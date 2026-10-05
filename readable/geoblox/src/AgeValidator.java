@@ -36,8 +36,8 @@ final class AgeValidator extends TextInputValidator {
           }
           candidateForParsing = (CharSequence) ((Object) candidateText);
           parsedAge = MultiHandleSliderWidget.parseSignedDecimalInt(false, candidateForParsing);
-          if ((parsedAge > 0) &&
-              (130 >= parsedAge)) {
+          if (parsedAge > 0 &&
+              130 >= parsedAge) {
             validAgeState = SocketArchiveNetworkClient.validInputValidationState;
             return validAgeState;
           }
@@ -155,12 +155,12 @@ final class AgeValidator extends TextInputValidator {
             return false;
           }
           for (operationIndex = 0; requestAlias.operationCount > operationIndex; operationIndex++) {
-            if ((null != requestFromQueue.fieldLookupTasks[operationIndex]) &&
-                (requestFromQueue.fieldLookupTasks[operationIndex].status == 0)) {
+            if (null != requestFromQueue.fieldLookupTasks[operationIndex] &&
+                requestFromQueue.fieldLookupTasks[operationIndex].status == 0) {
               return false;
             }
-            if ((requestFromQueue.methodLookupTasks[operationIndex] != null) &&
-                (requestFromQueue.methodLookupTasks[operationIndex].status == 0)) {
+            if (requestFromQueue.methodLookupTasks[operationIndex] != null &&
+                requestFromQueue.methodLookupTasks[operationIndex].status == 0) {
               return false;
             }
           }

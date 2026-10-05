@@ -137,8 +137,8 @@ final class MidiPcmStream extends PcmStream {
             }
             volume = volume * envelopeValue + 32 >> 6;
           }
-          if ((note.releaseEnvelopeTime > 0) &&
-              (envelope.releaseEnvelope != null)) {
+          if (note.releaseEnvelopeTime > 0 &&
+              envelope.releaseEnvelope != null) {
             envelopeTime = note.releaseEnvelopeTime;
             envelopeValue = envelope.releaseEnvelope[1 + note.releaseEnvelopeIndex];
             if (-2 + envelope.releaseEnvelope.length > note.releaseEnvelopeIndex) {
@@ -182,8 +182,8 @@ final class MidiPcmStream extends PcmStream {
           pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
           envelope = note.envelope;
           if (0 < envelope.vibratoPhaseStep) {
-            if (((!(envelope.vibratoDepth <= 0)) ||
-                ((this.channelModulation[note.channelIndex] > 0)))) {
+            if (!(envelope.vibratoDepth <= 0) ||
+                this.channelModulation[note.channelIndex] > 0) {
               vibratoDepthOrSampleStep = envelope.vibratoDepth << 2;
               vibratoRampUpdates = envelope.vibratoRampTicks << 1;
               if (vibratoRampUpdates > note.ageUpdates) {
@@ -232,7 +232,7 @@ final class MidiPcmStream extends PcmStream {
         if (methodGuard != 39) {
             this.resetChannelControllers((byte) -85, -70);
         }
-        if (((this.channelFlags[channelIndex] & 2) != 0)) {
+        if ((this.channelFlags[channelIndex] & 2) != 0) {
             note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
                 if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
@@ -258,12 +258,12 @@ final class MidiPcmStream extends PcmStream {
         try {
           note.framesUntilUpdate = AudioOutput.sampleRateHz / 100;
           if (note.releaseEnvelopeTime >= 0) {
-            if (((null == note.sampleStream) ||
-                (note.sampleStream.isSamplePositionOutOfRange()))) {
+            if (null == note.sampleStream ||
+                note.sampleStream.isSamplePositionOutOfRange()) {
               note.clearAudioReferences(-1);
               note.unlinkNode(completionOrUnlinkFlag);
-              if ((0 < note.keyGroup) &&
-                  (note == this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
+              if (0 < note.keyGroup &&
+                  note == this.notesByKeyGroup[note.channelIndex][note.keyGroup]) {
                 this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
                 return true;
               }
@@ -307,17 +307,17 @@ final class MidiPcmStream extends PcmStream {
               }
               break;
             }
-            if (((note.volumeEnvelopeIndex == -2 + envelope.volumeEnvelope.length) &&
-                (envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] == 0))) {
+            if (note.volumeEnvelopeIndex == -2 + envelope.volumeEnvelope.length &&
+                envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] == 0) {
               finishNoteInt = 1;
             }
           }
           releaseEnvelopeAdvance: {
-            if ((note.releaseEnvelopeTime >= 0) &&
-                (envelope.releaseEnvelope != null) &&
-                ((this.channelFlags[note.channelIndex] & 1) == 0)) {
-              if ((0 <= note.keyGroup) &&
-                  (note == this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
+            if (note.releaseEnvelopeTime >= 0 &&
+                envelope.releaseEnvelope != null &&
+                (this.channelFlags[note.channelIndex] & 1) == 0) {
+              if (0 <= note.keyGroup &&
+                  note == this.notesByKeyGroup[note.channelIndex][note.keyGroup]) {
                 break releaseEnvelopeAdvance;
               }
               if (0 < envelope.releaseEnvelopeKeyScaling) {
@@ -354,8 +354,8 @@ final class MidiPcmStream extends PcmStream {
           note.clearAudioReferences(-1);
           if (0 <= note.releaseEnvelopeTime) {
             note.unlinkNode(false);
-            if ((0 < note.keyGroup) &&
-                (this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note)) {
+            if (0 < note.keyGroup &&
+                this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
               this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
             }
           }
@@ -382,10 +382,10 @@ final class MidiPcmStream extends PcmStream {
 
     private final void resetChannelRetriggerPhases(int channelIndex, byte methodGuard) {
         MidiNote note = null;
-        if (((this.channelFlags[channelIndex] & 4) != 0)) {
+        if ((this.channelFlags[channelIndex] & 4) != 0) {
             note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
-                if ((note.channelIndex == channelIndex)) {
+                if (note.channelIndex == channelIndex) {
                     note.retriggerPhaseFixed = 0;
                 }
                 note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
@@ -433,8 +433,8 @@ final class MidiPcmStream extends PcmStream {
                 allInstrumentsPreparedFlag = 0;
               }
             }
-            if ((instrumentPatch != null) &&
-                (!instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache))) {
+            if (instrumentPatch != null &&
+                !instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache)) {
               allInstrumentsPreparedFlag = 0;
             }
             instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.nextForIteration(methodGuard - 100));
@@ -471,7 +471,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void resetChannelControllers(byte methodGuard, int channelIndex) {
-        if ((channelIndex < 0)) {
+        if (channelIndex < 0) {
             for (channelIndex = 0; channelIndex < 16; channelIndex++) {
                 this.resetChannelControllers((byte) -22, channelIndex);
             }
@@ -555,12 +555,12 @@ final class MidiPcmStream extends PcmStream {
             heldInternalKeys = (boolean[]) null;
           }
           sampleLengthOrFixedEnd = note.pcmSample.samples.length;
-          if ((loopEnabled) &&
-              (note.pcmSample.pingPongLoop)) {
+          if (loopEnabled &&
+              note.pcmSample.pingPongLoop) {
             reflectedLoopLength = -note.pcmSample.loopStart + sampleLengthOrFixedEnd + sampleLengthOrFixedEnd;
             sampleLengthOrFixedEnd = sampleLengthOrFixedEnd << 8;
             sampleOffsetFixed = (int)((long)reflectedLoopLength * (long)this.channelSampleOffsets[note.channelIndex] >> 6);
-            if ((sampleLengthOrFixedEnd <= sampleOffsetFixed)) {
+            if (sampleLengthOrFixedEnd <= sampleOffsetFixed) {
               note.sampleStream.setReversePlayback(true);
               sampleOffsetFixed = -sampleOffsetFixed + (sampleLengthOrFixedEnd + sampleLengthOrFixedEnd) - 1;
             }
@@ -591,7 +591,7 @@ final class MidiPcmStream extends PcmStream {
         MidiNote note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ methodGuard));
         while (note != null) {
             if ((channelIndex < 0 || channelIndex == note.channelIndex) &&
-                (!(note.releaseEnvelopeTime >= 0))) {
+                !(note.releaseEnvelopeTime >= 0)) {
                 this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
                 note.releaseEnvelopeTime = 0;
             }
@@ -802,8 +802,8 @@ final class MidiPcmStream extends PcmStream {
         trackIndex = this.nextTrackIndex;
         eventTick = this.nextEventTick;
         eventTime = this.nextEventTime;
-        if ((this.pendingScore != null) &&
-            (this.pendingScoreTick == eventTick)) {
+        if (this.pendingScore != null &&
+            this.pendingScoreTick == eventTick) {
           this.loadScoreAndResetSynthesis(121, this.pendingScore, this.loopScore, this.pendingScoreFadeOutNotes);
           this.advanceMidiEvents((byte) 73);
           return;
@@ -813,8 +813,8 @@ final class MidiPcmStream extends PcmStream {
             this.nextEventTick = eventTick;
             this.nextEventTime = eventTime;
             this.nextTrackIndex = trackIndex;
-            if ((null != this.pendingScore) &&
-                (this.pendingScoreTick < eventTick)) {
+            if (null != this.pendingScore &&
+                this.pendingScoreTick < eventTick) {
               this.nextEventTick = this.pendingScoreTick;
               this.nextTrackIndex = -1;
               this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
@@ -840,8 +840,8 @@ final class MidiPcmStream extends PcmStream {
                 this.advanceMidiEvents((byte) -32);
                 return;
               }
-              if ((this.loopScore) &&
-                  (eventTick != 0)) {
+              if (this.loopScore &&
+                  eventTick != 0) {
                 this.midiReader.restartTracks(eventTime);
               } else {
                 this.resetSynthesisState(true, 2097151);
@@ -884,9 +884,9 @@ final class MidiPcmStream extends PcmStream {
           if ((this.channelFlags[channelIndex] & 2) != 0) {
             otherHeldNote = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
             while (otherHeldNote != null) {
-              if ((note.channelIndex == otherHeldNote.channelIndex) &&
-                  (0 > otherHeldNote.releaseEnvelopeTime) &&
-                  (note != otherHeldNote)) {
+              if (note.channelIndex == otherHeldNote.channelIndex &&
+                  0 > otherHeldNote.releaseEnvelopeTime &&
+                  note != otherHeldNote) {
                 note.releaseEnvelopeTime = 0;
                 break portamentoReleaseSelection;
               }
@@ -902,8 +902,8 @@ final class MidiPcmStream extends PcmStream {
         MidiNote note;
         note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard - 100));
         while (note != null) {
-          if ((((channelIndex < 0)) ||
-                (channelIndex == note.channelIndex))) {
+          if (channelIndex < 0 ||
+                channelIndex == note.channelIndex) {
             if (null != note.sampleStream) {
               note.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);
               if (note.sampleStream.hasRemainingRampFrames()) {
@@ -1029,8 +1029,8 @@ final class MidiPcmStream extends PcmStream {
           }
           if (note.releaseEnvelopeTime >= 0) {
             note.unlinkNode(false);
-            if ((0 < note.keyGroup) &&
-                (this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note)) {
+            if (0 < note.keyGroup &&
+                this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
               this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
               return true;
             }
@@ -1075,8 +1075,8 @@ final class MidiPcmStream extends PcmStream {
         if (0 != (2 & this.channelFlags[channelIndex])) {
           heldNote = (MidiNote) ((Object) this.noteMixer.notes.lastForIteration(false));
           while (heldNote != null) {
-            if ((channelIndex == heldNote.channelIndex) &&
-                (heldNote.releaseEnvelopeTime < 0)) {
+            if (channelIndex == heldNote.channelIndex &&
+                heldNote.releaseEnvelopeTime < 0) {
               this.heldNotesByKey[channelIndex][heldNote.keyNumber] = null;
               this.heldNotesByKey[channelIndex][keyNumber] = heldNote;
               previousPitchFixed = (heldNote.portamentoPitchDelta * heldNote.portamentoScale >> 12) + heldNote.basePitchFixed;
@@ -1133,8 +1133,8 @@ final class MidiPcmStream extends PcmStream {
         }
         if (0 <= note.keyGroup) {
           previousGroupNote = this.notesByKeyGroup[channelIndex][note.keyGroup];
-          if ((previousGroupNote != null) &&
-              (previousGroupNote.releaseEnvelopeTime < 0)) {
+          if (previousGroupNote != null &&
+              previousGroupNote.releaseEnvelopeTime < 0) {
             this.heldNotesByKey[channelIndex][previousGroupNote.keyNumber] = null;
             previousGroupNote.releaseEnvelopeTime = 0;
           }

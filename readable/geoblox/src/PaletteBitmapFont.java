@@ -91,8 +91,8 @@ final class PaletteBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if ((width > 0) &&
-            (height > 0)) {
+        if (width > 0 &&
+            height > 0) {
           if (!shadowPass) {
             PaletteBitmapFont.blitPaletteGlyph(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
           } else {
@@ -137,8 +137,8 @@ final class PaletteBitmapFont extends BitmapFont {
           sourceRowSkip = sourceRowSkip + clippedPixels;
           destinationRowSkip = destinationRowSkip + clippedPixels;
         }
-        if ((width > 0) &&
-            (height > 0)) {
+        if (width > 0 &&
+            height > 0) {
           if (!shadowPass) {
             PaletteBitmapFont.blitPaletteGlyphAlpha(0, SoftwareRasterizer.framebuffer, this.glyphPaletteIndices[glyphIndex], this.colorPalettes[color], sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
           } else {

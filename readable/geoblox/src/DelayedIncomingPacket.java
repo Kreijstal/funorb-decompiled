@@ -116,8 +116,8 @@ final class DelayedIncomingPacket extends IntrusiveNode {
           if (nineSliceSprites == null) {
             return;
           }
-          if ((panelWidth > 0) &&
-              (0 < panelHeight)) {
+          if (panelWidth > 0 &&
+              0 < panelHeight) {
             if (nineSliceSprites[3] == null) {
               selectedLeftBorderWidth = 0;
             } else {
@@ -184,41 +184,41 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               nineSliceSprites[8].draw(centerTileRight, centerTileBottom);
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
-            if ((null != nineSliceSprites[1]) &&
-                (nineSliceSprites[1].fullWidth != 0)) {
+            if (null != nineSliceSprites[1] &&
+                nineSliceSprites[1].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(centerClipLeft, panelTop, centerClipRight, centerClipTop);
               for (edgeTileCoordinateOrCenterY = centerTileLeft; centerTileRight > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[1].fullWidth) {
                 nineSliceSprites[1].draw(edgeTileCoordinateOrCenterY, panelTop);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
-            if ((nineSliceSprites[7] != null) &&
-                (0 != nineSliceSprites[7].fullWidth)) {
+            if (nineSliceSprites[7] != null &&
+                0 != nineSliceSprites[7].fullWidth) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipBottom, centerClipRight, panelBottom);
               for (edgeTileCoordinateOrCenterY = centerTileLeft; edgeTileCoordinateOrCenterY < centerTileRight; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[7].fullWidth) {
                 nineSliceSprites[7].draw(edgeTileCoordinateOrCenterY, centerTileBottom);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
-            if ((nineSliceSprites[3] != null) &&
-                (0 != nineSliceSprites[3].fullHeight)) {
+            if (nineSliceSprites[3] != null &&
+                0 != nineSliceSprites[3].fullHeight) {
               SoftwareRasterizer.intersectClip(panelLeft, centerClipTop, centerClipLeft, centerClipBottom);
               for (edgeTileCoordinateOrCenterY = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[3].fullHeight) {
                 nineSliceSprites[3].draw(panelLeft, edgeTileCoordinateOrCenterY);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
-            if ((nineSliceSprites[5] != null) &&
-                (nineSliceSprites[5].fullHeight != 0)) {
+            if (nineSliceSprites[5] != null &&
+                nineSliceSprites[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(centerClipRight, centerClipTop, panelRight, centerClipBottom);
               for (edgeTileCoordinateOrCenterY = centerTileTop; edgeTileCoordinateOrCenterY < centerTileBottom; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[5].fullHeight) {
                 nineSliceSprites[5].draw(centerTileRight, edgeTileCoordinateOrCenterY);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
-            if ((nineSliceSprites[4] != null) &&
-                (nineSliceSprites[4].fullWidth != 0) &&
-                (0 != nineSliceSprites[4].fullHeight)) {
+            if (nineSliceSprites[4] != null &&
+                nineSliceSprites[4].fullWidth != 0 &&
+                0 != nineSliceSprites[4].fullHeight) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipTop, centerClipRight, centerClipBottom);
               for (edgeTileCoordinateOrCenterY = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[4].fullHeight) {
                 for (centerTileX = centerTileLeft; centerTileX < centerTileRight; centerTileX = centerTileX + nineSliceSprites[4].fullWidth) {
@@ -256,15 +256,15 @@ final class DelayedIncomingPacket extends IntrusiveNode {
         String spriteArchiveDescription = null;
         RuntimeException caughtLoadFailure = null;
         try {
-          if ((spriteArchive.ensureIndexLoaded(0)) &&
-              (spriteArchive.loadGroupByName("commonui", (byte) -127))) {
-            if ((fontArchive.ensureIndexLoaded(methodGuard + 11652)) &&
-                (fontArchive.loadGroupByName("commonui", (byte) -124))) {
+          if (spriteArchive.ensureIndexLoaded(0) &&
+              spriteArchive.loadGroupByName("commonui", (byte) -127)) {
+            if (fontArchive.ensureIndexLoaded(methodGuard + 11652) &&
+                fontArchive.loadGroupByName("commonui", (byte) -124)) {
               if (methodGuard != -11652) {
                 return false;
               }
-              if ((buttonAndLogoArchive.ensureIndexLoaded(0)) &&
-                  (buttonAndLogoArchive.loadGroupByName("button.gif", (byte) -125))) {
+              if (buttonAndLogoArchive.ensureIndexLoaded(0) &&
+                  buttonAndLogoArchive.loadGroupByName("button.gif", (byte) -125)) {
                 return true;
               }
               return false;

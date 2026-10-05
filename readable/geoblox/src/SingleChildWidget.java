@@ -56,8 +56,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           if (endIndexExclusive <= startIndex + 1) {
             return;
           }
-          if ((startIndex + 5 < endIndexExclusive) &&
-              (upperKeyBound != lowerKeyBound)) {
+          if (startIndex + 5 < endIndexExclusive &&
+              upperKeyBound != lowerKeyBound) {
             midpointOrBubbleEnd = (1 & (upperKeyBound & lowerKeyBound)) + (lowerKeyBound >> 1) + (upperKeyBound >> 1);
             partitionOrBubbleIndex = startIndex;
             leastUpperKeyOrLeftEntry = upperKeyBound;
@@ -160,11 +160,11 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             return false;
           }
           nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-          if ((EntityMotionSupport.incomingPacketBaseDelayMillis != 0) &&
-              (MidiNote.stagedIncomingPacketOpcode < 0)) {
+          if (EntityMotionSupport.incomingPacketBaseDelayMillis != 0 &&
+              MidiNote.stagedIncomingPacketOpcode < 0) {
             queuedPacket = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.delayedIncomingPackets.firstForIteration(0));
-            if ((queuedPacket != null) &&
-                (nowMillis > queuedPacket.deliveryTimeMillis)) {
+            if (queuedPacket != null &&
+                nowMillis > queuedPacket.deliveryTimeMillis) {
               queuedPacket.unlinkNode(false);
               AchievementSubmission.sessionPacketPayloadLength = queuedPacket.payload.length;
               LogoCompositor.sessionPacketBuffer.position = 0;
@@ -269,8 +269,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     UiWidget findFocusTarget(int methodGuard) {
         UiWidget childSnapshot = this.child;
-        if ((childSnapshot != null) &&
-            ((childSnapshot.hasKeyboardFocus((byte) 54)))) {
+        if (childSnapshot != null &&
+            childSnapshot.hasKeyboardFocus((byte) 54)) {
             return childSnapshot;
         }
         if (methodGuard == -4863) {
@@ -282,8 +282,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     }
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        if ((0 == renderPass) &&
-            ((this.renderer != null))) {
+        if (0 == renderPass &&
+            this.renderer != null) {
             this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
         }
         int guardResidue = 85 % ((methodGuard - 1) / 43);
@@ -361,9 +361,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     String getHoverText(byte methodGuard) {
         String childHoverText = null;
         String parentHoverText = super.getHoverText(methodGuard);
-        if ((this.child != null)) {
+        if (this.child != null) {
             childHoverText = this.child.getHoverText((byte) 69);
-            if ((childHoverText != null)) {
+            if (childHoverText != null) {
                 return childHoverText;
             }
         }
@@ -505,9 +505,9 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         String eventContextDescription = null;
         RuntimeException caughtKeyFailure = null;
         try {
-          if ((null != this.child) &&
-              (this.child.hasKeyboardFocus((byte) 54)) &&
-              (this.child.handleKeyInput(keyCode, 13, typedCharacter, eventContext))) {
+          if (null != this.child &&
+              this.child.hasKeyboardFocus((byte) 54) &&
+              this.child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
             return true;
           }
           if (methodGuard != 13) {

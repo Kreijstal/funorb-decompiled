@@ -145,8 +145,8 @@ abstract class ArchiveNetworkClient {
           if (elementCount == nullLengthSentinel) {
             return null;
           }
-          if (((destination == null) ||
-                (elementCount != destination.length))) {
+          if (destination == null ||
+                elementCount != destination.length) {
             destination = new short[elementCount];
           }
           deltaBitCount = packet.readBits((byte) -17, 4);

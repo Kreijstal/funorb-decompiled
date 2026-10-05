@@ -11,7 +11,7 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadSportsTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sports", (byte) -126))) {
+            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sports", (byte) -126)) {
                 return;
             }
             if (methodGuard <= 37) {
@@ -32,7 +32,7 @@ public final class Geoblox extends SessionGameApplet {
             this.loadJewelsTheme(true);
         }
         ScorePopup.disposeGameAudioOutputs(122);
-        if ((InstrumentPatch.activeFullscreenCanvas != null)) {
+        if (InstrumentPatch.activeFullscreenCanvas != null) {
             InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         }
         MidiNote.releaseSessionInputAndCloseSocket((byte) 124);
@@ -86,7 +86,7 @@ public final class Geoblox extends SessionGameApplet {
             themeIndex = -1;
             for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
                 categoryThenAnimationFrameIndex = geometryFrameThenVariantIndex % 7;
-                if ((categoryThenAnimationFrameIndex == 0)) {
+                if (categoryThenAnimationFrameIndex == 0) {
                     themeIndex++;
                     if (themeIndex >= 7) {
                         break;
@@ -163,7 +163,7 @@ public final class Geoblox extends SessionGameApplet {
             HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "", GameGraphicsResources.gameGraphicsArchive, 0);
             ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "", GameGraphicsResources.gameGraphicsArchive, 0);
             PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if ((ClientOptionSupport.isClientOptionEnabled(0, 110))) {
+            if (ClientOptionSupport.isClientOptionEnabled(0, 110)) {
                 HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
                 ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
                 PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
@@ -254,31 +254,31 @@ public final class Geoblox extends SessionGameApplet {
           return true;
         }
         Under13TermsPanel.initializeMenuActionTexts(9);
-        if ((OpacityWidget.synthesizedSoundArchive.ensureIndexLoaded(0)) &&
-            (OpacityWidget.synthesizedSoundArchive.loadAllGroups(true))) {
+        if (OpacityWidget.synthesizedSoundArchive.ensureIndexLoaded(0) &&
+            OpacityWidget.synthesizedSoundArchive.loadAllGroups(true)) {
           if (TextWidgetSupport.initialVorbisArchive.ensureIndexLoaded(0)) {
             soundArchiveSnapshot = TextWidgetSupport.initialVorbisArchive;
             soundLoadGroupsGuard = (archivePollGuard) ? false : true;
             if (((ResourceArchive) (Object) soundArchiveSnapshot).loadAllGroups(soundLoadGroupsGuard)) {
-              if ((GzipInflater.initialMusicScoreArchive.ensureIndexLoaded(0)) &&
-                  (GzipInflater.initialMusicScoreArchive.loadAllGroups(true))) {
-                if ((ProxySocketConnector.instrumentPatchArchive.ensureIndexLoaded(0)) &&
-                    (ProxySocketConnector.instrumentPatchArchive.loadAllGroups(true))) {
-                  if ((ArchiveLoadStep.fontMetricsArchive.ensureIndexLoaded(0)) &&
-                      (ArchiveLoadStep.fontMetricsArchive.loadAllGroups(true))) {
-                    if ((GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) &&
-                        (GameGraphicsResources.gameGraphicsArchive.loadGroupByName("", (byte) -127))) {
-                      if ((GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) &&
-                          (GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127))) {
+              if (GzipInflater.initialMusicScoreArchive.ensureIndexLoaded(0) &&
+                  GzipInflater.initialMusicScoreArchive.loadAllGroups(true)) {
+                if (ProxySocketConnector.instrumentPatchArchive.ensureIndexLoaded(0) &&
+                    ProxySocketConnector.instrumentPatchArchive.loadAllGroups(true)) {
+                  if (ArchiveLoadStep.fontMetricsArchive.ensureIndexLoaded(0) &&
+                      ArchiveLoadStep.fontMetricsArchive.loadAllGroups(true)) {
+                    if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) &&
+                        GameGraphicsResources.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
+                      if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) &&
+                          GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
                         if (ClientOptionSupport.isClientOptionEnabled(0, -112)) {
-                          if (((!(GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0))) ||
-                              (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))))) {
+                          if (!GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) ||
+                              !GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127)) {
                             HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.waitingForPumpkinText, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.loadingPumpkinText, true), -2, 45.0f);
                             return false;
                           }
                         }
-                        if ((SessionTextHistorySupport.basicUiGraphicsArchive.ensureIndexLoaded(0)) &&
-                            (SessionTextHistorySupport.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124))) {
+                        if (SessionTextHistorySupport.basicUiGraphicsArchive.ensureIndexLoaded(0) &&
+                            SessionTextHistorySupport.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124)) {
                           if (archivePollGuard) {
                             return true;
                           }
@@ -562,7 +562,7 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadGermsTheme(byte methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("germs", (byte) -126))) {
+            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("germs", (byte) -126)) {
                 return;
             }
             UsernameAvailabilityQuery.germsForegroundSprite = ScorePopupSupport.loadSprite("germs_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "germs");
@@ -615,8 +615,8 @@ public final class Geoblox extends SessionGameApplet {
         if (methodGuard) {
           return;
         }
-        if ((InstrumentPatch.activeFullscreenCanvas != null) &&
-            (InstrumentPatch.activeFullscreenCanvas.focusLost)) {
+        if (InstrumentPatch.activeFullscreenCanvas != null &&
+            InstrumentPatch.activeFullscreenCanvas.focusLost) {
           InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
           InstrumentPatch.activeFullscreenCanvas = null;
         }
@@ -642,8 +642,8 @@ public final class Geoblox extends SessionGameApplet {
           assetAndSessionPreparation: {
             if (!DebouncedValidationProvider.gameAssetsInitialized) {
               ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
-              if ((this.pollArchiveLoading(false)) &&
-                  (this.prepareGameAssets(25869))) {
+              if (this.pollArchiveLoading(false) &&
+                  this.prepareGameAssets(25869)) {
                 DebouncedValidationProvider.gameAssetsInitialized = true;
                 this.initializeScreens(82);
                 break assetAndSessionPreparation;
@@ -654,13 +654,13 @@ public final class Geoblox extends SessionGameApplet {
             if (!UsernameAvailabilityValidator.ensureAndCheckAchievementStateGate(79)) {
               HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
             } else {
-              if ((FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47)) &&
-                  (!FullscreenSupport.fullscreenDialogActiveSnapshot)) {
+              if (FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47) &&
+                  !FullscreenSupport.fullscreenDialogActiveSnapshot) {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
                 uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
                 if (uiServiceResultOrOverlayMode != 2364824) {
-                  if (((uiServiceResultOrOverlayMode == 1) ||
-                      (2 == uiServiceResultOrOverlayMode))) {
+                  if (uiServiceResultOrOverlayMode == 1 ||
+                      2 == uiServiceResultOrOverlayMode) {
                     if (null != InstrumentPatch.activeFullscreenCanvas) {
                       InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
                       InstrumentPatch.activeFullscreenCanvas = null;
@@ -717,8 +717,8 @@ public final class Geoblox extends SessionGameApplet {
                       TextTemplateDefinition.screens[0].activeTicks = 0;
                     }
                   }
-                  if ((null != UiWidget.gameplaySession) &&
-                      (UiWidget.gameplaySession.score > 0)) {
+                  if (null != UiWidget.gameplaySession &&
+                      UiWidget.gameplaySession.score > 0) {
                     UiWidget.gameplaySession.submitScore((byte) -70);
                   }
                   ScoreSubmission.requestedScreenId = UiWidget.gameplayReturnScreenId;
@@ -730,8 +730,8 @@ public final class Geoblox extends SessionGameApplet {
                 CharacterReplacementSupport.clearGameplayDuringTransition = true;
               }
               if (ScoreSubmission.requestedScreenId != SettingsCookieSupport.currentScreenId) {
-                if ((6 == ScoreSubmission.requestedScreenId) &&
-                    (ScorePopupSupport.newAchievementMask <= 0)) {
+                if (6 == ScoreSubmission.requestedScreenId &&
+                    ScorePopupSupport.newAchievementMask <= 0) {
                   ScoreSubmission.requestedScreenId = 2;
                 }
                 if (-1 < SettingsCookieSupport.currentScreenId) {
@@ -752,8 +752,8 @@ public final class Geoblox extends SessionGameApplet {
                 nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                 if (nextScreenTransitionTickSnapshot == 160) {
-                  if ((UiWidget.gameplayReturnScreenId != -1) &&
-                      (UnderlinedButtonRenderer.isGuestSessionMode(-109))) {
+                  if (UiWidget.gameplayReturnScreenId != -1 &&
+                      UnderlinedButtonRenderer.isGuestSessionMode(-109)) {
                     if (ProxySocketConnector.gameplayOriginScreenId != 0) {
                       UsernameResponseSupport.returnToLoginStage(-106);
                     } else {
@@ -791,7 +791,7 @@ public final class Geoblox extends SessionGameApplet {
           NanoFrameTimer.flushSessionWrites(-1, 0);
           if (ClientTimingSupport.isClientReadyForSessionActions(54)) {
             uiServiceResultOrOverlayMode = this.pollReconnectAndResendRequests((byte) -67);
-            if ((uiServiceResultOrOverlayMode == 2)) {
+            if (uiServiceResultOrOverlayMode == 2) {
               ClientScreenExitSupport.handleSessionExitServiceResult(320, 240, IntrusiveNodeHashTable.smallFont, IntrusiveNodeHashTable.smallFont.maxAscent * 3 >> 1, -128, IntrusiveNodeHashTable.smallFont.maxAscent);
             }
           }
@@ -841,8 +841,8 @@ public final class Geoblox extends SessionGameApplet {
         }
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard - 25598);
         SoftwareRasterizer.clearFramebuffer();
-        if ((SettingsCookieSupport.currentScreenId == ScoreSubmission.requestedScreenId) &&
-            (UiWidget.gameplayReturnScreenId == -1)) {
+        if (SettingsCookieSupport.currentScreenId == ScoreSubmission.requestedScreenId &&
+            UiWidget.gameplayReturnScreenId == -1) {
           if (SettingsCookieSupport.currentScreenId != -1) {
             TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].renderScreen(-28750);
           } else if (!UsernameQueryState.introAnimationRunning) {
@@ -852,11 +852,11 @@ public final class Geoblox extends SessionGameApplet {
           }
         } else {
           transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
-          if ((UiWidget.gameplayReturnScreenId == -1) &&
-              (!CharacterReplacementSupport.clearGameplayDuringTransition)) {
+          if (UiWidget.gameplayReturnScreenId == -1 &&
+              !CharacterReplacementSupport.clearGameplayDuringTransition) {
             if (ScoreSubmission.requestedScreenId == -1) {
               UiWidget.gameplaySession.renderSession((byte) -68);
-            } else if ((SettingsCookieSupport.currentScreenId == -1)) {
+            } else if (SettingsCookieSupport.currentScreenId == -1) {
               UiWidget.gameplaySession.renderSession((byte) -68);
             }
           } else {
@@ -892,7 +892,7 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadJewelsTheme(boolean methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128))) {
+            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128)) {
                 return;
             }
             if (methodGuard) {
@@ -907,7 +907,7 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadBakingTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(methodGuard - 2)) {
-            if (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("baking", (byte) -125))) {
+            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("baking", (byte) -125)) {
                 return;
             }
             DisplayNamePanel.bakingForegroundSprite = ScorePopupSupport.loadSprite("baking_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "baking");
@@ -991,8 +991,8 @@ public final class Geoblox extends SessionGameApplet {
           yRotationSign = -1;
           xRotationSign = 1;
         }
-        if (((7 == meshIndex) ||
-              (8 == meshIndex))) {
+        if (7 == meshIndex ||
+              8 == meshIndex) {
           yRotationSign = -1;
           xRotationSign = -1;
         }
@@ -1047,7 +1047,7 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadSweetsTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!(GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128))) {
+            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128)) {
                 return;
             }
             SessionInstanceState.sweetsForegroundSprite = ScorePopupSupport.loadSprite("sweets_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sweets");

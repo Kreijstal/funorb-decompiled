@@ -116,8 +116,8 @@ final class WhirlpoolHash {
           }
           while (8L < remainingBitCount) {
             shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
-            if ((shiftedSourceByte >= 0) &&
-                (256 > shiftedSourceByte)) {
+            if (shiftedSourceByte >= 0 &&
+                256 > shiftedSourceByte) {
               this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
               this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
               this.bufferBytePosition = this.bufferBytePosition + 1;

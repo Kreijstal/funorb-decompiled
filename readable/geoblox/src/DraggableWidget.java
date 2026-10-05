@@ -35,16 +35,16 @@ final class DraggableWidget extends SingleChildWidget {
         RuntimeException dragUpdateFailure = null;
         int dragTargetY = 0;
         try {
-          if ((((!(this.child instanceof ButtonWidget)) ||
-                (((ButtonWidget) ((Object) this.child)).enabled))) &&
-              (this.pressedPointerButton == 1)) {
+          if ((!(this.child instanceof ButtonWidget) ||
+                ((ButtonWidget) ((Object) this.child)).enabled) &&
+              this.pressedPointerButton == 1) {
             dragTargetXOrLayoutDelta = PrefixCodeDecoder.pointerXSnapshot - this.grabOffsetX - parentX;
             dragTargetY = -this.grabOffsetY + (PcmResampler.pointerYSnapshot - parentY);
-            if (((this.widgetX != dragTargetXOrLayoutDelta) ||
-                (dragTargetY != this.widgetY))) {
+            if (this.widgetX != dragTargetXOrLayoutDelta ||
+                dragTargetY != this.widgetY) {
               this.widgetY = dragTargetY;
               this.widgetX = dragTargetXOrLayoutDelta;
-              if (((this.listener instanceof DragMovementListener))) {
+              if (this.listener instanceof DragMovementListener) {
                 ((DragMovementListener) ((Object) this.listener)).onDragMoved(parentX, -20951, (DraggableWidget) (this), parentY);
               }
             }
@@ -129,8 +129,8 @@ final class DraggableWidget extends SingleChildWidget {
             this.appendWidgetDiagnosticProperties(depth, visitedWidgets, 34, output);
             this.appendChildDiagnostics(depth, output, visitedWidgets, methodGuard + 0);
             discardedRevertAppend = output.append(" revert=").append(this.easeToLayoutPosition);
-            if ((this.layoutTargetX != 2147483647) &&
-                (this.layoutTargetY != 2147483647)) {
+            if (this.layoutTargetX != 2147483647 &&
+                this.layoutTargetY != 2147483647) {
               discardedTargetPositionAppend = output.append(" to ").append(this.layoutTargetX).append(',').append(this.layoutTargetY);
             }
           }
@@ -171,8 +171,8 @@ final class DraggableWidget extends SingleChildWidget {
         try {
           childHandledFlag = super.handlePointerPress(parentY, 53, parentX, pointerButton, pointerX, pointerY, eventContext) ? 1 : 0;
           guardResidue = 5 % ((-3 - methodGuard) / 38);
-          if ((childHandledFlag != 0) &&
-              (this.childPressTakesPriority)) {
+          if (childHandledFlag != 0 &&
+              this.childPressTakesPriority) {
             return true;
           }
           if (!this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {

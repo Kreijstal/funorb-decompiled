@@ -173,9 +173,9 @@ final class SoftwareRasterizer {
             return;
           }
           if (x + width > clipLeft) {
-            if ((x < clipRight) &&
-                (y + height >= clipTop) &&
-                (y < clipBottom)) {
+            if (x < clipRight &&
+                y + height >= clipTop &&
+                y < clipBottom) {
               upperLeftOuterRowCenterIndex = leftCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
               upperRightOuterRowCenterIndex = rightCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
               upperLeftInnerRowCenterIndex = leftCornerCenterX + topCornerCenterY * stride;
@@ -188,10 +188,10 @@ final class SoftwareRasterizer {
               arcMinorOffset = 0;
               radiusSquared = cornerRadius * cornerRadius;
               xAdjustedSquaredDistance = radiusSquared - arcMajorOffset;
-              if ((x >= clipLeft) &&
-                  (x + width < clipRight) &&
-                  (y >= clipTop) &&
-                  (y + height < clipBottom)) {
+              if (x >= clipLeft &&
+                  x + width < clipRight &&
+                  y >= clipTop &&
+                  y + height < clipBottom) {
                 for (edgePixelIndex = upperLeftInnerRowCenterIndex; edgePixelIndex <= lowerLeftInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
                   framebuffer[edgePixelIndex - arcMajorOffset] = color;
                 }
@@ -257,36 +257,36 @@ final class SoftwareRasterizer {
                 if (arcMajorOffset < arcMinorOffset) {
                   return;
                 }
-                if ((topCornerCenterY - arcMajorOffset >= clipTop) &&
-                    (topCornerCenterY - arcMajorOffset < clipBottom)) {
-                  if ((leftCornerCenterX - arcMinorOffset >= clipLeft) &&
-                      (leftCornerCenterX - arcMinorOffset < clipRight)) {
+                if (topCornerCenterY - arcMajorOffset >= clipTop &&
+                    topCornerCenterY - arcMajorOffset < clipBottom) {
+                  if (leftCornerCenterX - arcMinorOffset >= clipLeft &&
+                      leftCornerCenterX - arcMinorOffset < clipRight) {
                     framebuffer[upperLeftOuterRowCenterIndex - arcMinorOffset] = color;
                   }
-                  if ((rightCornerCenterX + arcMinorOffset >= clipLeft) &&
-                      (rightCornerCenterX + arcMinorOffset < clipRight)) {
+                  if (rightCornerCenterX + arcMinorOffset >= clipLeft &&
+                      rightCornerCenterX + arcMinorOffset < clipRight) {
                     framebuffer[upperRightOuterRowCenterIndex + arcMinorOffset] = color;
                   }
                 }
-                if ((topCornerCenterY - arcMinorOffset >= clipTop) &&
-                    (topCornerCenterY - arcMinorOffset < clipBottom)) {
-                  if ((leftCornerCenterX - arcMajorOffset >= clipLeft) &&
-                      (leftCornerCenterX - arcMajorOffset < clipRight)) {
+                if (topCornerCenterY - arcMinorOffset >= clipTop &&
+                    topCornerCenterY - arcMinorOffset < clipBottom) {
+                  if (leftCornerCenterX - arcMajorOffset >= clipLeft &&
+                      leftCornerCenterX - arcMajorOffset < clipRight) {
                     framebuffer[upperLeftInnerRowCenterIndex - arcMajorOffset] = color;
                   }
-                  if ((rightCornerCenterX + arcMajorOffset >= clipLeft) &&
-                      (rightCornerCenterX + arcMajorOffset < clipRight)) {
+                  if (rightCornerCenterX + arcMajorOffset >= clipLeft &&
+                      rightCornerCenterX + arcMajorOffset < clipRight) {
                     framebuffer[upperRightInnerRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
-                if ((bottomCornerCenterY + arcMinorOffset >= clipTop) &&
-                    (bottomCornerCenterY + arcMinorOffset < clipBottom)) {
-                  if ((leftCornerCenterX - arcMajorOffset >= clipLeft) &&
-                      (leftCornerCenterX - arcMajorOffset < clipRight)) {
+                if (bottomCornerCenterY + arcMinorOffset >= clipTop &&
+                    bottomCornerCenterY + arcMinorOffset < clipBottom) {
+                  if (leftCornerCenterX - arcMajorOffset >= clipLeft &&
+                      leftCornerCenterX - arcMajorOffset < clipRight) {
                     framebuffer[lowerLeftInnerRowCenterIndex - arcMajorOffset] = color;
                   }
-                  if ((rightCornerCenterX + arcMajorOffset >= clipLeft) &&
-                      (rightCornerCenterX + arcMajorOffset < clipRight)) {
+                  if (rightCornerCenterX + arcMajorOffset >= clipLeft &&
+                      rightCornerCenterX + arcMajorOffset < clipRight) {
                     framebuffer[lowerRightInnerRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
@@ -296,8 +296,8 @@ final class SoftwareRasterizer {
                 if (bottomCornerCenterY + arcMajorOffset >= clipBottom) {
                   continue;
                 }
-                if ((leftCornerCenterX - arcMinorOffset >= clipLeft) &&
-                    (leftCornerCenterX - arcMinorOffset < clipRight)) {
+                if (leftCornerCenterX - arcMinorOffset >= clipLeft &&
+                    leftCornerCenterX - arcMinorOffset < clipRight) {
                   framebuffer[lowerLeftOuterRowCenterIndex - arcMinorOffset] = color;
                 }
                 if (rightCornerCenterX + arcMinorOffset < clipLeft) {
@@ -640,8 +640,8 @@ final class SoftwareRasterizer {
         }
         alphaCircleUpperRows: while (rowY < centerY) {
           while (true) {
-            if ((yAdjustedSquaredDistance > radiusSquared) &&
-                (xAdjustedSquaredDistance > radiusSquared)) {
+            if (yAdjustedSquaredDistance > radiusSquared &&
+                xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = centerX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -815,8 +815,8 @@ final class SoftwareRasterizer {
         }
         circleUpperRows: while (rowY < centerY) {
           while (true) {
-            if ((yAdjustedSquaredDistance > radiusSquared) &&
-                (xAdjustedSquaredDistance > radiusSquared)) {
+            if (yAdjustedSquaredDistance > radiusSquared &&
+                xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = centerX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -926,8 +926,8 @@ final class SoftwareRasterizer {
           }
           while (startY <= endY) {
             minorAxisPixel = startX >> 16;
-            if ((minorAxisPixel >= clipLeft) &&
-                (minorAxisPixel < clipRight)) {
+            if (minorAxisPixel >= clipLeft &&
+                minorAxisPixel < clipRight) {
               framebuffer[minorAxisPixel + startY * stride] = color;
             }
             startX = startX + minorAxisStepQ16;
@@ -949,8 +949,8 @@ final class SoftwareRasterizer {
         }
         while (startX <= endX) {
           minorAxisPixel = startY >> 16;
-          if ((minorAxisPixel >= clipTop) &&
-              (minorAxisPixel < clipBottom)) {
+          if (minorAxisPixel >= clipTop &&
+              minorAxisPixel < clipBottom) {
             framebuffer[startX + minorAxisPixel * stride] = color;
           }
           startY = startY + minorAxisStepQ16;
@@ -980,9 +980,9 @@ final class SoftwareRasterizer {
             return;
           }
           if (centerX + radius >= clipLeft) {
-            if ((centerX - radius < clipRight) &&
-                (centerY + radius >= clipTop) &&
-                (centerY - radius < clipBottom)) {
+            if (centerX - radius < clipRight &&
+                centerY + radius >= clipTop &&
+                centerY - radius < clipBottom) {
               upperMinorRowCenterIndex = centerX + centerY * stride;
               lowerMinorRowCenterIndex = upperMinorRowCenterIndex;
               upperMajorRowCenterIndex = upperMinorRowCenterIndex - radius * stride;
@@ -991,10 +991,10 @@ final class SoftwareRasterizer {
               arcMinorOffset = 0;
               radius = radius * radius;
               xAdjustedSquaredDistance = radius - arcMajorOffset;
-              if ((centerX - arcMajorOffset >= clipLeft) &&
-                  (centerX + arcMajorOffset < clipRight) &&
-                  (centerY - arcMajorOffset >= clipTop) &&
-                  (centerY + arcMajorOffset < clipBottom)) {
+              if (centerX - arcMajorOffset >= clipLeft &&
+                  centerX + arcMajorOffset < clipRight &&
+                  centerY - arcMajorOffset >= clipTop &&
+                  centerY + arcMajorOffset < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                 framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                 framebuffer[upperMajorRowCenterIndex] = color;
@@ -1025,43 +1025,43 @@ final class SoftwareRasterizer {
                   continue;
                 }
               }
-              if ((centerX - arcMajorOffset >= clipLeft) &&
-                  (centerY >= clipTop) &&
-                  (centerY < clipBottom)) {
+              if (centerX - arcMajorOffset >= clipLeft &&
+                  centerY >= clipTop &&
+                  centerY < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
               }
-              if ((centerX + arcMajorOffset < clipRight) &&
-                  (centerY >= clipTop) &&
-                  (centerY < clipBottom)) {
+              if (centerX + arcMajorOffset < clipRight &&
+                  centerY >= clipTop &&
+                  centerY < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
               }
               if (centerY - arcMajorOffset >= clipTop) {
                 if (centerX >= clipLeft) {
                   if (centerX < clipRight) {
                     framebuffer[upperMajorRowCenterIndex] = color;
-                    if ((centerY + arcMajorOffset < clipBottom) &&
-                        (centerX >= clipLeft) &&
-                        (centerX < clipRight)) {
+                    if (centerY + arcMajorOffset < clipBottom &&
+                        centerX >= clipLeft &&
+                        centerX < clipRight) {
                       framebuffer[lowerMajorRowCenterIndex] = color;
                     }
                   } else {
-                    if ((centerY + arcMajorOffset < clipBottom) &&
-                        (centerX >= clipLeft) &&
-                        (centerX < clipRight)) {
+                    if (centerY + arcMajorOffset < clipBottom &&
+                        centerX >= clipLeft &&
+                        centerX < clipRight) {
                       framebuffer[lowerMajorRowCenterIndex] = color;
                     }
                   }
                 } else {
-                  if ((centerY + arcMajorOffset < clipBottom) &&
-                      (centerX >= clipLeft) &&
-                      (centerX < clipRight)) {
+                  if (centerY + arcMajorOffset < clipBottom &&
+                      centerX >= clipLeft &&
+                      centerX < clipRight) {
                     framebuffer[lowerMajorRowCenterIndex] = color;
                   }
                 }
               } else {
-                if ((centerY + arcMajorOffset < clipBottom) &&
-                    (centerX >= clipLeft) &&
-                    (centerX < clipRight)) {
+                if (centerY + arcMajorOffset < clipBottom &&
+                    centerX >= clipLeft &&
+                    centerX < clipRight) {
                   framebuffer[lowerMajorRowCenterIndex] = color;
                 }
               }
@@ -1080,36 +1080,36 @@ final class SoftwareRasterizer {
                 if (arcMajorOffset < arcMinorOffset) {
                   return;
                 }
-                if ((centerY - arcMajorOffset >= clipTop) &&
-                    (centerY - arcMajorOffset < clipBottom)) {
-                  if ((centerX - arcMinorOffset >= clipLeft) &&
-                      (centerX - arcMinorOffset < clipRight)) {
+                if (centerY - arcMajorOffset >= clipTop &&
+                    centerY - arcMajorOffset < clipBottom) {
+                  if (centerX - arcMinorOffset >= clipLeft &&
+                      centerX - arcMinorOffset < clipRight) {
                     framebuffer[upperMajorRowCenterIndex - arcMinorOffset] = color;
                   }
-                  if ((centerX + arcMinorOffset >= clipLeft) &&
-                      (centerX + arcMinorOffset < clipRight)) {
+                  if (centerX + arcMinorOffset >= clipLeft &&
+                      centerX + arcMinorOffset < clipRight) {
                     framebuffer[upperMajorRowCenterIndex + arcMinorOffset] = color;
                   }
                 }
-                if ((centerY - arcMinorOffset >= clipTop) &&
-                    (centerY - arcMinorOffset < clipBottom)) {
-                  if ((centerX - arcMajorOffset >= clipLeft) &&
-                      (centerX - arcMajorOffset < clipRight)) {
+                if (centerY - arcMinorOffset >= clipTop &&
+                    centerY - arcMinorOffset < clipBottom) {
+                  if (centerX - arcMajorOffset >= clipLeft &&
+                      centerX - arcMajorOffset < clipRight) {
                     framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                   }
-                  if ((centerX + arcMajorOffset >= clipLeft) &&
-                      (centerX + arcMajorOffset < clipRight)) {
+                  if (centerX + arcMajorOffset >= clipLeft &&
+                      centerX + arcMajorOffset < clipRight) {
                     framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
-                if ((centerY + arcMinorOffset >= clipTop) &&
-                    (centerY + arcMinorOffset < clipBottom)) {
-                  if ((centerX - arcMajorOffset >= clipLeft) &&
-                      (centerX - arcMajorOffset < clipRight)) {
+                if (centerY + arcMinorOffset >= clipTop &&
+                    centerY + arcMinorOffset < clipBottom) {
+                  if (centerX - arcMajorOffset >= clipLeft &&
+                      centerX - arcMajorOffset < clipRight) {
                     framebuffer[lowerMinorRowCenterIndex - arcMajorOffset] = color;
                   }
-                  if ((centerX + arcMajorOffset >= clipLeft) &&
-                      (centerX + arcMajorOffset < clipRight)) {
+                  if (centerX + arcMajorOffset >= clipLeft &&
+                      centerX + arcMajorOffset < clipRight) {
                     framebuffer[lowerMinorRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
@@ -1119,8 +1119,8 @@ final class SoftwareRasterizer {
                 if (centerY + arcMajorOffset >= clipBottom) {
                   continue;
                 }
-                if ((centerX - arcMinorOffset >= clipLeft) &&
-                    (centerX - arcMinorOffset < clipRight)) {
+                if (centerX - arcMinorOffset >= clipLeft &&
+                    centerX - arcMinorOffset < clipRight) {
                   framebuffer[lowerMajorRowCenterIndex - arcMinorOffset] = color;
                 }
                 if (centerX + arcMinorOffset < clipLeft) {
@@ -1283,8 +1283,8 @@ final class SoftwareRasterizer {
         }
         roundedRectangleUpperRows: while (rowY < topCornerCenterYOrUpperHalfEnd) {
           while (true) {
-            if ((yAdjustedSquaredDistance > radiusSquared) &&
-                (xAdjustedSquaredDistance > radiusSquared)) {
+            if (yAdjustedSquaredDistance > radiusSquared &&
+                xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = leftCornerCenterX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -1431,8 +1431,8 @@ final class SoftwareRasterizer {
         int[] redSumsSnapshot;
         int[] greenSumsSnapshot;
         int[] blueSumsSnapshot;
-        if (((blurColumnRedSums == null) ||
-              (!(blurColumnRedSums.length >= regionWidth)))) {
+        if (blurColumnRedSums == null ||
+              !(blurColumnRedSums.length >= regionWidth)) {
           blurColumnRedSums = new int[regionWidth];
           blurColumnGreenSums = new int[regionWidth];
           blurColumnBlueSums = new int[regionWidth];

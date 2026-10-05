@@ -119,15 +119,15 @@ final class AchievementSubmission extends IntrusiveNode {
                   continue;
                 }
               } else {
-                if ((null != mesh.firstVertexSourceX) &&
-                    (mesh.firstVertexSourceY != null) &&
-                    (mesh.firstVertexSourceZ != null) &&
-                    (mesh.secondVertexSourceX != null) &&
-                    (null != mesh.secondVertexSourceY) &&
-                    (mesh.secondVertexSourceZ != null) &&
-                    (mesh.thirdVertexSourceX != null) &&
-                    (null != mesh.thirdVertexSourceY) &&
-                    (mesh.thirdVertexSourceZ != null)) {
+                if (null != mesh.firstVertexSourceX &&
+                    mesh.firstVertexSourceY != null &&
+                    mesh.firstVertexSourceZ != null &&
+                    mesh.secondVertexSourceX != null &&
+                    null != mesh.secondVertexSourceY &&
+                    mesh.secondVertexSourceZ != null &&
+                    mesh.thirdVertexSourceX != null &&
+                    null != mesh.thirdVertexSourceY &&
+                    mesh.thirdVertexSourceZ != null) {
                   cameraXBasisOrDeltaZOrVertexIndex = 0;
                   while (!(~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount)) {
                     cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];

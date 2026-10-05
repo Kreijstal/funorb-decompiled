@@ -32,7 +32,7 @@ abstract class ResizableDialog extends FadingDialog {
     }
 
     final void startResizeTransition(int targetHeight, int targetWidth, int methodGuard, int durationTicks) {
-        if ((durationTicks <= 0)) {
+        if (durationTicks <= 0) {
             this.resizeAndCenter(targetHeight, methodGuard + 5373, targetWidth);
             return;
         }
@@ -315,15 +315,15 @@ abstract class ResizableDialog extends FadingDialog {
               iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
-              if ((((1 << achievementIndex & selectedAchievementMask) != 0) ||
-                    (!(onlyNewAchievements))) &&
-                  ((ClientOptionSupport.isClientOptionEnabled(0, 88)) ||
-                    (achievementIndex != 16) ||
-                    (AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
-                    (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
-                    (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32)) {
+              if (((1 << achievementIndex & selectedAchievementMask) != 0 ||
+                    !onlyNewAchievements) &&
+                  (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
+                    achievementIndex != 16 ||
+                    AchievementQuery.hasReceivedAchievementSixteen(109))) {
+                if (AccountCreationSupport.pointerPressXSnapshot >= iconX &&
+                    AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
+                    iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
+                    FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
                   if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
@@ -341,8 +341,8 @@ abstract class ResizableDialog extends FadingDialog {
                   if (!compactAchievementRows) {
                     iconY += 5;
                   }
-                  if ((onlyNewAchievements) &&
-                      (missingFirstSixteenCount < 8)) {
+                  if (onlyNewAchievements &&
+                      missingFirstSixteenCount < 8) {
                     iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }
@@ -359,15 +359,15 @@ abstract class ResizableDialog extends FadingDialog {
               iconX = iconX + (-160 + missingMaskHorizontalOffset);
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
-              if ((((1 << achievementIndex & selectedAchievementMask) != 0) ||
-                    (!(onlyNewAchievements))) &&
-                  ((ClientOptionSupport.isClientOptionEnabled(0, 88)) ||
-                    (achievementIndex != 16) ||
-                    (AchievementQuery.hasReceivedAchievementSixteen(109)))) {
-                if ((AccountCreationSupport.pointerPressXSnapshot >= iconX) &&
-                    (AccountCreationSupport.pointerPressXSnapshot <= iconX + 32) &&
-                    (iconY <= FullscreenFocusCanvas.pointerPressYSnapshot) &&
-                    (FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32)) {
+              if (((1 << achievementIndex & selectedAchievementMask) != 0 ||
+                    !onlyNewAchievements) &&
+                  (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
+                    achievementIndex != 16 ||
+                    AchievementQuery.hasReceivedAchievementSixteen(109))) {
+                if (AccountCreationSupport.pointerPressXSnapshot >= iconX &&
+                    AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
+                    iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
+                    FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
                   if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
@@ -385,8 +385,8 @@ abstract class ResizableDialog extends FadingDialog {
                   if (!compactAchievementRows) {
                     iconY += 5;
                   }
-                  if ((onlyNewAchievements) &&
-                      (missingFirstSixteenCount < 8)) {
+                  if (onlyNewAchievements &&
+                      missingFirstSixteenCount < 8) {
                     iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }
@@ -437,7 +437,7 @@ abstract class ResizableDialog extends FadingDialog {
           leftEdgeOffset = 0;
           rightEdgeOffset = this.widgetWidth;
           if (bandRowIndex <= 20) {
-            while ((leftEdgeOffset <= 20)) {
+            while (leftEdgeOffset <= 20) {
               leftCornerDistanceSquaredOrRightEdgeLimit = (-bandRowIndex + 20) * (-bandRowIndex + 20) + (-leftEdgeOffset + 20) * (20 - leftEdgeOffset);
               if (leftCornerDistanceSquaredOrRightEdgeLimit > 462) {
                 leftEdgeOffset++;

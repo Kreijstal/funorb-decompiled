@@ -39,7 +39,7 @@ abstract class FadingDialog extends WidgetContainer {
     boolean advanceDialogAnimation(int methodGuard) {
         int targetOpacity = this.getTargetOpacity(-75);
         int opacityDelta = -this.dialogOpacity + targetOpacity;
-        if ((~opacityDelta < methodGuard)) {
+        if (~opacityDelta < methodGuard) {
             this.dialogOpacity = this.dialogOpacity + (opacityDelta + 8 - 1) / 8;
         }
         if (opacityDelta < 0) {
@@ -159,12 +159,12 @@ abstract class FadingDialog extends WidgetContainer {
         UiWidget focusedChild = super.findFocusTarget((byte) -62);
         if (methodGuard > -60) {
             this.dialogVisible = false;
-            if ((focusedChild != null)) {
+            if (focusedChild != null) {
                 return focusedChild;
             }
             return (UiWidget) (this);
         }
-        if ((focusedChild != null)) {
+        if (focusedChild != null) {
             return focusedChild;
         }
         return (UiWidget) (this);
@@ -176,7 +176,7 @@ abstract class FadingDialog extends WidgetContainer {
             return;
         }
         if (256 <= this.dialogOpacity) {
-            if ((renderPass != 0)) {
+            if (renderPass != 0) {
                 return;
             }
             this.drawDialogFrame(this.widgetX + parentX, 20, parentY + this.widgetY);

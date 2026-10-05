@@ -14,7 +14,7 @@ final class IntrusiveDeque {
             return (IntrusiveNode) null;
         }
         IntrusiveNode node = this.iterationCursor;
-        if ((this.sentinel == node)) {
+        if (this.sentinel == node) {
             this.iterationCursor = null;
             return null;
         }
@@ -46,8 +46,8 @@ final class IntrusiveDeque {
         int selectedThemeId;
         int clientControlSnapshot;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
-        if ((null != AccountEligibilitySupport.musicScoreArchive) &&
-            (!EmailValidator.themeMusicPreparationFlags[themeId])) {
+        if (null != AccountEligibilitySupport.musicScoreArchive &&
+            !EmailValidator.themeMusicPreparationFlags[themeId]) {
           selectedThemeId = themeId;
           if (selectedThemeId != 4) {
             if (3 != selectedThemeId) {
@@ -203,7 +203,7 @@ final class IntrusiveDeque {
             return (IntrusiveNode) null;
         }
         IntrusiveNode lastNode = this.sentinel.previousNode;
-        if ((this.sentinel == lastNode)) {
+        if (this.sentinel == lastNode) {
             this.iterationCursor = null;
             return null;
         }

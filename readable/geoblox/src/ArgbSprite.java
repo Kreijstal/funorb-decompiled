@@ -210,8 +210,8 @@ final class ArgbSprite extends Sprite {
             sourceRed = sourcePixel >> 16 & 255;
             sourceGreen = sourcePixel >> 8 & 255;
             sourceBlue = sourcePixel & 255;
-            if ((sourceRed == sourceGreen) &&
-                (sourceGreen == sourceBlue)) {
+            if (sourceRed == sourceGreen &&
+                sourceGreen == sourceBlue) {
               if (sourceRed > 128) {
                 tintedPixel = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
               } else {
@@ -444,10 +444,10 @@ final class ArgbSprite extends Sprite {
               sourceXQ12 = rowSourceXQ12;
               sourceYQ12 = rowSourceYQ12;
               negativePixelCounter = rightThenNegativeWidth;
-              if ((sourceXQ12 >= 0) &&
-                  (sourceYQ12 >= 0) &&
-                  (sourceXQ12 - (this.width << 12) < 0) &&
-                  (sourceYQ12 - (this.height << 12) < 0)) {
+              if (sourceXQ12 >= 0 &&
+                  sourceYQ12 >= 0 &&
+                  sourceXQ12 - (this.width << 12) < 0 &&
+                  sourceYQ12 - (this.height << 12) < 0) {
                 while (negativePixelCounter < 0) {
                   sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
                   destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
@@ -471,8 +471,8 @@ final class ArgbSprite extends Sprite {
               sourceXQ12 = rowSourceXQ12;
               sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
               negativePixelCounter = rightThenNegativeWidth;
-              if ((sourceXQ12 >= 0) &&
-                  (sourceXQ12 - (this.width << 12) < 0)) {
+              if (sourceXQ12 >= 0 &&
+                  sourceXQ12 - (this.width << 12) < 0) {
                 if (sourceYQ12 < 0) {
                   clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
                   negativePixelCounter = negativePixelCounter + clipPixelCount;
@@ -507,8 +507,8 @@ final class ArgbSprite extends Sprite {
             sourceXQ12 = rowSourceXQ12;
             sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
             negativePixelCounter = rightThenNegativeWidth;
-            if ((sourceXQ12 >= 0) &&
-                (sourceXQ12 - (this.width << 12) < 0)) {
+            if (sourceXQ12 >= 0 &&
+                sourceXQ12 - (this.width << 12) < 0) {
               clipPixelCount = sourceYQ12 - (this.height << 12);
               if (sourceYQ12 - (this.height << 12) >= 0) {
                 clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
@@ -546,8 +546,8 @@ final class ArgbSprite extends Sprite {
               sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
               sourceYQ12 = rowSourceYQ12;
               negativePixelCounter = rightThenNegativeWidth;
-              if ((sourceYQ12 >= 0) &&
-                  (sourceYQ12 - (this.height << 12) < 0)) {
+              if (sourceYQ12 >= 0 &&
+                  sourceYQ12 - (this.height << 12) < 0) {
                 if (sourceXQ12 < 0) {
                   clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
                   negativePixelCounter = negativePixelCounter + clipPixelCount;
@@ -679,8 +679,8 @@ final class ArgbSprite extends Sprite {
             sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
             sourceYQ12 = rowSourceYQ12;
             negativePixelCounter = rightThenNegativeWidth;
-            if ((sourceYQ12 >= 0) &&
-                (sourceYQ12 - (this.height << 12) < 0)) {
+            if (sourceYQ12 >= 0 &&
+                sourceYQ12 - (this.height << 12) < 0) {
               clipPixelCount = sourceXQ12 - (this.width << 12);
               if (sourceXQ12 - (this.width << 12) >= 0) {
                 clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;

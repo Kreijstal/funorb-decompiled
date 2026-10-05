@@ -184,13 +184,13 @@ abstract class SocketConnector {
             SocketConnector.findSocialEntry((byte) 74, (String) null);
           }
           while (soundIndex < 33) {
-            if ((TextTemplateArgumentType.gameSoundThemeIds[soundIndex] > 0) &&
-                (TextTemplateArgumentType.gameSoundThemeIds[soundIndex] != 1)) {
+            if (TextTemplateArgumentType.gameSoundThemeIds[soundIndex] > 0 &&
+                TextTemplateArgumentType.gameSoundThemeIds[soundIndex] != 1) {
               soundIndex++;
               continue;
             }
-            if ((soundIndex >= 10) &&
-                (26 >= soundIndex)) {
+            if (soundIndex >= 10 &&
+                26 >= soundIndex) {
               sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
             } else {
               sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
@@ -273,16 +273,16 @@ abstract class SocketConnector {
             maskedGreenFraction = (float)((themeSpriteColors[sortedThemeIndex][colorIndex] & 65454) >> 8) / 255.0f;
             blueFraction = (float)(255 & themeSpriteColors[sortedThemeIndex][colorIndex]) / 255.0f;
             dominantChannelId = 0;
-            if ((maskedRedFraction > maskedGreenFraction) &&
-                (maskedRedFraction > blueFraction)) {
+            if (maskedRedFraction > maskedGreenFraction &&
+                maskedRedFraction > blueFraction) {
               selectedHighChannel = maskedRedFraction;
               if (!(maskedGreenFraction > blueFraction)) {
                 selectedLowChannel = maskedGreenFraction;
               } else {
                 selectedLowChannel = blueFraction;
               }
-            } else if ((maskedGreenFraction > maskedRedFraction) &&
-                (maskedGreenFraction > blueFraction)) {
+            } else if (maskedGreenFraction > maskedRedFraction &&
+                maskedGreenFraction > blueFraction) {
               selectedLowChannel = (!(maskedRedFraction > blueFraction)) ? maskedRedFraction : blueFraction;
               dominantChannelId = 1;
               selectedHighChannel = maskedGreenFraction;

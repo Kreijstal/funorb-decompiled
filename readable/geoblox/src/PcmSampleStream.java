@@ -95,9 +95,9 @@ final class PcmSampleStream extends PcmStream {
           targetLeftVolume = 0;
           targetVolume = 0;
         }
-        if ((this.currentVolume == targetVolume) &&
-            (this.currentLeftVolume == targetLeftVolume) &&
-            (this.currentRightVolume == targetRightVolume)) {
+        if (this.currentVolume == targetVolume &&
+            this.currentLeftVolume == targetLeftVolume &&
+            this.currentRightVolume == targetRightVolume) {
           if (this.targetVolume != -2147483648) {
             this.refreshCurrentVolumes();
             return false;
@@ -125,22 +125,22 @@ final class PcmSampleStream extends PcmStream {
             this.leftVolumeStepPerFrame = 0;
           } else {
             this.leftVolumeStepPerFrame = -1;
-            if (((this.rampFramesRemaining == 0) ||
-                ((this.rampFramesRemaining > this.currentLeftVolume - targetLeftVolume)))) {
+            if (this.rampFramesRemaining == 0 ||
+                this.rampFramesRemaining > this.currentLeftVolume - targetLeftVolume) {
               this.rampFramesRemaining = this.currentLeftVolume - targetLeftVolume;
             }
           }
         } else {
           this.leftVolumeStepPerFrame = 1;
-          if (((this.rampFramesRemaining == 0) ||
-              ((this.rampFramesRemaining > targetLeftVolume - this.currentLeftVolume)))) {
+          if (this.rampFramesRemaining == 0 ||
+              this.rampFramesRemaining > targetLeftVolume - this.currentLeftVolume) {
             this.rampFramesRemaining = targetLeftVolume - this.currentLeftVolume;
           }
         }
         if (this.currentRightVolume < targetRightVolume) {
           this.rightVolumeStepPerFrame = 1;
-          if ((this.rampFramesRemaining != 0) &&
-              (this.rampFramesRemaining <= targetRightVolume - this.currentRightVolume)) {
+          if (this.rampFramesRemaining != 0 &&
+              this.rampFramesRemaining <= targetRightVolume - this.currentRightVolume) {
             return false;
           }
           this.rampFramesRemaining = targetRightVolume - this.currentRightVolume;
@@ -150,8 +150,8 @@ final class PcmSampleStream extends PcmStream {
           this.rightVolumeStepPerFrame = 0;
         } else {
           this.rightVolumeStepPerFrame = -1;
-          if (((this.rampFramesRemaining == 0) ||
-              ((this.rampFramesRemaining > this.currentRightVolume - targetRightVolume)))) {
+          if (this.rampFramesRemaining == 0 ||
+              this.rampFramesRemaining > this.currentRightVolume - targetRightVolume) {
             this.rampFramesRemaining = this.currentRightVolume - targetRightVolume;
           }
         }
@@ -162,8 +162,8 @@ final class PcmSampleStream extends PcmStream {
         int rampDestinationEnd;
         do {
           if (this.rampFramesRemaining <= 0) {
-            if ((this.sampleStepFixed == -256) &&
-                ((this.samplePositionFixed & 255) == 0)) {
+            if (this.sampleStepFixed == -256 &&
+                (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
                 return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, (PcmSampleStream) (this));
               }
@@ -179,8 +179,8 @@ final class PcmSampleStream extends PcmStream {
             rampDestinationEnd = destinationEnd;
           }
           this.rampFramesRemaining = this.rampFramesRemaining + destinationOffset;
-          if ((this.sampleStepFixed == -256) &&
-              ((this.samplePositionFixed & 255) == 0)) {
+          if (this.sampleStepFixed == -256 &&
+              (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
               destinationOffset = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, (PcmSampleStream) (this));
             } else {
@@ -213,8 +213,8 @@ final class PcmSampleStream extends PcmStream {
         int rampDestinationEnd;
         do {
           if (this.rampFramesRemaining <= 0) {
-            if ((this.sampleStepFixed == 256) &&
-                ((this.samplePositionFixed & 255) == 0)) {
+            if (this.sampleStepFixed == 256 &&
+                (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
                 return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, (PcmSampleStream) (this));
               }
@@ -230,8 +230,8 @@ final class PcmSampleStream extends PcmStream {
             rampDestinationEnd = destinationEnd;
           }
           this.rampFramesRemaining = this.rampFramesRemaining + destinationOffset;
-          if ((this.sampleStepFixed == 256) &&
-              ((this.samplePositionFixed & 255) == 0)) {
+          if (this.sampleStepFixed == 256 &&
+              (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
               destinationOffset = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, (PcmSampleStream) (this));
             } else {
@@ -1108,8 +1108,8 @@ final class PcmSampleStream extends PcmStream {
         int loopSpanFixed;
         int nextDestinationOffset;
         int loopsCrossed;
-        if ((this.targetVolume == 0) &&
-            (this.rampFramesRemaining == 0)) {
+        if (this.targetVolume == 0 &&
+            this.rampFramesRemaining == 0) {
           this.skipFrames(frameCount);
           return;
         }

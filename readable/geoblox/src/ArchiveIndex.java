@@ -76,8 +76,8 @@ final class ArchiveIndex {
         try {
           indexBuffer = new ByteArrayBuffer(CanvasResizeController.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
-          if ((5 <= formatVersion) &&
-              (formatVersion <= 7)) {
+          if (5 <= formatVersion &&
+              formatVersion <= 7) {
             if (formatVersion < 6) {
               this.indexRevision = 0;
             } else {

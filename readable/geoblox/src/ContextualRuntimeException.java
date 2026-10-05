@@ -18,8 +18,8 @@ final class ContextualRuntimeException extends RuntimeException {
         int unusedClientControlSnapshot = 0;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((-1 == NodeHashTableIterator.pendingTooltipAnchorX) &&
-              (DequeCursor.pendingTooltipAnchorY == -1)) {
+          if (-1 == NodeHashTableIterator.pendingTooltipAnchorX &&
+              DequeCursor.pendingTooltipAnchorY == -1) {
             NodeHashTableIterator.pendingTooltipAnchorX = PrefixCodeDecoder.pointerXSnapshot;
             DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
@@ -67,16 +67,16 @@ final class ContextualRuntimeException extends RuntimeException {
               InstrumentPatch.tooltipSuppressed = false;
             }
           }
-          if ((!InstrumentPatch.tooltipSuppressed) &&
-              (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) &&
-              (AttachmentPointerState.pointerActivitySnapshot)) {
+          if (!InstrumentPatch.tooltipSuppressed &&
+              AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks &&
+              AttachmentPointerState.pointerActivitySnapshot) {
             ResizableDialog.tooltipAgeTicks = 0;
             ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
             PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
           }
           SettingsCookieSupport.currentTooltipText = tooltipText;
-          if ((InstrumentPatch.tooltipSuppressed) &&
-              (UsernameQuerySupport.tooltipSuppressionResetAge == ResizableDialog.tooltipAgeTicks)) {
+          if (InstrumentPatch.tooltipSuppressed &&
+              UsernameQuerySupport.tooltipSuppressionResetAge == ResizableDialog.tooltipAgeTicks) {
             InstrumentPatch.tooltipSuppressed = false;
             ResizableDialog.tooltipAgeTicks = 0;
           }
@@ -114,7 +114,7 @@ final class ContextualRuntimeException extends RuntimeException {
         if (!readPassword) {
             return (String) null;
         }
-        if ((ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken)) {
+        if (ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken) {
             return ByteStorage.accountCreationPassword;
         }
         return LoginPasswordSupport.currentLoginPassword;

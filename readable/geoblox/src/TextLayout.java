@@ -42,7 +42,7 @@ abstract class TextLayout {
         if (null != this.lines) {
           lines = this.lines;
           lineIndex = 0;
-          while ((lines.length > lineIndex)) {
+          while (lines.length > lineIndex) {
             line = lines[lineIndex];
             if (line == null) {
               lineIndex++;
@@ -88,8 +88,8 @@ abstract class TextLayout {
             characterCode = text.charAt(characterIndex);
             if (characterCode != 60) {
               if (characterCode != 62) {
-                if ((insideMarkup == 0) &&
-                    (32 == characterCode)) {
+                if (insideMarkup == 0 &&
+                    32 == characterCode) {
                   spaceCount++;
                 }
               } else {
@@ -180,8 +180,8 @@ abstract class TextLayout {
         if (methodGuard != -3111) {
           categoryMatchCandidateCount = 49;
         }
-        if ((null != this.lines) &&
-            (this.lines.length > 0)) {
+        if (null != this.lines &&
+            this.lines.length > 0) {
           heightBeforeReturn = this.lines[this.lines.length - 1].bottomY - this.lines[0].topY;
         } else {
           heightBeforeReturn = 0;
@@ -214,9 +214,9 @@ abstract class TextLayout {
         int lineCaretIndex;
         int clientControlFlowSnapshot;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
-        if ((null != this.lines) &&
-            (this.lines.length != 0) &&
-            (this.lines[0].topY <= y)) {
+        if (null != this.lines &&
+            this.lines.length != 0 &&
+            this.lines[0].topY <= y) {
           if (this.lines[-1 + this.lines.length].bottomY < y) {
             return -1;
           }
@@ -227,8 +227,8 @@ abstract class TextLayout {
           guardResidue = -2 % ((15 - methodGuard) / 32);
           for (lineIndex = 0; lineIndex < this.lines.length; lineIndex++) {
             line = this.lines[lineIndex];
-            if ((y >= line.topY) &&
-                (line.bottomY >= y)) {
+            if (y >= line.topY &&
+                line.bottomY >= y) {
               lineCaretIndex = line.findNearestCaretIndex(-79, x);
               if (-1 != lineCaretIndex) {
                 return precedingCharacterCount + lineCaretIndex;

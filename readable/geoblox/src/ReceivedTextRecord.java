@@ -100,15 +100,15 @@ final class ReceivedTextRecord {
         if (this.headerFlagSet) {
           return 2;
         }
-        if ((this.recordKind == 2) &&
-            (this.recordMetadataByte > 0)) {
+        if (this.recordKind == 2 &&
+            this.recordMetadataByte > 0) {
           return 2;
         }
         if (SpriteState.retentionCategoryOneSourceId == this.sourceLongId) {
           return 1;
         }
-        if ((MouseWheelInput.primarySocialListState == 2) &&
-            (CanvasResizeController.hasPrimarySocialEntry(this.sourceDisplayName, (byte) 89))) {
+        if (MouseWheelInput.primarySocialListState == 2 &&
+            CanvasResizeController.hasPrimarySocialEntry(this.sourceDisplayName, (byte) 89)) {
           return 1;
         }
         if (methodGuard > 113) {

@@ -111,15 +111,15 @@ final class PlayfieldRules {
             TextTemplateDefinition.entityMotionSpeed = TextTemplateDefinition.entityMotionSpeed + 0.055555559694767f;
             ContextualRuntimeException.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
-          if (((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0) &&
-              (EmailValidator.availableSpriteVariantCount < 7)) {
+          if ((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0 &&
+              EmailValidator.availableSpriteVariantCount < 7) {
             EmailValidator.availableSpriteVariantCount = EmailValidator.availableSpriteVariantCount + 1;
           }
           if (recursiveAdvanceGuard) {
             PlayfieldRules.advanceDifficulty(true);
           }
-          if (((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0) &&
-              (MessageDialog.availableEntityCategoryCount < 7)) {
+          if ((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0 &&
+              MessageDialog.availableEntityCategoryCount < 7) {
             MessageDialog.availableEntityCategoryCount = MessageDialog.availableEntityCategoryCount + 1;
           }
           if (0 != (ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {

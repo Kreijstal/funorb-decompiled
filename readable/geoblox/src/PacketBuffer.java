@@ -96,8 +96,8 @@ final class PacketBuffer extends ByteArrayBuffer {
               continue;
             }
             if (!SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset]) {
-              if ((10 <= soundIndexThenFlagReset) &&
-                  (26 >= soundIndexThenFlagReset)) {
+              if (10 <= soundIndexThenFlagReset &&
+                  26 >= soundIndexThenFlagReset) {
                 sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);
               } else {
                 sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);

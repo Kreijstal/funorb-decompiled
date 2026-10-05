@@ -121,8 +121,8 @@ final class MeshDepthSupport {
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
           ResizableDialog.clearMeshDepthBucketCounts(0);
-          if ((mesh.facePriorityCount > 0) &&
-              (null != mesh.facePriorities)) {
+          if (mesh.facePriorityCount > 0 &&
+              null != mesh.facePriorities) {
             DelayedIncomingPacket.clearMeshPriorityCounts((byte) -35);
           }
           GameApplet.queuedMeshFaceCount = 0;
@@ -152,11 +152,11 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if ((-2147483648 == projectedAXOrVertexADepth)) {
+                if (-2147483648 == projectedAXOrVertexADepth) {
                   break faceVisibilityAndDepthQueue;
                 }
                 projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                if ((-2147483648 == projectedAYOrVertexBDepth)) {
+                if (-2147483648 == projectedAYOrVertexBDepth) {
                   break faceVisibilityAndDepthQueue;
                 }
                 edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
@@ -184,8 +184,8 @@ final class MeshDepthSupport {
                     faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
                     InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                     GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
-                    if ((0 < mesh.facePriorityCount) &&
-                        (null != mesh.facePriorities)) {
+                    if (0 < mesh.facePriorityCount &&
+                        null != mesh.facePriorities) {
                       facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
                       PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
                     }
@@ -199,8 +199,8 @@ final class MeshDepthSupport {
             }
             break;
           }
-          if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-              (null != mesh.facePriorities)) {
+          if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
+              null != mesh.facePriorities) {
             faceIndexOrPriorityPrefix = 0;
             vertexAOrPriorityIndex = 0;
             while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
@@ -269,8 +269,8 @@ final class MeshDepthSupport {
           minimumDepthTimesThree = minimumVisibleDepth * 3;
           depthBucketShift = depthRangeBitLength - 10;
           ResizableDialog.clearMeshDepthBucketCounts(0);
-          if ((mesh.facePriorityCount > 0) &&
-              (null != mesh.facePriorities)) {
+          if (mesh.facePriorityCount > 0 &&
+              null != mesh.facePriorities) {
             DelayedIncomingPacket.clearMeshPriorityCounts((byte) -35);
           }
           GameApplet.queuedMeshFaceCount = 0;
@@ -300,11 +300,11 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if ((-2147483648 == projectedAXOrVertexADepth)) {
+                if (-2147483648 == projectedAXOrVertexADepth) {
                   break faceVisibilityAndDepthQueue;
                 }
                 projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                if ((-2147483648 == projectedAYOrVertexBDepth)) {
+                if (-2147483648 == projectedAYOrVertexBDepth) {
                   break faceVisibilityAndDepthQueue;
                 }
                 edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
@@ -332,8 +332,8 @@ final class MeshDepthSupport {
                     faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
                     InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                     GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
-                    if ((0 < mesh.facePriorityCount) &&
-                        (null != mesh.facePriorities)) {
+                    if (0 < mesh.facePriorityCount &&
+                        null != mesh.facePriorities) {
                       facePriority = mesh.facePriorities[faceIndexOrPriorityPrefix];
                       PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
                     }
@@ -347,8 +347,8 @@ final class MeshDepthSupport {
             }
             break;
           }
-          if ((cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount) &&
-              (null != mesh.facePriorities)) {
+          if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
+              null != mesh.facePriorities) {
             faceIndexOrPriorityPrefix = 0;
             vertexAOrPriorityIndex = 0;
             while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {

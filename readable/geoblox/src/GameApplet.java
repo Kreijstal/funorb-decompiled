@@ -26,8 +26,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if ((null != VisualPropertyNode.loaderApplet) &&
-              (this != VisualPropertyNode.loaderApplet)) {
+          if (null != VisualPropertyNode.loaderApplet &&
+              this != VisualPropertyNode.loaderApplet) {
             stackIn_10_0 = VisualPropertyNode.loaderApplet.getDocumentBase();
             return stackIn_10_0;
           }
@@ -284,22 +284,22 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       vendorCompatibilityCheck: {
                         if (PlatformTaskDispatcher.javaVendor != null) {
                           lowercaseVendorOrFocusRootOrFailure = PlatformTaskDispatcher.javaVendor.toLowerCase();
-                          if ((-1 == ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("sun")) &&
-                              (((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("apple") == -1)) {
+                          if (-1 == ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("sun") &&
+                              ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("apple") == -1) {
                             break vendorCompatibilityCheck;
                           }
                           javaVersionText = PlatformTaskDispatcher.javaVersion;
-                          if (((javaVersionText.equals("1.1")) ||
-                              (javaVersionText.startsWith("1.1.")) ||
-                              (javaVersionText.equals("1.2")) ||
-                              (javaVersionText.startsWith("1.2.")) ||
-                              (javaVersionText.equals("1.3")) ||
-                              (javaVersionText.startsWith("1.3.")) ||
-                              (javaVersionText.equals("1.4")) ||
-                              (javaVersionText.startsWith("1.4.")) ||
-                              (javaVersionText.equals("1.5")) ||
-                              (javaVersionText.startsWith("1.5.")) ||
-                              (javaVersionText.equals("1.6.0")))) {
+                          if (javaVersionText.equals("1.1") ||
+                              javaVersionText.startsWith("1.1.") ||
+                              javaVersionText.equals("1.2") ||
+                              javaVersionText.startsWith("1.2.") ||
+                              javaVersionText.equals("1.3") ||
+                              javaVersionText.startsWith("1.3.") ||
+                              javaVersionText.equals("1.4") ||
+                              javaVersionText.startsWith("1.4.") ||
+                              javaVersionText.equals("1.5") ||
+                              javaVersionText.startsWith("1.5.") ||
+                              javaVersionText.equals("1.6.0")) {
                             this.showGameError((byte) 79, "wrongjava");
                             if (clientControlSnapshot == 0) {
                               break appletExecutionBoundary;
@@ -349,8 +349,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             if (clientControlSnapshot != 0) {
                               break majorVersionComparison;
                             }
-                            if ((majorVersionComparisonLeft >= majorVersionComparisonRight) &&
-                                (updateSuffixIndexOrVersionDigitOrTickIndex <= 57)) {
+                            if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
+                                updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
                               parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
                               javaVersionDigitIndex++;
                               continue;
@@ -442,8 +442,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if ((VisualPropertyNode.loaderApplet != null) &&
-              (this != VisualPropertyNode.loaderApplet)) {
+          if (VisualPropertyNode.loaderApplet != null &&
+              this != VisualPropertyNode.loaderApplet) {
             stackIn_8_0 = VisualPropertyNode.loaderApplet.getAppletContext();
             return stackIn_8_0;
           }
@@ -529,8 +529,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == PrefixCodeDecoder.activeGameApplet) &&
-              (!MidiNoteMixer.appletShutdownStarted)) {
+          if (this == PrefixCodeDecoder.activeGameApplet &&
+              !MidiNoteMixer.appletShutdownStarted) {
             MenuScreen.appletStopDeadlineMillis = 0L;
             return;
           }
@@ -589,8 +589,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           qualifiedMethodName = qualifiedMethodName.substring(qualifiedMethodName.lastIndexOf(' ') + 1);
           qualifiedMethodName = qualifiedMethodName.substring(1 + qualifiedMethodName.lastIndexOf('\t'));
           compactTrace = compactTrace + qualifiedMethodName;
-          if ((openParenthesisIndex != -1) &&
-              (-1 != closeParenthesisIndex)) {
+          if (openParenthesisIndex != -1 &&
+              -1 != closeParenthesisIndex) {
             javaSourceSuffixIndex = stackFrameLine.indexOf(".java:", openParenthesisIndex);
             if (javaSourceSuffixIndex >= 0) {
               compactTrace = compactTrace + stackFrameLine.substring(javaSourceSuffixIndex + 5, closeParenthesisIndex);
@@ -616,8 +616,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (null != SharedBufferPools.fullscreenFrame) {
           return null;
         }
-        if ((null != VisualPropertyNode.loaderApplet) &&
-            (VisualPropertyNode.loaderApplet != this)) {
+        if (null != VisualPropertyNode.loaderApplet &&
+            VisualPropertyNode.loaderApplet != this) {
           return VisualPropertyNode.loaderApplet.getCodeBase();
         }
         return super.getCodeBase();
@@ -662,8 +662,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           previousUpdateTimeMillis = RasterTargetSnapshot.updateTimeHistoryMillis[FullscreenErrorDialog.nextUpdateTimeHistoryIndex];
           RasterTargetSnapshot.updateTimeHistoryMillis[FullscreenErrorDialog.nextUpdateTimeHistoryIndex] = updateTimeMillis;
           FullscreenErrorDialog.nextUpdateTimeHistoryIndex = 31 & 1 + FullscreenErrorDialog.nextUpdateTimeHistoryIndex;
-          if ((previousUpdateTimeMillis != 0L) &&
-              (updateTimeMillis > previousUpdateTimeMillis)) {
+          if (previousUpdateTimeMillis != 0L &&
+              updateTimeMillis > previousUpdateTimeMillis) {
           }
           appletMonitor = this;
           synchronized (appletMonitor) {
@@ -690,11 +690,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          if ((PrefixCodeDecoder.activeGameApplet == this) &&
-              (!MidiNoteMixer.appletShutdownStarted)) {
+          if (PrefixCodeDecoder.activeGameApplet == this &&
+              !MidiNoteMixer.appletShutdownStarted) {
             UsernameQueryState.canvasRedrawRequested = true;
-            if ((ResizableDialog.legacyJavaCanvasRefreshRequired) &&
-                (-Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L)) {
+            if (ResizableDialog.legacyJavaCanvasRefreshRequired &&
+                -Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (~var2.width > ~DialWidget.initialCanvasWidth) {
@@ -781,7 +781,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 while (true) {
                   if (appletThreadTask.status == 0) {
                     ByteTextDecodingSupport.sleepMillis(0, 10L);
-                    if ((clientControlSnapshot == 0)) {
+                    if (clientControlSnapshot == 0) {
                       continue;
                     }
                   }
@@ -827,8 +827,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if ((VisualPropertyNode.loaderApplet != null) &&
-              (this != VisualPropertyNode.loaderApplet)) {
+          if (VisualPropertyNode.loaderApplet != null &&
+              this != VisualPropertyNode.loaderApplet) {
             stackIn_10_0 = VisualPropertyNode.loaderApplet.getParameter(param0);
             return stackIn_10_0;
           }
@@ -864,8 +864,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           previousRenderTimeMillis = ArchiveRequest.renderTimeHistoryMillis[GzipInflater.nextRenderTimeHistoryIndex];
           ArchiveRequest.renderTimeHistoryMillis[GzipInflater.nextRenderTimeHistoryIndex] = renderTimeMillis;
           GzipInflater.nextRenderTimeHistoryIndex = 31 & GzipInflater.nextRenderTimeHistoryIndex + 1;
-          if ((0L != previousRenderTimeMillis) &&
-              (previousRenderTimeMillis < renderTimeMillis)) {
+          if (0L != previousRenderTimeMillis &&
+              previousRenderTimeMillis < renderTimeMillis) {
             elapsedHistoryMillis = (int)(-previousRenderTimeMillis + renderTimeMillis);
             MatchScoringSupport.frameLoopRateEstimate = (32000 + (elapsedHistoryMillis >> 1)) / elapsedHistoryMillis;
           }
@@ -877,8 +877,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               UsernameQueryState.canvasRedrawRequested = true;
               MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
               MessageDialog.gameCanvas.setVisible(true);
-              if (((SharedBufferPools.fullscreenFrame == null) ||
-                  (FullscreenFocusCanvas.standaloneFrameReference != null))) {
+              if (SharedBufferPools.fullscreenFrame == null ||
+                  FullscreenFocusCanvas.standaloneFrameReference != null) {
                 MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
                 if (Geoblox.clientControlFlowFlag == 0) {
                   break canvasRefreshLocation;
@@ -901,8 +901,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if ((this == PrefixCodeDecoder.activeGameApplet) &&
-              (!MidiNoteMixer.appletShutdownStarted)) {
+          if (this == PrefixCodeDecoder.activeGameApplet &&
+              !MidiNoteMixer.appletShutdownStarted) {
             MenuScreen.appletStopDeadlineMillis = 4000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
             return;
           }

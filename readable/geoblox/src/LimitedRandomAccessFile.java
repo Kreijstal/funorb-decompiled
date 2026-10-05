@@ -92,8 +92,8 @@ final class LimitedRandomAccessFile {
         int characterCodeThenSignedDigit = 0;
         int nextAccumulatedValue = 0;
         try {
-          if ((2 <= radix) &&
-              (radix <= 36)) {
+          if (2 <= radix &&
+              radix <= 36) {
             negativeNumberFlag = 0;
             hasDigitFlag = 0;
             accumulatedValue = 0;
@@ -109,19 +109,19 @@ final class LimitedRandomAccessFile {
                     negativeNumberFlag = 1;
                     break signedNumberCharacter;
                   }
-                  if ((characterCodeThenSignedDigit == 43) &&
-                      (allowLeadingPlus)) {
+                  if (characterCodeThenSignedDigit == 43 &&
+                      allowLeadingPlus) {
                     break signedNumberCharacter;
                   }
                 }
-                if ((characterCodeThenSignedDigit >= 48) &&
-                    (characterCodeThenSignedDigit <= 57)) {
+                if (characterCodeThenSignedDigit >= 48 &&
+                    characterCodeThenSignedDigit <= 57) {
                   characterCodeThenSignedDigit -= 48;
-                } else if ((characterCodeThenSignedDigit >= 65) &&
-                    (characterCodeThenSignedDigit <= 90)) {
+                } else if (characterCodeThenSignedDigit >= 65 &&
+                    characterCodeThenSignedDigit <= 90) {
                   characterCodeThenSignedDigit -= 55;
-                } else if ((characterCodeThenSignedDigit >= 97) &&
-                    (characterCodeThenSignedDigit <= 122)) {
+                } else if (characterCodeThenSignedDigit >= 97 &&
+                    characterCodeThenSignedDigit <= 122) {
                   characterCodeThenSignedDigit -= 87;
                 } else {
                   return false;
@@ -177,8 +177,8 @@ final class LimitedRandomAccessFile {
             java.net.MalformedURLException malformedUrlFailureForReport = null;
             RuntimeException navigationFailureForContext = null;
             try {
-              if ((PlatformTaskDispatcher.osNameLowerCase.startsWith("win")) &&
-                  (GameplaySession.tryOpenUrlWithWindowsShell(urlText, false))) {
+              if (PlatformTaskDispatcher.osNameLowerCase.startsWith("win") &&
+                  GameplaySession.tryOpenUrlWithWindowsShell(urlText, false)) {
                 return;
               }
               try {

@@ -100,7 +100,7 @@ final class NanoFrameTimer extends FrameTimer {
               selfValueWriteIndex = 0;
               uniqueValueWriteIndex = 0;
               recordCount = packet.readUnsignedByte((byte) 34);
-              if ((0 < recordCount)) {
+              if (0 < recordCount) {
                 for (recordIndex = 0; recordIndex < recordCount; recordIndex++) {
                   nameTableIndex = packet.readUnsignedByte((byte) 34);
                   primaryName = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].primaryName;
@@ -117,8 +117,8 @@ final class NanoFrameTimer extends FrameTimer {
                     }
                     allViewCount++;
                   }
-                  if ((primaryName != null) &&
-                      (WhirlpoolHash.matchesNormalizedSessionName(primaryName, (byte) 12))) {
+                  if (primaryName != null &&
+                      WhirlpoolHash.matchesNormalizedSessionName(primaryName, (byte) 12)) {
                     namesByView[1][selfViewCount] = SecondaryDeque.receivedSessionName;
                     alternateNamesByView[1][selfViewCount] = null;
                     recordLongsByView[1][selfViewCount] = recordLongValue;
@@ -130,8 +130,8 @@ final class NanoFrameTimer extends FrameTimer {
                       valuesByView[1][selfValueIndexBeforeIncrement] = packet.readIntBE((byte) -122);
                     }
                   }
-                  if ((uniqueViewCount < entryLimit) &&
-                      (!RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView)) {
+                  if (uniqueViewCount < entryLimit &&
+                      !RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView) {
                     RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView = true;
                     namesByView[2][uniqueViewCount] = primaryName;
                     alternateNamesByView[2][uniqueViewCount] = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].alternateName;
@@ -192,10 +192,10 @@ final class NanoFrameTimer extends FrameTimer {
             IOException writeFailure = null;
             Throwable caughtWriteFailure = null;
             if (null != SpriteCheckboxRenderer.sessionSocket) {
-              if ((((keepaliveOpcode < 0)) ||
-                  (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage))) {
-                if ((0 == CacheReference.outgoingSessionBuffer.position) &&
-                    (~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis))) {
+              if (keepaliveOpcode < 0 ||
+                  PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
+                if (0 == CacheReference.outgoingSessionBuffer.position &&
+                    ~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
                   CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
                 }
                 if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
@@ -247,8 +247,8 @@ final class NanoFrameTimer extends FrameTimer {
         do {
           tickCount++;
           this.scheduledTickNanos = this.scheduledTickNanos + tickPeriodNanos;
-        } while ((tickCount < 10) &&
-              (~this.scheduledTickNanos > ~this.accumulatedTimeNanos));
+        } while (tickCount < 10 &&
+              ~this.scheduledTickNanos > ~this.accumulatedTimeNanos);
         if (this.accumulatedTimeNanos > this.scheduledTickNanos) {
           this.scheduledTickNanos = this.accumulatedTimeNanos;
         }
@@ -261,8 +261,8 @@ final class NanoFrameTimer extends FrameTimer {
         long sampleTimeNanos = System.nanoTime();
         long elapsedNanos = -this.lastSampleTimeNanos + sampleTimeNanos;
         this.lastSampleTimeNanos = sampleTimeNanos;
-        if ((-5000000000L < elapsedNanos) &&
-            ((5000000000L > elapsedNanos))) {
+        if (-5000000000L < elapsedNanos &&
+            5000000000L > elapsedNanos) {
             this.intervalSamplesNanos[this.nextSampleIndex] = elapsedNanos;
             if (this.intervalSampleCount < 1) {
                 this.intervalSampleCount = this.intervalSampleCount + 1;

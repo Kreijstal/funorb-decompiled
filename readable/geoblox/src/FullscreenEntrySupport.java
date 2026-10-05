@@ -40,19 +40,19 @@ final class FullscreenEntrySupport {
                 continue;
               }
               if (displayModes[modeIndex].height == height) {
-                if ((refreshRate != 0) &&
-                    (refreshRate != displayModes[modeIndex].refreshRate)) {
+                if (refreshRate != 0 &&
+                    refreshRate != displayModes[modeIndex].refreshRate) {
                   continue;
                 }
-                if ((matchingModeFoundInt != 0) &&
-                    (bitDepth >= displayModes[modeIndex].bitDepth)) {
+                if (matchingModeFoundInt != 0 &&
+                    bitDepth >= displayModes[modeIndex].bitDepth) {
                   continue;
                 }
                 matchingModeFoundInt = 1;
                 bitDepth = displayModes[modeIndex].bitDepth;
               }
             }
-            if ((matchingModeFoundInt == 0)) {
+            if (matchingModeFoundInt == 0) {
               return null;
             }
           }
@@ -98,8 +98,8 @@ final class FullscreenEntrySupport {
         RuntimeException quotaUpdateFailureForContext = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if ((ArchiveNetworkClient.difficultyStep != 0) &&
-              (ArchiveNetworkClient.difficultyStep < 21)) {
+          if (ArchiveNetworkClient.difficultyStep != 0 &&
+              ArchiveNetworkClient.difficultyStep < 21) {
             MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + 10;
           }
           MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + additionalReleases;

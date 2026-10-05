@@ -90,8 +90,8 @@ final class EntitySpawnSupport {
           unusedMotionFloat = 0.0f;
           boardYForCategorySelection = (float)pointerY;
           inwardVelocityYForCategorySelection = (float)(-pointerY + 240);
-          if ((spriteKindId != 2) &&
-              (1 != spriteKindId)) {
+          if (spriteKindId != 2 &&
+              1 != spriteKindId) {
             initializationCategory = -1;
           } else {
             initializationCategory = categoryId;

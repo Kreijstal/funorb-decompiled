@@ -35,8 +35,8 @@ final class GzipInflater {
             String destinationDescription = null;
             Throwable caughtInflateFailure = null;
             try {
-              if ((buffer.bytes[buffer.position] == 31) &&
-                  (-117 == buffer.bytes[1 + buffer.position])) {
+              if (buffer.bytes[buffer.position] == 31 &&
+                  -117 == buffer.bytes[1 + buffer.position]) {
                 if (this.inflater == null) {
                   this.inflater = new java.util.zip.Inflater(true);
                 }

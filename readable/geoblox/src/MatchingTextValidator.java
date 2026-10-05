@@ -174,7 +174,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static void openDisplayNamePanel(byte methodGuard) {
-        if ((Geoblox.activeMessageDialog != null)) {
+        if (Geoblox.activeMessageDialog != null) {
             Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         MouseWheelInput.activeDisplayNamePanel = new DisplayNamePanel();
@@ -199,8 +199,8 @@ final class MatchingTextValidator extends TextInputValidator {
           }
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -106);
-            if ((referenceValidation != null) &&
-                (referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState)) {
+            if (referenceValidation != null &&
+                referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState) {
               stackIn_9_0 = WidgetSkinState.invalidInputValidationState;
               return stackIn_9_0;
             }
@@ -242,8 +242,8 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -118);
             if (referenceValidation != null) {
-              if ((referenceValidation.getDebouncedValidationState((byte) -105) == SocketArchiveNetworkClient.validInputValidationState) &&
-                  (!candidateText.equals(this.referenceInput.widgetText))) {
+              if (referenceValidation.getDebouncedValidationState((byte) -105) == SocketArchiveNetworkClient.validInputValidationState &&
+                  !candidateText.equals(this.referenceInput.widgetText)) {
                 stackIn_8_0 = GrowableIntList.createMismatchAlertText;
                 return stackIn_8_0;
               }
@@ -271,7 +271,7 @@ final class MatchingTextValidator extends TextInputValidator {
     }
 
     final static UsernameAvailabilityQuery pollAccountCreationUsernameResult(byte methodGuard) {
-        if ((DiskCacheWorker.idleClientFlowToken == ClientFlowState.accountCreationFlowState)) {
+        if (DiskCacheWorker.idleClientFlowToken == ClientFlowState.accountCreationFlowState) {
             throw new IllegalStateException();
         }
         int guardRemainder = 28 % ((-79 - methodGuard) / 44);

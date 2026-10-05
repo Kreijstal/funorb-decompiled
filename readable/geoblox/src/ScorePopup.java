@@ -17,13 +17,13 @@ final class ScorePopup extends IntrusiveNode {
             return;
         }
         if (CacheReference.gameMusicOutput == null) {
-            if ((null != ClientScreenExitSupport.gameSoundOutput)) {
+            if (null != ClientScreenExitSupport.gameSoundOutput) {
                 ClientScreenExitSupport.gameSoundOutput.dispose();
             }
             return;
         }
         CacheReference.gameMusicOutput.dispose();
-        if ((null != ClientScreenExitSupport.gameSoundOutput)) {
+        if (null != ClientScreenExitSupport.gameSoundOutput) {
             ClientScreenExitSupport.gameSoundOutput.dispose();
         }
     }

@@ -476,16 +476,16 @@ abstract class SpriteState extends DualLinkNode {
         int controlFlagSnapshot = 0;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((bottomY >= 0) &&
-              (~TriangleRasterState.clipHeight < ~topY)) {
-            if ((topX < 0) &&
-                (middleX < 0) &&
-                (bottomX < 0)) {
+          if (bottomY >= 0 &&
+              ~TriangleRasterState.clipHeight < ~topY) {
+            if (topX < 0 &&
+                middleX < 0 &&
+                bottomX < 0) {
               return;
             }
-            if ((~TriangleRasterState.clipWidth >= ~topX) &&
-                (~TriangleRasterState.clipWidth >= ~middleX) &&
-                (bottomX >= TriangleRasterState.clipWidth)) {
+            if (~TriangleRasterState.clipWidth >= ~topX &&
+                ~TriangleRasterState.clipWidth >= ~middleX &&
+                bottomX >= TriangleRasterState.clipWidth) {
               return;
             }
             if (guard != -1275583984) {
@@ -643,7 +643,7 @@ abstract class SpriteState extends DualLinkNode {
                     }
                   }
                   edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
-                  while ((~middleY < ~topY)) {
+                  while (~middleY < ~topY) {
                     spanStartOrWidthOrBottomXQ16 = leftXQ16 >> 16;
                     invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
                     invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;
@@ -665,8 +665,8 @@ abstract class SpriteState extends DualLinkNode {
                           MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX, spanRedStepOrGreenStepOrBottomGreenQ16, 33423689, -(spanRedStepOrGreenStepOrBottomGreenQ16 * spanStartOrWidthOrBottomXQ16) + leftRedQ16, spanBlueStepQ16, leftGreenQ16 - spanStartOrWidthOrBottomXQ16 * spanGreenStepOrBlueStepOrBottomBlueQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, spanWidthOrRedStepOrBottomRedQ16 + spanStartOrWidthOrBottomXQ16, -(spanBlueStepQ16 * spanStartOrWidthOrBottomXQ16) + leftBlueQ16, destinationPixels);
                         }
                       } else {
-                        if ((spanStartOrWidthOrBottomXQ16 >= 0) &&
-                            (~spanStartOrWidthOrBottomXQ16 > ~TriangleRasterState.clipWidth)) {
+                        if (spanStartOrWidthOrBottomXQ16 >= 0 &&
+                            ~spanStartOrWidthOrBottomXQ16 > ~TriangleRasterState.clipWidth) {
                           MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanWidthOrRedStepOrBottomRedQ16, leftBlueQ16, destinationPixels);
                         }
                       }
@@ -765,8 +765,8 @@ abstract class SpriteState extends DualLinkNode {
                     MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX + edgeSegmentRowsThenRowBase, spanWidthOrRedStepOrBottomRedQ16, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                   }
                 } else {
-                  if ((edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0) &&
-                      (TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX)) {
+                  if (edgeSwapOrRowBaseOrLowerRowsThenLeftX >= 0 &&
+                      TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftX) {
                     MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBase + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanStartOrWidthOrBottomXQ16, leftBlueQ16, destinationPixels);
                   }
                 }
@@ -835,8 +835,8 @@ abstract class SpriteState extends DualLinkNode {
                           if (clientControlSnapshot != 0) {
                             break seedByteComparisonOperands;
                           }
-                          if (((seedScanComparisonLeft == seedScanComparisonRight) ||
-                              (clientControlSnapshot != 0))) {
+                          if (seedScanComparisonLeft == seedScanComparisonRight ||
+                              clientControlSnapshot != 0) {
                             seedByteIndex++;
                             continue;
                           }
@@ -867,7 +867,7 @@ abstract class SpriteState extends DualLinkNode {
                       seedReadContinuation = 0;
                     }
                   }
-                  if ((seedReadContinuation != 0)) {
+                  if (seedReadContinuation != 0) {
                     break seedPayloadWrite;
                   }
                 }

@@ -95,14 +95,14 @@ class ByteArrayBuffer extends IntrusiveNode {
             accumulatedChunk = accumulatedChunk * 38L;
             if (textLength > characterIndex) {
               characterCode = text.charAt(characterIndex);
-              if ((characterCode >= 65) &&
-                  (90 >= characterCode)) {
+              if (characterCode >= 65 &&
+                  90 >= characterCode) {
                 accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
-              } else if ((characterCode >= 97) &&
-                  (characterCode <= 122)) {
+              } else if (characterCode >= 97 &&
+                  characterCode <= 122) {
                 accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
-              } else if ((characterCode >= 48) &&
-                  (characterCode <= 57)) {
+              } else if (characterCode >= 48 &&
+                  characterCode <= 57) {
                 accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
               } else {
                 accumulatedChunk = accumulatedChunk + 1L;
@@ -366,10 +366,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
         encodedTextCharacter: {
-          if ((((0 >= character)) ||
-                ((character >= 128))) &&
-              (((character < 160)) ||
-                ((255 < character)))) {
+          if ((0 >= character ||
+                character >= 128) &&
+              (character < 160 ||
+                255 < character)) {
             if (character == 8364) {
               encodedByte = -128;
               break encodedTextCharacter;
@@ -687,10 +687,10 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     final void writeVariableIntBE(byte methodGuard, int value) {
-        if (((value & -128) != 0)) {
+        if ((value & -128) != 0) {
             if ((-16384 & value) != 0) {
                 if (0 != (value & -2097152)) {
-                    if (((-268435456 & value) != 0)) {
+                    if ((-268435456 & value) != 0) {
                         this.writeByte((byte) 126, value >>> 28 | 128);
                     }
                     this.writeByte((byte) -96, 128 | value >>> 21);
@@ -780,7 +780,7 @@ class ByteArrayBuffer extends IntrusiveNode {
             return;
         }
         try {
-            if ((zeroCharacterIndex >= 0)) {
+            if (zeroCharacterIndex >= 0) {
                 throw new IllegalArgumentException("");
             }
             prefixByteIndex = this.position;
@@ -813,8 +813,8 @@ class ByteArrayBuffer extends IntrusiveNode {
             this.writeByte((byte) 125, 64 + value);
             return;
         }
-        if ((value < 16384) &&
-            ((value >= -16384))) {
+        if (value < 16384 &&
+            value >= -16384) {
             this.writeShortBE(49152 + value, 28695);
             return;
         }

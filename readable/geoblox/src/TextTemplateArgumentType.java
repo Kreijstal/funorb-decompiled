@@ -72,8 +72,8 @@ final class TextTemplateArgumentType {
           boundsCenterZOrLightDirectionXQ8 = 0;
           cameraDepthBasisXQ14OrLightDirectionYQ8 = DelegatingCanvas.sineQ16((byte) 81, boundsCenterYOrLightAngle) >> 8;
           cameraDepthBasisYQ14OrLightDirectionZQ8 = IntrusiveNodeHashTable.cosineQ16(boundsCenterYOrLightAngle, 2048) >> 8;
-          if ((PrefixCodeDecoder.pointerXSnapshot != -1) &&
-              (PcmResampler.pointerYSnapshot != -1)) {
+          if (PrefixCodeDecoder.pointerXSnapshot != -1 &&
+              PcmResampler.pointerYSnapshot != -1) {
             boundsCenterZOrLightDirectionXQ8 = -320 + PrefixCodeDecoder.pointerXSnapshot;
             cameraDepthBasisYQ14OrLightDirectionZQ8 = -128;
             cameraDepthBasisXQ14OrLightDirectionYQ8 = -PcmResampler.pointerYSnapshot + 240;
@@ -132,8 +132,8 @@ final class TextTemplateArgumentType {
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!IntrusiveDeque.hasVisibleFullscreenDialog((byte) 124)) {
-            if ((InstrumentPatch.activeFullscreenCanvas != null) &&
-                (InstrumentPatch.activeFullscreenCanvas.focusLost)) {
+            if (InstrumentPatch.activeFullscreenCanvas != null &&
+                InstrumentPatch.activeFullscreenCanvas.focusLost) {
               FullscreenSupport.exitActiveFullscreen((byte) -87);
               ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.fullscreenFocusLostFailureReason));
             }

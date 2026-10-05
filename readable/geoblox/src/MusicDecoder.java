@@ -88,8 +88,8 @@ final class MusicDecoder extends IntrusiveNode {
         int unsignedPcmSample;
         float[] decodedSamples;
         byte[] completedPcm;
-        if ((sampleBudget != null) &&
-            (sampleBudget[0] <= 0)) {
+        if (sampleBudget != null &&
+            sampleBudget[0] <= 0) {
           return null;
         }
         if (this.pcmBytes == null) {
@@ -100,8 +100,8 @@ final class MusicDecoder extends IntrusiveNode {
           this.packetCursor = 0;
         }
         while (this.packetCursor < this.packets.length) {
-          if ((sampleBudget != null) &&
-              (sampleBudget[0] <= 0)) {
+          if (sampleBudget != null &&
+              sampleBudget[0] <= 0) {
             return null;
           }
           decodedSamples = this.decodePacket(this.packetCursor);
@@ -478,8 +478,8 @@ final class MusicDecoder extends IntrusiveNode {
           nextWindowLongValue = nextWindowFlagBeforeStore;
         }
         halfBlockSizeForWindow = blockSize >> 1;
-        if ((longBlockValue != 0) &&
-            (previousWindowLongValue == 0)) {
+        if (longBlockValue != 0 &&
+            previousWindowLongValue == 0) {
           leftWindowStart = (blockSize >> 2) - (shortBlockSize >> 2);
           leftWindowEnd = (blockSize >> 2) + (shortBlockSize >> 2);
           leftWindowLength = shortBlockSize >> 1;
@@ -488,8 +488,8 @@ final class MusicDecoder extends IntrusiveNode {
           leftWindowEnd = halfBlockSizeForWindow;
           leftWindowLength = blockSize >> 1;
         }
-        if ((longBlockValue != 0) &&
-            (nextWindowLongValue == 0)) {
+        if (longBlockValue != 0 &&
+            nextWindowLongValue == 0) {
           rightWindowStart = blockSize - (blockSize >> 2) - (shortBlockSize >> 2);
           rightWindowEnd = blockSize - (blockSize >> 2) + (shortBlockSize >> 2);
           rightWindowLength = shortBlockSize >> 1;

@@ -20,8 +20,8 @@ final class TextValidationSupport {
             return true;
           }
           reversedNeedle = CachedArchiveSource.reverseTextCodeUnits(32, needle);
-          if ((text.indexOf(needle) == -1) &&
-              (-1 == text.indexOf(reversedNeedle))) {
+          if (text.indexOf(needle) == -1 &&
+              -1 == text.indexOf(reversedNeedle)) {
             edgeMatchBeforeReturn = (text.startsWith(needle)) || (text.startsWith(reversedNeedle)) || (text.endsWith(needle)) || (text.endsWith(reversedNeedle));
             return edgeMatchBeforeReturn;
           }
@@ -66,8 +66,8 @@ final class TextValidationSupport {
         try {
           for (characterIndex = 0; characterIndex < text.length(); characterIndex++) {
             characterCode = text.charAt(characterIndex);
-            if ((!ArchiveCatalog.isAsciiLetter((char) characterCode, 97)) &&
-                (!DualLinkNode.isAsciiDigit(-58, (char) characterCode))) {
+            if (!ArchiveCatalog.isAsciiLetter((char) characterCode, 97) &&
+                !DualLinkNode.isAsciiDigit(-58, (char) characterCode)) {
               return true;
             }
           }

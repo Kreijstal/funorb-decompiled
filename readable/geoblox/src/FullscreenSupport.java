@@ -15,7 +15,7 @@ final class FullscreenSupport {
         InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (methodGuard <= -14) {
             InstrumentPatch.activeFullscreenCanvas = null;
-            if ((null != FontLoadingSupport.canvasResizeController)) {
+            if (null != FontLoadingSupport.canvasResizeController) {
                 FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
             }
             MessageDialog.gameCanvas.requestFocus();
@@ -24,7 +24,7 @@ final class FullscreenSupport {
         PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
         FullscreenSupport.exitFullscreenAndDisposeFrame((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
         InstrumentPatch.activeFullscreenCanvas = null;
-        if ((null != FontLoadingSupport.canvasResizeController)) {
+        if (null != FontLoadingSupport.canvasResizeController) {
             FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
         }
         MessageDialog.gameCanvas.requestFocus();
@@ -112,8 +112,8 @@ final class FullscreenSupport {
           for (characterIndex = 0; labelLength > characterIndex; characterIndex++) {
             characterCode = domainLabel.charAt(characterIndex);
             if (45 == characterCode) {
-              if (((characterIndex == 0) ||
-                  (characterIndex == -1 + labelLength))) {
+              if (characterIndex == 0 ||
+                  characterIndex == -1 + labelLength) {
                 edgeHyphenFailure = ArchiveLoadStep.invalidTextFormatFailure;
                 return edgeHyphenFailure;
               }

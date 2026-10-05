@@ -51,16 +51,16 @@ abstract class ArchiveSource {
           for (keyIndexThenUnusedZeroSnapshot = 0; keyIndexThenUnusedZeroSnapshot < 4; keyIndexThenUnusedZeroSnapshot++) {
             workingXteaKey[keyIndexThenUnusedZeroSnapshot] = UsernameQuerySupport.payloadKeyRandom.nextInt();
           }
-          if (((null == MessageDialogSupport.encryptedPayloadScratchBuffer) ||
-                (!(MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= paddedPayloadLength)))) {
+          if (null == MessageDialogSupport.encryptedPayloadScratchBuffer ||
+                !(MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= paddedPayloadLength)) {
             MessageDialogSupport.encryptedPayloadScratchBuffer = new ByteArrayBuffer(paddedPayloadLength);
           }
           MessageDialogSupport.encryptedPayloadScratchBuffer.position = 0;
           MessageDialogSupport.encryptedPayloadScratchBuffer.writeBytes(payloadLength, -97, payloadBytes, sourceOffset);
           MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, paddedPayloadLength);
           MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(xteaKey, (byte) -33);
-          if (((HotspotTextWidget.encryptedPayloadKeyScratchBuffer == null) ||
-              (!(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100)))) {
+          if (HotspotTextWidget.encryptedPayloadKeyScratchBuffer == null ||
+              !(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100)) {
             HotspotTextWidget.encryptedPayloadKeyScratchBuffer = new ByteArrayBuffer(100);
           }
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position = 0;

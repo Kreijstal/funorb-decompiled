@@ -177,8 +177,8 @@ final class VorbisCodebook {
           unorderedEntryIndex = 0;
           codewordLengthOrUnusedUnorderedCursorSnapshot = unorderedEntryIndex;
           while (unorderedEntryIndex < this.entryCount) {
-            if ((entryCursorOrSparseLengthsValueOrLookupType != 0) &&
-                (MusicDecoder.readBit() == 0)) {
+            if (entryCursorOrSparseLengthsValueOrLookupType != 0 &&
+                MusicDecoder.readBit() == 0) {
               this.codewordLengths[unorderedEntryIndex] = 0;
               unorderedEntryIndex++;
               continue;

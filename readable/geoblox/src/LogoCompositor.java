@@ -43,8 +43,8 @@ final class LogoCompositor {
           if (methodGuard != -51) {
             openInPopupWindowText = (String) null;
           }
-          if ((overlayTickOffset > 0) &&
-              (overlayTickOffset < 50)) {
+          if (overlayTickOffset > 0 &&
+              overlayTickOffset < 50) {
             if (overlayTickOffset >= 20) {
               if (overlayTickOffset >= 30) {
                 overlayAlpha256 = 256 * (-overlayTickOffset + 50) / 20;
@@ -64,8 +64,8 @@ final class LogoCompositor {
             overlayTickOffset = -125 + DequeCursor.logoAnimationTick;
             if (methodGuard != -51) {
               openInPopupWindowText = (String) null;
-              if ((overlayTickOffset > 0) &&
-                  (overlayTickOffset < 50)) {
+              if (overlayTickOffset > 0 &&
+                  overlayTickOffset < 50) {
                 if (overlayTickOffset >= 20) {
                   if (overlayTickOffset >= 30) {
                     overlayAlpha256 = 256 * (-overlayTickOffset + 50) / 20;
@@ -151,8 +151,8 @@ final class LogoCompositor {
           overlayTickOffset = -125 + DequeCursor.logoAnimationTick;
           if (methodGuard != -51) {
             openInPopupWindowText = (String) null;
-            if ((overlayTickOffset > 0) &&
-                (overlayTickOffset < 50)) {
+            if (overlayTickOffset > 0 &&
+                overlayTickOffset < 50) {
               if (overlayTickOffset >= 20) {
                 if (overlayTickOffset >= 30) {
                   overlayAlpha256 = 256 * (-overlayTickOffset + 50) / 20;
@@ -166,8 +166,8 @@ final class LogoCompositor {
               }
             }
           } else {
-            if ((overlayTickOffset > 0) &&
-                (overlayTickOffset < 50)) {
+            if (overlayTickOffset > 0 &&
+                overlayTickOffset < 50) {
               if (overlayTickOffset < 20) {
                 overlayAlpha256 = overlayTickOffset * 256 / 20;
                 ProxySocketConnector.logoGlowRaster.drawAdditive(logoLeft, logoTop, overlayAlpha256);

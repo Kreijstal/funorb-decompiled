@@ -225,8 +225,8 @@ class UiWidget extends IntrusiveNode {
         this.updatePointerState(false, parentY, (UiWidget) (this), parentX);
         focusFlag = this.hasKeyboardFocus((byte) 54) ? 1 : 0;
         if (!pointerEventsAvailable) {
-          if ((focusFlag != 0) &&
-              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+          if (focusFlag != 0 &&
+              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -235,8 +235,8 @@ class UiWidget extends IntrusiveNode {
         }
         if (0 == CachedTextLayout.wheelRotationSnapshot) {
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-            if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
-                (0 != FullscreenErrorDialog.previousUiPointerButton)) {
+            if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
+                0 != FullscreenErrorDialog.previousUiPointerButton) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithoutPressOrWheel = ValidationState.activeDragWidget;
               if (releasedDragWithoutPressOrWheel != null) {
@@ -245,9 +245,9 @@ class UiWidget extends IntrusiveNode {
                 }
                 ValidationState.activeDragWidget = null;
               }
-              if ((clientControlFlowSnapshot != 0) &&
-                  (focusFlag != 0) &&
-                  (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+              if (clientControlFlowSnapshot != 0 &&
+                  focusFlag != 0 &&
+                  CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -258,8 +258,8 @@ class UiWidget extends IntrusiveNode {
           pointerPressWithoutWheel: {
             if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (UiWidget) (this))) {
               if (focusFlag == 0) {
-                if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
-                    (0 != FullscreenErrorDialog.previousUiPointerButton)) {
+                if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
+                    0 != FullscreenErrorDialog.previousUiPointerButton) {
                   this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
                   releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
                   if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
@@ -268,9 +268,9 @@ class UiWidget extends IntrusiveNode {
                     }
                     ValidationState.activeDragWidget = null;
                   }
-                  if ((clientControlFlowSnapshot != 0) &&
-                      (focusFlag != 0) &&
-                      (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+                  if (clientControlFlowSnapshot != 0 &&
+                      focusFlag != 0 &&
+                      CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                     this.clearKeyboardFocus(-126);
                   }
                 }
@@ -303,9 +303,9 @@ class UiWidget extends IntrusiveNode {
             }
             ValidationState.activeDragWidget = null;
           }
-          if ((clientControlFlowSnapshot != 0) &&
-              (focusFlag != 0) &&
-              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+          if (clientControlFlowSnapshot != 0 &&
+              focusFlag != 0 &&
+              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -315,8 +315,8 @@ class UiWidget extends IntrusiveNode {
         if (focusFlag != 0) {
           this.handlePointerWheel(parentY, CachedTextLayout.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, (UiWidget) (this), PcmResampler.pointerYSnapshot);
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-            if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
-                (0 != FullscreenErrorDialog.previousUiPointerButton)) {
+            if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
+                0 != FullscreenErrorDialog.previousUiPointerButton) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithWheelAndNoPress = ValidationState.activeDragWidget;
               releasedDragWidgetAlias = releasedDragWithWheelAndNoPress;
@@ -326,8 +326,8 @@ class UiWidget extends IntrusiveNode {
                 }
                 ValidationState.activeDragWidget = null;
               }
-              if ((clientControlFlowSnapshot != 0) &&
-                  (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+              if (clientControlFlowSnapshot != 0 &&
+                  CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -363,8 +363,8 @@ class UiWidget extends IntrusiveNode {
             }
             ValidationState.activeDragWidget = null;
           }
-          if ((clientControlFlowSnapshot != 0) &&
-              (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+          if (clientControlFlowSnapshot != 0 &&
+              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -372,8 +372,8 @@ class UiWidget extends IntrusiveNode {
           return pointerEventsAvailable;
         }
         if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
-          if ((EntityCollisionSupport.heldPointerButtonSnapshot == 0) &&
-              (0 != FullscreenErrorDialog.previousUiPointerButton)) {
+          if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
+              0 != FullscreenErrorDialog.previousUiPointerButton) {
             this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, (UiWidget) (this), parentY, PcmResampler.pointerYSnapshot);
             releasedDragWithoutFocusOrPress = ValidationState.activeDragWidget;
             if (releasedDragWithoutFocusOrPress != null) {
@@ -382,9 +382,9 @@ class UiWidget extends IntrusiveNode {
               }
               ValidationState.activeDragWidget = null;
             }
-            if ((clientControlFlowSnapshot != 0) &&
-                (focusFlag != 0) &&
-                (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+            if (clientControlFlowSnapshot != 0 &&
+                focusFlag != 0 &&
+                CheckboxRenderer.pointerPressButtonSnapshot != 0) {
               this.clearKeyboardFocus(-126);
             }
           }
@@ -440,9 +440,9 @@ class UiWidget extends IntrusiveNode {
           }
           ValidationState.activeDragWidget = null;
         }
-        if ((clientControlFlowSnapshot != 0) &&
-            (focusFlag != 0) &&
-            (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+        if (clientControlFlowSnapshot != 0 &&
+            focusFlag != 0 &&
+            CheckboxRenderer.pointerPressButtonSnapshot != 0) {
           this.clearKeyboardFocus(-126);
         }
         FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;

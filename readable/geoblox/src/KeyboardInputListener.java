@@ -19,17 +19,17 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           }
           TextPairLoginPayload.keyboardIdleTicks = 0;
           internalKeyCode = event.getKeyCode();
-          if ((internalKeyCode >= 0) &&
-              (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+          if (internalKeyCode >= 0 &&
+              ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
             internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode];
-            if (((internalKeyCode & 128) != 0)) {
+            if ((internalKeyCode & 128) != 0) {
               internalKeyCode = -1;
             }
           } else {
             internalKeyCode = -1;
           }
-          if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
-              (internalKeyCode >= 0)) {
+          if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0 &&
+              internalKeyCode >= 0) {
             EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
             ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 127 & 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel;
             if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
@@ -45,9 +45,9 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             }
           }
           nextEventWriteIndexOrModifiers = event.getModifiers();
-          if (((nextEventWriteIndexOrModifiers & 10) == 0) &&
-              (85 != internalKeyCode) &&
-              (internalKeyCode != 10)) {
+          if ((nextEventWriteIndexOrModifiers & 10) == 0 &&
+              85 != internalKeyCode &&
+              internalKeyCode != 10) {
             return;
           }
           event.consume();
@@ -81,7 +81,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         int typedCharacterCode = 0;
         int nextEventWriteIndex = 0;
         try {
-            if ((TrackedPcmStream.keyboardListener != null)) {
+            if (TrackedPcmStream.keyboardListener != null) {
                 typedCharacterCode = event.getKeyChar();
                 if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
                     nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
@@ -109,14 +109,14 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           if (TrackedPcmStream.keyboardListener != null) {
             TextPairLoginPayload.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
-            if ((internalKeyCode >= 0) &&
-                (ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode)) {
+            if (internalKeyCode >= 0 &&
+                ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
               internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode] & -129;
             } else {
               internalKeyCode = -1;
             }
-            if ((ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0) &&
-                (0 <= internalKeyCode)) {
+            if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0 &&
+                0 <= internalKeyCode) {
               EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
               ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel & 127;
               if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {

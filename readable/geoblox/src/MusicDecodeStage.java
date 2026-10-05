@@ -360,8 +360,8 @@ final class MusicDecodeStage {
             this.configuredFloorX[pointCursorBeforeIncrement] = MusicDecoder.readBits(partitionOrClassIndexOrRangeBits);
           }
         }
-        if ((sharedFloorX != null) &&
-            (sharedFloorX.length >= classIdOrSubclassBitsOrBookCountOrPointCursor)) {
+        if (sharedFloorX != null &&
+            sharedFloorX.length >= classIdOrSubclassBitsOrBookCountOrPointCursor) {
           return;
         }
         sharedFloorX = new int[classIdOrSubclassBitsOrBookCountOrPointCursor];

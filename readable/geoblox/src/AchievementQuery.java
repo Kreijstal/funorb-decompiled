@@ -62,8 +62,8 @@ final class AchievementQuery extends IntrusiveNode {
                 cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
                 for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
                   equalsIndex = cookieEntries[cookieIndex].indexOf('=');
-                  if ((equalsIndex >= 0) &&
-                      (cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(cookieName))) {
+                  if (equalsIndex >= 0 &&
+                      cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(cookieName)) {
                     cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(1 + equalsIndex).trim();
                     return cookieValueBeforeReturn;
                   }

@@ -56,13 +56,13 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
           if (null == record.text) {
             return;
           }
-          if (((record.recordIdHigh16 != 0) ||
-              (0 != record.recordIdLow24))) {
+          if (record.recordIdHigh16 != 0 ||
+              0 != record.recordIdLow24) {
             for (recordIndex = 0; ByteStorage.retainedTextRecordCount > recordIndex; recordIndex++) {
               existingRecord = MatchingTextValidator.retainedTextRecords[recordIndex];
-              if ((2 == existingRecord.recordKind) &&
-                  (record.recordIdHigh16 == existingRecord.recordIdHigh16) &&
-                  (record.recordIdLow24 == existingRecord.recordIdLow24)) {
+              if (2 == existingRecord.recordKind &&
+                  record.recordIdHigh16 == existingRecord.recordIdHigh16 &&
+                  record.recordIdLow24 == existingRecord.recordIdLow24) {
                 return;
               }
             }
@@ -278,8 +278,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
                 cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
                 for (cookieIndex = 0; cookieEntries.length > cookieIndex; cookieIndex++) {
                   equalsIndex = cookieEntries[cookieIndex].indexOf('=');
-                  if ((equalsIndex >= 0) &&
-                      (cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName))) {
+                  if (equalsIndex >= 0 &&
+                      cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName)) {
                     cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(equalsIndex + 1).trim();
                     return cookieValueBeforeReturn;
                   }

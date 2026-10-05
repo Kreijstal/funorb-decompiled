@@ -36,8 +36,8 @@ abstract class MouseWheelInput {
             nullArrayBeforeReturn = null;
             return (byte[]) (nullArrayBeforeReturn);
           }
-          if (((destination == null) ||
-                (destination.length != arrayLength))) {
+          if (destination == null ||
+                destination.length != arrayLength) {
             destination = new byte[arrayLength];
           }
           deltaBitCount = buffer.readBits((byte) -17, 3);

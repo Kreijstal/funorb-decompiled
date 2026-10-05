@@ -134,8 +134,8 @@ final class ClientFlowToken {
                 cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieText);
                 for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
                   equalsOffset = cookieEntries[cookieIndex].indexOf('=');
-                  if ((equalsOffset >= 0) &&
-                      (cookieEntries[cookieIndex].substring(0, equalsOffset).trim().equals(markerName))) {
+                  if (equalsOffset >= 0 &&
+                      cookieEntries[cookieIndex].substring(0, equalsOffset).trim().equals(markerName)) {
                     return true;
                   }
                 }
@@ -172,7 +172,7 @@ final class ClientFlowToken {
     }
 
     final static String getActiveLoginIdentifier(int methodGuard) {
-        if ((IntrusiveDeque.pendingClientFlowToken == ClientFlowState.accountCreationFlowState)) {
+        if (IntrusiveDeque.pendingClientFlowToken == ClientFlowState.accountCreationFlowState) {
             return SpriteCheckboxRenderer.accountCreationDisplayName;
         }
         if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {

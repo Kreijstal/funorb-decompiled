@@ -163,8 +163,8 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         CharSequence unusedNullTextSnapshot = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((sprites != null) &&
-              (stripWidth > 0)) {
+          if (sprites != null &&
+              stripWidth > 0) {
             leftWidth = sprites[0].fullWidth;
             rightWidth = sprites[2].fullWidth;
             tileWidth = sprites[1].fullWidth;
@@ -224,10 +224,10 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
           for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
             encodedTextCharacter: {
               characterCode = text.charAt(characterIndex);
-              if ((((characterCode <= 0)) ||
-                  ((characterCode >= 128)))) {
-                if ((((characterCode < 160)) ||
-                    ((255 < characterCode)))) {
+              if (characterCode <= 0 ||
+                  characterCode >= 128) {
+                if (characterCode < 160 ||
+                    255 < characterCode) {
                   if (8364 == characterCode) {
                     encodedBytes[characterIndex] = (byte)-128;
                     break encodedTextCharacter;

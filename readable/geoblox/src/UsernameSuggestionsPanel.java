@@ -81,12 +81,12 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         super.renderWidget(parentX, parentY, (byte) 88, renderPass);
-        if ((renderPass != 0)) {
+        if (renderPass != 0) {
             return;
         }
         BitmapFont headingFont = DialogLayer.sharedUiFont;
         int guardResidue = -69 / ((1 - methodGuard) / 43);
-        if ((this.suggestions != null)) {
+        if (this.suggestions != null) {
             headingFont.drawParagraph(EntityMotionSupport.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, headingFont.maxDescent + headingFont.maxAscent);
         }
     }
@@ -191,8 +191,8 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
           if (methodGuard != 126) {
             return;
           }
-          if ((suggestions != null) &&
-              (suggestions.length != 0)) {
+          if (suggestions != null &&
+              suggestions.length != 0) {
             suggestionCount = suggestions.length;
             this.suggestions = new String[suggestionCount];
             for (formattedSuggestionIndex = 0; suggestionCount > formattedSuggestionIndex; formattedSuggestionIndex++) {

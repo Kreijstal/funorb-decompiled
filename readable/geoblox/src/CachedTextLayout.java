@@ -58,11 +58,11 @@ final class CachedTextLayout extends TextLayout {
             this.lines = null;
             return;
           }
-          if ((this.cachedFont == font) &&
-              (this.singleLineMode) &&
-              (this.cachedHorizontalAlignment == 2) &&
-              (null != this.cachedText) &&
-              (this.cachedText.equals(text))) {
+          if (this.cachedFont == font &&
+              this.singleLineMode &&
+              this.cachedHorizontalAlignment == 2 &&
+              null != this.cachedText &&
+              this.cachedText.equals(text)) {
             return;
           }
           this.cachedFont = font;
@@ -136,8 +136,8 @@ final class CachedTextLayout extends TextLayout {
         if (methodGuard > -89) {
             menuForegroundSprite = (Sprite) null;
         }
-        if ((this.cachedFont == font && this.singleLineMode && 0 == this.cachedHorizontalAlignment && this.cachedText != null) &&
-            ((this.cachedText.equals(text)))) {
+        if (this.cachedFont == font && this.singleLineMode && 0 == this.cachedHorizontalAlignment && this.cachedText != null &&
+            this.cachedText.equals(text)) {
             return;
         }
         try {
@@ -188,15 +188,15 @@ final class CachedTextLayout extends TextLayout {
             this.lines = null;
             return;
           }
-          if ((font == this.cachedFont) &&
-              (!this.singleLineMode) &&
-              (this.cachedHorizontalAlignment == horizontalAlignment) &&
-              (this.cachedVerticalAlignment == verticalAlignment) &&
-              (this.cachedLineSpacing == lineSpacing) &&
-              (availableHeight == this.cachedAvailableHeight) &&
-              (availableWidth == this.cachedAvailableWidth) &&
-              (null != this.cachedText) &&
-              (this.cachedText.equals(text))) {
+          if (font == this.cachedFont &&
+              !this.singleLineMode &&
+              this.cachedHorizontalAlignment == horizontalAlignment &&
+              this.cachedVerticalAlignment == verticalAlignment &&
+              this.cachedLineSpacing == lineSpacing &&
+              availableHeight == this.cachedAvailableHeight &&
+              availableWidth == this.cachedAvailableWidth &&
+              null != this.cachedText &&
+              this.cachedText.equals(text)) {
             return;
           }
           this.cachedAvailableHeight = availableHeight;
@@ -210,8 +210,8 @@ final class CachedTextLayout extends TextLayout {
           wrappedLines = new String[lineArraySlack + font.countWrappedLines(text, availableWidth)];
           wrappedLinesAlias = wrappedLines;
           lineCount = Math.max(1, font.wrapText(text, new int[]{availableWidth}, wrappedLinesAlias));
-          if ((this.cachedVerticalAlignment == 3) &&
-              (lineCount == 1)) {
+          if (this.cachedVerticalAlignment == 3 &&
+              lineCount == 1) {
             this.cachedVerticalAlignment = 1;
           }
           this.lines = new TextLayoutLine[lineCount];

@@ -22,8 +22,8 @@ final class FifoResponseToken extends IntrusiveNode {
         String emailDescription = null;
         RuntimeException caughtValidationFailure = null;
         try {
-          if ((candidateEmail != null) &&
-              (0 != candidateEmail.length())) {
+          if (candidateEmail != null &&
+              0 != candidateEmail.length()) {
             atSignIndex = candidateEmail.indexOf('@');
             if (atSignIndex == -1) {
               missingAtSignFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;

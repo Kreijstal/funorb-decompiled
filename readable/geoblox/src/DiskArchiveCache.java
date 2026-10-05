@@ -23,8 +23,8 @@ final class DiskArchiveCache {
         try {
           dataFileMonitor = this.dataFile;
           synchronized (dataFileMonitor) {
-            if ((0 <= length) &&
-                (length <= this.maximumEntryLength)) {
+            if (0 <= length &&
+                length <= this.maximumEntryLength) {
               if (methodGuard != -53) {
                 unusedAudioConfigurationSnapshot = (MidiPcmStream) null;
                 DiskArchiveCache.initializeGameAudioOutputs((java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false, -103);
@@ -212,8 +212,8 @@ final class DiskArchiveCache {
                     this.indexFile.seek(methodGuard - 228, (long)(entryId * 6));
                     this.indexFile.readFully(TextInputWidget.diskSectorBuffer, 6, 0, 9868);
                     sectorNumber = (TextInputWidget.diskSectorBuffer[5] & 255) + (((255 & TextInputWidget.diskSectorBuffer[4]) << 8) + ((255 & TextInputWidget.diskSectorBuffer[3]) << 16));
-                    if ((((sectorNumber <= 0)) ||
-                        (!(this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)))) {
+                    if (sectorNumber <= 0 ||
+                        !(this.dataFile.length((byte) 46) / 520L >= (long)sectorNumber)) {
                       return false;
                     }
                   } else {
@@ -251,7 +251,7 @@ final class DiskArchiveCache {
                                 headerEofFailure = (EOFException) (Object) caughtWriteFailure;
                                 smallHeaderEofState = 1;
                               }
-                              if ((smallHeaderEofState != 0)) {
+                              if (smallHeaderEofState != 0) {
                                 break cacheSectorWriteStep;
                               }
                               headerEntryIdOrPayloadLength = ((255 & TextInputWidget.diskSectorBuffer[0]) << 8) + (255 & TextInputWidget.diskSectorBuffer[1]);
@@ -267,7 +267,7 @@ final class DiskArchiveCache {
                                 headerEofFailure = (EOFException) (Object) caughtWriteFailure;
                                 largeHeaderEofState = 1;
                               }
-                              if ((largeHeaderEofState != 0)) {
+                              if (largeHeaderEofState != 0) {
                                 break cacheSectorWriteStep;
                               }
                               headerEntryIdOrPayloadLength = (65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 24) + (((TextInputWidget.diskSectorBuffer[1] & 255) << 16) + (255 & TextInputWidget.diskSectorBuffer[3])));
@@ -275,11 +275,11 @@ final class DiskArchiveCache {
                               nextSectorNumber = (TextInputWidget.diskSectorBuffer[8] & 255) + ((255 & TextInputWidget.diskSectorBuffer[6]) << 16) + (65280 & TextInputWidget.diskSectorBuffer[7] << 8);
                               headerChunkNumber = (TextInputWidget.diskSectorBuffer[4] << 8 & 65280) + (255 & TextInputWidget.diskSectorBuffer[5]);
                             }
-                            if ((headerEntryIdOrPayloadLength == entryId) &&
-                                (chunkNumber == headerChunkNumber) &&
-                                (headerArchiveId == this.archiveId)) {
-                              if ((nextSectorNumber >= 0) &&
-                                  (~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber)) {
+                            if (headerEntryIdOrPayloadLength == entryId &&
+                                chunkNumber == headerChunkNumber &&
+                                headerArchiveId == this.archiveId) {
+                              if (nextSectorNumber >= 0 &&
+                                  ~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber) {
                                 break existingSectorHeaderValidation;
                               }
                               return false;

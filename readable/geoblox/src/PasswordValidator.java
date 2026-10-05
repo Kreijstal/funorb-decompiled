@@ -109,11 +109,11 @@ final class PasswordValidator extends TextInputValidator {
         try {
           lowercaseEmail = this.emailInput.widgetText.toLowerCase();
           lowercasePassword = candidatePassword.toLowerCase();
-          if ((0 < lowercaseEmail.length()) &&
-              (lowercasePassword.length() > 0)) {
+          if (0 < lowercaseEmail.length() &&
+              lowercasePassword.length() > 0) {
             lastAtSignIndex = lowercaseEmail.lastIndexOf("@");
-            if ((0 <= lastAtSignIndex) &&
-                (lowercaseEmail.length() - 1 > lastAtSignIndex)) {
+            if (0 <= lastAtSignIndex &&
+                lowercaseEmail.length() - 1 > lastAtSignIndex) {
               emailLocalPart = lowercaseEmail.substring(0, lastAtSignIndex);
               emailDomain = lowercaseEmail.substring(lastAtSignIndex + 1);
               if (lowercasePassword.indexOf(emailLocalPart) >= 0) {

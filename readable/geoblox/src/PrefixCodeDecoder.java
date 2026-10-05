@@ -397,8 +397,8 @@ final class PrefixCodeDecoder {
         }
         avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
         if (FullscreenSupport.avatarSteeringDirectionId != 1) {
-          if ((FullscreenSupport.avatarSteeringDirectionId == 2) &&
-              (avatarFrameOffsetInSegment < 5)) {
+          if (FullscreenSupport.avatarSteeringDirectionId == 2 &&
+              avatarFrameOffsetInSegment < 5) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -419,8 +419,8 @@ final class PrefixCodeDecoder {
             }
             return;
           }
-          if ((FullscreenSupport.avatarSteeringDirectionId == 0) &&
-              (avatarFrameOffsetInSegment < 3)) {
+          if (FullscreenSupport.avatarSteeringDirectionId == 0 &&
+              avatarFrameOffsetInSegment < 3) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -529,8 +529,8 @@ final class PrefixCodeDecoder {
           }
           return;
         }
-        if ((FullscreenSupport.avatarSteeringDirectionId == 2) &&
-            (avatarFrameOffsetInSegment < 5)) {
+        if (FullscreenSupport.avatarSteeringDirectionId == 2 &&
+            avatarFrameOffsetInSegment < 5) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
           CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -551,8 +551,8 @@ final class PrefixCodeDecoder {
           }
           return;
         }
-        if ((FullscreenSupport.avatarSteeringDirectionId == 0) &&
-            (avatarFrameOffsetInSegment < 3)) {
+        if (FullscreenSupport.avatarSteeringDirectionId == 0 &&
+            avatarFrameOffsetInSegment < 3) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
           CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;

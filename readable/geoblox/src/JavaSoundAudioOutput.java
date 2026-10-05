@@ -62,7 +62,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
         if (mixerInfos != null) {
           mixerInfosAlias = mixerInfos;
           mixerIndex = 0;
-          while ((mixerIndex < mixerInfosAlias.length)) {
+          while (mixerIndex < mixerInfosAlias.length) {
             mixerInfo = mixerInfosAlias[mixerIndex];
             if (mixerInfo == null) {
               mixerIndex++;

@@ -16,10 +16,10 @@ final class SettingsCookieSupport {
         RuntimeException caughtCharacterFailure = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if ((((0 >= character)) ||
-                ((128 <= character))) &&
-              (((character < 160)) ||
-                ((255 < character)))) {
+          if ((0 >= character ||
+                128 <= character) &&
+              (character < 160 ||
+                255 < character)) {
             if (methodGuard != -112) {
               quitText = (String) null;
             }

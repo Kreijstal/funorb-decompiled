@@ -71,8 +71,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               alignmentMode = this.verticalAlignment;
               if (alignmentMode != 0) {
                 if (alignmentMode != 2) {
-                  if ((alignmentMode != 3) &&
-                      (alignmentMode != 1)) {
+                  if (alignmentMode != 3 &&
+                      alignmentMode != 1) {
                   }
                   baselineOffset = (-this.font.maxAscent + (availableHeight - this.font.maxDescent) >> 1) + this.font.maxAscent;
                 } else {
@@ -82,8 +82,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 baselineOffset = this.font.maxAscent;
               }
               alignmentMode = this.horizontalAlignment;
-              if ((alignmentMode != 0) &&
-                  (alignmentMode != 3)) {
+              if (alignmentMode != 0 &&
+                  alignmentMode != 3) {
                 if (alignmentMode == 1) {
                   this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
                   break textDrawingCompletion;
@@ -154,8 +154,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           alignmentMode = this.verticalAlignment;
           if (alignmentMode != 0) {
             if (alignmentMode != 2) {
-              if ((alignmentMode != 3) &&
-                  (alignmentMode == 1)) {
+              if (alignmentMode != 3 &&
+                  alignmentMode == 1) {
               }
               baselineOffset = (availableHeight - (this.font.maxAscent + this.font.maxDescent) >> 1) + this.font.maxAscent;
             } else {
@@ -165,8 +165,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             baselineOffset = this.font.maxAscent;
           }
           alignmentMode = this.horizontalAlignment;
-          if ((alignmentMode != 0) &&
-              (alignmentMode != 3)) {
+          if (alignmentMode != 0 &&
+              alignmentMode != 3) {
             if (alignmentMode == 1) {
               if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
@@ -472,7 +472,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
     }
 
     public void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        if ((null == this.font)) {
+        if (null == this.font) {
             return;
         }
         try {

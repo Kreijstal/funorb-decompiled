@@ -29,7 +29,7 @@ final class MeshPrioritySupport {
                     cookiePrefix = applet.getParameter("cookieprefix");
                     cookieHost = applet.getParameter("cookiehost");
                     cookieText = cookiePrefix + "session=" + sessionValue + "; version=1; path=/; domain=" + cookieHost;
-                    if ((~sessionValue.length() == expiryLengthComplement)) {
+                    if (~sessionValue.length() == expiryLengthComplement) {
                         cookieText = cookieText + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieText + "\"", (byte) -92);

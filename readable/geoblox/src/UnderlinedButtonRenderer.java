@@ -92,8 +92,8 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         int var11 = 0;
         var11 = Geoblox.clientControlFlowFlag;
         try {
-          if ((!widget.pointerInside) &&
-              (!widget.hasKeyboardFocus((byte) 54))) {
+          if (!widget.pointerInside &&
+              !widget.hasKeyboardFocus((byte) 54)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;

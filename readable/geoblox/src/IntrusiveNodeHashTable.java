@@ -16,7 +16,7 @@ final class IntrusiveNodeHashTable {
         IntrusiveNode bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
         this.lookupCursor = bucketSentinel.nextNode;
         while (bucketSentinel != this.lookupCursor) {
-            if ((~this.lookupCursor.nodeKey == ~key)) {
+            if (~this.lookupCursor.nodeKey == ~key) {
                 matchingNode = this.lookupCursor;
                 this.lookupCursor = this.lookupCursor.nextNode;
                 return matchingNode;
@@ -51,7 +51,7 @@ final class IntrusiveNodeHashTable {
     final void put(byte methodGuard, IntrusiveNode node, long key) {
         IntrusiveNode bucketSentinel = null;
         try {
-            if ((null != node.previousNode)) {
+            if (null != node.previousNode) {
                 node.unlinkNode(false);
             }
             bucketSentinel = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & key)];
@@ -78,8 +78,8 @@ final class IntrusiveNodeHashTable {
           if (methodGuard != 0) {
             changeDisplayNameText = (String) null;
           }
-          if ((track != null) &&
-              (track != GzipInflater.currentMusicTrack)) {
+          if (track != null &&
+              track != GzipInflater.currentMusicTrack) {
             PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
             CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
             GzipInflater.currentMusicTrack = track;

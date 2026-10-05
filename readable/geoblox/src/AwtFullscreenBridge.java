@@ -22,7 +22,7 @@ final class AwtFullscreenBridge {
     public final void exit() {
         if (this.savedDisplayMode != null) {
             this.graphicsDevice.setDisplayMode(this.savedDisplayMode);
-            if (!(this.graphicsDevice.getDisplayMode().equals(this.savedDisplayMode))) {
+            if (!this.graphicsDevice.getDisplayMode().equals(this.savedDisplayMode)) {
                 throw new RuntimeException("");
             }
             this.savedDisplayMode = null;
@@ -102,8 +102,8 @@ final class AwtFullscreenBridge {
               continue;
             }
             candidateRefreshRate = supportedModes[modeIndex].getRefreshRate();
-            if ((matchingModeFoundInt != 0) &&
-                (Math.abs(-savedRefreshRate + candidateRefreshRate) >= Math.abs(-savedRefreshRate + refreshRate))) {
+            if (matchingModeFoundInt != 0 &&
+                Math.abs(-savedRefreshRate + candidateRefreshRate) >= Math.abs(-savedRefreshRate + refreshRate)) {
               modeIndex++;
               continue;
             }

@@ -221,8 +221,8 @@ abstract class BitmapFont extends DualLinkNode {
             tagStart = textIndex;
             continue;
           }
-          if ((characterOrGlyphCode == 62) &&
-              (tagStart != -1)) {
+          if (characterOrGlyphCode == 62 &&
+              tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             builderAfterTagOpen = wrappingBuffer.append('<');
@@ -250,64 +250,64 @@ abstract class BitmapFont extends DualLinkNode {
                               }
                             } else {
                               lineWidth = lineWidth + this.measureCharacterAdvance('®');
-                              if ((this.pairKerning != null) &&
-                                  (previousGlyph != 0)) {
+                              if (this.pairKerning != null &&
+                                  previousGlyph != 0) {
                                 lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 174];
                               }
                               previousGlyph = 174;
                             }
                           } else {
                             lineWidth = lineWidth + this.measureCharacterAdvance('©');
-                            if ((this.pairKerning != null) &&
-                                (previousGlyph != 0)) {
+                            if (this.pairKerning != null &&
+                                previousGlyph != 0) {
                               lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 169];
                             }
                             previousGlyph = 169;
                           }
                         } else {
                           lineWidth = lineWidth + this.measureCharacterAdvance('€');
-                          if ((this.pairKerning != null) &&
-                              (previousGlyph != 0)) {
+                          if (this.pairKerning != null &&
+                              previousGlyph != 0) {
                             lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 128];
                           }
                           previousGlyph = 8364;
                         }
                       } else {
                         lineWidth = lineWidth + this.measureCharacterAdvance('×');
-                        if ((this.pairKerning != null) &&
-                            (previousGlyph != 0)) {
+                        if (this.pairKerning != null &&
+                            previousGlyph != 0) {
                           lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 215];
                         }
                         previousGlyph = 215;
                       }
                     } else {
                       lineWidth = lineWidth + this.measureCharacterAdvance('­');
-                      if ((this.pairKerning != null) &&
-                          (previousGlyph != 0)) {
+                      if (this.pairKerning != null &&
+                          previousGlyph != 0) {
                         lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 173];
                       }
                       previousGlyph = 173;
                     }
                   } else {
                     lineWidth = lineWidth + this.measureCharacterAdvance(' ');
-                    if ((this.pairKerning != null) &&
-                        (previousGlyph != 0)) {
+                    if (this.pairKerning != null &&
+                        previousGlyph != 0) {
                       lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 160];
                     }
                     previousGlyph = 160;
                   }
                 } else {
                   lineWidth = lineWidth + this.measureCharacterAdvance('>');
-                  if ((this.pairKerning != null) &&
-                      (previousGlyph != 0)) {
+                  if (this.pairKerning != null &&
+                      previousGlyph != 0) {
                     lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 62];
                   }
                   previousGlyph = 62;
                 }
               } else {
                 lineWidth = lineWidth + this.measureCharacterAdvance('<');
-                if ((this.pairKerning != null) &&
-                    (previousGlyph != 0)) {
+                if (this.pairKerning != null &&
+                    previousGlyph != 0) {
                   lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 60];
                 }
                 previousGlyph = 60;
@@ -329,8 +329,8 @@ abstract class BitmapFont extends DualLinkNode {
             builderAfterCharacter = wrappingBuffer.append((char) characterOrGlyphCode);
             characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
             lineWidth = lineWidth + this.glyphAdvances[characterOrGlyphCode];
-            if ((this.pairKerning != null) &&
-                (previousGlyph != 0)) {
+            if (this.pairKerning != null &&
+                previousGlyph != 0) {
               lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
             }
             previousGlyph = characterOrGlyphCode;
@@ -348,8 +348,8 @@ abstract class BitmapFont extends DualLinkNode {
             } else {
               widthLimitIndex = lineCount;
             }
-            if ((lineWidthBeforeLimitLookup > widthLimitsBeforeLookup[widthLimitIndex]) &&
-                (breakPosition >= 0)) {
+            if (lineWidthBeforeLimitLookup > widthLimitsBeforeLookup[widthLimitIndex] &&
+                breakPosition >= 0) {
               outputLines[lineCount] = wrappingBuffer.toString().substring(outputLineStart, breakPosition - breakCharacterTrim);
               lineCount++;
               outputLineStart = breakPosition;
@@ -496,13 +496,13 @@ abstract class BitmapFont extends DualLinkNode {
           lineSpacing = this.lineAdvance;
         }
         lineWidthLimits = new int[]{width};
-        if ((height < this.maxAscent + this.maxDescent + lineSpacing) &&
-            (height < lineSpacing + lineSpacing)) {
+        if (height < this.maxAscent + this.maxDescent + lineSpacing &&
+            height < lineSpacing + lineSpacing) {
           lineWidthLimits = null;
         }
         lineCount = this.wrapText(text, lineWidthLimits, wrappedLines);
-        if ((verticalAlignment == 3) &&
-            (lineCount == 1)) {
+        if (verticalAlignment == 3 &&
+            lineCount == 1) {
           verticalAlignment = 1;
         }
         if (verticalAlignment != 0) {
@@ -627,8 +627,8 @@ abstract class BitmapFont extends DualLinkNode {
             textIndex++;
             continue;
           }
-          if ((characterOrGlyphCode == 62) &&
-              (tagStart != -1)) {
+          if (characterOrGlyphCode == 62 &&
+              tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             if (!tag.equals("lt")) {
@@ -685,8 +685,8 @@ abstract class BitmapFont extends DualLinkNode {
           }
           characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
           textWidth = textWidth + this.glyphAdvances[characterOrGlyphCode];
-          if ((this.pairKerning != null) &&
-              (previousGlyph != 0)) {
+          if (this.pairKerning != null &&
+              previousGlyph != 0) {
             textWidth = textWidth + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
           }
           previousGlyph = characterOrGlyphCode;
@@ -793,8 +793,8 @@ abstract class BitmapFont extends DualLinkNode {
             textIndex++;
             continue;
           }
-          if ((characterOrGlyphCode == 62) &&
-              (tagStart != -1)) {
+          if (characterOrGlyphCode == 62 &&
+              tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             if (!tag.equals("lt")) {
@@ -863,8 +863,8 @@ abstract class BitmapFont extends DualLinkNode {
             continue;
           }
           characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
-          if ((this.pairKerning != null) &&
-              (previousGlyph != 0)) {
+          if (this.pairKerning != null &&
+              previousGlyph != 0) {
             penX = penX + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
           }
           glyphWidth = this.glyphWidths[characterOrGlyphCode];
@@ -915,8 +915,8 @@ abstract class BitmapFont extends DualLinkNode {
         minimumGlyphTop = 2147483647;
         maximumGlyphBottom = -2147483648;
         for (glyphIndex = 0; glyphIndex < 256; glyphIndex++) {
-          if ((this.glyphYOffsets[glyphIndex] < minimumGlyphTop) &&
-              (this.glyphHeights[glyphIndex] != 0)) {
+          if (this.glyphYOffsets[glyphIndex] < minimumGlyphTop &&
+              this.glyphHeights[glyphIndex] != 0) {
             minimumGlyphTop = this.glyphYOffsets[glyphIndex];
           }
           if (this.glyphYOffsets[glyphIndex] + this.glyphHeights[glyphIndex] <= maximumGlyphBottom) {

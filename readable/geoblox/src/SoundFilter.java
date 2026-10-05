@@ -105,8 +105,8 @@ final class SoundFilter {
               variantPairIndex++;
             }
           }
-          if (((variantMask != 0) ||
-                (this.gainEndpoints[1] != this.gainEndpoints[0]))) {
+          if (variantMask != 0 ||
+                this.gainEndpoints[1] != this.gainEndpoints[0]) {
             envelope.decodeSegments(buffer);
           }
         } else {

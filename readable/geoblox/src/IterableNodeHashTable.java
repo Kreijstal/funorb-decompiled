@@ -45,7 +45,7 @@ final class IterableNodeHashTable implements Iterable {
     final void put(long key, int methodGuard, IntrusiveNode node) {
         IntrusiveNode bucketSentinel = null;
         try {
-            if ((node.previousNode != null)) {
+            if (node.previousNode != null) {
                 node.unlinkNode(false);
             }
             bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];

@@ -29,10 +29,10 @@ final class ArchiveCatalog {
         if (methodGuard != 97) {
           replayTutorialText = (String) null;
         }
-        if ((((65 > character)) ||
-              ((character > 90))) &&
-            (((97 > character)) ||
-              ((character > 122)))) {
+        if ((65 > character ||
+              character > 90) &&
+            (97 > character ||
+              character > 122)) {
           asciiLetterBeforeReturn = false;
         } else {
           asciiLetterBeforeReturn = true;
@@ -69,8 +69,8 @@ final class ArchiveCatalog {
           if (this.catalogBuffer == null) {
             throw new RuntimeException();
           }
-          if ((archiveId >= 0) &&
-              (this.archiveSources.length > archiveId)) {
+          if (archiveId >= 0 &&
+              this.archiveSources.length > archiveId) {
             if (null != this.archiveSources[archiveId]) {
               cachedSourceBeforeReturn = this.archiveSources[archiveId];
               return cachedSourceBeforeReturn;
@@ -171,8 +171,8 @@ final class ArchiveCatalog {
         verificationBytesAlias = encodedVerificationBytes;
         rawVerificationBytes = verificationBytesAlias;
         catalogBuffer.readBytes(29915, encodedVerificationBytes.length, encodedVerificationBytes, 0);
-        if ((this.verificationExponent != null) &&
-            (this.verificationModulus != null)) {
+        if (this.verificationExponent != null &&
+            this.verificationModulus != null) {
           encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
           verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
           verificationBytes = verificationIntegerAfterModPow.toByteArray();
@@ -256,8 +256,8 @@ final class ArchiveCatalog {
           if (methodGuard < 53) {
             ArchiveCatalog.releaseReplayTutorialText(26);
           }
-          if ((password != null) &&
-              (password.length() >= AsyncResourceDownloader.minimumPasswordLength)) {
+          if (password != null &&
+              password.length() >= AsyncResourceDownloader.minimumPasswordLength) {
             if (password.length() > ArchiveIndex.maximumPasswordLength) {
               return true;
             }

@@ -84,16 +84,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int controlFlagSnapshot = 0;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((bottomY >= 0) &&
-              (topY < TriangleRasterState.clipHeight)) {
-            if ((0 > topX) &&
-                (middleX < 0) &&
-                (bottomX < 0)) {
+          if (bottomY >= 0 &&
+              topY < TriangleRasterState.clipHeight) {
+            if (0 > topX &&
+                middleX < 0 &&
+                bottomX < 0) {
               return;
             }
-            if ((topX >= TriangleRasterState.clipWidth) &&
-                (middleX >= TriangleRasterState.clipWidth) &&
-                (TriangleRasterState.clipWidth <= bottomX)) {
+            if (topX >= TriangleRasterState.clipWidth &&
+                middleX >= TriangleRasterState.clipWidth &&
+                TriangleRasterState.clipWidth <= bottomX) {
               return;
             }
             topToBottomRows = -topY + bottomY;
@@ -167,8 +167,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                         DebouncedValidationProvider.drawHalfBlendSolidSpan(57, destinationPixels, edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanStartOrBottomXQ16 + spanWidth);
                       }
                     } else {
-                      if ((spanStartOrBottomXQ16 >= 0) &&
-                          (TriangleRasterState.clipWidth > spanStartOrBottomXQ16)) {
+                      if (spanStartOrBottomXQ16 >= 0 &&
+                          TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
                         DebouncedValidationProvider.drawHalfBlendSolidSpan(-61, destinationPixels, spanStartOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder, halfRgb, spanWidth);
                       }
                     }
@@ -210,8 +210,8 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
                 spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
                 if (spanWidth == 0) {
-                  if ((spanStartOrBottomXQ16 >= 0) &&
-                      (TriangleRasterState.clipWidth > spanStartOrBottomXQ16)) {
+                  if (spanStartOrBottomXQ16 >= 0 &&
+                      TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
                     DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
                   }
                 } else {

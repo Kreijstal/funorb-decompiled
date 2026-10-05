@@ -35,8 +35,8 @@ final class UsernameQuerySupport {
           if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {
             return null;
           }
-          if ((WidgetSkinState.usernameQueryFlowState == MeshPrioritySupport.completedClientFlowToken) &&
-              (candidateText.equals(DelayedPcmStream.usernameQueryCandidate))) {
+          if (WidgetSkinState.usernameQueryFlowState == MeshPrioritySupport.completedClientFlowToken &&
+              candidateText.equals(DelayedPcmStream.usernameQueryCandidate)) {
             WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
             cachedQueryBeforeReturn = ScorePopup.pendingUsernameResult;
             return cachedQueryBeforeReturn;

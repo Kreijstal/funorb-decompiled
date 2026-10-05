@@ -99,7 +99,7 @@ class IntrusiveNode {
         if (methodGuard) {
             return;
         }
-        if ((null == this.previousNode)) {
+        if (null == this.previousNode) {
             return;
         }
         this.previousNode.nextNode = this.nextNode;
@@ -193,7 +193,7 @@ class IntrusiveNode {
               for (pixelIndexOrColumn = 0; pixelIndexOrColumn < pixelCount; pixelIndexOrColumn++) {
                 paletteIndicesForUpdates[pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
               }
-              if (((storageFlags & 2) != 0)) {
+              if ((storageFlags & 2) != 0) {
                 for (pixelIndexOrColumn = 0; pixelCount > pixelIndexOrColumn; pixelIndexOrColumn++) {
                   rowMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 95);
                   alphaPlaneForUpdates[pixelIndexOrColumn] = rowMajorAlphaByte;
@@ -213,7 +213,7 @@ class IntrusiveNode {
                   paletteIndicesForUpdates[alphaByteOrRow * spriteWidth + pixelIndexOrColumn] = spriteDataBuffer.readSignedByte((byte) 90);
                 }
               }
-              if ((0 != (2 & storageFlags))) {
+              if (0 != (2 & storageFlags)) {
                 for (pixelIndexOrColumn = 0; spriteWidth > pixelIndexOrColumn; pixelIndexOrColumn++) {
                   for (alphaByteOrRow = 0; spriteHeight > alphaByteOrRow; alphaByteOrRow++) {
                     columnMajorAlphaByte = spriteDataBuffer.readSignedByte((byte) 78);
@@ -254,7 +254,7 @@ class IntrusiveNode {
     }
 
     final boolean isLinked(int methodGuard) {
-        if ((null == this.previousNode)) {
+        if (null == this.previousNode) {
             return false;
         }
         if (methodGuard < 112) {

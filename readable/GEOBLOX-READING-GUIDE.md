@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e8111ee385d7d075a283b929c053f2f90fecaa1b/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/72c359f0f416f7a1f8e1b2e842f4ecfadbc85bb4/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 185)
+## Current readability (pass 186)
 
 The export has 18,445 guarded names and 117,533 Java identifier edits, plus 11
 class-name literal edits and 769 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -24,7 +24,73 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current declared-field predicates (pass 185)
+## Current predicate grouping (pass 186)
+
+The generic decompiler removes 2,009 redundant parentheses pairs from 874
+control conditions in 387 methods across 162 files. Logical precedence is
+visible without deeply nested grouping. For example,
+
+```java
+if (((((settled()) && (!processed))) || (!(preserve))) && (canAdvance()))
+```
+
+becomes
+
+```java
+if ((settled() && !processed || !preserve) && canAdvance())
+```
+
+The outer OR group remains necessary under AND. Right-associated expressions,
+arithmetic operands, casts, boxed comparisons and call arguments retain their
+grouping. Every operator, operand, statement and callback stays in its original
+order and association. Unsupported syntax, comments, Unicode translation and
+nested executables refuse the transformation. No GeoBlox names or assumed
+control-flag values enter the generic implementation.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/predicateGroupingRecovery.test.js`
+passes seven focused groups, including six independent native control/event
+models matching 466,560 cases. These cover short-circuit effects, nullable
+unboxing, boxed reference identity, signed overflow, floating NaNs, loops,
+injected failures and finally/monitor completion. The selected regression command
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/predicateGroupingRecovery.test.js test/predicateNegationRecovery.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/cfrBranchMergeRegressions.test.js`
+passes 119 tests, with one existing optional corpus skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+proves the exact expected character/token edits and source bytes for all 303 raw
+files. Independent JDK trees compare each complete compilation unit with only
+parenthesis nodes omitted; operator association and every other node remain
+unchanged. All 5,204 lexical transfers, their destinations and enclosing
+try/catch/finally/monitor scopes survive, alongside every ordinary/label binding
+and all 388 overrides. Both complete corpora compile.
+
+All eight remaining large labeled bodies have clearer conditions:
+
+| Method | Conditions simplified | Parentheses pairs removed |
+| --- | ---: | ---: |
+| `GameScreen.renderScreen` | 11 | 34 |
+| `GameScreen.updateScreen` | 13 | 33 |
+| `GameplaySession.renderSession` | 9 | 23 |
+| `GameplaySession.updateSession` | 18 | 50 |
+| `BoardReconciliationSupport.reconcileBoardEntities` | 11 | 19 |
+| `MusicScore.<init>` | 2 | 7 |
+| `Bzip2Decoder.decodeBlocks` | 4 | 7 |
+| `SpriteState.drawSortedHalfBlendRgbTriangle` | 6 | 13 |
+
+All 18,445 complete naming rules and 19,491 dictionary identities survive.
+The export retains 118,313 edits and reverses all 303 files byte exactly. All
+27 publication tests and existing scoped gameplay/result-helper traces pass;
+current and fresh sibling checkouts reproduce the same export. Body and corpus
+line counts remain unchanged. Eight large labeled bodies and 41 unsupported
+opaque fields still need work. Whole game/renderer/assets/server/browser/phone,
+heap/presented-FPS acceptance and catalog-wide effects remain unverified.
+Frozen inputs, naming/native evidence and earlier reviewed proofs stay pinned.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`4a7b03592eeaf71ddf2b0735b3806c28726a560c9edf853ea496e77c2a57c458`.
+
+## Previous declared-field predicates (pass 185)
 
 The generic decompiler now uses current-class field descriptors to clarify
 22 negated integral comparisons in eleven methods across seven files. For

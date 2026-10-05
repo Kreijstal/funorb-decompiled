@@ -101,8 +101,8 @@ final class EntityLinkSupport {
           firstNeighborInsertionIndex = firstEntity.relatedEntityCount;
           firstEntity.relatedEntityCount = firstEntity.relatedEntityCount + 1;
           firstEntity.relatedEntities[firstNeighborInsertionIndex] = secondEntity;
-          if (((secondEntity.entitySpriteKindId != 0) ||
-              (firstEntity.entitySpriteKindId != 0))) {
+          if (secondEntity.entitySpriteKindId != 0 ||
+              firstEntity.entitySpriteKindId != 0) {
             variantPropagationThenNeighborIndex = 0;
             propagateCategory = 0;
             secondIsKindOne = (secondEntity.entitySpriteKindId != 1) ? 0 : 1;
@@ -113,23 +113,23 @@ final class EntityLinkSupport {
             }
             {
               if ((secondIsKindOne ^ firstIsKindOne) != 0) {
-                if ((secondEntity.entitySpriteKindId == 1) &&
-                    (firstEntity.entitySpriteKindId == 0)) {
+                if (secondEntity.entitySpriteKindId == 1 &&
+                    firstEntity.entitySpriteKindId == 0) {
                   secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
                 } else {
-                  if ((secondEntity.entitySpriteKindId == 0) &&
-                      (firstEntity.entitySpriteKindId == 1)) {
+                  if (secondEntity.entitySpriteKindId == 0 &&
+                      firstEntity.entitySpriteKindId == 1) {
                     variantPropagationThenNeighborIndex = 1;
                   } else {
-                    if ((firstEntity.entitySpriteKindId == 2) &&
-                        (secondEntity.entitySpriteKindId == 1)) {
+                    if (firstEntity.entitySpriteKindId == 2 &&
+                        secondEntity.entitySpriteKindId == 1) {
                       neighborIndexThenDetachSecond = 1;
                       detachFirst = 1;
                       propagateCategory = 1;
                       secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
                     } else {
-                      if ((1 == firstEntity.entitySpriteKindId) &&
-                          (secondEntity.entitySpriteKindId == 2)) {
+                      if (1 == firstEntity.entitySpriteKindId &&
+                          secondEntity.entitySpriteKindId == 2) {
                         secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
                         variantPropagationThenNeighborIndex = 1;
                         neighborIndexThenDetachSecond = 1;
@@ -138,15 +138,15 @@ final class EntityLinkSupport {
                   }
                 }
               } else {
-                if (((2 == secondEntity.entitySpriteKindId) ||
-                    (firstEntity.entitySpriteKindId == 2))) {
-                  if ((secondEntity.entitySpriteKindId == 2) &&
-                      (2 != firstEntity.entitySpriteKindId)) {
+                if (2 == secondEntity.entitySpriteKindId ||
+                    firstEntity.entitySpriteKindId == 2) {
+                  if (secondEntity.entitySpriteKindId == 2 &&
+                      2 != firstEntity.entitySpriteKindId) {
                     secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
                     neighborIndexThenDetachSecond = 1;
                   } else {
-                    if ((firstEntity.entitySpriteKindId == 2) &&
-                        (2 != secondEntity.entitySpriteKindId)) {
+                    if (firstEntity.entitySpriteKindId == 2 &&
+                        2 != secondEntity.entitySpriteKindId) {
                       detachFirst = 1;
                       propagateCategory = 1;
                       neighborIndexThenDetachSecond = 1;
@@ -156,26 +156,26 @@ final class EntityLinkSupport {
                 }
               }
             }
-            if (((variantPropagationThenNeighborIndex != 0) ||
-                  (propagateCategory != 0))) {
+            if (variantPropagationThenNeighborIndex != 0 ||
+                  propagateCategory != 0) {
               DelegatingCanvas.propagateContactConversion(propagateCategory != 0, secondEntity, 1, firstEntity, variantPropagationThenNeighborIndex != 0);
             }
-            if ((secondEntity.entitySpriteKindId == 1) &&
-                (firstEntity.entitySpriteKindId == 1) &&
-                (firstEntity.entityCategoryKey == secondEntity.entityCategoryKey)) {
+            if (secondEntity.entitySpriteKindId == 1 &&
+                firstEntity.entitySpriteKindId == 1 &&
+                firstEntity.entityCategoryKey == secondEntity.entityCategoryKey) {
               secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
               firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;
             } else {
-              if ((secondEntity.entitySpriteKindId == 2) &&
-                  (firstEntity.entitySpriteKindId == 2) &&
-                  (firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex)) {
+              if (secondEntity.entitySpriteKindId == 2 &&
+                  firstEntity.entitySpriteKindId == 2 &&
+                  firstEntity.spriteVariantIndex == secondEntity.spriteVariantIndex) {
                 secondEntity.sameVariantEntityCount = secondEntity.sameVariantEntityCount + 1;
                 firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
               }
             }
           }
-          if ((secondEntity.entitySpriteKindId == 0) &&
-              (firstEntity.entitySpriteKindId == 0)) {
+          if (secondEntity.entitySpriteKindId == 0 &&
+              firstEntity.entitySpriteKindId == 0) {
             if (secondEntity.entityCategoryKey == firstEntity.entityCategoryKey) {
               secondEntity.sameCategoryEntityCount = secondEntity.sameCategoryEntityCount + 1;
               firstEntity.sameCategoryEntityCount = firstEntity.sameCategoryEntityCount + 1;

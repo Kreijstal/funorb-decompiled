@@ -81,11 +81,11 @@ final class GameplaySetupSupport {
                 try {
                   reflectionOperationDecode: {
                     operationType = buffer.readUnsignedByte((byte) 34);
-                    if ((0 != operationType) &&
-                        (1 != operationType) &&
-                        (operationType != 2)) {
-                      if ((operationType != 3) &&
-                          (operationType != 4)) {
+                    if (0 != operationType &&
+                        1 != operationType &&
+                        operationType != 2) {
+                      if (operationType != 3 &&
+                          operationType != 4) {
                         operationIndex++;
                         operationIncrementAlreadyApplied = 1;
                         break reflectionOperationDecode;
@@ -159,7 +159,7 @@ final class GameplaySetupSupport {
                   reflectionRequest.operationErrors[operationIndex] = -5;
                   operationIncrementAlreadyApplied = 0;
                 }
-                if ((operationIncrementAlreadyApplied != 0)) {
+                if (operationIncrementAlreadyApplied != 0) {
                   continue;
                 }
                 operationIndex++;

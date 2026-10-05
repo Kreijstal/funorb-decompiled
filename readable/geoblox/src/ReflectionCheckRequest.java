@@ -43,8 +43,8 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         int nextAccumulator = 0;
         CharSequence guardedNullTextSnapshot = null;
         try {
-          if ((2 <= radix) &&
-              (radix <= 36)) {
+          if (2 <= radix &&
+              radix <= 36) {
             negativeSignInt = 0;
             digitSeenInt = 0;
             accumulator = 0;
@@ -61,19 +61,19 @@ final class ReflectionCheckRequest extends IntrusiveNode {
                     negativeSignInt = 1;
                     break signedIntegerCharacter;
                   }
-                  if ((characterCodeOrSignedDigit == 43) &&
-                      (allowLeadingPlus)) {
+                  if (characterCodeOrSignedDigit == 43 &&
+                      allowLeadingPlus) {
                     break signedIntegerCharacter;
                   }
                 }
-                if ((48 <= characterCodeOrSignedDigit) &&
-                    (characterCodeOrSignedDigit <= 57)) {
+                if (48 <= characterCodeOrSignedDigit &&
+                    characterCodeOrSignedDigit <= 57) {
                   characterCodeOrSignedDigit -= 48;
-                } else if ((65 <= characterCodeOrSignedDigit) &&
-                    (90 >= characterCodeOrSignedDigit)) {
+                } else if (65 <= characterCodeOrSignedDigit &&
+                    90 >= characterCodeOrSignedDigit) {
                   characterCodeOrSignedDigit -= 55;
-                } else if ((characterCodeOrSignedDigit >= 97) &&
-                    (122 >= characterCodeOrSignedDigit)) {
+                } else if (characterCodeOrSignedDigit >= 97 &&
+                    122 >= characterCodeOrSignedDigit) {
                   characterCodeOrSignedDigit -= 87;
                 } else {
                   throw new NumberFormatException();

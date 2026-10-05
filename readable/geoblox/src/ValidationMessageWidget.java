@@ -132,10 +132,10 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite var19;
         var14 = Geoblox.clientControlFlowFlag;
         var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
-        if ((var6 != ImageProducerRasterBuffer.debouncingValidationState) &&
-            (var6 != WidgetSkinState.pendingQueryValidationState)) {
+        if (var6 != ImageProducerRasterBuffer.debouncingValidationState &&
+            var6 != WidgetSkinState.pendingQueryValidationState) {
           var5 = this.validationProvider.getDebouncedValidationMessage(-21666);
-          if ((var5 == null)) {
+          if (var5 == null) {
             var5 = this.fallbackMessage;
           }
         } else {

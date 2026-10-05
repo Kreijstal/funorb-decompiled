@@ -287,10 +287,10 @@ final class ProxySocketConnector extends SocketConnector {
             unusedGuardRemainder = -22 % ((3 - methodGuard) / 53);
             statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
             if (statusLineOrChallengeHeaderOrScheme != null) {
-              if ((!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200")) &&
-                  (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200"))) {
-                if ((!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407")) &&
-                    (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"))) {
+              if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
+                  !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
+                if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") &&
+                    !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407")) {
                   break connectResponseAcceptance;
                 }
                 scannedHeaderCount = 0;

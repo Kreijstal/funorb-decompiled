@@ -309,10 +309,10 @@ class Sprite extends SpriteState {
                 rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
                 continue;
               }
-              if ((sourceYQ12 >= 0) &&
-                  (sourceXQ12 - (this.width << 12) < 0) &&
-                  (sourceYQ12 - (this.height << 12) < 0)) {
-                while ((negativePixelCounter < 0)) {
+              if (sourceYQ12 >= 0 &&
+                  sourceXQ12 - (this.width << 12) < 0 &&
+                  sourceYQ12 - (this.height << 12) < 0) {
+                while (negativePixelCounter < 0) {
                   sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
                   if (sampledPixel == 0) {
                     destinationIndex++;
@@ -338,8 +338,8 @@ class Sprite extends SpriteState {
               sourceXQ12 = rowSourceXQ12;
               sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
               negativePixelCounter = rightThenNegativeWidth;
-              if ((sourceXQ12 >= 0) &&
-                  (sourceXQ12 - (this.width << 12) < 0)) {
+              if (sourceXQ12 >= 0 &&
+                  sourceXQ12 - (this.width << 12) < 0) {
                 if (sourceYQ12 < 0) {
                   clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
                   negativePixelCounter = negativePixelCounter + clipPixelCount;
@@ -420,8 +420,8 @@ class Sprite extends SpriteState {
               sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
               sourceYQ12 = rowSourceYQ12;
               negativePixelCounter = rightThenNegativeWidth;
-              if ((sourceYQ12 >= 0) &&
-                  (sourceYQ12 - (this.height << 12) < 0)) {
+              if (sourceYQ12 >= 0 &&
+                  sourceYQ12 - (this.height << 12) < 0) {
                 if (sourceXQ12 < 0) {
                   clipPixelCount = (inverseCosStep - 1 - sourceXQ12) / inverseCosStep;
                   negativePixelCounter = negativePixelCounter + clipPixelCount;
@@ -556,8 +556,8 @@ class Sprite extends SpriteState {
             sourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
             sourceYQ12 = rowSourceYQ12;
             negativePixelCounter = rightThenNegativeWidth;
-            if ((sourceYQ12 >= 0) &&
-                (sourceYQ12 - (this.height << 12) < 0)) {
+            if (sourceYQ12 >= 0 &&
+                sourceYQ12 - (this.height << 12) < 0) {
               clipPixelCount = sourceXQ12 - (this.width << 12);
               if (sourceXQ12 - (this.width << 12) >= 0) {
                 clipPixelCount = (inverseCosStep - clipPixelCount) / inverseCosStep;
@@ -783,10 +783,10 @@ class Sprite extends SpriteState {
           }
           break;
         }
-        if ((scanThenLeftEdge == 0) &&
-            (scanThenRightEdge == this.width - 1) &&
-            (rowOffsetThenTopEdge == 0) &&
-            (bottomEdge == this.height - 1)) {
+        if (scanThenLeftEdge == 0 &&
+            scanThenRightEdge == this.width - 1 &&
+            rowOffsetThenTopEdge == 0 &&
+            bottomEdge == this.height - 1) {
           return;
         }
         scanRowThenCroppedWidth = scanThenRightEdge + 1 - scanThenLeftEdge;
@@ -817,20 +817,20 @@ class Sprite extends SpriteState {
           for (column = 0; column < this.width; column++) {
             pixelOrOutlineColor = this.pixels[pixelIndex];
             if (pixelOrOutlineColor == 0) {
-              if ((column > 0) &&
-                  (this.pixels[pixelIndex - 1] != 0)) {
+              if (column > 0 &&
+                  this.pixels[pixelIndex - 1] != 0) {
                 pixelOrOutlineColor = color;
               } else {
-                if ((row > 0) &&
-                    (this.pixels[pixelIndex - this.width] != 0)) {
+                if (row > 0 &&
+                    this.pixels[pixelIndex - this.width] != 0) {
                   pixelOrOutlineColor = color;
                 } else {
-                  if ((column < this.width - 1) &&
-                      (this.pixels[pixelIndex + 1] != 0)) {
+                  if (column < this.width - 1 &&
+                      this.pixels[pixelIndex + 1] != 0) {
                     pixelOrOutlineColor = color;
                   } else {
-                    if ((row < this.height - 1) &&
-                        (this.pixels[pixelIndex + this.width] != 0)) {
+                    if (row < this.height - 1 &&
+                        this.pixels[pixelIndex + this.width] != 0) {
                       pixelOrOutlineColor = color;
                     }
                   }
@@ -1180,8 +1180,8 @@ class Sprite extends SpriteState {
             sourceRed = sourcePixel >> 16 & 255;
             sourceGreen = sourcePixel >> 8 & 255;
             sourceBlue = sourcePixel & 255;
-            if ((sourceRed == sourceGreen) &&
-                (sourceGreen == sourceBlue)) {
+            if (sourceRed == sourceGreen &&
+                sourceGreen == sourceBlue) {
               if (sourceRed > 128) {
                 destinationWriteIndex = destinationIndex;
                 destinationIndex++;
@@ -2234,8 +2234,8 @@ class Sprite extends SpriteState {
             }
             if (canSample != 0) {
               while (negativePixelCounter < 0) {
-                if ((sourceXQ12 >= -4096) &&
-                    (sourceYQ12 >= -4096)) {
+                if (sourceXQ12 >= -4096 &&
+                    sourceYQ12 >= -4096) {
                   sourcePixelX = sourceXQ12 >> 12;
                   sourcePixelY = sourceYQ12 >> 12;
                   this.sampleBilinear(destinationIndex, sourcePixelX, sourcePixelY, sourceXQ12, sourceYQ12);

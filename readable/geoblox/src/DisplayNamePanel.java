@@ -159,8 +159,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           meshForPriorityDecision = mesh;
-          if ((null != meshForPriorityDecision.facePriorities) &&
-              (meshForPriorityDecision.facePriorityCount > 1)) {
+          if (null != meshForPriorityDecision.facePriorities &&
+              meshForPriorityDecision.facePriorityCount > 1) {
             facePriorities = meshForPriorityDecision.facePriorities;
             MeshPrioritySupport.groupQueuedMeshFacesByPriority(0, facePriorities, 0, PasswordWidgetRenderer.meshFacePriorityWriteOffsets, (byte) -85);
           } else {
@@ -227,11 +227,11 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
               faceNormalCIndexOrMissing = -1;
             }
             faceNormalC = faceNormalCIndexOrMissing;
-            if ((DirectByteStorage.meshMaterials != null) &&
-                (mesh.faceMaterialIndices != null) &&
-                (mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex) &&
-                (mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1) &&
-                (DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex])) {
+            if (DirectByteStorage.meshMaterials != null &&
+                mesh.faceMaterialIndices != null &&
+                mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex &&
+                mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1 &&
+                DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]) {
               faceMaterialOrNull = DirectByteStorage.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
             } else {
               faceMaterialOrNull = null;
@@ -243,8 +243,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             vertexBY = TextInputWidget.projectedMeshVertexY[faceVertexB];
             vertexCX = SingleChildWidget.projectedMeshVertexX[faceVertexC];
             vertexCY = TextInputWidget.projectedMeshVertexY[faceVertexC];
-            if ((faceNormalA == faceNormalB) &&
-                (faceNormalC == faceNormalB)) {
+            if (faceNormalA == faceNormalB &&
+                faceNormalC == faceNormalB) {
               diffuseA = diffuseResponses[faceNormalA];
               flatSpecularOrDiffuseB = specularResponses[faceNormalA];
               if (faceMaterial != null) {
@@ -319,10 +319,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
             encodedCharacterHandled: {
               characterCode = text.charAt(characterStart + characterIndex);
-              if ((((0 >= characterCode)) ||
-                  ((characterCode >= 128)))) {
-                if ((((characterCode < 160)) ||
-                    ((characterCode > 255)))) {
+              if (0 >= characterCode ||
+                  characterCode >= 128) {
+                if (characterCode < 160 ||
+                    characterCode > 255) {
                   if (characterCode == 8364) {
                     destination[characterIndex + destinationOffset] = (byte)-128;
                     break encodedCharacterHandled;

@@ -75,13 +75,13 @@ final class UsernameAvailabilityQuery {
           }
           while (clampedPasswordLength > characterIndex) {
             sourceCodeUnit = passwordCharacters.charAt(characterIndex);
-            if ((sourceCodeUnit >= 65) &&
-                (sourceCodeUnit <= 90)) {
+            if (sourceCodeUnit >= 65 &&
+                sourceCodeUnit <= 90) {
               outputCharactersForWrites[characterIndex] = (char)(-65 + (sourceCodeUnit + 97));
-            } else if ((((sourceCodeUnit < 97)) ||
-                  ((sourceCodeUnit > 122))) &&
-                (((sourceCodeUnit < 48)) ||
-                  ((sourceCodeUnit > 57)))) {
+            } else if ((sourceCodeUnit < 97 ||
+                  sourceCodeUnit > 122) &&
+                (sourceCodeUnit < 48 ||
+                  sourceCodeUnit > 57)) {
               outputCharactersForWrites[characterIndex] = (char)95;
             } else {
               outputCharactersForWrites[characterIndex] = (char)sourceCodeUnit;

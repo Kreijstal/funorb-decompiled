@@ -77,8 +77,8 @@ abstract class MenuScreen {
           if (SessionTextHistorySupport.currentKeyboardEventCode == 97) {
             this.increaseMenuValue((byte) 90, itemIndex);
           } else {
-            if (((SessionTextHistorySupport.currentKeyboardEventCode == 84) ||
-                (SessionTextHistorySupport.currentKeyboardEventCode == 83))) {
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 84 ||
+                SessionTextHistorySupport.currentKeyboardEventCode == 83) {
               this.activateMenuItem(itemIndex, (byte) -2);
             }
           }
@@ -122,9 +122,9 @@ abstract class MenuScreen {
 
     int hitTestMenuItem(int pointerX, int pointerY, byte methodGuard) {
         int hitRowIndex;
-        if ((this.hitLeftX <= pointerX) &&
-            (pointerX < this.hitRightX) &&
-            (this.firstItemY <= pointerY)) {
+        if (this.hitLeftX <= pointerX &&
+            pointerX < this.hitRightX &&
+            this.firstItemY <= pointerY) {
           if (methodGuard < 20) {
             return 81;
           }
@@ -167,8 +167,8 @@ abstract class MenuScreen {
               this.pointerInteractionActive = false;
             }
           } else {
-            if ((EntityCollisionSupport.heldPointerButtonSnapshot != 0) &&
-                (this.pointerInteractionActive)) {
+            if (EntityCollisionSupport.heldPointerButtonSnapshot != 0 &&
+                this.pointerInteractionActive) {
               hitItemIndex = this.selectedItemIndex;
               if (hitItemIndex == -1) {
                 break menuPointerInteraction;

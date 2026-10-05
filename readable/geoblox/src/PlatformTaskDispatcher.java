@@ -122,16 +122,16 @@ final class PlatformTaskDispatcher implements Runnable {
                         } else {
                           if (taskType == 8) {
                             methodLookupArguments = (Object[]) (task.input);
-                            if ((this.privilegedServicesEnabled) &&
-                                (((Class) (methodLookupArguments[0])).getClassLoader() == null)) {
+                            if (this.privilegedServicesEnabled &&
+                                ((Class) (methodLookupArguments[0])).getClassLoader() == null) {
                               throw new SecurityException();
                             }
                             task.result = ((Class) (methodLookupArguments[0])).getDeclaredMethod((String) (methodLookupArguments[1]), (Class[]) (methodLookupArguments[2]));
                           } else {
                             if (taskType == 9) {
                               fieldLookupArguments = (Object[]) (task.input);
-                              if ((this.privilegedServicesEnabled) &&
-                                  (null == ((Class) (fieldLookupArguments[0])).getClassLoader())) {
+                              if (this.privilegedServicesEnabled &&
+                                  null == ((Class) (fieldLookupArguments[0])).getClassLoader()) {
                                 throw new SecurityException();
                               }
                               task.result = ((Class) (fieldLookupArguments[0])).getDeclaredField((String) (fieldLookupArguments[1]));
@@ -187,8 +187,8 @@ final class PlatformTaskDispatcher implements Runnable {
                                                 openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (task.input));
                                                 task.result = openedPreferencesFile;
                                               } else {
-                                                if ((this.privilegedServicesEnabled) &&
-                                                    (taskType == 14)) {
+                                                if (this.privilegedServicesEnabled &&
+                                                    taskType == 14) {
                                                   cursorXOrVisibleFlag = task.firstIntArgument;
                                                   cursorY = task.secondIntArgument;
                                                   if (!this.useMicrosoftVmBackend) {
@@ -198,8 +198,8 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
                                                   break platformTaskDispatch;
                                                 }
-                                                if ((this.privilegedServicesEnabled) &&
-                                                    (taskType == 15)) {
+                                                if (this.privilegedServicesEnabled &&
+                                                    taskType == 15) {
                                                   cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
                                                   cursorXOrVisibleFlag = cursorVisibleInt;
                                                   cursorComponent = (java.awt.Component) (task.input);
@@ -210,8 +210,8 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
                                                   break platformTaskDispatch;
                                                 }
-                                                if ((!this.useMicrosoftVmBackend) &&
-                                                    (taskType == 17)) {
+                                                if (!this.useMicrosoftVmBackend &&
+                                                    taskType == 17) {
                                                   customCursorArguments = (Object[]) (task.input);
                                                   Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
                                                 } else {
@@ -223,8 +223,8 @@ final class PlatformTaskDispatcher implements Runnable {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     urlToLaunch = (String) (task.input);
-                                                    if ((!urlToLaunch.startsWith("http://")) &&
-                                                        (!urlToLaunch.startsWith("https://"))) {
+                                                    if (!urlToLaunch.startsWith("http://") &&
+                                                        !urlToLaunch.startsWith("https://")) {
                                                       throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                                                     }
                                                     allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
@@ -350,8 +350,8 @@ final class PlatformTaskDispatcher implements Runnable {
             directoryIndex = 0;
             while (directoryIndex < searchDirectories.length) {
               searchDirectory = searchDirectories[directoryIndex];
-              if ((0 < searchDirectory.length()) &&
-                  (!new File(searchDirectory).exists())) {
+              if (0 < searchDirectory.length() &&
+                  !new File(searchDirectory).exists()) {
                 directoryIndex++;
                 continue;
               }

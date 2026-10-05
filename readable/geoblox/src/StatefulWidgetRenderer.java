@@ -156,7 +156,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             StatefulWidgetRenderer.setOptionalLoginText(38, (String) null);
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
-        if ((null == SecondaryNodeHashTable.accountProgressDialog)) {
+        if (null == SecondaryNodeHashTable.accountProgressDialog) {
             SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
         }
         ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
@@ -264,8 +264,8 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
             if (buttonWidget.pointerInside) {
               pressedSkin = this.stateSkins[3];
-              if ((buttonWidget.pressedPointerButton != 0) &&
-                  (pressedSkin != null)) {
+              if (buttonWidget.pressedPointerButton != 0 &&
+                  pressedSkin != null) {
                 pressedSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
               } else {
                 hoverSkin = this.stateSkins[2];

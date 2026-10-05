@@ -32,8 +32,8 @@ abstract class SessionGameApplet extends GameApplet {
         if (handshakeResult == pendingResultCode) {
           return -1;
         }
-        if ((handshakeResult != 0) &&
-            (handshakeResult != 1)) {
+        if (handshakeResult != 0 &&
+            handshakeResult != 1) {
           if (!TextWidgetRenderer.suppressReconnectErrorPage) {
             this.showGameError((byte) 79, "reconnect");
           }
@@ -68,14 +68,14 @@ abstract class SessionGameApplet extends GameApplet {
           guardResidue = -16 / ((methodGuard + 4) / 62);
           settingsOverrideOrFailure = null;
           sessionOverrideOrSettingsAlias = null;
-          if ((null != NetworkArchiveRequest.settingsCookieValue) &&
-              (!NetworkArchiveRequest.settingsCookieValue.equals(applet.getParameter("settings")))) {
+          if (null != NetworkArchiveRequest.settingsCookieValue &&
+              !NetworkArchiveRequest.settingsCookieValue.equals(applet.getParameter("settings"))) {
             settingsOverrideOrFailure = NetworkArchiveRequest.settingsCookieValue;
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
           }
-          if ((ScorePopup.sessionCookieOverride != null) &&
-              (!ScorePopup.sessionCookieOverride.equals(applet.getParameter("session")))) {
+          if (ScorePopup.sessionCookieOverride != null &&
+              !ScorePopup.sessionCookieOverride.equals(applet.getParameter("session"))) {
             sessionOverrideOrSettingsAlias = ScorePopup.sessionCookieOverride;
           }
           urlBeforeReturn = ScoreSubmission.rewriteSessionUrlPath((String) (sessionOverrideOrSettingsAlias), (String) (settingsOverrideOrFailure), url, -1, true);
@@ -134,7 +134,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     final void enableOptionalSessionPacketFamilies(boolean allowIntRecordReplies, boolean allowSessionAcknowledgements, boolean allowScoreReplies, boolean allowByteShortReplies, int methodGuard) {
         this.enableBaseSessionPacketFamilies(false, (byte) -91);
-        if ((allowByteShortReplies)) {
+        if (allowByteShortReplies) {
             this.enableByteShortReplies((byte) 32);
         }
         if (allowScoreReplies) {
@@ -143,7 +143,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard > -87) {
             this.alternateServerPort = -34;
         }
-        if ((allowIntRecordReplies)) {
+        if (allowIntRecordReplies) {
             this.enableIntRecordReplies((byte) -19);
         }
         if (allowSessionAcknowledgements) {
@@ -167,8 +167,8 @@ abstract class SessionGameApplet extends GameApplet {
           SessionGameApplet.applySessionOverridesToUrl((java.net.URL) null, 48, (java.applet.Applet) null);
         }
         handshakeResult = this.pollReconnectHandshake(-1);
-        if (((handshakeResult == 0) ||
-            (1 == handshakeResult))) {
+        if (handshakeResult == 0 ||
+            1 == handshakeResult) {
           if (OpacityWidget.enabledSessionPacketOpcodes[1]) {
             ByteArrayBuffer.resendByteShortQueries(true, 2);
           }
@@ -249,8 +249,8 @@ abstract class SessionGameApplet extends GameApplet {
         }
         RankedListQuery.updateKeyboardStateForFrame(true);
         AccountCreationSupport.snapshotPointerInput((byte) -128);
-        if ((!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) &&
-            (SpriteConstructionSupport.clientScreenStage != 11)) {
+        if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255) &&
+            SpriteConstructionSupport.clientScreenStage != 11) {
           TextTemplateArgumentType.updateFullscreenDialogFrame(1);
         }
         if (null != CachedTextLayout.mouseWheelInput) {
@@ -258,9 +258,9 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
-          if (((this.forceIdleDisconnect) ||
-              (!(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
-                !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))))) {
+          if (this.forceIdleDisconnect ||
+              !(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
+                !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))) {
             this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             ClientFlowState.requestSessionExit((byte) 81);
@@ -270,24 +270,24 @@ abstract class SessionGameApplet extends GameApplet {
             DisplayNamePanel.connectionRetryDeadlineMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 15000L;
           }
         }
-        if (((DebouncedValidationProvider.archiveLoadStatus == -1) ||
-              (DebouncedValidationProvider.archiveLoadStatus == 0))) {
+        if (DebouncedValidationProvider.archiveLoadStatus == -1 ||
+              DebouncedValidationProvider.archiveLoadStatus == 0) {
           archiveWasPendingSnapshot = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
           idleThresholdOrArchivePendingOrSequenceReady = archiveWasPendingSnapshot;
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
-          if ((idleThresholdOrArchivePendingOrSequenceReady != 0) &&
-              (DebouncedValidationProvider.archiveLoadStatus == 0) &&
-              (11 == SpriteConstructionSupport.clientScreenStage) &&
-              (!ClientTimingSupport.isClientReadyForSessionActions(73))) {
+          if (idleThresholdOrArchivePendingOrSequenceReady != 0 &&
+              DebouncedValidationProvider.archiveLoadStatus == 0 &&
+              11 == SpriteConstructionSupport.clientScreenStage &&
+              !ClientTimingSupport.isClientReadyForSessionActions(73)) {
             IterableNodeHashTable.refreshLoginTicketMessage(-12618);
           }
-          if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
-              (DebouncedValidationProvider.archiveLoadStatus != 0)) {
+          if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
+              DebouncedValidationProvider.archiveLoadStatus != 0) {
             DisplayNamePanel.connectionRetryDeadlineMillis = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
         }
-        if ((DebouncedValidationProvider.archiveLoadStatus != -1) &&
-            (DebouncedValidationProvider.archiveLoadStatus != 0)) {
+        if (DebouncedValidationProvider.archiveLoadStatus != -1 &&
+            DebouncedValidationProvider.archiveLoadStatus != 0) {
           if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (SpriteConstructionSupport.clientScreenStage >= 10) {
               ClientFlowState.requestSessionExit((byte) 114);
@@ -330,23 +330,23 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
         }
-        if ((((((DebouncedValidationProvider.archiveLoadStatus != -1) &&
-                (DebouncedValidationProvider.archiveLoadStatus != 0))) ||
-              (ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)))) &&
-            (~DisplayNamePanel.connectionRetryDeadlineMillis >= ~ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180))) {
+        if ((DebouncedValidationProvider.archiveLoadStatus != -1 &&
+                DebouncedValidationProvider.archiveLoadStatus != 0 ||
+              ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)) &&
+            ~DisplayNamePanel.connectionRetryDeadlineMillis >= ~ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180)) {
           ArchiveLoadStep.loginRetrySuspended = false;
-          if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
-              (DebouncedValidationProvider.archiveLoadStatus != 0)) {
+          if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
+              DebouncedValidationProvider.archiveLoadStatus != 0) {
             DebouncedValidationProvider.archiveLoadStatus = -1;
             SocialListEntry.resetArchiveConnectionFailures(-21754);
           }
         }
-        if ((DebouncedValidationProvider.archiveLoadStatus == 0) &&
-            (!ClientTimingSupport.isClientReadyForSessionActions(93))) {
+        if (DebouncedValidationProvider.archiveLoadStatus == 0 &&
+            !ClientTimingSupport.isClientReadyForSessionActions(93)) {
           SessionInstanceState.sessionExitRequested = false;
         }
-        if ((VisualPropertyOverrides.clientBootstrapStage == 0) &&
-            (AchievementQuery.ensureArchiveCatalogLoaded(108))) {
+        if (VisualPropertyOverrides.clientBootstrapStage == 0 &&
+            AchievementQuery.ensureArchiveCatalogLoaded(108)) {
           VisualPropertyOverrides.clientBootstrapStage = 1;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 1) {
@@ -361,8 +361,8 @@ abstract class SessionGameApplet extends GameApplet {
           RankedListQuery.basicUiFontArchive = AttachedEntityRenderer.initialUiFontArchive;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 2) {
-          if ((FadingDialog.interfaceTextArchive != null) &&
-              (FadingDialog.interfaceTextArchive.ensureIndexLoaded(0))) {
+          if (FadingDialog.interfaceTextArchive != null &&
+              FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
             if (!FadingDialog.interfaceTextArchive.hasGroupName((byte) -116, "")) {
               FadingDialog.interfaceTextArchive = null;
             } else {
@@ -377,16 +377,16 @@ abstract class SessionGameApplet extends GameApplet {
             VisualPropertyOverrides.clientBootstrapStage = 3;
           }
         }
-        if ((3 == VisualPropertyOverrides.clientBootstrapStage) &&
-            (DelayedIncomingPacket.loadRequiredLoginUiGroups(DialRenderer.initialButtonAndLogoArchive, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive, -11652)) &&
-            (DisplayModeInfo.loadAllArchiveGroups((byte) -127, DialRenderer.initialButtonAndLogoArchive))) {
+        if (3 == VisualPropertyOverrides.clientBootstrapStage &&
+            DelayedIncomingPacket.loadRequiredLoginUiGroups(DialRenderer.initialButtonAndLogoArchive, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive, -11652) &&
+            DisplayModeInfo.loadAllArchiveGroups((byte) -127, DialRenderer.initialButtonAndLogoArchive)) {
           LoginUiSupport.releaseAwtLoadingFonts((byte) -105);
           ConnectionHeaderSupport.evaluateConnectionHeaderGuard((byte) 120);
           ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.initialButtonAndLogoArchive, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive);
-          if (((LoginProtocolSupport.lockBootstrapLoginPanelActions) ||
-              (SocketConnector.bootstrapLoginPanelMessage != null))) {
+          if (LoginProtocolSupport.lockBootstrapLoginPanelActions ||
+              SocketConnector.bootstrapLoginPanelMessage != null) {
             loginPanelGuardSnapshot = 2274;
             loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
             if (LoginProtocolSupport.lockBootstrapLoginPanelActions) {
@@ -425,8 +425,8 @@ abstract class SessionGameApplet extends GameApplet {
         bootstrapTextArchiveGate: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
             if (null != TextValidationSupport.bootstrapGameTextArchive) {
-              if (((!(TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0))) ||
-                  (!(TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))))) {
+              if (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
+                  !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true)) {
                 HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
                 break bootstrapTextArchiveGate;
               }
@@ -438,8 +438,8 @@ abstract class SessionGameApplet extends GameApplet {
         if (methodGuard != 19660) {
           return;
         }
-        if ((VisualPropertyOverrides.clientBootstrapStage == 12) &&
-            (!AgeValidator.gameArchiveRequestPending)) {
+        if (VisualPropertyOverrides.clientBootstrapStage == 12 &&
+            !AgeValidator.gameArchiveRequestPending) {
           VisualPropertyOverrides.clientBootstrapStage = 13;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 13) {
@@ -453,8 +453,8 @@ abstract class SessionGameApplet extends GameApplet {
             VisualPropertyOverrides.clientBootstrapStage = 20;
           }
         }
-        if ((!fullscreenActive) &&
-            (EntityMotionSupport.canvasReplacementRequested)) {
+        if (!fullscreenActive &&
+            EntityMotionSupport.canvasReplacementRequested) {
           EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
           this.rebuildGameCanvas(true);
           UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
@@ -543,8 +543,8 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (uiAction == 3) {
-              if ((-1 != DebouncedValidationProvider.archiveLoadStatus) &&
-                  (DebouncedValidationProvider.archiveLoadStatus != 0)) {
+              if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
+                  DebouncedValidationProvider.archiveLoadStatus != 0) {
                 DebouncedValidationProvider.archiveLoadStatus = -1;
                 SocialListEntry.resetArchiveConnectionFailures(-21754);
               }
@@ -576,8 +576,8 @@ abstract class SessionGameApplet extends GameApplet {
             if (5 == uiAction) {
               EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(120), 62);
             }
-            if ((uiAction == 6) &&
-                (AccountEligibilitySupport.loginReturnAllowed)) {
+            if (uiAction == 6 &&
+                AccountEligibilitySupport.loginReturnAllowed) {
               SpriteConstructionSupport.clientScreenStage = 10;
             }
             if (uiAction == 7) {
@@ -731,8 +731,8 @@ abstract class SessionGameApplet extends GameApplet {
           this.requestedMemberMode = true;
         }
         packetOpcode = ScorePopup.currentPacketOpcode;
-        if ((packetOpcode < 64) &&
-            (OpacityWidget.enabledSessionPacketOpcodes[packetOpcode])) {
+        if (packetOpcode < 64 &&
+            OpacityWidget.enabledSessionPacketOpcodes[packetOpcode]) {
           if (packetOpcode == 0) {
             return;
           }
@@ -759,8 +759,8 @@ abstract class SessionGameApplet extends GameApplet {
                           if (packetOpcode == 16) {
                             DualLinkNode.readSessionNameAndNormalize(1);
                           } else {
-                            if ((11 != packetOpcode) &&
-                                (12 != packetOpcode)) {
+                            if (11 != packetOpcode &&
+                                12 != packetOpcode) {
                               if (packetOpcode == 13) {
                                 HighscoreNameEntry.handleSocialListResponse((byte) 104);
                                 return;

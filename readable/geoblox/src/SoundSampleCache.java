@@ -178,8 +178,8 @@ final class SoundSampleCache {
         String emailDescription = null;
         RuntimeException caughtQueryFailure = null;
         try {
-          if ((EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-87)) &&
-              (!candidateEmail.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491)))) {
+          if (EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-87) &&
+              !candidateEmail.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491))) {
             EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, candidateEmail);
           }
           if (methodGuard != -1) {
@@ -282,8 +282,8 @@ final class SoundSampleCache {
             cachedSampleAtReturn = cachedThenRenderedSample;
             return cachedSampleAtReturn;
           }
-          if ((byteBudget != null) &&
-              (byteBudget[0] <= 0)) {
+          if (byteBudget != null &&
+              byteBudget[0] <= 0) {
             return null;
           }
           soundEffect = SynthesizedSoundEffect.load(this.synthesizedSoundArchive, groupId, fileId);
@@ -341,8 +341,8 @@ final class SoundSampleCache {
             cachedSampleAtReturn = cachedThenDecodedSample;
             return cachedSampleAtReturn;
           }
-          if ((byteBudget != null) &&
-              (byteBudget[0] <= 0)) {
+          if (byteBudget != null &&
+              byteBudget[0] <= 0) {
             exhaustedBudgetResult = null;
             return (PcmSample) (exhaustedBudgetResult);
           }

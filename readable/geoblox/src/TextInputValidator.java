@@ -51,7 +51,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     abstract String validationMessageForText(int guard, String candidateText);
 
     final static boolean isAllowedAccountNameCharacter(char character, byte methodGuard) {
-        if ((Character.isISOControl(character))) {
+        if (Character.isISOControl(character)) {
             return false;
         }
         if (LoginPanel.isAsciiLetterOrDigit(-123, character)) {
@@ -135,8 +135,8 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
         try {
           MeshPrioritySupport.messageDialogUiFlowActive = false;
           ArchiveLoadStep.connectionLostMessagePending = false;
-          if ((null != Geoblox.activeMessageDialog) &&
-              (Geoblox.activeMessageDialog.dialogVisible)) {
+          if (null != Geoblox.activeMessageDialog &&
+              Geoblox.activeMessageDialog.dialogVisible) {
             if (8 == responseCode) {
               responseCode = 2;
               if (!AgeValidator.reconnectingLoginMode) {
@@ -160,9 +160,9 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               }
               Geoblox.activeMessageDialog.installErrorContent(responseCode, methodGuard + 19686, responseText);
             }
-            if ((responseCode != 256) &&
-                (responseCode != 10) &&
-                (!AgeValidator.reconnectingLoginMode)) {
+            if (responseCode != 256 &&
+                responseCode != 10 &&
+                !AgeValidator.reconnectingLoginMode) {
               SpriteButtonRenderer.activeLoginPanel.clearLoginInputs(-119);
             }
           }

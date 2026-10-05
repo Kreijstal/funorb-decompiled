@@ -19,7 +19,7 @@ abstract class FrameTimer {
 
     final int awaitAndCountTicks(byte methodGuard, long tickPeriodNanos) {
         long sleepMillis = this.measureSleepMillis((byte) -49);
-        if ((0L < sleepMillis)) {
+        if (0L < sleepMillis) {
             ByteTextDecodingSupport.sleepMillis(0, sleepMillis);
         }
         if (methodGuard == -6) {

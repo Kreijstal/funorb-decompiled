@@ -100,9 +100,9 @@ final class DiskCacheWorker implements Runnable {
           synchronized (queueMonitor) {
             queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.firstForIteration((byte) 121));
             while (queuedRequest != null) {
-              if (((long)groupId == queuedRequest.secondaryKey) &&
-                  (queuedRequest.diskCache == diskCache) &&
-                  (2 == queuedRequest.operationType)) {
+              if ((long)groupId == queuedRequest.secondaryKey &&
+                  queuedRequest.diskCache == diskCache &&
+                  2 == queuedRequest.operationType) {
                 request.bytes = queuedRequest.bytes;
                 request.pending = false;
                 reusedWriteRequestBeforeReturn = request;

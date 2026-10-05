@@ -34,26 +34,26 @@ final class BufferedRandomAccessFile {
           }
           overlapStart = -1L;
           overlapEnd = -1L;
-          if ((this.writeBufferStart >= this.readBufferStart) &&
-              (~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart)) {
+          if (this.writeBufferStart >= this.readBufferStart &&
+              ~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart) {
             overlapStart = this.writeBufferStart;
           } else {
-            if ((this.writeBufferStart <= this.readBufferStart) &&
-                (~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength))) {
+            if (this.writeBufferStart <= this.readBufferStart &&
+                ~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength)) {
               overlapStart = this.readBufferStart;
             }
           }
-          if ((~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength)) &&
-              (this.readBufferStart + (long)this.readBufferLength >= (long)this.writeBufferLength + this.writeBufferStart)) {
+          if (~this.readBufferStart > ~(this.writeBufferStart + (long)this.writeBufferLength) &&
+              this.readBufferStart + (long)this.readBufferLength >= (long)this.writeBufferLength + this.writeBufferStart) {
             overlapEnd = (long)this.writeBufferLength + this.writeBufferStart;
           } else {
-            if ((~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart) &&
-                (~(this.writeBufferStart + (long)this.writeBufferLength) <= ~((long)this.readBufferLength + this.readBufferStart))) {
+            if (~((long)this.readBufferLength + this.readBufferStart) < ~this.writeBufferStart &&
+                ~(this.writeBufferStart + (long)this.writeBufferLength) <= ~((long)this.readBufferLength + this.readBufferStart)) {
               overlapEnd = this.readBufferStart + (long)this.readBufferLength;
             }
           }
-          if ((overlapStart > -1L) &&
-              (overlapEnd > overlapStart)) {
+          if (overlapStart > -1L &&
+              overlapEnd > overlapStart) {
             overlapLength = (int)(overlapEnd - overlapStart);
             ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
           }
@@ -104,9 +104,9 @@ final class BufferedRandomAccessFile {
             if (remainingLength + destinationOffset > destination.length) {
               throw new ArrayIndexOutOfBoundsException(-destination.length + destinationOffset + remainingLength);
             }
-            if ((-1L != this.writeBufferStart) &&
-                (this.position >= this.writeBufferStart) &&
-                ((long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position)) {
+            if (-1L != this.writeBufferStart &&
+                this.position >= this.writeBufferStart &&
+                (long)this.writeBufferLength + this.writeBufferStart >= (long)remainingLength + this.position) {
               ArrayOperations.copyBytes(this.writeBuffer, (int)(-this.writeBufferStart + this.position), destination, destinationOffset, remainingLength);
               this.position = this.position + (long)remainingLength;
               return;
@@ -117,8 +117,8 @@ final class BufferedRandomAccessFile {
             if (methodGuard != 9868) {
               BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(-115);
             }
-            if ((~this.position <= ~this.readBufferStart) &&
-                (~((long)this.readBufferLength + this.readBufferStart) < ~this.position)) {
+            if (~this.position <= ~this.readBufferStart &&
+                ~((long)this.readBufferLength + this.readBufferStart) < ~this.position) {
               readCountOrZeroFillEnd = (int)((long)this.readBufferLength - this.position + this.readBufferStart);
               if (remainingLength < readCountOrZeroFillEnd) {
                 readCountOrZeroFillEnd = remainingLength;
@@ -175,27 +175,27 @@ final class BufferedRandomAccessFile {
                 }
               }
               overlayStart = -1L;
-              if ((~this.writeBufferStart <= ~initialPosition) &&
-                  (~this.writeBufferStart > ~((long)requestedLength + initialPosition))) {
+              if (~this.writeBufferStart <= ~initialPosition &&
+                  ~this.writeBufferStart > ~((long)requestedLength + initialPosition)) {
                 overlayStart = this.writeBufferStart;
               } else {
-                if ((~this.writeBufferStart >= ~initialPosition) &&
-                    (initialPosition < this.writeBufferStart + (long)this.writeBufferLength)) {
+                if (~this.writeBufferStart >= ~initialPosition &&
+                    initialPosition < this.writeBufferStart + (long)this.writeBufferLength) {
                   overlayStart = initialPosition;
                 }
               }
               overlayEnd = -1L;
-              if ((~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart)) &&
-                  ((long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart)) {
+              if (~initialPosition > ~((long)this.writeBufferLength + this.writeBufferStart) &&
+                  (long)requestedLength + initialPosition >= (long)this.writeBufferLength + this.writeBufferStart) {
                 overlayEnd = this.writeBufferStart + (long)this.writeBufferLength;
               } else {
-                if ((this.writeBufferStart < initialPosition + (long)requestedLength) &&
-                    (~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength))) {
+                if (this.writeBufferStart < initialPosition + (long)requestedLength &&
+                    ~(initialPosition + (long)requestedLength) >= ~(this.writeBufferStart + (long)this.writeBufferLength)) {
                   overlayEnd = (long)requestedLength + initialPosition;
                 }
               }
-              if ((overlayStart > -1L) &&
-                  (overlayStart < overlayEnd)) {
+              if (overlayStart > -1L &&
+                  overlayStart < overlayEnd) {
                 overlayLength = (int)(-overlayStart + overlayEnd);
                 ArrayOperations.copyBytes(this.writeBuffer, (int)(overlayStart - this.writeBufferStart), destination, initialDestinationOffset + (int)(-initialPosition + overlayStart), overlayLength);
                 if (overlayEnd > this.position) {
@@ -258,8 +258,8 @@ final class BufferedRandomAccessFile {
                 this.flush((byte) 99);
               }
             }
-            if ((-1L != this.writeBufferStart) &&
-                ((long)remainingLength + this.position > (long)this.writeBuffer.length + this.writeBufferStart)) {
+            if (-1L != this.writeBufferStart &&
+                (long)remainingLength + this.position > (long)this.writeBuffer.length + this.writeBufferStart) {
               bytesUntilWriteBufferFull = (int)((long)this.writeBuffer.length + this.writeBufferStart - this.position);
               ArrayOperations.copyBytes(source, sourceOffset, this.writeBuffer, (int)(-this.writeBufferStart + this.position), bytesUntilWriteBufferFull);
               this.position = this.position + (long)bytesUntilWriteBufferFull;
@@ -303,26 +303,26 @@ final class BufferedRandomAccessFile {
             }
             overlapStart = -1L;
             overlapEnd = -1L;
-            if ((~this.readBufferStart >= ~this.position) &&
-                (~this.position > ~(this.readBufferStart + (long)this.readBufferLength))) {
+            if (~this.readBufferStart >= ~this.position &&
+                ~this.position > ~(this.readBufferStart + (long)this.readBufferLength)) {
               overlapStart = this.position;
             } else {
-              if ((~this.readBufferStart <= ~this.position) &&
-                  (~this.readBufferStart > ~(this.position + (long)remainingLength))) {
+              if (~this.readBufferStart <= ~this.position &&
+                  ~this.readBufferStart > ~(this.position + (long)remainingLength)) {
                 overlapStart = this.readBufferStart;
               }
             }
-            if ((~this.readBufferStart > ~((long)remainingLength + this.position)) &&
-                (~((long)this.readBufferLength + this.readBufferStart) <= ~(this.position + (long)remainingLength))) {
+            if (~this.readBufferStart > ~((long)remainingLength + this.position) &&
+                ~((long)this.readBufferLength + this.readBufferStart) <= ~(this.position + (long)remainingLength)) {
               overlapEnd = this.position + (long)remainingLength;
             } else {
-              if ((this.position < this.readBufferStart + (long)this.readBufferLength) &&
-                  (~(this.readBufferStart + (long)this.readBufferLength) >= ~(this.position + (long)remainingLength))) {
+              if (this.position < this.readBufferStart + (long)this.readBufferLength &&
+                  ~(this.readBufferStart + (long)this.readBufferLength) >= ~(this.position + (long)remainingLength)) {
                 overlapEnd = (long)this.readBufferLength + this.readBufferStart;
               }
             }
-            if ((overlapStart > -1L) &&
-                (~overlapStart > ~overlapEnd)) {
+            if (overlapStart > -1L &&
+                ~overlapStart > ~overlapEnd) {
               overlapLength = (int)(-overlapStart + overlapEnd);
               ArrayOperations.copyBytes(source, (int)(overlapStart + ((long)sourceOffset - this.position)), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
             }
@@ -387,7 +387,7 @@ final class BufferedRandomAccessFile {
     }
 
     final void seek(int methodGuard, long position) throws IOException {
-        if ((position < 0L)) {
+        if (position < 0L) {
             throw new IOException();
         }
         int unusedSeekGuardQuotient = -65 / ((-57 - methodGuard) / 37);

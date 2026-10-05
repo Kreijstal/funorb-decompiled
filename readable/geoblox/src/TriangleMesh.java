@@ -148,36 +148,36 @@ final class TriangleMesh {
     }
 
     final static void prepareRankedEntryArrays(int lowerBoundSeed, int entryLimit, int responseEntryCount) {
-        if (((DialRenderer.rankedEntryResponseIndices == null) ||
-              (!(DialRenderer.rankedEntryResponseIndices.length >= responseEntryCount)))) {
+        if (DialRenderer.rankedEntryResponseIndices == null ||
+              !(DialRenderer.rankedEntryResponseIndices.length >= responseEntryCount)) {
           DialRenderer.rankedEntryResponseIndices = new int[responseEntryCount * 2];
         }
-        if (((null == LoginPasswordSupport.rankedEntryKeyTwo) ||
-              (!(responseEntryCount <= LoginPasswordSupport.rankedEntryKeyTwo.length)))) {
+        if (null == LoginPasswordSupport.rankedEntryKeyTwo ||
+              !(responseEntryCount <= LoginPasswordSupport.rankedEntryKeyTwo.length)) {
           LoginPasswordSupport.rankedEntryKeyTwo = new int[responseEntryCount * 2];
         }
-        if (((null == TextHotspotBounds.rankedEntryRatioNumerators) ||
-              (!(TextHotspotBounds.rankedEntryRatioNumerators.length >= responseEntryCount)))) {
+        if (null == TextHotspotBounds.rankedEntryRatioNumerators ||
+              !(TextHotspotBounds.rankedEntryRatioNumerators.length >= responseEntryCount)) {
           TextHotspotBounds.rankedEntryRatioNumerators = new int[responseEntryCount * 2];
         }
-        if (((null == NodeHashTableIterator.rankedEntryRatioSecondComponents) ||
-              (!(responseEntryCount <= NodeHashTableIterator.rankedEntryRatioSecondComponents.length)))) {
+        if (null == NodeHashTableIterator.rankedEntryRatioSecondComponents ||
+              !(responseEntryCount <= NodeHashTableIterator.rankedEntryRatioSecondComponents.length)) {
           NodeHashTableIterator.rankedEntryRatioSecondComponents = new int[responseEntryCount * 2];
         }
-        if (((null == FrameTimer.rankedEntryRatioThirdComponents) ||
-              (!(FrameTimer.rankedEntryRatioThirdComponents.length >= responseEntryCount)))) {
+        if (null == FrameTimer.rankedEntryRatioThirdComponents ||
+              !(FrameTimer.rankedEntryRatioThirdComponents.length >= responseEntryCount)) {
           FrameTimer.rankedEntryRatioThirdComponents = new int[2 * responseEntryCount];
         }
-        if (((null == ClientProtocolStage.rankedEntryKeyOne) ||
-              (!(ClientProtocolStage.rankedEntryKeyOne.length >= responseEntryCount)))) {
+        if (null == ClientProtocolStage.rankedEntryKeyOne ||
+              !(ClientProtocolStage.rankedEntryKeyOne.length >= responseEntryCount)) {
           ClientProtocolStage.rankedEntryKeyOne = new int[responseEntryCount * 2];
         }
-        if (((null == AchievementQuery.rankedEntryIndices) ||
-              (!(AchievementQuery.rankedEntryIndices.length >= responseEntryCount + entryLimit)))) {
+        if (null == AchievementQuery.rankedEntryIndices ||
+              !(AchievementQuery.rankedEntryIndices.length >= responseEntryCount + entryLimit)) {
           AchievementQuery.rankedEntryIndices = new int[(responseEntryCount + entryLimit) * 2];
         }
-        if (((null == AccountCreationForm.unusedRankedEntryBooleans) ||
-              (!(AccountCreationForm.unusedRankedEntryBooleans.length >= responseEntryCount)))) {
+        if (null == AccountCreationForm.unusedRankedEntryBooleans ||
+              !(AccountCreationForm.unusedRankedEntryBooleans.length >= responseEntryCount)) {
           AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * responseEntryCount];
         }
         GmtTimestampSupport.rankedEntryCount = 0;
@@ -214,7 +214,7 @@ final class TriangleMesh {
         if (methodGuard) {
             return false;
         }
-        if ((AchievementSubmission.sessionPacketPayloadLength == -1)) {
+        if (AchievementSubmission.sessionPacketPayloadLength == -1) {
             if (!UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                 return false;
             }
@@ -222,7 +222,7 @@ final class TriangleMesh {
             LogoCompositor.sessionPacketBuffer.position = 0;
         }
         if (AchievementSubmission.sessionPacketPayloadLength == -2) {
-            if (!(UiWidget.readSessionBytesIfAvailable(30000, 2))) {
+            if (!UiWidget.readSessionBytesIfAvailable(30000, 2)) {
                 return false;
             }
             AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);

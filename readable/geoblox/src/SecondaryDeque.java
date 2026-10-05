@@ -34,7 +34,7 @@ final class SecondaryDeque {
     }
 
     final void addFirst(DualLinkNode node, boolean methodGuard) {
-        if ((node.previousSecondaryNode != null)) {
+        if (node.previousSecondaryNode != null) {
             node.unlinkSecondaryNode((byte) 45);
         }
         node.nextSecondaryNode = this.sentinel.nextSecondaryNode;
@@ -97,7 +97,7 @@ final class SecondaryDeque {
 
     final void addLast(int methodGuard, DualLinkNode node) {
         try {
-            if ((node.previousSecondaryNode != null)) {
+            if (node.previousSecondaryNode != null) {
                 node.unlinkSecondaryNode((byte) 62);
             }
             int unusedInsertionGuardRemainder = -75 % ((methodGuard - 62) / 46);
@@ -172,8 +172,8 @@ final class SecondaryDeque {
           if (!methodGuard) {
             receivedSessionName = (String) null;
           }
-          if ((longValue == 0L) &&
-              (loginText != null)) {
+          if (longValue == 0L &&
+              loginText != null) {
             textPairPayload = new TextPairLoginPayload(loginText, base38Text);
             return (LoginPayload) ((Object) textPairPayload);
           }

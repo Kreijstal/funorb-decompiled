@@ -131,7 +131,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
     }
 
     private final void hideFullscreenError(byte methodGuard) {
-        if (!(this.dialogVisible)) {
+        if (!this.dialogVisible) {
             return;
         }
         int var2 = 102 / ((methodGuard - 6) / 43);

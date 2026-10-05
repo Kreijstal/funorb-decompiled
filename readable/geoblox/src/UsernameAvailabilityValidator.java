@@ -68,7 +68,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             if (stepIdForSelection == 1) {
                 return ByteArrayPoolSupport.tutorialColourMatchMessage;
             }
-            if ((stepIdForSelection != 2)) {
+            if (stepIdForSelection != 2) {
                 if (stepIdForSelection == 3) {
                     return ArchiveHandshakeState.tutorialCompleteMessage;
                 }
@@ -86,7 +86,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         if (stepIdForSelection == 1) {
             return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
-        if ((stepIdForSelection != 2)) {
+        if (stepIdForSelection != 2) {
             if (stepIdForSelection == 3) {
                 return ArchiveHandshakeState.tutorialCompleteMessage;
             }
@@ -305,8 +305,8 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           }
           if (!candidateText.equals(this.cachedUsernameCandidate)) {
             availabilityQuery = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
-            if ((availabilityQuery != null) &&
-                (availabilityQuery.candidateOrFailureText == null)) {
+            if (availabilityQuery != null &&
+                availabilityQuery.candidateOrFailureText == null) {
               this.cachedUsernameAvailable = availabilityQuery.accepted;
               this.cachedUsernameCandidate = candidateText;
             } else {

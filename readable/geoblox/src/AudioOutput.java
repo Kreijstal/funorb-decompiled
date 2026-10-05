@@ -40,8 +40,8 @@ class AudioOutput {
             if (sampleRateHz == 0) {
               throw new IllegalStateException();
             }
-            if ((outputSlot >= 0) &&
-                (outputSlot < 2)) {
+            if (outputSlot >= 0 &&
+                outputSlot < 2) {
               if (requestedBufferFrames < 256) {
                 requestedBufferFrames = 256;
               }
@@ -63,8 +63,8 @@ class AudioOutput {
                   ((AudioOutput) ((Object) output)).bufferCapacityFrames = 16384;
                 }
                 ((AudioOutput) ((Object) output)).openDevice(((AudioOutput) ((Object) output)).bufferCapacityFrames);
-                if ((serviceThreadPriority > 0) &&
-                    (sharedAudioService == null)) {
+                if (serviceThreadPriority > 0 &&
+                    sharedAudioService == null) {
                   sharedAudioService = new AudioService();
                   sharedAudioService.taskDispatcher = taskDispatcher;
                   taskDispatcher.startThread((Runnable) ((Object) sharedAudioService), 0, serviceThreadPriority);
@@ -124,7 +124,7 @@ class AudioOutput {
             }
             allOutputsRemovedInt = 0;
           }
-          if ((allOutputsRemovedInt != 0)) {
+          if (allOutputsRemovedInt != 0) {
             sharedAudioService.stopRequested = true;
             while (sharedAudioService.running) {
               ByteTextDecodingSupport.sleepMillis(0, 50L);
@@ -237,8 +237,8 @@ class AudioOutput {
                 if (this.skipNextDrainCheck) {
                   this.skipNextDrainCheck = false;
                 } else {
-                  if ((this.maxDrainedFrames == 0) &&
-                      (this.previousMaxDrainedFrames == 0)) {
+                  if (this.maxDrainedFrames == 0 &&
+                      this.previousMaxDrainedFrames == 0) {
                     this.closeDevice();
                     this.reopenAtMillis = nowMillis + 2000L;
                     return;
@@ -299,8 +299,8 @@ class AudioOutput {
         }
         ArrayOperations.clearInts(destination, 0, sampleCount);
         this.framesUntilReschedule = this.framesUntilReschedule - frameCount;
-        if ((this.rootStream != null) &&
-            (this.framesUntilReschedule <= 0)) {
+        if (this.rootStream != null &&
+            this.framesUntilReschedule <= 0) {
           this.framesUntilReschedule = this.framesUntilReschedule + (sampleRateHz >> 4);
           AudioOutput.resetStreamScheduling(this.rootStream);
           this.enqueueByPriority(this.rootStream, this.rootStream.getSchedulingPriority());
@@ -325,10 +325,10 @@ class AudioOutput {
                     stream = this.priorityQueueHeads[priorityBucket];
                     childStream = stream;
                     childStream = stream;
-                    while ((stream != null)) {
+                    while (stream != null) {
                       sample = stream.sample;
-                      if ((sample != null) &&
-                          (sample.scheduledWork > sampleWorkThreshold)) {
+                      if (sample != null &&
+                          sample.scheduledWork > sampleWorkThreshold) {
                         pendingBuckets = pendingBuckets | 1 << priorityBucket;
                         previousStreamOrNextCleanupStream = stream;
                         stream = stream.scheduledNextStream;

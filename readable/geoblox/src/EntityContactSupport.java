@@ -139,8 +139,8 @@ final class EntityContactSupport {
                     if (kindTwoMismatch != 0) {
                       pooledConversionEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeLast(1));
                       if (pooledConversionEntity != null) {
-                        if ((entity.entitySpriteKindId == 2) &&
-                            (kindTwoMismatch != 0)) {
+                        if (entity.entitySpriteKindId == 2 &&
+                            kindTwoMismatch != 0) {
                           pooledConversionEntity.initializeEntityMotion(negativeHorizontalClipGuard ^ -97, (float)contactX, 8, entity.velocityX, entity.spriteVariantIndex, 0, entity.spriteAngleRadians, (float)contactY, entity.velocityY, entity.entityCategoryKey, 0.0f);
                         } else {
                           pooledConversionEntity.initializeEntityMotion(-121, contactedEntity.positionX, 8, contactedEntity.velocityX, contactedEntity.spriteVariantIndex, 0, contactedEntity.spriteAngleRadians, contactedEntity.positionY, contactedEntity.velocityY, contactedEntity.entityCategoryKey, 0.0f);

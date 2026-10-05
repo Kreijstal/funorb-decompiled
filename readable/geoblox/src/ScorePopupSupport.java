@@ -46,7 +46,7 @@ final class ScorePopupSupport {
 
     final static void spawnScorePopup(int points, boolean methodGuard, int originY, int chainMultiplier, int originX) {
         ScorePopup popup = (ScorePopup) ((Object) PcmResampler.availableScorePopups.removeLast(1));
-        if ((popup == null)) {
+        if (popup == null) {
             UiWidget.gameplaySession.addScore((byte) 127, points);
             return;
         }

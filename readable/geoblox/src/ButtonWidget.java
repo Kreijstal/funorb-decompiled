@@ -20,8 +20,8 @@ class ButtonWidget extends UiWidget {
         String eventContextDescription = null;
         RuntimeException caughtPointerPressException = null;
         try {
-          if ((this.enabled) &&
-              (this.containsPointer(pointerX, -1, pointerY, parentY, parentX))) {
+          if (this.enabled &&
+              this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
             this.requestKeyboardFocus((byte) -116, eventContext);
             this.pressedPointerButton = pointerButton;
             if (null != this.listener) {
@@ -82,8 +82,8 @@ class ButtonWidget extends UiWidget {
                 if (EntityCollisionSupport.heldPointerButtonSnapshot == this.pressedPointerButton) {
                     return;
                 }
-                if ((this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX)) &&
-                    ((EntityCollisionSupport.heldPointerButtonSnapshot == 0))) {
+                if (this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX) &&
+                    EntityCollisionSupport.heldPointerButtonSnapshot == 0) {
                     this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
                 }
                 this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);
@@ -108,8 +108,8 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtKeyInputException = null;
         try {
           if (this.hasKeyboardFocus((byte) 54)) {
-            if (((keyCode == 84) ||
-                (keyCode == 83))) {
+            if (keyCode == 84 ||
+                keyCode == 83) {
               this.activateButton(-1, -28922, -1, 1);
               return true;
             }
@@ -185,12 +185,12 @@ class ButtonWidget extends UiWidget {
         String focusContextDescription = null;
         RuntimeException caughtFocusFailure = null;
         try {
-          if ((this.enabled) &&
-              (this.focusable)) {
+          if (this.enabled &&
+              this.focusable) {
             focusContext.clearKeyboardFocus(-128);
             this.focused = true;
-            if ((null != this.listener) &&
-                (this.listener instanceof KeyboardFocusListener)) {
+            if (null != this.listener &&
+                this.listener instanceof KeyboardFocusListener) {
               ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             }
             if (methodGuard <= -30) {

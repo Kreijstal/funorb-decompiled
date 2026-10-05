@@ -90,7 +90,7 @@ final class DialogLayer extends SingleChildWidget {
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            if ((dialog.dialogVisible)) {
+            if (dialog.dialogVisible) {
                 return dialog.findFocusTarget((byte) -79);
             }
             dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 119));

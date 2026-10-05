@@ -557,8 +557,8 @@ final class MusicScore extends IntrusiveNode {
             eventCodeOrControllerCursor++;
             controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
             midiOutput.writeByte((byte) 126, controllerNumber);
-            if ((controllerNumber != 0) &&
-                (controllerNumber != 32)) {
+            if (controllerNumber != 0 &&
+                controllerNumber != 32) {
               if (controllerNumber == 1) {
                 controller1ReadIndex = controller1Cursor;
                 controller1Cursor++;
@@ -599,11 +599,11 @@ final class MusicScore extends IntrusiveNode {
                 controller100ReadIndex = controller100Cursor;
                 controller100Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
-              } else if ((controllerNumber != 64) &&
-                  (controllerNumber != 65) &&
-                  (controllerNumber != 120) &&
-                  (controllerNumber != 121) &&
-                  (controllerNumber != 123)) {
+              } else if (controllerNumber != 64 &&
+                  controllerNumber != 65 &&
+                  controllerNumber != 120 &&
+                  controllerNumber != 121 &&
+                  controllerNumber != 123) {
                 otherControllerReadIndex = otherControllerCursor;
                 otherControllerCursor++;
                 controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];

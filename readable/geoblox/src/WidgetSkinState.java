@@ -134,8 +134,8 @@ final class WidgetSkinState {
             pendingQueryValidationState = (ValidationState) null;
           }
           displayText = renderer.getDisplayText(120, widget);
-          if ((displayText != null) &&
-              (null != renderer.font)) {
+          if (displayText != null &&
+              null != renderer.font) {
             if (this.textColor < 0) {
               return;
             }

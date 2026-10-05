@@ -35,8 +35,8 @@ final class LoginProtocolSupport {
             CharSequence receivedNameCharacters = null;
             unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              if ((null == SpriteCheckboxRenderer.sessionSocket) &&
-                  (!SessionSocketSupport.pollSessionSocketOpening(useLongLoginPayload, 52))) {
+              if (null == SpriteCheckboxRenderer.sessionSocket &&
+                  !SessionSocketSupport.pollSessionSocketOpening(useLongLoginPayload, 52)) {
                 connectionPendingResult = -1;
                 return connectionPendingResult;
               }
@@ -53,8 +53,8 @@ final class LoginProtocolSupport {
                 NanoFrameTimer.flushSessionWrites(-1, -1);
                 PacketBuffer.currentProtocolStage = ResizableDialog.awaitingInitialLoginReplyStage;
               }
-              if ((ResizableDialog.awaitingInitialLoginReplyStage == PacketBuffer.currentProtocolStage) &&
-                  (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
+              if (ResizableDialog.awaitingInitialLoginReplyStage == PacketBuffer.currentProtocolStage &&
+                  UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                 responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 if (responseByteThenPortSwapValue != 0) {
@@ -65,8 +65,8 @@ final class LoginProtocolSupport {
                   PacketBuffer.currentProtocolStage = MessageDialog.awaitingLoginLongState;
                 }
               }
-              if ((MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage) &&
-                  (UiWidget.readSessionBytesIfAvailable(30000, 8))) {
+              if (MessageDialog.awaitingLoginLongState == PacketBuffer.currentProtocolStage &&
+                  UiWidget.readSessionBytesIfAvailable(30000, 8)) {
                 TextValidationSupport.loginHandshakeServerSeed = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 LogoCompositor.sessionPacketBuffer.position = 0;
                 UsernameAvailabilityValidator.writeEncryptedLoginRequest(26, affiliateId, useLongLoginPayload, EntityContactSupport.pendingLoginPayload, enableLoginFlagBitEight);
@@ -77,14 +77,14 @@ final class LoginProtocolSupport {
                 LoginProtocolSupport.advanceLoginHandshake(false, (String) null, 95, false, (String) null, 13);
               }
               loginResultDispatch: {
-                if ((ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage) &&
-                    (UiWidget.readSessionBytesIfAvailable(30000, 1))) {
+                if (ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage &&
+                    UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                   responseByteThenPortSwapValue = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.position = 0;
                   GameSoundResources.optionalLoginText = null;
                   ScorePopup.currentPacketOpcode = responseByteThenPortSwapValue;
-                  if ((responseByteThenPortSwapValue != 0) &&
-                      (responseByteThenPortSwapValue != 1)) {
+                  if (responseByteThenPortSwapValue != 0 &&
+                      responseByteThenPortSwapValue != 1) {
                     if (responseByteThenPortSwapValue != 8) {
                       PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                       AchievementSubmission.sessionPacketPayloadLength = -1;
@@ -99,8 +99,8 @@ final class LoginProtocolSupport {
                   PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
                 }
               }
-              if ((ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage) &&
-                  (TriangleMesh.readSessionPacketPayload(false))) {
+              if (ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage &&
+                  TriangleMesh.readSessionPacketPayload(false)) {
                 ClientClockSupport.loginResponseLongValue = LogoCompositor.sessionPacketBuffer.readLongBE(2901);
                 SpriteCheckboxRenderer.loginDebugPermissionLevel = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                 LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
@@ -144,8 +144,8 @@ final class LoginProtocolSupport {
                 if (settingsCookieValue != null) {
                   SettingsCookieSupport.storeSettingsCookie(100, settingsCookieValue, NodeHashTableIterator.getActiveApplet(112));
                 }
-                if ((TextTemplateDefinition.loginMembershipGateValue <= 0) &&
-                    (!GzipInflater.loginResponseFlagFourSet)) {
+                if (TextTemplateDefinition.loginMembershipGateValue <= 0 &&
+                    !GzipInflater.loginResponseFlagFourSet) {
                   try {
                     AppletJavaScriptBridge.callWithoutArguments((byte) -6, NodeHashTableIterator.getActiveApplet(107), "unzap");
                   } catch (java.lang.Throwable unzapScriptFailure) {
@@ -171,11 +171,11 @@ final class LoginProtocolSupport {
                 connectedResponseResult = ScorePopup.currentPacketOpcode;
                 return connectedResponseResult;
               }
-              if ((PacketBuffer.currentProtocolStage == TextInputRenderer.awaitingLoginFailureTextStage) &&
-                  (TriangleMesh.readSessionPacketPayload(false))) {
+              if (PacketBuffer.currentProtocolStage == TextInputRenderer.awaitingLoginFailureTextStage &&
+                  TriangleMesh.readSessionPacketPayload(false)) {
                 Bzip2DecoderState.closeSessionSocket((byte) -118);
-                if ((ScorePopup.currentPacketOpcode == 7) &&
-                    (!TextTemplateArgumentType.loginRetryAttempted)) {
+                if (ScorePopup.currentPacketOpcode == 7 &&
+                    !TextTemplateArgumentType.loginRetryAttempted) {
                   TextTemplateArgumentType.loginRetryAttempted = true;
                   retryPendingResult = -1;
                   return retryPendingResult;

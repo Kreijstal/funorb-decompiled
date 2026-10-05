@@ -141,7 +141,7 @@ final class PacketByteCipher {
     }
 
     final int nextInt(int regenerateAtRemaining) {
-        if ((this.remainingResults == regenerateAtRemaining)) {
+        if (this.remainingResults == regenerateAtRemaining) {
             this.generateResults(-125);
             this.remainingResults = 256;
         }

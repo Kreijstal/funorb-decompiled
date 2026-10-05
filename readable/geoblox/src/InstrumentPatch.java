@@ -38,8 +38,8 @@ final class InstrumentPatch extends IntrusiveNode {
           previousEncodedSampleId = 0;
           resolvedSample = null;
           for (keyIndex = 0; keyIndex < 128; keyIndex++) {
-            if (((noteSelectionMask == null) ||
-                  (noteSelectionMask[keyIndex] != 0))) {
+            if (noteSelectionMask == null ||
+                  noteSelectionMask[keyIndex] != 0) {
               encodedSampleId = this.encodedSampleIds[keyIndex];
               if (encodedSampleId != 0) {
                 if (encodedSampleId != previousEncodedSampleId) {
@@ -157,8 +157,8 @@ final class InstrumentPatch extends IntrusiveNode {
         int unusedClientControlSnapshot = 0;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if ((sprites != null) &&
-              (stripWidth > 0)) {
+          if (sprites != null &&
+              stripWidth > 0) {
             leftWidth = sprites[0].fullWidth;
             rightWidth = sprites[2].fullWidth;
             tileWidth = sprites[1].fullWidth;

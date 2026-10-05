@@ -44,9 +44,9 @@ final class ResourceArchive {
             }
             if (null == attachedEntity.entityQueue) {
               attachedEntity.advanceEntityAnimation(true);
-              if ((3 == attachedEntity.entitySpriteKindId) &&
-                  (attachedEntity.touchesAvatar) &&
-                  (0 >= attachedEntity.matchCooldownTicks)) {
+              if (3 == attachedEntity.entitySpriteKindId &&
+                  attachedEntity.touchesAvatar &&
+                  0 >= attachedEntity.matchCooldownTicks) {
                 SessionSocketSupport.avatarShockPending = true;
               }
               if (maximumEntityRadiusSquared < (attachedEntity.positionX - 320.0f) * (-320.0f + attachedEntity.positionX) + (attachedEntity.positionY - 240.0f) * (attachedEntity.positionY - 240.0f)) {
@@ -75,7 +75,7 @@ final class ResourceArchive {
     }
 
     final int getFileSlotCount(int methodGuard, int groupId) {
-        if (!(this.isValidGroupId(groupId, 3))) {
+        if (!this.isValidGroupId(groupId, 3)) {
             return 0;
         }
         if (methodGuard != -9467) {
@@ -167,7 +167,7 @@ final class ResourceArchive {
         if (methodGuard != -1) {
             return ((boolean[]) (this.packedGroups[3]))[0];
         }
-        if (!(this.ensureIndexLoaded(0))) {
+        if (!this.ensureIndexLoaded(0)) {
             return false;
         }
         if (0 > groupId || fileId < 0 || this.index.fileSlotCounts.length <= groupId || this.index.fileSlotCounts[groupId] <= fileId) {
@@ -301,7 +301,7 @@ final class ResourceArchive {
         if (!this.ensureIndexLoaded(0)) {
             return null;
         }
-        if ((this.index.fileSlotCounts.length == 1)) {
+        if (this.index.fileSlotCounts.length == 1) {
             return this.getFile(0, methodGuard - 56472, id);
         }
         if (methodGuard != 28319) {
@@ -310,17 +310,17 @@ final class ResourceArchive {
         if (!this.isValidGroupId(id, 3)) {
             return null;
         }
-        if ((this.index.fileSlotCounts[id] == 1)) {
+        if (this.index.fileSlotCounts[id] == 1) {
             return this.getFile(id, methodGuard ^ -872, 0);
         }
         throw new RuntimeException();
     }
 
     final synchronized boolean loadGroupIfNeeded(byte methodGuard, int groupId) {
-        if (!(this.isValidGroupId(groupId, 3))) {
+        if (!this.isValidGroupId(groupId, 3)) {
             return false;
         }
-        if ((this.packedGroups[groupId] != null)) {
+        if (this.packedGroups[groupId] != null) {
             return true;
         }
         if (methodGuard != 102) {
@@ -414,10 +414,10 @@ final class ResourceArchive {
           }
           packedGroupDecryptionSelection: {
             if (decryptionKey != null) {
-              if (((decryptionKey[0] != 0) ||
-                  (decryptionKey[1] != 0) ||
-                  (decryptionKey[2] != 0) ||
-                  (0 != decryptionKey[3]))) {
+              if (decryptionKey[0] != 0 ||
+                  decryptionKey[1] != 0 ||
+                  decryptionKey[2] != 0 ||
+                  0 != decryptionKey[3]) {
                 copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
                 packedBytesForDecryption = copiedPackedBytes;
                 packedBytes = packedBytesForDecryption;
@@ -577,14 +577,14 @@ final class ResourceArchive {
     }
 
     final synchronized boolean isFileAvailable(byte methodGuard, int groupId, int fileId) {
-        if (!(this.isValidFileId(fileId, -1, groupId))) {
+        if (!this.isValidFileId(fileId, -1, groupId)) {
             return false;
         }
         if (methodGuard != 37) {
             return true;
         }
-        if ((null != this.decodedFiles[groupId]) &&
-            ((this.decodedFiles[groupId][fileId] != null))) {
+        if (null != this.decodedFiles[groupId] &&
+            this.decodedFiles[groupId][fileId] != null) {
             return true;
         }
         if (this.packedGroups[groupId] != null) {
@@ -616,8 +616,8 @@ final class ResourceArchive {
             return (byte[]) (invalidFileBeforeReturn);
           }
           fileBytesOrFailureForContext = null;
-          if (((this.decodedFiles[groupId] == null) ||
-              (null == this.decodedFiles[groupId][fileId]))) {
+          if (this.decodedFiles[groupId] == null ||
+              null == this.decodedFiles[groupId][fileId]) {
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
               this.loadPackedGroup(groupId, -118);
               if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
@@ -888,7 +888,7 @@ final class ResourceArchive {
 
     final synchronized int getGroupProgress(byte methodGuard, int groupId) {
         boolean unusedWrongGuardGroupValidation = false;
-        if (!(this.isValidGroupId(groupId, 3))) {
+        if (!this.isValidGroupId(groupId, 3)) {
             return 0;
         }
         if (null != this.packedGroups[groupId]) {
@@ -924,15 +924,15 @@ final class ResourceArchive {
           for (characterIndex = 0; characterIndex < nameLength; characterIndex++) {
             encodedName = encodedName * 37L;
             characterCode = nameCharacters.charAt(characterIndex);
-            if ((characterCode >= 65) &&
-                (characterCode <= 90)) {
+            if (characterCode >= 65 &&
+                characterCode <= 90) {
               encodedName = encodedName + (long)(-65 + (1 + characterCode));
-            } else if ((characterCode >= 97) &&
-                (characterCode <= 122)) {
+            } else if (characterCode >= 97 &&
+                characterCode <= 122) {
               encodedName = encodedName + (long)(-96 + characterCode);
             } else {
-              if ((48 <= characterCode) &&
-                  (57 >= characterCode)) {
+              if (48 <= characterCode &&
+                  57 >= characterCode) {
                 encodedName = encodedName + (long)(-48 + characterCode + 27);
               }
             }

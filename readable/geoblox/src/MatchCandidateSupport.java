@@ -59,8 +59,8 @@ final class MatchCandidateSupport {
             currentAvatarCryFrame = (Sprite) null;
           }
           while (centralEntity != null) {
-            if (((!(centralEntity.sameVariantEntityCount <= 1)) ||
-                (!(centralEntity.sameCategoryEntityCount <= 1)))) {
+            if (!(centralEntity.sameVariantEntityCount <= 1) ||
+                !(centralEntity.sameCategoryEntityCount <= 1)) {
               centralEntity.entityQueue = DelegatingCanvas.transientEntities;
               variantMatchEligibilityValue = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = variantMatchEligibilityValue;
@@ -80,8 +80,8 @@ final class MatchCandidateSupport {
                   firstNeighborCategoryMatchValue = 0;
                 }
                 firstNeighborSharesCategory = firstNeighborCategoryMatchValue;
-                if (((firstNeighborSharesVariant != 0) ||
-                    (firstNeighborSharesCategory != 0))) {
+                if (firstNeighborSharesVariant != 0 ||
+                    firstNeighborSharesCategory != 0) {
                   for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
                       tripleCategoryMatchValue = (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) ? 1 : 0;
@@ -95,8 +95,8 @@ final class MatchCandidateSupport {
                       tripleVariantMatchValue = 0;
                     }
                     tripleSharesVariant = tripleVariantMatchValue;
-                    if (((tripleSharesCategory != 0) ||
-                        (tripleSharesVariant != 0))) {
+                    if (tripleSharesCategory != 0 ||
+                        tripleSharesVariant != 0) {
                       centralEntity.relatedEntities[firstNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
                       centralEntity.relatedEntities[secondNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
                       middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
@@ -110,8 +110,8 @@ final class MatchCandidateSupport {
                       if (tripleSharesVariant != 0) {
                         FadingDialog.variantMatchCandidateCount = FadingDialog.variantMatchCandidateCount + 1;
                       }
-                      if ((tripleSharesVariant != 0) &&
-                          (tripleSharesCategory != 0)) {
+                      if (tripleSharesVariant != 0 &&
+                          tripleSharesCategory != 0) {
                       }
                       if (tripleSharesCategory != 0) {
                         TextLayout.categoryMatchCandidateCount = TextLayout.categoryMatchCandidateCount + 1;

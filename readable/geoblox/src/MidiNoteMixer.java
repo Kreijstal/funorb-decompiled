@@ -78,8 +78,8 @@ final class MidiNoteMixer extends PcmStream {
         RuntimeException skipFailure = null;
         int framesToPhaseWrap = 0;
         try {
-          if (((this.midiStream.channelFlags[note.channelIndex] & 4) != 0) &&
-              (note.releaseEnvelopeTime < 0)) {
+          if ((this.midiStream.channelFlags[note.channelIndex] & 4) != 0 &&
+              note.releaseEnvelopeTime < 0) {
             phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
             framesToPhaseWrap = (-note.retriggerPhaseFixed + (1048575 + phaseIncrement)) / phaseIncrement;
             note.retriggerPhaseFixed = 1048575 & note.retriggerPhaseFixed + frameCount * phaseIncrement;
@@ -196,7 +196,7 @@ final class MidiNoteMixer extends PcmStream {
         if (note == null) {
             return null;
         }
-        if ((null != note.sampleStream)) {
+        if (null != note.sampleStream) {
             return (PcmStream) ((Object) note.sampleStream);
         }
         return this.nextChildStream();
@@ -220,8 +220,8 @@ final class MidiNoteMixer extends PcmStream {
         int quarterPhaseFrames = 0;
         PcmSampleStream previousStream = null;
         try {
-          if (((4 & this.midiStream.channelFlags[note.channelIndex]) != 0) &&
-              (note.releaseEnvelopeTime < 0)) {
+          if ((4 & this.midiStream.channelFlags[note.channelIndex]) != 0 &&
+              note.releaseEnvelopeTime < 0) {
             phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
             while (true) {
               framesToPhaseWrap = (-note.retriggerPhaseFixed + (phaseIncrement + 1048575)) / phaseIncrement;

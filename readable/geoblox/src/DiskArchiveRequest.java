@@ -49,7 +49,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (methodGuard != 397) {
             return (byte[]) null;
         }
-        if ((this.pending)) {
+        if (this.pending) {
             throw new RuntimeException();
         }
         return this.bytes;

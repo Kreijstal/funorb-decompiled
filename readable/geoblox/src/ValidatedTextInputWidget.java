@@ -101,47 +101,47 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           if (characterCode == 91) {
             return character;
           }
-          if ((93 != characterCode) &&
-              (35 != characterCode)) {
-            if ((characterCode != 224) &&
-                (characterCode != 225) &&
-                (characterCode != 226) &&
-                (characterCode != 228) &&
-                (characterCode != 227) &&
-                (characterCode != 192) &&
-                (characterCode != 193) &&
-                (characterCode != 194) &&
-                (characterCode != 196) &&
-                (characterCode != 195)) {
-              if ((characterCode != 232) &&
-                  (characterCode != 233) &&
-                  (characterCode != 234) &&
-                  (characterCode != 235) &&
-                  (characterCode != 200) &&
-                  (characterCode != 201) &&
-                  (characterCode != 202) &&
-                  (characterCode != 203)) {
-                if ((characterCode != 237) &&
-                    (characterCode != 238) &&
-                    (239 != characterCode) &&
-                    (characterCode != 205) &&
-                    (characterCode != 206) &&
-                    (characterCode != 207)) {
-                  if ((characterCode != 242) &&
-                      (243 != characterCode) &&
-                      (characterCode != 244) &&
-                      (characterCode != 246) &&
-                      (characterCode != 245) &&
-                      (characterCode != 210) &&
-                      (characterCode != 211) &&
-                      (characterCode != 212) &&
-                      (characterCode != 214) &&
-                      (characterCode != 213)) {
-                    if ((249 != characterCode) &&
-                        (250 != characterCode) &&
-                        (characterCode != 251) &&
-                        (characterCode != 252) &&
-                        (characterCode != 217)) {
+          if (93 != characterCode &&
+              35 != characterCode) {
+            if (characterCode != 224 &&
+                characterCode != 225 &&
+                characterCode != 226 &&
+                characterCode != 228 &&
+                characterCode != 227 &&
+                characterCode != 192 &&
+                characterCode != 193 &&
+                characterCode != 194 &&
+                characterCode != 196 &&
+                characterCode != 195) {
+              if (characterCode != 232 &&
+                  characterCode != 233 &&
+                  characterCode != 234 &&
+                  characterCode != 235 &&
+                  characterCode != 200 &&
+                  characterCode != 201 &&
+                  characterCode != 202 &&
+                  characterCode != 203) {
+                if (characterCode != 237 &&
+                    characterCode != 238 &&
+                    239 != characterCode &&
+                    characterCode != 205 &&
+                    characterCode != 206 &&
+                    characterCode != 207) {
+                  if (characterCode != 242 &&
+                      243 != characterCode &&
+                      characterCode != 244 &&
+                      characterCode != 246 &&
+                      characterCode != 245 &&
+                      characterCode != 210 &&
+                      characterCode != 211 &&
+                      characterCode != 212 &&
+                      characterCode != 214 &&
+                      characterCode != 213) {
+                    if (249 != characterCode &&
+                        250 != characterCode &&
+                        characterCode != 251 &&
+                        characterCode != 252 &&
+                        characterCode != 217) {
                       if (218 == characterCode) {
                         return 'u';
                       }
@@ -191,28 +191,28 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           if (characterCode == 160) {
             return '_';
           }
-          if ((characterCode != 95) &&
-              (characterCode != 45)) {
-            if ((characterCode != 91) &&
-                (93 != characterCode) &&
-                (35 != characterCode)) {
-              if ((characterCode != 224) &&
-                  (characterCode != 225) &&
-                  (characterCode != 226) &&
-                  (characterCode != 228) &&
-                  (characterCode != 227) &&
-                  (characterCode != 192) &&
-                  (characterCode != 193) &&
-                  (characterCode != 194) &&
-                  (characterCode != 196) &&
-                  (characterCode != 195)) {
-                if ((characterCode != 232) &&
-                    (characterCode != 233) &&
-                    (characterCode != 234) &&
-                    (characterCode != 235) &&
-                    (characterCode != 200) &&
-                    (characterCode != 201) &&
-                    (characterCode != 202)) {
+          if (characterCode != 95 &&
+              characterCode != 45) {
+            if (characterCode != 91 &&
+                93 != characterCode &&
+                35 != characterCode) {
+              if (characterCode != 224 &&
+                  characterCode != 225 &&
+                  characterCode != 226 &&
+                  characterCode != 228 &&
+                  characterCode != 227 &&
+                  characterCode != 192 &&
+                  characterCode != 193 &&
+                  characterCode != 194 &&
+                  characterCode != 196 &&
+                  characterCode != 195) {
+                if (characterCode != 232 &&
+                    characterCode != 233 &&
+                    characterCode != 234 &&
+                    characterCode != 235 &&
+                    characterCode != 200 &&
+                    characterCode != 201 &&
+                    characterCode != 202) {
                   if (characterCode == 203) {
                     return 'e';
                   }
@@ -225,9 +225,9 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                   if (239 == characterCode) {
                     return 'i';
                   }
-                  if ((characterCode != 205) &&
-                      (characterCode != 206) &&
-                      (characterCode != 207)) {
+                  if (characterCode != 205 &&
+                      characterCode != 206 &&
+                      characterCode != 207) {
                     if (characterCode != 242) {
                       if (243 == characterCode) {
                         return 'o';
@@ -235,17 +235,17 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                       if (characterCode == 244) {
                         return 'o';
                       }
-                      if ((characterCode != 246) &&
-                          (characterCode != 245)) {
+                      if (characterCode != 246 &&
+                          characterCode != 245) {
                         if (characterCode == 210) {
                           return 'o';
                         }
                         if (characterCode == 211) {
                           return 'o';
                         }
-                        if ((characterCode != 212) &&
-                            (characterCode != 214) &&
-                            (characterCode != 213)) {
+                        if (characterCode != 212 &&
+                            characterCode != 214 &&
+                            characterCode != 213) {
                           if (249 != characterCode) {
                             if (250 == characterCode) {
                               return 'u';

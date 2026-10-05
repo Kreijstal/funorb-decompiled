@@ -84,7 +84,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final static void requestFullscreen(byte methodGuard) {
-        if ((InstrumentPatch.activeFullscreenCanvas != null)) {
+        if (InstrumentPatch.activeFullscreenCanvas != null) {
             return;
         }
         if (methodGuard >= -48) {
@@ -104,7 +104,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final void dismissDialog(byte methodGuard) {
-        if (!(this.dialogVisible)) {
+        if (!this.dialogVisible) {
             return;
         }
         this.dialogVisible = false;
@@ -217,8 +217,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           if (30 > IterableNodeHashTable.avatarBlinkClockTicks % blinkPeriodTicks) {
             DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
-          if ((UiWidget.gameplaySession.sessionEnding) &&
-              (IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0)) {
+          if (UiWidget.gameplaySession.sessionEnding &&
+              IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
             if (NameCharacterSupport.avatarCryPhase == 0) {
               if (!LoginPanel.endingEntityScanClear) {
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
@@ -317,22 +317,22 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         } else {
           avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + DiskCacheWorker.avatarFeedbackFrameIndex;
           if (1 != FullscreenSupport.avatarSteeringDirectionId) {
-            if ((2 == FullscreenSupport.avatarSteeringDirectionId) &&
-                (5 > avatarFrameOffsetInSegment)) {
+            if (2 == FullscreenSupport.avatarSteeringDirectionId &&
+                5 > avatarFrameOffsetInSegment) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
               if (0 == FullscreenSupport.avatarSteeringDirectionId) {
                 if (avatarFrameOffsetInSegment < 3) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
-                  if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
-                      (3 < avatarFrameOffsetInSegment)) {
+                  if (0 == FullscreenSupport.avatarSteeringDirectionId &&
+                      3 < avatarFrameOffsetInSegment) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
-                if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
-                    (3 < avatarFrameOffsetInSegment)) {
+                if (0 == FullscreenSupport.avatarSteeringDirectionId &&
+                    3 < avatarFrameOffsetInSegment) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
               }
@@ -342,8 +342,8 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             if (30 > IterableNodeHashTable.avatarBlinkClockTicks % blinkPeriodTicks) {
               DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
             }
-            if ((UiWidget.gameplaySession.sessionEnding) &&
-                (IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0)) {
+            if (UiWidget.gameplaySession.sessionEnding &&
+                IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
               if (NameCharacterSupport.avatarCryPhase == 0) {
                 if (!LoginPanel.endingEntityScanClear) {
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
@@ -437,22 +437,22 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           if (avatarFrameOffsetInSegment <= 1) {
-            if ((2 == FullscreenSupport.avatarSteeringDirectionId) &&
-                (5 > avatarFrameOffsetInSegment)) {
+            if (2 == FullscreenSupport.avatarSteeringDirectionId &&
+                5 > avatarFrameOffsetInSegment) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
               if (0 == FullscreenSupport.avatarSteeringDirectionId) {
                 if (avatarFrameOffsetInSegment < 3) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
-                  if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
-                      (3 < avatarFrameOffsetInSegment)) {
+                  if (0 == FullscreenSupport.avatarSteeringDirectionId &&
+                      3 < avatarFrameOffsetInSegment) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
-                if ((0 == FullscreenSupport.avatarSteeringDirectionId) &&
-                    (3 < avatarFrameOffsetInSegment)) {
+                if (0 == FullscreenSupport.avatarSteeringDirectionId &&
+                    3 < avatarFrameOffsetInSegment) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
               }

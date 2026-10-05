@@ -17,7 +17,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         int var6 = parentY + this.widgetY;
         super.renderWidget(parentX, parentY, (byte) 105, renderPass);
         int var7 = -79 / ((methodGuard - 1) / 43);
-        if ((renderPass != 0)) {
+        if (renderPass != 0) {
             return;
         }
         int var8 = !this.labelAfterChild ? 0 : -this.labelWidth + (this.widgetWidth - this.padding * 2);
@@ -39,8 +39,8 @@ final class LabeledChildWidget extends SingleChildWidget {
         }
         TextTemplateDefinitionLoader.releasedInDifficultyStep = TextTemplateDefinitionLoader.releasedInDifficultyStep + 1;
         MatchCandidateSupport.releasedInCurrentTheme = MatchCandidateSupport.releasedInCurrentTheme + 1;
-        if ((ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep) &&
-            (DequeCursor.difficultyAdvancesInCurrentTheme < 2)) {
+        if (ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep &&
+            DequeCursor.difficultyAdvancesInCurrentTheme < 2) {
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           PlayfieldRules.advanceDifficulty(false);
           DequeCursor.difficultyAdvancesInCurrentTheme = DequeCursor.difficultyAdvancesInCurrentTheme + 1;

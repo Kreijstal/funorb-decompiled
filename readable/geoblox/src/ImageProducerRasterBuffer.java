@@ -180,8 +180,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (methodGuard != 14164) {
             return;
           }
-          if ((rectangleLeft >= SoftwareRasterizer.clipLeft) &&
-              (rectangleLeft < SoftwareRasterizer.clipRight)) {
+          if (rectangleLeft >= SoftwareRasterizer.clipLeft &&
+              rectangleLeft < SoftwareRasterizer.clipRight) {
             framebufferIndex = rectangleLeft + clippedTop * SoftwareRasterizer.stride;
             remainingDots = clippedBottom + 1 - clippedTop >> 1;
             while (true) {
@@ -194,8 +194,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               continue;
             }
           }
-          if ((rectangleTop >= SoftwareRasterizer.clipTop) &&
-              (SoftwareRasterizer.clipBottom > rectangleBottom)) {
+          if (rectangleTop >= SoftwareRasterizer.clipTop &&
+              SoftwareRasterizer.clipBottom > rectangleBottom) {
             framebufferIndex = clippedLeft + SoftwareRasterizer.stride * rectangleTop;
             remainingDots = -clippedLeft + 1 + clippedRight >> 1;
             while (true) {
@@ -208,8 +208,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               continue;
             }
           }
-          if ((rectangleRight >= SoftwareRasterizer.clipLeft) &&
-              (SoftwareRasterizer.clipRight > rectangleRight)) {
+          if (rectangleRight >= SoftwareRasterizer.clipLeft &&
+              SoftwareRasterizer.clipRight > rectangleRight) {
             framebufferIndex = rectangleRight + ((1 & -rectangleLeft + rectangleRight) + clippedTop) * SoftwareRasterizer.stride;
             remainingDots = -clippedTop + 1 + clippedBottom >> 1;
             while (true) {
@@ -222,8 +222,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               continue;
             }
           }
-          if ((SoftwareRasterizer.clipTop <= rectangleTop) &&
-              (SoftwareRasterizer.clipBottom > rectangleBottom)) {
+          if (SoftwareRasterizer.clipTop <= rectangleTop &&
+              SoftwareRasterizer.clipBottom > rectangleBottom) {
             framebufferIndex = SoftwareRasterizer.stride * rectangleBottom + (clippedLeft + (1 & -rectangleTop + rectangleBottom));
             remainingDots = 1 - (-clippedRight + clippedLeft) >> 1;
             while (true) {

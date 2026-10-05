@@ -30,8 +30,8 @@ final class DequeCursor {
             }
             return true;
           }
-          if ((0 == MatchingTextValidator.introAnimationTick % 40) &&
-              (CachedTextLayout.introFaceFrameIndex < 11)) {
+          if (0 == MatchingTextValidator.introAnimationTick % 40 &&
+              CachedTextLayout.introFaceFrameIndex < 11) {
             UnderlinedButtonRenderer.introFaceFrameStartTick = MatchingTextValidator.introAnimationTick;
             CachedTextLayout.introFaceFrameIndex = CachedTextLayout.introFaceFrameIndex + 1;
             if (10 == CachedTextLayout.introFaceFrameIndex) {
@@ -44,13 +44,13 @@ final class DequeCursor {
           }
           faceHalfWidth = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
           geometryTravelDistance = MatchingTextValidator.introAnimationTick << 2;
-          if ((!SharedBufferPools.introFirstGeometrySoundPlayed) &&
-              (-geometryTravelDistance + 900 <= 320 + faceHalfWidth)) {
+          if (!SharedBufferPools.introFirstGeometrySoundPlayed &&
+              -geometryTravelDistance + 900 <= 320 + faceHalfWidth) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
             SharedBufferPools.introFirstGeometrySoundPlayed = true;
           }
-          if ((!EntityMotionSupport.introSecondGeometrySoundPlayed) &&
-              (-faceHalfWidth + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + geometryTravelDistance)) {
+          if (!EntityMotionSupport.introSecondGeometrySoundPlayed &&
+              -faceHalfWidth + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + geometryTravelDistance) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
             EntityMotionSupport.introSecondGeometrySoundPlayed = true;
           }
@@ -80,7 +80,7 @@ final class DequeCursor {
 
     final IntrusiveNode beginReverse(int methodGuard) {
         IntrusiveNode lastNode = this.deque.sentinel.previousNode;
-        if ((this.deque.sentinel == lastNode)) {
+        if (this.deque.sentinel == lastNode) {
             this.pendingNode = null;
             return null;
         }
@@ -217,7 +217,7 @@ final class DequeCursor {
         if (methodGuard <= 105) {
             return (IntrusiveNode) null;
         }
-        if ((node == this.deque.sentinel)) {
+        if (node == this.deque.sentinel) {
             this.pendingNode = null;
             return null;
         }

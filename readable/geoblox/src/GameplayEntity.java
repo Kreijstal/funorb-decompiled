@@ -45,8 +45,8 @@ final class GameplayEntity extends DualLinkNode {
           return;
         }
         rotatedEntityY = (int)(Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) + 240.0);
-        if ((this.entitySpriteKindId != 2) &&
-            (1 != this.entitySpriteKindId)) {
+        if (this.entitySpriteKindId != 2 &&
+            1 != this.entitySpriteKindId) {
           HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           this.entitySprite.drawUnmasked(-this.entitySprite.fullWidth + HotspotTextWidget.spriteScratchRaster.fullWidth >> 1, HotspotTextWidget.spriteScratchRaster.fullHeight - this.entitySprite.fullHeight >> 1);
@@ -96,8 +96,8 @@ final class GameplayEntity extends DualLinkNode {
         boardAngle = UiWidget.gameplaySession.boardAngleRadians;
         rotatedEntityX = (int)(320.0 + ((double)entityOffsetX * Math.cos((double)boardAngle) - Math.sin((double)boardAngle) * (double)entityOffsetY));
         rotatedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)boardAngle) + Math.cos((double)boardAngle) * (double)entityOffsetY));
-        if ((this.entitySpriteKindId != 1) &&
-            (2 != this.entitySpriteKindId)) {
+        if (this.entitySpriteKindId != 1 &&
+            2 != this.entitySpriteKindId) {
           HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
           SoftwareRasterizer.clearFramebuffer();
           this.entitySprite.rotateSmooth(this.entitySprite.fullWidth << 3, this.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(((double)this.spriteAngleRadians - (double)boardAngle / 6.283185307179586) * 65535.0), 4096);
@@ -230,7 +230,7 @@ final class GameplayEntity extends DualLinkNode {
             this.velocityX = (float)((double)this.velocityX * velocityNormalizationScale);
             this.velocityY = (float)((double)this.velocityY * velocityNormalizationScale);
         }
-        if ((this.entitySpriteKindId != 2)) {
+        if (this.entitySpriteKindId != 2) {
             this.spriteAngleRadians = this.spriteAngleRadians - rotationDeltaRadians;
         }
     }
@@ -309,7 +309,7 @@ final class GameplayEntity extends DualLinkNode {
 
     final static int roundUpToMultipleOfEight(int methodGuard, int valueToAlign) {
         int paddingToMultipleOfEight = 0;
-        if (((valueToAlign & 7) != 0)) {
+        if ((valueToAlign & 7) != 0) {
             paddingToMultipleOfEight = -(valueToAlign & 7) + 8;
         }
         if (methodGuard != 1221916132) {
@@ -345,8 +345,8 @@ final class GameplayEntity extends DualLinkNode {
                 this.animationFrameIndex = this.animationFrameIndex % 4;
               }
             } else {
-              if ((8 == this.entitySpriteKindId) &&
-                  (this.entityUpdateTick % 24 == 0)) {
+              if (8 == this.entitySpriteKindId &&
+                  this.entityUpdateTick % 24 == 0) {
                 kind8AnimationFrame = this.animationFrameIndex;
                 this.animationFrameIndex = this.animationFrameIndex + 1;
                 this.entitySprite = RatingPresentationResources.amorphousCrackFrames[kind8AnimationFrame];
@@ -375,9 +375,9 @@ final class GameplayEntity extends DualLinkNode {
             if (this.entitySpriteKindId != 3) {
               if (this.entitySpriteKindId == 6) {
                 this.remainingLifetimeTicks = this.remainingLifetimeTicks - 1;
-                if ((this.remainingLifetimeTicks < 0) &&
-                    (this.entityUpdateTick % 24 == 0) &&
-                    (4 > this.animationFrameIndex)) {
+                if (this.remainingLifetimeTicks < 0 &&
+                    this.entityUpdateTick % 24 == 0 &&
+                    4 > this.animationFrameIndex) {
                   kind6AnimationFrame = this.animationFrameIndex;
                   this.animationFrameIndex = this.animationFrameIndex + 1;
                   this.entitySprite = SessionTextState.bangFrames[kind6AnimationFrame];
@@ -449,8 +449,8 @@ final class GameplayEntity extends DualLinkNode {
             this.relatedEntities[this.relatedEntityCount] = null;
             break;
           }
-          if ((this.sameVariantEntityCount <= this.relatedEntityCount) &&
-              (this.relatedEntityCount >= this.sameCategoryEntityCount)) {
+          if (this.sameVariantEntityCount <= this.relatedEntityCount &&
+              this.relatedEntityCount >= this.sameCategoryEntityCount) {
             return;
           }
           throw new IllegalStateException("");
@@ -535,7 +535,7 @@ final class GameplayEntity extends DualLinkNode {
         if (methodGuard != 320) {
             this.spriteAngleRadians = -1.9950387477874756f;
         }
-        if ((this.entitySpriteKindId == 2)) {
+        if (this.entitySpriteKindId == 2) {
             this.matchCooldownTicks = 60;
         }
         this.spriteVariantIndex = spriteVariantIndex;

@@ -5,7 +5,7 @@ final class ByteTextDecodingSupport {
     static int tooltipAnchorX;
 
     final static void sleepMillis(int splitRemainder, long durationMillis) {
-        if ((durationMillis <= 0L)) {
+        if (durationMillis <= 0L) {
             return;
         }
         if (durationMillis % 10L == (long)splitRemainder) {
@@ -44,8 +44,8 @@ final class ByteTextDecodingSupport {
           for (byteIndex = 0; length > byteIndex; byteIndex++) {
             characterCode = textBytes[offset + byteIndex] & 255;
             if (characterCode != 0) {
-              if ((characterCode >= 128) &&
-                  (characterCode < 160)) {
+              if (characterCode >= 128 &&
+                  characterCode < 160) {
                 mappedCharacterCode = LongAndTextLoginPayload.extendedTextCharacters[-128 + characterCode];
                 if (mappedCharacterCode == 0) {
                   mappedCharacterCode = 63;

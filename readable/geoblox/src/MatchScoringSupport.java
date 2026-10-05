@@ -55,8 +55,8 @@ final class MatchScoringSupport {
         int candidateIndex = 0;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          if ((0 == EmailAvailabilityQuery.matchCandidateCount) &&
-              (0 < AttachmentPointerState.newAttachmentCount)) {
+          if (0 == EmailAvailabilityQuery.matchCandidateCount &&
+              0 < AttachmentPointerState.newAttachmentCount) {
             if (SessionSocketSupport.avatarShockPending) {
               return false;
             }
@@ -98,8 +98,8 @@ final class MatchScoringSupport {
           candidateIndex = 0;
           sortInsertionIndex = candidateIndex;
           while (candidateIndex < EmailAvailabilityQuery.matchCandidateCount) {
-            if ((-1 + EmailAvailabilityQuery.matchCandidateCount > candidateIndex) &&
-                (TextPairLoginPayload.packedMatchCandidates[candidateIndex] == TextPairLoginPayload.packedMatchCandidates[candidateIndex + 1])) {
+            if (-1 + EmailAvailabilityQuery.matchCandidateCount > candidateIndex &&
+                TextPairLoginPayload.packedMatchCandidates[candidateIndex] == TextPairLoginPayload.packedMatchCandidates[candidateIndex + 1]) {
               TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
             } else {
               sortCursorThenFirstEntityId = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
@@ -108,9 +108,9 @@ final class MatchScoringSupport {
               firstMatchedEntity = RasterTargetSnapshot.entitiesById[sortCursorThenFirstEntityId];
               secondMatchedEntity = RasterTargetSnapshot.entitiesById[packedCandidateThenSecondEntityId];
               thirdMatchedEntity = RasterTargetSnapshot.entitiesById[thirdEntityId];
-              if ((firstMatchedEntity.matchCooldownTicks <= 0) &&
-                  (secondMatchedEntity.matchCooldownTicks <= 0) &&
-                  (thirdMatchedEntity.matchCooldownTicks <= 0)) {
+              if (firstMatchedEntity.matchCooldownTicks <= 0 &&
+                  secondMatchedEntity.matchCooldownTicks <= 0 &&
+                  thirdMatchedEntity.matchCooldownTicks <= 0) {
                 ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[31]);
                 EntityCollisionSupport.matchChainLength = EntityCollisionSupport.matchChainLength + 1;
                 if (EntityCollisionSupport.matchChainLength > 1) {
@@ -150,7 +150,7 @@ final class MatchScoringSupport {
 
     final static void handleByteShortReply(int methodGuard) {
         ByteShortQuery pendingByteShortQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(methodGuard ^ methodGuard));
-        if ((pendingByteShortQuery == null)) {
+        if (pendingByteShortQuery == null) {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
         }

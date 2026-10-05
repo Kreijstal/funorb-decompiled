@@ -92,12 +92,12 @@ final class ValidationIconWidget extends ButtonWidget {
         var7 = -74 % ((methodGuard - 1) / 43);
         var6 = parentY - (-this.widgetY - (this.widgetHeight >> 1));
         var9 = this.validationProvider.getDebouncedValidationState((byte) -105);
-        if ((var9 != ImageProducerRasterBuffer.debouncingValidationState) &&
-            (WidgetSkinState.pendingQueryValidationState != var9)) {
+        if (var9 != ImageProducerRasterBuffer.debouncingValidationState &&
+            WidgetSkinState.pendingQueryValidationState != var9) {
           if (WidgetSkinState.invalidInputValidationState == var9) {
             var14 = ClientClockSupport.validationStateSprites[2];
             var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
-          } else if ((var9 == SocketArchiveNetworkClient.validInputValidationState)) {
+          } else if (var9 == SocketArchiveNetworkClient.validInputValidationState) {
             var15 = ClientClockSupport.validationStateSprites[1];
             var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
           }
@@ -105,9 +105,9 @@ final class ValidationIconWidget extends ButtonWidget {
           var13 = ClientClockSupport.validationStateSprites[0];
           var10 = var13.fullWidth << 1;
           var11 = var13.fullHeight << 1;
-          if ((null != ClientOptionSupport.validationIconScratchSprite) &&
-              (var10 <= ClientOptionSupport.validationIconScratchSprite.width) &&
-              (var11 <= ClientOptionSupport.validationIconScratchSprite.height)) {
+          if (null != ClientOptionSupport.validationIconScratchSprite &&
+              var10 <= ClientOptionSupport.validationIconScratchSprite.width &&
+              var11 <= ClientOptionSupport.validationIconScratchSprite.height) {
             Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
           } else {
@@ -156,8 +156,8 @@ final class ValidationIconWidget extends ButtonWidget {
             ValidationIconWidget.playPcmSample(-80, (PcmSample) null);
           }
           originalLength = destination.length();
-          if ((writeOffset >= 0) &&
-              (originalLength >= writeOffset)) {
+          if (writeOffset >= 0 &&
+              originalLength >= writeOffset) {
             sourceLength = sourceText.length();
             if (sourceLength == 0) {
               stackIn_9_0 = (StringBuilder) (destination);
@@ -256,7 +256,7 @@ final class ValidationIconWidget extends ButtonWidget {
         if (methodGuard != 69) {
             return (String) null;
         }
-        if ((this.pointerInside)) {
+        if (this.pointerInside) {
             return this.validationProvider.getDebouncedValidationMessage(-21666);
         }
         return null;

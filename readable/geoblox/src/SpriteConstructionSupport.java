@@ -12,11 +12,11 @@ final class SpriteConstructionSupport {
             remainingBits = remainingBits >>> 16;
             shiftedBitCount += 16;
         }
-        if ((remainingBits >= 256)) {
+        if (remainingBits >= 256) {
             shiftedBitCount += 8;
             remainingBits = remainingBits >>> 8;
         }
-        if ((16 <= remainingBits)) {
+        if (16 <= remainingBits) {
             shiftedBitCount += 4;
             remainingBits = remainingBits >>> 4;
         }

@@ -262,16 +262,16 @@ final class Bzip2Decoder {
               state.blockBytesConsumed = state.blockBytesConsumed + 1;
               state.blockLength = blockLength;
               Bzip2Decoder.emitBlockRuns(state);
-              if ((state.blockBytesConsumed == state.blockLength + 1) &&
-                  (state.pendingRunLength == 0)) {
+              if (state.blockBytesConsumed == state.blockLength + 1 &&
+                  state.pendingRunLength == 0) {
                 continueDecodingBlocks = 1;
                 continue decodeNextBlock;
               }
               continueDecodingBlocks = 0;
               continue decodeNextBlock;
             }
-            if ((symbol != 0) &&
-                (symbol != 1)) {
+            if (symbol != 0 &&
+                symbol != 1) {
               mtfRank = symbol - 1;
               if (mtfRank < 16) {
                 mtfPosition = state.moveToFrontBlockStarts[0];
@@ -307,7 +307,7 @@ final class Bzip2Decoder {
                 }
                 state.moveToFrontBlockStarts[0] = state.moveToFrontBlockStarts[0] - 1;
                 state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] = (byte)byteOrBitValue;
-                if ((state.moveToFrontBlockStarts[0] == 0)) {
+                if (state.moveToFrontBlockStarts[0] == 0) {
                   selectorRankOrMtfWritePosition = 4095;
                   for (mtfBlockIndex = 15; mtfBlockIndex >= 0; mtfBlockIndex--) {
                     for (selectorTableOrMtfByteIndex = 15; selectorTableOrMtfByteIndex >= 0; selectorTableOrMtfByteIndex--) {
@@ -371,7 +371,7 @@ final class Bzip2Decoder {
                 codeBits = codeBits << 1 | nextCodeBit;
               }
               symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-            } while ((symbol == 0) || (symbol == 1));
+            } while (symbol == 0 || symbol == 1);
             runLength++;
             byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
             state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;

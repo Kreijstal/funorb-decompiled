@@ -66,8 +66,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               }
             }
             if (this.socket == null) {
-              if ((this.countPriorityRequests(-78) == 0) &&
-                  (0 == this.countBackgroundRequests(false))) {
+              if (this.countPriorityRequests(-78) == 0 &&
+                  0 == this.countBackgroundRequests(false)) {
                 return true;
               }
               return false;
@@ -222,8 +222,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.failureCount = this.failureCount + 1;
               this.failureCode = -2;
               this.socket = null;
-              if ((0 == this.countPriorityRequests(methodGuard - 216)) &&
-                  (this.countBackgroundRequests(false) == 0)) {
+              if (0 == this.countPriorityRequests(methodGuard - 216) &&
+                  this.countBackgroundRequests(false) == 0) {
                 return true;
               }
               return false;
@@ -253,8 +253,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             return false;
           }
           nameLength = nameText.length();
-          if ((nameLength >= 1) &&
-              (12 >= nameLength)) {
+          if (nameLength >= 1 &&
+              12 >= nameLength) {
             normalizedName = ResizableDialog.normalizeSessionName(nameText, methodGuard ^ 122);
             if (normalizedName == null) {
               return false;
@@ -262,8 +262,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             if (normalizedName.length() < 1) {
               return false;
             }
-            if ((!NameCharacterSupport.isNameSeparator((byte) -62, normalizedName.charAt(0))) &&
-                (!NameCharacterSupport.isNameSeparator((byte) -98, normalizedName.charAt(-1 + normalizedName.length())))) {
+            if (!NameCharacterSupport.isNameSeparator((byte) -62, normalizedName.charAt(0)) &&
+                !NameCharacterSupport.isNameSeparator((byte) -98, normalizedName.charAt(-1 + normalizedName.length()))) {
               consecutiveSeparators = 0;
               for (characterIndex = 0; characterIndex < nameText.length(); characterIndex++) {
                 characterCode = nameText.charAt(characterIndex);
@@ -272,8 +272,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 } else {
                   consecutiveSeparators++;
                 }
-                if ((consecutiveSeparators >= 2) &&
-                    (!allowRepeatedSeparators)) {
+                if (consecutiveSeparators >= 2 &&
+                    !allowRepeatedSeparators) {
                   return false;
                 }
               }
@@ -406,7 +406,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
         if (methodGuard > -50) {
             validInputValidationState = (ValidationState) null;
         }
-        if ((this.socket != null)) {
+        if (this.socket != null) {
             this.socket.close(-123);
         }
     }

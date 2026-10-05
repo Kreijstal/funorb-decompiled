@@ -103,8 +103,8 @@ final class ScoreSubmission extends IntrusiveNode {
                       continue;
                     }
                   }
-                  if (((urlFile.regionMatches(prefixEnd, "/s=", 0, 3)) ||
-                        (urlFile.regionMatches(prefixEnd, "/c=", 0, 3)))) {
+                  if (urlFile.regionMatches(prefixEnd, "/s=", 0, 3) ||
+                        urlFile.regionMatches(prefixEnd, "/c=", 0, 3)) {
                     segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
                     if (0 <= segmentEnd) {
                       if (sessionValue != null) {
@@ -125,13 +125,13 @@ final class ScoreSubmission extends IntrusiveNode {
                     discardedLanguagePrefixAppend = rewrittenFile.append("/l=");
                     discardedLanguageValueAppend = rewrittenFile.append(Integer.toString(languageId));
                   }
-                  if ((settingsValue != null) &&
-                      (settingsValue.length() > 0)) {
+                  if (settingsValue != null &&
+                      settingsValue.length() > 0) {
                     discardedSettingsPrefixAppend = rewrittenFile.append("/p=");
                     discardedSettingsValueAppend = rewrittenFile.append(settingsValue);
                   }
-                  if ((sessionValue != null) &&
-                      (sessionValue.length() > 0)) {
+                  if (sessionValue != null &&
+                      sessionValue.length() > 0) {
                     discardedSessionPrefixAppend = rewrittenFile.append("/s=");
                     discardedSessionValueAppend = rewrittenFile.append(sessionValue);
                   }

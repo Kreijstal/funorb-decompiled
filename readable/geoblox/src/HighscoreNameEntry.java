@@ -22,7 +22,7 @@ final class HighscoreNameEntry {
         try {
           queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
           do {
-            if ((queuedEntityThenPooledEntity == null)) {
+            if (queuedEntityThenPooledEntity == null) {
               if (methodGuard != 255) {
                 decodedRankedKeyTwo = -11;
               }
@@ -31,22 +31,22 @@ final class HighscoreNameEntry {
             queuedEntityThenPooledEntity.advanceEntityAnimation(true);
             queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
           } while (clientControlFlowGuard == 0);
-          if ((((((MidiPcmStream.heldInternalKeys[99]) &&
-                (ArchiveNetworkClient.movingEntities.isEmpty(13519)))) ||
-              (!(~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease))) ||
-              ((MatchCandidateSupport.releasedInCurrentTheme == 0) &&
-                !(UiWidget.gameplaySession.tutorialMode)))) {
-            if ((0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170)) &&
-                (!UiWidget.gameplaySession.spawnReleaseDisabled)) {
+          if (MidiPcmStream.heldInternalKeys[99] &&
+                ArchiveNetworkClient.movingEntities.isEmpty(13519) ||
+              !(~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease) ||
+              MatchCandidateSupport.releasedInCurrentTheme == 0 &&
+                !UiWidget.gameplaySession.tutorialMode) {
+            if (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170) &&
+                !UiWidget.gameplaySession.spawnReleaseDisabled) {
               ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
               LabeledChildWidget.recordEntityRelease(2);
               BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
             }
           }
           BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
-          if ((SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3) &&
-              (DelayedIncomingPacket.canGenerateMoreEntitiesInTheme((byte) -53)) &&
-              (!UiWidget.gameplaySession.canAdvanceSession(true))) {
+          if (SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3 &&
+              DelayedIncomingPacket.canGenerateMoreEntitiesInTheme((byte) -53) &&
+              !UiWidget.gameplaySession.canAdvanceSession(true)) {
             queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
             if (null != queuedEntityThenPooledEntity) {
               spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;

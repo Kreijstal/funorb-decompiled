@@ -23,7 +23,7 @@ final class AudioService implements Runnable {
         if (VisualPropertyOverrides.clientBootstrapStage < 2) {
             return SocialListEntry.connectingToUpdateServerText;
         }
-        if ((FadingDialog.interfaceTextArchive != null)) {
+        if (FadingDialog.interfaceTextArchive != null) {
             if (!FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
                 return LoginProtocolSupport.waitingForBootstrapText;
             }
@@ -38,7 +38,7 @@ final class AudioService implements Runnable {
         if (!DirectByteStorage.initialCommonUiSpriteArchive.loadGroupByName("commonui", (byte) -127)) {
             return AccountWelcomePanel.loadingGraphicsText + " - " + DirectByteStorage.initialCommonUiSpriteArchive.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!(AttachedEntityRenderer.initialUiFontArchive.ensureIndexLoaded(0))) {
+        if (!AttachedEntityRenderer.initialUiFontArchive.ensureIndexLoaded(0)) {
             return EntityLinkSupport.waitingForFontsText;
         }
         if (!AttachedEntityRenderer.initialUiFontArchive.loadGroupByName("commonui", (byte) -125)) {

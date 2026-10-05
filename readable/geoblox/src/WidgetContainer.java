@@ -144,7 +144,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginReverseAt(focusedChildCandidate, (byte) 123);
               focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
-              while ((focusCandidate != null)) {
+              while (focusCandidate != null) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -39, focusContext)) {
                   focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
                   continue;
@@ -208,8 +208,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
-        if ((renderPass == 0) &&
-            ((this.renderer != null))) {
+        if (renderPass == 0 &&
+            this.renderer != null) {
             this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
         }
         int guardResidue = -58 % ((methodGuard - 1) / 43);
@@ -286,7 +286,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginForwardAt((byte) 56, focusedChildCandidate);
               focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
-              while ((focusCandidate != null)) {
+              while (focusCandidate != null) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -56, focusContext)) {
                   focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
                   continue;
@@ -437,8 +437,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(120)) {
-              if ((child.hasKeyboardFocus((byte) 54)) &&
-                  (child.handleKeyInput(keyCode, 13, typedCharacter, eventContext))) {
+              if (child.hasKeyboardFocus((byte) 54) &&
+                  child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
                 return true;
               }
               child = (UiWidget) ((Object) childCursor.nextForward((byte) 110));
@@ -570,8 +570,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(127)) {
-              if ((child.hasKeyboardFocus((byte) 54)) &&
-                  (child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY))) {
+              if (child.hasKeyboardFocus((byte) 54) &&
+                  child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY)) {
                 return true;
               }
               child = (UiWidget) ((Object) childCursor.nextForward((byte) 124));

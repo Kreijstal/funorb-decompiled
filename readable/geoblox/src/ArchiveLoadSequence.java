@@ -56,20 +56,20 @@ final class ArchiveLoadSequence {
             this.updateStepProgress(0, var5, -123);
             return false;
           }
-          if ((var5.groupId >= 0) &&
-              (!var5.archive.loadGroupIfNeeded((byte) 102, var5.groupId))) {
+          if (var5.groupId >= 0 &&
+              !var5.archive.loadGroupIfNeeded((byte) 102, var5.groupId)) {
             this.updateStepProgress(var5.archive.getGroupProgress((byte) 36, var5.groupId), var5, -119);
             return false;
           }
-          if ((null != var5.groupName) &&
-              (!var5.archive.loadGroupByName(var5.groupName, (byte) -126))) {
+          if (null != var5.groupName &&
+              !var5.archive.loadGroupByName(var5.groupName, (byte) -126)) {
             this.updateStepProgress(var5.archive.getGroupProgressByName(0, var5.groupName), var5, -123);
             return false;
           }
-          if ((var5.groupId < 0) &&
-              (var5.groupName == null) &&
-              (null != var5.loadingText) &&
-              (!var5.archive.loadAllGroups(true))) {
+          if (var5.groupId < 0 &&
+              var5.groupName == null &&
+              null != var5.loadingText &&
+              !var5.archive.loadAllGroups(true)) {
             this.updateStepProgress(var5.archive.getLoadProgress((byte) 106), var5, -108);
             return false;
           }
@@ -105,7 +105,7 @@ final class ArchiveLoadSequence {
                 }
                 return -1;
             }
-            if ((replyCode == 51)) {
+            if (replyCode == 51) {
                 return 2;
             }
             if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {

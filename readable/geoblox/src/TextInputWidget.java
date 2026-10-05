@@ -46,9 +46,9 @@ class TextInputWidget extends ButtonWidget {
               textRenderer = (TextWidgetLayout) ((Object) this.renderer);
               hitTextIndex = textRenderer.hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
               if (-1 != hitTextIndex) {
-                if ((this.wordSelectionDrag) &&
-                    (this.wordSelectionEndIndex > hitTextIndex) &&
-                    (this.selectionAnchorIndex < hitTextIndex)) {
+                if (this.wordSelectionDrag &&
+                    this.wordSelectionEndIndex > hitTextIndex &&
+                    this.selectionAnchorIndex < hitTextIndex) {
                   hitTextIndex = this.wordSelectionEndIndex;
                 }
                 this.caretIndex = hitTextIndex;
@@ -121,7 +121,7 @@ class TextInputWidget extends ButtonWidget {
         allocatedSprites[8] = secondBorderSprite;
         sprites[7] = secondBorderSprite;
         sprites[5] = secondBorderSprite;
-        if ((centerColor != 0)) {
+        if (centerColor != 0) {
             allocatedSprites[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, centerColor, 64);
         }
         return sprites;
@@ -196,7 +196,7 @@ class TextInputWidget extends ButtonWidget {
         if (methodGuard >= -114) {
             this.updateCaretScroll(-114);
         }
-        if (!(MidiPcmStream.heldInternalKeys[81])) {
+        if (!MidiPcmStream.heldInternalKeys[81]) {
             this.selectionAnchorIndex = this.caretIndex;
         }
     }
@@ -221,8 +221,8 @@ class TextInputWidget extends ButtonWidget {
         long nowMillis = 0L;
         RuntimeException pointerPressFailure = null;
         try {
-          if ((super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext)) &&
-              (this.renderer instanceof TextWidgetLayout)) {
+          if (super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext) &&
+              this.renderer instanceof TextWidgetLayout) {
             hitTextIndexOrGuardQuotient = ((TextWidgetLayout) ((Object) this.renderer)).hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
             if (hitTextIndexOrGuardQuotient != -1) {
               hitCaretIndexSnapshot = hitTextIndexOrGuardQuotient;
@@ -240,8 +240,8 @@ class TextInputWidget extends ButtonWidget {
             if (this.wordSelectionDrag) {
               this.selectionAnchorIndex = this.findPreviousWordBoundary((byte) 77);
               this.caretIndex = this.findNextWordBoundary((byte) -57);
-              if ((0 < this.caretIndex) &&
-                  (this.widgetText.charAt(this.caretIndex - 1) == 32)) {
+              if (0 < this.caretIndex &&
+                  this.widgetText.charAt(this.caretIndex - 1) == 32) {
                 this.caretIndex = this.caretIndex - 1;
               }
               this.wordSelectionEndIndex = this.caretIndex;
@@ -290,8 +290,8 @@ class TextInputWidget extends ButtonWidget {
         TextWidgetLayout textRenderer;
         long nowMillis;
         guardResidue = -124 % ((methodGuard - 1) / 43);
-        if ((this.renderer != null) &&
-            (renderPass == 0)) {
+        if (this.renderer != null &&
+            renderPass == 0) {
           this.renderer.drawWidget(parentX, -8, parentY, this.enabled, (UiWidget) (this));
           if (this.renderer instanceof TextWidgetLayout) {
             textRenderer = (TextWidgetLayout) ((Object) this.renderer);
@@ -374,13 +374,13 @@ class TextInputWidget extends ButtonWidget {
           if (typedCharacter == 62) {
             return false;
           }
-          if ((32 <= typedCharacter) &&
-              (typedCharacter <= 126)) {
+          if (32 <= typedCharacter &&
+              typedCharacter <= 126) {
             if (this.caretIndex != this.selectionAnchorIndex) {
               this.deleteSelectedText(0);
             }
-            if (((-1 == this.maximumTextLength) ||
-                  (!(this.widgetText.length() >= this.maximumTextLength)))) {
+            if (-1 == this.maximumTextLength ||
+                  !(this.widgetText.length() >= this.maximumTextLength)) {
               if (this.caretIndex >= this.widgetText.length()) {
                 this.widgetText = this.widgetText + typedCharacter;
                 textEndBeforeCaretAssignment = this.widgetText.length();
@@ -445,18 +445,18 @@ class TextInputWidget extends ButtonWidget {
                     this.notifyTextInputSubmitted((byte) 111);
                     return true;
                   }
-                  if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (keyCode == 65)) {
+                  if (MidiPcmStream.heldInternalKeys[82] &&
+                      keyCode == 65) {
                     this.cutSelectedText(112);
                     return true;
                   }
-                  if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (keyCode == 66)) {
+                  if (MidiPcmStream.heldInternalKeys[82] &&
+                      keyCode == 66) {
                     this.copySelectedTextToClipboard(-23161);
                     return true;
                   }
-                  if ((MidiPcmStream.heldInternalKeys[82]) &&
-                      (67 == keyCode)) {
+                  if (MidiPcmStream.heldInternalKeys[82] &&
+                      67 == keyCode) {
                     this.pasteClipboardText(82);
                     return true;
                   }
@@ -552,8 +552,8 @@ class TextInputWidget extends ButtonWidget {
           }
           this.widgetText = text;
           inputLength = text.length();
-          if ((this.maximumTextLength != -1) &&
-              (this.maximumTextLength < inputLength)) {
+          if (this.maximumTextLength != -1 &&
+              this.maximumTextLength < inputLength) {
             this.widgetText = this.widgetText.substring(0, this.maximumTextLength);
           }
           textEndBeforeCaretAssignment = this.widgetText.length();
@@ -581,7 +581,7 @@ class TextInputWidget extends ButtonWidget {
         if (methodGuard >= -16) {
             return;
         }
-        if (((this.listener instanceof TextInputListener))) {
+        if (this.listener instanceof TextInputListener) {
             ((TextInputListener) ((Object) this.listener)).onTextInputChanged((TextInputWidget) (this), (byte) 74);
         }
     }
