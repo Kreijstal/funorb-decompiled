@@ -641,44 +641,26 @@ final class gh {
                 case 0:
                   oa.field_a = oa.field_a + kb.field_d;
                   gb.field_g = gb.field_g - 1;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 1:
                   oa.field_a = oa.field_a + gb.field_g;
                   kb.field_d = kb.field_d - 1;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 3:
                   oa.field_a = oa.field_a - gb.field_g;
                   kb.field_d = kb.field_d + 1;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 4:
                   ml.field_r = ml.field_r + kb.field_d;
                   gb.field_g = gb.field_g + 1;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 5:
                   kb.field_d = kb.field_d + 1;
                   ml.field_r = ml.field_r + gb.field_g;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 6:
                   ml.field_r = ml.field_r - kb.field_d;
                   gb.field_g = gb.field_g - 1;
-                  if (var5 == 0) {
-                    break;
-                  }
                 default:
                   break;
                 case 7:
@@ -696,16 +678,10 @@ final class gh {
               switch (var4_int) {
                 case 0:
                   dc.field_a = dc.field_a | lb.field_b + el.field_g << 17;
-                  if (var5 == 0) {
-                    break;
-                  }
                   break;
                 case 3:
                   sc.field_f = sc.field_f + 1;
                   el.field_g = el.field_g + lb.field_b;
-                  if (var5 == 0) {
-                    break;
-                  }
                 default:
                   break;
                 case 4:
@@ -741,30 +717,18 @@ final class gh {
                   case 3:
                     kb.field_d = kb.field_d + 1;
                     oa.field_a = oa.field_a - gb.field_g;
-                    if (var5 == 0) {
-                      break;
-                    }
                     break;
                   case 4:
                     gb.field_g = gb.field_g + 1;
                     ml.field_r = ml.field_r + kb.field_d;
-                    if (var5 == 0) {
-                      break;
-                    }
                     break;
                   case 5:
                     kb.field_d = kb.field_d + 1;
                     ml.field_r = ml.field_r + gb.field_g;
-                    if (var5 == 0) {
-                      break;
-                    }
                     break;
                   case 6:
                     ml.field_r = ml.field_r - kb.field_d;
                     gb.field_g = gb.field_g - 1;
-                    if (var5 == 0) {
-                      break;
-                    }
                   default:
                     break;
                   case 7:

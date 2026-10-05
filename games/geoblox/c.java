@@ -1297,16 +1297,10 @@ final class c extends ka {
               case 3:
                 oa.field_a = oa.field_a - gb.field_g;
                 kb.field_d = kb.field_d + 1;
-                if (var3 == 0) {
-                  break;
-                }
                 break;
               case 6:
                 gb.field_g = gb.field_g - 1;
                 ml.field_r = ml.field_r - kb.field_d;
-                if (var3 == 0) {
-                  break;
-                }
               default:
                 break;
               case 7:
