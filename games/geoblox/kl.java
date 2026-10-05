@@ -126,14 +126,14 @@ final class kl extends ia {
           } else {
             this.field_t = -1;
             if (((this.field_l == 0) ||
-                (!(this.field_l <= this.field_n - var2)))) {
+                ((this.field_l > this.field_n - var2)))) {
               this.field_l = this.field_n - var2;
             }
           }
         } else {
           this.field_t = 1;
           if (((this.field_l == 0) ||
-              (!(this.field_l <= var2 - this.field_n)))) {
+              ((this.field_l > var2 - this.field_n)))) {
             this.field_l = var2 - this.field_n;
           }
         }
@@ -151,7 +151,7 @@ final class kl extends ia {
         } else {
           this.field_w = -1;
           if (((this.field_l == 0) ||
-              (!(this.field_l <= this.field_s - var3)))) {
+              ((this.field_l > this.field_s - var3)))) {
             this.field_l = this.field_s - var3;
           }
         }

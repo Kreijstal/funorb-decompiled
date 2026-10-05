@@ -575,9 +575,9 @@ final class gh {
         L2: {
           if (0 == (this.field_v & 1)) {
             if (((-1 != this.field_y) ||
-                  (!(463 < this.field_T)))) {
+                  ((463 >= this.field_T)))) {
               if (((this.field_y != 1) ||
-                    (!(this.field_T < 640)))) {
+                    ((this.field_T >= 640)))) {
                 if (this.field_T != 463) {
                   break L2;
                 }
@@ -1693,8 +1693,8 @@ final class gh {
               break L1;
             }
           }
-          if (((!(this.field_o <= 0)) ||
-                (!(this.field_e <= 0)))) {
+          if ((((this.field_o > 0)) ||
+                ((this.field_e > 0)))) {
             ai.field_p = 4;
             if (var3 == 0) {
               break L1;

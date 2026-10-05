@@ -145,7 +145,7 @@ final class c extends ka {
                     }
                   }
                   if (((1 == this.field_o) ||
-                      (!(this.field_o >= 0) &&
+                      ((this.field_o < 0) &&
                         !(qa.field_a <= 350) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 327) &&
@@ -187,7 +187,7 @@ final class c extends ka {
                 }
               }
               if (((this.field_o == 1) ||
-                  (!(this.field_o >= 0) &&
+                  ((this.field_o < 0) &&
                     !(qa.field_a <= 350) &&
                     !(470 <= qa.field_a) &&
                     !(ue.field_e <= 265) &&
@@ -444,7 +444,7 @@ final class c extends ka {
                   var9 = var8 - (-(var7 >> 1) - 10);
                   ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
                   if (((1 == this.field_o) ||
-                      (!(this.field_o >= 0) &&
+                      ((this.field_o < 0) &&
                         !(350 >= qa.field_a) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 265) &&
@@ -458,7 +458,7 @@ final class c extends ka {
                   var9 = 10 + (var7 >> 1) + var8;
                   ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
                   if (((this.field_o == 0) ||
-                      (!(0 <= this.field_o) &&
+                      ((0 > this.field_o) &&
                         !(170 >= qa.field_a) &&
                         !(qa.field_a >= 290) &&
                         !(ue.field_e <= 265) &&
@@ -529,7 +529,7 @@ final class c extends ka {
                   ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
                   var11 = 10 + ((var9 >> 1) + var10);
                   if (((this.field_o == 1) ||
-                      (!(0 <= this.field_o) &&
+                      ((0 > this.field_o) &&
                         !(qa.field_a <= 350) &&
                         !(qa.field_a >= 470) &&
                         !(ue.field_e <= 317) &&
@@ -542,7 +542,7 @@ final class c extends ka {
                   var11 = 10 + (var9 >> 1) + var10;
                   ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
                   if (((this.field_o == 0) ||
-                      (!(this.field_o >= 0) &&
+                      ((this.field_o < 0) &&
                         !(qa.field_a <= 170) &&
                         !(qa.field_a >= 290) &&
                         !(ue.field_e <= 317) &&
@@ -2031,7 +2031,7 @@ final class c extends ka {
                     break L1;
                   }
                 case 12:
-                  if (((!(this.field_q < 4)) ||
+                  if ((((this.field_q >= 4)) ||
                         (this.field_E))) {
                     var4 = 1;
                     if (var7 == 0) {
@@ -2046,7 +2046,7 @@ final class c extends ka {
                     break L1;
                   }
                 case 11:
-                  if (((!(this.field_q > 0)) ||
+                  if ((((this.field_q <= 0)) ||
                         (this.field_E))) {
                     var4 = 1;
                     if (var7 == 0) {

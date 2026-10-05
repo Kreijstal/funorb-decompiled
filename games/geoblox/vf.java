@@ -302,7 +302,7 @@ class vf extends hk {
         try {
           var4_int = 122 % ((41 - param1) / 55);
           if (((null == this.field_J) ||
-              (!(param0 < this.field_J.length)))) {
+              ((param0 >= this.field_J.length)))) {
             var5 = new String[param0 + 1];
             if (null != this.field_J) {
               for (var6 = 0; var6 < this.field_J.length; var6++) {

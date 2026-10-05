@@ -183,7 +183,7 @@ final class kj extends ia {
           var4 = param1.field_x;
           if (0 < var4.field_d) {
             if (((!(var4.field_b <= 0)) ||
-                (!(this.field_s[param1.field_t] <= 0)))) {
+                ((this.field_s[param1.field_t] > 0)))) {
               var5 = var4.field_b << 2;
               var6 = var4.field_j << 1;
               if (var6 > param1.field_j) {

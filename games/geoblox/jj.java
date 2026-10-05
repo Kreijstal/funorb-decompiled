@@ -24,7 +24,7 @@ final class jj {
         gj var6_ref = null;
         int var7 = Geoblox.field_C;
         try {
-            if (!(param1 <= this.field_b)) {
+            if ((param1 > this.field_b)) {
                 throw new IllegalStateException();
             }
             this.a(param0, 0);
