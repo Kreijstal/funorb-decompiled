@@ -231,11 +231,7 @@ class TextInputWidget extends ButtonWidget {
             }
             this.moveCaret(hitCaretIndexSnapshot, (byte) -123);
             nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-            if (nowMillis - this.lastPointerPressMillis >= 250L) {
-              doubleClickSnapshot = false;
-            } else {
-              doubleClickSnapshot = true;
-            }
+            doubleClickSnapshot = !(nowMillis - this.lastPointerPressMillis >= 250L);
             ((TextInputWidget) (this)).wordSelectionDrag = doubleClickSnapshot;
             if (this.wordSelectionDrag) {
               this.selectionAnchorIndex = this.findPreviousWordBoundary((byte) 77);

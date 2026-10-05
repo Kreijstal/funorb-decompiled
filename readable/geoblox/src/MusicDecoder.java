@@ -357,11 +357,7 @@ final class MusicDecoder extends IntrusiveNode {
         for (modeIndex = 0; modeIndex < eighthBlockSizeOrMappingIndexOrModeCount; modeIndex++) {
           modeFlagsArray = (boolean[]) (modeLongBlockFlags);
           modeFlagIndex = modeIndex;
-          if (MusicDecoder.readBit() == 0) {
-            modeLongBlockBeforeStore = false;
-          } else {
-            modeLongBlockBeforeStore = true;
-          }
+          modeLongBlockBeforeStore = !(MusicDecoder.readBit() == 0);
           modeFlagsArray[modeFlagIndex] = modeLongBlockBeforeStore;
           MusicDecoder.readBits(16);
           MusicDecoder.readBits(16);
@@ -702,11 +698,7 @@ final class MusicDecoder extends IntrusiveNode {
         workBlock = recycledPreviousBlock;
         this.previousBlockSize = blockSize;
         this.previousRightWindowLength = rightWindowEnd - (blockSize >> 1);
-        if (floorAbsentValue == 0) {
-          previousFloorAbsentBeforeStore = false;
-        } else {
-          previousFloorAbsentBeforeStore = true;
-        }
+        previousFloorAbsentBeforeStore = !(floorAbsentValue == 0);
         ((MusicDecoder) (this)).previousFloorAbsent = previousFloorAbsentBeforeStore;
         return (float[]) (overlapResult);
     }

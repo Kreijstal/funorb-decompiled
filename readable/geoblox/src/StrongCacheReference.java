@@ -51,11 +51,7 @@ final class StrongCacheReference extends CacheReference {
             return;
           }
           acceptedQueryGuard = -106;
-          if (StatefulWidgetRenderer.accountCreationAgeYears >= 13) {
-            under13Snapshot = false;
-          } else {
-            under13Snapshot = true;
-          }
+          under13Snapshot = !(StatefulWidgetRenderer.accountCreationAgeYears >= 13);
           UsernameQueryState.pendingAccountUsernameResult = UiFontResources.createAcceptedUsernameQuery(acceptedQueryGuard, under13Snapshot);
           return;
         } catch (java.lang.RuntimeException responseFailure) {

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0963abf3ca88ea342d65f36421a360adcc5f1d87/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/5c2829dc994c8e87f17f97c42c8752cdb9fff538/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 188)
+## Current readability (pass 189)
 
-The export has 18,445 guarded names and 117,477 Java identifier edits, plus 11
+The export has 18,445 guarded names and 117,447 Java identifier edits, plus 11
 class-name literal edits and 769 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,504 bindings, reproduce and
+compile and compare 136,470 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,54 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 304 lines and ten to four block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current encoder switch recovery (pass 188)
+## Current Boolean local assignment recovery (pass 189)
+
+Thirty-four opposite Boolean-literal branch pairs now assign the condition's
+value or its logical negation directly to the same primitive local. The generic
+decompiler evaluates and unboxes the original condition once, retaining all
+short-circuit order, callbacks, partial local writes, declaration scopes and
+exception/finally/monitor behavior. Effectful field/array destinations and
+boxed or ambiguous locals refuse this rule. No control-flag value is assumed.
+
+For example, a gameplay toggle becomes:
+
+```java
+toggledRotationControlsSwapped = !(this.rotationControlsSwapped);
+```
+
+The subsequent field assignment and feedback call remain in place. All six
+such gameplay toggles are clearer; `GameplaySession.updateSession` falls from
+587 to 563 body lines. Across 24 methods in 20 files, 68 branch blocks and 136
+corpus lines disappear. All 18,445 complete naming rules and 19,491 dictionary
+identities remain unchanged. The export has 118,227 edits and compares 136,470
+bindings.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/booleanLocalAssignmentRecovery.test.js`
+passes six focused groups, including 124,416 independent native cases across
+six control/completion contexts. The regression command
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test test/booleanLocalAssignmentRecovery.test.js test/scalarIfDispatchRecovery.test.js test/predicateGroupingRecovery.test.js test/predicateNegationRecovery.test.js test/javaAstEmitterLoopExits.test.js test/javaAstEmitterTrailingLoops.test.js test/cfrBranchMergeRegressions.test.js`
+passes 141 tests with one existing optional corpus skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks exact expected bytes/tokens for all 303 raw files. Independent JDK
+attribution proves each pair writes opposite literals to the same primitive
+Boolean local and verifies its exact JVM identity. All retained per-occurrence
+bindings, 5,205 original transfer targets/protected scopes, 388 overrides and
+769 lexical label records survive. Both complete corpora compile.
+
+All 303 readable files reverse byte exactly. The 27 publication tests, existing
+scoped gameplay/result-helper native traces and current/fresh sibling
+reproduction checks pass. Eight large labeled bodies and 41 unsupported opaque
+fields remain. Whole game/renderer/assets/server/browser/phone,
+heap/presented-FPS acceptance and catalog-wide effects remain unverified.
+Earlier reviewed proofs, frozen inputs and native/naming pins remain unchanged.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`c1f607dda4e58dbba0889ebd50c9cbf42647b6bc9b6ed1dda87790b023bf8871`.
+
+## Previous encoder switch recovery (pass 188)
 
 The two text encoders now express all 27 special character cases in one switch
 per method. The generic decompiler joins 11 terminating equality arms into each

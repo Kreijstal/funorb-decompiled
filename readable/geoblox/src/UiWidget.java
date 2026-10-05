@@ -128,11 +128,7 @@ class UiWidget extends IntrusiveNode {
             invertedPreviousPointerInsideFlag = 1;
           }
           if (currentPointerInsideFlag == invertedPreviousPointerInsideFlag) {
-            if (pointerInsideFlag == 0) {
-              newPointerInside = false;
-            } else {
-              newPointerInside = true;
-            }
+            newPointerInside = !(pointerInsideFlag == 0);
             ((UiWidget) (this)).pointerInside = newPointerInside;
             if (this.listener != null) {
               if (!(this.listener instanceof PointerHoverListener)) {

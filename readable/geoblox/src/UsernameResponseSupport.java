@@ -41,11 +41,7 @@ final class UsernameResponseSupport {
             return;
           }
           acceptedQueryGuard = methodGuard ^ 6648;
-          if (StatefulWidgetRenderer.accountCreationAgeYears >= 13) {
-            under13Snapshot = false;
-          } else {
-            under13Snapshot = true;
-          }
+          under13Snapshot = !(StatefulWidgetRenderer.accountCreationAgeYears >= 13);
           ScorePopup.pendingUsernameResult = UiFontResources.createAcceptedUsernameQuery(acceptedQueryGuard, under13Snapshot);
           unusedNullSuggestionsSnapshot = (String[]) null;
           SoundSampleCache.publishUsernameSuggestions((String[]) null, 416577356);

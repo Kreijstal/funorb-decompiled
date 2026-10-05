@@ -34,11 +34,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
           this.callbackRootAllocated = true;
         }
         if (var5 == this.windowHandle) {
-          if (!visible) {
-            stackIn_28_1 = false;
-          } else {
-            stackIn_28_1 = true;
-          }
+          stackIn_28_1 = !(!visible);
           ((WindowsCursorController) (this)).cursorVisible = stackIn_28_1;
         } else {
           if (0 != this.windowHandle) {
@@ -54,11 +50,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
             this.windowHandle = var5;
             this.previousWindowProcedure = com.ms.win32.User32.SetWindowLong(this.windowHandle, -4, this);
           }
-          if (!visible) {
-            stackIn_22_1 = false;
-          } else {
-            stackIn_22_1 = true;
-          }
+          stackIn_22_1 = !(!visible);
           ((WindowsCursorController) (this)).cursorVisible = stackIn_22_1;
         }
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);

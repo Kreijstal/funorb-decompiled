@@ -288,11 +288,7 @@ final class BufferedRandomAccessFile {
             if (this.position != this.underlyingPosition) {
               fileBeforeSeek = this.file;
               positionBeforeSeek = this.position;
-              if (methodGuard) {
-                seekGuardBeforeCall = false;
-              } else {
-                seekGuardBeforeCall = true;
-              }
+              seekGuardBeforeCall = !(methodGuard);
               ((LimitedRandomAccessFile) (Object) fileBeforeSeek).seek(positionBeforeSeek, seekGuardBeforeCall);
               this.underlyingPosition = this.position;
             }

@@ -91,11 +91,7 @@ final class MidiNoteMixer extends PcmStream {
                 offsetOwner = this.midiStream;
                 offsetNote = (MidiNote) (note);
                 offsetMethodGuard = -70;
-                if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0) {
-                  loopEnabled = false;
-                } else {
-                  loopEnabled = true;
-                }
+                loopEnabled = !(note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0);
                 ((MidiPcmStream) (Object) offsetOwner).applyNoteSampleOffset(offsetNote, (byte) offsetMethodGuard, loopEnabled);
               }
               if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] < 0) {
@@ -246,11 +242,7 @@ final class MidiNoteMixer extends PcmStream {
                 offsetOwner = this.midiStream;
                 offsetNote = (MidiNote) (note);
                 offsetMethodGuard = -70;
-                if (note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0) {
-                  loopEnabled = false;
-                } else {
-                  loopEnabled = true;
-                }
+                loopEnabled = !(note.instrumentPatch.pitchOffsetsAndLoopFlag[note.keyNumber] >= 0);
                 ((MidiPcmStream) (Object) offsetOwner).applyNoteSampleOffset(offsetNote, (byte) offsetMethodGuard, loopEnabled);
                 note.sampleStream.rampVolume(fadeFrames, previousStream.getTargetVolume());
               }

@@ -389,16 +389,8 @@ abstract class SessionGameApplet extends GameApplet {
               SocketConnector.bootstrapLoginPanelMessage != null) {
             loginPanelGuardSnapshot = 2274;
             loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
-            if (LoginProtocolSupport.lockBootstrapLoginPanelActions) {
-              allowRetrySnapshot = false;
-            } else {
-              allowRetrySnapshot = true;
-            }
-            if (LoginProtocolSupport.lockBootstrapLoginPanelActions) {
-              allowCancelSnapshot = false;
-            } else {
-              allowCancelSnapshot = true;
-            }
+            allowRetrySnapshot = !(LoginProtocolSupport.lockBootstrapLoginPanelActions);
+            allowCancelSnapshot = !(LoginProtocolSupport.lockBootstrapLoginPanelActions);
             TextTemplateDefinition.showAccountLoginPanel(loginPanelGuardSnapshot, loginPanelMessageSnapshot, allowRetrySnapshot, allowCancelSnapshot);
           }
           if (AchievementSubmission.simpleUiMode) {
@@ -485,11 +477,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         } else {
           suppressLoginHandshakeSnapshot = false;
-          if (InstrumentPatch.activeFullscreenCanvas == null) {
-            fullscreenActiveSnapshot = false;
-          } else {
-            fullscreenActiveSnapshot = true;
-          }
+          fullscreenActiveSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
           discardedFullscreenUiResult = this.processAccountUiActions(suppressLoginHandshakeSnapshot, fullscreenActiveSnapshot, -1);
         }
         if (methodGuard < 104) {

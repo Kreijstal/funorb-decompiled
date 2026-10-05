@@ -620,18 +620,10 @@ public final class Geoblox extends SessionGameApplet {
           InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
           InstrumentPatch.activeFullscreenCanvas = null;
         }
-        if (null == InstrumentPatch.activeFullscreenCanvas) {
-          fullscreenAvailableSnapshot = false;
-        } else {
-          fullscreenAvailableSnapshot = true;
-        }
+        fullscreenAvailableSnapshot = !(null == InstrumentPatch.activeFullscreenCanvas);
         this.updateSessionBootstrapAndInput(fullscreenAvailableSnapshot, 19660);
         if (AgeValidator.gameArchiveRequestPending) {
-          if (methodGuard) {
-            archiveRequestGuardSnapshot = false;
-          } else {
-            archiveRequestGuardSnapshot = true;
-          }
+          archiveRequestGuardSnapshot = !(methodGuard);
           this.requestGameArchives(archiveRequestGuardSnapshot);
           AgeValidator.gameArchiveRequestPending = false;
         }

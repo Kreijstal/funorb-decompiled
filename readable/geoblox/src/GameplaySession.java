@@ -876,11 +876,7 @@ final class GameplaySession {
           if (GameAudioState.currentKeyboardEventCharacter > 0) {
             PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
             if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
-              if (this.showDebugOverview) {
-                toggledDebugOverview = false;
-              } else {
-                toggledDebugOverview = true;
-              }
+              toggledDebugOverview = !(this.showDebugOverview);
               ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
             }
             if (SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2 &&
@@ -934,11 +930,7 @@ final class GameplaySession {
             this.tutorialPromptActive = true;
           }
           if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
-            if (this.rotationControlsSwapped) {
-              toggledRotationControlsSwapped = false;
-            } else {
-              toggledRotationControlsSwapped = true;
-            }
+            toggledRotationControlsSwapped = !(this.rotationControlsSwapped);
             ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
             AvatarFeedbackSupport.requestAvatarFeedback(7, false);
           }
@@ -967,11 +959,7 @@ final class GameplaySession {
               }
             }
             if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
-              if (this.debugSpawnSpecialKinds) {
-                toggledSpecialKindSpawn = false;
-              } else {
-                toggledSpecialKindSpawn = true;
-              }
+              toggledSpecialKindSpawn = !(this.debugSpawnSpecialKinds);
               ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
@@ -989,19 +977,11 @@ final class GameplaySession {
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
               this.submissionBlocked = true;
-              if (this.debugPointerSpawnEnabled) {
-                toggledDebugPointerSpawn = false;
-              } else {
-                toggledDebugPointerSpawn = true;
-              }
+              toggledDebugPointerSpawn = !(this.debugPointerSpawnEnabled);
               ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
             }
             if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
-              if (this.spawnReleaseDisabled) {
-                toggledSpawnReleaseDisabled = false;
-              } else {
-                toggledSpawnReleaseDisabled = true;
-              }
+              toggledSpawnReleaseDisabled = !(this.spawnReleaseDisabled);
               ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
               this.submissionBlocked = true;
             }
@@ -1049,11 +1029,7 @@ final class GameplaySession {
               ProxySocketConnector.selectThemeRenderAssets((byte) 82);
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
-              if (this.debugReducedRendering) {
-                toggledReducedRendering = false;
-              } else {
-                toggledReducedRendering = true;
-              }
+              toggledReducedRendering = !(this.debugReducedRendering);
               ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
             }
             if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {

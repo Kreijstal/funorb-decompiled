@@ -25,16 +25,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           unusedNullReplyBuffer = (PacketBuffer) null;
           LoginPanel.writeReflectionCheckReply(-108, (PacketBuffer) null);
         }
-        if ((character < 48 ||
+        isAsciiLetterOrDigitResult = !((character < 48 ||
               character > 57) &&
             (character < 65 ||
               character > 90) &&
             (character < 97 ||
-              character > 122)) {
-          isAsciiLetterOrDigitResult = false;
-        } else {
-          isAsciiLetterOrDigitResult = true;
-        }
+              character > 122));
         return isAsciiLetterOrDigitResult;
     }
 
@@ -714,24 +710,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         LabeledChildWidget identifierRowAlias = null;
         LabeledChildWidget passwordRowAlias = null;
         try {
-          if (!showCreateAccount) {
-            showCreateAccountValue = false;
-          } else {
-            showCreateAccountValue = true;
-          }
+          showCreateAccountValue = !(!showCreateAccount);
           ((LoginPanel) (this)).showCreateAccount = showCreateAccountValue;
           this.messageText = message;
-          if (!retryMode) {
-            retryModeValue = false;
-          } else {
-            retryModeValue = true;
-          }
+          retryModeValue = !(!retryMode);
           ((LoginPanel) (this)).retryMode = retryModeValue;
-          if (!allowJustPlay) {
-            allowJustPlayValue = false;
-          } else {
-            allowJustPlayValue = true;
-          }
+          allowJustPlayValue = !(!allowJustPlay);
           ((LoginPanel) (this)).allowJustPlay = allowJustPlayValue;
           if (this.retryMode) {
             if (this.showCreateAccount ||
