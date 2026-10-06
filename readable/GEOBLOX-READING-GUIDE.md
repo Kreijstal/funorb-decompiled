@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0da67c3ebebf82b897fae4795958a0a4f94142e6/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0d70a7ef345d21bd036e4eaee72d5368bd489ce1/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 197)
+## Current readability (pass 198)
 
-The export has 18,373 guarded names and 117,374 Java identifier edits, plus 11
-class-name literal edits and 618 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,367 guarded names and 117,374 Java identifier edits, plus 11
+class-name literal edits and 612 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,396 bindings, reproduce and
@@ -24,7 +24,47 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current exclusive guarded fallbacks (pass 197)
+## Current terminal loop frames (pass 198)
+
+Twenty-one terminal labeled blocks across fourteen methods now share the name
+of their actual loop exit: fifteen existing labels move onto loops, and six
+merge into existing loop labels. All thirty-two selected breaks exit the same
+loop, with no intervening action or protected boundary. Declaration-free bodies
+lose an unnecessary nesting level; declaration scopes retain their braces.
+Loading/rendering, board reconciliation, nine-slice generation and entropy
+copying benefit. Loop headers and updates, nested exits, outer continues,
+finally overrides and monitor scopes remain. No new condition or action is added.
+
+Independent javac certifies every frame, adjacent bare loop exit and resolved
+jump destination. Every original ordinary binding, label reference, transfer
+and protected scope is checked by exact token origin. Six label rules retire;
+3 surviving ordinals migrate. All 18,364 unaffected
+complete naming objects remain exact. There are 18,367 rules,
+19,413 dictionary identities, 117,374 identifier,
+11 literal and 612 label edits (117,997 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/terminalLoopFrameRecovery.test.js`
+passes six focused groups. Native independent models compare 11,520 cases
+across 48 loop/protected/merge models, covering callback order, update suppression,
+aliases, overflow, partial failures, finally priority and monitor release.
+The selected regression command passes 142 tests, with one optional skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independently certified loop exits,
+every original binding, moved and merged label identities, all 5,062 transfers
+and protected-scope facts, complete naming objects, migrations and compilation.
+All 303 readable files reverse byte exactly. Publication tests, scoped native
+probes and current/fresh sibling reproduction checks pass. Older proof records
+and frozen input/naming/native pins remain. Five large labeled bodies and 41
+unsupported fields remain; whole-game/browser/phone and heap/presented-FPS
+acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`8207f4543e3261edc2a8b23b324c7c0cd6ccb33f78cb745b930fc2b225b7c00b`.
+
+## Previous exclusive guarded fallbacks (pass 197)
 
 Gameplay rendering, scene-transition update and entropy copying now use ordinary
 `if/else` continuations in place of three single-exit labels. Each original

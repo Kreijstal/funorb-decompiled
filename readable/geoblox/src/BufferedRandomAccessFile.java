@@ -451,23 +451,21 @@ final class BufferedRandomAccessFile {
               }
               neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
               searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
-              while (true) {
-                unseenCascadeNeighborSelection: {
-                  if (searchedEntity == null) {
-                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
-                    while (searchedEntity != null) {
-                      if (searchedEntity == neighborEntity) {
-                        break unseenCascadeNeighborSelection;
-                      }
-                      searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
+              unseenCascadeNeighborSelection: while (true) {
+                if (searchedEntity == null) {
+                  searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
+                  while (searchedEntity != null) {
+                    if (searchedEntity == neighborEntity) {
+                      break unseenCascadeNeighborSelection;
                     }
-                    cascadeFrontier.addLast(-82, neighborEntity);
-                    break unseenCascadeNeighborSelection;
+                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
                   }
-                  if (searchedEntity != neighborEntity) {
-                    searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
-                    continue;
-                  }
+                  cascadeFrontier.addLast(-82, neighborEntity);
+                  break unseenCascadeNeighborSelection;
+                }
+                if (searchedEntity != neighborEntity) {
+                  searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
+                  continue;
                 }
                 break;
               }

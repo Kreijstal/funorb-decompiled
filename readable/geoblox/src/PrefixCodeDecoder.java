@@ -129,140 +129,138 @@ final class PrefixCodeDecoder {
           treeIndex = 0;
           outputLengthThenEnd = outputLengthThenEnd + destinationPosition;
           sourceIndex = sourceOffset;
-          while (true) {
+          prefixByteBitDecode: while (true) {
             signedSourceByte = source[sourceIndex];
             if (signedSourceByte < 0) {
               treeIndex = this.decodeTree[treeIndex];
             } else {
               treeIndex++;
             }
-            prefixByteBitDecode: {
-              nodeAfterBit7 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit7;
-              if (nodeAfterBit7 < 0) {
-                writeIndexAfterBit7 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit7] = (byte)(~nodeValue);
-                if (destinationPosition >= outputLengthThenEnd) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if (0 == (64 & signedSourceByte)) {
-                treeIndex++;
-              } else {
-                treeIndex = this.decodeTree[treeIndex];
-              }
-              nodeAfterBit6 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit6;
-              if (nodeAfterBit6 < 0) {
-                writeIndexAfterBit6 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit6] = (byte)(~nodeValue);
-                if (destinationPosition >= outputLengthThenEnd) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if ((signedSourceByte & 32) != 0) {
-                treeIndex = this.decodeTree[treeIndex];
-              } else {
-                treeIndex++;
-              }
-              nodeAfterBit5 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit5;
-              if (nodeAfterBit5 < 0) {
-                writeIndexAfterBit5 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit5] = (byte)(~nodeValue);
-                if (outputLengthThenEnd <= destinationPosition) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if ((signedSourceByte & 16) == 0) {
-                treeIndex++;
-              } else {
-                treeIndex = this.decodeTree[treeIndex];
-              }
-              nodeAfterBit4 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit4;
-              if (nodeAfterBit4 < 0) {
-                writeIndexAfterBit4 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit4] = (byte)(~nodeValue);
-                if (outputLengthThenEnd <= destinationPosition) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if ((8 & signedSourceByte) == 0) {
-                treeIndex++;
-              } else {
-                treeIndex = this.decodeTree[treeIndex];
-              }
-              nodeAfterBit3 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit3;
-              if (nodeAfterBit3 < 0) {
-                writeIndexAfterBit3 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit3] = (byte)(~nodeValue);
-                if (outputLengthThenEnd <= destinationPosition) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if ((signedSourceByte & 4) != 0) {
-                treeIndex = this.decodeTree[treeIndex];
-              } else {
-                treeIndex++;
-              }
-              nodeAfterBit2 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit2;
-              if (nodeAfterBit2 < 0) {
-                writeIndexAfterBit2 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit2] = (byte)(~nodeValue);
-                if (outputLengthThenEnd <= destinationPosition) {
-                  return sourceIndex + 1 - sourceOffset;
-                }
-                treeIndex = 0;
-              }
-              if ((signedSourceByte & 2) != 0) {
-                treeIndex = this.decodeTree[treeIndex];
-              } else {
-                treeIndex++;
-              }
-              nodeAfterBit1 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit1;
-              if (nodeAfterBit1 < 0) {
-                writeIndexAfterBit1 = destinationPosition;
-                destinationPosition++;
-                destination[writeIndexAfterBit1] = (byte)(~nodeValue);
-                if (destinationPosition >= outputLengthThenEnd) {
-                  break prefixByteBitDecode;
-                }
-                treeIndex = 0;
-              }
-              if (0 == (1 & signedSourceByte)) {
-                treeIndex++;
-              } else {
-                treeIndex = this.decodeTree[treeIndex];
-              }
-              nodeAfterBit0 = this.decodeTree[treeIndex];
-              nodeValue = nodeAfterBit0;
-              if (nodeAfterBit0 >= 0) {
-                sourceIndex++;
-                continue;
-              }
-              writeIndexAfterBit0 = destinationPosition;
+            nodeAfterBit7 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit7;
+            if (nodeAfterBit7 < 0) {
+              writeIndexAfterBit7 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit0] = (byte)(~nodeValue);
-              if (destinationPosition < outputLengthThenEnd) {
-                treeIndex = 0;
-                sourceIndex++;
-                continue;
+              destination[writeIndexAfterBit7] = (byte)(~nodeValue);
+              if (destinationPosition >= outputLengthThenEnd) {
+                break prefixByteBitDecode;
               }
+              treeIndex = 0;
+            }
+            if (0 == (64 & signedSourceByte)) {
+              treeIndex++;
+            } else {
+              treeIndex = this.decodeTree[treeIndex];
+            }
+            nodeAfterBit6 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit6;
+            if (nodeAfterBit6 < 0) {
+              writeIndexAfterBit6 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit6] = (byte)(~nodeValue);
+              if (destinationPosition >= outputLengthThenEnd) {
+                break prefixByteBitDecode;
+              }
+              treeIndex = 0;
+            }
+            if ((signedSourceByte & 32) != 0) {
+              treeIndex = this.decodeTree[treeIndex];
+            } else {
+              treeIndex++;
+            }
+            nodeAfterBit5 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit5;
+            if (nodeAfterBit5 < 0) {
+              writeIndexAfterBit5 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit5] = (byte)(~nodeValue);
+              if (outputLengthThenEnd <= destinationPosition) {
+                break prefixByteBitDecode;
+              }
+              treeIndex = 0;
+            }
+            if ((signedSourceByte & 16) == 0) {
+              treeIndex++;
+            } else {
+              treeIndex = this.decodeTree[treeIndex];
+            }
+            nodeAfterBit4 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit4;
+            if (nodeAfterBit4 < 0) {
+              writeIndexAfterBit4 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit4] = (byte)(~nodeValue);
+              if (outputLengthThenEnd <= destinationPosition) {
+                break prefixByteBitDecode;
+              }
+              treeIndex = 0;
+            }
+            if ((8 & signedSourceByte) == 0) {
+              treeIndex++;
+            } else {
+              treeIndex = this.decodeTree[treeIndex];
+            }
+            nodeAfterBit3 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit3;
+            if (nodeAfterBit3 < 0) {
+              writeIndexAfterBit3 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit3] = (byte)(~nodeValue);
+              if (outputLengthThenEnd <= destinationPosition) {
+                break prefixByteBitDecode;
+              }
+              treeIndex = 0;
+            }
+            if ((signedSourceByte & 4) != 0) {
+              treeIndex = this.decodeTree[treeIndex];
+            } else {
+              treeIndex++;
+            }
+            nodeAfterBit2 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit2;
+            if (nodeAfterBit2 < 0) {
+              writeIndexAfterBit2 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit2] = (byte)(~nodeValue);
+              if (outputLengthThenEnd <= destinationPosition) {
+                return sourceIndex + 1 - sourceOffset;
+              }
+              treeIndex = 0;
+            }
+            if ((signedSourceByte & 2) != 0) {
+              treeIndex = this.decodeTree[treeIndex];
+            } else {
+              treeIndex++;
+            }
+            nodeAfterBit1 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit1;
+            if (nodeAfterBit1 < 0) {
+              writeIndexAfterBit1 = destinationPosition;
+              destinationPosition++;
+              destination[writeIndexAfterBit1] = (byte)(~nodeValue);
+              if (destinationPosition >= outputLengthThenEnd) {
+                break prefixByteBitDecode;
+              }
+              treeIndex = 0;
+            }
+            if (0 == (1 & signedSourceByte)) {
+              treeIndex++;
+            } else {
+              treeIndex = this.decodeTree[treeIndex];
+            }
+            nodeAfterBit0 = this.decodeTree[treeIndex];
+            nodeValue = nodeAfterBit0;
+            if (nodeAfterBit0 >= 0) {
+              sourceIndex++;
+              continue;
+            }
+            writeIndexAfterBit0 = destinationPosition;
+            destinationPosition++;
+            destination[writeIndexAfterBit0] = (byte)(~nodeValue);
+            if (destinationPosition < outputLengthThenEnd) {
+              treeIndex = 0;
+              sourceIndex++;
+              continue;
             }
             break;
           }

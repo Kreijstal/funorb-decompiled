@@ -721,64 +721,56 @@ class Sprite extends SpriteState {
         int croppedHeight;
         int[] croppedPixels;
         bottomEdge = this.height - 1;
-        while (true) {
-          bottomBorderScan: {
-            if (bottomEdge >= 0) {
-              rowOffsetThenTopEdge = bottomEdge * this.width;
-              for (scanThenRightEdge = 0; scanThenRightEdge < this.width; scanThenRightEdge++) {
-                if (this.pixels[rowOffsetThenTopEdge + scanThenRightEdge] != 0) {
-                  break bottomBorderScan;
-                }
+        bottomBorderScan: while (true) {
+          if (bottomEdge >= 0) {
+            rowOffsetThenTopEdge = bottomEdge * this.width;
+            for (scanThenRightEdge = 0; scanThenRightEdge < this.width; scanThenRightEdge++) {
+              if (this.pixels[rowOffsetThenTopEdge + scanThenRightEdge] != 0) {
+                break bottomBorderScan;
               }
-              bottomEdge--;
-              continue;
             }
+            bottomEdge--;
+            continue;
           }
           break;
         }
         rowOffsetThenTopEdge = 0;
-        while (true) {
-          topBorderScan: {
-            if (rowOffsetThenTopEdge < bottomEdge) {
-              scanThenRightEdge = rowOffsetThenTopEdge * this.width;
-              for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
-                if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
-                  break topBorderScan;
-                }
+        topBorderScan: while (true) {
+          if (rowOffsetThenTopEdge < bottomEdge) {
+            scanThenRightEdge = rowOffsetThenTopEdge * this.width;
+            for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
+              if (this.pixels[scanThenRightEdge + scanThenLeftEdge] != 0) {
+                break topBorderScan;
               }
-              rowOffsetThenTopEdge++;
-              continue;
             }
+            rowOffsetThenTopEdge++;
+            continue;
           }
           break;
         }
         scanThenRightEdge = this.width - 1;
-        while (true) {
-          rightBorderScan: {
-            if (scanThenRightEdge >= 0) {
-              for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
-                if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
-                  break rightBorderScan;
-                }
+        rightBorderScan: while (true) {
+          if (scanThenRightEdge >= 0) {
+            for (scanThenLeftEdge = rowOffsetThenTopEdge; scanThenLeftEdge <= bottomEdge; scanThenLeftEdge++) {
+              if (this.pixels[scanThenLeftEdge * this.width + scanThenRightEdge] != 0) {
+                break rightBorderScan;
               }
-              scanThenRightEdge--;
-              continue;
             }
+            scanThenRightEdge--;
+            continue;
           }
           break;
         }
         scanThenLeftEdge = 0;
-        while (true) {
-          leftBorderScan: {
-            if (scanThenLeftEdge < scanThenRightEdge) {
-              for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
-                if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
-                  break leftBorderScan;
-                }
+        leftBorderScan: while (true) {
+          if (scanThenLeftEdge < scanThenRightEdge) {
+            for (scanRowThenCroppedWidth = rowOffsetThenTopEdge; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
+              if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdge] != 0) {
+                break leftBorderScan;
               }
-              scanThenLeftEdge++;
-              continue;
             }
+            scanThenLeftEdge++;
+            continue;
           }
           break;
         }

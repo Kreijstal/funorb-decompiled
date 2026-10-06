@@ -368,20 +368,18 @@ final class HighscoreNameEntry {
           primaryEntry.locationLabel = (String) (locationLabelValue);
           primaryEntry.unlinkNode(false);
           insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.firstForIteration(0));
-          while (true) {
-            insertionTargetSelection: {
-              if (null != insertionTarget) {
-                entryOrInsertionTargetSnapshot = primaryEntry;
-                if (clientControlFlowGuard != 0) {
-                  break insertionTargetSelection;
-                }
-                if (MatchCandidateSupport.socialEntrySortsAfter(entryOrInsertionTargetSnapshot, insertionTarget, (byte) 127)) {
-                  insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.nextForIteration(1));
-                  continue;
-                }
+          insertionTargetSelection: while (true) {
+            if (null != insertionTarget) {
+              entryOrInsertionTargetSnapshot = primaryEntry;
+              if (clientControlFlowGuard != 0) {
+                break insertionTargetSelection;
               }
-              entryOrInsertionTargetSnapshot = insertionTarget;
+              if (MatchCandidateSupport.socialEntrySortsAfter(entryOrInsertionTargetSnapshot, insertionTarget, (byte) 127)) {
+                insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.nextForIteration(1));
+                continue;
+              }
             }
+            entryOrInsertionTargetSnapshot = insertionTarget;
             break;
           }
           if (entryOrInsertionTargetSnapshot == null) {

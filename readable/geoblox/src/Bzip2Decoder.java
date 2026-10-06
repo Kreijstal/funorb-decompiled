@@ -512,90 +512,88 @@ final class Bzip2Decoder {
         initialOutputAllowance = remainingOutputBytes;
         blockEndPosition = state.blockLength + 1;
         emitTransformedRuns: while (true) {
-          runEmissionBeforeStateCommit: {
-            if (remainingRunLength > 0) {
-              while (true) {
-                if (remainingOutputBytes == 0) {
-                  break runEmissionBeforeStateCommit;
+          if (remainingRunLength > 0) {
+            while (true) {
+              if (remainingOutputBytes == 0) {
+                break emitTransformedRuns;
+              }
+              if (remainingRunLength != 1) {
+                outputBytes[outputPosition] = (byte)runByte;
+                remainingRunLength--;
+                outputPosition++;
+                remainingOutputBytes--;
+                continue;
+              }
+              break;
+            }
+            if (remainingOutputBytes == 0) {
+              remainingRunLength = 1;
+              break emitTransformedRuns;
+            }
+            outputBytes[outputPosition] = (byte)runByte;
+            outputPosition++;
+            remainingOutputBytes--;
+          }
+          while (blockBytesConsumed != blockEndPosition) {
+            sharedTransformTableSnapshot = transformTableAlias;
+            runByte = (byte)currentByte;
+            transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+            nextByteOrRunCount = (byte)transformPositionOrEntry;
+            transformPositionOrEntry = transformPositionOrEntry >> 8;
+            blockBytesConsumed++;
+            if (nextByteOrRunCount == currentByte) {
+              if (blockBytesConsumed != blockEndPosition) {
+                remainingRunLength = 2;
+                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                nextByteOrRunCount = (byte)transformPositionOrEntry;
+                transformPositionOrEntry = transformPositionOrEntry >> 8;
+                blockBytesConsumed++;
+                if (blockBytesConsumed == blockEndPosition) {
+                  continue emitTransformedRuns;
                 }
-                if (remainingRunLength != 1) {
-                  outputBytes[outputPosition] = (byte)runByte;
-                  remainingRunLength--;
-                  outputPosition++;
-                  remainingOutputBytes--;
-                  continue;
+                if (nextByteOrRunCount != currentByte) {
+                  currentByte = nextByteOrRunCount;
+                  continue emitTransformedRuns;
                 }
-                break;
+                remainingRunLength = 3;
+                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                nextByteOrRunCount = (byte)transformPositionOrEntry;
+                transformPositionOrEntry = transformPositionOrEntry >> 8;
+                blockBytesConsumed++;
+                if (blockBytesConsumed == blockEndPosition) {
+                  continue emitTransformedRuns;
+                }
+                if (nextByteOrRunCount != currentByte) {
+                  currentByte = nextByteOrRunCount;
+                  continue emitTransformedRuns;
+                }
+                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                nextByteOrRunCount = (byte)transformPositionOrEntry;
+                transformPositionOrEntry = transformPositionOrEntry >> 8;
+                blockBytesConsumed++;
+                remainingRunLength = (nextByteOrRunCount & 255) + 4;
+                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                currentByte = (byte)transformPositionOrEntry;
+                transformPositionOrEntry = transformPositionOrEntry >> 8;
+                blockBytesConsumed++;
+                continue emitTransformedRuns;
               }
               if (remainingOutputBytes == 0) {
                 remainingRunLength = 1;
-                break runEmissionBeforeStateCommit;
+                break emitTransformedRuns;
               }
-              outputBytes[outputPosition] = (byte)runByte;
-              outputPosition++;
-              remainingOutputBytes--;
-            }
-            while (blockBytesConsumed != blockEndPosition) {
-              sharedTransformTableSnapshot = transformTableAlias;
-              runByte = (byte)currentByte;
-              transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
-              nextByteOrRunCount = (byte)transformPositionOrEntry;
-              transformPositionOrEntry = transformPositionOrEntry >> 8;
-              blockBytesConsumed++;
-              if (nextByteOrRunCount == currentByte) {
-                if (blockBytesConsumed != blockEndPosition) {
-                  remainingRunLength = 2;
-                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
-                  nextByteOrRunCount = (byte)transformPositionOrEntry;
-                  transformPositionOrEntry = transformPositionOrEntry >> 8;
-                  blockBytesConsumed++;
-                  if (blockBytesConsumed == blockEndPosition) {
-                    continue emitTransformedRuns;
-                  }
-                  if (nextByteOrRunCount != currentByte) {
-                    currentByte = nextByteOrRunCount;
-                    continue emitTransformedRuns;
-                  }
-                  remainingRunLength = 3;
-                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
-                  nextByteOrRunCount = (byte)transformPositionOrEntry;
-                  transformPositionOrEntry = transformPositionOrEntry >> 8;
-                  blockBytesConsumed++;
-                  if (blockBytesConsumed == blockEndPosition) {
-                    continue emitTransformedRuns;
-                  }
-                  if (nextByteOrRunCount != currentByte) {
-                    currentByte = nextByteOrRunCount;
-                    continue emitTransformedRuns;
-                  }
-                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
-                  nextByteOrRunCount = (byte)transformPositionOrEntry;
-                  transformPositionOrEntry = transformPositionOrEntry >> 8;
-                  blockBytesConsumed++;
-                  remainingRunLength = (nextByteOrRunCount & 255) + 4;
-                  transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
-                  currentByte = (byte)transformPositionOrEntry;
-                  transformPositionOrEntry = transformPositionOrEntry >> 8;
-                  blockBytesConsumed++;
-                  continue emitTransformedRuns;
-                }
-                if (remainingOutputBytes == 0) {
-                  remainingRunLength = 1;
-                  break runEmissionBeforeStateCommit;
-                }
-              } else {
-                currentByte = nextByteOrRunCount;
-                if (remainingOutputBytes == 0) {
-                  remainingRunLength = 1;
-                  break runEmissionBeforeStateCommit;
-                }
+            } else {
+              currentByte = nextByteOrRunCount;
+              if (remainingOutputBytes == 0) {
+                remainingRunLength = 1;
+                break emitTransformedRuns;
               }
-              outputBytes[outputPosition] = (byte)runByte;
-              outputPosition++;
-              remainingOutputBytes--;
             }
-            remainingRunLength = 0;
+            outputBytes[outputPosition] = (byte)runByte;
+            outputPosition++;
+            remainingOutputBytes--;
           }
+          remainingRunLength = 0;
           break;
         }
         previousOutputBytesWritten = state.outputBytesWritten;

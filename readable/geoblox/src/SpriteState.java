@@ -820,23 +820,21 @@ abstract class SpriteState extends DualLinkNode {
                   CacheFileState.randomSeedFile.seek(51, 0L);
                   CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
                   seedByteIndex = 0;
-                  while (true) {
-                    seedByteComparisonOperands: {
-                      if (seedByteIndex < 24) {
-                        seedScanComparisonLeft = ~seedBytes[seedByteIndex];
-                        seedScanComparisonRight = -1;
-                        if (clientControlSnapshot != 0) {
-                          break seedByteComparisonOperands;
-                        }
-                        if (seedScanComparisonLeft == seedScanComparisonRight ||
-                            clientControlSnapshot != 0) {
-                          seedByteIndex++;
-                          continue;
-                        }
+                  seedByteComparisonOperands: while (true) {
+                    if (seedByteIndex < 24) {
+                      seedScanComparisonLeft = ~seedBytes[seedByteIndex];
+                      seedScanComparisonRight = -1;
+                      if (clientControlSnapshot != 0) {
+                        break seedByteComparisonOperands;
                       }
-                      seedScanComparisonLeft = 24;
-                      seedScanComparisonRight = seedByteIndex;
+                      if (seedScanComparisonLeft == seedScanComparisonRight ||
+                          clientControlSnapshot != 0) {
+                        seedByteIndex++;
+                        continue;
+                      }
                     }
+                    seedScanComparisonLeft = 24;
+                    seedScanComparisonRight = seedByteIndex;
                     break;
                   }
                   if (seedScanComparisonLeft <= seedScanComparisonRight) {

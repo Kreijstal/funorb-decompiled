@@ -433,37 +433,35 @@ final class GameplaySession {
                 renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
               } while (clientControlFlowGuard == 0);
               renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
-              while (true) {
-                debugCounterPanelSelection: {
-                  if (renderedEntity != null) {
-                    SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                    renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
-                    if (clientControlFlowGuard == 0) {
-                      continue;
-                    }
-                  } else {
-                    if (this.tutorialMode) {
-                      tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
-                      if (tutorialTextHeightOrDebugPanelTop < 10) {
-                        tutorialTextHeightOrDebugPanelTop = 10;
-                      }
-                      debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
-                      debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
-                      debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
-                      SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                      break debugCounterPanelSelection;
-                    }
-                    PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+              debugCounterPanelSelection: while (true) {
+                if (renderedEntity != null) {
+                  SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
+                  renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                  if (clientControlFlowGuard == 0) {
+                    continue;
                   }
-                  if (this.sessionPhase == 0 &&
-                      !EntityContactSupport.areEntityQueuesSettled(0)) {
-                    PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
-                    if (clientControlFlowGuard == 0) {
-                      break debugCounterPanelSelection;
+                } else {
+                  if (this.tutorialMode) {
+                    tutorialTextHeightOrDebugPanelTop = -(this.updateTick / 2) + 176;
+                    if (tutorialTextHeightOrDebugPanelTop < 10) {
+                      tutorialTextHeightOrDebugPanelTop = 10;
                     }
+                    debugTutorialLineHeight = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent;
+                    debugTutorialPanelWidth = IntrusiveNodeHashTable.smallFont.measureMaximumWrappedWidth(CanvasResizeController.tutorialSkipMessage, 640) + 40;
+                    debugEntityXOrTutorialTextHeight = IntrusiveNodeHashTable.smallFont.countWrappedLines(CanvasResizeController.tutorialSkipMessage, 640) * debugTutorialLineHeight + 10;
+                    SoftwareRasterizer.fillRectangle((320 - debugTutorialPanelWidth / 2) / 2, tutorialTextHeightOrDebugPanelTop / 2, debugTutorialPanelWidth / 2, (20 + debugEntityXOrTutorialTextHeight) / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                    break debugCounterPanelSelection;
                   }
-                  UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                  PointerMenuState.smallBoxSprite.drawScaledSilhouette(selectedThemeIdOrScoreBoxX / 2, loadingPanelWidthOrScoreBoxY / 2, PointerMenuState.smallBoxSprite.fullWidth / 2, PointerMenuState.smallBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                 }
+                if (this.sessionPhase == 0 &&
+                    !EntityContactSupport.areEntityQueuesSettled(0)) {
+                  PasswordValidator.countBoxSprite.drawScaledSilhouette(234, 205, PasswordValidator.countBoxSprite.fullWidth / 2, PasswordValidator.countBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
+                  if (clientControlFlowGuard == 0) {
+                    break debugCounterPanelSelection;
+                  }
+                }
+                UsernameSuggestionsPanel.largeBoxSprite.drawScaledSilhouette(223, 205, UsernameSuggestionsPanel.largeBoxSprite.fullWidth / 2, UsernameSuggestionsPanel.largeBoxSprite.fullHeight / 2, tutorialTopOrDebugColorOrTransitionClipTop);
                 break;
               }
               SoftwareRasterizer.fillCircle(160, 120, 21, 16777215);

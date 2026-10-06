@@ -493,27 +493,25 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                       backgroundGroup = this.backgroundGroups.nextForIteration(1);
                     }
-                    while (true) {
-                      backgroundDownloadScanStep: {
-                        if (this.backgroundGroupIndex < this.index.fileCounts.length) {
-                          if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
-                            if (this.networkClient.isBackgroundQueueFull(-21)) {
-                              phaseComplete = 0;
-                              break backgroundDownloadScanStep;
-                            }
-                            if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
-                              unusedScannedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, this.backgroundGroupIndex);
-                            }
-                            if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
-                              newDownloadGroup = new IntrusiveNode();
-                              newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
-                              phaseComplete = 0;
-                              this.backgroundGroups.addLast(-97, newDownloadGroup);
-                            }
+                    backgroundDownloadScanStep: while (true) {
+                      if (this.backgroundGroupIndex < this.index.fileCounts.length) {
+                        if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
+                          if (this.networkClient.isBackgroundQueueFull(-21)) {
+                            phaseComplete = 0;
+                            break backgroundDownloadScanStep;
                           }
-                          this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                          continue;
+                          if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
+                            unusedScannedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, this.backgroundGroupIndex);
+                          }
+                          if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
+                            newDownloadGroup = new IntrusiveNode();
+                            newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
+                            phaseComplete = 0;
+                            this.backgroundGroups.addLast(-97, newDownloadGroup);
+                          }
                         }
+                        this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
+                        continue;
                       }
                       break;
                     }

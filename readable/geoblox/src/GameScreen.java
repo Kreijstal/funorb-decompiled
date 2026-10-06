@@ -255,24 +255,22 @@ final class GameScreen extends MenuScreen {
           this.backgroundScrollY = this.backgroundScrollY % WidgetContainer.menuBackgroundSprite.fullHeight;
           tileX = -WidgetContainer.menuBackgroundSprite.fullWidth + this.backgroundScrollX;
           backgroundTileColumns: while (true) {
-            backgroundOrForegroundTileSetup: {
-              if (640 > tileX) {
-                tileOriginYOrForegroundStartX = WidgetContainer.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
-                if (clientControlFlowGuard != 0) {
-                  break backgroundOrForegroundTileSetup;
-                }
-                tileY = tileOriginYOrForegroundStartX;
-                while (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
-                  WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
-                  tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
-                }
-                tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
-                continue backgroundTileColumns;
+            if (640 > tileX) {
+              tileOriginYOrForegroundStartX = WidgetContainer.menuBackgroundSprite.fullHeight + this.backgroundScrollY + 480;
+              if (clientControlFlowGuard != 0) {
+                break backgroundTileColumns;
               }
-              this.foregroundScrollY = this.foregroundScrollY % CachedTextLayout.menuForegroundSprite.fullHeight;
-              this.foregroundScrollX = this.foregroundScrollX % CachedTextLayout.menuForegroundSprite.fullWidth;
-              tileOriginYOrForegroundStartX = this.foregroundScrollX + (CachedTextLayout.menuForegroundSprite.fullWidth + 640);
+              tileY = tileOriginYOrForegroundStartX;
+              while (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+                WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
+                tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
+              }
+              tileX = tileX + WidgetContainer.menuBackgroundSprite.fullWidth;
+              continue backgroundTileColumns;
             }
+            this.foregroundScrollY = this.foregroundScrollY % CachedTextLayout.menuForegroundSprite.fullHeight;
+            this.foregroundScrollX = this.foregroundScrollX % CachedTextLayout.menuForegroundSprite.fullWidth;
+            tileOriginYOrForegroundStartX = this.foregroundScrollX + (CachedTextLayout.menuForegroundSprite.fullWidth + 640);
             break;
           }
           tileX = tileOriginYOrForegroundStartX;

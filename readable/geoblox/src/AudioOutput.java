@@ -307,70 +307,68 @@ class AudioOutput {
           scheduledWork = 0;
           pendingBuckets = 255;
           priorityPassThenCleanupBucket = 7;
-          while (true) {
-            streamSelection: {
-              if (pendingBuckets != 0) {
-                if (priorityPassThenCleanupBucket >= 0) {
-                  priorityBucket = priorityPassThenCleanupBucket;
-                  sampleWorkThreshold = 0;
-                } else {
-                  priorityBucket = priorityPassThenCleanupBucket & 3;
-                  sampleWorkThreshold = -(priorityPassThenCleanupBucket >> 2);
-                }
-                bucketMaskThenCleanupIndex = pendingBuckets >>> priorityBucket & 286331153;
-                while (bucketMaskThenCleanupIndex != 0) {
-                  if ((bucketMaskThenCleanupIndex & 1) != 0) {
-                    pendingBuckets = pendingBuckets & ~(1 << priorityBucket);
-                    previousStreamOrNextCleanupStream = null;
-                    stream = this.priorityQueueHeads[priorityBucket];
-                    childStream = stream;
-                    childStream = stream;
-                    while (stream != null) {
-                      sample = stream.sample;
-                      if (sample != null &&
-                          sample.scheduledWork > sampleWorkThreshold) {
-                        pendingBuckets = pendingBuckets | 1 << priorityBucket;
-                        previousStreamOrNextCleanupStream = stream;
-                        stream = stream.scheduledNextStream;
-                        continue;
-                      }
-                      stream.activeForMixing = true;
-                      streamWork = stream.getSchedulingCost();
-                      scheduledWork = scheduledWork + streamWork;
-                      if (sample != null) {
-                        sample.scheduledWork = sample.scheduledWork + streamWork;
-                      }
-                      if (scheduledWork >= this.schedulingWorkLimit) {
-                        break streamSelection;
-                      }
-                      childStream = stream.firstChildStream();
-                      if (childStream != null) {
-                        parentPriority = stream.scheduledPriority;
-                        while (childStream != null) {
-                          this.enqueueByPriority(childStream, parentPriority * childStream.getSchedulingPriority() >> 8);
-                          childStream = stream.nextChildStream();
-                        }
-                      }
-                      nextStream = stream.scheduledNextStream;
-                      stream.scheduledNextStream = null;
-                      if (previousStreamOrNextCleanupStream != null) {
-                        ((PcmStream) (previousStreamOrNextCleanupStream)).scheduledNextStream = nextStream;
-                      } else {
-                        this.priorityQueueHeads[priorityBucket] = nextStream;
-                      }
-                      if (nextStream == null) {
-                        this.priorityQueueTails[priorityBucket] = (PcmStream) (previousStreamOrNextCleanupStream);
-                      }
-                      stream = nextStream;
-                    }
-                  }
-                  priorityBucket += 4;
-                  sampleWorkThreshold++;
-                  bucketMaskThenCleanupIndex = bucketMaskThenCleanupIndex >>> 4;
-                }
-                priorityPassThenCleanupBucket--;
-                continue;
+          streamSelection: while (true) {
+            if (pendingBuckets != 0) {
+              if (priorityPassThenCleanupBucket >= 0) {
+                priorityBucket = priorityPassThenCleanupBucket;
+                sampleWorkThreshold = 0;
+              } else {
+                priorityBucket = priorityPassThenCleanupBucket & 3;
+                sampleWorkThreshold = -(priorityPassThenCleanupBucket >> 2);
               }
+              bucketMaskThenCleanupIndex = pendingBuckets >>> priorityBucket & 286331153;
+              while (bucketMaskThenCleanupIndex != 0) {
+                if ((bucketMaskThenCleanupIndex & 1) != 0) {
+                  pendingBuckets = pendingBuckets & ~(1 << priorityBucket);
+                  previousStreamOrNextCleanupStream = null;
+                  stream = this.priorityQueueHeads[priorityBucket];
+                  childStream = stream;
+                  childStream = stream;
+                  while (stream != null) {
+                    sample = stream.sample;
+                    if (sample != null &&
+                        sample.scheduledWork > sampleWorkThreshold) {
+                      pendingBuckets = pendingBuckets | 1 << priorityBucket;
+                      previousStreamOrNextCleanupStream = stream;
+                      stream = stream.scheduledNextStream;
+                      continue;
+                    }
+                    stream.activeForMixing = true;
+                    streamWork = stream.getSchedulingCost();
+                    scheduledWork = scheduledWork + streamWork;
+                    if (sample != null) {
+                      sample.scheduledWork = sample.scheduledWork + streamWork;
+                    }
+                    if (scheduledWork >= this.schedulingWorkLimit) {
+                      break streamSelection;
+                    }
+                    childStream = stream.firstChildStream();
+                    if (childStream != null) {
+                      parentPriority = stream.scheduledPriority;
+                      while (childStream != null) {
+                        this.enqueueByPriority(childStream, parentPriority * childStream.getSchedulingPriority() >> 8);
+                        childStream = stream.nextChildStream();
+                      }
+                    }
+                    nextStream = stream.scheduledNextStream;
+                    stream.scheduledNextStream = null;
+                    if (previousStreamOrNextCleanupStream != null) {
+                      ((PcmStream) (previousStreamOrNextCleanupStream)).scheduledNextStream = nextStream;
+                    } else {
+                      this.priorityQueueHeads[priorityBucket] = nextStream;
+                    }
+                    if (nextStream == null) {
+                      this.priorityQueueTails[priorityBucket] = (PcmStream) (previousStreamOrNextCleanupStream);
+                    }
+                    stream = nextStream;
+                  }
+                }
+                priorityBucket += 4;
+                sampleWorkThreshold++;
+                bucketMaskThenCleanupIndex = bucketMaskThenCleanupIndex >>> 4;
+              }
+              priorityPassThenCleanupBucket--;
+              continue;
             }
             break;
           }

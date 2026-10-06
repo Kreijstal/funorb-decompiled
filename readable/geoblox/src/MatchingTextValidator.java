@@ -46,46 +46,42 @@ final class MatchingTextValidator extends TextInputValidator {
         slicesToFill = slices;
         scanIndex = 0;
         sliceFillLoop: while (true) {
-          sliceFillCounterSelection: {
-            if (scanIndex < slicesToFill.length) {
-              sliceToFill = slicesToFill[scanIndex];
-              fillPixelStartSnapshot = 0;
-              if (controlFlowGuard != 0) {
-                break sliceFillCounterSelection;
-              }
-              fillPixelIndex = fillPixelStartSnapshot;
-              while (sliceToFill.pixels.length > fillPixelIndex) {
-                sliceToFill.pixels[fillPixelIndex] = fillColor;
-                fillPixelIndex++;
-              }
-              scanIndex++;
-              continue sliceFillLoop;
-            }
+          if (scanIndex < slicesToFill.length) {
+            sliceToFill = slicesToFill[scanIndex];
             fillPixelStartSnapshot = 0;
+            if (controlFlowGuard != 0) {
+              break sliceFillLoop;
+            }
+            fillPixelIndex = fillPixelStartSnapshot;
+            while (sliceToFill.pixels.length > fillPixelIndex) {
+              sliceToFill.pixels[fillPixelIndex] = fillColor;
+              fillPixelIndex++;
+            }
+            scanIndex++;
+            continue sliceFillLoop;
           }
+          fillPixelStartSnapshot = 0;
           break;
         }
         borderIndex = fillPixelStartSnapshot;
         bottomRightBorderLoop: while (true) {
-          bottomRightBorderCounterSelection: {
-            if (borderIndex < outerBorderWidth) {
-              bottomRightScanStartSnapshot = 0;
-              if (controlFlowGuard != 0) {
-                break bottomRightBorderCounterSelection;
-              }
-              scanIndex = bottomRightScanStartSnapshot;
-              while (cornerSize > scanIndex) {
-                slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
-                slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
-                slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
-                slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
-                scanIndex++;
-              }
-              borderIndex++;
-              continue bottomRightBorderLoop;
-            }
+          if (borderIndex < outerBorderWidth) {
             bottomRightScanStartSnapshot = 0;
+            if (controlFlowGuard != 0) {
+              break bottomRightBorderLoop;
+            }
+            scanIndex = bottomRightScanStartSnapshot;
+            while (cornerSize > scanIndex) {
+              slices[6].pixels[scanIndex + (cornerSize - borderIndex - 1) * cornerSize] = bottomRightBorderColor;
+              slices[8].pixels[scanIndex + (-1 - borderIndex + cornerSize) * cornerSize] = bottomRightBorderColor;
+              slices[2].pixels[scanIndex * cornerSize - borderIndex + cornerSize - 1] = bottomRightBorderColor;
+              slices[8].pixels[-borderIndex - 1 - (-cornerSize - cornerSize * scanIndex)] = bottomRightBorderColor;
+              scanIndex++;
+            }
+            borderIndex++;
+            continue bottomRightBorderLoop;
           }
+          bottomRightScanStartSnapshot = 0;
           break;
         }
         borderIndex = bottomRightScanStartSnapshot;
@@ -115,48 +111,44 @@ final class MatchingTextValidator extends TextInputValidator {
           }
           borderIndex = topLeftScanStartSnapshot;
           edgeBorderLoop: while (true) {
-            edgeBorderCounterSelection: {
-              if (borderIndex < edgeLength) {
-                edgeScanStartSnapshot = 0;
-                if (controlFlowGuard != 0) {
-                  break edgeBorderCounterSelection;
-                }
-                scanIndex = edgeScanStartSnapshot;
-                while (outerBorderWidth > scanIndex) {
-                  slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
-                  slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
-                  slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
-                  slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
-                  scanIndex++;
-                }
-                borderIndex++;
-                continue edgeBorderLoop;
-              }
+            if (borderIndex < edgeLength) {
               edgeScanStartSnapshot = 0;
+              if (controlFlowGuard != 0) {
+                break edgeBorderLoop;
+              }
+              scanIndex = edgeScanStartSnapshot;
+              while (outerBorderWidth > scanIndex) {
+                slices[7].pixels[edgeLength * (cornerSize - scanIndex - 1) + borderIndex] = bottomRightBorderColor;
+                slices[5].pixels[-1 + (cornerSize - scanIndex + borderIndex * cornerSize)] = bottomRightBorderColor;
+                slices[1].pixels[edgeLength * scanIndex + borderIndex] = topLeftBorderColor;
+                slices[3].pixels[scanIndex + cornerSize * borderIndex] = topLeftBorderColor;
+                scanIndex++;
+              }
+              borderIndex++;
+              continue edgeBorderLoop;
             }
+            edgeScanStartSnapshot = 0;
             break;
           }
           borderIndex = edgeScanStartSnapshot;
           innerAccentLoop: while (true) {
-            innerAccentCounterSelection: {
-              if (borderIndex < edgeLength >> 1) {
-                accentScanStartOrRetentionGuardSnapshot = 0;
-                if (controlFlowGuard != 0) {
-                  break innerAccentCounterSelection;
-                }
-                scanIndex = accentScanStartOrRetentionGuardSnapshot;
-                while (innerAccentWidth > scanIndex) {
-                  slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
-                  slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
-                  slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
-                  slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
-                  scanIndex++;
-                }
-                borderIndex++;
-                continue innerAccentLoop;
+            if (borderIndex < edgeLength >> 1) {
+              accentScanStartOrRetentionGuardSnapshot = 0;
+              if (controlFlowGuard != 0) {
+                break innerAccentLoop;
               }
-              accentScanStartOrRetentionGuardSnapshot = referenceRetentionGuard;
+              scanIndex = accentScanStartOrRetentionGuardSnapshot;
+              while (innerAccentWidth > scanIndex) {
+                slices[1].pixels[edgeLength * (-1 + (-scanIndex + cornerSize)) + borderIndex] = innerAccentColor;
+                slices[3].pixels[-1 + cornerSize + (-scanIndex + cornerSize * borderIndex)] = innerAccentColor;
+                slices[7].pixels[borderIndex + edgeLength * scanIndex] = innerAccentColor;
+                slices[5].pixels[cornerSize * borderIndex + scanIndex] = innerAccentColor;
+                scanIndex++;
+              }
+              borderIndex++;
+              continue innerAccentLoop;
             }
+            accentScanStartOrRetentionGuardSnapshot = referenceRetentionGuard;
             break;
           }
           if (accentScanStartOrRetentionGuardSnapshot != 1) {
