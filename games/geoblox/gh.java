@@ -571,11 +571,11 @@ final class gh {
                 463 >= this.field_T) {
             if (this.field_y != 1 ||
                   this.field_T >= 640) {
-              if (!(this.field_T != 463)) {
-                if (!(gf.field_f != 0)) {
+              if (this.field_T == 463) {
+                if (gf.field_f == 0) {
                   this.field_y = 1;
                   el.field_o.c(false);
-                  if (!(var5 == 0)) {
+                  if (var5 != 0) {
                     this.field_T = this.field_T + 1;
                     if (var5 != 0) {
                       this.field_T = this.field_T - 1;
@@ -1497,7 +1497,7 @@ final class gh {
           if (fieldTemp$0 != 150 + this.field_W) {
             if (460 > this.field_D) {
               this.field_bb = 2;
-              if (!(var11 == 0)) {
+              if (var11 != 0) {
                 if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
                   this.field_bb = 4;
                   if (var11 != 0) {

@@ -300,9 +300,9 @@ final class c extends ka {
         var3 = Geoblox.field_C;
         try {
           if (!this.field_H) {
-            if (!(this.field_T >= 0)) {
+            if (this.field_T < 0) {
               this.field_T = this.field_T + 1;
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 if (-4 >= this.field_T) {
                   this.field_H = false;
                   if (var3 != 0) {
