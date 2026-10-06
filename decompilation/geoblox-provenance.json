@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "cb82a72dc2bf20c76b19dc66a2085aa5dbbb5f7a",
+      "commit": "0a2834d2149867039a77ba47543717687f64c164",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "8bad2651674bf730eac82c00891be01ac59a732ddd32ae909c350240eb04a1e1",
-        "reproduce": "git archive --format=tar cb82a72dc2bf20c76b19dc66a2085aa5dbbb5f7a | sha256sum",
+        "sha256": "39d4fb6149ae4129dcc270c0e0fc12935b8b8fa29a4339edb65208716ba6b0dd",
+        "reproduce": "git archive --format=tar 0a2834d2149867039a77ba47543717687f64c164 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "8bfbbd2a80cc86f3c17c4f84c94717ecb9eb3b85310ea5b9c8e6c674154e8592",
-  "previousSourceTreeSha256": "4cf17906cce1af4689911db74d90bd0906e08ef947a36f7e658bd940b85081eb",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "8afb3b74ca805cadd74fb6c3770a96a328db75a6a6870cf6b3abe72bc8f4826d",
+  "previousSourceTreeSha256": "8bfbbd2a80cc86f3c17c4f84c94717ecb9eb3b85310ea5b9c8e6c674154e8592",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "7bccfc1053cffe0dd293a504114445b1dccc82fe",
+    "commit": "45ce33ec941a41afc75b721cceb67b7a3b5603ac",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "c64c2fdefdac0d39e604662680cb7ff4e99a0df2244a7d3f6eba5ba0ea848fae"
+      "sha256": "49bbc6e01838cb8362ed19bff6f1c5925f230c5917dc34291c20fbc53159f5ca"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,19 +3291,19 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "ff350d7ba7a076d6ad3767006f3f57e222128312ad3e8bf1e94906fb7f2454bd",
+    "outputTreeSha256": "87905a63fe4e110ef0fbd495aca821c8167d504c9105a1a7194d7d1b60e3093b",
     "files": 303,
     "rules": 18357,
-    "identifierEdits": 117388,
-    "bindingsCompared": 136410,
+    "identifierEdits": 117393,
+    "bindingsCompared": 136415,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
     "totalEdits": 117974,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 575,
-    "labelBindingsCompared": 575,
+    "labelEdits": 570,
+    "labelBindingsCompared": 570,
     "labelDeclarationsCompared": 150,
     "namingPass": {
       "version": 180,
@@ -3320,7 +3320,7 @@
       "remainingOpaquePlainBlockLabels": 0,
       "remainingOpaqueFields": 41
     },
-    "structuralPass": 203
+    "structuralPass": 204
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -14767,5 +14767,180 @@
     ],
     "sourceWorkflowCommit": "7bccfc1053cffe0dd293a504114445b1dccc82fe",
     "sourceProofWorkflowCommit": "7bccfc1053cffe0dd293a504114445b1dccc82fe"
+  },
+  "sharedStoreFallbackRecovery": {
+    "version": 204,
+    "sharedStoreFallbacks": true,
+    "changedJavaFiles": 1,
+    "changedMethodBodies": 4,
+    "counts": {
+      "guardedStoreFallbacks": 5,
+      "fallbackAssignmentsCopied": 5,
+      "fallbackIdentifierCopiesAdded": 5,
+      "labelsRemoved": 0,
+      "sharedFramesRetained": 5
+    },
+    "sourceLinesBefore": 75661,
+    "sourceLinesAfter": 75666,
+    "genericFocusedTestGroupsPassed": 6,
+    "genericSelectedTestGroupsPassed": 36,
+    "genericSelectedTestGroupsSkipped": 0,
+    "nativeComparisons": 174960,
+    "nativeContextVariants": 24,
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestSha256": "18de577d5a3ed8cf53ca047bd3e4e65cc3e42b8ef421aac9c2070e68b0f7c7ff",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "previousSourceCommit": "363bfff2188637ec4f2c7a2e417d9d9f7adda8a0",
+    "sourceCommit": "27e76bc16c010c0785a176896de2f131e8aa2fb2",
+    "previousSourceTreeSha256": "8bfbbd2a80cc86f3c17c4f84c94717ecb9eb3b85310ea5b9c8e6c674154e8592",
+    "sourceTreeSha256": "8afb3b74ca805cadd74fb6c3770a96a328db75a6a6870cf6b3abe72bc8f4826d",
+    "javaToolsCommit": "0a2834d2149867039a77ba47543717687f64c164",
+    "sourceArchiveSha256": "39d4fb6149ae4129dcc270c0e0fc12935b8b8fa29a4339edb65208716ba6b0dd",
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117157,
+    "sourceReferenceOccurrencesAfter": 117162,
+    "sourceReferenceOccurrencesAdded": 5,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 122,
+    "plainBlockLabelsAfter": 122,
+    "labelDeclarationsBefore": 150,
+    "labelDeclarationsAfter": 150,
+    "labelBindingsBefore": 575,
+    "labelBindingsAfter": 570,
+    "survivingLabelOrdinalMigrations": 0,
+    "labelOrdinalMigrations": [],
+    "retiredLabelIdentities": [],
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 5,
+    "previousCompleteRules": 18357,
+    "unaffectedCompleteRulesPreserved": 18357,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "methodBodiesAfter": 2080,
+    "largeMethodBodiesAfter": 19,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 5,
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 5,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 312,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 331,
+          "labels": 4,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 557,
+          "labels": 6,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 311,
+          "labels": 5,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 357,
+          "labels": 6,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "remainingOpaqueFields": 41,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Recover five primitive assignment fallback guards across four gameplay-session methods. All five frame names/braces remain for other exits; one copied store site per fallback occupies exclusive arms and executes once on original paths. Independently attributed primitive types, terminal plain-block/if corridors, all original/copied bindings and all 5032 surviving transfers/protected scopes are certified. All complete naming objects, 303 exact tracked CLI bytes, compilation and dictionary reversal are verified. The 174960 native cases across 24 models and scoped probes do not establish whole-game/browser/phone or heap/presented-FPS acceptance",
+    "publicationTestGroupsPassed": 27,
+    "completeCorpusExpectedTokensVerified": true,
+    "exactExpectedSourceBytesVerified": true,
+    "allOriginalAndCopiedBindingOccurrencesPreserved": true,
+    "independentJdkPrimitiveStoreScopeAndCorridorEvidence": true,
+    "independentlyComparedTransferFacts": 5037,
+    "independentlyComparedTransferFactsAfter": 5032,
+    "allSurvivingTransfersAndProtectedScopesPreserved": true,
+    "allProtectedScopesPreserved": true,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 19403,
+    "readableIdentifierEdits": 117393,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 570,
+    "readableTotalEdits": 117974,
+    "previousNativeGameplayAndResultHelperPinsReverified": true,
+    "nativeScopeProbesRerun": [
+      {
+        "file": "readable/tests/test-geoblox-gameplay.mjs",
+        "sha256": "8992682ba5137d4a7f58ce5af975488add1f90dc90a982c52187d0e161ae74c9",
+        "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      },
+      {
+        "file": "readable/tests/test-geoblox-result-helpers.mjs",
+        "sha256": "6a4359c062c12b9caf664f4805f8f9a52c64a87997b74e5eddf9aa588f74640a",
+        "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      }
+    ],
+    "changedMethods": [
+      {
+        "symbol": "M:gh.a(I)V",
+        "frames": 2,
+        "stores": 2,
+        "identifiers": 2,
+        "labels": 0,
+        "retained": 2
+      },
+      {
+        "symbol": "M:gh.b(I)V",
+        "frames": 1,
+        "stores": 1,
+        "identifiers": 1,
+        "labels": 0,
+        "retained": 1
+      },
+      {
+        "symbol": "M:gh.f(I)V",
+        "frames": 1,
+        "stores": 1,
+        "identifiers": 1,
+        "labels": 0,
+        "retained": 1
+      },
+      {
+        "symbol": "M:gh.g(I)V",
+        "frames": 1,
+        "stores": 1,
+        "identifiers": 1,
+        "labels": 0,
+        "retained": 1
+      }
+    ],
+    "sourceWorkflowCommit": "45ce33ec941a41afc75b721cceb67b7a3b5603ac",
+    "sourceProofWorkflowCommit": "45ce33ec941a41afc75b721cceb67b7a3b5603ac"
   }
 }

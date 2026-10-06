@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7bccfc1053cffe0dd293a504114445b1dccc82fe/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/45ce33ec941a41afc75b721cceb67b7a3b5603ac/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 203)
+## Current readability (pass 204)
 
-The export has 18,357 guarded names and 117,388 Java identifier edits, plus 11
-class-name literal edits and 575 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,357 guarded names and 117,393 Java identifier edits, plus 11
+class-name literal edits and 570 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,410 bindings, reproduce and
@@ -24,7 +24,44 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current late shared-frame conditions (pass 203)
+## Current shared primitive-store fallbacks (pass 204)
+
+Five guarded fallback assignments across four gameplay-session methods now use
+exclusive if/else arms. Every other exit retains its original frame name, braces
+and destination. Conditions, prefixes, guard evaluation and store order remain
+once on the original paths. The generic decompiler requires scoped integral or
+boolean destination/operand evidence and a terminal plain-block/if corridor;
+unknown/boxed/floating/computed stores and crossed protected/loop/monitor
+corridors refuse reconstruction. No control-flag value is assumed.
+
+Independent javac attribution certifies all selected stores, continuations,
+original/copied bindings and 5,032 remaining transfers/protected scopes.
+All 18,357 complete naming objects remain exact; no label retires
+or ordinal migrates. There are 18,357 rules, 19,403 dictionary identities,
+117,393 identifier, 11 literal and 570 label edits
+(117,974 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/sharedStoreFallbackRecovery.test.js test/guardedStoreFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/terminalFrameLoopRecovery.test.js test/javaAstEmitterGuardedAbruptExits.test.js`
+passes all 36 groups. The shared-store fixture compares 174,960 native cases
+across 24 models with independent oracles, including original/shared/subsequently
+structured forms, nullable conditions and guards, early exits, mutations, partial
+writes, overflow, volatile fields, aliases, finally priority and monitor release.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independently attributed primitive stores
+and corridors, all bindings, five consumed exits, complete naming objects and
+compilation. All 303 readable files reverse byte exactly; all 27 publication
+checks, 17 scoped native trace groups and current/fresh sibling reproductions
+pass. Older proof records and frozen input/naming/native pins remain intact.
+Five large labeled methods and 41 unsupported fields remain. Whole-game/browser/
+phone equivalence and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`39d4fb6149ae4129dcc270c0e0fc12935b8b8fa29a4339edb65208716ba6b0dd`.
+
+## Previous late shared-frame conditions (pass 203)
 
 Shared-callback recovery exposed two early exits with complete terminal suffixes.
 Menu-action dispatch and gameplay rendering now guard those whole suffixes under

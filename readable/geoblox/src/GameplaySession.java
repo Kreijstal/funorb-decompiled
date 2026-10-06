@@ -94,11 +94,12 @@ final class GameplaySession {
               break tutorialPromptPlacement;
             }
             promptTop = 280;
-            if (clientControlFlowGuard == 0) {
-              break tutorialPromptPlacement;
+            if (!(clientControlFlowGuard == 0)) {
+              promptTop = 270;
             }
+          } else {
+            promptTop = 270;
           }
-          promptTop = 270;
         }
         tutorialPromptButtonRendering: {
           DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, GameGraphicsResources.frameNineSliceSprites);
@@ -561,11 +562,12 @@ final class GameplaySession {
                 break pointsPanelFrameDirection;
               }
               this.pointsPanelFrameDirection = 1;
-              if (clientControlFlowGuard == 0) {
-                break pointsPanelFrameDirection;
+              if (!(clientControlFlowGuard == 0)) {
+                this.pointsPanelFrameDirection = -1;
               }
+            } else {
+              this.pointsPanelFrameDirection = -1;
             }
-            this.pointsPanelFrameDirection = -1;
           }
         }
         pointsPanelSlideStep: {
@@ -902,11 +904,12 @@ final class GameplaySession {
                   }
                 }
                 this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                if (clientControlFlowGuard == 0) {
-                  break tutorialKeyAdvance;
+                if (!(clientControlFlowGuard == 0)) {
+                  this.tutorialProgressMetric = 0;
                 }
+              } else {
+                this.tutorialProgressMetric = 0;
               }
-              this.tutorialProgressMetric = 0;
             }
           }
           if (SessionTextHistorySupport.currentKeyboardEventCode == 85 &&
@@ -1216,11 +1219,12 @@ final class GameplaySession {
                 break tutorialStepPhaseUpdate;
               }
               this.tutorialStepPhase = 2;
-              if (clientControlFlowGuard == 0) {
-                break tutorialStepPhaseUpdate;
+              if (!(clientControlFlowGuard == 0)) {
+                this.tutorialStepPhase = 2;
               }
+            } else {
+              this.tutorialStepPhase = 2;
             }
-            this.tutorialStepPhase = 2;
           }
         }
         if (methodGuard < 59) {
@@ -1505,11 +1509,12 @@ final class GameplaySession {
               }
               if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
-                if (controlFlowGuard == 0) {
-                  break resultSequencePhaseSelection;
+                if (!(controlFlowGuard == 0)) {
+                  this.sessionPhase = 3;
                 }
+              } else {
+                this.sessionPhase = 3;
               }
-              this.sessionPhase = 3;
             }
             if (3 == this.sessionPhase) {
               this.resultBonusPoints = this.resultBonusPoints + 7;
