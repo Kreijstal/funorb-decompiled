@@ -139,85 +139,83 @@ final class BoardReconciliationSupport {
                 visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
                 alreadyVisited = visitedByEntityIdValue;
                 if (clientControlSnapshot == 0) {
-                  componentSearchAndDetach: {
-                    if (!(alreadyVisited)) {
-                      pendingConnectivityEntities = new SecondaryDeque();
-                      visitedNonAvatarEntities = new SecondaryDeque();
-                      pendingConnectivityEntities.addFirst(activeEntity, false);
-                      componentCanDetach = 1;
-                      while (true) {
-                        poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
-                        currentConnectivityEntity = poppedEntityOrSearchStart;
-                        currentConnectivityEntityAlias = currentConnectivityEntity;
-                        connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
-                        if (currentConnectivityEntityAlias != null) {
-                          PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
-                          directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
-                          avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
-                          poppedEntityTouchesAvatar = directAvatarContactValue;
-                          if (poppedEntityTouchesAvatar) {
-                            componentCanDetach = 0;
-                          } else {
-                            visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
-                            componentNeighborIndex = 0;
-                            while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
-                              neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
-                              poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
-                              componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
-                              enqueueUnseenNeighbor: while (true) {
-                                if (componentSearchThenVariantResetEntity != null) {
+                  if (!(alreadyVisited)) {
+                    pendingConnectivityEntities = new SecondaryDeque();
+                    visitedNonAvatarEntities = new SecondaryDeque();
+                    pendingConnectivityEntities.addFirst(activeEntity, false);
+                    componentCanDetach = 1;
+                    while (true) {
+                      poppedEntityOrSearchStart = (GameplayEntity) ((Object) pendingConnectivityEntities.removeFirst(true));
+                      currentConnectivityEntity = poppedEntityOrSearchStart;
+                      currentConnectivityEntityAlias = currentConnectivityEntity;
+                      connectivityAliasThenDetachingEntity = currentConnectivityEntityAlias;
+                      if (currentConnectivityEntityAlias != null) {
+                        PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
+                        directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
+                        avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
+                        poppedEntityTouchesAvatar = directAvatarContactValue;
+                        if (poppedEntityTouchesAvatar) {
+                          componentCanDetach = 0;
+                        } else {
+                          visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
+                          componentNeighborIndex = 0;
+                          while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                            neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
+                            poppedEntityOrSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
+                            componentSearchThenVariantResetEntity = poppedEntityOrSearchStart;
+                            enqueueUnseenNeighbor: while (true) {
+                              if (componentSearchThenVariantResetEntity != null) {
+                                comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
+                                neighborThenUnlinkArgument = neighborThenCountResetEntity;
+                                if (comparedThenUnlinkTarget != neighborThenUnlinkArgument) {
+                                  componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
+                                  continue;
+                                }
+                              } else {
+                                componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
+                                while (componentSearchThenVariantResetEntity != null) {
                                   comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
                                   neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                  if (comparedThenUnlinkTarget != neighborThenUnlinkArgument) {
-                                    componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
-                                    continue;
+                                  if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
+                                    break enqueueUnseenNeighbor;
                                   }
-                                } else {
-                                  componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
-                                  while (componentSearchThenVariantResetEntity != null) {
-                                    comparedThenUnlinkTarget = componentSearchThenVariantResetEntity;
-                                    neighborThenUnlinkArgument = neighborThenCountResetEntity;
-                                    if (comparedThenUnlinkTarget == neighborThenUnlinkArgument) {
-                                      break enqueueUnseenNeighbor;
-                                    }
-                                    componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
-                                  }
-                                  pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
+                                  componentSearchThenVariantResetEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
                                 }
-                                break;
+                                pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
                               }
-                              componentNeighborIndex++;
+                              break;
                             }
-                            continue;
-                          }
-                        }
-                        avatarContactThenDetachDecision = componentCanDetach;
-                        if (avatarContactThenDetachDecision == 0) {
-                          break componentSearchAndDetach;
-                        }
-                        connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
-                        while (connectivityAliasThenDetachingEntity != null) {
-                          connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-                          connectivityAliasThenDetachingEntity.touchesAvatar = false;
-                          connectivityAliasThenDetachingEntity.detachedFromBoard = true;
-                          MessageDialogSupport.entitiesDetachedThisTick = true;
-                          visitedFlagThenResetIndex = 0;
-                          componentNeighborIndex = visitedFlagThenResetIndex;
-                          while (componentNeighborIndex < connectivityAliasThenDetachingEntity.relatedEntityCount) {
-                            comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
-                            neighborThenUnlinkArgument = connectivityAliasThenDetachingEntity;
-                            ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
                             componentNeighborIndex++;
                           }
-                          entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
-                          neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
-                          connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
-                          entityForComponentCategoryReset.sameCategoryEntityCount = 0;
-                          neighborThenCountResetEntity.sameVariantEntityCount = 0;
-                          connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                          continue;
                         }
-                        break componentSearchAndDetach;
                       }
+                      avatarContactThenDetachDecision = componentCanDetach;
+                      if (avatarContactThenDetachDecision == 0) {
+                        break;
+                      }
+                      connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                      while (connectivityAliasThenDetachingEntity != null) {
+                        connectivityAliasThenDetachingEntity.entityQueue = ArchiveNetworkClient.movingEntities;
+                        connectivityAliasThenDetachingEntity.touchesAvatar = false;
+                        connectivityAliasThenDetachingEntity.detachedFromBoard = true;
+                        MessageDialogSupport.entitiesDetachedThisTick = true;
+                        visitedFlagThenResetIndex = 0;
+                        componentNeighborIndex = visitedFlagThenResetIndex;
+                        while (componentNeighborIndex < connectivityAliasThenDetachingEntity.relatedEntityCount) {
+                          comparedThenUnlinkTarget = connectivityAliasThenDetachingEntity.relatedEntities[componentNeighborIndex];
+                          neighborThenUnlinkArgument = connectivityAliasThenDetachingEntity;
+                          ((GameplayEntity) (Object) comparedThenUnlinkTarget).removeRelatedEntity(neighborThenUnlinkArgument, 0);
+                          componentNeighborIndex++;
+                        }
+                        entityForComponentCategoryReset = connectivityAliasThenDetachingEntity;
+                        neighborThenCountResetEntity = connectivityAliasThenDetachingEntity;
+                        connectivityAliasThenDetachingEntity.relatedEntityCount = 0;
+                        entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                        neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                        connectivityAliasThenDetachingEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
+                      }
+                      break;
                     }
                   }
                   activeEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
