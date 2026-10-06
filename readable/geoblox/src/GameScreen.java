@@ -311,7 +311,7 @@ final class GameScreen extends MenuScreen {
             }
             if (-4 >= this.menuPressOffset) {
               this.menuPressAnimationActive = false;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 this.menuPressOffset = this.menuPressOffset - 1;
               }
             } else {

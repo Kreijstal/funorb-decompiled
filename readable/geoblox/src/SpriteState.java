@@ -594,7 +594,7 @@ abstract class SpriteState extends DualLinkNode {
                 middleVertexOnRight = 1;
                 rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
                 rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
-                if (!(controlFlagSnapshot == 0)) {
+                if (controlFlagSnapshot != 0) {
                   rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
                   rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
                   leftRedStepQ16 = (middleRed - topRed << 16) / edgeSegmentRowsThenRowBase;

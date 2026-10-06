@@ -585,7 +585,7 @@ final class GameplaySession {
                 }
               }
               this.pointsPanelX = this.pointsPanelX + 1;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 this.pointsPanelX = this.pointsPanelX - 1;
               }
             } else {
