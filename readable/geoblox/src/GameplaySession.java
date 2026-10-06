@@ -580,13 +580,17 @@ final class GameplaySession {
                 }
                 this.pointsPanelSlideDirection = 1;
                 UiWidget.gameplaySession.emitPointsPopup(false);
-                if (clientControlFlowGuard == 0) {
-                  break pointsPanelSlideStep;
+                if (!(clientControlFlowGuard == 0)) {
+                  this.pointsPanelX = this.pointsPanelX + 1;
+                  if (clientControlFlowGuard != 0) {
+                    this.pointsPanelX = this.pointsPanelX - 1;
+                  }
                 }
-              }
-              this.pointsPanelX = this.pointsPanelX + 1;
-              if (clientControlFlowGuard != 0) {
-                this.pointsPanelX = this.pointsPanelX - 1;
+              } else {
+                this.pointsPanelX = this.pointsPanelX + 1;
+                if (clientControlFlowGuard != 0) {
+                  this.pointsPanelX = this.pointsPanelX - 1;
+                }
               }
             } else {
               this.pointsPanelX = this.pointsPanelX - 1;
@@ -1495,13 +1499,19 @@ final class GameplaySession {
           nextSceneAnimationTick = this.sceneAnimationTick + 1;
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
-            resultSequencePhaseSelection: {
-              if (460 > this.sceneAnimationTick) {
-                this.sessionPhase = 2;
-                if (controlFlowGuard == 0) {
-                  break resultSequencePhaseSelection;
+            if (460 > this.sceneAnimationTick) {
+              this.sessionPhase = 2;
+              if (!(controlFlowGuard == 0)) {
+                if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
+                  this.sessionPhase = 4;
+                  if (controlFlowGuard != 0) {
+                    this.sessionPhase = 3;
+                  }
+                } else {
+                  this.sessionPhase = 3;
                 }
               }
+            } else {
               if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
                 if (controlFlowGuard != 0) {

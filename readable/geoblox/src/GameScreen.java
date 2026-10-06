@@ -305,17 +305,25 @@ final class GameScreen extends MenuScreen {
                 break menuPressOffsetUpdate;
               }
               this.menuPressOffset = this.menuPressOffset + 1;
-              if (clientControlFlowGuard == 0) {
-                break menuPressOffsetUpdate;
-              }
-            }
-            if (-4 >= this.menuPressOffset) {
-              this.menuPressAnimationActive = false;
-              if (clientControlFlowGuard != 0) {
-                this.menuPressOffset = this.menuPressOffset - 1;
+              if (!(clientControlFlowGuard == 0)) {
+                if (-4 >= this.menuPressOffset) {
+                  this.menuPressAnimationActive = false;
+                  if (clientControlFlowGuard != 0) {
+                    this.menuPressOffset = this.menuPressOffset - 1;
+                  }
+                } else {
+                  this.menuPressOffset = this.menuPressOffset - 1;
+                }
               }
             } else {
-              this.menuPressOffset = this.menuPressOffset - 1;
+              if (-4 >= this.menuPressOffset) {
+                this.menuPressAnimationActive = false;
+                if (clientControlFlowGuard != 0) {
+                  this.menuPressOffset = this.menuPressOffset - 1;
+                }
+              } else {
+                this.menuPressOffset = this.menuPressOffset - 1;
+              }
             }
           }
           if (methodGuard >= -11) {
