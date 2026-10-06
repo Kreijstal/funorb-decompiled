@@ -612,27 +612,25 @@ class UiWidget extends IntrusiveNode {
           if (this.hasKeyboardFocus((byte) 54)) {
             discardedFocusAppend = output.append(" focused");
           }
-          rendererDiagnosticFormatting: {
-            if (null != this.renderer) {
-              discardedRendererPrefixAppend = output.append(" renderer=");
-              if (this.renderer instanceof UiWidget) {
-                output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
-                if (clientControlFlowSnapshot == 0) {
-                  break rendererDiagnosticFormatting;
-                }
+          if (null != this.renderer) {
+            discardedRendererPrefixAppend = output.append(" renderer=");
+            if (this.renderer instanceof UiWidget) {
+              output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
+              if (!(clientControlFlowSnapshot == 0)) {
+                discardedRendererAppend = output.append(this.renderer);
               }
+            } else {
               discardedRendererAppend = output.append(this.renderer);
             }
           }
           if (null != this.listener) {
-            listenerDiagnosticFormatting: {
-              discardedListenerPrefixAppend = output.append(" listener=");
-              if (!(this.listener instanceof UiWidget)) {
-                discardedListenerAppend = output.append(this.listener);
-                if (clientControlFlowSnapshot == 0) {
-                  break listenerDiagnosticFormatting;
-                }
+            discardedListenerPrefixAppend = output.append(" listener=");
+            if (!(this.listener instanceof UiWidget)) {
+              discardedListenerAppend = output.append(this.listener);
+              if (!(clientControlFlowSnapshot == 0)) {
+                output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
               }
+            } else {
               output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
             }
           }

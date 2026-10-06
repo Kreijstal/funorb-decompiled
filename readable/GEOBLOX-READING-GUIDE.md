@@ -7,24 +7,73 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a390b42c4fc69d7afda03f42a60f3cddf614f0ef/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a2ba10ac0963176d9899a29d2fb6bd62949c8a27/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 212)
+## Current readability (pass 213)
 
-The export has 18,352 guarded names and 117,440 Java identifier edits, plus 11
-class-name literal edits and 552 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,330 guarded names and 117,929 Java identifier edits, plus 11
+class-name literal edits and 475 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,462 bindings, reproduce and
+compile and compare 136,981 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
 predicate order while placing the highlight update under one explicit guard.
-Menu rendering falls from 372 to 296 lines and ten to three block labels.
+An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
+three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current late nested-if chains (pass 212)
+## Current mixed statement continuations (pass 213)
+
+The generic decompiler reconstructs 55 shared exits across
+25 methods and 6 files using explicit, exclusive if/else arms.
+Short continuations may mix calls, stores and complete conditional trees.
+Each original condition and action executes once on its original paths;
+receiver, argument, index, boxing, allocation and arithmetic association stay
+intact. Enclosing exception/finally and monitor coverage stays intact. No
+runtime flag value or predicate purity is assumed. Declaration-free terminal
+plain-block/if/label corridors, eight expression leaves, four conditions,
+24 statement nodes, 256 tokens and 2 KiB bound each continuation. Declarations,
+transfers, loops, protected suffixes, lambdas and method references refuse.
+Earlier callback and primitive-store APIs retain their policies.
+
+Every intermediate source tree is independently parsed with javac. The proof
+certifies each actual branch, guarded break, complete continuation and terminal
+corridor; it does not assume topology exposed by an earlier rewrite. All
+original/copied ordinary bindings and 4,964 surviving transfer/protected-scope
+facts remain exact. 22 labels retire; 8 surviving label ordinals migrate.
+All 18,322 unaffected complete naming objects remain unchanged.
+The export has 18,330 rules and 19,376 dictionary identities, with
+117,929 identifier, 11 literal and 475 label edits
+(118,415 total). 519 reference occurrences are copied as source sites,
+each retaining its original binding and executing on exclusive paths. Source
+length changes from 75,630 to 75,829 lines because both arms contain short
+continuations; plain block labels fall from 117 to 95.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/sharedStatementFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/nestedIfConditionRecovery.test.js`
+passes all 26 groups. The new fixture compares 641,520 native cases across
+18 contexts against independent ordered models, including nullable conditions,
+callbacks, boxing, aliases, receiver/index/argument order, partial writes,
+zero divisors, injected failures, finally overrides and monitor release.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-statement-fallback-source.mjs ../java-tools`
+checks every intermediate tree, exact complete continuation ranges, ordinary/
+label bindings, transfer/protected scopes and all 303 expected source bytes and
+compilation. A clean tracked compiler archive reproduces all 303 CLI bytes and
+unchanged diagnostics. All 303 readable files reverse byte exactly; all 27
+publication tests, 17 scoped native trace groups and current/fresh sibling
+reproductions pass. Older proofs and frozen input/naming/native pins remain.
+Five large labeled methods and 41 unsupported fields remain. Whole-game/browser/
+phone equivalence and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`128dc4e51bc9c67af7e22b3d93ecc4e688a922bfb8ac8ef6ae35c95baf2e400f`.
+
+## Previous late nested-if chains (pass 212)
 
 Earlier guard cleanup already joins braced chains; later reconstruction can
 expose more. The generic late recovery now joins 24 nested ifs across

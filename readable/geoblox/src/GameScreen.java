@@ -90,13 +90,12 @@ final class GameScreen extends MenuScreen {
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 13 &&
                 !this.fullscreenDialogActive) {
-              menuBackTargetSelection: {
-                if (this.screenId == 1) {
-                  ScoreSubmission.requestedScreenId = -1;
-                  if (clientControlFlowGuard == 0) {
-                    break menuBackTargetSelection;
-                  }
+              if (this.screenId == 1) {
+                ScoreSubmission.requestedScreenId = -1;
+                if (!(clientControlFlowGuard == 0)) {
+                  ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
                 }
+              } else {
                 ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
               }
               if (~ScoreSubmission.requestedScreenId == ~this.screenId) {
@@ -209,19 +208,29 @@ final class GameScreen extends MenuScreen {
                   if (PcmResampler.pointerYSnapshot <= 265) {
                     break menuKeyDispatch;
                   }
-                  if (PcmResampler.pointerYSnapshot >= 299) {
-                    break menuKeyDispatch;
+                  if (!(PcmResampler.pointerYSnapshot >= 299)) {
+                    this.pointerInteractionActive = true;
+                    if (null != UiWidget.gameplaySession) {
+                      UiWidget.gameplaySession.submitScore((byte) -70);
+                    }
+                    UiWidget.gameplayReturnScreenId = 0;
+                    ScoreSubmission.requestedScreenId = -1;
+                    ProxySocketConnector.gameplayOriginScreenId = 0;
+                    if (clientControlFlowGuard != 0) {
+                      super.handleMenuKey(itemIndex, -100);
+                    }
                   }
-                }
-                this.pointerInteractionActive = true;
-                if (null != UiWidget.gameplaySession) {
-                  UiWidget.gameplaySession.submitScore((byte) -70);
-                }
-                UiWidget.gameplayReturnScreenId = 0;
-                ScoreSubmission.requestedScreenId = -1;
-                ProxySocketConnector.gameplayOriginScreenId = 0;
-                if (clientControlFlowGuard != 0) {
-                  super.handleMenuKey(itemIndex, -100);
+                } else {
+                  this.pointerInteractionActive = true;
+                  if (null != UiWidget.gameplaySession) {
+                    UiWidget.gameplaySession.submitScore((byte) -70);
+                  }
+                  UiWidget.gameplayReturnScreenId = 0;
+                  ScoreSubmission.requestedScreenId = -1;
+                  ProxySocketConnector.gameplayOriginScreenId = 0;
+                  if (clientControlFlowGuard != 0) {
+                    super.handleMenuKey(itemIndex, -100);
+                  }
                 }
               }
             } else {
@@ -367,14 +376,17 @@ final class GameScreen extends MenuScreen {
               this.screenId != 1 &&
               this.screenId != 4) {
             panelHeight = (2 == this.screenId) && (clientControlFlowGuard == 0) ? (235) : (285);
-            panelPlacementSelection: {
-              panelLeftOrTextYOrOverlayAlphaOrCurtainX = 120;
-              if (this.screenId == 3) {
-                panelLeftOrTextYOrOverlayAlphaOrCurtainX += 10;
-                if (clientControlFlowGuard == 0) {
-                  break panelPlacementSelection;
+            panelLeftOrTextYOrOverlayAlphaOrCurtainX = 120;
+            if (this.screenId == 3) {
+              panelLeftOrTextYOrOverlayAlphaOrCurtainX += 10;
+              if (!(clientControlFlowGuard == 0)) {
+                if (this.screenId == 8 ||
+                    this.screenId == 7) {
+                  panelWidth += 20;
+                  panelLeftOrTextYOrOverlayAlphaOrCurtainX -= 10;
                 }
               }
+            } else {
               if (this.screenId == 8 ||
                   this.screenId == 7) {
                 panelWidth += 20;
@@ -498,21 +510,20 @@ final class GameScreen extends MenuScreen {
                   } else {
                     acceptanceOverlayAlpha = 200;
                   }
-                  fullscreenCountdownText: {
-                    panelLeftOrTextYOrOverlayAlphaOrCurtainX = acceptanceOverlayAlpha;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
-                    DelayedIncomingPacket.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
-                    textYOrButtonTop = 170;
-                    acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + FontLoadingSupport.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
-                    textYOrButtonTop = textYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(acceptancePromptText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
-                    textYOrButtonTop += 10;
-                    acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
-                    if ((1500 - this.activeTicks) / 150 <= 0) {
-                      textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
-                      if (clientControlFlowGuard == 0) {
-                        break fullscreenCountdownText;
-                      }
+                  panelLeftOrTextYOrOverlayAlphaOrCurtainX = acceptanceOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainX);
+                  DelayedIncomingPacket.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
+                  textYOrButtonTop = 170;
+                  acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + FontLoadingSupport.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
+                  textYOrButtonTop = textYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(acceptancePromptText, 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                  textYOrButtonTop += 10;
+                  acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
+                  if ((1500 - this.activeTicks) / 150 <= 0) {
+                    textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    if (!(clientControlFlowGuard == 0)) {
+                      textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                     }
+                  } else {
                     textYOrButtonTop = textYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, textYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
                   textYOrButtonTop += 40;
@@ -944,16 +955,21 @@ final class GameScreen extends MenuScreen {
                   break highscoreTitleSelection;
                 }
                 AudioService.screenTitleSprites[3].draw(0, 20);
-                if (clientControlFlowGuard == 0) {
-                  break highscoreTitleSelection;
+                if (!(clientControlFlowGuard == 0)) {
+                  AudioService.screenTitleSprites[2].draw(0, 20);
+                  if (!(clientControlFlowGuard == 0)) {
+                    AudioService.screenTitleSprites[1].draw(0, 20);
+                  }
+                }
+              } else {
+                AudioService.screenTitleSprites[2].draw(0, 20);
+                if (!(clientControlFlowGuard == 0)) {
+                  AudioService.screenTitleSprites[1].draw(0, 20);
                 }
               }
-              AudioService.screenTitleSprites[2].draw(0, 20);
-              if (clientControlFlowGuard == 0) {
-                break highscoreTitleSelection;
-              }
+            } else {
+              AudioService.screenTitleSprites[1].draw(0, 20);
             }
-            AudioService.screenTitleSprites[1].draw(0, 20);
           }
           if (methodGuard != 30) {
             this.updateTransition(-78);
@@ -1028,23 +1044,35 @@ final class GameScreen extends MenuScreen {
                 entryTextY = 76 + FadingDialog.uiPaletteFont.maxAscent + 150;
                 FadingDialog.uiPaletteFont.drawCenteredText(noHighscoresMessage, 322, entryTextY, 0, -1);
               }
-              if (clientControlFlowGuard == 0) {
-                break highscoreEntriesAndStatus;
-              }
-            }
-            highscoreUnavailableText: {
-              if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
-                statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
-                if (clientControlFlowGuard == 0) {
-                  break highscoreUnavailableText;
+              if (!(clientControlFlowGuard == 0)) {
+                if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
+                  statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
+                  if (!(clientControlFlowGuard == 0)) {
+                    statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                  }
+                } else {
+                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                }
+                statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
+                FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+                if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
+                  FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
                 }
               }
-              statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
-            }
-            statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
-            FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
-            if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
-              FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+            } else {
+              if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
+                statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
+                if (!(clientControlFlowGuard == 0)) {
+                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                }
+              } else {
+                statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+              }
+              statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
+              FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+              if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
+                FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
+              }
             }
           }
           if (!UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ -109)) {
@@ -1106,16 +1134,15 @@ final class GameScreen extends MenuScreen {
             this.handleScreenKey((byte) 62);
           } while (clientControlFlowGuard == 0);
           if (this.screenId == 3) {
-            tutorialOrbitUpdate: {
-              if (0 == (1 & this.animationTick)) {
-                this.tutorialDemoTick = this.tutorialDemoTick + 1;
-                this.tutorialOrbitRadius = -(this.tutorialDemoTick >> 1) + 60;
-                if (this.tutorialOrbitRadius < 15) {
-                  this.tutorialOrbitRadius = 15;
-                  if (clientControlFlowGuard == 0) {
-                    break tutorialOrbitUpdate;
-                  }
+            if (0 == (1 & this.animationTick)) {
+              this.tutorialDemoTick = this.tutorialDemoTick + 1;
+              this.tutorialOrbitRadius = -(this.tutorialDemoTick >> 1) + 60;
+              if (this.tutorialOrbitRadius < 15) {
+                this.tutorialOrbitRadius = 15;
+                if (!(clientControlFlowGuard == 0)) {
+                  this.tutorialOrbitAngleRadians = this.tutorialOrbitAngleRadians + 0.1;
                 }
+              } else {
                 this.tutorialOrbitAngleRadians = this.tutorialOrbitAngleRadians + 0.1;
               }
             }
@@ -1155,18 +1182,27 @@ final class GameScreen extends MenuScreen {
                 }
                 this.tutorialStarFrameOrColorIndex = 0;
                 this.tutorialEffectFrame = 0;
-                if (clientControlFlowGuard == 0) {
-                  break tutorialThemeAnimation;
+                if (!(clientControlFlowGuard == 0)) {
+                  colorInterpolationFraction = 0.019999999552965164f * (float)(this.animationTick % 50);
+                  this.tutorialTintRgb = ((int)(colorInterpolationFraction * (float)this.tutorialGreenDelta) << 8) + (SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] + ((int)(colorInterpolationFraction * (float)this.tutorialRedDelta) << 16) + (int)((float)this.tutorialBlueDelta * colorInterpolationFraction));
+                  if (this.animationTick % 50 == 49) {
+                    this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
+                    this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex % 7;
+                    this.tutorialRedDelta = -((16751678 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]) >> 16) + ((SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7] & 16754682) >> 16);
+                    this.tutorialGreenDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(this.tutorialStarFrameOrColorIndex + 1) % 7] >> 8) - ((SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] & 65438) >> 8);
+                    this.tutorialBlueDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7]) - (255 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]);
+                  }
                 }
-              }
-              colorInterpolationFraction = 0.019999999552965164f * (float)(this.animationTick % 50);
-              this.tutorialTintRgb = ((int)(colorInterpolationFraction * (float)this.tutorialGreenDelta) << 8) + (SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] + ((int)(colorInterpolationFraction * (float)this.tutorialRedDelta) << 16) + (int)((float)this.tutorialBlueDelta * colorInterpolationFraction));
-              if (this.animationTick % 50 == 49) {
-                this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
-                this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex % 7;
-                this.tutorialRedDelta = -((16751678 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]) >> 16) + ((SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7] & 16754682) >> 16);
-                this.tutorialGreenDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(this.tutorialStarFrameOrColorIndex + 1) % 7] >> 8) - ((SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] & 65438) >> 8);
-                this.tutorialBlueDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7]) - (255 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]);
+              } else {
+                colorInterpolationFraction = 0.019999999552965164f * (float)(this.animationTick % 50);
+                this.tutorialTintRgb = ((int)(colorInterpolationFraction * (float)this.tutorialGreenDelta) << 8) + (SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] + ((int)(colorInterpolationFraction * (float)this.tutorialRedDelta) << 16) + (int)((float)this.tutorialBlueDelta * colorInterpolationFraction));
+                if (this.animationTick % 50 == 49) {
+                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
+                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex % 7;
+                  this.tutorialRedDelta = -((16751678 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]) >> 16) + ((SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7] & 16754682) >> 16);
+                  this.tutorialGreenDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(this.tutorialStarFrameOrColorIndex + 1) % 7] >> 8) - ((SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex] & 65438) >> 8);
+                  this.tutorialBlueDelta = (255 & SocketConnector.themeCycleColors[selectedThemeId][(1 + this.tutorialStarFrameOrColorIndex) % 7]) - (255 & SocketConnector.themeCycleColors[selectedThemeId][this.tutorialStarFrameOrColorIndex]);
+                }
               }
             }
             PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) 127);
@@ -1179,11 +1215,12 @@ final class GameScreen extends MenuScreen {
                 break pointerPressDebounce;
               }
               TextTemplateDefinitionLoader.menuPointerPressDebounceTicks = 50;
-              if (clientControlFlowGuard == 0) {
-                break pointerPressDebounce;
+              if (!(clientControlFlowGuard == 0)) {
+                CheckboxRenderer.pointerPressButtonSnapshot = 0;
               }
+            } else {
+              CheckboxRenderer.pointerPressButtonSnapshot = 0;
             }
-            CheckboxRenderer.pointerPressButtonSnapshot = 0;
           }
           if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             if (this.screenId == 5 ||
@@ -1254,24 +1291,41 @@ final class GameScreen extends MenuScreen {
                     }
                     this.fullscreenDialogActive = false;
                     this.pointerInteractionActive = true;
-                    if (clientControlFlowGuard == 0) {
-                      break fullscreenPointerHandling;
+                    if (!(clientControlFlowGuard == 0)) {
+                      this.fullscreenDialogActive = false;
+                      ArchiveCatalog.exitFullscreenIfActive(255);
+                      this.pointerInteractionActive = true;
+                      if (!(clientControlFlowGuard == 0)) {
+                        this.pointerInteractionActive = false;
+                        if (!(clientControlFlowGuard == 0)) {
+                          this.pointerInteractionActive = true;
+                          this.fullscreenDialogActive = false;
+                        }
+                      }
+                    }
+                  } else {
+                    this.fullscreenDialogActive = false;
+                    ArchiveCatalog.exitFullscreenIfActive(255);
+                    this.pointerInteractionActive = true;
+                    if (!(clientControlFlowGuard == 0)) {
+                      this.pointerInteractionActive = false;
+                      if (!(clientControlFlowGuard == 0)) {
+                        this.pointerInteractionActive = true;
+                        this.fullscreenDialogActive = false;
+                      }
                     }
                   }
-                  this.fullscreenDialogActive = false;
-                  ArchiveCatalog.exitFullscreenIfActive(255);
-                  this.pointerInteractionActive = true;
-                  if (clientControlFlowGuard == 0) {
-                    break fullscreenPointerHandling;
+                } else {
+                  this.pointerInteractionActive = false;
+                  if (!(clientControlFlowGuard == 0)) {
+                    this.pointerInteractionActive = true;
+                    this.fullscreenDialogActive = false;
                   }
                 }
-                this.pointerInteractionActive = false;
-                if (clientControlFlowGuard == 0) {
-                  break fullscreenPointerHandling;
-                }
+              } else {
+                this.pointerInteractionActive = true;
+                this.fullscreenDialogActive = false;
               }
-              this.pointerInteractionActive = true;
-              this.fullscreenDialogActive = false;
             }
           }
           if (PrefixCodeDecoder.pointerXSnapshot != this.previousPointerX ||
@@ -1576,20 +1630,23 @@ final class GameScreen extends MenuScreen {
             actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
             selectedActionSnapshot = actionId;
             if (selectedActionSnapshot == 8) {
-              soundEffectSliderValueSelection: {
-                pointerX -= 280;
-                if (pointerX > 0) {
-                  if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
-                    SocialListEntry.soundEffectVolume = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
-                    if (clientControlFlowGuard == 0) {
-                      break soundEffectSliderValueSelection;
+              pointerX -= 280;
+              if (pointerX > 0) {
+                if (pointerX < NetworkArchiveRequest.barSprite.fullWidth) {
+                  SocialListEntry.soundEffectVolume = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
+                  if (!(clientControlFlowGuard == 0)) {
+                    SocialListEntry.soundEffectVolume = 80;
+                    if (!(clientControlFlowGuard == 0)) {
+                      SocialListEntry.soundEffectVolume = 0;
                     }
                   }
+                } else {
                   SocialListEntry.soundEffectVolume = 80;
-                  if (clientControlFlowGuard == 0) {
-                    break soundEffectSliderValueSelection;
+                  if (!(clientControlFlowGuard == 0)) {
+                    SocialListEntry.soundEffectVolume = 0;
                   }
                 }
+              } else {
                 SocialListEntry.soundEffectVolume = 0;
               }
               this.previewMusicVolume(0);
@@ -1693,11 +1750,12 @@ final class GameScreen extends MenuScreen {
                     break tutorialSlideInitialSelection;
                   }
                   this.selectedItemIndex = 3;
-                  if (Geoblox.clientControlFlowFlag == 0) {
-                    break tutorialSlideInitialSelection;
+                  if (!(Geoblox.clientControlFlowFlag == 0)) {
+                    this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 54);
                   }
+                } else {
+                  this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 54);
                 }
-                this.selectedItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 54);
               }
             }
             this.tutorialSlideOffset = this.tutorialSlideOffset + 8;
@@ -1724,14 +1782,21 @@ final class GameScreen extends MenuScreen {
           }
           if (3 == this.screenId &&
               !this.tutorialSlideActive) {
-            tutorialBackwardSelectionAdjustment: {
-              if (this.tutorialPageIndex != 4 &&
-                  this.selectedItemIndex == 3) {
-                this.selectedItemIndex = 2;
-                if (Geoblox.clientControlFlowFlag == 0) {
-                  break tutorialBackwardSelectionAdjustment;
+            if (this.tutorialPageIndex != 4 &&
+                this.selectedItemIndex == 3) {
+              this.selectedItemIndex = 2;
+              if (!(Geoblox.clientControlFlowFlag == 0)) {
+                if (this.tutorialPageIndex == 4) {
+                  if (this.selectedItemIndex == 2) {
+                    this.selectedItemIndex = 1;
+                  }
+                  if (SpriteCheckboxRenderer.previousMenuScreenId == 1 &&
+                      this.selectedItemIndex == 3) {
+                    this.selectedItemIndex = 1;
+                  }
                 }
               }
+            } else {
               if (this.tutorialPageIndex == 4) {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 1;
@@ -1943,23 +2008,28 @@ final class GameScreen extends MenuScreen {
                   if (null != UiWidget.gameplaySession) {
                     UiWidget.gameplaySession.submitScore((byte) -70);
                   }
-                  gameplayReturnScreenSelection: {
+                  {
                     ScoreSubmission.requestedScreenId = -1;
                     if ((this.screenId != 8) && (4 != this.screenId ||
                         null == UiWidget.gameplaySession ||
                         UiWidget.gameplaySession.newActionCount != 0)) {
                       if (this.screenId != 7) {
                         UiWidget.gameplayReturnScreenId = 6;
-                        if (clientControlFlowGuard == 0) {
-                          break gameplayReturnScreenSelection;
+                        if (!(clientControlFlowGuard == 0)) {
+                          UiWidget.gameplayReturnScreenId = 5;
+                          if (!(clientControlFlowGuard == 0)) {
+                            UiWidget.gameplayReturnScreenId = 2;
+                          }
+                        }
+                      } else {
+                        UiWidget.gameplayReturnScreenId = 5;
+                        if (!(clientControlFlowGuard == 0)) {
+                          UiWidget.gameplayReturnScreenId = 2;
                         }
                       }
-                      UiWidget.gameplayReturnScreenId = 5;
-                      if (clientControlFlowGuard == 0) {
-                        break gameplayReturnScreenSelection;
-                      }
+                    } else {
+                      UiWidget.gameplayReturnScreenId = 2;
                     }
-                    UiWidget.gameplayReturnScreenId = 2;
                   }
                   ProxySocketConnector.gameplayOriginScreenId = this.screenId;
                   if (clientControlFlowGuard == 0) {
@@ -1997,18 +2067,28 @@ final class GameScreen extends MenuScreen {
                     if (UiWidget.gameplaySession.score == 0 &&
                         ScorePopupSupport.newAchievementMask == 0) {
                       ScoreSubmission.requestedScreenId = 0;
-                      if (clientControlFlowGuard == 0) {
-                        break sessionResultScreenSelection;
+                      if (!(clientControlFlowGuard == 0)) {
+                        UiWidget.gameplaySession.submitScore((byte) -70);
+                        if (0 < UiWidget.gameplaySession.newActionCount) {
+                          ScoreSubmission.requestedScreenId = 6;
+                          if (!(clientControlFlowGuard == 0)) {
+                            ScoreSubmission.requestedScreenId = 2;
+                          }
+                        } else {
+                          ScoreSubmission.requestedScreenId = 2;
+                        }
+                      }
+                    } else {
+                      UiWidget.gameplaySession.submitScore((byte) -70);
+                      if (0 < UiWidget.gameplaySession.newActionCount) {
+                        ScoreSubmission.requestedScreenId = 6;
+                        if (!(clientControlFlowGuard == 0)) {
+                          ScoreSubmission.requestedScreenId = 2;
+                        }
+                      } else {
+                        ScoreSubmission.requestedScreenId = 2;
                       }
                     }
-                    UiWidget.gameplaySession.submitScore((byte) -70);
-                    if (0 < UiWidget.gameplaySession.newActionCount) {
-                      ScoreSubmission.requestedScreenId = 6;
-                      if (clientControlFlowGuard == 0) {
-                        break sessionResultScreenSelection;
-                      }
-                    }
-                    ScoreSubmission.requestedScreenId = 2;
                   }
                   IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard + 2, GameGraphicsResources.titleMusicTrack);
                   if (clientControlFlowGuard == 0) {
@@ -2144,11 +2224,12 @@ final class GameScreen extends MenuScreen {
             }
             if (SpriteCheckboxRenderer.gameMusicVolumeLevel >= 70) {
               AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
-              if (clientControlFlowGuard == 0) {
-                break volumeIncreaseDispatch;
+              if (!(clientControlFlowGuard == 0)) {
+                AsyncResourceDownloader.setGameMusicVolume(-15346, 10 + SpriteCheckboxRenderer.gameMusicVolumeLevel);
               }
+            } else {
+              AsyncResourceDownloader.setGameMusicVolume(-15346, 10 + SpriteCheckboxRenderer.gameMusicVolumeLevel);
             }
-            AsyncResourceDownloader.setGameMusicVolume(-15346, 10 + SpriteCheckboxRenderer.gameMusicVolumeLevel);
           }
           if (methodGuard != 90) {
             this.activeTicks = 120;
@@ -2214,14 +2295,18 @@ final class GameScreen extends MenuScreen {
               this.selectedItemIndex == 3) {
             selected = true;
           }
-          menuRowVerticalOffset: {
-            if (this.screenId == 3 ||
-                  this.screenId == 2) {
-              rowY += 280;
-              if (clientControlFlowGuard == 0) {
-                break menuRowVerticalOffset;
+          if (this.screenId == 3 ||
+                this.screenId == 2) {
+            rowY += 280;
+            if (!(clientControlFlowGuard == 0)) {
+              if (this.screenId == 5 ||
+                  this.screenId == 7 ||
+                  this.screenId == 6 ||
+                  this.screenId == 4) {
+                rowY += 295;
               }
             }
+          } else {
             if (this.screenId == 5 ||
                 this.screenId == 7 ||
                 this.screenId == 6 ||
@@ -2229,17 +2314,16 @@ final class GameScreen extends MenuScreen {
               rowY += 295;
             }
           }
-          menuButtonWidthSelection: {
-            rowFont = FadingDialog.uiPaletteFont;
-            buttonTextCenter = 320;
-            buttonLeft = 160;
-            if (0 == this.screenId ||
-                this.screenId == 1) {
-              buttonWidth = 322;
-              if (clientControlFlowGuard == 0) {
-                break menuButtonWidthSelection;
-              }
+          rowFont = FadingDialog.uiPaletteFont;
+          buttonTextCenter = 320;
+          buttonLeft = 160;
+          if (0 == this.screenId ||
+              this.screenId == 1) {
+            buttonWidth = 322;
+            if (!(clientControlFlowGuard == 0)) {
+              buttonWidth = rowFont.measureMaximumWrappedWidth(actionText, 400);
             }
+          } else {
             buttonWidth = rowFont.measureMaximumWrappedWidth(actionText, 400);
           }
           menuButtonLayoutAndFrame: {
@@ -2328,16 +2412,23 @@ final class GameScreen extends MenuScreen {
                 buttonLeft -= 138;
                 buttonWidth = 229;
                 buttonTextCenter = (buttonWidth >> 1) + buttonLeft;
-                if (clientControlFlowGuard == 0) {
-                  break footerButtonGeometry;
+                if (!(clientControlFlowGuard == 0)) {
+                  rowY = 380;
+                  if (actionId == 5) {
+                    buttonWidth = 83;
+                    buttonTextCenter = 320;
+                    rowY += 50;
+                    buttonLeft = buttonTextCenter - (buttonWidth >> 1);
+                  }
                 }
-              }
-              rowY = 380;
-              if (actionId == 5) {
-                buttonWidth = 83;
-                buttonTextCenter = 320;
-                rowY += 50;
-                buttonLeft = buttonTextCenter - (buttonWidth >> 1);
+              } else {
+                rowY = 380;
+                if (actionId == 5) {
+                  buttonWidth = 83;
+                  buttonTextCenter = 320;
+                  rowY += 50;
+                  buttonLeft = buttonTextCenter - (buttonWidth >> 1);
+                }
               }
             }
             if (!selected) {
@@ -2468,16 +2559,22 @@ final class GameScreen extends MenuScreen {
                     break directionalMenuSelection;
                   }
                   this.fullscreenDialogButtonIndex = 1;
-                  if (clientControlFlowGuard == 0) {
-                    break directionalMenuSelection;
+                  if (!(clientControlFlowGuard == 0)) {
+                    this.selectedItemIndex = this.selectedItemIndex + 1;
+                    this.keyboardSelectionActive = true;
+                    if (this.itemCount <= this.selectedItemIndex) {
+                      this.selectedItemIndex = 0;
+                    }
+                    this.skipUnavailableTutorialItemsForward((byte) -117);
                   }
+                } else {
+                  this.selectedItemIndex = this.selectedItemIndex + 1;
+                  this.keyboardSelectionActive = true;
+                  if (this.itemCount <= this.selectedItemIndex) {
+                    this.selectedItemIndex = 0;
+                  }
+                  this.skipUnavailableTutorialItemsForward((byte) -117);
                 }
-                this.selectedItemIndex = this.selectedItemIndex + 1;
-                this.keyboardSelectionActive = true;
-                if (this.itemCount <= this.selectedItemIndex) {
-                  this.selectedItemIndex = 0;
-                }
-                this.skipUnavailableTutorialItemsForward((byte) -117);
               }
               if (0 > this.selectedItemIndex) {
                 break screenKeyDispatch;
@@ -2505,12 +2602,15 @@ final class GameScreen extends MenuScreen {
               }
               this.keyboardSelectionActive = true;
               this.skipUnavailableTutorialItemsForward((byte) -107);
-              if (clientControlFlowGuard == 0) {
-                break screenKeyDispatch;
+              if (!(clientControlFlowGuard == 0)) {
+                if (0 <= this.selectedItemIndex) {
+                  this.handleMenuKey(this.selectedItemIndex, -29);
+                }
               }
-            }
-            if (0 <= this.selectedItemIndex) {
-              this.handleMenuKey(this.selectedItemIndex, -29);
+            } else {
+              if (0 <= this.selectedItemIndex) {
+                this.handleMenuKey(this.selectedItemIndex, -29);
+              }
             }
           }
           if (SessionTextHistorySupport.currentKeyboardEventCode == 69 &&
@@ -2532,21 +2632,29 @@ final class GameScreen extends MenuScreen {
           if (13 == SessionTextHistorySupport.currentKeyboardEventCode &&
               !this.fullscreenDialogActive &&
               4 != this.screenId) {
-            screenBackTargetSelection: {
-              if (this.screenId == 1) {
-                ScoreSubmission.requestedScreenId = -1;
-                if (clientControlFlowGuard == 0) {
-                  break screenBackTargetSelection;
+            if (this.screenId == 1) {
+              ScoreSubmission.requestedScreenId = -1;
+              if (!(clientControlFlowGuard == 0)) {
+                if (this.screenId != 6 &&
+                    this.screenId != 2) {
+                  ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
+                  if (!(clientControlFlowGuard == 0)) {
+                    ScoreSubmission.requestedScreenId = 0;
+                  }
+                } else {
+                  ScoreSubmission.requestedScreenId = 0;
                 }
               }
+            } else {
               if (this.screenId != 6 &&
                   this.screenId != 2) {
                 ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
-                if (clientControlFlowGuard == 0) {
-                  break screenBackTargetSelection;
+                if (!(clientControlFlowGuard == 0)) {
+                  ScoreSubmission.requestedScreenId = 0;
                 }
+              } else {
+                ScoreSubmission.requestedScreenId = 0;
               }
-              ScoreSubmission.requestedScreenId = 0;
             }
             if (~this.screenId != ~ScoreSubmission.requestedScreenId) {
               if (this.screenId != 1 &&

@@ -412,11 +412,12 @@ abstract class SpriteState extends DualLinkNode {
                   break whirlpoolInputSelection;
                 }
               }
-              if (clientControlFlowGuard == 0) {
-                break whirlpoolInputSelection;
+              if (!(clientControlFlowGuard == 0)) {
+                digestInput = source;
               }
+            } else {
+              digestInput = source;
             }
-            digestInput = source;
           }
           hash = new WhirlpoolHash();
           hash.reset(52);
