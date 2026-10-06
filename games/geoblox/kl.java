@@ -159,14 +159,14 @@ final class kl extends ia {
             if (this.field_p == -256 &&
                 (this.field_x & 255) == 0) {
               if (qk.field_q) {
-                return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
+                return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
-              return kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
+              return kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
             }
             if (qk.field_q) {
-              return kl.d(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this), this.field_p, param4);
+              return kl.d(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
             }
-            return kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this), this.field_p, param4);
+            return kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -176,15 +176,15 @@ final class kl extends ia {
           if (this.field_p == -256 &&
               (this.field_x & 255) == 0) {
             if (!qk.field_q) {
-              param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
+              param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
-              param1 = kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
+              param1 = kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!qk.field_q) {
-              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this), this.field_p, param4);
+              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
             } else {
-              param1 = kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this), this.field_p, param4);
+              param1 = kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -210,14 +210,14 @@ final class kl extends ia {
             if (this.field_p == 256 &&
                 (this.field_x & 255) == 0) {
               if (qk.field_q) {
-                return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this));
+                return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
-              return kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this));
+              return kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
             }
             if (qk.field_q) {
-              return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, (kl) (this), this.field_p, param4);
+              return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
             }
-            return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, (kl) (this), this.field_p, param4);
+            return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -227,15 +227,15 @@ final class kl extends ia {
           if (this.field_p == 256 &&
               (this.field_x & 255) == 0) {
             if (!qk.field_q) {
-              param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this));
+              param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
-              param1 = kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this));
+              param1 = kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!qk.field_q) {
-              param1 = kl.c(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, (kl) (this), this.field_p, param4);
+              param1 = kl.c(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
             } else {
-              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, (kl) (this), this.field_p, param4);
+              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
             }
           }
           this.field_l = this.field_l - param1;

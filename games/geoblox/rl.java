@@ -135,7 +135,7 @@ final class rl extends oe {
             return;
           }
           stackIn_8_1 = !(!param0);
-          ((rl) (this)).field_Z = stackIn_8_1;
+          this.field_Z = stackIn_8_1;
           if (!this.field_Z) {
             this.field_bb.a(4210752, 2113632, (byte) -103);
             if (this.field_ab) {

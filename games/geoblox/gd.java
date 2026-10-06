@@ -17,12 +17,12 @@ final class gd extends e {
             if (this.field_g == this.field_j) {
                 this.field_g = this.field_g - 1;
             }
-            return (gd) (this);
+            return this;
         }
         int dupTemp$0 = param0.b(this.field_g, 6);
         this.field_j = dupTemp$0;
         this.field_g = dupTemp$0;
-        return (gd) (this);
+        return this;
     }
 
     gd(int param0, byte[] param1, int param2, int param3) {

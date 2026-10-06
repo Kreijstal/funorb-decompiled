@@ -523,7 +523,7 @@ final class d implements Runnable {
         this.field_c = false;
         field_p = param1;
         stackIn_3_1 = !(!param3);
-        ((d) (this)).field_h = stackIn_3_1;
+        this.field_h = stackIn_3_1;
         field_o = "Unknown";
         field_t = "1.1";
         field_f = param0;

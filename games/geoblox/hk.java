@@ -28,7 +28,7 @@ class hk extends el {
               if (!(this.field_u instanceof ti)) {
                 return true;
               }
-              ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, (hk) (this), param3, param5);
+              ((ti) ((Object) this.field_u)).a(param0, -30896, param2, param4, this, param3, param5);
             }
             return true;
           }
@@ -57,7 +57,7 @@ class hk extends el {
                 }
                 return;
             }
-            ((pl) ((Object) this.field_u)).a(param2, (byte) -20, param0, param3, (hk) (this));
+            ((pl) ((Object) this.field_u)).a(param2, (byte) -20, param0, param3, this);
         }
         if (param1 == -28922) {
             return;
@@ -262,7 +262,7 @@ class hk extends el {
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
         if (null != this.field_u && this.field_u instanceof ti) {
-            ((ti) ((Object) this.field_u)).a(param4, param5, (byte) 55, (hk) (this), param0, param1);
+            ((ti) ((Object) this.field_u)).a(param4, param5, (byte) 55, this, param0, param1);
         }
         if (!param2) {
             return;

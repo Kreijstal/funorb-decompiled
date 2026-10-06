@@ -13,7 +13,7 @@ final class gi implements Iterable {
     static int[] field_b;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new k((gi) (this)));
+        return (Iterator) ((Object) new k(this));
     }
 
     final static void b(int param0) {

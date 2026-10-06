@@ -47,7 +47,7 @@ final class ob extends ia {
           var5 = (jd) ((Object) this.field_j.g(0));
           var6 = var5;
           synchronized (var6) {
-            var7 = var5.a((ob) (this));
+            var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_f = var7;
               this.a(var5.field_b, var5);
@@ -114,7 +114,7 @@ final class ob extends ia {
           var3 = (jd) ((Object) this.field_j.g(0));
           var4 = var3;
           synchronized (var4) {
-            var5 = var3.a((ob) (this));
+            var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_f = var5;
               this.a(var3.field_b, var3);

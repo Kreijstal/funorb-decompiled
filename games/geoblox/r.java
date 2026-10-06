@@ -61,7 +61,7 @@ final class r extends f implements pl {
           var5 = new ni((f) (this), hh.field_c, var4);
           if (param1.field_g) {
             if (param1.field_d) {
-              this.b(new s((r) (this)), -111);
+              this.b(new s(this), -111);
               return;
             }
             var5.a(-2, cl.field_d, (bb) (this));

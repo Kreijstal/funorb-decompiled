@@ -1232,7 +1232,7 @@ final class kj extends ia {
         this.field_F = new int[16];
         this.field_w = new int[16];
         this.field_C = new jb();
-        this.field_I = new ad((kj) (this));
+        this.field_I = new ad(this);
         this.field_q = new fi(128);
         this.a((byte) 74, -1, 256);
         this.a(true, 2097151);

@@ -45,7 +45,7 @@ final class la extends sh {
               this.field_m = var6;
               this.field_v = var5_int;
               if (this.field_u instanceof de) {
-                ((de) ((Object) this.field_u)).a(param3, -20951, (la) (this), param1);
+                ((de) ((Object) this.field_u)).a(param3, -20951, this, param1);
               }
             }
           } else {
@@ -62,7 +62,7 @@ final class la extends sh {
                     stackIn_18_2 = 1;
                   }
                 }
-                ((la) (this)).field_v = stackIn_17_1 + stackIn_18_2;
+                this.field_v = stackIn_17_1 + stackIn_18_2;
               }
               if (this.field_m != this.field_G) {
                 var5_int = this.field_G - this.field_m;
@@ -76,7 +76,7 @@ final class la extends sh {
                 } else {
                   stackIn_26_2 = var5_int >> 1;
                 }
-                ((la) (this)).field_m = stackIn_23_1 + stackIn_26_2;
+                this.field_m = stackIn_23_1 + stackIn_26_2;
               }
             }
           }
@@ -185,7 +185,7 @@ final class la extends sh {
           }
           this.field_H = -param0 + param5 - this.field_m;
           this.field_D = -param2 + (param4 - this.field_v);
-          lh.field_b = (la) (this);
+          lh.field_b = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

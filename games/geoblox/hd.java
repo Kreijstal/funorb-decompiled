@@ -91,7 +91,7 @@ final class hd extends sh {
           this.field_C = param7;
           this.field_F = param8;
           stackIn_4_1 = !(!param5);
-          ((hd) (this)).field_B = stackIn_4_1;
+          this.field_B = stackIn_4_1;
           this.field_K = param6;
           this.field_J = param10;
           var12_int = this.field_K - this.field_C;

@@ -69,14 +69,14 @@ final class fk extends sh {
             var7 = lh.field_b;
             if (var7 != null && this.a(param1, -1, param5, param4, param0)) {
                 if (this.field_u instanceof rg) {
-                    ((rg) ((Object) this.field_u)).a((fk) (this), var7, 22176);
+                    ((rg) ((Object) this.field_u)).a(this, var7, 22176);
                     lh.field_b = null;
                     return;
                 }
                 if (!(var7.field_u instanceof rg)) {
                     return;
                 }
-                ((rg) ((Object) var7.field_u)).a((fk) (this), var7, 22176);
+                ((rg) ((Object) var7.field_u)).a(this, var7, 22176);
                 lh.field_b = null;
             }
         } catch (RuntimeException runtimeException) {

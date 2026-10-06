@@ -192,7 +192,7 @@ final class qh extends ee implements pe, pl, ta {
             var2 = Integer.parseInt(this.field_R.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
-        return mc.a(this.field_H.field_s, this.field_I.field_s, var2, (qh) (this), 0, this.field_P.field_y, this.field_M.field_s);
+        return mc.a(this.field_H.field_s, this.field_I.field_s, var2, this, 0, this.field_P.field_y, this.field_M.field_s);
     }
 
     final static mb i(int param0) {

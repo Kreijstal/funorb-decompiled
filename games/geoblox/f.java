@@ -642,10 +642,10 @@ class f extends qf implements pl {
             return;
           }
           stackIn_9_1 = !(256 != param0);
-          ((f) (this)).field_ob = stackIn_9_1;
+          this.field_ob = stackIn_9_1;
           this.field_rb = true;
           this.field_pb.a(4210752, 8405024, (byte) -103);
-          var6 = new ni((f) (this), this.field_jb, param2);
+          var6 = new ni(this, this.field_jb, param2);
           if (param0 == 5) {
             var6.a(nf.field_E, 1, 11);
             var6.a(rj.field_e, 1, 17);
@@ -726,13 +726,13 @@ class f extends qf implements pl {
         ni var2 = null;
         this.field_pb.a(4210752, 2121792, (byte) -103);
         if (!param0) {
-            var2 = new ni((f) (this), this.field_jb, oe.field_O);
+            var2 = new ni(this, this.field_jb, oe.field_O);
             var2.a(jk.field_c, 1, 15);
             this.b(var2, -23);
             return;
         }
         field_kb = (java.awt.Canvas) null;
-        var2 = new ni((f) (this), this.field_jb, oe.field_O);
+        var2 = new ni(this, this.field_jb, oe.field_O);
         var2.a(jk.field_c, 1, 15);
         this.b(var2, -23);
     }

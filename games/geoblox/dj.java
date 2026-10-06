@@ -232,7 +232,7 @@ class dj extends hk {
             this.a(stackIn_5_1, (byte) -123);
             var8_long = oa.a(-12520);
             stackIn_8_1 = !(var8_long - this.field_P >= 250L);
-            ((dj) (this)).field_G = stackIn_8_1;
+            this.field_G = stackIn_8_1;
             if (this.field_G) {
               this.field_L = this.j((byte) 77);
               this.field_H = this.h((byte) -57);
@@ -304,7 +304,7 @@ class dj extends hk {
 
     private final void m(byte param0) {
         if (this.field_u instanceof ga) {
-            ((ga) ((Object) this.field_u)).a((dj) (this), -18649);
+            ((ga) ((Object) this.field_u)).a(this, -18649);
         }
         if (param0 < 107) {
             this.field_G = true;
@@ -578,7 +578,7 @@ class dj extends hk {
             return;
         }
         if (this.field_u instanceof ga) {
-            ((ga) ((Object) this.field_u)).a((dj) (this), (byte) 74);
+            ((ga) ((Object) this.field_u)).a(this, (byte) 74);
         }
     }
 

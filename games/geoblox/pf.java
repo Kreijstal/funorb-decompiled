@@ -711,12 +711,12 @@ final class pf extends ee implements ga, pl {
         hd var13 = null;
         try {
           stackIn_4_1 = !(!param3);
-          ((pf) (this)).field_C = stackIn_4_1;
+          this.field_C = stackIn_4_1;
           this.field_L = param1;
           stackIn_7_1 = !(!param2);
-          ((pf) (this)).field_N = stackIn_7_1;
+          this.field_N = stackIn_7_1;
           stackIn_10_1 = !(!param4);
-          ((pf) (this)).field_I = stackIn_10_1;
+          this.field_I = stackIn_10_1;
           if (this.field_N) {
             if (this.field_C ||
                 this.field_I) {
@@ -738,7 +738,7 @@ final class pf extends ee implements ga, pl {
               stackIn_19_2 = null;
               stackIn_19_3 = ll.field_b;
             }
-            ((pf) (this)).field_G = new hk(stackIn_19_3, (bb) null);
+            this.field_G = new hk(stackIn_19_3, (bb) null);
             if (this.field_C) {
               this.field_M = new hk(se.field_m, (bb) (this));
             }

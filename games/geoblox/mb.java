@@ -32,7 +32,7 @@ final class mb {
             this.field_d = "";
           }
           stackIn_6_1 = !(!param1);
-          ((mb) (this)).field_c = stackIn_6_1;
+          this.field_c = stackIn_6_1;
           if (this.field_d.length() != 0) {
             return;
           }

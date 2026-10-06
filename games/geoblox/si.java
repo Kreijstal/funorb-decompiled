@@ -67,7 +67,7 @@ final class si {
         if (param0 != 0) {
             return (si) null;
         }
-        return (si) (this);
+        return this;
     }
 
     final si b(int param0, int param1) {
@@ -75,16 +75,16 @@ final class si {
         if (param0 != 256) {
             return (si) null;
         }
-        return (si) (this);
+        return this;
     }
 
     final si a(boolean param0, byte param1) {
         this.field_h = param0 ? true : false;
         if (param1 != 73) {
             si.a(false);
-            return (si) (this);
+            return this;
         }
-        return (si) (this);
+        return this;
     }
 
     final void a(rd param0, int param1, int param2, el param3, int param4) {
@@ -192,16 +192,16 @@ final class si {
         if (param0 != 16) {
             return (si) null;
         }
-        return (si) (this);
+        return this;
     }
 
     final si b(byte param0, int param1) {
         this.field_b = param1;
         if (param0 != -53) {
             this.field_h = true;
-            return (si) (this);
+            return this;
         }
-        return (si) (this);
+        return this;
     }
 
     public static void a(boolean param0) {
@@ -313,7 +313,7 @@ final class si {
             this.a((byte) 66, -18);
           }
           this.field_a = param0;
-          return (si) (this);
+          return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

@@ -33,9 +33,9 @@ class el extends hf {
             if (var5 != 80) {
                 return false;
             }
-            return this.a((byte) -75, (el) (this));
+            return this.a((byte) -75, this);
         }
-        if (this.a(param2, 13, param1, (el) (this))) {
+        if (this.a(param2, 13, param1, this)) {
             return true;
         }
         var4 = 71 / ((param0 + 40) / 63);
@@ -43,7 +43,7 @@ class el extends hf {
         if (var5 != 80) {
             return false;
         }
-        return this.a((byte) -75, (el) (this));
+        return this.a((byte) -75, this);
     }
 
     public static void b(int param0) {
@@ -61,7 +61,7 @@ class el extends hf {
             return;
         }
         if (null != this.field_q) {
-            this.field_q.a(param0, -81, param1, true, (el) (this));
+            this.field_q.a(param0, -81, param1, true, this);
             var5 = 35 % ((1 - param2) / 43);
             return;
         }
@@ -129,12 +129,12 @@ class el extends hf {
           }
           if (stackIn_4_0 == stackIn_5_1) {
             stackIn_10_1 = !(var5_int == 0);
-            ((el) (this)).field_l = stackIn_10_1;
+            this.field_l = stackIn_10_1;
             if (this.field_u != null) {
               if (!(this.field_u instanceof lg)) {
                 return;
               }
-              ((lg) ((Object) this.field_u)).a(53, (el) (this), var5_int != 0);
+              ((lg) ((Object) this.field_u)).a(53, this, var5_int != 0);
             }
           }
           return;
@@ -218,7 +218,7 @@ class el extends hf {
         if (param1 <= 126) {
           return true;
         }
-        this.a(false, param3, (el) (this), param2);
+        this.a(false, param3, this, param2);
         var5 = this.e((byte) 54) ? 1 : 0;
         if (!param0) {
           if (var5 != 0 &&
@@ -233,7 +233,7 @@ class el extends hf {
           if (0 == bi.field_g) {
             if (gf.field_a == 0 &&
                 0 != ij.field_X) {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              this.a(param2, qa.field_a, true, this, param3, ue.field_e);
               var8 = lh.field_b;
               if (var8 != null) {
                 if (var8.field_u instanceof rg) {
@@ -252,11 +252,11 @@ class el extends hf {
             return param0;
           }
           L19: {
-            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
               if (var5 == 0) {
                 if (gf.field_a == 0 &&
                     0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+                  this.a(param2, qa.field_a, true, this, param3, ue.field_e);
                   var9 = lh.field_b;
                   if (var9 != null) {
                     if (var9.field_u instanceof rg) {
@@ -291,7 +291,7 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          this.a(param2, qa.field_a, true, this, param3, ue.field_e);
           var10 = lh.field_b;
           if (var10 != null) {
             if (var10.field_u instanceof rg) {
@@ -309,11 +309,11 @@ class el extends hf {
           return param0;
         }
         if (var5 != 0) {
-          this.a(param3, vc.field_i, param2, -1, qa.field_a, (el) (this), ue.field_e);
+          this.a(param3, vc.field_i, param2, -1, qa.field_a, this, ue.field_e);
           if (0 == bi.field_g) {
             if (gf.field_a == 0 &&
                 0 != ij.field_X) {
-              this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+              this.a(param2, qa.field_a, true, this, param3, ue.field_e);
               var15 = lh.field_b;
               var6 = var15;
               if (var15 != null) {
@@ -332,7 +332,7 @@ class el extends hf {
             return param0;
           }
           L0: {
-            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
               this.d(-127);
               if (var7 == 0) {
                 break L0;
@@ -350,7 +350,7 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          this.a(param2, qa.field_a, true, this, param3, ue.field_e);
           var17 = lh.field_b;
           var6 = var17;
           if (var17 != null) {
@@ -370,7 +370,7 @@ class el extends hf {
         if (0 == bi.field_g) {
           if (gf.field_a == 0 &&
               0 != ij.field_X) {
-            this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+            this.a(param2, qa.field_a, true, this, param3, ue.field_e);
             var11 = lh.field_b;
             if (var11 != null) {
               if (var11.field_u instanceof rg) {
@@ -388,7 +388,7 @@ class el extends hf {
           sa.a(this.c((byte) 69), (byte) 72);
           return param0;
         }
-        if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, (el) (this))) {
+        if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
           if (gf.field_a != 0) {
             ij.field_X = gf.field_a;
             sa.a(this.c((byte) 69), (byte) 72);
@@ -399,7 +399,7 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+          this.a(param2, qa.field_a, true, this, param3, ue.field_e);
           var12 = lh.field_b;
           var6 = var12;
           if (var12 != null) {
@@ -428,7 +428,7 @@ class el extends hf {
           sa.a(this.c((byte) 69), (byte) 72);
           return param0;
         }
-        this.a(param2, qa.field_a, true, (el) (this), param3, ue.field_e);
+        this.a(param2, qa.field_a, true, this, param3, ue.field_e);
         var14 = lh.field_b;
         if (var14 != null) {
           if (var14.field_u instanceof rg) {
@@ -804,8 +804,8 @@ class el extends hf {
             this.field_s = param0;
             if (this.field_q instanceof cc) {
                 var4 = (cc) ((Object) this.field_q);
-                this.field_r = var4.a((el) (this), (byte) -33);
-                this.field_h = var4.a(-122, (el) (this));
+                this.field_r = var4.a(this, (byte) -33);
+                this.field_h = var4.a(-122, this);
             }
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "el.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

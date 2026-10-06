@@ -768,7 +768,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 hk.field_B = 0;
                 kh.field_d = param4;
                 qb.field_G = param4;
-                qa.field_d = (ch) (this);
+                qa.field_d = this;
                 c.field_x = k.c(107);
                 if (param1 != -14948) {
                   return;

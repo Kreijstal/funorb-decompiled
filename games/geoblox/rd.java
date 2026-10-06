@@ -254,23 +254,23 @@ final class rd extends ff {
             field_s = (byte[][]) null;
           }
           this.field_t.a((byte) -28);
-          var7.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+          var7.a(param0, param2, this.field_t, this, -16566, param4);
           if (var10 != null) {
             if (var10.field_y) {
               var11 = this.field_x[1];
               if (var11 != null) {
-                var11.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+                var11.a(param0, param2, this.field_t, this, -16566, param4);
               }
             }
             if (var10.field_l) {
               var12 = this.field_x[3];
               if (var10.field_f != 0 &&
                   var12 != null) {
-                var12.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+                var12.a(param0, param2, this.field_t, this, -16566, param4);
               } else {
                 var9 = this.field_x[2];
                 if (var9 != null) {
-                  var9.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+                  var9.a(param0, param2, this.field_t, this, -16566, param4);
                 }
               }
             }
@@ -278,16 +278,16 @@ final class rd extends ff {
           if (param4.e((byte) 54)) {
             var13 = this.field_x[5];
             if (var13 != null) {
-              var13.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+              var13.a(param0, param2, this.field_t, this, -16566, param4);
             }
           }
           if (!param3) {
             var14 = this.field_x[4];
             if (var14 != null) {
-              var14.a(param0, param2, this.field_t, (rd) (this), -16566, param4);
+              var14.a(param0, param2, this.field_t, this, -16566, param4);
             }
           }
-          this.field_t.a((rd) (this), param0, param2, param4, 0);
+          this.field_t.a(this, param0, param2, param4, 0);
           id.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,7 +318,7 @@ final class rd extends ff {
     rd(rd param0, boolean param1) {
         this();
         try {
-            param0.a(true, (rd) (this), param1);
+            param0.a(true, this, param1);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

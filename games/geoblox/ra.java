@@ -160,7 +160,7 @@ final class ra implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ef((ra) (this)));
+        return (Iterator) ((Object) new ef(this));
     }
 
     public static void a(int param0) {

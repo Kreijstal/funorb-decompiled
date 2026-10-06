@@ -698,7 +698,7 @@ final class ua extends hf {
         this.field_M = var4;
         this.field_m = var12 - (var4 >> 1);
         stackIn_111_1 = !(var15 == 0);
-        ((ua) (this)).field_i = stackIn_111_1;
+        this.field_i = stackIn_111_1;
         return (float[]) (var17);
     }
 

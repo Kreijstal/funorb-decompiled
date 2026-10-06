@@ -654,7 +654,7 @@ abstract class wf extends ch {
             this.field_n = this.getCodeBase().getHost();
             var6 = this.field_n.toLowerCase();
             stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            ((wf) (this)).field_v = stackIn_7_1;
+            this.field_v = stackIn_7_1;
             this.field_l = Integer.parseInt(this.getParameter("gameport1"));
             this.field_w = Integer.parseInt(this.getParameter("gameport2"));
             var7 = this.getParameter("servernum");

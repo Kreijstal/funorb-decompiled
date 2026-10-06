@@ -95,14 +95,14 @@ final class ce extends qk {
           stackIn_13_2 = null;
           stackIn_13_5 = 2;
         }
-        ((ce) (this)).field_y = new javax.sound.sampled.AudioFormat(stackIn_12_3, stackIn_12_4, stackIn_13_5, true, false);
+        this.field_y = new javax.sound.sampled.AudioFormat(stackIn_12_3, stackIn_12_4, stackIn_13_5, true, false);
         stackIn_15_1 = 256;
         if (!field_q) {
           stackIn_16_2 = 1;
         } else {
           stackIn_16_2 = 2;
         }
-        ((ce) (this)).field_z = new byte[stackIn_15_1 << stackIn_16_2];
+        this.field_z = new byte[stackIn_15_1 << stackIn_16_2];
     }
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {

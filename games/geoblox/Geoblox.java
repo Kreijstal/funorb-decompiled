@@ -1017,7 +1017,7 @@ public final class Geoblox extends wf {
             t.field_i[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (var2 = 0; var2 < 9; var2++) {
-            og.field_q[var2] = new c((Geoblox) (this), var2);
+            og.field_q[var2] = new c(this, var2);
         }
         ai.field_p = -1;
         tc.field_c = -1;
