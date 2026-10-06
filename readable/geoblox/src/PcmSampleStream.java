@@ -23,13 +23,10 @@ final class PcmSampleStream extends PcmStream {
         int interiorRightDestinationIndex = 0;
         int boundaryLeftDestinationIndex = 0;
         int boundaryRightDestinationIndex = 0;
-        interiorFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -46,13 +43,10 @@ final class PcmSampleStream extends PcmStream {
           destination[interiorRightDestinationIndex] = destination[interiorRightDestinationIndex] + (sampleValueOrBoundarySample * rightVolume >> 6);
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if ((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -340,13 +334,10 @@ final class PcmSampleStream extends PcmStream {
         int interiorRightDestinationIndex = 0;
         int boundaryLeftDestinationIndex = 0;
         int boundaryRightDestinationIndex = 0;
-        interiorFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
-            if (destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -363,13 +354,10 @@ final class PcmSampleStream extends PcmStream {
           destination[interiorRightDestinationIndex] = destination[interiorRightDestinationIndex] + (sampleValueOrBoundarySample * rightVolume >> 6);
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
-            if ((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -618,14 +606,11 @@ final class PcmSampleStream extends PcmStream {
         int interiorRightDestinationIndex = 0;
         int boundaryLeftDestinationIndex = 0;
         int boundaryRightDestinationIndex = 0;
-        interiorFrameLimit: {
-          stream.currentVolume = stream.currentVolume - stream.volumeStepPerFrame * destinationFrameOrSampleIndex;
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
-            if (destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        stream.currentVolume = stream.currentVolume - stream.volumeStepPerFrame * destinationFrameOrSampleIndex;
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -644,13 +629,10 @@ final class PcmSampleStream extends PcmStream {
           rightVolume = rightVolume + rightVolumeStep;
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
-            if ((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -679,13 +661,10 @@ final class PcmSampleStream extends PcmStream {
     private final static int mixReverseMonoInterpolated(int sampleValueOrBoundarySample, int sourceIndexOrStep, byte[] samples, int[] destination, int samplePositionFixed, int destinationIndex, int volume, int destinationLimit, int destinationEnd, int sampleBoundaryFixed, PcmSampleStream stream, int sampleStepFixed, int boundarySample) {
         int interiorDestinationIndex = 0;
         int boundaryDestinationIndex = 0;
-        interiorFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -696,13 +675,10 @@ final class PcmSampleStream extends PcmStream {
           destination[interiorDestinationIndex] = destination[interiorDestinationIndex] + (((sampleValueOrBoundarySample << 8) + (samples[sourceIndexOrStep] - sampleValueOrBoundarySample) * (samplePositionFixed & 255)) * volume >> 6);
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         sampleValueOrBoundarySample = boundarySample;
@@ -722,14 +698,11 @@ final class PcmSampleStream extends PcmStream {
         int interiorRightDestinationIndex = 0;
         int boundaryLeftDestinationIndex = 0;
         int boundaryRightDestinationIndex = 0;
-        interiorFrameLimit: {
-          stream.currentVolume = stream.currentVolume - stream.volumeStepPerFrame * destinationFrameOrSampleIndex;
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        stream.currentVolume = stream.currentVolume - stream.volumeStepPerFrame * destinationFrameOrSampleIndex;
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -748,13 +721,10 @@ final class PcmSampleStream extends PcmStream {
           rightVolume = rightVolume + rightVolumeStep;
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if ((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -1283,15 +1253,12 @@ final class PcmSampleStream extends PcmStream {
     private final static int mixReverseMonoInterpolatedRamp(int sampleValueOrBoundarySample, int sourceIndexOrStep, byte[] samples, int[] destination, int samplePositionFixed, int destinationIndex, int volume, int volumeStep, int destinationLimit, int destinationEnd, int sampleBoundaryFixed, PcmSampleStream stream, int sampleStepFixed, int boundarySample) {
         int interiorDestinationIndex = 0;
         int boundaryDestinationIndex = 0;
-        interiorFrameLimit: {
-          stream.currentLeftVolume = stream.currentLeftVolume - stream.leftVolumeStepPerFrame * destinationIndex;
-          stream.currentRightVolume = stream.currentRightVolume - stream.rightVolumeStepPerFrame * destinationIndex;
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        stream.currentLeftVolume = stream.currentLeftVolume - stream.leftVolumeStepPerFrame * destinationIndex;
+        stream.currentRightVolume = stream.currentRightVolume - stream.rightVolumeStepPerFrame * destinationIndex;
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1303,13 +1270,10 @@ final class PcmSampleStream extends PcmStream {
           volume = volume + volumeStep;
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         sampleValueOrBoundarySample = boundarySample;
@@ -1409,15 +1373,12 @@ final class PcmSampleStream extends PcmStream {
     private final static int mixForwardMonoInterpolatedRamp(int sampleValueOrBoundarySample, int sourceIndexOrBoundarySample, byte[] samples, int[] destination, int samplePositionFixed, int destinationIndex, int volume, int volumeStep, int destinationLimit, int destinationEnd, int sampleBoundaryFixed, PcmSampleStream stream, int sampleStepFixed, int boundarySample) {
         int interiorDestinationIndex = 0;
         int boundaryDestinationIndex = 0;
-        interiorFrameLimit: {
-          stream.currentLeftVolume = stream.currentLeftVolume - stream.leftVolumeStepPerFrame * destinationIndex;
-          stream.currentRightVolume = stream.currentRightVolume - stream.rightVolumeStepPerFrame * destinationIndex;
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        stream.currentLeftVolume = stream.currentLeftVolume - stream.leftVolumeStepPerFrame * destinationIndex;
+        stream.currentRightVolume = stream.currentRightVolume - stream.rightVolumeStepPerFrame * destinationIndex;
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1429,13 +1390,10 @@ final class PcmSampleStream extends PcmStream {
           volume = volume + volumeStep;
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         sourceIndexOrBoundarySample = boundarySample;
@@ -1640,13 +1598,10 @@ final class PcmSampleStream extends PcmStream {
     private final static int mixForwardMonoInterpolated(int sampleValueOrBoundarySample, int sourceIndexOrBoundarySample, byte[] samples, int[] destination, int samplePositionFixed, int destinationIndex, int volume, int destinationLimit, int destinationEnd, int sampleBoundaryFixed, PcmSampleStream stream, int sampleStepFixed, int boundarySample) {
         int interiorDestinationIndex = 0;
         int boundaryDestinationIndex = 0;
-        interiorFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd) {
-              break interiorFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1657,13 +1612,10 @@ final class PcmSampleStream extends PcmStream {
           destination[interiorDestinationIndex] = destination[interiorDestinationIndex] + (((sampleValueOrBoundarySample << 8) + (samples[sourceIndexOrBoundarySample + 1] - sampleValueOrBoundarySample) * (samplePositionFixed & 255)) * volume >> 6);
           samplePositionFixed = samplePositionFixed + sampleStepFixed;
         }
-        boundaryFrameLimit: {
-          if (sampleStepFixed != 0) {
-            destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
-            if (destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd) {
-              break boundaryFrameLimit;
-            }
-          }
+        if (sampleStepFixed != 0) {
+          destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
+        }
+        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
           destinationLimit = destinationEnd;
         }
         sourceIndexOrBoundarySample = boundarySample;

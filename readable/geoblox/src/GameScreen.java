@@ -1383,18 +1383,17 @@ final class GameScreen extends MenuScreen {
         RuntimeException caughtFailure = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          tutorialDiagramRendering: {
-            paragraphY = 180;
-            SoftwareRasterizer.saveClip(this.savedTutorialClipBounds);
-            if (pageIndex != 0 &&
-                1 != pageIndex &&
-                pageIndex != 2) {
-              DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
-              DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
-              if (clientControlFlowGuard == 0) {
-                break tutorialDiagramRendering;
-              }
-            }
+          paragraphY = 180;
+          SoftwareRasterizer.saveClip(this.savedTutorialClipBounds);
+          if (pageIndex != 0 &&
+              1 != pageIndex &&
+              pageIndex != 2) {
+            DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
+            DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
+          }
+          if (!(pageIndex != 0 &&
+              1 != pageIndex &&
+              pageIndex != 2) || clientControlFlowGuard != 0) {
             tutorialOrbitSpriteRendering: {
               DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
               DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
@@ -2270,15 +2269,12 @@ final class GameScreen extends MenuScreen {
                     break menuButtonLayoutAndFrame;
                   }
                 }
-                screenFourButtonRow: {
-                  buttonWidth = 278;
-                  buttonLeft = 320 - (buttonWidth + 20 >> 1);
-                  if (actionId != 13) {
-                    rowY = 395;
-                    if (clientControlFlowGuard == 0) {
-                      break screenFourButtonRow;
-                    }
-                  }
+                buttonWidth = 278;
+                buttonLeft = 320 - (buttonWidth + 20 >> 1);
+                if (actionId != 13) {
+                  rowY = 395;
+                }
+                if (actionId == 13 || clientControlFlowGuard != 0) {
                   rowY = 265;
                 }
                 buttonTextCenter = 10 + (buttonWidth >> 1) + buttonLeft;
@@ -2292,15 +2288,12 @@ final class GameScreen extends MenuScreen {
                   break menuButtonLayoutAndFrame;
                 }
               }
-              pairedFooterButtonPosition: {
-                rowY = 437;
-                if (actionId == 13) {
-                  buttonLeft = 121;
-                  buttonTextCenter = (buttonWidth >> 1) + buttonLeft + 10;
-                  if (clientControlFlowGuard == 0) {
-                    break pairedFooterButtonPosition;
-                  }
-                }
+              rowY = 437;
+              if (actionId == 13) {
+                buttonLeft = 121;
+                buttonTextCenter = (buttonWidth >> 1) + buttonLeft + 10;
+              }
+              if (actionId != 13 || clientControlFlowGuard != 0) {
                 buttonLeft = 436;
                 buttonTextCenter = (buttonWidth >> 1) + buttonLeft + 10;
               }
@@ -2349,13 +2342,10 @@ final class GameScreen extends MenuScreen {
                 buttonLeft = buttonTextCenter - (buttonWidth >> 1);
               }
             }
-            footerButtonPressRendering: {
-              if (!selected) {
-                DelayedIncomingPacket.drawNineSlicePanel(rowY, buttonLeft, 40, (byte) -92, buttonWidth, ArchiveLoadSequence.mouseBoxFrames);
-                if (clientControlFlowGuard == 0) {
-                  break footerButtonPressRendering;
-                }
-              }
+            if (!selected) {
+              DelayedIncomingPacket.drawNineSlicePanel(rowY, buttonLeft, 40, (byte) -92, buttonWidth, ArchiveLoadSequence.mouseBoxFrames);
+            }
+            if (!(!selected) || clientControlFlowGuard != 0) {
               buttonTextCenter = buttonTextCenter + this.menuPressOffset;
               buttonLeft = buttonLeft + this.menuPressOffset;
               rowY = rowY - this.menuPressOffset;
@@ -2363,33 +2353,28 @@ final class GameScreen extends MenuScreen {
             }
             rowY += 2;
           }
-          menuTextPressOffset: {
-            if (selected) {
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
-              itemColumnOrPressOffset = this.menuPressOffset;
-              if (clientControlFlowGuard == 0) {
-                break menuTextPressOffset;
-              }
-            }
+          if (selected) {
+            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
+            itemColumnOrPressOffset = this.menuPressOffset;
+          }
+          if (!(selected) || clientControlFlowGuard != 0) {
             itemColumnOrPressOffset = 0;
           }
-          volumeSliderOrActionText: {
-            if (actionId == 8 ||
-                  9 == actionId) {
-              rowFont.drawRightAlignedText(actionText, 285 + itemColumnOrPressOffset, 30 + rowY, 0, -1);
-              NetworkArchiveRequest.barSprite.draw(itemColumnOrPressOffset + 280, rowY + 15);
-              if (actionId == 8) {
-                volumeLevelSnapshot = SocialListEntry.soundEffectVolume;
-              } else {
-                volumeLevelSnapshot = SpriteCheckboxRenderer.gameMusicVolumeLevel;
-              }
-              volumeLevelOrSliderOffset = volumeLevelSnapshot;
-              volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
-              RankedListQuery.widgetSprite.draw(280 + volumeLevelOrSliderOffset - 1 + itemColumnOrPressOffset, 9 + rowY);
-              if (clientControlFlowGuard == 0) {
-                break volumeSliderOrActionText;
-              }
+          if (actionId == 8 ||
+                9 == actionId) {
+            rowFont.drawRightAlignedText(actionText, 285 + itemColumnOrPressOffset, 30 + rowY, 0, -1);
+            NetworkArchiveRequest.barSprite.draw(itemColumnOrPressOffset + 280, rowY + 15);
+            if (actionId == 8) {
+              volumeLevelSnapshot = SocialListEntry.soundEffectVolume;
+            } else {
+              volumeLevelSnapshot = SpriteCheckboxRenderer.gameMusicVolumeLevel;
             }
+            volumeLevelOrSliderOffset = volumeLevelSnapshot;
+            volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
+            RankedListQuery.widgetSprite.draw(280 + volumeLevelOrSliderOffset - 1 + itemColumnOrPressOffset, 9 + rowY);
+          }
+          if (!(actionId == 8 ||
+                9 == actionId) || clientControlFlowGuard != 0) {
             rowFont.drawCenteredText(actionText, buttonTextCenter, rowY + 30, 0, -1);
           }
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;

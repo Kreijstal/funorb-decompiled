@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/47e13e4019e6aea26fb2b8200f8abe6c7c99ff51/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2318d20237d7fb5cff73d4d7caaf41c381916025/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 192)
+## Current readability (pass 193)
 
-The export has 18,400 guarded names and 117,445 Java identifier edits, plus 11
-class-name literal edits and 672 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,377 guarded names and 117,471 Java identifier edits, plus 11
+class-name literal edits and 626 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,468 bindings, reproduce and
+compile and compare 136,494 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,50 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current guarded value selection (pass 192)
+## Current stable guarded fallbacks (pass 193)
+
+The generic decompiler replaces 23 single-exit labeled fallback blocks with
+ordinary conditions in 11 methods across three files: screen rendering, PCM
+audio bounds and triangle rasterization. Each prefix, guard and fallback action stays in one place. A repeated predicate reads only proven
+primitive locals/formals that the complete prefix cannot change; no field value
+or client control-flag value is assumed. Effectful guards retain their original
+evaluation order. Empty prefixes need one condition evaluation. Floating
+arithmetic is repeated only in an actual FP-strict source context. No selector
+variable, callback copy or reassociated arithmetic is introduced.
+
+Java declarations remain exact. The 26 additional primitive read occurrences
+are independently attributed by javac; all 5,066 surviving transfer targets and
+protected scopes retain their identities. Twenty-three label rules retire and
+two surviving ordinals migrate; all 18,375 unaffected complete naming objects
+remain exact. There are 18,377 rules, 19,423 dictionary identities, 117,471
+identifier edits, 11 literal edits and 626 label edits (118,108 total). All 303
+sources compile, comparing 136,494 ordinary bindings and preserving 388 overrides.
+The raw corpus loses 66 lines. The large triangle rasterizer is 357 lines with
+six labels; five bodies still have labels and at least 300 lines. Forty-one
+unsupported opaque fields remain.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none --test-reporter=tap test/stableGuardedFallbackRecovery.test.js`
+passes nine groups, including 207,360 independent native completion cases
+across 12 models/six contexts and 55 FP-strict arithmetic cases. The selected
+regression suite passes 189 tests with one existing optional corpus skip.
+Callback order, partial writes, nullable unboxing, NaNs, overflow, guard mutations,
+finally overrides, monitor release and declaration scopes are covered.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact raw source bytes, independently proven predicate invariants
+and copies, every original binding, sole consumed exits, surviving targets/scopes,
+complete naming objects, label migrations and compilation. All 303 readable files
+reverse byte exactly. Publication tests, scoped native gameplay/result probes
+and current/fresh sibling reproduction checks pass. Older proof objects, fixed
+bytecode inputs and frozen naming/native pins remain. Whole-game/browser/phone
+equivalence and heap/presented-FPS acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`657bdbd19ffd0658856fe4021d70dffe76b1405292c586823a125745b88f0ec3`.
+
+## Previous guarded value selection (pass 192)
 
 Two screen-render blocks now assign their values directly with conditional
 expressions. The generic java-tools rule retains each condition's evaluation

@@ -702,20 +702,17 @@ abstract class SpriteState extends DualLinkNode {
                   break triangleEdgeInitialization;
                 }
               }
-              lowerEdgeOriginSelection: {
-                spanStartOrWidthOrBottomXQ16 = bottomX << 16;
-                spanWidthOrRedStepOrBottomRedQ16 = bottomRed << 16;
-                spanRedStepOrGreenStepOrBottomGreenQ16 = bottomGreen << 16;
-                spanGreenStepOrBlueStepOrBottomBlueQ16 = bottomBlue << 16;
-                if (middleVertexOnRight == 0) {
-                  leftXQ16 = middleX << 16;
-                  leftBlueQ16 = middleBlue << 16;
-                  leftRedQ16 = middleRed << 16;
-                  leftGreenQ16 = middleGreen << 16;
-                  if (controlFlagSnapshot == 0) {
-                    break lowerEdgeOriginSelection;
-                  }
-                }
+              spanStartOrWidthOrBottomXQ16 = bottomX << 16;
+              spanWidthOrRedStepOrBottomRedQ16 = bottomRed << 16;
+              spanRedStepOrGreenStepOrBottomGreenQ16 = bottomGreen << 16;
+              spanGreenStepOrBlueStepOrBottomBlueQ16 = bottomBlue << 16;
+              if (middleVertexOnRight == 0) {
+                leftXQ16 = middleX << 16;
+                leftBlueQ16 = middleBlue << 16;
+                leftRedQ16 = middleRed << 16;
+                leftGreenQ16 = middleGreen << 16;
+              }
+              if (middleVertexOnRight != 0 || controlFlagSnapshot != 0) {
                 rightRedQ16 = middleRed << 16;
                 rightXQ16 = middleX << 16;
                 rightGreenQ16 = middleGreen << 16;
