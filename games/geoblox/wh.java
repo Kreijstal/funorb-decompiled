@@ -412,11 +412,12 @@ abstract class wh extends rc {
                   break L0;
                 }
               }
-              if (var7 == 0) {
-                break L0;
+              if (!(var7 == 0)) {
+                var4 = param2;
               }
+            } else {
+              var4 = param2;
             }
-            var4 = param2;
           }
           var5 = new ge();
           var5.a(52);

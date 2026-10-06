@@ -308,13 +308,16 @@ final class kc {
                     }
                     if (4 != var2_ref_ja.field_z) {
                       var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 5);
-                      if (var9 == 0) {
-                        break L40;
+                      if (!(var9 == 0)) {
+                        var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
+                        var1_int++;
+                        rb.field_b = rb.field_b + 1;
                       }
+                    } else {
+                      var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
+                      var1_int++;
+                      rb.field_b = rb.field_b + 1;
                     }
-                    var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
-                    var1_int++;
-                    rb.field_b = rb.field_b + 1;
                   }
                 }
                 var2_ref_ja.field_K = null;

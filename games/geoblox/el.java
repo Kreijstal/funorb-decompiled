@@ -612,27 +612,25 @@ class el extends hf {
           if (this.e((byte) 54)) {
             discarded$3 = param3.append(" focused");
           }
-          L4: {
-            if (null != this.field_q) {
-              discarded$4 = param3.append(" renderer=");
-              if (this.field_q instanceof el) {
-                param3 = this.a(0, param3, param1, 1 + param0);
-                if (var6 == 0) {
-                  break L4;
-                }
+          if (null != this.field_q) {
+            discarded$4 = param3.append(" renderer=");
+            if (this.field_q instanceof el) {
+              param3 = this.a(0, param3, param1, 1 + param0);
+              if (!(var6 == 0)) {
+                discarded$5 = param3.append(this.field_q);
               }
+            } else {
               discarded$5 = param3.append(this.field_q);
             }
           }
           if (null != this.field_u) {
-            L7: {
-              discarded$6 = param3.append(" listener=");
-              if (!(this.field_u instanceof el)) {
-                discarded$7 = param3.append(this.field_u);
-                if (var6 == 0) {
-                  break L7;
-                }
+            discarded$6 = param3.append(" listener=");
+            if (!(this.field_u instanceof el)) {
+              discarded$7 = param3.append(this.field_u);
+              if (!(var6 == 0)) {
+                param3 = this.a(0, param3, param1, 1 + param0);
               }
+            } else {
               param3 = this.a(0, param3, param1, 1 + param0);
             }
           }

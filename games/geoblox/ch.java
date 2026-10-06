@@ -467,39 +467,49 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             f.field_kb.getParent().setBackground(java.awt.Color.black);
             f.field_kb.getParent().remove((java.awt.Component) ((Object) f.field_kb));
           }
-          L1: {
-            if (he.field_a == null) {
-              if (null == sg.field_a) {
-                if (kg.field_m != null) {
-                  var2 = kg.field_m;
-                  if (var4 == 0) {
-                    break L1;
+          if (he.field_a == null) {
+            if (null == sg.field_a) {
+              if (kg.field_m != null) {
+                var2 = kg.field_m;
+                if (!(var4 == 0)) {
+                  var2 = qa.field_d;
+                  if (!(var4 == 0)) {
+                    var2 = sg.field_a;
+                    if (!(var4 == 0)) {
+                      var2 = he.field_a;
+                    }
                   }
                 }
+              } else {
                 var2 = qa.field_d;
-                if (var4 == 0) {
-                  break L1;
+                if (!(var4 == 0)) {
+                  var2 = sg.field_a;
+                  if (!(var4 == 0)) {
+                    var2 = he.field_a;
+                  }
                 }
               }
+            } else {
               var2 = sg.field_a;
-              if (var4 == 0) {
-                break L1;
+              if (!(var4 == 0)) {
+                var2 = he.field_a;
               }
             }
+          } else {
             var2 = he.field_a;
           }
-          L5: {
-            ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-            f.field_kb = (java.awt.Canvas) ((Object) new bh((java.awt.Component) (this)));
-            ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) f.field_kb));
-            f.field_kb.setSize(kh.field_d, ok.field_c);
-            f.field_kb.setVisible(param0);
-            if (sg.field_a != var2) {
-              f.field_kb.setLocation(qa.field_b, hk.field_B);
-              if (var4 == 0) {
-                break L5;
-              }
+          ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
+          f.field_kb = (java.awt.Canvas) ((Object) new bh((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) f.field_kb));
+          f.field_kb.setSize(kh.field_d, ok.field_c);
+          f.field_kb.setVisible(param0);
+          if (sg.field_a != var2) {
+            f.field_kb.setLocation(qa.field_b, hk.field_B);
+            if (!(var4 == 0)) {
+              var3 = sg.field_a.getInsets();
+              f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
             }
+          } else {
             var3 = sg.field_a.getInsets();
             f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
           }
@@ -861,21 +871,21 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             var6_int = (int)(-var4 + var2_long);
             ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
           }
-          L2: {
-            fieldTemp$1 = rj.field_i;
-            rj.field_i = rj.field_i + 1;
-            if (fieldTemp$1 > 50) {
-              rj.field_i = rj.field_i - 50;
-              dl.field_c = true;
-              f.field_kb.setSize(kh.field_d, ok.field_c);
-              f.field_kb.setVisible(true);
-              if (sg.field_a == null ||
-                  he.field_a != null) {
-                f.field_kb.setLocation(qa.field_b, hk.field_B);
-                if (Geoblox.field_C == 0) {
-                  break L2;
-                }
+          fieldTemp$1 = rj.field_i;
+          rj.field_i = rj.field_i + 1;
+          if (fieldTemp$1 > 50) {
+            rj.field_i = rj.field_i - 50;
+            dl.field_c = true;
+            f.field_kb.setSize(kh.field_d, ok.field_c);
+            f.field_kb.setVisible(true);
+            if (sg.field_a == null ||
+                he.field_a != null) {
+              f.field_kb.setLocation(qa.field_b, hk.field_B);
+              if (!(Geoblox.field_C == 0)) {
+                var6 = sg.field_a.getInsets();
+                f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
               }
+            } else {
               var6 = sg.field_a.getInsets();
               f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
             }
