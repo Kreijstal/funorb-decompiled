@@ -139,7 +139,7 @@ final class BoardReconciliationSupport {
                 visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
                 alreadyVisited = visitedByEntityIdValue;
                 if (clientControlSnapshot == 0) {
-                  if (!(alreadyVisited)) {
+                  if (!alreadyVisited) {
                     pendingConnectivityEntities = new SecondaryDeque();
                     visitedNonAvatarEntities = new SecondaryDeque();
                     pendingConnectivityEntities.addFirst(activeEntity, false);
@@ -274,8 +274,8 @@ final class BoardReconciliationSupport {
                       break routingDestinationSelection;
                     }
                   }
-                  if (!(routedAttachedEntity.entityQueue != DelegatingCanvas.transientEntities &&
-                      !SessionSocketSupport.avatarShockPending)) {
+                  if (routedAttachedEntity.entityQueue == DelegatingCanvas.transientEntities ||
+                      SessionSocketSupport.avatarShockPending) {
                     transientNeighborIndex = 0;
                     while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
                       routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);

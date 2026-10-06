@@ -274,7 +274,7 @@ class UiWidget extends IntrusiveNode {
               return pointerEventsAvailable;
             }
             this.clearKeyboardFocus(-127);
-            if (!(clientControlFlowSnapshot == 0)) {
+            if (clientControlFlowSnapshot != 0) {
               pointerEventsAvailable = false;
             }
           } else {
@@ -332,7 +332,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
             this.clearKeyboardFocus(-127);
-            if (!(clientControlFlowSnapshot == 0)) {
+            if (clientControlFlowSnapshot != 0) {
               pointerEventsAvailable = false;
             }
           } else {

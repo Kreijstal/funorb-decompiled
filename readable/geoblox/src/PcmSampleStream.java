@@ -26,7 +26,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -46,7 +46,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -337,7 +337,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -357,7 +357,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -610,7 +610,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationFrameOrSampleIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -632,7 +632,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -664,7 +664,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -678,7 +678,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         sampleValueOrBoundarySample = boundarySample;
@@ -702,7 +702,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationFrameOrSampleIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
@@ -724,7 +724,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !((destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || (destinationFrameOrSampleIndex >> 1) + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         destinationLimit = destinationLimit << 1;
@@ -1258,7 +1258,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed + 256 - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1273,7 +1273,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         sampleValueOrBoundarySample = boundarySample;
@@ -1378,7 +1378,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1393,7 +1393,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         sourceIndexOrBoundarySample = boundarySample;
@@ -1601,7 +1601,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 257) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         while (destinationIndex < destinationLimit) {
@@ -1615,7 +1615,7 @@ final class PcmSampleStream extends PcmStream {
         if (sampleStepFixed != 0) {
           destinationLimit = destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed;
         }
-        if (sampleStepFixed == 0 || !(destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed <= destinationEnd)) {
+        if (sampleStepFixed == 0 || destinationIndex + (sampleBoundaryFixed - samplePositionFixed + sampleStepFixed - 1) / sampleStepFixed > destinationEnd) {
           destinationLimit = destinationEnd;
         }
         sourceIndexOrBoundarySample = boundarySample;

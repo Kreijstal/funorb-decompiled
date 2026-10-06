@@ -90,9 +90,9 @@ final class GameplaySession {
             }
           }
           if (this.tutorialStepId != 3) {
-            if (!(1 != this.tutorialStepId)) {
+            if (1 == this.tutorialStepId) {
               promptTop = 280;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 promptTop = 270;
               }
             }
@@ -317,7 +317,7 @@ final class GameplaySession {
             gameOverAnimationRemainderSquared = gameOverAnimationRemainder * gameOverAnimationRemainder;
             selectedThemeIdOrScoreBoxX = (int)(0.5f + (70.0f * (2.0f * gameOverAnimationProgress * gameOverAnimationRemainder) + 10.0f * gameOverAnimationRemainderSquared + 220.0f * (gameOverAnimationProgress * gameOverAnimationProgress)));
             loadingPanelWidthOrScoreBoxY = (int)(170.0f * (gameOverAnimationProgress * gameOverAnimationProgress) + (gameOverAnimationRemainderSquared * 10.0f + 140.0f * (gameOverAnimationProgress * 2.0f * gameOverAnimationRemainder)) + 0.5f);
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               selectedThemeIdOrScoreBoxX = 220;
               loadingPanelWidthOrScoreBoxY = 170;
             }
@@ -346,7 +346,7 @@ final class GameplaySession {
           if (0 != this.sessionPhase ||
               EntityContactSupport.areEntityQueuesSettled(0)) {
             UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               PasswordValidator.countBoxSprite.draw(468, 410);
             }
           } else {
@@ -508,14 +508,14 @@ final class GameplaySession {
           if (EntityContactSupport.areEntityQueuesSettled(0)) {
             if (0 == this.sessionPhase ||
                   this.sessionPhase == 1) {
-              if (!(sceneTransitionFlag == 0)) {
+              if (sceneTransitionFlag != 0) {
                 tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
                 SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
                 CharacterReplacementSupport.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
-                if (!(clientControlFlowGuard == 0)) {
+                if (clientControlFlowGuard != 0) {
                   this.renderResultSequence(false);
                 }
               }
@@ -524,7 +524,7 @@ final class GameplaySession {
             }
           }
           CachedTextLayout.drawPendingActionPanel(-1);
-          if (!(clientControlFlowGuard == 0)) {
+          if (clientControlFlowGuard != 0) {
             this.renderTutorialPrompt(2);
           }
         } else {
@@ -556,9 +556,9 @@ final class GameplaySession {
         if ((pointsPanelTickBeforeIncrement & 15) == 0) {
           this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
           if (7 != this.pointsPanelFrameIndex) {
-            if (!(this.pointsPanelFrameIndex != 0)) {
+            if (this.pointsPanelFrameIndex == 0) {
               this.pointsPanelFrameDirection = 1;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 this.pointsPanelFrameDirection = -1;
               }
             }
@@ -616,7 +616,7 @@ final class GameplaySession {
             if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
               return;
             }
-            if ((!this.rotationControlsSwapped) && (clientControlFlowGuard == 0)) {
+            if (!this.rotationControlsSwapped && clientControlFlowGuard == 0) {
               negativeRotationKeyCode = 96;
               positiveRotationKeyCode = 97;
             } else {
@@ -811,7 +811,7 @@ final class GameplaySession {
               this.delayedActionCountdown = 300;
               this.boardClearBonusEligible = false;
               SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 this.connectivityRebuiltThisTick = false;
               }
             } else {
@@ -900,7 +900,7 @@ final class GameplaySession {
                   }
                 }
                 this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                if (!(clientControlFlowGuard == 0)) {
+                if (clientControlFlowGuard != 0) {
                   this.tutorialProgressMetric = 0;
                 }
               } else {
@@ -1157,7 +1157,7 @@ final class GameplaySession {
           this.emitPointsPopup(false);
           this.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(-25866));
           this.submitScore((byte) -70);
-          if (!(Geoblox.clientControlFlowFlag == 0)) {
+          if (Geoblox.clientControlFlowFlag != 0) {
             this.tutorialStepId = 5;
             this.tutorialStepPhase = 0;
             this.tutorialPromptActive = true;
@@ -1208,10 +1208,10 @@ final class GameplaySession {
             }
             if (this.tutorialStepId != 1 ||
                   !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-              if (!(this.tutorialStepId != 2)) {
+              if (this.tutorialStepId == 2) {
                 if (!(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
                   this.tutorialStepPhase = 2;
-                  if (!(clientControlFlowGuard == 0)) {
+                  if (clientControlFlowGuard != 0) {
                     this.tutorialStepPhase = 2;
                   }
                 }
@@ -1236,7 +1236,7 @@ final class GameplaySession {
         if (this.sceneAnimationTick == 0) {
           if (!this.preserveScoreOnTransition) {
             this.resetScoreState(122);
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               this.prepareNextTheme(867);
             }
           } else {
@@ -1503,7 +1503,7 @@ final class GameplaySession {
               }
               if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
-                if (!(controlFlowGuard == 0)) {
+                if (controlFlowGuard != 0) {
                   this.sessionPhase = 3;
                 }
               } else {

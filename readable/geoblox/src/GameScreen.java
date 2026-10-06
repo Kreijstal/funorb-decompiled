@@ -112,8 +112,8 @@ final class GameScreen extends MenuScreen {
               }
             }
             if (this.fullscreenDialogActive) {
-              if (!(SessionTextHistorySupport.currentKeyboardEventCode != 84 &&
-                  83 != SessionTextHistorySupport.currentKeyboardEventCode)) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 84 ||
+                  83 == SessionTextHistorySupport.currentKeyboardEventCode) {
                 if (!UnderlinedButtonRenderer.isGuestSessionMode(-103)) {
                   if (!(TextTemplateDefinition.loginMembershipGateValue <= 0) ||
                       this.fullscreenDialogButtonIndex != 0 &&
@@ -220,7 +220,7 @@ final class GameScreen extends MenuScreen {
                 UiWidget.gameplayReturnScreenId = 0;
                 ScoreSubmission.requestedScreenId = -1;
                 ProxySocketConnector.gameplayOriginScreenId = 0;
-                if (!(clientControlFlowGuard == 0)) {
+                if (clientControlFlowGuard != 0) {
                   super.handleMenuKey(itemIndex, -100);
                 }
               }
@@ -369,8 +369,8 @@ final class GameScreen extends MenuScreen {
                   break panelPlacementSelection;
                 }
               }
-              if (!(this.screenId != 8 &&
-                  this.screenId != 7)) {
+              if (this.screenId == 8 ||
+                  this.screenId == 7) {
                 panelWidth += 20;
                 panelLeftOrTextYOrOverlayAlphaOrCurtainX -= 10;
               }
@@ -1388,9 +1388,9 @@ final class GameScreen extends MenuScreen {
             DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
             DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
           }
-          if (!(pageIndex != 0 &&
-              1 != pageIndex &&
-              pageIndex != 2) || clientControlFlowGuard != 0) {
+          if (pageIndex == 0 ||
+              1 == pageIndex ||
+              pageIndex == 2 || clientControlFlowGuard != 0) {
             tutorialOrbitSpriteRendering: {
               DelayedIncomingPacket.drawNineSlicePanel(140, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
               DelayedIncomingPacket.drawNineSlicePanel(242, 30, 80, (byte) -92, 80, GameGraphicsResources.frameNineSliceSprites);
@@ -2220,10 +2220,10 @@ final class GameScreen extends MenuScreen {
                 break menuRowVerticalOffset;
               }
             }
-            if (!(this.screenId != 5 &&
-                this.screenId != 7 &&
-                this.screenId != 6 &&
-                this.screenId != 4)) {
+            if (this.screenId == 5 ||
+                this.screenId == 7 ||
+                this.screenId == 6 ||
+                this.screenId == 4) {
               rowY += 295;
             }
           }
@@ -2341,7 +2341,7 @@ final class GameScreen extends MenuScreen {
             if (!selected) {
               DelayedIncomingPacket.drawNineSlicePanel(rowY, buttonLeft, 40, (byte) -92, buttonWidth, ArchiveLoadSequence.mouseBoxFrames);
             }
-            if (!(!selected) || clientControlFlowGuard != 0) {
+            if (selected || clientControlFlowGuard != 0) {
               buttonTextCenter = buttonTextCenter + this.menuPressOffset;
               buttonLeft = buttonLeft + this.menuPressOffset;
               rowY = rowY - this.menuPressOffset;
@@ -2353,7 +2353,7 @@ final class GameScreen extends MenuScreen {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
             itemColumnOrPressOffset = this.menuPressOffset;
           }
-          if (!(selected) || clientControlFlowGuard != 0) {
+          if (!selected || clientControlFlowGuard != 0) {
             itemColumnOrPressOffset = 0;
           }
           if (actionId == 8 ||
@@ -2369,8 +2369,8 @@ final class GameScreen extends MenuScreen {
             volumeLevelOrSliderOffset = volumeLevelOrSliderOffset * (-4 + NetworkArchiveRequest.barSprite.fullWidth) / 80;
             RankedListQuery.widgetSprite.draw(280 + volumeLevelOrSliderOffset - 1 + itemColumnOrPressOffset, 9 + rowY);
           }
-          if (!(actionId == 8 ||
-                9 == actionId) || clientControlFlowGuard != 0) {
+          if (actionId != 8 &&
+                9 != actionId || clientControlFlowGuard != 0) {
             rowFont.drawCenteredText(actionText, buttonTextCenter, rowY + 30, 0, -1);
           }
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;

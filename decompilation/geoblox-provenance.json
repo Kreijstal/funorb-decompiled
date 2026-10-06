@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "4331424a406d95ad49dbbeebc6e320606b98f2ef",
+      "commit": "0aeac5200e716ed4bc775397b4fa8fab4de140db",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "51826fc9c20a87bb45de6e208d1b9cb7d3b98dc663af9fdd1dda45932062b0b6",
-        "reproduce": "git archive --format=tar 4331424a406d95ad49dbbeebc6e320606b98f2ef | sha256sum",
+        "sha256": "bcd4e1fb42ac04b86ac84ccf75f8d2375af28bc26379b449157523106a50c9e2",
+        "reproduce": "git archive --format=tar 0aeac5200e716ed4bc775397b4fa8fab4de140db | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     },
@@ -107,9 +107,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "0efa342ac586a4e01a4e0245e9eeb85e8633fcb26a3f919e445113a244f74dc3",
-  "previousSourceTreeSha256": "8afb3b74ca805cadd74fb6c3770a96a328db75a6a6870cf6b3abe72bc8f4826d",
-  "changedJavaFiles": 1,
+  "sourceTreeSha256": "8db735fe0c4e589e6a2377b6eb2973eda81f667d8d2d083de537f2d3c648fcad",
+  "previousSourceTreeSha256": "0efa342ac586a4e01a4e0245e9eeb85e8633fcb26a3f919e445113a244f74dc3",
+  "changedJavaFiles": 10,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "6a450ae745e76801f81df963da51ba478d7e94bc",
+    "commit": "ca7d525afbc40304ce83133e0ee18d71b398f0bc",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "997df14fbb442d4762b94595dcc54b3af4cc63482c4586ccda02b4beba810bc0"
+      "sha256": "e7b8f6c54c5fff30a9c3b8382547286d563bbaafb944a8d5ce7f8320ba37536f"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,7 +3291,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "7846b943ff3462a79b0282753dd8bc604ab7ffb831731e8ede683ea21164c49e",
+    "outputTreeSha256": "f34b890b77743d3a37658cf4e0515f0586887fbf3bd1d6ef41caa2dcf3c585f7",
     "files": 303,
     "rules": 18356,
     "identifierEdits": 117393,
@@ -3320,7 +3320,7 @@
       "remainingOpaquePlainBlockLabels": 0,
       "remainingOpaqueFields": 41
     },
-    "structuralPass": 205
+    "structuralPass": 206
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -15133,5 +15133,297 @@
     ],
     "sourceWorkflowCommit": "6a450ae745e76801f81df963da51ba478d7e94bc",
     "sourceProofWorkflowCommit": "6a450ae745e76801f81df963da51ba478d7e94bc"
+  },
+  "latePredicateCleanup": {
+    "version": 206,
+    "predicateNegations": true,
+    "integralPredicates": true,
+    "ownedFieldPredicates": true,
+    "lateGrouping": true,
+    "changedJavaFiles": 10,
+    "changedMethodBodies": 27,
+    "counts": {
+      "predicatesSimplified": 53,
+      "doubleNegations": 3,
+      "equalityComplements": 42,
+      "deMorganOperators": 13,
+      "booleanLiterals": 0,
+      "relationalComplements": 20,
+      "conditionsGrouped": 56,
+      "parenthesisPairsRemoved": 57
+    },
+    "independentlyAttributedIntegralComparisons": 20,
+    "sourceLinesBefore": 75660,
+    "sourceLinesAfter": 75660,
+    "genericFocusedTestGroupsPassed": 1,
+    "genericSelectedTestGroupsPassed": 59,
+    "genericSelectedTestGroupsSkipped": 0,
+    "nativeComparisons": 1681412,
+    "nativePredicateOracleCases": {
+      "booleanConditions": 708750,
+      "integralConditions": 453600,
+      "ownedFieldConditions": 52502,
+      "conditionGrouping": 466560
+    },
+    "sourceProofTest": "readable/tests/test-geoblox-guarded-abrupt-source.mjs",
+    "sourceProofTestSha256": "75aa82cbb52891ede5e1d9a8aa0c230e202eb219e9e1f4f01be09655479d7290",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "previousSourceCommit": "b66815b3ea660cfb8e15be1e3078605fa2001667",
+    "sourceCommit": "f7f916947766e6007d50ad5a0eb0be59caf731a2",
+    "previousSourceTreeSha256": "0efa342ac586a4e01a4e0245e9eeb85e8633fcb26a3f919e445113a244f74dc3",
+    "sourceTreeSha256": "8db735fe0c4e589e6a2377b6eb2973eda81f667d8d2d083de537f2d3c648fcad",
+    "javaToolsCommit": "0aeac5200e716ed4bc775397b4fa8fab4de140db",
+    "sourceArchiveSha256": "bcd4e1fb42ac04b86ac84ccf75f8d2375af28bc26379b449157523106a50c9e2",
+    "sourceDeclarationsBefore": 19253,
+    "sourceDeclarationsAfter": 19253,
+    "sourceReferenceOccurrencesBefore": 117162,
+    "sourceReferenceOccurrencesAfter": 117162,
+    "sourceReferenceOccurrencesAdded": 0,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsBefore": 121,
+    "plainBlockLabelsAfter": 121,
+    "labelDeclarationsBefore": 149,
+    "labelDeclarationsAfter": 149,
+    "labelBindingsBefore": 565,
+    "labelBindingsAfter": 565,
+    "survivingLabelOrdinalMigrations": 0,
+    "labelOrdinalMigrations": [],
+    "retiredLabelIdentities": [],
+    "namedLabelsRetired": 0,
+    "namedLabelReferencesRemoved": 0,
+    "previousCompleteRules": 18356,
+    "unaffectedCompleteRulesPreserved": 18356,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "methodBodiesAfter": 2080,
+    "largeMethodBodiesAfter": 19,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 5,
+    "largeLabeledBodiesAfter": {
+      "minimumBodyLines": 300,
+      "bodies": 5,
+      "inventory": [
+        {
+          "file": "GameScreen.java",
+          "method": "updateScreen",
+          "lines": 312,
+          "labels": 4,
+          "rawFile": "c.java",
+          "enclosingMethod": "c.h(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "renderSession",
+          "lines": 331,
+          "labels": 4,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(B)V"
+        },
+        {
+          "file": "GameplaySession.java",
+          "method": "updateSession",
+          "lines": 554,
+          "labels": 5,
+          "rawFile": "gh.java",
+          "enclosingMethod": "gh.a(I)V"
+        },
+        {
+          "file": "BoardReconciliationSupport.java",
+          "method": "reconcileBoardEntities",
+          "lines": 311,
+          "labels": 5,
+          "rawFile": "kc.java",
+          "enclosingMethod": "kc.b(I)V"
+        },
+        {
+          "file": "SpriteState.java",
+          "method": "drawSortedHalfBlendRgbTriangle",
+          "lines": 357,
+          "labels": 6,
+          "rawFile": "wh.java",
+          "enclosingMethod": "wh.a(IIIIIIIIIII[IIIIII)V"
+        }
+      ]
+    },
+    "remainingOpaqueFields": 41,
+    "remainingSingleLetterMethods": 0,
+    "remainingOpaqueLabels": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Finish predicate operators and condition grouping after late structural reconstruction. Original field/local reads, calls, short circuits, boxed identity, floating NaN behavior and arithmetic association remain exact; integral relation complements require independently attributed primitive operand types. Exact permitted operator edits are checked, then full javac trees of the operator-cleaned intermediate corpus and final corpus compare modulo parentheses. Every ordinary/label binding, all 5028 transfer/protected-scope facts, complete naming objects, 303 tracked CLI bytes, compilation and dictionary reversal are checked. The 1681412 existing predicate/grouping oracle cases and scoped probes do not establish whole-game/browser/phone or heap/presented-FPS acceptance",
+    "publicationTestGroupsPassed": 27,
+    "completeCorpusExpectedTokensVerified": true,
+    "exactExpectedSourceBytesVerified": true,
+    "allOriginalBindingOccurrencesPreserved": true,
+    "independentJdkPrimitiveOperandAndTransferEvidence": true,
+    "completeJavaAstModuloParenthesesAfterOperatorCleanupPreserved": true,
+    "independentlyComparedAstFilesAfterOperatorCleanup": 303,
+    "independentlyComparedTransferFacts": 5028,
+    "independentlyComparedTransferFactsAfter": 5028,
+    "allSurvivingTransfersAndProtectedScopesPreserved": true,
+    "allProtectedScopesPreserved": true,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 19402,
+    "readableIdentifierEdits": 117393,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 565,
+    "readableTotalEdits": 117969,
+    "previousNativeGameplayAndResultHelperPinsReverified": true,
+    "nativeScopeProbesRerun": [
+      {
+        "file": "readable/tests/test-geoblox-gameplay.mjs",
+        "sha256": "8992682ba5137d4a7f58ce5af975488add1f90dc90a982c52187d0e161ae74c9",
+        "nativeOutputSha256": "42be694a3c2f9a7a80ec7e0ec910bd312bdba5bc38f30293eb00faddcb17ac79",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      },
+      {
+        "file": "readable/tests/test-geoblox-result-helpers.mjs",
+        "sha256": "6a4359c062c12b9caf664f4805f8f9a52c64a87997b74e5eddf9aa588f74640a",
+        "nativeOutputSha256": "ec3c627a2eec22d24549607b97ae8c3b6d735e24217b26c61e8a5e510872ace6",
+        "additionalTracesPreserved": true,
+        "nativeRawReadableTracesMatch": true
+      }
+    ],
+    "changedMethods": [
+      {
+        "symbol": "M:c.a(I)V",
+        "readableMethod": "GameScreen.renderScreen",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:c.a(II)V",
+        "readableMethod": "GameScreen.handleMenuKey",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:c.a(ZBII)V",
+        "readableMethod": "GameScreen.renderMenuItem",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:c.b(II)V",
+        "readableMethod": "GameScreen.renderTutorialPage",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:ch.run()V",
+        "readableMethod": "GameApplet.run",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:el.a(ZIII)Z",
+        "readableMethod": "UiWidget.processPointerFrame",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.a(B)V",
+        "readableMethod": "GameplaySession.renderSession",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.a(I)V",
+        "readableMethod": "GameplaySession.updateSession",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.b(B)V",
+        "readableMethod": "GameplaySession.updateSceneTransition",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.b(I)V",
+        "readableMethod": "GameplaySession.advanceTutorialStep",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.d(B)V",
+        "readableMethod": "GameplaySession.startSessionEndSequence",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.f(I)V",
+        "readableMethod": "GameplaySession.updateResultSequence",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:gh.g(I)V",
+        "readableMethod": "GameplaySession.renderTutorialPrompt",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V",
+        "readableMethod": "MeshDepthSupport.queueMeshFacesByDepthWithIntegerGuard",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:i.a(IBLnf;IZ)V",
+        "readableMethod": "MeshDepthSupport.queueMeshFacesByDepth",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:jb.c(I)I",
+        "readableMethod": "MidiTrackReader.readEventWithRunningStatus",
+        "comparisons": 4
+      },
+      {
+        "symbol": "M:kc.b(I)V",
+        "readableMethod": "BoardReconciliationSupport.reconcileBoardEntities",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:kj.a(II[ILpc;Z)Z",
+        "readableMethod": "MidiPcmStream.advanceNoteAndHandleCompletion",
+        "comparisons": 0
+      },
+      {
+        "symbol": "M:kl.a(II[B[IIIIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixForwardStereoInterpolatedRamp",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.a(II[B[IIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixReverseMonoInterpolatedRamp",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.a(II[B[IIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixReverseMonoInterpolated",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.b(II[B[IIIIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixReverseStereoInterpolatedRamp",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.b(II[B[IIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixForwardStereoInterpolated",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.b(II[B[IIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixForwardMonoInterpolated",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.c(II[B[IIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixForwardMonoInterpolatedRamp",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:kl.d(II[B[IIIIIIIILkl;II)I",
+        "readableMethod": "PcmSampleStream.mixReverseStereoInterpolated",
+        "comparisons": 2
+      },
+      {
+        "symbol": "M:wh.a(Lqc;Z)V",
+        "readableMethod": "SpriteState.writeCachedRandomSeedBytes",
+        "comparisons": 0
+      }
+    ],
+    "sourceWorkflowCommit": "ca7d525afbc40304ce83133e0ee18d71b398f0bc",
+    "sourceProofWorkflowCommit": "ca7d525afbc40304ce83133e0ee18d71b398f0bc"
   }
 }

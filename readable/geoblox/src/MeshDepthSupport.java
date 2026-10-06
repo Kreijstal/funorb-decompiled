@@ -152,9 +152,9 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if (!(-2147483648 == projectedAXOrVertexADepth)) {
+                if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                  if (!(-2147483648 == projectedAYOrVertexBDepth)) {
+                  if (-2147483648 != projectedAYOrVertexBDepth) {
                     edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
                     if (edgeBXOrVertexCDepth != -2147483648) {
                       edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
@@ -297,9 +297,9 @@ final class MeshDepthSupport {
                   }
                 }
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if (!(-2147483648 == projectedAXOrVertexADepth)) {
+                if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                  if (!(-2147483648 == projectedAYOrVertexBDepth)) {
+                  if (-2147483648 != projectedAYOrVertexBDepth) {
                     edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
                     if (edgeBXOrVertexCDepth != -2147483648) {
                       edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);

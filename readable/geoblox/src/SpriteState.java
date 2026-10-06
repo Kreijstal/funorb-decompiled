@@ -857,7 +857,7 @@ abstract class SpriteState extends DualLinkNode {
                     seedReadContinuation = 0;
                   }
                 }
-                if (!(seedReadContinuation != 0)) {
+                if (seedReadContinuation == 0) {
                   outputBuffer.writeBytes(24, -97, seedBytes, 0);
                 }
               } else {
