@@ -585,7 +585,7 @@ final class gh {
                 }
               }
               this.field_T = this.field_T + 1;
-              if (!(var5 == 0)) {
+              if (var5 != 0) {
                 this.field_T = this.field_T - 1;
               }
             } else {

@@ -311,7 +311,7 @@ final class c extends ka {
             }
             if (-4 >= this.field_T) {
               this.field_H = false;
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 this.field_T = this.field_T - 1;
               }
             } else {

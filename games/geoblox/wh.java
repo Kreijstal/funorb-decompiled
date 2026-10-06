@@ -594,7 +594,7 @@ abstract class wh extends rc {
                 var33 = 1;
                 var32 = (-param14 + param7 << 16) / var35;
                 var24 = (-param1 + param10 << 16) / var35;
-                if (!(var42 == 0)) {
+                if (var42 != 0) {
                   var32 = (-param14 + param5 << 16) / var34;
                   var28 = (param0 - param12 << 16) / var34;
                   var23 = (param10 - param1 << 16) / var35;
