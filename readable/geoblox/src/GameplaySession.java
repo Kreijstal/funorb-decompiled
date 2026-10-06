@@ -288,14 +288,11 @@ final class GameplaySession {
         } else {
           selectedSceneTransitionFlag = 0;
         }
-        boardRasterPreparation: {
-          sceneTransitionFlag = selectedSceneTransitionFlag;
-          if (sceneTransitionFlag == 0) {
-            if (!this.boardRasterDirty) {
-              SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
-              if (this.debugReducedRendering) {
-                break boardRasterPreparation;
-              }
+        sceneTransitionFlag = selectedSceneTransitionFlag;
+        if (sceneTransitionFlag == 0) {
+          if (!this.boardRasterDirty) {
+            SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
+            if (!(this.debugReducedRendering)) {
               StrongCacheReference.drawSpecialAttachedEntities((byte) -63);
               if (!(clientControlFlowGuard == 0)) {
                 SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
@@ -306,15 +303,15 @@ final class GameplaySession {
                 NodeHashTableIterator.markInsetZeroOutlinePixels(10, 90, 460, -27085, 460);
                 this.boardRasterDirty = false;
               }
-            } else {
-              SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
-              SoftwareRasterizer.clearFramebuffer();
-              if (!this.debugReducedRendering) {
-                AttachedEntityRenderer.drawAttachedEntities(7838);
-              }
-              NodeHashTableIterator.markInsetZeroOutlinePixels(10, 90, 460, -27085, 460);
-              this.boardRasterDirty = false;
             }
+          } else {
+            SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
+            if (!this.debugReducedRendering) {
+              AttachedEntityRenderer.drawAttachedEntities(7838);
+            }
+            NodeHashTableIterator.markInsetZeroOutlinePixels(10, 90, 460, -27085, 460);
+            this.boardRasterDirty = false;
           }
         }
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
@@ -916,16 +913,13 @@ final class GameplaySession {
               this.tutorialMode) {
             this.leaveTutorial(7000);
           }
-          tutorialKeyAdvance: {
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 84 &&
-                this.tutorialStepPhase == 0) {
-              this.tutorialStepPhase = 1;
-              this.tutorialPromptActive = false;
-              if (this.tutorialStepId != 0) {
-                if (this.tutorialStepId != 1) {
-                  if (this.tutorialStepId != 2) {
-                    break tutorialKeyAdvance;
-                  }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 84 &&
+              this.tutorialStepPhase == 0) {
+            this.tutorialStepPhase = 1;
+            this.tutorialPromptActive = false;
+            if (this.tutorialStepId != 0) {
+              if (this.tutorialStepId != 1) {
+                if (!(this.tutorialStepId != 2)) {
                   this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
                   if (!(clientControlFlowGuard == 0)) {
                     this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
@@ -933,15 +927,15 @@ final class GameplaySession {
                       this.tutorialProgressMetric = 0;
                     }
                   }
-                } else {
-                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                  if (clientControlFlowGuard != 0) {
-                    this.tutorialProgressMetric = 0;
-                  }
                 }
               } else {
-                this.tutorialProgressMetric = 0;
+                this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                if (clientControlFlowGuard != 0) {
+                  this.tutorialProgressMetric = 0;
+                }
               }
+            } else {
+              this.tutorialProgressMetric = 0;
             }
           }
           if (SessionTextHistorySupport.currentKeyboardEventCode == 85 &&
@@ -1583,20 +1577,19 @@ final class GameplaySession {
               this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
               GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
             }
-            if (this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1)) {
-              break resultSequenceTickAndCompletion;
-            }
-            this.resultPanelX = this.resultPanelX - 1;
-            if (!(controlFlowGuard == 0)) {
-              this.sceneTransitionRequested = true;
-              this.sceneAnimationTick = 0;
-              this.sessionPhase = 5;
-              if (this.boardEmptyAtResultStart) {
-                PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
-                SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
-                this.connectivityRebuiltThisTick = false;
+            if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
+              this.resultPanelX = this.resultPanelX - 1;
+              if (!(controlFlowGuard == 0)) {
+                this.sceneTransitionRequested = true;
+                this.sceneAnimationTick = 0;
+                this.sessionPhase = 5;
+                if (this.boardEmptyAtResultStart) {
+                  PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
+                  SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
+                  this.connectivityRebuiltThisTick = false;
+                }
+                PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
               }
-              PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
             }
           } else {
             this.sceneTransitionRequested = true;
