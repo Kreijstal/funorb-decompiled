@@ -94,11 +94,12 @@ final class gh {
               break L0;
             }
             var6 = 280;
-            if (var7 == 0) {
-              break L0;
+            if (!(var7 == 0)) {
+              var6 = 270;
             }
+          } else {
+            var6 = 270;
           }
-          var6 = 270;
         }
         L3: {
           ma.a(var6, 70, 10 + var5, (byte) -92, 500, ll.field_h);
@@ -561,11 +562,12 @@ final class gh {
                 break L0;
               }
               this.field_k = 1;
-              if (var5 == 0) {
-                break L0;
+              if (!(var5 == 0)) {
+                this.field_k = -1;
               }
+            } else {
+              this.field_k = -1;
             }
-            this.field_k = -1;
           }
         }
         L2: {
@@ -902,11 +904,12 @@ final class gh {
                   }
                 }
                 this.field_U = dd.field_D;
-                if (var5 == 0) {
-                  break L67;
+                if (!(var5 == 0)) {
+                  this.field_U = 0;
                 }
+              } else {
+                this.field_U = 0;
               }
-              this.field_U = 0;
             }
           }
           if (ki.field_d == 85 &&
@@ -1216,11 +1219,12 @@ final class gh {
                 break L0;
               }
               this.field_t = 2;
-              if (var3 == 0) {
-                break L0;
+              if (!(var3 == 0)) {
+                this.field_t = 2;
               }
+            } else {
+              this.field_t = 2;
             }
-            this.field_t = 2;
           }
         }
         if (param0 < 59) {
@@ -1505,11 +1509,12 @@ final class gh {
               }
               if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
                 this.field_bb = 4;
-                if (var11 == 0) {
-                  break L12;
+                if (!(var11 == 0)) {
+                  this.field_bb = 3;
                 }
+              } else {
+                this.field_bb = 3;
               }
-              this.field_bb = 3;
             }
             if (3 == this.field_bb) {
               this.field_q = this.field_q + 7;
