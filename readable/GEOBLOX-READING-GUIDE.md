@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/3df9598ca25244d3cd4fee6a689f5ec036846d78/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0da67c3ebebf82b897fae4795958a0a4f94142e6/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 196)
+## Current readability (pass 197)
 
-The export has 18,376 guarded names and 117,369 Java identifier edits, plus 11
-class-name literal edits and 624 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,373 guarded names and 117,374 Java identifier edits, plus 11
+class-name literal edits and 618 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,391 bindings, reproduce and
+compile and compare 136,396 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,49 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current single-pass inner loops (pass 196)
+## Current exclusive guarded fallbacks (pass 197)
+
+Gameplay rendering, scene-transition update and entropy copying now use ordinary
+`if/else` continuations in place of three single-exit labels. Each original
+condition, prefix and keep guard retains one source occurrence. One small
+fallback callback occupies two exclusive source sites; only one runs on any
+original fallback path. Conditions can mutate, unbox or throw, and are never
+reevaluated. No selector, new name or assumed control-flag value is introduced.
+
+A copied fallback must be one call with simple operands, including signed
+integral literals, at most 32 tokens/512 characters and one source line.
+Computed arithmetic, casts, poly expressions, prefix-owned direct declarations,
+extra frame exits and protected guarded-jump boundaries refuse. Outer declaration
+and statement-slot scopes retain their braces. Independent javac evidence checks
+the shape and copy scope, every original binding and all five added callback/
+operand bindings. The three consumed exits retire exactly their label rules;
+13 surviving ordinals migrate. All 18,360 unaffected
+complete naming objects remain exact. There are 18,373 rules,
+19,419 dictionary identities, 117,374 identifier,
+11 literal and 618 label edits (118,003 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/smallGuardedFallbackRecovery.test.js`
+passes seven focused groups. Native independent models compare 12,960 cases
+across six contexts, covering condition mutation, nullable guards, overloads,
+aliases, partial failures, overflow, finally priority and monitor release.
+The selected regression command passes all 69 tests.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independently certified copy scopes, every
+original and copied binding, the consumed labels, all 5,062 surviving transfer
+and protected-scope facts, complete naming objects, migrations and compilation.
+All 303 readable files reverse byte exactly. Publication tests, scoped native
+probes and current/fresh sibling reproduction checks pass. Older proof records
+and frozen input/naming/native pins remain. Five large labeled bodies and 41
+unsupported fields remain; whole-game/browser/phone and heap/presented-FPS
+acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`9189badf6664d1447e2d4b41c12c254cc174a075293aa81b5d49f220bf4aba40`.
+
+## Previous single-pass inner loops (pass 196)
 
 The generic decompiler removes artificial inner loops in board reconciliation
 and nine-slice generation. Their bodies execute at most once; two bare breaks

@@ -476,62 +476,61 @@ final class GameplaySession {
           }
           DebugOverviewCompositor.compositeScaledDebugOverview(minimumGrayLevelOrCompositeHeight, grayLevelForComparisonOrCompositeEnabled != 0, CacheFileState.debugOverviewRaster, 0, SoftwareRasterizer.stride, 0);
         }
-        gameplayOrTutorialOverlay: {
-          if (!this.tutorialMode) {
-            if (this.delayedActionCountdown > 0) {
-              PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 60 - (PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240);
-              FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.clearBonusText, 320, 310, 0, -1);
-            }
-            ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
-            if (640 > this.pointsPanelX &&
-                0 < this.pendingPopupPoints) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SessionBootstrapSupport.bonusAmountTemplateText, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
-            }
-            if (this.showSessionCounters) {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LoginPayloadKind.levelTextTemplate, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
-            }
-            gameOverTitleRendering: {
-              ProxyAuthenticationRequiredException.drawScorePopups(-117);
-              this.runGuardedStaticCleanup((byte) 64);
-              if (this.showGameOverOverlay) {
-                PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
-                if (this.sceneAnimationTick < 266) {
-                  AudioService.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
-                  if (clientControlFlowGuard == 0) {
-                    break gameOverTitleRendering;
-                  }
+        if (!this.tutorialMode) {
+          if (this.delayedActionCountdown > 0) {
+            PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 60 - (PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240);
+            FadingDialog.uiPaletteFont.drawCenteredText(KeyboardInputListener.clearBonusText, 320, 310, 0, -1);
+          }
+          ReflectionCheckRequest.pointsPanelGlowFrames[this.pointsPanelFrameIndex].draw(this.pointsPanelX, 4);
+          if (640 > this.pointsPanelX &&
+              0 < this.pendingPopupPoints) {
+            FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SessionBootstrapSupport.bonusAmountTemplateText, new String[]{this.popupPointsText.toString()}, (byte) -79), this.pointsPanelX + 20, 34, 0, -1);
+          }
+          if (this.showSessionCounters) {
+            FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(SingleChildWidget.fpsTextTemplate, new String[]{Integer.toString(MatchScoringSupport.frameLoopRateEstimate)}, (byte) -26), 400, 50, 0, -1);
+            FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LoginPayloadKind.levelTextTemplate, new String[]{Integer.toString(ArchiveNetworkClient.difficultyStep)}, (byte) -71), 400, 80, 0, -1);
+          }
+          gameOverTitleRendering: {
+            ProxyAuthenticationRequiredException.drawScorePopups(-117);
+            this.runGuardedStaticCleanup((byte) 64);
+            if (this.showGameOverOverlay) {
+              PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
+              if (this.sceneAnimationTick < 266) {
+                AudioService.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
+                if (clientControlFlowGuard == 0) {
+                  break gameOverTitleRendering;
                 }
-                AudioService.screenTitleSprites[6].draw(0, 20);
-                AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
               }
-            }
-            settledResultRendering: {
-              FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
-              if (EntityContactSupport.areEntityQueuesSettled(0)) {
-                if (0 == this.sessionPhase ||
-                      this.sessionPhase == 1) {
-                  if (sceneTransitionFlag == 0) {
-                    break settledResultRendering;
-                  }
-                  tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
-                  SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-                  SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
-                  SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
-                  SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  CharacterReplacementSupport.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
-                  if (clientControlFlowGuard == 0) {
-                    break settledResultRendering;
-                  }
-                }
-                this.renderResultSequence(false);
-              }
-            }
-            CachedTextLayout.drawPendingActionPanel(-1);
-            if (clientControlFlowGuard == 0) {
-              break gameplayOrTutorialOverlay;
+              AudioService.screenTitleSprites[6].draw(0, 20);
+              AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
             }
           }
+          settledResultRendering: {
+            FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+            if (EntityContactSupport.areEntityQueuesSettled(0)) {
+              if (0 == this.sessionPhase ||
+                    this.sessionPhase == 1) {
+                if (sceneTransitionFlag == 0) {
+                  break settledResultRendering;
+                }
+                tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+                SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
+                SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
+                SoftwareRasterizer.setClip(0, 0, 640, 480);
+                CharacterReplacementSupport.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
+                if (clientControlFlowGuard == 0) {
+                  break settledResultRendering;
+                }
+              }
+              this.renderResultSequence(false);
+            }
+          }
+          CachedTextLayout.drawPendingActionPanel(-1);
+          if (!(clientControlFlowGuard == 0)) {
+            this.renderTutorialPrompt(2);
+          }
+        } else {
           this.renderTutorialPrompt(2);
         }
     }
@@ -1240,13 +1239,12 @@ final class GameplaySession {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (this.sceneAnimationTick == 0) {
-          transitionScoreOrThemePreparation: {
-            if (!this.preserveScoreOnTransition) {
-              this.resetScoreState(122);
-              if (clientControlFlowGuard == 0) {
-                break transitionScoreOrThemePreparation;
-              }
+          if (!this.preserveScoreOnTransition) {
+            this.resetScoreState(122);
+            if (!(clientControlFlowGuard == 0)) {
+              this.prepareNextTheme(867);
             }
+          } else {
             this.prepareNextTheme(867);
           }
           this.sceneTransitionInProgress = true;

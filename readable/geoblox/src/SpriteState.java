@@ -814,56 +814,55 @@ abstract class SpriteState extends DualLinkNode {
             int fallbackByteIndex = 0;
             clientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
-              seedPayloadWrite: {
-                seedBytes = new byte[24];
-                if (null != CacheFileState.randomSeedFile) {
-                  try {
-                    CacheFileState.randomSeedFile.seek(51, 0L);
-                    CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
-                    seedByteIndex = 0;
-                    while (true) {
-                      seedByteComparisonOperands: {
-                        if (seedByteIndex < 24) {
-                          seedScanComparisonLeft = ~seedBytes[seedByteIndex];
-                          seedScanComparisonRight = -1;
-                          if (clientControlSnapshot != 0) {
-                            break seedByteComparisonOperands;
-                          }
-                          if (seedScanComparisonLeft == seedScanComparisonRight ||
-                              clientControlSnapshot != 0) {
-                            seedByteIndex++;
-                            continue;
-                          }
+              seedBytes = new byte[24];
+              if (null != CacheFileState.randomSeedFile) {
+                try {
+                  CacheFileState.randomSeedFile.seek(51, 0L);
+                  CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
+                  seedByteIndex = 0;
+                  while (true) {
+                    seedByteComparisonOperands: {
+                      if (seedByteIndex < 24) {
+                        seedScanComparisonLeft = ~seedBytes[seedByteIndex];
+                        seedScanComparisonRight = -1;
+                        if (clientControlSnapshot != 0) {
+                          break seedByteComparisonOperands;
                         }
-                        seedScanComparisonLeft = 24;
-                        seedScanComparisonRight = seedByteIndex;
+                        if (seedScanComparisonLeft == seedScanComparisonRight ||
+                            clientControlSnapshot != 0) {
+                          seedByteIndex++;
+                          continue;
+                        }
                       }
-                      break;
+                      seedScanComparisonLeft = 24;
+                      seedScanComparisonRight = seedByteIndex;
                     }
-                    if (seedScanComparisonLeft <= seedScanComparisonRight) {
-                      throw new IOException();
+                    break;
+                  }
+                  if (seedScanComparisonLeft <= seedScanComparisonRight) {
+                    throw new IOException();
+                  }
+                  seedReadContinuation = 0;
+                } catch (java.lang.Exception seedReadFailure) {
+                  caughtSeedThrowable = seedReadFailure;
+                  seedReadFailureFallback: {
+                    ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
+                    fallbackByteIndex = 0;
+                    while (fallbackByteIndex < 24) {
+                      seedBytes[fallbackByteIndex] = (byte) -1;
+                      fallbackByteIndex++;
+                      if (clientControlSnapshot != 0) {
+                        seedReadContinuation = 1;
+                        break seedReadFailureFallback;
+                      }
                     }
                     seedReadContinuation = 0;
-                  } catch (java.lang.Exception seedReadFailure) {
-                    caughtSeedThrowable = seedReadFailure;
-                    seedReadFailureFallback: {
-                      ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
-                      fallbackByteIndex = 0;
-                      while (fallbackByteIndex < 24) {
-                        seedBytes[fallbackByteIndex] = (byte) -1;
-                        fallbackByteIndex++;
-                        if (clientControlSnapshot != 0) {
-                          seedReadContinuation = 1;
-                          break seedReadFailureFallback;
-                        }
-                      }
-                      seedReadContinuation = 0;
-                    }
-                  }
-                  if (seedReadContinuation != 0) {
-                    break seedPayloadWrite;
                   }
                 }
+                if (!(seedReadContinuation != 0)) {
+                  outputBuffer.writeBytes(24, -97, seedBytes, 0);
+                }
+              } else {
                 outputBuffer.writeBytes(24, -97, seedBytes, 0);
               }
               if (!preserveTemplateTypeNine) {
