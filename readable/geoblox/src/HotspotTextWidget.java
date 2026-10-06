@@ -17,7 +17,7 @@ class HotspotTextWidget extends ButtonWidget {
         int relativeButtonY = buttonY - this.widgetY;
         TextHotspotBounds hitRecord = this.findHotspot((byte) -114, relativeButtonY, relativeButtonX);
         if (hitRecord != null && null != this.listener) {
-            ((HotspotActivationListener) ((Object) this.listener)).onHotspotActivated((HotspotTextWidget) (this), hitRecord.hotspotId, methodGuard + 28924, pointerButton);
+            ((HotspotActivationListener) ((Object) this.listener)).onHotspotActivated(this, hitRecord.hotspotId, methodGuard + 28924, pointerButton);
         }
     }
 

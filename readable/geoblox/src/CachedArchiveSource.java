@@ -610,7 +610,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.diskWorker = diskWorker;
           this.indexDiskCache = indexDiskCache;
           sweepOptionSnapshot = !(!sweepCompletedRequests);
-          ((CachedArchiveSource) (this)).sweepCompletedRequests = sweepOptionSnapshot;
+          this.sweepCompletedRequests = sweepOptionSnapshot;
           this.expectedIndexWhirlpoolDigest = expectedIndexWhirlpoolDigest;
           this.networkClient = networkClient;
           this.expectedIndexRevision = expectedIndexRevision;

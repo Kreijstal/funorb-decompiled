@@ -1017,7 +1017,7 @@ public final class Geoblox extends SessionGameApplet {
             InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (screenIndex = 0; screenIndex < 9; screenIndex++) {
-            TextTemplateDefinition.screens[screenIndex] = new GameScreen((Geoblox) (this), screenIndex);
+            TextTemplateDefinition.screens[screenIndex] = new GameScreen(this, screenIndex);
         }
         ScoreSubmission.requestedScreenId = -1;
         SettingsCookieSupport.currentScreenId = -1;

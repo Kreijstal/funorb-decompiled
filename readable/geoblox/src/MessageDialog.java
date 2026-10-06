@@ -642,10 +642,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             return;
           }
           retryButtonActionValue = !(256 != errorKind);
-          ((MessageDialog) (this)).retryButtonAction = retryButtonActionValue;
+          this.retryButtonAction = retryButtonActionValue;
           this.errorContentInstallationStarted = true;
           this.dialogStatusPanel.setStripeColors(4210752, 8405024, (byte) -103);
-          errorTextContent = new MessageDialogContent((MessageDialog) (this), this.messageFont, messageText);
+          errorTextContent = new MessageDialogContent(this, this.messageFont, messageText);
           if (errorKind == 5) {
             errorTextContent.appendActionButton(TriangleMesh.reloadGameText, 1, 11);
             errorTextContent.appendActionButton(DisplayModeInfo.quitToWebsiteText, 1, 17);
@@ -726,13 +726,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         MessageDialogContent restoredTextContent = null;
         this.dialogStatusPanel.setStripeColors(4210752, 2121792, (byte) -103);
         if (!clearCanvasGuard) {
-            restoredTextContent = new MessageDialogContent((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
+            restoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
             restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
             this.replaceContent(restoredTextContent, -23);
             return;
         }
         gameCanvas = (java.awt.Canvas) null;
-        restoredTextContent = new MessageDialogContent((MessageDialog) (this), this.messageFont, ResizableDialog.connectionRestoredText);
+        restoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
         restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
         this.replaceContent(restoredTextContent, -23);
     }

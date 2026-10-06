@@ -13,7 +13,7 @@ final class IterableNodeHashTable implements Iterable {
     static int[] transformedMeshNormalZ;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new NodeHashTableIterator((IterableNodeHashTable) (this)));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static void refreshLoginTicketMessage(int methodGuard) {

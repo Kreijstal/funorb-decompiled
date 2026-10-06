@@ -232,7 +232,7 @@ class TextInputWidget extends ButtonWidget {
             this.moveCaret(hitCaretIndexSnapshot, (byte) -123);
             nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
             doubleClickSnapshot = !(nowMillis - this.lastPointerPressMillis >= 250L);
-            ((TextInputWidget) (this)).wordSelectionDrag = doubleClickSnapshot;
+            this.wordSelectionDrag = doubleClickSnapshot;
             if (this.wordSelectionDrag) {
               this.selectionAnchorIndex = this.findPreviousWordBoundary((byte) 77);
               this.caretIndex = this.findNextWordBoundary((byte) -57);
@@ -304,7 +304,7 @@ class TextInputWidget extends ButtonWidget {
 
     private final void notifyTextInputSubmitted(byte methodGuard) {
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) ((Object) this.listener)).onTextInputSubmitted((TextInputWidget) (this), -18649);
+            ((TextInputListener) ((Object) this.listener)).onTextInputSubmitted(this, -18649);
         }
         if (methodGuard < 107) {
             this.wordSelectionDrag = true;
@@ -578,7 +578,7 @@ class TextInputWidget extends ButtonWidget {
             return;
         }
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) ((Object) this.listener)).onTextInputChanged((TextInputWidget) (this), (byte) 74);
+            ((TextInputListener) ((Object) this.listener)).onTextInputChanged(this, (byte) 74);
         }
     }
 

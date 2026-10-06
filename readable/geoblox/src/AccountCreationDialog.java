@@ -61,7 +61,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           var5 = new MessageDialogContent((MessageDialog) (this), UiFontResources.commonUiBoldFont, var4);
           if (result.accepted) {
             if (result.underThirteenFlag) {
-              this.replaceContent(new Under13TermsPanel((AccountCreationDialog) (this)), -111);
+              this.replaceContent(new Under13TermsPanel(this), -111);
               return;
             }
             var5.appendButton(-2, UsernameQuerySupport.continueText, (WidgetListener) (this));

@@ -35,7 +35,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
         }
         if (var5 == this.windowHandle) {
           stackIn_28_1 = !(!visible);
-          ((WindowsCursorController) (this)).cursorVisible = stackIn_28_1;
+          this.cursorVisible = stackIn_28_1;
         } else {
           if (0 != this.windowHandle) {
             this.cursorVisible = true;
@@ -51,7 +51,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
             this.previousWindowProcedure = com.ms.win32.User32.SetWindowLong(this.windowHandle, -4, this);
           }
           stackIn_22_1 = !(!visible);
-          ((WindowsCursorController) (this)).cursorVisible = stackIn_22_1;
+          this.cursorVisible = stackIn_22_1;
         }
         com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
     }

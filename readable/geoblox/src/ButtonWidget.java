@@ -28,7 +28,7 @@ class ButtonWidget extends UiWidget {
               if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerPressed(parentY, -30896, parentX, pointerX, (ButtonWidget) (this), pointerButton, pointerY);
+              ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerPressed(parentY, -30896, parentX, pointerX, this, pointerButton, pointerY);
             }
             return true;
           }
@@ -57,7 +57,7 @@ class ButtonWidget extends UiWidget {
                 }
                 return;
             }
-            ((ButtonActivationListener) ((Object) this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, (ButtonWidget) (this));
+            ((ButtonActivationListener) ((Object) this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, this);
         }
         if (methodGuard == -28922) {
             return;
@@ -262,7 +262,7 @@ class ButtonWidget extends UiWidget {
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         if (null != this.listener && this.listener instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, (ButtonWidget) (this), parentX, pointerX);
+            ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
         }
         if (!releaseGuard) {
             return;

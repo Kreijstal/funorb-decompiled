@@ -67,7 +67,7 @@ final class WidgetSkinState {
         if (methodGuard != 0) {
             return (WidgetSkinState) null;
         }
-        return (WidgetSkinState) (this);
+        return this;
     }
 
     final WidgetSkinState setTextColor(int methodGuard, int color) {
@@ -75,16 +75,16 @@ final class WidgetSkinState {
         if (methodGuard != 256) {
             return (WidgetSkinState) null;
         }
-        return (WidgetSkinState) (this);
+        return this;
     }
 
     final WidgetSkinState setFlushBeforeOverlay(boolean flushEnabled, byte methodGuard) {
         this.flushBeforeOverlay = flushEnabled ? true : false;
         if (methodGuard != 73) {
             WidgetSkinState.releaseSharedResources(false);
-            return (WidgetSkinState) (this);
+            return this;
         }
-        return (WidgetSkinState) (this);
+        return this;
     }
 
     final void drawSkin(StatefulWidgetRenderer renderer, int parentX, int parentY, UiWidget widget, int methodGuard) {
@@ -192,16 +192,16 @@ final class WidgetSkinState {
         if (methodGuard != 16) {
             return (WidgetSkinState) null;
         }
-        return (WidgetSkinState) (this);
+        return this;
     }
 
     final WidgetSkinState setOffsetX(byte methodGuard, int xOffset) {
         this.offsetX = xOffset;
         if (methodGuard != -53) {
             this.flushBeforeOverlay = true;
-            return (WidgetSkinState) (this);
+            return this;
         }
-        return (WidgetSkinState) (this);
+        return this;
     }
 
     public static void releaseSharedResources(boolean enableArchiveControlOpcode) {
@@ -313,7 +313,7 @@ final class WidgetSkinState {
             this.setTextShadowColor((byte) 66, -18);
           }
           this.panelSprites = sprites;
-          return (WidgetSkinState) (this);
+          return this;
         } catch (java.lang.RuntimeException panelException) {
           caughtPanelFailure = panelException;
           panelFailure = caughtPanelFailure;

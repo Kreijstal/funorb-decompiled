@@ -47,7 +47,7 @@ final class PcmStreamMixer extends PcmStream {
           listener = (PcmMixerListener) ((Object) this.scheduledListeners.firstForIteration(0));
           listenerMonitor = listener;
           synchronized (listenerMonitor) {
-            nextFrameOffset = listener.onMixerDeadline((PcmStreamMixer) (this));
+            nextFrameOffset = listener.onMixerDeadline(this);
             if (nextFrameOffset >= 0) {
               listener.scheduledFrameOffset = nextFrameOffset;
               this.insertListenerByFrameOffset(listener.nextNode, listener);
@@ -114,7 +114,7 @@ final class PcmStreamMixer extends PcmStream {
           listener = (PcmMixerListener) ((Object) this.scheduledListeners.firstForIteration(0));
           listenerMonitor = listener;
           synchronized (listenerMonitor) {
-            nextFrameOffset = listener.onMixerDeadline((PcmStreamMixer) (this));
+            nextFrameOffset = listener.onMixerDeadline(this);
             if (nextFrameOffset >= 0) {
               listener.scheduledFrameOffset = nextFrameOffset;
               this.insertListenerByFrameOffset(listener.nextNode, listener);

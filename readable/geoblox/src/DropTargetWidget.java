@@ -69,14 +69,14 @@ final class DropTargetWidget extends SingleChildWidget {
             draggedWidget = ValidationState.activeDragWidget;
             if (draggedWidget != null && this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
                 if (this.listener instanceof DropListener) {
-                    ((DropListener) ((Object) this.listener)).onDrop((DropTargetWidget) (this), draggedWidget, 22176);
+                    ((DropListener) ((Object) this.listener)).onDrop(this, draggedWidget, 22176);
                     ValidationState.activeDragWidget = null;
                     return;
                 }
                 if (!(draggedWidget.listener instanceof DropListener)) {
                     return;
                 }
-                ((DropListener) ((Object) draggedWidget.listener)).onDrop((DropTargetWidget) (this), draggedWidget, 22176);
+                ((DropListener) ((Object) draggedWidget.listener)).onDrop(this, draggedWidget, 22176);
                 ValidationState.activeDragWidget = null;
             }
         } catch (RuntimeException dropReleaseFailure) {

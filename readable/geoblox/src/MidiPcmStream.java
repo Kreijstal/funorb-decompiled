@@ -1232,7 +1232,7 @@ final class MidiPcmStream extends PcmStream {
         this.defaultChannelInstrumentIds = new int[16];
         this.channelSelectedParameter = new int[16];
         this.midiReader = new MidiTrackReader();
-        this.noteMixer = new MidiNoteMixer((MidiPcmStream) (this));
+        this.noteMixer = new MidiNoteMixer(this);
         this.instrumentPatches = new IntrusiveNodeHashTable(128);
         this.setChannelVolumeScale((byte) 74, -1, 256);
         this.resetSynthesisState(true, 2097151);

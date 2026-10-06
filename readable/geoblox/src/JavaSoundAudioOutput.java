@@ -95,14 +95,14 @@ final class JavaSoundAudioOutput extends AudioOutput {
           unusedNullFormatAliasAfterChannelChoice = null;
           channelCount = 2;
         }
-        ((JavaSoundAudioOutput) (this)).audioFormat = new javax.sound.sampled.AudioFormat(sampleRateFloat, sampleBits, channelCount, true, false);
+        this.audioFormat = new javax.sound.sampled.AudioFormat(sampleRateFloat, sampleBits, channelCount, true, false);
         mixBlockFrames = 256;
         if (!stereoEnabled) {
           channelByteShift = 1;
         } else {
           channelByteShift = 2;
         }
-        ((JavaSoundAudioOutput) (this)).pcm16Bytes = new byte[mixBlockFrames << channelByteShift];
+        this.pcm16Bytes = new byte[mixBlockFrames << channelByteShift];
     }
 
     final void openDevice(int capacityFrames) throws javax.sound.sampled.LineUnavailableException {

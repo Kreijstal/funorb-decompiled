@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a8049130f1a1d547c53a56e72110963d232c52f1/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/5e47f8e5bb624373fcde8e770636325f32075a6b/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 194)
+## Current readability (pass 195)
 
-The export has 18,376 guarded names and 117,471 Java identifier edits, plus 11
+The export has 18,376 guarded names and 117,369 Java identifier edits, plus 11
 class-name literal edits and 624 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,494 bindings, reproduce and
+compile and compare 136,391 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,51 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current guarded assignment sequences (pass 194)
+## Current exact self-cast cleanup (pass 195)
+
+The generic decompiler removes 103 redundant self casts in 48 methods across
+30 files, including seven in gameplay update. For example,
+`((GameplaySession) (this)).field` becomes `this.field`.
+Only casts from bare `this` to its exact nongeneric source class are removed.
+The emitter supplies its actual erased class and method type context; direct
+API callers must supply every in-scope type parameter. Different receiver types,
+nullable/ordinary receivers, boxing, enclosing `this`, hierarchy checks and
+casts selecting another overload retain their source. No value, alias or
+control-flag assumption is introduced, and no action moves or repeats.
+
+Independent javac evidence certifies each exact self type. All 303 complete ASTs
+match after ignoring only grouping and these certified self casts. Only 103
+cast-type class references disappear; all surviving field, method, local,
+parameter and type occurrences retain their bindings. All 5,065 transfer targets
+and protected scopes remain exact. All 18,376 complete naming objects,
+19,422 dictionary identities and 624 label edits remain;
+identifier edits fall to 117,369 (118,004 total edits).
+Five large labeled bodies and 41 unsupported opaque fields remain.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/selfCastRecovery.test.js test/javaAstEmitterIdentityCasts.test.js`
+passes 11 focused groups. The self-cast native fixture compares 810 cases across
+six contexts, covering overloads, hidden fields, aliases, constructors, retained
+runtime checks, partial effects, finally priority and monitor release. Existing
+local identity-cast tests and their 2,880 native cases remain unchanged. The
+selected receiver-cast regression command passes 17 Node checks and 35 Tape
+assertions. The broader metadata CLI test cannot start its child Node through
+restricted sandbox pipes (`spawnSync node EPERM`); exported member/type/value
+bindings are instead independently verified across all 303 files by javac.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks exact CLI/source bytes, self types, complete ASTs, surviving bindings,
+all control/protected targets, complete naming objects and compilation.
+All 303 readable files reverse byte exactly. Publication tests, scoped native
+probes and current/fresh sibling reproduction checks pass. Earlier proof records
+and frozen input/naming/native pins remain exact. Whole-game/browser/phone
+and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`ac3994e9f4e2561e9e484adfc3318de85475155495041876dae1d1a1ae4a1a04`.
+
+## Previous guarded assignment sequences (pass 194)
 
 The generic decompiler reconstructs rotation-key selection in
 `GameplaySession.updateSession` as an ordinary `if/else`. The original

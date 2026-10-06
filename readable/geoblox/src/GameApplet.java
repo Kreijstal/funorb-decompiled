@@ -768,7 +768,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 ButtonWidget.canvasOffsetY = 0;
                 AudioService.canvasWidth = initialCanvasWidth;
                 DialWidget.initialCanvasWidth = initialCanvasWidth;
-                PrefixCodeDecoder.activeGameApplet = (GameApplet) (this);
+                PrefixCodeDecoder.activeGameApplet = this;
                 GameScreen.errorReportApplet = NodeHashTableIterator.getActiveApplet(107);
                 if (methodGuard != -14948) {
                   return;

@@ -654,7 +654,7 @@ abstract class SessionGameApplet extends GameApplet {
             this.serverHost = this.getCodeBase().getHost();
             lowercaseServerHost = this.serverHost.toLowerCase();
             isJagexHostSnapshot = (lowercaseServerHost.equals("jagex.com")) || (lowercaseServerHost.endsWith(".jagex.com"));
-            ((SessionGameApplet) (this)).isJagexCodeBase = isJagexHostSnapshot;
+            this.isJagexCodeBase = isJagexHostSnapshot;
             this.primaryServerPort = Integer.parseInt(this.getParameter("gameport1"));
             this.alternateServerPort = Integer.parseInt(this.getParameter("gameport2"));
             serverNumberParameter = this.getParameter("servernum");

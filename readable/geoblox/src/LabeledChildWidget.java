@@ -91,7 +91,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           this.padding = padding;
           this.labelFont = labelFont;
           stackIn_4_1 = !(!labelAfterChild);
-          ((LabeledChildWidget) (this)).labelAfterChild = stackIn_4_1;
+          this.labelAfterChild = stackIn_4_1;
           this.labelWidth = labelWidth;
           this.labelText = labelText;
           var12_int = this.labelWidth - this.padding;

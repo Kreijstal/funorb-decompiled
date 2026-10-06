@@ -254,23 +254,23 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             byteArrayPool5000 = (byte[][]) null;
           }
           this.workingSkin.resetDrawingProperties((byte) -28);
-          baseSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+          baseSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
           if (buttonWidget != null) {
             if (buttonWidget.active) {
               activeSkin = this.stateSkins[1];
               if (activeSkin != null) {
-                activeSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+                activeSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
               }
             }
             if (buttonWidget.pointerInside) {
               pressedSkin = this.stateSkins[3];
               if (buttonWidget.pressedPointerButton != 0 &&
                   pressedSkin != null) {
-                pressedSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+                pressedSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
               } else {
                 hoverSkin = this.stateSkins[2];
                 if (hoverSkin != null) {
-                  hoverSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+                  hoverSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
                 }
               }
             }
@@ -278,16 +278,16 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
           if (widget.hasKeyboardFocus((byte) 54)) {
             focusSkin = this.stateSkins[5];
             if (focusSkin != null) {
-              focusSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+              focusSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
             }
           }
           if (!widgetEnabled) {
             disabledSkin = this.stateSkins[4];
             if (disabledSkin != null) {
-              disabledSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, (StatefulWidgetRenderer) (this), -16566, widget);
+              disabledSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
             }
           }
-          this.workingSkin.drawSkin((StatefulWidgetRenderer) (this), parentX, parentY, widget, 0);
+          this.workingSkin.drawSkin(this, parentX, parentY, widget, 0);
           RasterTargetRestoreSupport.restoreRasterTarget(true);
           return;
         } catch (java.lang.RuntimeException renderException) {
@@ -318,7 +318,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     StatefulWidgetRenderer(StatefulWidgetRenderer sourceRenderer, boolean copySkinProperties) {
         this();
         try {
-            sourceRenderer.copyStyleAndSkinsTo(true, (StatefulWidgetRenderer) (this), copySkinProperties);
+            sourceRenderer.copyStyleAndSkinsTo(true, this, copySkinProperties);
         } catch (RuntimeException rendererConstructionFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "rd.<init>(" + (sourceRenderer != null ? "{...}" : "null") + ',' + copySkinProperties + ')');
         }

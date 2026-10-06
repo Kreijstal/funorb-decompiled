@@ -32,7 +32,7 @@ final class LoginTextValue {
             this.text = "";
           }
           stackIn_6_1 = !(!includeInLookupRequest);
-          ((LoginTextValue) (this)).includeInLookupRequest = stackIn_6_1;
+          this.includeInLookupRequest = stackIn_6_1;
           if (this.text.length() != 0) {
             return;
           }

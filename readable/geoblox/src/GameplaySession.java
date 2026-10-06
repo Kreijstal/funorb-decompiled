@@ -811,7 +811,7 @@ final class GameplaySession {
             }
             nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
             boardClearBonusHandling: {
-              ((GameplaySession) (this)).boardClearBonusEligible = nextBoardClearBonusEligible;
+              this.boardClearBonusEligible = nextBoardClearBonusEligible;
               if (this.boardClearBonusEligible &&
                   this.connectivityRebuiltThisTick) {
                 this.connectivityRebuiltThisTick = false;
@@ -870,7 +870,7 @@ final class GameplaySession {
             PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
             if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
               toggledDebugOverview = !(this.showDebugOverview);
-              ((GameplaySession) (this)).showDebugOverview = toggledDebugOverview;
+              this.showDebugOverview = toggledDebugOverview;
             }
             if (SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2 &&
                 PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("brk")) {
@@ -924,7 +924,7 @@ final class GameplaySession {
           }
           if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
             toggledRotationControlsSwapped = !(this.rotationControlsSwapped);
-            ((GameplaySession) (this)).rotationControlsSwapped = toggledRotationControlsSwapped;
+            this.rotationControlsSwapped = toggledRotationControlsSwapped;
             AvatarFeedbackSupport.requestAvatarFeedback(7, false);
           }
           if (2 > SpriteCheckboxRenderer.loginDebugPermissionLevel) {
@@ -953,7 +953,7 @@ final class GameplaySession {
             }
             if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
               toggledSpecialKindSpawn = !(this.debugSpawnSpecialKinds);
-              ((GameplaySession) (this)).debugSpawnSpecialKinds = toggledSpecialKindSpawn;
+              this.debugSpawnSpecialKinds = toggledSpecialKindSpawn;
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
               this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
@@ -971,11 +971,11 @@ final class GameplaySession {
             if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
               this.submissionBlocked = true;
               toggledDebugPointerSpawn = !(this.debugPointerSpawnEnabled);
-              ((GameplaySession) (this)).debugPointerSpawnEnabled = toggledDebugPointerSpawn;
+              this.debugPointerSpawnEnabled = toggledDebugPointerSpawn;
             }
             if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
               toggledSpawnReleaseDisabled = !(this.spawnReleaseDisabled);
-              ((GameplaySession) (this)).spawnReleaseDisabled = toggledSpawnReleaseDisabled;
+              this.spawnReleaseDisabled = toggledSpawnReleaseDisabled;
               this.submissionBlocked = true;
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
@@ -1023,7 +1023,7 @@ final class GameplaySession {
             }
             if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
               toggledReducedRendering = !(this.debugReducedRendering);
-              ((GameplaySession) (this)).debugReducedRendering = toggledReducedRendering;
+              this.debugReducedRendering = toggledReducedRendering;
             }
             if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
               GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;

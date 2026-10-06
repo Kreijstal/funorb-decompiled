@@ -192,7 +192,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
             parsedAgeOrFailureSentinel = Integer.parseInt(this.ageInput.widgetText);
         } catch (NumberFormatException ignoredAgeParseFailure) {
         }
-        return AccountCreationSupport.startAccountCreation(this.displayNameInput.widgetText, this.emailInput.widgetText, parsedAgeOrFailureSentinel, (AccountCreationForm) (this), 0, this.newsOptInCheckbox.active, this.passwordInput.widgetText);
+        return AccountCreationSupport.startAccountCreation(this.displayNameInput.widgetText, this.emailInput.widgetText, parsedAgeOrFailureSentinel, this, 0, this.newsOptInCheckbox.active, this.passwordInput.widgetText);
     }
 
     final static LoginTextValue createActiveLoginLookupValue(int methodGuard) {

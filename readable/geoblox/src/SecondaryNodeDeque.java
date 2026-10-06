@@ -160,7 +160,7 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new SecondaryNodeDequeIterator((SecondaryNodeDeque) (this)));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void releaseSharedResources(int methodGuard) {

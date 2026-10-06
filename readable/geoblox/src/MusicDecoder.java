@@ -698,7 +698,7 @@ final class MusicDecoder extends IntrusiveNode {
         this.previousBlockSize = blockSize;
         this.previousRightWindowLength = rightWindowEnd - (blockSize >> 1);
         previousFloorAbsentBeforeStore = !(floorAbsentValue == 0);
-        ((MusicDecoder) (this)).previousFloorAbsent = previousFloorAbsentBeforeStore;
+        this.previousFloorAbsent = previousFloorAbsentBeforeStore;
         return (float[]) (overlapResult);
     }
 

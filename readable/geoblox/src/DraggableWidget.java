@@ -45,7 +45,7 @@ final class DraggableWidget extends SingleChildWidget {
               this.widgetY = dragTargetY;
               this.widgetX = dragTargetXOrLayoutDelta;
               if (this.listener instanceof DragMovementListener) {
-                ((DragMovementListener) ((Object) this.listener)).onDragMoved(parentX, -20951, (DraggableWidget) (this), parentY);
+                ((DragMovementListener) ((Object) this.listener)).onDragMoved(parentX, -20951, this, parentY);
               }
             }
           } else {
@@ -62,7 +62,7 @@ final class DraggableWidget extends SingleChildWidget {
                     xEasingStep = 1;
                   }
                 }
-                ((DraggableWidget) (this)).widgetX = xBeforeEasing + xEasingStep;
+                this.widgetX = xBeforeEasing + xEasingStep;
               }
               if (this.widgetY != this.layoutTargetY) {
                 dragTargetXOrLayoutDelta = this.layoutTargetY - this.widgetY;
@@ -76,7 +76,7 @@ final class DraggableWidget extends SingleChildWidget {
                 } else {
                   yEasingStep = dragTargetXOrLayoutDelta >> 1;
                 }
-                ((DraggableWidget) (this)).widgetY = yBeforeEasing + yEasingStep;
+                this.widgetY = yBeforeEasing + yEasingStep;
               }
             }
           }
@@ -185,7 +185,7 @@ final class DraggableWidget extends SingleChildWidget {
           }
           this.grabOffsetY = -parentY + pointerY - this.widgetY;
           this.grabOffsetX = -parentX + (pointerX - this.widgetX);
-          ValidationState.activeDragWidget = (DraggableWidget) (this);
+          ValidationState.activeDragWidget = this;
           return true;
         } catch (java.lang.RuntimeException caughtDragPressFailure) {
           caughtDragPressException = caughtDragPressFailure;

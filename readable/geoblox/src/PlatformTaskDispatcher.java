@@ -523,7 +523,7 @@ final class PlatformTaskDispatcher implements Runnable {
         this.shutdownRequested = false;
         gameCacheName = gameName;
         privilegedServicesFlag = !(!privilegedServicesEnabled);
-        ((PlatformTaskDispatcher) (this)).privilegedServicesEnabled = privilegedServicesFlag;
+        this.privilegedServicesEnabled = privilegedServicesFlag;
         javaVendor = "Unknown";
         javaVersion = "1.1";
         cacheVariant = initialCacheVariant;

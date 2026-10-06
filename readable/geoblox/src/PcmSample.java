@@ -17,12 +17,12 @@ final class PcmSample extends AbstractAudioSample {
             if (this.loopStart == this.loopEnd) {
                 this.loopStart = this.loopStart - 1;
             }
-            return (PcmSample) (this);
+            return this;
         }
         int scaledSharedLoopPosition = resampler.scaleSamplePosition(this.loopStart, 6);
         this.loopEnd = scaledSharedLoopPosition;
         this.loopStart = scaledSharedLoopPosition;
-        return (PcmSample) (this);
+        return this;
     }
 
     PcmSample(int sampleRateHz, byte[] samples, int loopStart, int loopEnd) {

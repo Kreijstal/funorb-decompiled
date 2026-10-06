@@ -711,12 +711,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         LabeledChildWidget passwordRowAlias = null;
         try {
           showCreateAccountValue = !(!showCreateAccount);
-          ((LoginPanel) (this)).showCreateAccount = showCreateAccountValue;
+          this.showCreateAccount = showCreateAccountValue;
           this.messageText = message;
           retryModeValue = !(!retryMode);
-          ((LoginPanel) (this)).retryMode = retryModeValue;
+          this.retryMode = retryModeValue;
           allowJustPlayValue = !(!allowJustPlay);
-          ((LoginPanel) (this)).allowJustPlay = allowJustPlayValue;
+          this.allowJustPlay = allowJustPlayValue;
           if (this.retryMode) {
             if (this.showCreateAccount ||
                 this.allowJustPlay) {
@@ -738,7 +738,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               unusedNullAlternateBranchButtonB = null;
               alternateButtonText = GameGraphicsResources.backText;
             }
-            ((LoginPanel) (this)).alternateButton = new ButtonWidget(alternateButtonText, (WidgetListener) null);
+            this.alternateButton = new ButtonWidget(alternateButtonText, (WidgetListener) null);
             if (this.showCreateAccount) {
               this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) (this));
             }
