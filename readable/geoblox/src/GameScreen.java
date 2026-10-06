@@ -222,11 +222,12 @@ final class GameScreen extends MenuScreen {
               UiWidget.gameplayReturnScreenId = 0;
               ScoreSubmission.requestedScreenId = -1;
               ProxySocketConnector.gameplayOriginScreenId = 0;
-              if (clientControlFlowGuard == 0) {
-                break menuKeyDispatch;
+              if (!(clientControlFlowGuard == 0)) {
+                super.handleMenuKey(itemIndex, -100);
               }
+            } else {
+              super.handleMenuKey(itemIndex, -100);
             }
-            super.handleMenuKey(itemIndex, -100);
           }
           if (methodGuard > -26) {
             this.updateTransition(59);

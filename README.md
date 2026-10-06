@@ -17,14 +17,56 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/46409537375b9464e3b17ab1ab51166d84c1ebde/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/a24f2282502637338f9b16c2ebe6e26969cb973a/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 136,404 bindings,
+identities. Both 303-file Java corpora compile and compare 136,410 bindings,
 preserving 388 override relationships.
 
-## Current terminal frame loops (pass 201)
+## Current shared bounded fallbacks (pass 202)
+
+Three final guarded callback skips in menu-action dispatch and gameplay rendering
+now use bounded callbacks in exclusive source arms. Each callback still executes
+once on its original fallback paths. Original conditions, prefixes and guards
+are not reevaluated. Other exits retain their original frame names and targets.
+Terminal plain-block/if/label corridors permit nested dispatch without crossing
+work, loops, protected regions or monitors. No new selector, name, assumed
+control-flag value or arithmetic reassociation is introduced.
+
+Callbacks require simple operands, at most 32 tokens/512 bytes and one source
+line. Computed arithmetic, casts, array/call operands, poly expressions and
+prefix-owned direct declarations refuse. Independent javac certifies the exact
+callback, copy scope, corridor and each selected exit. Every original binding
+and six copied bindings resolve to their exact original targets. All 18,358
+complete naming objects and 19,404 dictionary identities remain unchanged.
+There are 117,388 identifier, 11 literal and 578 label
+edits (117,977 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/sharedGuardedFallbackRecovery.test.js`
+passes six focused groups. Independent native models compare 174,960 cases
+across twelve direct/nested/protected contexts, including original, shared and
+follow-on structured forms. Early exits, nullable conditions/guards/payloads,
+mutations, overloads, aliases, partial failures, overflow, finally priority and
+monitor release retain their traces. All 47 selected regression tests pass.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independent callback/corridor/scope facts,
+every original/copied binding, three consumed exits, all 5,039 surviving
+transfer/protected-scope facts, unchanged complete naming objects and compilation.
+All 303 readable files reverse byte exactly. All 27 publication tests, 17 scoped
+native trace groups and current/fresh sibling reproduction checks pass. Older
+proof records and frozen input/naming/native pins remain. The remaining exits
+can now be checked for terminal conditional reconstruction in the next pass.
+Five large labeled bodies and 41 unsupported fields remain; whole-game/browser/
+phone and heap/presented-FPS acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`24f090f659ca01b85983a0a228106fdc72104b1b85588b5d224c7ca3e2e9eba8`.
+
+## Previous terminal frame loops (pass 201)
 
 Board connectivity traversal now uses two ordinary breaks of its existing
 queue-processing loop. Its enclosing block label and unnecessary scope disappear.

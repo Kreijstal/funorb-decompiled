@@ -346,11 +346,12 @@ final class GameplaySession {
           if (0 != this.sessionPhase ||
               EntityContactSupport.areEntityQueuesSettled(0)) {
             UsernameSuggestionsPanel.largeBoxSprite.draw(446, 410);
-            if (clientControlFlowGuard == 0) {
-              break tutorialOrCountBoxRendering;
+            if (!(clientControlFlowGuard == 0)) {
+              PasswordValidator.countBoxSprite.draw(468, 410);
             }
+          } else {
+            PasswordValidator.countBoxSprite.draw(468, 410);
           }
-          PasswordValidator.countBoxSprite.draw(468, 410);
         }
         if (!this.tutorialMode) {
           if (!EntityContactSupport.areEntityQueuesSettled(0) ||
@@ -517,11 +518,12 @@ final class GameplaySession {
                 SpriteCheckboxRenderer.boardSceneRaster.draw(0, 0);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
                 CharacterReplacementSupport.transitionCurtain.draw(0, -480 + 6 * this.sceneAnimationTick);
-                if (clientControlFlowGuard == 0) {
-                  break settledResultRendering;
+                if (!(clientControlFlowGuard == 0)) {
+                  this.renderResultSequence(false);
                 }
+              } else {
+                this.renderResultSequence(false);
               }
-              this.renderResultSequence(false);
             }
           }
           CachedTextLayout.drawPendingActionPanel(-1);
