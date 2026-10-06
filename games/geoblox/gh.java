@@ -585,11 +585,12 @@ final class gh {
                 }
               }
               this.field_T = this.field_T + 1;
-              if (var5 == 0) {
-                break L2;
+              if (!(var5 == 0)) {
+                this.field_T = this.field_T - 1;
               }
+            } else {
+              this.field_T = this.field_T - 1;
             }
-            this.field_T = this.field_T - 1;
           }
         }
         L7: {

@@ -572,33 +572,38 @@ abstract class wh extends rc {
                   break L3;
                 }
               }
-              L8: {
-                var18 = param2 << 16;
-                var17_int = param2 << 16;
-                var30 = param14 << 16;
-                var29 = param14 << 16;
-                var26 = param12 << 16;
-                var25 = param12 << 16;
-                var22 = param1 << 16;
-                var21 = param1 << 16;
-                var35 = param15 - param8;
-                var20 = (-param2 + param13 << 16) / var34;
-                var19 = (param9 - param2 << 16) / var35;
-                if (var20 <= var19) {
-                  var23 = (-param1 + param6 << 16) / var34;
-                  var27 = (-param12 + param0 << 16) / var34;
-                  var31 = (-param14 + param5 << 16) / var34;
-                  var36 = var19;
-                  var19 = var20;
-                  var20 = var36;
-                  var28 = (-param12 + param3 << 16) / var35;
-                  var33 = 1;
-                  var32 = (-param14 + param7 << 16) / var35;
-                  var24 = (-param1 + param10 << 16) / var35;
-                  if (var42 == 0) {
-                    break L8;
-                  }
+              var18 = param2 << 16;
+              var17_int = param2 << 16;
+              var30 = param14 << 16;
+              var29 = param14 << 16;
+              var26 = param12 << 16;
+              var25 = param12 << 16;
+              var22 = param1 << 16;
+              var21 = param1 << 16;
+              var35 = param15 - param8;
+              var20 = (-param2 + param13 << 16) / var34;
+              var19 = (param9 - param2 << 16) / var35;
+              if (var20 <= var19) {
+                var23 = (-param1 + param6 << 16) / var34;
+                var27 = (-param12 + param0 << 16) / var34;
+                var31 = (-param14 + param5 << 16) / var34;
+                var36 = var19;
+                var19 = var20;
+                var20 = var36;
+                var28 = (-param12 + param3 << 16) / var35;
+                var33 = 1;
+                var32 = (-param14 + param7 << 16) / var35;
+                var24 = (-param1 + param10 << 16) / var35;
+                if (!(var42 == 0)) {
+                  var32 = (-param14 + param5 << 16) / var34;
+                  var28 = (param0 - param12 << 16) / var34;
+                  var23 = (param10 - param1 << 16) / var35;
+                  var24 = (-param1 + param6 << 16) / var34;
+                  var31 = (param7 - param14 << 16) / var35;
+                  var27 = (-param12 + param3 << 16) / var35;
+                  var33 = 0;
                 }
+              } else {
                 var32 = (-param14 + param5 << 16) / var34;
                 var28 = (param0 - param12 << 16) / var34;
                 var23 = (param10 - param1 << 16) / var35;
