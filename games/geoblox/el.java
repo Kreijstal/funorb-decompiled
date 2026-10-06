@@ -251,34 +251,33 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          L19: {
-            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
-              if (var5 == 0) {
-                if (gf.field_a == 0 &&
-                    0 != ij.field_X) {
-                  this.a(param2, qa.field_a, true, this, param3, ue.field_e);
-                  var9 = lh.field_b;
-                  if (var9 != null) {
-                    if (var9.field_u instanceof rg) {
-                      ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
-                    }
-                    lh.field_b = null;
+          if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
+            if (var5 == 0) {
+              if (gf.field_a == 0 &&
+                  0 != ij.field_X) {
+                this.a(param2, qa.field_a, true, this, param3, ue.field_e);
+                var9 = lh.field_b;
+                if (var9 != null) {
+                  if (var9.field_u instanceof rg) {
+                    ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
                   }
-                  if (var7 != 0 &&
-                      var5 != 0 &&
-                      bi.field_g != 0) {
-                    this.d(-126);
-                  }
+                  lh.field_b = null;
                 }
-                ij.field_X = gf.field_a;
-                sa.a(this.c((byte) 69), (byte) 72);
-                return param0;
+                if (var7 != 0 &&
+                    var5 != 0 &&
+                    bi.field_g != 0) {
+                  this.d(-126);
+                }
               }
-              this.d(-127);
-              if (var7 == 0) {
-                break L19;
-              }
+              ij.field_X = gf.field_a;
+              sa.a(this.c((byte) 69), (byte) 72);
+              return param0;
             }
+            this.d(-127);
+            if (!(var7 == 0)) {
+              param0 = false;
+            }
+          } else {
             param0 = false;
           }
           if (gf.field_a != 0) {
@@ -331,13 +330,12 @@ class el extends hf {
             sa.a(this.c((byte) 69), (byte) 72);
             return param0;
           }
-          L0: {
-            if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
-              this.d(-127);
-              if (var7 == 0) {
-                break L0;
-              }
+          if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
+            this.d(-127);
+            if (!(var7 == 0)) {
+              param0 = false;
             }
+          } else {
             param0 = false;
           }
           if (gf.field_a != 0) {

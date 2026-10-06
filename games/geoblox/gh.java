@@ -310,18 +310,18 @@ final class gh {
         if (param0 >= -28) {
           this.a(-63);
         }
-        L17: {
-          if (this.field_L) {
-            if (this.field_D <= 266) {
-              var5_float = (float)this.field_D / 266.0f;
-              var6_float = -var5_float + 1.0f;
-              var7_float = var6_float * var6_float;
-              var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
-              var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
-              if (var14 == 0) {
-                break L17;
-              }
+        if (this.field_L) {
+          if (this.field_D <= 266) {
+            var5_float = (float)this.field_D / 266.0f;
+            var6_float = -var5_float + 1.0f;
+            var7_float = var6_float * var6_float;
+            var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
+            var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
+            if (!(var14 == 0)) {
+              var3 = 220;
+              var4 = 170;
             }
+          } else {
             var3 = 220;
             var4 = 170;
           }
@@ -807,18 +807,17 @@ final class gh {
               ld.a(310, 320, 123, 100 + 100 * ji.field_h);
             }
             stackIn_252_1 = (!fa.field_a) && (a.field_d.c(13519)) && (0 < ul.field_b);
-            L52: {
-              this.field_b = stackIn_252_1;
-              if (this.field_b &&
-                  this.field_B) {
+            this.field_b = stackIn_252_1;
+            if (this.field_b &&
+                this.field_B) {
+              this.field_B = false;
+              this.field_a = 300;
+              this.field_b = false;
+              ra.a(le.field_a ^ 255, -88, le.field_a);
+              if (!(var5 == 0)) {
                 this.field_B = false;
-                this.field_a = 300;
-                this.field_b = false;
-                ra.a(le.field_a ^ 255, -88, le.field_a);
-                if (var5 == 0) {
-                  break L52;
-                }
               }
+            } else {
               this.field_B = false;
             }
             this.field_Z = ab.field_f;
@@ -1154,17 +1153,18 @@ final class gh {
         if (param0 != 116) {
           this.field_o = -46;
         }
-        L1: {
-          if (!this.field_Y) {
-            this.field_x = true;
-            this.field_L = true;
-            this.c(false);
-            this.a((byte) 127, wa.a(-25866));
-            this.e((byte) -70);
-            if (Geoblox.field_C == 0) {
-              break L1;
-            }
+        if (!this.field_Y) {
+          this.field_x = true;
+          this.field_L = true;
+          this.c(false);
+          this.a((byte) 127, wa.a(-25866));
+          this.e((byte) -70);
+          if (!(Geoblox.field_C == 0)) {
+            this.field_p = 5;
+            this.field_t = 0;
+            this.field_C = true;
           }
+        } else {
           this.field_p = 5;
           this.field_t = 0;
           this.field_C = true;
