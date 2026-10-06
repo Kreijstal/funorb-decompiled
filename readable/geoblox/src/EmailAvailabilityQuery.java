@@ -106,7 +106,7 @@ final class EmailAvailabilityQuery {
 
     final boolean isAvailable(byte methodGuard) {
         if (methodGuard >= -45) {
-            java.applet.Applet var3 = (java.applet.Applet) null;
+            java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
             EmailAvailabilityQuery.navigateToReloadPage((java.applet.Applet) null, true);
             return this.available;
         }
@@ -126,8 +126,8 @@ final class EmailAvailabilityQuery {
         this.available = false;
         try {
             this.candidateEmail = candidateEmail;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "h.<init>(" + (candidateEmail != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException queryInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryInitializationFailure), "h.<init>(" + (candidateEmail != null ? "{...}" : "null") + ')');
         }
     }
 

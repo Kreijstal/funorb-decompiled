@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "47532cb29478aae98c5cc3aa36e58410b97fb580",
+    "commit": "7f3d87237e5f4fcab093c368284f4cf24d877555",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "c43a14c5c27dda4500eeb974d86672614be4691c965f6480bc73dcecb8dffd28"
+      "sha256": "a6ca18545a430e2a11eea0ad491f12a6c5de4900917eaf8c491bab93288d5c36"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,15 +3291,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "c843e9df3559795694292b1b41f15152aafe47aa96e4b8ea4787df93f9ea4709",
+    "outputTreeSha256": "7e6a348f983d37b4ef1096dd4897123b79f8eef7d35ab3f967f22d630cb74be7",
     "files": 303,
-    "rules": 18324,
-    "identifierEdits": 117929,
+    "rules": 18364,
+    "identifierEdits": 118061,
     "bindingsCompared": 136981,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 118394,
+    "totalEdits": 118526,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 454,
@@ -3320,7 +3320,8 @@
       "remainingOpaquePlainBlockLabels": 0,
       "remainingOpaqueFields": 41
     },
-    "structuralPass": 214
+    "structuralPass": 214,
+    "semanticPass": 215
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -17264,5 +17265,239 @@
     ],
     "sourceWorkflowCommit": "47532cb29478aae98c5cc3aa36e58410b97fb580",
     "sourceProofWorkflowCommit": "47532cb29478aae98c5cc3aa36e58410b97fb580"
+  },
+  "sliderRasterLocalNames": {
+    "version": 215,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 40,
+    "changedReadableJavaFiles": 4,
+    "previousCompleteRules": 18324,
+    "unaffectedCompleteRulesPreserved": 18324,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "966c498146038e6c2b81b6056569420aba995edf15219e9f3fe309056322d43d",
+    "sourceCommit": "c66b27f36c6b49e6546a7a131bd1888e6de7f190",
+    "javaToolsCommit": "c2a48445b625e64235f123e3f6777faf254769b6",
+    "sourceArchiveSha256": "6b7d983b3e8d24f36d4d6808afa6ed735bfcdf4b1c503b56af2f99204f2765b4",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 534,
+    "rawCompilerLocalsAfter": 498,
+    "identifierEditsAdded": 132,
+    "readableIdentifierEdits": 118061,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 454,
+    "readableTotalEdits": 118526,
+    "stableDictionaryIdentities": 19370,
+    "bindingsCompared": 136981,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name slider pointer/value selection, image-consumer failure context, Windows cursor/monitor/native-message roles and email-query guard/constructor temporaries from their current source operations. Preserve every complete existing rule and dictionary identity, the fixed raw/compiler inputs, all bindings and callback/error/monitor/guard behavior. Retain reused slots in combined role names, unused temporaries, current null native peer behavior, original diagnostics and arithmetic failure/overflow paths. All 303 files compile, reproduce and reverse byte exactly; scoped native evidence does not establish whole-game/browser/phone behavior.",
+    "symbols": [
+      {
+        "symbol": "L:bf.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+        "originalName": "runtimeException",
+        "to": "consumerRegistrationFailure"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+        "originalName": "var7",
+        "to": "imageUpdateFailureForContext"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+        "originalName": "stackIn_4_0",
+        "to": "imageUpdateFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+        "originalName": "stackIn_4_1",
+        "to": "imageUpdateMessagePrefix"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+        "originalName": "stackIn_5_2",
+        "to": "observedImageDescription"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+        "originalName": "decompiledCaughtException",
+        "to": "caughtImageUpdateFailure"
+      },
+      {
+        "symbol": "L:bf.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "imageUpdateFailure"
+      },
+      {
+        "symbol": "L:bf.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+        "originalName": "runtimeException",
+        "to": "consumerRemovalFailure"
+      },
+      {
+        "symbol": "L:bf.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+        "originalName": "runtimeException",
+        "to": "productionStartFailure"
+      },
+      {
+        "symbol": "L:h.<init>(Ljava/lang/String;)V#0",
+        "originalName": "runtimeException",
+        "to": "queryInitializationFailure"
+      },
+      {
+        "symbol": "L:h.a(B)Z#0",
+        "originalName": "var3",
+        "to": "nullAppletForInvalidGuard"
+      },
+      {
+        "symbol": "L:ol.a(B)I#0",
+        "originalName": "var2",
+        "to": "handleCountGuardQuotient"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#0",
+        "originalName": "var13",
+        "to": "handleSearchIndex"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#1",
+        "originalName": "stackIn_26_0",
+        "to": "pointerPressFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#10",
+        "originalName": "var12",
+        "to": "selectedHandleIndex"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#11",
+        "originalName": "var14",
+        "to": "valueDeltaThenSquaredDistance"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#12",
+        "originalName": "var15",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#13",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "pointerPressFailure"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#2",
+        "originalName": "stackIn_26_1",
+        "to": "pointerPressMessagePrefix"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#3",
+        "originalName": "stackIn_27_2",
+        "to": "eventContextDescription"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#4",
+        "originalName": "decompiledCaughtException",
+        "to": "caughtPointerPressFailure"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#5",
+        "originalName": "var8_int",
+        "to": "pointerPressGuardResidue"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#6",
+        "originalName": "var8",
+        "to": "pointerPressFailureForContext"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#7",
+        "originalName": "var9",
+        "to": "railOffsetThenHandleValue"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#8",
+        "originalName": "var10",
+        "to": "usableRailWidth"
+      },
+      {
+        "symbol": "L:ol.a(IIIIIILel;)Z#9",
+        "originalName": "var11",
+        "to": "smallestSquaredDistance"
+      },
+      {
+        "symbol": "L:ol.c(II)I#0",
+        "originalName": "var3",
+        "to": "handleLookupGuardQuotient"
+      },
+      {
+        "symbol": "L:tg.a(III)V#0",
+        "originalName": "var5",
+        "to": "nullComponentForInvalidGuard"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#0",
+        "originalName": "var5",
+        "to": "targetWindowHandle"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#1",
+        "originalName": "var6",
+        "to": "cursorControllerMonitor"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#2",
+        "originalName": "var8",
+        "to": "unusedCursorThrowable"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#3",
+        "originalName": "var9",
+        "to": "windowComponentPeer"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#4",
+        "originalName": "stackIn_6_0",
+        "to": "invertedCurrentVisibilityBit"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#5",
+        "originalName": "stackIn_22_1",
+        "to": "replacementWindowVisibilitySnapshot"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#6",
+        "originalName": "stackIn_28_1",
+        "to": "sameWindowVisibilitySnapshot"
+      },
+      {
+        "symbol": "L:tg.a(IZLjava/awt/Component;)V#7",
+        "originalName": "decompiledCaughtException",
+        "to": "unusedCaughtCursorThrowable"
+      },
+      {
+        "symbol": "L:tg.callback(IIII)I#0",
+        "originalName": "stackIn_7_0",
+        "to": "cursorHandleForPrivateMessage"
+      },
+      {
+        "symbol": "L:tg.callback(IIII)I#1",
+        "originalName": "stackIn_16_0",
+        "to": "cursorHandleForClientHitTest"
+      },
+      {
+        "symbol": "L:tg.callback(IIII)I#2",
+        "originalName": "stackIn_21_0",
+        "to": "cursorHandleForFallbackMessage"
+      },
+      {
+        "symbol": "L:tg.callback(IIII)I#3",
+        "originalName": "var5",
+        "to": "previousProcedureOrHitTestCode"
+      }
+    ],
+    "namingWorkflowCommit": "7f3d87237e5f4fcab093c368284f4cf24d877555"
   }
 }

@@ -17,14 +17,52 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/47532cb29478aae98c5cc3aa36e58410b97fb580/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/7f3d87237e5f4fcab093c368284f4cf24d877555/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,981 bindings,
 preserving 388 override relationships.
 
-## Current terminal mixed-statement frames (pass 214)
+## Current slider, raster and cursor local names (pass 215)
+
+Forty remaining unnamed declarations now describe their source roles in
+MultiHandleSliderWidget, ImageProducerRasterBuffer, WindowsCursorController and
+EmailAvailabilityQuery. Slider pointer handling names the clamped rail offset
+then handle value, usable rail width, search/selection indices, signed-int
+squared-distance state and exception aliases. Image-consumer callbacks name
+registration/removal/production failures and image-update diagnostic state.
+Cursor code names window handles, the this-alias monitor, visibility snapshots,
+message-specific cursor handles and the reused procedure-or-hit-test slot.
+Unused guard results, null platform peers and unused Throwable temporaries
+stay explicit; no behavior is repaired or guessed by naming them.
+
+Every new rule guards the complete original JVM method, local ordinal and
+spelling. All 18,324 previous complete rules and every dictionary identity
+remain exact. The raw Java, bytecode, compiler source, native inputs and
+frozen naming dependency are unchanged. Original diagnostics, integer overflow,
+division failures, callbacks, receiver identity and monitor/handler behavior
+stay intact. Reused slots have combined role names instead of hiding reuse.
+The export has 18,364 guarded rules, 118,061 identifier edits,
+11 literal edits and 454 label edits (118,526 total). Forty named
+declarations add 132 identifier edits. The number of declarations still using
+var/stackIn/decompiledCaught compiler names falls from 534 to 498;
+41 unsupported fields and four large methods with plain block frames remain.
+
+From Deko,
+`node readable/build-geoblox-rules.mjs --check` validates the explicit forty
+rule additions against the previous Git manifest and preserves every existing
+complete naming object. `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check`
+reproduces and compiles all 303 sources with 136,981 bindings and 388 override
+relationships checked. All 303 files reverse byte exactly; all 27 publication
+tests, 17 scoped native trace groups and fresh sibling reproductions pass.
+Scope-specific native evidence does not establish whole-game/browser/phone or
+heap/presented-FPS acceptance. Older structural proofs and pins remain intact.
+
+The unchanged tracked **decompiler-source** Git tar SHA-256 is
+`6b7d983b3e8d24f36d4d6808afa6ed735bfcdf4b1c503b56af2f99204f2765b4`.
+
+## Previous terminal mixed-statement frames (pass 214)
 
 Mixed statement reconstruction exposes more complete terminal frame remainders.
 The generic emitter now rechecks those corridors and guards 15

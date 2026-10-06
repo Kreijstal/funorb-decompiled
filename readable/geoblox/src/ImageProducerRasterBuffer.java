@@ -72,8 +72,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     public final void startProduction(java.awt.image.ImageConsumer consumer) {
         try {
             this.addConsumer(consumer);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bf.startProduction(" + (consumer != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException productionStartFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) productionStartFailure), "bf.startProduction(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -84,30 +84,30 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             consumer.setProperties((Hashtable) null);
             consumer.setColorModel(this.colorModel);
             consumer.setHints(14);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bf.addConsumer(" + (consumer != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException consumerRegistrationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRegistrationFailure), "bf.addConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
     public final boolean imageUpdate(java.awt.Image observedImage, int infoFlags, int updateX, int updateY, int updateWidth, int updateHeight) {
-        RuntimeException var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException imageUpdateFailureForContext = null;
+        RuntimeException imageUpdateFailureBeforeDescription = null;
+        StringBuilder imageUpdateMessagePrefix = null;
+        String observedImageDescription = null;
+        RuntimeException caughtImageUpdateFailure = null;
         try {
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("bf.imageUpdate(");
+        } catch (java.lang.RuntimeException imageUpdateFailure) {
+          caughtImageUpdateFailure = imageUpdateFailure;
+          imageUpdateFailureForContext = caughtImageUpdateFailure;
+          imageUpdateFailureBeforeDescription = imageUpdateFailureForContext;
+          imageUpdateMessagePrefix = new StringBuilder().append("bf.imageUpdate(");
           if (observedImage == null) {
-            stackIn_5_2 = "null";
+            observedImageDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            observedImageDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(infoFlags).append(',').append(updateX).append(',').append(updateY).append(',').append(updateWidth).append(',').append(updateHeight).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) imageUpdateFailureBeforeDescription), ((StringBuilder) (Object) imageUpdateMessagePrefix).append(observedImageDescription).append(',').append(infoFlags).append(',').append(updateX).append(',').append(updateY).append(',').append(updateWidth).append(',').append(updateHeight).append(')').toString());
         }
     }
 
@@ -245,8 +245,8 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             if (consumer == this.imageConsumer) {
                 this.imageConsumer = null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bf.removeConsumer(" + (consumer != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException consumerRemovalFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRemovalFailure), "bf.removeConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -9,22 +9,22 @@ final class WindowsCursorController extends com.ms.dll.Callback {
     private volatile int previousWindowProcedure;
 
     final void setCursorVisible(int methodGuard, boolean visible, java.awt.Component component) {
-        int var5 = 0;
-        Object var6 = null;
-        Throwable var8 = null;
-        com.ms.awt.WComponentPeer var9 = null;
-        int stackIn_6_0 = 0;
-        boolean stackIn_22_1 = false;
-        boolean stackIn_28_1 = false;
-        Throwable decompiledCaughtException = null;
+        int targetWindowHandle = 0;
+        Object cursorControllerMonitor = null;
+        Throwable unusedCursorThrowable = null;
+        com.ms.awt.WComponentPeer windowComponentPeer = null;
+        int invertedCurrentVisibilityBit = 0;
+        boolean replacementWindowVisibilitySnapshot = false;
+        boolean sameWindowVisibilitySnapshot = false;
+        Throwable unusedCaughtCursorThrowable = null;
         if (methodGuard != 12758) {
           this.callbackRootAllocated = true;
         }
-        var9 = (com.ms.awt.WComponentPeer) null;
-        var5 = var9.getTopHwnd();
-        if (this.windowHandle == var5) {
-          stackIn_6_0 = (this.cursorVisible) ? 0 : 1;
-          if (stackIn_6_0 != (visible ? 1 : 0)) {
+        windowComponentPeer = (com.ms.awt.WComponentPeer) null;
+        targetWindowHandle = windowComponentPeer.getTopHwnd();
+        if (this.windowHandle == targetWindowHandle) {
+          invertedCurrentVisibilityBit = (this.cursorVisible) ? 0 : 1;
+          if (invertedCurrentVisibilityBit != (visible ? 1 : 0)) {
             return;
           }
         }
@@ -33,45 +33,45 @@ final class WindowsCursorController extends com.ms.dll.Callback {
           com.ms.dll.Root.alloc(this);
           this.callbackRootAllocated = true;
         }
-        if (var5 == this.windowHandle) {
-          stackIn_28_1 = !(!visible);
-          this.cursorVisible = stackIn_28_1;
+        if (targetWindowHandle == this.windowHandle) {
+          sameWindowVisibilitySnapshot = !(!visible);
+          this.cursorVisible = sameWindowVisibilitySnapshot;
         } else {
           if (0 != this.windowHandle) {
             this.cursorVisible = true;
-            com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
-            var6 = this;
-            synchronized (var6) {
+            com.ms.win32.User32.SendMessage(targetWindowHandle, 101024, 0, 0);
+            cursorControllerMonitor = this;
+            synchronized (cursorControllerMonitor) {
               com.ms.win32.User32.SetWindowLong(this.windowHandle, -4, this.previousWindowProcedure);
             }
           }
-          var6 = this;
-          synchronized (var6) {
-            this.windowHandle = var5;
+          cursorControllerMonitor = this;
+          synchronized (cursorControllerMonitor) {
+            this.windowHandle = targetWindowHandle;
             this.previousWindowProcedure = com.ms.win32.User32.SetWindowLong(this.windowHandle, -4, this);
           }
-          stackIn_22_1 = !(!visible);
-          this.cursorVisible = stackIn_22_1;
+          replacementWindowVisibilitySnapshot = !(!visible);
+          this.cursorVisible = replacementWindowVisibilitySnapshot;
         }
-        com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
+        com.ms.win32.User32.SendMessage(targetWindowHandle, 101024, 0, 0);
     }
 
     final void moveCursor(int methodGuard, int y, int x) {
         com.ms.win32.User32.SetCursorPos(x, y);
         if (methodGuard > -45) {
-            java.awt.Component var5 = (java.awt.Component) null;
+            java.awt.Component nullComponentForInvalidGuard = (java.awt.Component) null;
             this.setCursorVisible(74, true, (java.awt.Component) null);
         }
     }
 
     final synchronized int callback(int windowHandle, int messageId, int wParam, int lParam) {
-        int stackIn_7_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_21_0 = 0;
-        int var5;
+        int cursorHandleForPrivateMessage = 0;
+        int cursorHandleForClientHitTest = 0;
+        int cursorHandleForFallbackMessage = 0;
+        int previousProcedureOrHitTestCode;
         if (this.windowHandle != windowHandle) {
-          var5 = com.ms.win32.User32.GetWindowLong(windowHandle, -4);
-          return com.ms.win32.User32.CallWindowProc(var5, windowHandle, messageId, wParam, lParam);
+          previousProcedureOrHitTestCode = com.ms.win32.User32.GetWindowLong(windowHandle, -4);
+          return com.ms.win32.User32.CallWindowProc(previousProcedureOrHitTestCode, windowHandle, messageId, wParam, lParam);
         }
         if (32 != messageId) {
           if (messageId != 101024) {
@@ -83,21 +83,21 @@ final class WindowsCursorController extends com.ms.dll.Callback {
             return com.ms.win32.User32.CallWindowProc(this.previousWindowProcedure, windowHandle, messageId, wParam, lParam);
           }
           if (this.cursorVisible) {
-            stackIn_7_0 = this.arrowCursorHandle;
+            cursorHandleForPrivateMessage = this.arrowCursorHandle;
           } else {
-            stackIn_7_0 = 0;
+            cursorHandleForPrivateMessage = 0;
           }
-          com.ms.win32.User32.SetCursor(stackIn_7_0);
+          com.ms.win32.User32.SetCursor(cursorHandleForPrivateMessage);
           return 0;
         }
-        var5 = 65535 & lParam;
-        if (var5 == 1) {
+        previousProcedureOrHitTestCode = 65535 & lParam;
+        if (previousProcedureOrHitTestCode == 1) {
           if (!this.cursorVisible) {
-            stackIn_16_0 = 0;
+            cursorHandleForClientHitTest = 0;
           } else {
-            stackIn_16_0 = this.arrowCursorHandle;
+            cursorHandleForClientHitTest = this.arrowCursorHandle;
           }
-          com.ms.win32.User32.SetCursor(stackIn_16_0);
+          com.ms.win32.User32.SetCursor(cursorHandleForClientHitTest);
           return 0;
         }
         if (messageId != 101024) {
@@ -109,11 +109,11 @@ final class WindowsCursorController extends com.ms.dll.Callback {
           return com.ms.win32.User32.CallWindowProc(this.previousWindowProcedure, windowHandle, messageId, wParam, lParam);
         }
         if (this.cursorVisible) {
-          stackIn_21_0 = this.arrowCursorHandle;
+          cursorHandleForFallbackMessage = this.arrowCursorHandle;
         } else {
-          stackIn_21_0 = 0;
+          cursorHandleForFallbackMessage = 0;
         }
-        com.ms.win32.User32.SetCursor(stackIn_21_0);
+        com.ms.win32.User32.SetCursor(cursorHandleForFallbackMessage);
         return 0;
     }
 
