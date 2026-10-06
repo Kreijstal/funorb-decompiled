@@ -580,13 +580,17 @@ final class gh {
                 }
                 this.field_y = 1;
                 el.field_o.c(false);
-                if (var5 == 0) {
-                  break L2;
+                if (!(var5 == 0)) {
+                  this.field_T = this.field_T + 1;
+                  if (var5 != 0) {
+                    this.field_T = this.field_T - 1;
+                  }
                 }
-              }
-              this.field_T = this.field_T + 1;
-              if (var5 != 0) {
-                this.field_T = this.field_T - 1;
+              } else {
+                this.field_T = this.field_T + 1;
+                if (var5 != 0) {
+                  this.field_T = this.field_T - 1;
+                }
               }
             } else {
               this.field_T = this.field_T - 1;
@@ -1495,13 +1499,19 @@ final class gh {
           fieldTemp$0 = this.field_D + 1;
           this.field_D = this.field_D + 1;
           if (fieldTemp$0 != 150 + this.field_W) {
-            L12: {
-              if (460 > this.field_D) {
-                this.field_bb = 2;
-                if (var11 == 0) {
-                  break L12;
+            if (460 > this.field_D) {
+              this.field_bb = 2;
+              if (!(var11 == 0)) {
+                if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
+                  this.field_bb = 4;
+                  if (var11 != 0) {
+                    this.field_bb = 3;
+                  }
+                } else {
+                  this.field_bb = 3;
                 }
               }
+            } else {
               if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
                 this.field_bb = 4;
                 if (var11 != 0) {
