@@ -566,35 +566,31 @@ final class gh {
             this.field_k = -1;
           }
         }
-        L2: {
-          if (0 == (this.field_v & 1)) {
-            if (-1 != this.field_y ||
-                  463 >= this.field_T) {
-              if (this.field_y != 1 ||
-                    this.field_T >= 640) {
-                if (this.field_T != 463) {
-                  break L2;
-                }
-                if (gf.field_f != 0) {
-                  break L2;
-                }
-                this.field_y = 1;
-                el.field_o.c(false);
-                if (!(var5 == 0)) {
-                  this.field_T = this.field_T + 1;
-                  if (var5 != 0) {
-                    this.field_T = this.field_T - 1;
+        if (0 == (this.field_v & 1)) {
+          if (-1 != this.field_y ||
+                463 >= this.field_T) {
+            if (this.field_y != 1 ||
+                  this.field_T >= 640) {
+              if (!(this.field_T != 463)) {
+                if (!(gf.field_f != 0)) {
+                  this.field_y = 1;
+                  el.field_o.c(false);
+                  if (!(var5 == 0)) {
+                    this.field_T = this.field_T + 1;
+                    if (var5 != 0) {
+                      this.field_T = this.field_T - 1;
+                    }
                   }
-                }
-              } else {
-                this.field_T = this.field_T + 1;
-                if (var5 != 0) {
-                  this.field_T = this.field_T - 1;
                 }
               }
             } else {
-              this.field_T = this.field_T - 1;
+              this.field_T = this.field_T + 1;
+              if (var5 != 0) {
+                this.field_T = this.field_T - 1;
+              }
             }
+          } else {
+            this.field_T = this.field_T - 1;
           }
         }
         L7: {

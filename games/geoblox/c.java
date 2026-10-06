@@ -299,11 +299,8 @@ final class c extends ka {
         RuntimeException var2 = null;
         var3 = Geoblox.field_C;
         try {
-          L0: {
-            if (!this.field_H) {
-              if (this.field_T >= 0) {
-                break L0;
-              }
+          if (!this.field_H) {
+            if (!(this.field_T >= 0)) {
               this.field_T = this.field_T + 1;
               if (!(var3 == 0)) {
                 if (-4 >= this.field_T) {
@@ -315,15 +312,15 @@ final class c extends ka {
                   this.field_T = this.field_T - 1;
                 }
               }
-            } else {
-              if (-4 >= this.field_T) {
-                this.field_H = false;
-                if (var3 != 0) {
-                  this.field_T = this.field_T - 1;
-                }
-              } else {
+            }
+          } else {
+            if (-4 >= this.field_T) {
+              this.field_H = false;
+              if (var3 != 0) {
                 this.field_T = this.field_T - 1;
               }
+            } else {
+              this.field_T = this.field_T - 1;
             }
           }
           if (param0 >= -11) {
