@@ -311,14 +311,11 @@ final class kj extends ia {
               var8 = 1;
             }
           }
-          L11: {
-            if (param3.field_y >= 0 &&
-                var7.field_e != null &&
-                (this.field_m[param3.field_t] & 1) == 0) {
-              if (0 <= param3.field_r &&
-                  param3 == this.field_D[param3.field_t][param3.field_r]) {
-                break L11;
-              }
+          if (param3.field_y >= 0 &&
+              var7.field_e != null &&
+              (this.field_m[param3.field_t] & 1) == 0) {
+            if (!(0 <= param3.field_r &&
+                param3 == this.field_D[param3.field_t][param3.field_r])) {
               if (0 < var7.field_a) {
                 param3.field_y = param3.field_y + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_a) * 128.0);
               } else {
@@ -331,10 +328,9 @@ final class kj extends ia {
                 }
                 break;
               }
-              if (-2 + var7.field_e.length != param3.field_q) {
-                break L11;
+              if (!(-2 + var7.field_e.length != param3.field_q)) {
+                var8 = 1;
               }
-              var8 = 1;
             }
           }
           if (var8 == 0) {

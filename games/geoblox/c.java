@@ -369,12 +369,11 @@ final class c extends ka {
                   break L3;
                 }
               }
-              if (this.field_K != 8 &&
-                  this.field_K != 7) {
-                break L3;
+              if (!(this.field_K != 8 &&
+                  this.field_K != 7)) {
+                var4 += 20;
+                var5 -= 10;
               }
-              var4 += 20;
-              var5 -= 10;
             }
             ma.a(var3, var5, var2_int, (byte) -92, var4, ll.field_h);
           }
@@ -2221,13 +2220,12 @@ final class c extends ka {
                 break L7;
               }
             }
-            if (this.field_K != 5 &&
+            if (!(this.field_K != 5 &&
                 this.field_K != 7 &&
                 this.field_K != 6 &&
-                this.field_K != 4) {
-              break L7;
+                this.field_K != 4)) {
+              param3 += 295;
             }
-            param3 += 295;
           }
           L11: {
             var8 = dd.field_G;
