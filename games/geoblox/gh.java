@@ -90,12 +90,11 @@ final class gh {
             }
           }
           if (this.field_p != 3) {
-            if (1 != this.field_p) {
-              break L0;
-            }
-            var6 = 280;
-            if (!(var7 == 0)) {
-              var6 = 270;
+            if (!(1 != this.field_p)) {
+              var6 = 280;
+              if (!(var7 == 0)) {
+                var6 = 270;
+              }
             }
           } else {
             var6 = 270;
@@ -550,24 +549,21 @@ final class gh {
         int var4_int = 0;
         ja var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = Geoblox.field_C;
-          lh.a(param0 ^ 1578896222);
-          fieldTemp$0 = this.field_v;
-          this.field_v = this.field_v + 1;
-          if ((fieldTemp$0 & 15) == 0) {
-            this.field_l = this.field_l + this.field_k;
-            if (7 != this.field_l) {
-              if (this.field_l != 0) {
-                break L0;
-              }
+        var5 = Geoblox.field_C;
+        lh.a(param0 ^ 1578896222);
+        fieldTemp$0 = this.field_v;
+        this.field_v = this.field_v + 1;
+        if ((fieldTemp$0 & 15) == 0) {
+          this.field_l = this.field_l + this.field_k;
+          if (7 != this.field_l) {
+            if (!(this.field_l != 0)) {
               this.field_k = 1;
               if (!(var5 == 0)) {
                 this.field_k = -1;
               }
-            } else {
-              this.field_k = -1;
             }
+          } else {
+            this.field_k = -1;
           }
         }
         L2: {
@@ -1212,15 +1208,13 @@ final class gh {
             }
             if (this.field_p != 1 ||
                   !(0 < dd.field_D - this.field_U)) {
-              if (this.field_p != 2) {
-                break L0;
-              }
-              if (dk.field_b - this.field_U <= 0) {
-                break L0;
-              }
-              this.field_t = 2;
-              if (!(var3 == 0)) {
-                this.field_t = 2;
+              if (!(this.field_p != 2)) {
+                if (!(dk.field_b - this.field_U <= 0)) {
+                  this.field_t = 2;
+                  if (!(var3 == 0)) {
+                    this.field_t = 2;
+                  }
+                }
               }
             } else {
               this.field_t = 2;
