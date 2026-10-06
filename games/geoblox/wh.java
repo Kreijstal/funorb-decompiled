@@ -405,7 +405,7 @@ abstract class wh extends rc {
             if (param1 > 0) {
               var4 = new byte[param0];
               var5_int = 0;
-              while (~param0 < ~var5_int) {
+              while (param0 > var5_int) {
                 var4[var5_int] = param2[param1 + var5_int];
                 var5_int++;
                 if (var7 != 0) {
@@ -477,14 +477,14 @@ abstract class wh extends rc {
         var42 = Geoblox.field_C;
         try {
           if (param4 >= 0 &&
-              ~mh.field_h < ~param8) {
+              mh.field_h > param8) {
             if (param2 < 0 &&
                 param9 < 0 &&
                 param13 < 0) {
               return;
             }
-            if (~mh.field_c >= ~param2 &&
-                ~mh.field_c >= ~param9 &&
+            if (mh.field_c <= param2 &&
+                mh.field_c <= param9 &&
                 param13 >= mh.field_c) {
               return;
             }
@@ -648,7 +648,7 @@ abstract class wh extends rc {
                     }
                   }
                   var36 = mh.field_b[param8];
-                  while (~param15 < ~param8) {
+                  while (param15 > param8) {
                     var37 = var17_int >> 16;
                     stackIn_73_0 = ~mh.field_c;
                     stackIn_73_1 = ~var37;
@@ -671,13 +671,13 @@ abstract class wh extends rc {
                         }
                       } else {
                         if (var37 >= 0 &&
-                            ~var37 > ~mh.field_c) {
+                            var37 < mh.field_c) {
                           jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                         }
                       }
                     }
                     param8++;
-                    if (~param8 <= ~mh.field_h) {
+                    if (param8 >= mh.field_h) {
                       return;
                     }
                     var18 = var18 + var20;
@@ -773,7 +773,7 @@ abstract class wh extends rc {
                 }
               }
               param8++;
-              if (~mh.field_h >= ~param8) {
+              if (mh.field_h <= param8) {
                 return;
               }
               var18 = var18 + var20;

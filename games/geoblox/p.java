@@ -98,7 +98,7 @@ final class p extends hf {
                   if (stackIn_66_0 >= stackIn_66_1) {
                     sh.field_x[var23] = var27 / var29 + var21;
                     dj.field_N[var23] = var22 + var28 / var29;
-                    if (~var29 > ~var7_int) {
+                    if (var29 < var7_int) {
                       var7_int = var29;
                     }
                     if (var8 < var29) {
@@ -128,7 +128,7 @@ final class p extends hf {
                   null != param2.field_p &&
                   param2.field_b != null) {
                 var23 = 0;
-                while (!(~var23 <= ~param2.field_f)) {
+                while (!(var23 >= param2.field_f)) {
                   var24 = param2.field_L[var23];
                   var25 = param2.field_d[var23];
                   var26 = param2.field_C[var23];
@@ -164,7 +164,7 @@ final class p extends hf {
                 var16 = param1[10];
                 var17 = param1[11];
                 var18 = 0;
-                while (!(~param2.field_m >= ~var18)) {
+                while (!(param2.field_m <= var18)) {
                   stackIn_66_0 = ok.field_h.length;
                   stackIn_66_1 = var18;
                   if (var30 != 0) {

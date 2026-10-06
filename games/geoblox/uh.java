@@ -128,7 +128,7 @@ final class uh extends ac {
             var5.field_n = vk.a(var5.field_n, param0, 16, 8);
             var6 = 0;
             for (var7 = 0; var5.field_n.length > var7; var7++) {
-              if (~(255 & var5.field_n[var7]) < ~var6) {
+              if ((255 & var5.field_n[var7]) > var6) {
                 var6 = 255 & var5.field_n[var7];
               }
             }

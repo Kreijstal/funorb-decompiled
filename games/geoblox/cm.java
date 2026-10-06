@@ -194,7 +194,7 @@ final class cm extends cj {
             if ((null != oc.field_e) && (param1 < 0 ||
                 pk.field_l == eh.field_b)) {
               if (0 == fj.field_q.field_f &&
-                  ~oa.a(-12520) < ~(10000L + v.field_r)) {
+                  oa.a(-12520) > (10000L + v.field_r)) {
                 fj.field_q.a(param1, (byte) -76);
               }
               if (param0 > ~fj.field_q.field_f) {
@@ -219,7 +219,7 @@ final class cm extends cj {
     }
 
     final void a(int param0) {
-        if (~this.field_e > ~this.field_c) {
+        if (this.field_e < this.field_c) {
             this.field_e = this.field_e + (this.field_c - this.field_e);
         }
         if (param0 < 60) {
@@ -246,7 +246,7 @@ final class cm extends cj {
           var4++;
           this.field_c = this.field_c + param1;
         } while (var4 < 10 &&
-              ~this.field_c > ~this.field_e);
+              this.field_c < this.field_e);
         if (this.field_e > this.field_c) {
           this.field_c = this.field_e;
         }
@@ -279,7 +279,7 @@ final class cm extends cj {
         if (param0 != -49) {
             this.a(false, 97L);
         }
-        if (~this.field_c < ~this.field_e) {
+        if (this.field_c > this.field_e) {
             return (this.field_c - this.field_e) / 1000000L;
         }
         return 0L;

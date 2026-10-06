@@ -266,7 +266,7 @@ final class c extends ka {
                 break L1;
               }
               var3 = stackIn_16_0;
-              while (~-ee.field_A.field_o >= ~var3) {
+              while (-ee.field_A.field_o <= var3) {
                 ee.field_A.c(var2_int, var3);
                 var3 = var3 - ee.field_A.field_o;
               }
@@ -279,12 +279,12 @@ final class c extends ka {
             break;
           }
           var2_int = stackIn_16_0;
-          while (~-vc.field_j.field_s >= ~var2_int) {
+          while (-vc.field_j.field_s <= var2_int) {
             if (var4 != 0) {
               return;
             }
             var3 = this.field_I + vc.field_j.field_o + 480;
-            while (~var3 <= ~-vc.field_j.field_o) {
+            while (var3 >= -vc.field_j.field_o) {
               vc.field_j.b(var2_int, var3);
               var3 = var3 - vc.field_j.field_o;
             }
@@ -1654,7 +1654,7 @@ final class c extends ka {
                 return;
               }
             }
-            if (~sd.field_y.field_s < ~param1) {
+            if (sd.field_y.field_s > param1) {
               wg.a(-15346, 80 * param1 / sd.field_y.field_s);
               if (var9 == 0) {
                 return;
@@ -1745,7 +1745,7 @@ final class c extends ka {
               }
             }
             this.field_F = this.field_F + 8;
-            if (~(640 + qj.field_c.field_m) > ~this.field_F) {
+            if ((640 + qj.field_c.field_m) < this.field_F) {
               this.field_E = false;
               this.field_F = 0;
             }

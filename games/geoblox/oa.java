@@ -11,7 +11,7 @@ final class oa {
 
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
-        if (!(~nd.field_b >= ~var1)) {
+        if (!(nd.field_b <= var1)) {
             rj.field_b = rj.field_b + (nd.field_b - var1);
         }
         nd.field_b = var1;

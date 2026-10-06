@@ -82,7 +82,7 @@ abstract class ib implements dg {
             if (this.a(param0 ^ 26579)) {
                 return oj.field_d;
             }
-            if (~(350L + this.field_b) >= ~oa.a(-12520)) {
+            if ((350L + this.field_b) <= oa.a(-12520)) {
                 return this.e(32);
             }
             return bf.field_g;
@@ -90,7 +90,7 @@ abstract class ib implements dg {
         if (this.a(param0 ^ 26579)) {
             return oj.field_d;
         }
-        if (~(350L + this.field_b) >= ~oa.a(-12520)) {
+        if ((350L + this.field_b) <= oa.a(-12520)) {
             return this.e(32);
         }
         return bf.field_g;

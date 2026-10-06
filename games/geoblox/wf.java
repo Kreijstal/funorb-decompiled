@@ -259,7 +259,7 @@ abstract class wf extends ch {
         if (t.b(param1 ^ 19649)) {
           var3 = 1200 * sb.a(true);
           if (this.field_t ||
-              !(~var3 <= ~ha.a(-76)) &&
+              !(var3 >= ha.a(-76)) &&
                 !(var3 >= jk.a(false))) {
             this.field_t = false;
             jl.a((byte) -115);
@@ -333,7 +333,7 @@ abstract class wf extends ch {
         if ((ib.field_e != -1 &&
                 ib.field_e != 0 ||
               sb.a(param1 - 19585)) &&
-            ~hi.field_G >= ~oa.a(param1 - 32180)) {
+            hi.field_G <= oa.a(param1 - 32180)) {
           ii.field_e = false;
           if (-1 != ib.field_e &&
               ib.field_e != 0) {

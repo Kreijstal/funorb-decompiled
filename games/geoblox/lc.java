@@ -33,7 +33,7 @@ final class lc {
           } while (var10 == 0);
           if ((kj.field_o[99] &&
               ji.field_r.c(13519) ||
-            !(~kb.field_c <= ~kc.field_a) ||
+            !(kb.field_c >= kc.field_a) ||
             ul.field_b == 0 &&
               !el.field_o.field_Y) && (0 < wd.field_e.a(param0 ^ -170) &&
               !el.field_o.field_N)) {

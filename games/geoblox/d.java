@@ -149,14 +149,14 @@ final class d implements Runnable {
                                     throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                   }
                                   if (var2_int == 3) {
-                                    if (~oa.a(-12520) > ~field_m) {
+                                    if (oa.a(-12520) < field_m) {
                                       throw new IOException();
                                     }
                                     var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
                                     var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
                                   } else {
                                     if (var2_int == 21) {
-                                      if (~oa.a(-12520) > ~field_m) {
+                                      if (oa.a(-12520) < field_m) {
                                         throw new IOException();
                                       }
                                       var9.field_b = java.net.InetAddress.getByName((String) (var9.field_f)).getAddress();
@@ -282,7 +282,7 @@ final class d implements Runnable {
                       }
                     }
                   } else {
-                    if (~oa.a(-12520) > ~field_m) {
+                    if (oa.a(-12520) < field_m) {
                       throw new IOException();
                     }
                     var9.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.field_f)), var9.field_c);

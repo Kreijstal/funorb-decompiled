@@ -423,7 +423,7 @@ abstract class oe extends dd {
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (~var8 > ~vb.field_i) {
+          if (var8 < vb.field_i) {
             var8++;
             var7++;
             continue;

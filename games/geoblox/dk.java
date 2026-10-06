@@ -16,7 +16,7 @@ abstract class dk {
         lk[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
             var5 = var7[var4];
-            if (~var5.field_c.length < ~param0) {
+            if (var5.field_c.length > param0) {
                 return var5.field_c[param0];
             }
             param0 = param0 - (var5.field_c.length - 1);

@@ -1537,7 +1537,7 @@ final class gh {
             if (460 > this.field_D) {
               this.field_bb = 2;
               if (var11 != 0) {
-                if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
+                if ((460 - this.field_D + 460) < (this.field_c * 2)) {
                   this.field_bb = 4;
                   if (var11 != 0) {
                     this.field_bb = 3;
@@ -1547,7 +1547,7 @@ final class gh {
                 }
               }
             } else {
-              if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
+              if ((460 - this.field_D + 460) < (this.field_c * 2)) {
                 this.field_bb = 4;
                 if (var11 != 0) {
                   this.field_bb = 3;

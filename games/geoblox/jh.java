@@ -82,7 +82,7 @@ final class jh {
             var3 = this.field_d;
             synchronized (var3) {
               try {
-                if (~this.field_c.a((byte) 46) > ~(long)(param0 * 6 + 6)) {
+                if (this.field_c.a((byte) 46) < (long)(param0 * 6 + 6)) {
                   stackIn_3_0 = null;
                   return (byte[]) (stackIn_3_0);
                 }
@@ -277,7 +277,7 @@ final class jh {
                               var9 == var12 &&
                               var13 == this.field_b) {
                             if (var10 >= 0 &&
-                                ~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
+                                (this.field_d.a((byte) 46) / 520L) >= (long)var10) {
                               break L5;
                             }
                             return false;

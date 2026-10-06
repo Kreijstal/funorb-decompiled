@@ -115,7 +115,7 @@ final class nf {
         for (var8 = 0; this.field_o > var8; var8++) {
           var9 = this.field_O[var8];
           var10 = this.field_q[var8];
-          if (~var10 > ~var3) {
+          if (var10 < var3) {
             var3 = var10;
           }
           if (var6 < var10) {

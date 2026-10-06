@@ -83,7 +83,7 @@ final class ec {
             var2 = var1_int - 1;
             var3 = nk.field_f[var1_int];
             while (var2 >= 0) {
-              if (~nk.field_f[var2] < ~var3) {
+              if (nk.field_f[var2] > var3) {
                 nk.field_f[1 + var2] = nk.field_f[var2];
                 var2--;
                 continue;

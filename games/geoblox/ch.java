@@ -335,7 +335,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       var2_int = 0;
                       while (true) {
                         L11: {
-                          if (~d.field_t.length() < ~var1_int) {
+                          if (d.field_t.length() > var1_int) {
                             var3 = d.field_t.charAt(var1_int);
                             stackIn_78_0 = var3;
                             stackIn_78_1 = 48;
@@ -699,7 +699,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 -Geoblox.field_D + oa.a(-12520) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (~var2.width > ~qb.field_G) {
+                if (var2.width < qb.field_G) {
                   return;
                 }
                 if (sd.field_w > var2.height) {

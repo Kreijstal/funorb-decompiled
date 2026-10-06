@@ -221,7 +221,7 @@ final class pa {
             if (param2 == -1L) {
                 param2 = 9223372036854775807L;
             }
-            if (~param2 > ~param0.length()) {
+            if (param2 < param0.length()) {
                 param0.delete();
             }
             this.field_d = new RandomAccessFile(param0, param1);

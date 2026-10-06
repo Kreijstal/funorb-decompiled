@@ -170,7 +170,7 @@ final class bm {
                   dupTemp$4 = this.field_o[var11];
                   dupTemp$4[var14] = dupTemp$3;
                   var15 = dupTemp$3;
-                  if (~var13 > ~var15) {
+                  if (var13 < var15) {
                     var13 = var15;
                   }
                 }
@@ -196,7 +196,7 @@ final class bm {
                   dupTemp$7 = this.field_o[var11];
                   dupTemp$7[var14] = dupTemp$6;
                   var15 = dupTemp$6;
-                  if (~var13 <= ~var15) {
+                  if (var13 >= var15) {
                     continue;
                   }
                   var13 = var15;

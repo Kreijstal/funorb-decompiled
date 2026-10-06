@@ -526,7 +526,7 @@ final class bj extends nh {
                     if (!this.field_w) {
                       break L0;
                     }
-                    if (~oa.a(-12520) > ~this.field_n) {
+                    if (oa.a(-12520) < this.field_n) {
                       break L1;
                     }
                     var2 = (pb) ((Object) this.field_g.a((byte) 125));
@@ -554,7 +554,7 @@ final class bj extends nh {
               if (!this.field_w) {
                 break L0;
               }
-              if (~oa.a(-12520) > ~this.field_n) {
+              if (oa.a(-12520) < this.field_n) {
                 break L1;
               }
               var2 = (pb) ((Object) this.field_g.a((byte) 125));
