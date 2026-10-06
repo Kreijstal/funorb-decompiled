@@ -112,65 +112,69 @@ final class c extends ka {
               }
             }
             if (this.field_C) {
-              if (ki.field_d != 84 &&
-                  83 != ki.field_d) {
-                break L0;
-              }
-              if (!fh.c(-103)) {
-                if (!(og.field_n <= 0) ||
-                    this.field_o != 0 &&
-                      (!(qa.field_a > 190) ||
-                      !(qa.field_a < 449) ||
-                      !(265 < ue.field_e) ||
-                      !(ue.field_e < 299))) {
-                  if (vl.field_n == null) {
-                    if (0 != this.field_o) {
-                      if (qa.field_a <= 260) {
+              if (!(ki.field_d != 84 &&
+                  83 != ki.field_d)) {
+                if (!fh.c(-103)) {
+                  if (!(og.field_n <= 0) ||
+                      this.field_o != 0 &&
+                        (!(qa.field_a > 190) ||
+                        !(qa.field_a < 449) ||
+                        !(265 < ue.field_e) ||
+                        !(ue.field_e < 299))) {
+                    if (vl.field_n == null) {
+                      if (0 != this.field_o) {
+                        if (qa.field_a <= 260) {
+                          break L0;
+                        }
+                        if (qa.field_a >= 380) {
+                          break L0;
+                        }
+                        if (ue.field_e <= 274) {
+                          break L0;
+                        }
+                        if (ue.field_e >= 309) {
+                          break L0;
+                        }
+                      }
+                      this.field_g = true;
+                      this.field_C = false;
+                      if (var4 == 0) {
                         break L0;
                       }
-                      if (qa.field_a >= 380) {
+                    }
+                    if (1 == this.field_o ||
+                        this.field_o < 0 &&
+                          !(qa.field_a <= 350) &&
+                          !(qa.field_a >= 470) &&
+                          !(ue.field_e <= 327) &&
+                          !(ue.field_e >= 362)) {
+                      this.field_C = false;
+                      em.b(255);
+                      this.field_g = true;
+                      if (var4 == 0) {
                         break L0;
                       }
-                      if (ue.field_e <= 274) {
+                    }
+                    if (this.field_o != 0) {
+                      if (this.field_o >= 0) {
                         break L0;
                       }
-                      if (ue.field_e >= 309) {
+                      if (qa.field_a <= 170) {
+                        break L0;
+                      }
+                      if (qa.field_a >= 290) {
+                        break L0;
+                      }
+                      if (ue.field_e <= 327) {
+                        break L0;
+                      }
+                      if (ue.field_e >= 362) {
                         break L0;
                       }
                     }
                     this.field_g = true;
                     this.field_C = false;
                     if (var4 == 0) {
-                      break L0;
-                    }
-                  }
-                  if (1 == this.field_o ||
-                      this.field_o < 0 &&
-                        !(qa.field_a <= 350) &&
-                        !(qa.field_a >= 470) &&
-                        !(ue.field_e <= 327) &&
-                        !(ue.field_e >= 362)) {
-                    this.field_C = false;
-                    em.b(255);
-                    this.field_g = true;
-                    if (var4 == 0) {
-                      break L0;
-                    }
-                  }
-                  if (this.field_o != 0) {
-                    if (this.field_o >= 0) {
-                      break L0;
-                    }
-                    if (qa.field_a <= 170) {
-                      break L0;
-                    }
-                    if (qa.field_a >= 290) {
-                      break L0;
-                    }
-                    if (ue.field_e <= 327) {
-                      break L0;
-                    }
-                    if (ue.field_e >= 362) {
                       break L0;
                     }
                   }
@@ -180,50 +184,45 @@ final class c extends ka {
                     break L0;
                   }
                 }
+                if (this.field_o == 1 ||
+                    this.field_o < 0 &&
+                      !(qa.field_a <= 350) &&
+                      !(470 <= qa.field_a) &&
+                      !(ue.field_e <= 265) &&
+                      !(ue.field_e >= 299)) {
+                  this.field_g = true;
+                  this.field_C = false;
+                  if (var4 == 0) {
+                    break L0;
+                  }
+                }
+                if (this.field_o != 0) {
+                  if (this.field_o >= 0) {
+                    break L0;
+                  }
+                  if (qa.field_a <= 170) {
+                    break L0;
+                  }
+                  if (qa.field_a >= 290) {
+                    break L0;
+                  }
+                  if (ue.field_e <= 265) {
+                    break L0;
+                  }
+                  if (ue.field_e >= 299) {
+                    break L0;
+                  }
+                }
                 this.field_g = true;
-                this.field_C = false;
-                if (var4 == 0) {
-                  break L0;
+                if (null != el.field_o) {
+                  el.field_o.e((byte) -70);
                 }
-              }
-              if (this.field_o == 1 ||
-                  this.field_o < 0 &&
-                    !(qa.field_a <= 350) &&
-                    !(470 <= qa.field_a) &&
-                    !(ue.field_e <= 265) &&
-                    !(ue.field_e >= 299)) {
-                this.field_g = true;
-                this.field_C = false;
-                if (var4 == 0) {
-                  break L0;
+                el.field_i = 0;
+                ai.field_p = -1;
+                cd.field_j = 0;
+                if (!(var4 == 0)) {
+                  super.a(param0, -100);
                 }
-              }
-              if (this.field_o != 0) {
-                if (this.field_o >= 0) {
-                  break L0;
-                }
-                if (qa.field_a <= 170) {
-                  break L0;
-                }
-                if (qa.field_a >= 290) {
-                  break L0;
-                }
-                if (ue.field_e <= 265) {
-                  break L0;
-                }
-                if (ue.field_e >= 299) {
-                  break L0;
-                }
-              }
-              this.field_g = true;
-              if (null != el.field_o) {
-                el.field_o.e((byte) -70);
-              }
-              el.field_i = 0;
-              ai.field_p = -1;
-              cd.field_j = 0;
-              if (!(var4 == 0)) {
-                super.a(param0, -100);
               }
             } else {
               super.a(param0, -100);

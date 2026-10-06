@@ -504,14 +504,11 @@ final class gh {
               kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
             }
           }
-          L55: {
-            dd.field_G.a(wj.a(pa.field_a, new String[]{this.field_X.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
-            if (ih.a(0)) {
-              if (0 == this.field_bb ||
-                    this.field_bb == 1) {
-                if (var2 == 0) {
-                  break L55;
-                }
+          dd.field_G.a(wj.a(pa.field_a, new String[]{this.field_X.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+          if (ih.a(0)) {
+            if (0 == this.field_bb ||
+                  this.field_bb == 1) {
+              if (!(var2 == 0)) {
                 var5 = 35 + (6 * this.field_D - 480);
                 sh.field_y.a(255);
                 vb.e(0, var5, 640, 480);
@@ -521,9 +518,9 @@ final class gh {
                 if (!(var14 == 0)) {
                   this.a(false);
                 }
-              } else {
-                this.a(false);
               }
+            } else {
+              this.a(false);
             }
           }
           vc.c(-1);
