@@ -90,12 +90,11 @@ final class GameplaySession {
             }
           }
           if (this.tutorialStepId != 3) {
-            if (1 != this.tutorialStepId) {
-              break tutorialPromptPlacement;
-            }
-            promptTop = 280;
-            if (!(clientControlFlowGuard == 0)) {
-              promptTop = 270;
+            if (!(1 != this.tutorialStepId)) {
+              promptTop = 280;
+              if (!(clientControlFlowGuard == 0)) {
+                promptTop = 270;
+              }
             }
           } else {
             promptTop = 270;
@@ -550,24 +549,21 @@ final class GameplaySession {
         int inputDerivedModuloIndex = 0;
         GameplayEntity fastForwardEntity = null;
         int clientControlFlowGuard = 0;
-        pointsPanelFrameDirection: {
-          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-          ValidationState.updatePendingActionPanel(methodGuard ^ 1578896222);
-          pointsPanelTickBeforeIncrement = this.updateTick;
-          this.updateTick = this.updateTick + 1;
-          if ((pointsPanelTickBeforeIncrement & 15) == 0) {
-            this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
-            if (7 != this.pointsPanelFrameIndex) {
-              if (this.pointsPanelFrameIndex != 0) {
-                break pointsPanelFrameDirection;
-              }
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        ValidationState.updatePendingActionPanel(methodGuard ^ 1578896222);
+        pointsPanelTickBeforeIncrement = this.updateTick;
+        this.updateTick = this.updateTick + 1;
+        if ((pointsPanelTickBeforeIncrement & 15) == 0) {
+          this.pointsPanelFrameIndex = this.pointsPanelFrameIndex + this.pointsPanelFrameDirection;
+          if (7 != this.pointsPanelFrameIndex) {
+            if (!(this.pointsPanelFrameIndex != 0)) {
               this.pointsPanelFrameDirection = 1;
               if (!(clientControlFlowGuard == 0)) {
                 this.pointsPanelFrameDirection = -1;
               }
-            } else {
-              this.pointsPanelFrameDirection = -1;
             }
+          } else {
+            this.pointsPanelFrameDirection = -1;
           }
         }
         pointsPanelSlideStep: {
@@ -1212,15 +1208,13 @@ final class GameplaySession {
             }
             if (this.tutorialStepId != 1 ||
                   !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-              if (this.tutorialStepId != 2) {
-                break tutorialStepPhaseUpdate;
-              }
-              if (TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0) {
-                break tutorialStepPhaseUpdate;
-              }
-              this.tutorialStepPhase = 2;
-              if (!(clientControlFlowGuard == 0)) {
-                this.tutorialStepPhase = 2;
+              if (!(this.tutorialStepId != 2)) {
+                if (!(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
+                  this.tutorialStepPhase = 2;
+                  if (!(clientControlFlowGuard == 0)) {
+                    this.tutorialStepPhase = 2;
+                  }
+                }
               }
             } else {
               this.tutorialStepPhase = 2;
