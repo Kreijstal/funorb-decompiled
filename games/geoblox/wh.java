@@ -857,7 +857,7 @@ abstract class wh extends rc {
                     decompiledRegionSelector0 = 0;
                   }
                 }
-                if (!(decompiledRegionSelector0 != 0)) {
+                if (decompiledRegionSelector0 == 0) {
                   param0.a(24, -97, var2, 0);
                 }
               } else {

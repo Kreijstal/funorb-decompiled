@@ -90,9 +90,9 @@ final class gh {
             }
           }
           if (this.field_p != 3) {
-            if (!(1 != this.field_p)) {
+            if (1 == this.field_p) {
               var6 = 280;
-              if (!(var7 == 0)) {
+              if (var7 != 0) {
                 var6 = 270;
               }
             }
@@ -317,7 +317,7 @@ final class gh {
             var7_float = var6_float * var6_float;
             var3 = (int)(0.5f + (70.0f * (2.0f * var5_float * var6_float) + 10.0f * var7_float + 220.0f * (var5_float * var5_float)));
             var4 = (int)(170.0f * (var5_float * var5_float) + (var7_float * 10.0f + 140.0f * (var5_float * 2.0f * var6_float)) + 0.5f);
-            if (!(var14 == 0)) {
+            if (var14 != 0) {
               var3 = 220;
               var4 = 170;
             }
@@ -346,7 +346,7 @@ final class gh {
           if (0 != this.field_bb ||
               ih.a(0)) {
             vh.field_G.b(446, 410);
-            if (!(var14 == 0)) {
+            if (var14 != 0) {
               g.field_i.b(468, 410);
             }
           } else {
@@ -508,14 +508,14 @@ final class gh {
           if (ih.a(0)) {
             if (0 == this.field_bb ||
                   this.field_bb == 1) {
-              if (!(var2 == 0)) {
+              if (var2 != 0) {
                 var5 = 35 + (6 * this.field_D - 480);
                 sh.field_y.a(255);
                 vb.e(0, var5, 640, 480);
                 oc.field_d.b(0, 0);
                 vb.e(0, 0, 640, 480);
                 qj.field_c.b(0, -480 + 6 * this.field_D);
-                if (!(var14 == 0)) {
+                if (var14 != 0) {
                   this.a(false);
                 }
               }
@@ -524,7 +524,7 @@ final class gh {
             }
           }
           vc.c(-1);
-          if (!(var14 == 0)) {
+          if (var14 != 0) {
             this.g(2);
           }
         } else {
@@ -556,9 +556,9 @@ final class gh {
         if ((fieldTemp$0 & 15) == 0) {
           this.field_l = this.field_l + this.field_k;
           if (7 != this.field_l) {
-            if (!(this.field_l != 0)) {
+            if (this.field_l == 0) {
               this.field_k = 1;
-              if (!(var5 == 0)) {
+              if (var5 != 0) {
                 this.field_k = -1;
               }
             }
@@ -616,7 +616,7 @@ final class gh {
             if (!ll.field_g[c.field_ab]) {
               return;
             }
-            if ((!this.field_E) && (var5 == 0)) {
+            if (!this.field_E && var5 == 0) {
               var2 = 96;
               var3 = 97;
             } else {
@@ -811,7 +811,7 @@ final class gh {
               this.field_a = 300;
               this.field_b = false;
               ra.a(le.field_a ^ 255, -88, le.field_a);
-              if (!(var5 == 0)) {
+              if (var5 != 0) {
                 this.field_B = false;
               }
             } else {
@@ -900,7 +900,7 @@ final class gh {
                   }
                 }
                 this.field_U = dd.field_D;
-                if (!(var5 == 0)) {
+                if (var5 != 0) {
                   this.field_U = 0;
                 }
               } else {
@@ -1157,7 +1157,7 @@ final class gh {
           this.c(false);
           this.a((byte) 127, wa.a(-25866));
           this.e((byte) -70);
-          if (!(Geoblox.field_C == 0)) {
+          if (Geoblox.field_C != 0) {
             this.field_p = 5;
             this.field_t = 0;
             this.field_C = true;
@@ -1208,10 +1208,10 @@ final class gh {
             }
             if (this.field_p != 1 ||
                   !(0 < dd.field_D - this.field_U)) {
-              if (!(this.field_p != 2)) {
+              if (this.field_p == 2) {
                 if (!(dk.field_b - this.field_U <= 0)) {
                   this.field_t = 2;
-                  if (!(var3 == 0)) {
+                  if (var3 != 0) {
                     this.field_t = 2;
                   }
                 }
@@ -1236,7 +1236,7 @@ final class gh {
         if (this.field_D == 0) {
           if (!this.field_f) {
             this.h(122);
-            if (!(var4 == 0)) {
+            if (var4 != 0) {
               this.j(867);
             }
           } else {
@@ -1503,7 +1503,7 @@ final class gh {
               }
               if (~(460 - this.field_D + 460) > ~(this.field_c * 2)) {
                 this.field_bb = 4;
-                if (!(var11 == 0)) {
+                if (var11 != 0) {
                   this.field_bb = 3;
                 }
               } else {

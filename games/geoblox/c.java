@@ -112,8 +112,8 @@ final class c extends ka {
               }
             }
             if (this.field_C) {
-              if (!(ki.field_d != 84 &&
-                  83 != ki.field_d)) {
+              if (ki.field_d == 84 ||
+                  83 == ki.field_d) {
                 if (!fh.c(-103)) {
                   if (!(og.field_n <= 0) ||
                       this.field_o != 0 &&
@@ -220,7 +220,7 @@ final class c extends ka {
                 el.field_i = 0;
                 ai.field_p = -1;
                 cd.field_j = 0;
-                if (!(var4 == 0)) {
+                if (var4 != 0) {
                   super.a(param0, -100);
                 }
               }
@@ -369,8 +369,8 @@ final class c extends ka {
                   break L3;
                 }
               }
-              if (!(this.field_K != 8 &&
-                  this.field_K != 7)) {
+              if (this.field_K == 8 ||
+                  this.field_K == 7) {
                 var4 += 20;
                 var5 -= 10;
               }
@@ -1388,9 +1388,9 @@ final class c extends ka {
             ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
             ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
           }
-          if (!(param1 != 0 &&
-              1 != param1 &&
-              param1 != 2) || var11 != 0) {
+          if (param1 == 0 ||
+              1 == param1 ||
+              param1 == 2 || var11 != 0) {
             L2: {
               ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
               ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
@@ -2220,10 +2220,10 @@ final class c extends ka {
                 break L7;
               }
             }
-            if (!(this.field_K != 5 &&
-                this.field_K != 7 &&
-                this.field_K != 6 &&
-                this.field_K != 4)) {
+            if (this.field_K == 5 ||
+                this.field_K == 7 ||
+                this.field_K == 6 ||
+                this.field_K == 4) {
               param3 += 295;
             }
           }
@@ -2341,7 +2341,7 @@ final class c extends ka {
             if (!param0) {
               ma.a(param3, var10, 40, (byte) -92, var11, eb.field_g);
             }
-            if (!(!param0) || var14 != 0) {
+            if (param0 || var14 != 0) {
               var9 = var9 + this.field_T;
               var10 = var10 + this.field_T;
               param3 = param3 - this.field_T;
@@ -2353,7 +2353,7 @@ final class c extends ka {
             dd.field_G.field_K[0][wf.field_p] = 15488514;
             var12 = this.field_T;
           }
-          if (!(param0) || var14 != 0) {
+          if (!param0 || var14 != 0) {
             var12 = 0;
           }
           if (var6 == 8 ||
@@ -2369,8 +2369,8 @@ final class c extends ka {
             var13 = var13 * (-4 + sd.field_y.field_s) / 80;
             re.field_h.b(280 + var13 - 1 + var12, 9 + param3);
           }
-          if (!(var6 == 8 ||
-                9 == var6) || var14 != 0) {
+          if (var6 != 8 &&
+                9 != var6 || var14 != 0) {
             var8.b(var7, var9, param3 + 30, 0, -1);
           }
           dd.field_G.field_K[0][wf.field_p] = 16689938;

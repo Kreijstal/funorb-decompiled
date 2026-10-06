@@ -139,7 +139,7 @@ final class kc {
                 stackIn_56_0 = stackOut_14_0 ? 1 : 0;
                 stackIn_15_0 = stackOut_14_0;
                 if (var9 == 0) {
-                  if (!(stackIn_15_0)) {
+                  if (!stackIn_15_0) {
                     var11 = new wd();
                     var13 = new wd();
                     var11.a(var1, false);
@@ -274,8 +274,8 @@ final class kc {
                       break L40;
                     }
                   }
-                  if (!(var2_ref_ja.field_K != bh.field_c &&
-                      !w.field_f)) {
+                  if (var2_ref_ja.field_K == bh.field_c ||
+                      w.field_f) {
                     var3_int = 0;
                     while (var3_int < var2_ref_ja.field_L) {
                       var2_ref_ja.field_n[var3_int].a(var2_ref_ja, 0);

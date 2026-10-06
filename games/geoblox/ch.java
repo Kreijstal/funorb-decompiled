@@ -283,8 +283,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     L3: {
                       if (d.field_o != null) {
                         var1 = d.field_o.toLowerCase();
-                        if (!(-1 == ((String) (var1)).indexOf("sun") &&
-                            ((String) (var1)).indexOf("apple") == -1)) {
+                        if (-1 != ((String) (var1)).indexOf("sun") ||
+                            ((String) (var1)).indexOf("apple") != -1) {
                           var2 = d.field_t;
                           if (var2.equals("1.1") ||
                               var2.startsWith("1.1.") ||
@@ -316,7 +316,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               break;
                             }
                             var4 = var2.substring(6, var3);
-                            if (!(!f.b((byte) -115, (CharSequence) ((Object) var4)))) {
+                            if (f.b((byte) -115, (CharSequence) ((Object) var4))) {
                               if (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
                                 this.a((byte) 79, "wrongjava");
                                 if (var5 == 0) {

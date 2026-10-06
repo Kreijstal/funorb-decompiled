@@ -152,9 +152,9 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if (!(-2147483648 == var12)) {
+                if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];
-                  if (!(-2147483648 == var13)) {
+                  if (-2147483648 != var13) {
                     var14 = bj.field_j[var11];
                     if (var14 != -2147483648) {
                       var15 = var13 + (var12 + var14 - var6);
@@ -297,9 +297,9 @@ final class i {
                   }
                 }
                 var12 = bj.field_j[var9];
-                if (!(-2147483648 == var12)) {
+                if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];
-                  if (!(-2147483648 == var13)) {
+                  if (-2147483648 != var13) {
                     var14 = bj.field_j[var11];
                     if (var14 != -2147483648) {
                       var15 = var13 + (var12 + var14 - var6);

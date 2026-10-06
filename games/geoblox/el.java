@@ -274,7 +274,7 @@ class el extends hf {
               return param0;
             }
             this.d(-127);
-            if (!(var7 == 0)) {
+            if (var7 != 0) {
               param0 = false;
             }
           } else {
@@ -332,7 +332,7 @@ class el extends hf {
           }
           if (!this.a(param3, -109, param2, bi.field_g, mc.field_a, he.field_d, this)) {
             this.d(-127);
-            if (!(var7 == 0)) {
+            if (var7 != 0) {
               param0 = false;
             }
           } else {
