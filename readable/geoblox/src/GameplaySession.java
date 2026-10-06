@@ -353,13 +353,11 @@ final class GameplaySession {
             PasswordValidator.countBoxSprite.draw(468, 410);
           }
         }
-        if (!this.tutorialMode) {
-          if (!EntityContactSupport.areEntityQueuesSettled(0) ||
-              sceneTransitionFlag != 0 &&
-                (0 == this.sessionPhase ||
-                this.sessionPhase == 1)) {
-            this.renderProgressHud(-46);
-          }
+        if ((!this.tutorialMode) && (!EntityContactSupport.areEntityQueuesSettled(0) ||
+            sceneTransitionFlag != 0 &&
+              (0 == this.sessionPhase ||
+              this.sessionPhase == 1))) {
+          this.renderProgressHud(-46);
         }
         if (!this.debugReducedRendering) {
           EmailAvailabilityQuery.drawMovingEntities(-1);
@@ -571,15 +569,13 @@ final class GameplaySession {
                 463 >= this.pointsPanelX) {
             if (this.pointsPanelSlideDirection != 1 ||
                   this.pointsPanelX >= 640) {
-              if (this.pointsPanelX == 463) {
-                if (EntityCollisionSupport.matchChainLength == 0) {
-                  this.pointsPanelSlideDirection = 1;
-                  UiWidget.gameplaySession.emitPointsPopup(false);
+              if ((this.pointsPanelX == 463) && (EntityCollisionSupport.matchChainLength == 0)) {
+                this.pointsPanelSlideDirection = 1;
+                UiWidget.gameplaySession.emitPointsPopup(false);
+                if (clientControlFlowGuard != 0) {
+                  this.pointsPanelX = this.pointsPanelX + 1;
                   if (clientControlFlowGuard != 0) {
-                    this.pointsPanelX = this.pointsPanelX + 1;
-                    if (clientControlFlowGuard != 0) {
-                      this.pointsPanelX = this.pointsPanelX - 1;
-                    }
+                    this.pointsPanelX = this.pointsPanelX - 1;
                   }
                 }
               }
@@ -1209,12 +1205,10 @@ final class GameplaySession {
             }
             if (this.tutorialStepId != 1 ||
                   !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-              if (this.tutorialStepId == 2) {
-                if (!(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
+              if ((this.tutorialStepId == 2) && (!(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0))) {
+                this.tutorialStepPhase = 2;
+                if (clientControlFlowGuard != 0) {
                   this.tutorialStepPhase = 2;
-                  if (clientControlFlowGuard != 0) {
-                    this.tutorialStepPhase = 2;
-                  }
                 }
               }
             } else {

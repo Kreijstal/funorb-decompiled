@@ -73,38 +73,34 @@ final class CanvasResizeController {
           buffer = new ByteArrayBuffer(packedBytes);
           compressionType = buffer.readUnsignedByte((byte) 34);
           packedLength = buffer.readIntBE((byte) -97);
-          if (packedLength >= 0) {
-            if (FullscreenFailureReason.maximumArchiveLength == 0 ||
-                !(packedLength > FullscreenFailureReason.maximumArchiveLength)) {
-              if (uncompressedTypeComplement == ~compressionType) {
-                allocatedUncompressedBytes = new byte[packedLength];
-                uncompressedBytesAlias = allocatedUncompressedBytes;
-                uncompressedBytes = uncompressedBytesAlias;
-                buffer.readBytes(29915, packedLength, allocatedUncompressedBytes, 0);
-                uncompressedBytesBeforeReturn = uncompressedBytes;
-                return uncompressedBytesBeforeReturn;
-              }
-              unpackedLength = buffer.readIntBE((byte) -49);
-              if (unpackedLength >= 0) {
-                if (FullscreenFailureReason.maximumArchiveLength == 0 ||
-                    !(FullscreenFailureReason.maximumArchiveLength < unpackedLength)) {
-                  allocatedDecompressedBytes = new byte[unpackedLength];
-                  decompressedBytesAlias = allocatedDecompressedBytes;
-                  decompressedBytes = decompressedBytesAlias;
-                  if (compressionType == 1) {
-                    Bzip2Decoder.decompressInto(allocatedDecompressedBytes, unpackedLength, packedBytes, packedLength, 9);
-                  } else {
-                    gzipInflaterMonitor = AwtRasterBuffer.archiveGzipInflater;
-                    synchronized (gzipInflaterMonitor) {
-                      AwtRasterBuffer.archiveGzipInflater.inflateInto(uncompressedTypeComplement + 0, buffer, allocatedDecompressedBytes);
-                    }
-                  }
-                  decompressedBytesBeforeReturn = decompressedBytes;
-                  return decompressedBytesBeforeReturn;
+          if ((packedLength >= 0) && (FullscreenFailureReason.maximumArchiveLength == 0 ||
+              !(packedLength > FullscreenFailureReason.maximumArchiveLength))) {
+            if (uncompressedTypeComplement == ~compressionType) {
+              allocatedUncompressedBytes = new byte[packedLength];
+              uncompressedBytesAlias = allocatedUncompressedBytes;
+              uncompressedBytes = uncompressedBytesAlias;
+              buffer.readBytes(29915, packedLength, allocatedUncompressedBytes, 0);
+              uncompressedBytesBeforeReturn = uncompressedBytes;
+              return uncompressedBytesBeforeReturn;
+            }
+            unpackedLength = buffer.readIntBE((byte) -49);
+            if ((unpackedLength >= 0) && (FullscreenFailureReason.maximumArchiveLength == 0 ||
+                !(FullscreenFailureReason.maximumArchiveLength < unpackedLength))) {
+              allocatedDecompressedBytes = new byte[unpackedLength];
+              decompressedBytesAlias = allocatedDecompressedBytes;
+              decompressedBytes = decompressedBytesAlias;
+              if (compressionType == 1) {
+                Bzip2Decoder.decompressInto(allocatedDecompressedBytes, unpackedLength, packedBytes, packedLength, 9);
+              } else {
+                gzipInflaterMonitor = AwtRasterBuffer.archiveGzipInflater;
+                synchronized (gzipInflaterMonitor) {
+                  AwtRasterBuffer.archiveGzipInflater.inflateInto(uncompressedTypeComplement + 0, buffer, allocatedDecompressedBytes);
                 }
               }
-              throw new RuntimeException();
+              decompressedBytesBeforeReturn = decompressedBytes;
+              return decompressedBytesBeforeReturn;
             }
+            throw new RuntimeException();
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException unpackFailure) {

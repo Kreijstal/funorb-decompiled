@@ -416,12 +416,10 @@ abstract class SessionGameApplet extends GameApplet {
         }
         bootstrapTextArchiveGate: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
-            if (null != TextValidationSupport.bootstrapGameTextArchive) {
-              if (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
-                  !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true)) {
-                HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
-                break bootstrapTextArchiveGate;
-              }
+            if ((null != TextValidationSupport.bootstrapGameTextArchive) && (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
+                !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))) {
+              HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
+              break bootstrapTextArchiveGate;
             }
             AgeValidator.gameArchiveRequestPending = true;
             VisualPropertyOverrides.clientBootstrapStage = 12;

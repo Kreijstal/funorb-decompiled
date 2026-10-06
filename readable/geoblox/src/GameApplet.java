@@ -316,12 +316,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                               break;
                             }
                             javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                            if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) {
-                              if (!(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
-                                this.showGameError((byte) 79, "wrongjava");
-                                if (clientControlSnapshot == 0) {
-                                  break appletExecutionBoundary;
-                                }
+                            if ((MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) && (!(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10))) {
+                              this.showGameError((byte) 79, "wrongjava");
+                              if (clientControlSnapshot == 0) {
+                                break appletExecutionBoundary;
                               }
                             }
                           }

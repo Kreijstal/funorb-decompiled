@@ -191,26 +191,24 @@ final class NanoFrameTimer extends FrameTimer {
         try {
             IOException writeFailure = null;
             Throwable caughtWriteFailure = null;
-            if (null != SpriteCheckboxRenderer.sessionSocket) {
-              if (keepaliveOpcode < 0 ||
-                  PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
-                if (0 == CacheReference.outgoingSessionBuffer.position &&
-                    ~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
-                  CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
-                }
-                if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
-                  try {
-                    SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
-                    CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                  } catch (java.io.IOException writeException) {
-                    caughtWriteFailure = writeException;
-                    writeFailure = (IOException) (Object) caughtWriteFailure;
-                    Bzip2DecoderState.closeSessionSocket((byte) -117);
-                  }
-                  CacheReference.outgoingSessionBuffer.position = 0;
-                }
-                return;
+            if ((null != SpriteCheckboxRenderer.sessionSocket) && (keepaliveOpcode < 0 ||
+                PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage)) {
+              if (0 == CacheReference.outgoingSessionBuffer.position &&
+                  ~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
+                CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
               }
+              if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
+                try {
+                  SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
+                  CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+                } catch (java.io.IOException writeException) {
+                  caughtWriteFailure = writeException;
+                  writeFailure = (IOException) (Object) caughtWriteFailure;
+                  Bzip2DecoderState.closeSessionSocket((byte) -117);
+                }
+                CacheReference.outgoingSessionBuffer.position = 0;
+              }
+              return;
             }
             CacheReference.outgoingSessionBuffer.position = 0;
         } catch (RuntimeException | Error uncheckedFlushFailure) {

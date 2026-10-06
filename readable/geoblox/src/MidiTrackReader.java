@@ -190,17 +190,11 @@ final class MidiTrackReader {
           if (status == 247 &&
               systemExclusiveLength > 0) {
             escapedStatus = this.input.bytes[this.input.position] & 255;
-            if (escapedStatus < 241 ||
-                escapedStatus > 243) {
-              if (escapedStatus != 246 &&
-                  escapedStatus != 248) {
-                if (escapedStatus < 250 ||
-                    escapedStatus > 252) {
-                  if (escapedStatus != 254) {
-                    break systemExclusiveEventSelection;
-                  }
-                }
-              }
+            if ((escapedStatus < 241 ||
+                escapedStatus > 243) && (escapedStatus != 246 &&
+            escapedStatus != 248) && (escapedStatus < 250 ||
+              escapedStatus > 252) && (escapedStatus != 254)) {
+              break systemExclusiveEventSelection;
             }
             this.input.position = this.input.position + 1;
             this.trackRunningStatuses[trackIndex] = escapedStatus;

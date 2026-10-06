@@ -1945,20 +1945,18 @@ final class GameScreen extends MenuScreen {
                   }
                   gameplayReturnScreenSelection: {
                     ScoreSubmission.requestedScreenId = -1;
-                    if (this.screenId != 8) {
-                      if (4 != this.screenId ||
-                          null == UiWidget.gameplaySession ||
-                          UiWidget.gameplaySession.newActionCount != 0) {
-                        if (this.screenId != 7) {
-                          UiWidget.gameplayReturnScreenId = 6;
-                          if (clientControlFlowGuard == 0) {
-                            break gameplayReturnScreenSelection;
-                          }
-                        }
-                        UiWidget.gameplayReturnScreenId = 5;
+                    if ((this.screenId != 8) && (4 != this.screenId ||
+                        null == UiWidget.gameplaySession ||
+                        UiWidget.gameplaySession.newActionCount != 0)) {
+                      if (this.screenId != 7) {
+                        UiWidget.gameplayReturnScreenId = 6;
                         if (clientControlFlowGuard == 0) {
                           break gameplayReturnScreenSelection;
                         }
+                      }
+                      UiWidget.gameplayReturnScreenId = 5;
+                      if (clientControlFlowGuard == 0) {
+                        break gameplayReturnScreenSelection;
                       }
                     }
                     UiWidget.gameplayReturnScreenId = 2;
@@ -2204,11 +2202,9 @@ final class GameScreen extends MenuScreen {
           }
           actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
           actionText = RasterTargetSnapshot.menuActionTexts[actionId];
-          if (actionId == 15) {
-            if (displayedTutorialPageIndex != 4 ||
-                SpriteCheckboxRenderer.previousMenuScreenId == 1) {
-              return;
-            }
+          if ((actionId == 15) && (displayedTutorialPageIndex != 4 ||
+              SpriteCheckboxRenderer.previousMenuScreenId == 1)) {
+            return;
           }
           if (3 == this.screenId &&
               this.tutorialSlideActive &&

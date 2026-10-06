@@ -319,98 +319,96 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           for (characterIndex = 0; characterIndex < encodedLength; characterIndex++) {
             encodedCharacterHandled: {
               characterCode = text.charAt(characterStart + characterIndex);
-              if (0 >= characterCode ||
-                  characterCode >= 128) {
-                if (characterCode < 160 ||
-                    characterCode > 255) {
-                  switch (characterCode) {
-                    case 8364:
-                      destination[characterIndex + destinationOffset] = (byte)-128;
-                      break encodedCharacterHandled;
-                    case 8218:
-                      destination[destinationOffset + characterIndex] = (byte)-126;
-                      break encodedCharacterHandled;
-                    case 402:
-                      destination[destinationOffset + characterIndex] = (byte)-125;
-                      break encodedCharacterHandled;
-                    case 8222:
-                      destination[characterIndex + destinationOffset] = (byte)-124;
-                      break encodedCharacterHandled;
-                    case 8230:
-                      destination[characterIndex + destinationOffset] = (byte)-123;
-                      break encodedCharacterHandled;
-                    case 8224:
-                      destination[destinationOffset + characterIndex] = (byte)-122;
-                      break encodedCharacterHandled;
-                    case 8225:
-                      destination[characterIndex + destinationOffset] = (byte)-121;
-                      break encodedCharacterHandled;
-                    case 710:
-                      destination[characterIndex + destinationOffset] = (byte)-120;
-                      break encodedCharacterHandled;
-                    case 8240:
-                      destination[characterIndex + destinationOffset] = (byte)-119;
-                      break encodedCharacterHandled;
-                    case 352:
-                      destination[destinationOffset + characterIndex] = (byte)-118;
-                      break encodedCharacterHandled;
-                    case 8249:
-                      destination[destinationOffset + characterIndex] = (byte)-117;
-                      break encodedCharacterHandled;
-                    case 338:
-                      destination[characterIndex + destinationOffset] = (byte)-116;
-                      break encodedCharacterHandled;
-                    case 381:
-                      destination[characterIndex + destinationOffset] = (byte)-114;
-                      break encodedCharacterHandled;
-                    case 8216:
-                      destination[destinationOffset + characterIndex] = (byte)-111;
-                      break encodedCharacterHandled;
-                    case 8217:
-                      destination[destinationOffset + characterIndex] = (byte)-110;
-                      break encodedCharacterHandled;
-                    case 8220:
-                      destination[characterIndex + destinationOffset] = (byte)-109;
-                      break encodedCharacterHandled;
-                    case 8221:
-                      destination[destinationOffset + characterIndex] = (byte)-108;
-                      break encodedCharacterHandled;
-                    case 8226:
-                      destination[destinationOffset + characterIndex] = (byte)-107;
-                      break encodedCharacterHandled;
-                    case 8211:
-                      destination[characterIndex + destinationOffset] = (byte)-106;
-                      break encodedCharacterHandled;
-                    case 8212:
-                      destination[destinationOffset + characterIndex] = (byte)-105;
-                      break encodedCharacterHandled;
-                    case 732:
-                      destination[characterIndex + destinationOffset] = (byte)-104;
-                      break encodedCharacterHandled;
-                    case 8482:
-                      destination[destinationOffset + characterIndex] = (byte)-103;
-                      break encodedCharacterHandled;
-                    case 353:
-                      destination[destinationOffset + characterIndex] = (byte)-102;
-                      break encodedCharacterHandled;
-                    case 8250:
-                      destination[characterIndex + destinationOffset] = (byte)-101;
-                      break encodedCharacterHandled;
-                    case 339:
-                      destination[characterIndex + destinationOffset] = (byte)-100;
-                      break encodedCharacterHandled;
-                    case 382:
-                      destination[characterIndex + destinationOffset] = (byte)-98;
-                      break encodedCharacterHandled;
-                    default:
-                      destination[characterIndex + destinationOffset] = (byte)63;
-                      break encodedCharacterHandled;
-                    case 376:
-                      destination[characterIndex + destinationOffset] = (byte)-97;
-                      break encodedCharacterHandled;
+              if ((0 >= characterCode ||
+                characterCode >= 128) && (characterCode < 160 ||
+                  characterCode > 255)) {
+                switch (characterCode) {
+                  case 8364:
+                    destination[characterIndex + destinationOffset] = (byte)-128;
+                    break encodedCharacterHandled;
+                  case 8218:
+                    destination[destinationOffset + characterIndex] = (byte)-126;
+                    break encodedCharacterHandled;
+                  case 402:
+                    destination[destinationOffset + characterIndex] = (byte)-125;
+                    break encodedCharacterHandled;
+                  case 8222:
+                    destination[characterIndex + destinationOffset] = (byte)-124;
+                    break encodedCharacterHandled;
+                  case 8230:
+                    destination[characterIndex + destinationOffset] = (byte)-123;
+                    break encodedCharacterHandled;
+                  case 8224:
+                    destination[destinationOffset + characterIndex] = (byte)-122;
+                    break encodedCharacterHandled;
+                  case 8225:
+                    destination[characterIndex + destinationOffset] = (byte)-121;
+                    break encodedCharacterHandled;
+                  case 710:
+                    destination[characterIndex + destinationOffset] = (byte)-120;
+                    break encodedCharacterHandled;
+                  case 8240:
+                    destination[characterIndex + destinationOffset] = (byte)-119;
+                    break encodedCharacterHandled;
+                  case 352:
+                    destination[destinationOffset + characterIndex] = (byte)-118;
+                    break encodedCharacterHandled;
+                  case 8249:
+                    destination[destinationOffset + characterIndex] = (byte)-117;
+                    break encodedCharacterHandled;
+                  case 338:
+                    destination[characterIndex + destinationOffset] = (byte)-116;
+                    break encodedCharacterHandled;
+                  case 381:
+                    destination[characterIndex + destinationOffset] = (byte)-114;
+                    break encodedCharacterHandled;
+                  case 8216:
+                    destination[destinationOffset + characterIndex] = (byte)-111;
+                    break encodedCharacterHandled;
+                  case 8217:
+                    destination[destinationOffset + characterIndex] = (byte)-110;
+                    break encodedCharacterHandled;
+                  case 8220:
+                    destination[characterIndex + destinationOffset] = (byte)-109;
+                    break encodedCharacterHandled;
+                  case 8221:
+                    destination[destinationOffset + characterIndex] = (byte)-108;
+                    break encodedCharacterHandled;
+                  case 8226:
+                    destination[destinationOffset + characterIndex] = (byte)-107;
+                    break encodedCharacterHandled;
+                  case 8211:
+                    destination[characterIndex + destinationOffset] = (byte)-106;
+                    break encodedCharacterHandled;
+                  case 8212:
+                    destination[destinationOffset + characterIndex] = (byte)-105;
+                    break encodedCharacterHandled;
+                  case 732:
+                    destination[characterIndex + destinationOffset] = (byte)-104;
+                    break encodedCharacterHandled;
+                  case 8482:
+                    destination[destinationOffset + characterIndex] = (byte)-103;
+                    break encodedCharacterHandled;
+                  case 353:
+                    destination[destinationOffset + characterIndex] = (byte)-102;
+                    break encodedCharacterHandled;
+                  case 8250:
+                    destination[characterIndex + destinationOffset] = (byte)-101;
+                    break encodedCharacterHandled;
+                  case 339:
+                    destination[characterIndex + destinationOffset] = (byte)-100;
+                    break encodedCharacterHandled;
+                  case 382:
+                    destination[characterIndex + destinationOffset] = (byte)-98;
+                    break encodedCharacterHandled;
+                  default:
+                    destination[characterIndex + destinationOffset] = (byte)63;
+                    break encodedCharacterHandled;
+                  case 376:
+                    destination[characterIndex + destinationOffset] = (byte)-97;
+                    break encodedCharacterHandled;
+                }
                   }
-                    }
-              }
               destination[destinationOffset + characterIndex] = (byte)characterCode;
             }
           }

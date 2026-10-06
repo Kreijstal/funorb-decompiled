@@ -31,17 +31,15 @@ final class HighscoreNameEntry {
             queuedEntityThenPooledEntity.advanceEntityAnimation(true);
             queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
           } while (clientControlFlowGuard == 0);
-          if (MidiPcmStream.heldInternalKeys[99] &&
-                ArchiveNetworkClient.movingEntities.isEmpty(13519) ||
-              !(~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease) ||
-              MatchCandidateSupport.releasedInCurrentTheme == 0 &&
-                !UiWidget.gameplaySession.tutorialMode) {
-            if (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170) &&
-                !UiWidget.gameplaySession.spawnReleaseDisabled) {
-              ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
-              LabeledChildWidget.recordEntityRelease(2);
-              BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
-            }
+          if ((MidiPcmStream.heldInternalKeys[99] &&
+              ArchiveNetworkClient.movingEntities.isEmpty(13519) ||
+            !(~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease) ||
+            MatchCandidateSupport.releasedInCurrentTheme == 0 &&
+              !UiWidget.gameplaySession.tutorialMode) && (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170) &&
+              !UiWidget.gameplaySession.spawnReleaseDisabled)) {
+            ArchiveNetworkClient.movingEntities.addLast(-48, SecondaryDeque.spawnQueue.removeFirst((byte) -124));
+            LabeledChildWidget.recordEntityRelease(2);
+            BoardReconciliationSupport.ticksSinceLastEntityRelease = 0;
           }
           BoardReconciliationSupport.ticksSinceLastEntityRelease = BoardReconciliationSupport.ticksSinceLastEntityRelease + 1;
           if (SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3 &&

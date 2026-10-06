@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b08173fc55b3a2763034f6c3855121d759656746/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a390b42c4fc69d7afda03f42a60f3cddf614f0ef/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 211)
+## Current readability (pass 212)
 
 The export has 18,352 guarded names and 117,440 Java identifier edits, plus 11
 class-name literal edits and 552 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -24,7 +24,47 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current final conditional predicates (pass 211)
+## Current late nested-if chains (pass 212)
+
+Earlier guard cleanup already joins braced chains; later reconstruction can
+expose more. The generic late recovery now joins 24 nested ifs across
+20 methods and 15 files into ordered short-circuit conjunctions.
+46 complete original conditions retain their read/call order, nullable
+unboxing, reference identity and numeric association. The deepest body stays
+intact; intermediate blocks contain no declarations, actions or protected
+boundaries. No condition value or purity is assumed. Scalar deepest bodies are
+supported; else arms, intervening work, nested executables, patterns and budgets
+refuse reconstruction.
+
+Independent javac certifies every maximal sole-child chain and Boolean condition.
+The exact complete condition/body ranges, every ordinary/label binding and all
+5,019 transfer/protected-scope facts remain exact, including destinations
+of labels around a merged if. All 18,352 complete naming objects are preserved;
+no label retires or ordinal migrates. There are 18,352 rules and
+19,398 dictionary identities, with 117,440 identifier,
+11 literal and 552 label edits (118,003 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/nestedIfConditionRecovery.test.js test/predicateGroupingRecovery.test.js test/conditionalStoreFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js`
+passes all 26 groups. The chain fixture compares 3,280,500 native cases across
+18 models against independent ordered oracles for nullable Boolean callbacks,
+identity, NaNs, overflow, failures, aliases, finally overrides and monitor release.
+Original, joined and grouped forms are compared independently.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independent topology/condition facts,
+complete original body/condition ranges, every binding and transfer/protected
+scope, naming objects and compilation. All 303 readable files reverse byte
+exactly; all 27 publication tests, 17 scoped native trace groups and current/fresh
+sibling reproductions pass. Older proofs and frozen input/naming/native pins
+remain. Five large labeled methods and 41 unsupported fields remain. Whole-game/
+browser/phone equivalence and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`14c5fdf8365372acd8682be219fac32a46eee8314b4050706f9de338a6db923c`.
+
+## Previous final conditional predicates (pass 211)
 
 The generic emitter now finalizes predicate operators and grouping after
 conditional-continuation and terminal-frame recovery. 6 exposed predicates

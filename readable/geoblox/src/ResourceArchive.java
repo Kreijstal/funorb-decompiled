@@ -413,18 +413,16 @@ final class ResourceArchive {
             return true;
           }
           packedGroupDecryptionSelection: {
-            if (decryptionKey != null) {
-              if (decryptionKey[0] != 0 ||
-                  decryptionKey[1] != 0 ||
-                  decryptionKey[2] != 0 ||
-                  0 != decryptionKey[3]) {
-                copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
-                packedBytesForDecryption = copiedPackedBytes;
-                packedBytes = packedBytesForDecryption;
-                encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
-                encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
-                break packedGroupDecryptionSelection;
-              }
+            if ((decryptionKey != null) && (decryptionKey[0] != 0 ||
+                decryptionKey[1] != 0 ||
+                decryptionKey[2] != 0 ||
+                0 != decryptionKey[3])) {
+              copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
+              packedBytesForDecryption = copiedPackedBytes;
+              packedBytes = packedBytesForDecryption;
+              encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
+              encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
+              break packedGroupDecryptionSelection;
             }
             packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
           }
@@ -612,14 +610,12 @@ final class ResourceArchive {
             return (byte[]) (invalidFileBeforeReturn);
           }
           fileBytesOrFailureForContext = null;
-          if (this.decodedFiles[groupId] == null ||
-              null == this.decodedFiles[groupId][fileId]) {
+          if ((this.decodedFiles[groupId] == null ||
+            null == this.decodedFiles[groupId][fileId]) && (!this.unpackGroup(fileId, 4, decryptionKey, groupId))) {
+            this.loadPackedGroup(groupId, -118);
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
-              this.loadPackedGroup(groupId, -118);
-              if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
-                unavailableFileBeforeReturn = null;
-                return (byte[]) (unavailableFileBeforeReturn);
-              }
+              unavailableFileBeforeReturn = null;
+              return (byte[]) (unavailableFileBeforeReturn);
             }
           }
           if (this.decodedFiles[groupId] == null) {
