@@ -346,11 +346,12 @@ final class gh {
           if (0 != this.field_bb ||
               ih.a(0)) {
             vh.field_G.b(446, 410);
-            if (var14 == 0) {
-              break L19;
+            if (!(var14 == 0)) {
+              g.field_i.b(468, 410);
             }
+          } else {
+            g.field_i.b(468, 410);
           }
-          g.field_i.b(468, 410);
         }
         if (!this.field_Y) {
           if (!ih.a(0) ||
@@ -517,11 +518,12 @@ final class gh {
                 oc.field_d.b(0, 0);
                 vb.e(0, 0, 640, 480);
                 qj.field_c.b(0, -480 + 6 * this.field_D);
-                if (var14 == 0) {
-                  break L55;
+                if (!(var14 == 0)) {
+                  this.a(false);
                 }
+              } else {
+                this.a(false);
               }
-              this.a(false);
             }
           }
           vc.c(-1);

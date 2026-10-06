@@ -222,11 +222,12 @@ final class c extends ka {
               el.field_i = 0;
               ai.field_p = -1;
               cd.field_j = 0;
-              if (var4 == 0) {
-                break L0;
+              if (!(var4 == 0)) {
+                super.a(param0, -100);
               }
+            } else {
+              super.a(param0, -100);
             }
-            super.a(param0, -100);
           }
           if (param1 > -26) {
             this.c(59);
