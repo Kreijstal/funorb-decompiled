@@ -368,20 +368,18 @@ final class lc {
           var6_ref.field_mb = (String) (var3);
           var6_ref.a(false);
           var7_ref = (j) ((Object) hl.field_B.g(0));
-          while (true) {
-            L15: {
-              if (null != var7_ref) {
-                stackIn_61_0 = var6_ref;
-                if (var8 != 0) {
-                  break L15;
-                }
-                if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
-                  var7_ref = (j) ((Object) hl.field_B.d(1));
-                  continue;
-                }
+          L15: while (true) {
+            if (null != var7_ref) {
+              stackIn_61_0 = var6_ref;
+              if (var8 != 0) {
+                break L15;
               }
-              stackIn_61_0 = var7_ref;
+              if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
+                var7_ref = (j) ((Object) hl.field_B.d(1));
+                continue;
+              }
             }
+            stackIn_61_0 = var7_ref;
             break;
           }
           if (stackIn_61_0 == null) {

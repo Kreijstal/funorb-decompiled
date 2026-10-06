@@ -451,23 +451,21 @@ final class sk {
               }
               var8 = var6.field_n[var7];
               var9 = (ja) ((Object) var4.c((byte) 121));
-              while (true) {
-                L5: {
-                  if (var9 == null) {
-                    var9 = (ja) ((Object) var12.c((byte) 121));
-                    while (var9 != null) {
-                      if (var9 == var8) {
-                        break L5;
-                      }
-                      var9 = (ja) ((Object) var12.a(69));
+              L5: while (true) {
+                if (var9 == null) {
+                  var9 = (ja) ((Object) var12.c((byte) 121));
+                  while (var9 != null) {
+                    if (var9 == var8) {
+                      break L5;
                     }
-                    var12.a(-82, var8);
-                    break L5;
+                    var9 = (ja) ((Object) var12.a(69));
                   }
-                  if (var9 != var8) {
-                    var9 = (ja) ((Object) var4.a(param0 ^ 24));
-                    continue;
-                  }
+                  var12.a(-82, var8);
+                  break L5;
+                }
+                if (var9 != var8) {
+                  var9 = (ja) ((Object) var4.a(param0 ^ 24));
+                  continue;
                 }
                 break;
               }

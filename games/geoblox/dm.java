@@ -721,64 +721,56 @@ class dm extends wh {
         int var6;
         int[] var7;
         var1 = this.field_m - 1;
-        while (true) {
-          L1: {
-            if (var1 >= 0) {
-              var2 = var1 * this.field_r;
-              for (var3 = 0; var3 < this.field_r; var3++) {
-                if (this.field_v[var2 + var3] != 0) {
-                  break L1;
-                }
+        L1: while (true) {
+          if (var1 >= 0) {
+            var2 = var1 * this.field_r;
+            for (var3 = 0; var3 < this.field_r; var3++) {
+              if (this.field_v[var2 + var3] != 0) {
+                break L1;
               }
-              var1--;
-              continue;
             }
+            var1--;
+            continue;
           }
           break;
         }
         var2 = 0;
-        while (true) {
-          L4: {
-            if (var2 < var1) {
-              var3 = var2 * this.field_r;
-              for (var4 = 0; var4 < this.field_r; var4++) {
-                if (this.field_v[var3 + var4] != 0) {
-                  break L4;
-                }
+        L4: while (true) {
+          if (var2 < var1) {
+            var3 = var2 * this.field_r;
+            for (var4 = 0; var4 < this.field_r; var4++) {
+              if (this.field_v[var3 + var4] != 0) {
+                break L4;
               }
-              var2++;
-              continue;
             }
+            var2++;
+            continue;
           }
           break;
         }
         var3 = this.field_r - 1;
-        while (true) {
-          L7: {
-            if (var3 >= 0) {
-              for (var4 = var2; var4 <= var1; var4++) {
-                if (this.field_v[var4 * this.field_r + var3] != 0) {
-                  break L7;
-                }
+        L7: while (true) {
+          if (var3 >= 0) {
+            for (var4 = var2; var4 <= var1; var4++) {
+              if (this.field_v[var4 * this.field_r + var3] != 0) {
+                break L7;
               }
-              var3--;
-              continue;
             }
+            var3--;
+            continue;
           }
           break;
         }
         var4 = 0;
-        while (true) {
-          L10: {
-            if (var4 < var3) {
-              for (var5 = var2; var5 <= var1; var5++) {
-                if (this.field_v[var5 * this.field_r + var4] != 0) {
-                  break L10;
-                }
+        L10: while (true) {
+          if (var4 < var3) {
+            for (var5 = var2; var5 <= var1; var5++) {
+              if (this.field_v[var5 * this.field_r + var4] != 0) {
+                break L10;
               }
-              var4++;
-              continue;
             }
+            var4++;
+            continue;
           }
           break;
         }

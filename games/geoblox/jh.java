@@ -234,112 +234,110 @@ final class jh {
                   this.field_c.a(6, 0, dj.field_F, false);
                   var8 = 0;
                   var9 = 0;
-                  while (true) {
-                    L4: {
-                      if (param1 > var8) {
-                        L5: {
-                          var10 = 0;
-                          if (param4) {
-                            this.field_d.a(param0 - 191, (long)(520 * var7_int));
-                            if (65535 >= param2) {
-                              try {
-                                this.field_d.a(dj.field_F, 8, 0, 9868);
-                                decompiledRegionSelector0 = 0;
-                              } catch (java.io.EOFException decompiledCaughtParameter0) {
-                                decompiledCaughtException = decompiledCaughtParameter0;
-                                var14 = (EOFException) (Object) decompiledCaughtException;
-                                decompiledRegionSelector0 = 1;
-                              }
-                              if (decompiledRegionSelector0 != 0) {
-                                break L4;
-                              }
-                              var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
-                              var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
-                              var13 = 255 & dj.field_F[7];
-                              var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
-                            } else {
-                              try {
-                                this.field_d.a(dj.field_F, 10, 0, 9868);
-                                decompiledRegionSelector1 = 0;
-                              } catch (java.io.EOFException decompiledCaughtParameter1) {
-                                decompiledCaughtException = decompiledCaughtParameter1;
-                                var14 = (EOFException) (Object) decompiledCaughtException;
-                                decompiledRegionSelector1 = 1;
-                              }
-                              if (decompiledRegionSelector1 != 0) {
-                                break L4;
-                              }
-                              var11 = (65280 & dj.field_F[2] << 8) + (((255 & dj.field_F[0]) << 24) + (((dj.field_F[1] & 255) << 16) + (255 & dj.field_F[3])));
-                              var13 = dj.field_F[9] & 255;
-                              var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) + (65280 & dj.field_F[7] << 8);
-                              var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
+                  L4: while (true) {
+                    if (param1 > var8) {
+                      L5: {
+                        var10 = 0;
+                        if (param4) {
+                          this.field_d.a(param0 - 191, (long)(520 * var7_int));
+                          if (65535 >= param2) {
+                            try {
+                              this.field_d.a(dj.field_F, 8, 0, 9868);
+                              decompiledRegionSelector0 = 0;
+                            } catch (java.io.EOFException decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              var14 = (EOFException) (Object) decompiledCaughtException;
+                              decompiledRegionSelector0 = 1;
                             }
-                            if (var11 == param2 &&
-                                var9 == var12 &&
-                                var13 == this.field_b) {
-                              if (var10 >= 0 &&
-                                  ~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
-                                break L5;
-                              }
-                              return false;
+                            if (decompiledRegionSelector0 != 0) {
+                              break L4;
+                            }
+                            var11 = ((255 & dj.field_F[0]) << 8) + (255 & dj.field_F[1]);
+                            var12 = (dj.field_F[3] & 255) + ((255 & dj.field_F[2]) << 8);
+                            var13 = 255 & dj.field_F[7];
+                            var10 = (dj.field_F[6] & 255) + ((65280 & dj.field_F[5] << 8) + (16711680 & dj.field_F[4] << 16));
+                          } else {
+                            try {
+                              this.field_d.a(dj.field_F, 10, 0, 9868);
+                              decompiledRegionSelector1 = 0;
+                            } catch (java.io.EOFException decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              var14 = (EOFException) (Object) decompiledCaughtException;
+                              decompiledRegionSelector1 = 1;
+                            }
+                            if (decompiledRegionSelector1 != 0) {
+                              break L4;
+                            }
+                            var11 = (65280 & dj.field_F[2] << 8) + (((255 & dj.field_F[0]) << 24) + (((dj.field_F[1] & 255) << 16) + (255 & dj.field_F[3])));
+                            var13 = dj.field_F[9] & 255;
+                            var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) + (65280 & dj.field_F[7] << 8);
+                            var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
+                          }
+                          if (var11 == param2 &&
+                              var9 == var12 &&
+                              var13 == this.field_b) {
+                            if (var10 >= 0 &&
+                                ~(this.field_d.a((byte) 46) / 520L) <= ~(long)var10) {
+                              break L5;
                             }
                             return false;
                           }
+                          return false;
                         }
-                        if (var10 == 0) {
-                          param4 = false;
-                          var10 = (int)((519L + this.field_d.a((byte) 46)) / 520L);
-                          if (var10 == 0) {
-                            var10++;
-                          }
-                          if (var7_int == var10) {
-                            var10++;
-                          }
-                        }
-                        if (512 >= -var8 + param1) {
-                          var10 = 0;
-                        }
-                        if (param2 <= 65535) {
-                          dj.field_F[4] = (byte)(var10 >> 16);
-                          dj.field_F[2] = (byte)(var9 >> 8);
-                          dj.field_F[0] = (byte)(param2 >> 8);
-                          dj.field_F[7] = (byte)this.field_b;
-                          dj.field_F[1] = (byte)param2;
-                          dj.field_F[5] = (byte)(var10 >> 8);
-                          dj.field_F[3] = (byte)var9;
-                          dj.field_F[6] = (byte)var10;
-                          this.field_d.a(-97, (long)(520 * var7_int));
-                          this.field_d.a(8, 0, dj.field_F, false);
-                          var11 = param1 - var8;
-                          if (512 < var11) {
-                            var11 = 512;
-                          }
-                          this.field_d.a(var11, var8, param3, false);
-                          var8 = var8 + var11;
-                        } else {
-                          dj.field_F[6] = (byte)(var10 >> 16);
-                          dj.field_F[5] = (byte)var9;
-                          dj.field_F[2] = (byte)(param2 >> 8);
-                          dj.field_F[9] = (byte)this.field_b;
-                          dj.field_F[4] = (byte)(var9 >> 8);
-                          dj.field_F[1] = (byte)(param2 >> 16);
-                          dj.field_F[7] = (byte)(var10 >> 8);
-                          dj.field_F[8] = (byte)var10;
-                          dj.field_F[3] = (byte)param2;
-                          dj.field_F[0] = (byte)(param2 >> 24);
-                          this.field_d.a(73, (long)(var7_int * 520));
-                          this.field_d.a(10, 0, dj.field_F, false);
-                          var11 = param1 - var8;
-                          if (510 < var11) {
-                            var11 = 510;
-                          }
-                          this.field_d.a(var11, var8, param3, false);
-                          var8 = var8 + var11;
-                        }
-                        var7_int = var10;
-                        var9++;
-                        continue;
                       }
+                      if (var10 == 0) {
+                        param4 = false;
+                        var10 = (int)((519L + this.field_d.a((byte) 46)) / 520L);
+                        if (var10 == 0) {
+                          var10++;
+                        }
+                        if (var7_int == var10) {
+                          var10++;
+                        }
+                      }
+                      if (512 >= -var8 + param1) {
+                        var10 = 0;
+                      }
+                      if (param2 <= 65535) {
+                        dj.field_F[4] = (byte)(var10 >> 16);
+                        dj.field_F[2] = (byte)(var9 >> 8);
+                        dj.field_F[0] = (byte)(param2 >> 8);
+                        dj.field_F[7] = (byte)this.field_b;
+                        dj.field_F[1] = (byte)param2;
+                        dj.field_F[5] = (byte)(var10 >> 8);
+                        dj.field_F[3] = (byte)var9;
+                        dj.field_F[6] = (byte)var10;
+                        this.field_d.a(-97, (long)(520 * var7_int));
+                        this.field_d.a(8, 0, dj.field_F, false);
+                        var11 = param1 - var8;
+                        if (512 < var11) {
+                          var11 = 512;
+                        }
+                        this.field_d.a(var11, var8, param3, false);
+                        var8 = var8 + var11;
+                      } else {
+                        dj.field_F[6] = (byte)(var10 >> 16);
+                        dj.field_F[5] = (byte)var9;
+                        dj.field_F[2] = (byte)(param2 >> 8);
+                        dj.field_F[9] = (byte)this.field_b;
+                        dj.field_F[4] = (byte)(var9 >> 8);
+                        dj.field_F[1] = (byte)(param2 >> 16);
+                        dj.field_F[7] = (byte)(var10 >> 8);
+                        dj.field_F[8] = (byte)var10;
+                        dj.field_F[3] = (byte)param2;
+                        dj.field_F[0] = (byte)(param2 >> 24);
+                        this.field_d.a(73, (long)(var7_int * 520));
+                        this.field_d.a(10, 0, dj.field_F, false);
+                        var11 = param1 - var8;
+                        if (510 < var11) {
+                          var11 = 510;
+                        }
+                        this.field_d.a(var11, var8, param3, false);
+                        var8 = var8 + var11;
+                      }
+                      var7_int = var10;
+                      var9++;
+                      continue;
                     }
                     break;
                   }

@@ -493,27 +493,25 @@ final class bj extends nh {
                       }
                       var3 = this.field_d.d(1);
                     }
-                    while (true) {
-                      L13: {
-                        if (this.field_o < this.field_u.field_a.length) {
-                          if (this.field_u.field_a[this.field_o] != 0) {
-                            if (this.field_f.b(-21)) {
-                              var2_int = 0;
-                              break L13;
-                            }
-                            if (this.field_k[this.field_o] != 1) {
-                              discarded$2 = this.a((byte) -71, 2, this.field_o);
-                            }
-                            if (this.field_k[this.field_o] != 1) {
-                              var6 = new hf();
-                              var6.field_a = (long)this.field_o;
-                              var2_int = 0;
-                              this.field_d.a(-97, var6);
-                            }
+                    L13: while (true) {
+                      if (this.field_o < this.field_u.field_a.length) {
+                        if (this.field_u.field_a[this.field_o] != 0) {
+                          if (this.field_f.b(-21)) {
+                            var2_int = 0;
+                            break L13;
                           }
-                          this.field_o = this.field_o + 1;
-                          continue;
+                          if (this.field_k[this.field_o] != 1) {
+                            discarded$2 = this.a((byte) -71, 2, this.field_o);
+                          }
+                          if (this.field_k[this.field_o] != 1) {
+                            var6 = new hf();
+                            var6.field_a = (long)this.field_o;
+                            var2_int = 0;
+                            this.field_d.a(-97, var6);
+                          }
                         }
+                        this.field_o = this.field_o + 1;
+                        continue;
                       }
                       break;
                     }

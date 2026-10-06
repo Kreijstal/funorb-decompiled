@@ -820,23 +820,21 @@ abstract class wh extends rc {
                   af.field_b.a(51, 0L);
                   af.field_b.a((byte) -76, var2);
                   var3_int = 0;
-                  while (true) {
-                    L4: {
-                      if (var3_int < 24) {
-                        stackIn_17_0 = ~var2[var3_int];
-                        stackIn_17_1 = -1;
-                        if (var5 != 0) {
-                          break L4;
-                        }
-                        if (stackIn_17_0 == stackIn_17_1 ||
-                            var5 != 0) {
-                          var3_int++;
-                          continue;
-                        }
+                  L4: while (true) {
+                    if (var3_int < 24) {
+                      stackIn_17_0 = ~var2[var3_int];
+                      stackIn_17_1 = -1;
+                      if (var5 != 0) {
+                        break L4;
                       }
-                      stackIn_17_0 = 24;
-                      stackIn_17_1 = var3_int;
+                      if (stackIn_17_0 == stackIn_17_1 ||
+                          var5 != 0) {
+                        var3_int++;
+                        continue;
+                      }
                     }
+                    stackIn_17_0 = 24;
+                    stackIn_17_1 = var3_int;
                     break;
                   }
                   if (stackIn_17_0 <= stackIn_17_1) {

@@ -255,24 +255,22 @@ final class c extends ka {
           this.field_O = this.field_O % ee.field_A.field_o;
           var2_int = -ee.field_A.field_s + this.field_W;
           L1: while (true) {
-            L2: {
-              if (640 > var2_int) {
-                stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
-                if (var4 != 0) {
-                  break L2;
-                }
-                var3 = stackIn_16_0;
-                while (~-ee.field_A.field_o >= ~var3) {
-                  ee.field_A.c(var2_int, var3);
-                  var3 = var3 - ee.field_A.field_o;
-                }
-                var2_int = var2_int + ee.field_A.field_s;
-                continue L1;
+            if (640 > var2_int) {
+              stackIn_16_0 = ee.field_A.field_o + this.field_O + 480;
+              if (var4 != 0) {
+                break L1;
               }
-              this.field_I = this.field_I % vc.field_j.field_o;
-              this.field_u = this.field_u % vc.field_j.field_s;
-              stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
+              var3 = stackIn_16_0;
+              while (~-ee.field_A.field_o >= ~var3) {
+                ee.field_A.c(var2_int, var3);
+                var3 = var3 - ee.field_A.field_o;
+              }
+              var2_int = var2_int + ee.field_A.field_s;
+              continue L1;
             }
+            this.field_I = this.field_I % vc.field_j.field_o;
+            this.field_u = this.field_u % vc.field_j.field_s;
+            stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
             break;
           }
           var2_int = stackIn_16_0;

@@ -512,90 +512,88 @@ final class tb {
         var11 = var10;
         var12 = param0.field_q + 1;
         L0: while (true) {
-          L1: {
-            if (var3 > 0) {
-              while (true) {
-                if (var10 == 0) {
-                  break L1;
+          if (var3 > 0) {
+            while (true) {
+              if (var10 == 0) {
+                break L0;
+              }
+              if (var3 != 1) {
+                var8[var9] = (byte)var2;
+                var3--;
+                var9++;
+                var10--;
+                continue;
+              }
+              break;
+            }
+            if (var10 == 0) {
+              var3 = 1;
+              break L0;
+            }
+            var8[var9] = (byte)var2;
+            var9++;
+            var10--;
+          }
+          while (var4 != var12) {
+            var15 = var14;
+            var2 = (byte)var5;
+            var7 = var15[var7];
+            var1 = (byte)var7;
+            var7 = var7 >> 8;
+            var4++;
+            if (var1 == var5) {
+              if (var4 != var12) {
+                var3 = 2;
+                var7 = var15[var7];
+                var1 = (byte)var7;
+                var7 = var7 >> 8;
+                var4++;
+                if (var4 == var12) {
+                  continue L0;
                 }
-                if (var3 != 1) {
-                  var8[var9] = (byte)var2;
-                  var3--;
-                  var9++;
-                  var10--;
-                  continue;
+                if (var1 != var5) {
+                  var5 = var1;
+                  continue L0;
                 }
-                break;
+                var3 = 3;
+                var7 = var15[var7];
+                var1 = (byte)var7;
+                var7 = var7 >> 8;
+                var4++;
+                if (var4 == var12) {
+                  continue L0;
+                }
+                if (var1 != var5) {
+                  var5 = var1;
+                  continue L0;
+                }
+                var7 = var15[var7];
+                var1 = (byte)var7;
+                var7 = var7 >> 8;
+                var4++;
+                var3 = (var1 & 255) + 4;
+                var7 = var15[var7];
+                var5 = (byte)var7;
+                var7 = var7 >> 8;
+                var4++;
+                continue L0;
               }
               if (var10 == 0) {
                 var3 = 1;
-                break L1;
+                break L0;
               }
-              var8[var9] = (byte)var2;
-              var9++;
-              var10--;
-            }
-            while (var4 != var12) {
-              var15 = var14;
-              var2 = (byte)var5;
-              var7 = var15[var7];
-              var1 = (byte)var7;
-              var7 = var7 >> 8;
-              var4++;
-              if (var1 == var5) {
-                if (var4 != var12) {
-                  var3 = 2;
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  if (var4 == var12) {
-                    continue L0;
-                  }
-                  if (var1 != var5) {
-                    var5 = var1;
-                    continue L0;
-                  }
-                  var3 = 3;
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  if (var4 == var12) {
-                    continue L0;
-                  }
-                  if (var1 != var5) {
-                    var5 = var1;
-                    continue L0;
-                  }
-                  var7 = var15[var7];
-                  var1 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  var3 = (var1 & 255) + 4;
-                  var7 = var15[var7];
-                  var5 = (byte)var7;
-                  var7 = var7 >> 8;
-                  var4++;
-                  continue L0;
-                }
-                if (var10 == 0) {
-                  var3 = 1;
-                  break L1;
-                }
-              } else {
-                var5 = var1;
-                if (var10 == 0) {
-                  var3 = 1;
-                  break L1;
-                }
+            } else {
+              var5 = var1;
+              if (var10 == 0) {
+                var3 = 1;
+                break L0;
               }
-              var8[var9] = (byte)var2;
-              var9++;
-              var10--;
             }
-            var3 = 0;
+            var8[var9] = (byte)var2;
+            var9++;
+            var10--;
           }
+          var3 = 0;
           break;
         }
         var13 = param0.field_i;
