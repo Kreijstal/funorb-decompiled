@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2318d20237d7fb5cff73d4d7caaf41c381916025/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/a8049130f1a1d547c53a56e72110963d232c52f1/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 193)
+## Current readability (pass 194)
 
-The export has 18,377 guarded names and 117,471 Java identifier edits, plus 11
-class-name literal edits and 626 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,376 guarded names and 117,471 Java identifier edits, plus 11
+class-name literal edits and 624 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,494 bindings, reproduce and
@@ -24,7 +24,50 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current stable guarded fallbacks (pass 193)
+## Current guarded assignment sequences (pass 194)
+
+The generic decompiler reconstructs rotation-key selection in
+`GameplaySession.updateSession` as an ordinary `if/else`. The original
+condition and captured keep-value guard each occur once. Both assignment
+sequences retain their statement order and assignment conversions. All selected
+destinations are primitive locals or parameters, both arms overwrite the same
+set, and every value/guard is total. The guard and fallback cannot read any
+selected destination. Effectful conditions still execute once before stores.
+No predicate copy, selector, assumed flag value or arithmetic reassociation is
+introduced. The rule applies to arbitrary Java; only naming is game-specific.
+
+One label rule retires and 4 surviving ordinals migrate;
+18,372 unaffected complete naming objects remain exact.
+There are 18,376 rules, 19,422 dictionary identities,
+117,471 identifier edits, 11 literal edits and
+624 label edits (118,106 total). The raw corpus
+loses 4 lines. Session update is 556 lines with
+7 labels. Five bodies still have labels and at least 300 lines;
+41 unsupported opaque fields remain.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/guardedAssignmentSequenceRecovery.test.js test/guardedLocalAssignmentRecovery.test.js`
+passes 17 groups, including nine sequence groups, 10,800 independent sequence
+completion cases across six contexts and 294 sequence primitive cases across
+seven models. They cover partial writes, null unboxing, overflow, finally
+priority, monitor release, narrowing, signed zero, NaN and long precision.
+The selected regression command passes 197 groups with one existing optional skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact raw bytes, independently typed destinations and dependencies,
+every original binding occurrence, the consumed exit, all
+5,065 surviving transfer targets/protected scopes,
+complete naming objects, migrations and compilation. The readable dictionary
+reverses all 303 files byte exactly. Publication tests, scoped native probes
+and current/fresh sibling reproduction checks pass. Older proof objects and
+frozen input/naming/native pins remain exact. Whole-game/browser/phone equivalence
+and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`5f50584da8d550da35a19b1288e65f7fde5c190f80eb022f67ccd65a54dbe874`.
+
+## Previous stable guarded fallbacks (pass 193)
 
 The generic decompiler replaces 23 single-exit labeled fallback blocks with
 ordinary conditions in 11 methods across three files: screen rendering, PCM

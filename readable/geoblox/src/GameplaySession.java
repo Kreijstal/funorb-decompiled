@@ -622,14 +622,10 @@ final class GameplaySession {
             if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
               return;
             }
-            rotationKeySelection: {
-              if (!this.rotationControlsSwapped) {
-                negativeRotationKeyCode = 96;
-                positiveRotationKeyCode = 97;
-                if (clientControlFlowGuard == 0) {
-                  break rotationKeySelection;
-                }
-              }
+            if ((!this.rotationControlsSwapped) && (clientControlFlowGuard == 0)) {
+              negativeRotationKeyCode = 96;
+              positiveRotationKeyCode = 97;
+            } else {
               positiveRotationKeyCode = 96;
               negativeRotationKeyCode = 97;
             }
