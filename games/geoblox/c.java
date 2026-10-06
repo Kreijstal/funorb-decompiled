@@ -1383,18 +1383,17 @@ final class c extends ka {
         RuntimeException decompiledCaughtException = null;
         var11 = Geoblox.field_C;
         try {
-          L0: {
-            var3_int = 180;
-            vb.a(this.field_P);
-            if (param1 != 0 &&
-                1 != param1 &&
-                param1 != 2) {
-              ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
-              ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
-              if (var11 == 0) {
-                break L0;
-              }
-            }
+          var3_int = 180;
+          vb.a(this.field_P);
+          if (param1 != 0 &&
+              1 != param1 &&
+              param1 != 2) {
+            ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
+            ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
+          }
+          if (!(param1 != 0 &&
+              1 != param1 &&
+              param1 != 2) || var11 != 0) {
             L2: {
               ma.a(140, 30, 80, (byte) -92, 80, ll.field_h);
               ma.a(242, 30, 80, (byte) -92, 80, ll.field_h);
@@ -2270,15 +2269,12 @@ final class c extends ka {
                     break L14;
                   }
                 }
-                L20: {
-                  var11 = 278;
-                  var10 = 320 - (var11 + 20 >> 1);
-                  if (var6 != 13) {
-                    param3 = 395;
-                    if (var14 == 0) {
-                      break L20;
-                    }
-                  }
+                var11 = 278;
+                var10 = 320 - (var11 + 20 >> 1);
+                if (var6 != 13) {
+                  param3 = 395;
+                }
+                if (var6 == 13 || var14 != 0) {
                   param3 = 265;
                 }
                 var9 = 10 + (var11 >> 1) + var10;
@@ -2292,15 +2288,12 @@ final class c extends ka {
                   break L14;
                 }
               }
-              L23: {
-                param3 = 437;
-                if (var6 == 13) {
-                  var10 = 121;
-                  var9 = (var11 >> 1) + var10 + 10;
-                  if (var14 == 0) {
-                    break L23;
-                  }
-                }
+              param3 = 437;
+              if (var6 == 13) {
+                var10 = 121;
+                var9 = (var11 >> 1) + var10 + 10;
+              }
+              if (var6 != 13 || var14 != 0) {
                 var10 = 436;
                 var9 = (var11 >> 1) + var10 + 10;
               }
@@ -2349,13 +2342,10 @@ final class c extends ka {
                 var10 = var9 - (var11 >> 1);
               }
             }
-            L31: {
-              if (!param0) {
-                ma.a(param3, var10, 40, (byte) -92, var11, eb.field_g);
-                if (var14 == 0) {
-                  break L31;
-                }
-              }
+            if (!param0) {
+              ma.a(param3, var10, 40, (byte) -92, var11, eb.field_g);
+            }
+            if (!(!param0) || var14 != 0) {
               var9 = var9 + this.field_T;
               var10 = var10 + this.field_T;
               param3 = param3 - this.field_T;
@@ -2363,33 +2353,28 @@ final class c extends ka {
             }
             param3 += 2;
           }
-          L33: {
-            if (param0) {
-              dd.field_G.field_K[0][wf.field_p] = 15488514;
-              var12 = this.field_T;
-              if (var14 == 0) {
-                break L33;
-              }
-            }
+          if (param0) {
+            dd.field_G.field_K[0][wf.field_p] = 15488514;
+            var12 = this.field_T;
+          }
+          if (!(param0) || var14 != 0) {
             var12 = 0;
           }
-          L35: {
-            if (var6 == 8 ||
-                  9 == var6) {
-              var8.c(var7, 285 + var12, 30 + param3, 0, -1);
-              sd.field_y.b(var12 + 280, param3 + 15);
-              if (var6 == 8) {
-                stackIn_153_0 = j.field_gb;
-              } else {
-                stackIn_153_0 = oc.field_c;
-              }
-              var13 = stackIn_153_0;
-              var13 = var13 * (-4 + sd.field_y.field_s) / 80;
-              re.field_h.b(280 + var13 - 1 + var12, 9 + param3);
-              if (var14 == 0) {
-                break L35;
-              }
+          if (var6 == 8 ||
+                9 == var6) {
+            var8.c(var7, 285 + var12, 30 + param3, 0, -1);
+            sd.field_y.b(var12 + 280, param3 + 15);
+            if (var6 == 8) {
+              stackIn_153_0 = j.field_gb;
+            } else {
+              stackIn_153_0 = oc.field_c;
             }
+            var13 = stackIn_153_0;
+            var13 = var13 * (-4 + sd.field_y.field_s) / 80;
+            re.field_h.b(280 + var13 - 1 + var12, 9 + param3);
+          }
+          if (!(var6 == 8 ||
+                9 == var6) || var14 != 0) {
             var8.b(var7, var9, param3 + 30, 0, -1);
           }
           dd.field_G.field_K[0][wf.field_p] = 16689938;

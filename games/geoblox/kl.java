@@ -23,13 +23,10 @@ final class kl extends ia {
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        L0: {
-          if (param12 != 0) {
-            param8 = param5 + (param10 + 256 - param4 + param12) / param12;
-            if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
-              break L0;
-            }
-          }
+        if (param12 != 0) {
+          param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 + 256 - param4 + param12) / param12 <= param9)) {
           param8 = param9;
         }
         param5 = param5 << 1;
@@ -46,13 +43,10 @@ final class kl extends ia {
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param4 = param4 + param12;
         }
-        L3: {
-          if (param12 != 0) {
-            param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
-            if ((param5 >> 1) + (param10 - param4 + param12) / param12 <= param9) {
-              break L3;
-            }
-          }
+        if (param12 != 0) {
+          param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
+        }
+        if (param12 == 0 || !((param5 >> 1) + (param10 - param4 + param12) / param12 <= param9)) {
           param8 = param9;
         }
         param8 = param8 << 1;
@@ -340,13 +334,10 @@ final class kl extends ia {
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        L0: {
-          if (param12 != 0) {
-            param8 = param5 + (param10 - param4 + param12 - 257) / param12;
-            if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
-              break L0;
-            }
-          }
+        if (param12 != 0) {
+          param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 - param4 + param12 - 257) / param12 <= param9)) {
           param8 = param9;
         }
         param5 = param5 << 1;
@@ -363,13 +354,10 @@ final class kl extends ia {
           param3[incrementValue$7] = param3[incrementValue$7] + (param0 * param7 >> 6);
           param4 = param4 + param12;
         }
-        L3: {
-          if (param12 != 0) {
-            param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
-            if ((param5 >> 1) + (param10 - param4 + param12 - 1) / param12 <= param9) {
-              break L3;
-            }
-          }
+        if (param12 != 0) {
+          param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
+        }
+        if (param12 == 0 || !((param5 >> 1) + (param10 - param4 + param12 - 1) / param12 <= param9)) {
           param8 = param9;
         }
         param8 = param8 << 1;
@@ -618,14 +606,11 @@ final class kl extends ia {
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        L0: {
-          param13.field_k = param13.field_k - param13.field_j * param5;
-          if (param14 != 0) {
-            param10 = param5 + (param12 - param4 + param14 - 257) / param14;
-            if (param5 + (param12 - param4 + param14 - 257) / param14 <= param11) {
-              break L0;
-            }
-          }
+        param13.field_k = param13.field_k - param13.field_j * param5;
+        if (param14 != 0) {
+          param10 = param5 + (param12 - param4 + param14 - 257) / param14;
+        }
+        if (param14 == 0 || !(param5 + (param12 - param4 + param14 - 257) / param14 <= param11)) {
           param10 = param11;
         }
         param5 = param5 << 1;
@@ -644,13 +629,10 @@ final class kl extends ia {
           param7 = param7 + param9;
           param4 = param4 + param14;
         }
-        L3: {
-          if (param14 != 0) {
-            param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
-            if ((param5 >> 1) + (param12 - param4 + param14 - 1) / param14 <= param11) {
-              break L3;
-            }
-          }
+        if (param14 != 0) {
+          param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
+        }
+        if (param14 == 0 || !((param5 >> 1) + (param12 - param4 + param14 - 1) / param14 <= param11)) {
           param10 = param11;
         }
         param10 = param10 << 1;
@@ -679,13 +661,10 @@ final class kl extends ia {
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, kl param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
-        L0: {
-          if (param11 != 0) {
-            param7 = param5 + (param9 + 256 - param4 + param11) / param11;
-            if (param5 + (param9 + 256 - param4 + param11) / param11 <= param8) {
-              break L0;
-            }
-          }
+        if (param11 != 0) {
+          param7 = param5 + (param9 + 256 - param4 + param11) / param11;
+        }
+        if (param11 == 0 || !(param5 + (param9 + 256 - param4 + param11) / param11 <= param8)) {
           param7 = param8;
         }
         while (param5 < param7) {
@@ -696,13 +675,10 @@ final class kl extends ia {
           param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
         }
-        L3: {
-          if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11) / param11;
-            if (param5 + (param9 - param4 + param11) / param11 <= param8) {
-              break L3;
-            }
-          }
+        if (param11 != 0) {
+          param7 = param5 + (param9 - param4 + param11) / param11;
+        }
+        if (param11 == 0 || !(param5 + (param9 - param4 + param11) / param11 <= param8)) {
           param7 = param8;
         }
         param0 = param12;
@@ -722,14 +698,11 @@ final class kl extends ia {
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        L0: {
-          param13.field_k = param13.field_k - param13.field_j * param5;
-          if (param14 != 0) {
-            param10 = param5 + (param12 + 256 - param4 + param14) / param14;
-            if (param5 + (param12 + 256 - param4 + param14) / param14 <= param11) {
-              break L0;
-            }
-          }
+        param13.field_k = param13.field_k - param13.field_j * param5;
+        if (param14 != 0) {
+          param10 = param5 + (param12 + 256 - param4 + param14) / param14;
+        }
+        if (param14 == 0 || !(param5 + (param12 + 256 - param4 + param14) / param14 <= param11)) {
           param10 = param11;
         }
         param5 = param5 << 1;
@@ -748,13 +721,10 @@ final class kl extends ia {
           param7 = param7 + param9;
           param4 = param4 + param14;
         }
-        L3: {
-          if (param14 != 0) {
-            param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
-            if ((param5 >> 1) + (param12 - param4 + param14) / param14 <= param11) {
-              break L3;
-            }
-          }
+        if (param14 != 0) {
+          param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
+        }
+        if (param14 == 0 || !((param5 >> 1) + (param12 - param4 + param14) / param14 <= param11)) {
           param10 = param11;
         }
         param10 = param10 << 1;
@@ -1283,15 +1253,12 @@ final class kl extends ia {
     private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        L0: {
-          param11.field_n = param11.field_n - param11.field_t * param5;
-          param11.field_s = param11.field_s - param11.field_w * param5;
-          if (param12 != 0) {
-            param8 = param5 + (param10 + 256 - param4 + param12) / param12;
-            if (param5 + (param10 + 256 - param4 + param12) / param12 <= param9) {
-              break L0;
-            }
-          }
+        param11.field_n = param11.field_n - param11.field_t * param5;
+        param11.field_s = param11.field_s - param11.field_w * param5;
+        if (param12 != 0) {
+          param8 = param5 + (param10 + 256 - param4 + param12) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 + 256 - param4 + param12) / param12 <= param9)) {
           param8 = param9;
         }
         while (param5 < param8) {
@@ -1303,13 +1270,10 @@ final class kl extends ia {
           param6 = param6 + param7;
           param4 = param4 + param12;
         }
-        L3: {
-          if (param12 != 0) {
-            param8 = param5 + (param10 - param4 + param12) / param12;
-            if (param5 + (param10 - param4 + param12) / param12 <= param9) {
-              break L3;
-            }
-          }
+        if (param12 != 0) {
+          param8 = param5 + (param10 - param4 + param12) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 - param4 + param12) / param12 <= param9)) {
           param8 = param9;
         }
         param0 = param13;
@@ -1409,15 +1373,12 @@ final class kl extends ia {
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, kl param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        L0: {
-          param11.field_n = param11.field_n - param11.field_t * param5;
-          param11.field_s = param11.field_s - param11.field_w * param5;
-          if (param12 != 0) {
-            param8 = param5 + (param10 - param4 + param12 - 257) / param12;
-            if (param5 + (param10 - param4 + param12 - 257) / param12 <= param9) {
-              break L0;
-            }
-          }
+        param11.field_n = param11.field_n - param11.field_t * param5;
+        param11.field_s = param11.field_s - param11.field_w * param5;
+        if (param12 != 0) {
+          param8 = param5 + (param10 - param4 + param12 - 257) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 - param4 + param12 - 257) / param12 <= param9)) {
           param8 = param9;
         }
         while (param5 < param8) {
@@ -1429,13 +1390,10 @@ final class kl extends ia {
           param6 = param6 + param7;
           param4 = param4 + param12;
         }
-        L3: {
-          if (param12 != 0) {
-            param8 = param5 + (param10 - param4 + param12 - 1) / param12;
-            if (param5 + (param10 - param4 + param12 - 1) / param12 <= param9) {
-              break L3;
-            }
-          }
+        if (param12 != 0) {
+          param8 = param5 + (param10 - param4 + param12 - 1) / param12;
+        }
+        if (param12 == 0 || !(param5 + (param10 - param4 + param12 - 1) / param12 <= param9)) {
           param8 = param9;
         }
         param1 = param13;
@@ -1640,13 +1598,10 @@ final class kl extends ia {
     private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, kl param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
-        L0: {
-          if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11 - 257) / param11;
-            if (param5 + (param9 - param4 + param11 - 257) / param11 <= param8) {
-              break L0;
-            }
-          }
+        if (param11 != 0) {
+          param7 = param5 + (param9 - param4 + param11 - 257) / param11;
+        }
+        if (param11 == 0 || !(param5 + (param9 - param4 + param11 - 257) / param11 <= param8)) {
           param7 = param8;
         }
         while (param5 < param7) {
@@ -1657,13 +1612,10 @@ final class kl extends ia {
           param3[incrementValue$1] = param3[incrementValue$1] + (((param0 << 8) + (param2[param1 + 1] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
         }
-        L3: {
-          if (param11 != 0) {
-            param7 = param5 + (param9 - param4 + param11 - 1) / param11;
-            if (param5 + (param9 - param4 + param11 - 1) / param11 <= param8) {
-              break L3;
-            }
-          }
+        if (param11 != 0) {
+          param7 = param5 + (param9 - param4 + param11 - 1) / param11;
+        }
+        if (param11 == 0 || !(param5 + (param9 - param4 + param11 - 1) / param11 <= param8)) {
           param7 = param8;
         }
         param1 = param12;

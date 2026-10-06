@@ -702,20 +702,17 @@ abstract class wh extends rc {
                   break L3;
                 }
               }
-              L21: {
-                var37 = param13 << 16;
-                var38 = param6 << 16;
-                var39 = param0 << 16;
-                var40 = param5 << 16;
-                if (var33 == 0) {
-                  var17_int = param9 << 16;
-                  var29 = param7 << 16;
-                  var21 = param10 << 16;
-                  var25 = param3 << 16;
-                  if (var42 == 0) {
-                    break L21;
-                  }
-                }
+              var37 = param13 << 16;
+              var38 = param6 << 16;
+              var39 = param0 << 16;
+              var40 = param5 << 16;
+              if (var33 == 0) {
+                var17_int = param9 << 16;
+                var29 = param7 << 16;
+                var21 = param10 << 16;
+                var25 = param3 << 16;
+              }
+              if (var33 != 0 || var42 != 0) {
                 var22 = param10 << 16;
                 var18 = param9 << 16;
                 var26 = param3 << 16;
