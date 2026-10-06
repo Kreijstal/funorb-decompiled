@@ -17,14 +17,54 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ea32b5f454b96da66830a7d9f9fa450bb98d8d3a/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/b08173fc55b3a2763034f6c3855121d759656746/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,462 bindings,
 preserving 388 override relationships.
 
-## Current final conditional frame exits (pass 210)
+## Current final conditional predicates (pass 211)
+
+The generic emitter now finalizes predicate operators and grouping after
+conditional-continuation and terminal-frame recovery. 6 exposed predicates
+simplify, and 6 redundant condition-parenthesis pairs disappear across
+3 methods and 2 files. Menu press animation, points-panel
+movement and result sequencing use direct conditions where safe. Original
+reads/calls, short circuits, nullable unboxing, boxed identity, floating NaN
+behavior, arithmetic association and protected completion stay intact. No
+control-flag value or purity is assumed.
+
+The source proof checks each exact permitted operator edit, then compares all
+303 complete javac trees before/after grouping modulo parentheses. Every
+ordinary and label binding, all 5,019 transfer/protected-scope facts and all
+18,352 complete naming objects remain exact. No label retires or ordinal
+migrates. There are 18,352 rules and 19,398 dictionary identities,
+with 117,440 identifier, 11 literal and 552 label edits
+(118,003 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/conditionalStoreFallbackRecovery.test.js test/arithmeticStoreFallbackRecovery.test.js test/latePredicateCleanup.test.js test/predicateNegationRecovery.test.js test/predicateGroupingRecovery.test.js test/sharedStoreFallbackRecovery.test.js test/guardedStoreFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/terminalFrameLoopRecovery.test.js test/javaAstEmitterGuardedAbruptExits.test.js`
+passes all 71 groups. Conditional, arithmetic and predicate/grouping fixtures
+compare 2,993,612 native cases with independent oracles for nullable callbacks,
+boxed identity, effects, short circuits, partial writes, overflow, zero divisors,
+NaNs, volatile fields, aliases, finally overrides and monitor release. Original,
+shared and final structured continuation forms are compared independently.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independent operand facts, every binding,
+all transfers/protected scopes, complete naming objects, full intermediate/final
+ASTs and compilation. All 303 readable files reverse byte exactly; all 27
+publication tests, 17 scoped native trace groups and current/fresh sibling
+reproductions pass. Older proofs and frozen input/naming/native pins remain.
+Five large labeled methods and 41 unsupported fields remain. Whole-game/browser/
+phone equivalence and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`dc7dcd73a40b0a7dd5de277f5203a016d4b9f406cd82a18bfd8a0ed3969777d3`.
+
+## Previous final conditional frame exits (pass 210)
 
 Three early exits exposed by complete conditional-continuation recovery now
 guard their entire terminal suffixes. Menu press animation and the points-panel

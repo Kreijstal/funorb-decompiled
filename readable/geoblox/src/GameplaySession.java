@@ -571,11 +571,11 @@ final class GameplaySession {
                 463 >= this.pointsPanelX) {
             if (this.pointsPanelSlideDirection != 1 ||
                   this.pointsPanelX >= 640) {
-              if (!(this.pointsPanelX != 463)) {
-                if (!(EntityCollisionSupport.matchChainLength != 0)) {
+              if (this.pointsPanelX == 463) {
+                if (EntityCollisionSupport.matchChainLength == 0) {
                   this.pointsPanelSlideDirection = 1;
                   UiWidget.gameplaySession.emitPointsPopup(false);
-                  if (!(clientControlFlowGuard == 0)) {
+                  if (clientControlFlowGuard != 0) {
                     this.pointsPanelX = this.pointsPanelX + 1;
                     if (clientControlFlowGuard != 0) {
                       this.pointsPanelX = this.pointsPanelX - 1;
@@ -1497,7 +1497,7 @@ final class GameplaySession {
           if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
             if (460 > this.sceneAnimationTick) {
               this.sessionPhase = 2;
-              if (!(controlFlowGuard == 0)) {
+              if (controlFlowGuard != 0) {
                 if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
                   this.sessionPhase = 4;
                   if (controlFlowGuard != 0) {

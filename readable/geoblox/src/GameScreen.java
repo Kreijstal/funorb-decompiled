@@ -300,9 +300,9 @@ final class GameScreen extends MenuScreen {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (!this.menuPressAnimationActive) {
-            if (!(this.menuPressOffset >= 0)) {
+            if (this.menuPressOffset < 0) {
               this.menuPressOffset = this.menuPressOffset + 1;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 if (-4 >= this.menuPressOffset) {
                   this.menuPressAnimationActive = false;
                   if (clientControlFlowGuard != 0) {
