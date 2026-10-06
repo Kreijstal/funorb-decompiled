@@ -566,35 +566,31 @@ final class GameplaySession {
             this.pointsPanelFrameDirection = -1;
           }
         }
-        pointsPanelSlideStep: {
-          if (0 == (this.updateTick & 1)) {
-            if (-1 != this.pointsPanelSlideDirection ||
-                  463 >= this.pointsPanelX) {
-              if (this.pointsPanelSlideDirection != 1 ||
-                    this.pointsPanelX >= 640) {
-                if (this.pointsPanelX != 463) {
-                  break pointsPanelSlideStep;
-                }
-                if (EntityCollisionSupport.matchChainLength != 0) {
-                  break pointsPanelSlideStep;
-                }
-                this.pointsPanelSlideDirection = 1;
-                UiWidget.gameplaySession.emitPointsPopup(false);
-                if (!(clientControlFlowGuard == 0)) {
-                  this.pointsPanelX = this.pointsPanelX + 1;
-                  if (clientControlFlowGuard != 0) {
-                    this.pointsPanelX = this.pointsPanelX - 1;
+        if (0 == (this.updateTick & 1)) {
+          if (-1 != this.pointsPanelSlideDirection ||
+                463 >= this.pointsPanelX) {
+            if (this.pointsPanelSlideDirection != 1 ||
+                  this.pointsPanelX >= 640) {
+              if (!(this.pointsPanelX != 463)) {
+                if (!(EntityCollisionSupport.matchChainLength != 0)) {
+                  this.pointsPanelSlideDirection = 1;
+                  UiWidget.gameplaySession.emitPointsPopup(false);
+                  if (!(clientControlFlowGuard == 0)) {
+                    this.pointsPanelX = this.pointsPanelX + 1;
+                    if (clientControlFlowGuard != 0) {
+                      this.pointsPanelX = this.pointsPanelX - 1;
+                    }
                   }
-                }
-              } else {
-                this.pointsPanelX = this.pointsPanelX + 1;
-                if (clientControlFlowGuard != 0) {
-                  this.pointsPanelX = this.pointsPanelX - 1;
                 }
               }
             } else {
-              this.pointsPanelX = this.pointsPanelX - 1;
+              this.pointsPanelX = this.pointsPanelX + 1;
+              if (clientControlFlowGuard != 0) {
+                this.pointsPanelX = this.pointsPanelX - 1;
+              }
             }
+          } else {
+            this.pointsPanelX = this.pointsPanelX - 1;
           }
         }
         sessionProgressionAndEnding: {

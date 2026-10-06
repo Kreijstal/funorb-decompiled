@@ -299,11 +299,8 @@ final class GameScreen extends MenuScreen {
         RuntimeException pressAnimationFailure = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          menuPressOffsetUpdate: {
-            if (!this.menuPressAnimationActive) {
-              if (this.menuPressOffset >= 0) {
-                break menuPressOffsetUpdate;
-              }
+          if (!this.menuPressAnimationActive) {
+            if (!(this.menuPressOffset >= 0)) {
               this.menuPressOffset = this.menuPressOffset + 1;
               if (!(clientControlFlowGuard == 0)) {
                 if (-4 >= this.menuPressOffset) {
@@ -315,15 +312,15 @@ final class GameScreen extends MenuScreen {
                   this.menuPressOffset = this.menuPressOffset - 1;
                 }
               }
-            } else {
-              if (-4 >= this.menuPressOffset) {
-                this.menuPressAnimationActive = false;
-                if (clientControlFlowGuard != 0) {
-                  this.menuPressOffset = this.menuPressOffset - 1;
-                }
-              } else {
+            }
+          } else {
+            if (-4 >= this.menuPressOffset) {
+              this.menuPressAnimationActive = false;
+              if (clientControlFlowGuard != 0) {
                 this.menuPressOffset = this.menuPressOffset - 1;
               }
+            } else {
+              this.menuPressOffset = this.menuPressOffset - 1;
             }
           }
           if (methodGuard >= -11) {

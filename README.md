@@ -17,14 +17,52 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/f398522aee7188615bdaa13cb433cfe9009903d4/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ea32b5f454b96da66830a7d9f9fa450bb98d8d3a/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,462 bindings,
 preserving 388 override relationships.
 
-## Current conditional primitive continuations (pass 209)
+## Current final conditional frame exits (pass 210)
+
+Three early exits exposed by complete conditional-continuation recovery now
+guard their entire terminal suffixes. Menu press animation and the points-panel
+slide use ordinary conditions; both frame labels retire only after their final
+references disappear. Original conditions, callbacks, unboxing, short circuits,
+store sites, expression association and arithmetic failures stay on the original
+paths. No predicate value, purity or selector state is assumed.
+
+Independent javac reattributes the actual intermediate source and certifies
+terminal plain-block/if corridors, every original binding and all
+5,019 remaining transfers/protected scopes. Two frame labels retire,
+4 surviving ordinals migrate, and all 18,348 unaffected
+complete naming objects remain exact. There are 18,352 rules and
+19,398 dictionary identities, with 117,440 identifier,
+11 literal and 552 label edits (118,003 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/conditionalStoreFallbackRecovery.test.js test/arithmeticStoreFallbackRecovery.test.js test/sharedStoreFallbackRecovery.test.js test/guardedStoreFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/terminalFrameLoopRecovery.test.js test/javaAstEmitterGuardedAbruptExits.test.js`
+passes all 48 groups. The conditional fixture compares 1,049,760 native cases
+across 36 models against independent oracles, including original/shared/final
+structured forms, nullable tail predicates, short-circuit callbacks, mutations,
+partial writes, zero divisors, overflow, aliases, finally priority and monitor
+release. It validates the final normal emitter as well as the recovery APIs.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independent corridor/destination facts,
+every binding, three consumed exits, complete naming objects, retirement/
+ordinal migrations and compilation. All 303 readable files reverse byte exactly;
+all 27 publication tests, 17 scoped native trace groups and current/fresh sibling
+reproductions pass. Older proofs and frozen input/naming/native pins remain.
+Five large labeled methods and 41 unsupported fields remain. Whole-game/browser/
+phone equivalence and heap/presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`1fc28bd64ae33b67cf8b92087f2362d08582c1c0239e687145b4f27a7293275d`.
+
+## Previous conditional primitive continuations (pass 209)
 
 The generic decompiler now keeps a bounded continuation of primitive stores and
 complete if/else trees together. Three guarded continuations across menu press
