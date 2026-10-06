@@ -310,18 +310,18 @@ final class GameplaySession {
         if (methodGuard >= -28) {
           this.updateSession(-63);
         }
-        gameOverScorePanelPosition: {
-          if (this.showGameOverOverlay) {
-            if (this.sceneAnimationTick <= 266) {
-              gameOverAnimationProgress = (float)this.sceneAnimationTick / 266.0f;
-              gameOverAnimationRemainder = -gameOverAnimationProgress + 1.0f;
-              gameOverAnimationRemainderSquared = gameOverAnimationRemainder * gameOverAnimationRemainder;
-              selectedThemeIdOrScoreBoxX = (int)(0.5f + (70.0f * (2.0f * gameOverAnimationProgress * gameOverAnimationRemainder) + 10.0f * gameOverAnimationRemainderSquared + 220.0f * (gameOverAnimationProgress * gameOverAnimationProgress)));
-              loadingPanelWidthOrScoreBoxY = (int)(170.0f * (gameOverAnimationProgress * gameOverAnimationProgress) + (gameOverAnimationRemainderSquared * 10.0f + 140.0f * (gameOverAnimationProgress * 2.0f * gameOverAnimationRemainder)) + 0.5f);
-              if (clientControlFlowGuard == 0) {
-                break gameOverScorePanelPosition;
-              }
+        if (this.showGameOverOverlay) {
+          if (this.sceneAnimationTick <= 266) {
+            gameOverAnimationProgress = (float)this.sceneAnimationTick / 266.0f;
+            gameOverAnimationRemainder = -gameOverAnimationProgress + 1.0f;
+            gameOverAnimationRemainderSquared = gameOverAnimationRemainder * gameOverAnimationRemainder;
+            selectedThemeIdOrScoreBoxX = (int)(0.5f + (70.0f * (2.0f * gameOverAnimationProgress * gameOverAnimationRemainder) + 10.0f * gameOverAnimationRemainderSquared + 220.0f * (gameOverAnimationProgress * gameOverAnimationProgress)));
+            loadingPanelWidthOrScoreBoxY = (int)(170.0f * (gameOverAnimationProgress * gameOverAnimationProgress) + (gameOverAnimationRemainderSquared * 10.0f + 140.0f * (gameOverAnimationProgress * 2.0f * gameOverAnimationRemainder)) + 0.5f);
+            if (!(clientControlFlowGuard == 0)) {
+              selectedThemeIdOrScoreBoxX = 220;
+              loadingPanelWidthOrScoreBoxY = 170;
             }
+          } else {
             selectedThemeIdOrScoreBoxX = 220;
             loadingPanelWidthOrScoreBoxY = 170;
           }
@@ -807,18 +807,17 @@ final class GameplaySession {
               PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
             }
             nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
-            boardClearBonusHandling: {
-              this.boardClearBonusEligible = nextBoardClearBonusEligible;
-              if (this.boardClearBonusEligible &&
-                  this.connectivityRebuiltThisTick) {
+            this.boardClearBonusEligible = nextBoardClearBonusEligible;
+            if (this.boardClearBonusEligible &&
+                this.connectivityRebuiltThisTick) {
+              this.connectivityRebuiltThisTick = false;
+              this.delayedActionCountdown = 300;
+              this.boardClearBonusEligible = false;
+              SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
+              if (!(clientControlFlowGuard == 0)) {
                 this.connectivityRebuiltThisTick = false;
-                this.delayedActionCountdown = 300;
-                this.boardClearBonusEligible = false;
-                SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
-                if (clientControlFlowGuard == 0) {
-                  break boardClearBonusHandling;
-                }
               }
+            } else {
               this.connectivityRebuiltThisTick = false;
             }
             this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
@@ -1154,17 +1153,18 @@ final class GameplaySession {
         if (methodGuard != 116) {
           this.score = -46;
         }
-        sessionEndOrTutorialCompletion: {
-          if (!this.tutorialMode) {
-            this.sessionEnding = true;
-            this.showGameOverOverlay = true;
-            this.emitPointsPopup(false);
-            this.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(-25866));
-            this.submitScore((byte) -70);
-            if (Geoblox.clientControlFlowFlag == 0) {
-              break sessionEndOrTutorialCompletion;
-            }
+        if (!this.tutorialMode) {
+          this.sessionEnding = true;
+          this.showGameOverOverlay = true;
+          this.emitPointsPopup(false);
+          this.addScore((byte) 127, WidgetTheme.collectUnfinishedPopupPoints(-25866));
+          this.submitScore((byte) -70);
+          if (!(Geoblox.clientControlFlowFlag == 0)) {
+            this.tutorialStepId = 5;
+            this.tutorialStepPhase = 0;
+            this.tutorialPromptActive = true;
           }
+        } else {
           this.tutorialStepId = 5;
           this.tutorialStepPhase = 0;
           this.tutorialPromptActive = true;

@@ -251,34 +251,33 @@ class UiWidget extends IntrusiveNode {
             ContextualRuntimeException.updateTooltipState(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          pointerPressWithoutWheel: {
-            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
-              if (focusFlag == 0) {
-                if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
-                    0 != FullscreenErrorDialog.previousUiPointerButton) {
-                  this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
-                  releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
-                  if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
-                    if (releasedDragAfterRejectedPressWithoutFocusOrWheel.listener instanceof DropListener) {
-                      ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocusOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocusOrWheel, 22176);
-                    }
-                    ValidationState.activeDragWidget = null;
+          if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
+            if (focusFlag == 0) {
+              if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
+                  0 != FullscreenErrorDialog.previousUiPointerButton) {
+                this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
+                releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
+                if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
+                  if (releasedDragAfterRejectedPressWithoutFocusOrWheel.listener instanceof DropListener) {
+                    ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocusOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocusOrWheel, 22176);
                   }
-                  if (clientControlFlowSnapshot != 0 &&
-                      focusFlag != 0 &&
-                      CheckboxRenderer.pointerPressButtonSnapshot != 0) {
-                    this.clearKeyboardFocus(-126);
-                  }
+                  ValidationState.activeDragWidget = null;
                 }
-                FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
-                ContextualRuntimeException.updateTooltipState(this.getHoverText((byte) 69), (byte) 72);
-                return pointerEventsAvailable;
+                if (clientControlFlowSnapshot != 0 &&
+                    focusFlag != 0 &&
+                    CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+                  this.clearKeyboardFocus(-126);
+                }
               }
-              this.clearKeyboardFocus(-127);
-              if (clientControlFlowSnapshot == 0) {
-                break pointerPressWithoutWheel;
-              }
+              FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
+              ContextualRuntimeException.updateTooltipState(this.getHoverText((byte) 69), (byte) 72);
+              return pointerEventsAvailable;
             }
+            this.clearKeyboardFocus(-127);
+            if (!(clientControlFlowSnapshot == 0)) {
+              pointerEventsAvailable = false;
+            }
+          } else {
             pointerEventsAvailable = false;
           }
           if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
@@ -331,13 +330,12 @@ class UiWidget extends IntrusiveNode {
             ContextualRuntimeException.updateTooltipState(this.getHoverText((byte) 69), (byte) 72);
             return pointerEventsAvailable;
           }
-          pointerPressWithWheel: {
-            if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
-              this.clearKeyboardFocus(-127);
-              if (clientControlFlowSnapshot == 0) {
-                break pointerPressWithWheel;
-              }
+          if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
+            this.clearKeyboardFocus(-127);
+            if (!(clientControlFlowSnapshot == 0)) {
+              pointerEventsAvailable = false;
             }
+          } else {
             pointerEventsAvailable = false;
           }
           if (EntityCollisionSupport.heldPointerButtonSnapshot != 0) {
