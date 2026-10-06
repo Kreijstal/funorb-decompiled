@@ -504,14 +504,11 @@ final class GameplaySession {
               AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
             }
           }
-          settledResultRendering: {
-            FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
-            if (EntityContactSupport.areEntityQueuesSettled(0)) {
-              if (0 == this.sessionPhase ||
-                    this.sessionPhase == 1) {
-                if (sceneTransitionFlag == 0) {
-                  break settledResultRendering;
-                }
+          FadingDialog.uiPaletteFont.drawText(OpacityWidget.replaceIndexedTextMarkers(LimitedRandomAccessFile.scoreTextTemplate, new String[]{this.scoreText.toString()}, (byte) -53), 15 + selectedThemeIdOrScoreBoxX, 30 + loadingPanelWidthOrScoreBoxY, 0, -1);
+          if (EntityContactSupport.areEntityQueuesSettled(0)) {
+            if (0 == this.sessionPhase ||
+                  this.sessionPhase == 1) {
+              if (!(sceneTransitionFlag == 0)) {
                 tutorialTopOrDebugColorOrTransitionClipTop = 35 + (6 * this.sceneAnimationTick - 480);
                 SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
                 SoftwareRasterizer.setClip(0, tutorialTopOrDebugColorOrTransitionClipTop, 640, 480);
@@ -521,9 +518,9 @@ final class GameplaySession {
                 if (!(clientControlFlowGuard == 0)) {
                   this.renderResultSequence(false);
                 }
-              } else {
-                this.renderResultSequence(false);
               }
+            } else {
+              this.renderResultSequence(false);
             }
           }
           CachedTextLayout.drawPendingActionPanel(-1);

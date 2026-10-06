@@ -17,14 +17,54 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/a24f2282502637338f9b16c2ebe6e26969cb973a/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/7bccfc1053cffe0dd293a504114445b1dccc82fe/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,410 bindings,
 preserving 388 override relationships.
 
-## Current shared bounded fallbacks (pass 202)
+## Current late shared-frame conditions (pass 203)
+
+Shared-callback recovery exposed two early exits with complete terminal suffixes.
+Menu-action dispatch and gameplay rendering now guard those whole suffixes under
+their original inverse conditions. The gameplay-overlay frame retires after its
+last exit disappears. Other menu exits retain their frame. Original conditions,
+prefixes, callbacks and guard order remain once on the original paths. No new
+selector, name, assumed control-flag value or arithmetic reassociation is added.
+
+The actual shared-stage source is independently reattributed with javac. Each
+selected exit reaches the frame end through a terminal plain-block/if corridor;
+intervening work and crossed loops/protected/monitor regions refuse. Every
+original binding and remaining destination/protected scope retains its exact
+identity. One label retires and 0 surviving ordinals migrate. All
+18,357 unaffected complete naming objects remain exact.
+There are 18,357 rules, 19,403 dictionary identities,
+117,388 identifier, 11 literal and 575 label edits
+(117,974 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/smallGuardedFallbackRecovery.test.js`
+passes all nineteen tests. The shared-callback fixture's 174,960 native cases
+compare original, shared and final structured forms with independent models,
+covering early exits, nullable conditions/guards/payloads, mutations, overloads,
+aliases, partial failures, overflow, finally priority and monitor release.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independently reattributed continuation
+facts, every binding, two consumed exits, all 5,037 surviving transfer/protected
+scope facts, complete naming objects, retirement/ordinal migrations and compilation.
+All 303 readable files reverse byte exactly. All 27 publication tests, 17 scoped
+native trace groups and current/fresh sibling reproduction checks pass. Older
+proof records and frozen input/naming/native pins remain. Five large labeled
+bodies and 41 unsupported fields remain; whole-game/browser/phone and heap/
+presented-FPS acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`8bad2651674bf730eac82c00891be01ac59a732ddd32ae909c350240eb04a1e1`.
+
+## Previous shared bounded fallbacks (pass 202)
 
 Three final guarded callback skips in menu-action dispatch and gameplay rendering
 now use bounded callbacks in exclusive source arms. Each callback still executes
