@@ -83,7 +83,7 @@ final class MatchScoringSupport {
             sortCursorThenFirstEntityId = sortInsertionIndex - 1;
             packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[sortInsertionIndex];
             while (sortCursorThenFirstEntityId >= 0) {
-              if (~TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId] < ~packedCandidateThenSecondEntityId) {
+              if (TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId] > packedCandidateThenSecondEntityId) {
                 TextPairLoginPayload.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId];
                 sortCursorThenFirstEntityId--;
                 continue;

@@ -33,7 +33,7 @@ final class HighscoreNameEntry {
           } while (clientControlFlowGuard == 0);
           if ((MidiPcmStream.heldInternalKeys[99] &&
               ArchiveNetworkClient.movingEntities.isEmpty(13519) ||
-            !(~UsernameResponseSupport.spawnReleaseIntervalTicks <= ~BoardReconciliationSupport.ticksSinceLastEntityRelease) ||
+            !(UsernameResponseSupport.spawnReleaseIntervalTicks >= BoardReconciliationSupport.ticksSinceLastEntityRelease) ||
             MatchCandidateSupport.releasedInCurrentTheme == 0 &&
               !UiWidget.gameplaySession.tutorialMode) && (0 < SecondaryDeque.spawnQueue.countNodes(methodGuard ^ -170) &&
               !UiWidget.gameplaySession.spawnReleaseDisabled)) {

@@ -98,7 +98,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
                     SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
                     TextInputWidget.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
-                    if (~cameraZBasisOrCameraDepth > ~minimumVisibleDepth) {
+                    if (cameraZBasisOrCameraDepth < minimumVisibleDepth) {
                       minimumVisibleDepth = cameraZBasisOrCameraDepth;
                     }
                     if (maximumVisibleDepth < cameraZBasisOrCameraDepth) {
@@ -128,7 +128,7 @@ final class AchievementSubmission extends IntrusiveNode {
                   null != mesh.thirdVertexSourceY &&
                   mesh.thirdVertexSourceZ != null) {
                 cameraXBasisOrDeltaZOrVertexIndex = 0;
-                while (!(~cameraXBasisOrDeltaZOrVertexIndex <= ~mesh.faceCount)) {
+                while (!(cameraXBasisOrDeltaZOrVertexIndex >= mesh.faceCount)) {
                   cameraYBasisOrVertexX = mesh.firstVertexSourceX[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexY = mesh.firstVertexSourceY[cameraXBasisOrDeltaZOrVertexIndex];
                   cameraYBasisOrVertexZ = mesh.firstVertexSourceZ[cameraXBasisOrDeltaZOrVertexIndex];
@@ -164,7 +164,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 cameraYYOrNormalYZQ16 = modelTransform[10];
                 cameraZYOrNormalZZQ16 = modelTransform[11];
                 cameraXZQ16OrNormalIndex = 0;
-                while (!(~mesh.normalCount >= ~cameraXZQ16OrNormalIndex)) {
+                while (!(mesh.normalCount <= cameraXZQ16OrNormalIndex)) {
                   nearPlaneOrNormalCapacityOrQueueMinDepth = ClientRenderingState.transformedMeshNormalX.length;
                   invertedDepthOrNormalIndexOrQueueGuard = cameraXZQ16OrNormalIndex;
                   if (controlFlagSnapshot != 0) {

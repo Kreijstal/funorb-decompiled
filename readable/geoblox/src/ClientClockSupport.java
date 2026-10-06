@@ -11,7 +11,7 @@ final class ClientClockSupport {
 
     final synchronized static long correctedCurrentTimeMillis(int methodGuard) {
         long wallClockMillis = System.currentTimeMillis();
-        if (!(~TextValidationFailure.previousWallClockMillis >= ~wallClockMillis)) {
+        if (!(TextValidationFailure.previousWallClockMillis <= wallClockMillis)) {
             DisplayModeInfo.backwardClockCorrectionMillis = DisplayModeInfo.backwardClockCorrectionMillis + (TextValidationFailure.previousWallClockMillis - wallClockMillis);
         }
         TextValidationFailure.previousWallClockMillis = wallClockMillis;

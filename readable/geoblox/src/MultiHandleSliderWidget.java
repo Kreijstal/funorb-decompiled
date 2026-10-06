@@ -109,7 +109,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
               for (handleSearchIndex = 0; handleSearchIndex < this.handleValues.size((byte) 48); handleSearchIndex++) {
                 valueDeltaThenSquaredDistance = this.handleValues.get(handleSearchIndex, (byte) 94) - railOffsetThenHandleValue;
                 valueDeltaThenSquaredDistance = valueDeltaThenSquaredDistance * valueDeltaThenSquaredDistance;
-                if (~smallestSquaredDistance < ~valueDeltaThenSquaredDistance) {
+                if (smallestSquaredDistance > valueDeltaThenSquaredDistance) {
                   smallestSquaredDistance = valueDeltaThenSquaredDistance;
                   selectedHandleIndex = handleSearchIndex;
                 }

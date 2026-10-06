@@ -82,7 +82,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
             if (this.isInputEmpty(methodGuard ^ 26579)) {
                 return ByteStorage.emptyInputValidationState;
             }
-            if (~(350L + this.lastInputChangeMillis) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
+            if ((350L + this.lastInputChangeMillis) <= ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
                 return this.currentValidationState(32);
             }
             return ImageProducerRasterBuffer.debouncingValidationState;
@@ -90,7 +90,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         if (this.isInputEmpty(methodGuard ^ 26579)) {
             return ByteStorage.emptyInputValidationState;
         }
-        if (~(350L + this.lastInputChangeMillis) >= ~ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
+        if ((350L + this.lastInputChangeMillis) <= ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
             return this.currentValidationState(32);
         }
         return ImageProducerRasterBuffer.debouncingValidationState;

@@ -335,7 +335,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       parsedJavaMajorVersion = 0;
                       while (true) {
                         majorVersionComparison: {
-                          if (~PlatformTaskDispatcher.javaVersion.length() < ~javaVersionDigitIndex) {
+                          if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
                             updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
                             majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
                             majorVersionComparisonRight = 48;
@@ -699,7 +699,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 -Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (~var2.width > ~DialWidget.initialCanvasWidth) {
+                if (var2.width < DialWidget.initialCanvasWidth) {
                   return;
                 }
                 if (NetworkArchiveRequest.initialCanvasHeight > var2.height) {

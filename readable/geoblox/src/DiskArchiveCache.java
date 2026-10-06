@@ -82,7 +82,7 @@ final class DiskArchiveCache {
             dataFileMonitor = this.dataFile;
             synchronized (dataFileMonitor) {
               try {
-                if (~this.indexFile.length((byte) 46) > ~(long)(entryId * 6 + 6)) {
+                if (this.indexFile.length((byte) 46) < (long)(entryId * 6 + 6)) {
                   nullForMissingIndex = null;
                   return (byte[]) (nullForMissingIndex);
                 }
@@ -277,7 +277,7 @@ final class DiskArchiveCache {
                               chunkNumber == headerChunkNumber &&
                               headerArchiveId == this.archiveId) {
                             if (nextSectorNumber >= 0 &&
-                                ~(this.dataFile.length((byte) 46) / 520L) <= ~(long)nextSectorNumber) {
+                                (this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber) {
                               break existingSectorHeaderValidation;
                             }
                             return false;

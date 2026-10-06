@@ -405,7 +405,7 @@ abstract class SpriteState extends DualLinkNode {
             if (sourceOffset > 0) {
               digestInput = new byte[length];
               copiedByteIndex = 0;
-              while (~length < ~copiedByteIndex) {
+              while (length > copiedByteIndex) {
                 digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
                 copiedByteIndex++;
                 if (clientControlFlowGuard != 0) {
@@ -477,14 +477,14 @@ abstract class SpriteState extends DualLinkNode {
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
-              ~TriangleRasterState.clipHeight < ~topY) {
+              TriangleRasterState.clipHeight > topY) {
             if (topX < 0 &&
                 middleX < 0 &&
                 bottomX < 0) {
               return;
             }
-            if (~TriangleRasterState.clipWidth >= ~topX &&
-                ~TriangleRasterState.clipWidth >= ~middleX &&
+            if (TriangleRasterState.clipWidth <= topX &&
+                TriangleRasterState.clipWidth <= middleX &&
                 bottomX >= TriangleRasterState.clipWidth) {
               return;
             }
@@ -648,7 +648,7 @@ abstract class SpriteState extends DualLinkNode {
                     }
                   }
                   edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
-                  while (~middleY < ~topY) {
+                  while (middleY > topY) {
                     spanStartOrWidthOrBottomXQ16 = leftXQ16 >> 16;
                     invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
                     invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;
@@ -671,13 +671,13 @@ abstract class SpriteState extends DualLinkNode {
                         }
                       } else {
                         if (spanStartOrWidthOrBottomXQ16 >= 0 &&
-                            ~spanStartOrWidthOrBottomXQ16 > ~TriangleRasterState.clipWidth) {
+                            spanStartOrWidthOrBottomXQ16 < TriangleRasterState.clipWidth) {
                           MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(spanStartOrWidthOrBottomXQ16 + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanWidthOrRedStepOrBottomRedQ16, leftBlueQ16, destinationPixels);
                         }
                       }
                     }
                     topY++;
-                    if (~topY <= ~TriangleRasterState.clipHeight) {
+                    if (topY >= TriangleRasterState.clipHeight) {
                       return;
                     }
                     rightXQ16 = rightXQ16 + rightXStepQ16;
@@ -773,7 +773,7 @@ abstract class SpriteState extends DualLinkNode {
                 }
               }
               topY++;
-              if (~TriangleRasterState.clipHeight >= ~topY) {
+              if (TriangleRasterState.clipHeight <= topY) {
                 return;
               }
               rightXQ16 = rightXQ16 + rightXStepQ16;

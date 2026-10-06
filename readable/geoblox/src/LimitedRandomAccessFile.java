@@ -221,7 +221,7 @@ final class LimitedRandomAccessFile {
             if (maximumLength == -1L) {
                 maximumLength = 9223372036854775807L;
             }
-            if (~maximumLength > ~path.length()) {
+            if (maximumLength < path.length()) {
                 path.delete();
             }
             this.file = new RandomAccessFile(path, mode);

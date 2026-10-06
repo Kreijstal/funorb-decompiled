@@ -194,7 +194,7 @@ final class NanoFrameTimer extends FrameTimer {
             if ((null != SpriteCheckboxRenderer.sessionSocket) && (keepaliveOpcode < 0 ||
                 PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage)) {
               if (0 == CacheReference.outgoingSessionBuffer.position &&
-                  ~ClientClockSupport.correctedCurrentTimeMillis(-12520) < ~(10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
+                  ClientClockSupport.correctedCurrentTimeMillis(-12520) > (10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
                 CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
               }
               if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
@@ -219,7 +219,7 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     final void resetForResume(int methodGuard) {
-        if (~this.accumulatedTimeNanos > ~this.scheduledTickNanos) {
+        if (this.accumulatedTimeNanos < this.scheduledTickNanos) {
             this.accumulatedTimeNanos = this.accumulatedTimeNanos + (this.scheduledTickNanos - this.accumulatedTimeNanos);
         }
         if (methodGuard < 60) {
@@ -246,7 +246,7 @@ final class NanoFrameTimer extends FrameTimer {
           tickCount++;
           this.scheduledTickNanos = this.scheduledTickNanos + tickPeriodNanos;
         } while (tickCount < 10 &&
-              ~this.scheduledTickNanos > ~this.accumulatedTimeNanos);
+              this.scheduledTickNanos < this.accumulatedTimeNanos);
         if (this.accumulatedTimeNanos > this.scheduledTickNanos) {
           this.scheduledTickNanos = this.accumulatedTimeNanos;
         }
@@ -279,7 +279,7 @@ final class NanoFrameTimer extends FrameTimer {
         if (methodGuard != -49) {
             this.advanceTicks(false, 97L);
         }
-        if (~this.scheduledTickNanos < ~this.accumulatedTimeNanos) {
+        if (this.scheduledTickNanos > this.accumulatedTimeNanos) {
             return (this.scheduledTickNanos - this.accumulatedTimeNanos) / 1000000L;
         }
         return 0L;

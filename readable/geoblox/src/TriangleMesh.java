@@ -115,7 +115,7 @@ final class TriangleMesh {
         for (vertexIndex = 0; this.vertexCount > vertexIndex; vertexIndex++) {
           vertexXValue = this.vertexX[vertexIndex];
           vertexYValue = this.vertexY[vertexIndex];
-          if (~vertexYValue > ~minimumY) {
+          if (vertexYValue < minimumY) {
             minimumY = vertexYValue;
           }
           if (maximumY < vertexYValue) {

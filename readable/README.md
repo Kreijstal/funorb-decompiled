@@ -5,7 +5,50 @@ The current export has 18,364 guarded naming rules: 302 classes, 2,064 fields,
 compile, comparing 136,981 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current slider, raster and cursor local names (pass 215)
+## Current complemented integer comparisons (pass 216)
+
+The generic decompiler replaces 73 paired complemented relations across
+32 methods and 22 files with direct comparisons: \~a < \~b becomes a > b,
+with the matching reversal for <=, > and >=. Legal Java complement yields
+signed int/long values; sign extension commutes with complement, which reverses
+that signed order. All complete original operands, casts and parentheses stay
+intact, including callback order and nullable unboxing. Equality stays unchanged
+to preserve boxed reference identity semantics. The normal emitter repeats the
+bounded cleanup until redundant nested complements stop exposing comparisons.
+
+Every lexical selection is checked against the complete intended parsed AST
+change. Independent javac attributes both original unary results as int/long
+and compares all 303 complete trees against that precise rewrite. Every
+original ordinary/label binding and all 4,949 transfer/protected-scope facts
+remain exact. All 18,364 complete naming objects and 19,370 dictionary identities
+remain unchanged, including pass215 names. No labels or references change.
+The export still has 118,061 identifier, 11 literal and 454 label edits
+(118,526 total), 89 plain block labels and 75,802 source lines.
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/complementedRelationRecovery.test.js test/sharedStatementFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/nestedIfConditionRecovery.test.js`
+passes all 33 groups. The new fixture compares 2,612,736 native cases across
+672 models against independent ordered comparisons. It covers byte/short/char/
+int/long promotion, boxed/null values, extreme and truncated values, callback
+order, failures, finally overrides and monitor release. The updated emitter's
+nested-complement regression and all six focused groups also pass.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-complemented-relations-source.mjs ../java-tools`
+checks independent complete javac trees and unary types, exact source edits,
+every binding and transfer/protected scope, all 303 compiler bytes and compilation.
+A clean tracked compiler archive reproduces all 303 CLI bytes with unchanged
+diagnostics. All 303 files reverse byte exactly; all 27 publication tests,
+17 scoped native trace groups and current/fresh sibling reproductions pass.
+Older proofs and frozen input/naming/native pins remain intact. Four large
+methods with plain block frames, 498 compiler-named declarations and 41
+unsupported fields remain. Whole-game/browser/phone equivalence and heap/
+presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`0d5006fd3d9321c254252d94f322f97c13ee4a6cca4549bcc03b48a597fbb6c6`.
+
+## Previous slider, raster and cursor local names (pass 215)
 
 Forty remaining unnamed declarations now describe their source roles in
 MultiHandleSliderWidget, ImageProducerRasterBuffer, WindowsCursorController and
@@ -4103,32 +4146,32 @@ Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refer
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
 The current Deko workflow/manifest commit is `7f3d87237e5f4fcab093c368284f4cf24d877555`; the
-manifest SHA-256 is `a6ca18545a430e2a11eea0ad491f12a6c5de4900917eaf8c491bab93288d5c36`.
+manifest SHA-256 is `a6869f797479dcb3e74b705039476a8d2f5197e007064987ebbb3308bbd72d32`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`c66b27f36c6b49e6546a7a131bd1888e6de7f190`. It comes from java-tools
-`c2a48445b625e64235f123e3f6777faf254769b6` and Deko
+`16b62019ef79afa0cc5ca8693b72206bfe722e9f`. It comes from java-tools
+`03a5aa806452458c8d2f19718f16a0c37ff78abf` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `7d339941e604dd19c040490e33a8fd5de0938a0b` in Deko; its selected generic-source
 archive SHA-256 is `1d0657a4052656a747abedab1cf491ebb97140bd68ad9389e25763443ab158a9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`6b7d983b3e8d24f36d4d6808afa6ed735bfcdf4b1c503b56af2f99204f2765b4`:
+`0d5006fd3d9321c254252d94f322f97c13ee4a6cca4549bcc03b48a597fbb6c6`:
 
 ```sh
-git archive --format=tar c2a48445b625e64235f123e3f6777faf254769b6 | sha256sum
+git archive --format=tar 03a5aa806452458c8d2f19718f16a0c37ff78abf | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`966c498146038e6c2b81b6056569420aba995edf15219e9f3fe309056322d43d`.
+`bf6759d05dff386a545e66df9abdb0e40f5327dcfda55870b73433ef8622c219`.
 Current readable tree SHA-256:
-`7e6a348f983d37b4ef1096dd4897123b79f8eef7d35ab3f967f22d630cb74be7`.
+`113ce535e9a2b19500716c08fff7e83da6e3f988ef000e0bc7ca83fc1b7de7ea`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

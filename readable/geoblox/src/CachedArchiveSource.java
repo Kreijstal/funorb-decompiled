@@ -526,7 +526,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (!this.sweepCompletedRequests) {
                       break backgroundLoadingAndSweep;
                     }
-                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
+                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
                       break requestSweepDueCheck;
                     }
                     cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
@@ -554,7 +554,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (!this.sweepCompletedRequests) {
                 break backgroundLoadingAndSweep;
               }
-              if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~this.nextRequestSweepMillis) {
+              if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
                 break requestSweepDueCheck;
               }
               cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));

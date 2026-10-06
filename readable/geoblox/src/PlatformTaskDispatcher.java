@@ -149,14 +149,14 @@ final class PlatformTaskDispatcher implements Runnable {
                                     throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                   }
                                   if (taskType == 3) {
-                                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
+                                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                                       throw new IOException();
                                     }
                                     reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
                                     task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
                                   } else {
                                     if (taskType == 21) {
-                                      if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
+                                      if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                                         throw new IOException();
                                       }
                                       task.result = java.net.InetAddress.getByName((String) (task.input)).getAddress();
@@ -282,7 +282,7 @@ final class PlatformTaskDispatcher implements Runnable {
                       }
                     }
                   } else {
-                    if (~ClientClockSupport.correctedCurrentTimeMillis(-12520) > ~networkBlockedUntilMillis) {
+                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     task.result = new java.net.Socket(java.net.InetAddress.getByName((String) (task.input)), task.firstIntArgument);

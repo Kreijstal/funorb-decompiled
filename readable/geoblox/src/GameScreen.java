@@ -266,7 +266,7 @@ final class GameScreen extends MenuScreen {
                 break backgroundTileColumns;
               }
               tileY = tileOriginYOrForegroundStartX;
-              while (~-WidgetContainer.menuBackgroundSprite.fullHeight >= ~tileY) {
+              while (-WidgetContainer.menuBackgroundSprite.fullHeight <= tileY) {
                 WidgetContainer.menuBackgroundSprite.drawUnmasked(tileX, tileY);
                 tileY = tileY - WidgetContainer.menuBackgroundSprite.fullHeight;
               }
@@ -279,12 +279,12 @@ final class GameScreen extends MenuScreen {
             break;
           }
           tileX = tileOriginYOrForegroundStartX;
-          while (~-CachedTextLayout.menuForegroundSprite.fullWidth >= ~tileX) {
+          while (-CachedTextLayout.menuForegroundSprite.fullWidth <= tileX) {
             if (clientControlFlowGuard != 0) {
               return;
             }
             tileY = this.foregroundScrollY + CachedTextLayout.menuForegroundSprite.fullHeight + 480;
-            while (~tileY <= ~-CachedTextLayout.menuForegroundSprite.fullHeight) {
+            while (tileY >= -CachedTextLayout.menuForegroundSprite.fullHeight) {
               CachedTextLayout.menuForegroundSprite.draw(tileX, tileY);
               tileY = tileY - CachedTextLayout.menuForegroundSprite.fullHeight;
             }
@@ -1654,7 +1654,7 @@ final class GameScreen extends MenuScreen {
                 return;
               }
             }
-            if (~NetworkArchiveRequest.barSprite.fullWidth < ~pointerX) {
+            if (NetworkArchiveRequest.barSprite.fullWidth > pointerX) {
               AsyncResourceDownloader.setGameMusicVolume(-15346, 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth);
               if (clientControlFlowGuard == 0) {
                 return;
@@ -1745,7 +1745,7 @@ final class GameScreen extends MenuScreen {
               }
             }
             this.tutorialSlideOffset = this.tutorialSlideOffset + 8;
-            if (~(640 + CharacterReplacementSupport.transitionCurtain.height) > ~this.tutorialSlideOffset) {
+            if ((640 + CharacterReplacementSupport.transitionCurtain.height) < this.tutorialSlideOffset) {
               this.tutorialSlideActive = false;
               this.tutorialSlideOffset = 0;
             }

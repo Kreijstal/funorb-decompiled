@@ -423,7 +423,7 @@ abstract class ResizableDialog extends FadingDialog {
         bandRowIndex = 0;
         rasterY = y;
         while (bandHeight > bandRowIndex) {
-          if (~rasterY > ~SoftwareRasterizer.clipTop) {
+          if (rasterY < SoftwareRasterizer.clipTop) {
             rasterY++;
             bandRowIndex++;
             continue;

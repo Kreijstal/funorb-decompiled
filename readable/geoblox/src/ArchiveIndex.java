@@ -170,7 +170,7 @@ final class ArchiveIndex {
                   wideFileIdsForStore = this.fileIds[groupId];
                   wideFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterWideDelta;
                   reconstructedFileId = fileIdAfterWideDelta;
-                  if (~maximumFileIdOrFileSlotIndex > ~reconstructedFileId) {
+                  if (maximumFileIdOrFileSlotIndex < reconstructedFileId) {
                     maximumFileIdOrFileSlotIndex = reconstructedFileId;
                   }
                 }
@@ -196,7 +196,7 @@ final class ArchiveIndex {
                   shortFileIdsForStore = this.fileIds[groupId];
                   shortFileIdsForStore[fileOrdinalOrFileId] = fileIdAfterShortDelta;
                   reconstructedFileId = fileIdAfterShortDelta;
-                  if (~maximumFileIdOrFileSlotIndex <= ~reconstructedFileId) {
+                  if (maximumFileIdOrFileSlotIndex >= reconstructedFileId) {
                     continue;
                   }
                   maximumFileIdOrFileSlotIndex = reconstructedFileId;

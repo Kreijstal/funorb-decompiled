@@ -1537,7 +1537,7 @@ final class GameplaySession {
             if (460 > this.sceneAnimationTick) {
               this.sessionPhase = 2;
               if (controlFlowGuard != 0) {
-                if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
+                if ((460 - this.sceneAnimationTick + 460) < (this.endingEntityRadius * 2)) {
                   this.sessionPhase = 4;
                   if (controlFlowGuard != 0) {
                     this.sessionPhase = 3;
@@ -1547,7 +1547,7 @@ final class GameplaySession {
                 }
               }
             } else {
-              if (~(460 - this.sceneAnimationTick + 460) > ~(this.endingEntityRadius * 2)) {
+              if ((460 - this.sceneAnimationTick + 460) < (this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
                 if (controlFlowGuard != 0) {
                   this.sessionPhase = 3;

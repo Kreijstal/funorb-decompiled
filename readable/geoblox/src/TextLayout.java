@@ -16,7 +16,7 @@ abstract class TextLayout {
         TextLayoutLine[] linesAlias = lines;
         for (lineIndex = 0; lines.length > lineIndex; lineIndex++) {
             line = lines[lineIndex];
-            if (~line.caretX.length < ~caretIndex) {
+            if (line.caretX.length > caretIndex) {
                 return line.caretX[caretIndex];
             }
             caretIndex = caretIndex - (line.caretX.length - 1);

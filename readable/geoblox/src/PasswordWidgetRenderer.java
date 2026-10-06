@@ -128,7 +128,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
             mesh.facePriorities = MouseWheelInput.readPackedByteArray(mesh.facePriorities, packet, 16, 8);
             maximumUnsignedFacePriority = 0;
             for (facePriorityIndex = 0; mesh.facePriorities.length > facePriorityIndex; facePriorityIndex++) {
-              if (~(255 & mesh.facePriorities[facePriorityIndex]) < ~maximumUnsignedFacePriority) {
+              if ((255 & mesh.facePriorities[facePriorityIndex]) > maximumUnsignedFacePriority) {
                 maximumUnsignedFacePriority = 255 & mesh.facePriorities[facePriorityIndex];
               }
             }

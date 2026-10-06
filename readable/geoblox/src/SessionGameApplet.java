@@ -259,7 +259,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
           if (this.forceIdleDisconnect ||
-              !(~idleThresholdOrArchivePendingOrSequenceReady <= ~IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
+              !(idleThresholdOrArchivePendingOrSequenceReady >= IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
                 !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))) {
             this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
@@ -333,7 +333,7 @@ abstract class SessionGameApplet extends GameApplet {
         if ((DebouncedValidationProvider.archiveLoadStatus != -1 &&
                 DebouncedValidationProvider.archiveLoadStatus != 0 ||
               ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)) &&
-            ~DisplayNamePanel.connectionRetryDeadlineMillis >= ~ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180)) {
+            DisplayNamePanel.connectionRetryDeadlineMillis <= ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180)) {
           ArchiveLoadStep.loginRetrySuspended = false;
           if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
               DebouncedValidationProvider.archiveLoadStatus != 0) {
