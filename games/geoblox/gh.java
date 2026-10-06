@@ -622,14 +622,10 @@ final class gh {
             if (!ll.field_g[c.field_ab]) {
               return;
             }
-            L14: {
-              if (!this.field_E) {
-                var2 = 96;
-                var3 = 97;
-                if (var5 == 0) {
-                  break L14;
-                }
-              }
+            if ((!this.field_E) && (var5 == 0)) {
+              var2 = 96;
+              var3 = 97;
+            } else {
               var3 = 96;
               var2 = 97;
             }
