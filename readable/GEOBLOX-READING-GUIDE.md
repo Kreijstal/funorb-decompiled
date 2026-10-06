@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ca7d525afbc40304ce83133e0ee18d71b398f0bc/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0a9035693e7e4963a5624e0e9fde913f5c0a1723/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 206)
+## Current readability (pass 207)
 
-The export has 18,356 guarded names and 117,393 Java identifier edits, plus 11
-class-name literal edits and 565 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,355 guarded names and 117,422 Java identifier edits, plus 11
+class-name literal edits and 561 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 136,415 bindings, reproduce and
+compile and compare 136,444 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -24,7 +24,48 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current final predicate cleanup (pass 206)
+## Current integral arithmetic fallbacks (pass 207)
+
+The generic decompiler now recovers guarded assignment fallbacks containing
+proven integral arithmetic. Three continuations across menu press animation,
+gameplay update and triangle rasterization use exclusive if/else arms.
+9 assignment source sites are copied, each still executing once on its
+original paths. Expression association, read order, overflow, shifts, division
+failures and partial writes remain exact. Floating, boxed, unknown, cast, call,
+increment, array and conditional operands refuse reconstruction. No predicate
+value or purity is assumed.
+
+Independent javac attributes all arithmetic operands and exact terminal
+plain-block/if corridors. Every original/copied binding and all
+5,025 surviving transfers/protected scopes retain their identity.
+One rasterizer frame label retires; 3 surviving ordinals migrate. All
+18,352 unaffected complete naming objects remain exact. There are
+18,355 rules and 19,401 dictionary identities, with
+117,422 identifier, 11 literal and 561 label edits
+(117,994 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/arithmeticStoreFallbackRecovery.test.js test/sharedStoreFallbackRecovery.test.js test/guardedStoreFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/terminalFrameLoopRecovery.test.js test/javaAstEmitterGuardedAbruptExits.test.js`
+passes all 42 groups. The arithmetic fixture compares 262,440 native cases
+across 36 models with independent oracles for nullable conditions/guards,
+prefix mutations, volatile reads, overflow, shifts, zero divisors, partial
+writes, aliases, finally overrides and monitor release.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independently attributed primitive
+operands/stores and corridors, all bindings, consumed and surviving transfers,
+complete naming objects, retirement/ordinal migrations and compilation.
+All 303 readable files reverse byte exactly; all 27 publication tests, 17 scoped
+native trace groups and current/fresh sibling reproductions pass. Older proofs
+and frozen input/naming/native pins remain. Five large labeled methods and
+41 unsupported fields remain. Whole-game/browser/phone equivalence and heap/
+presented-FPS acceptance remain unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`9f21120aab3e29c0160feae8881d1cbbd100c4c84079541a3f751069d039f39b`.
+
+## Previous final predicate cleanup (pass 206)
 
 The generic emitter now finishes predicate operators and grouping after late
 structural reconstruction. 53 exposed conditions simplify and

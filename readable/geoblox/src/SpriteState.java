@@ -572,33 +572,38 @@ abstract class SpriteState extends DualLinkNode {
                   break triangleEdgeInitialization;
                 }
               }
-              upperEdgeOrientation: {
-                rightXQ16 = topX << 16;
-                leftXQ16 = topX << 16;
-                rightBlueQ16 = topBlue << 16;
-                leftBlueQ16 = topBlue << 16;
-                rightGreenQ16 = topGreen << 16;
-                leftGreenQ16 = topGreen << 16;
-                rightRedQ16 = topRed << 16;
-                leftRedQ16 = topRed << 16;
-                edgeSegmentRowsThenRowBase = middleY - topY;
-                rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
-                leftXStepQ16 = (middleX - topX << 16) / edgeSegmentRowsThenRowBase;
-                if (rightXStepQ16 <= leftXStepQ16) {
-                  leftRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
-                  leftGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
-                  leftBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
-                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXStepQ16;
-                  leftXStepQ16 = rightXStepQ16;
-                  rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                  rightGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                  middleVertexOnRight = 1;
-                  rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
-                  rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
-                  if (controlFlagSnapshot == 0) {
-                    break upperEdgeOrientation;
-                  }
+              rightXQ16 = topX << 16;
+              leftXQ16 = topX << 16;
+              rightBlueQ16 = topBlue << 16;
+              leftBlueQ16 = topBlue << 16;
+              rightGreenQ16 = topGreen << 16;
+              leftGreenQ16 = topGreen << 16;
+              rightRedQ16 = topRed << 16;
+              leftRedQ16 = topRed << 16;
+              edgeSegmentRowsThenRowBase = middleY - topY;
+              rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
+              leftXStepQ16 = (middleX - topX << 16) / edgeSegmentRowsThenRowBase;
+              if (rightXStepQ16 <= leftXStepQ16) {
+                leftRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                leftGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
+                leftBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXStepQ16;
+                leftXStepQ16 = rightXStepQ16;
+                rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                rightGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                middleVertexOnRight = 1;
+                rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
+                rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
+                if (!(controlFlagSnapshot == 0)) {
+                  rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                  rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
+                  leftRedStepQ16 = (middleRed - topRed << 16) / edgeSegmentRowsThenRowBase;
+                  rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                  leftBlueStepQ16 = (middleBlue - topBlue << 16) / edgeSegmentRowsThenRowBase;
+                  leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                  middleVertexOnRight = 0;
                 }
+              } else {
                 rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
                 rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
                 leftRedStepQ16 = (middleRed - topRed << 16) / edgeSegmentRowsThenRowBase;

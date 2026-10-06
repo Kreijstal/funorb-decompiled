@@ -585,11 +585,12 @@ final class GameplaySession {
                 }
               }
               this.pointsPanelX = this.pointsPanelX + 1;
-              if (clientControlFlowGuard == 0) {
-                break pointsPanelSlideStep;
+              if (!(clientControlFlowGuard == 0)) {
+                this.pointsPanelX = this.pointsPanelX - 1;
               }
+            } else {
+              this.pointsPanelX = this.pointsPanelX - 1;
             }
-            this.pointsPanelX = this.pointsPanelX - 1;
           }
         }
         sessionProgressionAndEnding: {
