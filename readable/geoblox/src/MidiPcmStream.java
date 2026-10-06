@@ -311,14 +311,11 @@ final class MidiPcmStream extends PcmStream {
               finishNoteInt = 1;
             }
           }
-          releaseEnvelopeAdvance: {
-            if (note.releaseEnvelopeTime >= 0 &&
-                envelope.releaseEnvelope != null &&
-                (this.channelFlags[note.channelIndex] & 1) == 0) {
-              if (0 <= note.keyGroup &&
-                  note == this.notesByKeyGroup[note.channelIndex][note.keyGroup]) {
-                break releaseEnvelopeAdvance;
-              }
+          if (note.releaseEnvelopeTime >= 0 &&
+              envelope.releaseEnvelope != null &&
+              (this.channelFlags[note.channelIndex] & 1) == 0) {
+            if (!(0 <= note.keyGroup &&
+                note == this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
               if (0 < envelope.releaseEnvelopeKeyScaling) {
                 note.releaseEnvelopeTime = note.releaseEnvelopeTime + (int)(0.5 + Math.pow(2.0, keyScalingExponent * (double)envelope.releaseEnvelopeKeyScaling) * 128.0);
               } else {
@@ -331,10 +328,9 @@ final class MidiPcmStream extends PcmStream {
                 }
                 break;
               }
-              if (-2 + envelope.releaseEnvelope.length != note.releaseEnvelopeIndex) {
-                break releaseEnvelopeAdvance;
+              if (!(-2 + envelope.releaseEnvelope.length != note.releaseEnvelopeIndex)) {
+                finishNoteInt = 1;
               }
-              finishNoteInt = 1;
             }
           }
           if (finishNoteInt == 0) {

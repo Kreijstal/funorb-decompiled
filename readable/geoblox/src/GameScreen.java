@@ -369,12 +369,11 @@ final class GameScreen extends MenuScreen {
                   break panelPlacementSelection;
                 }
               }
-              if (this.screenId != 8 &&
-                  this.screenId != 7) {
-                break panelPlacementSelection;
+              if (!(this.screenId != 8 &&
+                  this.screenId != 7)) {
+                panelWidth += 20;
+                panelLeftOrTextYOrOverlayAlphaOrCurtainX -= 10;
               }
-              panelWidth += 20;
-              panelLeftOrTextYOrOverlayAlphaOrCurtainX -= 10;
             }
             DelayedIncomingPacket.drawNineSlicePanel(panelTop, panelLeftOrTextYOrOverlayAlphaOrCurtainX, panelHeight, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
           }
@@ -2221,13 +2220,12 @@ final class GameScreen extends MenuScreen {
                 break menuRowVerticalOffset;
               }
             }
-            if (this.screenId != 5 &&
+            if (!(this.screenId != 5 &&
                 this.screenId != 7 &&
                 this.screenId != 6 &&
-                this.screenId != 4) {
-              break menuRowVerticalOffset;
+                this.screenId != 4)) {
+              rowY += 295;
             }
-            rowY += 295;
           }
           menuButtonWidthSelection: {
             rowFont = FadingDialog.uiPaletteFont;

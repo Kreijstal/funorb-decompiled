@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0d88ad6f18b5fae740683b3b5153f6fdb87724ae/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/8d57f26de5927c7a9e9a78926b3d4515911e83cf/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 199)
+## Current readability (pass 200)
 
-The export has 18,362 guarded names and 117,382 Java identifier edits, plus 11
-class-name literal edits and 602 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 18,359 guarded names and 117,382 Java identifier edits, plus 11
+class-name literal edits and 584 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 136,404 bindings, reproduce and
@@ -24,7 +24,50 @@ predicate order while placing the highlight update under one explicit guard.
 Menu rendering falls from 372 to 296 lines and ten to three block labels.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current guarded primitive-store fallbacks (pass 199)
+## Current terminal guarded remainders (pass 200)
+
+Fifteen guarded frame exits across eight methods become inverse guards around
+their complete original suffixes. Board reconciliation, menu rendering, mesh-depth queueing, applet execution
+and MIDI event/audio updates benefit. Every original condition and action
+keeps one source occurrence and its original evaluation order. Whole protected
+suffixes stay together. Terminal plain-block/if corridors are independently
+certified; intervening work and corridors crossing loops, try/catch/finally or
+monitors refuse. No predicate or action copy, selector, new name, arithmetic
+reassociation or control-flag assumption is introduced.
+
+The last eligible guard recovers first. Other exits keep their frame name;
+three last references retire their labels. Declaration and scalar-statement
+scopes retain braces. Independent javac proves each consumed exit and complete
+terminal corridor. All original binding occurrences and surviving targets/
+protected scopes remain exact. 2 surviving label ordinals migrate; all
+18,357 unaffected complete naming objects remain exact.
+There are 18,359 rules, 19,405 dictionary identities,
+117,382 identifier, 11 literal and 584 label edits
+(117,977 total).
+
+From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/terminalGuardedFrameRecovery.test.js`
+passes six focused groups. Independent native models compare 77,760 cases
+across 24 direct/nested/chained/protected contexts. Nullable/effectful guards,
+partial writes, aliases, overflow, nested loop exits, finally priority and
+monitor release retain their traces. Selected regression commands pass 106
+tests, with one optional skip.
+
+From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-guarded-abrupt-source.mjs ../java-tools`
+checks all 303 exact CLI/source bytes, independent continuation evidence,
+every original binding, 15 consumed exits, all 5,042 surviving transfer/protected
+scope facts, complete naming objects, label migrations and compilation.
+All 303 readable files reverse byte exactly. All 27 publication tests, 17 scoped
+native trace groups and current/fresh sibling reproduction checks pass. Older
+proof records and frozen input/naming/native pins remain. Five large labeled
+bodies and 41 unsupported fields remain; whole-game/browser/phone and heap/
+presented-FPS acceptance are unverified.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`d1eba2a03c51fad0009b1f7b039da230ba8253d074033abb32b712ee2baccf8b`.
+
+## Previous guarded primitive-store fallbacks (pass 199)
 
 Five sole-exit labels across four methods become ordinary exclusive `if/else`
 continuations. Gameplay rendering, gameplay update, session-end initialization

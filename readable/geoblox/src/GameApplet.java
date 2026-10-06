@@ -281,13 +281,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 appletExecutionBoundary: {
                   legacyJavaVersionCheck: {
                     digitOrLegacyVersionDecision: {
-                      vendorCompatibilityCheck: {
-                        if (PlatformTaskDispatcher.javaVendor != null) {
-                          lowercaseVendorOrFocusRootOrFailure = PlatformTaskDispatcher.javaVendor.toLowerCase();
-                          if (-1 == ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("sun") &&
-                              ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("apple") == -1) {
-                            break vendorCompatibilityCheck;
-                          }
+                      if (PlatformTaskDispatcher.javaVendor != null) {
+                        lowercaseVendorOrFocusRootOrFailure = PlatformTaskDispatcher.javaVendor.toLowerCase();
+                        if (!(-1 == ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("sun") &&
+                            ((String) (lowercaseVendorOrFocusRootOrFailure)).indexOf("apple") == -1)) {
                           javaVersionText = PlatformTaskDispatcher.javaVersion;
                           if (javaVersionText.equals("1.1") ||
                               javaVersionText.startsWith("1.1.") ||
@@ -319,15 +316,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                               break;
                             }
                             javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                            if (!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) {
-                              break vendorCompatibilityCheck;
-                            }
-                            if (MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10) {
-                              break vendorCompatibilityCheck;
-                            }
-                            this.showGameError((byte) 79, "wrongjava");
-                            if (clientControlSnapshot == 0) {
-                              break appletExecutionBoundary;
+                            if (!(!MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)))) {
+                              if (!(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
+                                this.showGameError((byte) 79, "wrongjava");
+                                if (clientControlSnapshot == 0) {
+                                  break appletExecutionBoundary;
+                                }
+                              }
                             }
                           }
                         }
