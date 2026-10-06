@@ -1945,20 +1945,18 @@ final class c extends ka {
                   }
                   L30: {
                     ai.field_p = -1;
-                    if (this.field_K != 8) {
-                      if (4 != this.field_K ||
-                          null == el.field_o ||
-                          el.field_o.field_e != 0) {
-                        if (this.field_K != 7) {
-                          el.field_i = 6;
-                          if (var7 == 0) {
-                            break L30;
-                          }
-                        }
-                        el.field_i = 5;
+                    if ((this.field_K != 8) && (4 != this.field_K ||
+                        null == el.field_o ||
+                        el.field_o.field_e != 0)) {
+                      if (this.field_K != 7) {
+                        el.field_i = 6;
                         if (var7 == 0) {
                           break L30;
                         }
+                      }
+                      el.field_i = 5;
+                      if (var7 == 0) {
+                        break L30;
                       }
                     }
                     el.field_i = 2;
@@ -2204,11 +2202,9 @@ final class c extends ka {
           }
           var6 = t.field_i[this.field_K][param2];
           var7 = tl.field_f[var6];
-          if (var6 == 15) {
-            if (var5_int != 4 ||
-                oc.field_b == 1) {
-              return;
-            }
+          if ((var6 == 15) && (var5_int != 4 ||
+              oc.field_b == 1)) {
+            return;
           }
           if (3 == this.field_K &&
               this.field_E &&

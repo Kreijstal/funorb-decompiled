@@ -191,26 +191,24 @@ final class cm extends cj {
         try {
             IOException iOException = null;
             Throwable decompiledCaughtException = null;
-            if (null != oc.field_e) {
-              if (param1 < 0 ||
-                  pk.field_l == eh.field_b) {
-                if (0 == fj.field_q.field_f &&
-                    ~oa.a(-12520) < ~(10000L + v.field_r)) {
-                  fj.field_q.a(param1, (byte) -76);
-                }
-                if (param0 > ~fj.field_q.field_f) {
-                  try {
-                    oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
-                    v.field_r = oa.a(-12520);
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    jl.a((byte) -117);
-                  }
-                  fj.field_q.field_f = 0;
-                }
-                return;
+            if ((null != oc.field_e) && (param1 < 0 ||
+                pk.field_l == eh.field_b)) {
+              if (0 == fj.field_q.field_f &&
+                  ~oa.a(-12520) < ~(10000L + v.field_r)) {
+                fj.field_q.a(param1, (byte) -76);
               }
+              if (param0 > ~fj.field_q.field_f) {
+                try {
+                  oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
+                  v.field_r = oa.a(-12520);
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  iOException = (IOException) (Object) decompiledCaughtException;
+                  jl.a((byte) -117);
+                }
+                fj.field_q.field_f = 0;
+              }
+              return;
             }
             fj.field_q.field_f = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {

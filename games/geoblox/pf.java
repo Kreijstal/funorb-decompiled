@@ -717,11 +717,9 @@ final class pf extends ee implements ga, pl {
           this.field_N = stackIn_7_1;
           stackIn_10_1 = !(!param4);
           this.field_I = stackIn_10_1;
-          if (this.field_N) {
-            if (this.field_C ||
-                this.field_I) {
-              throw new IllegalStateException();
-            }
+          if ((this.field_N) && (this.field_C ||
+              this.field_I)) {
+            throw new IllegalStateException();
           }
           this.field_J = (dj) ((Object) new hc(param0, (bb) (this), 100));
           this.field_P = (dj) ((Object) new hc("", (bb) (this), 20));

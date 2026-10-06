@@ -190,17 +190,11 @@ final class jb {
           if (var2 == 247 &&
               var3 > 0) {
             var4 = this.field_g.field_j[this.field_g.field_f] & 255;
-            if (var4 < 241 ||
-                var4 > 243) {
-              if (var4 != 246 &&
-                  var4 != 248) {
-                if (var4 < 250 ||
-                    var4 > 252) {
-                  if (var4 != 254) {
-                    break L2;
-                  }
-                }
-              }
+            if ((var4 < 241 ||
+                var4 > 243) && (var4 != 246 &&
+            var4 != 248) && (var4 < 250 ||
+              var4 > 252) && (var4 != 254)) {
+              break L2;
             }
             this.field_g.field_f = this.field_g.field_f + 1;
             this.field_c[param0] = var4;

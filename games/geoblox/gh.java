@@ -353,13 +353,11 @@ final class gh {
             g.field_i.b(468, 410);
           }
         }
-        if (!this.field_Y) {
-          if (!ih.a(0) ||
-              var2 != 0 &&
-                (0 == this.field_bb ||
-                this.field_bb == 1)) {
-            this.e(-46);
-          }
+        if ((!this.field_Y) && (!ih.a(0) ||
+            var2 != 0 &&
+              (0 == this.field_bb ||
+              this.field_bb == 1))) {
+          this.e(-46);
         }
         if (!this.field_V) {
           h.c(-1);
@@ -571,15 +569,13 @@ final class gh {
                 463 >= this.field_T) {
             if (this.field_y != 1 ||
                   this.field_T >= 640) {
-              if (this.field_T == 463) {
-                if (gf.field_f == 0) {
-                  this.field_y = 1;
-                  el.field_o.c(false);
+              if ((this.field_T == 463) && (gf.field_f == 0)) {
+                this.field_y = 1;
+                el.field_o.c(false);
+                if (var5 != 0) {
+                  this.field_T = this.field_T + 1;
                   if (var5 != 0) {
-                    this.field_T = this.field_T + 1;
-                    if (var5 != 0) {
-                      this.field_T = this.field_T - 1;
-                    }
+                    this.field_T = this.field_T - 1;
                   }
                 }
               }
@@ -1209,12 +1205,10 @@ final class gh {
             }
             if (this.field_p != 1 ||
                   !(0 < dd.field_D - this.field_U)) {
-              if (this.field_p == 2) {
-                if (!(dk.field_b - this.field_U <= 0)) {
+              if ((this.field_p == 2) && (!(dk.field_b - this.field_U <= 0))) {
+                this.field_t = 2;
+                if (var3 != 0) {
                   this.field_t = 2;
-                  if (var3 != 0) {
-                    this.field_t = 2;
-                  }
                 }
               }
             } else {

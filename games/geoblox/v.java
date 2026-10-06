@@ -73,38 +73,34 @@ final class v {
           var9 = new qc(param0);
           var3 = var9.c((byte) 34);
           var4 = var9.a((byte) -97);
-          if (var4 >= 0) {
-            if (uj.field_b == 0 ||
-                !(var4 > uj.field_b)) {
-              if (param1 == ~var3) {
-                var12 = new byte[var4];
-                var10 = var12;
-                var5_ref_byte__ = var10;
-                var9.b(29915, var4, var12, 0);
-                stackIn_7_0 = var5_ref_byte__;
-                return stackIn_7_0;
-              }
-              var5 = var9.a((byte) -49);
-              if (var5 >= 0) {
-                if (uj.field_b == 0 ||
-                    !(uj.field_b < var5)) {
-                  var13 = new byte[var5];
-                  var11 = var13;
-                  var6 = var11;
-                  if (var3 == 1) {
-                    tb.a(var13, var5, param0, var4, 9);
-                  } else {
-                    var7 = sc.field_b;
-                    synchronized (var7) {
-                      sc.field_b.a(param1 + 0, var9, var13);
-                    }
-                  }
-                  stackIn_21_0 = var6;
-                  return stackIn_21_0;
+          if ((var4 >= 0) && (uj.field_b == 0 ||
+              !(var4 > uj.field_b))) {
+            if (param1 == ~var3) {
+              var12 = new byte[var4];
+              var10 = var12;
+              var5_ref_byte__ = var10;
+              var9.b(29915, var4, var12, 0);
+              stackIn_7_0 = var5_ref_byte__;
+              return stackIn_7_0;
+            }
+            var5 = var9.a((byte) -49);
+            if ((var5 >= 0) && (uj.field_b == 0 ||
+                !(uj.field_b < var5))) {
+              var13 = new byte[var5];
+              var11 = var13;
+              var6 = var11;
+              if (var3 == 1) {
+                tb.a(var13, var5, param0, var4, 9);
+              } else {
+                var7 = sc.field_b;
+                synchronized (var7) {
+                  sc.field_b.a(param1 + 0, var9, var13);
                 }
               }
-              throw new RuntimeException();
+              stackIn_21_0 = var6;
+              return stackIn_21_0;
             }
+            throw new RuntimeException();
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

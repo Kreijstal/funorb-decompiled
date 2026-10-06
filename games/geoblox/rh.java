@@ -413,18 +413,16 @@ final class rh {
             return true;
           }
           L4: {
-            if (param2 != null) {
-              if (param2[0] != 0 ||
-                  param2[1] != 0 ||
-                  param2[2] != 0 ||
-                  0 != param2[3]) {
-                var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
-                var24 = var34;
-                var9 = var24;
-                var25 = new qc(var34);
-                var25.a((byte) -125, param2, 5, var25.field_j.length);
-                break L4;
-              }
+            if ((param2 != null) && (param2[0] != 0 ||
+                param2[1] != 0 ||
+                param2[2] != 0 ||
+                0 != param2[3])) {
+              var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
+              var24 = var34;
+              var9 = var24;
+              var25 = new qc(var34);
+              var25.a((byte) -125, param2, 5, var25.field_j.length);
+              break L4;
             }
             var9 = uk.a(false, param1 - 90, this.field_f[param3]);
           }
@@ -612,14 +610,12 @@ final class rh {
             return (byte[]) (stackIn_4_0);
           }
           var5 = null;
-          if (this.field_e[param0] == null ||
-              null == this.field_e[param0][param3]) {
+          if ((this.field_e[param0] == null ||
+            null == this.field_e[param0][param3]) && (!this.a(param3, 4, param2, param0))) {
+            this.a(param0, -118);
             if (!this.a(param3, 4, param2, param0)) {
-              this.a(param0, -118);
-              if (!this.a(param3, 4, param2, param0)) {
-                stackIn_12_0 = null;
-                return (byte[]) (stackIn_12_0);
-              }
+              stackIn_12_0 = null;
+              return (byte[]) (stackIn_12_0);
             }
           }
           if (this.field_e[param0] == null) {

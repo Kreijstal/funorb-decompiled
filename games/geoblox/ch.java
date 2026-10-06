@@ -316,12 +316,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               break;
                             }
                             var4 = var2.substring(6, var3);
-                            if (f.b((byte) -115, (CharSequence) ((Object) var4))) {
-                              if (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
-                                this.a((byte) 79, "wrongjava");
-                                if (var5 == 0) {
-                                  break L1;
-                                }
+                            if ((f.b((byte) -115, (CharSequence) ((Object) var4))) && (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10))) {
+                              this.a((byte) 79, "wrongjava");
+                              if (var5 == 0) {
+                                break L1;
                               }
                             }
                           }

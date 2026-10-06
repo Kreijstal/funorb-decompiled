@@ -31,17 +31,15 @@ final class lc {
             var1.b(true);
             var1 = (ja) ((Object) wd.field_e.d(1));
           } while (var10 == 0);
-          if (kj.field_o[99] &&
-                ji.field_r.c(13519) ||
-              !(~kb.field_c <= ~kc.field_a) ||
-              ul.field_b == 0 &&
-                !el.field_o.field_Y) {
-            if (0 < wd.field_e.a(param0 ^ -170) &&
-                !el.field_o.field_N) {
-              ji.field_r.a(-48, wd.field_e.b((byte) -124));
-              hd.f(2);
-              kc.field_a = 0;
-            }
+          if ((kj.field_o[99] &&
+              ji.field_r.c(13519) ||
+            !(~kb.field_c <= ~kc.field_a) ||
+            ul.field_b == 0 &&
+              !el.field_o.field_Y) && (0 < wd.field_e.a(param0 ^ -170) &&
+              !el.field_o.field_N)) {
+            ji.field_r.a(-48, wd.field_e.b((byte) -124));
+            hd.f(2);
+            kc.field_a = 0;
           }
           kc.field_a = kc.field_a + 1;
           if (wd.field_e.a(param0 ^ 143) < 3 &&
