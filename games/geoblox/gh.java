@@ -476,62 +476,61 @@ final class gh {
           }
           ek.a(stackIn_168_0, stackIn_168_1 != 0, af.field_a, 0, vb.field_f, 0);
         }
-        L48: {
-          if (!this.field_Y) {
-            if (this.field_a > 0) {
-              lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 60 - (lj.field_d.field_o >> 1) + 240);
-              dd.field_G.b(wl.field_b, 320, 310, 0, -1);
-            }
-            eg.field_q[this.field_l].b(this.field_T, 4);
-            if (640 > this.field_T &&
-                0 < this.field_A) {
-              dd.field_G.a(wj.a(ic.field_a, new String[]{this.field_g.toString()}, (byte) -79), this.field_T + 20, 34, 0, -1);
-            }
-            if (this.field_h) {
-              dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
-              dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.field_h)}, (byte) -71), 400, 80, 0, -1);
-            }
-            L53: {
-              bd.a(-117);
-              this.c((byte) 64);
-              if (this.field_L) {
-                lj.field_d.b(var3, var4);
-                if (this.field_D < 266) {
-                  kh.field_h[6].b(0, (this.field_D >> 1) - 113);
-                  if (var14 == 0) {
-                    break L53;
-                  }
+        if (!this.field_Y) {
+          if (this.field_a > 0) {
+            lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 60 - (lj.field_d.field_o >> 1) + 240);
+            dd.field_G.b(wl.field_b, 320, 310, 0, -1);
+          }
+          eg.field_q[this.field_l].b(this.field_T, 4);
+          if (640 > this.field_T &&
+              0 < this.field_A) {
+            dd.field_G.a(wj.a(ic.field_a, new String[]{this.field_g.toString()}, (byte) -79), this.field_T + 20, 34, 0, -1);
+          }
+          if (this.field_h) {
+            dd.field_G.a(wj.a(sh.field_z, new String[]{Integer.toString(ec.field_b)}, (byte) -26), 400, 50, 0, -1);
+            dd.field_G.a(wj.a(qg.field_e, new String[]{Integer.toString(ji.field_h)}, (byte) -71), 400, 80, 0, -1);
+          }
+          L53: {
+            bd.a(-117);
+            this.c((byte) 64);
+            if (this.field_L) {
+              lj.field_d.b(var3, var4);
+              if (this.field_D < 266) {
+                kh.field_h[6].b(0, (this.field_D >> 1) - 113);
+                if (var14 == 0) {
+                  break L53;
                 }
-                kh.field_h[6].b(0, 20);
-                kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
               }
-            }
-            L55: {
-              dd.field_G.a(wj.a(pa.field_a, new String[]{this.field_X.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
-              if (ih.a(0)) {
-                if (0 == this.field_bb ||
-                      this.field_bb == 1) {
-                  if (var2 == 0) {
-                    break L55;
-                  }
-                  var5 = 35 + (6 * this.field_D - 480);
-                  sh.field_y.a(255);
-                  vb.e(0, var5, 640, 480);
-                  oc.field_d.b(0, 0);
-                  vb.e(0, 0, 640, 480);
-                  qj.field_c.b(0, -480 + 6 * this.field_D);
-                  if (var14 == 0) {
-                    break L55;
-                  }
-                }
-                this.a(false);
-              }
-            }
-            vc.c(-1);
-            if (var14 == 0) {
-              break L48;
+              kh.field_h[6].b(0, 20);
+              kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
             }
           }
+          L55: {
+            dd.field_G.a(wj.a(pa.field_a, new String[]{this.field_X.toString()}, (byte) -53), 15 + var3, 30 + var4, 0, -1);
+            if (ih.a(0)) {
+              if (0 == this.field_bb ||
+                    this.field_bb == 1) {
+                if (var2 == 0) {
+                  break L55;
+                }
+                var5 = 35 + (6 * this.field_D - 480);
+                sh.field_y.a(255);
+                vb.e(0, var5, 640, 480);
+                oc.field_d.b(0, 0);
+                vb.e(0, 0, 640, 480);
+                qj.field_c.b(0, -480 + 6 * this.field_D);
+                if (var14 == 0) {
+                  break L55;
+                }
+              }
+              this.a(false);
+            }
+          }
+          vc.c(-1);
+          if (!(var14 == 0)) {
+            this.g(2);
+          }
+        } else {
           this.g(2);
         }
     }
@@ -1240,13 +1239,12 @@ final class gh {
         int var4 = 0;
         var4 = Geoblox.field_C;
         if (this.field_D == 0) {
-          L1: {
-            if (!this.field_f) {
-              this.h(122);
-              if (var4 == 0) {
-                break L1;
-              }
+          if (!this.field_f) {
+            this.h(122);
+            if (!(var4 == 0)) {
+              this.j(867);
             }
+          } else {
             this.j(867);
           }
           this.field_i = true;

@@ -814,56 +814,55 @@ abstract class wh extends rc {
             int var4 = 0;
             var5 = Geoblox.field_C;
             try {
-              L0: {
-                var2 = new byte[24];
-                if (null != af.field_b) {
-                  try {
-                    af.field_b.a(51, 0L);
-                    af.field_b.a((byte) -76, var2);
-                    var3_int = 0;
-                    while (true) {
-                      L4: {
-                        if (var3_int < 24) {
-                          stackIn_17_0 = ~var2[var3_int];
-                          stackIn_17_1 = -1;
-                          if (var5 != 0) {
-                            break L4;
-                          }
-                          if (stackIn_17_0 == stackIn_17_1 ||
-                              var5 != 0) {
-                            var3_int++;
-                            continue;
-                          }
+              var2 = new byte[24];
+              if (null != af.field_b) {
+                try {
+                  af.field_b.a(51, 0L);
+                  af.field_b.a((byte) -76, var2);
+                  var3_int = 0;
+                  while (true) {
+                    L4: {
+                      if (var3_int < 24) {
+                        stackIn_17_0 = ~var2[var3_int];
+                        stackIn_17_1 = -1;
+                        if (var5 != 0) {
+                          break L4;
                         }
-                        stackIn_17_0 = 24;
-                        stackIn_17_1 = var3_int;
+                        if (stackIn_17_0 == stackIn_17_1 ||
+                            var5 != 0) {
+                          var3_int++;
+                          continue;
+                        }
                       }
-                      break;
+                      stackIn_17_0 = 24;
+                      stackIn_17_1 = var3_int;
                     }
-                    if (stackIn_17_0 <= stackIn_17_1) {
-                      throw new IOException();
+                    break;
+                  }
+                  if (stackIn_17_0 <= stackIn_17_1) {
+                    throw new IOException();
+                  }
+                  decompiledRegionSelector0 = 0;
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L7: {
+                    var3 = (Exception) (Object) decompiledCaughtException;
+                    var4 = 0;
+                    while (var4 < 24) {
+                      var2[var4] = (byte) -1;
+                      var4++;
+                      if (var5 != 0) {
+                        decompiledRegionSelector0 = 1;
+                        break L7;
+                      }
                     }
                     decompiledRegionSelector0 = 0;
-                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L7: {
-                      var3 = (Exception) (Object) decompiledCaughtException;
-                      var4 = 0;
-                      while (var4 < 24) {
-                        var2[var4] = (byte) -1;
-                        var4++;
-                        if (var5 != 0) {
-                          decompiledRegionSelector0 = 1;
-                          break L7;
-                        }
-                      }
-                      decompiledRegionSelector0 = 0;
-                    }
-                  }
-                  if (decompiledRegionSelector0 != 0) {
-                    break L0;
                   }
                 }
+                if (!(decompiledRegionSelector0 != 0)) {
+                  param0.a(24, -97, var2, 0);
+                }
+              } else {
                 param0.a(24, -97, var2, 0);
               }
               if (!param1) {
