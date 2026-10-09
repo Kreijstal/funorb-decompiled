@@ -10,7 +10,7 @@ final class ValidationIconWidget extends ButtonWidget {
 
     final static int computePackedValueBitCount(int valueThenShiftedRemainder, byte methodGuard) {
         int bitCount;
-        int bitCountPhase2;
+        int negativeBranchBitCount;
         if (valueThenShiftedRemainder == 0) {
           return 0;
         }
@@ -38,31 +38,31 @@ final class ValidationIconWidget extends ButtonWidget {
           }
           return bitCount;
         }
-        bitCountPhase2 = 2;
+        negativeBranchBitCount = 2;
         if (valueThenShiftedRemainder < -65536) {
-          bitCountPhase2 += 16;
+          negativeBranchBitCount += 16;
           valueThenShiftedRemainder = valueThenShiftedRemainder >> 16;
         }
         if (valueThenShiftedRemainder < -256) {
           valueThenShiftedRemainder = valueThenShiftedRemainder >> 8;
-          bitCountPhase2 += 8;
+          negativeBranchBitCount += 8;
         }
         if (methodGuard != 66) {
           clientCookieMarkerCreated = true;
         }
         if (-16 > valueThenShiftedRemainder) {
           valueThenShiftedRemainder = valueThenShiftedRemainder >> 4;
-          bitCountPhase2 += 4;
+          negativeBranchBitCount += 4;
         }
         if (valueThenShiftedRemainder < -4) {
           valueThenShiftedRemainder = valueThenShiftedRemainder >> 2;
-          bitCountPhase2 += 2;
+          negativeBranchBitCount += 2;
         }
         if (-2 > valueThenShiftedRemainder) {
-          bitCountPhase2++;
+          negativeBranchBitCount++;
           valueThenShiftedRemainder = valueThenShiftedRemainder >> 1;
         }
-        return bitCountPhase2;
+        return negativeBranchBitCount;
     }
 
     public static void releaseStaticReferences(int methodGuard) {

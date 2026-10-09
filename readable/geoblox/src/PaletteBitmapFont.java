@@ -61,8 +61,8 @@ final class PaletteBitmapFont extends BitmapFont {
         int sourceRowSkip;
         int sourceIndex;
         int clippedPixels;
-        int clippedPixelsPhase2;
-        int clippedPixelsPhase3;
+        int leftClipPixels;
+        int rightClipPixels;
         destinationIndex = x + y * SoftwareRasterizer.stride;
         destinationRowSkip = SoftwareRasterizer.stride - width;
         sourceRowSkip = 0;
@@ -78,19 +78,19 @@ final class PaletteBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          clippedPixelsPhase2 = SoftwareRasterizer.clipLeft - x;
-          width = width - clippedPixelsPhase2;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          width = width - leftClipPixels;
           x = SoftwareRasterizer.clipLeft;
-          sourceIndex = sourceIndex + clippedPixelsPhase2;
-          destinationIndex = destinationIndex + clippedPixelsPhase2;
-          sourceRowSkip = sourceRowSkip + clippedPixelsPhase2;
-          destinationRowSkip = destinationRowSkip + clippedPixelsPhase2;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          clippedPixelsPhase3 = x + width - SoftwareRasterizer.clipRight;
-          width = width - clippedPixelsPhase3;
-          sourceRowSkip = sourceRowSkip + clippedPixelsPhase3;
-          destinationRowSkip = destinationRowSkip + clippedPixelsPhase3;
+          rightClipPixels = x + width - SoftwareRasterizer.clipRight;
+          width = width - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width > 0 &&
             height > 0) {
@@ -109,8 +109,8 @@ final class PaletteBitmapFont extends BitmapFont {
         int sourceRowSkip;
         int sourceIndex;
         int clippedPixels;
-        int clippedPixelsPhase2;
-        int clippedPixelsPhase3;
+        int leftClipPixels;
+        int rightClipPixels;
         destinationIndex = x + y * SoftwareRasterizer.stride;
         destinationRowSkip = SoftwareRasterizer.stride - width;
         sourceRowSkip = 0;
@@ -126,19 +126,19 @@ final class PaletteBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          clippedPixelsPhase2 = SoftwareRasterizer.clipLeft - x;
-          width = width - clippedPixelsPhase2;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          width = width - leftClipPixels;
           x = SoftwareRasterizer.clipLeft;
-          sourceIndex = sourceIndex + clippedPixelsPhase2;
-          destinationIndex = destinationIndex + clippedPixelsPhase2;
-          sourceRowSkip = sourceRowSkip + clippedPixelsPhase2;
-          destinationRowSkip = destinationRowSkip + clippedPixelsPhase2;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          clippedPixelsPhase3 = x + width - SoftwareRasterizer.clipRight;
-          width = width - clippedPixelsPhase3;
-          sourceRowSkip = sourceRowSkip + clippedPixelsPhase3;
-          destinationRowSkip = destinationRowSkip + clippedPixelsPhase3;
+          rightClipPixels = x + width - SoftwareRasterizer.clipRight;
+          width = width - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width > 0 &&
             height > 0) {

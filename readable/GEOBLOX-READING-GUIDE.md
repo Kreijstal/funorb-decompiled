@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/765e8c5be3195b57d65f7c417905763ecbb764e6/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 244)
+## Current readability (pass 245)
 
 The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,23 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current MIDI, hash and menu-avatar roles (pass 244)
+## Current numbered-name milestone (pass 245)
+
+The last 69 numbered reconstruction names now identify dialog side bands, font
+clipping/profile/kerning traversal, archive/bootstrap readiness and scans,
+reconnect and UI layout results, sort terms, audio cleanup/loop/filter state,
+Bzip2 table construction and Vorbis residue classification. Mixed gray/RGB units
+and unused snapshots/guard arithmetic remain explicit and executable.
+
+Zero LiteralPhase or numbered Phase-family names remain in current rules and
+dictionary. All 303 sources compile, reproduce, reverse and match an independent
+identifier-only reconstruction. Existing native result/rendering traces keep
+their recorded scope. Other mixed roles and aliases/guard expressions remain,
+as do five large framed methods and 41 source-insufficient field purposes.
+The field names describe observations/merge mechanisms; finer UI meanings are
+not established. See the workflow for source hashes, commands and remaining work.
+
+## Previous MIDI, hash and menu-avatar roles (pass 244)
 
 MidiPcmStream event dispatch names now identify each status branch's channel,
 key, velocity, pressure, program/controller value, pitch bend and MSB/LSB

@@ -11,9 +11,9 @@ final class TextValidationFailure {
         int componentSum;
         int ratioKey;
         int guardQuotient;
-        int componentSumPhase2;
-        int ratioKeyPhase2;
-        int guardQuotientPhase2;
+        int sortComponentSum;
+        int storedRatioKey;
+        int sortGuardQuotient;
         DialRenderer.rankedEntryResponseIndices[GmtTimestampSupport.rankedEntryCount] = responseIndex;
         AchievementQuery.rankedEntryIndices[GmtTimestampSupport.rankedEntryCount] = GmtTimestampSupport.rankedEntryCount;
         LoginPasswordSupport.rankedEntryKeyTwo[GmtTimestampSupport.rankedEntryCount] = keyTwo;
@@ -47,23 +47,23 @@ final class TextValidationFailure {
         TextHotspotBounds.rankedEntryRatioNumerators[GmtTimestampSupport.rankedEntryCount] = numerator;
         NodeHashTableIterator.rankedEntryRatioSecondComponents[GmtTimestampSupport.rankedEntryCount] = secondComponent;
         FrameTimer.rankedEntryRatioThirdComponents[GmtTimestampSupport.rankedEntryCount] = thirdComponent;
-        componentSumPhase2 = thirdComponent + (secondComponent + numerator);
-        guardQuotientPhase2 = -80 / ((30 - methodGuard) / 42);
-        if (componentSumPhase2 != 0) {
-          ratioBeforeUpperKeyBranchJoin = numerator * 1000 / componentSumPhase2;
+        sortComponentSum = thirdComponent + (secondComponent + numerator);
+        sortGuardQuotient = -80 / ((30 - methodGuard) / 42);
+        if (sortComponentSum != 0) {
+          ratioBeforeUpperKeyBranchJoin = numerator * 1000 / sortComponentSum;
         } else {
           ratioBeforeUpperKeyBranchJoin = 0;
         }
-        ratioKeyPhase2 = ratioBeforeUpperKeyBranchJoin;
-        ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = ratioKeyPhase2;
-        if (MeshPrioritySupport.rankedSortUpperBoundValue < ratioKeyPhase2) {
-          MeshPrioritySupport.rankedSortUpperBoundValue = ratioKeyPhase2;
+        storedRatioKey = ratioBeforeUpperKeyBranchJoin;
+        ClientProtocolStage.rankedEntryKeyOne[GmtTimestampSupport.rankedEntryCount] = storedRatioKey;
+        if (MeshPrioritySupport.rankedSortUpperBoundValue < storedRatioKey) {
+          MeshPrioritySupport.rankedSortUpperBoundValue = storedRatioKey;
         }
         GmtTimestampSupport.rankedEntryCount = GmtTimestampSupport.rankedEntryCount + 1;
-        if (LoginPayloadKind.rankedSortLowerBoundValue <= ratioKeyPhase2) {
+        if (LoginPayloadKind.rankedSortLowerBoundValue <= storedRatioKey) {
           return;
         }
-        LoginPayloadKind.rankedSortLowerBoundValue = ratioKeyPhase2;
+        LoginPayloadKind.rankedSortLowerBoundValue = storedRatioKey;
     }
 
     final static MouseWheelInput createMouseWheelInput(int methodGuard) {

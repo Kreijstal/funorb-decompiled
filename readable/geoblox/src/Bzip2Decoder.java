@@ -388,12 +388,12 @@ final class Bzip2Decoder {
         int symbolWritePosition;
         int tableIndexOrCodeLength;
         int nextCode;
-        int tableIndexOrCodeLengthPhase2;
-        int tableIndexOrCodeLengthPhase3;
-        int tableIndexOrCodeLengthPhase4;
-        int tableIndexOrCodeLengthPhase5;
-        int tableIndexOrCodeLengthPhase6;
-        int tableIndexOrCodeLengthPhase7;
+        int baseClearIndex;
+        int lengthCountSymbolIndex;
+        int basePrefixSumIndex;
+        int limitClearIndex;
+        int limitCodeLength;
+        int baseAdjustmentCodeLength;
         symbolWritePosition = 0;
         for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
           for (symbolIndex = 0; symbolIndex < alphabetSize; symbolIndex++) {
@@ -404,27 +404,27 @@ final class Bzip2Decoder {
             symbolWritePosition++;
           }
         }
-        for (tableIndexOrCodeLengthPhase2 = 0; tableIndexOrCodeLengthPhase2 < 23; tableIndexOrCodeLengthPhase2++) {
-          bases[tableIndexOrCodeLengthPhase2] = 0;
+        for (baseClearIndex = 0; baseClearIndex < 23; baseClearIndex++) {
+          bases[baseClearIndex] = 0;
         }
-        for (tableIndexOrCodeLengthPhase3 = 0; tableIndexOrCodeLengthPhase3 < alphabetSize; tableIndexOrCodeLengthPhase3++) {
-          lengthBucketIndex = codeLengths[tableIndexOrCodeLengthPhase3] + 1;
+        for (lengthCountSymbolIndex = 0; lengthCountSymbolIndex < alphabetSize; lengthCountSymbolIndex++) {
+          lengthBucketIndex = codeLengths[lengthCountSymbolIndex] + 1;
           bases[lengthBucketIndex] = bases[lengthBucketIndex] + 1;
         }
-        for (tableIndexOrCodeLengthPhase4 = 1; tableIndexOrCodeLengthPhase4 < 23; tableIndexOrCodeLengthPhase4++) {
-          bases[tableIndexOrCodeLengthPhase4] = bases[tableIndexOrCodeLengthPhase4] + bases[tableIndexOrCodeLengthPhase4 - 1];
+        for (basePrefixSumIndex = 1; basePrefixSumIndex < 23; basePrefixSumIndex++) {
+          bases[basePrefixSumIndex] = bases[basePrefixSumIndex] + bases[basePrefixSumIndex - 1];
         }
-        for (tableIndexOrCodeLengthPhase5 = 0; tableIndexOrCodeLengthPhase5 < 23; tableIndexOrCodeLengthPhase5++) {
-          limits[tableIndexOrCodeLengthPhase5] = 0;
+        for (limitClearIndex = 0; limitClearIndex < 23; limitClearIndex++) {
+          limits[limitClearIndex] = 0;
         }
         nextCode = 0;
-        for (tableIndexOrCodeLengthPhase6 = minimumLength; tableIndexOrCodeLengthPhase6 <= maximumLength; tableIndexOrCodeLengthPhase6++) {
-          nextCode = nextCode + (bases[tableIndexOrCodeLengthPhase6 + 1] - bases[tableIndexOrCodeLengthPhase6]);
-          limits[tableIndexOrCodeLengthPhase6] = nextCode - 1;
+        for (limitCodeLength = minimumLength; limitCodeLength <= maximumLength; limitCodeLength++) {
+          nextCode = nextCode + (bases[limitCodeLength + 1] - bases[limitCodeLength]);
+          limits[limitCodeLength] = nextCode - 1;
           nextCode = nextCode << 1;
         }
-        for (tableIndexOrCodeLengthPhase7 = minimumLength + 1; tableIndexOrCodeLengthPhase7 <= maximumLength; tableIndexOrCodeLengthPhase7++) {
-          bases[tableIndexOrCodeLengthPhase7] = (limits[tableIndexOrCodeLengthPhase7 - 1] + 1 << 1) - bases[tableIndexOrCodeLengthPhase7];
+        for (baseAdjustmentCodeLength = minimumLength + 1; baseAdjustmentCodeLength <= maximumLength; baseAdjustmentCodeLength++) {
+          bases[baseAdjustmentCodeLength] = (limits[baseAdjustmentCodeLength - 1] + 1 << 1) - bases[baseAdjustmentCodeLength];
         }
     }
 

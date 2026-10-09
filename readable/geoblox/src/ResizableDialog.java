@@ -415,20 +415,20 @@ abstract class ResizableDialog extends FadingDialog {
         int rightCornerDistanceSquared;
         int rightCornerRgb;
         int unusedClientControlSnapshot;
-        int bandHeightPhase2;
-        int bandHeightPhase3;
-        int bandStartGrayPhase2;
-        int bandStartGrayPhase3;
-        int bandEndGrayPhase2;
-        int bandEndGrayPhase3;
-        int bandRowIndexPhase2;
-        int bandRowIndexPhase3;
-        int rasterYPhase2;
-        int rasterYPhase3;
-        int rowGrayOrRgbPhase2;
-        int rowGrayOrRgbPhase3;
-        int leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2;
-        int leftCornerRgbOrRightCornerXNestedPhase2;
+        int upperSideBandHeight;
+        int lowerSideBandHeight;
+        int upperSideBandStartGray;
+        int lowerSideBandStartGray;
+        int upperSideBandEndGray;
+        int lowerSideBandEndGray;
+        int upperSideBandRowIndex;
+        int lowerSideBandRowIndex;
+        int upperSideBandRasterY;
+        int lowerSideBandRasterY;
+        int upperSideBandGrayOrRgb;
+        int lowerSideBandGrayOrRgb;
+        int rightEdgeLimit;
+        int rightCornerX;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         SoftwareRasterizer.fillVerticalGradient(x + 6, y + 35, -12 + this.widgetWidth, -40 + this.widgetHeight, 2105376, 0);
         bandStartGray = 211;
@@ -467,13 +467,13 @@ abstract class ResizableDialog extends FadingDialog {
             }
           }
           if (20 >= bandRowIndex) {
-            leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2 = rightEdgeOffset;
+            rightEdgeLimit = rightEdgeOffset;
             rightEdgeOffset -= 21;
-            for (leftCornerRgbOrRightCornerXNestedPhase2 = 0; leftCornerRgbOrRightCornerXNestedPhase2 <= 20; leftCornerRgbOrRightCornerXNestedPhase2++) {
-              rightCornerDistanceSquared = (-bandRowIndex + 20) * (-bandRowIndex + 20) + leftCornerRgbOrRightCornerXNestedPhase2 * leftCornerRgbOrRightCornerXNestedPhase2;
+            for (rightCornerX = 0; rightCornerX <= 20; rightCornerX++) {
+              rightCornerDistanceSquared = (-bandRowIndex + 20) * (-bandRowIndex + 20) + rightCornerX * rightCornerX;
               if (rightCornerDistanceSquared <= 462) {
                 if (rightCornerDistanceSquared < 420) {
-                  leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2 = rightEdgeOffset + 1;
+                  rightEdgeLimit = rightEdgeOffset + 1;
                   rightEdgeOffset++;
                   continue;
                 }
@@ -485,25 +485,25 @@ abstract class ResizableDialog extends FadingDialog {
               }
               break;
             }
-            rightEdgeOffset = leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2;
+            rightEdgeOffset = rightEdgeLimit;
           }
           rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 16 | rowGrayOrRgb << 8);
           SoftwareRasterizer.drawHorizontalLine(leftEdgeOffset + x, rasterY, rightEdgeOffset - leftEdgeOffset, rowGrayOrRgb);
           rasterY++;
           bandRowIndex++;
         }
-        bandHeightPhase2 = 22;
-        bandStartGrayPhase2 = 194;
-        bandEndGrayPhase2 = 169;
-        bandRowIndexPhase2 = 0;
-        rasterYPhase2 = 35 + y;
-        while (bandRowIndexPhase2 < bandHeightPhase2) {
-          rowGrayOrRgbPhase2 = bandStartGrayPhase2 + (-bandStartGrayPhase2 + bandEndGrayPhase2) * bandRowIndexPhase2 / bandHeightPhase2;
-          rowGrayOrRgbPhase2 = rowGrayOrRgbPhase2 | (rowGrayOrRgbPhase2 << 8 | rowGrayOrRgbPhase2 << 16);
-          SoftwareRasterizer.drawHorizontalLine(x, rasterYPhase2, 6, rowGrayOrRgbPhase2);
-          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + x - 6, rasterYPhase2, 6, rowGrayOrRgbPhase2);
-          bandRowIndexPhase2++;
-          rasterYPhase2++;
+        upperSideBandHeight = 22;
+        upperSideBandStartGray = 194;
+        upperSideBandEndGray = 169;
+        upperSideBandRowIndex = 0;
+        upperSideBandRasterY = 35 + y;
+        while (upperSideBandRowIndex < upperSideBandHeight) {
+          upperSideBandGrayOrRgb = upperSideBandStartGray + (-upperSideBandStartGray + upperSideBandEndGray) * upperSideBandRowIndex / upperSideBandHeight;
+          upperSideBandGrayOrRgb = upperSideBandGrayOrRgb | (upperSideBandGrayOrRgb << 8 | upperSideBandGrayOrRgb << 16);
+          SoftwareRasterizer.drawHorizontalLine(x, upperSideBandRasterY, 6, upperSideBandGrayOrRgb);
+          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + x - 6, upperSideBandRasterY, 6, upperSideBandGrayOrRgb);
+          upperSideBandRowIndex++;
+          upperSideBandRasterY++;
         }
         AvatarFeedbackSupport.grayJagexLogoSprite.draw(-90 + this.widgetWidth + x, 10 + y);
         if (methodGuard != 20) {
@@ -511,18 +511,18 @@ abstract class ResizableDialog extends FadingDialog {
         }
         InstrumentPatch.drawHorizontalThreePartStrip(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + y, 5 + x, (byte) 107);
         InstrumentPatch.drawHorizontalThreePartStrip(UnderlinedButtonRenderer.frameBottomSprites, this.widgetWidth, -22 + (this.widgetHeight + y), x, (byte) 107);
-        bandHeightPhase3 = this.widgetHeight - 79;
-        bandStartGrayPhase3 = 169;
-        bandEndGrayPhase3 = 127;
-        bandRowIndexPhase3 = 0;
-        rasterYPhase3 = y + 57;
-        while (bandRowIndexPhase3 < bandHeightPhase3) {
-          rowGrayOrRgbPhase3 = bandRowIndexPhase3 * (bandEndGrayPhase3 - bandStartGrayPhase3) / bandHeightPhase3 + bandStartGrayPhase3;
-          rowGrayOrRgbPhase3 = rowGrayOrRgbPhase3 | (rowGrayOrRgbPhase3 << 16 | rowGrayOrRgbPhase3 << 8);
-          SoftwareRasterizer.drawHorizontalLine(x, rasterYPhase3, 6, rowGrayOrRgbPhase3);
-          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + x), rasterYPhase3, 6, rowGrayOrRgbPhase3);
-          rasterYPhase3++;
-          bandRowIndexPhase3++;
+        lowerSideBandHeight = this.widgetHeight - 79;
+        lowerSideBandStartGray = 169;
+        lowerSideBandEndGray = 127;
+        lowerSideBandRowIndex = 0;
+        lowerSideBandRasterY = y + 57;
+        while (lowerSideBandRowIndex < lowerSideBandHeight) {
+          lowerSideBandGrayOrRgb = lowerSideBandRowIndex * (lowerSideBandEndGray - lowerSideBandStartGray) / lowerSideBandHeight + lowerSideBandStartGray;
+          lowerSideBandGrayOrRgb = lowerSideBandGrayOrRgb | (lowerSideBandGrayOrRgb << 16 | lowerSideBandGrayOrRgb << 8);
+          SoftwareRasterizer.drawHorizontalLine(x, lowerSideBandRasterY, 6, lowerSideBandGrayOrRgb);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + x), lowerSideBandRasterY, 6, lowerSideBandGrayOrRgb);
+          lowerSideBandRasterY++;
+          lowerSideBandRowIndex++;
         }
     }
 

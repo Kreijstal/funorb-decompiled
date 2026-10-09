@@ -14,7 +14,7 @@ final class ValidationState {
         int panelTopBeforeInvalidGuardIncrement = 0;
         int panelPhase;
         int unusedClientControlSnapshot;
-        int panelPhasePhase2;
+        int pendingPanelPhaseSnapshot;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard <= -78) {
           if (null != ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
@@ -53,8 +53,8 @@ final class ValidationState {
         if (null == ArchiveRequest.pendingActionMarkers.firstForIteration(0)) {
           return;
         }
-        panelPhasePhase2 = MidiPcmStream.pendingActionPanelPhase;
-        if (panelPhasePhase2 == 0) {
+        pendingPanelPhaseSnapshot = MidiPcmStream.pendingActionPanelPhase;
+        if (pendingPanelPhaseSnapshot == 0) {
           LogoCompositor.pendingActionPanelTop = LogoCompositor.pendingActionPanelTop - 1;
           if (LogoCompositor.pendingActionPanelTop > -10 - (RasterTargetSnapshot.pendingActionPanelHeight - 480)) {
             return;
@@ -63,7 +63,7 @@ final class ValidationState {
           MidiPcmStream.pendingActionPanelPhase = 1;
           return;
         }
-        if (panelPhasePhase2 == 1) {
+        if (pendingPanelPhaseSnapshot == 1) {
           holdTicksBeforeInvalidGuardIncrement = EmailAvailabilityQuery.pendingActionPanelHoldTicks;
           EmailAvailabilityQuery.pendingActionPanelHoldTicks = EmailAvailabilityQuery.pendingActionPanelHoldTicks + 1;
           if (holdTicksBeforeInvalidGuardIncrement <= 450) {
@@ -72,7 +72,7 @@ final class ValidationState {
           MidiPcmStream.pendingActionPanelPhase = 2;
           return;
         }
-        if (panelPhasePhase2 != 2) {
+        if (pendingPanelPhaseSnapshot != 2) {
           return;
         }
         panelTopBeforeInvalidGuardIncrement = LogoCompositor.pendingActionPanelTop;

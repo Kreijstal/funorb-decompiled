@@ -241,7 +241,7 @@ class HotspotTextWidget extends ButtonWidget {
         int segmentEndX;
         TextHotspotBounds newSegment;
         int unusedClientControlSnapshot;
-        int openingDelimiterOffsetOrHotspotIdNestedPhase2;
+        int hotspotId;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         this.hotspotBounds = new IntrusiveDeque();
         guardQuotient = 83 / ((methodGuard - 48) / 55);
@@ -255,7 +255,7 @@ class HotspotTextWidget extends ButtonWidget {
           }
           openingDelimiterOffsetOrHotspotId = this.widgetText.indexOf(">", openingTagOffset);
           hotspotIdText = this.widgetText.substring(openingTagOffset + 9, openingDelimiterOffsetOrHotspotId);
-          openingDelimiterOffsetOrHotspotIdNestedPhase2 = Integer.parseInt(hotspotIdText);
+          hotspotId = Integer.parseInt(hotspotIdText);
           closingTagOffsetOrSearchCursor = this.widgetText.indexOf("</hotspot>", openingTagOffset);
           firstLineIndex = textLayout.getCaretLineIndex((byte) 24, openingTagOffset);
           lastLineIndex = textLayout.getCaretLineIndex((byte) 24, closingTagOffsetOrSearchCursor);
@@ -278,7 +278,7 @@ class HotspotTextWidget extends ButtonWidget {
               }
             }
             segmentEndX = segmentEndBeforeStore;
-            newSegment = new TextHotspotBounds(openingDelimiterOffsetOrHotspotIdNestedPhase2, segmentStartX, layoutLine.topY, segmentEndX - segmentStartX, Math.max(textRenderer.getFontHeight(1), -layoutLine.topY + layoutLine.bottomY));
+            newSegment = new TextHotspotBounds(hotspotId, segmentStartX, layoutLine.topY, segmentEndX - segmentStartX, Math.max(textRenderer.getFontHeight(1), -layoutLine.topY + layoutLine.bottomY));
             if (previousSegmentOrNull != null) {
               ((TextHotspotBounds) (previousSegmentOrNull)).nextSegment = newSegment;
             }

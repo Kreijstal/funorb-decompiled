@@ -14,8 +14,8 @@ final class LogoCompositor {
         int overlayTickOffset;
         int overlayAlpha256;
         int clientControlFlowGuard;
-        int overlayTickOffsetPhase2;
-        int overlayAlpha256Phase2;
+        int finalBottomOverlayTickOffset;
+        int finalBottomOverlayAlpha256;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (DequeCursor.logoAnimationTick < 0) {
           return;
@@ -184,13 +184,13 @@ final class LogoCompositor {
             }
           }
         }
-        overlayTickOffsetPhase2 = DequeCursor.logoAnimationTick - 140;
-        if (overlayTickOffsetPhase2 > 0) {
-          overlayAlpha256Phase2 = 256;
-          if (overlayTickOffsetPhase2 < 20) {
-            overlayAlpha256Phase2 = overlayTickOffsetPhase2 * 256 / 20;
+        finalBottomOverlayTickOffset = DequeCursor.logoAnimationTick - 140;
+        if (finalBottomOverlayTickOffset > 0) {
+          finalBottomOverlayAlpha256 = 256;
+          if (finalBottomOverlayTickOffset < 20) {
+            finalBottomOverlayAlpha256 = finalBottomOverlayTickOffset * 256 / 20;
           }
-          UsernameQuerySupport.logoFinalFrameBottom.drawAlpha(15 + logoLeft, logoTop + 10, sceneAlpha256 * overlayAlpha256Phase2 >> 8);
+          UsernameQuerySupport.logoFinalFrameBottom.drawAlpha(15 + logoLeft, logoTop + 10, sceneAlpha256 * finalBottomOverlayAlpha256 >> 8);
         }
         return;
     }

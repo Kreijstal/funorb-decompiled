@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/765e8c5be3195b57d65f7c417905763ecbb764e6/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,121 bindings,
 preserving 388 override relationships.
 
-## Current MIDI, hash and menu-avatar roles (pass 244)
+## Current numbered-name milestone (pass 245)
+
+The final 69 numbered Phase-family names now describe reviewed UI/font/archive/
+bootstrap/audio/decoder roles. Current rules and dictionary have zero numbered
+Phase-family or LiteralPhase names. Exactly 410 identifier occurrences change
+in 27 files; all 303 sources compile, reproduce and reverse byte exactly, with
+unchanged existing native traces. Source/compiler pins and historical records
+are preserved. Other mixed roles, aliases/guards, five large framed methods and
+41 unresolved field purposes still need work; this milestone is not full readability.
+
+## Previous MIDI, hash and menu-avatar roles (pass 244)
 
 67 local names now identify MIDI status/data branches and packed-score offsets,
 hash words/rounds/table bytes, and menu-avatar tint paths. 49 numbered names and

@@ -3305,11 +3305,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "765e8c5be3195b57d65f7c417905763ecbb764e6",
+    "commit": "0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "e23e047df49214cb12f46bbbb9b45f7ac5656d70a2e3d278f74ece5d2d7c28e0"
+      "sha256": "e54003cd30265598bdbb33053d1d6bc2223e0b874a4f8cafcd52a7c3d108f21a"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3319,7 +3319,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "f9b97cb47d77c1d94e1b581ae624e561b7fbec0a52df6d7e8c23fb43095a984d",
+    "outputTreeSha256": "f04e5ce94a2068fc545d2cf45b2e1caa0ffc9ac36229c30d3de6c8c419489112",
     "files": 303,
     "rules": 20125,
     "identifierEdits": 121882,
@@ -3350,7 +3350,7 @@
       "remainingUnresolvedFieldPurposes": 41
     },
     "structuralPass": 240,
-    "semanticPass": 244
+    "semanticPass": 245
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36426,5 +36426,36 @@
     "sourceWorkflowCommit": "765e8c5be3195b57d65f7c417905763ecbb764e6",
     "manifestSha256": "e23e047df49214cb12f46bbbb9b45f7ac5656d70a2e3d278f74ece5d2d7c28e0",
     "readableTreeSha256": "f9b97cb47d77c1d94e1b581ae624e561b7fbec0a52df6d7e8c23fb43095a984d"
+  },
+  "finalNumberedPhasePurposeNaming": {
+    "version": 245,
+    "rulesRefined": 69,
+    "numberedPhaseFamilyNamesReplaced": 69,
+    "boundIdentifierOccurrencesRenamed": 410,
+    "changedJavaFiles": 27,
+    "unaffectedCompleteRulesPreserved": 20056,
+    "dictionaryIdentitiesPreserved": 20432,
+    "remainingNumberedPhaseFamilyNames": 0,
+    "remainingLiteralPhaseNames": 0,
+    "remainingLargeFramedMethods": 5,
+    "remainingUnresolvedFieldPurposes": 41,
+    "sourceAndCompilerPinsUnchanged": true,
+    "sourceBodyEditedByHand": false,
+    "bytecodeChanged": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Final numbered phase-family names in UI/font/archive/bootstrap/audio/code-length table and decoding helpers. Full javac binding/compilation checks, exact identifier-only source reconstruction and byte-exact reversal certify naming only. Existing native score/rendering/result traces keep their previous coverage limits. Large framed methods, other shared roles and source-insufficient field purposes still need work.",
+    "ruleBuilderTestGroupsPassed": 13,
+    "matchingNativeResultTraceGroups": 14,
+    "matchingNativeRenderingTraceGroups": 10,
+    "independentlyReconstructedReadableFiles": 303,
+    "exactIdentifierOnlyOccurrencesCompared": 410,
+    "dictionaryReversalByteExact": true,
+    "sourceDeclarations": 20327,
+    "bindingsCompared": 138121,
+    "overrideRelationshipsPreserved": 388,
+    "numberedNamesAbsentInRulesAndDictionary": true,
+    "sourceWorkflowCommit": "0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15",
+    "manifestSha256": "e54003cd30265598bdbb33053d1d6bc2223e0b874a4f8cafcd52a7c3d108f21a",
+    "readableTreeSha256": "f04e5ce94a2068fc545d2cf45b2e1caa0ffc9ac36229c30d3de6c8c419489112"
   }
 }

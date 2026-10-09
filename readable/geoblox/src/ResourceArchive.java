@@ -753,7 +753,7 @@ final class ResourceArchive {
         int loadedProgress;
         int groupIndexThenPercentage;
         int unusedClientGuardSnapshot;
-        int groupIndexThenPercentagePhase2;
+        int loadPercentage;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (!this.ensureIndexLoaded(0)) {
           return 0;
@@ -773,8 +773,8 @@ final class ResourceArchive {
         if (possibleProgress == 0) {
           return 100;
         }
-        groupIndexThenPercentagePhase2 = loadedProgress * 100 / possibleProgress;
-        return groupIndexThenPercentagePhase2;
+        loadPercentage = loadedProgress * 100 / possibleProgress;
+        return loadPercentage;
     }
 
     final boolean isNamedFileAvailable(byte methodGuard, String fileName, String groupName) {

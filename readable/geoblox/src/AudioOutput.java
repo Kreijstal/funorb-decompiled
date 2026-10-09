@@ -293,8 +293,8 @@ class AudioOutput {
         PcmStream childStream;
         int parentPriority;
         PcmStream nextStream;
-        int priorityPassThenCleanupBucketNestedPhase2;
-        int bucketMaskThenCleanupIndexNestedPhase2;
+        int cleanupBucketIndex;
+        int cleanupHeadBucketIndex;
         Object nextCleanupStream;
         PcmStream childStreamAliasBeforeVisit;
         PcmStream childStreamBeingScheduled;
@@ -377,12 +377,12 @@ class AudioOutput {
             }
             break;
           }
-          for (priorityPassThenCleanupBucketNestedPhase2 = 0; priorityPassThenCleanupBucketNestedPhase2 < 8; priorityPassThenCleanupBucketNestedPhase2++) {
-            cleanupStream = this.priorityQueueHeads[priorityPassThenCleanupBucketNestedPhase2];
+          for (cleanupBucketIndex = 0; cleanupBucketIndex < 8; cleanupBucketIndex++) {
+            cleanupStream = this.priorityQueueHeads[cleanupBucketIndex];
             queueHeadsAlias = this.priorityQueueHeads;
-            bucketMaskThenCleanupIndexNestedPhase2 = priorityPassThenCleanupBucketNestedPhase2;
-            this.priorityQueueTails[priorityPassThenCleanupBucketNestedPhase2] = null;
-            queueHeadsAlias[bucketMaskThenCleanupIndexNestedPhase2] = null;
+            cleanupHeadBucketIndex = cleanupBucketIndex;
+            this.priorityQueueTails[cleanupBucketIndex] = null;
+            queueHeadsAlias[cleanupHeadBucketIndex] = null;
             while (cleanupStream != null) {
               nextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
               ((PcmStream) (cleanupStream)).scheduledNextStream = null;

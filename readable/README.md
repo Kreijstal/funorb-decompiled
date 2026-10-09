@@ -6,7 +6,59 @@ declarations and 105 labels. Both 303-file corpora compile, comparing 138,121
 bindings and preserving 388 override relationships. Some members retain unknown
 purposes; generated carriers, guards and shared joins remain.
 
-## Current MIDI, hash and menu-avatar roles (pass 244)
+## Current final numbered-phase purposes (pass 245)
+
+The final 69 numbered phase-family names now describe source-reviewed purposes
+across 27 classes. UI names distinguish reconnect results, pending-panel phase
+snapshots, spinner geometry, hotspot IDs, caret guard arithmetic, hit tests,
+aspect recomputation and upper/lower dialog side bands. Font names distinguish
+left/right clipping, trailing mask skips, wrapped lines, profile offsets/delta
+sums, second kerning glyphs and palette-glyph traversal. Archive/bootstrap names
+identify background downloads, group/archive indexes, percentages and readiness
+snapshots; other names identify ratio-sort terms, theme-color insertion, PCM loop
+crossing, audio cleanup buckets, filter variants, Bzip2 base/limit construction
+and Vorbis residue classifications.
+
+Names retain mixed gray/RGB units and unused arithmetic/snapshots explicitly.
+Original reads/stores, masks, shifts/overflow, clipping, allocation/callback
+order, repeated field reads, floating association, invalid-guard paths and
+protected/monitor transfers remain. No valid-input, stable-field or zero client-
+control assumption is introduced. The dictionary preserves every original name.
+
+69 guarded rules rename 410 bound occurrences. All 20,056 unaffected complete
+rule objects, all 20,432 dictionary identities, the 41-field purpose inventory
+and every prior provenance record outside the current workflow summary remain
+unchanged. Independent reconstruction from the old dictionary substitutes only
+the reviewed identifiers and matches every character of all 303 new readable
+files. Reversal recovers every raw byte. Source/compiler/frozen naming/workflow/
+stub/native pins are unchanged. The export retains 20,125 rules, 121,882
+identifier edits, 11 literal and 423 label edits (122,316 total), 138,121 binding
+comparisons and 388 override pairs.
+
+Validation: `node readable/build-geoblox-rules.mjs --check`,
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass.
+`node --test readable/tests/test-geoblox-rule-builder.mjs` passes 13 groups.
+With the fixed transformed classes as the final argument,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-result-helpers.mjs`
+and `...test-geoblox-nine-slice.mjs` retain 14 and ten native/raw/readable trace
+groups and their existing independent-oracle/trace-only coverage limits.
+Fresh committed sibling checkouts reproduce the complete export. Current-pass
+counters record naming-only refinements.
+
+There are zero LiteralPhase or numbered Phase-family names in the current rules
+and reversible dictionary. This is a naming milestone, not a complete readability
+or runtime-equivalence claim: other combined roles, aliases/guard expressions,
+five large framed methods, 77 plain block labels and 41 unresolved field purposes
+remain. The field inventory describes observed source mechanisms rather than
+unproved UI semantics. Large frames still require proved continuation or safe
+method decomposition. Whole-game, real assets/network/audio devices, browser/
+phone and heap/presented-FPS acceptance remain unverified.
+
+The tracked decompiler-source tar SHA-256 remains
+`d7a2128763a993e939f7809b9a33626cae6d4189f47ab0a30c0e7e3e4342c221`.
+
+## Previous MIDI, hash and menu-avatar roles (pass 244)
 
 67 source-reviewed local names now distinguish MIDI note-off/on, polyphonic
 pressure, program change, controller, channel-pressure and pitch-bend branches;
@@ -5464,16 +5516,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/765e8c5be3195b57d65f7c417905763ecbb764e6/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/765e8c5be3195b57d65f7c417905763ecbb764e6/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `765e8c5be3195b57d65f7c417905763ecbb764e6`; the
-manifest SHA-256 is `e23e047df49214cb12f46bbbb9b45f7ac5656d70a2e3d278f74ece5d2d7c28e0`.
+The current Deko workflow/manifest commit is `0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15`; the
+manifest SHA-256 is `e54003cd30265598bdbb33053d1d6bc2223e0b874a4f8cafcd52a7c3d108f21a`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -5498,7 +5550,7 @@ separate from a game JAR or Java source-tree hashes.
 Current raw tree SHA-256:
 `7bc14c890daa3207383089455bf539fdd73b7993aaa08d5e1c1c4e53827b2424`.
 Current readable tree SHA-256:
-`f9b97cb47d77c1d94e1b581ae624e561b7fbec0a52df6d7e8c23fb43095a984d`.
+`f04e5ce94a2068fc545d2cf45b2e1caa0ffc9ac36229c30d3de6c8c419489112`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

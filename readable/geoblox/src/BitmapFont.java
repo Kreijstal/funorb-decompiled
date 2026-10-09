@@ -84,9 +84,9 @@ abstract class BitmapFont extends DualLinkNode {
         byte[][] leadingProfilesSnapshot;
         byte[][] trailingProfilesSnapshot;
         int[] profileOffsetsSnapshot;
-        int profileMetadataGlyphIndexNestedPhase2;
-        int profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2;
-        int profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3;
+        int profileOffsetGlyphIndex;
+        int trailingProfileDeltaSum;
+        int kerningSecondGlyphIndex;
         int trailingProfileGlyphIndex;
         int kerningFirstGlyphIndex;
         this.glyphAdvances = new int[256];
@@ -113,10 +113,10 @@ abstract class BitmapFont extends DualLinkNode {
             glyphIndexOrMetricsOffset++;
             profileLengthsForUpdates[profileMetadataGlyphIndex] = metrics[lengthReadOffsetBeforeIncrement] & 255;
           }
-          for (profileMetadataGlyphIndexNestedPhase2 = 0; profileMetadataGlyphIndexNestedPhase2 < 256; profileMetadataGlyphIndexNestedPhase2++) {
+          for (profileOffsetGlyphIndex = 0; profileOffsetGlyphIndex < 256; profileOffsetGlyphIndex++) {
             profileOffsetReadOffsetBeforeIncrement = glyphIndexOrMetricsOffset;
             glyphIndexOrMetricsOffset++;
-            profileOffsetsForUpdates[profileMetadataGlyphIndexNestedPhase2] = metrics[profileOffsetReadOffsetBeforeIncrement] & 255;
+            profileOffsetsForUpdates[profileOffsetGlyphIndex] = metrics[profileOffsetReadOffsetBeforeIncrement] & 255;
           }
           leadingProfilesSnapshot = new byte[256][];
           leadingProfilesForwarded = leadingProfilesSnapshot;
@@ -138,12 +138,12 @@ abstract class BitmapFont extends DualLinkNode {
           for (trailingProfileGlyphIndex = 0; trailingProfileGlyphIndex < 256; trailingProfileGlyphIndex++) {
             allocatedTrailingProfile = new byte[profileLengthsSnapshot[trailingProfileGlyphIndex]];
             trailingProfilesForUpdates[trailingProfileGlyphIndex] = allocatedTrailingProfile;
-            profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 = 0;
+            trailingProfileDeltaSum = 0;
             for (trailingProfileRow = 0; trailingProfileRow < trailingProfilesSnapshot[trailingProfileGlyphIndex].length; trailingProfileRow++) {
               trailingDeltaReadOffsetBeforeIncrement = glyphIndexOrMetricsOffset;
               glyphIndexOrMetricsOffset++;
-              profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 = (byte)(profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 + metrics[trailingDeltaReadOffsetBeforeIncrement]);
-              trailingProfilesSnapshot[trailingProfileGlyphIndex][trailingProfileRow] = (byte)profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2;
+              trailingProfileDeltaSum = (byte)(trailingProfileDeltaSum + metrics[trailingDeltaReadOffsetBeforeIncrement]);
+              trailingProfilesSnapshot[trailingProfileGlyphIndex][trailingProfileRow] = (byte)trailingProfileDeltaSum;
             }
           }
           this.pairKerning = new byte[65536];
@@ -161,14 +161,14 @@ abstract class BitmapFont extends DualLinkNode {
               kerningFirstGlyphIndex++;
               continue;
             }
-            for (profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 = 0; profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 < 256; profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3++) {
-              if (profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 == 32) {
+            for (kerningSecondGlyphIndex = 0; kerningSecondGlyphIndex < 256; kerningSecondGlyphIndex++) {
+              if (kerningSecondGlyphIndex == 32) {
                 continue;
               }
-              if (profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 == 160) {
+              if (kerningSecondGlyphIndex == 160) {
                 continue;
               }
-              this.pairKerning[(kerningFirstGlyphIndex << 8) + profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3] = (byte)BitmapFont.computePairKerning(leadingProfilesSnapshot, trailingProfilesSnapshot, profileOffsetsSnapshot, this.glyphAdvances, profileLengthsSnapshot, kerningFirstGlyphIndex, profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3);
+              this.pairKerning[(kerningFirstGlyphIndex << 8) + kerningSecondGlyphIndex] = (byte)BitmapFont.computePairKerning(leadingProfilesSnapshot, trailingProfilesSnapshot, profileOffsetsSnapshot, this.glyphAdvances, profileLengthsSnapshot, kerningFirstGlyphIndex, kerningSecondGlyphIndex);
             }
             kerningFirstGlyphIndex++;
           }
@@ -492,7 +492,7 @@ abstract class BitmapFont extends DualLinkNode {
         int lineCount;
         int baselineY;
         int extraVerticalGapOrLineIndex;
-        int extraVerticalGapOrLineIndexPhase2;
+        int wrappedLineIndex;
         if (text == null) {
           return 0;
         }
@@ -528,28 +528,28 @@ abstract class BitmapFont extends DualLinkNode {
         } else {
           baselineY = top + this.maxAscent;
         }
-        for (extraVerticalGapOrLineIndexPhase2 = 0; extraVerticalGapOrLineIndexPhase2 < lineCount; extraVerticalGapOrLineIndexPhase2++) {
+        for (wrappedLineIndex = 0; wrappedLineIndex < lineCount; wrappedLineIndex++) {
           if (horizontalAlignment == 0) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
+            this.drawStyledText(wrappedLines[wrappedLineIndex], left, baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
           if (horizontalAlignment == 1) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left + (width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndexPhase2])) / 2, baselineY);
+            this.drawStyledText(wrappedLines[wrappedLineIndex], left + (width - this.measureTextWidth(wrappedLines[wrappedLineIndex])) / 2, baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
           if (horizontalAlignment == 2) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left + width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndexPhase2]), baselineY);
+            this.drawStyledText(wrappedLines[wrappedLineIndex], left + width - this.measureTextWidth(wrappedLines[wrappedLineIndex]), baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
-          if (extraVerticalGapOrLineIndexPhase2 != lineCount - 1) {
-            this.prepareJustification(wrappedLines[extraVerticalGapOrLineIndexPhase2], width);
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
+          if (wrappedLineIndex != lineCount - 1) {
+            this.prepareJustification(wrappedLines[wrappedLineIndex], width);
+            this.drawStyledText(wrappedLines[wrappedLineIndex], left, baselineY);
             spaceExpansionQ8 = 0;
           } else {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
+            this.drawStyledText(wrappedLines[wrappedLineIndex], left, baselineY);
           }
           baselineY = baselineY + lineSpacing;
         }

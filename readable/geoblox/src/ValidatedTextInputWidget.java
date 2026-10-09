@@ -84,7 +84,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     final static char normalizeNameCharacter(char character, int methodGuard) {
         int characterCode;
-        int characterCodePhase2;
+        int fallbackCharacterCode;
         if (methodGuard == -227) {
           characterCode = character;
           if (32 == characterCode) {
@@ -187,105 +187,105 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
           return character;
         }
         ValidatedTextInputWidget.releaseStaticReferences(82);
-        characterCodePhase2 = character;
-        if (32 != characterCodePhase2) {
-          if (characterCodePhase2 == 160) {
+        fallbackCharacterCode = character;
+        if (32 != fallbackCharacterCode) {
+          if (fallbackCharacterCode == 160) {
             return '_';
           }
-          if (characterCodePhase2 != 95 &&
-              characterCodePhase2 != 45) {
-            if (characterCodePhase2 != 91 &&
-                93 != characterCodePhase2 &&
-                35 != characterCodePhase2) {
-              if (characterCodePhase2 != 224 &&
-                  characterCodePhase2 != 225 &&
-                  characterCodePhase2 != 226 &&
-                  characterCodePhase2 != 228 &&
-                  characterCodePhase2 != 227 &&
-                  characterCodePhase2 != 192 &&
-                  characterCodePhase2 != 193 &&
-                  characterCodePhase2 != 194 &&
-                  characterCodePhase2 != 196 &&
-                  characterCodePhase2 != 195) {
-                if (characterCodePhase2 != 232 &&
-                    characterCodePhase2 != 233 &&
-                    characterCodePhase2 != 234 &&
-                    characterCodePhase2 != 235 &&
-                    characterCodePhase2 != 200 &&
-                    characterCodePhase2 != 201 &&
-                    characterCodePhase2 != 202) {
-                  if (characterCodePhase2 == 203) {
+          if (fallbackCharacterCode != 95 &&
+              fallbackCharacterCode != 45) {
+            if (fallbackCharacterCode != 91 &&
+                93 != fallbackCharacterCode &&
+                35 != fallbackCharacterCode) {
+              if (fallbackCharacterCode != 224 &&
+                  fallbackCharacterCode != 225 &&
+                  fallbackCharacterCode != 226 &&
+                  fallbackCharacterCode != 228 &&
+                  fallbackCharacterCode != 227 &&
+                  fallbackCharacterCode != 192 &&
+                  fallbackCharacterCode != 193 &&
+                  fallbackCharacterCode != 194 &&
+                  fallbackCharacterCode != 196 &&
+                  fallbackCharacterCode != 195) {
+                if (fallbackCharacterCode != 232 &&
+                    fallbackCharacterCode != 233 &&
+                    fallbackCharacterCode != 234 &&
+                    fallbackCharacterCode != 235 &&
+                    fallbackCharacterCode != 200 &&
+                    fallbackCharacterCode != 201 &&
+                    fallbackCharacterCode != 202) {
+                  if (fallbackCharacterCode == 203) {
                     return 'e';
                   }
-                  if (characterCodePhase2 == 237) {
+                  if (fallbackCharacterCode == 237) {
                     return 'i';
                   }
-                  if (characterCodePhase2 == 238) {
+                  if (fallbackCharacterCode == 238) {
                     return 'i';
                   }
-                  if (239 == characterCodePhase2) {
+                  if (239 == fallbackCharacterCode) {
                     return 'i';
                   }
-                  if (characterCodePhase2 != 205 &&
-                      characterCodePhase2 != 206 &&
-                      characterCodePhase2 != 207) {
-                    if (characterCodePhase2 != 242) {
-                      if (243 == characterCodePhase2) {
+                  if (fallbackCharacterCode != 205 &&
+                      fallbackCharacterCode != 206 &&
+                      fallbackCharacterCode != 207) {
+                    if (fallbackCharacterCode != 242) {
+                      if (243 == fallbackCharacterCode) {
                         return 'o';
                       }
-                      if (characterCodePhase2 == 244) {
+                      if (fallbackCharacterCode == 244) {
                         return 'o';
                       }
-                      if (characterCodePhase2 != 246 &&
-                          characterCodePhase2 != 245) {
-                        if (characterCodePhase2 == 210) {
+                      if (fallbackCharacterCode != 246 &&
+                          fallbackCharacterCode != 245) {
+                        if (fallbackCharacterCode == 210) {
                           return 'o';
                         }
-                        if (characterCodePhase2 == 211) {
+                        if (fallbackCharacterCode == 211) {
                           return 'o';
                         }
-                        if (characterCodePhase2 != 212 &&
-                            characterCodePhase2 != 214 &&
-                            characterCodePhase2 != 213) {
-                          if (249 != characterCodePhase2) {
-                            if (250 == characterCodePhase2) {
+                        if (fallbackCharacterCode != 212 &&
+                            fallbackCharacterCode != 214 &&
+                            fallbackCharacterCode != 213) {
+                          if (249 != fallbackCharacterCode) {
+                            if (250 == fallbackCharacterCode) {
                               return 'u';
                             }
-                            if (characterCodePhase2 == 251) {
+                            if (fallbackCharacterCode == 251) {
                               return 'u';
                             }
-                            if (characterCodePhase2 == 252) {
+                            if (fallbackCharacterCode == 252) {
                               return 'u';
                             }
-                            if (characterCodePhase2 == 217) {
+                            if (fallbackCharacterCode == 217) {
                               return 'u';
                             }
-                            if (218 == characterCodePhase2) {
+                            if (218 == fallbackCharacterCode) {
                               return 'u';
                             }
-                            if (characterCodePhase2 == 219) {
+                            if (fallbackCharacterCode == 219) {
                               return 'u';
                             }
-                            if (characterCodePhase2 != 220) {
-                              if (characterCodePhase2 == 231) {
+                            if (fallbackCharacterCode != 220) {
+                              if (fallbackCharacterCode == 231) {
                                 return 'c';
                               }
-                              if (characterCodePhase2 == 199) {
+                              if (fallbackCharacterCode == 199) {
                                 return 'c';
                               }
-                              if (characterCodePhase2 == 255) {
+                              if (fallbackCharacterCode == 255) {
                                 return 'y';
                               }
-                              if (characterCodePhase2 == 376) {
+                              if (fallbackCharacterCode == 376) {
                                 return 'y';
                               }
-                              if (characterCodePhase2 == 241) {
+                              if (fallbackCharacterCode == 241) {
                                 return 'n';
                               }
-                              if (characterCodePhase2 == 209) {
+                              if (fallbackCharacterCode == 209) {
                                 return 'n';
                               }
-                              if (characterCodePhase2 == 223) {
+                              if (fallbackCharacterCode == 223) {
                                 return 'b';
                               }
                               return Character.toLowerCase(character);

@@ -32,7 +32,7 @@ final class TextLayoutLine {
     final int findNearestCaretIndex(int methodGuard, int x) {
         int caretIndexOrGuardQuotient;
         int clientControlFlowSnapshot;
-        int caretIndexOrGuardQuotientPhase2;
+        int unusedCaretGuardQuotient;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (null == this.caretX) {
           return 0;
@@ -45,7 +45,7 @@ final class TextLayoutLine {
             return caretIndexOrGuardQuotient - 1;
           }
         }
-        caretIndexOrGuardQuotientPhase2 = 35 / ((methodGuard + 9) / 51);
+        unusedCaretGuardQuotient = 35 / ((methodGuard + 9) / 51);
         return this.caretX.length - 1;
     }
 

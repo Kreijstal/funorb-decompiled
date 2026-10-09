@@ -247,7 +247,7 @@ final class CanvasResizeController {
         int constrainedHeight;
         int aspectAdjustedWidth;
         int clientControlFlowSnapshot;
-        int aspectAdjustedWidthPhase2;
+        int recomputedAspectWidth;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         constrainedWidth = this.requestedWidth;
         constrainedHeight = this.requestedHeight;
@@ -338,8 +338,8 @@ final class CanvasResizeController {
           PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           return;
         }
-        aspectAdjustedWidthPhase2 = (int)(0.5f + (float)constrainedHeight * this.aspectRatio);
-        if (aspectAdjustedWidthPhase2 > constrainedWidth) {
+        recomputedAspectWidth = (int)(0.5f + (float)constrainedHeight * this.aspectRatio);
+        if (recomputedAspectWidth > constrainedWidth) {
           constrainedHeight = (int)((float)constrainedWidth / this.aspectRatio);
           if (!applyResize) {
             return;
@@ -352,8 +352,8 @@ final class CanvasResizeController {
             }
           }
         } else {
-          if (aspectAdjustedWidthPhase2 < constrainedWidth) {
-            constrainedWidth = aspectAdjustedWidthPhase2;
+          if (recomputedAspectWidth < constrainedWidth) {
+            constrainedWidth = recomputedAspectWidth;
             if (!applyResize) {
               return;
             }

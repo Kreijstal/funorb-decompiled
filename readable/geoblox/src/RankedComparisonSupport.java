@@ -6,9 +6,9 @@ final class RankedComparisonSupport {
         int rightTiePartSum;
         int leftTiePartSum;
         int guardResidue;
-        int rightTiePartSumPhase2;
-        int leftTiePartSumPhase2;
-        int guardResiduePhase2;
+        int ratioTieRightComponentSum;
+        int ratioTieLeftComponentSum;
+        int ratioTieGuardRemainder;
         if (!keyTwoFirst) {
           if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] < ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
             return true;
@@ -45,13 +45,13 @@ final class RankedComparisonSupport {
         if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] > ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
           return false;
         }
-        rightTiePartSumPhase2 = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
-        leftTiePartSumPhase2 = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
-        guardResiduePhase2 = 76 % ((-38 - methodGuard) / 45);
-        if (rightTiePartSumPhase2 < leftTiePartSumPhase2) {
+        ratioTieRightComponentSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
+        ratioTieLeftComponentSum = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
+        ratioTieGuardRemainder = 76 % ((-38 - methodGuard) / 45);
+        if (ratioTieRightComponentSum < ratioTieLeftComponentSum) {
           return true;
         }
-        if (rightTiePartSumPhase2 > leftTiePartSumPhase2) {
+        if (ratioTieRightComponentSum > ratioTieLeftComponentSum) {
           return false;
         }
         if (rightIndex >= leftIndex) {

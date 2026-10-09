@@ -130,8 +130,8 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite invalidIconSprite;
         Sprite pendingIconSprite;
         Sprite debouncingIconSprite;
-        int requiredSpinnerWidthPhase2;
-        int requiredSpinnerHeightPhase2;
+        int pendingIconSpinnerWidth;
+        int pendingIconSpinnerHeight;
         ValidationState activeValidationState;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         initialValidationState = this.validationProvider.getDebouncedValidationState((byte) -105);
@@ -195,18 +195,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         }
         pendingIconSprite = ClientClockSupport.validationStateSprites[0];
         unusedPendingIconAlias = pendingIconSprite;
-        requiredSpinnerWidthPhase2 = pendingIconSprite.fullWidth << 1;
-        requiredSpinnerHeightPhase2 = pendingIconSprite.fullHeight << 1;
+        pendingIconSpinnerWidth = pendingIconSprite.fullWidth << 1;
+        pendingIconSpinnerHeight = pendingIconSprite.fullHeight << 1;
         if (this.spinnerSprite == null) {
-          this.spinnerSprite = new Sprite(requiredSpinnerWidthPhase2, requiredSpinnerHeightPhase2);
+          this.spinnerSprite = new Sprite(pendingIconSpinnerWidth, pendingIconSpinnerHeight);
           Geoblox.setRasterTarget(1, this.spinnerSprite);
         } else {
-          if (this.spinnerSprite.width < requiredSpinnerWidthPhase2) {
-            this.spinnerSprite = new Sprite(requiredSpinnerWidthPhase2, requiredSpinnerHeightPhase2);
+          if (this.spinnerSprite.width < pendingIconSpinnerWidth) {
+            this.spinnerSprite = new Sprite(pendingIconSpinnerWidth, pendingIconSpinnerHeight);
             Geoblox.setRasterTarget(1, this.spinnerSprite);
           } else {
-            if (this.spinnerSprite.height < requiredSpinnerHeightPhase2) {
-              this.spinnerSprite = new Sprite(requiredSpinnerWidthPhase2, requiredSpinnerHeightPhase2);
+            if (this.spinnerSprite.height < pendingIconSpinnerHeight) {
+              this.spinnerSprite = new Sprite(pendingIconSpinnerWidth, pendingIconSpinnerHeight);
               Geoblox.setRasterTarget(1, this.spinnerSprite);
             } else {
               Geoblox.setRasterTarget(1, this.spinnerSprite);

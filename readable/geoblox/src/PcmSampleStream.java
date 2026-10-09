@@ -1079,7 +1079,7 @@ final class PcmSampleStream extends PcmStream {
         int loopSpanFixed;
         int nextDestinationOffset;
         int loopsCrossed;
-        int loopsCrossedNestedPhase2;
+        int forwardLoopCrossingCount;
         if (this.targetVolume == 0 &&
             this.rampFramesRemaining == 0) {
           this.skipFrames(frameCount);
@@ -1179,10 +1179,10 @@ final class PcmSampleStream extends PcmStream {
                 if (this.samplePositionFixed < loopEndFixed) {
                   return;
                 }
-                loopsCrossedNestedPhase2 = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
-                if (loopsCrossedNestedPhase2 < this.loopsRemaining) {
-                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * loopsCrossedNestedPhase2;
-                  this.loopsRemaining = this.loopsRemaining - loopsCrossedNestedPhase2;
+                forwardLoopCrossingCount = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
+                if (forwardLoopCrossingCount < this.loopsRemaining) {
+                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * forwardLoopCrossingCount;
+                  this.loopsRemaining = this.loopsRemaining - forwardLoopCrossingCount;
                   continue;
                 }
                 break;
