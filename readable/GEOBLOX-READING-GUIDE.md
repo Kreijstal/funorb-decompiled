@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/58202c762fb8c8dee9422d5c98626499bb2a81ee/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0e929ce8abf26ce37b1c752f603a5c40b12b319d/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 250)
+## Current readability (pass 251)
 
-The export has 20,139 guarded names and 122,120 Java identifier edits, plus 11
-class-name literal edits and 293 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,139 guarded names and 122,128 Java identifier edits, plus 11
+class-name literal edits and 288 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,055 bindings, reproduce and
+compile and compare 138,063 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,22 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current guarded frame continuations (pass 250)
+## Current initialized frame prefixes (pass 251)
+
+`GameScreen.renderScreen` no longer uses a plain frame for curtain rendering.
+Its curtain position is assigned before the forward/reverse decision. The
+original exit condition updates `tutorialSlideRenderingFrameContinues` after
+the reverse rendering calls; forward rendering runs under that captured guard.
+The tutorial-step update uses the same generic reconstruction with the original
+client-control snapshot and `tutorialStepPhaseUpdateFrameContinues`.
+
+There are zero methods over 300 lines that contain plain block labels. Long
+bodies and nested guards remain, along with 35 smaller frames and 41 finer
+field purposes. The current workflow records the independent source/binding/
+assignment/target certificate, native coverage, unchanged historical evidence
+and exact reproduction/reversal. Whole-game and phone/FPS behavior are unverified.
+
+## Previous guarded frame continuations (pass 250)
 
 Board reconciliation, screen update, session update and half-blend triangle
 drawing no longer contain plain block labels. Their original exit decisions are

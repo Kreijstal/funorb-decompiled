@@ -605,7 +605,8 @@ final class GameScreen extends MenuScreen {
                   return;
                 }
               }
-              tutorialSlideRendering: {
+              {
+                boolean tutorialSlideRenderingFrameContinues = true;
                 tutorialCurtainX = this.tutorialSlideOffset;
                 if (!this.tutorialSlideForward) {
                   tutorialCurtainX = 640 - tutorialCurtainX;
@@ -619,20 +620,20 @@ final class GameScreen extends MenuScreen {
                   super.renderScreen(-28750);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
                   CharacterReplacementSupport.transitionCurtain.drawRotatedCentered((CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + tutorialCurtainX, 240, -49150, 4096);
-                  if (clientControlFlowGuard == 0) {
-                    break tutorialSlideRendering;
-                  }
+                  tutorialSlideRenderingFrameContinues = !(clientControlFlowGuard == 0);
                 }
-                SoftwareRasterizer.setClip(tutorialCurtainX, 0, 640, 480);
-                this.renderTutorialPage(-17, this.previousTutorialPageIndex);
-                this.renderingPreviousTutorialPage = true;
-                super.renderScreen(-28750);
-                this.renderingPreviousTutorialPage = false;
-                SoftwareRasterizer.setClip(0, 0, tutorialCurtainX, 480);
-                this.renderTutorialPage(-48, this.tutorialPageIndex);
-                super.renderScreen(-28750);
-                SoftwareRasterizer.setClip(0, 0, 640, 480);
-                CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + tutorialCurtainX, 240, -16383, 4096);
+                if (tutorialSlideRenderingFrameContinues) {
+                  SoftwareRasterizer.setClip(tutorialCurtainX, 0, 640, 480);
+                  this.renderTutorialPage(-17, this.previousTutorialPageIndex);
+                  this.renderingPreviousTutorialPage = true;
+                  super.renderScreen(-28750);
+                  this.renderingPreviousTutorialPage = false;
+                  SoftwareRasterizer.setClip(0, 0, tutorialCurtainX, 480);
+                  this.renderTutorialPage(-48, this.tutorialPageIndex);
+                  super.renderScreen(-28750);
+                  SoftwareRasterizer.setClip(0, 0, 640, 480);
+                  CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + tutorialCurtainX, 240, -16383, 4096);
+                }
               }
               if (clientControlFlowGuard == 0) {
                 return;

@@ -1206,43 +1206,44 @@ final class GameplaySession {
 
     private final void advanceTutorialStep(int methodGuard) {
         int clientControlFlowGuard;
-        tutorialStepPhaseUpdate: {
+        {
+          boolean tutorialStepPhaseUpdateFrameContinues = true;
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (this.tutorialStepPhase == 2) {
             this.tutorialStepId = this.tutorialStepId + 1;
             this.tutorialPromptActive = true;
             this.tutorialStepPhase = 0;
-            if (clientControlFlowGuard == 0) {
-              break tutorialStepPhaseUpdate;
-            }
+            tutorialStepPhaseUpdateFrameContinues = !(clientControlFlowGuard == 0);
           }
-          if (1 == this.tutorialStepPhase) {
-            if (this.tutorialStepId == 3 ||
-                  this.tutorialStepId == 5) {
-              this.leaveTutorial(7000);
-            }
-            if (this.tutorialAdvanceRequested) {
-              this.tutorialAdvanceRequested = false;
-              this.tutorialStepPhase = 2;
-            }
-            if (this.tutorialStepId == 0 &&
-                this.tutorialProgressMetric > 450) {
-              this.tutorialStepPhase = 2;
-              if (clientControlFlowGuard == 0) {
-                break tutorialStepPhaseUpdate;
+          if (tutorialStepPhaseUpdateFrameContinues) {
+            if (1 == this.tutorialStepPhase) {
+              if (this.tutorialStepId == 3 ||
+                    this.tutorialStepId == 5) {
+                this.leaveTutorial(7000);
               }
-            }
-            if (this.tutorialStepId != 1 ||
-                  !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-              if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
+              if (this.tutorialAdvanceRequested) {
+                this.tutorialAdvanceRequested = false;
                 this.tutorialStepPhase = 2;
-                if (clientControlFlowGuard != 0) {
+              }
+              if (this.tutorialStepId == 0 &&
+                  this.tutorialProgressMetric > 450) {
+                this.tutorialStepPhase = 2;
+                tutorialStepPhaseUpdateFrameContinues = !(clientControlFlowGuard == 0);
+              }
+              if (tutorialStepPhaseUpdateFrameContinues) {
+              if (this.tutorialStepId != 1 ||
+                      !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
+                  if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
+                    this.tutorialStepPhase = 2;
+                    if (clientControlFlowGuard != 0) {
+                      this.tutorialStepPhase = 2;
+                    }
+                  }
+                } else {
                   this.tutorialStepPhase = 2;
                 }
               }
-            } else {
-              this.tutorialStepPhase = 2;
-            }
+          }
           }
         }
         if (methodGuard < 59) {
