@@ -236,7 +236,8 @@ final class DiskArchiveCache {
                   chunkNumber = 0;
                   cacheSectorWriteStep: while (true) {
                     if (length > bytesWritten) {
-                      existingSectorHeaderValidation: {
+                      {
+                        boolean existingSectorHeaderValidationFrameContinues = true;
                         nextSectorNumber = 0;
                         if (reuseExistingChain) {
                           this.dataFile.seek(methodGuard - 191, (long)(520 * sectorNumber));
@@ -276,13 +277,15 @@ final class DiskArchiveCache {
                           if (headerEntryIdOrPayloadLength == entryId &&
                               chunkNumber == headerChunkNumber &&
                               headerArchiveId == this.archiveId) {
-                            if (nextSectorNumber >= 0 &&
-                                (this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber) {
-                              break existingSectorHeaderValidation;
+                            existingSectorHeaderValidationFrameContinues = !(nextSectorNumber >= 0 &&
+                                (this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber);
+                            if (existingSectorHeaderValidationFrameContinues) {
+                              return false;
                             }
+                          }
+                          if (existingSectorHeaderValidationFrameContinues) {
                             return false;
                           }
-                          return false;
                         }
                       }
                       if (nextSectorNumber == 0) {

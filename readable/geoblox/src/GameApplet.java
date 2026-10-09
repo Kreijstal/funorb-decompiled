@@ -279,7 +279,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             try {
               try {
                 appletExecutionBoundary: {
-                  legacyJavaVersionCheck: {
+                  {
+                    boolean legacyJavaVersionCheckFrameContinues = true;
                     {
                       boolean digitOrLegacyVersionDecisionRemainderEnabled = true;
                       if (PlatformTaskDispatcher.javaVendor != null) {
@@ -330,39 +331,44 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                         }
                       }
                       if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                        if (PlatformTaskDispatcher.javaVersion == null) {
-                          break legacyJavaVersionCheck;
+                        legacyJavaVersionCheckFrameContinues = !(PlatformTaskDispatcher.javaVersion == null);
+                        if (legacyJavaVersionCheckFrameContinues) {
+                          digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                         }
-                        digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                       }
                     }
-                    if (digitOrLegacyVersionPredicate) {
-                      javaVersionDigitIndex = 2;
-                      parsedJavaMajorVersion = 0;
-                      while (true) {
-                        majorVersionComparison: {
-                          if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
-                            updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
-                            majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
-                            majorVersionComparisonRight = 48;
-                            if (clientControlSnapshot != 0) {
-                              break majorVersionComparison;
+                    if (legacyJavaVersionCheckFrameContinues) {
+                      if (digitOrLegacyVersionPredicate) {
+                        javaVersionDigitIndex = 2;
+                        parsedJavaMajorVersion = 0;
+                        while (true) {
+                          {
+                            boolean majorVersionComparisonFrameContinues = true;
+                            if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
+                              updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
+                              majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
+                              majorVersionComparisonRight = 48;
+                              majorVersionComparisonFrameContinues = !(clientControlSnapshot != 0);
+                              if (majorVersionComparisonFrameContinues) {
+                                if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
+                                    updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
+                                  parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
+                                  javaVersionDigitIndex++;
+                                  continue;
+                                }
+                              }
                             }
-                            if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
-                                updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
-                              parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
-                              javaVersionDigitIndex++;
-                              continue;
+                            if (majorVersionComparisonFrameContinues) {
+                              majorVersionComparisonLeft = ~parsedJavaMajorVersion;
+                              majorVersionComparisonRight = -6;
                             }
                           }
-                          majorVersionComparisonLeft = ~parsedJavaMajorVersion;
-                          majorVersionComparisonRight = -6;
-                        }
-                        if (majorVersionComparisonLeft > majorVersionComparisonRight) {
+                          if (majorVersionComparisonLeft > majorVersionComparisonRight) {
+                            break;
+                          }
+                          ResizableDialog.legacyJavaCanvasRefreshRequired = true;
                           break;
                         }
-                        ResizableDialog.legacyJavaCanvasRefreshRequired = true;
-                        break;
                       }
                     }
                   }
@@ -385,18 +391,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   this.initializeGame(117);
                   ReflectionCheckRequest.frameTimer = BufferedSocket.createFrameClock(5000);
                   do {
-                    stopDeadlineOrTickDecision: {
+                    {
+                      boolean stopDeadlineOrTickDecisionFrameContinues = true;
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
                         stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
-                        if (clientControlSnapshot != 0) {
-                          break stopDeadlineOrTickDecision;
-                        }
-                        if (stopDeadlineComparisonOrTickIndex >= 0) {
-                          break appletExecutionBoundary;
+                        stopDeadlineOrTickDecisionFrameContinues = !(clientControlSnapshot != 0);
+                        if (stopDeadlineOrTickDecisionFrameContinues) {
+                          if (stopDeadlineComparisonOrTickIndex >= 0) {
+                            break appletExecutionBoundary;
+                          }
                         }
                       }
-                      TriangleMesh.pendingUpdateTicks = ReflectionCheckRequest.frameTimer.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
-                      stopDeadlineComparisonOrTickIndex = 0;
+                      if (stopDeadlineOrTickDecisionFrameContinues) {
+                        TriangleMesh.pendingUpdateTicks = ReflectionCheckRequest.frameTimer.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
+                        stopDeadlineComparisonOrTickIndex = 0;
+                      }
                     }
                     updateSuffixIndexOrVersionDigitOrTickIndex = stopDeadlineComparisonOrTickIndex;
                     do {

@@ -605,7 +605,8 @@ final class GameplaySession {
             this.pointsPanelX = this.pointsPanelX - 1;
           }
         }
-        sessionProgressionAndEnding: {
+        {
+          boolean sessionProgressionAndEndingFrameContinues = true;
           boolean advanceEndingSequence = !(!this.sessionEnding);
           if (!advanceEndingSequence) {
             if ((EntityContactSupport.areEntityQueuesSettled(0) &&
@@ -614,258 +615,260 @@ final class GameplaySession {
                 this.canAdvanceSession(true)) {
               if (0 == this.sessionPhase ||
                     this.sessionPhase == 5) {
-                if (!this.sceneTransitionRequested) {
-                  break sessionProgressionAndEnding;
-                }
-                this.updateSceneTransition((byte) -80);
-                if (clientControlFlowGuard == 0) {
-                  break sessionProgressionAndEnding;
+                sessionProgressionAndEndingFrameContinues = !(!this.sceneTransitionRequested);
+                if (sessionProgressionAndEndingFrameContinues) {
+                  this.updateSceneTransition((byte) -80);
+                  sessionProgressionAndEndingFrameContinues = !(clientControlFlowGuard == 0);
                 }
               }
-              this.updateResultSequence(10);
-              if (clientControlFlowGuard == 0) {
-                break sessionProgressionAndEnding;
+              if (sessionProgressionAndEndingFrameContinues) {
+                this.updateResultSequence(10);
+                sessionProgressionAndEndingFrameContinues = !(clientControlFlowGuard == 0);
               }
             }
-            if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
-              return;
-            }
-            if (!this.rotationControlsSwapped && clientControlFlowGuard == 0) {
-              negativeRotationKeyCode = 96;
-              positiveRotationKeyCode = 97;
-            } else {
-              positiveRotationKeyCode = 96;
-              negativeRotationKeyCode = 97;
-            }
-            if (MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
-              this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
-              ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
-              inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
-              switch (inputDerivedModuloIndex) {
-                case 0:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  break;
-                case 1:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  break;
-                case 3:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  break;
-                case 4:
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  break;
-                case 5:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  break;
-                case 6:
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                default:
-                  break;
-                case 7:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
-                case 2:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  break;
+            if (sessionProgressionAndEndingFrameContinues) {
+              if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
+                return;
               }
-              inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-              switch (inputDerivedModuloIndex) {
-                case 0:
-                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
-                  break;
-                case 3:
-                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                default:
-                  break;
-                case 4:
-                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
-                case 2:
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
-                case 1:
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
-                  break;
+              if (!this.rotationControlsSwapped && clientControlFlowGuard == 0) {
+                negativeRotationKeyCode = 96;
+                positiveRotationKeyCode = 97;
+              } else {
+                positiveRotationKeyCode = 96;
+                negativeRotationKeyCode = 97;
               }
-              if (this.tutorialStepId == 0) {
-                this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-              }
-            }
-            if (MidiPcmStream.heldInternalKeys[positiveRotationKeyCode]) {
-              this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
-              SecondaryDeque.setAvatarPositiveRotationSteering((byte) 74);
-              if (this.tutorialStepId == 0) {
-                this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-              }
-              inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
-              switch (inputDerivedModuloIndex) {
-                case 3:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  break;
-                case 4:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  break;
-                case 5:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  break;
-                case 6:
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                default:
-                  break;
-                case 7:
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
+              if (MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
+                this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
+                ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
+                inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
+                switch (inputDerivedModuloIndex) {
+                  case 0:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
                     break;
-                  }
-                case 2:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                  if (clientControlFlowGuard == 0) {
+                  case 1:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
                     break;
-                  }
-                case 1:
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                  if (clientControlFlowGuard == 0) {
+                  case 3:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
                     break;
-                  }
-                case 0:
-                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                  break;
-              }
-              inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-              switch (inputDerivedModuloIndex) {
-                case 3:
-                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
+                  case 4:
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
                     break;
-                  }
-                default:
-                  break;
-                case 4:
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                  if (clientControlFlowGuard == 0) {
+                  case 5:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
                     break;
-                  }
-                case 2:
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
+                  case 6:
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                  default:
                     break;
-                  }
-                case 1:
-                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
-                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                  if (clientControlFlowGuard == 0) {
+                  case 7:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 2:
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
                     break;
-                  }
-                case 0:
-                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
-                  break;
-              }
-            }
-            {
-              boolean rotationKeySnapshotEnabled = true;
-              if (MidiPcmStream.heldInternalKeys[99] &&
-                  !this.tutorialPromptActive) {
-                fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                while (null != fastForwardEntity) {
-                  detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
-                  if (clientControlFlowGuard != 0) {
-                    rotationKeySnapshotEnabled = false;
+                }
+                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+                switch (inputDerivedModuloIndex) {
+                  case 0:
+                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
                     break;
-                  }
-                  if (!detachedEntityOrPositiveRotationKeySnapshot) {
-                    fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
-                    fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                  case 3:
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                  default:
                     break;
-                  }
-                  fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                  case 4:
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 2:
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 1:
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                    break;
+                }
+                if (this.tutorialStepId == 0) {
+                  this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
                 }
               }
-              if (rotationKeySnapshotEnabled) {
-                detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
+              if (MidiPcmStream.heldInternalKeys[positiveRotationKeyCode]) {
+                this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
+                SecondaryDeque.setAvatarPositiveRotationSteering((byte) 74);
+                if (this.tutorialStepId == 0) {
+                  this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
+                }
+                inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
+                switch (inputDerivedModuloIndex) {
+                  case 3:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    break;
+                  case 4:
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    break;
+                  case 5:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                    break;
+                  case 6:
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                  default:
+                    break;
+                  case 7:
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 2:
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 1:
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 0:
+                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                    break;
+                }
+                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+                switch (inputDerivedModuloIndex) {
+                  case 3:
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  default:
+                    break;
+                  case 4:
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 2:
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 1:
+                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                    if (clientControlFlowGuard == 0) {
+                      break;
+                    }
+                  case 0:
+                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
+                    break;
+                }
               }
-            }
-            if (!detachedEntityOrPositiveRotationKeySnapshot &&
-                !MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
-              WeightedObjectCache.clearAvatarSteering(-106);
-            }
-            this.delayedActionCountdown = this.delayedActionCountdown - 1;
-            if (this.delayedActionCountdown == 0) {
-              PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
-            }
-            nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
-            this.boardClearBonusEligible = nextBoardClearBonusEligible;
-            if (this.boardClearBonusEligible &&
-                this.connectivityRebuiltThisTick) {
-              this.connectivityRebuiltThisTick = false;
-              this.delayedActionCountdown = 300;
-              this.boardClearBonusEligible = false;
-              SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
-              if (clientControlFlowGuard != 0) {
+              {
+                boolean rotationKeySnapshotEnabled = true;
+                if (MidiPcmStream.heldInternalKeys[99] &&
+                    !this.tutorialPromptActive) {
+                  fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
+                  while (null != fastForwardEntity) {
+                    detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
+                    if (clientControlFlowGuard != 0) {
+                      rotationKeySnapshotEnabled = false;
+                      break;
+                    }
+                    if (!detachedEntityOrPositiveRotationKeySnapshot) {
+                      fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
+                      fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                      break;
+                    }
+                    fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                  }
+                }
+                if (rotationKeySnapshotEnabled) {
+                  detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
+                }
+              }
+              if (!detachedEntityOrPositiveRotationKeySnapshot &&
+                  !MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
+                WeightedObjectCache.clearAvatarSteering(-106);
+              }
+              this.delayedActionCountdown = this.delayedActionCountdown - 1;
+              if (this.delayedActionCountdown == 0) {
+                PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
+              }
+              nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
+              this.boardClearBonusEligible = nextBoardClearBonusEligible;
+              if (this.boardClearBonusEligible &&
+                  this.connectivityRebuiltThisTick) {
+                this.connectivityRebuiltThisTick = false;
+                this.delayedActionCountdown = 300;
+                this.boardClearBonusEligible = false;
+                SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
+                if (clientControlFlowGuard != 0) {
+                  this.connectivityRebuiltThisTick = false;
+                }
+              } else {
                 this.connectivityRebuiltThisTick = false;
               }
-            } else {
-              this.connectivityRebuiltThisTick = false;
+              this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
+              SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
+              BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
+              if (EntityMotionSupport.boardContactStateDirty) {
+                MatchCandidateSupport.collectMatchCandidates(-2);
+              }
+              this.matchBatchProcessedThisTick = MatchScoringSupport.processMatchCandidates(-18913);
+              if (this.boundaryCheckRequested) {
+                BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
+              }
+              AgeValidator.advanceScorePopups((byte) 27);
+              MessageDialog.advanceGameplayAvatarAnimation(600);
+              if (this.tutorialMode) {
+                this.advanceTutorialStep(109);
+              }
+              advanceEndingSequence = (clientControlFlowGuard != 0);
             }
-            this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
-            SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
-            BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
-            if (EntityMotionSupport.boardContactStateDirty) {
-              MatchCandidateSupport.collectMatchCandidates(-2);
-            }
-            this.matchBatchProcessedThisTick = MatchScoringSupport.processMatchCandidates(-18913);
-            if (this.boundaryCheckRequested) {
-              BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
-            }
-            AgeValidator.advanceScorePopups((byte) 27);
-            MessageDialog.advanceGameplayAvatarAnimation(600);
-            if (this.tutorialMode) {
-              this.advanceTutorialStep(109);
-            }
-            advanceEndingSequence = (clientControlFlowGuard != 0);
           }
-          if (advanceEndingSequence) {
-            if (this.sceneAnimationTick == 0) {
-              IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
+          if (sessionProgressionAndEndingFrameContinues) {
+            if (advanceEndingSequence) {
+              if (this.sceneAnimationTick == 0) {
+                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
+              }
+              if (LoginPanel.endingEntityScanClear &&
+                  LoginMethod.isAvatarCryHoldExpired(-3) &&
+                  this.sceneAnimationTick > 1000) {
+                this.requestSessionExitScreen(28809);
+              }
+              EndingAnimationSupport.advanceEndingEntityAnimations(19);
+              AgeValidator.advanceScorePopups((byte) 24);
+              MessageDialog.advanceGameplayAvatarAnimation(600);
+              this.sceneAnimationTick = this.sceneAnimationTick + 1;
+              this.boardRasterDirty = true;
             }
-            if (LoginPanel.endingEntityScanClear &&
-                LoginMethod.isAvatarCryHoldExpired(-3) &&
-                this.sceneAnimationTick > 1000) {
-              this.requestSessionExitScreen(28809);
-            }
-            EndingAnimationSupport.advanceEndingEntityAnimations(19);
-            AgeValidator.advanceScorePopups((byte) 24);
-            MessageDialog.advanceGameplayAvatarAnimation(600);
-            this.sceneAnimationTick = this.sceneAnimationTick + 1;
-            this.boardRasterDirty = true;
           }
         }
         if (methodGuard != -1578896191) {
@@ -1056,7 +1059,8 @@ final class GameplaySession {
               SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2) {
             EntitySpawnSupport.spawnEntityAtPointer(-28195, AccountCreationSupport.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
           }
-          tutorialAutoAdvance: {
+          {
+            boolean tutorialAutoAdvanceFrameContinues = true;
             if (this.tutorialMode &&
                 this.tutorialStepPhase == 0) {
               if (this.tutorialStepId != 5) {
@@ -1064,41 +1068,41 @@ final class GameplaySession {
                 this.tutorialStepPhase = 1;
                 if (this.tutorialStepId == 0) {
                   this.tutorialProgressMetric = 0;
-                  if (clientControlFlowGuard == 0) {
-                    break tutorialAutoAdvance;
+                  tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
+                }
+                if (tutorialAutoAdvanceFrameContinues) {
+                  if (this.tutorialStepId == 1) {
+                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                    tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
                   }
+                  if (tutorialAutoAdvanceFrameContinues) {
+                  if (this.tutorialStepId != 2) {
+                      return;
+                    }
+                    this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
+                    tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
                 }
-                if (this.tutorialStepId == 1) {
-                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                  if (clientControlFlowGuard == 0) {
-                    break tutorialAutoAdvance;
-                  }
-                }
-                if (this.tutorialStepId != 2) {
-                  return;
-                }
-                this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                if (clientControlFlowGuard == 0) {
-                  break tutorialAutoAdvance;
                 }
               }
-              if (AccountCreationSupport.pointerPressXSnapshot > 100 &&
-                  340 > AccountCreationSupport.pointerPressXSnapshot &&
-                  FullscreenFocusCanvas.pointerPressYSnapshot > 440 &&
-                  476 > FullscreenFocusCanvas.pointerPressYSnapshot) {
-                this.leaveTutorial(methodGuard ^ -1578897511);
-                this.tutorialStepId = 0;
-                this.tutorialMode = true;
-                this.tutorialPromptActive = true;
-              }
-              if (AccountCreationSupport.pointerPressXSnapshot > 380 &&
-                  540 > AccountCreationSupport.pointerPressXSnapshot &&
-                  FullscreenFocusCanvas.pointerPressYSnapshot > 440) {
-                if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
-                  return;
+              if (tutorialAutoAdvanceFrameContinues) {
+                if (AccountCreationSupport.pointerPressXSnapshot > 100 &&
+                    340 > AccountCreationSupport.pointerPressXSnapshot &&
+                    FullscreenFocusCanvas.pointerPressYSnapshot > 440 &&
+                    476 > FullscreenFocusCanvas.pointerPressYSnapshot) {
+                  this.leaveTutorial(methodGuard ^ -1578897511);
+                  this.tutorialStepId = 0;
+                  this.tutorialMode = true;
+                  this.tutorialPromptActive = true;
                 }
-                this.tutorialPromptActive = false;
-                this.tutorialStepPhase = 1;
+                if (AccountCreationSupport.pointerPressXSnapshot > 380 &&
+                    540 > AccountCreationSupport.pointerPressXSnapshot &&
+                    FullscreenFocusCanvas.pointerPressYSnapshot > 440) {
+                  if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
+                    return;
+                  }
+                  this.tutorialPromptActive = false;
+                  this.tutorialStepPhase = 1;
+                }
               }
             }
           }
@@ -1277,98 +1281,162 @@ final class GameplaySession {
             precedingThemeId = 0;
             themeIndexThenId = 0;
             while (true) {
-              precedingThemeDispatchPreparation: {
+              {
+                boolean precedingThemeDispatchPreparationFrameContinues = true;
                 precedingThemeLookup: {
                   if (7 > themeIndexThenId) {
                     selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
                     themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
-                    if (clientControlFlowGuard != 0) {
-                      break precedingThemeDispatchPreparation;
-                    }
-                    if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                      if (0 < themeIndexThenId) {
-                        precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
+                    precedingThemeDispatchPreparationFrameContinues = !(clientControlFlowGuard != 0);
+                    if (precedingThemeDispatchPreparationFrameContinues) {
+                      if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
+                        if (0 < themeIndexThenId) {
+                          precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
+                          break precedingThemeLookup;
+                        }
+                        precedingThemeId = WidgetContainer.themeCycleOrder[6];
                         break precedingThemeLookup;
                       }
-                      precedingThemeId = WidgetContainer.themeCycleOrder[6];
-                      break precedingThemeLookup;
+                      themeIndexThenId++;
+                      continue;
                     }
-                    themeIndexThenId++;
-                    continue;
                   }
                 }
-                themeIndexThenId = precedingThemeId;
-                selectedThemeComplementOrThemeSentinel = 4;
-                themeEntryComplementOrThemeId = themeIndexThenId;
+                if (precedingThemeDispatchPreparationFrameContinues) {
+                  themeIndexThenId = precedingThemeId;
+                  selectedThemeComplementOrThemeSentinel = 4;
+                  themeEntryComplementOrThemeId = themeIndexThenId;
+                }
               }
-              fallbackSunAchievementEntry: {
-                sweetsAchievementEntry: {
-                  sportsAchievementEntry: {
-                    spaceAchievementEntry: {
-                      jewelsAchievementEntry: {
-                        germsAchievementEntry: {
-                          sunAchievementEntry: {
+              {
+                boolean fallbackSunAchievementEntryFrameContinues = true;
+                {
+                  boolean sweetsAchievementEntryFrameContinues = true;
+                  {
+                    boolean sportsAchievementEntryFrameContinues = true;
+                    {
+                      boolean spaceAchievementEntryFrameContinues = true;
+                      {
+                        boolean jewelsAchievementEntryFrameContinues = true;
+                        {
+                          boolean germsAchievementEntryFrameContinues = true;
+                          {
+                            boolean sunAchievementEntryFrameContinues = true;
                             if (selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
                                   clientControlFlowGuard != 0) {
-                              if (themeIndexThenId == 1 &&
-                                  clientControlFlowGuard == 0) {
-                                break sunAchievementEntry;
-                              }
-                              if (themeIndexThenId == 3 &&
-                                  clientControlFlowGuard == 0) {
-                                break germsAchievementEntry;
-                              }
-                              if (themeIndexThenId == 0 &&
-                                  clientControlFlowGuard == 0) {
-                                break jewelsAchievementEntry;
-                              }
-                              if (themeIndexThenId == 6) {
-                                break spaceAchievementEntry;
-                              }
-                              if (5 == themeIndexThenId &&
-                                  clientControlFlowGuard == 0) {
-                                break sportsAchievementEntry;
-                              }
-                              if (2 != themeIndexThenId) {
-                                break fallbackSunAchievementEntry;
-                              }
-                              if (clientControlFlowGuard == 0) {
-                                break sweetsAchievementEntry;
+                              sunAchievementEntryFrameContinues = !(themeIndexThenId == 1 &&
+                                  clientControlFlowGuard == 0);
+                              if (sunAchievementEntryFrameContinues) {
+                                germsAchievementEntryFrameContinues = !(themeIndexThenId == 3 &&
+                                    clientControlFlowGuard == 0);
+                                if (germsAchievementEntryFrameContinues) {
+                                  jewelsAchievementEntryFrameContinues = !(themeIndexThenId == 0 &&
+                                      clientControlFlowGuard == 0);
+                                  if (jewelsAchievementEntryFrameContinues) {
+                                    spaceAchievementEntryFrameContinues = !(themeIndexThenId == 6);
+                                    if (spaceAchievementEntryFrameContinues) {
+                                      sportsAchievementEntryFrameContinues = !(5 == themeIndexThenId &&
+                                          clientControlFlowGuard == 0);
+                                      if (sportsAchievementEntryFrameContinues) {
+                                        fallbackSunAchievementEntryFrameContinues = !(2 != themeIndexThenId);
+                                        if (fallbackSunAchievementEntryFrameContinues) {
+                                          sweetsAchievementEntryFrameContinues = !(clientControlFlowGuard == 0);
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
                               }
                             }
-                            SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
-                            if (clientControlFlowGuard == 0) {
-                              break;
+                            if (fallbackSunAchievementEntryFrameContinues) {
+                              if (sweetsAchievementEntryFrameContinues) {
+                                if (sportsAchievementEntryFrameContinues) {
+                                  if (spaceAchievementEntryFrameContinues) {
+                                    if (jewelsAchievementEntryFrameContinues) {
+                                      if (germsAchievementEntryFrameContinues) {
+                                        if (sunAchievementEntryFrameContinues) {
+                                          SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
+                                          if (clientControlFlowGuard == 0) {
+                                            break;
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
                             }
                           }
-                          SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
+                          if (fallbackSunAchievementEntryFrameContinues) {
+                            if (sweetsAchievementEntryFrameContinues) {
+                              if (sportsAchievementEntryFrameContinues) {
+                                if (spaceAchievementEntryFrameContinues) {
+                                  if (jewelsAchievementEntryFrameContinues) {
+                                    if (germsAchievementEntryFrameContinues) {
+                                      SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
+                                      if (clientControlFlowGuard == 0) {
+                                        break;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        if (fallbackSunAchievementEntryFrameContinues) {
+                          if (sweetsAchievementEntryFrameContinues) {
+                            if (sportsAchievementEntryFrameContinues) {
+                              if (spaceAchievementEntryFrameContinues) {
+                                if (jewelsAchievementEntryFrameContinues) {
+                                  SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
+                                  if (clientControlFlowGuard == 0) {
+                                    break;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      if (fallbackSunAchievementEntryFrameContinues) {
+                        if (sweetsAchievementEntryFrameContinues) {
+                          if (sportsAchievementEntryFrameContinues) {
+                            if (spaceAchievementEntryFrameContinues) {
+                              SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
+                              if (clientControlFlowGuard == 0) {
+                                break;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    if (fallbackSunAchievementEntryFrameContinues) {
+                      if (sweetsAchievementEntryFrameContinues) {
+                        if (sportsAchievementEntryFrameContinues) {
+                          SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
                           if (clientControlFlowGuard == 0) {
                             break;
                           }
                         }
-                        SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
-                        if (clientControlFlowGuard == 0) {
-                          break;
-                        }
                       }
-                      SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
+                    }
+                  }
+                  if (fallbackSunAchievementEntryFrameContinues) {
+                    if (sweetsAchievementEntryFrameContinues) {
+                      SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
                       if (clientControlFlowGuard == 0) {
                         break;
                       }
                     }
-                    SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
                   }
-                  SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
+                }
+                if (fallbackSunAchievementEntryFrameContinues) {
+                  SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.sweetsThemeCompletionAchievementId, -121, SocketConnector.sweetsThemeCompletionAchievementId);
                   if (clientControlFlowGuard == 0) {
                     break;
                   }
-                }
-                SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.sweetsThemeCompletionAchievementId, -121, SocketConnector.sweetsThemeCompletionAchievementId);
-                if (clientControlFlowGuard == 0) {
-                  break;
                 }
               }
               SecondaryNodeDeque.recordAchievement(SpriteConstructionSupport.sunThemeCompletionAchievementId ^ 255, -95, SpriteConstructionSupport.sunThemeCompletionAchievementId);
@@ -1465,55 +1533,56 @@ final class GameplaySession {
           }
           {
             boolean resultMusicPreparationEnabled = true;
-            endingEntityRadiusMeasurement: {
+            {
+              boolean endingEntityRadiusMeasurementFrameContinues = true;
               this.resultBonusPoints = this.resultBonusPoints + 179;
               this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
               this.resultSequenceCountdown = 150;
               endingEntity = MeshDepthSupport.findOutermostAttachedEntity((byte) -128);
               if (null == endingEntity) {
                 this.endingEntityRadius = 29;
-                if (controlFlowGuard == 0) {
-                  break endingEntityRadiusMeasurement;
-                }
+                endingEntityRadiusMeasurementFrameContinues = !(controlFlowGuard == 0);
               }
-              HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
-              SoftwareRasterizer.clearFramebuffer();
-              endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
-              SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-              maxRadiusSquared = 0;
-              spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
-              spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
-              spriteColumn = 0;
-              while (true) {
-                comparisonLeftColumnOrZero = spriteColumn;
-                comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
-                if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
-                  rowStartOrMusicGuard = 0;
-                  if (controlFlowGuard != 0) {
-                    resultMusicPreparationEnabled = false;
-                    break;
-                  }
-                  spriteRow = rowStartOrMusicGuard;
-                  while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
-                    comparisonLeftColumnOrZero = 0;
-                    comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
-                    if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
-                      pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
-                      pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
-                      pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
-                      if (pixelRadiusSquared > maxRadiusSquared) {
-                        maxRadiusSquared = pixelRadiusSquared;
-                      }
+              if (endingEntityRadiusMeasurementFrameContinues) {
+                HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
+                SoftwareRasterizer.clearFramebuffer();
+                endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
+                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+                maxRadiusSquared = 0;
+                spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
+                spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
+                spriteColumn = 0;
+                while (true) {
+                  comparisonLeftColumnOrZero = spriteColumn;
+                  comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
+                  if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
+                    rowStartOrMusicGuard = 0;
+                    if (controlFlowGuard != 0) {
+                      resultMusicPreparationEnabled = false;
+                      break;
                     }
-                    spriteRow++;
+                    spriteRow = rowStartOrMusicGuard;
+                    while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
+                      comparisonLeftColumnOrZero = 0;
+                      comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
+                      if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
+                        pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                        pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                        pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
+                        if (pixelRadiusSquared > maxRadiusSquared) {
+                          maxRadiusSquared = pixelRadiusSquared;
+                        }
+                      }
+                      spriteRow++;
+                    }
+                    spriteColumn++;
+                    continue;
                   }
-                  spriteColumn++;
-                  continue;
+                  break;
                 }
-                break;
-              }
-              if (resultMusicPreparationEnabled) {
-                this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+                if (resultMusicPreparationEnabled) {
+                  this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+                }
               }
             }
             if (resultMusicPreparationEnabled) {
@@ -1523,7 +1592,8 @@ final class GameplaySession {
           }
           SecondaryNodeDeque.selectBackgroundMusic(rowStartOrMusicGuard, ContentTransitionDialog.resultMusicTrack);
         }
-        resultSequenceTickAndCompletion: {
+        {
+          boolean resultSequenceTickAndCompletionFrameContinues = true;
           nextSceneAnimationTick = this.sceneAnimationTick + 1;
           this.sceneAnimationTick = this.sceneAnimationTick + 1;
           if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
@@ -1549,38 +1619,38 @@ final class GameplaySession {
             }
             if (3 == this.sessionPhase) {
               this.resultBonusPoints = this.resultBonusPoints + 7;
-              if (controlFlowGuard == 0) {
-                break resultSequenceTickAndCompletion;
-              }
+              resultSequenceTickAndCompletionFrameContinues = !(controlFlowGuard == 0);
             }
-            if (this.sessionPhase != 2) {
-              if (this.resultSequenceCountdown == 150) {
-                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
-              }
-              this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
-              if (controlFlowGuard == 0) {
-                break resultSequenceTickAndCompletion;
-              }
-            }
-            if (this.resultExpansionAudioStream == null ||
-                  this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
-              resultProgressPercent = this.sceneAnimationTick * 100 / 460;
-              this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
-              GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
-            }
-            if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
-              this.resultPanelX = this.resultPanelX - 1;
-              if (controlFlowGuard != 0) {
-                this.sceneTransitionRequested = true;
-                this.sceneAnimationTick = 0;
-                this.sessionPhase = 5;
-                if (this.boardEmptyAtResultStart) {
-                  PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
-                  SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
-                  this.connectivityRebuiltThisTick = false;
+            if (resultSequenceTickAndCompletionFrameContinues) {
+              if (this.sessionPhase != 2) {
+                if (this.resultSequenceCountdown == 150) {
+                  ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
                 }
-                PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
+                this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
+                resultSequenceTickAndCompletionFrameContinues = !(controlFlowGuard == 0);
               }
+              if (resultSequenceTickAndCompletionFrameContinues) {
+              if (this.resultExpansionAudioStream == null ||
+                      this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
+                  resultProgressPercent = this.sceneAnimationTick * 100 / 460;
+                  this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
+                  GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
+                }
+                if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
+                  this.resultPanelX = this.resultPanelX - 1;
+                  if (controlFlowGuard != 0) {
+                    this.sceneTransitionRequested = true;
+                    this.sceneAnimationTick = 0;
+                    this.sessionPhase = 5;
+                    if (this.boardEmptyAtResultStart) {
+                      PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
+                      SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
+                      this.connectivityRebuiltThisTick = false;
+                    }
+                    PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
+                  }
+                }
+            }
             }
           } else {
             this.sceneTransitionRequested = true;

@@ -23,48 +23,47 @@ final class ContextualRuntimeException extends RuntimeException {
             NodeHashTableIterator.pendingTooltipAnchorX = PrefixCodeDecoder.pointerXSnapshot;
             DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
-          tooltipAgeAdjustment: {
+          {
+            boolean tooltipAgeAdjustmentFrameContinues = true;
             ResizableDialog.tooltipAgeTicks = ResizableDialog.tooltipAgeTicks + 1;
             if (tooltipText != null) {
-              if (tooltipText.equals(SettingsCookieSupport.currentTooltipText)) {
-                break tooltipAgeAdjustment;
-              }
+              tooltipAgeAdjustmentFrameContinues = !(tooltipText.equals(SettingsCookieSupport.currentTooltipText));
             } else {
-              if (null != SettingsCookieSupport.currentTooltipText) {
-                break tooltipAgeAdjustment;
-              }
+              tooltipAgeAdjustmentFrameContinues = !(null != SettingsCookieSupport.currentTooltipText);
             }
-            if (!InstrumentPatch.tooltipSuppressed) {
-              if (AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks) {
-                previousTooltipVisibleSnapshot = (ResizableDialog.tooltipAgeTicks < PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks) ? 1 : 0;
+            if (tooltipAgeAdjustmentFrameContinues) {
+              if (!InstrumentPatch.tooltipSuppressed) {
+                if (AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks) {
+                  previousTooltipVisibleSnapshot = (ResizableDialog.tooltipAgeTicks < PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks) ? 1 : 0;
+                } else {
+                  previousTooltipVisibleSnapshot = 0;
+                }
               } else {
                 previousTooltipVisibleSnapshot = 0;
               }
-            } else {
-              previousTooltipVisibleSnapshot = 0;
-            }
-            previousTooltipVisible = previousTooltipVisibleSnapshot;
-            if (tooltipText == null) {
-              ResizableDialog.tooltipAgeTicks = 0;
-            } else {
-              if (InstrumentPatch.tooltipSuppressed) {
-                ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
+              previousTooltipVisible = previousTooltipVisibleSnapshot;
+              if (tooltipText == null) {
+                ResizableDialog.tooltipAgeTicks = 0;
               } else {
-                if (previousTooltipVisible == 0) {
-                  ResizableDialog.tooltipAgeTicks = 0;
-                } else {
+                if (InstrumentPatch.tooltipSuppressed) {
                   ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
+                } else {
+                  if (previousTooltipVisible == 0) {
+                    ResizableDialog.tooltipAgeTicks = 0;
+                  } else {
+                    ResizableDialog.tooltipAgeTicks = AsyncResourceDownloader.tooltipShowDelayTicks;
+                  }
                 }
               }
-            }
-            PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
-            ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
-            if (tooltipText == null) {
-              if (previousTooltipVisible != 0) {
-                InstrumentPatch.tooltipSuppressed = true;
+              PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
+              ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
+              if (tooltipText == null) {
+                if (previousTooltipVisible != 0) {
+                  InstrumentPatch.tooltipSuppressed = true;
+                }
+              } else {
+                InstrumentPatch.tooltipSuppressed = false;
               }
-            } else {
-              InstrumentPatch.tooltipSuppressed = false;
             }
           }
           if (!InstrumentPatch.tooltipSuppressed &&

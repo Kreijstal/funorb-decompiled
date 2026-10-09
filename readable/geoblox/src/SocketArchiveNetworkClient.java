@@ -163,7 +163,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       packedLength = this.responseHeaderBuffer.readIntBE((byte) -61);
                       compressionType = compressionAndQueueFlags & 127;
                       backgroundFlagBeforeMatch = ((128 & compressionAndQueueFlags) == 0) ? 0 : 1;
-                      archiveResponseRequestLookup: {
+                      {
+                        boolean archiveResponseRequestLookupFrameContinues = true;
                         boolean archiveResponseRequestLookupRemainderEnabled = true;
                         backgroundResponseFlag = backgroundFlagBeforeMatch;
                         responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
@@ -177,17 +178,17 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                             }
                             matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
                           }
-                          if (archiveResponseRequestLookupRemainderEnabled) {
-                            break archiveResponseRequestLookup;
-                          }
+                          archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
                         }
-                        if (archiveResponseRequestLookupRemainderEnabled) {
-                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
-                          while (matchedRequest != null) {
-                            if (~responseKey == ~matchedRequest.secondaryKey) {
-                              break;
+                        if (archiveResponseRequestLookupFrameContinues) {
+                          if (archiveResponseRequestLookupRemainderEnabled) {
+                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
+                            while (matchedRequest != null) {
+                              if (~responseKey == ~matchedRequest.secondaryKey) {
+                                break;
+                              }
+                              matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                             }
-                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                           }
                         }
                       }

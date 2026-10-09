@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/07c801d35203072c259801b30fded03bbc72e922/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/58202c762fb8c8dee9422d5c98626499bb2a81ee/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 249)
+## Current readability (pass 250)
 
-The export has 20,139 guarded names and 121,855 Java identifier edits, plus 11
-class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,139 guarded names and 122,120 Java identifier edits, plus 11
+class-name literal edits and 293 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 137,790 bindings, reproduce and
+compile and compare 138,055 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,24 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current sole loop exits (pass 249)
+## Current guarded frame continuations (pass 250)
+
+Board reconciliation, screen update, session update and half-blend triangle
+drawing no longer contain plain block labels. Their original exit decisions are
+captured in local `*FrameContinues` Booleans; the original following work runs
+under guards. Conditions and effects remain once in their original order.
+`connectivityRebuildFrameContinues` controls the reconciliation remainder;
+`sessionProgressionAndEndingFrameContinues` controls session progression work.
+These temporaries describe continuation eligibility, not new gameplay state.
+
+Only `GameScreen.renderScreen` remains a large framed method (314 lines, one
+block label). There are 37 plain block labels across the corpus. Long bodies and
+nested guards remain, as do 41 finer field purposes. Source proof, native oracle
+coverage, naming preservation and exact reproduction/reversal are recorded in
+the current workflow. This is structural progress, not full readability or a
+whole-game/performance claim.
+
+## Previous sole loop exits (pass 249)
 
 The related-entity scan and six raster loops no longer carry a temporary
 completion Boolean. Their direct while conditions keep the original expression

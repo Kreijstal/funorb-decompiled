@@ -111,7 +111,8 @@ final class BoardReconciliationSupport {
           MessageDialogSupport.entitiesDetachedThisTick = false;
           activeEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
           movingAndConnectivityPhase: while (true) {
-            connectivityRebuild: {
+            {
+              boolean connectivityRebuildFrameContinues = true;
               if (activeEntity != null) {
                 entityQueueThenAttachedQueue = activeEntity.entityQueue;
                 if (clientControlSnapshot == 0) {
@@ -132,115 +133,117 @@ final class BoardReconciliationSupport {
                   continue;
                 }
               } else {
-                if (!RankedListQuery.connectivityDirty) {
-                  break connectivityRebuild;
+                connectivityRebuildFrameContinues = !(!RankedListQuery.connectivityDirty);
+                if (connectivityRebuildFrameContinues) {
+                  entityQueueThenAttachedQueue = BoardEntityState.attachedEntities;
                 }
-                entityQueueThenAttachedQueue = BoardEntityState.attachedEntities;
               }
-              activeEntity = (GameplayEntity) (((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
-              {
-              boolean connectivityEntityScanCompleted = false;
-              while (!(connectivityEntityScanCompleted = (activeEntity == null))) {
-                visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
-                visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
-                alreadyVisited = visitedByEntityIdValue;
-                if (clientControlSnapshot == 0) {
-                  if (!alreadyVisited) {
-                    pendingConnectivityEntities = new SecondaryDeque();
-                    visitedNonAvatarEntities = new SecondaryDeque();
-                    pendingConnectivityEntities.addFirst(activeEntity, false);
-                    componentCanDetach = 1;
-                    while (true) {
-                      poppedConnectivityEntity = (GameplayEntity) (pendingConnectivityEntities.removeFirst(true));
-                      currentConnectivityEntity = poppedConnectivityEntity;
-                      currentConnectivityEntityAlias = currentConnectivityEntity;
-                      connectivityEntityAlias = currentConnectivityEntityAlias;
-                      if (currentConnectivityEntityAlias != null) {
-                        PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
-                        directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
-                        avatarContactBitSnapshot = directAvatarContactValue ? 1 : 0;
-                        poppedEntityTouchesAvatar = directAvatarContactValue;
-                        if (poppedEntityTouchesAvatar) {
-                          componentCanDetach = 0;
-                        } else {
-                          visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
-                          connectivityNeighborIndex = 0;
-                          while (connectivityNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
-                            connectivityNeighbor = currentConnectivityEntity.relatedEntities[connectivityNeighborIndex];
-                            visitedNeighborSearchStart = (GameplayEntity) (visitedNonAvatarEntities.firstForIteration((byte) 121));
-                            componentSearchEntity = visitedNeighborSearchStart;
-                            enqueueUnseenNeighbor: while (true) {
-                              if (componentSearchEntity != null) {
-                                comparisonEntity = componentSearchEntity;
-                                neighborForConnectivityComparison = connectivityNeighbor;
-                                if (comparisonEntity != neighborForConnectivityComparison) {
-                                  componentSearchEntity = (GameplayEntity) (visitedNonAvatarEntities.nextForIteration(-45));
-                                  continue;
-                                }
-                              } else {
-                                componentSearchEntity = (GameplayEntity) (pendingConnectivityEntities.firstForIteration((byte) 121));
-                                while (componentSearchEntity != null) {
+              if (connectivityRebuildFrameContinues) {
+                activeEntity = (GameplayEntity) (((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
+                {
+                boolean connectivityEntityScanCompleted = false;
+                while (!(connectivityEntityScanCompleted = (activeEntity == null))) {
+                  visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
+                  visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
+                  alreadyVisited = visitedByEntityIdValue;
+                  if (clientControlSnapshot == 0) {
+                    if (!alreadyVisited) {
+                      pendingConnectivityEntities = new SecondaryDeque();
+                      visitedNonAvatarEntities = new SecondaryDeque();
+                      pendingConnectivityEntities.addFirst(activeEntity, false);
+                      componentCanDetach = 1;
+                      while (true) {
+                        poppedConnectivityEntity = (GameplayEntity) (pendingConnectivityEntities.removeFirst(true));
+                        currentConnectivityEntity = poppedConnectivityEntity;
+                        currentConnectivityEntityAlias = currentConnectivityEntity;
+                        connectivityEntityAlias = currentConnectivityEntityAlias;
+                        if (currentConnectivityEntityAlias != null) {
+                          PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
+                          directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
+                          avatarContactBitSnapshot = directAvatarContactValue ? 1 : 0;
+                          poppedEntityTouchesAvatar = directAvatarContactValue;
+                          if (poppedEntityTouchesAvatar) {
+                            componentCanDetach = 0;
+                          } else {
+                            visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
+                            connectivityNeighborIndex = 0;
+                            while (connectivityNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                              connectivityNeighbor = currentConnectivityEntity.relatedEntities[connectivityNeighborIndex];
+                              visitedNeighborSearchStart = (GameplayEntity) (visitedNonAvatarEntities.firstForIteration((byte) 121));
+                              componentSearchEntity = visitedNeighborSearchStart;
+                              enqueueUnseenNeighbor: while (true) {
+                                if (componentSearchEntity != null) {
                                   comparisonEntity = componentSearchEntity;
                                   neighborForConnectivityComparison = connectivityNeighbor;
-                                  if (comparisonEntity == neighborForConnectivityComparison) {
-                                    break enqueueUnseenNeighbor;
+                                  if (comparisonEntity != neighborForConnectivityComparison) {
+                                    componentSearchEntity = (GameplayEntity) (visitedNonAvatarEntities.nextForIteration(-45));
+                                    continue;
                                   }
-                                  componentSearchEntity = (GameplayEntity) (pendingConnectivityEntities.nextForIteration(54));
+                                } else {
+                                  componentSearchEntity = (GameplayEntity) (pendingConnectivityEntities.firstForIteration((byte) 121));
+                                  while (componentSearchEntity != null) {
+                                    comparisonEntity = componentSearchEntity;
+                                    neighborForConnectivityComparison = connectivityNeighbor;
+                                    if (comparisonEntity == neighborForConnectivityComparison) {
+                                      break enqueueUnseenNeighbor;
+                                    }
+                                    componentSearchEntity = (GameplayEntity) (pendingConnectivityEntities.nextForIteration(54));
+                                  }
+                                  pendingConnectivityEntities.addFirst(connectivityNeighbor, false);
                                 }
-                                pendingConnectivityEntities.addFirst(connectivityNeighbor, false);
+                                break;
                               }
-                              break;
+                              connectivityNeighborIndex++;
                             }
-                            connectivityNeighborIndex++;
+                            continue;
                           }
-                          continue;
                         }
-                      }
-                      componentDetachDecision = componentCanDetach;
-                      if (componentDetachDecision == 0) {
+                        componentDetachDecision = componentCanDetach;
+                        if (componentDetachDecision == 0) {
+                          break;
+                        }
+                        detachingComponentEntity = (GameplayEntity) (visitedNonAvatarEntities.removeFirst(true));
+                        while (detachingComponentEntity != null) {
+                          detachingComponentEntity.entityQueue = ArchiveNetworkClient.movingEntities;
+                          detachingComponentEntity.touchesAvatar = false;
+                          detachingComponentEntity.detachedFromBoard = true;
+                          MessageDialogSupport.entitiesDetachedThisTick = true;
+                          visitedFlagThenResetIndex = 0;
+                          relationRemovalNeighborIndex = visitedFlagThenResetIndex;
+                          while (relationRemovalNeighborIndex < detachingComponentEntity.relatedEntityCount) {
+                            neighborForRelationRemoval = detachingComponentEntity.relatedEntities[relationRemovalNeighborIndex];
+                            detachingEntityForRelationRemoval = detachingComponentEntity;
+                            ((GameplayEntity) (Object) neighborForRelationRemoval).removeRelatedEntity(detachingEntityForRelationRemoval, 0);
+                            relationRemovalNeighborIndex++;
+                          }
+                          entityForComponentCategoryReset = detachingComponentEntity;
+                          detachingEntityForVariantReset = detachingComponentEntity;
+                          detachingComponentEntity.relatedEntityCount = 0;
+                          entityForComponentCategoryReset.sameCategoryEntityCount = 0;
+                          detachingEntityForVariantReset.sameVariantEntityCount = 0;
+                          detachingComponentEntity = (GameplayEntity) (visitedNonAvatarEntities.removeFirst(true));
+                        }
                         break;
                       }
-                      detachingComponentEntity = (GameplayEntity) (visitedNonAvatarEntities.removeFirst(true));
-                      while (detachingComponentEntity != null) {
-                        detachingComponentEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-                        detachingComponentEntity.touchesAvatar = false;
-                        detachingComponentEntity.detachedFromBoard = true;
-                        MessageDialogSupport.entitiesDetachedThisTick = true;
-                        visitedFlagThenResetIndex = 0;
-                        relationRemovalNeighborIndex = visitedFlagThenResetIndex;
-                        while (relationRemovalNeighborIndex < detachingComponentEntity.relatedEntityCount) {
-                          neighborForRelationRemoval = detachingComponentEntity.relatedEntities[relationRemovalNeighborIndex];
-                          detachingEntityForRelationRemoval = detachingComponentEntity;
-                          ((GameplayEntity) (Object) neighborForRelationRemoval).removeRelatedEntity(detachingEntityForRelationRemoval, 0);
-                          relationRemovalNeighborIndex++;
-                        }
-                        entityForComponentCategoryReset = detachingComponentEntity;
-                        detachingEntityForVariantReset = detachingComponentEntity;
-                        detachingComponentEntity.relatedEntityCount = 0;
-                        entityForComponentCategoryReset.sameCategoryEntityCount = 0;
-                        detachingEntityForVariantReset.sameVariantEntityCount = 0;
-                        detachingComponentEntity = (GameplayEntity) (visitedNonAvatarEntities.removeFirst(true));
-                      }
-                      break;
                     }
+                    activeEntity = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
+                    continue;
                   }
-                  activeEntity = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
-                  continue;
+                  break;
                 }
-                break;
-              }
-              if (connectivityEntityScanCompleted) {
-                  RankedListQuery.connectivityDirty = false;
-                  UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
-                  visitedFlagThenResetIndex = 0;
+                if (connectivityEntityScanCompleted) {
+                    RankedListQuery.connectivityDirty = false;
+                    UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
+                    visitedFlagThenResetIndex = 0;
+                    }
+                }
+                visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
+                while (1000 > visitedResetIndexThenKindFourCount) {
+                  PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
+                  visitedResetIndexThenKindFourCount++;
+                  if (clientControlSnapshot != 0) {
+                    break movingAndConnectivityPhase;
                   }
-              }
-              visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
-              while (1000 > visitedResetIndexThenKindFourCount) {
-                PacketBuffer.connectivityVisitedByEntityId[visitedResetIndexThenKindFourCount] = false;
-                visitedResetIndexThenKindFourCount++;
-                if (clientControlSnapshot != 0) {
-                  break movingAndConnectivityPhase;
                 }
               }
             }
@@ -255,7 +258,8 @@ final class BoardReconciliationSupport {
               {
                 boolean movingEntityRoutingRemainderEnabled = true;
                 boolean transientEntityRoutingRemainderEnabled = true;
-                routingDestinationSelection: {
+                {
+                  boolean routingDestinationSelectionFrameContinues = true;
                   RankedListQuery.connectivityDirty = true;
                   routedAttachedEntity.unlinkNode(false);
                   routedAttachedEntity.unlinkSecondaryNode((byte) 100);
@@ -286,55 +290,55 @@ final class BoardReconciliationSupport {
                       routedEntityForCategoryReset.sameCategoryEntityCount = 0;
                       routedEntityForVariantReset.sameVariantEntityCount = 0;
                       ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
-                      if (clientControlSnapshot == 0) {
-                        break routingDestinationSelection;
-                      }
+                      routingDestinationSelectionFrameContinues = !(clientControlSnapshot == 0);
                     }
                   }
-                  if (movingEntityRoutingRemainderEnabled) {
-                    if (routedAttachedEntity.entityQueue == DelegatingCanvas.transientEntities ||
-                        SessionSocketSupport.avatarShockPending) {
-                      transientNeighborIndex = 0;
-                      while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
-                        routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);
-                        routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
-                        transientNeighborIndex++;
-                        if (clientControlSnapshot != 0) {
-                          transientEntityRoutingRemainderEnabled = false;
-                          break;
-                        }
-                      }
-                      if (transientEntityRoutingRemainderEnabled) {
-                        entityForRoutingCategoryReset = routedAttachedEntity;
-                        routedAttachedEntity.relatedEntityCount = 0;
-                        entityForTransientVariantReset = routedAttachedEntity;
-                        entityForRoutingCategoryReset.sameCategoryEntityCount = 0;
-                        entityForTransientVariantReset.sameVariantEntityCount = 0;
-                        routedAttachedEntity.remainingLifetimeTicks = 50;
-                        DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
-                        routedAttachedEntity.animationFrameIndex = 0;
-                        if (routedAttachedEntity.touchesAvatar &&
-                            SessionSocketSupport.avatarShockPending) {
-                          popupOriginYInput = (int)routedAttachedEntity.positionY;
-                          popupOriginXInput = (int)routedAttachedEntity.positionX;
-                          popupGuardInput = 117;
-                          if (routedAttachedEntity.entitySpriteKindId != 4 &&
-                              routedAttachedEntity.entitySpriteKindId != 3) {
-                            popupPoints = 10;
-                          } else {
-                            popupPoints = 100;
+                  if (routingDestinationSelectionFrameContinues) {
+                    if (movingEntityRoutingRemainderEnabled) {
+                      if (routedAttachedEntity.entityQueue == DelegatingCanvas.transientEntities ||
+                          SessionSocketSupport.avatarShockPending) {
+                        transientNeighborIndex = 0;
+                        while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
+                          routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);
+                          routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
+                          transientNeighborIndex++;
+                          if (clientControlSnapshot != 0) {
+                            transientEntityRoutingRemainderEnabled = false;
+                            break;
                           }
-                          PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                         }
-                        boolean applyKindSevenConversionAndCounters = !(4 != routedAttachedEntity.entitySpriteKindId);
-                        if (!applyKindSevenConversionAndCounters) {
-                          routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
-                          applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);
-                        }
-                        if (applyKindSevenConversionAndCounters) {
-                          routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
-                          visitedResetIndexThenKindFourCount++;
-                          FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
+                        if (transientEntityRoutingRemainderEnabled) {
+                          entityForRoutingCategoryReset = routedAttachedEntity;
+                          routedAttachedEntity.relatedEntityCount = 0;
+                          entityForTransientVariantReset = routedAttachedEntity;
+                          entityForRoutingCategoryReset.sameCategoryEntityCount = 0;
+                          entityForTransientVariantReset.sameVariantEntityCount = 0;
+                          routedAttachedEntity.remainingLifetimeTicks = 50;
+                          DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
+                          routedAttachedEntity.animationFrameIndex = 0;
+                          if (routedAttachedEntity.touchesAvatar &&
+                              SessionSocketSupport.avatarShockPending) {
+                            popupOriginYInput = (int)routedAttachedEntity.positionY;
+                            popupOriginXInput = (int)routedAttachedEntity.positionX;
+                            popupGuardInput = 117;
+                            if (routedAttachedEntity.entitySpriteKindId != 4 &&
+                                routedAttachedEntity.entitySpriteKindId != 3) {
+                              popupPoints = 10;
+                            } else {
+                              popupPoints = 100;
+                            }
+                            PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
+                          }
+                          boolean applyKindSevenConversionAndCounters = !(4 != routedAttachedEntity.entitySpriteKindId);
+                          if (!applyKindSevenConversionAndCounters) {
+                            routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
+                            applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);
+                          }
+                          if (applyKindSevenConversionAndCounters) {
+                            routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
+                            visitedResetIndexThenKindFourCount++;
+                            FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
+                          }
                         }
                       }
                     }

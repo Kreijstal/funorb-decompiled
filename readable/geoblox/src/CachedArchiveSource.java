@@ -430,8 +430,10 @@ final class CachedArchiveSource extends ArchiveSource {
         int backgroundDownloadGroupId;
         ArchiveRequest completedCleanupRequest;
         IntrusiveNode verificationGroup;
-        backgroundLoadingAndSweep: {
-          requestSweepDueCheck: {
+        {
+          boolean backgroundLoadingAndSweepFrameContinues = true;
+          {
+            boolean requestSweepDueCheckFrameContinues = true;
             completedRequestSweep: {
               backgroundGroupLoading: {
                 unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
@@ -527,56 +529,68 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (methodGuard != -38) {
                       this.getPackedGroup(25, 41);
                     }
-                    if (!this.sweepCompletedRequests) {
-                      break backgroundLoadingAndSweep;
-                    }
-                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
-                      break requestSweepDueCheck;
-                    }
-                    cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                    while (cleanupRequest != null) {
-                      if (!cleanupRequest.pending) {
-                        if (cleanupRequest.seenByCleanup) {
-                          if (!cleanupRequest.priority) {
-                            throw new RuntimeException();
+                    backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
+                    if (backgroundLoadingAndSweepFrameContinues) {
+                      requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
+                      if (requestSweepDueCheckFrameContinues) {
+                        cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                        while (cleanupRequest != null) {
+                          if (!cleanupRequest.pending) {
+                            if (cleanupRequest.seenByCleanup) {
+                              if (!cleanupRequest.priority) {
+                                throw new RuntimeException();
+                              }
+                              cleanupRequest.unlinkNode(false);
+                            } else {
+                              cleanupRequest.seenByCleanup = true;
+                            }
                           }
-                          cleanupRequest.unlinkNode(false);
-                        } else {
-                          cleanupRequest.seenByCleanup = true;
+                          cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                         }
+                        break completedRequestSweep;
                       }
-                      cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                     }
-                    break completedRequestSweep;
                   }
-                  this.backgroundGroups = null;
-                }
-              }
-              if (methodGuard != -38) {
-                this.getPackedGroup(25, 41);
-              }
-              if (!this.sweepCompletedRequests) {
-                break backgroundLoadingAndSweep;
-              }
-              if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
-                break requestSweepDueCheck;
-              }
-              completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-              while (completedCleanupRequest != null) {
-                if (!completedCleanupRequest.pending) {
-                  if (completedCleanupRequest.seenByCleanup) {
-                    if (!completedCleanupRequest.priority) {
-                      throw new RuntimeException();
+                  if (backgroundLoadingAndSweepFrameContinues) {
+                    if (requestSweepDueCheckFrameContinues) {
+                      this.backgroundGroups = null;
                     }
-                    completedCleanupRequest.unlinkNode(false);
-                  } else {
-                    completedCleanupRequest.seenByCleanup = true;
                   }
                 }
-                completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
+              }
+              if (backgroundLoadingAndSweepFrameContinues) {
+                if (requestSweepDueCheckFrameContinues) {
+                  if (methodGuard != -38) {
+                    this.getPackedGroup(25, 41);
+                  }
+                  backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
+                  if (backgroundLoadingAndSweepFrameContinues) {
+                  requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
+                    if (requestSweepDueCheckFrameContinues) {
+                    completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                      while (completedCleanupRequest != null) {
+                        if (!completedCleanupRequest.pending) {
+                          if (completedCleanupRequest.seenByCleanup) {
+                            if (!completedCleanupRequest.priority) {
+                              throw new RuntimeException();
+                            }
+                            completedCleanupRequest.unlinkNode(false);
+                          } else {
+                            completedCleanupRequest.seenByCleanup = true;
+                          }
+                        }
+                        completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
+                      }
+                  }
+                  }
+              }
               }
             }
-            this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
+            if (backgroundLoadingAndSweepFrameContinues) {
+              if (requestSweepDueCheckFrameContinues) {
+                this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
+              }
+            }
           }
         }
     }

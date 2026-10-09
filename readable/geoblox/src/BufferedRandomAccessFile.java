@@ -131,7 +131,8 @@ final class BufferedRandomAccessFile {
               this.position = this.position + (long)readCountOrZeroFillEnd;
               destinationOffset = destinationOffset + readCountOrZeroFillEnd;
             }
-            underlyingReadSelection: {
+            {
+              boolean underlyingReadSelectionFrameContinues = true;
               boolean underlyingReadSelectionRemainderEnabled = true;
               if (this.readBuffer.length < remainingLength) {
                 this.file.seek(this.position, true);
@@ -147,21 +148,21 @@ final class BufferedRandomAccessFile {
                   remainingLength = remainingLength - underlyingReadCount;
                   destinationOffset = destinationOffset + underlyingReadCount;
                 }
-                if (underlyingReadSelectionRemainderEnabled) {
-                  break underlyingReadSelection;
-                }
+                underlyingReadSelectionFrameContinues = !(underlyingReadSelectionRemainderEnabled);
               }
-              if (underlyingReadSelectionRemainderEnabled) {
-                if (remainingLength > 0) {
-                  this.refillReadBuffer(true);
-                  refillCopyCount = remainingLength;
-                  if (this.readBufferLength < refillCopyCount) {
-                    refillCopyCount = this.readBufferLength;
+              if (underlyingReadSelectionFrameContinues) {
+                if (underlyingReadSelectionRemainderEnabled) {
+                  if (remainingLength > 0) {
+                    this.refillReadBuffer(true);
+                    refillCopyCount = remainingLength;
+                    if (this.readBufferLength < refillCopyCount) {
+                      refillCopyCount = this.readBufferLength;
+                    }
+                    ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
+                    remainingLength = remainingLength - refillCopyCount;
+                    destinationOffset = destinationOffset + refillCopyCount;
+                    this.position = this.position + (long)refillCopyCount;
                   }
-                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
-                  remainingLength = remainingLength - refillCopyCount;
-                  destinationOffset = destinationOffset + refillCopyCount;
-                  this.position = this.position + (long)refillCopyCount;
                 }
               }
             }

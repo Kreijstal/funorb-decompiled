@@ -17,14 +17,26 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/07c801d35203072c259801b30fded03bbc72e922/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/58202c762fb8c8dee9422d5c98626499bb2a81ee/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 137,790 bindings,
+identities. Both 303-file Java corpora compile and compare 138,055 bindings,
 preserving 388 override relationships.
 
-## Current direct loop headers (pass 249)
+## Current guarded frame continuations (pass 250)
+
+Forty plain frames now use named continuation decisions and ordinary guards;
+90 nonlocal breaks disappear. Four of the five large framed methods lose their
+plain labels. Screen rendering remains framed at 314 lines; 37 plain block
+labels and 41 finer field purposes remain. All 303 sources compile, reproduce
+and reverse exactly. An independent source/binding/target certificate, 63,180
+new native oracle cases and the existing native/raw/readable probes pass.
+Surviving complete names, dictionary identities and historical proofs are
+preserved. Guard nesting and long bodies still need work; see the current
+workflow and reading guide for hashes, commands and coverage.
+
+## Previous direct loop headers (pass 249)
 
 Seven entity/raster loops now use direct conditions followed by their original
 completion work. Seven redundant synthetic Booleans disappear; six captures

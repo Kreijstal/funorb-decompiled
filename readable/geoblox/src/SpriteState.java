@@ -591,7 +591,8 @@ abstract class SpriteState extends DualLinkNode {
             if (guard != -1275583984) {
               return;
             }
-            triangleEdgeInitialization: {
+            {
+              boolean triangleEdgeInitializationFrameContinues = true;
               topToBottomRows = -topY + bottomY;
               if (topY == middleY) {
                 if (~bottomY == ~topY) {
@@ -651,46 +652,54 @@ abstract class SpriteState extends DualLinkNode {
                     leftBlueQ16 = topBlue << 16;
                   }}
                 middleVertexOnRight = 0;
-                if (0 <= topY) {
-                  break triangleEdgeInitialization;
-                }
-                topY = Math.min(-topY, middleY - topY);
-                rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
-                rightBlueQ16 = rightBlueQ16 + topY * rightBlueStepQ16;
-                rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
-                leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
-                leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
-                leftRedQ16 = leftRedQ16 + leftRedStepQ16 * topY;
-                leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
-                rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
-                topY = 0;
-                if (controlFlagSnapshot == 0) {
-                  break triangleEdgeInitialization;
+                triangleEdgeInitializationFrameContinues = !(0 <= topY);
+                if (triangleEdgeInitializationFrameContinues) {
+                  topY = Math.min(-topY, middleY - topY);
+                  rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                  rightBlueQ16 = rightBlueQ16 + topY * rightBlueStepQ16;
+                  rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                  leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
+                  leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                  leftRedQ16 = leftRedQ16 + leftRedStepQ16 * topY;
+                  leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                  rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                  topY = 0;
+                  triangleEdgeInitializationFrameContinues = !(controlFlagSnapshot == 0);
                 }
               }
-              rightXQ16 = topX << 16;
-              leftXQ16 = topX << 16;
-              rightBlueQ16 = topBlue << 16;
-              leftBlueQ16 = topBlue << 16;
-              rightGreenQ16 = topGreen << 16;
-              leftGreenQ16 = topGreen << 16;
-              rightRedQ16 = topRed << 16;
-              leftRedQ16 = topRed << 16;
-              upperSegmentRows = middleY - topY;
-              rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
-              leftXStepQ16 = (middleX - topX << 16) / upperSegmentRows;
-              if (rightXStepQ16 <= leftXStepQ16) {
-                leftRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
-                leftGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
-                leftBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
-                edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXStepQ16;
-                leftXStepQ16 = rightXStepQ16;
-                rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                rightGreenStepQ16 = (-topGreen + middleGreen << 16) / upperSegmentRows;
-                lowerSegmentMiddleVertexOnRight = 1;
-                rightBlueStepQ16 = (-topBlue + middleBlue << 16) / upperSegmentRows;
-                rightRedStepQ16 = (-topRed + middleRed << 16) / upperSegmentRows;
-                if (controlFlagSnapshot != 0) {
+              if (triangleEdgeInitializationFrameContinues) {
+                rightXQ16 = topX << 16;
+                leftXQ16 = topX << 16;
+                rightBlueQ16 = topBlue << 16;
+                leftBlueQ16 = topBlue << 16;
+                rightGreenQ16 = topGreen << 16;
+                leftGreenQ16 = topGreen << 16;
+                rightRedQ16 = topRed << 16;
+                leftRedQ16 = topRed << 16;
+                upperSegmentRows = middleY - topY;
+                rightXStepQ16 = (-topX + bottomX << 16) / topToBottomRows;
+                leftXStepQ16 = (middleX - topX << 16) / upperSegmentRows;
+                if (rightXStepQ16 <= leftXStepQ16) {
+                  leftRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                  leftGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
+                  leftBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = leftXStepQ16;
+                  leftXStepQ16 = rightXStepQ16;
+                  rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  rightGreenStepQ16 = (-topGreen + middleGreen << 16) / upperSegmentRows;
+                  lowerSegmentMiddleVertexOnRight = 1;
+                  rightBlueStepQ16 = (-topBlue + middleBlue << 16) / upperSegmentRows;
+                  rightRedStepQ16 = (-topRed + middleRed << 16) / upperSegmentRows;
+                  if (controlFlagSnapshot != 0) {
+                    rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                    rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
+                    leftRedStepQ16 = (middleRed - topRed << 16) / upperSegmentRows;
+                    rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
+                    leftBlueStepQ16 = (middleBlue - topBlue << 16) / upperSegmentRows;
+                    leftGreenStepQ16 = (-topGreen + middleGreen << 16) / upperSegmentRows;
+                    lowerSegmentMiddleVertexOnRight = 0;
+                  }
+                } else {
                   rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
                   rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
                   leftRedStepQ16 = (middleRed - topRed << 16) / upperSegmentRows;
@@ -699,132 +708,125 @@ abstract class SpriteState extends DualLinkNode {
                   leftGreenStepQ16 = (-topGreen + middleGreen << 16) / upperSegmentRows;
                   lowerSegmentMiddleVertexOnRight = 0;
                 }
-              } else {
-                rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
-                rightGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
-                leftRedStepQ16 = (middleRed - topRed << 16) / upperSegmentRows;
-                rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
-                leftBlueStepQ16 = (middleBlue - topBlue << 16) / upperSegmentRows;
-                leftGreenStepQ16 = (-topGreen + middleGreen << 16) / upperSegmentRows;
-                lowerSegmentMiddleVertexOnRight = 0;
-              }
-              {
-                boolean upperSegmentCompletionRemainderEnabled = true;
-                upperSegmentScan: {
-                  if (topY < 0) {
-                    if (middleY >= 0) {
-                      topY = -topY;
-                      rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
-                      rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
-                      leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
-                      leftGreenQ16 = leftGreenQ16 + topY * leftGreenStepQ16;
-                      leftXQ16 = leftXQ16 + topY * leftXStepQ16;
-                      rightXQ16 = rightXQ16 + topY * rightXStepQ16;
-                      rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
-                      leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
-                      topY = 0;
-                    }
-                    if (!(middleY >= 0) || controlFlagSnapshot != 0) {
-                      topY = middleY - topY;
-                      leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
-                      rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
-                      leftXQ16 = leftXQ16 + topY * leftXStepQ16;
-                      rightXQ16 = rightXQ16 + topY * rightXStepQ16;
-                      leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
-                      rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
-                      rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
-                      leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
-                      topY = middleY;
-                      if (controlFlagSnapshot == 0) {
-                        break upperSegmentScan;
+                {
+                  boolean upperSegmentCompletionRemainderEnabled = true;
+                  {
+                    boolean upperSegmentScanFrameContinues = true;
+                    if (topY < 0) {
+                      if (middleY >= 0) {
+                        topY = -topY;
+                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                        rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                        leftGreenQ16 = leftGreenQ16 + topY * leftGreenStepQ16;
+                        leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                        rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                        rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                        leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                        topY = 0;
                       }
-                    }}
-                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
-                  while (middleY > topY) {
-                    upperSpanLeft = leftXQ16 >> 16;
-                    invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
-                    invertedSpanStartOrNegativeOne = ~upperSpanLeft;
-                    if (controlFlagSnapshot != 0) {
-                      upperSegmentCompletionRemainderEnabled = false;
-                      break;
-                    }
-                    if (invertedClipWidthOrLowerRows < invertedSpanStartOrNegativeOne) {
-                      upperSpanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
-                      if (upperSpanWidth != 0) {
-                        upperSpanRedStepQ16 = (rightRedQ16 - leftRedQ16) / upperSpanWidth;
-                        upperSpanGreenStepQ16 = (-leftGreenQ16 + rightGreenQ16) / upperSpanWidth;
-                        spanBlueStepQ16 = (rightBlueQ16 - leftBlueQ16) / upperSpanWidth;
-                        if (TriangleRasterState.clipWidth <= upperSpanWidth + upperSpanLeft) {
-                          upperSpanWidth = -1 + (TriangleRasterState.clipWidth - upperSpanLeft);
+                      if (!(middleY >= 0) || controlFlagSnapshot != 0) {
+                        topY = middleY - topY;
+                        leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                        rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                        leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                        rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                        leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                        rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
+                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                        topY = middleY;
+                        upperSegmentScanFrameContinues = !(controlFlagSnapshot == 0);
+                      }}
+                    if (upperSegmentScanFrameContinues) {
+                      edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
+                      while (middleY > topY) {
+                        upperSpanLeft = leftXQ16 >> 16;
+                        invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
+                        invertedSpanStartOrNegativeOne = ~upperSpanLeft;
+                        if (controlFlagSnapshot != 0) {
+                          upperSegmentCompletionRemainderEnabled = false;
+                          break;
                         }
-                        if (0 <= upperSpanLeft) {
-                          MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(upperSpanLeft + edgeSwapOrRowBaseOrLowerRowsThenLeftX, upperSpanRedStepQ16, 33423689, leftRedQ16, spanBlueStepQ16, leftGreenQ16, upperSpanGreenStepQ16, upperSpanWidth, leftBlueQ16, destinationPixels);
-                        } else {
-                          MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX, upperSpanRedStepQ16, 33423689, -(upperSpanRedStepQ16 * upperSpanLeft) + leftRedQ16, spanBlueStepQ16, leftGreenQ16 - upperSpanLeft * upperSpanGreenStepQ16, upperSpanGreenStepQ16, upperSpanWidth + upperSpanLeft, -(spanBlueStepQ16 * upperSpanLeft) + leftBlueQ16, destinationPixels);
+                        if (invertedClipWidthOrLowerRows < invertedSpanStartOrNegativeOne) {
+                          upperSpanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                          if (upperSpanWidth != 0) {
+                            upperSpanRedStepQ16 = (rightRedQ16 - leftRedQ16) / upperSpanWidth;
+                            upperSpanGreenStepQ16 = (-leftGreenQ16 + rightGreenQ16) / upperSpanWidth;
+                            spanBlueStepQ16 = (rightBlueQ16 - leftBlueQ16) / upperSpanWidth;
+                            if (TriangleRasterState.clipWidth <= upperSpanWidth + upperSpanLeft) {
+                              upperSpanWidth = -1 + (TriangleRasterState.clipWidth - upperSpanLeft);
+                            }
+                            if (0 <= upperSpanLeft) {
+                              MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(upperSpanLeft + edgeSwapOrRowBaseOrLowerRowsThenLeftX, upperSpanRedStepQ16, 33423689, leftRedQ16, spanBlueStepQ16, leftGreenQ16, upperSpanGreenStepQ16, upperSpanWidth, leftBlueQ16, destinationPixels);
+                            } else {
+                              MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftX, upperSpanRedStepQ16, 33423689, -(upperSpanRedStepQ16 * upperSpanLeft) + leftRedQ16, spanBlueStepQ16, leftGreenQ16 - upperSpanLeft * upperSpanGreenStepQ16, upperSpanGreenStepQ16, upperSpanWidth + upperSpanLeft, -(spanBlueStepQ16 * upperSpanLeft) + leftBlueQ16, destinationPixels);
+                            }
+                          } else {
+                            if (upperSpanLeft >= 0 &&
+                                upperSpanLeft < TriangleRasterState.clipWidth) {
+                              MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(upperSpanLeft + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, upperSpanWidth, leftBlueQ16, destinationPixels);
+                            }
+                          }
                         }
-                      } else {
-                        if (upperSpanLeft >= 0 &&
-                            upperSpanLeft < TriangleRasterState.clipWidth) {
-                          MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(upperSpanLeft + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, upperSpanWidth, leftBlueQ16, destinationPixels);
+                        topY++;
+                        if (topY >= TriangleRasterState.clipHeight) {
+                          return;
                         }
+                        rightXQ16 = rightXQ16 + rightXStepQ16;
+                        rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
+                        rightRedQ16 = rightRedQ16 + rightRedStepQ16;
+                        leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
+                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
+                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
+                        leftXQ16 = leftXQ16 + leftXStepQ16;
+                        leftRedQ16 = leftRedQ16 + leftRedStepQ16;
+                        edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
                       }
                     }
-                    topY++;
-                    if (topY >= TriangleRasterState.clipHeight) {
-                      return;
-                    }
-                    rightXQ16 = rightXQ16 + rightXStepQ16;
-                    rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
-                    rightRedQ16 = rightRedQ16 + rightRedStepQ16;
-                    leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
-                    leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
-                    rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16;
-                    leftXQ16 = leftXQ16 + leftXStepQ16;
-                    leftRedQ16 = leftRedQ16 + leftRedStepQ16;
-                    edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
+                  }
+                  if (upperSegmentCompletionRemainderEnabled) {
+                    edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
+                    invertedClipWidthOrLowerRows = ~edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                    invertedSpanStartOrNegativeOne = -1;
                   }
                 }
-                if (upperSegmentCompletionRemainderEnabled) {
-                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
-                  invertedClipWidthOrLowerRows = ~edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                  invertedSpanStartOrNegativeOne = -1;
+                if (invertedClipWidthOrLowerRows == invertedSpanStartOrNegativeOne) {
+                  leftRedStepQ16 = 0;
+                  leftGreenStepQ16 = 0;
+                  rightXStepQ16 = 0;
+                  leftXStepQ16 = 0;
+                  rightRedStepQ16 = 0;
+                  leftBlueStepQ16 = 0;
+                  rightGreenStepQ16 = 0;
+                  rightBlueStepQ16 = 0;
                 }
-              }
-              if (invertedClipWidthOrLowerRows == invertedSpanStartOrNegativeOne) {
-                leftRedStepQ16 = 0;
-                leftGreenStepQ16 = 0;
-                rightXStepQ16 = 0;
-                leftXStepQ16 = 0;
-                rightRedStepQ16 = 0;
-                leftBlueStepQ16 = 0;
-                rightGreenStepQ16 = 0;
-                rightBlueStepQ16 = 0;
-              }
-              if (invertedClipWidthOrLowerRows != invertedSpanStartOrNegativeOne || controlFlagSnapshot != 0) {
-                bottomXQ16 = bottomX << 16;
-                bottomRedQ16 = bottomRed << 16;
-                bottomGreenQ16 = bottomGreen << 16;
-                bottomBlueQ16 = bottomBlue << 16;
-                if (lowerSegmentMiddleVertexOnRight == 0) {
-                  leftXQ16 = middleX << 16;
-                  leftBlueQ16 = middleBlue << 16;
-                  leftRedQ16 = middleRed << 16;
-                  leftGreenQ16 = middleGreen << 16;
+                if (invertedClipWidthOrLowerRows != invertedSpanStartOrNegativeOne || controlFlagSnapshot != 0) {
+                  bottomXQ16 = bottomX << 16;
+                  bottomRedQ16 = bottomRed << 16;
+                  bottomGreenQ16 = bottomGreen << 16;
+                  bottomBlueQ16 = bottomBlue << 16;
+                  if (lowerSegmentMiddleVertexOnRight == 0) {
+                    leftXQ16 = middleX << 16;
+                    leftBlueQ16 = middleBlue << 16;
+                    leftRedQ16 = middleRed << 16;
+                    leftGreenQ16 = middleGreen << 16;
+                  }
+                  if (lowerSegmentMiddleVertexOnRight != 0 || controlFlagSnapshot != 0) {
+                    rightRedQ16 = middleRed << 16;
+                    rightXQ16 = middleX << 16;
+                    rightGreenQ16 = middleGreen << 16;
+                    rightBlueQ16 = middleBlue << 16;
+                  }
+                  rightGreenStepQ16 = (bottomGreenQ16 - rightGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  leftBlueStepQ16 = (-leftBlueQ16 + bottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  leftXStepQ16 = (bottomXQ16 - leftXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  leftRedStepQ16 = (-leftRedQ16 + bottomRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  leftGreenStepQ16 = (bottomGreenQ16 - leftGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  rightRedStepQ16 = (bottomRedQ16 - rightRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  rightXStepQ16 = (bottomXQ16 - rightXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  rightBlueStepQ16 = (-rightBlueQ16 + bottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
                 }
-                if (lowerSegmentMiddleVertexOnRight != 0 || controlFlagSnapshot != 0) {
-                  rightRedQ16 = middleRed << 16;
-                  rightXQ16 = middleX << 16;
-                  rightGreenQ16 = middleGreen << 16;
-                  rightBlueQ16 = middleBlue << 16;
-                }
-                rightGreenStepQ16 = (bottomGreenQ16 - rightGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                leftBlueStepQ16 = (-leftBlueQ16 + bottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                leftXStepQ16 = (bottomXQ16 - leftXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                leftRedStepQ16 = (-leftRedQ16 + bottomRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                leftGreenStepQ16 = (bottomGreenQ16 - leftGreenQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                rightRedStepQ16 = (bottomRedQ16 - rightRedQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                rightXStepQ16 = (bottomXQ16 - rightXQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                rightBlueStepQ16 = (-rightBlueQ16 + bottomBlueQ16) / edgeSwapOrRowBaseOrLowerRowsThenLeftX;
               }
             }
             if (topY < 0) {
