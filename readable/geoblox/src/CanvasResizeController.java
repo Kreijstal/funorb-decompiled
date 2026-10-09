@@ -125,10 +125,10 @@ final class CanvasResizeController {
     }
 
     final void updateResize(byte methodGuard) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$0 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$2 = 0;
+        int blockedMembershipCountdownAfterDecrement = 0;
+        int allowedMembershipCountdownAfterDecrement = 0;
+        int invalidGuardAllowedCountdownAfterDecrement = 0;
+        int invalidGuardBlockedCountdownAfterDecrement = 0;
         if (null != InstrumentPatch.activeFullscreenCanvas) {
           return;
         }
@@ -136,9 +136,9 @@ final class CanvasResizeController {
           if (TextTemplateDefinition.loginMembershipGateValue <= 0) {
             this.resizePending = false;
             if (this.resizePending) {
-              fieldTemp$1 = this.resizeCountdownTicks - 1;
+              blockedMembershipCountdownAfterDecrement = this.resizeCountdownTicks - 1;
               this.resizeCountdownTicks = this.resizeCountdownTicks - 1;
-              if (0 < fieldTemp$1) {
+              if (0 < blockedMembershipCountdownAfterDecrement) {
                 return;
               }
               this.resizeCountdownTicks = this.resizeIntervalTicks;
@@ -158,9 +158,9 @@ final class CanvasResizeController {
             }
           } else {
             if (this.resizePending) {
-              fieldTemp$0 = this.resizeCountdownTicks - 1;
+              allowedMembershipCountdownAfterDecrement = this.resizeCountdownTicks - 1;
               this.resizeCountdownTicks = this.resizeCountdownTicks - 1;
-              if (0 < fieldTemp$0) {
+              if (0 < allowedMembershipCountdownAfterDecrement) {
                 return;
               }
               this.resizeCountdownTicks = this.resizeIntervalTicks;
@@ -189,9 +189,9 @@ final class CanvasResizeController {
         this.fallbackWidth = -79;
         if (TextTemplateDefinition.loginMembershipGateValue > 0) {
           if (this.resizePending) {
-            fieldTemp$3 = this.resizeCountdownTicks - 1;
+            invalidGuardAllowedCountdownAfterDecrement = this.resizeCountdownTicks - 1;
             this.resizeCountdownTicks = this.resizeCountdownTicks - 1;
-            if (0 < fieldTemp$3) {
+            if (0 < invalidGuardAllowedCountdownAfterDecrement) {
               return;
             }
             this.resizeCountdownTicks = this.resizeIntervalTicks;
@@ -212,9 +212,9 @@ final class CanvasResizeController {
         } else {
           this.resizePending = false;
           if (this.resizePending) {
-            fieldTemp$2 = this.resizeCountdownTicks - 1;
+            invalidGuardBlockedCountdownAfterDecrement = this.resizeCountdownTicks - 1;
             this.resizeCountdownTicks = this.resizeCountdownTicks - 1;
-            if (0 < fieldTemp$2) {
+            if (0 < invalidGuardBlockedCountdownAfterDecrement) {
               return;
             }
             this.resizeCountdownTicks = this.resizeIntervalTicks;
@@ -243,35 +243,35 @@ final class CanvasResizeController {
     }
 
     private final void applyConstrainedSize(boolean applyResize) {
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        var5 = Geoblox.clientControlFlowFlag;
-        var2 = this.requestedWidth;
-        var3 = this.requestedHeight;
+        int constrainedWidth;
+        int constrainedHeight;
+        int aspectAdjustedWidth;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        constrainedWidth = this.requestedWidth;
+        constrainedHeight = this.requestedHeight;
         if (!this.isResizeAllowed(-123)) {
           this.resizePending = false;
           return;
         }
-        if (this.maximumWidth >= var2) {
-          if (var2 < this.minimumWidth) {
-            var2 = this.minimumWidth;
+        if (this.maximumWidth >= constrainedWidth) {
+          if (constrainedWidth < this.minimumWidth) {
+            constrainedWidth = this.minimumWidth;
           }
         } else {
-          var2 = this.maximumWidth;
+          constrainedWidth = this.maximumWidth;
         }
-        if (var3 > this.maximumHeight) {
-          var3 = this.maximumHeight;
+        if (constrainedHeight > this.maximumHeight) {
+          constrainedHeight = this.maximumHeight;
           if (!(0.0f < this.aspectRatio)) {
             if (!applyResize) {
               return;
             }
-            if (AudioService.canvasWidth != var2) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (AudioService.canvasWidth != constrainedWidth) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
             } else {
-              if (var3 != ClientRenderingState.canvasHeight) {
-                this.resizeListener.onCanvasResize(-2964, var2, var3);
+              if (constrainedHeight != ClientRenderingState.canvasHeight) {
+                this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
               }
             }
             if (this.requestedWidth > 0) {
@@ -279,19 +279,19 @@ final class CanvasResizeController {
             }
             return;
           }
-          var4 = (int)(0.5f + (float)var3 * this.aspectRatio);
-          if (var4 > var2) {
-            var3 = (int)((float)var2 / this.aspectRatio);
+          aspectAdjustedWidth = (int)(0.5f + (float)constrainedHeight * this.aspectRatio);
+          if (aspectAdjustedWidth > constrainedWidth) {
+            constrainedHeight = (int)((float)constrainedWidth / this.aspectRatio);
           } else {
-            if (var4 >= var2) {
+            if (aspectAdjustedWidth >= constrainedWidth) {
               if (!applyResize) {
                 return;
               }
-              if (AudioService.canvasWidth != var2) {
-                this.resizeListener.onCanvasResize(-2964, var2, var3);
+              if (AudioService.canvasWidth != constrainedWidth) {
+                this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
               } else {
-                if (var3 != ClientRenderingState.canvasHeight) {
-                  this.resizeListener.onCanvasResize(-2964, var2, var3);
+                if (constrainedHeight != ClientRenderingState.canvasHeight) {
+                  this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
                 }
               }
               if (this.requestedWidth > 0) {
@@ -299,16 +299,16 @@ final class CanvasResizeController {
               }
               return;
             }
-            var2 = var4;
+            constrainedWidth = aspectAdjustedWidth;
           }
           if (!applyResize) {
             return;
           }
-          if (AudioService.canvasWidth != var2) {
-            this.resizeListener.onCanvasResize(-2964, var2, var3);
+          if (AudioService.canvasWidth != constrainedWidth) {
+            this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
           } else {
-            if (var3 != ClientRenderingState.canvasHeight) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (constrainedHeight != ClientRenderingState.canvasHeight) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
             }
           }
           if (this.requestedWidth <= 0) {
@@ -317,18 +317,18 @@ final class CanvasResizeController {
           PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           return;
         }
-        if (var3 < this.minimumHeight) {
-          var3 = this.minimumHeight;
+        if (constrainedHeight < this.minimumHeight) {
+          constrainedHeight = this.minimumHeight;
         }
         if (!(0.0f < this.aspectRatio)) {
           if (!applyResize) {
             return;
           }
-          if (AudioService.canvasWidth != var2) {
-            this.resizeListener.onCanvasResize(-2964, var2, var3);
+          if (AudioService.canvasWidth != constrainedWidth) {
+            this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
           } else {
-            if (var3 != ClientRenderingState.canvasHeight) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (constrainedHeight != ClientRenderingState.canvasHeight) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
             }
           }
           if (this.requestedWidth <= 0) {
@@ -337,34 +337,34 @@ final class CanvasResizeController {
           PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
           return;
         }
-        var4 = (int)(0.5f + (float)var3 * this.aspectRatio);
-        if (var4 > var2) {
-          var3 = (int)((float)var2 / this.aspectRatio);
+        aspectAdjustedWidth = (int)(0.5f + (float)constrainedHeight * this.aspectRatio);
+        if (aspectAdjustedWidth > constrainedWidth) {
+          constrainedHeight = (int)((float)constrainedWidth / this.aspectRatio);
           if (!applyResize) {
             return;
           }
-          if (AudioService.canvasWidth != var2) {
-            this.resizeListener.onCanvasResize(-2964, var2, var3);
+          if (AudioService.canvasWidth != constrainedWidth) {
+            this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
           } else {
-            if (var3 != ClientRenderingState.canvasHeight) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (constrainedHeight != ClientRenderingState.canvasHeight) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
             }
           }
         } else {
-          if (var4 < var2) {
-            var2 = var4;
+          if (aspectAdjustedWidth < constrainedWidth) {
+            constrainedWidth = aspectAdjustedWidth;
             if (!applyResize) {
               return;
             }
-            if (AudioService.canvasWidth != var2) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (AudioService.canvasWidth != constrainedWidth) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
               if (this.requestedWidth > 0) {
                 PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
               }
               return;
             }
-            if (var3 != ClientRenderingState.canvasHeight) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (constrainedHeight != ClientRenderingState.canvasHeight) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
               if (this.requestedWidth > 0) {
                 PrefixCodeDecoder.canvasOffsetX = (-AudioService.canvasWidth + this.requestedWidth) / 2;
               }
@@ -374,11 +374,11 @@ final class CanvasResizeController {
             if (!applyResize) {
               return;
             }
-            if (AudioService.canvasWidth != var2) {
-              this.resizeListener.onCanvasResize(-2964, var2, var3);
+            if (AudioService.canvasWidth != constrainedWidth) {
+              this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
             } else {
-              if (var3 != ClientRenderingState.canvasHeight) {
-                this.resizeListener.onCanvasResize(-2964, var2, var3);
+              if (constrainedHeight != ClientRenderingState.canvasHeight) {
+                this.resizeListener.onCanvasResize(-2964, constrainedWidth, constrainedHeight);
               }
             }
           }

@@ -390,10 +390,10 @@ final class BufferedRandomAccessFile {
         this.position = position;
     }
 
-    final static boolean checkBoundaryLossAndStartCascade(int param0) {
-        RuntimeException decompiledCaughtException = null;
+    final static boolean checkBoundaryLossAndStartCascade(int methodGuard) {
+        RuntimeException boundaryCheckFailure = null;
         GameplayEntity farthestEntity = null;
-        RuntimeException var1_ref = null;
+        RuntimeException boundaryCheckFailureForContext = null;
         float farthestRadiusSquared = 0.0f;
         GameplayEntity candidateEntity = null;
         SecondaryDeque visitedCascadeEntities = null;
@@ -402,12 +402,12 @@ final class BufferedRandomAccessFile {
         int neighborIndex = 0;
         GameplayEntity neighborEntity = null;
         GameplayEntity searchedEntity = null;
-        int var10 = 0;
+        int clientControlFlowSnapshot = 0;
         GameplayEntity seedEntity = null;
         SecondaryDeque cascadeFrontier = null;
-        var10 = Geoblox.clientControlFlowFlag;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param0 != -1) {
+          if (methodGuard != -1) {
             BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(3);
           }
           if (UiWidget.gameplaySession.sceneTransitionRequested) {
@@ -464,7 +464,7 @@ final class BufferedRandomAccessFile {
                   break unseenCascadeNeighborSelection;
                 }
                 if (searchedEntity != neighborEntity) {
-                  searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(param0 ^ 24));
+                  searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(methodGuard ^ 24));
                   continue;
                 }
                 break;
@@ -472,10 +472,10 @@ final class BufferedRandomAccessFile {
               neighborIndex++;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1_ref), "sk.D(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtBoundaryCheckFailure) {
+          boundaryCheckFailure = caughtBoundaryCheckFailure;
+          boundaryCheckFailureForContext = boundaryCheckFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) boundaryCheckFailureForContext), "sk.D(" + methodGuard + ')');
         }
     }
 

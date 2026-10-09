@@ -13,13 +13,13 @@ final class TextPairLoginPayload extends LoginPayload {
     final void writePayload(int methodGuard, ByteArrayBuffer buffer) {
         try {
             if (methodGuard <= 107) {
-                byte[] var4 = (byte[]) null;
+                byte[] unusedNullBytesForInvalidGuard = (byte[]) null;
                 TextPairLoginPayload.copyBytesWithDestinationOffset((byte[]) null, -72);
             }
             buffer.writeZeroPrefixedNullTerminatedText(this.loginText, (byte) -126);
             buffer.writeBase38Text(this.base38Text, false);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "nk.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException payloadWriteFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "nk.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -74,8 +74,8 @@ final class TextPairLoginPayload extends LoginPayload {
         try {
             this.base38Text = base38Text;
             this.loginText = loginText;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "nk.<init>(" + (loginText != null ? "{...}" : "null") + ',' + (base38Text != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException payloadInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "nk.<init>(" + (loginText != null ? "{...}" : "null") + ',' + (base38Text != null ? "{...}" : "null") + ')');
         }
     }
 

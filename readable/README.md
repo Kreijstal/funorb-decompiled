@@ -1,11 +1,59 @@
 # Readable GeoBlox
 
-The current export has 18,784 guarded naming rules: 302 classes, 2,064 fields,
+The current export has 19,012 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 145 labels. Both 303-file corpora
 compile, comparing 136,992 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current dialog and validation names (pass 221)
+## Current remaining local and parameter names (pass 222)
+
+A whole-dictionary audit names 228 declarations across 28 readable classes:
+181 locals and 47 parameters. All 150 remaining var/stackIn/decompiledCaught
+names receive source-supported roles. The audit also names nine fieldTemp
+snapshots, the socket writer region selector, every leftover generic exception
+local and opaque constructor/callback arguments that the narrower inventory
+missed. Only already descriptive throwable and left/right helper parameters
+remain unrenamed among locals and formals. This is a naming milestone, not
+proof that the entire source is idiomatic or that all field meanings are known.
+
+Roles now distinguish account/terms/welcome/fullscreen panel geometry, callback
+arguments from their actual interfaces/callers, cookie/method/payload snapshots,
+pointer angles and highscore queries, score/submission IDs and returns, pending
+query retries, list capacities/aliases, cascade errors, audio registration,
+DirectDraw enumeration/native peers and canvas constraints/countdown branches.
+A fullscreen constructor's Object slot retains its combined message-or-failure
+role. Window callbacks with empty bodies explicitly name unused inputs. The
+socket route remains an int assigned inside the monitor and consumed outside it;
+its naming does not remove that dispatch. Native null peers, invalid-guard
+recursion, partial writes, unused aliases, volatile/control fields, counters,
+FP association and original cookie/diagnostic strings remain unchanged.
+
+All 18,784 previous complete rules and 19,366 dictionary identities stay exact.
+Only 228 selected renamedName fields change in dictionary symbols; raw source
+positions and every other metadata field are preserved. The pass adds 787
+identifier edits in 28 files. The export has 19,012 guarded rules, 120,592
+identifier edits, 11 literal and 442 label edits (121,045 total). No opaque
+local/parameter placeholders remain in the bound dictionary. The 41 unresolved
+fields, compiler helper class/method spellings, mixed audio live ranges, 85 plain
+block labels and four large framed methods still need their own readability work.
+Required Java/platform API method names remain intact.
+
+From Deko, `node readable/build-geoblox-rules.mjs --check` validates all 228
+explicit additions against the previous Git manifest. Both
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` compile
+all 303 sources with 136,992 binding and 388 override checks. All 303 files
+reverse byte exactly; 27 publication tests, 17 scoped native trace groups and
+fresh sibling reproductions pass. All 73 historical source-proof pins remain
+intact. This naming pass does not newly establish actual platform/server/browser/
+phone, whole-game or heap/presented-FPS acceptance. Raw source, bytecode, compiler,
+environment, frozen naming dependency and native inputs are unchanged.
+
+The unchanged tracked **decompiler-source** Git tar SHA-256 is
+`f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95`; the pinned compiler environment still records
+`CFR_JS_DISABLE_LOOP_TAIL_MERGE=1`.
+
+## Previous dialog and validation names (pass 221)
 
 A naming pass covers 129 declarations in five classes: 123 locals and six
 callback parameters. MessageDialogContent now names button-array capacity/copy/
@@ -4358,16 +4406,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/0a7d84390d28948e6b526c5b64ee236e20872298/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/d7957395c3e870397ac0a830974d140e5b6b7be3/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/0a7d84390d28948e6b526c5b64ee236e20872298/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/d7957395c3e870397ac0a830974d140e5b6b7be3/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `0a7d84390d28948e6b526c5b64ee236e20872298`; the
-manifest SHA-256 is `0cccb494a8eed431c8e120dc76382fa977b56b138909b75381ba105197a7abc9`.
+The current Deko workflow/manifest commit is `d7957395c3e870397ac0a830974d140e5b6b7be3`; the
+manifest SHA-256 is `ddeaf02127fd35c56559980942fe92277ad52217cb8cb9c7b3035ee3b279ef1a`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -4392,7 +4440,7 @@ separate from a game JAR or Java source-tree hashes.
 Current raw tree SHA-256:
 `81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695`.
 Current readable tree SHA-256:
-`7d2fff178f4f54dd08f4a8ca7ade579c42d939b8a823ac77be00846ae96c5cec`.
+`764802b111511f1d0cad5fbf16c9627f76edab62f3bd80efbffb064f2ed496d9`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

@@ -26,8 +26,8 @@ final class PendingActionMarker extends IntrusiveNode {
         pendingRankedListQueries = null;
     }
 
-    PendingActionMarker(int param0) {
-        this.actionId = param0;
+    PendingActionMarker(int actionId) {
+        this.actionId = actionId;
     }
 
     static {

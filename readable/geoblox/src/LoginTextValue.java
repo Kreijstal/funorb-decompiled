@@ -20,35 +20,35 @@ final class LoginTextValue {
     }
 
     LoginTextValue(String text, boolean includeInLookupRequest) {
-        RuntimeException var3 = null;
-        boolean stackIn_6_1 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException textInitializationFailureForContext = null;
+        boolean lookupInclusionSnapshot = false;
+        RuntimeException textInitializationFailureBeforeDescription = null;
+        StringBuilder textInitializationMessagePrefix = null;
+        String textDescription = null;
+        RuntimeException textInitializationFailure = null;
         try {
           this.text = text;
           if (null == this.text) {
             this.text = "";
           }
-          stackIn_6_1 = !(!includeInLookupRequest);
-          this.includeInLookupRequest = stackIn_6_1;
+          lookupInclusionSnapshot = !(!includeInLookupRequest);
+          this.includeInLookupRequest = lookupInclusionSnapshot;
           if (this.text.length() != 0) {
             return;
           }
           this.includeInLookupRequest = false;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("mb.<init>(");
+        } catch (java.lang.RuntimeException caughtTextInitializationFailure) {
+          textInitializationFailure = caughtTextInitializationFailure;
+          textInitializationFailureForContext = textInitializationFailure;
+          textInitializationFailureBeforeDescription = textInitializationFailureForContext;
+          textInitializationMessagePrefix = new StringBuilder().append("mb.<init>(");
           if (text == null) {
-            stackIn_13_2 = "null";
+            textDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            textDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(includeInLookupRequest).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textInitializationFailureBeforeDescription), ((StringBuilder) (Object) textInitializationMessagePrefix).append(textDescription).append(',').append(includeInLookupRequest).append(')').toString());
         }
     }
 

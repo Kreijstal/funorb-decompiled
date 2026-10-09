@@ -87,46 +87,46 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     Under13TermsPanel(AccountCreationDialog accountCreationDialog) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
-        String var7 = null;
-        int var3 = 0;
-        TextWidgetRenderer var4 = null;
-        int var5 = 0;
-        int var6 = 0;
+        String expandedTermsText = null;
+        int contentOffsetY = 0;
+        TextWidgetRenderer termsRenderer = null;
+        int footerSpacing = 0;
+        int continueButtonWidth = 0;
         try {
             this.accountCreationDialog = accountCreationDialog;
             this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
             this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-            var7 = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.openingTermsLinkMarkup(11501), this.closingTermsLinkMarkup(false)}, (byte) -114);
-            var3 = 20;
-            var4 = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
-            this.termsText = new HotspotTextWidget(var7, var4);
+            expandedTermsText = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.openingTermsLinkMarkup(11501), this.closingTermsLinkMarkup(false)}, (byte) -114);
+            contentOffsetY = 20;
+            termsRenderer = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+            this.termsText = new HotspotTextWidget(expandedTermsText, termsRenderer);
             this.termsText.hoverText = "";
             this.termsText.setHotspotHoverText(0, -47, LogoCompositor.openInPopupWindowText);
             this.termsText.setHotspotHoverText(1, 118, LogoCompositor.openInPopupWindowText);
             this.termsText.listener = (WidgetListener) (this);
             this.termsText.widgetWidth = this.widgetWidth - 40;
-            this.termsText.fitTextBounds(26, 0, var3, this.widgetWidth - 40);
-            var3 = var3 + (this.termsText.widgetHeight + 15);
+            this.termsText.fitTextBounds(26, 0, contentOffsetY, this.widgetWidth - 40);
+            contentOffsetY = contentOffsetY + (this.termsText.widgetHeight + 15);
             this.addChild((byte) -108, this.termsText);
-            var5 = 4;
-            var6 = 200;
-            this.continueButton.setWidgetBounds(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
+            footerSpacing = 4;
+            continueButtonWidth = 200;
+            this.continueButton.setWidgetBounds(40, continueButtonWidth, (byte) -71, contentOffsetY, -continueButtonWidth + 300 >> 1);
             this.continueButton.listener = (WidgetListener) (this);
             this.addChild((byte) -63, this.continueButton);
-            this.setWidgetBounds(var3 + (55 + var5), 300, (byte) -104, 0, 0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "s.<init>(" + (accountCreationDialog != null ? "{...}" : "null") + ')');
+            this.setWidgetBounds(contentOffsetY + (55 + footerSpacing), 300, (byte) -104, 0, 0);
+        } catch (RuntimeException panelInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "s.<init>(" + (accountCreationDialog != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void onHotspotActivated(HotspotTextWidget widget, int hotspotId, int methodGuard, int pointerButton) {
-        int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = Geoblox.clientControlFlowFlag;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException hotspotFailureBeforeDescription = null;
+        StringBuilder hotspotMessagePrefix = null;
+        String widgetDescription = null;
+        RuntimeException hotspotFailure = null;
+        RuntimeException hotspotFailureForContext = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (0 == hotspotId) {
             UsernameAvailabilityValidator.requestNavigationToSharedTarget(false, "terms.ws");
@@ -144,17 +144,17 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
           }
           this.accountCreationDialog = (AccountCreationDialog) null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("s.A(");
+        } catch (java.lang.RuntimeException caughtHotspotFailure) {
+          hotspotFailure = caughtHotspotFailure;
+          hotspotFailureForContext = hotspotFailure;
+          hotspotFailureBeforeDescription = hotspotFailureForContext;
+          hotspotMessagePrefix = new StringBuilder().append("s.A(");
           if (widget == null) {
-            stackIn_14_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(hotspotId).append(',').append(methodGuard).append(',').append(pointerButton).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hotspotFailureBeforeDescription), ((StringBuilder) (Object) hotspotMessagePrefix).append(widgetDescription).append(',').append(hotspotId).append(',').append(methodGuard).append(',').append(pointerButton).append(')').toString());
         }
     }
 
@@ -167,38 +167,38 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_6_0 = false;
-        boolean stackIn_10_0 = false;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        RuntimeException keyFailureForContext = null;
+        boolean previousChildFocusResult = false;
+        boolean nextChildFocusResult = false;
+        RuntimeException keyFailureBeforeDescription = null;
+        StringBuilder keyMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException keyFailure = null;
         try {
-          if (super.handleKeyInput(param0, param1, param2, param3)) {
+          if (super.handleKeyInput(keyCode, methodGuard, typedCharacter, eventContext)) {
             return true;
           }
-          if (param0 == 98) {
-            stackIn_6_0 = this.requestPreviousChildFocus(7305, param3);
-            return stackIn_6_0;
+          if (keyCode == 98) {
+            previousChildFocusResult = this.requestPreviousChildFocus(7305, eventContext);
+            return previousChildFocusResult;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.requestNextChildFocus(param3, -104);
-          return stackIn_10_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("s.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_14_2 = "null";
+          nextChildFocusResult = this.requestNextChildFocus(eventContext, -104);
+          return nextChildFocusResult;
+        } catch (java.lang.RuntimeException caughtKeyFailure) {
+          keyFailure = caughtKeyFailure;
+          keyFailureForContext = keyFailure;
+          keyFailureBeforeDescription = keyFailureForContext;
+          keyMessagePrefix = new StringBuilder().append("s.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureBeforeDescription), ((StringBuilder) (Object) keyMessagePrefix).append(eventContextDescription).append(')').toString());
         }
     }
 
@@ -223,33 +223,33 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         return "</col></u>";
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        RuntimeException activationFailureForContext = null;
+        RuntimeException activationFailureBeforeDescription = null;
+        StringBuilder activationMessagePrefix = null;
+        String buttonDescription = null;
+        RuntimeException activationFailure = null;
         try {
-          if (param4 == this.continueButton) {
+          if (button == this.continueButton) {
             SessionTextHistorySupport.prepareAccountCreationUi(77);
             this.accountCreationDialog.dismissDialog((byte) -104);
           }
-          if (param1 == -20) {
+          if (methodGuard == -20) {
             return;
           }
           this.accountCreationDialog = (AccountCreationDialog) null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_7_0 = var6;
-          stackIn_7_1 = new StringBuilder().append("s.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException caughtActivationFailure) {
+          activationFailure = caughtActivationFailure;
+          activationFailureForContext = activationFailure;
+          activationFailureBeforeDescription = activationFailureForContext;
+          activationMessagePrefix = new StringBuilder().append("s.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            buttonDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            buttonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailureBeforeDescription), ((StringBuilder) (Object) activationMessagePrefix).append(buttonDescription).append(')').toString());
         }
     }
 

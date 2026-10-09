@@ -74,59 +74,59 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
 
     FullscreenErrorDialog(DialogLayer dialogLayer, FullscreenFailureReason failureReason) {
         super(dialogLayer, 200, 150);
-        Object var3 = null;
-        Object stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        UiWidget var4 = null;
+        Object messageOrConstructionFailure = null;
+        Object constructionFailureBeforeDescriptions = null;
+        StringBuilder constructionMessagePrefix = null;
+        String dialogLayerDescription = null;
+        StringBuilder constructionMessageBeforeReason = null;
+        String failureReasonDescription = null;
+        RuntimeException constructionFailure = null;
+        UiWidget messageWidget = null;
         try {
-          var3 = null;
+          messageOrConstructionFailure = null;
           if (TextInputValidator.fullscreenUnavailableFailureReason == failureReason) {
-            var3 = AccountContentDialog.fullscreenUnavailableTrySignedAppletText;
+            messageOrConstructionFailure = AccountContentDialog.fullscreenUnavailableTrySignedAppletText;
           } else {
             if (failureReason == AccountContentDialog.fullscreenFocusLostFailureReason) {
-              var3 = NodeHashTableIterator.fullscreenFocusText;
+              messageOrConstructionFailure = NodeHashTableIterator.fullscreenFocusText;
               this.widgetHeight = this.widgetHeight + 10;
               if (EntitySpawnSupport.isCanvasResizeAllowed(true)) {
-                var3 = MidiNoteMixer.fullscreenFocusOrResolutionText;
+                messageOrConstructionFailure = MidiNoteMixer.fullscreenFocusOrResolutionText;
                 this.widgetHeight = this.widgetHeight + 20;
               }
             } else {
               if (failureReason == LimitedRandomAccessFile.fullscreenTimeoutFailureReason) {
-                var3 = MessageDialog.fullscreenTimeoutText;
+                messageOrConstructionFailure = MessageDialog.fullscreenTimeoutText;
                 this.widgetHeight = this.widgetHeight + 30;
               }
             }
           }
-          var4 = new UiWidget((String) (var3), (WidgetListener) null);
-          var4.widgetX = 0;
-          var4.widgetHeight = 80;
-          var4.widgetWidth = this.widgetWidth;
-          var4.widgetY = 50;
-          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.addChild((byte) -91, var4);
+          messageWidget = new UiWidget((String) (messageOrConstructionFailure), (WidgetListener) null);
+          messageWidget.widgetX = 0;
+          messageWidget.widgetHeight = 80;
+          messageWidget.widgetWidth = this.widgetWidth;
+          messageWidget.widgetY = 50;
+          messageWidget.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild((byte) -91, messageWidget);
           this.closeButton = this.appendFullscreenDialogButton(UiFontResources.fullscreenCloseButtonText, (byte) 87, (WidgetListener) (this));
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("ij.<init>(");
+        } catch (java.lang.RuntimeException caughtConstructionFailure) {
+          constructionFailure = caughtConstructionFailure;
+          messageOrConstructionFailure = constructionFailure;
+          constructionFailureBeforeDescriptions = messageOrConstructionFailure;
+          constructionMessagePrefix = new StringBuilder().append("ij.<init>(");
           if (dialogLayer == null) {
-            stackIn_13_2 = "null";
+            dialogLayerDescription = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            dialogLayerDescription = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          constructionMessageBeforeReason = ((StringBuilder) (Object) constructionMessagePrefix).append(dialogLayerDescription).append(',');
           if (failureReason == null) {
-            stackIn_16_2 = "null";
+            failureReasonDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            failureReasonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) (constructionFailureBeforeDescriptions), ((StringBuilder) (Object) constructionMessageBeforeReason).append(failureReasonDescription).append(')').toString());
         }
     }
 
@@ -134,36 +134,36 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         if (!this.dialogVisible) {
             return;
         }
-        int var2 = 102 / ((methodGuard - 6) / 43);
+        int hideGuardQuotient = 102 / ((methodGuard - 6) / 43);
         this.dialogVisible = false;
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        RuntimeException var6 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        RuntimeException activationFailureForContext = null;
+        RuntimeException activationFailureBeforeDescription = null;
+        StringBuilder activationMessagePrefix = null;
+        String buttonDescription = null;
+        RuntimeException activationFailure = null;
         try {
-          if (param4 == this.closeButton) {
+          if (button == this.closeButton) {
             this.hideFullscreenError((byte) 122);
           }
-          if (param1 == -20) {
+          if (methodGuard == -20) {
             return;
           }
           alternateArchivePort = -95;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("ij.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException caughtActivationFailure) {
+          activationFailure = caughtActivationFailure;
+          activationFailureForContext = activationFailure;
+          activationFailureBeforeDescription = activationFailureForContext;
+          activationMessagePrefix = new StringBuilder().append("ij.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            buttonDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            buttonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailureBeforeDescription), ((StringBuilder) (Object) activationMessagePrefix).append(buttonDescription).append(')').toString());
         }
     }
 

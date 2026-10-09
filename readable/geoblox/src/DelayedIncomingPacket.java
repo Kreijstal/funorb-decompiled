@@ -303,8 +303,8 @@ final class DelayedIncomingPacket extends IntrusiveNode {
             this.packetOpcode = packetOpcode;
             this.payload = payload;
             this.deliveryTimeMillis = deliveryTimeMillis;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ma.<init>(" + deliveryTimeMillis + ',' + packetOpcode + ',' + (payload != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException packetInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetInitializationFailure), "ma.<init>(" + deliveryTimeMillis + ',' + packetOpcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

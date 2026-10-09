@@ -3283,11 +3283,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0a7d84390d28948e6b526c5b64ee236e20872298",
+    "commit": "d7957395c3e870397ac0a830974d140e5b6b7be3",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "0cccb494a8eed431c8e120dc76382fa977b56b138909b75381ba105197a7abc9"
+      "sha256": "ddeaf02127fd35c56559980942fe92277ad52217cb8cb9c7b3035ee3b279ef1a"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3297,15 +3297,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "7d2fff178f4f54dd08f4a8ca7ade579c42d939b8a823ac77be00846ae96c5cec",
+    "outputTreeSha256": "764802b111511f1d0cad5fbf16c9627f76edab62f3bd80efbffb064f2ed496d9",
     "files": 303,
-    "rules": 18784,
-    "identifierEdits": 119805,
+    "rules": 19012,
+    "identifierEdits": 120592,
     "bindingsCompared": 136992,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 120258,
+    "totalEdits": 121045,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3327,7 +3327,7 @@
       "remainingOpaqueFields": 41
     },
     "structuralPass": 218,
-    "semanticPass": 221
+    "semanticPass": 222
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -20224,5 +20224,1187 @@
       }
     ],
     "namingWorkflowCommit": "0a7d84390d28948e6b526c5b64ee236e20872298"
+  },
+  "remainingCompilerLocalNames": {
+    "version": 222,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 228,
+    "namedLocalDeclarationsAdded": 181,
+    "namedParameterDeclarationsAdded": 47,
+    "changedReadableJavaFiles": 28,
+    "previousCompleteRules": 18784,
+    "unaffectedCompleteRulesPreserved": 18784,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+    "sourceCommit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
+    "javaToolsCommit": "433ff77e11140811703f28a56e22efa35fc64e07",
+    "sourceArchiveSha256": "f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1"
+    },
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 150,
+    "rawCompilerLocalsAfter": 0,
+    "additionalFieldTemporarySnapshotsNamed": 9,
+    "identifierEditsAdded": 787,
+    "readableIdentifierEdits": 120592,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 121045,
+    "stableDictionaryIdentities": 19366,
+    "bindingsCompared": 136992,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name all remaining var/stackIn/decompiledCaught declarations plus fieldTemp snapshots and remaining local/parameter names in their eighteen owning classes. Trace account/terms/welcome/fullscreen panels, actual callback roles, login cookie/lookup/payload values, pointer/highscore queries, score creation, byte-short retries, array growth, boundary cascade failure aliases, DirectDraw enumeration/native peer setup, canvas constraints/countdowns and static sound/popup indices. Preserve unused snapshots, every type/cursor/queue alias, guards, counters, partial writes, callbacks, exception/monitor/FP behavior and original diagnostics. Keep all older complete rules/dictionary identities and pinned source/compiler/environment/native inputs. Zero conventional compiler-style locals does not mean all declarations are named or structural readability is finished; broader opaque-name inventory and lifetime/frame reconstruction remain. No actual platform, server/browser/phone or whole-game/FPS acceptance. The whole dictionary audit also names the remaining opaque constructor/callback parameters, submission ID snapshot, socket writer route and every leftover generic RuntimeException local. Only already descriptive throwable and left/right helper parameters remain unrenamed among locals/formals. Generated helper class/method names, unresolved fields, genuine frames and mixed live ranges still require their own readability audit.",
+    "symbols": [
+      {
+        "symbol": "L:ai.<init>(IIIIII[I)V#0",
+        "originalName": "fieldTemp$0",
+        "to": "submissionIdBeforeIncrement"
+      },
+      {
+        "symbol": "L:ai.<init>(IIIIII[I)V#1",
+        "originalName": "runtimeException",
+        "to": "submissionInitializationFailure"
+      },
+      {
+        "symbol": "L:ba.run()V#2",
+        "originalName": "decompiledRegionSelector0",
+        "to": "writerActionRoute"
+      },
+      {
+        "symbol": "L:ck.<initializer>()V#0",
+        "originalName": "var0",
+        "to": "soundThemeEntryIndex"
+      },
+      {
+        "symbol": "L:he.a(ILd;)V#0",
+        "originalName": "runtimeException",
+        "to": "fullscreenExitFailure"
+      },
+      {
+        "symbol": "L:he.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "runtimeException",
+        "to": "focusLossFailure"
+      },
+      {
+        "symbol": "L:ie.a(I)[I#0",
+        "originalName": "var3",
+        "to": "enumeratedModeValues"
+      },
+      {
+        "symbol": "L:ie.a(I)[I#1",
+        "originalName": "var2",
+        "to": "unusedModeValuesAlias"
+      },
+      {
+        "symbol": "L:ie.a(IILjava/awt/Frame;III)V#0",
+        "originalName": "var7",
+        "to": "nullWindowPeer"
+      },
+      {
+        "symbol": "L:ie.a(IILjava/awt/Frame;III)V#1",
+        "originalName": "var8",
+        "to": "windowHandle"
+      },
+      {
+        "symbol": "L:ie.a(ILjava/awt/Frame;)V#0",
+        "originalName": "var3",
+        "to": "exitGuardRemainder"
+      },
+      {
+        "symbol": "L:ie.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+        "originalName": "fieldTemp$1",
+        "to": "widthWriteIndex"
+      },
+      {
+        "symbol": "L:ie.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+        "originalName": "fieldTemp$2",
+        "to": "heightWriteIndex"
+      },
+      {
+        "symbol": "L:ie.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+        "originalName": "fieldTemp$3",
+        "to": "bitDepthWriteIndex"
+      },
+      {
+        "symbol": "L:ie.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+        "originalName": "fieldTemp$4",
+        "to": "refreshRateWriteIndex"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#0",
+        "originalName": "var3",
+        "to": "messageOrConstructionFailure"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#1",
+        "originalName": "stackIn_12_0",
+        "to": "constructionFailureBeforeDescriptions"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#2",
+        "originalName": "stackIn_12_1",
+        "to": "constructionMessagePrefix"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#3",
+        "originalName": "stackIn_13_2",
+        "to": "dialogLayerDescription"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#4",
+        "originalName": "stackIn_15_1",
+        "to": "constructionMessageBeforeReason"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#5",
+        "originalName": "stackIn_16_2",
+        "to": "failureReasonDescription"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#6",
+        "originalName": "decompiledCaughtException",
+        "to": "constructionFailure"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#7",
+        "originalName": "var4",
+        "to": "messageWidget"
+      },
+      {
+        "symbol": "L:ij.<init>(Lng;Luj;)V#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtConstructionFailure"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#0",
+        "originalName": "var6",
+        "to": "activationFailureForContext"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#1",
+        "originalName": "stackIn_8_0",
+        "to": "activationFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#2",
+        "originalName": "stackIn_8_1",
+        "to": "activationMessagePrefix"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#3",
+        "originalName": "stackIn_9_2",
+        "to": "buttonDescription"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "activationFailure"
+      },
+      {
+        "symbol": "L:ij.a(IBIILhk;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtActivationFailure"
+      },
+      {
+        "symbol": "L:ij.j(B)V#0",
+        "originalName": "var2",
+        "to": "hideGuardQuotient"
+      },
+      {
+        "symbol": "L:ja.a(ZLkl;)V#0",
+        "originalName": "var3",
+        "to": "unusedNullStreamForGuardPath"
+      },
+      {
+        "symbol": "L:ja.a(ZLkl;)V#1",
+        "originalName": "runtimeException",
+        "to": "audioRegistrationFailure"
+      },
+      {
+        "symbol": "L:je.<init>(Lkl;Lhf;)V#0",
+        "originalName": "runtimeException",
+        "to": "trackedStreamInitializationFailure"
+      },
+      {
+        "symbol": "L:lf.<init>(JLjava/lang/String;)V#0",
+        "originalName": "runtimeException",
+        "to": "payloadInitializationFailure"
+      },
+      {
+        "symbol": "L:lf.a(ILqc;)V#0",
+        "originalName": "runtimeException",
+        "to": "payloadWriteFailure"
+      },
+      {
+        "symbol": "L:ma.<init>(JI[B)V#0",
+        "originalName": "runtimeException",
+        "to": "packetInitializationFailure"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#0",
+        "originalName": "var3",
+        "to": "textInitializationFailureForContext"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#1",
+        "originalName": "stackIn_6_1",
+        "to": "lookupInclusionSnapshot"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#2",
+        "originalName": "stackIn_12_0",
+        "to": "textInitializationFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#3",
+        "originalName": "stackIn_12_1",
+        "to": "textInitializationMessagePrefix"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#4",
+        "originalName": "stackIn_13_2",
+        "to": "textDescription"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#5",
+        "originalName": "decompiledCaughtException",
+        "to": "textInitializationFailure"
+      },
+      {
+        "symbol": "L:mb.<init>(Ljava/lang/String;Z)V#6",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtTextInitializationFailure"
+      },
+      {
+        "symbol": "L:nk.<init>(Ljava/lang/String;Ljava/lang/String;)V#0",
+        "originalName": "runtimeException",
+        "to": "payloadInitializationFailure"
+      },
+      {
+        "symbol": "L:nk.a(ILqc;)V#0",
+        "originalName": "var4",
+        "to": "unusedNullBytesForInvalidGuard"
+      },
+      {
+        "symbol": "L:nk.a(ILqc;)V#1",
+        "originalName": "runtimeException",
+        "to": "payloadWriteFailure"
+      },
+      {
+        "symbol": "L:od.<init>(Ljava/lang/String;)V#0",
+        "originalName": "runtimeException",
+        "to": "methodInitializationFailure"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#0",
+        "originalName": "var3",
+        "to": "methodMatchFailureForContext"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#1",
+        "originalName": "stackIn_4_0",
+        "to": "methodNameMatches"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#2",
+        "originalName": "stackIn_7_0",
+        "to": "methodMatchFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#3",
+        "originalName": "stackIn_7_1",
+        "to": "methodMatchMessagePrefix"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#4",
+        "originalName": "stackIn_8_2",
+        "to": "candidateDescription"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#5",
+        "originalName": "decompiledCaughtException",
+        "to": "methodMatchFailure"
+      },
+      {
+        "symbol": "L:od.a(ILjava/lang/String;)Z#6",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtMethodMatchFailure"
+      },
+      {
+        "symbol": "L:od.a(Ljava/applet/Applet;I)V#0",
+        "originalName": "var4",
+        "to": "unusedNullAppletForInvalidGuard"
+      },
+      {
+        "symbol": "L:od.a(Ljava/applet/Applet;I)V#1",
+        "originalName": "runtimeException",
+        "to": "cookieWriteFailure"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#0",
+        "originalName": "stackIn_19_0",
+        "to": "pointerFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#1",
+        "originalName": "stackIn_19_1",
+        "to": "pointerMessagePrefix"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#2",
+        "originalName": "stackIn_20_2",
+        "to": "eventContextDescription"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#3",
+        "originalName": "decompiledCaughtException",
+        "to": "pointerFailure"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#4",
+        "originalName": "var8_int",
+        "to": "guardRemainderOrPointerOffsetX"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#5",
+        "originalName": "var8",
+        "to": "pointerFailureForContext"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#6",
+        "originalName": "var9",
+        "to": "pointerOffsetY"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#7",
+        "originalName": "var10",
+        "to": "adjustedPointerAngleRadians"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#8",
+        "originalName": "var12",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:qb.a(IIIIIILel;)Z#9",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtPointerFailure"
+      },
+      {
+        "symbol": "L:qb.b(IIIII)Lmg;#0",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:qb.b(IIIII)Lmg;#1",
+        "originalName": "var5",
+        "to": "existingOrCreatedQuery"
+      },
+      {
+        "symbol": "L:qc.a(ZI)V#0",
+        "originalName": "var3",
+        "to": "pendingQuery"
+      },
+      {
+        "symbol": "L:qc.a(ZI)V#1",
+        "originalName": "decompiledCaughtException",
+        "to": "resendFailure"
+      },
+      {
+        "symbol": "L:qc.a(ZI)V#2",
+        "originalName": "var2",
+        "to": "resendFailureForContext"
+      },
+      {
+        "symbol": "L:qc.a(ZI)V#3",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtResendFailure"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#0",
+        "originalName": "var9",
+        "to": "createdSubmission"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#1",
+        "originalName": "var9_ref",
+        "to": "submissionFailureForContext"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#2",
+        "originalName": "stackIn_2_0",
+        "to": "invalidGuardNullSubmission"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#3",
+        "originalName": "stackIn_4_0",
+        "to": "submissionBeforeReturn"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#4",
+        "originalName": "stackIn_7_0",
+        "to": "submissionFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#5",
+        "originalName": "stackIn_7_1",
+        "to": "submissionMessagePrefix"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#6",
+        "originalName": "stackIn_8_2",
+        "to": "scoresDescription"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#7",
+        "originalName": "decompiledCaughtException",
+        "to": "submissionFailure"
+      },
+      {
+        "symbol": "L:qf.a(IIII[IIIII)Lai;#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtSubmissionFailure"
+      },
+      {
+        "symbol": "L:r.<init>(Lng;Lqh;)V#0",
+        "originalName": "runtimeException",
+        "to": "dialogInitializationFailure"
+      },
+      {
+        "symbol": "L:r.a(IBIILhk;)V#0",
+        "originalName": "runtimeException",
+        "to": "activationFailure"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#0",
+        "originalName": "stackIn_32_0",
+        "to": "resultFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#1",
+        "originalName": "stackIn_32_1",
+        "to": "resultMessagePrefix"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#2",
+        "originalName": "stackIn_33_2",
+        "to": "queryResultDescription"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#3",
+        "originalName": "decompiledCaughtException",
+        "to": "resultFailure"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#4",
+        "originalName": "var4",
+        "to": "resultMessage"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#5",
+        "originalName": "var4_ref",
+        "to": "resultFailureForContext"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#6",
+        "originalName": "var5",
+        "to": "resultContent"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#7",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:r.a(ZLsl;B)V#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtResultFailure"
+      },
+      {
+        "symbol": "L:r.f(I)Z#0",
+        "originalName": "var2",
+        "to": "creationQueryResult"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#0",
+        "originalName": "var7",
+        "to": "expandedTermsText"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#1",
+        "originalName": "var3",
+        "to": "contentOffsetY"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#2",
+        "originalName": "var4",
+        "to": "termsRenderer"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#3",
+        "originalName": "var5",
+        "to": "footerSpacing"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#4",
+        "originalName": "var6",
+        "to": "continueButtonWidth"
+      },
+      {
+        "symbol": "L:s.<init>(Lr;)V#5",
+        "originalName": "runtimeException",
+        "to": "panelInitializationFailure"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#0",
+        "originalName": "var6",
+        "to": "activationFailureForContext"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#1",
+        "originalName": "stackIn_7_0",
+        "to": "activationFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#2",
+        "originalName": "stackIn_7_1",
+        "to": "activationMessagePrefix"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#3",
+        "originalName": "stackIn_8_2",
+        "to": "buttonDescription"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "activationFailure"
+      },
+      {
+        "symbol": "L:s.a(IBIILhk;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtActivationFailure"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#0",
+        "originalName": "var5",
+        "to": "keyFailureForContext"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#1",
+        "originalName": "stackIn_6_0",
+        "to": "previousChildFocusResult"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#2",
+        "originalName": "stackIn_10_0",
+        "to": "nextChildFocusResult"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#3",
+        "originalName": "stackIn_13_0",
+        "to": "keyFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#4",
+        "originalName": "stackIn_13_1",
+        "to": "keyMessagePrefix"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#5",
+        "originalName": "stackIn_14_2",
+        "to": "eventContextDescription"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#6",
+        "originalName": "decompiledCaughtException",
+        "to": "keyFailure"
+      },
+      {
+        "symbol": "L:s.a(IICLel;)Z#7",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtKeyFailure"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#0",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#1",
+        "originalName": "stackIn_13_0",
+        "to": "hotspotFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#2",
+        "originalName": "stackIn_13_1",
+        "to": "hotspotMessagePrefix"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#3",
+        "originalName": "stackIn_14_2",
+        "to": "widgetDescription"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "hotspotFailure"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#5",
+        "originalName": "var5",
+        "to": "hotspotFailureForContext"
+      },
+      {
+        "symbol": "L:s.a(Lvf;III)V#6",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtHotspotFailure"
+      },
+      {
+        "symbol": "L:sj.b(IB)V#0",
+        "originalName": "var3",
+        "to": "appendGuardRemainder"
+      },
+      {
+        "symbol": "L:sj.b(II)I#0",
+        "originalName": "var3",
+        "to": "candidateCapacity"
+      },
+      {
+        "symbol": "L:sj.b(II)I#1",
+        "originalName": "var4",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:sj.c(II)V#0",
+        "originalName": "var4",
+        "to": "replacementValues"
+      },
+      {
+        "symbol": "L:sj.c(II)V#1",
+        "originalName": "var3",
+        "to": "unusedReplacementAlias"
+      },
+      {
+        "symbol": "L:sk.a(I)Z#0",
+        "originalName": "decompiledCaughtException",
+        "to": "boundaryCheckFailure"
+      },
+      {
+        "symbol": "L:sk.a(I)Z#11",
+        "originalName": "var10",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:sk.a(I)Z#14",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtBoundaryCheckFailure"
+      },
+      {
+        "symbol": "L:sk.a(I)Z#2",
+        "originalName": "var1_ref",
+        "to": "boundaryCheckFailureForContext"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#0",
+        "originalName": "var4",
+        "to": "methodIndex"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#1",
+        "originalName": "var2",
+        "to": "rememberedMethodName"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#10",
+        "originalName": "stackIn_17_1",
+        "to": "lookupMessagePrefix"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#11",
+        "originalName": "stackIn_18_2",
+        "to": "appletDescription"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#12",
+        "originalName": "decompiledCaughtException",
+        "to": "lookupFailure"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#13",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtLookupFailure"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#2",
+        "originalName": "var2_ref",
+        "to": "lookupFailureForContext"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#3",
+        "originalName": "var3",
+        "to": "availableMethods"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#4",
+        "originalName": "var5",
+        "to": "candidateMethod"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#5",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#6",
+        "originalName": "stackIn_5_0",
+        "to": "missingCookieFallbackMethod"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#7",
+        "originalName": "stackIn_11_0",
+        "to": "matchingMethodBeforeReturn"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#8",
+        "originalName": "stackIn_14_0",
+        "to": "unknownNameFallbackMethod"
+      },
+      {
+        "symbol": "L:th.a(Ljava/applet/Applet;I)Lod;#9",
+        "originalName": "stackIn_17_0",
+        "to": "lookupFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:tl.a(IIIIII[IZ)V#0",
+        "originalName": "runtimeException",
+        "to": "rasterCaptureFailure"
+      },
+      {
+        "symbol": "L:ue.<initializer>()V#0",
+        "originalName": "var0",
+        "to": "popupPoolIndex"
+      },
+      {
+        "symbol": "L:v.a(B)V#0",
+        "originalName": "fieldTemp$1",
+        "to": "blockedMembershipCountdownAfterDecrement"
+      },
+      {
+        "symbol": "L:v.a(B)V#1",
+        "originalName": "fieldTemp$0",
+        "to": "allowedMembershipCountdownAfterDecrement"
+      },
+      {
+        "symbol": "L:v.a(B)V#2",
+        "originalName": "fieldTemp$3",
+        "to": "invalidGuardAllowedCountdownAfterDecrement"
+      },
+      {
+        "symbol": "L:v.a(B)V#3",
+        "originalName": "fieldTemp$2",
+        "to": "invalidGuardBlockedCountdownAfterDecrement"
+      },
+      {
+        "symbol": "L:v.b(Z)V#0",
+        "originalName": "var2",
+        "to": "constrainedWidth"
+      },
+      {
+        "symbol": "L:v.b(Z)V#1",
+        "originalName": "var3",
+        "to": "constrainedHeight"
+      },
+      {
+        "symbol": "L:v.b(Z)V#2",
+        "originalName": "var4",
+        "to": "aspectAdjustedWidth"
+      },
+      {
+        "symbol": "L:v.b(Z)V#3",
+        "originalName": "var5",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:vi.<init>(Ljava/lang/String;Lbb;)V#0",
+        "originalName": "runtimeException",
+        "to": "checkboxInitializationFailure"
+      },
+      {
+        "symbol": "L:vi.<init>(Ljava/lang/String;Lbb;Z)V#0",
+        "originalName": "runtimeException",
+        "to": "checkboxInitializationFailure"
+      },
+      {
+        "symbol": "L:vi.<init>(Ljava/lang/String;Ldh;Lbb;)V#0",
+        "originalName": "runtimeException",
+        "to": "checkboxInitializationFailure"
+      },
+      {
+        "symbol": "L:wi.<init>()V#0",
+        "originalName": "var1",
+        "to": "sharedButtonRenderer"
+      },
+      {
+        "symbol": "L:wi.<init>()V#1",
+        "originalName": "var2",
+        "to": "buttonGap"
+      },
+      {
+        "symbol": "L:wi.<init>()V#2",
+        "originalName": "var3",
+        "to": "buttonRowWidth"
+      },
+      {
+        "symbol": "L:wi.<init>()V#3",
+        "originalName": "var4",
+        "to": "halfRowButtonWidth"
+      },
+      {
+        "symbol": "L:wi.<init>()V#4",
+        "originalName": "runtimeException",
+        "to": "panelInitializationFailure"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#0",
+        "originalName": "var7",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#1",
+        "originalName": "stackIn_23_0",
+        "to": "activationFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#2",
+        "originalName": "stackIn_23_1",
+        "to": "activationMessagePrefix"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#3",
+        "originalName": "stackIn_24_2",
+        "to": "buttonDescription"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "activationFailure"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#5",
+        "originalName": "var6",
+        "to": "activationFailureForContext"
+      },
+      {
+        "symbol": "L:wi.a(IBIILhk;)V#6",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtActivationFailure"
+      },
+      {
+        "symbol": "L:wi.a(IIBI)V#0",
+        "originalName": "var6",
+        "to": "widgetScreenX"
+      },
+      {
+        "symbol": "L:wi.a(IIBI)V#1",
+        "originalName": "var7",
+        "to": "widgetScreenY"
+      },
+      {
+        "symbol": "L:wi.a(IIBI)V#2",
+        "originalName": "var5_int",
+        "to": "renderGuardRemainder"
+      },
+      {
+        "symbol": "L:wi.a(IIBI)V#3",
+        "originalName": "runtimeException",
+        "to": "renderFailure"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#0",
+        "originalName": "var5",
+        "to": "keyFailureForContext"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#1",
+        "originalName": "stackIn_8_0",
+        "to": "previousChildFocusResult"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#2",
+        "originalName": "stackIn_13_0",
+        "to": "nextChildFocusResult"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#3",
+        "originalName": "stackIn_19_0",
+        "to": "keyFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#4",
+        "originalName": "stackIn_19_1",
+        "to": "keyMessagePrefix"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#5",
+        "originalName": "stackIn_20_2",
+        "to": "eventContextDescription"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#6",
+        "originalName": "decompiledCaughtException",
+        "to": "keyFailure"
+      },
+      {
+        "symbol": "L:wi.a(IICLel;)Z#7",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtKeyFailure"
+      },
+      {
+        "symbol": "P:he.focusGained(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedFocusEvent"
+      },
+      {
+        "symbol": "P:he.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "param0",
+        "to": "focusEvent"
+      },
+      {
+        "symbol": "P:he.paint(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "unusedGraphics"
+      },
+      {
+        "symbol": "P:he.update(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "unusedGraphics"
+      },
+      {
+        "symbol": "P:ij.a(IBIILhk;)V#0",
+        "originalName": "param0",
+        "to": "buttonX"
+      },
+      {
+        "symbol": "P:ij.a(IBIILhk;)V#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ij.a(IBIILhk;)V#2",
+        "originalName": "param2",
+        "to": "buttonY"
+      },
+      {
+        "symbol": "P:ij.a(IBIILhk;)V#3",
+        "originalName": "param3",
+        "to": "pointerButton"
+      },
+      {
+        "symbol": "P:ij.a(IBIILhk;)V#4",
+        "originalName": "param4",
+        "to": "button"
+      },
+      {
+        "symbol": "P:ja.a(ZLkl;)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ja.a(ZLkl;)V#1",
+        "originalName": "param1",
+        "to": "stream"
+      },
+      {
+        "symbol": "P:nj.<init>(I)V#0",
+        "originalName": "param0",
+        "to": "actionId"
+      },
+      {
+        "symbol": "P:r.a(IBIILhk;)V#0",
+        "originalName": "param0",
+        "to": "buttonX"
+      },
+      {
+        "symbol": "P:r.a(IBIILhk;)V#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:r.a(IBIILhk;)V#2",
+        "originalName": "param2",
+        "to": "buttonY"
+      },
+      {
+        "symbol": "P:r.a(IBIILhk;)V#3",
+        "originalName": "param3",
+        "to": "pointerButton"
+      },
+      {
+        "symbol": "P:r.a(IBIILhk;)V#4",
+        "originalName": "param4",
+        "to": "button"
+      },
+      {
+        "symbol": "P:r.f(I)Z#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:s.a(IBIILhk;)V#0",
+        "originalName": "param0",
+        "to": "buttonX"
+      },
+      {
+        "symbol": "P:s.a(IBIILhk;)V#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:s.a(IBIILhk;)V#2",
+        "originalName": "param2",
+        "to": "buttonY"
+      },
+      {
+        "symbol": "P:s.a(IBIILhk;)V#3",
+        "originalName": "param3",
+        "to": "pointerButton"
+      },
+      {
+        "symbol": "P:s.a(IBIILhk;)V#4",
+        "originalName": "param4",
+        "to": "button"
+      },
+      {
+        "symbol": "P:s.a(IICLel;)Z#0",
+        "originalName": "param0",
+        "to": "keyCode"
+      },
+      {
+        "symbol": "P:s.a(IICLel;)Z#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:s.a(IICLel;)Z#2",
+        "originalName": "param2",
+        "to": "typedCharacter"
+      },
+      {
+        "symbol": "P:s.a(IICLel;)Z#3",
+        "originalName": "param3",
+        "to": "eventContext"
+      },
+      {
+        "symbol": "P:sa.<init>(Ljava/lang/Throwable;Ljava/lang/String;)V#0",
+        "originalName": "param0",
+        "to": "wrappedCause"
+      },
+      {
+        "symbol": "P:sa.<init>(Ljava/lang/Throwable;Ljava/lang/String;)V#1",
+        "originalName": "param1",
+        "to": "contextPath"
+      },
+      {
+        "symbol": "P:sk.a(I)Z#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Lbb;)V#0",
+        "originalName": "param0",
+        "to": "label"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Lbb;)V#1",
+        "originalName": "param1",
+        "to": "listener"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Lbb;Z)V#0",
+        "originalName": "param0",
+        "to": "label"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Lbb;Z)V#1",
+        "originalName": "param1",
+        "to": "listener"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Lbb;Z)V#2",
+        "originalName": "param2",
+        "to": "initiallyActive"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Ldh;Lbb;)V#0",
+        "originalName": "param0",
+        "to": "label"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Ldh;Lbb;)V#1",
+        "originalName": "param1",
+        "to": "initialButtonRenderer"
+      },
+      {
+        "symbol": "P:vi.<init>(Ljava/lang/String;Ldh;Lbb;)V#2",
+        "originalName": "param2",
+        "to": "listener"
+      },
+      {
+        "symbol": "P:wi.a(IBIILhk;)V#0",
+        "originalName": "param0",
+        "to": "buttonX"
+      },
+      {
+        "symbol": "P:wi.a(IBIILhk;)V#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:wi.a(IBIILhk;)V#2",
+        "originalName": "param2",
+        "to": "buttonY"
+      },
+      {
+        "symbol": "P:wi.a(IBIILhk;)V#3",
+        "originalName": "param3",
+        "to": "pointerButton"
+      },
+      {
+        "symbol": "P:wi.a(IBIILhk;)V#4",
+        "originalName": "param4",
+        "to": "button"
+      },
+      {
+        "symbol": "P:wi.a(IICLel;)Z#0",
+        "originalName": "param0",
+        "to": "keyCode"
+      },
+      {
+        "symbol": "P:wi.a(IICLel;)Z#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:wi.a(IICLel;)Z#2",
+        "originalName": "param2",
+        "to": "typedCharacter"
+      },
+      {
+        "symbol": "P:wi.a(IICLel;)Z#3",
+        "originalName": "param3",
+        "to": "eventContext"
+      }
+    ],
+    "remainingCompilerRegionSelectorNames": 0,
+    "remainingOpaqueLocalOrParameterPatternNames": 0,
+    "namingWorkflowCommit": "d7957395c3e870397ac0a830974d140e5b6b7be3"
   }
 }

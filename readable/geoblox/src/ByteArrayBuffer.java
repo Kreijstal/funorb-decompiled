@@ -298,23 +298,23 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     final static void resendByteShortQueries(boolean methodGuard, int packetOpcode) {
-        ByteShortQuery var3 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
+        ByteShortQuery pendingQuery = null;
+        RuntimeException resendFailure = null;
+        RuntimeException resendFailureForContext = null;
         try {
-          var3 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(0));
-          while (var3 != null) {
-            ProgressDialog.writeByteShortQuery(packetOpcode, 534, var3);
-            var3 = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.nextForIteration(1));
+          pendingQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(0));
+          while (pendingQuery != null) {
+            ProgressDialog.writeByteShortQuery(packetOpcode, 534, pendingQuery);
+            pendingQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.nextForIteration(1));
           }
           if (!methodGuard) {
             receivedSocialSettingMiddle = -54;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var2), "qc.PA(" + methodGuard + ',' + packetOpcode + ')');
+        } catch (java.lang.RuntimeException caughtResendFailure) {
+          resendFailure = caughtResendFailure;
+          resendFailureForContext = resendFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) resendFailureForContext), "qc.PA(" + methodGuard + ',' + packetOpcode + ')');
         }
     }
 

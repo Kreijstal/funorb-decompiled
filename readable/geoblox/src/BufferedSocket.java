@@ -209,7 +209,7 @@ final class BufferedSocket implements Runnable {
         try {
             int contiguousWriteLength = 0;
             Object writerMonitor = null;
-            int decompiledRegionSelector0 = 0;
+            int writerActionRoute = 0;
             Throwable caughtWriterThrowable = null;
             IOException ignoredCloseFailure = null;
             Exception workerFailure = null;
@@ -224,7 +224,7 @@ final class BufferedSocket implements Runnable {
                   writerChunkSelection: {
                     if (this.writeReadIndex == this.writeInsertIndex) {
                       if (this.closeRequested) {
-                        decompiledRegionSelector0 = 0;
+                        writerActionRoute = 0;
                         break writerChunkSelection;
                       }
                       try {
@@ -240,10 +240,10 @@ final class BufferedSocket implements Runnable {
                     } else {
                       contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
                     }
-                    decompiledRegionSelector0 = 1;
+                    writerActionRoute = 1;
                   }
                 }
-                if (decompiledRegionSelector0 == 0) {
+                if (writerActionRoute == 0) {
                   try {
                     if (this.inputStream != null) {
                       this.inputStream.close();

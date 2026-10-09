@@ -26,29 +26,29 @@ final class LoginMethod {
     }
 
     final boolean matchesMethodName(int methodGuard, String candidate) {
-        RuntimeException var3 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException methodMatchFailureForContext = null;
+        boolean methodNameMatches = false;
+        RuntimeException methodMatchFailureBeforeDescription = null;
+        StringBuilder methodMatchMessagePrefix = null;
+        String candidateDescription = null;
+        RuntimeException methodMatchFailure = null;
         try {
           if (methodGuard > 107) {
-            stackIn_4_0 = this.methodName.equals(candidate);
-            return stackIn_4_0;
+            methodNameMatches = this.methodName.equals(candidate);
+            return methodNameMatches;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("od.E(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException caughtMethodMatchFailure) {
+          methodMatchFailure = caughtMethodMatchFailure;
+          methodMatchFailureForContext = methodMatchFailure;
+          methodMatchFailureBeforeDescription = methodMatchFailureForContext;
+          methodMatchMessagePrefix = new StringBuilder().append("od.E(").append(methodGuard).append(',');
           if (candidate == null) {
-            stackIn_8_2 = "null";
+            candidateDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) methodMatchFailureBeforeDescription), ((StringBuilder) (Object) methodMatchMessagePrefix).append(candidateDescription).append(')').toString());
         }
     }
 
@@ -63,11 +63,11 @@ final class LoginMethod {
         try {
             IntArrayQuery.writeCookieValue((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
             if (methodGuard != 0) {
-                java.applet.Applet var4 = (java.applet.Applet) null;
+                java.applet.Applet unusedNullAppletForInvalidGuard = (java.applet.Applet) null;
                 this.rememberMethod((java.applet.Applet) null, -71);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "od.F(" + (applet != null ? "{...}" : "null") + ',' + methodGuard + ')');
+        } catch (RuntimeException cookieWriteFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieWriteFailure), "od.F(" + (applet != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -149,8 +149,8 @@ final class LoginMethod {
     LoginMethod(String methodName) {
         try {
             this.methodName = methodName;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "od.<init>(" + (methodName != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException methodInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) methodInitializationFailure), "od.<init>(" + (methodName != null ? "{...}" : "null") + ')');
         }
     }
 

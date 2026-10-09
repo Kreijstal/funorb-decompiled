@@ -179,14 +179,14 @@ final class PcmResampler {
     }
 
     static {
-        int var0 = 0;
+        int popupPoolIndex = 0;
         createAgeText = "Age:";
         fullscreenBeforeAcceptText = "Click";
         highscoreFriendTipText = "Friends can be added in multiplayer<nbsp>games";
         createNewsOptInText = "Please send me news and updates (I can unsubscribe at any time)";
         pointerYSnapshot = 0;
         availableScorePopups = new IntrusiveDeque();
-        for (var0 = 0; var0 < 20; var0++) {
+        for (popupPoolIndex = 0; popupPoolIndex < 20; popupPoolIndex++) {
             availableScorePopups.addLast(-83, new ScorePopup());
         }
         tooltipShowDurationTicks = 250;

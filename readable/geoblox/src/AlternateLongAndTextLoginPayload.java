@@ -11,50 +11,50 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
     }
 
     final static LoginMethod readRememberedMethod(java.applet.Applet applet, int methodGuard) {
-        int var4 = 0;
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        LoginMethod[] var3 = null;
-        LoginMethod var5 = null;
-        int var6 = 0;
-        LoginMethod stackIn_5_0 = null;
-        LoginMethod stackIn_11_0 = null;
-        LoginMethod stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = Geoblox.clientControlFlowFlag;
+        int methodIndex = 0;
+        String rememberedMethodName = null;
+        RuntimeException lookupFailureForContext = null;
+        LoginMethod[] availableMethods = null;
+        LoginMethod candidateMethod = null;
+        int clientControlFlowSnapshot = 0;
+        LoginMethod missingCookieFallbackMethod = null;
+        LoginMethod matchingMethodBeforeReturn = null;
+        LoginMethod unknownNameFallbackMethod = null;
+        RuntimeException lookupFailureBeforeDescription = null;
+        StringBuilder lookupMessagePrefix = null;
+        String appletDescription = null;
+        RuntimeException lookupFailure = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 200) {
             AlternateLongAndTextLoginPayload.releaseStaticReferences((byte) 21);
           }
-          var2 = AchievementQuery.readCookieValue("jagex-last-login-method", applet, -114);
-          if (var2 == null) {
-            stackIn_5_0 = ValidationIconWidget.emptyNameLoginMethod;
-            return stackIn_5_0;
+          rememberedMethodName = AchievementQuery.readCookieValue("jagex-last-login-method", applet, -114);
+          if (rememberedMethodName == null) {
+            missingCookieFallbackMethod = ValidationIconWidget.emptyNameLoginMethod;
+            return missingCookieFallbackMethod;
           }
-          var3 = TextValidationSupport.listLoginMethods(false);
-          for (var4 = 0; var3.length > var4; var4++) {
-            var5 = var3[var4];
-            if (var5.matchesMethodName(115, var2)) {
-              stackIn_11_0 = var5;
-              return stackIn_11_0;
+          availableMethods = TextValidationSupport.listLoginMethods(false);
+          for (methodIndex = 0; availableMethods.length > methodIndex; methodIndex++) {
+            candidateMethod = availableMethods[methodIndex];
+            if (candidateMethod.matchesMethodName(115, rememberedMethodName)) {
+              matchingMethodBeforeReturn = candidateMethod;
+              return matchingMethodBeforeReturn;
             }
           }
-          stackIn_14_0 = ValidationIconWidget.emptyNameLoginMethod;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_17_0 = var2_ref;
-          stackIn_17_1 = new StringBuilder().append("th.H(");
+          unknownNameFallbackMethod = ValidationIconWidget.emptyNameLoginMethod;
+          return unknownNameFallbackMethod;
+        } catch (java.lang.RuntimeException caughtLookupFailure) {
+          lookupFailure = caughtLookupFailure;
+          lookupFailureForContext = lookupFailure;
+          lookupFailureBeforeDescription = lookupFailureForContext;
+          lookupMessagePrefix = new StringBuilder().append("th.H(");
           if (applet == null) {
-            stackIn_18_2 = "null";
+            appletDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            appletDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(appletDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 

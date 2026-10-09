@@ -97,8 +97,8 @@ final class TrackedPcmStream extends IntrusiveNode {
             this.initialVolume = stream.getTargetVolume();
             this.lifetimeNode = lifetimeNode;
             this.stream.setVolume(this.initialVolume * SocialListEntry.soundEffectVolume / 80);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "je.<init>(" + (stream != null ? "{...}" : "null") + ',' + (lifetimeNode != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException trackedStreamInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) trackedStreamInitializationFailure), "je.<init>(" + (stream != null ? "{...}" : "null") + ',' + (lifetimeNode != null ? "{...}" : "null") + ')');
         }
     }
 

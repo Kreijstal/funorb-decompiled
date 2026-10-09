@@ -43,25 +43,25 @@ final class GrowableIntList {
     }
 
     private final int capacityFor(int index, int methodGuard) {
-        int var3;
-        int var4;
-        var4 = Geoblox.clientControlFlowFlag;
+        int candidateCapacity;
+        int clientControlFlowSnapshot;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != 1) {
           return 80;
         }
-        var3 = this.values.length;
-        while (index >= var3) {
+        candidateCapacity = this.values.length;
+        while (index >= candidateCapacity) {
           if (!this.multiplicativeGrowth) {
-            var3 = var3 + this.growthFactor;
+            candidateCapacity = candidateCapacity + this.growthFactor;
             continue;
           }
-          if (0 == var3) {
-            var3 = 1;
+          if (0 == candidateCapacity) {
+            candidateCapacity = 1;
             continue;
           }
-          var3 = var3 * this.growthFactor;
+          candidateCapacity = candidateCapacity * this.growthFactor;
         }
-        return var3;
+        return candidateCapacity;
     }
 
     final int get(int index, byte methodGuard) {
@@ -100,21 +100,21 @@ final class GrowableIntList {
     }
 
     private final void ensureCapacity(int index, int methodGuard) {
-        int[] var4 = new int[this.capacityFor(index, 1)];
-        int[] var3 = var4;
+        int[] replacementValues = new int[this.capacityFor(index, 1)];
+        int[] unusedReplacementAlias = replacementValues;
         if (methodGuard == 25177) {
-            ArrayOperations.copyInts(this.values, 0, var4, 0, this.values.length);
-            this.values = var4;
+            ArrayOperations.copyInts(this.values, 0, replacementValues, 0, this.values.length);
+            this.values = replacementValues;
             return;
         }
         this.values = (int[]) null;
-        ArrayOperations.copyInts(this.values, 0, var4, 0, this.values.length);
-        this.values = var4;
+        ArrayOperations.copyInts(this.values, 0, replacementValues, 0, this.values.length);
+        this.values = replacementValues;
     }
 
     final void add(int value, byte methodGuard) {
         this.set(value, 1, 1 + this.lastIndex);
-        int var3 = -48 % ((-39 - methodGuard) / 50);
+        int appendGuardRemainder = -48 % ((-39 - methodGuard) / 50);
     }
 
     final static void createClientCookieMarker(java.applet.Applet applet, byte methodGuard) {

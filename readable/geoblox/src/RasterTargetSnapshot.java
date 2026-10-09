@@ -90,8 +90,8 @@ final class RasterTargetSnapshot extends IntrusiveNode {
             }
             this.framebufferHeight = framebufferHeight;
             this.stride = stride;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "tl.C(" + clipLeft + ',' + clipRight + ',' + clipBottom + ',' + stride + ',' + framebufferHeight + ',' + clipTop + ',' + (pixels != null ? "{...}" : "null") + ',' + methodGuard + ')');
+        } catch (RuntimeException rasterCaptureFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rasterCaptureFailure), "tl.C(" + clipLeft + ',' + clipRight + ',' + clipBottom + ',' + stride + ',' + framebufferHeight + ',' + clipTop + ',' + (pixels != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 

@@ -29,8 +29,8 @@ class LongAndTextLoginPayload extends LoginPayload {
             if (methodGuard < 107) {
                 extendedTextCharacters = (char[]) null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "lf.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException payloadWriteFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "lf.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,8 +38,8 @@ class LongAndTextLoginPayload extends LoginPayload {
         try {
             this.longValue = longValue;
             this.base38Text = base38Text;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "lf.<init>(" + longValue + ',' + (base38Text != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException payloadInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "lf.<init>(" + longValue + ',' + (base38Text != null ? "{...}" : "null") + ')');
         }
     }
 

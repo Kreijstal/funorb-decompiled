@@ -7,18 +7,18 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     static java.awt.Frame standaloneFrameReference;
     java.awt.Frame fullscreenFrame;
 
-    public final void focusLost(java.awt.event.FocusEvent param0) {
+    public final void focusLost(java.awt.event.FocusEvent focusEvent) {
         try {
             this.focusLost = true;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "he.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException focusLossFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusLossFailure), "he.focusLost(" + (focusEvent != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void paint(java.awt.Graphics param0) {
+    public final void paint(java.awt.Graphics unusedGraphics) {
     }
 
-    public final void focusGained(java.awt.event.FocusEvent param0) {
+    public final void focusGained(java.awt.event.FocusEvent unusedFocusEvent) {
     }
 
     final void exitFullscreen(int methodGuard, PlatformTaskDispatcher taskDispatcher) {
@@ -27,8 +27,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (methodGuard != 0) {
                 standaloneFrameReference = (java.awt.Frame) null;
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "he.B(" + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException fullscreenExitFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fullscreenExitFailure), "he.B(" + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -44,7 +44,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     FullscreenFocusCanvas() {
     }
 
-    public final void update(java.awt.Graphics param0) {
+    public final void update(java.awt.Graphics unusedGraphics) {
     }
 
     static {

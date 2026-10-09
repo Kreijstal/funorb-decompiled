@@ -16,12 +16,12 @@ final class CheckboxWidget extends ButtonWidget {
         createNewsOptInTooltipText = null;
     }
 
-    private CheckboxWidget(String param0, WidgetListener param1) {
-        this(param0, DialRenderer.accountUiTheme.buttonRenderer, param1);
+    private CheckboxWidget(String label, WidgetListener listener) {
+        this(label, DialRenderer.accountUiTheme.buttonRenderer, listener);
         try {
             this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException checkboxInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -30,12 +30,12 @@ final class CheckboxWidget extends ButtonWidget {
         super.activateButton(buttonY, methodGuard, buttonX, pointerButton);
     }
 
-    private CheckboxWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
-        super(param0, param1, param2);
+    private CheckboxWidget(String label, WidgetRenderer initialButtonRenderer, WidgetListener listener) {
+        super(label, initialButtonRenderer, listener);
         try {
             this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException checkboxInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (initialButtonRenderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,12 +101,12 @@ final class CheckboxWidget extends ButtonWidget {
         }
     }
 
-    CheckboxWidget(String param0, WidgetListener param1, boolean param2) {
-        this(param0, param1);
+    CheckboxWidget(String label, WidgetListener listener, boolean initiallyActive) {
+        this(label, listener);
         try {
-            this.active = param2 ? true : false;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            this.active = initiallyActive ? true : false;
+        } catch (RuntimeException checkboxInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + initiallyActive + ')');
         }
     }
 

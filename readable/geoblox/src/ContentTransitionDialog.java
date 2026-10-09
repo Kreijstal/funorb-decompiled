@@ -172,35 +172,35 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     }
 
     final static ScoreSubmission createAndSubmitScore(int firstContextValue, int firstShortValue, int thirdContextValue, int methodGuard, int[] scores, int secondContextValue, int secondShortValue, int packetOpcode, int fourthContextValue) {
-        ScoreSubmission var9 = null;
-        RuntimeException var9_ref = null;
-        ScoreSubmission stackIn_2_0 = null;
-        ScoreSubmission stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        ScoreSubmission createdSubmission = null;
+        RuntimeException submissionFailureForContext = null;
+        ScoreSubmission invalidGuardNullSubmission = null;
+        ScoreSubmission submissionBeforeReturn = null;
+        RuntimeException submissionFailureBeforeDescription = null;
+        StringBuilder submissionMessagePrefix = null;
+        String scoresDescription = null;
+        RuntimeException submissionFailure = null;
         try {
-          var9 = new ScoreSubmission(firstShortValue, secondShortValue, firstContextValue, secondContextValue, thirdContextValue, fourthContextValue, scores);
-          TriangleMesh.pendingScoreSubmissions.addLast(methodGuard ^ -25202, var9);
-          ArchiveIndex.writeScoreSubmission(var9, packetOpcode, methodGuard ^ -25169);
+          createdSubmission = new ScoreSubmission(firstShortValue, secondShortValue, firstContextValue, secondContextValue, thirdContextValue, fourthContextValue, scores);
+          TriangleMesh.pendingScoreSubmissions.addLast(methodGuard ^ -25202, createdSubmission);
+          ArchiveIndex.writeScoreSubmission(createdSubmission, packetOpcode, methodGuard ^ -25169);
           if (methodGuard == 25134) {
-            stackIn_4_0 = var9;
-            return stackIn_4_0;
+            submissionBeforeReturn = createdSubmission;
+            return submissionBeforeReturn;
           }
-          stackIn_2_0 = (ScoreSubmission) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9_ref = decompiledCaughtException;
-          stackIn_7_0 = var9_ref;
-          stackIn_7_1 = new StringBuilder().append("qf.UB(").append(firstContextValue).append(',').append(firstShortValue).append(',').append(thirdContextValue).append(',').append(methodGuard).append(',');
+          invalidGuardNullSubmission = (ScoreSubmission) null;
+          return invalidGuardNullSubmission;
+        } catch (java.lang.RuntimeException caughtSubmissionFailure) {
+          submissionFailure = caughtSubmissionFailure;
+          submissionFailureForContext = submissionFailure;
+          submissionFailureBeforeDescription = submissionFailureForContext;
+          submissionMessagePrefix = new StringBuilder().append("qf.UB(").append(firstContextValue).append(',').append(firstShortValue).append(',').append(thirdContextValue).append(',').append(methodGuard).append(',');
           if (scores == null) {
-            stackIn_8_2 = "null";
+            scoresDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            scoresDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(secondContextValue).append(',').append(secondShortValue).append(',').append(packetOpcode).append(',').append(fourthContextValue).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailureBeforeDescription), ((StringBuilder) (Object) submissionMessagePrefix).append(scoresDescription).append(',').append(secondContextValue).append(',').append(secondShortValue).append(',').append(packetOpcode).append(',').append(fourthContextValue).append(')').toString());
         }
     }
 

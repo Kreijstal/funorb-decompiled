@@ -9,24 +9,24 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
 
     public AccountWelcomePanel() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        SpriteButtonRenderer var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
+        SpriteButtonRenderer sharedButtonRenderer = null;
+        int buttonGap = 0;
+        int buttonRowWidth = 0;
+        int halfRowButtonWidth = 0;
         try {
             this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) null);
             this.goBackButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
             this.justPlayButton = new ButtonWidget(ClientRenderingState.justPlayText, (WidgetListener) null);
-            var1 = new SpriteButtonRenderer();
-            this.createAccountButton.renderer = (WidgetRenderer) ((Object) var1);
-            this.goBackButton.renderer = (WidgetRenderer) ((Object) var1);
-            this.justPlayButton.renderer = (WidgetRenderer) ((Object) var1);
-            var2 = 4;
-            var3 = 326;
-            var4 = var3 - var2 >> 1;
-            this.goBackButton.setWidgetBounds(30, var4, (byte) -38, -48 + (this.widgetHeight - var2), this.widgetWidth - var3 >> 1);
-            this.justPlayButton.setWidgetBounds(30, var4, (byte) -77, -var2 - 48 + this.widgetHeight, var2 + ((-var3 + this.widgetWidth >> 1) + var4));
-            this.createAccountButton.setWidgetBounds(30, var3, (byte) -73, this.widgetHeight - (78 + 2 * var2), -var3 + this.widgetWidth >> 1);
+            sharedButtonRenderer = new SpriteButtonRenderer();
+            this.createAccountButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+            this.goBackButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+            this.justPlayButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+            buttonGap = 4;
+            buttonRowWidth = 326;
+            halfRowButtonWidth = buttonRowWidth - buttonGap >> 1;
+            this.goBackButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -38, -48 + (this.widgetHeight - buttonGap), this.widgetWidth - buttonRowWidth >> 1);
+            this.justPlayButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -77, -buttonGap - 48 + this.widgetHeight, buttonGap + ((-buttonRowWidth + this.widgetWidth >> 1) + halfRowButtonWidth));
+            this.createAccountButton.setWidgetBounds(30, buttonRowWidth, (byte) -73, this.widgetHeight - (78 + 2 * buttonGap), -buttonRowWidth + this.widgetWidth >> 1);
             this.goBackButton.listener = (WidgetListener) (this);
             this.createAccountButton.listener = (WidgetListener) (this);
             this.createAccountButton.hoverText = SessionBootstrapSupport.loginCreateTooltipText;
@@ -35,102 +35,102 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             this.addChild((byte) -88, this.goBackButton);
             this.addChild((byte) -102, this.createAccountButton);
             this.addChild((byte) -104, this.justPlayButton);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.<init>()");
+        } catch (RuntimeException panelInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "wi.<init>()");
         }
     }
 
-    final boolean handleKeyInput(int param0, int param1, char param2, UiWidget param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_8_0 = false;
-        boolean stackIn_13_0 = false;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean handleKeyInput(int keyCode, int methodGuard, char typedCharacter, UiWidget eventContext) {
+        RuntimeException keyFailureForContext = null;
+        boolean previousChildFocusResult = false;
+        boolean nextChildFocusResult = false;
+        RuntimeException keyFailureBeforeDescription = null;
+        StringBuilder keyMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException keyFailure = null;
         try {
-          if (super.handleKeyInput(param0, param1 + 0, param2, param3)) {
+          if (super.handleKeyInput(keyCode, methodGuard + 0, typedCharacter, eventContext)) {
             return true;
           }
-          if (param1 != 13) {
+          if (methodGuard != 13) {
             loadingGraphicsText = (String) null;
           }
-          if (param0 == 98) {
-            stackIn_8_0 = this.requestPreviousChildFocus(7305, param3);
-            return stackIn_8_0;
+          if (keyCode == 98) {
+            previousChildFocusResult = this.requestPreviousChildFocus(7305, eventContext);
+            return previousChildFocusResult;
           }
-          if (99 == param0) {
-            stackIn_13_0 = this.requestNextChildFocus(param3, -119);
-            return stackIn_13_0;
+          if (99 == keyCode) {
+            nextChildFocusResult = this.requestNextChildFocus(eventContext, -119);
+            return nextChildFocusResult;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("wi.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_20_2 = "null";
+        } catch (java.lang.RuntimeException caughtKeyFailure) {
+          keyFailure = caughtKeyFailure;
+          keyFailureForContext = keyFailure;
+          keyFailureBeforeDescription = keyFailureForContext;
+          keyMessagePrefix = new StringBuilder().append("wi.I(").append(keyCode).append(',').append(methodGuard).append(',').append(typedCharacter).append(',');
+          if (eventContext == null) {
+            eventContextDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) keyFailureBeforeDescription), ((StringBuilder) (Object) keyMessagePrefix).append(eventContextDescription).append(')').toString());
         }
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var6 = 0;
-        int var7 = 0;
+        int widgetScreenX = 0;
+        int widgetScreenY = 0;
         try {
-            int var5_int = 90 % ((1 - methodGuard) / 43);
-            var6 = parentX + this.widgetX;
-            var7 = parentY + this.widgetY;
-            DialogLayer.sharedUiFont.drawParagraph(ArchiveNetworkClient.createWelcomeText, var6 + 20, 20 + var7, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
+            int renderGuardRemainder = 90 % ((1 - methodGuard) / 43);
+            widgetScreenX = parentX + this.widgetX;
+            widgetScreenY = parentY + this.widgetY;
+            DialogLayer.sharedUiFont.drawParagraph(ArchiveNetworkClient.createWelcomeText, widgetScreenX + 20, 20 + widgetScreenY, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
             super.renderWidget(parentX, parentY, (byte) 63, renderPass);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
+        } catch (RuntimeException renderFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailure), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
         }
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        int var7 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = Geoblox.clientControlFlowFlag;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        int clientControlFlowSnapshot = 0;
+        RuntimeException activationFailureBeforeDescription = null;
+        StringBuilder activationMessagePrefix = null;
+        String buttonDescription = null;
+        RuntimeException activationFailure = null;
+        RuntimeException activationFailureForContext = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          if (param1 != -20) {
+          if (methodGuard != -20) {
             this.justPlayButton = (ButtonWidget) null;
           }
-          if (this.goBackButton == param4) {
-            DebouncedValidationProvider.showEmptyLoginForm(param1 ^ -24121);
-            if (var7 == 0) {
+          if (this.goBackButton == button) {
+            DebouncedValidationProvider.showEmptyLoginForm(methodGuard ^ -24121);
+            if (clientControlFlowSnapshot == 0) {
               return;
             }
           }
-          if (this.createAccountButton == param4) {
+          if (this.createAccountButton == button) {
             MultiHandleSliderRenderer.openAccountCreationForm((byte) 101);
-            if (var7 == 0) {
+            if (clientControlFlowSnapshot == 0) {
               return;
             }
           }
-          if (this.justPlayButton == param4) {
-            ButtonWidget.requestJustPlay(param1 + 103);
+          if (this.justPlayButton == button) {
+            ButtonWidget.requestJustPlay(methodGuard + 103);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_23_0 = var6;
-          stackIn_23_1 = new StringBuilder().append("wi.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_24_2 = "null";
+        } catch (java.lang.RuntimeException caughtActivationFailure) {
+          activationFailure = caughtActivationFailure;
+          activationFailureForContext = activationFailure;
+          activationFailureBeforeDescription = activationFailureForContext;
+          activationMessagePrefix = new StringBuilder().append("wi.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            buttonDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            buttonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailureBeforeDescription), ((StringBuilder) (Object) activationMessagePrefix).append(buttonDescription).append(')').toString());
         }
     }
 

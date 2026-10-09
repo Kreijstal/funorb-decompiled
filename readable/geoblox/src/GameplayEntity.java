@@ -563,16 +563,16 @@ final class GameplayEntity extends DualLinkNode {
         this.resetEntityAnimation(103);
     }
 
-    final static void registerAudioStream(boolean param0, PcmSampleStream param1) {
+    final static void registerAudioStream(boolean methodGuard, PcmSampleStream stream) {
         try {
-            PrefixCodeDecoder.trackedSoundEffectStreams.addLast(-74, new TrackedPcmStream(param1, param1));
-            WhirlpoolHash.gameSoundMixer.addChildStream(param1);
-            if (param0) {
-                PcmSampleStream var3 = (PcmSampleStream) null;
+            PrefixCodeDecoder.trackedSoundEffectStreams.addLast(-74, new TrackedPcmStream(stream, stream));
+            WhirlpoolHash.gameSoundMixer.addChildStream(stream);
+            if (methodGuard) {
+                PcmSampleStream unusedNullStreamForGuardPath = (PcmSampleStream) null;
                 GameplayEntity.registerAudioStream(false, (PcmSampleStream) null);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException audioRegistrationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) audioRegistrationFailure), "ja.FA(" + methodGuard + ',' + (stream != null ? "{...}" : "null") + ')');
         }
     }
 

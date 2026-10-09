@@ -27,20 +27,20 @@ final class ScoreSubmission extends IntrusiveNode {
     }
 
     ScoreSubmission(int firstShortValue, int secondShortValue, int firstContextValue, int secondContextValue, int thirdContextValue, int fourthContextValue, int[] scores) {
-        int fieldTemp$0 = 0;
+        int submissionIdBeforeIncrement = 0;
         try {
             this.thirdContextValue = thirdContextValue;
-            fieldTemp$0 = EndingAnimationSupport.nextScoreSubmissionId;
+            submissionIdBeforeIncrement = EndingAnimationSupport.nextScoreSubmissionId;
             EndingAnimationSupport.nextScoreSubmissionId = EndingAnimationSupport.nextScoreSubmissionId + 1;
-            this.submissionId = 65535 & fieldTemp$0;
+            this.submissionId = 65535 & submissionIdBeforeIncrement;
             this.secondContextValue = secondContextValue;
             this.fourthContextValue = fourthContextValue;
             this.firstContextValue = firstContextValue;
             this.scores = scores;
             this.secondShortValue = secondShortValue;
             this.firstShortValue = firstShortValue;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ai.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException submissionInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionInitializationFailure), "ai.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
         }
     }
 

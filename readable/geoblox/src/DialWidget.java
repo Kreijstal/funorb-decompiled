@@ -15,21 +15,21 @@ final class DialWidget extends ButtonWidget {
     int radius;
 
     final static HighscoreQuery getOrRequestHighscores(int queryId, int valuesPerEntry, int methodGuard, int entryLimit, int packetOpcode) {
-        int var6 = Geoblox.clientControlFlowFlag;
-        HighscoreQuery var5 = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
-        while (var5 != null) {
-            if (~var5.queryId == ~queryId) {
-                return var5;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        HighscoreQuery existingOrCreatedQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
+        while (existingOrCreatedQuery != null) {
+            if (~existingOrCreatedQuery.queryId == ~queryId) {
+                return existingOrCreatedQuery;
             }
-            var5 = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
+            existingOrCreatedQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
         }
-        var5 = new HighscoreQuery();
-        var5.entryLimit = entryLimit;
-        var5.valuesPerEntry = valuesPerEntry;
-        var5.queryId = queryId;
-        ResourceArchive.pendingHighscoreQueries.addLast(-71, var5);
-        DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, methodGuard + 5, var5);
-        return var5;
+        existingOrCreatedQuery = new HighscoreQuery();
+        existingOrCreatedQuery.entryLimit = entryLimit;
+        existingOrCreatedQuery.valuesPerEntry = valuesPerEntry;
+        existingOrCreatedQuery.queryId = queryId;
+        ResourceArchive.pendingHighscoreQueries.addLast(-71, existingOrCreatedQuery);
+        DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, methodGuard + 5, existingOrCreatedQuery);
+        return existingOrCreatedQuery;
     }
 
     public static void releaseStaticReferences(int methodGuard) {
@@ -43,33 +43,33 @@ final class DialWidget extends ButtonWidget {
     }
 
     final boolean handlePointerPress(int parentY, int methodGuard, int parentX, int pointerButton, int pointerX, int pointerY, UiWidget eventContext) {
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        int var9 = 0;
-        double var10 = 0.0;
-        int var12 = 0;
-        var12 = Geoblox.clientControlFlowFlag;
+        RuntimeException pointerFailureBeforeDescription = null;
+        StringBuilder pointerMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException pointerFailure = null;
+        int guardRemainderOrPointerOffsetX = 0;
+        RuntimeException pointerFailureForContext = null;
+        int pointerOffsetY = 0;
+        double adjustedPointerAngleRadians = 0.0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!super.handlePointerPress(parentY, -52, parentX, pointerButton, pointerX, pointerY, eventContext)) {
-            var8_int = 35 % ((-3 - methodGuard) / 38);
+            guardRemainderOrPointerOffsetX = 35 % ((-3 - methodGuard) / 38);
             return false;
           }
-          var8_int = -this.centerOffsetX - (this.widgetX + (parentX - pointerX));
-          var9 = pointerY - (this.widgetY + parentY + this.centerOffsetY);
-          if (var8_int * var8_int + var9 * var9 < this.radius * this.radius) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - TextInputValidator.dialReferenceAngleRadians;
-            if (!(var10 < 0.0)) {
-              if (0.0 < var10) {
-                var10 = var10 + 3.141592653589793 / (double)this.stepCount;
+          guardRemainderOrPointerOffsetX = -this.centerOffsetX - (this.widgetX + (parentX - pointerX));
+          pointerOffsetY = pointerY - (this.widgetY + parentY + this.centerOffsetY);
+          if (guardRemainderOrPointerOffsetX * guardRemainderOrPointerOffsetX + pointerOffsetY * pointerOffsetY < this.radius * this.radius) {
+            adjustedPointerAngleRadians = Math.atan2((double)pointerOffsetY, (double)guardRemainderOrPointerOffsetX) - TextInputValidator.dialReferenceAngleRadians;
+            if (!(adjustedPointerAngleRadians < 0.0)) {
+              if (0.0 < adjustedPointerAngleRadians) {
+                adjustedPointerAngleRadians = adjustedPointerAngleRadians + 3.141592653589793 / (double)this.stepCount;
               }
             } else {
-              var10 = var10 - 3.141592653589793 / (double)this.stepCount;
+              adjustedPointerAngleRadians = adjustedPointerAngleRadians - 3.141592653589793 / (double)this.stepCount;
             }
-            this.selectedStep = (int)(var10 * (double)this.stepCount / 6.283185307179586);
+            this.selectedStep = (int)(adjustedPointerAngleRadians * (double)this.stepCount / 6.283185307179586);
             while (this.selectedStep >= this.stepCount) {
               this.selectedStep = this.selectedStep - this.stepCount;
             }
@@ -78,17 +78,17 @@ final class DialWidget extends ButtonWidget {
             }
           }
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_19_0 = var8;
-          stackIn_19_1 = new StringBuilder().append("qb.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
+        } catch (java.lang.RuntimeException caughtPointerFailure) {
+          pointerFailure = caughtPointerFailure;
+          pointerFailureForContext = pointerFailure;
+          pointerFailureBeforeDescription = pointerFailureForContext;
+          pointerMessagePrefix = new StringBuilder().append("qb.D(").append(parentY).append(',').append(methodGuard).append(',').append(parentX).append(',').append(pointerButton).append(',').append(pointerX).append(',').append(pointerY).append(',');
           if (eventContext == null) {
-            stackIn_20_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerFailureBeforeDescription), ((StringBuilder) (Object) pointerMessagePrefix).append(eventContextDescription).append(')').toString());
         }
     }
 

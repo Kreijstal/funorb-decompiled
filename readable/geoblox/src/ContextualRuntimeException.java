@@ -147,9 +147,9 @@ final class ContextualRuntimeException extends RuntimeException {
         }
     }
 
-    ContextualRuntimeException(Throwable param0, String param1) {
-        this.contextPath = param1;
-        this.wrappedCause = param0;
+    ContextualRuntimeException(Throwable wrappedCause, String contextPath) {
+        this.contextPath = contextPath;
+        this.wrappedCause = wrappedCause;
     }
 
     static {

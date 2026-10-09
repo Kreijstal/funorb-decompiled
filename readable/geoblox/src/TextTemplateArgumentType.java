@@ -161,17 +161,17 @@ final class TextTemplateArgumentType {
     }
 
     static {
-        int var0 = 0;
+        int soundThemeEntryIndex = 0;
         cancelText = "Cancel";
         gameSoundThemeIds = new int[33];
-        for (var0 = 0; var0 < 3; var0++) {
-            gameSoundThemeIds[var0 + 10] = 4;
-            gameSoundThemeIds[13 + var0] = 3;
-            gameSoundThemeIds[7 + var0] = 1;
-            gameSoundThemeIds[var0 + 1] = 0;
-            gameSoundThemeIds[var0 + 4] = 6;
-            gameSoundThemeIds[16 + var0] = 5;
-            gameSoundThemeIds[19 + var0] = 2;
+        for (soundThemeEntryIndex = 0; soundThemeEntryIndex < 3; soundThemeEntryIndex++) {
+            gameSoundThemeIds[soundThemeEntryIndex + 10] = 4;
+            gameSoundThemeIds[13 + soundThemeEntryIndex] = 3;
+            gameSoundThemeIds[7 + soundThemeEntryIndex] = 1;
+            gameSoundThemeIds[soundThemeEntryIndex + 1] = 0;
+            gameSoundThemeIds[soundThemeEntryIndex + 4] = 6;
+            gameSoundThemeIds[16 + soundThemeEntryIndex] = 5;
+            gameSoundThemeIds[19 + soundThemeEntryIndex] = 2;
         }
     }
 }
