@@ -5,7 +5,45 @@ The current export has 20,044 guarded naming rules: 302 classes, 2,064 fields,
 compile, comparing 138,040 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current renderer direction and clipping names (pass 234)
+## Current patch, envelope and filter names (pass 235)
+
+79 guarded local names now describe audio roles in InstrumentPatch, MidiPcmStream
+and SynthesizedSoundInstrument. Patch decoding distinguishes pitch-byte
+accumulators, independent sample/group/pan/envelope/volume run cursors and values,
+envelope time/value bytes, Q6 volume interpolation and clamped pan curves.
+MIDI distinguishes volume/release segments, vibrato depth and computed sample step.
+Synthesis distinguishes forward/feedback coefficient loops and noise/sine tables.
+Unused snapshots and mixed curve-stage roles remain explicitly named and intact.
+
+All 53 LiteralPhase names in these three owners are replaced; 214 remain across
+the export. Only 451 bound identifier occurrences change. All 19,965 unaffected
+complete rules and all 20,351 dictionary identities survive unchanged. Source,
+compiler, naming, workflow, stubs and historical source/native proof pins stay fixed.
+
+Validation: `node readable/build-geoblox-rules.mjs --check`,
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass.
+All 303 sources compile, compare 138,040 bindings and 388 override pairs, reproduce
+and reverse byte-for-byte. The rule-builder suite passes 13 groups. Existing
+result-helper and scene probes match 14 and 10 native/raw/readable trace groups,
+including 1,759 instrument-patch and 134 synthesized-sound cases. Their original
+independent-oracle/trace-only distinctions and coverage limits stay unchanged;
+actual sound assets/devices and whole-game behavior remain unverified.
+
+Two diagnostic findings guide further generic reconstruction. A second call to
+the existing literal-initialized lifetime helper on the current readable patch
+constructor exposes eight additional locals/nine declarations; those bodies are
+not yet published or runtime-certified. Separately, the flow analyzer's expression
+switch has no NewArrayExpression case: a local read in an allocation dimension
+makes that candidate refuse analysis. That explains the retained
+instrument-envelope index/curve-point-count family. These need generic, tested
+compiler work rather than game-specific body rewrites. Five large framed methods
+and 41 unknown field purposes still remain.
+
+The tracked decompiler-source tar SHA-256 remains
+`6fa9e00942517d37f35330c93ebbbd3ed421ef9815ee54550cfdaea28734b424`.
+
+## Previous renderer direction and clipping names (pass 234)
 
 277 guarded local names now expose renderer roles in Sprite, ArgbSprite,
 IndexedSprite and SpriteState. Nearest rotation's nine source-sampling directions
@@ -5030,16 +5068,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/dda83356dbea82ae699a920af7772d7f780c5917/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/9d6cd0583010a8fbe8519c7973ed8d78a3100629/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/dda83356dbea82ae699a920af7772d7f780c5917/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/9d6cd0583010a8fbe8519c7973ed8d78a3100629/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `dda83356dbea82ae699a920af7772d7f780c5917`; the
-manifest SHA-256 is `b73c106d2b9ccb7bfa064523975e0fd028b8ff4dd765a6308772400a6acca882`.
+The current Deko workflow/manifest commit is `9d6cd0583010a8fbe8519c7973ed8d78a3100629`; the
+manifest SHA-256 is `fead868c0470b87dd66593f9614e960e246362a95a05b002449f6cecbac5534f`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 

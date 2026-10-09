@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/dda83356dbea82ae699a920af7772d7f780c5917/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9d6cd0583010a8fbe8519c7973ed8d78a3100629/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 234)
+## Current readability (pass 235)
 
 The export has 20,044 guarded names and 121,801 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,29 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current renderer names (pass 234)
+## Current patch and envelope names (pass 235)
+
+InstrumentPatch decodes five independent run streams. Names distinguish the
+stored-run decode index, run cursor, remaining count, key index and current value.
+The -1 run sentinels, signed byte reads, sample loop flags and conditional reads
+remain as in the raw input. Volume curves use Q6 scales; pan curves add shifted
+signed offsets before the original 0/128 clamp. Mixed pair-index/previous-key
+phases retain both roles in their names.
+
+MIDI volume and release segments have separate time/value/start/end names.
+Vibrato depth is separate from the computed sample step, including the original
+minimum-one return clamp. Synthesis filter loops identify forward coefficients
+added from channel zero and feedback coefficients subtracted from channel one.
+Noise and sine table indexes are separate. Unused snapshots still execute.
+
+79 names replace 451 bound occurrences in three files. All 53 LiteralPhase names
+in these owners are replaced; 214 remain elsewhere. All-file reproduction,
+compilation, reversal and unchanged native audio traces pass. Five large framed
+methods and 41 unknown field purposes remain. A second lifetime pass and array
+allocation-dimension analysis are concrete generic reconstruction candidates;
+see the workflow for the diagnostic evidence and unverified scope.
+
+## Previous renderer names (pass 234)
 
 The nearest-rotation locals describe which way source coordinates move across
 one destination scanline. Shared row-start coordinates retain their separate
