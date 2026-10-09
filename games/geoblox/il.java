@@ -918,8 +918,7 @@ final class il extends dm {
           }
           param6 = -param9;
           {
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (param6 >= 0))) {
+          while (!(param6 >= 0)) {
             param0 = param4[param5++];
             if (param0 == 0) {
               param7++;
@@ -938,7 +937,7 @@ final class il extends dm {
             param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
             param6++;
           }
-          if (decompiledNaturalLoopExit0) {
+           {
               param7 = param7 + param11;
               param5 = param5 + param12;
               param8++;
@@ -1192,8 +1191,7 @@ final class il extends dm {
           }
           param5 = -param7;
           {
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (param5 >= 0))) {
+          while (!(param5 >= 0)) {
             param2 = param1[param3++];
             var14 = param2 >>> 24;
             param2 = param2 & 16777215;
@@ -1216,7 +1214,7 @@ final class il extends dm {
             param0[incrementValue$1] = ((var15Lifetime1 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15Lifetime1 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
             param5++;
           }
-          if (decompiledNaturalLoopExit0) {
+           {
               param4 = param4 + param9;
               param3 = param3 + param10;
               param6++;

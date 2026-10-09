@@ -150,8 +150,7 @@ final class na extends ha {
             param3++;
           }
           {
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (param4 <= 0))) {
+          while (!(param4 <= 0)) {
             param0 = param1[param2++];
             param4--;
             if (param0 == 0) {
@@ -176,7 +175,7 @@ final class na extends ha {
             param4 = param4 - param0;
             param3 = param3 + (param0 + 2);
           }
-          if (decompiledNaturalLoopExit0) {
+           {
               param3 = param3 + param8;
               param2 = param2 + param9;
               param10++;
