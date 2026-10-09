@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "b79263fd3d9bdd3ca5dd6c6da770f2fc408ae33f",
+      "commit": "14903fd851efb12e52b4d5deceab9429f95e60cf",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "dfef14f52b48989dc39587cc22a33c63dc0f63cfcced12d209fa061d2c240dfd",
-        "reproduce": "git archive --format=tar b79263fd3d9bdd3ca5dd6c6da770f2fc408ae33f | sha256sum",
+        "sha256": "e2261f888d2bf94d415d0c2f20ddec67cde432388752e30140b6dd7f056ff5d7",
+        "reproduce": "git archive --format=tar 14903fd851efb12e52b4d5deceab9429f95e60cf | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -29,7 +29,8 @@
         "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
         "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
         "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
-        "CFR_JS_LEADING_LOOP_EXIT_WORK": "1"
+        "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+        "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1"
       }
     },
     "namingTool": {
@@ -116,7 +117,8 @@
       "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
       "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
       "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
-      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1"
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1"
     }
   },
   "freshVerification": {
@@ -141,9 +143,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "5d97bb0e02c7b2d06ce35485f2fb22c5933cda82a6635773190a73acf1d73524",
-  "previousSourceTreeSha256": "037efd68ac6bb81fa5126c1475d4c3117fa8e00cb646142b0298fe8bb52aaa49",
-  "changedJavaFiles": 7,
+  "sourceTreeSha256": "737c1e6b7166b74200845dd41e3149fffabc2fce4f6cf7104a79cd62c0871ec8",
+  "previousSourceTreeSha256": "5d97bb0e02c7b2d06ce35485f2fb22c5933cda82a6635773190a73acf1d73524",
+  "changedJavaFiles": 4,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3311,11 +3313,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "085ec178905159b8cea18acca79f791b1058ff89",
+    "commit": "07c801d35203072c259801b30fded03bbc72e922",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "341cdf90184256273073920dda91a404794d8d53183ab91372aae72dffff17de"
+      "sha256": "ffa8d3f012fa7a7c373836b19f9c190cb44c12101ade6d6672d273ce9645a582"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3325,15 +3327,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "0f060b630e94e32b6bd0bb50de28fb778652fb766bbd99790a31f4080c25fa1c",
+    "outputTreeSha256": "7d0075fe2e68c8432b46b0f4e9d7a7fb9fd580f92fede298224c313e501e71e0",
     "files": 303,
-    "rules": 20146,
-    "identifierEdits": 121876,
-    "bindingsCompared": 137811,
+    "rules": 20139,
+    "identifierEdits": 121855,
+    "bindingsCompared": 137790,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122310,
+    "totalEdits": 122289,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 423,
@@ -3355,8 +3357,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 248,
-    "semanticPass": 248
+    "structuralPass": 249,
+    "semanticPass": 249
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36834,12 +36836,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "2ee483c8c720d9cd5c6d17a3baa8fa54ee71b7f8",
-    "sourceTreeSha256": "5d97bb0e02c7b2d06ce35485f2fb22c5933cda82a6635773190a73acf1d73524",
+    "sourceCommit": "f8a6056fcca5f005bcc0b752ca41567409ea843f",
+    "sourceTreeSha256": "737c1e6b7166b74200845dd41e3149fffabc2fce4f6cf7104a79cd62c0871ec8",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "085ec178905159b8cea18acca79f791b1058ff89"
+    "workflowCommit": "07c801d35203072c259801b30fded03bbc72e922"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -40407,5 +40409,364 @@
     "renderingNativeTraceGroups": 10,
     "sourceWorkflowCommit": "085ec178905159b8cea18acca79f791b1058ff89",
     "sourceProofWorkflowCommit": "085ec178905159b8cea18acca79f791b1058ff89"
+  },
+  "naturalLoopExitCaptureCleanup": {
+    "version": 249,
+    "changedJavaFiles": 4,
+    "capturesRemoved": 7,
+    "removedDeclarations": 7,
+    "removedIdentifierOccurrences": 21,
+    "sourceProofTest": "readable/tests/test-geoblox-sole-loop-exit-source.mjs",
+    "sourceProofTestSha256": "5f9b1be66b547aa30b554fef86c01470380e0c8ebdfc20aec018d5cf1974182c",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "2ee483c8c720d9cd5c6d17a3baa8fa54ee71b7f8",
+    "sourceCommit": "f8a6056fcca5f005bcc0b752ca41567409ea843f",
+    "previousSourceTreeSha256": "5d97bb0e02c7b2d06ce35485f2fb22c5933cda82a6635773190a73acf1d73524",
+    "sourceTreeSha256": "737c1e6b7166b74200845dd41e3149fffabc2fce4f6cf7104a79cd62c0871ec8",
+    "javaToolsCommit": "14903fd851efb12e52b4d5deceab9429f95e60cf",
+    "sourceArchiveSha256": "e2261f888d2bf94d415d0c2f20ddec67cde432388752e30140b6dd7f056ff5d7",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1"
+    },
+    "bindingsBefore": 137811,
+    "bindingsCompared": 137790,
+    "transfersCompared": 4928,
+    "originalIdentityMigrations": [
+      {
+        "before": "L:bh.a(ZLja;ILja;Z)V#23",
+        "after": "L:bh.a(ZLja;ILja;Z)V#22"
+      }
+    ],
+    "removedSymbols": [
+      "L:bh.a(ZLja;ILja;Z)V#22",
+      "L:dm.a(III[I[IIIIIIIII)V#1",
+      "L:dm.b([I[IIIIIIIIIII)V#3",
+      "L:dm.a(III[I[IIIIIIIIII)V#1",
+      "L:il.d([I[IIIIIIIIIII)V#8",
+      "L:il.b(III[I[IIIIIIIIII)V#2",
+      "L:na.a(I[BIII[I[IIIIII)V#2"
+    ],
+    "removedLocalsHadNoOtherUses": true,
+    "soleNormalLoopExitIndependentlyResolved": true,
+    "nonconstantConditionsIndependentlyAttributed": true,
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 17,
+    "genericCaptureCleanupTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 38880,
+    "remainingNaturalExitCaptures": 6,
+    "remainingLargeFramedMethods": 5,
+    "plainBlockLabelsAfter": 77,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "largeFramedMethodInventory": [
+      {
+        "file": "BoardReconciliationSupport.java",
+        "method": "reconcileBoardEntities",
+        "lines": 340,
+        "blockLabels": 2
+      },
+      {
+        "file": "GameScreen.java",
+        "method": "renderScreen",
+        "lines": 314,
+        "blockLabels": 1
+      },
+      {
+        "file": "GameScreen.java",
+        "method": "updateScreen",
+        "lines": 328,
+        "blockLabels": 2
+      },
+      {
+        "file": "GameplaySession.java",
+        "method": "updateSession",
+        "lines": 557,
+        "blockLabels": 2
+      },
+      {
+        "file": "SpriteState.java",
+        "method": "drawSortedHalfBlendRgbTriangle",
+        "lines": 368,
+        "blockLabels": 2
+      }
+    ],
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "2ee483c8c720d9cd5c6d17a3baa8fa54ee71b7f8",
+      "sourceTreeSha256": "5d97bb0e02c7b2d06ce35485f2fb22c5933cda82a6635773190a73acf1d73524",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "085ec178905159b8cea18acca79f791b1058ff89"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass249 removes seven captured natural-exit Boolean locals only where the loop has no own break, the local has exactly its declaration/assignment/guard uses, and independently attributed lexical/JDK evidence proves a nonconstant condition. The same condition remains once in a direct while header; body and completion work remain once in intact scopes. All other original bindings, transfer destinations and protected scopes remain, including return/throw/continue/finally/monitor behavior. Only one surviving local ordinal migrates. Constant-expression ambiguity, annotations, extra flag uses, captures and other loop breaks refuse. Whole-game equivalence is not claimed.",
+    "selections": [
+      {
+        "file": "bh.java",
+        "methodStart": 5221,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 6882,
+          "end": 8404
+        },
+        "declaration": {
+          "start": 6896,
+          "end": 6952
+        },
+        "captured": {
+          "start": 6962,
+          "end": 7020
+        },
+        "condition": {
+          "start": 6994,
+          "end": 7018
+        },
+        "guard": {
+          "start": 8301,
+          "end": 8332
+        },
+        "loop": {
+          "start": 6956,
+          "end": 8288
+        },
+        "label": "L5",
+        "labelStart": 6952,
+        "removedSymbol": "L:bh.a(ZLja;ILja;Z)V#22",
+        "afterStart": 6882
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 88237,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 88614,
+          "end": 89457
+        },
+        "declaration": {
+          "start": 88626,
+          "end": 88680
+        },
+        "captured": {
+          "start": 88686,
+          "end": 88733
+        },
+        "condition": {
+          "start": 88718,
+          "end": 88731
+        },
+        "guard": {
+          "start": 89290,
+          "end": 89321
+        },
+        "loop": {
+          "start": 88680,
+          "end": 89279
+        },
+        "label": null,
+        "labelStart": 88680,
+        "removedSymbol": "L:dm.a(III[I[IIIIIIIII)V#1",
+        "afterStart": 88382
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 69635,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 70108,
+          "end": 70952
+        },
+        "declaration": {
+          "start": 70120,
+          "end": 70174
+        },
+        "captured": {
+          "start": 70180,
+          "end": 70227
+        },
+        "condition": {
+          "start": 70212,
+          "end": 70225
+        },
+        "guard": {
+          "start": 70786,
+          "end": 70817
+        },
+        "loop": {
+          "start": 70174,
+          "end": 70775
+        },
+        "label": null,
+        "labelStart": 70174,
+        "removedSymbol": "L:dm.b([I[IIIIIIIIIII)V#3",
+        "afterStart": 69992
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 65987,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 66377,
+          "end": 67362
+        },
+        "declaration": {
+          "start": 66389,
+          "end": 66443
+        },
+        "captured": {
+          "start": 66449,
+          "end": 66496
+        },
+        "condition": {
+          "start": 66481,
+          "end": 66494
+        },
+        "guard": {
+          "start": 67195,
+          "end": 67226
+        },
+        "loop": {
+          "start": 66443,
+          "end": 67184
+        },
+        "label": null,
+        "labelStart": 66443,
+        "removedSymbol": "L:dm.a(III[I[IIIIIIIIII)V#1",
+        "afterStart": 66377
+      },
+      {
+        "file": "il.java",
+        "methodStart": 47170,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 47746,
+          "end": 48918
+        },
+        "declaration": {
+          "start": 47758,
+          "end": 47812
+        },
+        "captured": {
+          "start": 47818,
+          "end": 47865
+        },
+        "condition": {
+          "start": 47850,
+          "end": 47863
+        },
+        "guard": {
+          "start": 48752,
+          "end": 48783
+        },
+        "loop": {
+          "start": 47812,
+          "end": 48741
+        },
+        "label": null,
+        "labelStart": 47812,
+        "removedSymbol": "L:il.d([I[IIIIIIIIIII)V#8",
+        "afterStart": 47630
+      },
+      {
+        "file": "il.java",
+        "methodStart": 38565,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 38974,
+          "end": 40013
+        },
+        "declaration": {
+          "start": 38986,
+          "end": 39040
+        },
+        "captured": {
+          "start": 39046,
+          "end": 39093
+        },
+        "condition": {
+          "start": 39078,
+          "end": 39091
+        },
+        "guard": {
+          "start": 39846,
+          "end": 39877
+        },
+        "loop": {
+          "start": 39040,
+          "end": 39835
+        },
+        "label": null,
+        "labelStart": 39040,
+        "removedSymbol": "L:il.b(III[I[IIIIIIIIII)V#2",
+        "afterStart": 38974
+      },
+      {
+        "file": "na.java",
+        "methodStart": 4370,
+        "name": "decompiledNaturalLoopExit0",
+        "region": {
+          "start": 4921,
+          "end": 5961
+        },
+        "declaration": {
+          "start": 4933,
+          "end": 4987
+        },
+        "captured": {
+          "start": 4993,
+          "end": 5040
+        },
+        "condition": {
+          "start": 5025,
+          "end": 5038
+        },
+        "guard": {
+          "start": 5795,
+          "end": 5826
+        },
+        "loop": {
+          "start": 4987,
+          "end": 5784
+        },
+        "label": null,
+        "labelStart": 4987,
+        "removedSymbol": "L:na.a(I[BIII[I[IIIIII)V#2",
+        "afterStart": 4921
+      }
+    ],
+    "dictionaryIdentities": 20446,
+    "dictionaryReversalByteExact": true,
+    "readableIdentifierEdits": 121855,
+    "readableTotalEdits": 122289,
+    "ruleBuilderTestGroupsPassed": 13,
+    "matchingNativeTraceGroups": 13,
+    "gameplayNativeTraceGroups": 3,
+    "renderingNativeTraceGroups": 10,
+    "sourceWorkflowCommit": "07c801d35203072c259801b30fded03bbc72e922",
+    "sourceProofWorkflowCommit": "07c801d35203072c259801b30fded03bbc72e922"
   }
 }

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/085ec178905159b8cea18acca79f791b1058ff89/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/07c801d35203072c259801b30fded03bbc72e922/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 248)
+## Current readability (pass 249)
 
-The export has 20,146 guarded names and 121,876 Java identifier edits, plus 11
+The export has 20,139 guarded names and 121,855 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 137,811 bindings, reproduce and
+compile and compare 137,790 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,18 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current loop exit work (pass 248)
+## Current sole loop exits (pass 249)
+
+The related-entity scan and six raster loops no longer carry a temporary
+completion Boolean. Their direct while conditions keep the original expression
+once, and their intact completion blocks run on the sole normal loop exit.
+Returns, throws and nonlocal transfers still skip the completion work. Captures
+remain in keyboard, URL, mesh and board scans where other breaks can skip it.
+
+The five framed methods and their line counts remain unchanged. The workflow
+records the independent source/binding/target certificate and native scenarios.
+
+## Previous loop exit work (pass 248)
 
 `connectivityEntityScanCompleted` controls the original connectivity reset after
 the entity scan. `transientQueueExhausted` controls the original avatar-feedback
