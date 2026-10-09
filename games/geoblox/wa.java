@@ -310,10 +310,10 @@ final class wa {
           if (param0 != -25866) {
             wa.a(53, -56, 122, 126);
           }
-          var2 = (me) ((Object) md.field_a.b((byte) -121));
+          var2 = (me) (md.field_a.b((byte) -121));
           while (var2 != null) {
             var1_int = var1_int + var2.field_f;
-            var2 = (me) ((Object) md.field_a.b((byte) -99));
+            var2 = (me) (md.field_a.b((byte) -99));
           }
           stackIn_7_0 = var1_int;
           return stackIn_7_0;

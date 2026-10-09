@@ -55,7 +55,7 @@ final class ul {
           h.field_a = 0;
           var1_int = 0;
           var2 = 0;
-          var3 = (ja) ((Object) a.field_d.g(0));
+          var3 = (ja) (a.field_d.g(0));
           if (param0 != -2) {
             field_a = (dm) null;
           }
@@ -156,7 +156,7 @@ final class ul {
                 }
               }
             }
-            var3 = (ja) ((Object) a.field_d.d(1));
+            var3 = (ja) (a.field_d.d(1));
           }
           if (var1_int != 0) {
             if (var2 == 0) {

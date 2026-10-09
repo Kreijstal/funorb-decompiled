@@ -349,7 +349,7 @@ class vf extends hk {
         int var7;
         var7 = Geoblox.field_C;
         var5 = 3 / ((param0 + 46) / 58);
-        var4 = (fb) ((Object) this.field_F.g(0));
+        var4 = (fb) (this.field_F.g(0));
         while (var4 != null) {
           var6 = var4;
           while (var6 != null) {
@@ -361,7 +361,7 @@ class vf extends hk {
             }
             var6 = var6.field_h;
           }
-          var4 = (fb) ((Object) this.field_F.d(1));
+          var4 = (fb) (this.field_F.d(1));
         }
         return null;
     }

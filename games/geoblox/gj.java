@@ -94,12 +94,12 @@ final class gj extends fj {
         ja var1 = null;
         int var2 = Geoblox.field_C;
         try {
-            var1 = (ja) ((Object) a.field_d.g(0));
+            var1 = (ja) (a.field_d.g(0));
             while (var1 != null) {
                 if (var1.field_z != 0) {
                     var1.e(1643839728);
                 }
-                var1 = (ja) ((Object) a.field_d.d(1));
+                var1 = (ja) (a.field_d.d(1));
             }
             if (param0 > -33) {
                 gj.f((byte) 90);

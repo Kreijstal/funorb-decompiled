@@ -175,7 +175,7 @@ final class uh extends ac {
           if (param0 != 4740) {
             return;
           }
-          var14 = (ja) ((Object) wd.field_e.g(0));
+          var14 = (ja) (wd.field_e.g(0));
           if (var14 == null) {
             return;
           }
@@ -195,10 +195,10 @@ final class uh extends ac {
             var6 = var6 + var6 * 0.25f;
             var7 += 778;
           }
-          var13 = (ja) ((Object) wd.field_e.g(0));
+          var13 = (ja) (wd.field_e.g(0));
           while (var13 != null) {
             var13.n(param0 - 4830);
-            var13 = (ja) ((Object) wd.field_e.d(1));
+            var13 = (ja) (wd.field_e.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

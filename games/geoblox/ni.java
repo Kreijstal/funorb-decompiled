@@ -151,10 +151,10 @@ final class ni extends ee implements pl {
           if (param0 != 484842465) {
             ni.f(15);
           }
-          var3 = (ja) ((Object) bh.field_c.g(0));
+          var3 = (ja) (bh.field_c.g(0));
           while (var3 != null) {
             var3.l(1915952803);
-            var3 = (ja) ((Object) bh.field_c.d(1));
+            var3 = (ja) (bh.field_c.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

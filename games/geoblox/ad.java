@@ -32,7 +32,7 @@ final class ad extends ia {
         pc var6 = null;
         try {
           this.field_m.a(param0, param1, param2);
-          var6 = (pc) ((Object) this.field_l.g(0));
+          var6 = (pc) (this.field_l.g(0));
           while (var6 != null) {
             if (!this.field_k.b(var6, -1)) {
               var4_int = param1;
@@ -48,7 +48,7 @@ final class ad extends ia {
                 var4_int = var4_int + var6.field_g;
               } while (!this.field_k.a(var5, var4_int, param0, var6, false));
             }
-            var6 = (pc) ((Object) this.field_l.d(1));
+            var6 = (pc) (this.field_l.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,7 +151,7 @@ final class ad extends ia {
         int var2;
         pc var3;
         this.field_m.b(param0);
-        var3 = (pc) ((Object) this.field_l.g(0));
+        var3 = (pc) (this.field_l.g(0));
         while (var3 != null) {
           L1: {
             if (!this.field_k.b(var3, -1)) {
@@ -167,7 +167,7 @@ final class ad extends ia {
               var3.field_g = var3.field_g - var2;
             }
           }
-          var3 = (pc) ((Object) this.field_l.d(1));
+          var3 = (pc) (this.field_l.d(1));
         }
     }
 
@@ -176,7 +176,7 @@ final class ad extends ia {
         int var2;
         var2 = Geoblox.field_C;
         while (true) {
-          var1 = (pc) ((Object) this.field_l.d(1));
+          var1 = (pc) (this.field_l.d(1));
           if (var1 == null) {
             return null;
           }
@@ -187,7 +187,7 @@ final class ad extends ia {
     }
 
     final ia b() {
-        pc var1 = (pc) ((Object) this.field_l.g(0));
+        pc var1 = (pc) (this.field_l.g(0));
         if (var1 == null) {
             return null;
         }

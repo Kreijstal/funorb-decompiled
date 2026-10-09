@@ -47,10 +47,10 @@ final class di {
         RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
-          var4 = (wc) ((Object) l.field_g.g(param1 ^ param1));
+          var4 = (wc) (l.field_g.g(param1 ^ param1));
           while (var4 != null) {
             o.a(param0, var4, param1 - 21718);
-            var4 = (wc) ((Object) l.field_g.d(1));
+            var4 = (wc) (l.field_g.d(1));
           }
           var2 = qa.field_e.g(0);
           while (var2 != null) {

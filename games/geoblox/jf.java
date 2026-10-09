@@ -45,7 +45,7 @@ final class jf implements dh {
           } else {
             stackIn_4_0 = null;
           }
-          var12 = (ol) ((Object) stackIn_4_0);
+          var12 = (ol) (stackIn_4_0);
           if (param1 >= -5) {
             return;
           }

@@ -14,12 +14,12 @@ final class ob extends ia {
         if (var2 == this.field_j.field_a) {
             this.field_k = -1;
         } else {
-            this.field_k = ((jd) ((Object) var2)).field_f;
+            this.field_k = ((jd) (var2)).field_f;
         }
     }
 
     final ia c() {
-        return (ia) ((Object) this.field_m.d(1));
+        return (ia) (this.field_m.d(1));
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -44,7 +44,7 @@ final class ob extends ia {
           param2 = param2 - var4;
           this.field_l = this.field_l + var4;
           this.e();
-          var5 = (jd) ((Object) this.field_j.g(0));
+          var5 = (jd) (this.field_j.g(0));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
@@ -64,25 +64,25 @@ final class ob extends ia {
         while (true) {
           if (param0 == this.field_j.field_a) {
             le.a(param0, 93, param1);
-            this.field_k = ((jd) ((Object) this.field_j.field_a.field_b)).field_f;
+            this.field_k = ((jd) (this.field_j.field_a.field_b)).field_f;
             return;
           }
-          if (((jd) ((Object) param0)).field_f <= param1.field_f) {
+          if (((jd) (param0)).field_f <= param1.field_f) {
             param0 = param0.field_b;
             continue;
           }
           break;
         }
         le.a(param0, 93, param1);
-        this.field_k = ((jd) ((Object) this.field_j.field_a.field_b)).field_f;
+        this.field_k = ((jd) (this.field_j.field_a.field_b)).field_f;
         return;
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ia var4 = (ia) ((Object) this.field_m.g(0));
+        ia var4 = (ia) (this.field_m.g(0));
         while (var4 != null) {
             var4.b(param0, param1, param2);
-            var4 = (ia) ((Object) this.field_m.d(1));
+            var4 = (ia) (this.field_m.d(1));
         }
     }
 
@@ -111,7 +111,7 @@ final class ob extends ia {
           param0 = param0 - var2;
           this.field_l = this.field_l + var2;
           this.e();
-          var3 = (jd) ((Object) this.field_j.g(0));
+          var3 = (jd) (this.field_j.g(0));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
@@ -130,10 +130,10 @@ final class ob extends ia {
     private final void e() {
         jd var1 = null;
         if (this.field_l > 0) {
-            var1 = (jd) ((Object) this.field_j.g(0));
+            var1 = (jd) (this.field_j.g(0));
             while (var1 != null) {
                 var1.field_f = var1.field_f - this.field_l;
-                var1 = (jd) ((Object) this.field_j.d(1));
+                var1 = (jd) (this.field_j.d(1));
             }
             this.field_k = this.field_k - this.field_l;
             this.field_l = 0;
@@ -141,14 +141,14 @@ final class ob extends ia {
     }
 
     final ia b() {
-        return (ia) ((Object) this.field_m.g(0));
+        return (ia) (this.field_m.g(0));
     }
 
     private final void c(int param0) {
-        ia var2 = (ia) ((Object) this.field_m.g(0));
+        ia var2 = (ia) (this.field_m.g(0));
         while (var2 != null) {
             var2.b(param0);
-            var2 = (ia) ((Object) this.field_m.d(1));
+            var2 = (ia) (this.field_m.d(1));
         }
     }
 

@@ -579,7 +579,7 @@ final class hi extends ee implements ta, pl {
     }
 
     public final void a(byte param0) {
-        ((uk) ((Object) this.field_E.a((byte) -117))).c((byte) -80);
+        ((uk) (this.field_E.a((byte) -117))).c((byte) -80);
         if (param0 != 83) {
             this.field_H = (hk) null;
         }

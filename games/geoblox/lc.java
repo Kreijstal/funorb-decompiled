@@ -20,7 +20,7 @@ final class lc {
         int var10 = 0;
         var10 = Geoblox.field_C;
         try {
-          var1 = (ja) ((Object) wd.field_e.g(0));
+          var1 = (ja) (wd.field_e.g(0));
           do {
             if (var1 == null) {
               if (param0 != 255) {
@@ -29,7 +29,7 @@ final class lc {
               break;
             }
             var1.b(true);
-            var1 = (ja) ((Object) wd.field_e.d(1));
+            var1 = (ja) (wd.field_e.d(1));
           } while (var10 == 0);
           if ((kj.field_o[99] &&
               ji.field_r.c(13519) ||
@@ -45,7 +45,7 @@ final class lc {
           if (wd.field_e.a(param0 ^ 143) < 3 &&
               ma.c((byte) -53) &&
               !el.field_o.b(true)) {
-            var1 = (ja) ((Object) ra.field_a.b((byte) -101));
+            var1 = (ja) (ra.field_a.b((byte) -101));
             if (null != var1) {
               var2 = 2.0 * Math.random() * 3.141592653589793;
               var4 = 240.0f * (float)Math.cos(var2) + 320.0f;
@@ -367,7 +367,7 @@ final class lc {
           var6_ref.field_hb = var4_ref_StringLifetime1;
           var6_ref.field_mb = (String) (var3Lifetime1);
           var6_ref.a(false);
-          var7_ref = (j) ((Object) hl.field_B.g(0));
+          var7_ref = (j) (hl.field_B.g(0));
           L15: while (true) {
             if (null != var7_ref) {
               stackIn_61_0 = var6_ref;
@@ -375,7 +375,7 @@ final class lc {
                 break L15;
               }
               if (ul.a(stackIn_61_0, var7_ref, (byte) 127)) {
-                var7_ref = (j) ((Object) hl.field_B.d(1));
+                var7_ref = (j) (hl.field_B.d(1));
                 continue;
               }
             }

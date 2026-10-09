@@ -47,14 +47,14 @@ final class ef implements Iterator {
           if (param0 != -15) {
             ef.a((byte) -11);
           }
-          var2 = (ja) ((Object) bh.field_c.g(0));
+          var2 = (ja) (bh.field_c.g(0));
           while (var2 != null) {
             var2.b(true);
             if (var2.field_G >= 3) {
               var2.field_K = ra.field_a;
               var2.field_G = 0;
             }
-            var2 = (ja) ((Object) bh.field_c.d(1));
+            var2 = (ja) (bh.field_c.d(1));
           }
           if (el.field_o.field_C) {
             return;

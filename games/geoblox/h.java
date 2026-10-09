@@ -87,10 +87,10 @@ final class h {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
-          var3 = (ja) ((Object) ji.field_r.g(0));
+          var3 = (ja) (ji.field_r.g(0));
           while (var3 != null) {
             var3.g(-16096);
-            var3 = (ja) ((Object) ji.field_r.d(1));
+            var3 = (ja) (ji.field_r.d(1));
           }
           if (param0 == -1) {
             return;

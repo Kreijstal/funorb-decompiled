@@ -305,7 +305,7 @@ class dj extends hk {
 
     private final void m(byte param0) {
         if (this.field_u instanceof ga) {
-            ((ga) ((Object) this.field_u)).a(this, -18649);
+            ((ga) (this.field_u)).a(this, -18649);
         }
         if (param0 < 107) {
             this.field_G = true;
@@ -579,7 +579,7 @@ class dj extends hk {
             return;
         }
         if (this.field_u instanceof ga) {
-            ((ga) ((Object) this.field_u)).a(this, (byte) 74);
+            ((ga) (this.field_u)).a(this, (byte) 74);
         }
     }
 

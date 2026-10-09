@@ -102,7 +102,7 @@ final class oc implements dh {
           ik.a(var6_int, param4.field_h, var7, param4.field_r, -1540604944);
           var8 = oa.field_e[1];
           if (param4 instanceof hk &&
-              ((hk) ((Object) param4)).field_y) {
+              ((hk) (param4)).field_y) {
             var8.c(var6_int - (-1 - (-var8.field_s + param4.field_r >> 1)), (-var8.field_o + param4.field_h >> 1) + 1 + var7, 256);
           }
           if (param4.e((byte) 54)) {
@@ -129,7 +129,7 @@ final class oc implements dh {
 
     final static void b(int param0) {
         int var2 = -117 / ((-46 - param0) / 50);
-        tl var1 = (tl) ((Object) sg.field_b.e(1));
+        tl var1 = (tl) (sg.field_b.e(1));
         if (var1 == null) {
             var1 = new tl();
         }

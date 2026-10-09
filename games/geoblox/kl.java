@@ -159,14 +159,14 @@ final class kl extends ia {
             if (this.field_p == -256 &&
                 (this.field_x & 255) == 0) {
               if (qk.field_q) {
-                return kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
+                return kl.b(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
-              return kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
+              return kl.b(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
             }
             if (qk.field_q) {
-              return kl.d(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
+              return kl.d(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
             }
-            return kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
+            return kl.a(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -176,15 +176,15 @@ final class kl extends ia {
           if (this.field_p == -256 &&
               (this.field_x & 255) == 0) {
             if (!qk.field_q) {
-              param1 = kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
+              param1 = kl.a(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
-              param1 = kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
+              param1 = kl.a(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!qk.field_q) {
-              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
+              param1 = kl.a(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
             } else {
-              param1 = kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
+              param1 = kl.b(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -210,14 +210,14 @@ final class kl extends ia {
             if (this.field_p == 256 &&
                 (this.field_x & 255) == 0) {
               if (qk.field_q) {
-                return kl.a(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
+                return kl.a(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
-              return kl.a(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
+              return kl.a(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this);
             }
             if (qk.field_q) {
-              return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
+              return kl.b(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this, this.field_p, param4);
             }
-            return kl.b(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
+            return kl.b(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, 0, param3, param2, this, this.field_p, param4);
           }
           var6 = param1 + this.field_l;
           if (var6 > param3) {
@@ -227,15 +227,15 @@ final class kl extends ia {
           if (this.field_p == 256 &&
               (this.field_x & 255) == 0) {
             if (!qk.field_q) {
-              param1 = kl.b(((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
+              param1 = kl.b(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
-              param1 = kl.b(0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
+              param1 = kl.b(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this);
             }
           } else {
             if (!qk.field_q) {
-              param1 = kl.c(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
+              param1 = kl.c(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this, this.field_p, param4);
             } else {
-              param1 = kl.a(0, 0, ((gd) ((Object) this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
+              param1 = kl.a(0, 0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, this.field_t, this.field_w, 0, var6, param2, this, this.field_p, param4);
             }
           }
           this.field_l = this.field_l - param1;
@@ -250,10 +250,10 @@ final class kl extends ia {
         int var1 = this.field_k * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_v == 0) {
-            var1 = var1 - var1 * this.field_x / (((gd) ((Object) this.field_g)).field_k.length << 8);
+            var1 = var1 - var1 * this.field_x / (((gd) (this.field_g)).field_k.length << 8);
         } else {
             if (this.field_v >= 0) {
-                var1 = var1 - var1 * this.field_q / ((gd) ((Object) this.field_g)).field_k.length;
+                var1 = var1 - var1 * this.field_q / ((gd) (this.field_g)).field_k.length;
             }
         }
         return var1 > 255 ? 255 : var1;
@@ -763,7 +763,7 @@ final class kl extends ia {
     }
 
     final synchronized void e(int param0) {
-        int var2 = ((gd) ((Object) this.field_g)).field_k.length << 8;
+        int var2 = ((gd) (this.field_g)).field_k.length << 8;
         if (param0 < -1) {
             param0 = -1;
         }
@@ -810,7 +810,7 @@ final class kl extends ia {
             this.e();
           }
         }
-        var2 = (gd) ((Object) this.field_g);
+        var2 = (gd) (this.field_g);
         var3 = this.field_q << 8;
         var4 = this.field_m << 8;
         var5 = var2.field_k.length << 8;
@@ -1085,7 +1085,7 @@ final class kl extends ia {
           this.b(param2);
           return;
         }
-        var4 = (gd) ((Object) this.field_g);
+        var4 = (gd) (this.field_g);
         var5 = this.field_q << 8;
         var6 = this.field_m << 8;
         var7 = var4.field_k.length << 8;
@@ -1573,7 +1573,7 @@ final class kl extends ia {
     }
 
     final synchronized boolean l() {
-        return this.field_x < 0 || this.field_x >= ((gd) ((Object) this.field_g)).field_k.length << 8;
+        return this.field_x < 0 || this.field_x >= ((gd) (this.field_g)).field_k.length << 8;
     }
 
     final static kl a(gd param0, int param1, int param2) {

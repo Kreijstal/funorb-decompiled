@@ -10,10 +10,10 @@ final class ng extends sh {
     final void f(int param0) {
         int var4 = Geoblox.field_C;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        dd var3 = (dd) (var2.c((byte) 88));
         while (var3 != null) {
             var3.field_I = false;
-            var3 = (dd) ((Object) var2.a((byte) 125));
+            var3 = (dd) (var2.a((byte) 125));
         }
         if (param0 != 10936) {
             return;
@@ -27,7 +27,7 @@ final class ng extends sh {
             if (!(param1 instanceof dd)) {
                 throw new IllegalArgumentException();
             }
-            var3 = (dd) ((Object) param1);
+            var3 = (dd) (param1);
             this.field_C.a(var3, param0);
             var3.field_I = true;
             var3.a((byte) -37, (el) (this));
@@ -43,10 +43,10 @@ final class ng extends sh {
         }
         int var6 = 75 / ((1 - param2) / 43);
         gb var5 = new gb(this.field_C);
-        el var7 = (el) ((Object) var5.d(1));
+        el var7 = (el) (var5.d(1));
         while (var7 != null) {
             var7.a(param0 + this.field_v, param1 + this.field_m, (byte) -106, param3);
-            var7 = (el) ((Object) var5.c(26));
+            var7 = (el) (var5.c(26));
         }
     }
 
@@ -71,12 +71,12 @@ final class ng extends sh {
         if (param0 != 0) {
             return;
         }
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        dd var3 = (dd) (var2.c((byte) 88));
         while (var3 != null) {
             if (var3.h(229)) {
                 var3.a(false);
             }
-            var3 = (dd) ((Object) var2.a((byte) 112));
+            var3 = (dd) (var2.a((byte) 112));
         }
     }
 
@@ -88,12 +88,12 @@ final class ng extends sh {
     final el e(int param0) {
         int var4 = Geoblox.field_C;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        dd var3 = (dd) (var2.c((byte) 88));
         while (var3 != null) {
             if (var3.field_I) {
                 return var3.f((byte) -79);
             }
-            var3 = (dd) ((Object) var2.a((byte) 119));
+            var3 = (dd) (var2.a((byte) 119));
         }
         if (param0 == -4863) {
             return null;
@@ -105,12 +105,12 @@ final class ng extends sh {
     final void i(int param0) {
         int var4 = Geoblox.field_C;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        dd var3 = (dd) (var2.c((byte) 88));
         while (var3 != null) {
             if (var3.f(-1)) {
                 var3.a(false);
             }
-            var3 = (dd) ((Object) var2.a((byte) 115));
+            var3 = (dd) (var2.a((byte) 115));
         }
         this.field_A = (el) ((Object) this.j(100));
         if (param0 >= -14) {
@@ -129,12 +129,12 @@ final class ng extends sh {
     final dd j(int param0) {
         int var4 = Geoblox.field_C;
         gb var2 = new gb(this.field_C);
-        dd var3 = (dd) ((Object) var2.c((byte) 88));
+        dd var3 = (dd) (var2.c((byte) 88));
         while (var3 != null) {
             if (var3.field_I) {
                 return var3;
             }
-            var3 = (dd) ((Object) var2.a((byte) 111));
+            var3 = (dd) (var2.a((byte) 111));
         }
         if (param0 >= 57) {
             return null;

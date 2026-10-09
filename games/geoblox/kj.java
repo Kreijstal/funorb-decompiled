@@ -235,12 +235,12 @@ final class kj extends ia {
             this.b((byte) -85, -70);
         }
         if ((this.field_m[param1] & 2) != 0) {
-            var3 = (pc) ((Object) this.field_I.field_l.g(0));
+            var3 = (pc) (this.field_I.field_l.g(0));
             while (var3 != null) {
                 if (param1 == var3.field_t && null == this.field_j[param1][var3.field_D] && var3.field_y < 0) {
                     var3.field_y = 0;
                 }
-                var3 = (pc) ((Object) this.field_I.field_l.d(1));
+                var3 = (pc) (this.field_I.field_l.d(1));
             }
         }
     }
@@ -377,12 +377,12 @@ final class kj extends ia {
     private final void a(int param0, byte param1) {
         pc var3 = null;
         if ((this.field_m[param0] & 4) != 0) {
-            var3 = (pc) ((Object) this.field_I.field_l.g(0));
+            var3 = (pc) (this.field_I.field_l.g(0));
             while (var3 != null) {
                 if (var3.field_t == param0) {
                     var3.field_B = 0;
                 }
-                var3 = (pc) ((Object) this.field_I.field_l.d(1));
+                var3 = (pc) (this.field_I.field_l.d(1));
             }
         }
         if (param1 != 67) {
@@ -415,10 +415,10 @@ final class kj extends ia {
           if (~param1 < param2) {
             var7 = new int[]{param1};
           }
-          var8 = (pj) ((Object) param3.field_g.a((byte) 125));
+          var8 = (pj) (param3.field_g.a((byte) 125));
           while (var8 != null) {
             var9 = (int)var8.field_a;
-            var10 = (vl) ((Object) this.field_q.a((long)var9, (byte) -91));
+            var10 = (vl) (this.field_q.a((long)var9, (byte) -91));
             if (var10 == null) {
               var10 = vl.a(var9, (byte) 121, param4);
               if (var10 != null) {
@@ -431,7 +431,7 @@ final class kj extends ia {
                 !var10.a((int[]) (var7), var8.field_h, param2 + 36, param0)) {
               var6_int = 0;
             }
-            var8 = (pj) ((Object) param3.field_g.b(param2 - 100));
+            var8 = (pj) (param3.field_g.b(param2 - 100));
           }
           if (var6_int != 0) {
             param3.a();
@@ -582,14 +582,14 @@ final class kj extends ia {
     }
 
     private final void c(int param0, int param1) {
-        pc var3 = (pc) ((Object) this.field_I.field_l.g(param1 ^ param1));
+        pc var3 = (pc) (this.field_I.field_l.g(param1 ^ param1));
         while (var3 != null) {
             if ((param0 < 0 || param0 == var3.field_t) &&
                 !(var3.field_y >= 0)) {
                 this.field_j[var3.field_t][var3.field_D] = null;
                 var3.field_y = 0;
             }
-            var3 = (pc) ((Object) this.field_I.field_l.d(1));
+            var3 = (pc) (this.field_I.field_l.d(1));
         }
     }
 
@@ -891,7 +891,7 @@ final class kj extends ia {
         }
         L1: {
           if ((this.field_m[param3] & 2) != 0) {
-            var6 = (pc) ((Object) this.field_I.field_l.g(param0 ^ 23327));
+            var6 = (pc) (this.field_I.field_l.g(param0 ^ 23327));
             while (var6 != null) {
               if (var7.field_t == var6.field_t &&
                   0 > var6.field_y &&
@@ -899,7 +899,7 @@ final class kj extends ia {
                 var7.field_y = 0;
                 break L1;
               }
-              var6 = (pc) ((Object) this.field_I.field_l.d(1));
+              var6 = (pc) (this.field_I.field_l.d(1));
             }
             break L1;
           }
@@ -909,7 +909,7 @@ final class kj extends ia {
 
     private final void b(int param0, int param1) {
         pc var3;
-        var3 = (pc) ((Object) this.field_I.field_l.g(param0 - 100));
+        var3 = (pc) (this.field_I.field_l.g(param0 - 100));
         while (var3 != null) {
           if (param1 < 0 ||
                 param1 == var3.field_t) {
@@ -925,7 +925,7 @@ final class kj extends ia {
             }
             var3.a(false);
           }
-          var3 = (pc) ((Object) this.field_I.field_l.d(1));
+          var3 = (pc) (this.field_I.field_l.d(1));
         }
         if (param0 != 100) {
           this.field_x = -48L;
@@ -937,10 +937,10 @@ final class kj extends ia {
         if (param0 <= 65) {
             this.c(-76, (byte) -34);
         }
-        vl var4 = (vl) ((Object) this.field_q.a((byte) 125));
+        vl var4 = (vl) (this.field_q.a((byte) 125));
         while (var4 != null) {
             var4.a((byte) -121);
-            var4 = (vl) ((Object) this.field_q.b(-52));
+            var4 = (vl) (this.field_q.b(-52));
         }
     }
 
@@ -1083,7 +1083,7 @@ final class kj extends ia {
         vl var10;
         this.b(23327, param3, 64, param1);
         if (0 != (2 & this.field_m[param1])) {
-          var5 = (pc) ((Object) this.field_I.field_l.a(false));
+          var5 = (pc) (this.field_I.field_l.a(false));
           while (var5 != null) {
             if (param1 == var5.field_t &&
                 var5.field_y < 0) {
@@ -1096,10 +1096,10 @@ final class kj extends ia {
               var5.field_s = 4096;
               return;
             }
-            var5 = (pc) ((Object) this.field_I.field_l.b(~param0));
+            var5 = (pc) (this.field_I.field_l.b(~param0));
           }
         }
-        var9 = (vl) ((Object) this.field_q.a((long)this.field_S[param1], (byte) -105));
+        var9 = (vl) (this.field_q.a((long)this.field_S[param1], (byte) -105));
         var10 = var9;
         if (var10 == null) {
           return;

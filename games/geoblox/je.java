@@ -24,7 +24,7 @@ final class je extends hf {
             }
             if (!fh.c(-91)) {
                 while (true) {
-                    var1 = (p) ((Object) ja.field_A.b((byte) -118));
+                    var1 = (p) (ja.field_A.b((byte) -118));
                     if (var1 == null) {
                         break;
                     }

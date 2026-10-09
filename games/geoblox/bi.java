@@ -77,7 +77,7 @@ final class bi implements dh {
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (vi) ((Object) stackIn_3_0);
+          var11 = (vi) (stackIn_3_0);
           if (var11 != null) {
             param3 = param3 & var11.field_D;
           }

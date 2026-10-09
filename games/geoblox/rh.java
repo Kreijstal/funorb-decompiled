@@ -36,7 +36,7 @@ final class rh {
             rh.a((byte) 28);
           }
           var1_float = 0.0f;
-          var2 = (ja) ((Object) a.field_d.g(0));
+          var2 = (ja) (a.field_d.g(0));
           while (var2 != null) {
             var2.field_E = var2.field_E - 1;
             if (var2.field_E == 0) {
@@ -53,7 +53,7 @@ final class rh {
                 var1_float = (-240.0f + var2.field_v) * (-240.0f + var2.field_v) + (-320.0f + var2.field_o) * (-320.0f + var2.field_o);
               }
             }
-            var2 = (ja) ((Object) a.field_d.d(1));
+            var2 = (ja) (a.field_d.d(1));
           }
           wc.a(var1_float, (byte) 14);
           if (10000.0f > var1_float) {

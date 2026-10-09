@@ -76,18 +76,18 @@ final class oi {
         RuntimeException var2 = null;
         var3 = Geoblox.field_C;
         try {
-          var4 = (se) ((Object) sj.field_g.g(0));
+          var4 = (se) (sj.field_g.g(0));
           while (var4 != null) {
             tj.a(param0, 86, var4);
-            var4 = (se) ((Object) sj.field_g.d(1));
+            var4 = (se) (sj.field_g.d(1));
           }
           if (param1 < 115) {
             field_b = (dm) null;
           }
-          var5 = (ea) ((Object) ea.field_g.g(0));
+          var5 = (ea) (ea.field_g.g(0));
           while (var5 != null) {
             gj.a((byte) -88, param0, var5);
-            var5 = (ea) ((Object) ea.field_g.d(1));
+            var5 = (ea) (ea.field_g.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

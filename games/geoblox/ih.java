@@ -138,7 +138,7 @@ final class ih {
                     }
                     var25 = stackIn_35_0 ^ stackIn_38_1;
                     if (var25 != 0) {
-                      var26_ref = (ja) ((Object) ra.field_a.e(1));
+                      var26_ref = (ja) (ra.field_a.e(1));
                       if (var26_ref != null) {
                         if (param2.field_z == 2 &&
                             var25 != 0) {

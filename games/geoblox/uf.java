@@ -98,7 +98,7 @@ final class uf implements Runnable {
           var4.field_x = 1;
           var5 = this.field_k;
           synchronized (var5) {
-            var6 = (o) ((Object) this.field_k.c((byte) 121));
+            var6 = (o) (this.field_k.c((byte) 121));
             while (var6 != null) {
               if ((long)param1 == var6.field_i &&
                   var6.field_w == param0 &&
@@ -108,7 +108,7 @@ final class uf implements Runnable {
                 stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var6 = (o) ((Object) this.field_k.a(-20));
+              var6 = (o) (this.field_k.a(-20));
             }
           }
           var4.field_y = param0.a(param1, (byte) -78);
@@ -286,7 +286,7 @@ final class uf implements Runnable {
             while (!this.field_j) {
               var2 = this.field_k;
               synchronized (var2) {
-                var7 = (o) ((Object) this.field_k.a(true));
+                var7 = (o) (this.field_k.a(true));
                 if (var7 == null) {
                   try {
                     this.field_k.wait();

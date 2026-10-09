@@ -56,7 +56,7 @@ final class pf extends ee implements ga, pl {
             var2 = var9.c((byte) 34);
             var3 = var9.c((byte) 34);
             if (0 == var2) {
-              var4_ref_ea = (ea) ((Object) ea.field_g.g(0));
+              var4_ref_ea = (ea) (ea.field_g.g(0));
               if (var4_ref_ea == null) {
                 jl.a((byte) -116);
                 return;
@@ -75,11 +75,11 @@ final class pf extends ee implements ga, pl {
             } else {
               if (var2 == 1) {
                 var4 = var9.h(76);
-                var5 = (se) ((Object) sj.field_g.g(0));
+                var5 = (se) (sj.field_g.g(0));
                 while (var5 != null) {
                   if (var5.field_g != var3 ||
                       var5.field_j != var4) {
-                    var5 = (se) ((Object) sj.field_g.d(1));
+                    var5 = (se) (sj.field_g.d(1));
                     continue;
                   }
                   break;
@@ -524,7 +524,7 @@ final class pf extends ee implements ga, pl {
             var19 = null;
             var21 = null;
             try {
-              var13 = (eg) ((Object) sl.field_k.g(0));
+              var13 = (eg) (sl.field_k.g(0));
               var17 = var13;
               if (var17 == null) {
                 return;

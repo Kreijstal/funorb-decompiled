@@ -128,7 +128,7 @@ final class bj extends nh {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = Geoblox.field_C;
-        var12 = (pb) ((Object) this.field_g.a((long)param2, (byte) -124));
+        var12 = (pb) (this.field_g.a((long)param2, (byte) -124));
         var4 = var12;
         if (var12 != null &&
             param1 == 0 &&
@@ -341,7 +341,7 @@ final class bj extends nh {
     }
 
     final int a(int param0, int param1) {
-        pb var3 = (pb) ((Object) this.field_g.a((long)param1, (byte) -102));
+        pb var3 = (pb) (this.field_g.a((long)param1, (byte) -102));
         if (param0 < 125) {
             return -119;
         }
@@ -533,7 +533,7 @@ final class bj extends nh {
                     if (oa.a(-12520) < this.field_n) {
                       break L1;
                     }
-                    var2 = (pb) ((Object) this.field_g.a((byte) 125));
+                    var2 = (pb) (this.field_g.a((byte) 125));
                     while (var2 != null) {
                       if (!var2.field_u) {
                         if (var2.field_n) {
@@ -545,7 +545,7 @@ final class bj extends nh {
                           var2.field_n = true;
                         }
                       }
-                      var2 = (pb) ((Object) this.field_g.b(74));
+                      var2 = (pb) (this.field_g.b(74));
                     }
                     break L2;
                   }
@@ -561,7 +561,7 @@ final class bj extends nh {
               if (oa.a(-12520) < this.field_n) {
                 break L1;
               }
-              var2Lifetime1 = (pb) ((Object) this.field_g.a((byte) 125));
+              var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
               while (var2Lifetime1 != null) {
                 if (!var2Lifetime1.field_u) {
                   if (var2Lifetime1.field_n) {
@@ -573,7 +573,7 @@ final class bj extends nh {
                     var2Lifetime1.field_n = true;
                   }
                 }
-                var2Lifetime1 = (pb) ((Object) this.field_g.b(74));
+                var2Lifetime1 = (pb) (this.field_g.b(74));
               }
             }
             this.field_n = 1000L + oa.a(param0 - 12482);

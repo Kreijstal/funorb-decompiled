@@ -180,7 +180,7 @@ final class ag extends q {
         var3 = Geoblox.field_C;
         try {
           j.field_gb = param0;
-          var2 = (je) ((Object) qa.field_f.g(0));
+          var2 = (je) (qa.field_f.g(0));
           if (param1 != -67) {
             return;
           }
@@ -190,7 +190,7 @@ final class ag extends q {
             } else {
               var2.field_g.f((int)((float)(j.field_gb * var2.field_i / 80) * 1.399999976158142f));
             }
-            var2 = (je) ((Object) qa.field_f.d(1));
+            var2 = (je) (qa.field_f.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

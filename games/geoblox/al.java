@@ -22,7 +22,7 @@ final class al {
           var9 = eh.field_d;
           var2 = var9.c((byte) 34);
           if (var2 == 0) {
-            var8 = (ca) ((Object) qa.field_e.g(0));
+            var8 = (ca) (qa.field_e.g(0));
             if (var8 == null) {
               jl.a((byte) -124);
               return;
@@ -43,10 +43,10 @@ final class al {
           } else {
             if (1 == var2) {
               var3 = var9.a((byte) -101);
-              var4_ref_wc = (wc) ((Object) l.field_g.g(0));
+              var4_ref_wc = (wc) (l.field_g.g(0));
               while (var4_ref_wc != null) {
                 if (var3 != var4_ref_wc.field_h) {
-                  var4_ref_wc = (wc) ((Object) l.field_g.d(1));
+                  var4_ref_wc = (wc) (l.field_g.d(1));
                   continue;
                 }
                 break;

@@ -18,7 +18,7 @@ final class bd extends IOException {
         var4 = Geoblox.field_C;
         try {
           sh.field_y.a(255);
-          var1 = (me) ((Object) md.field_a.g(0));
+          var1 = (me) (md.field_a.g(0));
           if (param0 > -112) {
             return;
           }
@@ -32,7 +32,7 @@ final class bd extends IOException {
             } else {
               dd.field_G.b(var1.field_m, (int)(var1.field_k * (-var1.field_n + 144.0f) + var1.field_n), (int)((-var1.field_i + 34.0f) * var1.field_k + var1.field_i), 0, -1);
             }
-            var1 = (me) ((Object) md.field_a.d(1));
+            var1 = (me) (md.field_a.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

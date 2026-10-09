@@ -16,7 +16,7 @@ final class id {
     }
 
     final static void a(boolean param0) {
-        tl var1 = (tl) ((Object) n.field_l.e(1));
+        tl var1 = (tl) (n.field_l.e(1));
         if (var1 == null) {
             throw new IllegalStateException();
         }

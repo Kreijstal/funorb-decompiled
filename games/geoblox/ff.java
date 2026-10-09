@@ -173,7 +173,7 @@ class ff implements dh, cc {
               if (!(param1.field_w instanceof vc)) {
                 return;
               }
-              ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
+              ((vc) (param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
               return;
             }
             if (var6Lifetime1 != 2) {
@@ -182,11 +182,11 @@ class ff implements dh, cc {
             if (!(param1.field_w instanceof vc)) {
               return;
             }
-            ((vc) ((Object) param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
+            ((vc) (param1.field_w)).a(var3_int, var5, (byte) -21, this.field_n, this.c(125, param1));
             return;
           }
           if (param1.field_w instanceof vc) {
-            ((vc) ((Object) param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
+            ((vc) (param1.field_w)).a(var5, 0, this.c(param0 ^ 18, param1), -91, this.field_n);
             return;
           }
           return;
@@ -217,7 +217,7 @@ class ff implements dh, cc {
             param1.field_w = (dk) ((Object) new vc());
           }
           if (this.field_q) {
-            ((vc) ((Object) param1.field_w)).a(this.field_i, 1, this.c(116, param1), this.field_f, this.field_n, this.a(param1, -1), this.field_g, this.b(289769985, param1));
+            ((vc) (param1.field_w)).a(this.field_i, 1, this.c(116, param1), this.field_f, this.field_n, this.a(param1, -1), this.field_g, this.b(289769985, param1));
           } else {
             this.b((byte) 109, param1);
           }

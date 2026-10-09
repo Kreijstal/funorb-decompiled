@@ -35,7 +35,7 @@ final class ml extends ff {
           }
           var6_int = stackIn_6_0;
           if (param4 instanceof hk) {
-            param3 = param3 & ((hk) ((Object) param4)).field_D;
+            param3 = param3 & ((hk) (param4)).field_D;
           }
           if (param1 >= -5) {
             ml.c(-17);

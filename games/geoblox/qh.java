@@ -529,7 +529,7 @@ final class qh extends ee implements pe, pl, ta {
     }
 
     public final void a(byte param0) {
-        ((uk) ((Object) this.field_H.a((byte) -128))).c((byte) -89);
+        ((uk) (this.field_H.a((byte) -128))).c((byte) -89);
         if (param0 != 83) {
             this.a((byte) -25);
         }

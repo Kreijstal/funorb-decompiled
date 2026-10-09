@@ -63,10 +63,10 @@ final class bh extends java.awt.Canvas {
             return;
           }
           var2 = var14.c((byte) 34);
-          var3 = (re) ((Object) nj.field_f.g(0));
+          var3 = (re) (nj.field_f.g(0));
           while (var3 != null) {
             if (var2 != var3.field_k) {
-              var3 = (re) ((Object) nj.field_f.d(1));
+              var3 = (re) (nj.field_f.d(1));
               continue;
             }
             break;
@@ -183,7 +183,7 @@ final class bh extends java.awt.Canvas {
           var8 = param1.field_z;
           var9 = param1.field_C;
           while (true) {
-            dupTemp$0 = (ja) ((Object) var15.a(true));
+            dupTemp$0 = (ja) (var15.a(true));
             var10 = dupTemp$0;
             if (null == dupTemp$0) {
               if (param2 != 1) {
@@ -218,10 +218,10 @@ final class bh extends java.awt.Canvas {
                   continue;
                 }
               }
-              var12 = (ja) ((Object) var6.c((byte) 121));
+              var12 = (ja) (var6.c((byte) 121));
               while (var12 != null) {
                 if (var10 != var12) {
-                  var12 = (ja) ((Object) var6.a(param2 - 60));
+                  var12 = (ja) (var6.a(param2 - 60));
                   continue;
                 }
                 var11++;

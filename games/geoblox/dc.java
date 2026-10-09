@@ -20,10 +20,10 @@ final class dc {
         RuntimeException decompiledCaughtException = null;
         var2 = Geoblox.field_C;
         try {
-          var3 = (ja) ((Object) a.field_d.g(0));
+          var3 = (ja) (a.field_d.g(0));
           while (var3 != null) {
             var3.e(1643839728);
-            var3 = (ja) ((Object) a.field_d.d(1));
+            var3 = (ja) (a.field_d.d(1));
           }
           if (param0 == 7838) {
             return;

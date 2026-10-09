@@ -13,10 +13,10 @@ final class ud {
         RuntimeException var2_ref = null;
         var3 = Geoblox.field_C;
         try {
-          var4 = (p) ((Object) rh.field_a.g(0));
+          var4 = (p) (rh.field_a.g(0));
           while (var4 != null) {
             ol.a(param1, var4, 30175);
-            var4 = (p) ((Object) rh.field_a.d(1));
+            var4 = (p) (rh.field_a.d(1));
           }
           var2 = k.field_e.g(0);
           if (param0 > -123) {
@@ -58,7 +58,7 @@ final class ud {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (j) ((Object) ug.field_a.a((long)var2.hashCode(), -1));
+          var3 = (j) (ug.field_a.a((long)var2.hashCode(), -1));
           if (param0 != 0) {
             var6 = (String) null;
             ud.a(55, (String) null);
@@ -73,7 +73,7 @@ final class ud {
               stackIn_16_0 = var3;
               return stackIn_16_0;
             }
-            var3 = (j) ((Object) ug.field_a.a(param0 ^ -29925));
+            var3 = (j) (ug.field_a.a(param0 ^ -29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class ud {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((qc) ((Object) var5)).a((byte) -97);
             }
-            var14 = (qi) ((Object) k.field_e.g(0));
+            var14 = (qi) (k.field_e.g(0));
             if (var14 == null) {
               jl.a((byte) -117);
               return;
@@ -143,7 +143,7 @@ final class ud {
             var14.a(false);
           } else {
             if (var2 == 1) {
-              var11 = (p) ((Object) rh.field_a.g(0));
+              var11 = (p) (rh.field_a.g(0));
               if (var11 == null) {
                 jl.a((byte) -120);
                 return;
@@ -151,7 +151,7 @@ final class ud {
               var11.a(false);
             } else {
               if (var2 == 2) {
-                var15 = (qi) ((Object) k.field_e.g(0));
+                var15 = (qi) (k.field_e.g(0));
                 if (var15 == null) {
                   jl.a((byte) -115);
                   return;

@@ -60,10 +60,10 @@ final class cm extends cj {
           var2 = var27.c((byte) 34);
           if (var2 == 0) {
             var3 = var27.b(true);
-            var4 = (mg) ((Object) rh.field_d.g(0));
+            var4 = (mg) (rh.field_d.g(0));
             while (var4 != null) {
               if (var4.field_i != var3) {
-                var4 = (mg) ((Object) rh.field_d.d(1));
+                var4 = (mg) (rh.field_d.d(1));
                 continue;
               }
               break;
@@ -157,10 +157,10 @@ final class cm extends cj {
           if (1 == var2) {
             var3Lifetime1 = var27.b(true);
             var27.b(param0 + 27740);
-            var4_ref = (ai) ((Object) nf.field_j.g(0));
+            var4_ref = (ai) (nf.field_j.g(0));
             while (var4_ref != null) {
               if (var3Lifetime1 != var4_ref.field_q) {
-                var4_ref = (ai) ((Object) nf.field_j.d(1));
+                var4_ref = (ai) (nf.field_j.d(1));
                 continue;
               }
               break;

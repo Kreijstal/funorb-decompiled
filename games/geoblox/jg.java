@@ -65,7 +65,7 @@ abstract class jg {
             stackIn_13_0 = null;
             return (j) (stackIn_13_0);
           }
-          var3 = (j) ((Object) nh.field_a.a((long)var2.hashCode(), -1));
+          var3 = (j) (nh.field_a.a((long)var2.hashCode(), -1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_hb);
             var4 = oe.a(var7, 12);
@@ -73,7 +73,7 @@ abstract class jg {
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
-            var3 = (j) ((Object) nh.field_a.a(-29925));
+            var3 = (j) (nh.field_a.a(-29925));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

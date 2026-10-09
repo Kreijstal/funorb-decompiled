@@ -138,7 +138,7 @@ class el extends hf {
               if (!(this.field_u instanceof lg)) {
                 return;
               }
-              ((lg) ((Object) this.field_u)).a(53, this, var5_int != 0);
+              ((lg) (this.field_u)).a(53, this, var5_int != 0);
             }
           }
           return;
@@ -243,7 +243,7 @@ class el extends hf {
               var8 = lh.field_b;
               if (var8 != null) {
                 if (var8.field_u instanceof rg) {
-                  ((rg) ((Object) var8.field_u)).a((fk) null, var8, 22176);
+                  ((rg) (var8.field_u)).a((fk) null, var8, 22176);
                 }
                 lh.field_b = null;
               }
@@ -265,7 +265,7 @@ class el extends hf {
                 var9 = lh.field_b;
                 if (var9 != null) {
                   if (var9.field_u instanceof rg) {
-                    ((rg) ((Object) var9.field_u)).a((fk) null, var9, 22176);
+                    ((rg) (var9.field_u)).a((fk) null, var9, 22176);
                   }
                   lh.field_b = null;
                 }
@@ -300,7 +300,7 @@ class el extends hf {
           var10 = lh.field_b;
           if (var10 != null) {
             if (var10.field_u instanceof rg) {
-              ((rg) ((Object) var10.field_u)).a((fk) null, var10, 22176);
+              ((rg) (var10.field_u)).a((fk) null, var10, 22176);
             }
             lh.field_b = null;
           }
@@ -323,7 +323,7 @@ class el extends hf {
               var6 = var15;
               if (var15 != null) {
                 if (var15.field_u instanceof rg) {
-                  ((rg) ((Object) var15.field_u)).a((fk) null, var15, 22176);
+                  ((rg) (var15.field_u)).a((fk) null, var15, 22176);
                 }
                 lh.field_b = null;
               }
@@ -359,7 +359,7 @@ class el extends hf {
           var6Lifetime2 = var17;
           if (var17 != null) {
             if (var17.field_u instanceof rg) {
-              ((rg) ((Object) var17.field_u)).a((fk) null, var17, 22176);
+              ((rg) (var17.field_u)).a((fk) null, var17, 22176);
             }
             lh.field_b = null;
           }
@@ -378,7 +378,7 @@ class el extends hf {
             var11 = lh.field_b;
             if (var11 != null) {
               if (var11.field_u instanceof rg) {
-                ((rg) ((Object) var11.field_u)).a((fk) null, var11, 22176);
+                ((rg) (var11.field_u)).a((fk) null, var11, 22176);
               }
               lh.field_b = null;
             }
@@ -408,7 +408,7 @@ class el extends hf {
           var6Lifetime1 = var12;
           if (var12 != null) {
             if (var12.field_u instanceof rg) {
-              ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);
+              ((rg) (var12.field_u)).a((fk) null, var12, 22176);
             }
             lh.field_b = null;
           }
@@ -436,7 +436,7 @@ class el extends hf {
         var14 = lh.field_b;
         if (var14 != null) {
           if (var14.field_u instanceof rg) {
-            ((rg) ((Object) var14.field_u)).a((fk) null, var14, 22176);
+            ((rg) (var14.field_u)).a((fk) null, var14, 22176);
           }
           lh.field_b = null;
         }

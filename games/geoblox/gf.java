@@ -11,7 +11,7 @@ final class gf {
 
     final static void a(byte param0) {
         int var2 = 78 % ((-69 - param0) / 46);
-        nj var4 = (nj) ((Object) pb.field_t.g(0));
+        nj var4 = (nj) (pb.field_t.g(0));
         var4 = var4;
         if (var4 == null) {
             return;

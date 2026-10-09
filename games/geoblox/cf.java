@@ -114,7 +114,7 @@ final class cf extends q {
           if (param0 < 8) {
             cf.c((byte) 121);
           }
-          var1 = (me) ((Object) md.field_a.g(0));
+          var1 = (me) (md.field_a.g(0));
           while (var1 != null) {
             if (!(var1.field_k >= 1.0f)) {
               var1.field_k = var1.field_k + (0.03999999910593033f * var1.field_k + 0.00004999999873689376f);
@@ -127,7 +127,7 @@ final class cf extends q {
                 ue.field_f.a(-35, var1);
               }
             }
-            var1 = (me) ((Object) md.field_a.d(1));
+            var1 = (me) (md.field_a.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -149,7 +149,7 @@ final class cf extends q {
           if (param0 != -114) {
             return true;
           }
-          var4 = (eg) ((Object) sl.field_k.g(0));
+          var4 = (eg) (sl.field_k.g(0));
           var1 = var4;
           if (var1 == null) {
             return false;

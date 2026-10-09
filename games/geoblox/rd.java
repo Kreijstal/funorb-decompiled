@@ -244,7 +244,7 @@ final class rd extends ff {
           } else {
             stackIn_3_0 = (el) (param4);
           }
-          var10 = (hk) ((Object) stackIn_3_0);
+          var10 = (hk) (stackIn_3_0);
           uh.a(param4.field_m + param2, param4.field_v + param0, -14045, param4.field_h + (param2 + param4.field_m), param4.field_r + (param0 + param4.field_v));
           if (var10 != null) {
             param3 = param3 & var10.field_D;

@@ -18,15 +18,15 @@ final class ec {
         var4 = Geoblox.field_C;
         try {
           var3 = 57 % ((param0 - 57) / 46);
-          var5 = (ai) ((Object) nf.field_j.g(0));
+          var5 = (ai) (nf.field_j.g(0));
           while (var5 != null) {
             bm.a(var5, param1, -127);
-            var5 = (ai) ((Object) nf.field_j.d(1));
+            var5 = (ai) (nf.field_j.d(1));
           }
-          var6 = (mg) ((Object) rh.field_d.g(0));
+          var6 = (mg) (rh.field_d.g(0));
           while (var6 != null) {
             ib.a(param1, 5, var6);
-            var6 = (mg) ((Object) rh.field_d.d(1));
+            var6 = (mg) (rh.field_d.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -154,7 +154,7 @@ final class ec {
     }
 
     final static void a(int param0) {
-        ph var1 = (ph) ((Object) el.field_p.g(param0 ^ param0));
+        ph var1 = (ph) (el.field_p.g(param0 ^ param0));
         if (var1 == null) {
             jl.a((byte) -122);
             return;

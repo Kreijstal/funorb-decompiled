@@ -429,23 +429,23 @@ final class sk {
           }
           el.field_o.d((byte) 116);
           sh.field_y.a(255);
-          var11 = (ja) ((Object) a.field_d.a(false));
+          var11 = (ja) (a.field_d.a(false));
           var1 = var11;
           var2 = (-320.0f + var11.field_o) * (-320.0f + var11.field_o) + (var11.field_v - 240.0f) * (var11.field_v - 240.0f);
-          var3 = (ja) ((Object) a.field_d.a(false));
+          var3 = (ja) (a.field_d.a(false));
           while (var3 != null) {
             if (var2 < (-320.0f + var3.field_o) * (var3.field_o - 320.0f) + (-240.0f + var3.field_v) * (-240.0f + var3.field_v)) {
               var2 = (-320.0f + var3.field_o) * (var3.field_o - 320.0f) + (var3.field_v - 240.0f) * (-240.0f + var3.field_v);
               var1 = var3;
             }
-            var3 = (ja) ((Object) a.field_d.b(0));
+            var3 = (ja) (a.field_d.b(0));
           }
           var12 = new wd();
           var4 = new wd();
           var5 = 0;
           var12.a(var1, false);
           while (true) {
-            var6 = (ja) ((Object) var12.a(true));
+            var6 = (ja) (var12.a(true));
             if (var6 == null) {
               return true;
             }
@@ -459,21 +459,21 @@ final class sk {
                 break;
               }
               var8 = var6.field_n[var7];
-              var9 = (ja) ((Object) var4.c((byte) 121));
+              var9 = (ja) (var4.c((byte) 121));
               L5: while (true) {
                 if (var9 == null) {
-                  var9 = (ja) ((Object) var12.c((byte) 121));
+                  var9 = (ja) (var12.c((byte) 121));
                   while (var9 != null) {
                     if (var9 == var8) {
                       break L5;
                     }
-                    var9 = (ja) ((Object) var12.a(69));
+                    var9 = (ja) (var12.a(69));
                   }
                   var12.a(-82, var8);
                   break L5;
                 }
                 if (var9 != var8) {
-                  var9 = (ja) ((Object) var4.a(param0 ^ 24));
+                  var9 = (ja) (var4.a(param0 ^ 24));
                   continue;
                 }
                 break;

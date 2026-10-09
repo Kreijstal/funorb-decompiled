@@ -197,7 +197,7 @@ final class ab {
           field_f = false;
           wb.field_b = 0;
           sh.field_y.a(255);
-          var2 = (ja) ((Object) ji.field_r.g(0));
+          var2 = (ja) (ji.field_r.g(0));
           while (var2 != null) {
             L2: {
               if (a.field_d != var2.field_K) {
@@ -233,7 +233,7 @@ final class ab {
                     wb.field_b = wb.field_b + 1;
                     break L2;
                   }
-                  var2 = (ja) ((Object) ji.field_r.d(1));
+                  var2 = (ja) (ji.field_r.d(1));
                   continue;
                 }
                 if (ma.a(true, param1, var2)) {
@@ -295,13 +295,13 @@ final class ab {
                 var2.h((byte) 51);
               }
             }
-            var2 = (ja) ((Object) ji.field_r.d(1));
+            var2 = (ja) (ji.field_r.d(1));
           }
           var3Lifetime1 = -125 % ((param0 - 35) / 49);
-          var17 = (ja) ((Object) ji.field_r.g(0));
+          var17 = (ja) (ji.field_r.g(0));
           while (var17 != null) {
             var17.j(30383);
-            var17 = (ja) ((Object) ji.field_r.d(1));
+            var17 = (ja) (ji.field_r.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

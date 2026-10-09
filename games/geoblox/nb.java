@@ -55,7 +55,7 @@ final class nb {
         if (param0 != -28195) {
           return;
         }
-        var6 = (ja) ((Object) ra.field_a.e(1));
+        var6 = (ja) (ra.field_a.e(1));
         if (var6 == null) {
           return;
         }

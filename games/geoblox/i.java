@@ -28,7 +28,7 @@ final class i {
         try {
           var1_float = 1.401298464324817e-45f;
           var2 = null;
-          var3 = (ja) ((Object) a.field_d.a(false));
+          var3 = (ja) (a.field_d.a(false));
           if (param0 >= -127) {
             i.a(false);
           }
@@ -38,7 +38,7 @@ final class i {
               var1_float = var4;
               var2 = var3;
             }
-            var3 = (ja) ((Object) a.field_d.b(0));
+            var3 = (ja) (a.field_d.b(0));
             if (var5 == 0) {
               continue;
             }

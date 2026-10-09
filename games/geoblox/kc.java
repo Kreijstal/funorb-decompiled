@@ -109,7 +109,7 @@ final class kc {
         var9 = Geoblox.field_C;
         try {
           fa.field_a = false;
-          var1 = (ja) ((Object) ji.field_r.g(0));
+          var1 = (ja) (ji.field_r.g(0));
           L1: while (true) {
             L2: {
               if (var1 != null) {
@@ -128,7 +128,7 @@ final class kc {
                     el.field_o.field_F = true;
                   }
                   var1.field_K = null;
-                  var1 = (ja) ((Object) ji.field_r.d(1));
+                  var1 = (ja) (ji.field_r.d(1));
                   continue;
                 }
               } else {
@@ -137,7 +137,7 @@ final class kc {
                 }
                 stackIn_12_0 = a.field_d;
               }
-              var1 = (ja) ((Object) ((tf) (Object) stackIn_12_0).g(0));
+              var1 = (ja) (((tf) (Object) stackIn_12_0).g(0));
               while (true) {
                 if (var1 == null) {
                   re.field_j = false;
@@ -155,7 +155,7 @@ final class kc {
                     var11.a(var1, false);
                     var4_int = 1;
                     while (true) {
-                      stackIn_20_0 = (ja) ((Object) var11.a(true));
+                      stackIn_20_0 = (ja) (var11.a(true));
                       var10 = stackIn_20_0;
                       var12 = var10;
                       var5_ref_ja = var12;
@@ -171,25 +171,25 @@ final class kc {
                           var6_int = 0;
                           while (var6_int < var12.field_L) {
                             var7 = var10.field_n[var6_int];
-                            stackIn_20_0Lifetime1 = (ja) ((Object) var13.c((byte) 121));
+                            stackIn_20_0Lifetime1 = (ja) (var13.c((byte) 121));
                             var8 = stackIn_20_0Lifetime1;
                             L20: while (true) {
                               if (var8 != null) {
                                 stackIn_51_0 = var8;
                                 stackIn_51_1 = var7;
                                 if (stackIn_51_0 != stackIn_51_1) {
-                                  var8 = (ja) ((Object) var13.a(-45));
+                                  var8 = (ja) (var13.a(-45));
                                   continue;
                                 }
                               } else {
-                                var8 = (ja) ((Object) var11.c((byte) 121));
+                                var8 = (ja) (var11.c((byte) 121));
                                 while (var8 != null) {
                                   stackIn_51_0 = var8;
                                   stackIn_51_1 = var7;
                                   if (stackIn_51_0 == stackIn_51_1) {
                                     break L20;
                                   }
-                                  var8 = (ja) ((Object) var11.a(54));
+                                  var8 = (ja) (var11.a(54));
                                 }
                                 var11.a(var7, false);
                               }
@@ -204,7 +204,7 @@ final class kc {
                       if (stackIn_44_0Lifetime1 == 0) {
                         break;
                       }
-                      var5_ref_jaLifetime1 = (ja) ((Object) var13.a(true));
+                      var5_ref_jaLifetime1 = (ja) (var13.a(true));
                       while (var5_ref_jaLifetime1 != null) {
                         var5_ref_jaLifetime1.field_K = ji.field_r;
                         var5_ref_jaLifetime1.field_t = false;
@@ -223,12 +223,12 @@ final class kc {
                         var5_ref_jaLifetime1.field_L = 0;
                         var6.field_N = 0;
                         var7Lifetime2.field_m = 0;
-                        var5_ref_jaLifetime1 = (ja) ((Object) var13.a(true));
+                        var5_ref_jaLifetime1 = (ja) (var13.a(true));
                       }
                       break;
                     }
                   }
-                  var1 = (ja) ((Object) a.field_d.d(1));
+                  var1 = (ja) (a.field_d.d(1));
                   continue;
                 }
                 break;
@@ -245,7 +245,7 @@ final class kc {
             var1_int = 0;
             break;
           }
-          var2_ref_ja = (ja) ((Object) a.field_d.g(0));
+          var2_ref_ja = (ja) (a.field_d.g(0));
           while (var2_ref_ja != null) {
             if (null != var2_ref_ja.field_K ||
                 w.field_f &&
@@ -346,14 +346,14 @@ final class kc {
               }
               el.field_o.field_F = true;
             }
-            var2_ref_ja = (ja) ((Object) a.field_d.d(1));
+            var2_ref_ja = (ja) (a.field_d.d(1));
             if (var9 == 0) {
               continue;
             }
             break;
           }
           var2 = -23 / ((param0 - 69) / 46);
-          var3Lifetime1 = (ja) ((Object) bh.field_c.g(0));
+          var3Lifetime1 = (ja) (bh.field_c.g(0));
           while (true) {
             if (var3Lifetime1 == null) {
               if (w.field_f) {
@@ -369,7 +369,7 @@ final class kc {
                 ra.field_a.a(-44, var3Lifetime1);
                 var3Lifetime1.field_K = null;
               }
-              var3Lifetime1 = (ja) ((Object) bh.field_c.d(1));
+              var3Lifetime1 = (ja) (bh.field_c.d(1));
               continue;
             }
             break;

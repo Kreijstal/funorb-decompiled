@@ -22,7 +22,7 @@ final class hb implements dh {
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
+        qb var14 = param4 instanceof qb ? (qb) (param4) : null;
         double var9Lifetime1;
         vb.a(param0 + param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
         if (var14 != null) {

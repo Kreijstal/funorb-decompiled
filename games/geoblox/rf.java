@@ -98,7 +98,7 @@ final class rf extends hf {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (pj) ((Object) this.field_g.a((long)var13, (byte) -76));
+                var14 = (pj) (this.field_g.a((long)var13, (byte) -76));
                 if (var14 == null) {
                   var14 = new pj(new byte[128]);
                   this.field_g.a((byte) 102, var14, (long)var13);

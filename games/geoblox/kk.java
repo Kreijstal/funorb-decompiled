@@ -75,16 +75,16 @@ final class kk extends ji {
             }
             try {
               this.field_u.d(-108);
-              var2 = (sd) ((Object) this.field_g.c((byte) 121));
+              var2 = (sd) (this.field_g.c((byte) 121));
               while (var2 != null) {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) -54, 1);
                 this.field_m.a((byte) -127, var2.field_i);
                 this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
                 this.field_e.a(-93, var2);
-                var2 = (sd) ((Object) this.field_g.a(param0 ^ 41));
+                var2 = (sd) (this.field_g.a(param0 ^ 41));
               }
-              var2Lifetime1 = (sd) ((Object) this.field_p.c((byte) 121));
+              var2Lifetime1 = (sd) (this.field_p.c((byte) 121));
               if (param0 != 95) {
                 this.e(-90);
               }
@@ -94,7 +94,7 @@ final class kk extends ji {
                 this.field_m.a((byte) -127, var2Lifetime1.field_i);
                 this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
                 this.field_c.a(112, var2Lifetime1);
-                var2Lifetime1 = (sd) ((Object) this.field_p.a(54));
+                var2Lifetime1 = (sd) (this.field_p.a(54));
               }
               for (var2_int = 0; var2_int < 100; var2_int++) {
                 var3_int = this.field_u.a((byte) 82);
@@ -169,25 +169,25 @@ final class kk extends ji {
                         var12 = (long)var7 + ((long)var6 << 32);
                         var14 = null;
                         if (var11 != 0) {
-                          var14_ref = (sd) ((Object) this.field_c.c((byte) 121));
+                          var14_ref = (sd) (this.field_c.c((byte) 121));
                           while (var14_ref != null) {
                             if (var12 == var14_ref.field_i) {
                               decompiledFrameCompleted0 = false;
                               break;
                             }
-                            var14_ref = (sd) ((Object) this.field_c.a(-30));
+                            var14_ref = (sd) (this.field_c.a(-30));
                           }
                           if (decompiledFrameCompleted0) {
                             break L18;
                           }
                         }
                         if (decompiledFrameCompleted0) {
-                          var14_ref = (sd) ((Object) this.field_e.c((byte) 121));
+                          var14_ref = (sd) (this.field_e.c((byte) 121));
                           while (var14_ref != null) {
                             if (~var12 == ~var14_ref.field_i) {
                               break;
                             }
-                            var14_ref = (sd) ((Object) this.field_e.a(72));
+                            var14_ref = (sd) (this.field_e.a(72));
                           }
                         }
                       }
@@ -349,7 +349,7 @@ final class kk extends ji {
               this.field_j.field_f = 0;
               this.field_f = null;
               while (true) {
-                var4_ref = (sd) ((Object) this.field_e.a(true));
+                var4_ref = (sd) (this.field_e.a(true));
                 if (var4_ref != null) {
                   this.field_g.a(-74, var4_ref);
                   continue;
@@ -360,7 +360,7 @@ final class kk extends ji {
                 field_t = 110;
               }
               while (true) {
-                var4_refLifetime1 = (sd) ((Object) this.field_c.a(true));
+                var4_refLifetime1 = (sd) (this.field_c.a(true));
                 if (var4_refLifetime1 != null) {
                   this.field_p.a(116, var4_refLifetime1);
                   continue;

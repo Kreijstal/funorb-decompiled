@@ -275,7 +275,7 @@ final class ci {
           var5_int = param3 ^ (65533 & param2 << 4 | param2 >>> 12);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (gd) ((Object) this.field_b.a(var6, (byte) -74));
+          var8 = (gd) (this.field_b.a(var6, (byte) -74));
           if (param1 <= 19) {
             this.field_c = (rh) null;
           }
@@ -334,7 +334,7 @@ final class ci {
           var5_int = ((param1 & -1879044097) << 4 | param1 >>> 12) ^ param2;
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (gd) ((Object) this.field_b.a(var6, (byte) -115));
+          var8 = (gd) (this.field_b.a(var6, (byte) -115));
           if (param3 != 14) {
             stackIn_2_0 = (gd) null;
             return stackIn_2_0;
@@ -348,7 +348,7 @@ final class ci {
             stackIn_10_0 = null;
             return (gd) (stackIn_10_0);
           }
-          var9 = (ua) ((Object) this.field_a.a(var6, (byte) -96));
+          var9 = (ua) (this.field_a.a(var6, (byte) -96));
           if (var9 == null) {
             var9 = ua.a(this.field_d, param1, param2);
             if (var9 == null) {

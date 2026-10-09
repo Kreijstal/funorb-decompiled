@@ -289,7 +289,7 @@ final class vc extends dk {
         if (param0 != -1) {
             field_h = 119;
         }
-        nj var3 = (nj) ((Object) pb.field_t.g(0));
+        nj var3 = (nj) (pb.field_t.g(0));
         nj var1 = var3;
         if (var1 != null) {
             var2 = eh.field_c;

@@ -11,7 +11,7 @@ final class jj {
     private int field_b;
 
     private final void a(long param0, int param1) {
-        fj var4 = (fj) ((Object) this.field_f.a(param0, (byte) -72));
+        fj var4 = (fj) (this.field_f.a(param0, (byte) -72));
         this.a(param1 - 117, var4);
         if (param1 == 0) {
             return;
@@ -30,7 +30,7 @@ final class jj {
             this.a(param0, 0);
             this.field_d = this.field_d - param1;
             while (0 > this.field_d) {
-                var6 = (fj) ((Object) this.field_e.a((byte) -41));
+                var6 = (fj) (this.field_e.a((byte) -41));
                 this.a(114, var6);
             }
             var6_ref = new gj(param3, param1);
@@ -46,7 +46,7 @@ final class jj {
     }
 
     final Object a(byte param0, long param1) {
-        fj var7 = (fj) ((Object) this.field_f.a(param1, (byte) 61));
+        fj var7 = (fj) (this.field_f.a(param1, (byte) 61));
         if (var7 == null) {
             return null;
         }

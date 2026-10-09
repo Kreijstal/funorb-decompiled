@@ -166,7 +166,7 @@ abstract class sh extends el implements ql {
           var3 = oa.a(-12520);
           if (ab.field_b != 0 &&
               pc.field_f < 0) {
-            var5_ref_ma = (ma) ((Object) va.field_c.g(0));
+            var5_ref_ma = (ma) (va.field_c.g(0));
             if (var5_ref_ma != null &&
                 var3 > var5_ref_ma.field_f) {
               var5_ref_ma.a(false);
