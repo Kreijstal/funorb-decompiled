@@ -171,12 +171,9 @@ final class gh {
             }
             var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             var3 = 0;
-            while (true) {
-              if (!(param0.length() > var3)) {
-                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                stackIn_20_0 = 1;
-                break;
-              }
+            {
+            boolean decompiledNaturalLoopExit0 = false;
+            while (!(decompiledNaturalLoopExit0 = (!(param0.length() > var3)))) {
               stackIn_20_0 = var2.indexOf((int) param0.charAt(var3));
               if (var4 == 0) {
                 if (stackIn_20_0 == -1) {
@@ -186,6 +183,11 @@ final class gh {
                 continue;
               }
               break;
+            }
+            if (decompiledNaturalLoopExit0) {
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                stackIn_20_0 = 1;
+                }
             }
             return stackIn_20_0 != 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -869,12 +871,9 @@ final class gh {
         if (param0 != -1578896191) {
           this.field_X = (StringBuilder) null;
         }
-        while (true) {
-          if (!hh.a(111)) {
-            stackIn_464_0 = ~bi.field_g;
-            stackIn_464_1 = -1;
-            break;
-          }
+        {
+        boolean decompiledNaturalLoopExit0 = false;
+        while (!(decompiledNaturalLoopExit0 = (!hh.a(111)))) {
           if (te.field_a > 0) {
             pk.field_r = pk.field_r.substring(1) + te.field_a;
             if (pk.field_r.equalsIgnoreCase("fog")) {
@@ -1046,6 +1045,11 @@ final class gh {
             continue;
           }
           break;
+        }
+        if (decompiledNaturalLoopExit0) {
+            stackIn_464_0 = ~bi.field_g;
+            stackIn_464_1 = -1;
+            }
         }
         if (stackIn_464_0 != stackIn_464_1) {
           if (this.field_j &&

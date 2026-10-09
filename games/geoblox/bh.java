@@ -202,11 +202,9 @@ final class bh extends java.awt.Canvas {
               var10.a(320, var9, var10.field_M, var8);
             }
             var11 = 0;
-            L5: while (true) {
-              if (var11 >= var10.field_L) {
-                var6.a(var10, false);
-                break;
-              }
+            {
+            boolean decompiledNaturalLoopExit0 = false;
+            L5: while (!(decompiledNaturalLoopExit0 = (var11 >= var10.field_L))) {
               if (var10.field_n[var11].field_z != 1 ||
                     !param4) {
                 if (2 != var10.field_n[var11].field_z) {
@@ -242,6 +240,10 @@ final class bh extends java.awt.Canvas {
               }
               var14.a(var10.field_n[var11], false);
               var11++;
+            }
+            if (decompiledNaturalLoopExit0) {
+                var6.a(var10, false);
+                }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

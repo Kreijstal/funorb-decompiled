@@ -138,13 +138,9 @@ final class kc {
                 stackIn_12_0 = a.field_d;
               }
               var1 = (ja) (((tf) (Object) stackIn_12_0).g(0));
-              while (true) {
-                if (var1 == null) {
-                  re.field_j = false;
-                  el.field_o.field_B = true;
-                  stackIn_56_0 = 0;
-                  break;
-                }
+              {
+              boolean decompiledNaturalLoopExit1 = false;
+              while (!(decompiledNaturalLoopExit1 = (var1 == null))) {
                 stackOut_14_0 = pk.field_o[var1.field_H];
                 stackIn_56_0 = stackOut_14_0 ? 1 : 0;
                 stackIn_15_0 = stackOut_14_0;
@@ -232,6 +228,12 @@ final class kc {
                   continue;
                 }
                 break;
+              }
+              if (decompiledNaturalLoopExit1) {
+                  re.field_j = false;
+                  el.field_o.field_B = true;
+                  stackIn_56_0 = 0;
+                  }
               }
               var1_int = stackIn_56_0;
               while (1000 > var1_int) {
@@ -354,14 +356,9 @@ final class kc {
           }
           var2 = -23 / ((param0 - 69) / 46);
           var3Lifetime1 = (ja) (bh.field_c.g(0));
-          while (true) {
-            if (var3Lifetime1 == null) {
-              if (w.field_f) {
-                jc.a(3, false);
-                jl.field_t = false;
-              }
-              break;
-            }
+          {
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (var3Lifetime1 == null))) {
             if (var9 == 0) {
               if (ra.field_a == var3Lifetime1.field_K) {
                 var3Lifetime1.a(false);
@@ -373,6 +370,13 @@ final class kc {
               continue;
             }
             break;
+          }
+          if (decompiledNaturalLoopExit0) {
+              if (w.field_f) {
+                jc.a(3, false);
+                jl.field_t = false;
+              }
+              }
           }
           stackIn_110_0 = el.field_o;
           stackIn_112_1 = (el.field_o.field_F) || (ab.field_f) || (w.field_f);

@@ -133,11 +133,9 @@ final class i {
           }
           ch.field_b = 0;
           var8 = 0;
-          while (true) {
-            if (!(var8 < param2.field_f)) {
-              stackIn_49_0 = -1;
-              break;
-            }
+          {
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_f)))) {
             var9 = param2.field_r[var8];
             var10 = param2.field_B[var8];
             var11 = param2.field_c[var8];
@@ -199,6 +197,10 @@ final class i {
               continue;
             }
             break;
+          }
+          if (decompiledNaturalLoopExit0) {
+              stackIn_49_0 = -1;
+              }
           }
           if (stackIn_49_0 > ~param2.field_v &&
               null != param2.field_n) {
@@ -281,11 +283,9 @@ final class i {
           }
           ch.field_b = 0;
           var8 = 0;
-          while (true) {
-            if (!(var8 < param2.field_f)) {
-              stackIn_49_0 = -1;
-              break;
-            }
+          {
+          boolean decompiledNaturalLoopExit0 = false;
+          while (!(decompiledNaturalLoopExit0 = (!(var8 < param2.field_f)))) {
             var9 = param2.field_r[var8];
             var10 = param2.field_B[var8];
             var11 = param2.field_c[var8];
@@ -347,6 +347,10 @@ final class i {
               continue;
             }
             break;
+          }
+          if (decompiledNaturalLoopExit0) {
+              stackIn_49_0 = -1;
+              }
           }
           if (stackIn_49_0 > ~param2.field_v &&
               null != param2.field_n) {
