@@ -1,11 +1,61 @@
 # Readable GeoBlox
 
-The current export has 18,434 guarded naming rules: 302 classes, 2,064 fields,
+The current export has 18,430 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 145 labels. Both 303-file corpora
-compile, comparing 136,981 bindings and preserving 388 override relationships. Unknown
+compile, comparing 136,992 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current ranked-response and stripe local names (pass 217)
+## Current terminal nested continuations (pass 218)
+
+The generic decompiler now guards complete terminal nested continuations using
+primitive-local predicates proved total and unchanged across their prefixes.
+Other exits retain the same label until its last reference is recovered.
+Eight rewrites in five methods and four files remove four block labels and
+14 source lines. They copy eight proved conditions and eleven primitive reads;
+no drawing, callback or field-write sequence is copied. The large
+SpriteState.drawSortedHalfBlendRgbTriangle body falls from five labels and
+362 lines to three labels and 356 lines. MeshDepthSupport's two depth-queue helpers,
+ReflectionCheckRequest's numeric parser and LimitedRandomAccessFile's character
+validator also improve. Four large bodies with plain block labels remain.
+
+A focused native fixture compares 51,840 original/recovered/oracle cases across
+24 models, including nullable unboxing, partial writes, other frame exits,
+monitors, injected failures and overriding finally completions. From java-tools,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node --test --experimental-test-isolation=none test/nestedStableGuardedFallbackRecovery.test.js test/stableGuardedFallbackRecovery.test.js test/terminalGuardedFrameRecovery.test.js test/sharedStatementFallbackRecovery.test.js test/sharedGuardedFallbackRecovery.test.js test/cfrLoopTailMerge.test.js test/exceptionRegionSplitting.test.js test/exceptionStructurer.test.js`
+passes 75 Node groups and 12 loop-tail checks. From Deko,
+`JAVA_TOOL_OPTIONS=-XX:-UsePerfData NODE_PATH=/home/kreijstal/git/java-tools/node_modules node readable/tests/test-geoblox-nested-stable-source.mjs ../java-tools`
+uses independent javac attribution at every intermediate rewrite to prove the
+terminal corridor, primitive inputs, complete prefix mutation set and moved
+guard's scope. All original ordinary bindings and surviving transfer/handler/
+monitor targets are preserved; all 303 original/readable files compile and
+reverse byte exactly. All 27 publication tests, 17 scoped native trace groups
+and fresh sibling reproduction checks pass. Historical proofs remain pinned.
+
+The export has 18,430 guarded names, 118,402 identifier edits,
+11 literal and 442 label edits (118,855 total), 85 plain block labels
+and 75,788 source lines. Four labels retire and two surviving
+label ordinals migrate explicitly; every unaffected complete rule and dictionary
+object remains intact. The 436 compiler-style declarations and 41 unsupported
+fields are unchanged. Whole-game/server/browser/phone and heap/presented-FPS
+acceptance remain unverified.
+
+The remaining large frames have real skips: gameplay fast-forward exits skip
+the later rotation-key snapshot; board-routing exits skip later queue clears;
+menu/tutorial exits skip later animation or pointer effects. Replacing those
+jumps with an inner-loop break would execute different work. Repeating field or
+callback predicates across writes is also unsafe. Further recovery needs a
+proved continuation or an independently verified method decomposition; no
+clientControlFlowFlag value is assumed.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95` at java-tools `433ff77e11140811703f28a56e22efa35fc64e07`.
+The raw compiler invocation records `CFR_JS_DISABLE_LOOP_TAIL_MERGE=1` in both
+the generator and fresh-decompilation provenance. Upstream master's loop-tail
+optimization changes 49 additional files; that reconstruction is excluded from
+this pass's independently proved four-file change. All other normal CLI flags
+and fixed transformed classes/stubs remain unchanged.
+
+## Previous ranked-response and stripe local names (pass 217)
 
 Seventy previously unnamed declarations now describe their source roles in
 DelegatingCanvas and ProgressBarWidget. Contact conversion names its failure
@@ -4174,41 +4224,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/90c321084b14a10c8e8f445a8d8fe87dc3576297/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/77511453225b8fe5a1eed627688ccd8b05313a51/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/90c321084b14a10c8e8f445a8d8fe87dc3576297/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/77511453225b8fe5a1eed627688ccd8b05313a51/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `90c321084b14a10c8e8f445a8d8fe87dc3576297`; the
-manifest SHA-256 is `01fd75436b0807eb0289c57cbaafb4f2314cd145740e2e738caa6fff2a09af49`.
+The current Deko workflow/manifest commit is `77511453225b8fe5a1eed627688ccd8b05313a51`; the
+manifest SHA-256 is `16677ce51b23a0c5ff2f9876ea591fb7b675f28972e8d183d26c8627e01c3fad`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`16b62019ef79afa0cc5ca8693b72206bfe722e9f`. It comes from java-tools
-`03a5aa806452458c8d2f19718f16a0c37ff78abf` and Deko
+`f5458b33a0efe7a55264de9382e3f8db1d5ff968`. It comes from java-tools
+`433ff77e11140811703f28a56e22efa35fc64e07` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `7d339941e604dd19c040490e33a8fd5de0938a0b` in Deko; its selected generic-source
 archive SHA-256 is `1d0657a4052656a747abedab1cf491ebb97140bd68ad9389e25763443ab158a9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`0d5006fd3d9321c254252d94f322f97c13ee4a6cca4549bcc03b48a597fbb6c6`:
+`f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95`:
 
 ```sh
-git archive --format=tar 03a5aa806452458c8d2f19718f16a0c37ff78abf | sha256sum
+git archive --format=tar 433ff77e11140811703f28a56e22efa35fc64e07 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`bf6759d05dff386a545e66df9abdb0e40f5327dcfda55870b73433ef8622c219`.
+`81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695`.
 Current readable tree SHA-256:
-`75a2fe5efadbd96d65fe9a4ab7d77a654c8e4f6e340722b336a778dc7d24d957`.
+`83f3eeed01097120de2458aae7f2a75b88b880c1a2b0fa77bee63ba8defad343`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

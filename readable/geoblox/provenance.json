@@ -3,13 +3,13 @@
   "mode": "readable-source-mirror",
   "source": {
     "repository": "Kreijstal/funorb-decompiled",
-    "commit": "16b62019ef79afa0cc5ca8693b72206bfe722e9f",
+    "commit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
     "subdirectory": "games/geoblox"
   },
-  "rulesSha256": "01fd75436b0807eb0289c57cbaafb4f2314cd145740e2e738caa6fff2a09af49",
+  "rulesSha256": "16677ce51b23a0c5ff2f9876ea591fb7b675f28972e8d183d26c8627e01c3fad",
   "generatorSha256": "b8e756dd9e7b53a5277f5681a02770c9d64aaa88ec4ac76f9320e18676ec04d6",
-  "inputTreeSha256": "bf6759d05dff386a545e66df9abdb0e40f5327dcfda55870b73433ef8622c219",
-  "outputTreeSha256": "75a2fe5efadbd96d65fe9a4ab7d77a654c8e4f6e340722b336a778dc7d24d957",
+  "inputTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+  "outputTreeSha256": "83f3eeed01097120de2458aae7f2a75b88b880c1a2b0fa77bee63ba8defad343",
   "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
   "classpath": [
     {
@@ -20,13 +20,13 @@
   "verification": {
     "originalCompiles": true,
     "renamedCompiles": true,
-    "bindingsCompared": 136981,
+    "bindingsCompared": 136992,
     "overrideFamiliesChecked": 388,
     "overrideRelationshipsPreserved": true,
     "classNameLiteralBindingsCompared": 11,
     "classNameLiteralEdits": 11,
-    "labelBindingsCompared": 454,
-    "labelEdits": 454,
+    "labelBindingsCompared": 442,
+    "labelEdits": 442,
     "runtimeEquivalenceVerified": false
   }
 }

@@ -139,18 +139,15 @@ final class MeshDepthSupport {
             cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
             cullBackfacesSnapshot = cullBackfacesCarrier;
             if (controlFlagSnapshot == 0) {
-              faceVisibilityAndDepthQueue: {
-                if (cullBackfacesSnapshot) {
-                  projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
-                  projectedAYOrVertexBDepth = TextInputWidget.projectedMeshVertexY[vertexAOrPriorityIndex];
-                  edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
-                  edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
-                  edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
-                  edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
-                  if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {
-                    break faceVisibilityAndDepthQueue;
-                  }
-                }
+              if (cullBackfacesSnapshot) {
+                projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
+                projectedAYOrVertexBDepth = TextInputWidget.projectedMeshVertexY[vertexAOrPriorityIndex];
+                edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
+                edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
+              }
+              if (!(cullBackfacesSnapshot) || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
                 if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
@@ -284,18 +281,15 @@ final class MeshDepthSupport {
             cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
             cullBackfacesSnapshot = cullBackfacesCarrier;
             if (controlFlagSnapshot == 0) {
-              faceVisibilityAndDepthQueue: {
-                if (cullBackfacesSnapshot) {
-                  projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
-                  projectedAYOrVertexBDepth = TextInputWidget.projectedMeshVertexY[vertexAOrPriorityIndex];
-                  edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
-                  edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
-                  edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
-                  edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
-                  if (-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0) {
-                    break faceVisibilityAndDepthQueue;
-                  }
-                }
+              if (cullBackfacesSnapshot) {
+                projectedAXOrVertexADepth = SingleChildWidget.projectedMeshVertexX[vertexAOrPriorityIndex];
+                projectedAYOrVertexBDepth = TextInputWidget.projectedMeshVertexY[vertexAOrPriorityIndex];
+                edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexBOrPriorityCount] - projectedAXOrVertexADepth;
+                edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAXOrVertexADepth;
+                edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
+                edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
+              }
+              if (!(cullBackfacesSnapshot) || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
                 if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
