@@ -171,12 +171,9 @@ final class GameplaySession {
             }
             allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             urlCharacterIndex = 0;
-            while (true) {
-              if (!(url.length() > urlCharacterIndex)) {
-                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
-                allowedCharacterIndexOrSuccessFlag = 1;
-                break;
-              }
+            {
+            boolean urlCharactersValidated = false;
+            while (!(urlCharactersValidated = (!(url.length() > urlCharacterIndex)))) {
               allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
               if (clientControlFlowGuard == 0) {
                 if (allowedCharacterIndexOrSuccessFlag == -1) {
@@ -186,6 +183,11 @@ final class GameplaySession {
                 continue;
               }
               break;
+            }
+            if (urlCharactersValidated) {
+                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
+                allowedCharacterIndexOrSuccessFlag = 1;
+                }
             }
             return allowedCharacterIndexOrSuccessFlag != 0;
           } catch (java.lang.Exception caughtLaunchException) {
@@ -869,12 +871,9 @@ final class GameplaySession {
         if (methodGuard != -1578896191) {
           this.scoreText = (StringBuilder) null;
         }
-        while (true) {
-          if (!UiFontResources.pollKeyboardEvent(111)) {
-            debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
-            debugKeySentinelOrPointerEventSentinel = -1;
-            break;
-          }
+        {
+        boolean keyboardEventsExhausted = false;
+        while (!(keyboardEventsExhausted = (!UiFontResources.pollKeyboardEvent(111)))) {
           if (GameAudioState.currentKeyboardEventCharacter > 0) {
             PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
             if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
@@ -1046,6 +1045,11 @@ final class GameplaySession {
             continue;
           }
           break;
+        }
+        if (keyboardEventsExhausted) {
+            debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
+            debugKeySentinelOrPointerEventSentinel = -1;
+            }
         }
         if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
           if (this.debugPointerSpawnEnabled &&

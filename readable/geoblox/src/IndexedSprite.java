@@ -149,13 +149,9 @@ final class IndexedSprite extends IndexedSpriteState {
             sourceIndex++;
             destinationIndex++;
           }
-          while (true) {
-            if (remainingColumnsScratch <= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (remainingColumnsScratch <= 0))) {
             indexThenRunLength = sourceIndices[sourceIndex++];
             remainingColumnsScratch--;
             if (indexThenRunLength == 0) {
@@ -179,6 +175,12 @@ final class IndexedSprite extends IndexedSpriteState {
             sourceIndex = sourceIndex + indexThenRunLength;
             remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
             destinationIndex = destinationIndex + (indexThenRunLength + 2);
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }

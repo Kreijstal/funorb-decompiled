@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/085ec178905159b8cea18acca79f791b1058ff89/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 247)
+## Current readability (pass 248)
 
-The export has 20,133 guarded names and 121,837 Java identifier edits, plus 11
+The export has 20,146 guarded names and 121,876 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 137,772 bindings, reproduce and
+compile and compare 137,811 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,22 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current cast cleanup (pass 247)
+## Current loop exit work (pass 248)
+
+`connectivityEntityScanCompleted` controls the original connectivity reset after
+the entity scan. `transientQueueExhausted` controls the original avatar-feedback
+cleanup. Other breaks retain their destinations and skip those exit-only actions.
+`keyboardEventsExhausted` similarly distinguishes empty polling from other exits.
+Raster, related-entity, mesh and URL loops use the same generic reconstruction.
+All conditions and original operations remain once, with their protected scopes.
+
+The five remaining framed methods measure 340, 314, 328, 557 and 368 lines:
+board reconciliation, screen rendering, screen update, session update and
+half-blend RGB triangle drawing. Their block-label counts remain two, one, two,
+two and two. The source certificate and native oracle results are documented in
+the current workflow; remaining frame reconstruction still needs further proofs.
+
+## Previous cast cleanup (pass 247)
 
 294 intermediate `(Object)` casts disappear from 66 files. Narrowing target
 casts remain, making entity/deque/widget code easier to follow without changing

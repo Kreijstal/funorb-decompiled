@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/085ec178905159b8cea18acca79f791b1058ff89/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 137,772 bindings,
+identities. Both 303-file Java corpora compile and compare 137,811 bindings,
 preserving 388 override relationships.
 
-## Current reference casts (pass 247)
+## Current loop exits (pass 248)
+
+Thirteen loops now express their original leading exit conditions in their
+headers and separate exit-only work from the repeating body. Other breaks skip
+that work. The independent source certificate compares all 303 trees, retained
+bindings and protected targets; 155,520 native oracle cases and 13 existing
+native trace groups pass. All 303 sources reproduce and reverse exactly. The
+export has 20,146 rules. Five large frames and 41 finer field purposes remain;
+see the current reading guide and reproduction procedure for coverage.
+
+## Previous reference casts (pass 247)
 
 294 redundant `(Object)` bridges are removed from 66 files while retaining the
 original target casts. Independently compiled old/new raw and readable trees

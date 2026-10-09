@@ -1829,13 +1829,9 @@ class Sprite extends SpriteState {
             return;
           }
           negativeColumnScratch = -drawWidth;
-          while (true) {
-            if (negativeColumnScratch >= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (negativeColumnScratch >= 0))) {
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
@@ -1852,6 +1848,12 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }
@@ -1934,13 +1936,9 @@ class Sprite extends SpriteState {
             return;
           }
           negativeColumnScratch = -drawWidth;
-          while (true) {
-            if (negativeColumnScratch >= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (negativeColumnScratch >= 0))) {
             sourcePixel = sourcePixels[sourceIndex++];
             if (sourcePixel == 0) {
               destinationIndex++;
@@ -1957,6 +1955,12 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex2] = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
             negativeColumnScratch++;
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }
@@ -2454,13 +2458,9 @@ class Sprite extends SpriteState {
             return;
           }
           negativeColumnScratch = -drawWidth;
-          while (true) {
-            if (negativeColumnScratch >= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (negativeColumnScratch >= 0))) {
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
@@ -2475,6 +2475,12 @@ class Sprite extends SpriteState {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }

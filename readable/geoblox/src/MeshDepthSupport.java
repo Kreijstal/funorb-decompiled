@@ -133,11 +133,9 @@ final class MeshDepthSupport {
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndex = 0;
-          while (true) {
-            if (!(faceIndex < mesh.faceCount)) {
-              cullFlagOrPriorityLoopSentinel = -1;
-              break;
-            }
+          {
+          boolean meshFacesScanned = false;
+          while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
             vertexA = mesh.faceVertexA[faceIndex];
             vertexB = mesh.faceVertexB[faceIndex];
             vertexC = mesh.faceVertexC[faceIndex];
@@ -199,6 +197,10 @@ final class MeshDepthSupport {
               continue;
             }
             break;
+          }
+          if (meshFacesScanned) {
+              cullFlagOrPriorityLoopSentinel = -1;
+              }
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
               null != mesh.facePriorities) {
@@ -281,11 +283,9 @@ final class MeshDepthSupport {
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndex = 0;
-          while (true) {
-            if (!(faceIndex < mesh.faceCount)) {
-              cullFlagOrPriorityLoopSentinel = -1;
-              break;
-            }
+          {
+          boolean meshFacesScanned = false;
+          while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
             vertexA = mesh.faceVertexA[faceIndex];
             vertexB = mesh.faceVertexB[faceIndex];
             vertexC = mesh.faceVertexC[faceIndex];
@@ -347,6 +347,10 @@ final class MeshDepthSupport {
               continue;
             }
             break;
+          }
+          if (meshFacesScanned) {
+              cullFlagOrPriorityLoopSentinel = -1;
+              }
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
               null != mesh.facePriorities) {

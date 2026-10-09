@@ -138,13 +138,9 @@ final class BoardReconciliationSupport {
                 entityQueueThenAttachedQueue = BoardEntityState.attachedEntities;
               }
               activeEntity = (GameplayEntity) (((IntrusiveDeque) (Object) entityQueueThenAttachedQueue).firstForIteration(0));
-              while (true) {
-                if (activeEntity == null) {
-                  RankedListQuery.connectivityDirty = false;
-                  UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
-                  visitedFlagThenResetIndex = 0;
-                  break;
-                }
+              {
+              boolean connectivityEntityScanCompleted = false;
+              while (!(connectivityEntityScanCompleted = (activeEntity == null))) {
                 visitedByEntityIdValue = PacketBuffer.connectivityVisitedByEntityId[activeEntity.entityId];
                 visitedFlagThenResetIndex = visitedByEntityIdValue ? 1 : 0;
                 alreadyVisited = visitedByEntityIdValue;
@@ -232,6 +228,12 @@ final class BoardReconciliationSupport {
                   continue;
                 }
                 break;
+              }
+              if (connectivityEntityScanCompleted) {
+                  RankedListQuery.connectivityDirty = false;
+                  UiWidget.gameplaySession.connectivityRebuiltThisTick = true;
+                  visitedFlagThenResetIndex = 0;
+                  }
               }
               visitedResetIndexThenKindFourCount = visitedFlagThenResetIndex;
               while (1000 > visitedResetIndexThenKindFourCount) {
@@ -354,14 +356,9 @@ final class BoardReconciliationSupport {
           }
           methodGuardResidue = -23 / ((methodGuard - 69) / 46);
           transientQueueEntity = (GameplayEntity) (DelegatingCanvas.transientEntities.firstForIteration(0));
-          while (true) {
-            if (transientQueueEntity == null) {
-              if (SessionSocketSupport.avatarShockPending) {
-                AvatarFeedbackSupport.requestAvatarFeedback(3, false);
-                Bzip2DecoderState.avatarShockContactPending = false;
-              }
-              break;
-            }
+          {
+          boolean transientQueueExhausted = false;
+          while (!(transientQueueExhausted = (transientQueueEntity == null))) {
             if (clientControlSnapshot == 0) {
               if (SecondaryNodeDeque.availableEntities == transientQueueEntity.entityQueue) {
                 transientQueueEntity.unlinkNode(false);
@@ -373,6 +370,13 @@ final class BoardReconciliationSupport {
               continue;
             }
             break;
+          }
+          if (transientQueueExhausted) {
+              if (SessionSocketSupport.avatarShockPending) {
+                AvatarFeedbackSupport.requestAvatarFeedback(3, false);
+                Bzip2DecoderState.avatarShockContactPending = false;
+              }
+              }
           }
           sessionForRasterRead = UiWidget.gameplaySession;
           rasterDirtyDecision = (UiWidget.gameplaySession.boardRasterDirty) || (EntityMotionSupport.boardContactStateDirty) || (SessionSocketSupport.avatarShockPending);

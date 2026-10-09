@@ -202,11 +202,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
               currentEntity.configureEntitySprite(320, templateCategoryKey, currentEntity.spriteVariantIndex, templateSpriteKindId);
             }
             neighborIndex = 0;
-            contactConversionNeighbors: while (true) {
-              if (neighborIndex >= currentEntity.relatedEntityCount) {
-                processedEntities.addFirst(currentEntity, false);
-                break;
-              }
+            {
+            boolean allRelatedEntitiesScanned = false;
+            contactConversionNeighbors: while (!(allRelatedEntitiesScanned = (neighborIndex >= currentEntity.relatedEntityCount))) {
               if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1 ||
                     !propagateVariant) {
                 if (2 != currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
@@ -242,6 +240,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
               pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
               neighborIndex++;
+            }
+            if (allRelatedEntitiesScanned) {
+                processedEntities.addFirst(currentEntity, false);
+                }
             }
           }
         } catch (java.lang.RuntimeException caughtConversionFailure) {

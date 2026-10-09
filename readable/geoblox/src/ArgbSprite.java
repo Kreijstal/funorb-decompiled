@@ -917,13 +917,9 @@ final class ArgbSprite extends Sprite {
             return;
           }
           negativeColumnScratch = -drawWidth;
-          while (true) {
-            if (negativeColumnScratch >= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (negativeColumnScratch >= 0))) {
             sourceColorScratch = sourcePixels[sourceIndex++];
             if (sourceColorScratch == 0) {
               destinationIndex++;
@@ -941,6 +937,12 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
             negativeColumnScratch++;
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }
@@ -1189,13 +1191,9 @@ final class ArgbSprite extends Sprite {
             return;
           }
           negativeColumnScratch = -drawWidth;
-          while (true) {
-            if (negativeColumnScratch >= 0) {
-              destinationIndex = destinationIndex + destinationRowSkip;
-              sourceIndex = sourceIndex + sourceRowSkip;
-              negativeRowScratch++;
-              break;
-            }
+          {
+          boolean rasterColumnsCompleted = false;
+          while (!(rasterColumnsCompleted = (negativeColumnScratch >= 0))) {
             sourcePixel = sourcePixels[sourceIndex++];
             storedAlpha = sourcePixel >>> 24;
             sourcePixel = sourcePixel & 16777215;
@@ -1217,6 +1215,12 @@ final class ArgbSprite extends Sprite {
             destinationIndex++;
             destinationPixels[destinationWriteIndex] = ((modulatedRgb & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedRgb & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumnScratch++;
+          }
+          if (rasterColumnsCompleted) {
+              destinationIndex = destinationIndex + destinationRowSkip;
+              sourceIndex = sourceIndex + sourceRowSkip;
+              negativeRowScratch++;
+              }
           }
         }
     }
