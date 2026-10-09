@@ -26,70 +26,70 @@ final class WhirlpoolHash {
     private final void processBlock(int methodGuard) {
         long hashWordSnapshot = 0L;
         long messageWordSnapshot = 0L;
-        int wordIndexOrRound;
-        int blockByteOffsetOrWordIndex;
-        int keyByteIndexOrStateStartSnapshot;
-        int byteShift;
+        int messageWordIndex;
+        int blockByteOffset;
+        int roundKeyTableIndex;
+        int roundKeyByteShift;
         int unusedClientGuardSnapshot;
         int stateByteIndex;
-        int wordIndexOrRoundPhase2;
-        int wordIndexOrRoundPhase3;
-        int wordIndexOrRoundPhase4;
-        int blockByteOffsetOrWordIndexPhase2;
-        int keyByteIndexOrStateStartSnapshotNestedPhase2;
-        int byteShiftNestedPhase2;
-        int blockByteOffsetOrWordIndexPhase2NestedPhase2;
-        int blockByteOffsetOrWordIndexPhase2NestedPhase3;
-        int blockByteOffsetOrWordIndexPhase2NestedPhase4;
+        int initialStateWordIndex;
+        int roundNumber;
+        int feedForwardWordIndex;
+        int roundKeyWordIndex;
+        int unusedStateByteIndexSnapshot;
+        int cipherStateByteShift;
+        int roundKeyPublishIndex;
+        int cipherStateWordIndex;
+        int cipherStatePublishIndex;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard < 103) {
           return;
         }
-        wordIndexOrRound = 0;
-        blockByteOffsetOrWordIndex = 0;
-        while (wordIndexOrRound < 8) {
-          this.messageWords[wordIndexOrRound] = MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[7 + blockByteOffsetOrWordIndex], 255L), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(FrameTimer.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 3] << 32), MessageDialog.xorLong(FrameTimer.andLong(255L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 2]) << 40, MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffsetOrWordIndex] << 56))), FrameTimer.andLong((long)this.blockBuffer[4 + blockByteOffsetOrWordIndex] << 24, 4278190080L)), FrameTimer.andLong(16711680L, (long)this.blockBuffer[blockByteOffsetOrWordIndex + 5] << 16)), FrameTimer.andLong((long)this.blockBuffer[blockByteOffsetOrWordIndex + 6] << 8, 65280L)));
-          blockByteOffsetOrWordIndex += 8;
-          wordIndexOrRound++;
+        messageWordIndex = 0;
+        blockByteOffset = 0;
+        while (messageWordIndex < 8) {
+          this.messageWords[messageWordIndex] = MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[7 + blockByteOffset], 255L), MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(MessageDialog.xorLong(FrameTimer.andLong(1095216660480L, (long)this.blockBuffer[blockByteOffset + 3] << 32), MessageDialog.xorLong(FrameTimer.andLong(255L, (long)this.blockBuffer[blockByteOffset + 2]) << 40, MessageDialog.xorLong(FrameTimer.andLong((long)this.blockBuffer[blockByteOffset + 1] << 48, 71776119061217280L), (long)this.blockBuffer[blockByteOffset] << 56))), FrameTimer.andLong((long)this.blockBuffer[4 + blockByteOffset] << 24, 4278190080L)), FrameTimer.andLong(16711680L, (long)this.blockBuffer[blockByteOffset + 5] << 16)), FrameTimer.andLong((long)this.blockBuffer[blockByteOffset + 6] << 8, 65280L)));
+          blockByteOffset += 8;
+          messageWordIndex++;
         }
-        for (wordIndexOrRoundPhase2 = 0; wordIndexOrRoundPhase2 < 8; wordIndexOrRoundPhase2++) {
-          hashWordSnapshot = this.hashWords[wordIndexOrRoundPhase2];
-          messageWordSnapshot = this.messageWords[wordIndexOrRoundPhase2];
-          this.roundKey[wordIndexOrRoundPhase2] = hashWordSnapshot;
-          this.cipherState[wordIndexOrRoundPhase2] = MessageDialog.xorLong(messageWordSnapshot, hashWordSnapshot);
+        for (initialStateWordIndex = 0; initialStateWordIndex < 8; initialStateWordIndex++) {
+          hashWordSnapshot = this.hashWords[initialStateWordIndex];
+          messageWordSnapshot = this.messageWords[initialStateWordIndex];
+          this.roundKey[initialStateWordIndex] = hashWordSnapshot;
+          this.cipherState[initialStateWordIndex] = MessageDialog.xorLong(messageWordSnapshot, hashWordSnapshot);
         }
-        for (wordIndexOrRoundPhase3 = 1; 10 >= wordIndexOrRoundPhase3; wordIndexOrRoundPhase3++) {
-          for (blockByteOffsetOrWordIndexPhase2 = 0; blockByteOffsetOrWordIndexPhase2 < 8; blockByteOffsetOrWordIndexPhase2++) {
-            this.roundScratch[blockByteOffsetOrWordIndexPhase2] = 0L;
-            keyByteIndexOrStateStartSnapshot = 0;
-            byteShift = 56;
-            while (keyByteIndexOrStateStartSnapshot < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndexPhase2] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndexPhase2], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][ProxySocketConnector.andInt(255, (int)(this.roundKey[ProxySocketConnector.andInt(7, blockByteOffsetOrWordIndexPhase2 - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
-              byteShift -= 8;
-              keyByteIndexOrStateStartSnapshot++;
+        for (roundNumber = 1; 10 >= roundNumber; roundNumber++) {
+          for (roundKeyWordIndex = 0; roundKeyWordIndex < 8; roundKeyWordIndex++) {
+            this.roundScratch[roundKeyWordIndex] = 0L;
+            roundKeyTableIndex = 0;
+            roundKeyByteShift = 56;
+            while (roundKeyTableIndex < 8) {
+              this.roundScratch[roundKeyWordIndex] = MessageDialog.xorLong(this.roundScratch[roundKeyWordIndex], ByteArrayBuffer.whirlpoolTables[roundKeyTableIndex][ProxySocketConnector.andInt(255, (int)(this.roundKey[ProxySocketConnector.andInt(7, roundKeyWordIndex - roundKeyTableIndex)] >>> roundKeyByteShift))]);
+              roundKeyByteShift -= 8;
+              roundKeyTableIndex++;
             }
           }
-          for (blockByteOffsetOrWordIndexPhase2NestedPhase2 = 0; blockByteOffsetOrWordIndexPhase2NestedPhase2 < 8; blockByteOffsetOrWordIndexPhase2NestedPhase2++) {
-            this.roundKey[blockByteOffsetOrWordIndexPhase2NestedPhase2] = this.roundScratch[blockByteOffsetOrWordIndexPhase2NestedPhase2];
+          for (roundKeyPublishIndex = 0; roundKeyPublishIndex < 8; roundKeyPublishIndex++) {
+            this.roundKey[roundKeyPublishIndex] = this.roundScratch[roundKeyPublishIndex];
           }
-          this.roundKey[0] = MessageDialog.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRoundPhase3]);
-          for (blockByteOffsetOrWordIndexPhase2NestedPhase3 = 0; blockByteOffsetOrWordIndexPhase2NestedPhase3 < 8; blockByteOffsetOrWordIndexPhase2NestedPhase3++) {
-            this.roundScratch[blockByteOffsetOrWordIndexPhase2NestedPhase3] = this.roundKey[blockByteOffsetOrWordIndexPhase2NestedPhase3];
+          this.roundKey[0] = MessageDialog.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[roundNumber]);
+          for (cipherStateWordIndex = 0; cipherStateWordIndex < 8; cipherStateWordIndex++) {
+            this.roundScratch[cipherStateWordIndex] = this.roundKey[cipherStateWordIndex];
             stateByteIndex = 0;
-            keyByteIndexOrStateStartSnapshotNestedPhase2 = stateByteIndex;
-            byteShiftNestedPhase2 = 56;
+            unusedStateByteIndexSnapshot = stateByteIndex;
+            cipherStateByteShift = 56;
             while (stateByteIndex < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndexPhase2NestedPhase3] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndexPhase2NestedPhase3], ByteArrayBuffer.whirlpoolTables[stateByteIndex][ProxySocketConnector.andInt(255, (int)(this.cipherState[ProxySocketConnector.andInt(-stateByteIndex + blockByteOffsetOrWordIndexPhase2NestedPhase3, 7)] >>> byteShiftNestedPhase2))]);
+              this.roundScratch[cipherStateWordIndex] = MessageDialog.xorLong(this.roundScratch[cipherStateWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][ProxySocketConnector.andInt(255, (int)(this.cipherState[ProxySocketConnector.andInt(-stateByteIndex + cipherStateWordIndex, 7)] >>> cipherStateByteShift))]);
               stateByteIndex++;
-              byteShiftNestedPhase2 -= 8;
+              cipherStateByteShift -= 8;
             }
           }
-          for (blockByteOffsetOrWordIndexPhase2NestedPhase4 = 0; 8 > blockByteOffsetOrWordIndexPhase2NestedPhase4; blockByteOffsetOrWordIndexPhase2NestedPhase4++) {
-            this.cipherState[blockByteOffsetOrWordIndexPhase2NestedPhase4] = this.roundScratch[blockByteOffsetOrWordIndexPhase2NestedPhase4];
+          for (cipherStatePublishIndex = 0; 8 > cipherStatePublishIndex; cipherStatePublishIndex++) {
+            this.cipherState[cipherStatePublishIndex] = this.roundScratch[cipherStatePublishIndex];
           }
         }
-        for (wordIndexOrRoundPhase4 = 0; wordIndexOrRoundPhase4 < 8; wordIndexOrRoundPhase4++) {
-          this.hashWords[wordIndexOrRoundPhase4] = MessageDialog.xorLong(this.hashWords[wordIndexOrRoundPhase4], MessageDialog.xorLong(this.cipherState[wordIndexOrRoundPhase4], this.messageWords[wordIndexOrRoundPhase4]));
+        for (feedForwardWordIndex = 0; feedForwardWordIndex < 8; feedForwardWordIndex++) {
+          this.hashWords[feedForwardWordIndex] = MessageDialog.xorLong(this.hashWords[feedForwardWordIndex], MessageDialog.xorLong(this.cipherState[feedForwardWordIndex], this.messageWords[feedForwardWordIndex]));
         }
         return;
     }

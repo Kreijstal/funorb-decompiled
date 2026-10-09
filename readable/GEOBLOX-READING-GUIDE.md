@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/16ac502638fa95e80fa26a72cfe6c7a65cec3f04/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/765e8c5be3195b57d65f7c417905763ecbb764e6/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 243)
+## Current readability (pass 244)
 
 The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,28 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current Vorbis setup and packet roles (pass 243)
+## Current MIDI, hash and menu-avatar roles (pass 244)
+
+MidiPcmStream event dispatch names now identify each status branch's channel,
+key, velocity, pressure, program/controller value, pitch bend and MSB/LSB
+parameter snapshot. MusicScore separates event/track/controller scans from
+serialized stream cursors and identifies program/note collection. WhirlpoolHash
+separates message/key/state words, round numbers, table bytes, publication indexes
+and feed-forward. Its unused initial state-byte snapshot still executes.
+
+The unrelated menu-avatar helper in PrefixCodeDecoder names held/blink, left/
+right steering, neutral step/hold and left-fallback tint factors. Names follow
+actual neighboring branch snapshots, retaining repeated field reads and float
+association. The prefix-code algorithm itself is unchanged.
+
+67 names change exactly 468 bound occurrences. All 303 sources compile,
+reproduce, reverse and match an independent identifier-only reconstruction.
+Existing score/rendering native probes preserve their original scopes and
+traces; full MIDI-dispatch/hash/device behavior is not newly verified. 69 numbered
+phase-family names, five large framed methods and 41 unresolved field purposes
+remain. See the workflow for exact commands, hashes and coverage limits.
+
+## Previous Vorbis setup and packet roles (pass 243)
 
 MusicDecoder names distinguish packet mux/floor/residue selection, pre-rotation
 and pre-butterfly samples, recursive butterfly stages, bit-reversal partners and

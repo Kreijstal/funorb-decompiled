@@ -3305,11 +3305,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "16ac502638fa95e80fa26a72cfe6c7a65cec3f04",
+    "commit": "765e8c5be3195b57d65f7c417905763ecbb764e6",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "c35e961021c1e02fab164d54606e5b445bb8f6c95ef2e104c1189c6544642d10"
+      "sha256": "e23e047df49214cb12f46bbbb9b45f7ac5656d70a2e3d278f74ece5d2d7c28e0"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3319,7 +3319,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "488fe93d2361622f38f22c650f85d116ea10052c73940cbedc367d848893f02f",
+    "outputTreeSha256": "f9b97cb47d77c1d94e1b581ae624e561b7fbec0a52df6d7e8c23fb43095a984d",
     "files": 303,
     "rules": 20125,
     "identifierEdits": 121882,
@@ -3350,7 +3350,7 @@
       "remainingUnresolvedFieldPurposes": 41
     },
     "structuralPass": 240,
-    "semanticPass": 243
+    "semanticPass": 244
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36395,5 +36395,36 @@
     "sourceWorkflowCommit": "16ac502638fa95e80fa26a72cfe6c7a65cec3f04",
     "manifestSha256": "c35e961021c1e02fab164d54606e5b445bb8f6c95ef2e104c1189c6544642d10",
     "readableTreeSha256": "488fe93d2361622f38f22c650f85d116ea10052c73940cbedc367d848893f02f"
+  },
+  "midiHashAndMenuAvatarPurposeNaming": {
+    "version": 244,
+    "rulesRefined": 67,
+    "numberedPhaseFamilyNamesReplaced": 49,
+    "supersededCombinedNamesRefined": 18,
+    "boundIdentifierOccurrencesRenamed": 468,
+    "changedJavaFiles": 4,
+    "unaffectedCompleteRulesPreserved": 20058,
+    "dictionaryIdentitiesPreserved": 20432,
+    "remainingNumberedPhaseFamilyNames": 69,
+    "remainingLiteralPhaseNames": 0,
+    "remainingLargeFramedMethods": 5,
+    "remainingUnresolvedFieldPurposes": 41,
+    "sourceAndCompilerPinsUnchanged": true,
+    "sourceBodyEditedByHand": false,
+    "bytecodeChanged": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "MIDI score scan/serialization and event-dispatch locals, Whirlpool block processing locals and the menu-avatar helper owned by PrefixCodeDecoder. Exact identifier-only source reconstruction, full javac binding/compilation checks and byte-exact reversal certify the naming transformation. Existing native score/rendering probes keep their documented scope; live devices, all dispatcher/hash paths and whole-game equivalence are not newly certified.",
+    "ruleBuilderTestGroupsPassed": 13,
+    "matchingNativeResultTraceGroups": 14,
+    "matchingNativeRenderingTraceGroups": 10,
+    "independentlyReconstructedReadableFiles": 303,
+    "exactIdentifierOnlyOccurrencesCompared": 468,
+    "dictionaryReversalByteExact": true,
+    "sourceDeclarations": 20327,
+    "bindingsCompared": 138121,
+    "overrideRelationshipsPreserved": 388,
+    "sourceWorkflowCommit": "765e8c5be3195b57d65f7c417905763ecbb764e6",
+    "manifestSha256": "e23e047df49214cb12f46bbbb9b45f7ac5656d70a2e3d278f74ece5d2d7c28e0",
+    "readableTreeSha256": "f9b97cb47d77c1d94e1b581ae624e561b7fbec0a52df6d7e8c23fb43095a984d"
   }
 }
