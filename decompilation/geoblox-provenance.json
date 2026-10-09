@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "43de5a2a1fce5ea26fc01bd05f606d6a3e3ec380",
+      "commit": "52c822f9f3262f6286f80e826b9fe2f3070df4fe",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ee67d76058d27a23dec52d4e93e2c11224b27a62343df06136915f7557fa3f15",
-        "reproduce": "git archive --format=tar 43de5a2a1fce5ea26fc01bd05f606d6a3e3ec380 | sha256sum",
+        "sha256": "7fce66e335643f894682ca00040d2a446b4cf316676e0583580cd14a153196ff",
+        "reproduce": "git archive --format=tar 52c822f9f3262f6286f80e826b9fe2f3070df4fe | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -33,7 +33,8 @@
         "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
         "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
         "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
-        "CFR_JS_REINDENT_STRUCTURED_BODIES": "1"
+        "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+        "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1"
       }
     },
     "namingTool": {
@@ -124,7 +125,8 @@
       "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
       "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
       "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
-      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1"
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1"
     }
   },
   "freshVerification": {
@@ -149,9 +151,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
-  "previousSourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
-  "changedJavaFiles": 275,
+  "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+  "previousSourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+  "changedJavaFiles": 2,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3319,11 +3321,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3",
+    "commit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "b715a3684ec5e7a0a16652c20058fd94928e7790e9c8530fe639fe330ff8ff34"
+      "sha256": "f1589b240837ad07e44368080bacffec2fc13e148f142d3f06fc184acfcc6755"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3333,20 +3335,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "9b6c4231b1ad75a5d202b8b6586b409a428da8f3096df3e744f20c67f604001f",
+    "outputTreeSha256": "3819a4c31f3530662ca0b0897fcaecccbadcabdcfd698cb07dd5d7db5c6478f7",
     "files": 303,
-    "rules": 20139,
+    "rules": 20137,
     "identifierEdits": 122113,
     "bindingsCompared": 138048,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122412,
+    "totalEdits": 122354,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 288,
-    "labelBindingsCompared": 288,
-    "labelDeclarationsCompared": 63,
+    "labelEdits": 230,
+    "labelBindingsCompared": 230,
+    "labelDeclarationsCompared": 61,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3363,8 +3365,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 252,
-    "semanticPass": 252
+    "structuralPass": 253,
+    "semanticPass": 253
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36842,12 +36844,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "60c1b588fd0f6468a640b6e707cfb18b97732279",
-    "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+    "sourceCommit": "53901f0dbdd5d94cc0421241c727f8cd4f199bd9",
+    "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3"
+    "workflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -48020,5 +48022,392 @@
     ],
     "sourceWorkflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3",
     "sourceProofWorkflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3"
+  },
+  "exhaustiveSwitchFrameRecovery": {
+    "version": 253,
+    "changedJavaFiles": 2,
+    "changedMethodBodies": 2,
+    "framesRecovered": 2,
+    "breaksLocalized": 56,
+    "removedLabelOccurrences": 58,
+    "removedLabelDeclarations": 2,
+    "newDecisionLocals": 0,
+    "sourceProofTest": "readable/tests/test-geoblox-exhaustive-switch-source.mjs",
+    "sourceProofTestSha256": "56e86b23bfc1ee3fbea6ac6d42f64399de64094df50ab6d4260f5c565cda3e45",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "60c1b588fd0f6468a640b6e707cfb18b97732279",
+    "sourceCommit": "53901f0dbdd5d94cc0421241c727f8cd4f199bd9",
+    "previousSourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+    "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+    "javaToolsCommit": "52c822f9f3262f6286f80e826b9fe2f3070df4fe",
+    "sourceArchiveSha256": "7fce66e335643f894682ca00040d2a446b4cf316676e0583580cd14a153196ff",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1"
+    },
+    "bindingsBefore": 138048,
+    "bindingsCompared": 138048,
+    "transfersCompared": 4835,
+    "originalIdentityMigrations": [],
+    "removedSymbols": [
+      "B:hi.a(Ljava/lang/CharSequence;[BIIII)I#0",
+      "B:jf.a(Ljava/lang/CharSequence;B)[B#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "exhaustiveDefaultAndTerminalCaseDestinationsIndependentlyCertified": true,
+    "originalPredicateSelectorStoresAndFallbackPreserved": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 20,
+    "genericExhaustiveSwitchTestGroupsPassed": 5,
+    "newIndependentNativeOracleCases": 46800,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 33,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "60c1b588fd0f6468a640b6e707cfb18b97732279",
+      "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass253 reconstructs two exhaustive switch frames as explicit predicate/switch and fallback arms. Only direct terminal case exits change from the plain frame to the existing switch. Preserve every predicate, selector, store, prefix, scope, callback, failure and evaluation order. Independent javac trees resolve every case destination and compare complete ordered syntax, all other bindings/overrides, and all protected transfers. No new locals or copied operations. Original bytecode is unchanged; generated Java is never hand-edited. Whole-game equivalence and phone/FPS behavior remain unverified.",
+    "selections": [
+      {
+        "file": "hi.java",
+        "methodStart": 11918,
+        "label": "L1",
+        "region": {
+          "start": 12674,
+          "end": 16174
+        },
+        "body": {
+          "start": 12678,
+          "end": 16174
+        },
+        "guard": {
+          "start": 12745,
+          "end": 16110
+        },
+        "condition": {
+          "start": 12748,
+          "end": 12838
+        },
+        "switch": {
+          "start": 12857,
+          "end": 16094
+        },
+        "suffix": {
+          "start": 16125,
+          "end": 16160
+        },
+        "suffixStatements": 1,
+        "jumps": [
+          {
+            "start": 12978,
+            "end": 12987
+          },
+          {
+            "start": 13093,
+            "end": 13102
+          },
+          {
+            "start": 13207,
+            "end": 13216
+          },
+          {
+            "start": 13322,
+            "end": 13331
+          },
+          {
+            "start": 13437,
+            "end": 13446
+          },
+          {
+            "start": 13552,
+            "end": 13561
+          },
+          {
+            "start": 13667,
+            "end": 13676
+          },
+          {
+            "start": 13781,
+            "end": 13790
+          },
+          {
+            "start": 13896,
+            "end": 13905
+          },
+          {
+            "start": 14010,
+            "end": 14019
+          },
+          {
+            "start": 14125,
+            "end": 14134
+          },
+          {
+            "start": 14239,
+            "end": 14248
+          },
+          {
+            "start": 14353,
+            "end": 14362
+          },
+          {
+            "start": 14468,
+            "end": 14477
+          },
+          {
+            "start": 14583,
+            "end": 14592
+          },
+          {
+            "start": 14698,
+            "end": 14707
+          },
+          {
+            "start": 14813,
+            "end": 14822
+          },
+          {
+            "start": 14928,
+            "end": 14937
+          },
+          {
+            "start": 15043,
+            "end": 15052
+          },
+          {
+            "start": 15158,
+            "end": 15167
+          },
+          {
+            "start": 15272,
+            "end": 15281
+          },
+          {
+            "start": 15387,
+            "end": 15396
+          },
+          {
+            "start": 15501,
+            "end": 15510
+          },
+          {
+            "start": 15616,
+            "end": 15625
+          },
+          {
+            "start": 15730,
+            "end": 15739
+          },
+          {
+            "start": 15843,
+            "end": 15852
+          },
+          {
+            "start": 15954,
+            "end": 15963
+          },
+          {
+            "start": 16067,
+            "end": 16076
+          }
+        ],
+        "removedSymbol": "B:hi.a(Ljava/lang/CharSequence;[BIIII)I#0",
+        "afterStart": 12674,
+        "guardIndex": 1
+      },
+      {
+        "file": "jf.java",
+        "methodStart": 7608,
+        "label": "L2",
+        "region": {
+          "start": 8404,
+          "end": 11576
+        },
+        "body": {
+          "start": 8408,
+          "end": 11576
+        },
+        "guard": {
+          "start": 8466,
+          "end": 11523
+        },
+        "condition": {
+          "start": 8469,
+          "end": 8559
+        },
+        "switch": {
+          "start": 8578,
+          "end": 11507
+        },
+        "suffix": {
+          "start": 11538,
+          "end": 11562
+        },
+        "suffixStatements": 1,
+        "jumps": [
+          {
+            "start": 8688,
+            "end": 8697
+          },
+          {
+            "start": 8792,
+            "end": 8801
+          },
+          {
+            "start": 8895,
+            "end": 8904
+          },
+          {
+            "start": 8999,
+            "end": 9008
+          },
+          {
+            "start": 9103,
+            "end": 9112
+          },
+          {
+            "start": 9207,
+            "end": 9216
+          },
+          {
+            "start": 9311,
+            "end": 9320
+          },
+          {
+            "start": 9414,
+            "end": 9423
+          },
+          {
+            "start": 9518,
+            "end": 9527
+          },
+          {
+            "start": 9621,
+            "end": 9630
+          },
+          {
+            "start": 9725,
+            "end": 9734
+          },
+          {
+            "start": 9828,
+            "end": 9837
+          },
+          {
+            "start": 9931,
+            "end": 9940
+          },
+          {
+            "start": 10035,
+            "end": 10044
+          },
+          {
+            "start": 10139,
+            "end": 10148
+          },
+          {
+            "start": 10243,
+            "end": 10252
+          },
+          {
+            "start": 10347,
+            "end": 10356
+          },
+          {
+            "start": 10451,
+            "end": 10460
+          },
+          {
+            "start": 10555,
+            "end": 10564
+          },
+          {
+            "start": 10659,
+            "end": 10668
+          },
+          {
+            "start": 10762,
+            "end": 10771
+          },
+          {
+            "start": 10866,
+            "end": 10875
+          },
+          {
+            "start": 10969,
+            "end": 10978
+          },
+          {
+            "start": 11073,
+            "end": 11082
+          },
+          {
+            "start": 11176,
+            "end": 11185
+          },
+          {
+            "start": 11278,
+            "end": 11287
+          },
+          {
+            "start": 11378,
+            "end": 11387
+          },
+          {
+            "start": 11480,
+            "end": 11489
+          }
+        ],
+        "removedSymbol": "B:jf.a(Ljava/lang/CharSequence;B)[B#0",
+        "afterStart": 8404,
+        "guardIndex": 1
+      }
+    ],
+    "dictionaryIdentities": 20444,
+    "survivingCompleteRulesPreserved": 20137,
+    "survivingDictionaryIdentitiesPreserved": 20444,
+    "historicalSourceProofsPreserved": 95,
+    "historicalRecordsPreserved": 176,
+    "readableIdentifierEdits": 122113,
+    "readableTotalEdits": 122354,
+    "dictionaryReversalByteExact": true,
+    "publicationTestGroupsPassed": 27,
+    "unresolvedFieldInventoryRechecked": true,
+    "sourceWorkflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6",
+    "sourceProofWorkflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6"
   }
 }

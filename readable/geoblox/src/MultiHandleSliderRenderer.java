@@ -221,7 +221,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
           textLength = text.length();
           encodedBytes = new byte[textLength];
           for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
-            encodedTextCharacter: {
+            {
               characterCode = text.charAt(characterIndex);
               if ((characterCode <= 0 ||
                 characterCode >= 128) && (characterCode < 160 ||
@@ -229,91 +229,92 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
                 switch (characterCode) {
                   case 8364:
                     encodedBytes[characterIndex] = (byte)-128;
-                    break encodedTextCharacter;
+                    break;
                   case 8218:
                     encodedBytes[characterIndex] = (byte)-126;
-                    break encodedTextCharacter;
+                    break;
                   case 402:
                     encodedBytes[characterIndex] = (byte)-125;
-                    break encodedTextCharacter;
+                    break;
                   case 8222:
                     encodedBytes[characterIndex] = (byte)-124;
-                    break encodedTextCharacter;
+                    break;
                   case 8230:
                     encodedBytes[characterIndex] = (byte)-123;
-                    break encodedTextCharacter;
+                    break;
                   case 8224:
                     encodedBytes[characterIndex] = (byte)-122;
-                    break encodedTextCharacter;
+                    break;
                   case 8225:
                     encodedBytes[characterIndex] = (byte)-121;
-                    break encodedTextCharacter;
+                    break;
                   case 710:
                     encodedBytes[characterIndex] = (byte)-120;
-                    break encodedTextCharacter;
+                    break;
                   case 8240:
                     encodedBytes[characterIndex] = (byte)-119;
-                    break encodedTextCharacter;
+                    break;
                   case 352:
                     encodedBytes[characterIndex] = (byte)-118;
-                    break encodedTextCharacter;
+                    break;
                   case 8249:
                     encodedBytes[characterIndex] = (byte)-117;
-                    break encodedTextCharacter;
+                    break;
                   case 338:
                     encodedBytes[characterIndex] = (byte)-116;
-                    break encodedTextCharacter;
+                    break;
                   case 381:
                     encodedBytes[characterIndex] = (byte)-114;
-                    break encodedTextCharacter;
+                    break;
                   case 8216:
                     encodedBytes[characterIndex] = (byte)-111;
-                    break encodedTextCharacter;
+                    break;
                   case 8217:
                     encodedBytes[characterIndex] = (byte)-110;
-                    break encodedTextCharacter;
+                    break;
                   case 8220:
                     encodedBytes[characterIndex] = (byte)-109;
-                    break encodedTextCharacter;
+                    break;
                   case 8221:
                     encodedBytes[characterIndex] = (byte)-108;
-                    break encodedTextCharacter;
+                    break;
                   case 8226:
                     encodedBytes[characterIndex] = (byte)-107;
-                    break encodedTextCharacter;
+                    break;
                   case 8211:
                     encodedBytes[characterIndex] = (byte)-106;
-                    break encodedTextCharacter;
+                    break;
                   case 8212:
                     encodedBytes[characterIndex] = (byte)-105;
-                    break encodedTextCharacter;
+                    break;
                   case 732:
                     encodedBytes[characterIndex] = (byte)-104;
-                    break encodedTextCharacter;
+                    break;
                   case 8482:
                     encodedBytes[characterIndex] = (byte)-103;
-                    break encodedTextCharacter;
+                    break;
                   case 353:
                     encodedBytes[characterIndex] = (byte)-102;
-                    break encodedTextCharacter;
+                    break;
                   case 8250:
                     encodedBytes[characterIndex] = (byte)-101;
-                    break encodedTextCharacter;
+                    break;
                   case 339:
                     encodedBytes[characterIndex] = (byte)-100;
-                    break encodedTextCharacter;
+                    break;
                   case 382:
                     encodedBytes[characterIndex] = (byte)-98;
-                    break encodedTextCharacter;
+                    break;
                   default:
                     encodedBytes[characterIndex] = (byte)63;
-                    break encodedTextCharacter;
+                    break;
                   case 376:
                     encodedBytes[characterIndex] = (byte)-97;
-                    break encodedTextCharacter;
+                    break;
                 }
+              } else {
+                encodedBytes[characterIndex] = (byte)characterCode;
               }
-              encodedBytes[characterIndex] = (byte)characterCode;
             }
           }
           encodedBytesBeforeReturn = encodedBytes;

@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/3db79a3eb140b8063dbfa89e6787bdbffeaa0be3/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 252)
+## Current readability (pass 253)
 
-The export has 20,139 guarded names and 122,113 Java identifier edits, plus 11
-class-name literal edits and 288 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,137 guarded names and 122,113 Java identifier edits, plus 11
+class-name literal edits and 230 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 138,048 bindings, reproduce and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current compound guards and indentation (pass 252)
+## Current exhaustive switch frames (pass 253)
+
+`DisplayNamePanel.encodeTextSlice` and
+`MultiHandleSliderRenderer.encodeTextBytes` use explicit predicate/switch and
+fallback arms. Every terminal case exits its switch with an ordinary break.
+The original character read, mapping, stores, bounds/failure behavior and
+exception scopes remain. There are no new continuation locals. The dictionary
+removes only the two obsolete frame labels; all surviving metadata stays intact.
+
+There are zero large methods with plain block labels, 33 smaller frames and
+41 finer field purposes left. The workflow records the independent source/
+binding/transfer certificate, native coverage and exact reproduction/reversal.
+Full-game equivalence and phone/FPS behavior remain unverified.
+
+## Previous compound guards and indentation (pass 252)
 
 The non-main-menu hit-test continuation is now checked together with its next
 conditional assignment. Each assignment remains short-circuited, and its returned

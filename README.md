@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/3db79a3eb140b8063dbfa89e6787bdbffeaa0be3/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,048 bindings,
 preserving 388 override relationships.
 
-## Current compound guards and indentation (pass 252)
+## Current exhaustive switch frames (pass 253)
+
+Two bulk text encoders now use ordinary switch breaks and explicit fallback
+arms. Their original predicates, selectors and stores retain their order;
+56 labeled exits are localized without new locals. Thirty-three smaller frames
+and 41 finer field purposes remain. Independent source checks and 46,800 native
+oracle cases pass. All 303 sources compile, reproduce and reverse byte exactly;
+surviving naming/dictionary objects and historical proof records remain.
+Generic recovery stays in java-tools; game evidence stays in Deko.
+
+## Previous compound guards and indentation (pass 252)
 
 Menu hit-testing combines 15 nested guards into nine ordered compound guards,
 retaining every conditional flag write and failure. Consistent indentation
