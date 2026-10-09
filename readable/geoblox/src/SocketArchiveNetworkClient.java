@@ -46,6 +46,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             int archiveHeaderSize = 0;
             int unusedClientGuardSnapshot = 0;
             int bodyXorByteIndex = 0;
+            NetworkArchiveRequest nextRequestToSend;
             unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             if (this.socket != null) {
               currentTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
@@ -83,17 +84,17 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 this.sentPriorityRequests.addLast(-93, requestToSend);
                 requestToSend = (NetworkArchiveRequest) ((Object) this.pendingPriorityRequests.nextForIteration(methodGuard ^ 41));
               }
-              requestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.firstForIteration((byte) 121));
+              nextRequestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.firstForIteration((byte) 121));
               if (methodGuard != 95) {
                 this.resetAfterValidationFailure(-90);
               }
-              while (requestToSend != null) {
+              while (nextRequestToSend != null) {
                 this.outboundPacketBuffer.position = 0;
                 this.outboundPacketBuffer.writeByte((byte) 8, 0);
-                this.outboundPacketBuffer.writeLong40BE((byte) -127, requestToSend.secondaryKey);
+                this.outboundPacketBuffer.writeLong40BE((byte) -127, nextRequestToSend.secondaryKey);
                 this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-                this.sentBackgroundRequests.addLast(112, requestToSend);
-                requestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.nextForIteration(54));
+                this.sentBackgroundRequests.addLast(112, nextRequestToSend);
+                nextRequestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.nextForIteration(54));
               }
               for (receiveIteration = 0; receiveIteration < 100; receiveIteration++) {
                 availableBytes = this.socket.available((byte) 82);
@@ -330,6 +331,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             RuntimeException attachmentFailureForContext = null;
             Exception xorSetupCloseFailure = null;
             int unusedClientGuardSnapshot = 0;
+            NetworkArchiveRequest nextRequestToRequeue;
             unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
             try {
               if (null != this.socket) {
@@ -358,9 +360,9 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 errorReportGameCrc = 110;
               }
               while (true) {
-                requestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));
-                if (requestToRequeue != null) {
-                  this.pendingBackgroundRequests.addLast(116, requestToRequeue);
+                nextRequestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));
+                if (nextRequestToRequeue != null) {
+                  this.pendingBackgroundRequests.addLast(116, nextRequestToRequeue);
                   continue;
                 }
                 break;

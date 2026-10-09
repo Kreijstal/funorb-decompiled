@@ -286,7 +286,7 @@ class AudioOutput {
         int sampleWorkThreshold;
         PcmStream[] queueHeadsAlias;
         int bucketMaskThenCleanupIndex;
-        Object previousStreamOrNextCleanupStream;
+        Object previousScheduledStream;
         PcmStream stream;
         AbstractAudioSample sample;
         int streamWork;
@@ -295,6 +295,9 @@ class AudioOutput {
         PcmStream nextStream;
         int priorityPassThenCleanupBucketNestedPhase2;
         int bucketMaskThenCleanupIndexNestedPhase2;
+        Object nextCleanupStream;
+        PcmStream childStreamAliasBeforeVisit;
+        PcmStream childStreamBeingScheduled;
         sampleCount = frameCount;
         if (stereoEnabled) {
           sampleCount = sampleCount << 1;
@@ -322,16 +325,16 @@ class AudioOutput {
               while (bucketMaskThenCleanupIndex != 0) {
                 if ((bucketMaskThenCleanupIndex & 1) != 0) {
                   pendingBuckets = pendingBuckets & ~(1 << priorityBucket);
-                  previousStreamOrNextCleanupStream = null;
+                  previousScheduledStream = null;
                   stream = this.priorityQueueHeads[priorityBucket];
                   childStream = stream;
-                  childStream = stream;
+                  childStreamAliasBeforeVisit = stream;
                   while (stream != null) {
                     sample = stream.sample;
                     if (sample != null &&
                         sample.scheduledWork > sampleWorkThreshold) {
                       pendingBuckets = pendingBuckets | 1 << priorityBucket;
-                      previousStreamOrNextCleanupStream = stream;
+                      previousScheduledStream = stream;
                       stream = stream.scheduledNextStream;
                       continue;
                     }
@@ -344,23 +347,23 @@ class AudioOutput {
                     if (scheduledWork >= this.schedulingWorkLimit) {
                       break streamSelection;
                     }
-                    childStream = stream.firstChildStream();
-                    if (childStream != null) {
+                    childStreamBeingScheduled = stream.firstChildStream();
+                    if (childStreamBeingScheduled != null) {
                       parentPriority = stream.scheduledPriority;
-                      while (childStream != null) {
-                        this.enqueueByPriority(childStream, parentPriority * childStream.getSchedulingPriority() >> 8);
-                        childStream = stream.nextChildStream();
+                      while (childStreamBeingScheduled != null) {
+                        this.enqueueByPriority(childStreamBeingScheduled, parentPriority * childStreamBeingScheduled.getSchedulingPriority() >> 8);
+                        childStreamBeingScheduled = stream.nextChildStream();
                       }
                     }
                     nextStream = stream.scheduledNextStream;
                     stream.scheduledNextStream = null;
-                    if (previousStreamOrNextCleanupStream != null) {
-                      ((PcmStream) (previousStreamOrNextCleanupStream)).scheduledNextStream = nextStream;
+                    if (previousScheduledStream != null) {
+                      ((PcmStream) (previousScheduledStream)).scheduledNextStream = nextStream;
                     } else {
                       this.priorityQueueHeads[priorityBucket] = nextStream;
                     }
                     if (nextStream == null) {
-                      this.priorityQueueTails[priorityBucket] = (PcmStream) (previousStreamOrNextCleanupStream);
+                      this.priorityQueueTails[priorityBucket] = (PcmStream) (previousScheduledStream);
                     }
                     stream = nextStream;
                   }
@@ -381,9 +384,9 @@ class AudioOutput {
             this.priorityQueueTails[priorityPassThenCleanupBucketNestedPhase2] = null;
             queueHeadsAlias[bucketMaskThenCleanupIndexNestedPhase2] = null;
             while (cleanupStream != null) {
-              previousStreamOrNextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
+              nextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
               ((PcmStream) (cleanupStream)).scheduledNextStream = null;
-              cleanupStream = previousStreamOrNextCleanupStream;
+              cleanupStream = nextCleanupStream;
             }
           }
         }

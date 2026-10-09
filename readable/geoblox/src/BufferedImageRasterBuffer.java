@@ -10,6 +10,9 @@ final class BufferedImageRasterBuffer extends AwtRasterBuffer {
         java.awt.image.DataBufferInt pixelDataBuffer = null;
         java.awt.image.DirectColorModel rgbColorModel = null;
         java.awt.image.WritableRaster imageRaster = null;
+        java.awt.image.DataBufferInt fallbackPixelDataBuffer;
+        java.awt.image.DirectColorModel fallbackRgbColorModel;
+        java.awt.image.WritableRaster fallbackImageRaster;
         this.width = width;
         if (methodGuard > 116) {
             this.height = height;
@@ -25,10 +28,10 @@ final class BufferedImageRasterBuffer extends AwtRasterBuffer {
         this.imageObserverComponent = (java.awt.Component) null;
         this.height = height;
         this.pixels = new int[1 + width * height];
-        pixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
-        rgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-        imageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) rgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) pixelDataBuffer), (java.awt.Point) null);
-        this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) rgbColorModel), imageRaster, false, new Hashtable()));
+        fallbackPixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
+        fallbackRgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        fallbackImageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) fallbackRgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) fallbackPixelDataBuffer), (java.awt.Point) null);
+        this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) fallbackRgbColorModel), fallbackImageRaster, false, new Hashtable()));
         this.imageObserverComponent = component;
         this.setAsRasterTarget(255);
     }

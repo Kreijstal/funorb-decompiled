@@ -266,6 +266,8 @@ final class HighscoreNameEntry {
         String normalizedSecondaryName = null;
         SocialListEntry insertionTarget = null;
         int clientControlFlowGuard = 0;
+        Object decodedLocationLabel;
+        String decodedDisplayName;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 104) {
@@ -336,32 +338,32 @@ final class HighscoreNameEntry {
             ArchiveSource.primarySocialEntriesByNameHash = new SecondaryNodeHashTable(128);
             HighscoreQuery.nextPrimarySocialInsertionIndex = 0;
           }
-          locationLabelValue = packet.readNullTerminatedText((byte) 108);
-          if (((String) (locationLabelValue)).equals("")) {
-            locationLabelValue = null;
+          decodedLocationLabel = packet.readNullTerminatedText((byte) 108);
+          if (((String) (decodedLocationLabel)).equals("")) {
+            decodedLocationLabel = null;
           }
-          displayName = packet.readNullTerminatedText((byte) 102);
+          decodedDisplayName = packet.readNullTerminatedText((byte) 102);
           previousPrimaryName = packet.readNullTerminatedText((byte) 110);
-          primaryEntry = SocketConnector.findSocialEntry((byte) -62, displayName);
+          primaryEntry = SocketConnector.findSocialEntry((byte) -62, decodedDisplayName);
           if (null == primaryEntry) {
             primaryEntry = SocketConnector.findSocialEntry((byte) -62, previousPrimaryName);
             if (null != primaryEntry) {
-              ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) displayName), 12).hashCode(), -63, primaryEntry);
+              ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) decodedDisplayName), 12).hashCode(), -63, primaryEntry);
             }
           }
           if (null == primaryEntry) {
             primaryEntry = new SocialListEntry();
-            ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) displayName), methodGuard ^ 100).hashCode(), 110, primaryEntry);
+            ArchiveSource.primarySocialEntriesByNameHash.put((long)ResizableDialog.normalizeSessionName((CharSequence) ((Object) decodedDisplayName), methodGuard ^ 100).hashCode(), 110, primaryEntry);
             primaryInsertionIndexBeforeIncrement = HighscoreQuery.nextPrimarySocialInsertionIndex;
             HighscoreQuery.nextPrimarySocialInsertionIndex = HighscoreQuery.nextPrimarySocialInsertionIndex + 1;
             primaryEntry.insertionIndex = primaryInsertionIndexBeforeIncrement;
             ProgressBarWidget.primarySocialEntriesInOrder.addLast(-59, primaryEntry);
           }
-          if (locationLabelValue != null) {
-            locationLabelValue = ((String) (locationLabelValue)).intern();
+          if (decodedLocationLabel != null) {
+            decodedLocationLabel = ((String) (decodedLocationLabel)).intern();
           }
-          primaryEntry.displayName = displayName;
-          primaryEntry.locationLabel = (String) (locationLabelValue);
+          primaryEntry.displayName = decodedDisplayName;
+          primaryEntry.locationLabel = (String) (decodedLocationLabel);
           primaryEntry.unlinkNode(false);
           insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.firstForIteration(0));
           insertionTargetSelection: while (true) {

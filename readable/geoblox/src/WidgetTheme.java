@@ -84,6 +84,8 @@ final class WidgetTheme {
         StatefulWidgetRenderer unusedArrowButtonRenderer = null;
         StatefulWidgetRenderer unusedFinalArrowButtonRenderer = null;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        StatefulWidgetRenderer firstConfiguredArrowButton;
+        StatefulWidgetRenderer secondConfiguredArrowButton;
         try {
             baseTextRenderer = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, 2 + (font.maxAscent + font.maxDescent));
             this.textRenderer = (WidgetRenderer) ((Object) baseTextRenderer);
@@ -144,11 +146,11 @@ final class WidgetTheme {
             unusedArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
             unusedArrowButtonRenderer.setIconOnExistingStates(0, arrowSprite.copy());
             arrowSprite.rotateClockwise();
-            unusedArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedArrowButtonRenderer.setIconOnExistingStates(methodGuard ^ 9, arrowSprite.copy());
+            firstConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+            firstConfiguredArrowButton.setIconOnExistingStates(methodGuard ^ 9, arrowSprite.copy());
             arrowSprite.rotateClockwise();
-            unusedArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedArrowButtonRenderer.setIconOnExistingStates(0, arrowSprite.copy());
+            secondConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+            secondConfiguredArrowButton.setIconOnExistingStates(0, arrowSprite.copy());
             arrowSprite.rotateClockwise();
             unusedFinalArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
             unusedFinalArrowButtonRenderer.setIconOnExistingStates(methodGuard ^ 9, arrowSprite);

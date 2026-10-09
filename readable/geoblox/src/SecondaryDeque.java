@@ -75,21 +75,22 @@ final class SecondaryDeque {
     }
 
     final int countNodes(byte methodGuard) {
-        DualLinkNode nodeToCount = null;
+        DualLinkNode initialNodeToCount = null;
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int nodeCount = 0;
+        DualLinkNode currentNodeToCount;
         if (methodGuard == 67) {
-            nodeToCount = this.sentinel.nextSecondaryNode;
-            while (this.sentinel != nodeToCount) {
-                nodeToCount = nodeToCount.nextSecondaryNode;
+            initialNodeToCount = this.sentinel.nextSecondaryNode;
+            while (this.sentinel != initialNodeToCount) {
+                initialNodeToCount = initialNodeToCount.nextSecondaryNode;
                 nodeCount++;
             }
             return nodeCount;
         }
         contactProbeRaster = (Sprite) null;
-        nodeToCount = this.sentinel.nextSecondaryNode;
-        while (this.sentinel != nodeToCount) {
-            nodeToCount = nodeToCount.nextSecondaryNode;
+        currentNodeToCount = this.sentinel.nextSecondaryNode;
+        while (this.sentinel != currentNodeToCount) {
+            currentNodeToCount = currentNodeToCount.nextSecondaryNode;
             nodeCount++;
         }
         return nodeCount;

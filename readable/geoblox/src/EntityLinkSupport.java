@@ -82,10 +82,12 @@ final class EntityLinkSupport {
         RuntimeException linkFailureForContext = null;
         int detachFirst = 0;
         int variantPropagationThenNeighborIndex = 0;
-        GameplayEntity entityForNeighborCountReset = null;
+        GameplayEntity firstEntityForNeighborCountReset = null;
         int propagateCategory = 0;
-        GameplayEntity entityForVariantCountReset = null;
+        GameplayEntity firstEntityForVariantCountReset = null;
         int unusedClientControlSnapshot = 0;
+        GameplayEntity secondEntityForNeighborCountReset;
+        GameplayEntity secondEntityForVariantCountReset;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           for (neighborIndexThenDetachSecond = 0; neighborIndexThenDetachSecond < secondEntity.relatedEntityCount; neighborIndexThenDetachSecond++) {
@@ -187,11 +189,11 @@ final class EntityLinkSupport {
             for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
               secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
             }
-            entityForNeighborCountReset = secondEntity;
+            firstEntityForNeighborCountReset = secondEntity;
             secondEntity.sameCategoryEntityCount = 0;
-            entityForVariantCountReset = secondEntity;
-            entityForVariantCountReset.sameVariantEntityCount = 0;
-            entityForNeighborCountReset.relatedEntityCount = 0;
+            firstEntityForVariantCountReset = secondEntity;
+            firstEntityForVariantCountReset.sameVariantEntityCount = 0;
+            firstEntityForNeighborCountReset.relatedEntityCount = 0;
             secondEntity.entityQueue = ArchiveNetworkClient.movingEntities;
             secondEntity.detachedFromBoard = true;
           }
@@ -199,14 +201,14 @@ final class EntityLinkSupport {
             for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
               firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
             }
-            entityForNeighborCountReset = firstEntity;
+            secondEntityForNeighborCountReset = firstEntity;
             firstEntity.sameCategoryEntityCount = 0;
-            entityForVariantCountReset = firstEntity;
-            entityForNeighborCountReset.relatedEntityCount = 0;
+            secondEntityForVariantCountReset = firstEntity;
+            secondEntityForNeighborCountReset.relatedEntityCount = 0;
             firstEntity.touchesAvatar = false;
             firstEntity.detachedFromBoard = true;
             firstEntity.entityQueue = ArchiveNetworkClient.movingEntities;
-            entityForVariantCountReset.sameVariantEntityCount = 0;
+            secondEntityForVariantCountReset.sameVariantEntityCount = 0;
           }
           secondDetachmentReturnValue = neighborIndexThenDetachSecond;
           return secondDetachmentReturnValue != 0;

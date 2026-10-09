@@ -42,7 +42,7 @@ public final class Geoblox extends SessionGameApplet {
         int uiPaletteSize = 0;
         int[] alternateUiPalette = null;
         Sprite[] geometrySourceFrames = null;
-        Sprite[] geometryAliasThenAmorphousFrames = null;
+        Sprite[] geometryFramesAlias = null;
         int themeIndex = 0;
         int geometryCanvasHeight = 0;
         Sprite[] avatarEyeSourceFrames = null;
@@ -57,6 +57,7 @@ public final class Geoblox extends SessionGameApplet {
         int geometryCanvasWidthThenFrameIndex = 0;
         int paletteVariantThenKeyboardIndex = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
+        Sprite[] amorphousSpriteFrames;
         ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.initialMusicScoreArchive && TextWidgetSupport.initialVorbisArchive != null && null != ProxySocketConnector.instrumentPatchArchive) {
             HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
@@ -82,7 +83,7 @@ public final class Geoblox extends SessionGameApplet {
             ArrayOperations.copyInts(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
             FadingDialog.uiPaletteFont.colorPalettes[1][SessionGameApplet.uiAccentPaletteIndex] = 16777215;
             geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            geometryAliasThenAmorphousFrames = geometrySourceFrames;
+            geometryFramesAlias = geometrySourceFrames;
             themeIndex = -1;
             for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
                 categoryThenAnimationFrameIndex = geometryFrameThenVariantIndex % 7;
@@ -101,13 +102,13 @@ public final class Geoblox extends SessionGameApplet {
                     geometrySourceFrames[geometryFrameThenVariantIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
                 }
             }
-            geometryAliasThenAmorphousFrames = OpacityWidget.loadSpriteFrames("amorphic", "", GameGraphicsResources.gameGraphicsArchive, methodGuard ^ 25869);
+            amorphousSpriteFrames = OpacityWidget.loadSpriteFrames("amorphic", "", GameGraphicsResources.gameGraphicsArchive, methodGuard ^ 25869);
             for (themeIndex = 0; themeIndex < 7; themeIndex++) {
                 for (geometryFrameThenVariantIndex = 0; geometryFrameThenVariantIndex < 7; geometryFrameThenVariantIndex++) {
-                    for (categoryThenAnimationFrameIndex = 0; categoryThenAnimationFrameIndex < geometryAliasThenAmorphousFrames.length; categoryThenAnimationFrameIndex++) {
-                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex] = new Sprite(4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].fullWidth, 4 + geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].fullHeight);
+                    for (categoryThenAnimationFrameIndex = 0; categoryThenAnimationFrameIndex < amorphousSpriteFrames.length; categoryThenAnimationFrameIndex++) {
+                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex] = new Sprite(4 + amorphousSpriteFrames[categoryThenAnimationFrameIndex].fullWidth, 4 + amorphousSpriteFrames[categoryThenAnimationFrameIndex].fullHeight);
                         MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].setAsRasterTarget();
-                        geometryAliasThenAmorphousFrames[categoryThenAnimationFrameIndex].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[themeIndex][geometryFrameThenVariantIndex]);
+                        amorphousSpriteFrames[categoryThenAnimationFrameIndex].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[themeIndex][geometryFrameThenVariantIndex]);
                         NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[themeIndex][geometryFrameThenVariantIndex][categoryThenAnimationFrameIndex].fullHeight);
                     }
                 }

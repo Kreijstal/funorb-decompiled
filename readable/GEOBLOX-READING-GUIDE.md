@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9532e0f19438dab9dcc2116cb6d16daadf33b210/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b08d3ad84e62cccff56cb021b0e4e70547b5317a/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 229)
+## Current readability (pass 230)
 
-The export has 19,521 guarded names and 121,249 Java identifier edits, plus 11
+The export has 19,656 guarded names and 121,411 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 137,471 bindings, reproduce and
+compile and compare 137,650 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,68 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current standalone block flattening (pass 229)
+## Current independent reference phases (pass 230)
+
+Forty-one reused reference locals now have 135 independently assigned later
+phases in 28 methods across 26 classes. Board reconciliation separates popped
+connectivity entities from neighbor-search starts, comparison operands from
+relation-removal targets/arguments, connectivity aliases from detaching entities,
+and category-reset aliases from transient routing. Other changes cover sample
+caching, entity reset, stream scheduling, byte-array pools, display modes,
+image setup, widget helpers and cookie construction.
+
+Resource-byte phases in SpriteState's loader name each decoded destination
+(achievement titles/descriptions, menu/tutorial messages and other fields).
+Caption bytes whose decoded result is discarded remain named as such, and the
+reverse-control key-code bytes keep their scalar read. No decoder call, redundant
+assignment, original null initializer or partial side effect is discarded.
+Twenty-five first-phase names are refined; all 135 new locals have reviewed
+semantic names rather than opaque spelling suffixes.
+
+The generic opt-in `CFR_JS_SPLIT_REFERENCE_LIFETIMES=1` retains original
+uninitialized or literal-null declarations. A block must contain every use;
+all later phases assign their value independently before reading it. Protected
+bodies may qualify, but reaching values cannot cross handler/finally/monitor
+boundaries. Conditional/loop carries stay together. Captures, shadows, ambiguous
+identifiers, annotated/inferred types and uncertain syntax refuse. Types,
+object/array identity, assignments, effects and exception scopes stay intact.
+The option defaults off and primitive lifetime behavior remains unchanged.
+
+Independent javac certificates type every old/new local, verify definite
+assignment and every copied type binding, and retain every original binding
+occurrence under explicit identity/phase maps. The compiler's generated
+unchecked-exception wrapper is matched exactly to inspect the same pre-wrapper
+body. Only exact reviewed uninitialized declarations and bound local identifier
+replacements are allowed. All 4,941 transfers and protected scopes remain.
+Thirty-two surviving local ordinal migrations are explicit. The 19,464 unaffected
+complete rules remain exact, with 19,656 rules and 19,963 dictionary identities
+in total. Both corpora compare 137,650 bindings and 388 override pairs. Naming
+records 121,411 identifier, 11 literal and 423 label edits (121,845 total).
+
+Validation:
+
+- java-tools: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test --experimental-test-isolation=none test/referenceLocalLifetimeRecovery.test.js test/primitiveLocalLifetimeRecovery.test.js test/nestedPrimitiveLocalLifetimeRecovery.test.js` — 16 groups pass, including four reference groups and 192,000 new native oracle cases for aliases, shared arrays, nullable values/locks, partial mutations, cleanup overrides and monitors.
+- Deko: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-reference-lifetimes-source.mjs ../java-tools` — exact new declarations/identifier edits, independently resolved types, every original binding, copied type references and all protected transfers.
+- `node readable/build-geoblox-rules.mjs --check` and
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` /
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass
+  for all 303 files. Dictionary reversal is byte exact. All 27 publication groups
+  and 17 scoped gameplay/result trace groups pass. Fresh sibling checkouts
+  reproduce the complete committed export.
+- A clean tracked compiler-source tar reproduces all raw files and unchanged
+  diagnostics. Fixed bytecode, stubs, naming dependency, native probes, four
+  workflow files and complete historical proof objects remain unchanged.
+
+Four large framed methods, some mixed reference/primitive roles within phases,
+and 41 unknown functional field purposes remain. Whole-game/browser/phone
+behavior and heap/presented-FPS acceptance are not established. Further work
+must preserve real nonlocal skips and protected/outer-loop boundaries.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`f40de094559b7e200092a0400cd5dac847decc2e5e4af0e4b6af0594b85ae04b` at java-tools `626be757181bf3183a28c54bc44d5fbbf9401edf`.
+It identifies compiler source, not a game JAR.
+
+## Previous standalone block flattening (pass 229)
 
 Twenty-seven standalone blocks in 19 methods across eight classes now expose
 their original statements directly. This removes 54 brace lines and unnecessary

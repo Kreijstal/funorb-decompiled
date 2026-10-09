@@ -428,6 +428,8 @@ final class CachedArchiveSource extends ArchiveSource {
         IntrusiveNode newVerificationGroup;
         int phaseCompleteNestedPhase2;
         int groupIdNestedPhase2;
+        ArchiveRequest completedCleanupRequest;
+        IntrusiveNode verificationGroup;
         backgroundLoadingAndSweep: {
           requestSweepDueCheck: {
             completedRequestSweep: {
@@ -482,18 +484,18 @@ final class CachedArchiveSource extends ArchiveSource {
                   }
                   if (this.downloadAllPending) {
                     phaseCompleteNestedPhase2 = 1;
-                    backgroundGroup = this.backgroundGroups.firstForIteration(0);
-                    while (backgroundGroup != null) {
-                      groupIdNestedPhase2 = (int)backgroundGroup.nodeKey;
+                    verificationGroup = this.backgroundGroups.firstForIteration(0);
+                    while (verificationGroup != null) {
+                      groupIdNestedPhase2 = (int)verificationGroup.nodeKey;
                       if (this.groupDiskStatus[groupIdNestedPhase2] != 1) {
                         unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupIdNestedPhase2);
                       }
                       if (this.groupDiskStatus[groupIdNestedPhase2] != 1) {
                         phaseCompleteNestedPhase2 = 0;
                       } else {
-                        backgroundGroup.unlinkNode(false);
+                        verificationGroup.unlinkNode(false);
                       }
-                      backgroundGroup = this.backgroundGroups.nextForIteration(1);
+                      verificationGroup = this.backgroundGroups.nextForIteration(1);
                     }
                     backgroundDownloadScanStep: while (true) {
                       if (this.backgroundGroupIndex < this.index.fileCounts.length) {
@@ -559,19 +561,19 @@ final class CachedArchiveSource extends ArchiveSource {
               if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
                 break requestSweepDueCheck;
               }
-              cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
-              while (cleanupRequest != null) {
-                if (!cleanupRequest.pending) {
-                  if (cleanupRequest.seenByCleanup) {
-                    if (!cleanupRequest.priority) {
+              completedCleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
+              while (completedCleanupRequest != null) {
+                if (!completedCleanupRequest.pending) {
+                  if (completedCleanupRequest.seenByCleanup) {
+                    if (!completedCleanupRequest.priority) {
                       throw new RuntimeException();
                     }
-                    cleanupRequest.unlinkNode(false);
+                    completedCleanupRequest.unlinkNode(false);
                   } else {
-                    cleanupRequest.seenByCleanup = true;
+                    completedCleanupRequest.seenByCleanup = true;
                   }
                 }
-                cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
+                completedCleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
               }
             }
             this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);

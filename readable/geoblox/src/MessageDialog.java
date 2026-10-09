@@ -730,18 +730,19 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
     }
 
     final void showConnectionRestoredContent(boolean clearCanvasGuard) {
-        MessageDialogContent restoredTextContent = null;
+        MessageDialogContent initialRestoredTextContent = null;
+        MessageDialogContent replacementRestoredTextContent;
         this.dialogStatusPanel.setStripeColors(4210752, 2121792, (byte) -103);
         if (!clearCanvasGuard) {
-            restoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
-            restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
-            this.replaceContent(restoredTextContent, -23);
+            initialRestoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
+            initialRestoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
+            this.replaceContent(initialRestoredTextContent, -23);
             return;
         }
         gameCanvas = (java.awt.Canvas) null;
-        restoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
-        restoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
-        this.replaceContent(restoredTextContent, -23);
+        replacementRestoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
+        replacementRestoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
+        this.replaceContent(replacementRestoredTextContent, -23);
     }
 
     static {

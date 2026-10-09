@@ -920,7 +920,7 @@ final class GameScreen extends MenuScreen {
     private final void renderHighscoreList(int methodGuard) {
         Object nullEntryOrSessionSentinel = null;
         RuntimeException caughtFailure = null;
-        String statusOrFriendTipText = null;
+        String highscoreStatusText = null;
         int hasDisplayedEntryFlag = 0;
         RuntimeException highscoreRenderFailure = null;
         int statusTextY = 0;
@@ -934,6 +934,7 @@ final class GameScreen extends MenuScreen {
         String unlistedCurrentScoreText = null;
         String entryName = null;
         int clientControlFlowGuard = 0;
+        String friendTipText;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (FifoResponseToken.activeHighscoreQuery == null &&
@@ -965,9 +966,9 @@ final class GameScreen extends MenuScreen {
             if (null != FifoResponseToken.activeHighscoreQuery &&
                 null != FifoResponseToken.activeHighscoreQuery.namesByView) {
               if (!FifoResponseToken.activeHighscoreQuery.completed) {
-                statusOrFriendTipText = ArchiveLoadSequence.fetchingHighscoresText;
+                highscoreStatusText = ArchiveLoadSequence.fetchingHighscoresText;
                 statusTextY = 76 + (150 + FadingDialog.uiPaletteFont.maxAscent);
-                FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+                FadingDialog.uiPaletteFont.drawCenteredText(highscoreStatusText, 322, statusTextY, 0, -1);
                 if (clientControlFlowGuard == 0) {
                   break highscoreEntriesAndStatus;
                 }
@@ -1033,36 +1034,36 @@ final class GameScreen extends MenuScreen {
               }
               if (clientControlFlowGuard != 0) {
                 if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
-                  statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
-                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                  highscoreStatusText = PasswordValidator.serviceUnavailableText;
+                  highscoreStatusText = ClientTimingSupport.noHighscoresText;
                 } else {
-                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                  highscoreStatusText = ClientTimingSupport.noHighscoresText;
                 }
                 statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
-                FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+                FadingDialog.uiPaletteFont.drawCenteredText(highscoreStatusText, 322, statusTextY, 0, -1);
                 if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
                   FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
                 }
               }
             } else {
               if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
-                statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
+                highscoreStatusText = PasswordValidator.serviceUnavailableText;
                 if (clientControlFlowGuard != 0) {
-                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                  highscoreStatusText = ClientTimingSupport.noHighscoresText;
                 }
               } else {
-                statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
+                highscoreStatusText = ClientTimingSupport.noHighscoresText;
               }
               statusTextY = 150 - (-FadingDialog.uiPaletteFont.maxAscent - 76);
-              FadingDialog.uiPaletteFont.drawCenteredText(statusOrFriendTipText, 322, statusTextY, 0, -1);
+              FadingDialog.uiPaletteFont.drawCenteredText(highscoreStatusText, 322, statusTextY, 0, -1);
               if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard - 147)) {
                 FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
               }
             }
           }
           if (!UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ -109)) {
-            statusOrFriendTipText = PcmResampler.highscoreFriendTipText;
-            IntrusiveNodeHashTable.smallFont.drawParagraph(statusOrFriendTipText, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+            friendTipText = PcmResampler.highscoreFriendTipText;
+            IntrusiveNodeHashTable.smallFont.drawParagraph(friendTipText, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

@@ -214,6 +214,7 @@ class UiWidget extends IntrusiveNode {
         DraggableWidget releasedDragWithWheelAndNoPress;
         DraggableWidget releasedDragAfterRejectedPressWithWheel;
         DraggableWidget releasedDragAfterPressWithWheel;
+        DraggableWidget dragReleaseTargetAlias;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard <= 126) {
           return true;
@@ -399,7 +400,7 @@ class UiWidget extends IntrusiveNode {
           }
           this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
           releasedDragAfterRejectedPressWithoutFocus = ValidationState.activeDragWidget;
-          releasedDragWidgetAlias = releasedDragAfterRejectedPressWithoutFocus;
+          dragReleaseTargetAlias = releasedDragAfterRejectedPressWithoutFocus;
           if (releasedDragAfterRejectedPressWithoutFocus != null) {
             if (releasedDragAfterRejectedPressWithoutFocus.listener instanceof DropListener) {
               ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);

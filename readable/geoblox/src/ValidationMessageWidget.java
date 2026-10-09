@@ -117,7 +117,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         String displayMessage;
-        ValidationState validationState;
+        ValidationState initialValidationState;
         int clientControlFlowSnapshot;
         TextWidgetLayout textLayoutRenderer;
         int iconScreenX;
@@ -132,10 +132,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         Sprite debouncingIconSprite;
         int requiredSpinnerWidthPhase2;
         int requiredSpinnerHeightPhase2;
+        ValidationState activeValidationState;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
-        validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
-        if (validationState != ImageProducerRasterBuffer.debouncingValidationState &&
-            validationState != WidgetSkinState.pendingQueryValidationState) {
+        initialValidationState = this.validationProvider.getDebouncedValidationState((byte) -105);
+        if (initialValidationState != ImageProducerRasterBuffer.debouncingValidationState &&
+            initialValidationState != WidgetSkinState.pendingQueryValidationState) {
           displayMessage = this.validationProvider.getDebouncedValidationMessage(-21666);
           if (displayMessage == null) {
             displayMessage = this.fallbackMessage;
@@ -148,12 +149,12 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.rebuildHotspotBounds(-55);
         }
         super.renderWidget(parentX, parentY, (byte) 106, renderPass);
-        validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
+        activeValidationState = this.validationProvider.getDebouncedValidationState((byte) -105);
         textLayoutRenderer = (TextWidgetLayout) ((Object) this.renderer);
         iconScreenX = this.widgetX + parentX;
         iconCenterY = textLayoutRenderer.getTextOriginY(parentY, -2, (UiWidget) (this)) + (textLayoutRenderer.getTextLayout((byte) 125, (UiWidget) (this)).getLayoutHeight(-3111) >> 1);
         renderGuardRemainder = 7 % ((methodGuard - 1) / 43);
-        if (ImageProducerRasterBuffer.debouncingValidationState == validationState) {
+        if (ImageProducerRasterBuffer.debouncingValidationState == activeValidationState) {
           debouncingIconSprite = ClientClockSupport.validationStateSprites[0];
           requiredSpinnerWidth = debouncingIconSprite.fullWidth << 1;
           requiredSpinnerHeight = debouncingIconSprite.fullHeight << 1;
@@ -179,13 +180,13 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           this.spinnerSprite.drawAdditive(-(debouncingIconSprite.fullWidth >> 1) + iconScreenX, iconCenterY - debouncingIconSprite.fullHeight, 256);
           return;
         }
-        if (validationState != WidgetSkinState.pendingQueryValidationState) {
-          if (WidgetSkinState.invalidInputValidationState == validationState) {
+        if (activeValidationState != WidgetSkinState.pendingQueryValidationState) {
+          if (WidgetSkinState.invalidInputValidationState == activeValidationState) {
             invalidIconSprite = ClientClockSupport.validationStateSprites[2];
             invalidIconSprite.drawAdditive(iconScreenX, iconCenterY - (invalidIconSprite.height >> 1), 256);
             return;
           }
-          if (SocketArchiveNetworkClient.validInputValidationState != validationState) {
+          if (SocketArchiveNetworkClient.validInputValidationState != activeValidationState) {
             return;
           }
           validIconSprite = ClientClockSupport.validationStateSprites[1];

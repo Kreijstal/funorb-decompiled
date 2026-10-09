@@ -503,13 +503,14 @@ final class Bzip2Decoder {
         int blockEndPosition;
         int previousOutputBytesWritten;
         int[] transformTableAlias;
-        int[] sharedTransformTableSnapshot;
+        int[] initialSharedTransformTableSnapshot;
+        int[] activeSharedTransformTable;
         runByte = state.pendingRunByte;
         remainingRunLength = state.pendingRunLength;
         blockBytesConsumed = state.blockBytesConsumed;
         currentByte = state.currentByte;
-        sharedTransformTableSnapshot = UsernameResponseSupport.bzip2TransformTable;
-        transformTableAlias = sharedTransformTableSnapshot;
+        initialSharedTransformTableSnapshot = UsernameResponseSupport.bzip2TransformTable;
+        transformTableAlias = initialSharedTransformTableSnapshot;
         transformTable = transformTableAlias;
         transformPositionOrEntry = state.transformPositionOrEntry;
         outputBytes = state.outputBytes;
@@ -541,16 +542,16 @@ final class Bzip2Decoder {
             remainingOutputBytes--;
           }
           while (blockBytesConsumed != blockEndPosition) {
-            sharedTransformTableSnapshot = transformTableAlias;
+            activeSharedTransformTable = transformTableAlias;
             runByte = (byte)currentByte;
-            transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+            transformPositionOrEntry = activeSharedTransformTable[transformPositionOrEntry];
             nextByteOrRunCount = (byte)transformPositionOrEntry;
             transformPositionOrEntry = transformPositionOrEntry >> 8;
             blockBytesConsumed++;
             if (nextByteOrRunCount == currentByte) {
               if (blockBytesConsumed != blockEndPosition) {
                 remainingRunLength = 2;
-                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                transformPositionOrEntry = activeSharedTransformTable[transformPositionOrEntry];
                 nextByteOrRunCount = (byte)transformPositionOrEntry;
                 transformPositionOrEntry = transformPositionOrEntry >> 8;
                 blockBytesConsumed++;
@@ -562,7 +563,7 @@ final class Bzip2Decoder {
                   continue emitTransformedRuns;
                 }
                 remainingRunLength = 3;
-                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                transformPositionOrEntry = activeSharedTransformTable[transformPositionOrEntry];
                 nextByteOrRunCount = (byte)transformPositionOrEntry;
                 transformPositionOrEntry = transformPositionOrEntry >> 8;
                 blockBytesConsumed++;
@@ -573,12 +574,12 @@ final class Bzip2Decoder {
                   currentByte = nextByteOrRunCount;
                   continue emitTransformedRuns;
                 }
-                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                transformPositionOrEntry = activeSharedTransformTable[transformPositionOrEntry];
                 nextByteOrRunCount = (byte)transformPositionOrEntry;
                 transformPositionOrEntry = transformPositionOrEntry >> 8;
                 blockBytesConsumed++;
                 remainingRunLength = (nextByteOrRunCount & 255) + 4;
-                transformPositionOrEntry = sharedTransformTableSnapshot[transformPositionOrEntry];
+                transformPositionOrEntry = activeSharedTransformTable[transformPositionOrEntry];
                 currentByte = (byte)transformPositionOrEntry;
                 transformPositionOrEntry = transformPositionOrEntry >> 8;
                 blockBytesConsumed++;

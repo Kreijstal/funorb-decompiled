@@ -55,28 +55,34 @@ final class SettingsCookieSupport {
     final static void storeSettingsCookie(int methodGuard, String settings, java.applet.Applet applet) {
         try {
             String cookiePrefix = null;
-            String cookieValueAndScratch = null;
+            String unusedCookiePrefixSnapshot = null;
             String cookieHost = null;
             String cookieWithoutExpiry = null;
+            String unusedCookiePrefixCopy;
+            String unusedCookieDomainSnapshot;
+            String unusedCookieDomainCopy;
+            String unusedSettingsHeaderSnapshot;
+            String unusedSettingsHeaderCopy;
+            String settingsCookieAssignmentValue;
             try {
                 NetworkArchiveRequest.settingsCookieValue = settings;
                 try {
                     cookiePrefix = applet.getParameter("cookieprefix");
-                    cookieValueAndScratch = cookiePrefix;
-                    cookieValueAndScratch = cookiePrefix;
+                    unusedCookiePrefixSnapshot = cookiePrefix;
+                    unusedCookiePrefixCopy = cookiePrefix;
                     cookieHost = applet.getParameter("cookiehost");
-                    cookieValueAndScratch = cookieHost;
-                    cookieValueAndScratch = cookieHost;
+                    unusedCookieDomainSnapshot = cookieHost;
+                    unusedCookieDomainCopy = cookieHost;
                     cookieWithoutExpiry = cookiePrefix + "settings=" + settings + "; version=1; path=/; domain=" + cookieHost;
-                    cookieValueAndScratch = cookieWithoutExpiry;
-                    cookieValueAndScratch = cookieWithoutExpiry;
+                    unusedSettingsHeaderSnapshot = cookieWithoutExpiry;
+                    unusedSettingsHeaderCopy = cookieWithoutExpiry;
                     if (settings.length() != 0) {
-                        cookieValueAndScratch = cookieWithoutExpiry + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -58, ClientClockSupport.correctedCurrentTimeMillis(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
+                        settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -58, ClientClockSupport.correctedCurrentTimeMillis(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
                     } else {
-                        cookieValueAndScratch = cookieWithoutExpiry + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     int guardResidue = -93 % ((-64 - methodGuard) / 61);
-                    AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieValueAndScratch + "\"", (byte) -92);
+                    AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + settingsCookieAssignmentValue + "\"", (byte) -92);
                 } catch (Throwable ignoredCookieWriteFailure) {
                 }
                 ByteStorage.updatePageNavigationLinks(applet, 20000000);

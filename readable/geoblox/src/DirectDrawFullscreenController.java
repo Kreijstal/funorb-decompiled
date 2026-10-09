@@ -9,6 +9,8 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
     final int[] listDisplayModes(int methodGuard) {
         int[] enumeratedModeValues = null;
         int[] unusedModeValuesAlias = null;
+        int[] alternateGuardModeValues;
+        int[] unusedAlternateModeValuesAlias;
         this.directDraw.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (methodGuard == 8) {
             modeValues = new int[modeValueIndex];
@@ -24,11 +26,11 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
         modeValues = new int[modeValueIndex];
         modeValueIndex = 0;
         this.directDraw.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        enumeratedModeValues = modeValues;
-        unusedModeValuesAlias = enumeratedModeValues;
+        alternateGuardModeValues = modeValues;
+        unusedAlternateModeValuesAlias = alternateGuardModeValues;
         modeValueIndex = 0;
         modeValues = null;
-        return enumeratedModeValues;
+        return alternateGuardModeValues;
     }
 
     final void enterFullscreen(int extendedWindowStyle, int width, java.awt.Frame frame, int bitDepth, int height, int refreshRate) {

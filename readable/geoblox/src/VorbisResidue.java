@@ -27,12 +27,13 @@ final class VorbisResidue {
         VorbisCodebook residueCodebook;
         int partitionSampleCursorOrStridedVectorCount;
         int[] intermediateClassificationsAlias;
-        int[] allocatedClassificationsOrGroupAlias;
+        int[] allocatedClassifications;
         float[] stridedVector;
         float[] contiguousVector;
         int clearSampleIndexOrClasswordDimensionsPhase2;
         int classwordRemainderOrGroupPartitionIndexNestedPhase2;
         int classwordDimensionIndexOrClassificationNestedPhase2;
+        int[] classificationGroupAlias;
         for (clearSampleIndexOrClasswordDimensions = 0; clearSampleIndexOrClasswordDimensions < sampleCount; clearSampleIndexOrClasswordDimensions++) {
           samples[clearSampleIndexOrClasswordDimensions] = 0.0f;
         }
@@ -42,8 +43,8 @@ final class VorbisResidue {
         clearSampleIndexOrClasswordDimensionsPhase2 = MusicDecoder.codebooks[this.classbookIndex].dimensions;
         residueSampleSpan = this.end - this.begin;
         partitionCount = residueSampleSpan / this.partitionSize;
-        allocatedClassificationsOrGroupAlias = new int[partitionCount];
-        intermediateClassificationsAlias = allocatedClassificationsOrGroupAlias;
+        allocatedClassifications = new int[partitionCount];
+        intermediateClassificationsAlias = allocatedClassifications;
         classificationsAlias = intermediateClassificationsAlias;
         for (passIndex = 0; passIndex < 8; passIndex++) {
           partitionIndex = 0;
@@ -57,10 +58,10 @@ final class VorbisResidue {
                 classwordRemainderOrGroupPartitionIndex = classwordRemainderOrGroupPartitionIndex / this.classificationCount;
               }
             }
-            allocatedClassificationsOrGroupAlias = intermediateClassificationsAlias;
+            classificationGroupAlias = intermediateClassificationsAlias;
             classwordRemainderOrGroupPartitionIndexNestedPhase2 = 0;
             while (classwordRemainderOrGroupPartitionIndexNestedPhase2 < clearSampleIndexOrClasswordDimensionsPhase2) {
-              classwordDimensionIndexOrClassificationNestedPhase2 = allocatedClassificationsOrGroupAlias[partitionIndex];
+              classwordDimensionIndexOrClassificationNestedPhase2 = classificationGroupAlias[partitionIndex];
               passBookId = this.passBookIndices[classwordDimensionIndexOrClassificationNestedPhase2 * 8 + passIndex];
               if (passBookId >= 0) {
                 partitionSampleOffset = this.begin + partitionIndex * this.partitionSize;

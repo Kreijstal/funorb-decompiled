@@ -261,7 +261,7 @@ final class SoundSampleCache {
         int packedCacheKey = 0;
         RuntimeException lookupFailureForContext = null;
         long cacheKey = 0L;
-        PcmSample cachedThenRenderedSample = null;
+        PcmSample cachedRenderedSample = null;
         SynthesizedSoundEffect soundEffect = null;
         PcmSample renderedSample = null;
         PcmSample cachedSampleAtReturn = null;
@@ -270,16 +270,17 @@ final class SoundSampleCache {
         StringBuilder lookupMessagePrefix = null;
         String byteBudgetDescription = null;
         RuntimeException caughtLookupFailure = null;
+        PcmSample renderedSampleForCache;
         try {
           packedCacheKey = fileId ^ (65533 & groupId << 4 | groupId >>> 12);
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey;
-          cachedThenRenderedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -74));
+          cachedRenderedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -74));
           if (methodGuard <= 19) {
             this.synthesizedSoundArchive = (ResourceArchive) null;
           }
-          if (cachedThenRenderedSample != null) {
-            cachedSampleAtReturn = cachedThenRenderedSample;
+          if (cachedRenderedSample != null) {
+            cachedSampleAtReturn = cachedRenderedSample;
             return cachedSampleAtReturn;
           }
           if (byteBudget != null &&
@@ -291,12 +292,12 @@ final class SoundSampleCache {
             return null;
           }
           renderedSample = soundEffect.toPcmSample();
-          cachedThenRenderedSample = renderedSample;
-          this.decodedSamples.put((byte) 102, cachedThenRenderedSample, cacheKey);
+          renderedSampleForCache = renderedSample;
+          this.decodedSamples.put((byte) 102, renderedSampleForCache, cacheKey);
           if (byteBudget != null) {
             byteBudget[0] = byteBudget[0] - renderedSample.samples.length;
           }
-          renderedSampleAtReturn = cachedThenRenderedSample;
+          renderedSampleAtReturn = renderedSampleForCache;
           return renderedSampleAtReturn;
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;
@@ -316,7 +317,7 @@ final class SoundSampleCache {
         int packedCacheKey = 0;
         RuntimeException lookupFailureForContext = null;
         long cacheKey = 0L;
-        PcmSample cachedThenDecodedSample = null;
+        PcmSample cachedDecodedSample = null;
         MusicDecoder decoder = null;
         PcmSample invalidGuardResult = null;
         PcmSample cachedSampleAtReturn = null;
@@ -328,17 +329,18 @@ final class SoundSampleCache {
         StringBuilder lookupMessagePrefix = null;
         String byteBudgetDescription = null;
         RuntimeException caughtLookupFailure = null;
+        PcmSample decodedSampleForCache;
         try {
           packedCacheKey = ((groupId & -1879044097) << 4 | groupId >>> 12) ^ fileId;
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey ^ 4294967296L;
-          cachedThenDecodedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -115));
+          cachedDecodedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -115));
           if (methodGuard != 14) {
             invalidGuardResult = (PcmSample) null;
             return invalidGuardResult;
           }
-          if (cachedThenDecodedSample != null) {
-            cachedSampleAtReturn = cachedThenDecodedSample;
+          if (cachedDecodedSample != null) {
+            cachedSampleAtReturn = cachedDecodedSample;
             return cachedSampleAtReturn;
           }
           if (byteBudget != null &&
@@ -355,14 +357,14 @@ final class SoundSampleCache {
             }
             this.pendingVorbisDecoders.put((byte) 102, decoder, cacheKey);
           }
-          cachedThenDecodedSample = decoder.decodePcmBudgeted(byteBudget);
-          if (cachedThenDecodedSample == null) {
+          decodedSampleForCache = decoder.decodePcmBudgeted(byteBudget);
+          if (decodedSampleForCache == null) {
             incompleteDecodeResult = null;
             return (PcmSample) (incompleteDecodeResult);
           }
           decoder.unlinkNode(false);
-          this.decodedSamples.put((byte) 102, cachedThenDecodedSample, cacheKey);
-          decodedSampleAtReturn = cachedThenDecodedSample;
+          this.decodedSamples.put((byte) 102, decodedSampleForCache, cacheKey);
+          decodedSampleAtReturn = decodedSampleForCache;
           return decodedSampleAtReturn;
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;

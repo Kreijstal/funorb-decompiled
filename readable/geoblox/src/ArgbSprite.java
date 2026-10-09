@@ -1070,11 +1070,12 @@ final class ArgbSprite extends Sprite {
         int inverseAlpha256;
         int destinationPixel;
         int[] sampleBlockStorage;
-        int[] sampleBlockAllocationThenReadAlias;
+        int[] allocatedSampleBlock;
         int sampleRowThenAlphaNestedPhase2;
         int sampleRowThenAlphaNestedPhase3;
         int sampleColumnThenAlphaSumNestedPhase2;
         int sampleIndexThenAverageAlphaNestedPhase2;
+        int[] sampleBlockReadAlias;
         reducedWidth = this.width >> 2;
         reducedHeight = this.height >> 2;
         x = x + this.trimX / 4;
@@ -1103,8 +1104,8 @@ final class ArgbSprite extends Sprite {
           lastBlockSourceYCandidate = (SoftwareRasterizer.clipBottom - y << 2) - 4;
         }
         lastBlockSourceY = lastBlockSourceYCandidate;
-        sampleBlockAllocationThenReadAlias = new int[16];
-        sampleBlockStorage = sampleBlockAllocationThenReadAlias;
+        allocatedSampleBlock = new int[16];
+        sampleBlockStorage = allocatedSampleBlock;
         sampleBlockAlias = sampleBlockStorage;
         sourceBlockY = firstSourceY;
         while (true) {
@@ -1124,18 +1125,18 @@ final class ArgbSprite extends Sprite {
                 sampleBlockAlias[(sampleRowThenAlpha << 2) + sampleColumnThenAlphaSum] = this.pixels[sourceIndex + sampleRowThenAlpha * this.width + sampleColumnThenAlphaSum];
               }
             }
-            sampleBlockAllocationThenReadAlias = sampleBlockStorage;
+            sampleBlockReadAlias = sampleBlockStorage;
             sampleRowThenAlphaNestedPhase2 = 0;
             sampleColumnThenAlphaSumNestedPhase2 = 0;
             weightedRedThenRedBlue = 0;
             weightedGreenThenPackedGreen = 0;
             weightedBlue = 0;
             for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 16; sampleIndexThenAverageAlpha++) {
-              sampleRowThenAlphaNestedPhase3 = sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >>> 24;
+              sampleRowThenAlphaNestedPhase3 = sampleBlockReadAlias[sampleIndexThenAverageAlpha] >>> 24;
               sampleColumnThenAlphaSumNestedPhase2 = sampleColumnThenAlphaSumNestedPhase2 + sampleRowThenAlphaNestedPhase3;
-              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
-              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
-              weightedBlue = weightedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] & 255);
+              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
+              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
+              weightedBlue = weightedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] & 255);
             }
             if (sampleColumnThenAlphaSumNestedPhase2 == 0) {
               sourceBlockX += 4;

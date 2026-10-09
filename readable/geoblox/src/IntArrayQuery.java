@@ -29,25 +29,29 @@ final class IntArrayQuery extends IntrusiveNode {
             Throwable caughtCookieThrowable = null;
             Throwable ignoredCookieWriteFailure = null;
             RuntimeException cookieFailureForContext = null;
-            String cookieHostThenAssignmentValue = null;
+            String unusedCookieHostSnapshot = null;
             int guardQuotient = 0;
             String cookieHost = null;
             String baseCookieAssignment = null;
+            String unusedCookieHostCopy;
+            String unusedCookieHeaderSnapshot;
+            String unusedCookieHeaderCopy;
+            String cookieAssignmentValue;
             try {
               try {
                 cookieHost = applet.getParameter("cookiehost");
-                cookieHostThenAssignmentValue = cookieHost;
-                cookieHostThenAssignmentValue = cookieHost;
+                unusedCookieHostSnapshot = cookieHost;
+                unusedCookieHostCopy = cookieHost;
                 guardQuotient = -108 / ((48 - methodGuard) / 59);
                 baseCookieAssignment = cookieName + "=" + cookieValue + "; version=1; path=/; domain=" + cookieHost;
-                cookieHostThenAssignmentValue = baseCookieAssignment;
-                cookieHostThenAssignmentValue = baseCookieAssignment;
+                unusedCookieHeaderSnapshot = baseCookieAssignment;
+                unusedCookieHeaderCopy = baseCookieAssignment;
                 if (maxAgeSeconds < 0L) {
-                  cookieHostThenAssignmentValue = baseCookieAssignment + "; Discard;";
+                  cookieAssignmentValue = baseCookieAssignment + "; Discard;";
                 } else {
-                  cookieHostThenAssignmentValue = baseCookieAssignment + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -79, 1000L * maxAgeSeconds + ClientClockSupport.correctedCurrentTimeMillis(-12520)) + "; Max-Age=" + maxAgeSeconds;
+                  cookieAssignmentValue = baseCookieAssignment + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -79, 1000L * maxAgeSeconds + ClientClockSupport.correctedCurrentTimeMillis(-12520)) + "; Max-Age=" + maxAgeSeconds;
                 }
-                AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieHostThenAssignmentValue + "\"", (byte) -10);
+                AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieAssignmentValue + "\"", (byte) -10);
                 return;
               } catch (java.lang.Throwable cookieWriteThrowable) {
                 caughtCookieThrowable = cookieWriteThrowable;

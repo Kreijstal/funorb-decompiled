@@ -14,24 +14,26 @@ final class ByteArrayPoolSupport {
         int pool30000PopIndex = 0;
         int additionalPoolPopIndex = 0;
         byte[][] additionalPoolSnapshot = null;
-        byte[] standardPoolArrayBeforeReturn;
+        byte[] smallPoolArrayBeforeReturn;
         int additionalPoolIndex;
         byte[] additionalPoolArrayBeforeReturn;
+        byte[] mediumPoolArrayBeforeReturn;
+        byte[] largePoolArrayBeforeReturn;
         if (length == 100 &&
             DialRenderer.byteArrayPool100Count > 0) {
           pool100PopIndex = DialRenderer.byteArrayPool100Count - 1;
           DialRenderer.byteArrayPool100Count = DialRenderer.byteArrayPool100Count - 1;
-          standardPoolArrayBeforeReturn = TextInputWidget.byteArrayPool100[pool100PopIndex];
+          smallPoolArrayBeforeReturn = TextInputWidget.byteArrayPool100[pool100PopIndex];
           TextInputWidget.byteArrayPool100[DialRenderer.byteArrayPool100Count] = null;
-          return standardPoolArrayBeforeReturn;
+          return smallPoolArrayBeforeReturn;
         }
         if (length == 5000 &&
             0 < TextWidgetSupport.byteArrayPool5000Count) {
           pool5000PopIndex = TextWidgetSupport.byteArrayPool5000Count - 1;
           TextWidgetSupport.byteArrayPool5000Count = TextWidgetSupport.byteArrayPool5000Count - 1;
-          standardPoolArrayBeforeReturn = StatefulWidgetRenderer.byteArrayPool5000[pool5000PopIndex];
+          mediumPoolArrayBeforeReturn = StatefulWidgetRenderer.byteArrayPool5000[pool5000PopIndex];
           StatefulWidgetRenderer.byteArrayPool5000[TextWidgetSupport.byteArrayPool5000Count] = null;
-          return standardPoolArrayBeforeReturn;
+          return mediumPoolArrayBeforeReturn;
         }
         if (earlyReturnGuard) {
           return (byte[]) null;
@@ -40,9 +42,9 @@ final class ByteArrayPoolSupport {
             EmailValidator.byteArrayPool30000Count > 0) {
           pool30000PopIndex = EmailValidator.byteArrayPool30000Count - 1;
           EmailValidator.byteArrayPool30000Count = EmailValidator.byteArrayPool30000Count - 1;
-          standardPoolArrayBeforeReturn = NetworkArchiveRequest.byteArrayPool30000[pool30000PopIndex];
+          largePoolArrayBeforeReturn = NetworkArchiveRequest.byteArrayPool30000[pool30000PopIndex];
           NetworkArchiveRequest.byteArrayPool30000[EmailValidator.byteArrayPool30000Count] = null;
-          return standardPoolArrayBeforeReturn;
+          return largePoolArrayBeforeReturn;
         }
         if (SharedBufferPools.additionalByteArrayPools != null) {
           additionalPoolIndex = 0;

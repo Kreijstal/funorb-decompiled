@@ -12,37 +12,38 @@ final class EndingAnimationSupport {
 
     final static void advanceEndingEntityAnimations(int methodGuard) {
         RuntimeException caughtEndingAnimationException = null;
-        GameplayEntity attachedThenTransientEntity = null;
+        GameplayEntity attachedEntityToReset = null;
         RuntimeException endingAnimationFailure = null;
         int guardResidue = 0;
         int clientControlFlowSnapshot = 0;
+        GameplayEntity transientEntityToReset;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           LoginPanel.endingEntityScanClear = true;
-          attachedThenTransientEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
-          while (attachedThenTransientEntity != null) {
-            attachedThenTransientEntity.advanceEntityAnimation(true);
-            if (6 == attachedThenTransientEntity.entitySpriteKindId) {
+          attachedEntityToReset = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
+          while (attachedEntityToReset != null) {
+            attachedEntityToReset.advanceEntityAnimation(true);
+            if (6 == attachedEntityToReset.entitySpriteKindId) {
               LoginPanel.endingEntityScanClear = false;
-              if (attachedThenTransientEntity.animationFrameIndex >= 3) {
-                SecondaryNodeDeque.availableEntities.addLast(-67, attachedThenTransientEntity);
+              if (attachedEntityToReset.animationFrameIndex >= 3) {
+                SecondaryNodeDeque.availableEntities.addLast(-67, attachedEntityToReset);
               }
             }
-            attachedThenTransientEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
+            attachedEntityToReset = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
           }
           guardResidue = 12 % ((-69 - methodGuard) / 38);
-          attachedThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
-          while (attachedThenTransientEntity != null) {
-            attachedThenTransientEntity.advanceEntityAnimation(true);
-            if (5 == attachedThenTransientEntity.entitySpriteKindId ||
-                attachedThenTransientEntity.entitySpriteKindId == 7 ||
-                attachedThenTransientEntity.entitySpriteKindId == 8) {
+          transientEntityToReset = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
+          while (transientEntityToReset != null) {
+            transientEntityToReset.advanceEntityAnimation(true);
+            if (5 == transientEntityToReset.entitySpriteKindId ||
+                transientEntityToReset.entitySpriteKindId == 7 ||
+                transientEntityToReset.entitySpriteKindId == 8) {
               LoginPanel.endingEntityScanClear = false;
-              if (attachedThenTransientEntity.animationFrameIndex >= 3) {
-                SecondaryNodeDeque.availableEntities.addLast(-115, attachedThenTransientEntity);
+              if (transientEntityToReset.animationFrameIndex >= 3) {
+                SecondaryNodeDeque.availableEntities.addLast(-115, transientEntityToReset);
               }
             }
-            attachedThenTransientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
+            transientEntityToReset = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException caughtEndingAnimationFailure) {

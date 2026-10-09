@@ -35,6 +35,7 @@ final class SecondaryNodeHashTable {
         DualLinkNode bucketSentinel;
         DualLinkNode matchingNode;
         int clientControlFlowSnapshot;
+        DualLinkNode matchingNodeForReturn;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (null == this.lookupCursor) {
           return null;
@@ -68,9 +69,9 @@ final class SecondaryNodeHashTable {
           }
           break;
         }
-        matchingNode = this.lookupCursor;
+        matchingNodeForReturn = this.lookupCursor;
         this.lookupCursor = this.lookupCursor.nextSecondaryNode;
-        return matchingNode;
+        return matchingNodeForReturn;
     }
 
     final DualLinkNode findFirst(long key, int bucketOffsetGuard) {

@@ -104,19 +104,20 @@ final class EntityCollisionSupport {
     }
 
     final static void writeOpcodeWithOneZeroPayload(int packetOpcode, int methodGuard) {
-        PacketBuffer outputPacket = null;
+        PacketBuffer firstOutputPacketSnapshot = null;
+        PacketBuffer secondOutputPacketSnapshot;
         if (methodGuard >= 28) {
-            outputPacket = CacheReference.outgoingSessionBuffer;
-            outputPacket.writeCipherByte(packetOpcode, (byte) -103);
-            outputPacket.writeByte((byte) 127, 1);
-            outputPacket.writeByte((byte) -20, 0);
+            firstOutputPacketSnapshot = CacheReference.outgoingSessionBuffer;
+            firstOutputPacketSnapshot.writeCipherByte(packetOpcode, (byte) -103);
+            firstOutputPacketSnapshot.writeByte((byte) 127, 1);
+            firstOutputPacketSnapshot.writeByte((byte) -20, 0);
             return;
         }
         createPasswordContainsNameAlertText = (String) null;
-        outputPacket = CacheReference.outgoingSessionBuffer;
-        outputPacket.writeCipherByte(packetOpcode, (byte) -103);
-        outputPacket.writeByte((byte) 127, 1);
-        outputPacket.writeByte((byte) -20, 0);
+        secondOutputPacketSnapshot = CacheReference.outgoingSessionBuffer;
+        secondOutputPacketSnapshot.writeCipherByte(packetOpcode, (byte) -103);
+        secondOutputPacketSnapshot.writeByte((byte) 127, 1);
+        secondOutputPacketSnapshot.writeByte((byte) -20, 0);
     }
 
     final static String formatArchiveGroupProgress(String fallbackMessage, ResourceArchive archive, String groupName, String progressLabel, boolean methodGuard) {
