@@ -388,6 +388,10 @@ final class rh {
         int var18Lifetime1;
         int var18Lifetime2;
         int var19Lifetime1;
+        int var14Lifetime1;
+        int var16Lifetime1;
+        int var16Lifetime2;
+        int var16Lifetime3;
         try {
           if (!this.b(param3, 3)) {
             return false;
@@ -483,7 +487,7 @@ final class rh {
               }
               var43 = new byte[var14];
               var31.field_f = var11;
-              var14 = 0;
+              var14Lifetime1 = 0;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
@@ -495,8 +499,8 @@ final class rh {
                     var21 = var33[var20];
                   }
                   if (var21 == param0) {
-                    sf.a(var42, var17, var43, var14, var19);
-                    var14 = var14 + var19;
+                    sf.a(var42, var17, var43, var14Lifetime1, var19);
+                    var14Lifetime1 = var14Lifetime1 + var19;
                   }
                   var17 = var17 + var19;
                 }
@@ -514,28 +518,28 @@ final class rh {
             var14_ref_int__ = var29;
             var28.field_f = var11;
             for (var15Lifetime1 = 0; var15Lifetime1 < var12Lifetime1; var15Lifetime1++) {
-              var16 = 0;
+              var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16 = var16 + var28.a((byte) -27);
-                var14_ref_int__[var17Lifetime1] = var14_ref_int__[var17Lifetime1] + var16;
+                var16Lifetime1 = var16Lifetime1 + var28.a((byte) -27);
+                var14_ref_int__[var17Lifetime1] = var14_ref_int__[var17Lifetime1] + var16Lifetime1;
               }
             }
             var38 = new byte[var5_int][];
             var30 = var38;
             var15_ref_byte____ = var30;
-            for (var16 = 0; var5_int > var16; var16++) {
-              array$1 = new byte[var37[var16]];
-              var15_ref_byte____[var16] = array$1;
-              var37[var16] = 0;
+            for (var16Lifetime2 = 0; var5_int > var16Lifetime2; var16Lifetime2++) {
+              array$1 = new byte[var37[var16Lifetime2]];
+              var15_ref_byte____[var16Lifetime2] = array$1;
+              var37[var16Lifetime2] = 0;
             }
             var28.field_f = var11;
-            var16 = 0;
+            var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
                 var18Lifetime1 = var18Lifetime1 + var28.a((byte) -106);
-                sf.a(var35, var16, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
-                var16 = var16 + var18Lifetime1;
+                sf.a(var35, var16Lifetime3, var38[var19Lifetime1], var37[var19Lifetime1], var18Lifetime1);
+                var16Lifetime3 = var16Lifetime3 + var18Lifetime1;
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
               }
             }

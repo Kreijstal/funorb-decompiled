@@ -281,6 +281,17 @@ final class ua extends hf {
         float[] var8;
         int[] var9;
         int var10;
+        int var1Lifetime1;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var3Lifetime1;
+        int var3Lifetime2;
+        int var3Lifetime3;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
         ua.a(param0, 0);
         field_v = 1 << ua.b(4);
         field_t = 1 << ua.b(4);
@@ -327,34 +338,34 @@ final class ua extends hf {
           field_h = var8;
           field_l = var9;
         }
-        var1 = ua.b(8) + 1;
-        field_u = new ae[var1];
-        for (var2 = 0; var2 < var1; var2++) {
-          field_u[var2] = new ae();
+        var1Lifetime1 = ua.b(8) + 1;
+        field_u = new ae[var1Lifetime1];
+        for (var2Lifetime1 = 0; var2Lifetime1 < var1Lifetime1; var2Lifetime1++) {
+          field_u[var2Lifetime1] = new ae();
         }
-        var2 = ua.b(6) + 1;
-        for (var3 = 0; var3 < var2; var3++) {
+        var2Lifetime2 = ua.b(6) + 1;
+        for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime2; var3Lifetime1++) {
           ua.b(16);
         }
-        var2 = ua.b(6) + 1;
-        field_F = new u[var2];
-        for (var3 = 0; var3 < var2; var3++) {
-          field_F[var3] = new u();
+        var2Lifetime3 = ua.b(6) + 1;
+        field_F = new u[var2Lifetime3];
+        for (var3Lifetime2 = 0; var3Lifetime2 < var2Lifetime3; var3Lifetime2++) {
+          field_F[var3Lifetime2] = new u();
         }
-        var3 = ua.b(6) + 1;
-        field_k = new ui[var3];
-        for (var4 = 0; var4 < var3; var4++) {
-          field_k[var4] = new ui();
+        var3Lifetime3 = ua.b(6) + 1;
+        field_k = new ui[var3Lifetime3];
+        for (var4Lifetime1 = 0; var4Lifetime1 < var3Lifetime3; var4Lifetime1++) {
+          field_k[var4Lifetime1] = new ui();
         }
-        var4 = ua.b(6) + 1;
-        field_N = new we[var4];
-        for (var5 = 0; var5 < var4; var5++) {
-          field_N[var5] = new we();
+        var4Lifetime2 = ua.b(6) + 1;
+        field_N = new we[var4Lifetime2];
+        for (var5Lifetime1 = 0; var5Lifetime1 < var4Lifetime2; var5Lifetime1++) {
+          field_N[var5Lifetime1] = new we();
         }
-        var5 = ua.b(6) + 1;
-        field_o = new boolean[var5];
-        field_D = new int[var5];
-        for (var6 = 0; var6 < var5; var6++) {
+        var5Lifetime2 = ua.b(6) + 1;
+        field_o = new boolean[var5Lifetime2];
+        field_D = new int[var5Lifetime2];
+        for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_39_0 = (boolean[]) (field_o);
           stackIn_39_1 = var6;
           stackIn_40_2 = !(ua.b() == 0);
@@ -495,6 +506,8 @@ final class ua extends hf {
         float var30Lifetime1Lifetime1;
         float var30Lifetime1Lifetime2;
         float var30Lifetime1Lifetime3;
+        int var18_intLifetime1;
+        int var18_intLifetime2;
         ua.a(this.field_p[param0], 0);
         ua.b();
         var2 = ua.b(hj.a((byte) 58, field_D.length - 1));
@@ -556,7 +569,7 @@ final class ua extends hf {
           }
         } else {
           var17_intLifetime3 = var4 >> 1;
-          var18_int = var4 >> 2;
+          var18_intLifetime1 = var4 >> 2;
           var19 = var4 >> 3;
           var49 = field_B;
           var45 = var49;
@@ -596,7 +609,7 @@ final class ua extends hf {
           var48 = stackIn_49_0;
           var44 = var48;
           var24 = var44;
-          for (var25 = 0; var25 < var18_int; var25++) {
+          for (var25 = 0; var25 < var18_intLifetime1; var25++) {
             var26_float = var20_ref_float__[4 * var25] - var20_ref_float__[var4 - 4 * var25 - 1];
             var27 = var20_ref_float__[4 * var25 + 2] - var20_ref_float__[var4 - 4 * var25 - 3];
             var28 = var21[2 * var25];
@@ -671,8 +684,8 @@ final class ua extends hf {
           for (var26Lifetime3 = 0; var26Lifetime3 < var19; var26Lifetime3++) {
             var20_ref_float__[var4 - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3];
             var20_ref_float__[var4 - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 1];
-            var20_ref_float__[var4 - var18_int - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 2];
-            var20_ref_float__[var4 - var18_int - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 3];
+            var20_ref_float__[var4 - var18_intLifetime1 - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 2];
+            var20_ref_float__[var4 - var18_intLifetime1 - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 3];
           }
           for (var26Lifetime4 = 0; var26Lifetime4 < var19; var26Lifetime4++) {
             var27Lifetime2 = var23[2 * var26Lifetime4];
@@ -688,20 +701,20 @@ final class ua extends hf {
             var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4 + 1] = (var30Lifetime2 - var32 + var33Lifetime1) * 0.5f;
             var20_ref_float__[var4 - 1 - 2 * var26Lifetime4] = (-var30Lifetime2 + var32 + var33Lifetime1) * 0.5f;
           }
-          for (var26Lifetime5 = 0; var26Lifetime5 < var18_int; var26Lifetime5++) {
+          for (var26Lifetime5 = 0; var26Lifetime5 < var18_intLifetime1; var26Lifetime5++) {
             var20_ref_float__[var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5] + var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1];
             var20_ref_float__[var17_intLifetime3 - 1 - var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1] - var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5];
           }
-          for (var26Lifetime6 = 0; var26Lifetime6 < var18_int; var26Lifetime6++) {
-            var20_ref_float__[var4 - var18_int + var26Lifetime6] = -var49[var26Lifetime6];
+          for (var26Lifetime6 = 0; var26Lifetime6 < var18_intLifetime1; var26Lifetime6++) {
+            var20_ref_float__[var4 - var18_intLifetime1 + var26Lifetime6] = -var49[var26Lifetime6];
           }
-          for (var26Lifetime7 = 0; var26Lifetime7 < var18_int; var26Lifetime7++) {
-            var20_ref_float__[var26Lifetime7] = var20_ref_float__[var18_int + var26Lifetime7];
+          for (var26Lifetime7 = 0; var26Lifetime7 < var18_intLifetime1; var26Lifetime7++) {
+            var20_ref_float__[var26Lifetime7] = var20_ref_float__[var18_intLifetime1 + var26Lifetime7];
           }
-          for (var26Lifetime8 = 0; var26Lifetime8 < var18_int; var26Lifetime8++) {
-            var20_ref_float__[var18_int + var26Lifetime8] = -var20_ref_float__[var18_int - var26Lifetime8 - 1];
+          for (var26Lifetime8 = 0; var26Lifetime8 < var18_intLifetime1; var26Lifetime8++) {
+            var20_ref_float__[var18_intLifetime1 + var26Lifetime8] = -var20_ref_float__[var18_intLifetime1 - var26Lifetime8 - 1];
           }
-          for (var26Lifetime9 = 0; var26Lifetime9 < var18_int; var26Lifetime9++) {
+          for (var26Lifetime9 = 0; var26Lifetime9 < var18_intLifetime1; var26Lifetime9++) {
             var20_ref_float__[var17_intLifetime3 + var26Lifetime9] = var20_ref_float__[var4 - var26Lifetime9 - 1];
           }
           for (var26Lifetime10 = var8; var26Lifetime10 < var9; var26Lifetime10++) {
@@ -715,8 +728,8 @@ final class ua extends hf {
         }
         var17 = null;
         if (this.field_M > 0) {
-          var18_int = this.field_M + var4 >> 2;
-          var50 = new float[var18_int];
+          var18_intLifetime2 = this.field_M + var4 >> 2;
+          var50 = new float[var18_intLifetime2];
           var46 = var50;
           var40 = var46;
           var17 = var40;

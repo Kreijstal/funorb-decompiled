@@ -798,6 +798,7 @@ class dm extends wh {
         int var3Lifetime2;
         int var4Lifetime1;
         int var4Lifetime2;
+        int var5Lifetime1;
         var1 = this.field_m - 1;
         L1: while (true) {
           if (var1 >= 0) {
@@ -858,16 +859,16 @@ class dm extends wh {
             var1 == this.field_m - 1) {
           return;
         }
-        var5 = var3Lifetime2 + 1 - var4Lifetime2;
+        var5Lifetime1 = var3Lifetime2 + 1 - var4Lifetime2;
         var6 = var1 + 1 - var2Lifetime1;
-        var7 = new int[var5 * var6];
+        var7 = new int[var5Lifetime1 * var6];
         for (var8 = 0; var8 < var6; var8++) {
-          for (var9 = 0; var9 < var5; var9++) {
-            var7[var8 * var5 + var9] = this.field_v[(var8 + var2Lifetime1) * this.field_r + (var9 + var4Lifetime2)];
+          for (var9 = 0; var9 < var5Lifetime1; var9++) {
+            var7[var8 * var5Lifetime1 + var9] = this.field_v[(var8 + var2Lifetime1) * this.field_r + (var9 + var4Lifetime2)];
           }
         }
         this.field_v = var7;
-        this.field_r = var5;
+        this.field_r = var5Lifetime1;
         this.field_m = var6;
         this.field_u = this.field_u + var4Lifetime2;
         this.field_p = this.field_p + var2Lifetime1;

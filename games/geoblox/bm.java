@@ -81,6 +81,8 @@ final class bm {
         int var10Lifetime6;
         int var13Lifetime1;
         int var14Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
         var16 = Geoblox.field_C;
         try {
           var18 = new qc(v.a(param1, -1));
@@ -220,22 +222,22 @@ final class bm {
               this.field_e = new int[var9 + 1][];
               this.field_f = new am[1 + var9];
               for (var10Lifetime6 = 0; var10Lifetime6 < this.field_h; var10Lifetime6++) {
-                var11 = this.field_i[var10Lifetime6];
-                var12 = this.field_a[var11];
-                array$8 = new int[this.field_k[var11]];
-                this.field_e[var11] = array$8;
-                for (var13Lifetime1 = 0; this.field_k[var11] > var13Lifetime1; var13Lifetime1++) {
-                  this.field_e[var11][var13Lifetime1] = -1;
+                var11Lifetime1 = this.field_i[var10Lifetime6];
+                var12Lifetime1 = this.field_a[var11Lifetime1];
+                array$8 = new int[this.field_k[var11Lifetime1]];
+                this.field_e[var11Lifetime1] = array$8;
+                for (var13Lifetime1 = 0; this.field_k[var11Lifetime1] > var13Lifetime1; var13Lifetime1++) {
+                  this.field_e[var11Lifetime1][var13Lifetime1] = -1;
                 }
-                for (var13Lifetime1 = 0; var13Lifetime1 < var12; var13Lifetime1++) {
-                  if (this.field_o[var11] != null) {
-                    var14Lifetime1 = this.field_o[var11][var13Lifetime1];
+                for (var13Lifetime1 = 0; var13Lifetime1 < var12Lifetime1; var13Lifetime1++) {
+                  if (this.field_o[var11Lifetime1] != null) {
+                    var14Lifetime1 = this.field_o[var11Lifetime1][var13Lifetime1];
                   } else {
                     var14Lifetime1 = var13Lifetime1;
                   }
-                  this.field_e[var11][var14Lifetime1] = var18.a((byte) -78);
+                  this.field_e[var11Lifetime1][var14Lifetime1] = var18.a((byte) -78);
                 }
-                this.field_f[var11] = new am(this.field_e[var11]);
+                this.field_f[var11Lifetime1] = new am(this.field_e[var11Lifetime1]);
               }
               return;
             }

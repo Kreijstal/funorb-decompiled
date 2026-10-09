@@ -21,6 +21,7 @@ final class fg {
         int var6;
         int var9;
         int[] var13;
+        int var2Lifetime1;
         var1 = 0;
         for (var2 = 0; var2 < 10; var2++) {
           if (this.field_a[var2] == null) {
@@ -34,8 +35,8 @@ final class fg {
         if (var1 == 0) {
           return new byte[]{};
         }
-        var2 = 22050 * var1 / 1000;
-        var3 = new byte[var2];
+        var2Lifetime1 = 22050 * var1 / 1000;
+        var3 = new byte[var2Lifetime1];
         var4 = 0;
         while (true) {
           if (var4 >= 10) {

@@ -259,6 +259,9 @@ final class pf extends ee implements ga, pl {
         String var13 = null;
         CharSequence var14 = null;
         int var10Lifetime1;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var9Lifetime3;
         try {
           var13 = param2.b(16925);
           var8 = param3.b(16925);
@@ -324,25 +327,25 @@ final class pf extends ee implements ga, pl {
           }
           if (field_K == pk.field_l &&
               el.b(30000, 1)) {
-            var9 = eh.field_d.c((byte) 34);
+            var9Lifetime1 = eh.field_d.c((byte) 34);
             eh.field_d.field_f = 0;
-            if (var9 >= 100 &&
-                var9 <= 105) {
+            if (var9Lifetime1 >= 100 &&
+                var9Lifetime1 <= 105) {
               pk.field_l = v.field_l;
-              si.field_i = new String[var9 - 100];
+              si.field_i = new String[var9Lifetime1 - 100];
             } else {
-              if (var9 == 248) {
+              if (var9Lifetime1 == 248) {
                 sj.a(k.c(124), (byte) 123);
                 kh.field_a = ph.field_k;
                 jl.a((byte) -124);
                 ck.field_e = false;
-                stackIn_31_0 = var9;
+                stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
               }
-              if (99 != var9) {
+              if (99 != var9Lifetime1) {
                 pk.field_l = qh.field_F;
                 p.field_k = -1;
-                me.field_l = var9;
+                me.field_l = var9Lifetime1;
               } else {
                 el.b(30000, rc.d(112));
                 fi.field_b = new Boolean(jl.a(eh.field_d, 0));
@@ -351,8 +354,8 @@ final class pf extends ee implements ga, pl {
             }
           }
           if (pk.field_l == v.field_l) {
-            var9 = 2;
-            if (el.b(30000, var9)) {
+            var9Lifetime2 = 2;
+            if (el.b(30000, var9Lifetime2)) {
               var10Lifetime1 = eh.field_d.b(true);
               eh.field_d.field_f = 0;
               if (el.b(30000, var10Lifetime1)) {
@@ -396,10 +399,10 @@ final class pf extends ee implements ga, pl {
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9 = sd.field_x;
+            var9Lifetime3 = sd.field_x;
             sd.field_x = ac.field_s;
             ck.field_e = true;
-            ac.field_s = var9;
+            ac.field_s = var9Lifetime3;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;

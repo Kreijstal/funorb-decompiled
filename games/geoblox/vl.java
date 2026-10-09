@@ -307,6 +307,10 @@ final class vl extends hf {
         int var32Lifetime1;
         int var33Lifetime1;
         int var34Lifetime1;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var14Lifetime3;
+        int var16_intLifetime1;
         try {
           this.field_m = new byte[128];
           this.field_f = new t[128];
@@ -375,34 +379,34 @@ final class vl extends hf {
             var12 = var9;
           }
           var13 = new t[var12];
-          for (var14 = 0; var14 < var13.length; var14++) {
+          for (var14Lifetime1 = 0; var14Lifetime1 < var13.length; var14Lifetime1++) {
             dupTemp$8 = new t();
-            var13[var14] = dupTemp$8;
+            var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
             var16_int = var38.c((byte) 34);
             if (0 < var16_int) {
               var15_ref.field_f = new byte[2 * var16_int];
             }
-            var16_int = var38.c((byte) 34);
-            if (0 < var16_int) {
-              var15_ref.field_e = new byte[2 * var16_int + 2];
+            var16_intLifetime1 = var38.c((byte) 34);
+            if (0 < var16_intLifetime1) {
+              var15_ref.field_e = new byte[2 * var16_intLifetime1 + 2];
               var40.field_e[1] = (byte)64;
             }
           }
-          var14 = var38.c((byte) 34);
-          if (var14 <= 0) {
+          var14Lifetime2 = var38.c((byte) 34);
+          if (var14Lifetime2 <= 0) {
             stackIn_39_0 = null;
           } else {
-            stackIn_39_0 = new byte[var14 * 2];
+            stackIn_39_0 = new byte[var14Lifetime2 * 2];
           }
           var46 = stackIn_39_0;
           var15 = var46;
-          var14 = var38.c((byte) 34);
-          if (0 >= var14) {
+          var14Lifetime3 = var38.c((byte) 34);
+          if (0 >= var14Lifetime3) {
             stackIn_42_0 = null;
           } else {
-            stackIn_42_0 = new byte[var14 * 2];
+            stackIn_42_0 = new byte[var14Lifetime3 * 2];
           }
           var47 = stackIn_42_0;
           var16 = var47;

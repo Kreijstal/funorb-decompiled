@@ -65,6 +65,7 @@ final class pg {
             byte[][] var20 = null;
             String var21 = null;
             byte[][] var22 = null;
+            int var13Lifetime1;
             var14 = Geoblox.field_C;
             try {
               var19 = new eg();
@@ -111,7 +112,7 @@ final class pg {
                       var19.field_k[var5] = var6_int;
                       var12 = new Class[var9];
                       var18 = 0;
-                      var13 = var18;
+                      var13Lifetime1 = var18;
                       while (var18 < var9) {
                         var12[var18] = ag.a(var10[var18], false);
                         var18++;

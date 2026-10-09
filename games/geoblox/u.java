@@ -313,6 +313,9 @@ final class u {
         int var4Lifetime2;
         int var6Lifetime1;
         int var7Lifetime1;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
         var1 = ua.b(16);
         if (var1 != 1) {
           throw new RuntimeException();
@@ -336,44 +339,44 @@ final class u {
           this.field_i[var4Lifetime1] = ua.b(3) + 1;
           dupTemp$1 = ua.b(2);
           this.field_h[var4Lifetime1] = dupTemp$1;
-          var5 = dupTemp$1;
-          if (var5 != 0) {
+          var5Lifetime1 = dupTemp$1;
+          if (var5Lifetime1 != 0) {
             this.field_f[var4Lifetime1] = ua.b(8);
           }
-          var5 = 1 << var5;
-          var10 = new int[var5];
+          var5Lifetime1 = 1 << var5Lifetime1;
+          var10 = new int[var5Lifetime1];
           var9 = var10;
           var6_ref_int__ = var9;
           this.field_j[var4Lifetime1] = var10;
-          for (var7 = 0; var7 < var5; var7++) {
+          for (var7 = 0; var7 < var5Lifetime1; var7++) {
             var6_ref_int__[var7] = ua.b(8) - 1;
           }
         }
         this.field_d = ua.b(2) + 1;
         var4Lifetime2 = ua.b(4);
-        var5 = 2;
+        var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
-          var5 = var5 + this.field_i[this.field_l[var6]];
+          var5Lifetime2 = var5Lifetime2 + this.field_i[this.field_l[var6]];
         }
-        this.field_c = new int[var5];
+        this.field_c = new int[var5Lifetime2];
         this.field_c[0] = 0;
         this.field_c[1] = 1 << var4Lifetime2;
-        var5 = 2;
+        var5Lifetime3 = 2;
         for (var6Lifetime1 = 0; var6Lifetime1 < var2; var6Lifetime1++) {
           var7Lifetime1 = this.field_l[var6Lifetime1];
           for (var8 = 0; var8 < this.field_i[var7Lifetime1]; var8++) {
-            incrementValue$0 = var5;
-            var5++;
+            incrementValue$0 = var5Lifetime3;
+            var5Lifetime3++;
             this.field_c[incrementValue$0] = ua.b(var4Lifetime2);
           }
         }
         if (field_a != null &&
-            field_a.length >= var5) {
+            field_a.length >= var5Lifetime3) {
           return;
         }
-        field_a = new int[var5];
-        field_g = new int[var5];
-        field_e = new boolean[var5];
+        field_a = new int[var5Lifetime3];
+        field_g = new int[var5Lifetime3];
+        field_e = new boolean[var5Lifetime3];
         return;
     }
 
