@@ -348,28 +348,36 @@ final class GameScreen extends MenuScreen {
         int panelTop = 0;
         int panelWidth = 0;
         int panelLeft = 0;
-        int membershipDialogTextYOrButtonTop = 0;
+        int membershipMessageTop = 0;
         int membershipDialogButtonWidth = 0;
         String acceptancePromptText = null;
-        int membershipDialogButtonLeft = 0;
+        int membershipCloseButtonLeft = 0;
         String acceptanceCountdownText = null;
-        int membershipDialogButtonTextCenter = 0;
+        int membershipCloseButtonTextCenter = 0;
         int cancelButtonLeft = 0;
         int cancelButtonTextCenter = 0;
         int clientControlFlowGuard = 0;
         int screenPanelHeight;
-        int loginTextYOrOverlayAlphaOrCurtainX;
-        int fullscreenPromptTextYOrButtonTop;
+        int loginTextY;
+        int unavailableTextYOrButtonTop;
         int nonmemberMessageTop;
         int nonmemberCloseButtonTop;
         int unavailableCloseButtonWidth;
         int nonmemberCloseButtonWidth;
         int unavailableCloseButtonLeft;
         int nonmemberCloseButtonLeft;
-        int unavailableCloseTextCenterOrAcceptanceButtonWidth;
+        int unavailableCloseButtonTextCenter;
         int nonmemberCloseButtonTextCenter;
         int acceptButtonLeft;
         int acceptButtonTextCenter;
+        int membershipCloseButtonTop;
+        int membershipMembersButtonTop;
+        int membershipMembersButtonLeft;
+        int membershipMembersButtonTextCenter;
+        int fullscreenOverlayAlpha;
+        int tutorialCurtainX;
+        int acceptanceTextYOrButtonTop;
+        int acceptanceButtonWidth;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != -28750) {
@@ -419,10 +427,10 @@ final class GameScreen extends MenuScreen {
               if (this.screenId == 4) {
                 AudioService.screenTitleSprites[8].draw(0, 20);
                 DelayedIncomingPacket.drawNineSlicePanel(panelTop + 10, 120, 100, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
-                loginTextYOrOverlayAlphaOrCurtainX = 184;
-                FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, loginTextYOrOverlayAlphaOrCurtainX, 0, -1);
-                loginTextYOrOverlayAlphaOrCurtainX = 185;
-                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.notLoggedInText, 130, loginTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
+                loginTextY = 184;
+                FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, loginTextY, 0, -1);
+                loginTextY = 185;
+                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.notLoggedInText, 130, loginTextY, 380, 300, 0, -1, 1, 0, 14);
                 DelayedIncomingPacket.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
                 IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.discardResultsWarningText, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (clientControlFlowGuard == 0) {
@@ -444,16 +452,16 @@ final class GameScreen extends MenuScreen {
                   } else {
                     membershipOverlayAlpha = 200;
                   }
-                  loginTextYOrOverlayAlphaOrCurtainX = membershipOverlayAlpha;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
+                  fullscreenOverlayAlpha = membershipOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, fullscreenOverlayAlpha);
                   DelayedIncomingPacket.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, GameGraphicsResources.frameNineSliceSprites);
-                  membershipDialogTextYOrButtonTop = 170;
-                  IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 160, membershipDialogTextYOrButtonTop, 320, 300, 0, -1, 1, 0, 16);
+                  membershipMessageTop = 170;
+                  IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 160, membershipMessageTop, 320, 300, 0, -1, 1, 0, 16);
                   membershipDialogButtonWidth = 100;
-                  membershipDialogButtonLeft = -(20 + membershipDialogButtonWidth >> 1) + 410;
-                  membershipDialogTextYOrButtonTop = 265;
-                  membershipDialogButtonTextCenter = membershipDialogButtonLeft - (-(membershipDialogButtonWidth >> 1) - 10);
-                  DelayedIncomingPacket.drawNineSlicePanel(membershipDialogTextYOrButtonTop, membershipDialogButtonLeft, 36, (byte) -92, 20 + membershipDialogButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
+                  membershipCloseButtonLeft = -(20 + membershipDialogButtonWidth >> 1) + 410;
+                  membershipCloseButtonTop = 265;
+                  membershipCloseButtonTextCenter = membershipCloseButtonLeft - (-(membershipDialogButtonWidth >> 1) - 10);
+                  DelayedIncomingPacket.drawNineSlicePanel(membershipCloseButtonTop, membershipCloseButtonLeft, 36, (byte) -92, 20 + membershipDialogButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
                   if (1 == this.fullscreenDialogButtonIndex ||
                       this.fullscreenDialogButtonIndex < 0 &&
                         !(350 >= PrefixCodeDecoder.pointerXSnapshot) &&
@@ -462,12 +470,12 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 299)) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, membershipDialogButtonTextCenter, 30 + membershipDialogTextYOrButtonTop, 0, -1);
-                  membershipDialogButtonLeft = 320 - (20 + membershipDialogButtonWidth >> 1) - 90;
+                  FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, membershipCloseButtonTextCenter, 30 + membershipCloseButtonTop, 0, -1);
+                  membershipMembersButtonLeft = 320 - (20 + membershipDialogButtonWidth >> 1) - 90;
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-                  membershipDialogTextYOrButtonTop = 265;
-                  membershipDialogButtonTextCenter = 10 + (membershipDialogButtonWidth >> 1) + membershipDialogButtonLeft;
-                  DelayedIncomingPacket.drawNineSlicePanel(membershipDialogTextYOrButtonTop, membershipDialogButtonLeft, 36, (byte) -92, membershipDialogButtonWidth + 20, ArchiveLoadSequence.mouseBoxFrames);
+                  membershipMembersButtonTop = 265;
+                  membershipMembersButtonTextCenter = 10 + (membershipDialogButtonWidth >> 1) + membershipMembersButtonLeft;
+                  DelayedIncomingPacket.drawNineSlicePanel(membershipMembersButtonTop, membershipMembersButtonLeft, 36, (byte) -92, membershipDialogButtonWidth + 20, ArchiveLoadSequence.mouseBoxFrames);
                   if (this.fullscreenDialogButtonIndex == 0 ||
                       0 > this.fullscreenDialogButtonIndex &&
                         !(170 >= PrefixCodeDecoder.pointerXSnapshot) &&
@@ -476,7 +484,7 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 299)) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(DialWidget.fullscreenMembersButtonText, membershipDialogButtonTextCenter, 30 + membershipDialogTextYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(DialWidget.fullscreenMembersButtonText, membershipMembersButtonTextCenter, 30 + membershipMembersButtonTop, 0, -1);
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
@@ -489,16 +497,16 @@ final class GameScreen extends MenuScreen {
                     } else {
                       unavailableOverlayAlpha = this.activeTicks;
                     }
-                    loginTextYOrOverlayAlphaOrCurtainX = unavailableOverlayAlpha;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
+                    fullscreenOverlayAlpha = unavailableOverlayAlpha;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, fullscreenOverlayAlpha);
                     DelayedIncomingPacket.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
-                    fullscreenPromptTextYOrButtonTop = 170;
-                    fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(GrowableIntList.fullscreenUnavailableText, 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
-                    fullscreenPromptTextYOrButtonTop += 40;
+                    unavailableTextYOrButtonTop = 170;
+                    unavailableTextYOrButtonTop = unavailableTextYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(GrowableIntList.fullscreenUnavailableText, 170, unavailableTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                    unavailableTextYOrButtonTop += 40;
                     unavailableCloseButtonWidth = 100;
                     unavailableCloseButtonLeft = 320 - (unavailableCloseButtonWidth + 20 >> 1);
-                    unavailableCloseTextCenterOrAcceptanceButtonWidth = (unavailableCloseButtonWidth >> 1) + (unavailableCloseButtonLeft + 10);
-                    DelayedIncomingPacket.drawNineSlicePanel(fullscreenPromptTextYOrButtonTop, unavailableCloseButtonLeft, 36, (byte) -92, 20 + unavailableCloseButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
+                    unavailableCloseButtonTextCenter = (unavailableCloseButtonWidth >> 1) + (unavailableCloseButtonLeft + 10);
+                    DelayedIncomingPacket.drawNineSlicePanel(unavailableTextYOrButtonTop, unavailableCloseButtonLeft, 36, (byte) -92, 20 + unavailableCloseButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
                     if (0 == this.fullscreenDialogButtonIndex ||
                         !(260 >= PrefixCodeDecoder.pointerXSnapshot) &&
                           !(PrefixCodeDecoder.pointerXSnapshot >= 380) &&
@@ -506,7 +514,7 @@ final class GameScreen extends MenuScreen {
                           !(PcmResampler.pointerYSnapshot >= 309)) {
                       FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                     }
-                    FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, unavailableCloseTextCenterOrAcceptanceButtonWidth, 30 + fullscreenPromptTextYOrButtonTop, 0, -1);
+                    FadingDialog.uiPaletteFont.drawCenteredText(UiFontResources.fullscreenCloseButtonText, unavailableCloseButtonTextCenter, 30 + unavailableTextYOrButtonTop, 0, -1);
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                     if (clientControlFlowGuard == 0) {
                       return;
@@ -517,27 +525,27 @@ final class GameScreen extends MenuScreen {
                   } else {
                     acceptanceOverlayAlpha = 200;
                   }
-                  loginTextYOrOverlayAlphaOrCurtainX = acceptanceOverlayAlpha;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
+                  fullscreenOverlayAlpha = acceptanceOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, fullscreenOverlayAlpha);
                   DelayedIncomingPacket.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
-                  fullscreenPromptTextYOrButtonTop = 170;
+                  acceptanceTextYOrButtonTop = 170;
                   acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + FontLoadingSupport.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
-                  fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(acceptancePromptText, 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
-                  fullscreenPromptTextYOrButtonTop += 10;
+                  acceptanceTextYOrButtonTop = acceptanceTextYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(acceptancePromptText, 170, acceptanceTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
+                  acceptanceTextYOrButtonTop += 10;
                   acceptanceCountdownText = Integer.toString((1500 - this.activeTicks) / 150 + 1);
                   if ((1500 - this.activeTicks) / 150 <= 0) {
-                    fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    acceptanceTextYOrButtonTop = acceptanceTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{acceptanceCountdownText}, (byte) -51), 170, acceptanceTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                     if (clientControlFlowGuard != 0) {
-                      fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      acceptanceTextYOrButtonTop = acceptanceTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, acceptanceTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                     }
                   } else {
-                    fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    acceptanceTextYOrButtonTop = acceptanceTextYOrButtonTop + IntrusiveNodeHashTable.smallFont.drawParagraph(OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{acceptanceCountdownText}, (byte) -45), 170, acceptanceTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
-                  fullscreenPromptTextYOrButtonTop += 40;
-                  unavailableCloseTextCenterOrAcceptanceButtonWidth = 100;
-                  cancelButtonLeft = -(20 + unavailableCloseTextCenterOrAcceptanceButtonWidth >> 1) + 320 + 90;
-                  DelayedIncomingPacket.drawNineSlicePanel(fullscreenPromptTextYOrButtonTop, cancelButtonLeft, 36, (byte) -92, unavailableCloseTextCenterOrAcceptanceButtonWidth + 20, ArchiveLoadSequence.mouseBoxFrames);
-                  cancelButtonTextCenter = 10 + ((unavailableCloseTextCenterOrAcceptanceButtonWidth >> 1) + cancelButtonLeft);
+                  acceptanceTextYOrButtonTop += 40;
+                  acceptanceButtonWidth = 100;
+                  cancelButtonLeft = -(20 + acceptanceButtonWidth >> 1) + 320 + 90;
+                  DelayedIncomingPacket.drawNineSlicePanel(acceptanceTextYOrButtonTop, cancelButtonLeft, 36, (byte) -92, acceptanceButtonWidth + 20, ArchiveLoadSequence.mouseBoxFrames);
+                  cancelButtonTextCenter = 10 + ((acceptanceButtonWidth >> 1) + cancelButtonLeft);
                   if (this.fullscreenDialogButtonIndex == 1 ||
                       0 > this.fullscreenDialogButtonIndex &&
                         !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
@@ -546,11 +554,11 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 352)) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(FontLoadingSupport.fullscreenCancelButtonText, cancelButtonTextCenter, 30 + fullscreenPromptTextYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(FontLoadingSupport.fullscreenCancelButtonText, cancelButtonTextCenter, 30 + acceptanceTextYOrButtonTop, 0, -1);
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-                  acceptButtonLeft = 320 - (20 + unavailableCloseTextCenterOrAcceptanceButtonWidth >> 1) - 90;
-                  acceptButtonTextCenter = 10 + (unavailableCloseTextCenterOrAcceptanceButtonWidth >> 1) + acceptButtonLeft;
-                  DelayedIncomingPacket.drawNineSlicePanel(fullscreenPromptTextYOrButtonTop, acceptButtonLeft, 36, (byte) -92, 20 + unavailableCloseTextCenterOrAcceptanceButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
+                  acceptButtonLeft = 320 - (20 + acceptanceButtonWidth >> 1) - 90;
+                  acceptButtonTextCenter = 10 + (acceptanceButtonWidth >> 1) + acceptButtonLeft;
+                  DelayedIncomingPacket.drawNineSlicePanel(acceptanceTextYOrButtonTop, acceptButtonLeft, 36, (byte) -92, 20 + acceptanceButtonWidth, ArchiveLoadSequence.mouseBoxFrames);
                   if (this.fullscreenDialogButtonIndex == 0 ||
                       this.fullscreenDialogButtonIndex < 0 &&
                         !(PrefixCodeDecoder.pointerXSnapshot <= 170) &&
@@ -559,7 +567,7 @@ final class GameScreen extends MenuScreen {
                         !(PcmResampler.pointerYSnapshot >= 352)) {
                     FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
                   }
-                  FadingDialog.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, acceptButtonTextCenter, 30 + fullscreenPromptTextYOrButtonTop, 0, -1);
+                  FadingDialog.uiPaletteFont.drawCenteredText(ArchiveRequest.fullscreenAcceptButtonText, acceptButtonTextCenter, 30 + acceptanceTextYOrButtonTop, 0, -1);
                   FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
                   if (clientControlFlowGuard == 0) {
                     return;
@@ -570,8 +578,8 @@ final class GameScreen extends MenuScreen {
                 } else {
                   fallbackOverlayAlpha = this.activeTicks;
                 }
-                loginTextYOrOverlayAlphaOrCurtainX = fallbackOverlayAlpha;
-                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
+                fullscreenOverlayAlpha = fallbackOverlayAlpha;
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, fullscreenOverlayAlpha);
                 DelayedIncomingPacket.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                 nonmemberMessageTop = 180;
                 IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 170, nonmemberMessageTop, 300, 300, 0, -1, 1, 0, 16);
@@ -601,33 +609,33 @@ final class GameScreen extends MenuScreen {
                 }
               }
               tutorialSlideRendering: {
-                loginTextYOrOverlayAlphaOrCurtainX = this.tutorialSlideOffset;
+                tutorialCurtainX = this.tutorialSlideOffset;
                 if (!this.tutorialSlideForward) {
-                  loginTextYOrOverlayAlphaOrCurtainX = 640 - loginTextYOrOverlayAlphaOrCurtainX;
-                  SoftwareRasterizer.setClip(0, 0, loginTextYOrOverlayAlphaOrCurtainX, 480);
+                  tutorialCurtainX = 640 - tutorialCurtainX;
+                  SoftwareRasterizer.setClip(0, 0, tutorialCurtainX, 480);
                   this.renderTutorialPage(-85, this.previousTutorialPageIndex);
                   this.renderingPreviousTutorialPage = true;
                   super.renderScreen(-28750);
                   this.renderingPreviousTutorialPage = false;
-                  SoftwareRasterizer.setClip(loginTextYOrOverlayAlphaOrCurtainX, 0, 640, 480);
+                  SoftwareRasterizer.setClip(tutorialCurtainX, 0, 640, 480);
                   this.renderTutorialPage(methodGuard ^ 28757, this.tutorialPageIndex);
                   super.renderScreen(-28750);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  CharacterReplacementSupport.transitionCurtain.drawRotatedCentered((CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + loginTextYOrOverlayAlphaOrCurtainX, 240, -49150, 4096);
+                  CharacterReplacementSupport.transitionCurtain.drawRotatedCentered((CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + tutorialCurtainX, 240, -49150, 4096);
                   if (clientControlFlowGuard == 0) {
                     break tutorialSlideRendering;
                   }
                 }
-                SoftwareRasterizer.setClip(loginTextYOrOverlayAlphaOrCurtainX, 0, 640, 480);
+                SoftwareRasterizer.setClip(tutorialCurtainX, 0, 640, 480);
                 this.renderTutorialPage(-17, this.previousTutorialPageIndex);
                 this.renderingPreviousTutorialPage = true;
                 super.renderScreen(-28750);
                 this.renderingPreviousTutorialPage = false;
-                SoftwareRasterizer.setClip(0, 0, loginTextYOrOverlayAlphaOrCurtainX, 480);
+                SoftwareRasterizer.setClip(0, 0, tutorialCurtainX, 480);
                 this.renderTutorialPage(-48, this.tutorialPageIndex);
                 super.renderScreen(-28750);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
-                CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + loginTextYOrOverlayAlphaOrCurtainX, 240, -16383, 4096);
+                CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + tutorialCurtainX, 240, -16383, 4096);
               }
               if (clientControlFlowGuard == 0) {
                 return;
@@ -1436,6 +1444,10 @@ final class GameScreen extends MenuScreen {
         int tutorialParagraphWidth;
         int unusedSecondSparkleRotationAngle16;
         int unusedThirdSparkleRotationAngle16;
+        int secondSparkleX;
+        int thirdSparkleX;
+        int secondSparkleY;
+        int thirdSparkleY;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           paragraphY = 180;
@@ -1514,26 +1526,26 @@ final class GameScreen extends MenuScreen {
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
               KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitX - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), orbitY - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1));
               unusedSecondSparkleRotationAngle16 = (int)((this.tutorialOrbitAngleRadians + orbitAngleSpacing) / 6.283185307179586 * 65535.0 + 0.5);
-              orbitX = (int)(-Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5) + orbitCenterX;
-              orbitY = orbitCenterY + (int)(0.5 + Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius);
+              secondSparkleX = (int)(-Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius + 0.5) + orbitCenterX;
+              secondSparkleY = orbitCenterY + (int)(0.5 + Math.cos(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius);
               KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) - 10, (KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1) - 10, 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitX - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), -(KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) + orbitY);
+              KeyboardInputListener.entityAndTutorialScratchRaster.draw(secondSparkleX - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), -(KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) + secondSparkleY);
               orbitAngleSpacing = orbitAngleSpacing * 2.0;
               unusedThirdSparkleRotationAngle16 = (int)(0.5 + (this.tutorialOrbitAngleRadians + orbitAngleSpacing) / 6.283185307179586 * 65535.0);
-              orbitX = (int)(0.5 + -Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius) + orbitCenterX;
-              orbitY = orbitCenterY + (int)(Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius + 0.5);
+              thirdSparkleX = (int)(0.5 + -Math.sin(orbitAngleSpacing + this.tutorialOrbitAngleRadians) * (double)this.tutorialOrbitRadius) + orbitCenterX;
+              thirdSparkleY = orbitCenterY + (int)(Math.cos(this.tutorialOrbitAngleRadians + orbitAngleSpacing) * (double)this.tutorialOrbitRadius + 0.5);
               KeyboardInputListener.entityAndTutorialScratchRaster.setAsRasterTarget();
               SoftwareRasterizer.clearFramebuffer();
               VisualPropertyOverrides.sparkleFrames[this.tutorialEffectFrame].drawScaled((KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1) - 10, -10 + (KeyboardInputListener.entityAndTutorialScratchRaster.fullHeight >> 1), 20, 20);
               SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
               SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
               SoftwareRasterizer.intersectClip(40, 355, 103, 415);
-              KeyboardInputListener.entityAndTutorialScratchRaster.draw(orbitX - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), orbitY - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1));
+              KeyboardInputListener.entityAndTutorialScratchRaster.draw(thirdSparkleX - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1), thirdSparkleY - (KeyboardInputListener.entityAndTutorialScratchRaster.fullWidth >> 1));
             }
             SoftwareRasterizer.restoreClip(this.savedTutorialClipBounds);
           }

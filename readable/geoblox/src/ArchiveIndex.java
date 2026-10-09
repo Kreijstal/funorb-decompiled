@@ -73,16 +73,18 @@ final class ArchiveIndex {
         ByteArrayBuffer indexBuffer = null;
         byte[] newGroupDigest = null;
         int accumulatedFileId;
-        int groupNameHashSlotOrOrdinal;
+        int groupNameHashSlotIndex;
         int groupCrcOrdinal;
         int groupDigestOrdinal;
         int groupRevisionOrdinal;
         int fileMetadataGroupOrdinal;
         int fileNameGroupOrdinal;
-        int fileNameHashSlotOrOrdinal;
+        int fileNameHashSlotIndex;
         int namedFileId;
         int fileNameGroupId;
         int namedFileCount;
+        int groupNameHashOrdinal;
+        int namedFileOrdinal;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           indexBuffer = new ByteArrayBuffer(CanvasResizeController.decompressArchive(packedIndexBytes, -1));
@@ -137,11 +139,11 @@ final class ArchiveIndex {
             this.fileIds = new int[this.groupSlotCount][];
             if (hasNameHashes != 0) {
               this.groupNameHashes = new int[this.groupSlotCount];
-              for (groupNameHashSlotOrOrdinal = 0; this.groupSlotCount > groupNameHashSlotOrOrdinal; groupNameHashSlotOrOrdinal++) {
-                this.groupNameHashes[groupNameHashSlotOrOrdinal] = -1;
+              for (groupNameHashSlotIndex = 0; this.groupSlotCount > groupNameHashSlotIndex; groupNameHashSlotIndex++) {
+                this.groupNameHashes[groupNameHashSlotIndex] = -1;
               }
-              for (groupNameHashSlotOrOrdinal = 0; groupNameHashSlotOrOrdinal < this.groupCount; groupNameHashSlotOrOrdinal++) {
-                this.groupNameHashes[this.groupIds[groupNameHashSlotOrOrdinal]] = indexBuffer.readIntBE((byte) -76);
+              for (groupNameHashOrdinal = 0; groupNameHashOrdinal < this.groupCount; groupNameHashOrdinal++) {
+                this.groupNameHashes[this.groupIds[groupNameHashOrdinal]] = indexBuffer.readIntBE((byte) -76);
               }
               this.groupNameLookup = new IntKeyLookup(this.groupNameHashes);
             }
@@ -226,14 +228,14 @@ final class ArchiveIndex {
                 namedFileCount = this.fileCounts[fileNameGroupId];
                 newFileNameHashSlots = new int[this.fileSlotCounts[fileNameGroupId]];
                 this.fileNameHashes[fileNameGroupId] = newFileNameHashSlots;
-                for (fileNameHashSlotOrOrdinal = 0; this.fileSlotCounts[fileNameGroupId] > fileNameHashSlotOrOrdinal; fileNameHashSlotOrOrdinal++) {
-                  this.fileNameHashes[fileNameGroupId][fileNameHashSlotOrOrdinal] = -1;
+                for (fileNameHashSlotIndex = 0; this.fileSlotCounts[fileNameGroupId] > fileNameHashSlotIndex; fileNameHashSlotIndex++) {
+                  this.fileNameHashes[fileNameGroupId][fileNameHashSlotIndex] = -1;
                 }
-                for (fileNameHashSlotOrOrdinal = 0; fileNameHashSlotOrOrdinal < namedFileCount; fileNameHashSlotOrOrdinal++) {
+                for (namedFileOrdinal = 0; namedFileOrdinal < namedFileCount; namedFileOrdinal++) {
                   if (this.fileIds[fileNameGroupId] != null) {
-                    namedFileId = this.fileIds[fileNameGroupId][fileNameHashSlotOrOrdinal];
+                    namedFileId = this.fileIds[fileNameGroupId][namedFileOrdinal];
                   } else {
-                    namedFileId = fileNameHashSlotOrOrdinal;
+                    namedFileId = namedFileOrdinal;
                   }
                   this.fileNameHashes[fileNameGroupId][namedFileId] = indexBuffer.readIntBE((byte) -78);
                 }

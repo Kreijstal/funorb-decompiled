@@ -360,9 +360,9 @@ final class ResourceArchive {
         int requestedStorageFileId = 0;
         byte[][] splitFileBytes = null;
         int requestedFileChunkIndex = 0;
-        int requestedChunkLengthOrReadOffset = 0;
-        int requestedFileOrdinalOrCopyChunkIndex = 0;
-        int mappedRequestedFileIdOrCopyLength = 0;
+        int requestedChunkLength = 0;
+        int requestedFileOrdinal = 0;
+        int requestedMappedFileId = 0;
         int copiedFileId = 0;
         byte[] unpackedBytesForChunkCount = null;
         int[] fileIdsForEntryScan = null;
@@ -392,6 +392,9 @@ final class ResourceArchive {
         int allFilesChunkLength;
         int allocationFileIndex;
         int chunkDataOffset;
+        int requestedFileReadOffset;
+        int requestedCopyChunkIndex;
+        int requestedCopyChunkLength;
         try {
           if (!this.isValidGroupId(groupId, 3)) {
             return false;
@@ -468,17 +471,17 @@ final class ResourceArchive {
               requestedStorageFileId = 0;
               requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
               for (requestedFileChunkIndex = 0; requestedFileChunkIndex < requestedFileChunkCount; requestedFileChunkIndex++) {
-                requestedChunkLengthOrReadOffset = 0;
-                for (requestedFileOrdinalOrCopyChunkIndex = 0; requestedFileOrdinalOrCopyChunkIndex < actualFileCount; requestedFileOrdinalOrCopyChunkIndex++) {
-                  requestedChunkLengthOrReadOffset = requestedChunkLengthOrReadOffset + requestedFileChunkTableBuffer.readIntBE((byte) -126);
+                requestedChunkLength = 0;
+                for (requestedFileOrdinal = 0; requestedFileOrdinal < actualFileCount; requestedFileOrdinal++) {
+                  requestedChunkLength = requestedChunkLength + requestedFileChunkTableBuffer.readIntBE((byte) -126);
                   if (fileIds == null) {
-                    mappedRequestedFileIdOrCopyLength = requestedFileOrdinalOrCopyChunkIndex;
+                    requestedMappedFileId = requestedFileOrdinal;
                   } else {
-                    mappedRequestedFileIdOrCopyLength = mappedFileIds[requestedFileOrdinalOrCopyChunkIndex];
+                    requestedMappedFileId = mappedFileIds[requestedFileOrdinal];
                   }
-                  if (requestedFileId == mappedRequestedFileIdOrCopyLength) {
-                    requestedFileLength = requestedFileLength + requestedChunkLengthOrReadOffset;
-                    requestedStorageFileId = mappedRequestedFileIdOrCopyLength;
+                  if (requestedFileId == requestedMappedFileId) {
+                    requestedFileLength = requestedFileLength + requestedChunkLength;
+                    requestedStorageFileId = requestedMappedFileId;
                   }
                 }
               }
@@ -488,21 +491,21 @@ final class ResourceArchive {
               requestedFileBytes = new byte[requestedFileLength];
               requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
               requestedFileWritePosition = 0;
-              requestedChunkLengthOrReadOffset = 0;
-              for (requestedFileOrdinalOrCopyChunkIndex = 0; requestedFileOrdinalOrCopyChunkIndex < requestedFileChunkCount; requestedFileOrdinalOrCopyChunkIndex++) {
-                mappedRequestedFileIdOrCopyLength = 0;
+              requestedFileReadOffset = 0;
+              for (requestedCopyChunkIndex = 0; requestedCopyChunkIndex < requestedFileChunkCount; requestedCopyChunkIndex++) {
+                requestedCopyChunkLength = 0;
                 for (copyFileOrdinal = 0; copyFileOrdinal < actualFileCount; copyFileOrdinal++) {
-                  mappedRequestedFileIdOrCopyLength = mappedRequestedFileIdOrCopyLength + requestedFileChunkTableBuffer.readIntBE((byte) -82);
+                  requestedCopyChunkLength = requestedCopyChunkLength + requestedFileChunkTableBuffer.readIntBE((byte) -82);
                   if (fileIds == null) {
                     copiedFileId = copyFileOrdinal;
                   } else {
                     copiedFileId = mappedFileIds[copyFileOrdinal];
                   }
                   if (copiedFileId == requestedFileId) {
-                    ArrayOperations.copyBytes(unpackedBytesForChunkCopies, requestedChunkLengthOrReadOffset, requestedFileBytes, requestedFileWritePosition, mappedRequestedFileIdOrCopyLength);
-                    requestedFileWritePosition = requestedFileWritePosition + mappedRequestedFileIdOrCopyLength;
+                    ArrayOperations.copyBytes(unpackedBytesForChunkCopies, requestedFileReadOffset, requestedFileBytes, requestedFileWritePosition, requestedCopyChunkLength);
+                    requestedFileWritePosition = requestedFileWritePosition + requestedCopyChunkLength;
                   }
-                  requestedChunkLengthOrReadOffset = requestedChunkLengthOrReadOffset + mappedRequestedFileIdOrCopyLength;
+                  requestedFileReadOffset = requestedFileReadOffset + requestedCopyChunkLength;
                 }
               }
               groupFileSlots[requestedStorageFileId] = requestedFileBytes;

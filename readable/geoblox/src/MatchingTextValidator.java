@@ -42,7 +42,9 @@ final class MatchingTextValidator extends TextInputValidator {
         int controlFlowGuard = 0;
         int topLeftEdgeOrAccentCursor;
         int bottomRightCornerScanIndex;
-        int topLeftEdgeOrAccentScanIndex;
+        int topLeftCornerScanIndex;
+        int borderEdgeScanIndex;
+        int innerAccentScanIndex;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         cornerSize = innerAccentWidth + borderGap + outerBorderWidth;
         slices = new Sprite[]{new Sprite(cornerSize, cornerSize), new Sprite(edgeLength, cornerSize), new Sprite(cornerSize, cornerSize), new Sprite(cornerSize, edgeLength), new Sprite(64, 64), new Sprite(cornerSize, edgeLength), new Sprite(cornerSize, cornerSize), new Sprite(edgeLength, cornerSize), new Sprite(cornerSize, cornerSize)};
@@ -94,17 +96,17 @@ final class MatchingTextValidator extends TextInputValidator {
           if (borderIndexOrCornerDiagonalSnapshot < outerBorderWidthOrDiagonalScanSnapshot) {
             topLeftScanStartSnapshot = 0;
             if (controlFlowGuard == 0) {
-              topLeftEdgeOrAccentScanIndex = topLeftScanStartSnapshot;
-              while (cornerSize > topLeftEdgeOrAccentScanIndex) {
-                slices[0].pixels[topLeftEdgeOrAccentScanIndex + topLeftEdgeOrAccentCursor * cornerSize] = topLeftBorderColor;
-                slices[0].pixels[topLeftEdgeOrAccentCursor + topLeftEdgeOrAccentScanIndex * cornerSize] = topLeftBorderColor;
+              topLeftCornerScanIndex = topLeftScanStartSnapshot;
+              while (cornerSize > topLeftCornerScanIndex) {
+                slices[0].pixels[topLeftCornerScanIndex + topLeftEdgeOrAccentCursor * cornerSize] = topLeftBorderColor;
+                slices[0].pixels[topLeftEdgeOrAccentCursor + topLeftCornerScanIndex * cornerSize] = topLeftBorderColor;
                 borderIndexOrCornerDiagonalSnapshot = ~(-topLeftEdgeOrAccentCursor + cornerSize);
-                outerBorderWidthOrDiagonalScanSnapshot = ~topLeftEdgeOrAccentScanIndex;
+                outerBorderWidthOrDiagonalScanSnapshot = ~topLeftCornerScanIndex;
                 if (borderIndexOrCornerDiagonalSnapshot < outerBorderWidthOrDiagonalScanSnapshot) {
-                  slices[2].pixels[cornerSize * topLeftEdgeOrAccentCursor + topLeftEdgeOrAccentScanIndex] = topLeftBorderColor;
-                  slices[6].pixels[topLeftEdgeOrAccentCursor + topLeftEdgeOrAccentScanIndex * cornerSize] = topLeftBorderColor;
+                  slices[2].pixels[cornerSize * topLeftEdgeOrAccentCursor + topLeftCornerScanIndex] = topLeftBorderColor;
+                  slices[6].pixels[topLeftEdgeOrAccentCursor + topLeftCornerScanIndex * cornerSize] = topLeftBorderColor;
                 }
-                topLeftEdgeOrAccentScanIndex++;
+                topLeftCornerScanIndex++;
               }
               topLeftEdgeOrAccentCursor++;
               continue;
@@ -119,13 +121,13 @@ final class MatchingTextValidator extends TextInputValidator {
               if (controlFlowGuard != 0) {
                 break edgeBorderLoop;
               }
-              topLeftEdgeOrAccentScanIndex = edgeScanStartSnapshot;
-              while (outerBorderWidth > topLeftEdgeOrAccentScanIndex) {
-                slices[7].pixels[edgeLength * (cornerSize - topLeftEdgeOrAccentScanIndex - 1) + topLeftEdgeOrAccentCursor] = bottomRightBorderColor;
-                slices[5].pixels[-1 + (cornerSize - topLeftEdgeOrAccentScanIndex + topLeftEdgeOrAccentCursor * cornerSize)] = bottomRightBorderColor;
-                slices[1].pixels[edgeLength * topLeftEdgeOrAccentScanIndex + topLeftEdgeOrAccentCursor] = topLeftBorderColor;
-                slices[3].pixels[topLeftEdgeOrAccentScanIndex + cornerSize * topLeftEdgeOrAccentCursor] = topLeftBorderColor;
-                topLeftEdgeOrAccentScanIndex++;
+              borderEdgeScanIndex = edgeScanStartSnapshot;
+              while (outerBorderWidth > borderEdgeScanIndex) {
+                slices[7].pixels[edgeLength * (cornerSize - borderEdgeScanIndex - 1) + topLeftEdgeOrAccentCursor] = bottomRightBorderColor;
+                slices[5].pixels[-1 + (cornerSize - borderEdgeScanIndex + topLeftEdgeOrAccentCursor * cornerSize)] = bottomRightBorderColor;
+                slices[1].pixels[edgeLength * borderEdgeScanIndex + topLeftEdgeOrAccentCursor] = topLeftBorderColor;
+                slices[3].pixels[borderEdgeScanIndex + cornerSize * topLeftEdgeOrAccentCursor] = topLeftBorderColor;
+                borderEdgeScanIndex++;
               }
               topLeftEdgeOrAccentCursor++;
               continue edgeBorderLoop;
@@ -140,13 +142,13 @@ final class MatchingTextValidator extends TextInputValidator {
               if (controlFlowGuard != 0) {
                 break innerAccentLoop;
               }
-              topLeftEdgeOrAccentScanIndex = accentScanStartOrRetentionGuardSnapshot;
-              while (innerAccentWidth > topLeftEdgeOrAccentScanIndex) {
-                slices[1].pixels[edgeLength * (-1 + (-topLeftEdgeOrAccentScanIndex + cornerSize)) + topLeftEdgeOrAccentCursor] = innerAccentColor;
-                slices[3].pixels[-1 + cornerSize + (-topLeftEdgeOrAccentScanIndex + cornerSize * topLeftEdgeOrAccentCursor)] = innerAccentColor;
-                slices[7].pixels[topLeftEdgeOrAccentCursor + edgeLength * topLeftEdgeOrAccentScanIndex] = innerAccentColor;
-                slices[5].pixels[cornerSize * topLeftEdgeOrAccentCursor + topLeftEdgeOrAccentScanIndex] = innerAccentColor;
-                topLeftEdgeOrAccentScanIndex++;
+              innerAccentScanIndex = accentScanStartOrRetentionGuardSnapshot;
+              while (innerAccentWidth > innerAccentScanIndex) {
+                slices[1].pixels[edgeLength * (-1 + (-innerAccentScanIndex + cornerSize)) + topLeftEdgeOrAccentCursor] = innerAccentColor;
+                slices[3].pixels[-1 + cornerSize + (-innerAccentScanIndex + cornerSize * topLeftEdgeOrAccentCursor)] = innerAccentColor;
+                slices[7].pixels[topLeftEdgeOrAccentCursor + edgeLength * innerAccentScanIndex] = innerAccentColor;
+                slices[5].pixels[cornerSize * topLeftEdgeOrAccentCursor + innerAccentScanIndex] = innerAccentColor;
+                innerAccentScanIndex++;
               }
               topLeftEdgeOrAccentCursor++;
               continue innerAccentLoop;

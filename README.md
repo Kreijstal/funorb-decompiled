@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/b83a64f05a4b829858b07b716e847ea41dd25507/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2b3aed32a85979375b057e51fec96adeeb0054cd/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,040 bindings,
+identities. Both 303-file Java corpora compile and compare 138,121 bindings,
 preserving 388 override relationships.
 
-## Current lifetime naming milestone (pass 239)
+## Current nested primitive recovery (pass 240)
+
+The generic opt-in nested pass exposes 47 additional purpose-named roles across
+40 reused locals in 14 classes. Dialog layout, avatar tints, archive/buffered-read
+stages, patch curves and triangle spans become easier to follow while every
+original operation remains. All 303 sources compile, reproduce and reverse
+exactly; independent source certificates and existing native traces pass.
+Five large framed methods, older phase-family names and unknown field purposes
+remain. See the reading guide and workflow for source hashes, commands and limits.
+
+## Previous lifetime naming milestone (pass 239)
 
 All LiteralPhase suffixes are replaced with source-reviewed names. This pass
 refines 83 gameplay/codec/audio/request roles while preserving the original

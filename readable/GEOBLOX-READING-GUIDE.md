@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b83a64f05a4b829858b07b716e847ea41dd25507/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2b3aed32a85979375b057e51fec96adeeb0054cd/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 239)
+## Current readability (pass 240)
 
-The export has 20,078 guarded names and 121,835 Java identifier edits, plus 11
+The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,074 bindings, reproduce and
+compile and compare 138,121 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,32 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current reviewed lifetime roles (pass 239)
+## Current independently assigned roles (pass 240)
+
+GameScreen separates membership text/button geometry, unavailable/acceptance
+dialog controls, fullscreen overlay alpha, tutorial curtain position and second/
+third sparkle coordinates. MessageDialog distinguishes held/steered cry begin,
+middle, hold and tail tint factors. SpriteCheckboxRenderer separates intro face
+fall from geometry travel; MatchingTextValidator separates corner, edge and accent
+scan indexes.
+
+ArchiveIndex separates hash-table slots from hash ordinals. ResourceArchive
+separates requested chunk lengths, mapped IDs and copy offsets. Buffered reads
+separate underlying I/O counts from refill copy lengths. InstrumentPatch now
+uses independent volume/release envelope byte indexes and volume/pan curve
+keys, pairs and prefix/tail indexes. Mesh lighting separates dot products from
+lighting responses; solid/RGB triangle rendering separates upper spans from
+bottom-vertex fixed-point coordinates and colors.
+
+The generic opt-in nested lifetime pass inserts 47 uninitialized declarations;
+all original reads, stores, expressions, allocations, callbacks and guard effects
+remain. Independent source and native checks preserve original bindings,
+protected transfers and recorded traces. The existing large control frames are
+still present: five methods exceed 300 lines. 285 older numbered phase-family
+names and 41 unknown field purposes remain. See the workflow for compiler-source
+SHA-256, flags, exact commands and coverage limits.
+
+## Previous reviewed lifetime roles (pass 239)
 
 The last LiteralPhase names now describe detach decisions and neighbor scans,
 held/steered/stepped avatar tint paths, sprite-sheet metadata and palettes,

@@ -98,8 +98,9 @@ final class BufferedRandomAccessFile {
         long overlayEnd = 0L;
         int overlayLength = 0;
         int unusedClientGuardSnapshot = 0;
-        int underlyingOrRefillReadCount;
+        int underlyingReadCount;
         int zeroFillEndOffset;
+        int refillCopyCount;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           try {
@@ -136,15 +137,15 @@ final class BufferedRandomAccessFile {
                 this.file.seek(this.position, true);
                 this.underlyingPosition = this.position;
                 while (remainingLength > 0) {
-                  underlyingOrRefillReadCount = this.file.read(remainingLength, destination, destinationOffset, false);
-                  if (-1 == underlyingOrRefillReadCount) {
+                  underlyingReadCount = this.file.read(remainingLength, destination, destinationOffset, false);
+                  if (-1 == underlyingReadCount) {
                     underlyingReadSelectionRemainderEnabled = false;
                     break;
                   }
-                  this.position = this.position + (long)underlyingOrRefillReadCount;
-                  this.underlyingPosition = this.underlyingPosition + (long)underlyingOrRefillReadCount;
-                  remainingLength = remainingLength - underlyingOrRefillReadCount;
-                  destinationOffset = destinationOffset + underlyingOrRefillReadCount;
+                  this.position = this.position + (long)underlyingReadCount;
+                  this.underlyingPosition = this.underlyingPosition + (long)underlyingReadCount;
+                  remainingLength = remainingLength - underlyingReadCount;
+                  destinationOffset = destinationOffset + underlyingReadCount;
                 }
                 if (underlyingReadSelectionRemainderEnabled) {
                   break underlyingReadSelection;
@@ -153,14 +154,14 @@ final class BufferedRandomAccessFile {
               if (underlyingReadSelectionRemainderEnabled) {
                 if (remainingLength > 0) {
                   this.refillReadBuffer(true);
-                  underlyingOrRefillReadCount = remainingLength;
-                  if (this.readBufferLength < underlyingOrRefillReadCount) {
-                    underlyingOrRefillReadCount = this.readBufferLength;
+                  refillCopyCount = remainingLength;
+                  if (this.readBufferLength < refillCopyCount) {
+                    refillCopyCount = this.readBufferLength;
                   }
-                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, underlyingOrRefillReadCount);
-                  remainingLength = remainingLength - underlyingOrRefillReadCount;
-                  destinationOffset = destinationOffset + underlyingOrRefillReadCount;
-                  this.position = this.position + (long)underlyingOrRefillReadCount;
+                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
+                  remainingLength = remainingLength - refillCopyCount;
+                  destinationOffset = destinationOffset + refillCopyCount;
+                  this.position = this.position + (long)refillCopyCount;
                 }
               }
             }

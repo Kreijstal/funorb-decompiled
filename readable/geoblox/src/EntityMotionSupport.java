@@ -166,7 +166,7 @@ final class EntityMotionSupport {
         RuntimeException caughtMotionFailure = null;
         GameplayEntity movingEntity = null;
         RuntimeException motionFailureForContext = null;
-        int neighborIndexOrKindFlagOrContactIdOrDivisionGuard = 0;
+        int neighborIndexOrKind2Snapshot = 0;
         float inwardOffsetX = 0.0f;
         GameplayEntity contactedEntity = null;
         float inwardOffsetY = 0.0f;
@@ -190,6 +190,7 @@ final class EntityMotionSupport {
         float midpointCenterOffsetY;
         float movingNextCenterOffsetXThenSquared;
         float movingNextCenterOffsetYThenSquared;
+        int contactedEntityId;
         unusedMotionScratch = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
@@ -212,14 +213,14 @@ final class EntityMotionSupport {
                   }
                   boardContactStateDirty = true;
                   movingEntity.entityQueue = null;
-                  for (neighborIndexOrKindFlagOrContactIdOrDivisionGuard = 0; neighborIndexOrKindFlagOrContactIdOrDivisionGuard < movingEntity.relatedEntityCount; neighborIndexOrKindFlagOrContactIdOrDivisionGuard++) {
-                    movingEntity.relatedEntities[neighborIndexOrKindFlagOrContactIdOrDivisionGuard].removeRelatedEntity(movingEntity, 0);
+                  for (neighborIndexOrKind2Snapshot = 0; neighborIndexOrKind2Snapshot < movingEntity.relatedEntityCount; neighborIndexOrKind2Snapshot++) {
+                    movingEntity.relatedEntities[neighborIndexOrKind2Snapshot].removeRelatedEntity(movingEntity, 0);
                   }
                   movingEntity.relatedEntityCount = 0;
                   wasKind2IntSnapshot = (movingEntity.entitySpriteKindId != 2) ? 0 : 1;
-                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = wasKind2IntSnapshot;
+                  neighborIndexOrKind2Snapshot = wasKind2IntSnapshot;
                   EntityContactSupport.linkEntityAtMaskContacts(-1, ValidationIconWidget.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
-                  if (neighborIndexOrKindFlagOrContactIdOrDivisionGuard == 0 ||
+                  if (neighborIndexOrKind2Snapshot == 0 ||
                       movingEntity.entitySpriteKindId == 2) {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
@@ -236,8 +237,8 @@ final class EntityMotionSupport {
                   continue;
                 }
                 if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
-                  neighborIndexOrKindFlagOrContactIdOrDivisionGuard = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
-                  contactedEntity = RasterTargetSnapshot.entitiesById[neighborIndexOrKindFlagOrContactIdOrDivisionGuard];
+                  contactedEntityId = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
+                  contactedEntity = RasterTargetSnapshot.entitiesById[contactedEntityId];
                   if (BoardEntityState.attachedEntities == contactedEntity.entityQueue) {
                     break movingEntityContactResolution;
                   }

@@ -236,8 +236,8 @@ final class InstrumentPatch extends IntrusiveNode {
         int envelopeKeyIndex = 0;
         int volumeKeyIndex = 0;
         int volumeScaleQ6 = 0;
-        int envelopeValueByteIndex = 0;
-        int nextVolumeCurveKeyThenTailKey = 0;
+        int volumeEnvelopeValueByteIndex = 0;
+        int nextVolumeCurveKey = 0;
         int nextVolumeScaleQ6 = 0;
         int volumeInterpolationNumerator = 0;
         int volumeInterpolationKeyIndex = 0;
@@ -290,8 +290,8 @@ final class InstrumentPatch extends IntrusiveNode {
         int panCurveValueByteIndex;
         int releaseEnvelopeTimeDecodeIndex;
         int volumeEnvelopeTimeDecodeIndex;
-        int volumeCurvePairIndexThenPreviousKey;
-        int panCurvePairIndexThenPreviousKey;
+        int volumeCurveKeyByteIndex;
+        int panCurveKeyByteIndex;
         int decayEnvelopeDecodeIndex;
         int keyScalingEnvelopeDecodeIndex;
         int vibratoPhaseEnvelopeDecodeIndex;
@@ -300,10 +300,10 @@ final class InstrumentPatch extends IntrusiveNode {
         int panCurveOffset;
         int releaseEnvelopeTimeByteIndex;
         int volumeEnvelopeTimeByteIndex;
-        int volumePrefixKeyThenCurvePairIndex;
-        int panPrefixKeyThenCurvePairIndex;
-        int panCurveKeyOrPrefixClampedPan;
-        int nextPanCurveOffsetOrTailClampedPan;
+        int volumePrefixKeyIndex;
+        int panPrefixKeyIndex;
+        int prefixClampedPan;
+        int nextPanCurveOffset;
         int panInterpolationNumerator;
         int unusedPanInterpolationStartKeySnapshot;
         int interpolatedPanCurveOffset;
@@ -311,6 +311,15 @@ final class InstrumentPatch extends IntrusiveNode {
         int volumeCurvePointCount;
         int panCurvePointCount;
         int releaseEnvelopePointCount;
+        int releaseEnvelopeValueByteIndex;
+        int volumeTailKeyIndex;
+        int previousVolumeCurveKey;
+        int previousPanCurveKey;
+        int volumeCurvePairIndex;
+        int panCurvePairIndex;
+        int nextPanCurveKey;
+        int panTailKeyIndex;
+        int tailClampedPan;
         try {
           this.keyPans = new byte[128];
           this.keyEnvelopes = new InstrumentEnvelope[128];
@@ -522,13 +531,13 @@ final class InstrumentPatch extends IntrusiveNode {
           for (envelopeValueDecodeIndex = 0; envelopeCount > envelopeValueDecodeIndex; envelopeValueDecodeIndex++) {
             envelopeForValues = envelopes[envelopeValueDecodeIndex];
             if (null != envelopeForValues.volumeEnvelope) {
-              for (envelopeValueByteIndex = 1; envelopeForValues.volumeEnvelope.length > envelopeValueByteIndex; envelopeValueByteIndex += 2) {
-                envelopeForValues.volumeEnvelope[envelopeValueByteIndex] = patchInput.readSignedByte((byte) 76);
+              for (volumeEnvelopeValueByteIndex = 1; envelopeForValues.volumeEnvelope.length > volumeEnvelopeValueByteIndex; volumeEnvelopeValueByteIndex += 2) {
+                envelopeForValues.volumeEnvelope[volumeEnvelopeValueByteIndex] = patchInput.readSignedByte((byte) 76);
               }
             }
             if (envelopeForValues.releaseEnvelope != null) {
-              for (envelopeValueByteIndex = 3; -2 + envelopeForValues.releaseEnvelope.length > envelopeValueByteIndex; envelopeValueByteIndex += 2) {
-                envelopeForValues.releaseEnvelope[envelopeValueByteIndex] = patchInput.readSignedByte((byte) 102);
+              for (releaseEnvelopeValueByteIndex = 3; -2 + envelopeForValues.releaseEnvelope.length > releaseEnvelopeValueByteIndex; releaseEnvelopeValueByteIndex += 2) {
+                envelopeForValues.releaseEnvelope[releaseEnvelopeValueByteIndex] = patchInput.readSignedByte((byte) 102);
               }
             }
           }
@@ -565,60 +574,60 @@ final class InstrumentPatch extends IntrusiveNode {
           if (null != volumeCurve) {
             volumeCurveKeyAccumulator = patchInput.readUnsignedByte((byte) 34);
             volumeCurve[0] = (byte)volumeCurveKeyAccumulator;
-            for (volumeCurvePairIndexThenPreviousKey = 2; volumeCurvePairIndexThenPreviousKey < volumeCurveAlias.length; volumeCurvePairIndexThenPreviousKey += 2) {
+            for (volumeCurveKeyByteIndex = 2; volumeCurveKeyByteIndex < volumeCurveAlias.length; volumeCurveKeyByteIndex += 2) {
               volumeCurveKeyAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + volumeCurveKeyAccumulator;
-              volumeCurve[volumeCurvePairIndexThenPreviousKey] = (byte)volumeCurveKeyAccumulator;
+              volumeCurve[volumeCurveKeyByteIndex] = (byte)volumeCurveKeyAccumulator;
             }
-            volumeCurvePairIndexThenPreviousKey = volumeCurveAlias[0];
+            previousVolumeCurveKey = volumeCurveAlias[0];
             volumeScaleQ6 = volumeCurveAlias[1];
-            for (volumePrefixKeyThenCurvePairIndex = 0; volumeCurvePairIndexThenPreviousKey > volumePrefixKeyThenCurvePairIndex; volumePrefixKeyThenCurvePairIndex++) {
-              this.keyVolumes[volumePrefixKeyThenCurvePairIndex] = (byte)(this.keyVolumes[volumePrefixKeyThenCurvePairIndex] * volumeScaleQ6 + 32 >> 6);
+            for (volumePrefixKeyIndex = 0; previousVolumeCurveKey > volumePrefixKeyIndex; volumePrefixKeyIndex++) {
+              this.keyVolumes[volumePrefixKeyIndex] = (byte)(this.keyVolumes[volumePrefixKeyIndex] * volumeScaleQ6 + 32 >> 6);
             }
-            for (volumePrefixKeyThenCurvePairIndex = 2; volumeCurveAlias.length > volumePrefixKeyThenCurvePairIndex; volumePrefixKeyThenCurvePairIndex += 2) {
-              nextVolumeCurveKeyThenTailKey = volumeCurveAlias[volumePrefixKeyThenCurvePairIndex];
-              nextVolumeScaleQ6 = volumeCurve[1 + volumePrefixKeyThenCurvePairIndex];
-              volumeInterpolationNumerator = volumeScaleQ6 * (nextVolumeCurveKeyThenTailKey - volumeCurvePairIndexThenPreviousKey) + (-volumeCurvePairIndexThenPreviousKey + nextVolumeCurveKeyThenTailKey) / 2;
-              for (volumeInterpolationKeyIndex = volumeCurvePairIndexThenPreviousKey; nextVolumeCurveKeyThenTailKey > volumeInterpolationKeyIndex; volumeInterpolationKeyIndex++) {
-                interpolatedVolumeScaleQ6 = PacketBuffer.divideFloorWithPositiveDivisor(nextVolumeCurveKeyThenTailKey - volumeCurvePairIndexThenPreviousKey, (byte) -6, volumeInterpolationNumerator);
+            for (volumeCurvePairIndex = 2; volumeCurveAlias.length > volumeCurvePairIndex; volumeCurvePairIndex += 2) {
+              nextVolumeCurveKey = volumeCurveAlias[volumeCurvePairIndex];
+              nextVolumeScaleQ6 = volumeCurve[1 + volumeCurvePairIndex];
+              volumeInterpolationNumerator = volumeScaleQ6 * (nextVolumeCurveKey - previousVolumeCurveKey) + (-previousVolumeCurveKey + nextVolumeCurveKey) / 2;
+              for (volumeInterpolationKeyIndex = previousVolumeCurveKey; nextVolumeCurveKey > volumeInterpolationKeyIndex; volumeInterpolationKeyIndex++) {
+                interpolatedVolumeScaleQ6 = PacketBuffer.divideFloorWithPositiveDivisor(nextVolumeCurveKey - previousVolumeCurveKey, (byte) -6, volumeInterpolationNumerator);
                 this.keyVolumes[volumeInterpolationKeyIndex] = (byte)(32 + this.keyVolumes[volumeInterpolationKeyIndex] * interpolatedVolumeScaleQ6 >> 6);
                 volumeInterpolationNumerator = volumeInterpolationNumerator + (nextVolumeScaleQ6 - volumeScaleQ6);
               }
-              volumeCurvePairIndexThenPreviousKey = nextVolumeCurveKeyThenTailKey;
+              previousVolumeCurveKey = nextVolumeCurveKey;
               volumeScaleQ6 = nextVolumeScaleQ6;
             }
-            for (nextVolumeCurveKeyThenTailKey = volumeCurvePairIndexThenPreviousKey; nextVolumeCurveKeyThenTailKey < 128; nextVolumeCurveKeyThenTailKey++) {
-              this.keyVolumes[nextVolumeCurveKeyThenTailKey] = (byte)(32 + this.keyVolumes[nextVolumeCurveKeyThenTailKey] * volumeScaleQ6 >> 6);
+            for (volumeTailKeyIndex = previousVolumeCurveKey; volumeTailKeyIndex < 128; volumeTailKeyIndex++) {
+              this.keyVolumes[volumeTailKeyIndex] = (byte)(32 + this.keyVolumes[volumeTailKeyIndex] * volumeScaleQ6 >> 6);
             }
             volumeCurve = null;
           }
           if (panCurve != null) {
             panCurveKeyAccumulator = patchInput.readUnsignedByte((byte) 34);
             panCurve[0] = (byte)panCurveKeyAccumulator;
-            for (panCurvePairIndexThenPreviousKey = 2; panCurvePairIndexThenPreviousKey < panCurveAlias.length; panCurvePairIndexThenPreviousKey += 2) {
+            for (panCurveKeyByteIndex = 2; panCurveKeyByteIndex < panCurveAlias.length; panCurveKeyByteIndex += 2) {
               panCurveKeyAccumulator = patchInput.readUnsignedByte((byte) 34) + 1 + panCurveKeyAccumulator;
-              panCurve[panCurvePairIndexThenPreviousKey] = (byte)panCurveKeyAccumulator;
+              panCurve[panCurveKeyByteIndex] = (byte)panCurveKeyAccumulator;
             }
-            panCurvePairIndexThenPreviousKey = panCurveAlias[0];
+            previousPanCurveKey = panCurveAlias[0];
             panCurveOffset = panCurveAlias[1] << 1;
-            for (panPrefixKeyThenCurvePairIndex = 0; panCurvePairIndexThenPreviousKey > panPrefixKeyThenCurvePairIndex; panPrefixKeyThenCurvePairIndex++) {
-              panCurveKeyOrPrefixClampedPan = (255 & this.keyPans[panPrefixKeyThenCurvePairIndex]) + panCurveOffset;
-              if (panCurveKeyOrPrefixClampedPan < 0) {
-                panCurveKeyOrPrefixClampedPan = 0;
+            for (panPrefixKeyIndex = 0; previousPanCurveKey > panPrefixKeyIndex; panPrefixKeyIndex++) {
+              prefixClampedPan = (255 & this.keyPans[panPrefixKeyIndex]) + panCurveOffset;
+              if (prefixClampedPan < 0) {
+                prefixClampedPan = 0;
               }
-              if (panCurveKeyOrPrefixClampedPan > 128) {
-                panCurveKeyOrPrefixClampedPan = 128;
+              if (prefixClampedPan > 128) {
+                prefixClampedPan = 128;
               }
-              this.keyPans[panPrefixKeyThenCurvePairIndex] = (byte)panCurveKeyOrPrefixClampedPan;
+              this.keyPans[panPrefixKeyIndex] = (byte)prefixClampedPan;
             }
-            panPrefixKeyThenCurvePairIndex = 2;
-            while (panPrefixKeyThenCurvePairIndex < panCurveAlias.length) {
-              panCurveKeyOrPrefixClampedPan = panCurveAlias[panPrefixKeyThenCurvePairIndex];
-              nextPanCurveOffsetOrTailClampedPan = panCurve[panPrefixKeyThenCurvePairIndex + 1] << 1;
-              panInterpolationNumerator = (panCurveKeyOrPrefixClampedPan - panCurvePairIndexThenPreviousKey) * panCurveOffset + (-panCurvePairIndexThenPreviousKey + panCurveKeyOrPrefixClampedPan) / 2;
-              panCurveKeyIndex = panCurvePairIndexThenPreviousKey;
+            panCurvePairIndex = 2;
+            while (panCurvePairIndex < panCurveAlias.length) {
+              nextPanCurveKey = panCurveAlias[panCurvePairIndex];
+              nextPanCurveOffset = panCurve[panCurvePairIndex + 1] << 1;
+              panInterpolationNumerator = (nextPanCurveKey - previousPanCurveKey) * panCurveOffset + (-previousPanCurveKey + nextPanCurveKey) / 2;
+              panCurveKeyIndex = previousPanCurveKey;
               unusedPanInterpolationStartKeySnapshot = panCurveKeyIndex;
-              while (panCurveKeyOrPrefixClampedPan > panCurveKeyIndex) {
-                interpolatedPanCurveOffset = PacketBuffer.divideFloorWithPositiveDivisor(panCurveKeyOrPrefixClampedPan - panCurvePairIndexThenPreviousKey, (byte) -6, panInterpolationNumerator);
+              while (nextPanCurveKey > panCurveKeyIndex) {
+                interpolatedPanCurveOffset = PacketBuffer.divideFloorWithPositiveDivisor(nextPanCurveKey - previousPanCurveKey, (byte) -6, panInterpolationNumerator);
                 clampedPan = (this.keyPans[panCurveKeyIndex] & 255) + interpolatedPanCurveOffset;
                 if (clampedPan < 0) {
                   clampedPan = 0;
@@ -627,22 +636,22 @@ final class InstrumentPatch extends IntrusiveNode {
                   clampedPan = 128;
                 }
                 this.keyPans[panCurveKeyIndex] = (byte)clampedPan;
-                panInterpolationNumerator = panInterpolationNumerator + (nextPanCurveOffsetOrTailClampedPan - panCurveOffset);
+                panInterpolationNumerator = panInterpolationNumerator + (nextPanCurveOffset - panCurveOffset);
                 panCurveKeyIndex++;
               }
-              panPrefixKeyThenCurvePairIndex += 2;
-              panCurveOffset = nextPanCurveOffsetOrTailClampedPan;
-              panCurvePairIndexThenPreviousKey = panCurveKeyOrPrefixClampedPan;
+              panCurvePairIndex += 2;
+              panCurveOffset = nextPanCurveOffset;
+              previousPanCurveKey = nextPanCurveKey;
             }
-            for (panCurveKeyOrPrefixClampedPan = panCurvePairIndexThenPreviousKey; panCurveKeyOrPrefixClampedPan < 128; panCurveKeyOrPrefixClampedPan++) {
-              nextPanCurveOffsetOrTailClampedPan = (this.keyPans[panCurveKeyOrPrefixClampedPan] & 255) + panCurveOffset;
-              if (nextPanCurveOffsetOrTailClampedPan < 0) {
-                nextPanCurveOffsetOrTailClampedPan = 0;
+            for (panTailKeyIndex = previousPanCurveKey; panTailKeyIndex < 128; panTailKeyIndex++) {
+              tailClampedPan = (this.keyPans[panTailKeyIndex] & 255) + panCurveOffset;
+              if (tailClampedPan < 0) {
+                tailClampedPan = 0;
               }
-              if (nextPanCurveOffsetOrTailClampedPan > 128) {
-                nextPanCurveOffsetOrTailClampedPan = 128;
+              if (tailClampedPan > 128) {
+                tailClampedPan = 128;
               }
-              this.keyPans[panCurveKeyOrPrefixClampedPan] = (byte)nextPanCurveOffsetOrTailClampedPan;
+              this.keyPans[panTailKeyIndex] = (byte)tailClampedPan;
             }
             panCurve = null;
           }

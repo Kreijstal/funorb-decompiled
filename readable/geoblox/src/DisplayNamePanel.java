@@ -120,8 +120,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         int[] diffuseResponsesThirdAlias = null;
         RuntimeException renderFailure = null;
         int normalOrFaceQueueIndex = 0;
-        int diffuseResponseOrFaceIndex = 0;
-        int specularResponseOrVertexA = 0;
+        int diffuseDotMagnitude = 0;
+        int halfVectorDotProduct = 0;
         int faceVertexB = 0;
         int faceVertexC = 0;
         int faceNormalA = 0;
@@ -159,6 +159,8 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         int queuedFaceIndex;
         int faceIndex;
         int faceVertexA;
+        int diffuseLightingResponse;
+        int specularLightingResponse;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           meshForPriorityDecision = mesh;
@@ -181,31 +183,31 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           transformedNormalsY = ClientClockSupport.transformedMeshNormalY;
           transformedNormalsZ = IterableNodeHashTable.transformedMeshNormalZ;
           for (normalOrFaceQueueIndex = 0; mesh.normalCount > normalOrFaceQueueIndex; normalOrFaceQueueIndex++) {
-            diffuseResponseOrFaceIndex = transformedNormalsY[normalOrFaceQueueIndex] * lightDirectionYQ8 + lightDirectionXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + transformedNormalsZ[normalOrFaceQueueIndex] * lightDirectionZQ8 >> 8;
-            if (0 > diffuseResponseOrFaceIndex) {
-              diffuseResponseOrFaceIndex = -diffuseResponseOrFaceIndex;
+            diffuseDotMagnitude = transformedNormalsY[normalOrFaceQueueIndex] * lightDirectionYQ8 + lightDirectionXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + transformedNormalsZ[normalOrFaceQueueIndex] * lightDirectionZQ8 >> 8;
+            if (0 > diffuseDotMagnitude) {
+              diffuseDotMagnitude = -diffuseDotMagnitude;
             }
-            if (diffuseResponseOrFaceIndex >= 0) {
-              if (128 <= diffuseResponseOrFaceIndex) {
+            if (diffuseDotMagnitude >= 0) {
+              if (128 <= diffuseDotMagnitude) {
                 diffuseResponseCandidate = 256;
               } else {
-                diffuseResponseCandidate = 128 + diffuseResponseOrFaceIndex;
+                diffuseResponseCandidate = 128 + diffuseDotMagnitude;
               }
             } else {
               diffuseResponseCandidate = 128;
             }
-            diffuseResponseOrFaceIndex = diffuseResponseCandidate;
-            specularResponseOrVertexA = halfVectorZQ8 * transformedNormalsZ[normalOrFaceQueueIndex] + (halfVectorXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + halfVectorYQ8 * transformedNormalsY[normalOrFaceQueueIndex]) >> 8;
+            diffuseLightingResponse = diffuseResponseCandidate;
+            halfVectorDotProduct = halfVectorZQ8 * transformedNormalsZ[normalOrFaceQueueIndex] + (halfVectorXQ8 * transformedNormalsX[normalOrFaceQueueIndex] + halfVectorYQ8 * transformedNormalsY[normalOrFaceQueueIndex]) >> 8;
             specularResponseTableSnapshot = MultiHandleSliderRenderer.meshSpecularResponseByAbsDot;
-            if (specularResponseOrVertexA < 0) {
-              absoluteHalfVectorDot = -specularResponseOrVertexA;
+            if (halfVectorDotProduct < 0) {
+              absoluteHalfVectorDot = -halfVectorDotProduct;
             } else {
-              absoluteHalfVectorDot = specularResponseOrVertexA;
+              absoluteHalfVectorDot = halfVectorDotProduct;
             }
-            specularResponseOrVertexA = specularResponseTableSnapshot[absoluteHalfVectorDot];
-            diffuseResponseOrFaceIndex = diffuseResponseOrFaceIndex * (256 - specularResponseOrVertexA) >>> 8;
-            diffuseResponses[normalOrFaceQueueIndex] = diffuseResponseOrFaceIndex;
-            specularResponses[normalOrFaceQueueIndex] = specularResponseOrVertexA;
+            specularLightingResponse = specularResponseTableSnapshot[absoluteHalfVectorDot];
+            diffuseLightingResponse = diffuseLightingResponse * (256 - specularLightingResponse) >>> 8;
+            diffuseResponses[normalOrFaceQueueIndex] = diffuseLightingResponse;
+            specularResponses[normalOrFaceQueueIndex] = specularLightingResponse;
           }
           for (queuedFaceIndex = 0; queuedFaceIndex < GameApplet.queuedMeshFaceCount; queuedFaceIndex++) {
             faceIndex = InstrumentNoteMask.meshFaceOrder[queuedFaceIndex];

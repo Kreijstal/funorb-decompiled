@@ -87,19 +87,20 @@ final class UsernameResponseSupport {
     }
 
     final static void settleAccountDialogAnimations(int methodGuard) {
-        int guardResidue = 0;
+        int stoppedLayerProgressGuardRemainder = 0;
         int missingProgressDialogGuardRemainder;
         int stoppedProgressDialogGuardRemainder;
+        int missingLayerProgressGuardRemainder;
         if (null != ClientFlowState.accountDialogLayer) {
             ClientFlowState.accountDialogLayer.settleDialogAnimations(0);
             if (SecondaryNodeHashTable.accountProgressDialog != null) {
                 SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
                 LogoCompositor.resetUiInteractionState((byte) -2);
-                guardResidue = -121 % ((-38 - methodGuard) / 59);
+                stoppedLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
                 return;
             }
             LogoCompositor.resetUiInteractionState((byte) -2);
-            guardResidue = -121 % ((-38 - methodGuard) / 59);
+            missingLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
             return;
         }
         if (SecondaryNodeHashTable.accountProgressDialog == null) {

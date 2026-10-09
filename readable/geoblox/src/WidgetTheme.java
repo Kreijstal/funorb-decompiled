@@ -173,11 +173,12 @@ final class WidgetTheme {
         int textHeight = 0;
         int lineCount = 0;
         int wrapWidthOrBoxX = 0;
-        int widthChunkCountOrLineIndexOrBoxY = 0;
+        int wrapWidthChunkCount = 0;
         int measuredLineWidth = 0;
         int clientControlFlowSnapshot = 0;
         int wrappedLineCount;
         int tooltipBoxTop;
+        int wrappedLineWidthIndex;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           horizontalPadding = this.tooltipPaddingRight + this.tooltipPaddingLeft;
@@ -201,14 +202,14 @@ final class WidgetTheme {
             if (quarterRasterWidth >= textWidth) {
               wrapWidthOrBoxX = quarterRasterWidth;
             } else {
-              widthChunkCountOrLineIndexOrBoxY = textWidth / quarterRasterWidth;
-              wrapWidthOrBoxX = (textWidth % quarterRasterWidth + widthChunkCountOrLineIndexOrBoxY - 1) / widthChunkCountOrLineIndexOrBoxY * 2 + quarterRasterWidth;
+              wrapWidthChunkCount = textWidth / quarterRasterWidth;
+              wrapWidthOrBoxX = (textWidth % quarterRasterWidth + wrapWidthChunkCount - 1) / wrapWidthChunkCount * 2 + quarterRasterWidth;
             }
             wrappedLineCount = this.tooltipFont.wrapText(text, new int[]{wrapWidthOrBoxX}, FadingDialog.wrappedTooltipLines);
             textWidth = 0;
             textHeight = textHeight + (wrappedLineCount - 1) * lineSpacing;
-            for (widthChunkCountOrLineIndexOrBoxY = 0; widthChunkCountOrLineIndexOrBoxY < wrappedLineCount; widthChunkCountOrLineIndexOrBoxY++) {
-              measuredLineWidth = this.tooltipFont.measureTextWidth(FadingDialog.wrappedTooltipLines[widthChunkCountOrLineIndexOrBoxY]);
+            for (wrappedLineWidthIndex = 0; wrappedLineWidthIndex < wrappedLineCount; wrappedLineWidthIndex++) {
+              measuredLineWidth = this.tooltipFont.measureTextWidth(FadingDialog.wrappedTooltipLines[wrappedLineWidthIndex]);
               if (measuredLineWidth <= textWidth) {
                 continue;
               }
