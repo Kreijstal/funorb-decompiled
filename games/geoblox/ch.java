@@ -479,20 +479,14 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                 var2 = kg.field_m;
                 if (var4 != 0) {
                   var2 = qa.field_d;
-                  {
-                    var2 = sg.field_a;
-                    {
-                      var2 = he.field_a;
-                    }
-                  }
+                  var2 = sg.field_a;
+                  var2 = he.field_a;
                 }
               } else {
                 var2 = qa.field_d;
                 if (var4 != 0) {
                   var2 = sg.field_a;
-                  {
-                    var2 = he.field_a;
-                  }
+                  var2 = he.field_a;
                 }
               }
             } else {

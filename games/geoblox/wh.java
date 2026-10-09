@@ -498,64 +498,62 @@ abstract class wh extends rc {
             L3: {
               var34 = -param8 + param4;
               if (param8 == param15) {
-                {
-                  if (~param4 == ~param8) {
-                    var29 = param14;
-                    var17_int = param2 << 16;
-                    var31 = 0;
-                    var30 = param7;
-                    var19 = 0;
-                    var21 = param1;
-                    var24 = 0;
-                    var32 = 0;
-                    var20 = 0;
-                    var26 = param3;
-                    var23 = 0;
-                    var22 = param10;
-                    var27 = 0;
-                    var28 = 0;
-                    var18 = param9 << 16;
-                    var25 = param12;
-                  }
-                  if (~param4 != ~param8 || var42 != 0) {
-                    var35 = -param15 + param4;
-                    if (param9 <= param2) {
-                      var27 = (param0 - param3 << 16) / var35;
-                      var29 = param7 << 16;
-                      var20 = (param13 - param2 << 16) / var34;
-                      var24 = (param6 - param1 << 16) / var34;
-                      var17_int = param9 << 16;
-                      var23 = (-param10 + param6 << 16) / var35;
-                      var18 = param2 << 16;
-                      var31 = (-param7 + param5 << 16) / var35;
-                      var32 = (-param14 + param5 << 16) / var34;
-                      var25 = param3 << 16;
-                      var30 = param14 << 16;
-                      var28 = (-param12 + param0 << 16) / var34;
-                      var19 = (-param9 + param13 << 16) / var35;
-                      var21 = param10 << 16;
-                      var22 = param1 << 16;
-                      var26 = param12 << 16;
-                    }
-                    if (!(param9 <= param2) || var42 != 0) {
-                      var28 = (param0 - param3 << 16) / var35;
-                      var23 = (param6 - param1 << 16) / var34;
-                      var19 = (param13 - param2 << 16) / var34;
-                      var25 = param12 << 16;
-                      var22 = param10 << 16;
-                      var32 = (param5 - param7 << 16) / var35;
-                      var26 = param3 << 16;
-                      var17_int = param2 << 16;
-                      var24 = (-param10 + param6 << 16) / var35;
-                      var21 = param1 << 16;
-                      var30 = param7 << 16;
-                      var18 = param9 << 16;
-                      var20 = (param13 - param9 << 16) / var35;
-                      var31 = (param5 - param14 << 16) / var34;
-                      var27 = (param0 - param12 << 16) / var34;
-                      var29 = param14 << 16;
-                    }}
+                if (~param4 == ~param8) {
+                  var29 = param14;
+                  var17_int = param2 << 16;
+                  var31 = 0;
+                  var30 = param7;
+                  var19 = 0;
+                  var21 = param1;
+                  var24 = 0;
+                  var32 = 0;
+                  var20 = 0;
+                  var26 = param3;
+                  var23 = 0;
+                  var22 = param10;
+                  var27 = 0;
+                  var28 = 0;
+                  var18 = param9 << 16;
+                  var25 = param12;
                 }
+                if (~param4 != ~param8 || var42 != 0) {
+                  var35 = -param15 + param4;
+                  if (param9 <= param2) {
+                    var27 = (param0 - param3 << 16) / var35;
+                    var29 = param7 << 16;
+                    var20 = (param13 - param2 << 16) / var34;
+                    var24 = (param6 - param1 << 16) / var34;
+                    var17_int = param9 << 16;
+                    var23 = (-param10 + param6 << 16) / var35;
+                    var18 = param2 << 16;
+                    var31 = (-param7 + param5 << 16) / var35;
+                    var32 = (-param14 + param5 << 16) / var34;
+                    var25 = param3 << 16;
+                    var30 = param14 << 16;
+                    var28 = (-param12 + param0 << 16) / var34;
+                    var19 = (-param9 + param13 << 16) / var35;
+                    var21 = param10 << 16;
+                    var22 = param1 << 16;
+                    var26 = param12 << 16;
+                  }
+                  if (!(param9 <= param2) || var42 != 0) {
+                    var28 = (param0 - param3 << 16) / var35;
+                    var23 = (param6 - param1 << 16) / var34;
+                    var19 = (param13 - param2 << 16) / var34;
+                    var25 = param12 << 16;
+                    var22 = param10 << 16;
+                    var32 = (param5 - param7 << 16) / var35;
+                    var26 = param3 << 16;
+                    var17_int = param2 << 16;
+                    var24 = (-param10 + param6 << 16) / var35;
+                    var21 = param1 << 16;
+                    var30 = param7 << 16;
+                    var18 = param9 << 16;
+                    var20 = (param13 - param9 << 16) / var35;
+                    var31 = (param5 - param14 << 16) / var34;
+                    var27 = (param0 - param12 << 16) / var34;
+                    var29 = param14 << 16;
+                  }}
                 var33 = 0;
                 if (0 <= param8) {
                   break L3;
@@ -617,36 +615,34 @@ abstract class wh extends rc {
               {
                 boolean decompiledFrameCompleted0 = true;
                 L11: {
-                  {
-                    if (param8 < 0) {
-                      if (param15 >= 0) {
-                        param8 = -param8;
-                        var30 = var30 + var32 * param8;
-                        var26 = var26 + param8 * var28;
-                        var29 = var29 + var31 * param8;
-                        var25 = var25 + param8 * var27;
-                        var17_int = var17_int + param8 * var19;
-                        var18 = var18 + param8 * var20;
-                        var22 = var22 + var24 * param8;
-                        var21 = var21 + param8 * var23;
-                        param8 = 0;
+                  if (param8 < 0) {
+                    if (param15 >= 0) {
+                      param8 = -param8;
+                      var30 = var30 + var32 * param8;
+                      var26 = var26 + param8 * var28;
+                      var29 = var29 + var31 * param8;
+                      var25 = var25 + param8 * var27;
+                      var17_int = var17_int + param8 * var19;
+                      var18 = var18 + param8 * var20;
+                      var22 = var22 + var24 * param8;
+                      var21 = var21 + param8 * var23;
+                      param8 = 0;
+                    }
+                    if (!(param15 >= 0) || var42 != 0) {
+                      param8 = param15 - param8;
+                      var21 = var21 + param8 * var23;
+                      var26 = var26 + param8 * var28;
+                      var17_int = var17_int + param8 * var19;
+                      var18 = var18 + param8 * var20;
+                      var25 = var25 + var27 * param8;
+                      var30 = var30 + var32 * param8;
+                      var22 = var22 + param8 * var24;
+                      var29 = var29 + var31 * param8;
+                      param8 = param15;
+                      if (var42 == 0) {
+                        break L11;
                       }
-                      if (!(param15 >= 0) || var42 != 0) {
-                        param8 = param15 - param8;
-                        var21 = var21 + param8 * var23;
-                        var26 = var26 + param8 * var28;
-                        var17_int = var17_int + param8 * var19;
-                        var18 = var18 + param8 * var20;
-                        var25 = var25 + var27 * param8;
-                        var30 = var30 + var32 * param8;
-                        var22 = var22 + param8 * var24;
-                        var29 = var29 + var31 * param8;
-                        param8 = param15;
-                        if (var42 == 0) {
-                          break L11;
-                        }
-                      }}
-                  }
+                    }}
                   var36 = mh.field_b[param8];
                   while (param15 > param8) {
                     var37 = var17_int >> 16;

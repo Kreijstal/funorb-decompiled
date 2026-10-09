@@ -94,20 +94,18 @@ final class p extends hf {
               stackIn_66_0 = -51;
               stackIn_66_1 = ~var29;
               if (var30 == 0) {
-                {
-                  if (stackIn_66_0 >= stackIn_66_1) {
-                    sh.field_x[var23] = var27 / var29 + var21;
-                    dj.field_N[var23] = var22 + var28 / var29;
-                    if (var29 < var7_int) {
-                      var7_int = var29;
-                    }
-                    if (var8 < var29) {
-                      var8 = var29;
-                    }
-                    bj.field_j[var23] = var29;
-                  } else {
-                    bj.field_j[var23] = -2147483648;
+                if (stackIn_66_0 >= stackIn_66_1) {
+                  sh.field_x[var23] = var27 / var29 + var21;
+                  dj.field_N[var23] = var22 + var28 / var29;
+                  if (var29 < var7_int) {
+                    var7_int = var29;
                   }
+                  if (var8 < var29) {
+                    var8 = var29;
+                  }
+                  bj.field_j[var23] = var29;
+                } else {
+                  bj.field_j[var23] = -2147483648;
                 }
                 if (param4) {
                   a.field_c[var23] = var27 >> ok.field_g;

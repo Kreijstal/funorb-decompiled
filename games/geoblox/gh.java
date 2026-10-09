@@ -353,9 +353,7 @@ final class gh {
             if (0 != this.field_bb ||
                 ih.a(0)) {
               vh.field_G.b(446, 410);
-              {
-                g.field_i.b(468, 410);
-              }
+              g.field_i.b(468, 410);
             } else {
               g.field_i.b(468, 410);
             }
@@ -593,9 +591,7 @@ final class gh {
                 el.field_o.c(false);
                 if (var5 != 0) {
                   this.field_T = this.field_T + 1;
-                  {
-                    this.field_T = this.field_T - 1;
-                  }
+                  this.field_T = this.field_T - 1;
                 }
               }
             } else {
@@ -927,9 +923,7 @@ final class gh {
                   this.field_U = dk.field_b;
                   if (var5 != 0) {
                     this.field_U = dd.field_D;
-                    {
-                      this.field_U = 0;
-                    }
+                    this.field_U = 0;
                   }
                 }
               } else {
@@ -1156,9 +1150,7 @@ final class gh {
               var5 = var3 / 3;
               oa.field_a = oa.field_a + var5;
               ml.field_r = ml.field_r - (var3 - var5);
-              {
-                oa.field_a = oa.field_a + var3;
-              }
+              oa.field_a = oa.field_a + var3;
             }
           } else {
             var5 = var3 / 3;
@@ -1549,9 +1541,7 @@ final class gh {
               if (var11 != 0) {
                 if ((460 - this.field_D + 460) < (this.field_c * 2)) {
                   this.field_bb = 4;
-                  {
-                    this.field_bb = 3;
-                  }
+                  this.field_bb = 3;
                 } else {
                   this.field_bb = 3;
                 }
@@ -1679,9 +1669,7 @@ final class gh {
             if (var3 != 0) {
               if (var2 <= 99999) {
                 dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                {
-                  dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
-                }
+                dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
               } else {
                 dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
               }
@@ -1727,9 +1715,7 @@ final class gh {
               if (this.field_o > 0 ||
                     this.field_e > 0) {
                 ai.field_p = 4;
-                {
-                  ai.field_p = 0;
-                }
+                ai.field_p = 0;
               } else {
                 ai.field_p = 0;
               }
