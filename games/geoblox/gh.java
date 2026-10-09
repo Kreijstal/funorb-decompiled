@@ -353,7 +353,7 @@ final class gh {
             if (0 != this.field_bb ||
                 ih.a(0)) {
               vh.field_G.b(446, 410);
-              if (var14 != 0) {
+              {
                 g.field_i.b(468, 410);
               }
             } else {
@@ -593,7 +593,7 @@ final class gh {
                 el.field_o.c(false);
                 if (var5 != 0) {
                   this.field_T = this.field_T + 1;
-                  if (var5 != 0) {
+                  {
                     this.field_T = this.field_T - 1;
                   }
                 }
@@ -927,7 +927,7 @@ final class gh {
                   this.field_U = dk.field_b;
                   if (var5 != 0) {
                     this.field_U = dd.field_D;
-                    if (var5 != 0) {
+                    {
                       this.field_U = 0;
                     }
                   }
@@ -1156,7 +1156,7 @@ final class gh {
               var5 = var3 / 3;
               oa.field_a = oa.field_a + var5;
               ml.field_r = ml.field_r - (var3 - var5);
-              if (var6 != 0) {
+              {
                 oa.field_a = oa.field_a + var3;
               }
             }
@@ -1549,7 +1549,7 @@ final class gh {
               if (var11 != 0) {
                 if ((460 - this.field_D + 460) < (this.field_c * 2)) {
                   this.field_bb = 4;
-                  if (var11 != 0) {
+                  {
                     this.field_bb = 3;
                   }
                 } else {
@@ -1679,7 +1679,7 @@ final class gh {
             if (var3 != 0) {
               if (var2 <= 99999) {
                 dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                if (var3 != 0) {
+                {
                   dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
                 }
               } else {
@@ -1727,7 +1727,7 @@ final class gh {
               if (this.field_o > 0 ||
                     this.field_e > 0) {
                 ai.field_p = 4;
-                if (var3 != 0) {
+                {
                   ai.field_p = 0;
                 }
               } else {
