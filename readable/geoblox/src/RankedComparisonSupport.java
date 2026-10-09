@@ -6,6 +6,9 @@ final class RankedComparisonSupport {
         int rightTiePartSum;
         int leftTiePartSum;
         int guardResidue;
+        int rightTiePartSumPhase2;
+        int leftTiePartSumPhase2;
+        int guardResiduePhase2;
         if (!keyTwoFirst) {
           if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] < ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
             return true;
@@ -42,13 +45,13 @@ final class RankedComparisonSupport {
         if (ClientProtocolStage.rankedEntryKeyOne[rightIndex] > ClientProtocolStage.rankedEntryKeyOne[leftIndex]) {
           return false;
         }
-        rightTiePartSum = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
-        leftTiePartSum = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
-        guardResidue = 76 % ((-38 - methodGuard) / 45);
-        if (rightTiePartSum < leftTiePartSum) {
+        rightTiePartSumPhase2 = FrameTimer.rankedEntryRatioThirdComponents[rightIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rightIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rightIndex];
+        leftTiePartSumPhase2 = TextHotspotBounds.rankedEntryRatioNumerators[leftIndex] + (NodeHashTableIterator.rankedEntryRatioSecondComponents[leftIndex] + FrameTimer.rankedEntryRatioThirdComponents[leftIndex]);
+        guardResiduePhase2 = 76 % ((-38 - methodGuard) / 45);
+        if (rightTiePartSumPhase2 < leftTiePartSumPhase2) {
           return true;
         }
-        if (rightTiePartSum > leftTiePartSum) {
+        if (rightTiePartSumPhase2 > leftTiePartSumPhase2) {
           return false;
         }
         if (rightIndex >= leftIndex) {

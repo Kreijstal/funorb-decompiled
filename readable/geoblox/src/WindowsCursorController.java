@@ -69,6 +69,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
         int cursorHandleForClientHitTest = 0;
         int cursorHandleForFallbackMessage = 0;
         int previousProcedureOrHitTestCode;
+        int previousProcedureOrHitTestCodePhase2;
         if (this.windowHandle != windowHandle) {
           previousProcedureOrHitTestCode = com.ms.win32.User32.GetWindowLong(windowHandle, -4);
           return com.ms.win32.User32.CallWindowProc(previousProcedureOrHitTestCode, windowHandle, messageId, wParam, lParam);
@@ -90,8 +91,8 @@ final class WindowsCursorController extends com.ms.dll.Callback {
           com.ms.win32.User32.SetCursor(cursorHandleForPrivateMessage);
           return 0;
         }
-        previousProcedureOrHitTestCode = 65535 & lParam;
-        if (previousProcedureOrHitTestCode == 1) {
+        previousProcedureOrHitTestCodePhase2 = 65535 & lParam;
+        if (previousProcedureOrHitTestCodePhase2 == 1) {
           if (!this.cursorVisible) {
             cursorHandleForClientHitTest = 0;
           } else {

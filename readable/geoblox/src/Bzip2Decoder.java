@@ -388,6 +388,12 @@ final class Bzip2Decoder {
         int symbolWritePosition;
         int tableIndexOrCodeLength;
         int nextCode;
+        int tableIndexOrCodeLengthPhase2;
+        int tableIndexOrCodeLengthPhase3;
+        int tableIndexOrCodeLengthPhase4;
+        int tableIndexOrCodeLengthPhase5;
+        int tableIndexOrCodeLengthPhase6;
+        int tableIndexOrCodeLengthPhase7;
         symbolWritePosition = 0;
         for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
           for (symbolIndex = 0; symbolIndex < alphabetSize; symbolIndex++) {
@@ -398,27 +404,27 @@ final class Bzip2Decoder {
             symbolWritePosition++;
           }
         }
-        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
-          bases[tableIndexOrCodeLength] = 0;
+        for (tableIndexOrCodeLengthPhase2 = 0; tableIndexOrCodeLengthPhase2 < 23; tableIndexOrCodeLengthPhase2++) {
+          bases[tableIndexOrCodeLengthPhase2] = 0;
         }
-        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < alphabetSize; tableIndexOrCodeLength++) {
-          lengthBucketIndex = codeLengths[tableIndexOrCodeLength] + 1;
+        for (tableIndexOrCodeLengthPhase3 = 0; tableIndexOrCodeLengthPhase3 < alphabetSize; tableIndexOrCodeLengthPhase3++) {
+          lengthBucketIndex = codeLengths[tableIndexOrCodeLengthPhase3] + 1;
           bases[lengthBucketIndex] = bases[lengthBucketIndex] + 1;
         }
-        for (tableIndexOrCodeLength = 1; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
-          bases[tableIndexOrCodeLength] = bases[tableIndexOrCodeLength] + bases[tableIndexOrCodeLength - 1];
+        for (tableIndexOrCodeLengthPhase4 = 1; tableIndexOrCodeLengthPhase4 < 23; tableIndexOrCodeLengthPhase4++) {
+          bases[tableIndexOrCodeLengthPhase4] = bases[tableIndexOrCodeLengthPhase4] + bases[tableIndexOrCodeLengthPhase4 - 1];
         }
-        for (tableIndexOrCodeLength = 0; tableIndexOrCodeLength < 23; tableIndexOrCodeLength++) {
-          limits[tableIndexOrCodeLength] = 0;
+        for (tableIndexOrCodeLengthPhase5 = 0; tableIndexOrCodeLengthPhase5 < 23; tableIndexOrCodeLengthPhase5++) {
+          limits[tableIndexOrCodeLengthPhase5] = 0;
         }
         nextCode = 0;
-        for (tableIndexOrCodeLength = minimumLength; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
-          nextCode = nextCode + (bases[tableIndexOrCodeLength + 1] - bases[tableIndexOrCodeLength]);
-          limits[tableIndexOrCodeLength] = nextCode - 1;
+        for (tableIndexOrCodeLengthPhase6 = minimumLength; tableIndexOrCodeLengthPhase6 <= maximumLength; tableIndexOrCodeLengthPhase6++) {
+          nextCode = nextCode + (bases[tableIndexOrCodeLengthPhase6 + 1] - bases[tableIndexOrCodeLengthPhase6]);
+          limits[tableIndexOrCodeLengthPhase6] = nextCode - 1;
           nextCode = nextCode << 1;
         }
-        for (tableIndexOrCodeLength = minimumLength + 1; tableIndexOrCodeLength <= maximumLength; tableIndexOrCodeLength++) {
-          bases[tableIndexOrCodeLength] = (limits[tableIndexOrCodeLength - 1] + 1 << 1) - bases[tableIndexOrCodeLength];
+        for (tableIndexOrCodeLengthPhase7 = minimumLength + 1; tableIndexOrCodeLengthPhase7 <= maximumLength; tableIndexOrCodeLengthPhase7++) {
+          bases[tableIndexOrCodeLengthPhase7] = (limits[tableIndexOrCodeLengthPhase7 - 1] + 1 << 1) - bases[tableIndexOrCodeLengthPhase7];
         }
     }
 

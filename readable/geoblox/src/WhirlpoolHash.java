@@ -32,6 +32,10 @@ final class WhirlpoolHash {
         int byteShift;
         int unusedClientGuardSnapshot;
         int stateByteIndex;
+        int wordIndexOrRoundPhase2;
+        int wordIndexOrRoundPhase3;
+        int wordIndexOrRoundPhase4;
+        int blockByteOffsetOrWordIndexPhase2;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard < 103) {
           return;
@@ -43,44 +47,44 @@ final class WhirlpoolHash {
           blockByteOffsetOrWordIndex += 8;
           wordIndexOrRound++;
         }
-        for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
-          hashWordSnapshot = this.hashWords[wordIndexOrRound];
-          messageWordSnapshot = this.messageWords[wordIndexOrRound];
-          this.roundKey[wordIndexOrRound] = hashWordSnapshot;
-          this.cipherState[wordIndexOrRound] = MessageDialog.xorLong(messageWordSnapshot, hashWordSnapshot);
+        for (wordIndexOrRoundPhase2 = 0; wordIndexOrRoundPhase2 < 8; wordIndexOrRoundPhase2++) {
+          hashWordSnapshot = this.hashWords[wordIndexOrRoundPhase2];
+          messageWordSnapshot = this.messageWords[wordIndexOrRoundPhase2];
+          this.roundKey[wordIndexOrRoundPhase2] = hashWordSnapshot;
+          this.cipherState[wordIndexOrRoundPhase2] = MessageDialog.xorLong(messageWordSnapshot, hashWordSnapshot);
         }
-        for (wordIndexOrRound = 1; 10 >= wordIndexOrRound; wordIndexOrRound++) {
-          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-            this.roundScratch[blockByteOffsetOrWordIndex] = 0L;
+        for (wordIndexOrRoundPhase3 = 1; 10 >= wordIndexOrRoundPhase3; wordIndexOrRoundPhase3++) {
+          for (blockByteOffsetOrWordIndexPhase2 = 0; blockByteOffsetOrWordIndexPhase2 < 8; blockByteOffsetOrWordIndexPhase2++) {
+            this.roundScratch[blockByteOffsetOrWordIndexPhase2] = 0L;
             keyByteIndexOrStateStartSnapshot = 0;
             byteShift = 56;
             while (keyByteIndexOrStateStartSnapshot < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][ProxySocketConnector.andInt(255, (int)(this.roundKey[ProxySocketConnector.andInt(7, blockByteOffsetOrWordIndex - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndexPhase2] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndexPhase2], ByteArrayBuffer.whirlpoolTables[keyByteIndexOrStateStartSnapshot][ProxySocketConnector.andInt(255, (int)(this.roundKey[ProxySocketConnector.andInt(7, blockByteOffsetOrWordIndexPhase2 - keyByteIndexOrStateStartSnapshot)] >>> byteShift))]);
               byteShift -= 8;
               keyByteIndexOrStateStartSnapshot++;
             }
           }
-          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-            this.roundKey[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
+          for (blockByteOffsetOrWordIndexPhase2 = 0; blockByteOffsetOrWordIndexPhase2 < 8; blockByteOffsetOrWordIndexPhase2++) {
+            this.roundKey[blockByteOffsetOrWordIndexPhase2] = this.roundScratch[blockByteOffsetOrWordIndexPhase2];
           }
-          this.roundKey[0] = MessageDialog.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRound]);
-          for (blockByteOffsetOrWordIndex = 0; blockByteOffsetOrWordIndex < 8; blockByteOffsetOrWordIndex++) {
-            this.roundScratch[blockByteOffsetOrWordIndex] = this.roundKey[blockByteOffsetOrWordIndex];
+          this.roundKey[0] = MessageDialog.xorLong(this.roundKey[0], ByteArrayBuffer.whirlpoolRoundConstants[wordIndexOrRoundPhase3]);
+          for (blockByteOffsetOrWordIndexPhase2 = 0; blockByteOffsetOrWordIndexPhase2 < 8; blockByteOffsetOrWordIndexPhase2++) {
+            this.roundScratch[blockByteOffsetOrWordIndexPhase2] = this.roundKey[blockByteOffsetOrWordIndexPhase2];
             stateByteIndex = 0;
             keyByteIndexOrStateStartSnapshot = stateByteIndex;
             byteShift = 56;
             while (stateByteIndex < 8) {
-              this.roundScratch[blockByteOffsetOrWordIndex] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndex], ByteArrayBuffer.whirlpoolTables[stateByteIndex][ProxySocketConnector.andInt(255, (int)(this.cipherState[ProxySocketConnector.andInt(-stateByteIndex + blockByteOffsetOrWordIndex, 7)] >>> byteShift))]);
+              this.roundScratch[blockByteOffsetOrWordIndexPhase2] = MessageDialog.xorLong(this.roundScratch[blockByteOffsetOrWordIndexPhase2], ByteArrayBuffer.whirlpoolTables[stateByteIndex][ProxySocketConnector.andInt(255, (int)(this.cipherState[ProxySocketConnector.andInt(-stateByteIndex + blockByteOffsetOrWordIndexPhase2, 7)] >>> byteShift))]);
               stateByteIndex++;
               byteShift -= 8;
             }
           }
-          for (blockByteOffsetOrWordIndex = 0; 8 > blockByteOffsetOrWordIndex; blockByteOffsetOrWordIndex++) {
-            this.cipherState[blockByteOffsetOrWordIndex] = this.roundScratch[blockByteOffsetOrWordIndex];
+          for (blockByteOffsetOrWordIndexPhase2 = 0; 8 > blockByteOffsetOrWordIndexPhase2; blockByteOffsetOrWordIndexPhase2++) {
+            this.cipherState[blockByteOffsetOrWordIndexPhase2] = this.roundScratch[blockByteOffsetOrWordIndexPhase2];
           }
         }
-        for (wordIndexOrRound = 0; wordIndexOrRound < 8; wordIndexOrRound++) {
-          this.hashWords[wordIndexOrRound] = MessageDialog.xorLong(this.hashWords[wordIndexOrRound], MessageDialog.xorLong(this.cipherState[wordIndexOrRound], this.messageWords[wordIndexOrRound]));
+        for (wordIndexOrRoundPhase4 = 0; wordIndexOrRoundPhase4 < 8; wordIndexOrRoundPhase4++) {
+          this.hashWords[wordIndexOrRoundPhase4] = MessageDialog.xorLong(this.hashWords[wordIndexOrRoundPhase4], MessageDialog.xorLong(this.cipherState[wordIndexOrRoundPhase4], this.messageWords[wordIndexOrRoundPhase4]));
         }
         return;
     }

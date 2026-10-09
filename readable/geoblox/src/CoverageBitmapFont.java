@@ -10,6 +10,8 @@ final class CoverageBitmapFont extends BitmapFont {
         int sourceRowSkip;
         int sourceIndex;
         int clippedPixels;
+        int clippedPixelsPhase2;
+        int clippedPixelsPhase3;
         destinationIndex = x + y * SoftwareRasterizer.stride;
         destinationRowSkip = SoftwareRasterizer.stride - width;
         sourceRowSkip = 0;
@@ -25,19 +27,19 @@ final class CoverageBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          clippedPixels = SoftwareRasterizer.clipLeft - x;
-          width = width - clippedPixels;
+          clippedPixelsPhase2 = SoftwareRasterizer.clipLeft - x;
+          width = width - clippedPixelsPhase2;
           x = SoftwareRasterizer.clipLeft;
-          sourceIndex = sourceIndex + clippedPixels;
-          destinationIndex = destinationIndex + clippedPixels;
-          sourceRowSkip = sourceRowSkip + clippedPixels;
-          destinationRowSkip = destinationRowSkip + clippedPixels;
+          sourceIndex = sourceIndex + clippedPixelsPhase2;
+          destinationIndex = destinationIndex + clippedPixelsPhase2;
+          sourceRowSkip = sourceRowSkip + clippedPixelsPhase2;
+          destinationRowSkip = destinationRowSkip + clippedPixelsPhase2;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          clippedPixels = x + width - SoftwareRasterizer.clipRight;
-          width = width - clippedPixels;
-          sourceRowSkip = sourceRowSkip + clippedPixels;
-          destinationRowSkip = destinationRowSkip + clippedPixels;
+          clippedPixelsPhase3 = x + width - SoftwareRasterizer.clipRight;
+          width = width - clippedPixelsPhase3;
+          sourceRowSkip = sourceRowSkip + clippedPixelsPhase3;
+          destinationRowSkip = destinationRowSkip + clippedPixelsPhase3;
         }
         if (width > 0 &&
             height > 0) {
@@ -58,14 +60,15 @@ final class CoverageBitmapFont extends BitmapFont {
         int twiceRedPlusBlue;
         byte[] glyphPixels;
         int signedPaletteIndex;
+        int paletteColorOrGlyphIndexPhase2;
         for (paletteIndex = 0; paletteIndex < palette.length; paletteIndex++) {
           paletteColorOrGlyphIndex = palette[paletteIndex];
           twiceRedPlusBlue = (paletteColorOrGlyphIndex >> 15 & 510) + (paletteColorOrGlyphIndex & 255);
           palette[paletteIndex] = twiceRedPlusBlue / 3 + (paletteColorOrGlyphIndex >> 8 & 255) >> 1;
         }
         glyphsSnapshot = glyphs;
-        for (paletteColorOrGlyphIndex = 0; paletteColorOrGlyphIndex < glyphsSnapshot.length; paletteColorOrGlyphIndex++) {
-          glyphPixels = glyphsSnapshot[paletteColorOrGlyphIndex];
+        for (paletteColorOrGlyphIndexPhase2 = 0; paletteColorOrGlyphIndexPhase2 < glyphsSnapshot.length; paletteColorOrGlyphIndexPhase2++) {
+          glyphPixels = glyphsSnapshot[paletteColorOrGlyphIndexPhase2];
           for (glyphPixelIndex = 0; glyphPixelIndex < glyphPixels.length; glyphPixelIndex++) {
             signedPaletteIndex = glyphPixels[glyphPixelIndex];
             if (signedPaletteIndex == 0) {
@@ -83,6 +86,8 @@ final class CoverageBitmapFont extends BitmapFont {
         int sourceRowSkip;
         int sourceIndex;
         int clippedPixels;
+        int clippedPixelsPhase2;
+        int clippedPixelsPhase3;
         destinationIndex = x + y * SoftwareRasterizer.stride;
         destinationRowSkip = SoftwareRasterizer.stride - width;
         sourceRowSkip = 0;
@@ -98,19 +103,19 @@ final class CoverageBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          clippedPixels = SoftwareRasterizer.clipLeft - x;
-          width = width - clippedPixels;
+          clippedPixelsPhase2 = SoftwareRasterizer.clipLeft - x;
+          width = width - clippedPixelsPhase2;
           x = SoftwareRasterizer.clipLeft;
-          sourceIndex = sourceIndex + clippedPixels;
-          destinationIndex = destinationIndex + clippedPixels;
-          sourceRowSkip = sourceRowSkip + clippedPixels;
-          destinationRowSkip = destinationRowSkip + clippedPixels;
+          sourceIndex = sourceIndex + clippedPixelsPhase2;
+          destinationIndex = destinationIndex + clippedPixelsPhase2;
+          sourceRowSkip = sourceRowSkip + clippedPixelsPhase2;
+          destinationRowSkip = destinationRowSkip + clippedPixelsPhase2;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          clippedPixels = x + width - SoftwareRasterizer.clipRight;
-          width = width - clippedPixels;
-          sourceRowSkip = sourceRowSkip + clippedPixels;
-          destinationRowSkip = destinationRowSkip + clippedPixels;
+          clippedPixelsPhase3 = x + width - SoftwareRasterizer.clipRight;
+          width = width - clippedPixelsPhase3;
+          sourceRowSkip = sourceRowSkip + clippedPixelsPhase3;
+          destinationRowSkip = destinationRowSkip + clippedPixelsPhase3;
         }
         if (width > 0 &&
             height > 0) {

@@ -32,6 +32,7 @@ final class MusicScore extends IntrusiveNode {
         int[] channelProgramsStorage;
         int[] channelBanksStorage;
         int[] channelBanksInitializationAlias;
+        int trackIndexPhase2;
         if (this.instrumentNoteMasks != null) {
           return;
         }
@@ -53,17 +54,17 @@ final class MusicScore extends IntrusiveNode {
           midiReader.saveTrackPosition(trackIndex);
         }
         while (true) {
-          trackIndex = midiReader.selectEarliestTrack();
-          tickGroup = midiReader.trackTicks[trackIndex];
+          trackIndexPhase2 = midiReader.selectEarliestTrack();
+          tickGroup = midiReader.trackTicks[trackIndexPhase2];
           while (true) {
-            if (midiReader.trackTicks[trackIndex] != tickGroup) {
+            if (midiReader.trackTicks[trackIndexPhase2] != tickGroup) {
               break;
             }
-            midiReader.seekTrack(trackIndex);
-            packedEvent = midiReader.readTrackEvent(trackIndex);
+            midiReader.seekTrack(trackIndexPhase2);
+            packedEvent = midiReader.readTrackEvent(trackIndexPhase2);
             if (packedEvent == 1) {
               midiReader.markCurrentTrackEnded();
-              midiReader.saveTrackPosition(trackIndex);
+              midiReader.saveTrackPosition(trackIndexPhase2);
               if (midiReader.areAllTracksEnded()) {
                 return;
               }
@@ -100,8 +101,8 @@ final class MusicScore extends IntrusiveNode {
                 noteMask.notesUsed[controllerOrProgramOrNote] = (byte) 1;
               }
             }
-            midiReader.readTrackDelta(trackIndex);
-            midiReader.saveTrackPosition(trackIndex);
+            midiReader.readTrackDelta(trackIndexPhase2);
+            midiReader.saveTrackPosition(trackIndexPhase2);
           }
         }
     }
@@ -203,6 +204,12 @@ final class MusicScore extends IntrusiveNode {
         int statusChanged;
         int controllerValueOrDelta;
         int[] controllerValues;
+        int trackIndexOrDeltaStartPhase2;
+        int previousEventKindOrDeltaCountPhase2;
+        int eventCodeOrControllerCursorPhase2;
+        int eventCodeOrControllerCursorPhase3;
+        int controllerNumberPhase2;
+        int controllerIndexOrEventCursorPhase2;
         packedInput.position = packedInput.bytes.length - 3;
         trackCount = packedInput.readUnsignedByte((byte) 34);
         tickDivision = packedInput.readUnsignedShortBE(true);
@@ -266,13 +273,13 @@ final class MusicScore extends IntrusiveNode {
         midiByteCount = midiByteCount + 5 * tempoEventCount;
         midiByteCount = midiByteCount + 2 * (noteOnEventCount + noteOffEventCount + controllerEventCount + pitchEventCount + polyPressureEventCount);
         midiByteCount = midiByteCount + (channelPressureEventCount + programAndBankValueCount);
-        trackIndexOrDeltaStart = packedInput.position;
-        previousEventKindOrDeltaCount = trackCount + tempoEventCount + controllerEventCount + noteOnEventCount + noteOffEventCount + pitchEventCount + channelPressureEventCount + polyPressureEventCount + programAndBankValueCount;
-        for (eventCodeOrControllerCursor = 0; eventCodeOrControllerCursor < previousEventKindOrDeltaCount; eventCodeOrControllerCursor++) {
+        trackIndexOrDeltaStartPhase2 = packedInput.position;
+        previousEventKindOrDeltaCountPhase2 = trackCount + tempoEventCount + controllerEventCount + noteOnEventCount + noteOffEventCount + pitchEventCount + channelPressureEventCount + polyPressureEventCount + programAndBankValueCount;
+        for (eventCodeOrControllerCursorPhase2 = 0; eventCodeOrControllerCursorPhase2 < previousEventKindOrDeltaCountPhase2; eventCodeOrControllerCursorPhase2++) {
           packedInput.readVariableIntBE((byte) -110);
         }
-        midiByteCount = midiByteCount + (packedInput.position - trackIndexOrDeltaStart);
-        eventCodeOrControllerCursor = packedInput.position;
+        midiByteCount = midiByteCount + (packedInput.position - trackIndexOrDeltaStartPhase2);
+        eventCodeOrControllerCursorPhase3 = packedInput.position;
         controller1Count = 0;
         controller33Count = 0;
         controller7Count = 0;
@@ -358,7 +365,7 @@ final class MusicScore extends IntrusiveNode {
           }
           switchControllerCount++;
         }
-        controllerIndexOrEventCursor = 0;
+        controllerIndexOrEventCursorPhase2 = 0;
         switchControllerCursor = packedInput.position;
         packedInput.position = packedInput.position + switchControllerCount;
         polyPressureCursor = packedInput.position;
@@ -414,7 +421,7 @@ final class MusicScore extends IntrusiveNode {
         ((ByteArrayBuffer) (Object) midiHeaderOutput).writeShortBE(midiFormat, 28695);
         midiOutput.writeShortBE(trackCount, 28695);
         midiOutput.writeShortBE(tickDivision, 28695);
-        packedInput.position = trackIndexOrDeltaStart;
+        packedInput.position = trackIndexOrDeltaStartPhase2;
         channelNumber = 0;
         noteNumber = 0;
         noteOnVelocity = 0;
@@ -423,7 +430,7 @@ final class MusicScore extends IntrusiveNode {
         channelPressure = 0;
         polyPressure = 0;
         controllerValues = new int[128];
-        controllerNumber = 0;
+        controllerNumberPhase2 = 0;
         outputTrackIndex = 0;
         while (true) {
           if (outputTrackIndex >= trackCount) {
@@ -436,8 +443,8 @@ final class MusicScore extends IntrusiveNode {
           while (true) {
             deltaTicks = packedInput.readVariableIntBE((byte) -125);
             midiOutput.writeVariableIntBE((byte) -118, deltaTicks);
-            eventReadIndex = controllerIndexOrEventCursor;
-            controllerIndexOrEventCursor++;
+            eventReadIndex = controllerIndexOrEventCursorPhase2;
+            controllerIndexOrEventCursorPhase2++;
             packedEventCode = packedInput.bytes[eventReadIndex] & 255;
             statusChangedCarrier = (packedEventCode == previousOutputEventKind) ? 0 : 1;
             statusChanged = statusChangedCarrier;
@@ -551,57 +558,57 @@ final class MusicScore extends IntrusiveNode {
             if (statusChanged != 0) {
               midiOutput.writeByte((byte) -19, 176 + channelNumber);
             }
-            controllerReadIndex = eventCodeOrControllerCursor;
-            eventCodeOrControllerCursor++;
-            controllerNumber = controllerNumber + packedInput.bytes[controllerReadIndex] & 127;
-            midiOutput.writeByte((byte) 126, controllerNumber);
-            if (controllerNumber != 0 &&
-                controllerNumber != 32) {
-              if (controllerNumber == 1) {
+            controllerReadIndex = eventCodeOrControllerCursorPhase3;
+            eventCodeOrControllerCursorPhase3++;
+            controllerNumberPhase2 = controllerNumberPhase2 + packedInput.bytes[controllerReadIndex] & 127;
+            midiOutput.writeByte((byte) 126, controllerNumberPhase2);
+            if (controllerNumberPhase2 != 0 &&
+                controllerNumberPhase2 != 32) {
+              if (controllerNumberPhase2 == 1) {
                 controller1ReadIndex = controller1Cursor;
                 controller1Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller1ReadIndex];
-              } else if (controllerNumber == 33) {
+              } else if (controllerNumberPhase2 == 33) {
                 controller33ReadIndex = controller33Cursor;
                 controller33Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller33ReadIndex];
-              } else if (controllerNumber == 7) {
+              } else if (controllerNumberPhase2 == 7) {
                 controller7ReadIndex = controller7Cursor;
                 controller7Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller7ReadIndex];
-              } else if (controllerNumber == 39) {
+              } else if (controllerNumberPhase2 == 39) {
                 controller39ReadIndex = controller39Cursor;
                 controller39Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller39ReadIndex];
-              } else if (controllerNumber == 10) {
+              } else if (controllerNumberPhase2 == 10) {
                 controller10ReadIndex = controller10Cursor;
                 controller10Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller10ReadIndex];
-              } else if (controllerNumber == 42) {
+              } else if (controllerNumberPhase2 == 42) {
                 controller42ReadIndex = controller42Cursor;
                 controller42Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller42ReadIndex];
-              } else if (controllerNumber == 99) {
+              } else if (controllerNumberPhase2 == 99) {
                 controller99ReadIndex = controller99Cursor;
                 controller99Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller99ReadIndex];
-              } else if (controllerNumber == 98) {
+              } else if (controllerNumberPhase2 == 98) {
                 controller98ReadIndex = controller98Cursor;
                 controller98Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller98ReadIndex];
-              } else if (controllerNumber == 101) {
+              } else if (controllerNumberPhase2 == 101) {
                 controller101ReadIndex = controller101Cursor;
                 controller101Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller101ReadIndex];
-              } else if (controllerNumber == 100) {
+              } else if (controllerNumberPhase2 == 100) {
                 controller100ReadIndex = controller100Cursor;
                 controller100Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
-              } else if (controllerNumber != 64 &&
-                  controllerNumber != 65 &&
-                  controllerNumber != 120 &&
-                  controllerNumber != 121 &&
-                  controllerNumber != 123) {
+              } else if (controllerNumberPhase2 != 64 &&
+                  controllerNumberPhase2 != 65 &&
+                  controllerNumberPhase2 != 120 &&
+                  controllerNumberPhase2 != 121 &&
+                  controllerNumberPhase2 != 123) {
                 otherControllerReadIndex = otherControllerCursor;
                 otherControllerCursor++;
                 controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];
@@ -615,8 +622,8 @@ final class MusicScore extends IntrusiveNode {
               programAndBankCursor++;
               controllerValueOrDelta = packedInput.bytes[bankControllerReadIndex];
             }
-            controllerValueOrDelta = controllerValueOrDelta + controllerValues[controllerNumber];
-            controllerValues[controllerNumber] = controllerValueOrDelta;
+            controllerValueOrDelta = controllerValueOrDelta + controllerValues[controllerNumberPhase2];
+            controllerValues[controllerNumberPhase2] = controllerValueOrDelta;
             midiOutput.writeByte((byte) -10, controllerValueOrDelta & 127);
           }
         }

@@ -238,6 +238,8 @@ abstract class SessionGameApplet extends GameApplet {
         java.awt.Dimension containerSize;
         int clientControlFlowGuard;
         java.awt.Container canvasContainer;
+        int idleThresholdOrArchivePendingOrSequenceReadyPhase2;
+        int idleThresholdOrArchivePendingOrSequenceReadyPhase3;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (null != FontLoadingSupport.canvasResizeController) {
           if (InstrumentPatch.activeFullscreenCanvas == null) {
@@ -273,9 +275,9 @@ abstract class SessionGameApplet extends GameApplet {
         if (DebouncedValidationProvider.archiveLoadStatus == -1 ||
               DebouncedValidationProvider.archiveLoadStatus == 0) {
           archiveWasPendingSnapshot = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
-          idleThresholdOrArchivePendingOrSequenceReady = archiveWasPendingSnapshot;
+          idleThresholdOrArchivePendingOrSequenceReadyPhase2 = archiveWasPendingSnapshot;
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
-          if (idleThresholdOrArchivePendingOrSequenceReady != 0 &&
+          if (idleThresholdOrArchivePendingOrSequenceReadyPhase2 != 0 &&
               DebouncedValidationProvider.archiveLoadStatus == 0 &&
               11 == SpriteConstructionSupport.clientScreenStage &&
               !ClientTimingSupport.isClientReadyForSessionActions(73)) {
@@ -433,13 +435,13 @@ abstract class SessionGameApplet extends GameApplet {
           VisualPropertyOverrides.clientBootstrapStage = 13;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 13) {
-          idleThresholdOrArchivePendingOrSequenceReady = 1;
+          idleThresholdOrArchivePendingOrSequenceReadyPhase3 = 1;
           if (null != TextTemplateLookupSupport.bootstrapArchiveLoadSequence) {
             bootstrapSequenceReadySnapshot = (!TextTemplateLookupSupport.bootstrapArchiveLoadSequence.pollLoaded(true)) ? 0 : 1;
-            idleThresholdOrArchivePendingOrSequenceReady = bootstrapSequenceReadySnapshot;
+            idleThresholdOrArchivePendingOrSequenceReadyPhase3 = bootstrapSequenceReadySnapshot;
             HighscoreNameEntry.setLoadingProgress(TextTemplateLookupSupport.bootstrapArchiveLoadSequence.statusText, -2, TextTemplateLookupSupport.bootstrapArchiveLoadSequence.scaledProgress);
           }
-          if (idleThresholdOrArchivePendingOrSequenceReady != 0) {
+          if (idleThresholdOrArchivePendingOrSequenceReadyPhase3 != 0) {
             VisualPropertyOverrides.clientBootstrapStage = 20;
           }
         }

@@ -30,13 +30,14 @@ final class VorbisResidue {
         int[] allocatedClassificationsOrGroupAlias;
         float[] stridedVector;
         float[] contiguousVector;
+        int clearSampleIndexOrClasswordDimensionsPhase2;
         for (clearSampleIndexOrClasswordDimensions = 0; clearSampleIndexOrClasswordDimensions < sampleCount; clearSampleIndexOrClasswordDimensions++) {
           samples[clearSampleIndexOrClasswordDimensions] = 0.0f;
         }
         if (silent) {
           return;
         }
-        clearSampleIndexOrClasswordDimensions = MusicDecoder.codebooks[this.classbookIndex].dimensions;
+        clearSampleIndexOrClasswordDimensionsPhase2 = MusicDecoder.codebooks[this.classbookIndex].dimensions;
         residueSampleSpan = this.end - this.begin;
         partitionCount = residueSampleSpan / this.partitionSize;
         allocatedClassificationsOrGroupAlias = new int[partitionCount];
@@ -47,7 +48,7 @@ final class VorbisResidue {
           while (partitionIndex < partitionCount) {
             if (passIndex == 0) {
               classwordRemainderOrGroupPartitionIndex = MusicDecoder.codebooks[this.classbookIndex].readScalar();
-              for (classwordDimensionIndexOrClassification = clearSampleIndexOrClasswordDimensions - 1; classwordDimensionIndexOrClassification >= 0; classwordDimensionIndexOrClassification--) {
+              for (classwordDimensionIndexOrClassification = clearSampleIndexOrClasswordDimensionsPhase2 - 1; classwordDimensionIndexOrClassification >= 0; classwordDimensionIndexOrClassification--) {
                 if (partitionIndex + classwordDimensionIndexOrClassification < partitionCount) {
                   classificationsAlias[partitionIndex + classwordDimensionIndexOrClassification] = classwordRemainderOrGroupPartitionIndex % this.classificationCount;
                 }
@@ -56,7 +57,7 @@ final class VorbisResidue {
             }
             allocatedClassificationsOrGroupAlias = intermediateClassificationsAlias;
             classwordRemainderOrGroupPartitionIndex = 0;
-            while (classwordRemainderOrGroupPartitionIndex < clearSampleIndexOrClasswordDimensions) {
+            while (classwordRemainderOrGroupPartitionIndex < clearSampleIndexOrClasswordDimensionsPhase2) {
               classwordDimensionIndexOrClassification = allocatedClassificationsOrGroupAlias[partitionIndex];
               passBookId = this.passBookIndices[classwordDimensionIndexOrClassification * 8 + passIndex];
               if (passBookId >= 0) {

@@ -109,6 +109,7 @@ final class ArchiveCatalog {
         int archiveId;
         int unusedClientGuardSnapshot;
         CachedArchiveSource sourceBeforeBackgroundTick = null;
+        int archiveIdPhase2;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         if (null == this.archiveSources) {
           return;
@@ -122,11 +123,11 @@ final class ArchiveCatalog {
         if (methodGuard != -65) {
           ArchiveCatalog.isAsciiLetter('', 15);
         }
-        for (archiveId = 0; archiveId < this.archiveSources.length; archiveId++) {
-          if (null == this.archiveSources[archiveId]) {
+        for (archiveIdPhase2 = 0; archiveIdPhase2 < this.archiveSources.length; archiveIdPhase2++) {
+          if (null == this.archiveSources[archiveIdPhase2]) {
             continue;
           }
-          sourceBeforeBackgroundTick = this.archiveSources[archiveId];
+          sourceBeforeBackgroundTick = this.archiveSources[archiveIdPhase2];
           ((CachedArchiveSource) (Object) sourceBeforeBackgroundTick).advanceBackgroundLoading((byte) -38);
         }
     }

@@ -415,6 +415,18 @@ abstract class ResizableDialog extends FadingDialog {
         int rightCornerDistanceSquared;
         int rightCornerRgb;
         int unusedClientControlSnapshot;
+        int bandHeightPhase2;
+        int bandHeightPhase3;
+        int bandStartGrayPhase2;
+        int bandStartGrayPhase3;
+        int bandEndGrayPhase2;
+        int bandEndGrayPhase3;
+        int bandRowIndexPhase2;
+        int bandRowIndexPhase3;
+        int rasterYPhase2;
+        int rasterYPhase3;
+        int rowGrayOrRgbPhase2;
+        int rowGrayOrRgbPhase3;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         SoftwareRasterizer.fillVerticalGradient(x + 6, y + 35, -12 + this.widgetWidth, -40 + this.widgetHeight, 2105376, 0);
         bandStartGray = 211;
@@ -478,18 +490,18 @@ abstract class ResizableDialog extends FadingDialog {
           rasterY++;
           bandRowIndex++;
         }
-        bandHeight = 22;
-        bandStartGray = 194;
-        bandEndGray = 169;
-        bandRowIndex = 0;
-        rasterY = 35 + y;
-        while (bandRowIndex < bandHeight) {
-          rowGrayOrRgb = bandStartGray + (-bandStartGray + bandEndGray) * bandRowIndex / bandHeight;
-          rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 8 | rowGrayOrRgb << 16);
-          SoftwareRasterizer.drawHorizontalLine(x, rasterY, 6, rowGrayOrRgb);
-          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + x - 6, rasterY, 6, rowGrayOrRgb);
-          bandRowIndex++;
-          rasterY++;
+        bandHeightPhase2 = 22;
+        bandStartGrayPhase2 = 194;
+        bandEndGrayPhase2 = 169;
+        bandRowIndexPhase2 = 0;
+        rasterYPhase2 = 35 + y;
+        while (bandRowIndexPhase2 < bandHeightPhase2) {
+          rowGrayOrRgbPhase2 = bandStartGrayPhase2 + (-bandStartGrayPhase2 + bandEndGrayPhase2) * bandRowIndexPhase2 / bandHeightPhase2;
+          rowGrayOrRgbPhase2 = rowGrayOrRgbPhase2 | (rowGrayOrRgbPhase2 << 8 | rowGrayOrRgbPhase2 << 16);
+          SoftwareRasterizer.drawHorizontalLine(x, rasterYPhase2, 6, rowGrayOrRgbPhase2);
+          SoftwareRasterizer.drawHorizontalLine(this.widgetWidth + x - 6, rasterYPhase2, 6, rowGrayOrRgbPhase2);
+          bandRowIndexPhase2++;
+          rasterYPhase2++;
         }
         AvatarFeedbackSupport.grayJagexLogoSprite.draw(-90 + this.widgetWidth + x, 10 + y);
         if (methodGuard != 20) {
@@ -497,18 +509,18 @@ abstract class ResizableDialog extends FadingDialog {
         }
         InstrumentPatch.drawHorizontalThreePartStrip(RasterTargetRestoreSupport.dialogTopFrameSprites, -10 + this.widgetWidth, 35 + y, 5 + x, (byte) 107);
         InstrumentPatch.drawHorizontalThreePartStrip(UnderlinedButtonRenderer.frameBottomSprites, this.widgetWidth, -22 + (this.widgetHeight + y), x, (byte) 107);
-        bandHeight = this.widgetHeight - 79;
-        bandStartGray = 169;
-        bandEndGray = 127;
-        bandRowIndex = 0;
-        rasterY = y + 57;
-        while (bandRowIndex < bandHeight) {
-          rowGrayOrRgb = bandRowIndex * (bandEndGray - bandStartGray) / bandHeight + bandStartGray;
-          rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 16 | rowGrayOrRgb << 8);
-          SoftwareRasterizer.drawHorizontalLine(x, rasterY, 6, rowGrayOrRgb);
-          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + x), rasterY, 6, rowGrayOrRgb);
-          rasterY++;
-          bandRowIndex++;
+        bandHeightPhase3 = this.widgetHeight - 79;
+        bandStartGrayPhase3 = 169;
+        bandEndGrayPhase3 = 127;
+        bandRowIndexPhase3 = 0;
+        rasterYPhase3 = y + 57;
+        while (bandRowIndexPhase3 < bandHeightPhase3) {
+          rowGrayOrRgbPhase3 = bandRowIndexPhase3 * (bandEndGrayPhase3 - bandStartGrayPhase3) / bandHeightPhase3 + bandStartGrayPhase3;
+          rowGrayOrRgbPhase3 = rowGrayOrRgbPhase3 | (rowGrayOrRgbPhase3 << 16 | rowGrayOrRgbPhase3 << 8);
+          SoftwareRasterizer.drawHorizontalLine(x, rasterYPhase3, 6, rowGrayOrRgbPhase3);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (this.widgetWidth + x), rasterYPhase3, 6, rowGrayOrRgbPhase3);
+          rasterYPhase3++;
+          bandRowIndexPhase3++;
         }
     }
 

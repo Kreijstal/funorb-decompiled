@@ -594,6 +594,18 @@ final class MidiPcmStream extends PcmStream {
         int firstDataByte;
         int secondDataByte;
         int selectedParameter;
+        int channelIndexPhase2;
+        int channelIndexPhase3;
+        int channelIndexPhase4;
+        int channelIndexPhase5;
+        int firstDataBytePhase2;
+        int firstDataBytePhase3;
+        int firstDataBytePhase4;
+        int firstDataBytePhase5;
+        int secondDataBytePhase2;
+        int secondDataBytePhase3;
+        int secondDataBytePhase4;
+        int selectedParameterPhase2;
         if (methodGuard != 38) {
           return;
         }
@@ -606,40 +618,40 @@ final class MidiPcmStream extends PcmStream {
           return;
         }
         if (statusKind == 144) {
-          channelIndex = packedEvent & 15;
-          firstDataByte = (32525 & packedEvent) >> 8;
-          secondDataByte = 127 & packedEvent >> 16;
-          if (secondDataByte > 0) {
-            this.startNote(-1, channelIndex, secondDataByte, firstDataByte);
+          channelIndexPhase2 = packedEvent & 15;
+          firstDataBytePhase2 = (32525 & packedEvent) >> 8;
+          secondDataBytePhase2 = 127 & packedEvent >> 16;
+          if (secondDataBytePhase2 > 0) {
+            this.startNote(-1, channelIndexPhase2, secondDataBytePhase2, firstDataBytePhase2);
           } else {
-            this.releaseNote(23327, firstDataByte, 64, channelIndex);
+            this.releaseNote(23327, firstDataBytePhase2, 64, channelIndexPhase2);
           }
           return;
         }
         if (statusKind == 160) {
-          channelIndex = 15 & packedEvent;
-          firstDataByte = packedEvent >> 8 & 127;
-          secondDataByte = (8370933 & packedEvent) >> 16;
-          this.handlePolyphonicPressureStub(-40, secondDataByte, firstDataByte, channelIndex);
+          channelIndexPhase3 = 15 & packedEvent;
+          firstDataBytePhase3 = packedEvent >> 8 & 127;
+          secondDataBytePhase3 = (8370933 & packedEvent) >> 16;
+          this.handlePolyphonicPressureStub(-40, secondDataBytePhase3, firstDataBytePhase3, channelIndexPhase3);
           return;
         }
         if (statusKind != 176) {
           if (192 == statusKind) {
-            channelIndex = packedEvent & 15;
-            firstDataByte = (32632 & packedEvent) >> 8;
-            this.selectChannelInstrument(channelIndex, methodGuard - 167, firstDataByte + this.channelBankOffsets[channelIndex]);
+            channelIndexPhase4 = packedEvent & 15;
+            firstDataBytePhase4 = (32632 & packedEvent) >> 8;
+            this.selectChannelInstrument(channelIndexPhase4, methodGuard - 167, firstDataBytePhase4 + this.channelBankOffsets[channelIndexPhase4]);
             return;
           }
           if (statusKind == 208) {
-            channelIndex = packedEvent & 15;
-            firstDataByte = (32669 & packedEvent) >> 8;
-            this.handleChannelPressureStub(firstDataByte, methodGuard ^ -2858, channelIndex);
+            channelIndexPhase4 = packedEvent & 15;
+            firstDataBytePhase4 = (32669 & packedEvent) >> 8;
+            this.handleChannelPressureStub(firstDataBytePhase4, methodGuard ^ -2858, channelIndexPhase4);
             return;
           }
           if (statusKind == 224) {
-            channelIndex = packedEvent & 15;
-            firstDataByte = (packedEvent >> 9 & 16256) + ((32673 & packedEvent) >> 8);
-            this.setChannelPitchBend(-108, firstDataByte, channelIndex);
+            channelIndexPhase4 = packedEvent & 15;
+            firstDataBytePhase4 = (packedEvent >> 9 & 16256) + ((32673 & packedEvent) >> 8);
+            this.setChannelPitchBend(-108, firstDataBytePhase4, channelIndexPhase4);
             return;
           }
           statusKind = 255 & packedEvent;
@@ -649,112 +661,112 @@ final class MidiPcmStream extends PcmStream {
           this.resetSynthesisState(true, methodGuard ^ 2097113);
           return;
         }
-        channelIndex = 15 & packedEvent;
-        firstDataByte = (packedEvent & 32577) >> 8;
-        secondDataByte = packedEvent >> 16 & 127;
-        if (0 == firstDataByte) {
-          this.channelBankOffsets[channelIndex] = (secondDataByte << 14) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndex], -2080769);
+        channelIndexPhase5 = 15 & packedEvent;
+        firstDataBytePhase5 = (packedEvent & 32577) >> 8;
+        secondDataBytePhase4 = packedEvent >> 16 & 127;
+        if (0 == firstDataBytePhase5) {
+          this.channelBankOffsets[channelIndexPhase5] = (secondDataBytePhase4 << 14) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndexPhase5], -2080769);
         }
-        if (firstDataByte == 32) {
-          this.channelBankOffsets[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndex], -16257);
+        if (firstDataBytePhase5 == 32) {
+          this.channelBankOffsets[channelIndexPhase5] = (secondDataBytePhase4 << 7) + ProxySocketConnector.andInt(this.channelBankOffsets[channelIndexPhase5], -16257);
         }
-        if (firstDataByte == 1) {
-          this.channelModulation[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(this.channelModulation[channelIndex], -16257);
+        if (firstDataBytePhase5 == 1) {
+          this.channelModulation[channelIndexPhase5] = (secondDataBytePhase4 << 7) + ProxySocketConnector.andInt(this.channelModulation[channelIndexPhase5], -16257);
         }
-        if (33 == firstDataByte) {
-          this.channelModulation[channelIndex] = secondDataByte + ProxySocketConnector.andInt(-128, this.channelModulation[channelIndex]);
+        if (33 == firstDataBytePhase5) {
+          this.channelModulation[channelIndexPhase5] = secondDataBytePhase4 + ProxySocketConnector.andInt(-128, this.channelModulation[channelIndexPhase5]);
         }
-        if (firstDataByte == 5) {
-          this.channelPortamentoTime[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelPortamentoTime[channelIndex]) + (secondDataByte << 7);
+        if (firstDataBytePhase5 == 5) {
+          this.channelPortamentoTime[channelIndexPhase5] = ProxySocketConnector.andInt(-16257, this.channelPortamentoTime[channelIndexPhase5]) + (secondDataBytePhase4 << 7);
         }
-        if (firstDataByte == 37) {
-          this.channelPortamentoTime[channelIndex] = ProxySocketConnector.andInt(-128, this.channelPortamentoTime[channelIndex]) + secondDataByte;
+        if (firstDataBytePhase5 == 37) {
+          this.channelPortamentoTime[channelIndexPhase5] = ProxySocketConnector.andInt(-128, this.channelPortamentoTime[channelIndexPhase5]) + secondDataBytePhase4;
         }
-        if (firstDataByte == 7) {
-          this.channelVolume[channelIndex] = ProxySocketConnector.andInt(this.channelVolume[channelIndex], -16257) + (secondDataByte << 7);
+        if (firstDataBytePhase5 == 7) {
+          this.channelVolume[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelVolume[channelIndexPhase5], -16257) + (secondDataBytePhase4 << 7);
         }
-        if (firstDataByte == 39) {
-          this.channelVolume[channelIndex] = ProxySocketConnector.andInt(-128, this.channelVolume[channelIndex]) + secondDataByte;
+        if (firstDataBytePhase5 == 39) {
+          this.channelVolume[channelIndexPhase5] = ProxySocketConnector.andInt(-128, this.channelVolume[channelIndexPhase5]) + secondDataBytePhase4;
         }
-        if (firstDataByte == 10) {
-          this.channelPan[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelPan[channelIndex]) + (secondDataByte << 7);
+        if (firstDataBytePhase5 == 10) {
+          this.channelPan[channelIndexPhase5] = ProxySocketConnector.andInt(-16257, this.channelPan[channelIndexPhase5]) + (secondDataBytePhase4 << 7);
         }
-        if (firstDataByte == 42) {
-          this.channelPan[channelIndex] = secondDataByte + ProxySocketConnector.andInt(-128, this.channelPan[channelIndex]);
+        if (firstDataBytePhase5 == 42) {
+          this.channelPan[channelIndexPhase5] = secondDataBytePhase4 + ProxySocketConnector.andInt(-128, this.channelPan[channelIndexPhase5]);
         }
-        if (firstDataByte == 11) {
-          this.channelExpression[channelIndex] = (secondDataByte << 7) + ProxySocketConnector.andInt(-16257, this.channelExpression[channelIndex]);
+        if (firstDataBytePhase5 == 11) {
+          this.channelExpression[channelIndexPhase5] = (secondDataBytePhase4 << 7) + ProxySocketConnector.andInt(-16257, this.channelExpression[channelIndexPhase5]);
         }
-        if (firstDataByte == 43) {
-          this.channelExpression[channelIndex] = ProxySocketConnector.andInt(-128, this.channelExpression[channelIndex]) + secondDataByte;
+        if (firstDataBytePhase5 == 43) {
+          this.channelExpression[channelIndexPhase5] = ProxySocketConnector.andInt(-128, this.channelExpression[channelIndexPhase5]) + secondDataBytePhase4;
         }
-        if (firstDataByte == 64) {
-          if (secondDataByte < 64) {
-            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -2);
+        if (firstDataBytePhase5 == 64) {
+          if (secondDataBytePhase4 < 64) {
+            this.channelFlags[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelFlags[channelIndexPhase5], -2);
           } else {
-            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 1);
+            this.channelFlags[channelIndexPhase5] = SessionInstanceState.orInt(this.channelFlags[channelIndexPhase5], 1);
           }
         }
-        if (firstDataByte == 65) {
-          if (64 <= secondDataByte) {
-            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 2);
+        if (firstDataBytePhase5 == 65) {
+          if (64 <= secondDataBytePhase4) {
+            this.channelFlags[channelIndexPhase5] = SessionInstanceState.orInt(this.channelFlags[channelIndexPhase5], 2);
           } else {
-            this.releaseUnmappedPortamentoNotes((byte) 39, channelIndex);
-            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -3);
+            this.releaseUnmappedPortamentoNotes((byte) 39, channelIndexPhase5);
+            this.channelFlags[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelFlags[channelIndexPhase5], -3);
           }
         }
-        if (firstDataByte == 99) {
-          this.channelSelectedParameter[channelIndex] = ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndex], 127) + (secondDataByte << 7);
+        if (firstDataBytePhase5 == 99) {
+          this.channelSelectedParameter[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndexPhase5], 127) + (secondDataBytePhase4 << 7);
         }
-        if (firstDataByte == 98) {
-          this.channelSelectedParameter[channelIndex] = secondDataByte + ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndex]);
+        if (firstDataBytePhase5 == 98) {
+          this.channelSelectedParameter[channelIndexPhase5] = secondDataBytePhase4 + ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndexPhase5]);
         }
-        if (101 == firstDataByte) {
-          this.channelSelectedParameter[channelIndex] = (secondDataByte << 7) + (ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndex], 127) + 16384);
+        if (101 == firstDataBytePhase5) {
+          this.channelSelectedParameter[channelIndexPhase5] = (secondDataBytePhase4 << 7) + (ProxySocketConnector.andInt(this.channelSelectedParameter[channelIndexPhase5], 127) + 16384);
         }
-        if (firstDataByte == 100) {
-          this.channelSelectedParameter[channelIndex] = 16384 + (ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndex]) + secondDataByte);
+        if (firstDataBytePhase5 == 100) {
+          this.channelSelectedParameter[channelIndexPhase5] = 16384 + (ProxySocketConnector.andInt(16256, this.channelSelectedParameter[channelIndexPhase5]) + secondDataBytePhase4);
         }
-        if (120 == firstDataByte) {
-          this.fadeOutChannelNotes(100, channelIndex);
+        if (120 == firstDataBytePhase5) {
+          this.fadeOutChannelNotes(100, channelIndexPhase5);
         }
-        if (firstDataByte == 121) {
-          this.resetChannelControllers((byte) -72, channelIndex);
+        if (firstDataBytePhase5 == 121) {
+          this.resetChannelControllers((byte) -72, channelIndexPhase5);
         }
-        if (firstDataByte == 123) {
-          this.releaseChannelNotes(channelIndex, methodGuard ^ 15421);
+        if (firstDataBytePhase5 == 123) {
+          this.releaseChannelNotes(channelIndexPhase5, methodGuard ^ 15421);
         }
-        if (firstDataByte == 6) {
-          selectedParameter = this.channelSelectedParameter[channelIndex];
+        if (firstDataBytePhase5 == 6) {
+          selectedParameter = this.channelSelectedParameter[channelIndexPhase5];
           if (16384 == selectedParameter) {
-            this.channelPitchBendSensitivity[channelIndex] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndex], -16257) + (secondDataByte << 7);
+            this.channelPitchBendSensitivity[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndexPhase5], -16257) + (secondDataBytePhase4 << 7);
           }
         }
-        if (firstDataByte == 38) {
-          selectedParameter = this.channelSelectedParameter[channelIndex];
-          if (selectedParameter == 16384) {
-            this.channelPitchBendSensitivity[channelIndex] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndex], -128) + secondDataByte;
+        if (firstDataBytePhase5 == 38) {
+          selectedParameterPhase2 = this.channelSelectedParameter[channelIndexPhase5];
+          if (selectedParameterPhase2 == 16384) {
+            this.channelPitchBendSensitivity[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelPitchBendSensitivity[channelIndexPhase5], -128) + secondDataBytePhase4;
           }
         }
-        if (16 == firstDataByte) {
-          this.channelSampleOffsets[channelIndex] = ProxySocketConnector.andInt(-16257, this.channelSampleOffsets[channelIndex]) + (secondDataByte << 7);
+        if (16 == firstDataBytePhase5) {
+          this.channelSampleOffsets[channelIndexPhase5] = ProxySocketConnector.andInt(-16257, this.channelSampleOffsets[channelIndexPhase5]) + (secondDataBytePhase4 << 7);
         }
-        if (48 == firstDataByte) {
-          this.channelSampleOffsets[channelIndex] = secondDataByte + ProxySocketConnector.andInt(this.channelSampleOffsets[channelIndex], -128);
+        if (48 == firstDataBytePhase5) {
+          this.channelSampleOffsets[channelIndexPhase5] = secondDataBytePhase4 + ProxySocketConnector.andInt(this.channelSampleOffsets[channelIndexPhase5], -128);
         }
-        if (firstDataByte == 81) {
-          if (secondDataByte >= 64) {
-            this.channelFlags[channelIndex] = SessionInstanceState.orInt(this.channelFlags[channelIndex], 4);
+        if (firstDataBytePhase5 == 81) {
+          if (secondDataBytePhase4 >= 64) {
+            this.channelFlags[channelIndexPhase5] = SessionInstanceState.orInt(this.channelFlags[channelIndexPhase5], 4);
           } else {
-            this.resetChannelRetriggerPhases(channelIndex, (byte) 67);
-            this.channelFlags[channelIndex] = ProxySocketConnector.andInt(this.channelFlags[channelIndex], -5);
+            this.resetChannelRetriggerPhases(channelIndexPhase5, (byte) 67);
+            this.channelFlags[channelIndexPhase5] = ProxySocketConnector.andInt(this.channelFlags[channelIndexPhase5], -5);
           }
         }
-        if (firstDataByte == 17) {
-          this.setChannelRetriggerControl(-118, (secondDataByte << 7) + (this.channelRetriggerControl[channelIndex] & -16257), channelIndex);
+        if (firstDataBytePhase5 == 17) {
+          this.setChannelRetriggerControl(-118, (secondDataBytePhase4 << 7) + (this.channelRetriggerControl[channelIndexPhase5] & -16257), channelIndexPhase5);
         }
-        if (firstDataByte == 49) {
-          this.setChannelRetriggerControl(-102, (-128 & this.channelRetriggerControl[channelIndex]) + secondDataByte, channelIndex);
+        if (firstDataBytePhase5 == 49) {
+          this.setChannelRetriggerControl(-102, (-128 & this.channelRetriggerControl[channelIndexPhase5]) + secondDataBytePhase4, channelIndexPhase5);
         }
         return;
     }

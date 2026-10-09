@@ -118,13 +118,28 @@ final class SynthesizedSoundInstrument {
         int volumeModulationScale;
         int baseVolumeModulationStep;
         int volumeModulationPhase;
-        int indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue;
-        int pitchOrGateThresholdOrEchoIndexOrForwardOrder;
-        int volumeOrMuteFlagOrFeedbackOrder;
-        int modulationValueOrOscillatorOrSampleIndex;
-        int amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd;
-        int unmuteEnvelopeValueOrFilteredSample;
+        int oscillatorSetupIndex;
+        int pitchEnvelopeValue;
+        int volumeEnvelopeValue;
+        int modulationValueOrOscillatorIndex;
+        int modulationAmplitudeOrSampleOffset;
+        int unmuteEnvelopeValue;
         int filterCoefficientIndex;
+        int sampleIndex;
+        int gateCounterQ8;
+        int echoDelaySamples;
+        int filterEnvelopeValue;
+        int clippingSampleIndex;
+        int gateThreshold;
+        int echoSampleIndex;
+        int forwardFilterOrder;
+        int muteFlag;
+        int feedbackFilterOrder;
+        int gatedSampleIndex;
+        int filterSampleIndex;
+        int muteEnvelopeValue;
+        int filterChunkEnd;
+        int filteredSample;
         ArrayOperations.clearInts(sampleBuffer, 0, sampleCount);
         if (durationMillis < 10) {
           return sampleBuffer;
@@ -150,149 +165,149 @@ final class SynthesizedSoundInstrument {
           volumeModulationScale = (int)((double)(this.volumeModulationEnvelope.endValue - this.volumeModulationEnvelope.startValue) * 32.768 / samplesPerMillisecond);
           baseVolumeModulationStep = (int)((double)this.volumeModulationEnvelope.startValue * 32.768 / samplesPerMillisecond);
         }
-        for (indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = 0; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue < 5; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue++) {
-          if (this.oscillatorVolumePercent[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] == 0) {
+        for (oscillatorSetupIndex = 0; oscillatorSetupIndex < 5; oscillatorSetupIndex++) {
+          if (this.oscillatorVolumePercent[oscillatorSetupIndex] == 0) {
             continue;
           }
-          oscillatorPhases[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = 0;
-          oscillatorDelaySamples[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = (int)((double)this.oscillatorDelaysMillis[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] * samplesPerMillisecond);
-          oscillatorVolumeScales[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = (this.oscillatorVolumePercent[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] << 14) / 100;
-          oscillatorPitchSteps[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = (int)((double)(this.pitchEnvelope.endValue - this.pitchEnvelope.startValue) * 32.768 * Math.pow(1.0057929410678534, (double)this.oscillatorPitchOffsets[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue]) / samplesPerMillisecond);
-          oscillatorBasePitchSteps[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = (int)((double)this.pitchEnvelope.startValue * 32.768 / samplesPerMillisecond);
+          oscillatorPhases[oscillatorSetupIndex] = 0;
+          oscillatorDelaySamples[oscillatorSetupIndex] = (int)((double)this.oscillatorDelaysMillis[oscillatorSetupIndex] * samplesPerMillisecond);
+          oscillatorVolumeScales[oscillatorSetupIndex] = (this.oscillatorVolumePercent[oscillatorSetupIndex] << 14) / 100;
+          oscillatorPitchSteps[oscillatorSetupIndex] = (int)((double)(this.pitchEnvelope.endValue - this.pitchEnvelope.startValue) * 32.768 * Math.pow(1.0057929410678534, (double)this.oscillatorPitchOffsets[oscillatorSetupIndex]) / samplesPerMillisecond);
+          oscillatorBasePitchSteps[oscillatorSetupIndex] = (int)((double)this.pitchEnvelope.startValue * 32.768 / samplesPerMillisecond);
         }
-        for (indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = 0; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue < sampleCount; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue++) {
-          pitchOrGateThresholdOrEchoIndexOrForwardOrder = this.pitchEnvelope.advance(sampleCount);
-          volumeOrMuteFlagOrFeedbackOrder = this.volumeEnvelope.advance(sampleCount);
+        for (sampleIndex = 0; sampleIndex < sampleCount; sampleIndex++) {
+          pitchEnvelopeValue = this.pitchEnvelope.advance(sampleCount);
+          volumeEnvelopeValue = this.volumeEnvelope.advance(sampleCount);
           if (this.pitchModulationEnvelope != null) {
-            modulationValueOrOscillatorOrSampleIndex = this.pitchModulationEnvelope.advance(sampleCount);
-            amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = this.pitchModulationAmplitudeEnvelope.advance(sampleCount);
-            pitchOrGateThresholdOrEchoIndexOrForwardOrder = pitchOrGateThresholdOrEchoIndexOrForwardOrder + (this.evaluateWaveform(pitchModulationPhase, amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd, this.pitchModulationEnvelope.waveform) >> 1);
-            pitchModulationPhase = pitchModulationPhase + ((modulationValueOrOscillatorOrSampleIndex * pitchModulationScale >> 16) + basePitchModulationStep);
+            modulationValueOrOscillatorIndex = this.pitchModulationEnvelope.advance(sampleCount);
+            modulationAmplitudeOrSampleOffset = this.pitchModulationAmplitudeEnvelope.advance(sampleCount);
+            pitchEnvelopeValue = pitchEnvelopeValue + (this.evaluateWaveform(pitchModulationPhase, modulationAmplitudeOrSampleOffset, this.pitchModulationEnvelope.waveform) >> 1);
+            pitchModulationPhase = pitchModulationPhase + ((modulationValueOrOscillatorIndex * pitchModulationScale >> 16) + basePitchModulationStep);
           }
           if (this.volumeModulationEnvelope != null) {
-            modulationValueOrOscillatorOrSampleIndex = this.volumeModulationEnvelope.advance(sampleCount);
-            amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = this.volumeModulationAmplitudeEnvelope.advance(sampleCount);
-            volumeOrMuteFlagOrFeedbackOrder = volumeOrMuteFlagOrFeedbackOrder * ((this.evaluateWaveform(volumeModulationPhase, amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd, this.volumeModulationEnvelope.waveform) >> 1) + 32768) >> 15;
-            volumeModulationPhase = volumeModulationPhase + ((modulationValueOrOscillatorOrSampleIndex * volumeModulationScale >> 16) + baseVolumeModulationStep);
+            modulationValueOrOscillatorIndex = this.volumeModulationEnvelope.advance(sampleCount);
+            modulationAmplitudeOrSampleOffset = this.volumeModulationAmplitudeEnvelope.advance(sampleCount);
+            volumeEnvelopeValue = volumeEnvelopeValue * ((this.evaluateWaveform(volumeModulationPhase, modulationAmplitudeOrSampleOffset, this.volumeModulationEnvelope.waveform) >> 1) + 32768) >> 15;
+            volumeModulationPhase = volumeModulationPhase + ((modulationValueOrOscillatorIndex * volumeModulationScale >> 16) + baseVolumeModulationStep);
           }
-          for (modulationValueOrOscillatorOrSampleIndex = 0; modulationValueOrOscillatorOrSampleIndex < 5; modulationValueOrOscillatorOrSampleIndex++) {
-            if (this.oscillatorVolumePercent[modulationValueOrOscillatorOrSampleIndex] == 0) {
+          for (modulationValueOrOscillatorIndex = 0; modulationValueOrOscillatorIndex < 5; modulationValueOrOscillatorIndex++) {
+            if (this.oscillatorVolumePercent[modulationValueOrOscillatorIndex] == 0) {
               continue;
             }
-            amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue + oscillatorDelaySamples[modulationValueOrOscillatorOrSampleIndex];
-            if (amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd >= sampleCount) {
+            modulationAmplitudeOrSampleOffset = sampleIndex + oscillatorDelaySamples[modulationValueOrOscillatorIndex];
+            if (modulationAmplitudeOrSampleOffset >= sampleCount) {
               continue;
             }
-            sampleBuffer[amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd] = sampleBuffer[amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd] + this.evaluateWaveform(oscillatorPhases[modulationValueOrOscillatorOrSampleIndex], volumeOrMuteFlagOrFeedbackOrder * oscillatorVolumeScales[modulationValueOrOscillatorOrSampleIndex] >> 15, this.pitchEnvelope.waveform);
-            oscillatorPhases[modulationValueOrOscillatorOrSampleIndex] = oscillatorPhases[modulationValueOrOscillatorOrSampleIndex] + ((pitchOrGateThresholdOrEchoIndexOrForwardOrder * oscillatorPitchSteps[modulationValueOrOscillatorOrSampleIndex] >> 16) + oscillatorBasePitchSteps[modulationValueOrOscillatorOrSampleIndex]);
+            sampleBuffer[modulationAmplitudeOrSampleOffset] = sampleBuffer[modulationAmplitudeOrSampleOffset] + this.evaluateWaveform(oscillatorPhases[modulationValueOrOscillatorIndex], volumeEnvelopeValue * oscillatorVolumeScales[modulationValueOrOscillatorIndex] >> 15, this.pitchEnvelope.waveform);
+            oscillatorPhases[modulationValueOrOscillatorIndex] = oscillatorPhases[modulationValueOrOscillatorIndex] + ((pitchEnvelopeValue * oscillatorPitchSteps[modulationValueOrOscillatorIndex] >> 16) + oscillatorBasePitchSteps[modulationValueOrOscillatorIndex]);
           }
         }
         if (this.muteTimingEnvelope != null) {
           this.muteTimingEnvelope.reset();
           this.unmuteTimingEnvelope.reset();
-          indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = 0;
-          pitchOrGateThresholdOrEchoIndexOrForwardOrder = 0;
-          volumeOrMuteFlagOrFeedbackOrder = 1;
-          for (modulationValueOrOscillatorOrSampleIndex = 0; modulationValueOrOscillatorOrSampleIndex < sampleCount; modulationValueOrOscillatorOrSampleIndex++) {
-            amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = this.muteTimingEnvelope.advance(sampleCount);
-            unmuteEnvelopeValueOrFilteredSample = this.unmuteTimingEnvelope.advance(sampleCount);
-            if (volumeOrMuteFlagOrFeedbackOrder == 0) {
-              pitchOrGateThresholdOrEchoIndexOrForwardOrder = this.muteTimingEnvelope.startValue + ((this.muteTimingEnvelope.endValue - this.muteTimingEnvelope.startValue) * unmuteEnvelopeValueOrFilteredSample >> 8);
+          gateCounterQ8 = 0;
+          gateThreshold = 0;
+          muteFlag = 1;
+          for (gatedSampleIndex = 0; gatedSampleIndex < sampleCount; gatedSampleIndex++) {
+            muteEnvelopeValue = this.muteTimingEnvelope.advance(sampleCount);
+            unmuteEnvelopeValue = this.unmuteTimingEnvelope.advance(sampleCount);
+            if (muteFlag == 0) {
+              gateThreshold = this.muteTimingEnvelope.startValue + ((this.muteTimingEnvelope.endValue - this.muteTimingEnvelope.startValue) * unmuteEnvelopeValue >> 8);
             } else {
-              pitchOrGateThresholdOrEchoIndexOrForwardOrder = this.muteTimingEnvelope.startValue + ((this.muteTimingEnvelope.endValue - this.muteTimingEnvelope.startValue) * amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd >> 8);
+              gateThreshold = this.muteTimingEnvelope.startValue + ((this.muteTimingEnvelope.endValue - this.muteTimingEnvelope.startValue) * muteEnvelopeValue >> 8);
             }
-            indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue += 256;
-            if (indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue >= pitchOrGateThresholdOrEchoIndexOrForwardOrder) {
-              indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = 0;
-              nextMuteFlag = (volumeOrMuteFlagOrFeedbackOrder != 0) ? 0 : 1;
-              volumeOrMuteFlagOrFeedbackOrder = nextMuteFlag;
+            gateCounterQ8 += 256;
+            if (gateCounterQ8 >= gateThreshold) {
+              gateCounterQ8 = 0;
+              nextMuteFlag = (muteFlag != 0) ? 0 : 1;
+              muteFlag = nextMuteFlag;
             }
-            if (volumeOrMuteFlagOrFeedbackOrder == 0) {
+            if (muteFlag == 0) {
               continue;
             }
-            sampleBuffer[modulationValueOrOscillatorOrSampleIndex] = 0;
+            sampleBuffer[gatedSampleIndex] = 0;
           }
         }
         if (this.echoDelayMillis > 0 &&
             this.echoDecayPercent > 0) {
-          indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = (int)((double)this.echoDelayMillis * samplesPerMillisecond);
-          for (pitchOrGateThresholdOrEchoIndexOrForwardOrder = indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue; pitchOrGateThresholdOrEchoIndexOrForwardOrder < sampleCount; pitchOrGateThresholdOrEchoIndexOrForwardOrder++) {
-            sampleBuffer[pitchOrGateThresholdOrEchoIndexOrForwardOrder] = sampleBuffer[pitchOrGateThresholdOrEchoIndexOrForwardOrder] + sampleBuffer[pitchOrGateThresholdOrEchoIndexOrForwardOrder - indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] * this.echoDecayPercent / 100;
+          echoDelaySamples = (int)((double)this.echoDelayMillis * samplesPerMillisecond);
+          for (echoSampleIndex = echoDelaySamples; echoSampleIndex < sampleCount; echoSampleIndex++) {
+            sampleBuffer[echoSampleIndex] = sampleBuffer[echoSampleIndex] + sampleBuffer[echoSampleIndex - echoDelaySamples] * this.echoDecayPercent / 100;
           }
         }
         {
           if (!(this.filter.pairCounts[0] <= 0) ||
               !(this.filter.pairCounts[1] <= 0)) {
             this.filterEnvelope.reset();
-            indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-            pitchOrGateThresholdOrEchoIndexOrForwardOrder = this.filter.computeCoefficients(0, (float)indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue / 65536.0f);
-            volumeOrMuteFlagOrFeedbackOrder = this.filter.computeCoefficients(1, (float)indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue / 65536.0f);
-            if (sampleCount >= pitchOrGateThresholdOrEchoIndexOrForwardOrder + volumeOrMuteFlagOrFeedbackOrder) {
-              modulationValueOrOscillatorOrSampleIndex = 0;
-              amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = volumeOrMuteFlagOrFeedbackOrder;
-              if (amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd > sampleCount - pitchOrGateThresholdOrEchoIndexOrForwardOrder) {
-                amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = sampleCount - pitchOrGateThresholdOrEchoIndexOrForwardOrder;
+            filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+            forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
+            feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
+            if (sampleCount >= forwardFilterOrder + feedbackFilterOrder) {
+              filterSampleIndex = 0;
+              filterChunkEnd = feedbackFilterOrder;
+              if (filterChunkEnd > sampleCount - forwardFilterOrder) {
+                filterChunkEnd = sampleCount - forwardFilterOrder;
               }
-              while (modulationValueOrOscillatorOrSampleIndex < amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd) {
-                unmuteEnvelopeValueOrFilteredSample = (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < pitchOrGateThresholdOrEchoIndexOrForwardOrder; filterCoefficientIndex++) {
-                  unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample + (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+              while (filterSampleIndex < filterChunkEnd) {
+                filteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+                for (filterCoefficientIndex = 0; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
+                  filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
                 }
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < modulationValueOrOscillatorOrSampleIndex; filterCoefficientIndex++) {
-                  unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample - (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                for (filterCoefficientIndex = 0; filterCoefficientIndex < filterSampleIndex; filterCoefficientIndex++) {
+                  filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
                 }
-                sampleBuffer[modulationValueOrOscillatorOrSampleIndex] = unmuteEnvelopeValueOrFilteredSample;
-                indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-                modulationValueOrOscillatorOrSampleIndex++;
+                sampleBuffer[filterSampleIndex] = filteredSample;
+                filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+                filterSampleIndex++;
               }
-              amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = 128;
+              filterChunkEnd = 128;
               while (true) {
-                if (amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd > sampleCount - pitchOrGateThresholdOrEchoIndexOrForwardOrder) {
-                  amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd = sampleCount - pitchOrGateThresholdOrEchoIndexOrForwardOrder;
+                if (filterChunkEnd > sampleCount - forwardFilterOrder) {
+                  filterChunkEnd = sampleCount - forwardFilterOrder;
                 }
-                while (modulationValueOrOscillatorOrSampleIndex < amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd) {
-                  unmuteEnvelopeValueOrFilteredSample = (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                  for (filterCoefficientIndex = 0; filterCoefficientIndex < pitchOrGateThresholdOrEchoIndexOrForwardOrder; filterCoefficientIndex++) {
-                    unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample + (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+                while (filterSampleIndex < filterChunkEnd) {
+                  filteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+                  for (filterCoefficientIndex = 0; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
+                    filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
                   }
-                  for (filterCoefficientIndex = 0; filterCoefficientIndex < volumeOrMuteFlagOrFeedbackOrder; filterCoefficientIndex++) {
-                    unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample - (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                  for (filterCoefficientIndex = 0; filterCoefficientIndex < feedbackFilterOrder; filterCoefficientIndex++) {
+                    filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
                   }
-                  sampleBuffer[modulationValueOrOscillatorOrSampleIndex] = unmuteEnvelopeValueOrFilteredSample;
-                  indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-                  modulationValueOrOscillatorOrSampleIndex++;
+                  sampleBuffer[filterSampleIndex] = filteredSample;
+                  filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+                  filterSampleIndex++;
                 }
-                if (modulationValueOrOscillatorOrSampleIndex < sampleCount - pitchOrGateThresholdOrEchoIndexOrForwardOrder) {
-                  pitchOrGateThresholdOrEchoIndexOrForwardOrder = this.filter.computeCoefficients(0, (float)indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue / 65536.0f);
-                  volumeOrMuteFlagOrFeedbackOrder = this.filter.computeCoefficients(1, (float)indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue / 65536.0f);
-                  amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd += 128;
+                if (filterSampleIndex < sampleCount - forwardFilterOrder) {
+                  forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
+                  feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
+                  filterChunkEnd += 128;
                   continue;
                 }
                 break;
               }
-              while (modulationValueOrOscillatorOrSampleIndex < sampleCount) {
-                unmuteEnvelopeValueOrFilteredSample = 0;
-                for (filterCoefficientIndex = modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder - sampleCount; filterCoefficientIndex < pitchOrGateThresholdOrEchoIndexOrForwardOrder; filterCoefficientIndex++) {
-                  unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample + (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex + pitchOrGateThresholdOrEchoIndexOrForwardOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+              while (filterSampleIndex < sampleCount) {
+                filteredSample = 0;
+                for (filterCoefficientIndex = filterSampleIndex + forwardFilterOrder - sampleCount; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
+                  filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
                 }
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < volumeOrMuteFlagOrFeedbackOrder; filterCoefficientIndex++) {
-                  unmuteEnvelopeValueOrFilteredSample = unmuteEnvelopeValueOrFilteredSample - (int)((long)sampleBuffer[modulationValueOrOscillatorOrSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                for (filterCoefficientIndex = 0; filterCoefficientIndex < feedbackFilterOrder; filterCoefficientIndex++) {
+                  filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
                 }
-                sampleBuffer[modulationValueOrOscillatorOrSampleIndex] = unmuteEnvelopeValueOrFilteredSample;
-                indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-                modulationValueOrOscillatorOrSampleIndex++;
+                sampleBuffer[filterSampleIndex] = filteredSample;
+                filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+                filterSampleIndex++;
               }
             }
           }
         }
-        for (indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue = 0; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue < sampleCount; indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue++) {
-          if (sampleBuffer[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] < -32768) {
-            sampleBuffer[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = -32768;
+        for (clippingSampleIndex = 0; clippingSampleIndex < sampleCount; clippingSampleIndex++) {
+          if (sampleBuffer[clippingSampleIndex] < -32768) {
+            sampleBuffer[clippingSampleIndex] = -32768;
           }
-          if (sampleBuffer[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] <= 32767) {
+          if (sampleBuffer[clippingSampleIndex] <= 32767) {
             continue;
           }
-          sampleBuffer[indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue] = 32767;
+          sampleBuffer[clippingSampleIndex] = 32767;
         }
         return sampleBuffer;
     }

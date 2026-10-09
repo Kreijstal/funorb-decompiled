@@ -487,6 +487,7 @@ abstract class BitmapFont extends DualLinkNode {
         int lineCount;
         int baselineY;
         int extraVerticalGapOrLineIndex;
+        int extraVerticalGapOrLineIndexPhase2;
         if (text == null) {
           return 0;
         }
@@ -522,28 +523,28 @@ abstract class BitmapFont extends DualLinkNode {
         } else {
           baselineY = top + this.maxAscent;
         }
-        for (extraVerticalGapOrLineIndex = 0; extraVerticalGapOrLineIndex < lineCount; extraVerticalGapOrLineIndex++) {
+        for (extraVerticalGapOrLineIndexPhase2 = 0; extraVerticalGapOrLineIndexPhase2 < lineCount; extraVerticalGapOrLineIndexPhase2++) {
           if (horizontalAlignment == 0) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndex], left, baselineY);
+            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
           if (horizontalAlignment == 1) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndex], left + (width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndex])) / 2, baselineY);
+            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left + (width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndexPhase2])) / 2, baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
           if (horizontalAlignment == 2) {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndex], left + width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndex]), baselineY);
+            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left + width - this.measureTextWidth(wrappedLines[extraVerticalGapOrLineIndexPhase2]), baselineY);
             baselineY = baselineY + lineSpacing;
             continue;
           }
-          if (extraVerticalGapOrLineIndex != lineCount - 1) {
-            this.prepareJustification(wrappedLines[extraVerticalGapOrLineIndex], width);
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndex], left, baselineY);
+          if (extraVerticalGapOrLineIndexPhase2 != lineCount - 1) {
+            this.prepareJustification(wrappedLines[extraVerticalGapOrLineIndexPhase2], width);
+            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
             spaceExpansionQ8 = 0;
           } else {
-            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndex], left, baselineY);
+            this.drawStyledText(wrappedLines[extraVerticalGapOrLineIndexPhase2], left, baselineY);
           }
           baselineY = baselineY + lineSpacing;
         }
