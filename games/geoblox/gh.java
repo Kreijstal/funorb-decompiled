@@ -508,13 +508,12 @@ final class gh {
           this.c((byte) 64);
           if (this.field_L) {
             lj.field_d.b(var3, var4);
-            if (this.field_D < 266) {
+            boolean decompiledSharedTail0 = !(this.field_D < 266);
+            if (!decompiledSharedTail0) {
               kh.field_h[6].b(0, (this.field_D >> 1) - 113);
-              if (var14 != 0) {
-                kh.field_h[6].b(0, 20);
-                kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
-              }
-            } else {
+              decompiledSharedTail0 = (var14 != 0);
+            }
+            if (decompiledSharedTail0) {
               kh.field_h[6].b(0, 20);
               kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
             }
@@ -605,7 +604,8 @@ final class gh {
           }
         }
         L7: {
-          if (!this.field_x) {
+          boolean decompiledSharedTail0 = !(!this.field_x);
+          if (!decompiledSharedTail0) {
             if ((ih.a(0) &&
                     !this.field_n ||
                   !this.field_f) &&
@@ -848,22 +848,9 @@ final class gh {
             if (this.field_Y) {
               this.b(109);
             }
-            if (var5 != 0) {
-              if (this.field_D == 0) {
-                fi.a(param0 ^ -1578896191, pi.field_S);
-              }
-              if (pf.field_D &&
-                  od.a(-3) &&
-                  this.field_D > 1000) {
-                this.d(28809);
-              }
-              fc.a(19);
-              cf.d((byte) 24);
-              f.o(600);
-              this.field_D = this.field_D + 1;
-              this.field_F = true;
-            }
-          } else {
+            decompiledSharedTail0 = (var5 != 0);
+          }
+          if (decompiledSharedTail0) {
             if (this.field_D == 0) {
               fi.a(param0 ^ -1578896191, pi.field_S);
             }

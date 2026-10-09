@@ -503,13 +503,12 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) f.field_kb));
           f.field_kb.setSize(kh.field_d, ok.field_c);
           f.field_kb.setVisible(param0);
-          if (sg.field_a != var2) {
+          boolean decompiledSharedTail0 = !(sg.field_a != var2);
+          if (!decompiledSharedTail0) {
             f.field_kb.setLocation(qa.field_b, hk.field_B);
-            if (var4 != 0) {
-              var3 = sg.field_a.getInsets();
-              f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
-            }
-          } else {
+            decompiledSharedTail0 = (var4 != 0);
+          }
+          if (decompiledSharedTail0) {
             var3 = sg.field_a.getInsets();
             f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
           }
@@ -878,14 +877,13 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             dl.field_c = true;
             f.field_kb.setSize(kh.field_d, ok.field_c);
             f.field_kb.setVisible(true);
-            if (sg.field_a == null ||
-                he.field_a != null) {
+            boolean decompiledSharedTail0 = !(sg.field_a == null ||
+                he.field_a != null);
+            if (!decompiledSharedTail0) {
               f.field_kb.setLocation(qa.field_b, hk.field_B);
-              if (Geoblox.field_C != 0) {
-                var6 = sg.field_a.getInsets();
-                f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
-              }
-            } else {
+              decompiledSharedTail0 = (Geoblox.field_C != 0);
+            }
+            if (decompiledSharedTail0) {
               var6 = sg.field_a.getInsets();
               f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
             }

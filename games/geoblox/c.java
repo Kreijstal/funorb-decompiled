@@ -392,16 +392,12 @@ final class c extends ka {
               this.field_K != 4) {
             var2_intLifetime1 = (2 == this.field_K) && (var12 == 0) ? (235) : (285);
             var5 = 120;
-            if (this.field_K == 3) {
+            boolean decompiledSharedTail0 = !(this.field_K == 3);
+            if (!decompiledSharedTail0) {
               var5 += 10;
-              if (var12 != 0) {
-                if (this.field_K == 8 ||
-                    this.field_K == 7) {
-                  var4 += 20;
-                  var5 -= 10;
-                }
-              }
-            } else {
+              decompiledSharedTail0 = (var12 != 0);
+            }
+            if (decompiledSharedTail0) {
               if (this.field_K == 8 ||
                   this.field_K == 7) {
                 var4 += 20;
@@ -1787,21 +1783,13 @@ final class c extends ka {
           }
           if (3 == this.field_K &&
               !this.field_E) {
-            if (this.field_q != 4 &&
-                this.field_b == 3) {
+            boolean decompiledSharedTail0 = !(this.field_q != 4 &&
+                this.field_b == 3);
+            if (!decompiledSharedTail0) {
               this.field_b = 2;
-              if (Geoblox.field_C != 0) {
-                if (this.field_q == 4) {
-                  if (this.field_b == 2) {
-                    this.field_b = 1;
-                  }
-                  if (oc.field_b == 1 &&
-                      this.field_b == 3) {
-                    this.field_b = 1;
-                  }
-                }
-              }
-            } else {
+              decompiledSharedTail0 = (Geoblox.field_C != 0);
+            }
+            if (decompiledSharedTail0) {
               if (this.field_q == 4) {
                 if (this.field_b == 2) {
                   this.field_b = 1;
@@ -2296,18 +2284,13 @@ final class c extends ka {
               this.field_b == 3) {
             param0 = true;
           }
-          if (this.field_K == 3 ||
-                this.field_K == 2) {
+          boolean decompiledSharedTail0 = !(this.field_K == 3 ||
+                this.field_K == 2);
+          if (!decompiledSharedTail0) {
             param3 += 280;
-            if (var14 != 0) {
-              if (this.field_K == 5 ||
-                  this.field_K == 7 ||
-                  this.field_K == 6 ||
-                  this.field_K == 4) {
-                param3 += 295;
-              }
-            }
-          } else {
+            decompiledSharedTail0 = (var14 != 0);
+          }
+          if (decompiledSharedTail0) {
             if (this.field_K == 5 ||
                 this.field_K == 7 ||
                 this.field_K == 6 ||

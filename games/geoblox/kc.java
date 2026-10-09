@@ -324,14 +324,12 @@ final class kc {
                           }
                           ld.a(stackIn_88_0, stackIn_88_1, stackIn_88_2, stackIn_90_3);
                         }
-                        if (4 != var2_ref_ja.field_z) {
+                        boolean decompiledSharedTail0 = !(4 != var2_ref_ja.field_z);
+                        if (!decompiledSharedTail0) {
                           var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 5);
-                          if (var9 != 0) {
-                            var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
-                            var1_int++;
-                            rb.field_b = rb.field_b + 1;
-                          }
-                        } else {
+                          decompiledSharedTail0 = (var9 != 0);
+                        }
+                        if (decompiledSharedTail0) {
                           var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 7);
                           var1_int++;
                           rb.field_b = rb.field_b + 1;
