@@ -139,18 +139,15 @@ final class i {
             stackIn_49_0 = stackOut_10_0 ? 1 : 0;
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
-              L4: {
-                if (stackIn_11_0) {
-                  var12 = sh.field_x[var9];
-                  var13 = dj.field_N[var9];
-                  var14 = sh.field_x[var10] - var12;
-                  var15 = sh.field_x[var11] - var12;
-                  var16 = dj.field_N[var10] - var13;
-                  var17 = -var13 + dj.field_N[var11];
-                  if (-(var16 * var15) + var14 * var17 >= 0) {
-                    break L4;
-                  }
-                }
+              if (stackIn_11_0) {
+                var12 = sh.field_x[var9];
+                var13 = dj.field_N[var9];
+                var14 = sh.field_x[var10] - var12;
+                var15 = sh.field_x[var11] - var12;
+                var16 = dj.field_N[var10] - var13;
+                var17 = -var13 + dj.field_N[var11];
+              }
+              if (!(stackIn_11_0) || !(-(var16 * var15) + var14 * var17 >= 0)) {
                 var12 = bj.field_j[var9];
                 if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];
@@ -284,18 +281,15 @@ final class i {
             stackIn_49_0 = stackOut_10_0 ? 1 : 0;
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
-              L4: {
-                if (stackIn_11_0) {
-                  var12 = sh.field_x[var9];
-                  var13 = dj.field_N[var9];
-                  var14 = sh.field_x[var10] - var12;
-                  var15 = sh.field_x[var11] - var12;
-                  var16 = dj.field_N[var10] - var13;
-                  var17 = -var13 + dj.field_N[var11];
-                  if (-(var16 * var15) + var14 * var17 >= 0) {
-                    break L4;
-                  }
-                }
+              if (stackIn_11_0) {
+                var12 = sh.field_x[var9];
+                var13 = dj.field_N[var9];
+                var14 = sh.field_x[var10] - var12;
+                var15 = sh.field_x[var11] - var12;
+                var16 = dj.field_N[var10] - var13;
+                var17 = -var13 + dj.field_N[var11];
+              }
+              if (!(stackIn_11_0) || !(-(var16 * var15) + var14 * var17 >= 0)) {
                 var12 = bj.field_j[var9];
                 if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];

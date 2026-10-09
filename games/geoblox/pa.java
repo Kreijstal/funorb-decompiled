@@ -109,35 +109,34 @@ final class pa {
                     var4_int = 1;
                     break L3;
                   }
-                  if (var9 == 43 &&
-                      param1) {
-                    break L3;
+                }
+                if (var8 != 0 || !(var9 == 43 &&
+                      param1)) {
+                  if (var9 >= 48 &&
+                      var9 <= 57) {
+                    var9 -= 48;
+                  } else if (var9 >= 65 &&
+                      var9 <= 90) {
+                    var9 -= 55;
+                  } else if (var9 >= 97 &&
+                      var9 <= 122) {
+                    var9 -= 87;
+                  } else {
+                    return false;
                   }
+                  if (var9 >= param2) {
+                    return false;
+                  }
+                  if (var4_int != 0) {
+                    var9 = -var9;
+                  }
+                  var10 = var6 * param2 + var9;
+                  if (var6 != var10 / param2) {
+                    return false;
+                  }
+                  var6 = var10;
+                  var5 = 1;
                 }
-                if (var9 >= 48 &&
-                    var9 <= 57) {
-                  var9 -= 48;
-                } else if (var9 >= 65 &&
-                    var9 <= 90) {
-                  var9 -= 55;
-                } else if (var9 >= 97 &&
-                    var9 <= 122) {
-                  var9 -= 87;
-                } else {
-                  return false;
-                }
-                if (var9 >= param2) {
-                  return false;
-                }
-                if (var4_int != 0) {
-                  var9 = -var9;
-                }
-                var10 = var6 * param2 + var9;
-                if (var6 != var10 / param2) {
-                  return false;
-                }
-                var6 = var10;
-                var5 = 1;
               }
             }
             stackIn_41_0 = var5;
