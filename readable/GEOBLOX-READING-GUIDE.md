@@ -7,7 +7,7 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7f3d87237e5f4fcab093c368284f4cf24d877555/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0ca055144d8584592b9add66a1713df2b7922812/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
 ## Current readability (pass 216)

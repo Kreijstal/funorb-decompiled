@@ -4137,15 +4137,15 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/7f3d87237e5f4fcab093c368284f4cf24d877555/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/0ca055144d8584592b9add66a1713df2b7922812/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/7f3d87237e5f4fcab093c368284f4cf24d877555/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/0ca055144d8584592b9add66a1713df2b7922812/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `7f3d87237e5f4fcab093c368284f4cf24d877555`; the
+The current Deko workflow/manifest commit is `0ca055144d8584592b9add66a1713df2b7922812`; the
 manifest SHA-256 is `a6869f797479dcb3e74b705039476a8d2f5197e007064987ebbb3308bbd72d32`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
