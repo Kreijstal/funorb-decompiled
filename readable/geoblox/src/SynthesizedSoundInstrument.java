@@ -121,16 +121,16 @@ final class SynthesizedSoundInstrument {
         int oscillatorSetupIndex;
         int pitchEnvelopeValue;
         int volumeEnvelopeValue;
-        int modulationValueOrOscillatorIndex;
-        int modulationAmplitudeOrSampleOffset;
+        int pitchModulationValue;
+        int pitchModulationAmplitude;
         int unmuteEnvelopeValue;
-        int filterCoefficientIndex;
+        int warmupCoefficientIndex;
         int sampleIndex;
         int gateCounterQ8;
         int echoDelaySamples;
         int filterEnvelopeValue;
         int clippingSampleIndex;
-        int gateThreshold;
+        int unusedInitialGateThreshold;
         int echoSampleIndex;
         int forwardFilterOrder;
         int muteFlag;
@@ -138,8 +138,18 @@ final class SynthesizedSoundInstrument {
         int gatedSampleIndex;
         int filterSampleIndex;
         int muteEnvelopeValue;
+        int filterWarmupEnd;
+        int warmupFilteredSample;
+        int volumeModulationValue;
+        int oscillatorIndex;
+        int volumeModulationAmplitude;
+        int oscillatorSampleOffset;
+        int chunkCoefficientIndex;
+        int tailCoefficientIndex;
+        int gateThreshold;
         int filterChunkEnd;
-        int filteredSample;
+        int chunkFilteredSample;
+        int tailFilteredSample;
         ArrayOperations.clearInts(sampleBuffer, 0, sampleCount);
         if (durationMillis < 10) {
           return sampleBuffer;
@@ -179,34 +189,34 @@ final class SynthesizedSoundInstrument {
           pitchEnvelopeValue = this.pitchEnvelope.advance(sampleCount);
           volumeEnvelopeValue = this.volumeEnvelope.advance(sampleCount);
           if (this.pitchModulationEnvelope != null) {
-            modulationValueOrOscillatorIndex = this.pitchModulationEnvelope.advance(sampleCount);
-            modulationAmplitudeOrSampleOffset = this.pitchModulationAmplitudeEnvelope.advance(sampleCount);
-            pitchEnvelopeValue = pitchEnvelopeValue + (this.evaluateWaveform(pitchModulationPhase, modulationAmplitudeOrSampleOffset, this.pitchModulationEnvelope.waveform) >> 1);
-            pitchModulationPhase = pitchModulationPhase + ((modulationValueOrOscillatorIndex * pitchModulationScale >> 16) + basePitchModulationStep);
+            pitchModulationValue = this.pitchModulationEnvelope.advance(sampleCount);
+            pitchModulationAmplitude = this.pitchModulationAmplitudeEnvelope.advance(sampleCount);
+            pitchEnvelopeValue = pitchEnvelopeValue + (this.evaluateWaveform(pitchModulationPhase, pitchModulationAmplitude, this.pitchModulationEnvelope.waveform) >> 1);
+            pitchModulationPhase = pitchModulationPhase + ((pitchModulationValue * pitchModulationScale >> 16) + basePitchModulationStep);
           }
           if (this.volumeModulationEnvelope != null) {
-            modulationValueOrOscillatorIndex = this.volumeModulationEnvelope.advance(sampleCount);
-            modulationAmplitudeOrSampleOffset = this.volumeModulationAmplitudeEnvelope.advance(sampleCount);
-            volumeEnvelopeValue = volumeEnvelopeValue * ((this.evaluateWaveform(volumeModulationPhase, modulationAmplitudeOrSampleOffset, this.volumeModulationEnvelope.waveform) >> 1) + 32768) >> 15;
-            volumeModulationPhase = volumeModulationPhase + ((modulationValueOrOscillatorIndex * volumeModulationScale >> 16) + baseVolumeModulationStep);
+            volumeModulationValue = this.volumeModulationEnvelope.advance(sampleCount);
+            volumeModulationAmplitude = this.volumeModulationAmplitudeEnvelope.advance(sampleCount);
+            volumeEnvelopeValue = volumeEnvelopeValue * ((this.evaluateWaveform(volumeModulationPhase, volumeModulationAmplitude, this.volumeModulationEnvelope.waveform) >> 1) + 32768) >> 15;
+            volumeModulationPhase = volumeModulationPhase + ((volumeModulationValue * volumeModulationScale >> 16) + baseVolumeModulationStep);
           }
-          for (modulationValueOrOscillatorIndex = 0; modulationValueOrOscillatorIndex < 5; modulationValueOrOscillatorIndex++) {
-            if (this.oscillatorVolumePercent[modulationValueOrOscillatorIndex] == 0) {
+          for (oscillatorIndex = 0; oscillatorIndex < 5; oscillatorIndex++) {
+            if (this.oscillatorVolumePercent[oscillatorIndex] == 0) {
               continue;
             }
-            modulationAmplitudeOrSampleOffset = sampleIndex + oscillatorDelaySamples[modulationValueOrOscillatorIndex];
-            if (modulationAmplitudeOrSampleOffset >= sampleCount) {
+            oscillatorSampleOffset = sampleIndex + oscillatorDelaySamples[oscillatorIndex];
+            if (oscillatorSampleOffset >= sampleCount) {
               continue;
             }
-            sampleBuffer[modulationAmplitudeOrSampleOffset] = sampleBuffer[modulationAmplitudeOrSampleOffset] + this.evaluateWaveform(oscillatorPhases[modulationValueOrOscillatorIndex], volumeEnvelopeValue * oscillatorVolumeScales[modulationValueOrOscillatorIndex] >> 15, this.pitchEnvelope.waveform);
-            oscillatorPhases[modulationValueOrOscillatorIndex] = oscillatorPhases[modulationValueOrOscillatorIndex] + ((pitchEnvelopeValue * oscillatorPitchSteps[modulationValueOrOscillatorIndex] >> 16) + oscillatorBasePitchSteps[modulationValueOrOscillatorIndex]);
+            sampleBuffer[oscillatorSampleOffset] = sampleBuffer[oscillatorSampleOffset] + this.evaluateWaveform(oscillatorPhases[oscillatorIndex], volumeEnvelopeValue * oscillatorVolumeScales[oscillatorIndex] >> 15, this.pitchEnvelope.waveform);
+            oscillatorPhases[oscillatorIndex] = oscillatorPhases[oscillatorIndex] + ((pitchEnvelopeValue * oscillatorPitchSteps[oscillatorIndex] >> 16) + oscillatorBasePitchSteps[oscillatorIndex]);
           }
         }
         if (this.muteTimingEnvelope != null) {
           this.muteTimingEnvelope.reset();
           this.unmuteTimingEnvelope.reset();
           gateCounterQ8 = 0;
-          gateThreshold = 0;
+          unusedInitialGateThreshold = 0;
           muteFlag = 1;
           for (gatedSampleIndex = 0; gatedSampleIndex < sampleCount; gatedSampleIndex++) {
             muteEnvelopeValue = this.muteTimingEnvelope.advance(sampleCount);
@@ -244,19 +254,19 @@ final class SynthesizedSoundInstrument {
             feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
             if (sampleCount >= forwardFilterOrder + feedbackFilterOrder) {
               filterSampleIndex = 0;
-              filterChunkEnd = feedbackFilterOrder;
-              if (filterChunkEnd > sampleCount - forwardFilterOrder) {
-                filterChunkEnd = sampleCount - forwardFilterOrder;
+              filterWarmupEnd = feedbackFilterOrder;
+              if (filterWarmupEnd > sampleCount - forwardFilterOrder) {
+                filterWarmupEnd = sampleCount - forwardFilterOrder;
               }
-              while (filterSampleIndex < filterChunkEnd) {
-                filteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
-                  filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+              while (filterSampleIndex < filterWarmupEnd) {
+                warmupFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+                for (warmupCoefficientIndex = 0; warmupCoefficientIndex < forwardFilterOrder; warmupCoefficientIndex++) {
+                  warmupFilteredSample = warmupFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][warmupCoefficientIndex] >> 16);
                 }
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < filterSampleIndex; filterCoefficientIndex++) {
-                  filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                for (warmupCoefficientIndex = 0; warmupCoefficientIndex < filterSampleIndex; warmupCoefficientIndex++) {
+                  warmupFilteredSample = warmupFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][warmupCoefficientIndex] >> 16);
                 }
-                sampleBuffer[filterSampleIndex] = filteredSample;
+                sampleBuffer[filterSampleIndex] = warmupFilteredSample;
                 filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
                 filterSampleIndex++;
               }
@@ -266,14 +276,14 @@ final class SynthesizedSoundInstrument {
                   filterChunkEnd = sampleCount - forwardFilterOrder;
                 }
                 while (filterSampleIndex < filterChunkEnd) {
-                  filteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                  for (filterCoefficientIndex = 0; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
-                    filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+                  chunkFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+                  for (chunkCoefficientIndex = 0; chunkCoefficientIndex < forwardFilterOrder; chunkCoefficientIndex++) {
+                    chunkFilteredSample = chunkFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][chunkCoefficientIndex] >> 16);
                   }
-                  for (filterCoefficientIndex = 0; filterCoefficientIndex < feedbackFilterOrder; filterCoefficientIndex++) {
-                    filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                  for (chunkCoefficientIndex = 0; chunkCoefficientIndex < feedbackFilterOrder; chunkCoefficientIndex++) {
+                    chunkFilteredSample = chunkFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][chunkCoefficientIndex] >> 16);
                   }
-                  sampleBuffer[filterSampleIndex] = filteredSample;
+                  sampleBuffer[filterSampleIndex] = chunkFilteredSample;
                   filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
                   filterSampleIndex++;
                 }
@@ -286,14 +296,14 @@ final class SynthesizedSoundInstrument {
                 break;
               }
               while (filterSampleIndex < sampleCount) {
-                filteredSample = 0;
-                for (filterCoefficientIndex = filterSampleIndex + forwardFilterOrder - sampleCount; filterCoefficientIndex < forwardFilterOrder; filterCoefficientIndex++) {
-                  filteredSample = filteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][filterCoefficientIndex] >> 16);
+                tailFilteredSample = 0;
+                for (tailCoefficientIndex = filterSampleIndex + forwardFilterOrder - sampleCount; tailCoefficientIndex < forwardFilterOrder; tailCoefficientIndex++) {
+                  tailFilteredSample = tailFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][tailCoefficientIndex] >> 16);
                 }
-                for (filterCoefficientIndex = 0; filterCoefficientIndex < feedbackFilterOrder; filterCoefficientIndex++) {
-                  filteredSample = filteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - filterCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][filterCoefficientIndex] >> 16);
+                for (tailCoefficientIndex = 0; tailCoefficientIndex < feedbackFilterOrder; tailCoefficientIndex++) {
+                  tailFilteredSample = tailFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][tailCoefficientIndex] >> 16);
                 }
-                sampleBuffer[filterSampleIndex] = filteredSample;
+                sampleBuffer[filterSampleIndex] = tailFilteredSample;
                 filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
                 filterSampleIndex++;
               }

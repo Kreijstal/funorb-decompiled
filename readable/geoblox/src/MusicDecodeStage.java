@@ -127,6 +127,10 @@ final class MusicDecodeStage {
         boolean[] activatedStepFlagsAlias;
         int lowNeighborForActivation;
         int activePointIndex;
+        int lowNeighborIndexOrLineStartYNestedPhase2;
+        int highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2;
+        int predictedYOrLineEndXOrTailIndexNestedPhase2;
+        int encodedResidualOrLineEndYNestedPhase2;
         pointCount = this.configuredFloorX.length;
         multiplierRange = multiplierRanges[this.floorMultiplier - 1];
         initialStepFlagsAlias = sharedStepFlags;
@@ -163,32 +167,32 @@ final class MusicDecodeStage {
               activePointIndex++;
             }
           }
-          lowNeighborIndexOrLineStartY = MusicDecodeStage.findLowNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
-          highNeighborIndexOrUnusedActiveCursorSnapshot = MusicDecodeStage.findHighNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
-          predictedYOrLineEndXOrTailIndex = this.predictFloorY(sharedFloorX[lowNeighborIndexOrLineStartY], sharedFloorY[lowNeighborIndexOrLineStartY], sharedFloorX[highNeighborIndexOrUnusedActiveCursorSnapshot], sharedFloorY[highNeighborIndexOrUnusedActiveCursorSnapshot], sharedFloorX[reconstructionIndexOrLineStartX]);
-          encodedResidualOrLineEndY = sharedFloorY[reconstructionIndexOrLineStartX];
-          highRoom = multiplierRange - predictedYOrLineEndXOrTailIndex;
-          lowRoom = predictedYOrLineEndXOrTailIndex;
+          lowNeighborIndexOrLineStartYNestedPhase2 = MusicDecodeStage.findLowNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
+          highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2 = MusicDecodeStage.findHighNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
+          predictedYOrLineEndXOrTailIndexNestedPhase2 = this.predictFloorY(sharedFloorX[lowNeighborIndexOrLineStartYNestedPhase2], sharedFloorY[lowNeighborIndexOrLineStartYNestedPhase2], sharedFloorX[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2], sharedFloorY[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2], sharedFloorX[reconstructionIndexOrLineStartX]);
+          encodedResidualOrLineEndYNestedPhase2 = sharedFloorY[reconstructionIndexOrLineStartX];
+          highRoom = multiplierRange - predictedYOrLineEndXOrTailIndexNestedPhase2;
+          lowRoom = predictedYOrLineEndXOrTailIndexNestedPhase2;
           minRoomBeforeDoubling = (highRoom >= lowRoom) ? lowRoom : highRoom;
           doubledRoom = minRoomBeforeDoubling << 1;
-          if (encodedResidualOrLineEndY == 0) {
+          if (encodedResidualOrLineEndYNestedPhase2 == 0) {
             sharedStepFlags[reconstructionIndexOrLineStartX] = false;
-            sharedFloorY[reconstructionIndexOrLineStartX] = predictedYOrLineEndXOrTailIndex;
+            sharedFloorY[reconstructionIndexOrLineStartX] = predictedYOrLineEndXOrTailIndexNestedPhase2;
             reconstructionIndexOrLineStartX++;
             continue;
           }
           activatedStepFlagsAlias = sharedStepFlags;
-          lowNeighborForActivation = lowNeighborIndexOrLineStartY;
-          sharedStepFlags[highNeighborIndexOrUnusedActiveCursorSnapshot] = true;
+          lowNeighborForActivation = lowNeighborIndexOrLineStartYNestedPhase2;
+          sharedStepFlags[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2] = true;
           activatedStepFlagsAlias[lowNeighborForActivation] = true;
           sharedStepFlags[reconstructionIndexOrLineStartX] = true;
-          if (encodedResidualOrLineEndY < doubledRoom) {
+          if (encodedResidualOrLineEndYNestedPhase2 < doubledRoom) {
             smallResidualYArray = (int[]) (sharedFloorY);
             smallResidualYIndex = reconstructionIndexOrLineStartX;
-            if ((encodedResidualOrLineEndY & 1) == 0) {
-              smallResidualYResult = predictedYOrLineEndXOrTailIndex + encodedResidualOrLineEndY / 2;
+            if ((encodedResidualOrLineEndYNestedPhase2 & 1) == 0) {
+              smallResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 + encodedResidualOrLineEndYNestedPhase2 / 2;
             } else {
-              smallResidualYResult = predictedYOrLineEndXOrTailIndex - (encodedResidualOrLineEndY + 1) / 2;
+              smallResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 - (encodedResidualOrLineEndYNestedPhase2 + 1) / 2;
             }
             smallResidualYArray[smallResidualYIndex] = smallResidualYResult;
             reconstructionIndexOrLineStartX++;
@@ -197,9 +201,9 @@ final class MusicDecodeStage {
           largeResidualYArray = (int[]) (sharedFloorY);
           largeResidualYIndex = reconstructionIndexOrLineStartX;
           if (highRoom <= lowRoom) {
-            largeResidualYResult = predictedYOrLineEndXOrTailIndex - encodedResidualOrLineEndY + highRoom - 1;
+            largeResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 - encodedResidualOrLineEndYNestedPhase2 + highRoom - 1;
           } else {
-            largeResidualYResult = encodedResidualOrLineEndY - lowRoom + predictedYOrLineEndXOrTailIndex;
+            largeResidualYResult = encodedResidualOrLineEndYNestedPhase2 - lowRoom + predictedYOrLineEndXOrTailIndexNestedPhase2;
           }
           largeResidualYArray[largeResidualYIndex] = largeResidualYResult;
           reconstructionIndexOrLineStartX++;

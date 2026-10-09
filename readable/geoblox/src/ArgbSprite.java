@@ -380,6 +380,52 @@ final class ArgbSprite extends Sprite {
         int inverseAlpha256Phase3;
         int inverseAlpha256Phase4;
         int inverseAlpha256Phase5;
+        int clipPixelCountNestedPhase2;
+        int negativeRowCounterNestedPhase2;
+        int negativeRowCounterNestedPhase3;
+        int destinationIndexNestedPhase2;
+        int destinationIndexNestedPhase3;
+        int sourceXQ12NestedPhase2;
+        int sourceXQ12NestedPhase3;
+        int sourceYQ12NestedPhase2;
+        int sourceYQ12NestedPhase3;
+        int negativePixelCounterNestedPhase2;
+        int negativePixelCounterNestedPhase3;
+        int sampledPixelNestedPhase2;
+        int sampledPixelNestedPhase3;
+        int destinationPixelNestedPhase2;
+        int destinationPixelNestedPhase3;
+        int storedAlphaNestedPhase2;
+        int storedAlphaNestedPhase3;
+        int inverseAlpha256NestedPhase2;
+        int inverseAlpha256NestedPhase3;
+        int clipPixelCountPhase2NestedPhase2;
+        int clipPixelCountPhase2NestedPhase3;
+        int clipPixelCountPhase3NestedPhase2;
+        int clipPixelCountPhase4NestedPhase2;
+        int clipPixelCountPhase4NestedPhase3;
+        int clipPixelCountPhase4NestedPhase4;
+        int clipPixelCountPhase5NestedPhase2;
+        int clipPixelCountPhase5NestedPhase3;
+        int clipPixelCountPhase5NestedPhase4;
+        int negativeRowCounterPhase2NestedPhase2;
+        int negativeRowCounterPhase2NestedPhase3;
+        int destinationIndexPhase2NestedPhase2;
+        int destinationIndexPhase2NestedPhase3;
+        int sourceXQ12Phase2NestedPhase2;
+        int sourceXQ12Phase2NestedPhase3;
+        int sourceYQ12Phase2NestedPhase2;
+        int sourceYQ12Phase2NestedPhase3;
+        int negativePixelCounterPhase2NestedPhase2;
+        int negativePixelCounterPhase2NestedPhase3;
+        int sampledPixelPhase2NestedPhase2;
+        int sampledPixelPhase2NestedPhase3;
+        int destinationPixelPhase2NestedPhase2;
+        int destinationPixelPhase2NestedPhase3;
+        int storedAlphaPhase2NestedPhase2;
+        int storedAlphaPhase2NestedPhase3;
+        int inverseAlpha256Phase2NestedPhase2;
+        int inverseAlpha256Phase2NestedPhase3;
         if (scale == 0) {
           return;
         }
@@ -503,74 +549,74 @@ final class ArgbSprite extends Sprite {
             return;
           }
           if (inverseSinStep >= 0) {
-            negativeRowCounter = bottomThenNegativeHeight;
-            while (negativeRowCounter < 0) {
-              destinationIndex = rowDestinationIndex;
-              sourceXQ12 = rowSourceXQ12;
-              sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-              negativePixelCounter = rightThenNegativeWidth;
-              if (sourceXQ12 >= 0 &&
-                  sourceXQ12 - (this.width << 12) < 0) {
-                if (sourceYQ12 < 0) {
-                  clipPixelCount = (inverseSinStep - 1 - sourceYQ12) / inverseSinStep;
-                  negativePixelCounter = negativePixelCounter + clipPixelCount;
-                  sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                  destinationIndex = destinationIndex + clipPixelCount;
+            negativeRowCounterNestedPhase2 = bottomThenNegativeHeight;
+            while (negativeRowCounterNestedPhase2 < 0) {
+              destinationIndexNestedPhase2 = rowDestinationIndex;
+              sourceXQ12NestedPhase2 = rowSourceXQ12;
+              sourceYQ12NestedPhase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+              negativePixelCounterNestedPhase2 = rightThenNegativeWidth;
+              if (sourceXQ12NestedPhase2 >= 0 &&
+                  sourceXQ12NestedPhase2 - (this.width << 12) < 0) {
+                if (sourceYQ12NestedPhase2 < 0) {
+                  clipPixelCount = (inverseSinStep - 1 - sourceYQ12NestedPhase2) / inverseSinStep;
+                  negativePixelCounterNestedPhase2 = negativePixelCounterNestedPhase2 + clipPixelCount;
+                  sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep * clipPixelCount;
+                  destinationIndexNestedPhase2 = destinationIndexNestedPhase2 + clipPixelCount;
                 }
-                clipPixelCount = (1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep;
-                if ((1 + sourceYQ12 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                  negativePixelCounter = clipPixelCount;
+                clipPixelCount = (1 + sourceYQ12NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                if ((1 + sourceYQ12NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterNestedPhase2) {
+                  negativePixelCounterNestedPhase2 = clipPixelCount;
                 }
-                while (negativePixelCounter < 0) {
-                  sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                  destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                  storedAlpha = sampledPixel >>> 24;
-                  inverseAlpha256 = 256 - storedAlpha;
-                  writeIndexFixedXForwardY = destinationIndex;
-                  destinationIndex++;
-                  SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                  sourceYQ12 = sourceYQ12 + inverseSinStep;
-                  negativePixelCounter++;
+                while (negativePixelCounterNestedPhase2 < 0) {
+                  sampledPixelNestedPhase2 = this.pixels[(sourceYQ12NestedPhase2 >> 12) * this.width + (sourceXQ12NestedPhase2 >> 12)];
+                  destinationPixelNestedPhase2 = SoftwareRasterizer.framebuffer[destinationIndexNestedPhase2];
+                  storedAlphaNestedPhase2 = sampledPixelNestedPhase2 >>> 24;
+                  inverseAlpha256NestedPhase2 = 256 - storedAlphaNestedPhase2;
+                  writeIndexFixedXForwardY = destinationIndexNestedPhase2;
+                  destinationIndexNestedPhase2++;
+                  SoftwareRasterizer.framebuffer[writeIndexFixedXForwardY] = ((sampledPixelNestedPhase2 & 16711935) * storedAlphaNestedPhase2 + (destinationPixelNestedPhase2 & 16711935) * inverseAlpha256NestedPhase2 & -16711936) + ((sampledPixelNestedPhase2 & 65280) * storedAlphaNestedPhase2 + (destinationPixelNestedPhase2 & 65280) * inverseAlpha256NestedPhase2 & 16711680) >>> 8;
+                  sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep;
+                  negativePixelCounterNestedPhase2++;
                 }
               }
-              negativeRowCounter++;
+              negativeRowCounterNestedPhase2++;
               rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
               rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
             return;
           }
-          negativeRowCounter = bottomThenNegativeHeight;
-          while (negativeRowCounter < 0) {
-            destinationIndex = rowDestinationIndex;
-            sourceXQ12 = rowSourceXQ12;
-            sourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-            negativePixelCounter = rightThenNegativeWidth;
-            if (sourceXQ12 >= 0 &&
-                sourceXQ12 - (this.width << 12) < 0) {
-              clipPixelCount = sourceYQ12 - (this.height << 12);
-              if (sourceYQ12 - (this.height << 12) >= 0) {
-                clipPixelCount = (inverseSinStep - clipPixelCount) / inverseSinStep;
-                negativePixelCounter = negativePixelCounter + clipPixelCount;
-                sourceYQ12 = sourceYQ12 + inverseSinStep * clipPixelCount;
-                destinationIndex = destinationIndex + clipPixelCount;
+          negativeRowCounterNestedPhase3 = bottomThenNegativeHeight;
+          while (negativeRowCounterNestedPhase3 < 0) {
+            destinationIndexNestedPhase3 = rowDestinationIndex;
+            sourceXQ12NestedPhase3 = rowSourceXQ12;
+            sourceYQ12NestedPhase3 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+            negativePixelCounterNestedPhase3 = rightThenNegativeWidth;
+            if (sourceXQ12NestedPhase3 >= 0 &&
+                sourceXQ12NestedPhase3 - (this.width << 12) < 0) {
+              clipPixelCountNestedPhase2 = sourceYQ12NestedPhase3 - (this.height << 12);
+              if (sourceYQ12NestedPhase3 - (this.height << 12) >= 0) {
+                clipPixelCountNestedPhase2 = (inverseSinStep - clipPixelCountNestedPhase2) / inverseSinStep;
+                negativePixelCounterNestedPhase3 = negativePixelCounterNestedPhase3 + clipPixelCountNestedPhase2;
+                sourceYQ12NestedPhase3 = sourceYQ12NestedPhase3 + inverseSinStep * clipPixelCountNestedPhase2;
+                destinationIndexNestedPhase3 = destinationIndexNestedPhase3 + clipPixelCountNestedPhase2;
               }
-              clipPixelCount = (sourceYQ12 - inverseSinStep) / inverseSinStep;
-              if ((sourceYQ12 - inverseSinStep) / inverseSinStep > negativePixelCounter) {
-                negativePixelCounter = clipPixelCount;
+              clipPixelCountNestedPhase2 = (sourceYQ12NestedPhase3 - inverseSinStep) / inverseSinStep;
+              if ((sourceYQ12NestedPhase3 - inverseSinStep) / inverseSinStep > negativePixelCounterNestedPhase3) {
+                negativePixelCounterNestedPhase3 = clipPixelCountNestedPhase2;
               }
-              while (negativePixelCounter < 0) {
-                sampledPixel = this.pixels[(sourceYQ12 >> 12) * this.width + (sourceXQ12 >> 12)];
-                destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-                storedAlpha = sampledPixel >>> 24;
-                inverseAlpha256 = 256 - storedAlpha;
-                writeIndexFixedXReverseY = destinationIndex;
-                destinationIndex++;
-                SoftwareRasterizer.framebuffer[writeIndexFixedXReverseY] = ((sampledPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sampledPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                sourceYQ12 = sourceYQ12 + inverseSinStep;
-                negativePixelCounter++;
+              while (negativePixelCounterNestedPhase3 < 0) {
+                sampledPixelNestedPhase3 = this.pixels[(sourceYQ12NestedPhase3 >> 12) * this.width + (sourceXQ12NestedPhase3 >> 12)];
+                destinationPixelNestedPhase3 = SoftwareRasterizer.framebuffer[destinationIndexNestedPhase3];
+                storedAlphaNestedPhase3 = sampledPixelNestedPhase3 >>> 24;
+                inverseAlpha256NestedPhase3 = 256 - storedAlphaNestedPhase3;
+                writeIndexFixedXReverseY = destinationIndexNestedPhase3;
+                destinationIndexNestedPhase3++;
+                SoftwareRasterizer.framebuffer[writeIndexFixedXReverseY] = ((sampledPixelNestedPhase3 & 16711935) * storedAlphaNestedPhase3 + (destinationPixelNestedPhase3 & 16711935) * inverseAlpha256NestedPhase3 & -16711936) + ((sampledPixelNestedPhase3 & 65280) * storedAlphaNestedPhase3 + (destinationPixelNestedPhase3 & 65280) * inverseAlpha256NestedPhase3 & 16711680) >>> 8;
+                sourceYQ12NestedPhase3 = sourceYQ12NestedPhase3 + inverseSinStep;
+                negativePixelCounterNestedPhase3++;
               }
             }
-            negativeRowCounter++;
+            negativeRowCounterNestedPhase3++;
             rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
             rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
           }
@@ -615,95 +661,95 @@ final class ArgbSprite extends Sprite {
             return;
           }
           if (inverseSinStep >= 0) {
-            negativeRowCounterPhase2 = bottomThenNegativeHeight;
-            while (negativeRowCounterPhase2 < 0) {
-              destinationIndexPhase2 = rowDestinationIndex;
-              sourceXQ12Phase2 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-              sourceYQ12Phase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-              negativePixelCounterPhase2 = rightThenNegativeWidth;
-              if (sourceXQ12Phase2 < 0) {
-                clipPixelCountPhase2 = (inverseCosStep - 1 - sourceXQ12Phase2) / inverseCosStep;
-                negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipPixelCountPhase2;
-                sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipPixelCountPhase2;
-                sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipPixelCountPhase2;
-                destinationIndexPhase2 = destinationIndexPhase2 + clipPixelCountPhase2;
+            negativeRowCounterPhase2NestedPhase2 = bottomThenNegativeHeight;
+            while (negativeRowCounterPhase2NestedPhase2 < 0) {
+              destinationIndexPhase2NestedPhase2 = rowDestinationIndex;
+              sourceXQ12Phase2NestedPhase2 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+              sourceYQ12Phase2NestedPhase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+              negativePixelCounterPhase2NestedPhase2 = rightThenNegativeWidth;
+              if (sourceXQ12Phase2NestedPhase2 < 0) {
+                clipPixelCountPhase2NestedPhase2 = (inverseCosStep - 1 - sourceXQ12Phase2NestedPhase2) / inverseCosStep;
+                negativePixelCounterPhase2NestedPhase2 = negativePixelCounterPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
+                sourceXQ12Phase2NestedPhase2 = sourceXQ12Phase2NestedPhase2 + inverseCosStep * clipPixelCountPhase2NestedPhase2;
+                sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep * clipPixelCountPhase2NestedPhase2;
+                destinationIndexPhase2NestedPhase2 = destinationIndexPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
               }
-              clipPixelCountPhase2 = (1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
-              if ((1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2) {
-                negativePixelCounterPhase2 = clipPixelCountPhase2;
+              clipPixelCountPhase2NestedPhase2 = (1 + sourceXQ12Phase2NestedPhase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+              if ((1 + sourceXQ12Phase2NestedPhase2 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2NestedPhase2) {
+                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2;
               }
-              if (sourceYQ12Phase2 < 0) {
-                clipPixelCountPhase2 = (inverseSinStep - 1 - sourceYQ12Phase2) / inverseSinStep;
-                negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipPixelCountPhase2;
-                sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipPixelCountPhase2;
-                sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipPixelCountPhase2;
-                destinationIndexPhase2 = destinationIndexPhase2 + clipPixelCountPhase2;
+              if (sourceYQ12Phase2NestedPhase2 < 0) {
+                clipPixelCountPhase2NestedPhase2 = (inverseSinStep - 1 - sourceYQ12Phase2NestedPhase2) / inverseSinStep;
+                negativePixelCounterPhase2NestedPhase2 = negativePixelCounterPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
+                sourceXQ12Phase2NestedPhase2 = sourceXQ12Phase2NestedPhase2 + inverseCosStep * clipPixelCountPhase2NestedPhase2;
+                sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep * clipPixelCountPhase2NestedPhase2;
+                destinationIndexPhase2NestedPhase2 = destinationIndexPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
               }
-              clipPixelCountPhase2 = (1 + sourceYQ12Phase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
-              if ((1 + sourceYQ12Phase2 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2) {
-                negativePixelCounterPhase2 = clipPixelCountPhase2;
+              clipPixelCountPhase2NestedPhase2 = (1 + sourceYQ12Phase2NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+              if ((1 + sourceYQ12Phase2NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2NestedPhase2) {
+                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2;
               }
-              while (negativePixelCounterPhase2 < 0) {
-                sampledPixelPhase2 = this.pixels[(sourceYQ12Phase2 >> 12) * this.width + (sourceXQ12Phase2 >> 12)];
-                destinationPixelPhase2 = SoftwareRasterizer.framebuffer[destinationIndexPhase2];
-                storedAlphaPhase2 = sampledPixelPhase2 >>> 24;
-                inverseAlpha256Phase2 = 256 - storedAlphaPhase2;
-                writeIndexForwardXForwardY = destinationIndexPhase2;
-                destinationIndexPhase2++;
-                SoftwareRasterizer.framebuffer[writeIndexForwardXForwardY] = ((sampledPixelPhase2 & 16711935) * storedAlphaPhase2 + (destinationPixelPhase2 & 16711935) * inverseAlpha256Phase2 & -16711936) + ((sampledPixelPhase2 & 65280) * storedAlphaPhase2 + (destinationPixelPhase2 & 65280) * inverseAlpha256Phase2 & 16711680) >>> 8;
-                sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep;
-                sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep;
-                negativePixelCounterPhase2++;
+              while (negativePixelCounterPhase2NestedPhase2 < 0) {
+                sampledPixelPhase2NestedPhase2 = this.pixels[(sourceYQ12Phase2NestedPhase2 >> 12) * this.width + (sourceXQ12Phase2NestedPhase2 >> 12)];
+                destinationPixelPhase2NestedPhase2 = SoftwareRasterizer.framebuffer[destinationIndexPhase2NestedPhase2];
+                storedAlphaPhase2NestedPhase2 = sampledPixelPhase2NestedPhase2 >>> 24;
+                inverseAlpha256Phase2NestedPhase2 = 256 - storedAlphaPhase2NestedPhase2;
+                writeIndexForwardXForwardY = destinationIndexPhase2NestedPhase2;
+                destinationIndexPhase2NestedPhase2++;
+                SoftwareRasterizer.framebuffer[writeIndexForwardXForwardY] = ((sampledPixelPhase2NestedPhase2 & 16711935) * storedAlphaPhase2NestedPhase2 + (destinationPixelPhase2NestedPhase2 & 16711935) * inverseAlpha256Phase2NestedPhase2 & -16711936) + ((sampledPixelPhase2NestedPhase2 & 65280) * storedAlphaPhase2NestedPhase2 + (destinationPixelPhase2NestedPhase2 & 65280) * inverseAlpha256Phase2NestedPhase2 & 16711680) >>> 8;
+                sourceXQ12Phase2NestedPhase2 = sourceXQ12Phase2NestedPhase2 + inverseCosStep;
+                sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep;
+                negativePixelCounterPhase2NestedPhase2++;
               }
-              negativeRowCounterPhase2++;
+              negativeRowCounterPhase2NestedPhase2++;
               rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
               rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
               rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
             }
             return;
           }
-          negativeRowCounterPhase2 = bottomThenNegativeHeight;
-          while (negativeRowCounterPhase2 < 0) {
-            destinationIndexPhase2 = rowDestinationIndex;
-            sourceXQ12Phase2 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-            sourceYQ12Phase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-            negativePixelCounterPhase2 = rightThenNegativeWidth;
-            if (sourceXQ12Phase2 < 0) {
-              clipPixelCountPhase2 = (inverseCosStep - 1 - sourceXQ12Phase2) / inverseCosStep;
-              negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipPixelCountPhase2;
-              sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipPixelCountPhase2;
-              sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipPixelCountPhase2;
-              destinationIndexPhase2 = destinationIndexPhase2 + clipPixelCountPhase2;
+          negativeRowCounterPhase2NestedPhase3 = bottomThenNegativeHeight;
+          while (negativeRowCounterPhase2NestedPhase3 < 0) {
+            destinationIndexPhase2NestedPhase3 = rowDestinationIndex;
+            sourceXQ12Phase2NestedPhase3 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+            sourceYQ12Phase2NestedPhase3 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+            negativePixelCounterPhase2NestedPhase3 = rightThenNegativeWidth;
+            if (sourceXQ12Phase2NestedPhase3 < 0) {
+              clipPixelCountPhase2NestedPhase3 = (inverseCosStep - 1 - sourceXQ12Phase2NestedPhase3) / inverseCosStep;
+              negativePixelCounterPhase2NestedPhase3 = negativePixelCounterPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
+              sourceXQ12Phase2NestedPhase3 = sourceXQ12Phase2NestedPhase3 + inverseCosStep * clipPixelCountPhase2NestedPhase3;
+              sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep * clipPixelCountPhase2NestedPhase3;
+              destinationIndexPhase2NestedPhase3 = destinationIndexPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
             }
-            clipPixelCountPhase2 = (1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
-            if ((1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2) {
-              negativePixelCounterPhase2 = clipPixelCountPhase2;
+            clipPixelCountPhase2NestedPhase3 = (1 + sourceXQ12Phase2NestedPhase3 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+            if ((1 + sourceXQ12Phase2NestedPhase3 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2NestedPhase3) {
+              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3;
             }
-            clipPixelCountPhase2 = sourceYQ12Phase2 - (this.height << 12);
-            if (sourceYQ12Phase2 - (this.height << 12) >= 0) {
-              clipPixelCountPhase2 = (inverseSinStep - clipPixelCountPhase2) / inverseSinStep;
-              negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipPixelCountPhase2;
-              sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipPixelCountPhase2;
-              sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipPixelCountPhase2;
-              destinationIndexPhase2 = destinationIndexPhase2 + clipPixelCountPhase2;
+            clipPixelCountPhase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 - (this.height << 12);
+            if (sourceYQ12Phase2NestedPhase3 - (this.height << 12) >= 0) {
+              clipPixelCountPhase2NestedPhase3 = (inverseSinStep - clipPixelCountPhase2NestedPhase3) / inverseSinStep;
+              negativePixelCounterPhase2NestedPhase3 = negativePixelCounterPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
+              sourceXQ12Phase2NestedPhase3 = sourceXQ12Phase2NestedPhase3 + inverseCosStep * clipPixelCountPhase2NestedPhase3;
+              sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep * clipPixelCountPhase2NestedPhase3;
+              destinationIndexPhase2NestedPhase3 = destinationIndexPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
             }
-            clipPixelCountPhase2 = (sourceYQ12Phase2 - inverseSinStep) / inverseSinStep;
-            if ((sourceYQ12Phase2 - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2) {
-              negativePixelCounterPhase2 = clipPixelCountPhase2;
+            clipPixelCountPhase2NestedPhase3 = (sourceYQ12Phase2NestedPhase3 - inverseSinStep) / inverseSinStep;
+            if ((sourceYQ12Phase2NestedPhase3 - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2NestedPhase3) {
+              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3;
             }
-            while (negativePixelCounterPhase2 < 0) {
-              sampledPixelPhase2 = this.pixels[(sourceYQ12Phase2 >> 12) * this.width + (sourceXQ12Phase2 >> 12)];
-              destinationPixelPhase2 = SoftwareRasterizer.framebuffer[destinationIndexPhase2];
-              storedAlphaPhase2 = sampledPixelPhase2 >>> 24;
-              inverseAlpha256Phase2 = 256 - storedAlphaPhase2;
-              writeIndexForwardXReverseY = destinationIndexPhase2;
-              destinationIndexPhase2++;
-              SoftwareRasterizer.framebuffer[writeIndexForwardXReverseY] = ((sampledPixelPhase2 & 16711935) * storedAlphaPhase2 + (destinationPixelPhase2 & 16711935) * inverseAlpha256Phase2 & -16711936) + ((sampledPixelPhase2 & 65280) * storedAlphaPhase2 + (destinationPixelPhase2 & 65280) * inverseAlpha256Phase2 & 16711680) >>> 8;
-              sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep;
-              sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep;
-              negativePixelCounterPhase2++;
+            while (negativePixelCounterPhase2NestedPhase3 < 0) {
+              sampledPixelPhase2NestedPhase3 = this.pixels[(sourceYQ12Phase2NestedPhase3 >> 12) * this.width + (sourceXQ12Phase2NestedPhase3 >> 12)];
+              destinationPixelPhase2NestedPhase3 = SoftwareRasterizer.framebuffer[destinationIndexPhase2NestedPhase3];
+              storedAlphaPhase2NestedPhase3 = sampledPixelPhase2NestedPhase3 >>> 24;
+              inverseAlpha256Phase2NestedPhase3 = 256 - storedAlphaPhase2NestedPhase3;
+              writeIndexForwardXReverseY = destinationIndexPhase2NestedPhase3;
+              destinationIndexPhase2NestedPhase3++;
+              SoftwareRasterizer.framebuffer[writeIndexForwardXReverseY] = ((sampledPixelPhase2NestedPhase3 & 16711935) * storedAlphaPhase2NestedPhase3 + (destinationPixelPhase2NestedPhase3 & 16711935) * inverseAlpha256Phase2NestedPhase3 & -16711936) + ((sampledPixelPhase2NestedPhase3 & 65280) * storedAlphaPhase2NestedPhase3 + (destinationPixelPhase2NestedPhase3 & 65280) * inverseAlpha256Phase2NestedPhase3 & 16711680) >>> 8;
+              sourceXQ12Phase2NestedPhase3 = sourceXQ12Phase2NestedPhase3 + inverseCosStep;
+              sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep;
+              negativePixelCounterPhase2NestedPhase3++;
             }
-            negativeRowCounterPhase2++;
+            negativeRowCounterPhase2NestedPhase3++;
             rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
             rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
             rowDestinationIndex = rowDestinationIndex + SoftwareRasterizer.stride;
@@ -726,9 +772,9 @@ final class ArgbSprite extends Sprite {
                 sourceXQ12Phase3 = sourceXQ12Phase3 + inverseCosStep * clipPixelCountPhase3;
                 destinationIndexPhase3 = destinationIndexPhase3 + clipPixelCountPhase3;
               }
-              clipPixelCountPhase3 = (sourceXQ12Phase3 - inverseCosStep) / inverseCosStep;
+              clipPixelCountPhase3NestedPhase2 = (sourceXQ12Phase3 - inverseCosStep) / inverseCosStep;
               if ((sourceXQ12Phase3 - inverseCosStep) / inverseCosStep > negativePixelCounterPhase3) {
-                negativePixelCounterPhase3 = clipPixelCountPhase3;
+                negativePixelCounterPhase3 = clipPixelCountPhase3NestedPhase2;
               }
               while (negativePixelCounterPhase3 < 0) {
                 sampledPixelPhase3 = this.pixels[(sourceYQ12Phase3 >> 12) * this.width + (sourceXQ12Phase3 >> 12)];
@@ -763,20 +809,20 @@ final class ArgbSprite extends Sprite {
               sourceYQ12Phase4 = sourceYQ12Phase4 + inverseSinStep * clipPixelCountPhase4;
               destinationIndexPhase4 = destinationIndexPhase4 + clipPixelCountPhase4;
             }
-            clipPixelCountPhase4 = (sourceXQ12Phase4 - inverseCosStep) / inverseCosStep;
+            clipPixelCountPhase4NestedPhase2 = (sourceXQ12Phase4 - inverseCosStep) / inverseCosStep;
             if ((sourceXQ12Phase4 - inverseCosStep) / inverseCosStep > negativePixelCounterPhase4) {
-              negativePixelCounterPhase4 = clipPixelCountPhase4;
+              negativePixelCounterPhase4 = clipPixelCountPhase4NestedPhase2;
             }
             if (sourceYQ12Phase4 < 0) {
-              clipPixelCountPhase4 = (inverseSinStep - 1 - sourceYQ12Phase4) / inverseSinStep;
-              negativePixelCounterPhase4 = negativePixelCounterPhase4 + clipPixelCountPhase4;
-              sourceXQ12Phase4 = sourceXQ12Phase4 + inverseCosStep * clipPixelCountPhase4;
-              sourceYQ12Phase4 = sourceYQ12Phase4 + inverseSinStep * clipPixelCountPhase4;
-              destinationIndexPhase4 = destinationIndexPhase4 + clipPixelCountPhase4;
+              clipPixelCountPhase4NestedPhase3 = (inverseSinStep - 1 - sourceYQ12Phase4) / inverseSinStep;
+              negativePixelCounterPhase4 = negativePixelCounterPhase4 + clipPixelCountPhase4NestedPhase3;
+              sourceXQ12Phase4 = sourceXQ12Phase4 + inverseCosStep * clipPixelCountPhase4NestedPhase3;
+              sourceYQ12Phase4 = sourceYQ12Phase4 + inverseSinStep * clipPixelCountPhase4NestedPhase3;
+              destinationIndexPhase4 = destinationIndexPhase4 + clipPixelCountPhase4NestedPhase3;
             }
-            clipPixelCountPhase4 = (1 + sourceYQ12Phase4 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+            clipPixelCountPhase4NestedPhase4 = (1 + sourceYQ12Phase4 - (this.height << 12) - inverseSinStep) / inverseSinStep;
             if ((1 + sourceYQ12Phase4 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterPhase4) {
-              negativePixelCounterPhase4 = clipPixelCountPhase4;
+              negativePixelCounterPhase4 = clipPixelCountPhase4NestedPhase4;
             }
             while (negativePixelCounterPhase4 < 0) {
               sampledPixelPhase4 = this.pixels[(sourceYQ12Phase4 >> 12) * this.width + (sourceXQ12Phase4 >> 12)];
@@ -811,21 +857,21 @@ final class ArgbSprite extends Sprite {
             sourceYQ12Phase5 = sourceYQ12Phase5 + inverseSinStep * clipPixelCountPhase5;
             destinationIndexPhase5 = destinationIndexPhase5 + clipPixelCountPhase5;
           }
-          clipPixelCountPhase5 = (sourceXQ12Phase5 - inverseCosStep) / inverseCosStep;
+          clipPixelCountPhase5NestedPhase2 = (sourceXQ12Phase5 - inverseCosStep) / inverseCosStep;
           if ((sourceXQ12Phase5 - inverseCosStep) / inverseCosStep > negativePixelCounterPhase5) {
-            negativePixelCounterPhase5 = clipPixelCountPhase5;
+            negativePixelCounterPhase5 = clipPixelCountPhase5NestedPhase2;
           }
-          clipPixelCountPhase5 = sourceYQ12Phase5 - (this.height << 12);
+          clipPixelCountPhase5NestedPhase3 = sourceYQ12Phase5 - (this.height << 12);
           if (sourceYQ12Phase5 - (this.height << 12) >= 0) {
-            clipPixelCountPhase5 = (inverseSinStep - clipPixelCountPhase5) / inverseSinStep;
-            negativePixelCounterPhase5 = negativePixelCounterPhase5 + clipPixelCountPhase5;
-            sourceXQ12Phase5 = sourceXQ12Phase5 + inverseCosStep * clipPixelCountPhase5;
-            sourceYQ12Phase5 = sourceYQ12Phase5 + inverseSinStep * clipPixelCountPhase5;
-            destinationIndexPhase5 = destinationIndexPhase5 + clipPixelCountPhase5;
+            clipPixelCountPhase5NestedPhase3 = (inverseSinStep - clipPixelCountPhase5NestedPhase3) / inverseSinStep;
+            negativePixelCounterPhase5 = negativePixelCounterPhase5 + clipPixelCountPhase5NestedPhase3;
+            sourceXQ12Phase5 = sourceXQ12Phase5 + inverseCosStep * clipPixelCountPhase5NestedPhase3;
+            sourceYQ12Phase5 = sourceYQ12Phase5 + inverseSinStep * clipPixelCountPhase5NestedPhase3;
+            destinationIndexPhase5 = destinationIndexPhase5 + clipPixelCountPhase5NestedPhase3;
           }
-          clipPixelCountPhase5 = (sourceYQ12Phase5 - inverseSinStep) / inverseSinStep;
+          clipPixelCountPhase5NestedPhase4 = (sourceYQ12Phase5 - inverseSinStep) / inverseSinStep;
           if ((sourceYQ12Phase5 - inverseSinStep) / inverseSinStep > negativePixelCounterPhase5) {
-            negativePixelCounterPhase5 = clipPixelCountPhase5;
+            negativePixelCounterPhase5 = clipPixelCountPhase5NestedPhase4;
           }
           while (negativePixelCounterPhase5 < 0) {
             sampledPixelPhase5 = this.pixels[(sourceYQ12Phase5 >> 12) * this.width + (sourceXQ12Phase5 >> 12)];
@@ -911,6 +957,9 @@ final class ArgbSprite extends Sprite {
         int sampleIndexThenAverageAlpha;
         int inverseAlpha256;
         int destinationPixel;
+        int samplePixelNestedPhase2;
+        int sampleAlphaNestedPhase2;
+        int sampleIndexThenAverageAlphaNestedPhase2;
         reducedWidth = this.width >> 1;
         reducedHeight = this.height >> 1;
         x = x + this.trimX / 2;
@@ -966,12 +1015,12 @@ final class ArgbSprite extends Sprite {
               } else {
                 sampleRowOffset = this.width;
               }
-              samplePixel = samplePixelBuffer[sampleBaseIndex + sampleRowOffset];
-              sampleAlpha = samplePixel >>> 24;
-              alphaSum = alphaSum + sampleAlpha;
-              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlpha * (samplePixel >> 16 & 255);
-              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlpha * (samplePixel >> 8 & 255);
-              weightedBlue = weightedBlue + sampleAlpha * (samplePixel & 255);
+              samplePixelNestedPhase2 = samplePixelBuffer[sampleBaseIndex + sampleRowOffset];
+              sampleAlphaNestedPhase2 = samplePixelNestedPhase2 >>> 24;
+              alphaSum = alphaSum + sampleAlphaNestedPhase2;
+              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 >> 16 & 255);
+              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 >> 8 & 255);
+              weightedBlue = weightedBlue + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 & 255);
             }
             if (alphaSum == 0) {
               sourceBlockX += 2;
@@ -981,10 +1030,10 @@ final class ArgbSprite extends Sprite {
             }
             weightedRedThenRedBlue = (weightedRedThenRedBlue / alphaSum << 16) + weightedBlue / alphaSum;
             weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / alphaSum << 8;
-            sampleIndexThenAverageAlpha = alphaSum >> 2;
-            inverseAlpha256 = 256 - sampleIndexThenAverageAlpha;
+            sampleIndexThenAverageAlphaNestedPhase2 = alphaSum >> 2;
+            inverseAlpha256 = 256 - sampleIndexThenAverageAlphaNestedPhase2;
             destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlphaNestedPhase2 * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlphaNestedPhase2 * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
             sourceBlockX += 2;
             destinationIndex++;
             sourceIndex += 2;
@@ -1022,6 +1071,10 @@ final class ArgbSprite extends Sprite {
         int destinationPixel;
         int[] sampleBlockStorage;
         int[] sampleBlockAllocationThenReadAlias;
+        int sampleRowThenAlphaNestedPhase2;
+        int sampleRowThenAlphaNestedPhase3;
+        int sampleColumnThenAlphaSumNestedPhase2;
+        int sampleIndexThenAverageAlphaNestedPhase2;
         reducedWidth = this.width >> 2;
         reducedHeight = this.height >> 2;
         x = x + this.trimX / 4;
@@ -1072,28 +1125,28 @@ final class ArgbSprite extends Sprite {
               }
             }
             sampleBlockAllocationThenReadAlias = sampleBlockStorage;
-            sampleRowThenAlpha = 0;
-            sampleColumnThenAlphaSum = 0;
+            sampleRowThenAlphaNestedPhase2 = 0;
+            sampleColumnThenAlphaSumNestedPhase2 = 0;
             weightedRedThenRedBlue = 0;
             weightedGreenThenPackedGreen = 0;
             weightedBlue = 0;
             for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 16; sampleIndexThenAverageAlpha++) {
-              sampleRowThenAlpha = sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >>> 24;
-              sampleColumnThenAlphaSum = sampleColumnThenAlphaSum + sampleRowThenAlpha;
-              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
-              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
-              weightedBlue = weightedBlue + sampleRowThenAlpha * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] & 255);
+              sampleRowThenAlphaNestedPhase3 = sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >>> 24;
+              sampleColumnThenAlphaSumNestedPhase2 = sampleColumnThenAlphaSumNestedPhase2 + sampleRowThenAlphaNestedPhase3;
+              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
+              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
+              weightedBlue = weightedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockAllocationThenReadAlias[sampleIndexThenAverageAlpha] & 255);
             }
-            if (sampleColumnThenAlphaSum == 0) {
+            if (sampleColumnThenAlphaSumNestedPhase2 == 0) {
               sourceBlockX += 4;
               continue;
             }
-            weightedRedThenRedBlue = (weightedRedThenRedBlue / sampleColumnThenAlphaSum << 16) + weightedBlue / sampleColumnThenAlphaSum;
-            weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / sampleColumnThenAlphaSum << 8;
-            sampleIndexThenAverageAlpha = sampleColumnThenAlphaSum >> 4;
-            inverseAlpha256 = 256 - sampleIndexThenAverageAlpha;
+            weightedRedThenRedBlue = (weightedRedThenRedBlue / sampleColumnThenAlphaSumNestedPhase2 << 16) + weightedBlue / sampleColumnThenAlphaSumNestedPhase2;
+            weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / sampleColumnThenAlphaSumNestedPhase2 << 8;
+            sampleIndexThenAverageAlphaNestedPhase2 = sampleColumnThenAlphaSumNestedPhase2 >> 4;
+            inverseAlpha256 = 256 - sampleIndexThenAverageAlphaNestedPhase2;
             destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlphaNestedPhase2 * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlphaNestedPhase2 * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
             sourceBlockX += 4;
           }
         }
@@ -1111,6 +1164,7 @@ final class ArgbSprite extends Sprite {
         int modulatedPixel;
         int inverseAlpha256;
         int destinationPixel;
+        int modulatedPixelNestedPhase2;
         tintRedBlue = tintColor & 16711935;
         tintGreen = tintColor >> 8 & 255;
         negativeRowScratch = -drawHeight;
@@ -1136,16 +1190,16 @@ final class ArgbSprite extends Sprite {
             }
             modulatedPixel = 0;
             if (sourcePixel >> 8 != (sourcePixel & 65535)) {
-              modulatedPixel = sourcePixel;
+              modulatedPixelNestedPhase2 = sourcePixel;
             } else {
               sourcePixel = sourcePixel & 255;
-              modulatedPixel = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
+              modulatedPixelNestedPhase2 = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
             }
             inverseAlpha256 = 256 - storedAlpha;
             destinationPixel = destinationPixels[destinationIndex];
             destinationWriteIndex = destinationIndex;
             destinationIndex++;
-            destinationPixels[destinationWriteIndex] = ((modulatedPixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedPixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+            destinationPixels[destinationWriteIndex] = ((modulatedPixelNestedPhase2 & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedPixelNestedPhase2 & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumnScratch++;
           }
         }

@@ -7,16 +7,17 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "bec08ca258ed3f787606631b5ec8e7b0c79f1672",
+      "commit": "c6726c0b44589e46c5a52c7782ca9d7865c326ec",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "51923d64c90319051a0f3ae4de530aeac9df06ef18cb2d1a569025efe896ecbf",
-        "reproduce": "git archive --format=tar bec08ca258ed3f787606631b5ec8e7b0c79f1672 | sha256sum",
+        "sha256": "ff694e2b663e7cbf666d1f466d5cde1ab7e4da04c2c75f4d5a0b6db5e030635e",
+        "reproduce": "git archive --format=tar c6726c0b44589e46c5a52c7782ca9d7865c326ec | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
         "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
-        "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1"
+        "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+        "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1"
       }
     },
     "namingTool": {
@@ -90,7 +91,8 @@
     "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
     "environment": {
       "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
-      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1"
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1"
     }
   },
   "freshVerification": {
@@ -115,9 +117,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "8eed457bb2251a90af73610f14a8fd44fb36195328846931933c0ee3af7aa62d",
-  "previousSourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
-  "changedJavaFiles": 32,
+  "sourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
+  "previousSourceTreeSha256": "8eed457bb2251a90af73610f14a8fd44fb36195328846931933c0ee3af7aa62d",
+  "changedJavaFiles": 23,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3285,11 +3287,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "4cafecb6c2c67f2062262b13398581d6c70efe63",
+    "commit": "226656005fb63fff19addd00608c509b8f01e41b",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "d280db4343a7ce9f5e0182ac0f261c7b8bb70a30addfd43bbcd292d920f827c5"
+      "sha256": "c8fc2c1952cd65780655ec1104c36367a8eae406743b031f4538bea211572ad7"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3299,15 +3301,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "30504d9aba56f09984db4093a3ac2900502b3aa7ee2f742171464339d423ec3d",
+    "outputTreeSha256": "4d3292e560a441b716e6be4bd4ff8e1552e192b94ce7c4e300b70974714525f2",
     "files": 303,
-    "rules": 19313,
-    "identifierEdits": 121024,
-    "bindingsCompared": 137246,
+    "rules": 19518,
+    "identifierEdits": 121229,
+    "bindingsCompared": 137451,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 121477,
+    "totalEdits": 121682,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3329,8 +3331,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 224,
-    "semanticPass": 224
+    "structuralPass": 225,
+    "semanticPass": 225
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -23943,5 +23945,1993 @@
     ],
     "sourceWorkflowCommit": "4cafecb6c2c67f2062262b13398581d6c70efe63",
     "sourceProofWorkflowCommit": "4cafecb6c2c67f2062262b13398581d6c70efe63"
+  },
+  "nestedPrimitiveLocalLifetimeRecovery": {
+    "version": 225,
+    "nestedPrimitiveLifetimes": true,
+    "changedJavaFiles": 23,
+    "changedMethodBodies": 32,
+    "localsSplit": 125,
+    "declarationsAdded": 205,
+    "lifetimesAfter": 330,
+    "genericTestGroupsPassed": 5,
+    "genericAndNestedTestGroupsPassed": 12,
+    "nativeComparisons": 50688,
+    "sourceProofTest": "readable/tests/test-geoblox-primitive-lifetimes-source.mjs",
+    "sourceProofTestSha256": "bd51f7b28ee4843a47db5c308e723308192f03856afbffc07c2c07454ffd1d39",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "previousSourceCommit": "cc4642af5550934876b6e4f29605af49f7e87e3f",
+    "sourceCommit": "b411cb3c06d7e89e03caf9e339e42d9aff88691c",
+    "previousSourceTreeSha256": "8eed457bb2251a90af73610f14a8fd44fb36195328846931933c0ee3af7aa62d",
+    "sourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
+    "javaToolsCommit": "c6726c0b44589e46c5a52c7782ca9d7865c326ec",
+    "sourceArchiveSha256": "ff694e2b663e7cbf666d1f466d5cde1ab7e4da04c2c75f4d5a0b6db5e030635e",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1"
+    },
+    "sourceDeclarationsBefore": 19507,
+    "sourceDeclarationsAfter": 19712,
+    "bindingsBefore": 137246,
+    "bindingsCompared": 137451,
+    "sourceReferenceOccurrencesAdded": 0,
+    "sourceReferenceOccurrencesRemoved": 0,
+    "fullOverridePairsPreserved": 388,
+    "plainBlockLabelsAfter": 85,
+    "largeMethodBodiesWithPlainBlockLabelsAfter": 4,
+    "previousCompleteRules": 19313,
+    "unaffectedCompleteRulesPreserved": 19306,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "namingRulesAdded": 205,
+    "namingRulesRefined": 6,
+    "survivingLocalOrdinalMigrations": 1,
+    "localOrdinalMigrations": [
+      {
+        "before": "L:f.o(I)V#45",
+        "after": "L:f.o(I)V#48"
+      }
+    ],
+    "remainingOpaqueFieldSpellings": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "rawCompilerLocalsAfter": 0,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "exactExpectedSourceBytesVerified": true,
+    "allOriginalBindingOccurrencesPreserved": true,
+    "newLocalsIndependentlyTypedAndDefinitelyAssigned": true,
+    "allSurvivingTransfersAndProtectedScopesPreserved": true,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 19825,
+    "readableIdentifierEdits": 121229,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 121682,
+    "scope": "Split independently defined primitive phases inside a nested block containing every resolved use of that local using the pinned generic decompiler. Independent javac attribution proves unchanged primitive types, no initializers, definite assignment, every original binding occurrence and exact candidate bytes. Preserve all statements, effect/operator order, reference identity, exceptions/monitors and original diagnostics. Each raw local lineage is explicit; source/compiler/environment identities migrate, frozen naming/workflow/native pins do not. The two mixed synthesis locals receive their pitch/volume/oscillator roles. The deliberately retained initial gate-threshold assignment stays unused; filter warmup/chunk/tail roles are separate. Rendering-field purposes, four large frames and whole-game/device/FPS acceptance remain unresolved.",
+    "changedMethods": [
+      {
+        "file": "Geoblox.java",
+        "methodStart": 21142,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:Geoblox.c(Z)V#6",
+            "newNames": [
+              "var2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:Geoblox.c(Z)V#8"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ae.java",
+        "methodStart": 4037,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var8",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ae.<init>()V#13",
+            "newNames": [
+              "var8Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ae.<init>()V#23"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ae.java",
+        "methodStart": 438,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var8",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ae.c()V#7",
+            "newNames": [
+              "var8Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ae.c()V#22"
+            ]
+          },
+          {
+            "name": "var9_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ae.c()V#9",
+            "newNames": [
+              "var9_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:ae.c()V#23"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "bg.java",
+        "methodStart": 1988,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var19",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:bg.a([I[BIIIIIIIII[I[I)V#7",
+            "newNames": [
+              "var19Lifetime1"
+            ],
+            "newSymbols": [
+              "L:bg.a([I[BIIIIIIIII[I[I)V#9"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13779,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var2_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:bj.b(B)V#4",
+            "newNames": [
+              "var2_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:bj.b(B)V#11"
+            ]
+          },
+          {
+            "name": "var4",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:bj.b(B)V#7",
+            "newNames": [
+              "var4Lifetime1"
+            ],
+            "newSymbols": [
+              "L:bj.b(B)V#12"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 64945,
+        "localsSplit": 10,
+        "declarationsAdded": 10,
+        "locals": [
+          {
+            "name": "var33",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#24",
+            "newNames": [
+              "var33Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#48"
+            ]
+          },
+          {
+            "name": "var34",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#25",
+            "newNames": [
+              "var34Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#49"
+            ]
+          },
+          {
+            "name": "var35",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#26",
+            "newNames": [
+              "var35Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#50"
+            ]
+          },
+          {
+            "name": "var36",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#27",
+            "newNames": [
+              "var36Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#51"
+            ]
+          },
+          {
+            "name": "var37",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#28",
+            "newNames": [
+              "var37Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#52"
+            ]
+          },
+          {
+            "name": "var38",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#29",
+            "newNames": [
+              "var38Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#53"
+            ]
+          },
+          {
+            "name": "var39",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#30",
+            "newNames": [
+              "var39Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#54"
+            ]
+          },
+          {
+            "name": "var40",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#31",
+            "newNames": [
+              "var40Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#55"
+            ]
+          },
+          {
+            "name": "var35Lifetime1",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#36",
+            "newNames": [
+              "var35Lifetime1Lifetime1"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#56"
+            ]
+          },
+          {
+            "name": "var35Lifetime2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.a(IIIIII)V#37",
+            "newNames": [
+              "var35Lifetime2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:dm.a(IIIIII)V#57"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 53944,
+        "localsSplit": 1,
+        "declarationsAdded": 3,
+        "locals": [
+          {
+            "name": "var10",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:dm.a([IIIIIIII)V#7",
+            "newNames": [
+              "var10Lifetime1",
+              "var10Lifetime2",
+              "var10Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.a([IIIIIIII)V#12",
+              "L:dm.a([IIIIIIII)V#13",
+              "L:dm.a([IIIIIIII)V#14"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 51632,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var13",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.f(II)V#16",
+            "newNames": [
+              "var13Lifetime1"
+            ],
+            "newSymbols": [
+              "L:dm.f(II)V#19"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 5053,
+        "localsSplit": 17,
+        "declarationsAdded": 34,
+        "locals": [
+          {
+            "name": "var32",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.b(IIIIII)V#32",
+            "newNames": [
+              "var32Lifetime5"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#67"
+            ]
+          },
+          {
+            "name": "var33",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#33",
+            "newNames": [
+              "var33Lifetime5",
+              "var33Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#68",
+              "L:dm.b(IIIIII)V#69"
+            ]
+          },
+          {
+            "name": "var34",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#34",
+            "newNames": [
+              "var34Lifetime5",
+              "var34Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#70",
+              "L:dm.b(IIIIII)V#71"
+            ]
+          },
+          {
+            "name": "var35",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#35",
+            "newNames": [
+              "var35Lifetime5",
+              "var35Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#72",
+              "L:dm.b(IIIIII)V#73"
+            ]
+          },
+          {
+            "name": "var36",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#36",
+            "newNames": [
+              "var36Lifetime5",
+              "var36Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#74",
+              "L:dm.b(IIIIII)V#75"
+            ]
+          },
+          {
+            "name": "var37",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#37",
+            "newNames": [
+              "var37Lifetime5",
+              "var37Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#76",
+              "L:dm.b(IIIIII)V#77"
+            ]
+          },
+          {
+            "name": "var38",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#38",
+            "newNames": [
+              "var38Lifetime5",
+              "var38Lifetime6"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#78",
+              "L:dm.b(IIIIII)V#79"
+            ]
+          },
+          {
+            "name": "var32Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#39",
+            "newNames": [
+              "var32Lifetime1Lifetime1",
+              "var32Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#80",
+              "L:dm.b(IIIIII)V#81"
+            ]
+          },
+          {
+            "name": "var32Lifetime2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:dm.b(IIIIII)V#40",
+            "newNames": [
+              "var32Lifetime2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#82"
+            ]
+          },
+          {
+            "name": "var32Lifetime3",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:dm.b(IIIIII)V#41",
+            "newNames": [
+              "var32Lifetime3Lifetime1",
+              "var32Lifetime3Lifetime2",
+              "var32Lifetime3Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#83",
+              "L:dm.b(IIIIII)V#84",
+              "L:dm.b(IIIIII)V#85"
+            ]
+          },
+          {
+            "name": "var32Lifetime4",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:dm.b(IIIIII)V#42",
+            "newNames": [
+              "var32Lifetime4Lifetime1",
+              "var32Lifetime4Lifetime2",
+              "var32Lifetime4Lifetime3"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#86",
+              "L:dm.b(IIIIII)V#87",
+              "L:dm.b(IIIIII)V#88"
+            ]
+          },
+          {
+            "name": "var33Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#43",
+            "newNames": [
+              "var33Lifetime1Lifetime1",
+              "var33Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#89",
+              "L:dm.b(IIIIII)V#90"
+            ]
+          },
+          {
+            "name": "var34Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#47",
+            "newNames": [
+              "var34Lifetime1Lifetime1",
+              "var34Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#91",
+              "L:dm.b(IIIIII)V#92"
+            ]
+          },
+          {
+            "name": "var35Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#51",
+            "newNames": [
+              "var35Lifetime1Lifetime1",
+              "var35Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#93",
+              "L:dm.b(IIIIII)V#94"
+            ]
+          },
+          {
+            "name": "var36Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#55",
+            "newNames": [
+              "var36Lifetime1Lifetime1",
+              "var36Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#95",
+              "L:dm.b(IIIIII)V#96"
+            ]
+          },
+          {
+            "name": "var37Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#59",
+            "newNames": [
+              "var37Lifetime1Lifetime1",
+              "var37Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#97",
+              "L:dm.b(IIIIII)V#98"
+            ]
+          },
+          {
+            "name": "var38Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:dm.b(IIIIII)V#63",
+            "newNames": [
+              "var38Lifetime1Lifetime1",
+              "var38Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:dm.b(IIIIII)V#99",
+              "L:dm.b(IIIIII)V#100"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ed.java",
+        "methodStart": 3119,
+        "localsSplit": 6,
+        "declarationsAdded": 10,
+        "locals": [
+          {
+            "name": "var14",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:ed.a(II)[I#11",
+            "newNames": [
+              "var14Lifetime3",
+              "var14Lifetime4"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#30",
+              "L:ed.a(II)[I#31"
+            ]
+          },
+          {
+            "name": "var15",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:ed.a(II)[I#12",
+            "newNames": [
+              "var15Lifetime3",
+              "var15Lifetime4"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#32",
+              "L:ed.a(II)[I#33"
+            ]
+          },
+          {
+            "name": "var17",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:ed.a(II)[I#14",
+            "newNames": [
+              "var17Lifetime1",
+              "var17Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#34",
+              "L:ed.a(II)[I#35"
+            ]
+          },
+          {
+            "name": "var12Lifetime1",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ed.a(II)[I#20",
+            "newNames": [
+              "var12Lifetime1Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#36"
+            ]
+          },
+          {
+            "name": "var15Lifetime2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ed.a(II)[I#28",
+            "newNames": [
+              "var15Lifetime2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#37"
+            ]
+          },
+          {
+            "name": "var16Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:ed.a(II)[I#29",
+            "newNames": [
+              "var16Lifetime1Lifetime1",
+              "var16Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ed.a(II)[I#38",
+              "L:ed.a(II)[I#39"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "f.java",
+        "methodStart": 5834,
+        "localsSplit": 3,
+        "declarationsAdded": 3,
+        "locals": [
+          {
+            "name": "var1",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:f.o(I)V#38",
+            "newNames": [
+              "var1Lifetime5"
+            ],
+            "newSymbols": [
+              "L:f.o(I)V#45"
+            ]
+          },
+          {
+            "name": "var1Lifetime1",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:f.o(I)V#41",
+            "newNames": [
+              "var1Lifetime1Lifetime1"
+            ],
+            "newSymbols": [
+              "L:f.o(I)V#46"
+            ]
+          },
+          {
+            "name": "var1Lifetime3",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:f.o(I)V#43",
+            "newNames": [
+              "var1Lifetime3Lifetime1"
+            ],
+            "newSymbols": [
+              "L:f.o(I)V#47"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ge.java",
+        "methodStart": 582,
+        "localsSplit": 3,
+        "declarationsAdded": 5,
+        "locals": [
+          {
+            "name": "var4",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ge.c(I)V#4",
+            "newNames": [
+              "var4Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ge.c(I)V#12"
+            ]
+          },
+          {
+            "name": "var5",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ge.c(I)V#5",
+            "newNames": [
+              "var5Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ge.c(I)V#13"
+            ]
+          },
+          {
+            "name": "var3Lifetime1",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:ge.c(I)V#11",
+            "newNames": [
+              "var3Lifetime1Lifetime1",
+              "var3Lifetime1Lifetime2",
+              "var3Lifetime1Lifetime3"
+            ],
+            "newSymbols": [
+              "L:ge.c(I)V#14",
+              "L:ge.c(I)V#15",
+              "L:ge.c(I)V#16"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "il.java",
+        "methodStart": 41683,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var15",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.d([I[IIIIIIIIIII)V#4",
+            "newNames": [
+              "var15Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.d([I[IIIIIIIIIII)V#7"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "il.java",
+        "methodStart": 38361,
+        "localsSplit": 3,
+        "declarationsAdded": 4,
+        "locals": [
+          {
+            "name": "var14",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.f(II)V#15",
+            "newNames": [
+              "var14Lifetime1",
+              "var14Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.f(II)V#25",
+              "L:il.f(II)V#26"
+            ]
+          },
+          {
+            "name": "var15",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.f(II)V#16",
+            "newNames": [
+              "var15Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.f(II)V#27"
+            ]
+          },
+          {
+            "name": "var19",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.f(II)V#20",
+            "newNames": [
+              "var19Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.f(II)V#28"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "il.java",
+        "methodStart": 34966,
+        "localsSplit": 3,
+        "declarationsAdded": 3,
+        "locals": [
+          {
+            "name": "var13",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.d(II)V#17",
+            "newNames": [
+              "var13Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.d(II)V#26"
+            ]
+          },
+          {
+            "name": "var14",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.d(II)V#18",
+            "newNames": [
+              "var14Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.d(II)V#27"
+            ]
+          },
+          {
+            "name": "var19",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.d(II)V#23",
+            "newNames": [
+              "var19Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.d(II)V#28"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "il.java",
+        "methodStart": 10202,
+        "localsSplit": 23,
+        "declarationsAdded": 46,
+        "locals": [
+          {
+            "name": "var32",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.b(IIIIII)V#32",
+            "newNames": [
+              "var32Lifetime5"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#82"
+            ]
+          },
+          {
+            "name": "var33",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#33",
+            "newNames": [
+              "var33Lifetime5",
+              "var33Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#83",
+              "L:il.b(IIIIII)V#84"
+            ]
+          },
+          {
+            "name": "var34",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#34",
+            "newNames": [
+              "var34Lifetime5",
+              "var34Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#85",
+              "L:il.b(IIIIII)V#86"
+            ]
+          },
+          {
+            "name": "var35",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#35",
+            "newNames": [
+              "var35Lifetime5",
+              "var35Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#87",
+              "L:il.b(IIIIII)V#88"
+            ]
+          },
+          {
+            "name": "var36",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#36",
+            "newNames": [
+              "var36Lifetime5",
+              "var36Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#89",
+              "L:il.b(IIIIII)V#90"
+            ]
+          },
+          {
+            "name": "var37",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#37",
+            "newNames": [
+              "var37Lifetime5",
+              "var37Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#91",
+              "L:il.b(IIIIII)V#92"
+            ]
+          },
+          {
+            "name": "var38",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#38",
+            "newNames": [
+              "var38Lifetime5",
+              "var38Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#93",
+              "L:il.b(IIIIII)V#94"
+            ]
+          },
+          {
+            "name": "var39",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#39",
+            "newNames": [
+              "var39Lifetime5",
+              "var39Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#95",
+              "L:il.b(IIIIII)V#96"
+            ]
+          },
+          {
+            "name": "var40",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#40",
+            "newNames": [
+              "var40Lifetime5",
+              "var40Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#97",
+              "L:il.b(IIIIII)V#98"
+            ]
+          },
+          {
+            "name": "var41",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#41",
+            "newNames": [
+              "var41Lifetime5",
+              "var41Lifetime6"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#99",
+              "L:il.b(IIIIII)V#100"
+            ]
+          },
+          {
+            "name": "var32Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#42",
+            "newNames": [
+              "var32Lifetime1Lifetime1",
+              "var32Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#101",
+              "L:il.b(IIIIII)V#102"
+            ]
+          },
+          {
+            "name": "var32Lifetime2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:il.b(IIIIII)V#43",
+            "newNames": [
+              "var32Lifetime2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#103"
+            ]
+          },
+          {
+            "name": "var32Lifetime3",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:il.b(IIIIII)V#44",
+            "newNames": [
+              "var32Lifetime3Lifetime1",
+              "var32Lifetime3Lifetime2",
+              "var32Lifetime3Lifetime3"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#104",
+              "L:il.b(IIIIII)V#105",
+              "L:il.b(IIIIII)V#106"
+            ]
+          },
+          {
+            "name": "var32Lifetime4",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:il.b(IIIIII)V#45",
+            "newNames": [
+              "var32Lifetime4Lifetime1",
+              "var32Lifetime4Lifetime2",
+              "var32Lifetime4Lifetime3"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#107",
+              "L:il.b(IIIIII)V#108",
+              "L:il.b(IIIIII)V#109"
+            ]
+          },
+          {
+            "name": "var33Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#46",
+            "newNames": [
+              "var33Lifetime1Lifetime1",
+              "var33Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#110",
+              "L:il.b(IIIIII)V#111"
+            ]
+          },
+          {
+            "name": "var34Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#50",
+            "newNames": [
+              "var34Lifetime1Lifetime1",
+              "var34Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#112",
+              "L:il.b(IIIIII)V#113"
+            ]
+          },
+          {
+            "name": "var35Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#54",
+            "newNames": [
+              "var35Lifetime1Lifetime1",
+              "var35Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#114",
+              "L:il.b(IIIIII)V#115"
+            ]
+          },
+          {
+            "name": "var36Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#58",
+            "newNames": [
+              "var36Lifetime1Lifetime1",
+              "var36Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#116",
+              "L:il.b(IIIIII)V#117"
+            ]
+          },
+          {
+            "name": "var37Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#62",
+            "newNames": [
+              "var37Lifetime1Lifetime1",
+              "var37Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#118",
+              "L:il.b(IIIIII)V#119"
+            ]
+          },
+          {
+            "name": "var38Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#66",
+            "newNames": [
+              "var38Lifetime1Lifetime1",
+              "var38Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#120",
+              "L:il.b(IIIIII)V#121"
+            ]
+          },
+          {
+            "name": "var39Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#70",
+            "newNames": [
+              "var39Lifetime1Lifetime1",
+              "var39Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#122",
+              "L:il.b(IIIIII)V#123"
+            ]
+          },
+          {
+            "name": "var40Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#74",
+            "newNames": [
+              "var40Lifetime1Lifetime1",
+              "var40Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#124",
+              "L:il.b(IIIIII)V#125"
+            ]
+          },
+          {
+            "name": "var41Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:il.b(IIIIII)V#78",
+            "newNames": [
+              "var41Lifetime1Lifetime1",
+              "var41Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:il.b(IIIIII)V#126",
+              "L:il.b(IIIIII)V#127"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "jg.java",
+        "methodStart": 8344,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:jg.<initializer>()V#3",
+            "newNames": [
+              "var2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:jg.<initializer>()V#23"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "kj.java",
+        "methodStart": 22192,
+        "localsSplit": 2,
+        "declarationsAdded": 4,
+        "locals": [
+          {
+            "name": "var4Lifetime3",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:kj.c(IB)V#7",
+            "newNames": [
+              "var4Lifetime3Lifetime1",
+              "var4Lifetime3Lifetime2"
+            ],
+            "newSymbols": [
+              "L:kj.c(IB)V#17",
+              "L:kj.c(IB)V#18"
+            ]
+          },
+          {
+            "name": "var5Lifetime3",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:kj.c(IB)V#11",
+            "newNames": [
+              "var5Lifetime3Lifetime1",
+              "var5Lifetime3Lifetime2"
+            ],
+            "newSymbols": [
+              "L:kj.c(IB)V#19",
+              "L:kj.c(IB)V#20"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 39712,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var10",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:kl.a([III)V#11",
+            "newNames": [
+              "var10Lifetime1"
+            ],
+            "newSymbols": [
+              "L:kl.a([III)V#12"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "m.java",
+        "methodStart": 1495,
+        "localsSplit": 2,
+        "declarationsAdded": 3,
+        "locals": [
+          {
+            "name": "var5_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:m.a([B)V#13",
+            "newNames": [
+              "var5_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:m.a([B)V#26"
+            ]
+          },
+          {
+            "name": "var8",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:m.a([B)V#17",
+            "newNames": [
+              "var8Lifetime1",
+              "var8Lifetime2"
+            ],
+            "newSymbols": [
+              "L:m.a([B)V#27",
+              "L:m.a([B)V#28"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "oe.java",
+        "methodStart": 12723,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var12",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:oe.b(III)V#8",
+            "newNames": [
+              "var12Lifetime1"
+            ],
+            "newSymbols": [
+              "L:oe.b(III)V#25"
+            ]
+          },
+          {
+            "name": "var13",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:oe.b(III)V#9",
+            "newNames": [
+              "var13Lifetime1"
+            ],
+            "newSymbols": [
+              "L:oe.b(III)V#26"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "qa.java",
+        "methodStart": 10224,
+        "localsSplit": 1,
+        "declarationsAdded": 4,
+        "locals": [
+          {
+            "name": "var1Lifetime2",
+            "type": "float",
+            "groups": 5,
+            "symbol": "L:qa.b(B)V#34",
+            "newNames": [
+              "var1Lifetime2Lifetime1",
+              "var1Lifetime2Lifetime2",
+              "var1Lifetime2Lifetime3",
+              "var1Lifetime2Lifetime4"
+            ],
+            "newSymbols": [
+              "L:qa.b(B)V#41",
+              "L:qa.b(B)V#42",
+              "L:qa.b(B)V#43",
+              "L:qa.b(B)V#44"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "qk.java",
+        "methodStart": 9038,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var6",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:qk.a([II)V#3",
+            "newNames": [
+              "var6Lifetime1"
+            ],
+            "newSymbols": [
+              "L:qk.a([II)V#16"
+            ]
+          },
+          {
+            "name": "var9",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:qk.a([II)V#8",
+            "newNames": [
+              "var9Lifetime1"
+            ],
+            "newSymbols": [
+              "L:qk.a([II)V#17"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "rf.java",
+        "methodStart": 345,
+        "localsSplit": 3,
+        "declarationsAdded": 5,
+        "locals": [
+          {
+            "name": "var10",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:rf.b()V#8",
+            "newNames": [
+              "var10Lifetime1",
+              "var10Lifetime2"
+            ],
+            "newSymbols": [
+              "L:rf.b()V#19",
+              "L:rf.b()V#20"
+            ]
+          },
+          {
+            "name": "var11",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:rf.b()V#9",
+            "newNames": [
+              "var11Lifetime1",
+              "var11Lifetime2"
+            ],
+            "newSymbols": [
+              "L:rf.b()V#21",
+              "L:rf.b()V#22"
+            ]
+          },
+          {
+            "name": "var12",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:rf.b()V#10",
+            "newNames": [
+              "var12Lifetime1"
+            ],
+            "newSymbols": [
+              "L:rf.b()V#23"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "u.java",
+        "methodStart": 2787,
+        "localsSplit": 4,
+        "declarationsAdded": 4,
+        "locals": [
+          {
+            "name": "var7",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:u.a([FI)V#11",
+            "newNames": [
+              "var7Lifetime1"
+            ],
+            "newSymbols": [
+              "L:u.a([FI)V#22"
+            ]
+          },
+          {
+            "name": "var8_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:u.a([FI)V#12",
+            "newNames": [
+              "var8_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:u.a([FI)V#23"
+            ]
+          },
+          {
+            "name": "var9",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:u.a([FI)V#14",
+            "newNames": [
+              "var9Lifetime1"
+            ],
+            "newSymbols": [
+              "L:u.a([FI)V#24"
+            ]
+          },
+          {
+            "name": "var10",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:u.a([FI)V#15",
+            "newNames": [
+              "var10Lifetime1"
+            ],
+            "newSymbols": [
+              "L:u.a([FI)V#25"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ua.java",
+        "methodStart": 11996,
+        "localsSplit": 15,
+        "declarationsAdded": 32,
+        "locals": [
+          {
+            "name": "var20",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#31",
+            "newNames": [
+              "var20Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#74"
+            ]
+          },
+          {
+            "name": "var21_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#32",
+            "newNames": [
+              "var21_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#75"
+            ]
+          },
+          {
+            "name": "var25",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:ua.c(I)[F#37",
+            "newNames": [
+              "var25Lifetime1",
+              "var25Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#76",
+              "L:ua.c(I)[F#77"
+            ]
+          },
+          {
+            "name": "var26",
+            "type": "int",
+            "groups": 12,
+            "symbol": "L:ua.c(I)[F#38",
+            "newNames": [
+              "var26Lifetime1",
+              "var26Lifetime2",
+              "var26Lifetime3",
+              "var26Lifetime4",
+              "var26Lifetime5",
+              "var26Lifetime6",
+              "var26Lifetime7",
+              "var26Lifetime8",
+              "var26Lifetime9",
+              "var26Lifetime10",
+              "var26Lifetime11"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#78",
+              "L:ua.c(I)[F#79",
+              "L:ua.c(I)[F#80",
+              "L:ua.c(I)[F#81",
+              "L:ua.c(I)[F#82",
+              "L:ua.c(I)[F#83",
+              "L:ua.c(I)[F#84",
+              "L:ua.c(I)[F#85",
+              "L:ua.c(I)[F#86",
+              "L:ua.c(I)[F#87",
+              "L:ua.c(I)[F#88"
+            ]
+          },
+          {
+            "name": "var26_float",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#39",
+            "newNames": [
+              "var26_floatLifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#89"
+            ]
+          },
+          {
+            "name": "var27",
+            "type": "float",
+            "groups": 5,
+            "symbol": "L:ua.c(I)[F#40",
+            "newNames": [
+              "var27Lifetime1",
+              "var27Lifetime2",
+              "var27Lifetime3",
+              "var27Lifetime4"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#90",
+              "L:ua.c(I)[F#91",
+              "L:ua.c(I)[F#92",
+              "L:ua.c(I)[F#93"
+            ]
+          },
+          {
+            "name": "var27_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#41",
+            "newNames": [
+              "var27_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#94"
+            ]
+          },
+          {
+            "name": "var28",
+            "type": "float",
+            "groups": 3,
+            "symbol": "L:ua.c(I)[F#42",
+            "newNames": [
+              "var28Lifetime1",
+              "var28Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#95",
+              "L:ua.c(I)[F#96"
+            ]
+          },
+          {
+            "name": "var28_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#43",
+            "newNames": [
+              "var28_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#97"
+            ]
+          },
+          {
+            "name": "var29",
+            "type": "float",
+            "groups": 3,
+            "symbol": "L:ua.c(I)[F#44",
+            "newNames": [
+              "var29Lifetime1",
+              "var29Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#98",
+              "L:ua.c(I)[F#99"
+            ]
+          },
+          {
+            "name": "var29_int",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#45",
+            "newNames": [
+              "var29_intLifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#100"
+            ]
+          },
+          {
+            "name": "var30",
+            "type": "float",
+            "groups": 3,
+            "symbol": "L:ua.c(I)[F#46",
+            "newNames": [
+              "var30Lifetime1",
+              "var30Lifetime2"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#101",
+              "L:ua.c(I)[F#102"
+            ]
+          },
+          {
+            "name": "var31",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#48",
+            "newNames": [
+              "var31Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#103"
+            ]
+          },
+          {
+            "name": "var33",
+            "type": "float",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#51",
+            "newNames": [
+              "var33Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#104"
+            ]
+          },
+          {
+            "name": "var19Lifetime1",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ua.c(I)[F#73",
+            "newNames": [
+              "var19Lifetime1Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ua.c(I)[F#105"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ub.java",
+        "methodStart": 2784,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var5",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ub.a(Lqc;Luc;)V#2",
+            "newNames": [
+              "var5Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ub.a(Lqc;Luc;)V#6"
+            ]
+          },
+          {
+            "name": "var6",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ub.a(Lqc;Luc;)V#3",
+            "newNames": [
+              "var6Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ub.a(Lqc;Luc;)V#7"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "ui.java",
+        "methodStart": 294,
+        "localsSplit": 2,
+        "declarationsAdded": 2,
+        "locals": [
+          {
+            "name": "var10",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ui.a([FIZ)V#9",
+            "newNames": [
+              "var10Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ui.a([FIZ)V#20"
+            ]
+          },
+          {
+            "name": "var11",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:ui.a([FIZ)V#10",
+            "newNames": [
+              "var11Lifetime1"
+            ],
+            "newSymbols": [
+              "L:ui.a([FIZ)V#21"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "vb.java",
+        "methodStart": 47040,
+        "localsSplit": 4,
+        "declarationsAdded": 5,
+        "locals": [
+          {
+            "name": "var20",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:vb.a([IIIIIIIII)V#24",
+            "newNames": [
+              "var20Lifetime3"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIIII)V#46"
+            ]
+          },
+          {
+            "name": "var20Lifetime1",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:vb.a([IIIIIIIII)V#38",
+            "newNames": [
+              "var20Lifetime1Lifetime1",
+              "var20Lifetime1Lifetime2"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIIII)V#47",
+              "L:vb.a([IIIIIIIII)V#48"
+            ]
+          },
+          {
+            "name": "var20Lifetime2",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:vb.a([IIIIIIIII)V#39",
+            "newNames": [
+              "var20Lifetime2Lifetime1"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIIII)V#49"
+            ]
+          },
+          {
+            "name": "var21Lifetime1",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:vb.a([IIIIIIIII)V#40",
+            "newNames": [
+              "var21Lifetime1Lifetime1"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIIII)V#50"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "vb.java",
+        "methodStart": 10895,
+        "localsSplit": 4,
+        "declarationsAdded": 7,
+        "locals": [
+          {
+            "name": "var19",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:vb.a([IIIIIIII)V#15",
+            "newNames": [
+              "var19Lifetime1"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIII)V#20"
+            ]
+          },
+          {
+            "name": "var21",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:vb.a([IIIIIIII)V#17",
+            "newNames": [
+              "var21Lifetime1",
+              "var21Lifetime2"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIII)V#21",
+              "L:vb.a([IIIIIIII)V#22"
+            ]
+          },
+          {
+            "name": "var22",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:vb.a([IIIIIIII)V#18",
+            "newNames": [
+              "var22Lifetime1",
+              "var22Lifetime2"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIII)V#23",
+              "L:vb.a([IIIIIIII)V#24"
+            ]
+          },
+          {
+            "name": "var23",
+            "type": "int",
+            "groups": 3,
+            "symbol": "L:vb.a([IIIIIIII)V#19",
+            "newNames": [
+              "var23Lifetime1",
+              "var23Lifetime2"
+            ],
+            "newSymbols": [
+              "L:vb.a([IIIIIIII)V#25",
+              "L:vb.a([IIIIIIII)V#26"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "vb.java",
+        "methodStart": 4283,
+        "localsSplit": 1,
+        "declarationsAdded": 3,
+        "locals": [
+          {
+            "name": "var22",
+            "type": "int",
+            "groups": 4,
+            "symbol": "L:vb.a(IIIIII)V#18",
+            "newNames": [
+              "var22Lifetime1",
+              "var22Lifetime2",
+              "var22Lifetime3"
+            ],
+            "newSymbols": [
+              "L:vb.a(IIIIII)V#19",
+              "L:vb.a(IIIIII)V#20",
+              "L:vb.a(IIIIII)V#21"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "vf.java",
+        "methodStart": 7823,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var8",
+            "type": "int",
+            "groups": 2,
+            "symbol": "L:vf.g(I)V#9",
+            "newNames": [
+              "var8Lifetime1"
+            ],
+            "newSymbols": [
+              "L:vf.g(I)V#18"
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceWorkflowCommit": "226656005fb63fff19addd00608c509b8f01e41b",
+    "sourceProofWorkflowCommit": "226656005fb63fff19addd00608c509b8f01e41b"
   }
 }

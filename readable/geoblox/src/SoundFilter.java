@@ -77,6 +77,8 @@ final class SoundFilter {
         int pairIndex;
         int variantPairIndex;
         int[] zeroedGainEndpoints;
+        int channelNestedPhase2;
+        int pairIndexNestedPhase2;
         packedPairCounts = buffer.readUnsignedByte((byte) 34);
         this.pairCounts[0] = packedPairCounts >> 4;
         this.pairCounts[1] = packedPairCounts & 15;
@@ -90,18 +92,18 @@ final class SoundFilter {
               this.attenuationEndpoints[channel][0][pairIndex] = buffer.readUnsignedShortBE(true);
             }
           }
-          for (channel = 0; channel < 2; channel++) {
+          for (channelNestedPhase2 = 0; channelNestedPhase2 < 2; channelNestedPhase2++) {
             variantPairIndex = 0;
-            pairIndex = variantPairIndex;
-            while (variantPairIndex < this.pairCounts[channel]) {
-              if ((variantMask & 1 << channel * 4 << variantPairIndex) == 0) {
-                this.frequencyEndpoints[channel][1][variantPairIndex] = this.frequencyEndpoints[channel][0][variantPairIndex];
-                this.attenuationEndpoints[channel][1][variantPairIndex] = this.attenuationEndpoints[channel][0][variantPairIndex];
+            pairIndexNestedPhase2 = variantPairIndex;
+            while (variantPairIndex < this.pairCounts[channelNestedPhase2]) {
+              if ((variantMask & 1 << channelNestedPhase2 * 4 << variantPairIndex) == 0) {
+                this.frequencyEndpoints[channelNestedPhase2][1][variantPairIndex] = this.frequencyEndpoints[channelNestedPhase2][0][variantPairIndex];
+                this.attenuationEndpoints[channelNestedPhase2][1][variantPairIndex] = this.attenuationEndpoints[channelNestedPhase2][0][variantPairIndex];
                 variantPairIndex++;
                 continue;
               }
-              this.frequencyEndpoints[channel][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
-              this.attenuationEndpoints[channel][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
+              this.frequencyEndpoints[channelNestedPhase2][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
+              this.attenuationEndpoints[channelNestedPhase2][1][variantPairIndex] = buffer.readUnsignedShortBE(true);
               variantPairIndex++;
             }
           }

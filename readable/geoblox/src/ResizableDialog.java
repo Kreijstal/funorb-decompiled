@@ -427,6 +427,8 @@ abstract class ResizableDialog extends FadingDialog {
         int rasterYPhase3;
         int rowGrayOrRgbPhase2;
         int rowGrayOrRgbPhase3;
+        int leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2;
+        int leftCornerRgbOrRightCornerXNestedPhase2;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         SoftwareRasterizer.fillVerticalGradient(x + 6, y + 35, -12 + this.widgetWidth, -40 + this.widgetHeight, 2105376, 0);
         bandStartGray = 211;
@@ -465,13 +467,13 @@ abstract class ResizableDialog extends FadingDialog {
             }
           }
           if (20 >= bandRowIndex) {
-            leftCornerDistanceSquaredOrRightEdgeLimit = rightEdgeOffset;
+            leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2 = rightEdgeOffset;
             rightEdgeOffset -= 21;
-            for (leftCornerRgbOrRightCornerX = 0; leftCornerRgbOrRightCornerX <= 20; leftCornerRgbOrRightCornerX++) {
-              rightCornerDistanceSquared = (-bandRowIndex + 20) * (-bandRowIndex + 20) + leftCornerRgbOrRightCornerX * leftCornerRgbOrRightCornerX;
+            for (leftCornerRgbOrRightCornerXNestedPhase2 = 0; leftCornerRgbOrRightCornerXNestedPhase2 <= 20; leftCornerRgbOrRightCornerXNestedPhase2++) {
+              rightCornerDistanceSquared = (-bandRowIndex + 20) * (-bandRowIndex + 20) + leftCornerRgbOrRightCornerXNestedPhase2 * leftCornerRgbOrRightCornerXNestedPhase2;
               if (rightCornerDistanceSquared <= 462) {
                 if (rightCornerDistanceSquared < 420) {
-                  leftCornerDistanceSquaredOrRightEdgeLimit = rightEdgeOffset + 1;
+                  leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2 = rightEdgeOffset + 1;
                   rightEdgeOffset++;
                   continue;
                 }
@@ -483,7 +485,7 @@ abstract class ResizableDialog extends FadingDialog {
               }
               break;
             }
-            rightEdgeOffset = leftCornerDistanceSquaredOrRightEdgeLimit;
+            rightEdgeOffset = leftCornerDistanceSquaredOrRightEdgeLimitNestedPhase2;
           }
           rowGrayOrRgb = rowGrayOrRgb | (rowGrayOrRgb << 16 | rowGrayOrRgb << 8);
           SoftwareRasterizer.drawHorizontalLine(leftEdgeOffset + x, rasterY, rightEdgeOffset - leftEdgeOffset, rowGrayOrRgb);

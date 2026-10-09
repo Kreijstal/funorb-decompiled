@@ -33,6 +33,11 @@ final class MusicScore extends IntrusiveNode {
         int[] channelBanksStorage;
         int[] channelBanksInitializationAlias;
         int trackIndexPhase2;
+        int channelIndexNestedPhase2;
+        int channelIndexNestedPhase3;
+        int controllerOrProgramOrNoteNestedPhase2;
+        int controllerOrProgramOrNoteNestedPhase3;
+        int controllerValueOrVelocityNestedPhase2;
         if (this.instrumentNoteMasks != null) {
           return;
         }
@@ -83,22 +88,22 @@ final class MusicScore extends IntrusiveNode {
               }
             }
             if (eventStatus == 192) {
-              channelIndex = packedEvent & 15;
-              controllerOrProgramOrNote = packedEvent >> 8 & 127;
-              channelPrograms[channelIndex] = channelBanksStorage[channelIndex] + controllerOrProgramOrNote;
+              channelIndexNestedPhase2 = packedEvent & 15;
+              controllerOrProgramOrNoteNestedPhase2 = packedEvent >> 8 & 127;
+              channelPrograms[channelIndexNestedPhase2] = channelBanksStorage[channelIndexNestedPhase2] + controllerOrProgramOrNoteNestedPhase2;
             }
             if (eventStatus == 144) {
-              channelIndex = packedEvent & 15;
-              controllerOrProgramOrNote = packedEvent >> 8 & 127;
-              controllerValueOrVelocity = packedEvent >> 16 & 127;
-              if (controllerValueOrVelocity > 0) {
-                instrumentId = channelProgramsStorage[channelIndex];
+              channelIndexNestedPhase3 = packedEvent & 15;
+              controllerOrProgramOrNoteNestedPhase3 = packedEvent >> 8 & 127;
+              controllerValueOrVelocityNestedPhase2 = packedEvent >> 16 & 127;
+              if (controllerValueOrVelocityNestedPhase2 > 0) {
+                instrumentId = channelProgramsStorage[channelIndexNestedPhase3];
                 noteMask = (InstrumentNoteMask) ((Object) this.instrumentNoteMasks.findByKey((long)instrumentId, (byte) -76));
                 if (noteMask == null) {
                   noteMask = new InstrumentNoteMask(new byte[128]);
                   this.instrumentNoteMasks.put((byte) 102, noteMask, (long)instrumentId);
                 }
-                noteMask.notesUsed[controllerOrProgramOrNote] = (byte) 1;
+                noteMask.notesUsed[controllerOrProgramOrNoteNestedPhase3] = (byte) 1;
               }
             }
             midiReader.readTrackDelta(trackIndexPhase2);

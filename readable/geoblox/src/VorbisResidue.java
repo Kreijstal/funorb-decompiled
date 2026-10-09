@@ -31,6 +31,8 @@ final class VorbisResidue {
         float[] stridedVector;
         float[] contiguousVector;
         int clearSampleIndexOrClasswordDimensionsPhase2;
+        int classwordRemainderOrGroupPartitionIndexNestedPhase2;
+        int classwordDimensionIndexOrClassificationNestedPhase2;
         for (clearSampleIndexOrClasswordDimensions = 0; clearSampleIndexOrClasswordDimensions < sampleCount; clearSampleIndexOrClasswordDimensions++) {
           samples[clearSampleIndexOrClasswordDimensions] = 0.0f;
         }
@@ -56,10 +58,10 @@ final class VorbisResidue {
               }
             }
             allocatedClassificationsOrGroupAlias = intermediateClassificationsAlias;
-            classwordRemainderOrGroupPartitionIndex = 0;
-            while (classwordRemainderOrGroupPartitionIndex < clearSampleIndexOrClasswordDimensionsPhase2) {
-              classwordDimensionIndexOrClassification = allocatedClassificationsOrGroupAlias[partitionIndex];
-              passBookId = this.passBookIndices[classwordDimensionIndexOrClassification * 8 + passIndex];
+            classwordRemainderOrGroupPartitionIndexNestedPhase2 = 0;
+            while (classwordRemainderOrGroupPartitionIndexNestedPhase2 < clearSampleIndexOrClasswordDimensionsPhase2) {
+              classwordDimensionIndexOrClassificationNestedPhase2 = allocatedClassificationsOrGroupAlias[partitionIndex];
+              passBookId = this.passBookIndices[classwordDimensionIndexOrClassificationNestedPhase2 * 8 + passIndex];
               if (passBookId >= 0) {
                 partitionSampleOffset = this.begin + partitionIndex * this.partitionSize;
                 residueCodebook = MusicDecoder.codebooks[passBookId];
@@ -86,7 +88,7 @@ final class VorbisResidue {
               if (partitionIndex >= partitionCount) {
                 break;
               }
-              classwordRemainderOrGroupPartitionIndex++;
+              classwordRemainderOrGroupPartitionIndexNestedPhase2++;
             }
           }
         }

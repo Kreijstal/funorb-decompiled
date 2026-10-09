@@ -256,6 +256,7 @@ abstract class SocketConnector {
         float blueHueOffset;
         int[] allocatedSortKeysAlias;
         int[] allocatedSortKeys;
+        int colorIndexNestedPhase2;
         sweetsThemeCompletionAchievementId = 9;
         loginGameUpdatedText = "This game has been updated! Please reload this page.";
         swapRotationControlsKeyCode = 35;
@@ -320,10 +321,10 @@ abstract class SocketConnector {
             }
             themeSortKeysForWrites[colorIndex] = (int)(derivedHue * 255.0f) << (int)(derivedSaturation * 255.0f) + 16 << 8 + (int)(255.0f * derivedLightness);
           }
-          for (colorIndex = 1; 7 > colorIndex; colorIndex++) {
-            insertionScanIndex = -1 + colorIndex;
-            insertionSortKey = allocatedSortKeys[colorIndex];
-            insertionRgbColor = themeCycleColors[sortedThemeIndex][colorIndex];
+          for (colorIndexNestedPhase2 = 1; 7 > colorIndexNestedPhase2; colorIndexNestedPhase2++) {
+            insertionScanIndex = -1 + colorIndexNestedPhase2;
+            insertionSortKey = allocatedSortKeys[colorIndexNestedPhase2];
+            insertionRgbColor = themeCycleColors[sortedThemeIndex][colorIndexNestedPhase2];
             while (insertionScanIndex >= 0) {
               if (allocatedSortKeys[insertionScanIndex] > insertionSortKey) {
                 themeSortKeysForWrites[insertionScanIndex + 1] = allocatedSortKeys[insertionScanIndex];

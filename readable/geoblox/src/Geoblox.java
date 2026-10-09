@@ -608,6 +608,7 @@ public final class Geoblox extends SessionGameApplet {
         boolean fullscreenAvailableForUiSnapshot = false;
         int uiServiceResultOrOverlayMode;
         int clientControlFlowGuard;
+        int uiServiceResultOrOverlayModeNestedPhase2;
         clientControlFlowGuard = clientControlFlowFlag;
         DialogLayer.serviceGameAudioOutputs(78);
         if (methodGuard) {
@@ -780,8 +781,8 @@ public final class Geoblox extends SessionGameApplet {
           TrackedPcmStream.updateAchievementSubmissions((byte) -122);
           NanoFrameTimer.flushSessionWrites(-1, 0);
           if (ClientTimingSupport.isClientReadyForSessionActions(54)) {
-            uiServiceResultOrOverlayMode = this.pollReconnectAndResendRequests((byte) -67);
-            if (uiServiceResultOrOverlayMode == 2) {
+            uiServiceResultOrOverlayModeNestedPhase2 = this.pollReconnectAndResendRequests((byte) -67);
+            if (uiServiceResultOrOverlayModeNestedPhase2 == 2) {
               ClientScreenExitSupport.handleSessionExitServiceResult(320, 240, IntrusiveNodeHashTable.smallFont, IntrusiveNodeHashTable.smallFont.maxAscent * 3 >> 1, -128, IntrusiveNodeHashTable.smallFont.maxAscent);
             }
           }

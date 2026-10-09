@@ -40,6 +40,8 @@ final class VorbisCodebook {
         int nextCodewordOrBitIndexPhase2;
         int shorterOrLongerLengthOrBranchBitMaskPhase2;
         int carryBitMaskOrUnusedCopyCursorSnapshotPhase2;
+        int shorterOrLongerLengthOrBranchBitMaskNestedPhase2;
+        int candidateCodewordNestedPhase2;
         entryCodewords = new int[this.entryCount];
         nextCodewordByLength = new int[33];
         intermediateNextCodewordByLengthAlias = nextCodewordByLength;
@@ -72,12 +74,12 @@ final class VorbisCodebook {
             nextCodewordOrBitIndex = nextCodewordByLengthAlias[codewordLength - 1];
           }
           nextCodewordByLength[codewordLength] = nextCodewordOrBitIndex;
-          for (shorterOrLongerLengthOrBranchBitMask = codewordLength + 1; shorterOrLongerLengthOrBranchBitMask <= 32; shorterOrLongerLengthOrBranchBitMask++) {
-            candidateCodeword = nextCodewordByLength[shorterOrLongerLengthOrBranchBitMask];
-            if (candidateCodeword != currentCodewordOrTreeIndex) {
+          for (shorterOrLongerLengthOrBranchBitMaskNestedPhase2 = codewordLength + 1; shorterOrLongerLengthOrBranchBitMaskNestedPhase2 <= 32; shorterOrLongerLengthOrBranchBitMaskNestedPhase2++) {
+            candidateCodewordNestedPhase2 = nextCodewordByLength[shorterOrLongerLengthOrBranchBitMaskNestedPhase2];
+            if (candidateCodewordNestedPhase2 != currentCodewordOrTreeIndex) {
               continue;
             }
-            nextCodewordByLength[shorterOrLongerLengthOrBranchBitMask] = nextCodewordOrBitIndex;
+            nextCodewordByLength[shorterOrLongerLengthOrBranchBitMaskNestedPhase2] = nextCodewordOrBitIndex;
           }
         }
         this.huffmanTree = new int[8];
@@ -161,6 +163,7 @@ final class VorbisCodebook {
         int unorderedEntryIndex;
         int entryCursorOrSparseLengthsValueOrLookupTypePhase2;
         int runEntryIndexOrLookupValueBitsPhase2;
+        int lookupValueIndexOrEntryIndexNestedPhase2;
         MusicDecoder.readBits(24);
         this.dimensions = MusicDecoder.readBits(16);
         this.entryCount = MusicDecoder.readBits(24);
@@ -214,13 +217,13 @@ final class VorbisCodebook {
           }
           this.valueVectors = new float[this.entryCount][this.dimensions];
           if (entryCursorOrSparseLengthsValueOrLookupTypePhase2 == 1) {
-            for (lookupValueIndexOrEntryIndex = 0; lookupValueIndexOrEntryIndex < this.entryCount; lookupValueIndexOrEntryIndex++) {
+            for (lookupValueIndexOrEntryIndexNestedPhase2 = 0; lookupValueIndexOrEntryIndexNestedPhase2 < this.entryCount; lookupValueIndexOrEntryIndexNestedPhase2++) {
               sequenceLastValue = 0.0f;
               latticeIndexDivisorOrDenseLookupIndex = 1;
               for (dimensionIndex = 0; dimensionIndex < this.dimensions; dimensionIndex++) {
-                latticeLookupIndex = lookupValueIndexOrEntryIndex / latticeIndexDivisorOrDenseLookupIndex % lookupValueCount;
+                latticeLookupIndex = lookupValueIndexOrEntryIndexNestedPhase2 / latticeIndexDivisorOrDenseLookupIndex % lookupValueCount;
                 latticeLookupValue = (float)this.quantizedLookupValues[latticeLookupIndex] * lookupDeltaValue + lookupMinimumValue + sequenceLastValue;
-                this.valueVectors[lookupValueIndexOrEntryIndex][dimensionIndex] = latticeLookupValue;
+                this.valueVectors[lookupValueIndexOrEntryIndexNestedPhase2][dimensionIndex] = latticeLookupValue;
                 if (sequenceFlagValue != 0) {
                   sequenceLastValue = latticeLookupValue;
                 }
@@ -228,12 +231,12 @@ final class VorbisCodebook {
               }
             }
           } else {
-            for (lookupValueIndexOrEntryIndex = 0; lookupValueIndexOrEntryIndex < this.entryCount; lookupValueIndexOrEntryIndex++) {
+            for (lookupValueIndexOrEntryIndexNestedPhase2 = 0; lookupValueIndexOrEntryIndexNestedPhase2 < this.entryCount; lookupValueIndexOrEntryIndexNestedPhase2++) {
               sequenceLastValue = 0.0f;
-              latticeIndexDivisorOrDenseLookupIndex = lookupValueIndexOrEntryIndex * this.dimensions;
+              latticeIndexDivisorOrDenseLookupIndex = lookupValueIndexOrEntryIndexNestedPhase2 * this.dimensions;
               for (dimensionIndex = 0; dimensionIndex < this.dimensions; dimensionIndex++) {
                 denseLookupValue = (float)this.quantizedLookupValues[latticeIndexDivisorOrDenseLookupIndex] * lookupDeltaValue + lookupMinimumValue + sequenceLastValue;
-                this.valueVectors[lookupValueIndexOrEntryIndex][dimensionIndex] = denseLookupValue;
+                this.valueVectors[lookupValueIndexOrEntryIndexNestedPhase2][dimensionIndex] = denseLookupValue;
                 if (sequenceFlagValue == 0) {
                   latticeIndexDivisorOrDenseLookupIndex++;
                   continue;

@@ -426,6 +426,8 @@ final class CachedArchiveSource extends ArchiveSource {
         int unusedClientGuardSnapshot;
         IntrusiveNode newDownloadGroup;
         IntrusiveNode newVerificationGroup;
+        int phaseCompleteNestedPhase2;
+        int groupIdNestedPhase2;
         backgroundLoadingAndSweep: {
           requestSweepDueCheck: {
             completedRequestSweep: {
@@ -479,15 +481,15 @@ final class CachedArchiveSource extends ArchiveSource {
                     break backgroundGroupLoading;
                   }
                   if (this.downloadAllPending) {
-                    phaseComplete = 1;
+                    phaseCompleteNestedPhase2 = 1;
                     backgroundGroup = this.backgroundGroups.firstForIteration(0);
                     while (backgroundGroup != null) {
-                      groupId = (int)backgroundGroup.nodeKey;
-                      if (this.groupDiskStatus[groupId] != 1) {
-                        unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupId);
+                      groupIdNestedPhase2 = (int)backgroundGroup.nodeKey;
+                      if (this.groupDiskStatus[groupIdNestedPhase2] != 1) {
+                        unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, groupIdNestedPhase2);
                       }
-                      if (this.groupDiskStatus[groupId] != 1) {
-                        phaseComplete = 0;
+                      if (this.groupDiskStatus[groupIdNestedPhase2] != 1) {
+                        phaseCompleteNestedPhase2 = 0;
                       } else {
                         backgroundGroup.unlinkNode(false);
                       }
@@ -497,7 +499,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       if (this.backgroundGroupIndex < this.index.fileCounts.length) {
                         if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
                           if (this.networkClient.isBackgroundQueueFull(-21)) {
-                            phaseComplete = 0;
+                            phaseCompleteNestedPhase2 = 0;
                             break backgroundDownloadScanStep;
                           }
                           if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
@@ -506,7 +508,7 @@ final class CachedArchiveSource extends ArchiveSource {
                           if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
                             newDownloadGroup = new IntrusiveNode();
                             newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
-                            phaseComplete = 0;
+                            phaseCompleteNestedPhase2 = 0;
                             this.backgroundGroups.addLast(-97, newDownloadGroup);
                           }
                         }
@@ -515,7 +517,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       }
                       break;
                     }
-                    if (phaseComplete != 0) {
+                    if (phaseCompleteNestedPhase2 != 0) {
                       this.downloadAllPending = false;
                       this.backgroundGroupIndex = 0;
                       break backgroundGroupLoading;

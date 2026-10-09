@@ -606,6 +606,10 @@ final class MidiPcmStream extends PcmStream {
         int secondDataBytePhase3;
         int secondDataBytePhase4;
         int selectedParameterPhase2;
+        int channelIndexPhase4NestedPhase2;
+        int channelIndexPhase4NestedPhase3;
+        int firstDataBytePhase4NestedPhase2;
+        int firstDataBytePhase4NestedPhase3;
         if (methodGuard != 38) {
           return;
         }
@@ -643,15 +647,15 @@ final class MidiPcmStream extends PcmStream {
             return;
           }
           if (statusKind == 208) {
-            channelIndexPhase4 = packedEvent & 15;
-            firstDataBytePhase4 = (32669 & packedEvent) >> 8;
-            this.handleChannelPressureStub(firstDataBytePhase4, methodGuard ^ -2858, channelIndexPhase4);
+            channelIndexPhase4NestedPhase2 = packedEvent & 15;
+            firstDataBytePhase4NestedPhase2 = (32669 & packedEvent) >> 8;
+            this.handleChannelPressureStub(firstDataBytePhase4NestedPhase2, methodGuard ^ -2858, channelIndexPhase4NestedPhase2);
             return;
           }
           if (statusKind == 224) {
-            channelIndexPhase4 = packedEvent & 15;
-            firstDataBytePhase4 = (packedEvent >> 9 & 16256) + ((32673 & packedEvent) >> 8);
-            this.setChannelPitchBend(-108, firstDataBytePhase4, channelIndexPhase4);
+            channelIndexPhase4NestedPhase3 = packedEvent & 15;
+            firstDataBytePhase4NestedPhase3 = (packedEvent >> 9 & 16256) + ((32673 & packedEvent) >> 8);
+            this.setChannelPitchBend(-108, firstDataBytePhase4NestedPhase3, channelIndexPhase4NestedPhase3);
             return;
           }
           statusKind = 255 & packedEvent;

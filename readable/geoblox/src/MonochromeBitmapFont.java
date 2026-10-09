@@ -62,6 +62,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         int availableGlyphWidth;
         int leadingClipOrTrailingSkip;
         int negativePixelCounter;
+        int leadingClipOrTrailingSkipNestedPhase2;
         glyphLeftRelativeToClip = x - SoftwareRasterizer.clipLeft;
         glyphTopRelativeToClip = y - SoftwareRasterizer.clipTop;
         maskRow = glyphTopRelativeToClip;
@@ -93,17 +94,17 @@ final class MonochromeBitmapFont extends BitmapFont {
             }
             maskWidth = maskWidth - leadingClipOrTrailingSkip;
           }
-          leadingClipOrTrailingSkip = 0;
+          leadingClipOrTrailingSkipNestedPhase2 = 0;
           if (availableGlyphWidth >= maskWidth) {
-            leadingClipOrTrailingSkip = availableGlyphWidth - maskWidth;
+            leadingClipOrTrailingSkipNestedPhase2 = availableGlyphWidth - maskWidth;
           } else {
             maskWidth = availableGlyphWidth;
           }
           negativePixelCounter = -maskWidth;
           while (true) {
             if (negativePixelCounter >= 0) {
-              sourceIndex = sourceIndex + (leadingClipOrTrailingSkip + sourceRowSkip);
-              destinationIndex = destinationIndex + (leadingClipOrTrailingSkip + destinationRowSkip);
+              sourceIndex = sourceIndex + (leadingClipOrTrailingSkipNestedPhase2 + sourceRowSkip);
+              destinationIndex = destinationIndex + (leadingClipOrTrailingSkipNestedPhase2 + destinationRowSkip);
               maskRow++;
               break;
             }

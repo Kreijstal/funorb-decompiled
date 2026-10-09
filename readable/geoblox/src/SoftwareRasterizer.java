@@ -157,6 +157,9 @@ final class SoftwareRasterizer {
         int radiusSquared;
         int xAdjustedSquaredDistance;
         int edgePixelIndex;
+        int edgePixelIndexNestedPhase2;
+        int edgePixelIndexNestedPhase3;
+        int edgePixelIndexNestedPhase4;
         if (cornerRadius == 0) {
           SoftwareRasterizer.drawRectangle(x, y, width, height, color);
           return;
@@ -195,14 +198,14 @@ final class SoftwareRasterizer {
                 for (edgePixelIndex = upperLeftInnerRowCenterIndex; edgePixelIndex <= lowerLeftInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
                   framebuffer[edgePixelIndex - arcMajorOffset] = color;
                 }
-                for (edgePixelIndex = upperRightInnerRowCenterIndex; edgePixelIndex <= lowerRightInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
-                  framebuffer[edgePixelIndex + arcMajorOffset] = color;
+                for (edgePixelIndexNestedPhase2 = upperRightInnerRowCenterIndex; edgePixelIndexNestedPhase2 <= lowerRightInnerRowCenterIndex; edgePixelIndexNestedPhase2 = edgePixelIndexNestedPhase2 + stride) {
+                  framebuffer[edgePixelIndexNestedPhase2 + arcMajorOffset] = color;
                 }
-                for (edgePixelIndex = upperLeftOuterRowCenterIndex; edgePixelIndex <= upperRightOuterRowCenterIndex; edgePixelIndex++) {
-                  framebuffer[edgePixelIndex] = color;
+                for (edgePixelIndexNestedPhase3 = upperLeftOuterRowCenterIndex; edgePixelIndexNestedPhase3 <= upperRightOuterRowCenterIndex; edgePixelIndexNestedPhase3++) {
+                  framebuffer[edgePixelIndexNestedPhase3] = color;
                 }
-                for (edgePixelIndex = lowerLeftOuterRowCenterIndex; edgePixelIndex <= lowerRightOuterRowCenterIndex; edgePixelIndex++) {
-                  framebuffer[edgePixelIndex] = color;
+                for (edgePixelIndexNestedPhase4 = lowerLeftOuterRowCenterIndex; edgePixelIndexNestedPhase4 <= lowerRightOuterRowCenterIndex; edgePixelIndexNestedPhase4++) {
+                  framebuffer[edgePixelIndexNestedPhase4] = color;
                 }
                 while (true) {
                   unclippedMinorOffsetBeforeIncrement = arcMinorOffset;
@@ -335,6 +338,13 @@ final class SoftwareRasterizer {
         int outputRed;
         int outputGreen;
         int outputBlue;
+        int windowXOrNegativeOutputCounterNestedPhase2;
+        int outputRedNestedPhase2;
+        int outputRedNestedPhase3;
+        int outputGreenNestedPhase2;
+        int outputGreenNestedPhase3;
+        int outputBlueNestedPhase2;
+        int outputBlueNestedPhase3;
         reciprocalWindowScaleQ14 = 16384 / (2 * radius + 1);
         growingWindowEndCounter = 1 + radius - regionWidth - regionLeft;
         if (0 < growingWindowEndCounter) {
@@ -376,9 +386,9 @@ final class SoftwareRasterizer {
           initialDestinationIndexBeforeIncrement = destinationIndex;
           destinationIndex++;
           pixels[initialDestinationIndexBeforeIncrement] = (runningRedSum / windowSampleCount << 16) + (runningGreenSum / windowSampleCount << 8) + runningBlueSum / windowSampleCount;
-          for (windowXOrNegativeOutputCounter = 1 - regionWidth; windowXOrNegativeOutputCounter < growingWindowEndCounter; windowXOrNegativeOutputCounter++) {
+          for (windowXOrNegativeOutputCounterNestedPhase2 = 1 - regionWidth; windowXOrNegativeOutputCounterNestedPhase2 < growingWindowEndCounter; windowXOrNegativeOutputCounterNestedPhase2++) {
             leavingPixelIndex++;
-            if (regionLeft + regionWidth + windowXOrNegativeOutputCounter + radius < clipRight) {
+            if (regionLeft + regionWidth + windowXOrNegativeOutputCounterNestedPhase2 + radius < clipRight) {
               scratchPixel = pixels[enteringPixelIndex];
               enteringPixelIndex++;
               runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
@@ -393,7 +403,7 @@ final class SoftwareRasterizer {
             destinationIndex++;
             pixels[growingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
           }
-          while (windowXOrNegativeOutputCounter < fullWindowEndCounter) {
+          while (windowXOrNegativeOutputCounterNestedPhase2 < fullWindowEndCounter) {
             scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             if (runningRedSum < 0) {
@@ -412,57 +422,57 @@ final class SoftwareRasterizer {
             runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
             runningGreenSum = runningGreenSum + (scratchPixel >> 8 & 255);
             runningBlueSum = runningBlueSum + (scratchPixel & 255);
-            outputRed = runningRedSum * reciprocalWindowScaleQ14 >> 14;
-            outputGreen = runningGreenSum * reciprocalWindowScaleQ14 >> 14;
-            outputBlue = runningBlueSum * reciprocalWindowScaleQ14 >> 14;
-            if (outputRed > 255) {
-              outputRed = 255;
+            outputRedNestedPhase2 = runningRedSum * reciprocalWindowScaleQ14 >> 14;
+            outputGreenNestedPhase2 = runningGreenSum * reciprocalWindowScaleQ14 >> 14;
+            outputBlueNestedPhase2 = runningBlueSum * reciprocalWindowScaleQ14 >> 14;
+            if (outputRedNestedPhase2 > 255) {
+              outputRedNestedPhase2 = 255;
             }
-            if (outputGreen > 255) {
-              outputGreen = 255;
+            if (outputGreenNestedPhase2 > 255) {
+              outputGreenNestedPhase2 = 255;
             }
-            if (outputBlue > 255) {
-              outputBlue = 255;
+            if (outputBlueNestedPhase2 > 255) {
+              outputBlueNestedPhase2 = 255;
             }
             fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[fullWindowDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
-            windowXOrNegativeOutputCounter++;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (outputRedNestedPhase2 << 16) + (outputGreenNestedPhase2 << 8) + outputBlueNestedPhase2;
+            windowXOrNegativeOutputCounterNestedPhase2++;
           }
-          while (windowXOrNegativeOutputCounter < 0) {
+          while (windowXOrNegativeOutputCounterNestedPhase2 < 0) {
             scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             runningGreenSum = runningGreenSum - (scratchPixel >> 8 & 255);
             runningBlueSum = runningBlueSum - (scratchPixel & 255);
             windowSampleCount--;
-            outputRed = runningRedSum / windowSampleCount;
-            outputGreen = runningGreenSum / windowSampleCount;
-            outputBlue = runningBlueSum / windowSampleCount;
-            if (outputRed >= 0) {
-              if (outputRed > 255) {
-                outputRed = 255;
+            outputRedNestedPhase3 = runningRedSum / windowSampleCount;
+            outputGreenNestedPhase3 = runningGreenSum / windowSampleCount;
+            outputBlueNestedPhase3 = runningBlueSum / windowSampleCount;
+            if (outputRedNestedPhase3 >= 0) {
+              if (outputRedNestedPhase3 > 255) {
+                outputRedNestedPhase3 = 255;
               }
             } else {
-              outputRed = 0;
+              outputRedNestedPhase3 = 0;
             }
-            if (outputGreen >= 0) {
-              if (outputGreen > 255) {
-                outputGreen = 255;
+            if (outputGreenNestedPhase3 >= 0) {
+              if (outputGreenNestedPhase3 > 255) {
+                outputGreenNestedPhase3 = 255;
               }
             } else {
-              outputGreen = 0;
+              outputGreenNestedPhase3 = 0;
             }
-            if (outputBlue >= 0) {
-              if (outputBlue > 255) {
-                outputBlue = 255;
+            if (outputBlueNestedPhase3 >= 0) {
+              if (outputBlueNestedPhase3 > 255) {
+                outputBlueNestedPhase3 = 255;
               }
             } else {
-              outputBlue = 0;
+              outputBlueNestedPhase3 = 0;
             }
             shrinkingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[shrinkingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
-            windowXOrNegativeOutputCounter++;
+            pixels[shrinkingDestinationIndexBeforeIncrement] = (outputRedNestedPhase3 << 16) + (outputGreenNestedPhase3 << 8) + outputBlueNestedPhase3;
+            windowXOrNegativeOutputCounterNestedPhase2++;
           }
           destinationIndex = destinationIndex + rowSkip;
         }
@@ -1470,6 +1480,11 @@ final class SoftwareRasterizer {
         int outputGreenPhase3;
         int outputBluePhase2;
         int outputBluePhase3;
+        int columnIndexNestedPhase2;
+        int columnIndexPhase2NestedPhase2;
+        int columnIndexPhase2NestedPhase3;
+        int columnIndexPhase3NestedPhase2;
+        int channelSumAfterRemovalOrOutputRedPhase2NestedPhase2;
         if (blurColumnRedSums == null ||
               !(blurColumnRedSums.length >= regionWidth)) {
           blurColumnRedSums = new int[regionWidth];
@@ -1540,10 +1555,10 @@ final class SoftwareRasterizer {
           } else {
             enteringPixelIndex = enteringPixelIndex + stride;
           }
-          for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
-            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndex] / windowSampleCount;
-            outputGreen = greenSumsSnapshot[columnIndex] / windowSampleCount;
-            outputBlue = blueSumsSnapshot[columnIndex] / windowSampleCount;
+          for (columnIndexNestedPhase2 = 0; columnIndexNestedPhase2 < regionWidth; columnIndexNestedPhase2++) {
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
+            outputGreen = greenSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
+            outputBlue = blueSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
             growingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
             pixels[growingDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRed << 16) + (outputGreen << 8) + outputBlue;
@@ -1587,19 +1602,19 @@ final class SoftwareRasterizer {
             blueSumsForClampedStore[blueColumnForClampedStore] = nonnegativeBlueSum;
           }
           leavingPixelIndex = leavingPixelIndex + rowSkip;
-          for (columnIndexPhase2 = 0; columnIndexPhase2 < regionWidth; columnIndexPhase2++) {
+          for (columnIndexPhase2NestedPhase2 = 0; columnIndexPhase2NestedPhase2 < regionWidth; columnIndexPhase2NestedPhase2++) {
             scratchPixel = pixels[enteringPixelIndex++];
-            redSumsForUpdates[columnIndexPhase2] = redSumsForUpdates[columnIndexPhase2] + (scratchPixel >> 16 & 255);
-            greenSumsForUpdates[columnIndexPhase2] = greenSumsForUpdates[columnIndexPhase2] + (scratchPixel >> 8 & 255);
-            blueSumsForUpdates[columnIndexPhase2] = blueSumsForUpdates[columnIndexPhase2] + (scratchPixel & 255);
+            redSumsForUpdates[columnIndexPhase2NestedPhase2] = redSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[columnIndexPhase2NestedPhase2] = greenSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[columnIndexPhase2NestedPhase2] = blueSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel & 255);
           }
           enteringPixelIndex = enteringPixelIndex + rowSkip;
-          for (columnIndexPhase2 = 0; columnIndexPhase2 < regionWidth; columnIndexPhase2++) {
-            channelSumAfterRemovalOrOutputRedPhase2 = redSumsSnapshot[columnIndexPhase2] * reciprocalWindowScaleQ14 >> 14;
-            outputGreenPhase2 = greenSumsSnapshot[columnIndexPhase2] * reciprocalWindowScaleQ14 >> 14;
-            outputBluePhase2 = blueSumsSnapshot[columnIndexPhase2] * reciprocalWindowScaleQ14 >> 14;
-            if (channelSumAfterRemovalOrOutputRedPhase2 > 255) {
-              channelSumAfterRemovalOrOutputRedPhase2 = 255;
+          for (columnIndexPhase2NestedPhase3 = 0; columnIndexPhase2NestedPhase3 < regionWidth; columnIndexPhase2NestedPhase3++) {
+            channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 = redSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
+            outputGreenPhase2 = greenSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
+            outputBluePhase2 = blueSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
+            if (channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 > 255) {
+              channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 = 255;
             }
             if (outputGreenPhase2 > 255) {
               outputGreenPhase2 = 255;
@@ -1609,7 +1624,7 @@ final class SoftwareRasterizer {
             }
             fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[fullWindowDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRedPhase2 << 16) + (outputGreenPhase2 << 8) + outputBluePhase2;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 << 16) + (outputGreenPhase2 << 8) + outputBluePhase2;
           }
           destinationIndex = destinationIndex + rowSkip;
           initialWindowRowOrNegativeOutputCounterPhase2++;
@@ -1623,10 +1638,10 @@ final class SoftwareRasterizer {
           }
           leavingPixelIndex = leavingPixelIndex + rowSkip;
           windowSampleCount--;
-          for (columnIndexPhase3 = 0; columnIndexPhase3 < regionWidth; columnIndexPhase3++) {
-            channelSumAfterRemovalOrOutputRedPhase3 = redSumsSnapshot[columnIndexPhase3] / windowSampleCount;
-            outputGreenPhase3 = greenSumsSnapshot[columnIndexPhase3] / windowSampleCount;
-            outputBluePhase3 = blueSumsSnapshot[columnIndexPhase3] / windowSampleCount;
+          for (columnIndexPhase3NestedPhase2 = 0; columnIndexPhase3NestedPhase2 < regionWidth; columnIndexPhase3NestedPhase2++) {
+            channelSumAfterRemovalOrOutputRedPhase3 = redSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
+            outputGreenPhase3 = greenSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
+            outputBluePhase3 = blueSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
             if (channelSumAfterRemovalOrOutputRedPhase3 >= 0) {
               if (channelSumAfterRemovalOrOutputRedPhase3 > 255) {
                 channelSumAfterRemovalOrOutputRedPhase3 = 255;

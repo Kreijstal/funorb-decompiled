@@ -339,6 +339,10 @@ final class PrefixCodeDecoder {
         float avatarTintFadeFactorPhase7;
         float avatarTintFadeFactorPhase8;
         float avatarTintFadeFactorPhase9;
+        float avatarTintFadeFactorPhase3NestedPhase2;
+        float avatarTintFadeFactorPhase3NestedPhase3;
+        float avatarTintFadeFactorPhase3NestedPhase4;
+        float avatarTintFadeFactorPhase3NestedPhase5;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard < 72) {
           return;
@@ -434,7 +438,7 @@ final class PrefixCodeDecoder {
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            avatarTintFadeFactorPhase3 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactorPhase3NestedPhase2 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             neutralStepUpShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
             WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
             if (neutralStepUpShockTicksSnapshot > 0) {
@@ -443,7 +447,7 @@ final class PrefixCodeDecoder {
             neutralStepUpTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (neutralStepUpTintTicksSnapshot > 0) {
-              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3 * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3NestedPhase2) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3NestedPhase2 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3NestedPhase2 * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -454,7 +458,7 @@ final class PrefixCodeDecoder {
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            avatarTintFadeFactorPhase3 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactorPhase3NestedPhase3 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             nonneutralHoldShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
             WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
             if (nonneutralHoldShockTicksSnapshot > 0) {
@@ -463,7 +467,7 @@ final class PrefixCodeDecoder {
             nonneutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (nonneutralHoldTintTicksSnapshot > 0) {
-              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3 * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3NestedPhase3) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3NestedPhase3 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3NestedPhase3 * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -474,7 +478,7 @@ final class PrefixCodeDecoder {
             if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
               DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
             }
-            avatarTintFadeFactorPhase3 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactorPhase3NestedPhase4 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             neutralHoldShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
             WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
             if (neutralHoldShockTicksSnapshot > 0) {
@@ -483,7 +487,7 @@ final class PrefixCodeDecoder {
             neutralHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (neutralHoldTintTicksSnapshot > 0) {
-              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3 * UsernameAvailabilityValidator.avatarTintBlueDelta));
+              DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3NestedPhase4) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3NestedPhase4 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3NestedPhase4 * UsernameAvailabilityValidator.avatarTintBlueDelta));
             }
             return;
           }
@@ -494,7 +498,7 @@ final class PrefixCodeDecoder {
           if (IterableNodeHashTable.avatarBlinkClockTicks % 600 < 30) {
             DiskCacheWorker.avatarFeedbackFrameIndex = MenuScreen.avatarFeedbackFrameBase + 0;
           }
-          avatarTintFadeFactorPhase3 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+          avatarTintFadeFactorPhase3NestedPhase5 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
           neutralStepDownShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
           WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
           if (neutralStepDownShockTicksSnapshot > 0) {
@@ -503,7 +507,7 @@ final class PrefixCodeDecoder {
           neutralStepDownTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
           MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
           if (neutralStepDownTintTicksSnapshot > 0) {
-            DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3 * UsernameAvailabilityValidator.avatarTintBlueDelta));
+            DisplayModeInfo.avatarTintColor = ((int)(GzipInflater.avatarTintGreenDelta * avatarTintFadeFactorPhase3NestedPhase5) << 8) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase3NestedPhase5 * GmtTimestampSupport.avatarTintRedDelta) << 16) + (int)(avatarTintFadeFactorPhase3NestedPhase5 * UsernameAvailabilityValidator.avatarTintBlueDelta));
           }
           return;
         }

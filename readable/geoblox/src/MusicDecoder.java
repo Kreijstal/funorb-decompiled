@@ -459,6 +459,38 @@ final class MusicDecoder extends IntrusiveNode {
         int floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase3;
         int floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4;
         int eighthBlockSizeOrOverlapIndexPhase2;
+        int overlapSourceOrDestinationIndexNestedPhase2;
+        int scalingIndexOrUnusedMirrorCursorSnapshotNestedPhase2;
+        int rotationIndexOrTransformBitWidthNestedPhase2;
+        int rotationIndexOrTransformBitWidthNestedPhase3;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase2;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase3;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase4;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase5;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase6;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase7;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase8;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase9;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase10;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase11;
+        int butterflyStageOrReorderOrWindowIndexNestedPhase12;
+        float rotationDifferenceOrButterflyUpperANestedPhase2;
+        float rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase2;
+        float rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase3;
+        float rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase4;
+        float rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase5;
+        int butterflySpanOrBitReversePartnerNestedPhase2;
+        float rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase2;
+        float rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase3;
+        int trigStrideOrSwapBaseNestedPhase2;
+        float rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase2;
+        float rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3;
+        int butterflyGroupOrSwapPartnerBaseNestedPhase2;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3;
+        float butterflyNegativeSineOrPostRotationLowerANestedPhase2;
+        float postRotationMixNestedPhase2;
+        int eighthBlockSizeOrOverlapIndexPhase2NestedPhase2;
         MusicDecoder.setBitInput(this.packets[packetIndex], 0);
         MusicDecoder.readBit();
         modeIndex = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, modeMappingIndices.length - 1));
@@ -529,7 +561,7 @@ final class MusicDecoder extends IntrusiveNode {
             transformBlockAlias[scalingIndexOrUnusedMirrorCursorSnapshot] = transformBlockAlias[scalingIndexOrUnusedMirrorCursorSnapshot] * 0.5f;
           }
           mirrorFillIndex = floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4;
-          scalingIndexOrUnusedMirrorCursorSnapshot = mirrorFillIndex;
+          scalingIndexOrUnusedMirrorCursorSnapshotNestedPhase2 = mirrorFillIndex;
           while (mirrorFillIndex < blockSize) {
             transformBlockAlias[mirrorFillIndex] = -transformBlockAlias[blockSize - mirrorFillIndex - 1];
             mirrorFillIndex++;
@@ -568,20 +600,20 @@ final class MusicDecoder extends IntrusiveNode {
             transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 1] = rotationDifferenceOrButterflyUpperA * rotationCosineOrButterflyLowerAOrPostRotationNegativeSine - rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA;
             transformBlockAlias[blockSize - 4 * rotationIndexOrTransformBitWidth - 3] = rotationDifferenceOrButterflyUpperA * rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * rotationCosineOrButterflyLowerAOrPostRotationNegativeSine;
           }
-          for (rotationIndexOrTransformBitWidth = 0; rotationIndexOrTransformBitWidth < eighthBlockSizeOrOverlapIndex; rotationIndexOrTransformBitWidth++) {
-            rotationDifferenceOrButterflyUpperA = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 3 + 4 * rotationIndexOrTransformBitWidth];
-            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 1 + 4 * rotationIndexOrTransformBitWidth];
-            rotationCosineOrButterflyLowerAOrPostRotationNegativeSine = transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 3];
-            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA = transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 1];
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 3 + 4 * rotationIndexOrTransformBitWidth] = rotationDifferenceOrButterflyUpperA + rotationCosineOrButterflyLowerAOrPostRotationNegativeSine;
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 1 + 4 * rotationIndexOrTransformBitWidth] = rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine + rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA;
-            butterflyCosineOrSwapSampleOrPostRotationUpperB = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 4 - 4 * rotationIndexOrTransformBitWidth];
-            butterflyNegativeSineOrPostRotationLowerA = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 3 - 4 * rotationIndexOrTransformBitWidth];
-            transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 3] = (rotationDifferenceOrButterflyUpperA - rotationCosineOrButterflyLowerAOrPostRotationNegativeSine) * butterflyCosineOrSwapSampleOrPostRotationUpperB - (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA) * butterflyNegativeSineOrPostRotationLowerA;
-            transformBlockAlias[4 * rotationIndexOrTransformBitWidth + 1] = (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA) * butterflyCosineOrSwapSampleOrPostRotationUpperB + (rotationDifferenceOrButterflyUpperA - rotationCosineOrButterflyLowerAOrPostRotationNegativeSine) * butterflyNegativeSineOrPostRotationLowerA;
+          for (rotationIndexOrTransformBitWidthNestedPhase2 = 0; rotationIndexOrTransformBitWidthNestedPhase2 < eighthBlockSizeOrOverlapIndex; rotationIndexOrTransformBitWidthNestedPhase2++) {
+            rotationDifferenceOrButterflyUpperANestedPhase2 = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 3 + 4 * rotationIndexOrTransformBitWidthNestedPhase2];
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase2 = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 1 + 4 * rotationIndexOrTransformBitWidthNestedPhase2];
+            rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase2 = transformBlockAlias[4 * rotationIndexOrTransformBitWidthNestedPhase2 + 3];
+            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase2 = transformBlockAlias[4 * rotationIndexOrTransformBitWidthNestedPhase2 + 1];
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 3 + 4 * rotationIndexOrTransformBitWidthNestedPhase2] = rotationDifferenceOrButterflyUpperANestedPhase2 + rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase2;
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 1 + 4 * rotationIndexOrTransformBitWidthNestedPhase2] = rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase2 + rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase2;
+            butterflyCosineOrSwapSampleOrPostRotationUpperB = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 4 - 4 * rotationIndexOrTransformBitWidthNestedPhase2];
+            butterflyNegativeSineOrPostRotationLowerA = mdctTrigA[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 3 - 4 * rotationIndexOrTransformBitWidthNestedPhase2];
+            transformBlockAlias[4 * rotationIndexOrTransformBitWidthNestedPhase2 + 3] = (rotationDifferenceOrButterflyUpperANestedPhase2 - rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase2) * butterflyCosineOrSwapSampleOrPostRotationUpperB - (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase2 - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase2) * butterflyNegativeSineOrPostRotationLowerA;
+            transformBlockAlias[4 * rotationIndexOrTransformBitWidthNestedPhase2 + 1] = (rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase2 - rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase2) * butterflyCosineOrSwapSampleOrPostRotationUpperB + (rotationDifferenceOrButterflyUpperANestedPhase2 - rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase2) * butterflyNegativeSineOrPostRotationLowerA;
           }
-          rotationIndexOrTransformBitWidth = SpriteConstructionSupport.unsignedBitLength((byte) 58, blockSize - 1);
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < rotationIndexOrTransformBitWidth - 3; butterflyStageOrReorderOrWindowIndex++) {
+          rotationIndexOrTransformBitWidthNestedPhase3 = SpriteConstructionSupport.unsignedBitLength((byte) 58, blockSize - 1);
+          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < rotationIndexOrTransformBitWidthNestedPhase3 - 3; butterflyStageOrReorderOrWindowIndex++) {
             butterflySpanOrBitReversePartner = blockSize >> butterflyStageOrReorderOrWindowIndex + 2;
             trigStrideOrSwapBase = 8 << butterflyStageOrReorderOrWindowIndex;
             for (butterflyGroupOrSwapPartnerBase = 0; butterflyGroupOrSwapPartnerBase < 2 << butterflyStageOrReorderOrWindowIndex; butterflyGroupOrSwapPartnerBase++) {
@@ -602,79 +634,79 @@ final class MusicDecoder extends IntrusiveNode {
               }
             }
           }
-          butterflyStageOrReorderOrWindowIndex = 1;
+          butterflyStageOrReorderOrWindowIndexNestedPhase2 = 1;
           while (true) {
-            if (butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex - 1) {
-              butterflySpanOrBitReversePartner = bitReverseIndices[butterflyStageOrReorderOrWindowIndex];
-              if (butterflyStageOrReorderOrWindowIndex >= butterflySpanOrBitReversePartner) {
-                butterflyStageOrReorderOrWindowIndex++;
+            if (butterflyStageOrReorderOrWindowIndexNestedPhase2 < eighthBlockSizeOrOverlapIndex - 1) {
+              butterflySpanOrBitReversePartnerNestedPhase2 = bitReverseIndices[butterflyStageOrReorderOrWindowIndexNestedPhase2];
+              if (butterflyStageOrReorderOrWindowIndexNestedPhase2 >= butterflySpanOrBitReversePartnerNestedPhase2) {
+                butterflyStageOrReorderOrWindowIndexNestedPhase2++;
                 continue;
               }
-              trigStrideOrSwapBase = 8 * butterflyStageOrReorderOrWindowIndex;
-              butterflyGroupOrSwapPartnerBase = 8 * butterflySpanOrBitReversePartner;
-              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 1];
-              transformBlockAlias[trigStrideOrSwapBase + 1] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 1];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 1] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
-              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 3];
-              transformBlockAlias[trigStrideOrSwapBase + 3] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 3];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 3] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
-              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 5];
-              transformBlockAlias[trigStrideOrSwapBase + 5] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 5];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 5] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
-              butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[trigStrideOrSwapBase + 7];
-              transformBlockAlias[trigStrideOrSwapBase + 7] = transformBlockAlias[butterflyGroupOrSwapPartnerBase + 7];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBase + 7] = butterflyCosineOrSwapSampleOrPostRotationUpperB;
-              butterflyStageOrReorderOrWindowIndex++;
+              trigStrideOrSwapBaseNestedPhase2 = 8 * butterflyStageOrReorderOrWindowIndexNestedPhase2;
+              butterflyGroupOrSwapPartnerBaseNestedPhase2 = 8 * butterflySpanOrBitReversePartnerNestedPhase2;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 1];
+              transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 1] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 1];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 1] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 3];
+              transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 3] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 3];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 3] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 5];
+              transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 5] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 5];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 5] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 7];
+              transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 7] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 7];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 7] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+              butterflyStageOrReorderOrWindowIndexNestedPhase2++;
               continue;
             }
             break;
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase3 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase3 < floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4; butterflyStageOrReorderOrWindowIndexNestedPhase3++) {
+            transformBlockAlias[butterflyStageOrReorderOrWindowIndexNestedPhase3] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndexNestedPhase3 + 1];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex];
-            transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 1];
-            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 2];
-            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndex + 3];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase4 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase4 < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndexNestedPhase4++) {
+            transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase4] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndexNestedPhase4];
+            transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase4] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndexNestedPhase4 + 1];
+            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 1 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase4] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndexNestedPhase4 + 2];
+            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength - 2 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase4] = transformBlockAlias[4 * butterflyStageOrReorderOrWindowIndexNestedPhase4 + 3];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndex++) {
-            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndex];
-            rotationCosineOrButterflyLowerAOrPostRotationNegativeSine = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndex + 1];
-            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndex];
-            butterflyCosineOrSwapSampleOrPostRotationUpperB = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndex + 1];
-            butterflyNegativeSineOrPostRotationLowerA = transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex];
-            postRotationLowerB = transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex];
-            postRotationMix = rotationCosineOrButterflyLowerAOrPostRotationNegativeSine * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA - butterflyNegativeSineOrPostRotationLowerA) + rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB);
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndex] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + butterflyNegativeSineOrPostRotationLowerA + postRotationMix) * 0.5f;
-            transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndex] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA + butterflyNegativeSineOrPostRotationLowerA - postRotationMix) * 0.5f;
-            postRotationMix = rotationCosineOrButterflyLowerAOrPostRotationNegativeSine * (butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB) - rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperA - butterflyNegativeSineOrPostRotationLowerA);
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndex + 1] = (butterflyCosineOrSwapSampleOrPostRotationUpperB - postRotationLowerB + postRotationMix) * 0.5f;
-            transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndex] = (-butterflyCosineOrSwapSampleOrPostRotationUpperB + postRotationLowerB + postRotationMix) * 0.5f;
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase5 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase5 < eighthBlockSizeOrOverlapIndex; butterflyStageOrReorderOrWindowIndexNestedPhase5++) {
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase3 = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndexNestedPhase5];
+            rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase3 = mdctTrigC[2 * butterflyStageOrReorderOrWindowIndexNestedPhase5 + 1];
+            rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3 = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5];
+            butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3 = transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5 + 1];
+            butterflyNegativeSineOrPostRotationLowerANestedPhase2 = transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5];
+            postRotationLowerB = transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5];
+            postRotationMix = rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase3 * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3 - butterflyNegativeSineOrPostRotationLowerANestedPhase2) + rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase3 * (butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3 + postRotationLowerB);
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3 + butterflyNegativeSineOrPostRotationLowerANestedPhase2 + postRotationMix) * 0.5f;
+            transformBlockAlias[blockSize - 2 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5] = (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3 + butterflyNegativeSineOrPostRotationLowerANestedPhase2 - postRotationMix) * 0.5f;
+            postRotationMixNestedPhase2 = rotationCosineOrButterflyLowerAOrPostRotationNegativeSineNestedPhase3 * (butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3 + postRotationLowerB) - rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase3 * (rotationNegativeSineOrButterflyLowerBOrPostRotationUpperANestedPhase3 - butterflyNegativeSineOrPostRotationLowerANestedPhase2);
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5 + 1] = (butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3 - postRotationLowerB + postRotationMixNestedPhase2) * 0.5f;
+            transformBlockAlias[blockSize - 1 - 2 * butterflyStageOrReorderOrWindowIndexNestedPhase5] = (-butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase3 + postRotationLowerB + postRotationMixNestedPhase2) * 0.5f;
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex] + transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex + 1];
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 1 - butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex + 1] - transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndex + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndex];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase6 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase6 < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndexNestedPhase6++) {
+            transformBlockAlias[butterflyStageOrReorderOrWindowIndexNestedPhase6] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6] + transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + 1];
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 - 1 - butterflyStageOrReorderOrWindowIndexNestedPhase6] = transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + 1] - transformBlockAlias[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6 + 1 + floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4] * mdctTrigB[2 * butterflyStageOrReorderOrWindowIndexNestedPhase6];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex] = -sharedWorkBlockAlias[butterflyStageOrReorderOrWindowIndex];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase7 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase7 < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndexNestedPhase7++) {
+            transformBlockAlias[blockSize - floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndexNestedPhase7] = -sharedWorkBlockAlias[butterflyStageOrReorderOrWindowIndexNestedPhase7];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase8 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase8 < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndexNestedPhase8++) {
+            transformBlockAlias[butterflyStageOrReorderOrWindowIndexNestedPhase8] = transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndexNestedPhase8];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndex] = -transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength - butterflyStageOrReorderOrWindowIndex - 1];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase9 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase9 < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndexNestedPhase9++) {
+            transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength + butterflyStageOrReorderOrWindowIndexNestedPhase9] = -transformBlockAlias[floorIndexOrQuarterBlockSizeOrOverlapLength - butterflyStageOrReorderOrWindowIndexNestedPhase9 - 1];
           }
-          for (butterflyStageOrReorderOrWindowIndex = 0; butterflyStageOrReorderOrWindowIndex < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndex++) {
-            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + butterflyStageOrReorderOrWindowIndex] = transformBlockAlias[blockSize - butterflyStageOrReorderOrWindowIndex - 1];
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase10 = 0; butterflyStageOrReorderOrWindowIndexNestedPhase10 < floorIndexOrQuarterBlockSizeOrOverlapLength; butterflyStageOrReorderOrWindowIndexNestedPhase10++) {
+            transformBlockAlias[floorIndexOrSubmapIndexOrMuxOrZeroFillIndexOrHalfBlockSizePhase4 + butterflyStageOrReorderOrWindowIndexNestedPhase10] = transformBlockAlias[blockSize - butterflyStageOrReorderOrWindowIndexNestedPhase10 - 1];
           }
-          for (butterflyStageOrReorderOrWindowIndex = leftWindowStart; butterflyStageOrReorderOrWindowIndex < leftWindowEnd; butterflyStageOrReorderOrWindowIndex++) {
-            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndex - leftWindowStart) + 0.5) / (double)leftWindowLength * 0.5 * 3.141592653589793);
-            workBlock[butterflyStageOrReorderOrWindowIndex] = workBlock[butterflyStageOrReorderOrWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine);
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase11 = leftWindowStart; butterflyStageOrReorderOrWindowIndexNestedPhase11 < leftWindowEnd; butterflyStageOrReorderOrWindowIndexNestedPhase11++) {
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase4 = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndexNestedPhase11 - leftWindowStart) + 0.5) / (double)leftWindowLength * 0.5 * 3.141592653589793);
+            workBlock[butterflyStageOrReorderOrWindowIndexNestedPhase11] = workBlock[butterflyStageOrReorderOrWindowIndexNestedPhase11] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase4 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase4);
           }
-          for (butterflyStageOrReorderOrWindowIndex = rightWindowStart; butterflyStageOrReorderOrWindowIndex < rightWindowEnd; butterflyStageOrReorderOrWindowIndex++) {
-            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndex - rightWindowStart) + 0.5) / (double)rightWindowLength * 0.5 * 3.141592653589793 + 1.5707963267948966);
-            workBlock[butterflyStageOrReorderOrWindowIndex] = workBlock[butterflyStageOrReorderOrWindowIndex] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSine);
+          for (butterflyStageOrReorderOrWindowIndexNestedPhase12 = rightWindowStart; butterflyStageOrReorderOrWindowIndexNestedPhase12 < rightWindowEnd; butterflyStageOrReorderOrWindowIndexNestedPhase12++) {
+            rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase5 = (float)Math.sin(((double)(butterflyStageOrReorderOrWindowIndexNestedPhase12 - rightWindowStart) + 0.5) / (double)rightWindowLength * 0.5 * 3.141592653589793 + 1.5707963267948966);
+            workBlock[butterflyStageOrReorderOrWindowIndexNestedPhase12] = workBlock[butterflyStageOrReorderOrWindowIndexNestedPhase12] * (float)Math.sin(1.5707963267948966 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase5 * (double)rotationDifferenceOrButterflyUpperBOrPostRotationCosineOrWindowSineNestedPhase5);
           }
         }
         overlapResult = null;
@@ -691,9 +723,9 @@ final class MusicDecoder extends IntrusiveNode {
             }
           }
           if (floorAbsentValue == 0) {
-            for (eighthBlockSizeOrOverlapIndexPhase2 = leftWindowStart; eighthBlockSizeOrOverlapIndexPhase2 < blockSize >> 1; eighthBlockSizeOrOverlapIndexPhase2++) {
-              overlapSourceOrDestinationIndex = allocatedOverlapSamples.length - (blockSize >> 1) + eighthBlockSizeOrOverlapIndexPhase2;
-              overlapSamplesAlias[overlapSourceOrDestinationIndex] = overlapSamplesAlias[overlapSourceOrDestinationIndex] + workBlock[eighthBlockSizeOrOverlapIndexPhase2];
+            for (eighthBlockSizeOrOverlapIndexPhase2NestedPhase2 = leftWindowStart; eighthBlockSizeOrOverlapIndexPhase2NestedPhase2 < blockSize >> 1; eighthBlockSizeOrOverlapIndexPhase2NestedPhase2++) {
+              overlapSourceOrDestinationIndexNestedPhase2 = allocatedOverlapSamples.length - (blockSize >> 1) + eighthBlockSizeOrOverlapIndexPhase2NestedPhase2;
+              overlapSamplesAlias[overlapSourceOrDestinationIndexNestedPhase2] = overlapSamplesAlias[overlapSourceOrDestinationIndexNestedPhase2] + workBlock[eighthBlockSizeOrOverlapIndexPhase2NestedPhase2];
             }
           }
         }

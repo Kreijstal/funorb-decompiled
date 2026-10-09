@@ -293,6 +293,8 @@ class AudioOutput {
         PcmStream childStream;
         int parentPriority;
         PcmStream nextStream;
+        int priorityPassThenCleanupBucketNestedPhase2;
+        int bucketMaskThenCleanupIndexNestedPhase2;
         sampleCount = frameCount;
         if (stereoEnabled) {
           sampleCount = sampleCount << 1;
@@ -372,12 +374,12 @@ class AudioOutput {
             }
             break;
           }
-          for (priorityPassThenCleanupBucket = 0; priorityPassThenCleanupBucket < 8; priorityPassThenCleanupBucket++) {
-            cleanupStream = this.priorityQueueHeads[priorityPassThenCleanupBucket];
+          for (priorityPassThenCleanupBucketNestedPhase2 = 0; priorityPassThenCleanupBucketNestedPhase2 < 8; priorityPassThenCleanupBucketNestedPhase2++) {
+            cleanupStream = this.priorityQueueHeads[priorityPassThenCleanupBucketNestedPhase2];
             queueHeadsAlias = this.priorityQueueHeads;
-            bucketMaskThenCleanupIndex = priorityPassThenCleanupBucket;
-            this.priorityQueueTails[priorityPassThenCleanupBucket] = null;
-            queueHeadsAlias[bucketMaskThenCleanupIndex] = null;
+            bucketMaskThenCleanupIndexNestedPhase2 = priorityPassThenCleanupBucketNestedPhase2;
+            this.priorityQueueTails[priorityPassThenCleanupBucketNestedPhase2] = null;
+            queueHeadsAlias[bucketMaskThenCleanupIndexNestedPhase2] = null;
             while (cleanupStream != null) {
               previousStreamOrNextCleanupStream = ((PcmStream) (cleanupStream)).scheduledNextStream;
               ((PcmStream) (cleanupStream)).scheduledNextStream = null;
