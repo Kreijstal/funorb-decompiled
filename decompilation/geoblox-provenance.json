@@ -7,17 +7,18 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "c6726c0b44589e46c5a52c7782ca9d7865c326ec",
+      "commit": "c7d22893f95bfe07da508185eb1f7c3d4a49743d",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ff694e2b663e7cbf666d1f466d5cde1ab7e4da04c2c75f4d5a0b6db5e030635e",
-        "reproduce": "git archive --format=tar c6726c0b44589e46c5a52c7782ca9d7865c326ec | sha256sum",
+        "sha256": "0819866e4f81c570cf69f43578055cd68bceb5857929b00d44234f4c4653ca90",
+        "reproduce": "git archive --format=tar c7d22893f95bfe07da508185eb1f7c3d4a49743d | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
         "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
         "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
-        "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1"
+        "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+        "CFR_JS_LOOP_FRAME_COMPLETION": "1"
       }
     },
     "namingTool": {
@@ -92,7 +93,8 @@
     "environment": {
       "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
       "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
-      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1"
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1"
     }
   },
   "freshVerification": {
@@ -117,9 +119,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
-  "previousSourceTreeSha256": "8eed457bb2251a90af73610f14a8fd44fb36195328846931933c0ee3af7aa62d",
-  "changedJavaFiles": 23,
+  "sourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
+  "previousSourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
+  "changedJavaFiles": 7,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3287,11 +3289,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "226656005fb63fff19addd00608c509b8f01e41b",
+    "commit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "c8fc2c1952cd65780655ec1104c36367a8eae406743b031f4538bea211572ad7"
+      "sha256": "df2982a678bf28011fa8ae757457288ad1300234c757a663e54affae4635ddc4"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3301,20 +3303,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "4d3292e560a441b716e6be4bd4ff8e1552e192b94ce7c4e300b70974714525f2",
+    "outputTreeSha256": "284d8e31e4331c117ceb63738cbc0401dfd6ce87b8450577d345e55c3c446765",
     "files": 303,
-    "rules": 19518,
-    "identifierEdits": 121229,
-    "bindingsCompared": 137451,
+    "rules": 19521,
+    "identifierEdits": 121269,
+    "bindingsCompared": 137491,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 121682,
+    "totalEdits": 121703,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 442,
-    "labelBindingsCompared": 442,
-    "labelDeclarationsCompared": 113,
+    "labelEdits": 423,
+    "labelBindingsCompared": 423,
+    "labelDeclarationsCompared": 105,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3331,8 +3333,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 225,
-    "semanticPass": 225
+    "structuralPass": 226,
+    "semanticPass": 226
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -25933,5 +25935,346 @@
     ],
     "sourceWorkflowCommit": "226656005fb63fff19addd00608c509b8f01e41b",
     "sourceProofWorkflowCommit": "226656005fb63fff19addd00608c509b8f01e41b"
+  },
+  "loopFrameCompletionRecovery": {
+    "version": 226,
+    "loopFrameCompletion": true,
+    "changedJavaFiles": 7,
+    "changedMethodBodies": 10,
+    "recoveries": 11,
+    "completionLocalsAdded": 11,
+    "guardsAdded": 18,
+    "labelsRemoved": 8,
+    "genericSelectedTestGroupsPassed": 18,
+    "genericCompletionTestGroupsPassed": 6,
+    "nativeComparisons": 528768,
+    "sourceProofTest": "readable/tests/test-geoblox-loop-completion-source.mjs",
+    "sourceProofTestSha256": "e402a3fd19f0af8bcd86b485154a66a8ce9284bca4ca033d28c7ff7823c47d49",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "previousSourceCommit": "b411cb3c06d7e89e03caf9e339e42d9aff88691c",
+    "sourceCommit": "4cacd4fd0e7847ff3e34d8d67cec26f31f735564",
+    "previousSourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
+    "sourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
+    "javaToolsCommit": "c7d22893f95bfe07da508185eb1f7c3d4a49743d",
+    "sourceArchiveSha256": "0819866e4f81c570cf69f43578055cd68bceb5857929b00d44234f4c4653ca90",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1"
+    },
+    "bindingsBefore": 137451,
+    "bindingsCompared": 137491,
+    "transfersCompared": 4941,
+    "retiredLabelIdentities": [
+      {
+        "symbol": "B:ch.run()V#2",
+        "originalName": "L3"
+      },
+      {
+        "symbol": "B:d.run()V#0",
+        "originalName": "L1"
+      },
+      {
+        "symbol": "B:gh.a(I)V#1",
+        "originalName": "L44"
+      },
+      {
+        "symbol": "B:gh.f(I)V#0",
+        "originalName": "L1"
+      },
+      {
+        "symbol": "B:kc.b(I)V#3",
+        "originalName": "L39"
+      },
+      {
+        "symbol": "B:wh.a(II[BI)[B#0",
+        "originalName": "L0"
+      },
+      {
+        "symbol": "B:wh.a(IIIIIIIIIII[IIIIII)V#1",
+        "originalName": "L10"
+      },
+      {
+        "symbol": "B:wh.a(Lqc;Z)V#1",
+        "originalName": "L7"
+      }
+    ],
+    "originalIdentityMigrations": [
+      {
+        "before": "B:ch.run()V#3",
+        "after": "B:ch.run()V#2"
+      },
+      {
+        "before": "L:ch.run()V#14",
+        "after": "L:ch.run()V#15"
+      },
+      {
+        "before": "B:ch.run()V#4",
+        "after": "B:ch.run()V#3"
+      },
+      {
+        "before": "L:ch.run()V#15",
+        "after": "L:ch.run()V#16"
+      },
+      {
+        "before": "L:ch.run()V#16",
+        "after": "L:ch.run()V#17"
+      },
+      {
+        "before": "L:ch.run()V#17",
+        "after": "L:ch.run()V#18"
+      },
+      {
+        "before": "L:ch.run()V#18",
+        "after": "L:ch.run()V#19"
+      },
+      {
+        "before": "L:d.run()V#26",
+        "after": "L:d.run()V#27"
+      },
+      {
+        "before": "B:d.run()V#1",
+        "after": "B:d.run()V#0"
+      },
+      {
+        "before": "L:d.run()V#27",
+        "after": "L:d.run()V#28"
+      },
+      {
+        "before": "L:d.run()V#28",
+        "after": "L:d.run()V#29"
+      },
+      {
+        "before": "L:d.run()V#29",
+        "after": "L:d.run()V#30"
+      },
+      {
+        "before": "L:d.run()V#30",
+        "after": "L:d.run()V#31"
+      },
+      {
+        "before": "L:d.run()V#31",
+        "after": "L:d.run()V#32"
+      },
+      {
+        "before": "L:d.run()V#32",
+        "after": "L:d.run()V#33"
+      },
+      {
+        "before": "B:gh.a(I)V#2",
+        "after": "B:gh.a(I)V#1"
+      },
+      {
+        "before": "B:gh.f(I)V#1",
+        "after": "B:gh.f(I)V#0"
+      },
+      {
+        "before": "B:gh.f(I)V#2",
+        "after": "B:gh.f(I)V#1"
+      },
+      {
+        "before": "B:kc.b(I)V#4",
+        "after": "B:kc.b(I)V#3"
+      },
+      {
+        "before": "L:kc.b(I)V#40",
+        "after": "L:kc.b(I)V#42"
+      },
+      {
+        "before": "L:kk.a(B)Z#25",
+        "after": "L:kk.a(B)Z#26"
+      },
+      {
+        "before": "L:kk.a(B)Z#26",
+        "after": "L:kk.a(B)Z#27"
+      },
+      {
+        "before": "L:kk.a(B)Z#27",
+        "after": "L:kk.a(B)Z#28"
+      },
+      {
+        "before": "L:kk.a(B)Z#28",
+        "after": "L:kk.a(B)Z#29"
+      },
+      {
+        "before": "L:sk.a([BIII)V#17",
+        "after": "L:sk.a([BIII)V#18"
+      },
+      {
+        "before": "L:sk.a([BIII)V#18",
+        "after": "L:sk.a([BIII)V#19"
+      },
+      {
+        "before": "L:wh.a(II[BI)[B#11",
+        "after": "L:wh.a(II[BI)[B#12"
+      },
+      {
+        "before": "B:wh.a(IIIIIIIIIII[IIIIII)V#2",
+        "after": "B:wh.a(IIIIIIIIIII[IIIIII)V#1"
+      },
+      {
+        "before": "L:wh.a(IIIIIIIIIII[IIIIII)V#33",
+        "after": "L:wh.a(IIIIIIIIIII[IIIIII)V#34"
+      },
+      {
+        "before": "L:wh.a(Lqc;Z)V#14",
+        "after": "L:wh.a(Lqc;Z)V#15"
+      },
+      {
+        "before": "L:wh.a(Lqc;Z)V#15",
+        "after": "L:wh.a(Lqc;Z)V#16"
+      },
+      {
+        "before": "L:wh.a(Lqc;Z)V#16",
+        "after": "L:wh.a(Lqc;Z)V#17"
+      }
+    ],
+    "newFlags": [
+      {
+        "symbol": "L:ch.run()V#14",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "ch.java",
+        "frameSymbol": "B:ch.run()V#2"
+      },
+      {
+        "symbol": "L:d.run()V#26",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "d.java",
+        "frameSymbol": "B:d.run()V#0"
+      },
+      {
+        "symbol": "L:gh.a(I)V#16",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "gh.java",
+        "frameSymbol": "B:gh.a(I)V#1"
+      },
+      {
+        "symbol": "L:gh.f(I)V#15",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "gh.java",
+        "frameSymbol": "B:gh.f(I)V#0"
+      },
+      {
+        "symbol": "L:kc.b(I)V#40",
+        "originalName": "decompiledFrameCompleted1",
+        "file": "kc.java",
+        "frameSymbol": "B:kc.b(I)V#3"
+      },
+      {
+        "symbol": "L:kc.b(I)V#41",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "kc.java",
+        "frameSymbol": "B:kc.b(I)V#3"
+      },
+      {
+        "symbol": "L:kk.a(B)Z#25",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "kk.java",
+        "frameSymbol": "B:kk.a(B)Z#0"
+      },
+      {
+        "symbol": "L:sk.a([BIII)V#17",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "sk.java",
+        "frameSymbol": "B:sk.a([BIII)V#0"
+      },
+      {
+        "symbol": "L:wh.a(II[BI)[B#11",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "wh.java",
+        "frameSymbol": "B:wh.a(II[BI)[B#0"
+      },
+      {
+        "symbol": "L:wh.a(IIIIIIIIIII[IIIIII)V#33",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "wh.java",
+        "frameSymbol": "B:wh.a(IIIIIIIIIII[IIIIII)V#1"
+      },
+      {
+        "symbol": "L:wh.a(Lqc;Z)V#14",
+        "originalName": "decompiledFrameCompleted0",
+        "file": "wh.java",
+        "frameSymbol": "B:wh.a(Lqc;Z)V#1"
+      }
+    ],
+    "previousCompleteRules": 19518,
+    "unaffectedCompleteRulesPreserved": 19478,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "remainingUnresolvedFieldPurposes": 41,
+    "plainBlockLabelsBefore": 85,
+    "plainBlockLabelsAfter": 77,
+    "rawCompilerLocalsAfter": 0,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "allOriginalValueBindingsPreserved": true,
+    "allUnchangedTransfersAndProtectedScopesPreserved": true,
+    "independentJdkCertificatesAtEveryStep": true,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 19828,
+    "readableIdentifierEdits": 121269,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 423,
+    "readableTotalEdits": 121703,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Replace one nonlocal frame exit from a loop with a local loop break and a primitive boolean completion value. Guard every block suffix on its independently certified path to the frame. Preserve each original condition/action once and every other transfer/protected scope. Refuse crossed protected, switch or outer-loop corridors and lost definite assignment. Preserve all original values, types, assignment/call order, aliases, exceptions, monitors and diagnostics; no source body is hand edited. Gameplay fast-forward retains the detached snapshot on the interrupted path, board routing skips its original queue resets/clear, and triangle completion skips the original remainder. No full-game/browser/phone or heap/presented-FPS acceptance is established.",
+    "changedMethods": [
+      {
+        "file": "ch.java",
+        "methodStart": 10498,
+        "recoveries": 1
+      },
+      {
+        "file": "d.java",
+        "methodStart": 1509,
+        "recoveries": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 48231,
+        "recoveries": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19047,
+        "recoveries": 1
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1860,
+        "recoveries": 2
+      },
+      {
+        "file": "kk.java",
+        "methodStart": 445,
+        "recoveries": 1
+      },
+      {
+        "file": "sk.java",
+        "methodStart": 2580,
+        "recoveries": 1
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 29553,
+        "recoveries": 1
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 14650,
+        "recoveries": 1
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 12592,
+        "recoveries": 1
+      }
+    ],
+    "sourceWorkflowCommit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1",
+    "sourceProofWorkflowCommit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1"
   }
 }

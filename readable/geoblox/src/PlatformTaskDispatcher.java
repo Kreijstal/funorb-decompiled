@@ -88,7 +88,8 @@ final class PlatformTaskDispatcher implements Runnable {
             while (true) {
               dispatcherOrTaskMonitor = this;
               synchronized (dispatcherOrTaskMonitor) {
-                taskDequeueWait: {
+                {
+                  boolean taskDequeueWaitRemainderEnabled = true;
                   while (!this.shutdownRequested) {
                     if (this.taskQueueHead != null) {
                       task = this.taskQueueHead;
@@ -96,7 +97,8 @@ final class PlatformTaskDispatcher implements Runnable {
                       if (null == this.taskQueueHead) {
                         this.taskQueueTail = null;
                       }
-                      break taskDequeueWait;
+                      taskDequeueWaitRemainderEnabled = false;
+                      break;
                     }
                     try {
                       this.wait();
@@ -105,7 +107,9 @@ final class PlatformTaskDispatcher implements Runnable {
                       ignoredWaitInterruption = (InterruptedException) (Object) caughtTaskThrowable;
                     }
                   }
-                  return;
+                  if (taskDequeueWaitRemainderEnabled) {
+                    return;
+                  }
                 }
               }
               try {

@@ -129,31 +129,37 @@ final class BufferedRandomAccessFile {
               destinationOffset = destinationOffset + readCountOrZeroFillEnd;
             }
             underlyingReadSelection: {
+              boolean underlyingReadSelectionRemainderEnabled = true;
               if (this.readBuffer.length < remainingLength) {
                 this.file.seek(this.position, true);
                 this.underlyingPosition = this.position;
                 while (remainingLength > 0) {
                   readCountOrZeroFillEnd = this.file.read(remainingLength, destination, destinationOffset, false);
                   if (-1 == readCountOrZeroFillEnd) {
-                    break underlyingReadSelection;
+                    underlyingReadSelectionRemainderEnabled = false;
+                    break;
                   }
                   this.position = this.position + (long)readCountOrZeroFillEnd;
                   this.underlyingPosition = this.underlyingPosition + (long)readCountOrZeroFillEnd;
                   remainingLength = remainingLength - readCountOrZeroFillEnd;
                   destinationOffset = destinationOffset + readCountOrZeroFillEnd;
                 }
-                break underlyingReadSelection;
-              }
-              if (remainingLength > 0) {
-                this.refillReadBuffer(true);
-                readCountOrZeroFillEnd = remainingLength;
-                if (this.readBufferLength < readCountOrZeroFillEnd) {
-                  readCountOrZeroFillEnd = this.readBufferLength;
+                if (underlyingReadSelectionRemainderEnabled) {
+                  break underlyingReadSelection;
                 }
-                ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
-                remainingLength = remainingLength - readCountOrZeroFillEnd;
-                destinationOffset = destinationOffset + readCountOrZeroFillEnd;
-                this.position = this.position + (long)readCountOrZeroFillEnd;
+              }
+              if (underlyingReadSelectionRemainderEnabled) {
+                if (remainingLength > 0) {
+                  this.refillReadBuffer(true);
+                  readCountOrZeroFillEnd = remainingLength;
+                  if (this.readBufferLength < readCountOrZeroFillEnd) {
+                    readCountOrZeroFillEnd = this.readBufferLength;
+                  }
+                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEnd);
+                  remainingLength = remainingLength - readCountOrZeroFillEnd;
+                  destinationOffset = destinationOffset + readCountOrZeroFillEnd;
+                  this.position = this.position + (long)readCountOrZeroFillEnd;
+                }
               }
             }
             if (-1L != this.writeBufferStart) {

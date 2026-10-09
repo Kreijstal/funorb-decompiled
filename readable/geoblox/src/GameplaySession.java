@@ -792,14 +792,16 @@ final class GameplaySession {
                   break;
               }
             }
-            fastForwardAndRotationSnapshot: {
+            {
+              boolean rotationKeySnapshotEnabled = true;
               if (MidiPcmStream.heldInternalKeys[99] &&
                   !this.tutorialPromptActive) {
                 fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
                 while (null != fastForwardEntity) {
                   detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
                   if (clientControlFlowGuard != 0) {
-                    break fastForwardAndRotationSnapshot;
+                    rotationKeySnapshotEnabled = false;
+                    break;
                   }
                   if (!detachedEntityOrPositiveRotationKeySnapshot) {
                     fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
@@ -809,7 +811,9 @@ final class GameplaySession {
                   fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
                 }
               }
-              detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
+              if (rotationKeySnapshotEnabled) {
+                detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
+              }
             }
             if (!detachedEntityOrPositiveRotationKeySnapshot &&
                 !MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
@@ -1476,7 +1480,8 @@ final class GameplaySession {
             this.pointsPanelSlideDirection = 0;
             return;
           }
-          resultRadiusAndMusicPreparation: {
+          {
+            boolean resultMusicPreparationEnabled = true;
             endingEntityRadiusMeasurement: {
               this.resultBonusPoints = this.resultBonusPoints + 179;
               this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
@@ -1502,7 +1507,8 @@ final class GameplaySession {
                 if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
                   rowStartOrMusicGuard = 0;
                   if (controlFlowGuard != 0) {
-                    break resultRadiusAndMusicPreparation;
+                    resultMusicPreparationEnabled = false;
+                    break;
                   }
                   spriteRow = rowStartOrMusicGuard;
                   while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
@@ -1523,10 +1529,14 @@ final class GameplaySession {
                 }
                 break;
               }
-              this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+              if (resultMusicPreparationEnabled) {
+                this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+              }
             }
-            this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
-            rowStartOrMusicGuard = methodGuard ^ 10;
+            if (resultMusicPreparationEnabled) {
+              this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
+              rowStartOrMusicGuard = methodGuard ^ 10;
+            }
           }
           SecondaryNodeDeque.selectBackgroundMusic(rowStartOrMusicGuard, ContentTransitionDialog.resultMusicTrack);
         }

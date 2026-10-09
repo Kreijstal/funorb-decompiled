@@ -401,7 +401,8 @@ abstract class SpriteState extends DualLinkNode {
         RuntimeException caughtDigestFailure = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          whirlpoolInputSelection: {
+          {
+            boolean whirlpoolInputSelectionRemainderEnabled = true;
             if (sourceOffset > 0) {
               digestInput = new byte[length];
               copiedByteIndex = 0;
@@ -409,11 +410,14 @@ abstract class SpriteState extends DualLinkNode {
                 digestInput[copiedByteIndex] = source[sourceOffset + copiedByteIndex];
                 copiedByteIndex++;
                 if (clientControlFlowGuard != 0) {
-                  break whirlpoolInputSelection;
+                  whirlpoolInputSelectionRemainderEnabled = false;
+                  break;
                 }
               }
-              if (!(clientControlFlowGuard == 0)) {
-                digestInput = source;
+              if (whirlpoolInputSelectionRemainderEnabled) {
+                if (!(clientControlFlowGuard == 0)) {
+                  digestInput = source;
+                }
               }
             } else {
               digestInput = source;
@@ -610,7 +614,8 @@ abstract class SpriteState extends DualLinkNode {
                 leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
                 middleVertexOnRight = 0;
               }
-              upperSegmentCompletion: {
+              {
+                boolean upperSegmentCompletionRemainderEnabled = true;
                 upperSegmentScan: {
                   {
                     if (topY < 0) {
@@ -648,7 +653,8 @@ abstract class SpriteState extends DualLinkNode {
                     invertedClipWidthOrLowerRows = ~TriangleRasterState.clipWidth;
                     invertedSpanStartOrNegativeOne = ~spanStartOrWidthOrBottomXQ16;
                     if (controlFlagSnapshot != 0) {
-                      break upperSegmentCompletion;
+                      upperSegmentCompletionRemainderEnabled = false;
+                      break;
                     }
                     if (invertedClipWidthOrLowerRows < invertedSpanStartOrNegativeOne) {
                       spanWidthOrRedStepOrBottomRedQ16 = (rightXQ16 >> 16) - (leftXQ16 >> 16);
@@ -686,9 +692,11 @@ abstract class SpriteState extends DualLinkNode {
                     edgeSwapOrRowBaseOrLowerRowsThenLeftX = edgeSwapOrRowBaseOrLowerRowsThenLeftX + SoftwareRasterizer.stride;
                   }
                 }
-                edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
-                invertedClipWidthOrLowerRows = ~edgeSwapOrRowBaseOrLowerRowsThenLeftX;
-                invertedSpanStartOrNegativeOne = -1;
+                if (upperSegmentCompletionRemainderEnabled) {
+                  edgeSwapOrRowBaseOrLowerRowsThenLeftX = bottomY - middleY;
+                  invertedClipWidthOrLowerRows = ~edgeSwapOrRowBaseOrLowerRowsThenLeftX;
+                  invertedSpanStartOrNegativeOne = -1;
+                }
               }
               if (invertedClipWidthOrLowerRows == invertedSpanStartOrNegativeOne) {
                 leftRedStepQ16 = 0;
@@ -843,7 +851,8 @@ abstract class SpriteState extends DualLinkNode {
                   seedReadContinuation = 0;
                 } catch (java.lang.Exception seedReadFailure) {
                   caughtSeedThrowable = seedReadFailure;
-                  seedReadFailureFallback: {
+                  {
+                    boolean seedReadFailureFallbackRemainderEnabled = true;
                     ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
                     fallbackByteIndex = 0;
                     while (fallbackByteIndex < 24) {
@@ -851,10 +860,13 @@ abstract class SpriteState extends DualLinkNode {
                       fallbackByteIndex++;
                       if (clientControlSnapshot != 0) {
                         seedReadContinuation = 1;
-                        break seedReadFailureFallback;
+                        seedReadFailureFallbackRemainderEnabled = false;
+                        break;
                       }
                     }
-                    seedReadContinuation = 0;
+                    if (seedReadFailureFallbackRemainderEnabled) {
+                      seedReadContinuation = 0;
+                    }
                   }
                 }
                 if (seedReadContinuation == 0) {
