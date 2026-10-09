@@ -236,7 +236,8 @@ final class jh {
                   var9 = 0;
                   L4: while (true) {
                     if (param1 > var8) {
-                      L5: {
+                      {
+                        boolean decompiledFrameRemainder0 = true;
                         var10 = 0;
                         if (param4) {
                           this.field_d.a(param0 - 191, (long)(520 * var7_int));
@@ -276,13 +277,15 @@ final class jh {
                           if (var11 == param2 &&
                               var9 == var12 &&
                               var13 == this.field_b) {
-                            if (var10 >= 0 &&
-                                (this.field_d.a((byte) 46) / 520L) >= (long)var10) {
-                              break L5;
+                            decompiledFrameRemainder0 = !(var10 >= 0 &&
+                                (this.field_d.a((byte) 46) / 520L) >= (long)var10);
+                            if (decompiledFrameRemainder0) {
+                              return false;
                             }
+                          }
+                          if (decompiledFrameRemainder0) {
                             return false;
                           }
-                          return false;
                         }
                       }
                       if (var10 == 0) {

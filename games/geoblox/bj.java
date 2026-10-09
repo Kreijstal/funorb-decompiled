@@ -430,8 +430,10 @@ final class bj extends nh {
         int var4Lifetime1;
         pb var2Lifetime1;
         hf var3Lifetime1;
-        L0: {
-          L1: {
+        {
+          boolean decompiledFrameRemainder1 = true;
+          {
+            boolean decompiledFrameRemainder0 = true;
             L2: {
               L3: {
                 var5 = Geoblox.field_C;
@@ -527,56 +529,68 @@ final class bj extends nh {
                     if (param0 != -38) {
                       this.b(25, 41);
                     }
-                    if (!this.field_w) {
-                      break L0;
-                    }
-                    if (oa.a(-12520) < this.field_n) {
-                      break L1;
-                    }
-                    var2 = (pb) (this.field_g.a((byte) 125));
-                    while (var2 != null) {
-                      if (!var2.field_u) {
-                        if (var2.field_n) {
-                          if (!var2.field_q) {
-                            throw new RuntimeException();
+                    decompiledFrameRemainder1 = !(!this.field_w);
+                    if (decompiledFrameRemainder1) {
+                      decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
+                      if (decompiledFrameRemainder0) {
+                        var2 = (pb) (this.field_g.a((byte) 125));
+                        while (var2 != null) {
+                          if (!var2.field_u) {
+                            if (var2.field_n) {
+                              if (!var2.field_q) {
+                                throw new RuntimeException();
+                              }
+                              var2.a(false);
+                            } else {
+                              var2.field_n = true;
+                            }
                           }
-                          var2.a(false);
-                        } else {
-                          var2.field_n = true;
+                          var2 = (pb) (this.field_g.b(74));
                         }
+                        break L2;
                       }
-                      var2 = (pb) (this.field_g.b(74));
                     }
-                    break L2;
                   }
-                  this.field_d = null;
-                }
-              }
-              if (param0 != -38) {
-                this.b(25, 41);
-              }
-              if (!this.field_w) {
-                break L0;
-              }
-              if (oa.a(-12520) < this.field_n) {
-                break L1;
-              }
-              var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
-              while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_u) {
-                  if (var2Lifetime1.field_n) {
-                    if (!var2Lifetime1.field_q) {
-                      throw new RuntimeException();
+                  if (decompiledFrameRemainder1) {
+                    if (decompiledFrameRemainder0) {
+                      this.field_d = null;
                     }
-                    var2Lifetime1.a(false);
-                  } else {
-                    var2Lifetime1.field_n = true;
                   }
                 }
-                var2Lifetime1 = (pb) (this.field_g.b(74));
+              }
+              if (decompiledFrameRemainder1) {
+                if (decompiledFrameRemainder0) {
+                  if (param0 != -38) {
+                    this.b(25, 41);
+                  }
+                  decompiledFrameRemainder1 = !(!this.field_w);
+                  if (decompiledFrameRemainder1) {
+                  decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
+                    if (decompiledFrameRemainder0) {
+                    var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
+                      while (var2Lifetime1 != null) {
+                        if (!var2Lifetime1.field_u) {
+                          if (var2Lifetime1.field_n) {
+                            if (!var2Lifetime1.field_q) {
+                              throw new RuntimeException();
+                            }
+                            var2Lifetime1.a(false);
+                          } else {
+                            var2Lifetime1.field_n = true;
+                          }
+                        }
+                        var2Lifetime1 = (pb) (this.field_g.b(74));
+                      }
+                  }
+                  }
+              }
               }
             }
-            this.field_n = 1000L + oa.a(param0 - 12482);
+            if (decompiledFrameRemainder1) {
+              if (decompiledFrameRemainder0) {
+                this.field_n = 1000L + oa.a(param0 - 12482);
+              }
+            }
           }
         }
     }

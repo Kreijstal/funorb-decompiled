@@ -591,7 +591,8 @@ abstract class wh extends rc {
             if (param16 != -1275583984) {
               return;
             }
-            L3: {
+            {
+              boolean decompiledFrameRemainder1 = true;
               var34 = -param8 + param4;
               if (param8 == param15) {
                 if (~param4 == ~param8) {
@@ -651,46 +652,54 @@ abstract class wh extends rc {
                     var29 = param14 << 16;
                   }}
                 var33 = 0;
-                if (0 <= param8) {
-                  break L3;
-                }
-                param8 = Math.min(-param8, param15 - param8);
-                var22 = var22 + var24 * param8;
-                var30 = var30 + param8 * var32;
-                var18 = var18 + var20 * param8;
-                var17_int = var17_int + var19 * param8;
-                var25 = var25 + var27 * param8;
-                var21 = var21 + var23 * param8;
-                var29 = var29 + var31 * param8;
-                var26 = var26 + param8 * var28;
-                param8 = 0;
-                if (var42 == 0) {
-                  break L3;
+                decompiledFrameRemainder1 = !(0 <= param8);
+                if (decompiledFrameRemainder1) {
+                  param8 = Math.min(-param8, param15 - param8);
+                  var22 = var22 + var24 * param8;
+                  var30 = var30 + param8 * var32;
+                  var18 = var18 + var20 * param8;
+                  var17_int = var17_int + var19 * param8;
+                  var25 = var25 + var27 * param8;
+                  var21 = var21 + var23 * param8;
+                  var29 = var29 + var31 * param8;
+                  var26 = var26 + param8 * var28;
+                  param8 = 0;
+                  decompiledFrameRemainder1 = !(var42 == 0);
                 }
               }
-              var18 = param2 << 16;
-              var17_int = param2 << 16;
-              var30 = param14 << 16;
-              var29 = param14 << 16;
-              var26 = param12 << 16;
-              var25 = param12 << 16;
-              var22 = param1 << 16;
-              var21 = param1 << 16;
-              var35Lifetime2 = param15 - param8;
-              var20 = (-param2 + param13 << 16) / var34;
-              var19 = (param9 - param2 << 16) / var35Lifetime2;
-              if (var20 <= var19) {
-                var23 = (-param1 + param6 << 16) / var34;
-                var27 = (-param12 + param0 << 16) / var34;
-                var31 = (-param14 + param5 << 16) / var34;
-                var36 = var19;
-                var19 = var20;
-                var20 = var36;
-                var28 = (-param12 + param3 << 16) / var35Lifetime2;
-                var33Lifetime1 = 1;
-                var32 = (-param14 + param7 << 16) / var35Lifetime2;
-                var24 = (-param1 + param10 << 16) / var35Lifetime2;
-                if (var42 != 0) {
+              if (decompiledFrameRemainder1) {
+                var18 = param2 << 16;
+                var17_int = param2 << 16;
+                var30 = param14 << 16;
+                var29 = param14 << 16;
+                var26 = param12 << 16;
+                var25 = param12 << 16;
+                var22 = param1 << 16;
+                var21 = param1 << 16;
+                var35Lifetime2 = param15 - param8;
+                var20 = (-param2 + param13 << 16) / var34;
+                var19 = (param9 - param2 << 16) / var35Lifetime2;
+                if (var20 <= var19) {
+                  var23 = (-param1 + param6 << 16) / var34;
+                  var27 = (-param12 + param0 << 16) / var34;
+                  var31 = (-param14 + param5 << 16) / var34;
+                  var36 = var19;
+                  var19 = var20;
+                  var20 = var36;
+                  var28 = (-param12 + param3 << 16) / var35Lifetime2;
+                  var33Lifetime1 = 1;
+                  var32 = (-param14 + param7 << 16) / var35Lifetime2;
+                  var24 = (-param1 + param10 << 16) / var35Lifetime2;
+                  if (var42 != 0) {
+                    var32 = (-param14 + param5 << 16) / var34;
+                    var28 = (param0 - param12 << 16) / var34;
+                    var23 = (param10 - param1 << 16) / var35Lifetime2;
+                    var24 = (-param1 + param6 << 16) / var34;
+                    var31 = (param7 - param14 << 16) / var35Lifetime2;
+                    var27 = (-param12 + param3 << 16) / var35Lifetime2;
+                    var33Lifetime1 = 0;
+                  }
+                } else {
                   var32 = (-param14 + param5 << 16) / var34;
                   var28 = (param0 - param12 << 16) / var34;
                   var23 = (param10 - param1 << 16) / var35Lifetime2;
@@ -699,132 +708,125 @@ abstract class wh extends rc {
                   var27 = (-param12 + param3 << 16) / var35Lifetime2;
                   var33Lifetime1 = 0;
                 }
-              } else {
-                var32 = (-param14 + param5 << 16) / var34;
-                var28 = (param0 - param12 << 16) / var34;
-                var23 = (param10 - param1 << 16) / var35Lifetime2;
-                var24 = (-param1 + param6 << 16) / var34;
-                var31 = (param7 - param14 << 16) / var35Lifetime2;
-                var27 = (-param12 + param3 << 16) / var35Lifetime2;
-                var33Lifetime1 = 0;
-              }
-              {
-                boolean decompiledFrameCompleted0 = true;
-                L11: {
-                  if (param8 < 0) {
-                    if (param15 >= 0) {
-                      param8 = -param8;
-                      var30 = var30 + var32 * param8;
-                      var26 = var26 + param8 * var28;
-                      var29 = var29 + var31 * param8;
-                      var25 = var25 + param8 * var27;
-                      var17_int = var17_int + param8 * var19;
-                      var18 = var18 + param8 * var20;
-                      var22 = var22 + var24 * param8;
-                      var21 = var21 + param8 * var23;
-                      param8 = 0;
-                    }
-                    if (!(param15 >= 0) || var42 != 0) {
-                      param8 = param15 - param8;
-                      var21 = var21 + param8 * var23;
-                      var26 = var26 + param8 * var28;
-                      var17_int = var17_int + param8 * var19;
-                      var18 = var18 + param8 * var20;
-                      var25 = var25 + var27 * param8;
-                      var30 = var30 + var32 * param8;
-                      var22 = var22 + param8 * var24;
-                      var29 = var29 + var31 * param8;
-                      param8 = param15;
-                      if (var42 == 0) {
-                        break L11;
+                {
+                  boolean decompiledFrameCompleted0 = true;
+                  {
+                    boolean decompiledFrameRemainder0 = true;
+                    if (param8 < 0) {
+                      if (param15 >= 0) {
+                        param8 = -param8;
+                        var30 = var30 + var32 * param8;
+                        var26 = var26 + param8 * var28;
+                        var29 = var29 + var31 * param8;
+                        var25 = var25 + param8 * var27;
+                        var17_int = var17_int + param8 * var19;
+                        var18 = var18 + param8 * var20;
+                        var22 = var22 + var24 * param8;
+                        var21 = var21 + param8 * var23;
+                        param8 = 0;
                       }
-                    }}
-                  var36 = mh.field_b[param8];
-                  while (param15 > param8) {
-                    var37 = var17_int >> 16;
-                    stackIn_73_0 = ~mh.field_c;
-                    stackIn_73_1 = ~var37;
-                    if (var42 != 0) {
-                      decompiledFrameCompleted0 = false;
-                      break;
-                    }
-                    if (stackIn_73_0 < stackIn_73_1) {
-                      var38 = (var18 >> 16) - (var17_int >> 16);
-                      if (var38 != 0) {
-                        var39 = (var22 - var21) / var38;
-                        var40 = (-var25 + var26) / var38;
-                        var41 = (var30 - var29) / var38;
-                        if (mh.field_c <= var38 + var37) {
-                          var38 = -1 + (mh.field_c - var37);
+                      if (!(param15 >= 0) || var42 != 0) {
+                        param8 = param15 - param8;
+                        var21 = var21 + param8 * var23;
+                        var26 = var26 + param8 * var28;
+                        var17_int = var17_int + param8 * var19;
+                        var18 = var18 + param8 * var20;
+                        var25 = var25 + var27 * param8;
+                        var30 = var30 + var32 * param8;
+                        var22 = var22 + param8 * var24;
+                        var29 = var29 + var31 * param8;
+                        param8 = param15;
+                        decompiledFrameRemainder0 = !(var42 == 0);
+                      }}
+                    if (decompiledFrameRemainder0) {
+                      var36 = mh.field_b[param8];
+                      while (param15 > param8) {
+                        var37 = var17_int >> 16;
+                        stackIn_73_0 = ~mh.field_c;
+                        stackIn_73_1 = ~var37;
+                        if (var42 != 0) {
+                          decompiledFrameCompleted0 = false;
+                          break;
                         }
-                        if (0 <= var37) {
-                          jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
-                        } else {
-                          jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
+                        if (stackIn_73_0 < stackIn_73_1) {
+                          var38 = (var18 >> 16) - (var17_int >> 16);
+                          if (var38 != 0) {
+                            var39 = (var22 - var21) / var38;
+                            var40 = (-var25 + var26) / var38;
+                            var41 = (var30 - var29) / var38;
+                            if (mh.field_c <= var38 + var37) {
+                              var38 = -1 + (mh.field_c - var37);
+                            }
+                            if (0 <= var37) {
+                              jf.a(var37 + var36, var39, 33423689, var21, var41, var25, var40, var38, var29, param11);
+                            } else {
+                              jf.a(var36, var39, 33423689, -(var39 * var37) + var21, var41, var25 - var37 * var40, var40, var38 + var37, -(var41 * var37) + var29, param11);
+                            }
+                          } else {
+                            if (var37 >= 0 &&
+                                var37 < mh.field_c) {
+                              jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
+                            }
+                          }
                         }
-                      } else {
-                        if (var37 >= 0 &&
-                            var37 < mh.field_c) {
-                          jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
+                        param8++;
+                        if (param8 >= mh.field_h) {
+                          return;
                         }
+                        var18 = var18 + var20;
+                        var26 = var26 + var28;
+                        var22 = var22 + var24;
+                        var25 = var25 + var27;
+                        var29 = var29 + var31;
+                        var30 = var30 + var32;
+                        var17_int = var17_int + var19;
+                        var21 = var21 + var23;
+                        var36 = var36 + vb.field_f;
                       }
                     }
-                    param8++;
-                    if (param8 >= mh.field_h) {
-                      return;
-                    }
-                    var18 = var18 + var20;
-                    var26 = var26 + var28;
-                    var22 = var22 + var24;
-                    var25 = var25 + var27;
-                    var29 = var29 + var31;
-                    var30 = var30 + var32;
-                    var17_int = var17_int + var19;
-                    var21 = var21 + var23;
-                    var36 = var36 + vb.field_f;
+                  }
+                  if (decompiledFrameCompleted0) {
+                    var36 = param4 - param15;
+                    stackIn_73_0 = ~var36;
+                    stackIn_73_1 = -1;
                   }
                 }
-                if (decompiledFrameCompleted0) {
-                  var36 = param4 - param15;
-                  stackIn_73_0 = ~var36;
-                  stackIn_73_1 = -1;
+                if (stackIn_73_0 == stackIn_73_1) {
+                  var23 = 0;
+                  var27 = 0;
+                  var20 = 0;
+                  var19 = 0;
+                  var24 = 0;
+                  var31 = 0;
+                  var28 = 0;
+                  var32 = 0;
                 }
-              }
-              if (stackIn_73_0 == stackIn_73_1) {
-                var23 = 0;
-                var27 = 0;
-                var20 = 0;
-                var19 = 0;
-                var24 = 0;
-                var31 = 0;
-                var28 = 0;
-                var32 = 0;
-              }
-              if (stackIn_73_0 != stackIn_73_1 || var42 != 0) {
-                var37Lifetime2 = param13 << 16;
-                var38Lifetime2 = param6 << 16;
-                var39Lifetime2 = param0 << 16;
-                var40Lifetime2 = param5 << 16;
-                if (var33Lifetime1 == 0) {
-                  var17_int = param9 << 16;
-                  var29 = param7 << 16;
-                  var21 = param10 << 16;
-                  var25 = param3 << 16;
+                if (stackIn_73_0 != stackIn_73_1 || var42 != 0) {
+                  var37Lifetime2 = param13 << 16;
+                  var38Lifetime2 = param6 << 16;
+                  var39Lifetime2 = param0 << 16;
+                  var40Lifetime2 = param5 << 16;
+                  if (var33Lifetime1 == 0) {
+                    var17_int = param9 << 16;
+                    var29 = param7 << 16;
+                    var21 = param10 << 16;
+                    var25 = param3 << 16;
+                  }
+                  if (var33Lifetime1 != 0 || var42 != 0) {
+                    var22 = param10 << 16;
+                    var18 = param9 << 16;
+                    var26 = param3 << 16;
+                    var30 = param7 << 16;
+                  }
+                  var28 = (var39Lifetime2 - var26) / var36;
+                  var31 = (-var29 + var40Lifetime2) / var36;
+                  var19 = (var37Lifetime2 - var17_int) / var36;
+                  var23 = (-var21 + var38Lifetime2) / var36;
+                  var27 = (var39Lifetime2 - var25) / var36;
+                  var24 = (var38Lifetime2 - var22) / var36;
+                  var20 = (var37Lifetime2 - var18) / var36;
+                  var32 = (-var30 + var40Lifetime2) / var36;
                 }
-                if (var33Lifetime1 != 0 || var42 != 0) {
-                  var22 = param10 << 16;
-                  var18 = param9 << 16;
-                  var26 = param3 << 16;
-                  var30 = param7 << 16;
-                }
-                var28 = (var39Lifetime2 - var26) / var36;
-                var31 = (-var29 + var40Lifetime2) / var36;
-                var19 = (var37Lifetime2 - var17_int) / var36;
-                var23 = (-var21 + var38Lifetime2) / var36;
-                var27 = (var39Lifetime2 - var25) / var36;
-                var24 = (var38Lifetime2 - var22) / var36;
-                var20 = (var37Lifetime2 - var18) / var36;
-                var32 = (-var30 + var40Lifetime2) / var36;
               }
             }
             if (param8 < 0) {

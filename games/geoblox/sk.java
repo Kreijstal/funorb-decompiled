@@ -131,7 +131,8 @@ final class sk {
               this.field_f = this.field_f + (long)var9_int;
               param2 = param2 + var9_int;
             }
-            L5: {
+            {
+              boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted0 = true;
               if (this.field_h.length < param1) {
                 this.field_a.a(this.field_f, true);
@@ -147,21 +148,21 @@ final class sk {
                   param1 = param1 - var9_intLifetime1;
                   param2 = param2 + var9_intLifetime1;
                 }
-                if (decompiledFrameCompleted0) {
-                  break L5;
-                }
+                decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
               }
-              if (decompiledFrameCompleted0) {
-                if (param1 > 0) {
-                  this.a(true);
-                  var9_intLifetime1Lifetime1 = param1;
-                  if (this.field_i < var9_intLifetime1Lifetime1) {
-                    var9_intLifetime1Lifetime1 = this.field_i;
+              if (decompiledFrameRemainder0) {
+                if (decompiledFrameCompleted0) {
+                  if (param1 > 0) {
+                    this.a(true);
+                    var9_intLifetime1Lifetime1 = param1;
+                    if (this.field_i < var9_intLifetime1Lifetime1) {
+                      var9_intLifetime1Lifetime1 = this.field_i;
+                    }
+                    sf.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
+                    param1 = param1 - var9_intLifetime1Lifetime1;
+                    param2 = param2 + var9_intLifetime1Lifetime1;
+                    this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
                   }
-                  sf.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
-                  param1 = param1 - var9_intLifetime1Lifetime1;
-                  param2 = param2 + var9_intLifetime1Lifetime1;
-                  this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
                 }
               }
             }
