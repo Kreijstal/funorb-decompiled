@@ -245,68 +245,66 @@ final class SynthesizedSoundInstrument {
             sampleBuffer[echoSampleIndex] = sampleBuffer[echoSampleIndex] + sampleBuffer[echoSampleIndex - echoDelaySamples] * this.echoDecayPercent / 100;
           }
         }
-        {
-          if (!(this.filter.pairCounts[0] <= 0) ||
-              !(this.filter.pairCounts[1] <= 0)) {
-            this.filterEnvelope.reset();
-            filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-            forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
-            feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
-            if (sampleCount >= forwardFilterOrder + feedbackFilterOrder) {
-              filterSampleIndex = 0;
-              filterWarmupEnd = feedbackFilterOrder;
-              if (filterWarmupEnd > sampleCount - forwardFilterOrder) {
-                filterWarmupEnd = sampleCount - forwardFilterOrder;
+        if (!(this.filter.pairCounts[0] <= 0) ||
+            !(this.filter.pairCounts[1] <= 0)) {
+          this.filterEnvelope.reset();
+          filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+          forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
+          feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
+          if (sampleCount >= forwardFilterOrder + feedbackFilterOrder) {
+            filterSampleIndex = 0;
+            filterWarmupEnd = feedbackFilterOrder;
+            if (filterWarmupEnd > sampleCount - forwardFilterOrder) {
+              filterWarmupEnd = sampleCount - forwardFilterOrder;
+            }
+            while (filterSampleIndex < filterWarmupEnd) {
+              warmupFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+              for (warmupCoefficientIndex = 0; warmupCoefficientIndex < forwardFilterOrder; warmupCoefficientIndex++) {
+                warmupFilteredSample = warmupFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][warmupCoefficientIndex] >> 16);
               }
-              while (filterSampleIndex < filterWarmupEnd) {
-                warmupFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                for (warmupCoefficientIndex = 0; warmupCoefficientIndex < forwardFilterOrder; warmupCoefficientIndex++) {
-                  warmupFilteredSample = warmupFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][warmupCoefficientIndex] >> 16);
+              for (warmupCoefficientIndex = 0; warmupCoefficientIndex < filterSampleIndex; warmupCoefficientIndex++) {
+                warmupFilteredSample = warmupFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][warmupCoefficientIndex] >> 16);
+              }
+              sampleBuffer[filterSampleIndex] = warmupFilteredSample;
+              filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+              filterSampleIndex++;
+            }
+            filterChunkEnd = 128;
+            while (true) {
+              if (filterChunkEnd > sampleCount - forwardFilterOrder) {
+                filterChunkEnd = sampleCount - forwardFilterOrder;
+              }
+              while (filterSampleIndex < filterChunkEnd) {
+                chunkFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
+                for (chunkCoefficientIndex = 0; chunkCoefficientIndex < forwardFilterOrder; chunkCoefficientIndex++) {
+                  chunkFilteredSample = chunkFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][chunkCoefficientIndex] >> 16);
                 }
-                for (warmupCoefficientIndex = 0; warmupCoefficientIndex < filterSampleIndex; warmupCoefficientIndex++) {
-                  warmupFilteredSample = warmupFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - warmupCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][warmupCoefficientIndex] >> 16);
+                for (chunkCoefficientIndex = 0; chunkCoefficientIndex < feedbackFilterOrder; chunkCoefficientIndex++) {
+                  chunkFilteredSample = chunkFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][chunkCoefficientIndex] >> 16);
                 }
-                sampleBuffer[filterSampleIndex] = warmupFilteredSample;
+                sampleBuffer[filterSampleIndex] = chunkFilteredSample;
                 filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
                 filterSampleIndex++;
               }
-              filterChunkEnd = 128;
-              while (true) {
-                if (filterChunkEnd > sampleCount - forwardFilterOrder) {
-                  filterChunkEnd = sampleCount - forwardFilterOrder;
-                }
-                while (filterSampleIndex < filterChunkEnd) {
-                  chunkFilteredSample = (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder] * (long)SoundFilter.forwardMultiplierQ16 >> 16);
-                  for (chunkCoefficientIndex = 0; chunkCoefficientIndex < forwardFilterOrder; chunkCoefficientIndex++) {
-                    chunkFilteredSample = chunkFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][chunkCoefficientIndex] >> 16);
-                  }
-                  for (chunkCoefficientIndex = 0; chunkCoefficientIndex < feedbackFilterOrder; chunkCoefficientIndex++) {
-                    chunkFilteredSample = chunkFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - chunkCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][chunkCoefficientIndex] >> 16);
-                  }
-                  sampleBuffer[filterSampleIndex] = chunkFilteredSample;
-                  filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-                  filterSampleIndex++;
-                }
-                if (filterSampleIndex < sampleCount - forwardFilterOrder) {
-                  forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
-                  feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
-                  filterChunkEnd += 128;
-                  continue;
-                }
-                break;
+              if (filterSampleIndex < sampleCount - forwardFilterOrder) {
+                forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
+                feedbackFilterOrder = this.filter.computeCoefficients(1, (float)filterEnvelopeValue / 65536.0f);
+                filterChunkEnd += 128;
+                continue;
               }
-              while (filterSampleIndex < sampleCount) {
-                tailFilteredSample = 0;
-                for (tailCoefficientIndex = filterSampleIndex + forwardFilterOrder - sampleCount; tailCoefficientIndex < forwardFilterOrder; tailCoefficientIndex++) {
-                  tailFilteredSample = tailFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][tailCoefficientIndex] >> 16);
-                }
-                for (tailCoefficientIndex = 0; tailCoefficientIndex < feedbackFilterOrder; tailCoefficientIndex++) {
-                  tailFilteredSample = tailFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][tailCoefficientIndex] >> 16);
-                }
-                sampleBuffer[filterSampleIndex] = tailFilteredSample;
-                filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
-                filterSampleIndex++;
+              break;
+            }
+            while (filterSampleIndex < sampleCount) {
+              tailFilteredSample = 0;
+              for (tailCoefficientIndex = filterSampleIndex + forwardFilterOrder - sampleCount; tailCoefficientIndex < forwardFilterOrder; tailCoefficientIndex++) {
+                tailFilteredSample = tailFilteredSample + (int)((long)sampleBuffer[filterSampleIndex + forwardFilterOrder - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[0][tailCoefficientIndex] >> 16);
               }
+              for (tailCoefficientIndex = 0; tailCoefficientIndex < feedbackFilterOrder; tailCoefficientIndex++) {
+                tailFilteredSample = tailFilteredSample - (int)((long)sampleBuffer[filterSampleIndex - 1 - tailCoefficientIndex] * (long)SoundFilter.coefficientsQ16[1][tailCoefficientIndex] >> 16);
+              }
+              sampleBuffer[filterSampleIndex] = tailFilteredSample;
+              filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
+              filterSampleIndex++;
             }
           }
         }

@@ -111,47 +111,45 @@ final class EntityLinkSupport {
             } else {
               firstIsKindOne = 1;
             }
-            {
-              if ((secondIsKindOne ^ firstIsKindOne) != 0) {
-                if (secondEntity.entitySpriteKindId == 1 &&
-                    firstEntity.entitySpriteKindId == 0) {
-                  secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+            if ((secondIsKindOne ^ firstIsKindOne) != 0) {
+              if (secondEntity.entitySpriteKindId == 1 &&
+                  firstEntity.entitySpriteKindId == 0) {
+                secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
+              } else {
+                if (secondEntity.entitySpriteKindId == 0 &&
+                    firstEntity.entitySpriteKindId == 1) {
+                  variantPropagationThenNeighborIndex = 1;
                 } else {
-                  if (secondEntity.entitySpriteKindId == 0 &&
-                      firstEntity.entitySpriteKindId == 1) {
-                    variantPropagationThenNeighborIndex = 1;
+                  if (firstEntity.entitySpriteKindId == 2 &&
+                      secondEntity.entitySpriteKindId == 1) {
+                    neighborIndexThenDetachSecond = 1;
+                    detachFirst = 1;
+                    propagateCategory = 1;
+                    secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
                   } else {
-                    if (firstEntity.entitySpriteKindId == 2 &&
-                        secondEntity.entitySpriteKindId == 1) {
+                    if (1 == firstEntity.entitySpriteKindId &&
+                        secondEntity.entitySpriteKindId == 2) {
+                      secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
+                      variantPropagationThenNeighborIndex = 1;
                       neighborIndexThenDetachSecond = 1;
-                      detachFirst = 1;
-                      propagateCategory = 1;
-                      secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
-                    } else {
-                      if (1 == firstEntity.entitySpriteKindId &&
-                          secondEntity.entitySpriteKindId == 2) {
-                        secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
-                        variantPropagationThenNeighborIndex = 1;
-                        neighborIndexThenDetachSecond = 1;
-                      }
                     }
                   }
                 }
-              } else {
-                if (2 == secondEntity.entitySpriteKindId ||
-                    firstEntity.entitySpriteKindId == 2) {
-                  if (secondEntity.entitySpriteKindId == 2 &&
-                      2 != firstEntity.entitySpriteKindId) {
-                    secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
+              }
+            } else {
+              if (2 == secondEntity.entitySpriteKindId ||
+                  firstEntity.entitySpriteKindId == 2) {
+                if (secondEntity.entitySpriteKindId == 2 &&
+                    2 != firstEntity.entitySpriteKindId) {
+                  secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
+                  neighborIndexThenDetachSecond = 1;
+                } else {
+                  if (firstEntity.entitySpriteKindId == 2 &&
+                      2 != secondEntity.entitySpriteKindId) {
+                    detachFirst = 1;
+                    propagateCategory = 1;
                     neighborIndexThenDetachSecond = 1;
-                  } else {
-                    if (firstEntity.entitySpriteKindId == 2 &&
-                        2 != secondEntity.entitySpriteKindId) {
-                      detachFirst = 1;
-                      propagateCategory = 1;
-                      neighborIndexThenDetachSecond = 1;
-                      firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
-                    }
+                    firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
                   }
                 }
               }

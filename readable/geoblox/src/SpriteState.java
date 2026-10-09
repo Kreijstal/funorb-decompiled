@@ -498,64 +498,62 @@ abstract class SpriteState extends DualLinkNode {
             triangleEdgeInitialization: {
               topToBottomRows = -topY + bottomY;
               if (topY == middleY) {
-                {
-                  if (~bottomY == ~topY) {
-                    leftBlueQ16 = topBlue;
-                    leftXQ16 = topX << 16;
-                    leftBlueStepQ16 = 0;
-                    rightBlueQ16 = middleBlue;
-                    leftXStepQ16 = 0;
-                    leftRedQ16 = topRed;
-                    rightRedStepQ16 = 0;
-                    rightBlueStepQ16 = 0;
-                    rightXStepQ16 = 0;
-                    rightGreenQ16 = middleGreen;
-                    leftRedStepQ16 = 0;
-                    rightRedQ16 = middleRed;
-                    leftGreenStepQ16 = 0;
-                    rightGreenStepQ16 = 0;
-                    rightXQ16 = middleX << 16;
-                    leftGreenQ16 = topGreen;
-                  }
-                  if (~bottomY != ~topY || controlFlagSnapshot != 0) {
-                    edgeSegmentRowsThenRowBase = -middleY + bottomY;
-                    if (middleX <= topX) {
-                      leftGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                      leftBlueQ16 = middleBlue << 16;
-                      rightXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
-                      rightRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
-                      leftXQ16 = middleX << 16;
-                      leftRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
-                      rightXQ16 = topX << 16;
-                      leftBlueStepQ16 = (-middleBlue + bottomBlue << 16) / edgeSegmentRowsThenRowBase;
-                      rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
-                      leftGreenQ16 = middleGreen << 16;
-                      rightBlueQ16 = topBlue << 16;
-                      rightGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
-                      leftXStepQ16 = (-middleX + bottomX << 16) / edgeSegmentRowsThenRowBase;
-                      leftRedQ16 = middleRed << 16;
-                      rightRedQ16 = topRed << 16;
-                      rightGreenQ16 = topGreen << 16;
-                    }
-                    if (!(middleX <= topX) || controlFlagSnapshot != 0) {
-                      rightGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                      leftRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
-                      leftXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
-                      leftGreenQ16 = topGreen << 16;
-                      rightRedQ16 = middleRed << 16;
-                      rightBlueStepQ16 = (bottomBlue - middleBlue << 16) / edgeSegmentRowsThenRowBase;
-                      rightGreenQ16 = middleGreen << 16;
-                      leftXQ16 = topX << 16;
-                      rightRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
-                      leftRedQ16 = topRed << 16;
-                      rightBlueQ16 = middleBlue << 16;
-                      rightXQ16 = middleX << 16;
-                      rightXStepQ16 = (bottomX - middleX << 16) / edgeSegmentRowsThenRowBase;
-                      leftBlueStepQ16 = (bottomBlue - topBlue << 16) / topToBottomRows;
-                      leftGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
-                      leftBlueQ16 = topBlue << 16;
-                    }}
+                if (~bottomY == ~topY) {
+                  leftBlueQ16 = topBlue;
+                  leftXQ16 = topX << 16;
+                  leftBlueStepQ16 = 0;
+                  rightBlueQ16 = middleBlue;
+                  leftXStepQ16 = 0;
+                  leftRedQ16 = topRed;
+                  rightRedStepQ16 = 0;
+                  rightBlueStepQ16 = 0;
+                  rightXStepQ16 = 0;
+                  rightGreenQ16 = middleGreen;
+                  leftRedStepQ16 = 0;
+                  rightRedQ16 = middleRed;
+                  leftGreenStepQ16 = 0;
+                  rightGreenStepQ16 = 0;
+                  rightXQ16 = middleX << 16;
+                  leftGreenQ16 = topGreen;
                 }
+                if (~bottomY != ~topY || controlFlagSnapshot != 0) {
+                  edgeSegmentRowsThenRowBase = -middleY + bottomY;
+                  if (middleX <= topX) {
+                    leftGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                    leftBlueQ16 = middleBlue << 16;
+                    rightXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
+                    rightRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
+                    leftXQ16 = middleX << 16;
+                    leftRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
+                    rightXQ16 = topX << 16;
+                    leftBlueStepQ16 = (-middleBlue + bottomBlue << 16) / edgeSegmentRowsThenRowBase;
+                    rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
+                    leftGreenQ16 = middleGreen << 16;
+                    rightBlueQ16 = topBlue << 16;
+                    rightGreenStepQ16 = (-topGreen + bottomGreen << 16) / topToBottomRows;
+                    leftXStepQ16 = (-middleX + bottomX << 16) / edgeSegmentRowsThenRowBase;
+                    leftRedQ16 = middleRed << 16;
+                    rightRedQ16 = topRed << 16;
+                    rightGreenQ16 = topGreen << 16;
+                  }
+                  if (!(middleX <= topX) || controlFlagSnapshot != 0) {
+                    rightGreenStepQ16 = (bottomGreen - middleGreen << 16) / edgeSegmentRowsThenRowBase;
+                    leftRedStepQ16 = (bottomRed - topRed << 16) / topToBottomRows;
+                    leftXStepQ16 = (bottomX - topX << 16) / topToBottomRows;
+                    leftGreenQ16 = topGreen << 16;
+                    rightRedQ16 = middleRed << 16;
+                    rightBlueStepQ16 = (bottomBlue - middleBlue << 16) / edgeSegmentRowsThenRowBase;
+                    rightGreenQ16 = middleGreen << 16;
+                    leftXQ16 = topX << 16;
+                    rightRedStepQ16 = (-middleRed + bottomRed << 16) / edgeSegmentRowsThenRowBase;
+                    leftRedQ16 = topRed << 16;
+                    rightBlueQ16 = middleBlue << 16;
+                    rightXQ16 = middleX << 16;
+                    rightXStepQ16 = (bottomX - middleX << 16) / edgeSegmentRowsThenRowBase;
+                    leftBlueStepQ16 = (bottomBlue - topBlue << 16) / topToBottomRows;
+                    leftGreenStepQ16 = (bottomGreen - topGreen << 16) / topToBottomRows;
+                    leftBlueQ16 = topBlue << 16;
+                  }}
                 middleVertexOnRight = 0;
                 if (0 <= topY) {
                   break triangleEdgeInitialization;
@@ -617,36 +615,34 @@ abstract class SpriteState extends DualLinkNode {
               {
                 boolean upperSegmentCompletionRemainderEnabled = true;
                 upperSegmentScan: {
-                  {
-                    if (topY < 0) {
-                      if (middleY >= 0) {
-                        topY = -topY;
-                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
-                        rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
-                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
-                        leftGreenQ16 = leftGreenQ16 + topY * leftGreenStepQ16;
-                        leftXQ16 = leftXQ16 + topY * leftXStepQ16;
-                        rightXQ16 = rightXQ16 + topY * rightXStepQ16;
-                        rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
-                        leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
-                        topY = 0;
+                  if (topY < 0) {
+                    if (middleY >= 0) {
+                      topY = -topY;
+                      rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                      rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                      leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                      leftGreenQ16 = leftGreenQ16 + topY * leftGreenStepQ16;
+                      leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                      rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                      rightRedQ16 = rightRedQ16 + rightRedStepQ16 * topY;
+                      leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                      topY = 0;
+                    }
+                    if (!(middleY >= 0) || controlFlagSnapshot != 0) {
+                      topY = middleY - topY;
+                      leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
+                      rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
+                      leftXQ16 = leftXQ16 + topY * leftXStepQ16;
+                      rightXQ16 = rightXQ16 + topY * rightXStepQ16;
+                      leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
+                      rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
+                      rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
+                      leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
+                      topY = middleY;
+                      if (controlFlagSnapshot == 0) {
+                        break upperSegmentScan;
                       }
-                      if (!(middleY >= 0) || controlFlagSnapshot != 0) {
-                        topY = middleY - topY;
-                        leftRedQ16 = leftRedQ16 + topY * leftRedStepQ16;
-                        rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
-                        leftXQ16 = leftXQ16 + topY * leftXStepQ16;
-                        rightXQ16 = rightXQ16 + topY * rightXStepQ16;
-                        leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
-                        rightBlueQ16 = rightBlueQ16 + rightBlueStepQ16 * topY;
-                        rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
-                        leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
-                        topY = middleY;
-                        if (controlFlagSnapshot == 0) {
-                          break upperSegmentScan;
-                        }
-                      }}
-                  }
+                    }}
                   edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];
                   while (middleY > topY) {
                     spanStartOrWidthOrBottomXQ16 = leftXQ16 >> 16;

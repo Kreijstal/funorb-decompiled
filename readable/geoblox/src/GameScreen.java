@@ -53,16 +53,14 @@ final class GameScreen extends MenuScreen {
               actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
               if (actionId == 8 &&
                   clientControlFlowGuard == 0) {
-                {
-                  if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
-                    if (SessionTextHistorySupport.currentKeyboardEventCode != 103) {
-                      super.handleMenuKey(itemIndex, -53);
-                    } else {
-                      SocialListEntry.soundEffectVolume = 80;
-                    }
+                if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
+                  if (SessionTextHistorySupport.currentKeyboardEventCode != 103) {
+                    super.handleMenuKey(itemIndex, -53);
                   } else {
-                    SocialListEntry.soundEffectVolume = 0;
+                    SocialListEntry.soundEffectVolume = 80;
                   }
+                } else {
+                  SocialListEntry.soundEffectVolume = 0;
                 }
                 this.previewMusicVolume(0);
                 break menuKeyDispatch;
@@ -310,9 +308,7 @@ final class GameScreen extends MenuScreen {
               if (clientControlFlowGuard != 0) {
                 if (-4 >= this.menuPressOffset) {
                   this.menuPressAnimationActive = false;
-                  {
-                    this.menuPressOffset = this.menuPressOffset - 1;
-                  }
+                  this.menuPressOffset = this.menuPressOffset - 1;
                 } else {
                   this.menuPressOffset = this.menuPressOffset - 1;
                 }
@@ -950,9 +946,7 @@ final class GameScreen extends MenuScreen {
                 AudioService.screenTitleSprites[3].draw(0, 20);
                 if (clientControlFlowGuard != 0) {
                   AudioService.screenTitleSprites[2].draw(0, 20);
-                  {
-                    AudioService.screenTitleSprites[1].draw(0, 20);
-                  }
+                  AudioService.screenTitleSprites[1].draw(0, 20);
                 }
               }
             } else {
@@ -1040,9 +1034,7 @@ final class GameScreen extends MenuScreen {
               if (clientControlFlowGuard != 0) {
                 if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
                   statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
-                  {
-                    statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
-                  }
+                  statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
                 } else {
                   statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
                 }
@@ -1284,13 +1276,9 @@ final class GameScreen extends MenuScreen {
                       this.fullscreenDialogActive = false;
                       ArchiveCatalog.exitFullscreenIfActive(255);
                       this.pointerInteractionActive = true;
-                      {
-                        this.pointerInteractionActive = false;
-                        {
-                          this.pointerInteractionActive = true;
-                          this.fullscreenDialogActive = false;
-                        }
-                      }
+                      this.pointerInteractionActive = false;
+                      this.pointerInteractionActive = true;
+                      this.fullscreenDialogActive = false;
                     }
                   } else {
                     this.fullscreenDialogActive = false;
@@ -1298,10 +1286,8 @@ final class GameScreen extends MenuScreen {
                     this.pointerInteractionActive = true;
                     if (clientControlFlowGuard != 0) {
                       this.pointerInteractionActive = false;
-                      {
-                        this.pointerInteractionActive = true;
-                        this.fullscreenDialogActive = false;
-                      }
+                      this.pointerInteractionActive = true;
+                      this.fullscreenDialogActive = false;
                     }
                   }
                 } else {
@@ -1625,9 +1611,7 @@ final class GameScreen extends MenuScreen {
                   SocialListEntry.soundEffectVolume = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                   if (clientControlFlowGuard != 0) {
                     SocialListEntry.soundEffectVolume = 80;
-                    {
-                      SocialListEntry.soundEffectVolume = 0;
-                    }
+                    SocialListEntry.soundEffectVolume = 0;
                   }
                 } else {
                   SocialListEntry.soundEffectVolume = 80;
@@ -2003,9 +1987,7 @@ final class GameScreen extends MenuScreen {
                         UiWidget.gameplayReturnScreenId = 6;
                         if (clientControlFlowGuard != 0) {
                           UiWidget.gameplayReturnScreenId = 5;
-                          {
-                            UiWidget.gameplayReturnScreenId = 2;
-                          }
+                          UiWidget.gameplayReturnScreenId = 2;
                         }
                       } else {
                         UiWidget.gameplayReturnScreenId = 5;
@@ -2057,9 +2039,7 @@ final class GameScreen extends MenuScreen {
                         UiWidget.gameplaySession.submitScore((byte) -70);
                         if (0 < UiWidget.gameplaySession.newActionCount) {
                           ScoreSubmission.requestedScreenId = 6;
-                          {
-                            ScoreSubmission.requestedScreenId = 2;
-                          }
+                          ScoreSubmission.requestedScreenId = 2;
                         } else {
                           ScoreSubmission.requestedScreenId = 2;
                         }
@@ -2621,9 +2601,7 @@ final class GameScreen extends MenuScreen {
                 if (this.screenId != 6 &&
                     this.screenId != 2) {
                   ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
-                  {
-                    ScoreSubmission.requestedScreenId = 0;
-                  }
+                  ScoreSubmission.requestedScreenId = 0;
                 } else {
                   ScoreSubmission.requestedScreenId = 0;
                 }

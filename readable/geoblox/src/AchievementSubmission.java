@@ -94,20 +94,18 @@ final class AchievementSubmission extends IntrusiveNode {
               nearPlaneOrNormalCapacityOrQueueMinDepth = -51;
               invertedDepthOrNormalIndexOrQueueGuard = ~cameraZBasisOrCameraDepth;
               if (controlFlagSnapshot == 0) {
-                {
-                  if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
-                    SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
-                    TextInputWidget.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
-                    if (cameraZBasisOrCameraDepth < minimumVisibleDepth) {
-                      minimumVisibleDepth = cameraZBasisOrCameraDepth;
-                    }
-                    if (maximumVisibleDepth < cameraZBasisOrCameraDepth) {
-                      maximumVisibleDepth = cameraZBasisOrCameraDepth;
-                    }
-                    CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
-                  } else {
-                    CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
+                if (nearPlaneOrNormalCapacityOrQueueMinDepth >= invertedDepthOrNormalIndexOrQueueGuard) {
+                  SingleChildWidget.projectedMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled / cameraZBasisOrCameraDepth + cameraXBasisOrDeltaXOrClipCenterXOrNormalZ;
+                  TextInputWidget.projectedMeshVertexY[cameraXBasisOrDeltaZOrVertexIndex] = cameraXBasisOrDeltaYOrClipCenterY + cameraZBasisOrCameraYScaled / cameraZBasisOrCameraDepth;
+                  if (cameraZBasisOrCameraDepth < minimumVisibleDepth) {
+                    minimumVisibleDepth = cameraZBasisOrCameraDepth;
                   }
+                  if (maximumVisibleDepth < cameraZBasisOrCameraDepth) {
+                    maximumVisibleDepth = cameraZBasisOrCameraDepth;
+                  }
+                  CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraDepth;
+                } else {
+                  CachedArchiveSource.projectedMeshVertexDepth[cameraXBasisOrDeltaZOrVertexIndex] = -2147483648;
                 }
                 if (storeCameraCoordinates) {
                   BoardEntityState.cameraMeshVertexX[cameraXBasisOrDeltaZOrVertexIndex] = cameraZBasisOrCameraXScaled >> ClientRenderingState.meshProjectionShift;
