@@ -324,14 +324,12 @@ final class BoardReconciliationSupport {
                           }
                           PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                         }
-                        if (4 != routedAttachedEntity.entitySpriteKindId) {
+                        boolean applyKindSevenConversionAndCounters = !(4 != routedAttachedEntity.entitySpriteKindId);
+                        if (!applyKindSevenConversionAndCounters) {
                           routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
-                          if (clientControlSnapshot != 0) {
-                            routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
-                            visitedResetIndexThenKindFourCount++;
-                            FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
-                          }
-                        } else {
+                          applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);
+                        }
+                        if (applyKindSevenConversionAndCounters) {
                           routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
                           visitedResetIndexThenKindFourCount++;
                           FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;

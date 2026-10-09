@@ -508,13 +508,12 @@ final class GameplaySession {
           this.runGuardedStaticCleanup((byte) 64);
           if (this.showGameOverOverlay) {
             PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
-            if (this.sceneAnimationTick < 266) {
+            boolean drawSettledEndingTitle = !(this.sceneAnimationTick < 266);
+            if (!drawSettledEndingTitle) {
               AudioService.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
-              if (clientControlFlowGuard != 0) {
-                AudioService.screenTitleSprites[6].draw(0, 20);
-                AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
-              }
-            } else {
+              drawSettledEndingTitle = (clientControlFlowGuard != 0);
+            }
+            if (drawSettledEndingTitle) {
               AudioService.screenTitleSprites[6].draw(0, 20);
               AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
             }
@@ -605,7 +604,8 @@ final class GameplaySession {
           }
         }
         sessionProgressionAndEnding: {
-          if (!this.sessionEnding) {
+          boolean advanceEndingSequence = !(!this.sessionEnding);
+          if (!advanceEndingSequence) {
             if ((EntityContactSupport.areEntityQueuesSettled(0) &&
                     !this.matchBatchProcessedThisTick ||
                   !this.preserveScoreOnTransition) &&
@@ -848,22 +848,9 @@ final class GameplaySession {
             if (this.tutorialMode) {
               this.advanceTutorialStep(109);
             }
-            if (clientControlFlowGuard != 0) {
-              if (this.sceneAnimationTick == 0) {
-                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
-              }
-              if (LoginPanel.endingEntityScanClear &&
-                  LoginMethod.isAvatarCryHoldExpired(-3) &&
-                  this.sceneAnimationTick > 1000) {
-                this.requestSessionExitScreen(28809);
-              }
-              EndingAnimationSupport.advanceEndingEntityAnimations(19);
-              AgeValidator.advanceScorePopups((byte) 24);
-              MessageDialog.advanceGameplayAvatarAnimation(600);
-              this.sceneAnimationTick = this.sceneAnimationTick + 1;
-              this.boardRasterDirty = true;
-            }
-          } else {
+            advanceEndingSequence = (clientControlFlowGuard != 0);
+          }
+          if (advanceEndingSequence) {
             if (this.sceneAnimationTick == 0) {
               IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
             }

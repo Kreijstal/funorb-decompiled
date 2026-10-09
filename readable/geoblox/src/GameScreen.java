@@ -392,16 +392,12 @@ final class GameScreen extends MenuScreen {
               this.screenId != 4) {
             screenPanelHeight = (2 == this.screenId) && (clientControlFlowGuard == 0) ? (235) : (285);
             panelLeft = 120;
-            if (this.screenId == 3) {
+            boolean applyScreenSevenOrEightOffsets = !(this.screenId == 3);
+            if (!applyScreenSevenOrEightOffsets) {
               panelLeft += 10;
-              if (clientControlFlowGuard != 0) {
-                if (this.screenId == 8 ||
-                    this.screenId == 7) {
-                  panelWidth += 20;
-                  panelLeft -= 10;
-                }
-              }
-            } else {
+              applyScreenSevenOrEightOffsets = (clientControlFlowGuard != 0);
+            }
+            if (applyScreenSevenOrEightOffsets) {
               if (this.screenId == 8 ||
                   this.screenId == 7) {
                 panelWidth += 20;
@@ -1787,21 +1783,13 @@ final class GameScreen extends MenuScreen {
           }
           if (3 == this.screenId &&
               !this.tutorialSlideActive) {
-            if (this.tutorialPageIndex != 4 &&
-                this.selectedItemIndex == 3) {
+            boolean normalizeFinalTutorialSelection = !(this.tutorialPageIndex != 4 &&
+                this.selectedItemIndex == 3);
+            if (!normalizeFinalTutorialSelection) {
               this.selectedItemIndex = 2;
-              if (Geoblox.clientControlFlowFlag != 0) {
-                if (this.tutorialPageIndex == 4) {
-                  if (this.selectedItemIndex == 2) {
-                    this.selectedItemIndex = 1;
-                  }
-                  if (SpriteCheckboxRenderer.previousMenuScreenId == 1 &&
-                      this.selectedItemIndex == 3) {
-                    this.selectedItemIndex = 1;
-                  }
-                }
-              }
-            } else {
+              normalizeFinalTutorialSelection = (Geoblox.clientControlFlowFlag != 0);
+            }
+            if (normalizeFinalTutorialSelection) {
               if (this.tutorialPageIndex == 4) {
                 if (this.selectedItemIndex == 2) {
                   this.selectedItemIndex = 1;
@@ -2296,18 +2284,13 @@ final class GameScreen extends MenuScreen {
               this.selectedItemIndex == 3) {
             selected = true;
           }
-          if (this.screenId == 3 ||
-                this.screenId == 2) {
+          boolean applyMenuScreenOffset = !(this.screenId == 3 ||
+                this.screenId == 2);
+          if (!applyMenuScreenOffset) {
             rowY += 280;
-            if (clientControlFlowGuard != 0) {
-              if (this.screenId == 5 ||
-                  this.screenId == 7 ||
-                  this.screenId == 6 ||
-                  this.screenId == 4) {
-                rowY += 295;
-              }
-            }
-          } else {
+            applyMenuScreenOffset = (clientControlFlowGuard != 0);
+          }
+          if (applyMenuScreenOffset) {
             if (this.screenId == 5 ||
                 this.screenId == 7 ||
                 this.screenId == 6 ||

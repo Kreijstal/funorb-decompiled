@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "ad6182796608a0bd498ddcf5877d51a80eb9530a",
+      "commit": "73cd732a36d6f6239d42514a638c35a82d802fcd",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "d7a2128763a993e939f7809b9a33626cae6d4189f47ab0a30c0e7e3e4342c221",
-        "reproduce": "git archive --format=tar ad6182796608a0bd498ddcf5877d51a80eb9530a | sha256sum",
+        "sha256": "13323243f4efd6315fb37089324e1bbf35303069dc734764045b83d206988bf0",
+        "reproduce": "git archive --format=tar 73cd732a36d6f6239d42514a638c35a82d802fcd | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -26,7 +26,8 @@
         "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
         "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
         "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
-        "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1"
+        "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+        "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1"
       }
     },
     "namingTool": {
@@ -110,7 +111,8 @@
       "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
       "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
       "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
-      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1"
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1"
     }
   },
   "freshVerification": {
@@ -135,9 +137,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "7bc14c890daa3207383089455bf539fdd73b7993aaa08d5e1c1c4e53827b2424",
-  "previousSourceTreeSha256": "118042122589877c5e7f2e5ff503b6b2049308a8c26b0cd788abc4f4154e57ce",
-  "changedJavaFiles": 14,
+  "sourceTreeSha256": "0654237dfe0081fd0135475f152847514f2930d28ba7433a419df7661b20253a",
+  "previousSourceTreeSha256": "7bc14c890daa3207383089455bf539fdd73b7993aaa08d5e1c1c4e53827b2424",
+  "changedJavaFiles": 4,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3305,11 +3307,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15",
+    "commit": "ac3504fe54c19da72263e9da4adf248716a6d92a",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "e54003cd30265598bdbb33053d1d6bc2223e0b874a4f8cafcd52a7c3d108f21a"
+      "sha256": "2efda5badfe5994b3e8c349ebec15d790afd8fc766c98af5cef21f446e0e8158"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3319,15 +3321,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "f04e5ce94a2068fc545d2cf45b2e1caa0ffc9ac36229c30d3de6c8c419489112",
+    "outputTreeSha256": "7676f486fadc9bb323c3c260d15c09fadc4560a46c34a99279beb0f66898e67c",
     "files": 303,
-    "rules": 20125,
-    "identifierEdits": 121882,
-    "bindingsCompared": 138121,
+    "rules": 20133,
+    "identifierEdits": 121837,
+    "bindingsCompared": 138066,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122316,
+    "totalEdits": 122271,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 423,
@@ -3349,8 +3351,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 240,
-    "semanticPass": 245
+    "structuralPass": 246,
+    "semanticPass": 246
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36457,5 +36459,382 @@
     "sourceWorkflowCommit": "0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15",
     "manifestSha256": "e54003cd30265598bdbb33053d1d6bc2223e0b874a4f8cafcd52a7c3d108f21a",
     "readableTreeSha256": "f04e5ce94a2068fc545d2cf45b2e1caa0ffc9ac36229c30d3de6c8c419489112"
+  },
+  "dynamicGuardedTailSharing": {
+    "version": 246,
+    "changedJavaFiles": 4,
+    "changedMethodBodies": 8,
+    "sharedTails": 8,
+    "duplicateTokensRemoved": 350,
+    "sourceProofTest": "readable/tests/test-geoblox-dynamic-tails-source.mjs",
+    "sourceProofTestSha256": "cc4675d1c6c3194626df2a7825c2619dedccdc8fb70724df120c47f2caf2d7e4",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "a3549bae67d913b9604b388d0e190a6389cea8ff",
+    "sourceCommit": "d0dcf594ffb877434edece9d20f008d7458a382c",
+    "previousSourceTreeSha256": "7bc14c890daa3207383089455bf539fdd73b7993aaa08d5e1c1c4e53827b2424",
+    "sourceTreeSha256": "0654237dfe0081fd0135475f152847514f2930d28ba7433a419df7661b20253a",
+    "javaToolsCommit": "73cd732a36d6f6239d42514a638c35a82d802fcd",
+    "sourceArchiveSha256": "13323243f4efd6315fb37089324e1bbf35303069dc734764045b83d206988bf0",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1"
+    },
+    "independentlyComparedAstFiles": 303,
+    "bindingsBefore": 138121,
+    "bindingsCompared": 138066,
+    "duplicateBindingsRemoved": 87,
+    "newDecisionLocals": 8,
+    "newFlagOccurrences": 32,
+    "transfersBefore": 4941,
+    "transfersCompared": 4941,
+    "duplicateTransfersRemoved": 0,
+    "originalIdentityMigrations": [
+      {
+        "before": "L:c.a(I)V#40",
+        "after": "L:c.a(I)V#41"
+      },
+      {
+        "before": "L:c.f(B)V#2",
+        "after": "L:c.f(B)V#3"
+      },
+      {
+        "before": "L:c.a(ZBII)V#17",
+        "after": "L:c.a(ZBII)V#18"
+      },
+      {
+        "before": "L:ch.b(Z)V#4",
+        "after": "L:ch.b(Z)V#5"
+      },
+      {
+        "before": "L:ch.d(I)V#7",
+        "after": "L:ch.d(I)V#8"
+      },
+      {
+        "before": "L:gh.a(I)V#16",
+        "after": "L:gh.a(I)V#17"
+      },
+      {
+        "before": "L:kc.b(I)V#52",
+        "after": "L:kc.b(I)V#53"
+      }
+    ],
+    "originalDecisionsEvaluatedOnce": true,
+    "retainedBindingsAndProtectedTransfersPreserved": true,
+    "duplicateTailBindingsAndTargetsIndependentlyMatched": true,
+    "newFlagsIndependentlyBooleanAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 32,
+    "genericDynamicTailTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 26055,
+    "remainingLargeFramedMethods": 5,
+    "plainBlockLabelsAfter": 77,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass246 caches the original outer and post-prefix Boolean decisions, then executes one shared continuation. No predicate is reevaluated across prefix writes/callbacks. Independent javac ASTs certify ordered condition/prefix/guard/tail and all other syntax; full binding/character provenance certifies retained symbols, duplicate-tail binding equality, definite assignment and all exit targets/protected scopes. Original reads/stores/unused snapshots, signed overflow, float association, exception/finally/monitor behavior and nonzero control flags are preserved. Whole-game/runtime equivalence is not claimed.",
+    "selections": [
+      {
+        "file": "c.java",
+        "methodStart": 83311,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 84838,
+          "end": 85395
+        },
+        "condition": {
+          "start": 84841,
+          "end": 84897
+        },
+        "guard": {
+          "start": 84942,
+          "end": 84954
+        },
+        "removedTail": {
+          "start": 84971,
+          "end": 85159
+        },
+        "retainedTail": {
+          "start": 85205,
+          "end": 85394
+        },
+        "duplicateTokensRemoved": 32,
+        "method": "M:c.a(ZBII)V",
+        "symbol": "L:c.a(ZBII)V#17",
+        "afterStart": 84594
+      },
+      {
+        "file": "c.java",
+        "methodStart": 67744,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 68031,
+          "end": 68803
+        },
+        "condition": {
+          "start": 68034,
+          "end": 68090
+        },
+        "guard": {
+          "start": 68142,
+          "end": 68164
+        },
+        "removedTail": {
+          "start": 68183,
+          "end": 68468
+        },
+        "retainedTail": {
+          "start": 68520,
+          "end": 68802
+        },
+        "duplicateTokensRemoved": 48,
+        "method": "M:c.f(B)V",
+        "symbol": "L:c.f(B)V#2",
+        "afterStart": 67980
+      },
+      {
+        "file": "c.java",
+        "methodStart": 11288,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 12905,
+          "end": 13348
+        },
+        "condition": {
+          "start": 12908,
+          "end": 12927
+        },
+        "guard": {
+          "start": 12973,
+          "end": 12985
+        },
+        "removedTail": {
+          "start": 13004,
+          "end": 13147
+        },
+        "retainedTail": {
+          "start": 13199,
+          "end": 13347
+        },
+        "duplicateTokensRemoved": 24,
+        "method": "M:c.a(I)V",
+        "symbol": "L:c.a(I)V#40",
+        "afterStart": 12905
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 33037,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 34094,
+          "end": 34576
+        },
+        "condition": {
+          "start": 34097,
+          "end": 34155
+        },
+        "guard": {
+          "start": 34237,
+          "end": 34259
+        },
+        "removedTail": {
+          "start": 34278,
+          "end": 34395
+        },
+        "retainedTail": {
+          "start": 34447,
+          "end": 34575
+        },
+        "duplicateTokensRemoved": 33,
+        "method": "M:ch.d(I)V",
+        "symbol": "L:ch.d(I)V#7",
+        "afterStart": 34071
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 18992,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 20605,
+          "end": 21020
+        },
+        "condition": {
+          "start": 20608,
+          "end": 20628
+        },
+        "guard": {
+          "start": 20706,
+          "end": 20717
+        },
+        "removedTail": {
+          "start": 20734,
+          "end": 20849
+        },
+        "retainedTail": {
+          "start": 20895,
+          "end": 21019
+        },
+        "duplicateTokensRemoved": 33,
+        "method": "M:ch.b(Z)V",
+        "symbol": "L:ch.b(Z)V#4",
+        "afterStart": 20605
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 18956,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 20791,
+          "end": 30181
+        },
+        "condition": {
+          "start": 20794,
+          "end": 20809
+        },
+        "guard": {
+          "start": 29305,
+          "end": 29316
+        },
+        "removedTail": {
+          "start": 29333,
+          "end": 29740
+        },
+        "retainedTail": {
+          "start": 29786,
+          "end": 30180
+        },
+        "duplicateTokensRemoved": 93,
+        "method": "M:gh.a(I)V",
+        "symbol": "L:gh.a(I)V#16",
+        "afterStart": 20750
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 6562,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 17641,
+          "end": 18106
+        },
+        "condition": {
+          "start": 17644,
+          "end": 17664
+        },
+        "guard": {
+          "start": 17745,
+          "end": 17757
+        },
+        "removedTail": {
+          "start": 17776,
+          "end": 17909
+        },
+        "retainedTail": {
+          "start": 17961,
+          "end": 18105
+        },
+        "duplicateTokensRemoved": 57,
+        "method": "M:gh.a(B)V",
+        "symbol": "L:gh.a(B)V#27",
+        "afterStart": 17641
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1828,
+        "name": "decompiledSharedTail0",
+        "region": {
+          "start": 13027,
+          "end": 13653
+        },
+        "condition": {
+          "start": 13030,
+          "end": 13056
+        },
+        "guard": {
+          "start": 13179,
+          "end": 13190
+        },
+        "removedTail": {
+          "start": 13221,
+          "end": 13382
+        },
+        "retainedTail": {
+          "start": 13470,
+          "end": 13652
+        },
+        "duplicateTokensRemoved": 30,
+        "method": "M:kc.b(I)V",
+        "symbol": "L:kc.b(I)V#52",
+        "afterStart": 13027
+      }
+    ],
+    "publicationTestGroupsPassed": 21,
+    "matchingNativeTraceGroups": 27,
+    "gameplayNativeTraceGroups": 3,
+    "resultNativeTraceGroups": 14,
+    "renderingNativeTraceGroups": 10,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 20432,
+    "readableIdentifierEdits": 121837,
+    "readableTotalEdits": 122271,
+    "largeFramedMethodInventory": [
+      {
+        "file": "BoardReconciliationSupport.java",
+        "method": "reconcileBoardEntities",
+        "lines": 336,
+        "blockLabels": 2
+      },
+      {
+        "file": "GameScreen.java",
+        "method": "renderScreen",
+        "lines": 314,
+        "blockLabels": 1
+      },
+      {
+        "file": "GameScreen.java",
+        "method": "updateScreen",
+        "lines": 328,
+        "blockLabels": 2
+      },
+      {
+        "file": "GameplaySession.java",
+        "method": "updateSession",
+        "lines": 555,
+        "blockLabels": 2
+      },
+      {
+        "file": "SpriteState.java",
+        "method": "drawSortedHalfBlendRgbTriangle",
+        "lines": 368,
+        "blockLabels": 2
+      }
+    ],
+    "dictionaryIdentities": 20440,
+    "sourceWorkflowCommit": "ac3504fe54c19da72263e9da4adf248716a6d92a",
+    "sourceProofWorkflowCommit": "ac3504fe54c19da72263e9da4adf248716a6d92a"
+  },
+  "currentUnresolvedFieldSourceAudit": {
+    "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+    "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+    "sourceCommit": "d0dcf594ffb877434edece9d20f008d7458a382c",
+    "sourceTreeSha256": "0654237dfe0081fd0135475f152847514f2930d28ba7433a419df7661b20253a",
+    "previousAuditRetained": true,
+    "unresolvedFieldPurposes": 41,
+    "compiledSourceFiles": 303,
+    "workflowCommit": "ac3504fe54c19da72263e9da4adf248716a6d92a"
   }
 }

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 245)
+## Current readability (pass 246)
 
-The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
+The export has 20,133 guarded names and 121,837 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,121 bindings, reproduce and
+compile and compare 138,066 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,23 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current numbered-name milestone (pass 245)
+## Current continuation cleanup (pass 246)
+
+`advanceEndingSequence` caches whether the ending continuation should run.
+The prefix remains guarded by the original entry decision, so changes to
+`sessionEnding` during that prefix cannot repeat or change the entry test.
+`drawSettledEndingTitle` similarly shares the original title draw/additive glow.
+The screen, canvas and board routines use the same generic reconstruction.
+Eight methods lose duplicated tails; no whole-game equivalence is inferred.
+
+The five remaining large framed methods measure 336, 314, 328, 555 and 368
+lines respectively: board reconciliation, screen rendering, screen update,
+session update and half-blend RGB triangle drawing. They retain two, one, two,
+two and two block labels. Further structural recovery needs proofs of the
+original edges, stores and protected scopes; readable names alone do not remove
+those joins. See the current workflow for the source certificate and tests.
+
+## Previous numbered-name milestone (pass 245)
 
 The last 69 numbered reconstruction names now identify dialog side bands, font
 clipping/profile/kerning traversal, archive/bootstrap readiness and scans,

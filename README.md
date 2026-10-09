@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0f18399cecb2e4cc2ffa00ee6555e3eaf5d1fe15/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,121 bindings,
+identities. Both 303-file Java corpora compile and compare 138,066 bindings,
 preserving 388 override relationships.
 
-## Current numbered-name milestone (pass 245)
+## Current shared continuations (pass 246)
+
+Eight methods now use a captured decision and one shared continuation body,
+removing 350 duplicate tokens while preserving the original predicate order and
+protected exits. All 303 sources compile, reproduce and reverse. An independent
+Java-tree/binding certificate and 27 existing native trace groups pass. The
+export has 20,133 guarded rules and 138,066 binding comparisons; historical
+proofs and original dictionary identities are preserved. Five large framed
+methods and 41 unresolved finer field purposes remain. See the reading guide
+and reproduction procedure for exact coverage and the current compiler SHA-256.
+
+## Previous numbered-name milestone (pass 245)
 
 The final 69 numbered Phase-family names now describe reviewed UI/font/archive/
 bootstrap/audio/decoder roles. Current rules and dictionary have zero numbered

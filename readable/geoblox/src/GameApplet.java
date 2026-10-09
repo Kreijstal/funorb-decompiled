@@ -503,13 +503,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (selectedContainerOrFailure)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
           MessageDialog.gameCanvas.setVisible(visible);
-          if (SharedBufferPools.fullscreenFrame != selectedContainerOrFailure) {
+          boolean positionRebuiltCanvasWithinFrame = !(SharedBufferPools.fullscreenFrame != selectedContainerOrFailure);
+          if (!positionRebuiltCanvasWithinFrame) {
             MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
-            if (clientControlSnapshot != 0) {
-              fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
-              MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, fullscreenInsets.top + ButtonWidget.canvasOffsetY);
-            }
-          } else {
+            positionRebuiltCanvasWithinFrame = (clientControlSnapshot != 0);
+          }
+          if (positionRebuiltCanvasWithinFrame) {
             fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
             MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, fullscreenInsets.top + ButtonWidget.canvasOffsetY);
           }
@@ -878,14 +877,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             UsernameQueryState.canvasRedrawRequested = true;
             MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             MessageDialog.gameCanvas.setVisible(true);
-            if (SharedBufferPools.fullscreenFrame == null ||
-                FullscreenFocusCanvas.standaloneFrameReference != null) {
+            boolean positionCanvasWithinFrame = !(SharedBufferPools.fullscreenFrame == null ||
+                FullscreenFocusCanvas.standaloneFrameReference != null);
+            if (!positionCanvasWithinFrame) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
-              if (Geoblox.clientControlFlowFlag != 0) {
-                fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
-                MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY + fullscreenInsets.top);
-              }
-            } else {
+              positionCanvasWithinFrame = (Geoblox.clientControlFlowFlag != 0);
+            }
+            if (positionCanvasWithinFrame) {
               fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
               MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY + fullscreenInsets.top);
             }
