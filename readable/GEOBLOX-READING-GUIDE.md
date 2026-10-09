@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/46ff013f3898fcd6233b84c4fd50c1cc0e92afca/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b831f8b9d506252cf0c8b4fcbc070dadef962d20/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 236)
+## Current readability (pass 237)
 
 The export has 20,078 guarded names and 121,835 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,28 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current array-size and index roles (pass 236)
+## Current archive, prefix and mesh names (pass 237)
+
+Archive metadata names distinguish reconstructed group/file IDs from name-hash
+slots, CRC/digest/revision ordinals and file-table group ordinals. Unpacking
+names distinguish requested-only versus all-file chunk tables, length scans,
+copy indexes and storage publication. Combined names retain values still reused
+within one phase; the format, retention policies and partial writes are unchanged.
+
+Prefix-code node snapshots identify bits 7 through 0. Mesh projection names
+separate camera basis values, model-to-camera deltas, projected coordinates and
+depth. Lighting separates view/light/half vectors and their normalization scales.
+Depth queues separate screen-coordinate tests, vertex depths, packed face-order
+slots and priority count/prefix values. Both guard entry points retain identical
+roles. The clip-center-X/normal-Z and vertex/source-face-index phases remain shared.
+
+99 names replace 600 bound occurrences in six files. 58 LiteralPhase names are
+retired; 156 remain. Current-pass counters now record this naming-only change.
+All-file compilation/reproduction/reversal and existing native result/rendering
+traces pass. Five large framed methods and 41 unknown field purposes remain;
+see the workflow for unchanged proof pins and coverage limits.
+
+## Previous array-size and index roles (pass 236)
 
 The decompiler's opt-in array-dimension analysis separates reused primitive
 locals without changing allocations or expressions. InstrumentPatch now has

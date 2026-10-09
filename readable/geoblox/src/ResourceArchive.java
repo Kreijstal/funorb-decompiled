@@ -354,15 +354,15 @@ final class ResourceArchive {
         int cachedFileId = 0;
         RuntimeException decompressionFailureForContext = null;
         int chunkTableOffsetOrSingleFileId = 0;
-        int chunkCount = 0;
+        int requestedFileChunkCount = 0;
         int requestedFileLength = 0;
         int[] fileLengthsThenWritePositions = null;
-        int requestedStorageFileIdOrChunkIndex = 0;
+        int requestedStorageFileId = 0;
         byte[][] splitFileBytes = null;
         int requestedFileChunkIndex = 0;
-        int chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
-        int fileIndexOrChunkIndexOrChunkLengthOrFileId = 0;
-        int fileIdOrChunkLengthOrFileIndex = 0;
+        int requestedChunkLengthOrReadOffset = 0;
+        int requestedFileOrdinalOrCopyChunkIndex = 0;
+        int mappedRequestedFileIdOrCopyLength = 0;
         int copiedFileId = 0;
         byte[] unpackedBytesForChunkCount = null;
         int[] fileIdsForEntryScan = null;
@@ -380,14 +380,14 @@ final class ResourceArchive {
         byte[][] allocatedSplitFileBytes = null;
         byte[] unpackedBytesForChunkCopies = null;
         byte[] requestedFileBytes = null;
-        int chunkCountLiteralPhase1;
-        int requestedStorageFileIdOrChunkIndexLiteralPhase1;
-        int chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1;
-        int chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase2;
-        int chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3;
-        int fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1;
-        int fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase2;
-        int fileIdOrChunkLengthOrFileIndexLiteralPhase1;
+        int allFilesChunkCount;
+        int lengthScanChunkIndex;
+        int lengthScanFileIndex;
+        int copyChunkIndex;
+        int publicationFileIndex;
+        int copyChunkLength;
+        int publicationFileId;
+        int copyFileIndex;
         int requestedFileWritePosition;
         int allFilesChunkLength;
         int allocationFileIndex;
@@ -461,24 +461,24 @@ final class ResourceArchive {
             if (this.fileRetentionPolicy == 2) {
               chunkTableOffsetOrSingleFileId = unpackedBytes.length;
               chunkTableOffsetOrSingleFileId--;
-              chunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
-              chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - actualFileCount * (chunkCount * 4);
+              requestedFileChunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
+              chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - actualFileCount * (requestedFileChunkCount * 4);
               requestedFileChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
               requestedFileLength = 0;
-              requestedStorageFileIdOrChunkIndex = 0;
+              requestedStorageFileId = 0;
               requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-              for (requestedFileChunkIndex = 0; requestedFileChunkIndex < chunkCount; requestedFileChunkIndex++) {
-                chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
-                for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < actualFileCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
-                  chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + requestedFileChunkTableBuffer.readIntBE((byte) -126);
+              for (requestedFileChunkIndex = 0; requestedFileChunkIndex < requestedFileChunkCount; requestedFileChunkIndex++) {
+                requestedChunkLengthOrReadOffset = 0;
+                for (requestedFileOrdinalOrCopyChunkIndex = 0; requestedFileOrdinalOrCopyChunkIndex < actualFileCount; requestedFileOrdinalOrCopyChunkIndex++) {
+                  requestedChunkLengthOrReadOffset = requestedChunkLengthOrReadOffset + requestedFileChunkTableBuffer.readIntBE((byte) -126);
                   if (fileIds == null) {
-                    fileIdOrChunkLengthOrFileIndex = fileIndexOrChunkIndexOrChunkLengthOrFileId;
+                    mappedRequestedFileIdOrCopyLength = requestedFileOrdinalOrCopyChunkIndex;
                   } else {
-                    fileIdOrChunkLengthOrFileIndex = mappedFileIds[fileIndexOrChunkIndexOrChunkLengthOrFileId];
+                    mappedRequestedFileIdOrCopyLength = mappedFileIds[requestedFileOrdinalOrCopyChunkIndex];
                   }
-                  if (requestedFileId == fileIdOrChunkLengthOrFileIndex) {
-                    requestedFileLength = requestedFileLength + chunkLengthOrDataOffsetOrFileIndexOrChunkIndex;
-                    requestedStorageFileIdOrChunkIndex = fileIdOrChunkLengthOrFileIndex;
+                  if (requestedFileId == mappedRequestedFileIdOrCopyLength) {
+                    requestedFileLength = requestedFileLength + requestedChunkLengthOrReadOffset;
+                    requestedStorageFileId = mappedRequestedFileIdOrCopyLength;
                   }
                 }
               }
@@ -488,40 +488,40 @@ final class ResourceArchive {
               requestedFileBytes = new byte[requestedFileLength];
               requestedFileChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
               requestedFileWritePosition = 0;
-              chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = 0;
-              for (fileIndexOrChunkIndexOrChunkLengthOrFileId = 0; fileIndexOrChunkIndexOrChunkLengthOrFileId < chunkCount; fileIndexOrChunkIndexOrChunkLengthOrFileId++) {
-                fileIdOrChunkLengthOrFileIndex = 0;
+              requestedChunkLengthOrReadOffset = 0;
+              for (requestedFileOrdinalOrCopyChunkIndex = 0; requestedFileOrdinalOrCopyChunkIndex < requestedFileChunkCount; requestedFileOrdinalOrCopyChunkIndex++) {
+                mappedRequestedFileIdOrCopyLength = 0;
                 for (copyFileOrdinal = 0; copyFileOrdinal < actualFileCount; copyFileOrdinal++) {
-                  fileIdOrChunkLengthOrFileIndex = fileIdOrChunkLengthOrFileIndex + requestedFileChunkTableBuffer.readIntBE((byte) -82);
+                  mappedRequestedFileIdOrCopyLength = mappedRequestedFileIdOrCopyLength + requestedFileChunkTableBuffer.readIntBE((byte) -82);
                   if (fileIds == null) {
                     copiedFileId = copyFileOrdinal;
                   } else {
                     copiedFileId = mappedFileIds[copyFileOrdinal];
                   }
                   if (copiedFileId == requestedFileId) {
-                    ArrayOperations.copyBytes(unpackedBytesForChunkCopies, chunkLengthOrDataOffsetOrFileIndexOrChunkIndex, requestedFileBytes, requestedFileWritePosition, fileIdOrChunkLengthOrFileIndex);
-                    requestedFileWritePosition = requestedFileWritePosition + fileIdOrChunkLengthOrFileIndex;
+                    ArrayOperations.copyBytes(unpackedBytesForChunkCopies, requestedChunkLengthOrReadOffset, requestedFileBytes, requestedFileWritePosition, mappedRequestedFileIdOrCopyLength);
+                    requestedFileWritePosition = requestedFileWritePosition + mappedRequestedFileIdOrCopyLength;
                   }
-                  chunkLengthOrDataOffsetOrFileIndexOrChunkIndex = chunkLengthOrDataOffsetOrFileIndexOrChunkIndex + fileIdOrChunkLengthOrFileIndex;
+                  requestedChunkLengthOrReadOffset = requestedChunkLengthOrReadOffset + mappedRequestedFileIdOrCopyLength;
                 }
               }
-              groupFileSlots[requestedStorageFileIdOrChunkIndex] = requestedFileBytes;
+              groupFileSlots[requestedStorageFileId] = requestedFileBytes;
               return true;
             }
             chunkTableOffsetOrSingleFileId = unpackedBytes.length;
             chunkTableOffsetOrSingleFileId--;
-            chunkCountLiteralPhase1 = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
-            chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - 4 * chunkCountLiteralPhase1 * actualFileCount;
+            allFilesChunkCount = 255 & unpackedBytesForChunkCount[chunkTableOffsetOrSingleFileId];
+            chunkTableOffsetOrSingleFileId = chunkTableOffsetOrSingleFileId - 4 * allFilesChunkCount * actualFileCount;
             allFilesChunkTableBuffer = new ByteArrayBuffer(unpackedBytesForChunkCopies);
             allocatedFileLengthsThenWritePositions = new int[actualFileCount];
             fileLengthsAlias = allocatedFileLengthsThenWritePositions;
             fileLengthsThenWritePositions = fileLengthsAlias;
             allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
-            for (requestedStorageFileIdOrChunkIndexLiteralPhase1 = 0; requestedStorageFileIdOrChunkIndexLiteralPhase1 < chunkCountLiteralPhase1; requestedStorageFileIdOrChunkIndexLiteralPhase1++) {
+            for (lengthScanChunkIndex = 0; lengthScanChunkIndex < allFilesChunkCount; lengthScanChunkIndex++) {
               allFilesChunkLength = 0;
-              for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1 = 0; chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1 < actualFileCount; chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1++) {
+              for (lengthScanFileIndex = 0; lengthScanFileIndex < actualFileCount; lengthScanFileIndex++) {
                 allFilesChunkLength = allFilesChunkLength + allFilesChunkTableBuffer.readIntBE((byte) -27);
-                fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1] = fileLengthsThenWritePositions[chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase1] + allFilesChunkLength;
+                fileLengthsThenWritePositions[lengthScanFileIndex] = fileLengthsThenWritePositions[lengthScanFileIndex] + allFilesChunkLength;
               }
             }
             allocatedSplitFileBytes = new byte[actualFileCount][];
@@ -534,25 +534,25 @@ final class ResourceArchive {
             }
             allFilesChunkTableBuffer.position = chunkTableOffsetOrSingleFileId;
             chunkDataOffset = 0;
-            for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase2 = 0; chunkCountLiteralPhase1 > chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase2; chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase2++) {
-              fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1 = 0;
-              for (fileIdOrChunkLengthOrFileIndexLiteralPhase1 = 0; actualFileCount > fileIdOrChunkLengthOrFileIndexLiteralPhase1; fileIdOrChunkLengthOrFileIndexLiteralPhase1++) {
-                fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1 = fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1 + allFilesChunkTableBuffer.readIntBE((byte) -106);
-                ArrayOperations.copyBytes(unpackedBytes, chunkDataOffset, allocatedSplitFileBytes[fileIdOrChunkLengthOrFileIndexLiteralPhase1], allocatedFileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndexLiteralPhase1], fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1);
-                chunkDataOffset = chunkDataOffset + fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1;
-                fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndexLiteralPhase1] = fileLengthsThenWritePositions[fileIdOrChunkLengthOrFileIndexLiteralPhase1] + fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase1;
+            for (copyChunkIndex = 0; allFilesChunkCount > copyChunkIndex; copyChunkIndex++) {
+              copyChunkLength = 0;
+              for (copyFileIndex = 0; actualFileCount > copyFileIndex; copyFileIndex++) {
+                copyChunkLength = copyChunkLength + allFilesChunkTableBuffer.readIntBE((byte) -106);
+                ArrayOperations.copyBytes(unpackedBytes, chunkDataOffset, allocatedSplitFileBytes[copyFileIndex], allocatedFileLengthsThenWritePositions[copyFileIndex], copyChunkLength);
+                chunkDataOffset = chunkDataOffset + copyChunkLength;
+                fileLengthsThenWritePositions[copyFileIndex] = fileLengthsThenWritePositions[copyFileIndex] + copyChunkLength;
               }
             }
-            for (chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3 = 0; actualFileCount > chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3; chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3++) {
+            for (publicationFileIndex = 0; actualFileCount > publicationFileIndex; publicationFileIndex++) {
               if (fileIds == null) {
-                fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase2 = chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3;
+                publicationFileId = publicationFileIndex;
               } else {
-                fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase2 = mappedFileIds[chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3];
+                publicationFileId = mappedFileIds[publicationFileIndex];
               }
               if (this.fileRetentionPolicy != 0) {
-                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase2] = allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3];
+                groupFileSlots[publicationFileId] = allocatedSplitFileBytes[publicationFileIndex];
               } else {
-                groupFileSlots[fileIndexOrChunkIndexOrChunkLengthOrFileIdLiteralPhase2] = IntrusiveNode.wrapByteStorage(methodGuard - 126, allocatedSplitFileBytes[chunkLengthOrDataOffsetOrFileIndexOrChunkIndexLiteralPhase3], false);
+                groupFileSlots[publicationFileId] = IntrusiveNode.wrapByteStorage(methodGuard - 126, allocatedSplitFileBytes[publicationFileIndex], false);
               }
             }
           } else {

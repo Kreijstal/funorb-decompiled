@@ -21,21 +21,21 @@ final class TextTemplateArgumentType {
         int translationComponentIndex = 0;
         int meshCount = 0;
         int[] meshDepthKeysAlias = null;
-        int meshIndexOrViewDirectionXQ8 = 0;
+        int meshIndex = 0;
         TriangleMesh meshForDepthBounds = null;
         int viewDirectionYQ8 = 0;
-        int boundsCenterXOrViewDirectionZQ8 = 0;
-        int boundsCenterYOrLightAngle = 0;
-        int boundsCenterZOrLightDirectionXQ8 = 0;
-        int cameraDepthBasisXQ14OrLightDirectionYQ8 = 0;
-        int cameraDepthBasisYQ14OrLightDirectionZQ8 = 0;
+        int boundsCenterX = 0;
+        int boundsCenterY = 0;
+        int boundsCenterZ = 0;
+        int cameraDepthBasisXQ14 = 0;
+        int cameraDepthBasisYQ14 = 0;
         int cameraDepthBasisZQ14 = 0;
-        double directionNormalizationScale = 0.0;
+        double lightDirectionNormalizationScale = 0.0;
         int meshDepthFromXQ16 = 0;
-        int meshDepthFromYQ16OrHalfVectorXQ8 = 0;
-        int meshDepthFromZQ16OrHalfVectorYQ8 = 0;
+        int meshDepthFromYQ16 = 0;
+        int meshDepthFromZQ16 = 0;
         int halfVectorZQ8 = 0;
-        int drawOrderIndexOrFinalGuardQuotient = 0;
+        int meshDrawOrderIndex = 0;
         int selectedMeshIndex = 0;
         int controlFlagSnapshot = 0;
         int[] allocatedDepthKeysAlias = null;
@@ -43,16 +43,16 @@ final class TextTemplateArgumentType {
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
         TriangleMesh selectedMesh = null;
-        int meshIndexOrViewDirectionXQ8LiteralPhase1;
-        int boundsCenterXOrViewDirectionZQ8LiteralPhase1;
-        int boundsCenterYOrLightAngleLiteralPhase1;
-        int boundsCenterZOrLightDirectionXQ8LiteralPhase1;
-        int cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1;
-        int cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1;
-        double directionNormalizationScaleLiteralPhase1;
-        int meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1;
-        int meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1;
-        int drawOrderIndexOrFinalGuardQuotientLiteralPhase1;
+        int viewDirectionXQ8;
+        int viewDirectionZQ8;
+        int lightAngle16;
+        int lightDirectionXQ8;
+        int lightDirectionYQ8;
+        int lightDirectionZQ8;
+        double halfVectorNormalizationScale;
+        int halfVectorXQ8;
+        int halfVectorYQ8;
+        int unusedFinalGuardQuotient;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           IntKeyLookup.meshCameraTransform = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
@@ -60,46 +60,46 @@ final class TextTemplateArgumentType {
           meshDepthKeys = new int[meshCount];
           allocatedDepthKeysAlias = meshDepthKeys;
           meshDepthKeysAlias = allocatedDepthKeysAlias;
-          for (meshIndexOrViewDirectionXQ8 = 0; meshCount > meshIndexOrViewDirectionXQ8; meshIndexOrViewDirectionXQ8++) {
-            meshForDepthBounds = ArchiveIndex.logoMeshes[meshIndexOrViewDirectionXQ8];
+          for (meshIndex = 0; meshCount > meshIndex; meshIndex++) {
+            meshForDepthBounds = ArchiveIndex.logoMeshes[meshIndex];
             meshForDepthBounds.refreshBounds((byte) -99);
-            Geoblox.prepareLogoMeshRotation((byte) -112, meshIndexOrViewDirectionXQ8);
-            boundsCenterXOrViewDirectionZQ8 = meshForDepthBounds.minX + meshForDepthBounds.maxX >> 1;
-            boundsCenterYOrLightAngle = meshForDepthBounds.minY + meshForDepthBounds.maxY >> 1;
-            boundsCenterZOrLightDirectionXQ8 = meshForDepthBounds.maxZ + meshForDepthBounds.minZ >> 1;
-            cameraDepthBasisXQ14OrLightDirectionYQ8 = IntKeyLookup.meshCameraTransform[9] >> 2;
-            cameraDepthBasisYQ14OrLightDirectionZQ8 = IntKeyLookup.meshCameraTransform[10] >> 2;
+            Geoblox.prepareLogoMeshRotation((byte) -112, meshIndex);
+            boundsCenterX = meshForDepthBounds.minX + meshForDepthBounds.maxX >> 1;
+            boundsCenterY = meshForDepthBounds.minY + meshForDepthBounds.maxY >> 1;
+            boundsCenterZ = meshForDepthBounds.maxZ + meshForDepthBounds.minZ >> 1;
+            cameraDepthBasisXQ14 = IntKeyLookup.meshCameraTransform[9] >> 2;
+            cameraDepthBasisYQ14 = IntKeyLookup.meshCameraTransform[10] >> 2;
             cameraDepthBasisZQ14 = IntKeyLookup.meshCameraTransform[11] >> 2;
-            meshDepthFromXQ16 = cameraDepthBasisZQ14 * TextLayoutLine.meshModelTransform[5] + cameraDepthBasisXQ14OrLightDirectionYQ8 * TextLayoutLine.meshModelTransform[3] + TextLayoutLine.meshModelTransform[4] * cameraDepthBasisYQ14OrLightDirectionZQ8 >> 14;
-            meshDepthFromYQ16OrHalfVectorXQ8 = cameraDepthBasisYQ14OrLightDirectionZQ8 * TextLayoutLine.meshModelTransform[7] + (cameraDepthBasisXQ14OrLightDirectionYQ8 * TextLayoutLine.meshModelTransform[6] + TextLayoutLine.meshModelTransform[8] * cameraDepthBasisZQ14) >> 14;
-            meshDepthFromZQ16OrHalfVectorYQ8 = cameraDepthBasisZQ14 * TextLayoutLine.meshModelTransform[11] + (cameraDepthBasisXQ14OrLightDirectionYQ8 * TextLayoutLine.meshModelTransform[9] + TextLayoutLine.meshModelTransform[10] * cameraDepthBasisYQ14OrLightDirectionZQ8) >> 14;
-            meshDepthKeysAlias[meshIndexOrViewDirectionXQ8] = boundsCenterXOrViewDirectionZQ8 * meshDepthFromXQ16 + meshDepthFromYQ16OrHalfVectorXQ8 * boundsCenterYOrLightAngle + meshDepthFromZQ16OrHalfVectorYQ8 * boundsCenterZOrLightDirectionXQ8 >> 16;
+            meshDepthFromXQ16 = cameraDepthBasisZQ14 * TextLayoutLine.meshModelTransform[5] + cameraDepthBasisXQ14 * TextLayoutLine.meshModelTransform[3] + TextLayoutLine.meshModelTransform[4] * cameraDepthBasisYQ14 >> 14;
+            meshDepthFromYQ16 = cameraDepthBasisYQ14 * TextLayoutLine.meshModelTransform[7] + (cameraDepthBasisXQ14 * TextLayoutLine.meshModelTransform[6] + TextLayoutLine.meshModelTransform[8] * cameraDepthBasisZQ14) >> 14;
+            meshDepthFromZQ16 = cameraDepthBasisZQ14 * TextLayoutLine.meshModelTransform[11] + (cameraDepthBasisXQ14 * TextLayoutLine.meshModelTransform[9] + TextLayoutLine.meshModelTransform[10] * cameraDepthBasisYQ14) >> 14;
+            meshDepthKeysAlias[meshIndex] = boundsCenterX * meshDepthFromXQ16 + meshDepthFromYQ16 * boundsCenterY + meshDepthFromZQ16 * boundsCenterZ >> 16;
           }
-          meshIndexOrViewDirectionXQ8LiteralPhase1 = IntKeyLookup.meshCameraTransform[9] >> 8;
+          viewDirectionXQ8 = IntKeyLookup.meshCameraTransform[9] >> 8;
           viewDirectionYQ8 = IntKeyLookup.meshCameraTransform[10] >> 8;
-          boundsCenterXOrViewDirectionZQ8LiteralPhase1 = IntKeyLookup.meshCameraTransform[11] >> 8;
-          boundsCenterYOrLightAngleLiteralPhase1 = DequeCursor.logoAnimationTick << 4;
-          boundsCenterZOrLightDirectionXQ8LiteralPhase1 = 0;
-          cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 = DelegatingCanvas.sineQ16((byte) 81, boundsCenterYOrLightAngleLiteralPhase1) >> 8;
-          cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1 = IntrusiveNodeHashTable.cosineQ16(boundsCenterYOrLightAngleLiteralPhase1, 2048) >> 8;
+          viewDirectionZQ8 = IntKeyLookup.meshCameraTransform[11] >> 8;
+          lightAngle16 = DequeCursor.logoAnimationTick << 4;
+          lightDirectionXQ8 = 0;
+          lightDirectionYQ8 = DelegatingCanvas.sineQ16((byte) 81, lightAngle16) >> 8;
+          lightDirectionZQ8 = IntrusiveNodeHashTable.cosineQ16(lightAngle16, 2048) >> 8;
           if (PrefixCodeDecoder.pointerXSnapshot != -1 &&
               PcmResampler.pointerYSnapshot != -1) {
-            boundsCenterZOrLightDirectionXQ8LiteralPhase1 = -320 + PrefixCodeDecoder.pointerXSnapshot;
-            cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1 = -128;
-            cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 = -PcmResampler.pointerYSnapshot + 240;
+            lightDirectionXQ8 = -320 + PrefixCodeDecoder.pointerXSnapshot;
+            lightDirectionZQ8 = -128;
+            lightDirectionYQ8 = -PcmResampler.pointerYSnapshot + 240;
           }
-          directionNormalizationScale = 256.0 / Math.sqrt((double)(cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 * cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 + (boundsCenterZOrLightDirectionXQ8LiteralPhase1 * boundsCenterZOrLightDirectionXQ8LiteralPhase1 + cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1 * cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1)));
-          cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 = (int)((double)cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 * directionNormalizationScale);
-          boundsCenterZOrLightDirectionXQ8LiteralPhase1 = (int)((double)boundsCenterZOrLightDirectionXQ8LiteralPhase1 * directionNormalizationScale);
-          cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1 = (int)((double)cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1 * directionNormalizationScale);
-          meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1 = boundsCenterZOrLightDirectionXQ8LiteralPhase1 - meshIndexOrViewDirectionXQ8LiteralPhase1;
-          meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1 = cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1 - viewDirectionYQ8;
-          halfVectorZQ8 = -boundsCenterXOrViewDirectionZQ8LiteralPhase1 + cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1;
-          directionNormalizationScaleLiteralPhase1 = 256.0 / Math.sqrt((double)(halfVectorZQ8 * halfVectorZQ8 + (meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1 * meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1 + meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1 * meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1)));
-          halfVectorZQ8 = (int)((double)halfVectorZQ8 * directionNormalizationScaleLiteralPhase1);
-          meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1 = (int)((double)meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1 * directionNormalizationScaleLiteralPhase1);
-          meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1 = (int)((double)meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1 * directionNormalizationScaleLiteralPhase1);
-          for (drawOrderIndexOrFinalGuardQuotient = 0; ArchiveIndex.logoMeshes.length > drawOrderIndexOrFinalGuardQuotient; drawOrderIndexOrFinalGuardQuotient++) {
+          lightDirectionNormalizationScale = 256.0 / Math.sqrt((double)(lightDirectionYQ8 * lightDirectionYQ8 + (lightDirectionXQ8 * lightDirectionXQ8 + lightDirectionZQ8 * lightDirectionZQ8)));
+          lightDirectionYQ8 = (int)((double)lightDirectionYQ8 * lightDirectionNormalizationScale);
+          lightDirectionXQ8 = (int)((double)lightDirectionXQ8 * lightDirectionNormalizationScale);
+          lightDirectionZQ8 = (int)((double)lightDirectionZQ8 * lightDirectionNormalizationScale);
+          halfVectorXQ8 = lightDirectionXQ8 - viewDirectionXQ8;
+          halfVectorYQ8 = lightDirectionYQ8 - viewDirectionYQ8;
+          halfVectorZQ8 = -viewDirectionZQ8 + lightDirectionZQ8;
+          halfVectorNormalizationScale = 256.0 / Math.sqrt((double)(halfVectorZQ8 * halfVectorZQ8 + (halfVectorYQ8 * halfVectorYQ8 + halfVectorXQ8 * halfVectorXQ8)));
+          halfVectorZQ8 = (int)((double)halfVectorZQ8 * halfVectorNormalizationScale);
+          halfVectorXQ8 = (int)((double)halfVectorXQ8 * halfVectorNormalizationScale);
+          halfVectorYQ8 = (int)((double)halfVectorYQ8 * halfVectorNormalizationScale);
+          for (meshDrawOrderIndex = 0; ArchiveIndex.logoMeshes.length > meshDrawOrderIndex; meshDrawOrderIndex++) {
             selectedMeshIndex = 0;
             for (depthCandidateIndex = 1; ArchiveIndex.logoMeshes.length > depthCandidateIndex; depthCandidateIndex++) {
               if (meshDepthKeys[depthCandidateIndex] <= meshDepthKeys[selectedMeshIndex]) {
@@ -111,12 +111,12 @@ final class TextTemplateArgumentType {
             selectedMesh = ArchiveIndex.logoMeshes[selectedMeshIndex];
             Geoblox.prepareLogoMeshRotation((byte) -112, selectedMeshIndex);
             for (translationComponentIndex = 0; translationComponentIndex < 3; translationComponentIndex++) {
-              TextLayoutLine.meshModelTransform[translationComponentIndex] = TextLayoutLine.meshModelTransform[translationComponentIndex] + ValidationMessageWidget.logoMeshCenters[drawOrderIndexOrFinalGuardQuotient][translationComponentIndex];
+              TextLayoutLine.meshModelTransform[translationComponentIndex] = TextLayoutLine.meshModelTransform[translationComponentIndex] + ValidationMessageWidget.logoMeshCenters[meshDrawOrderIndex][translationComponentIndex];
             }
             AchievementSubmission.projectMeshAndQueueFaces(IntKeyLookup.meshCameraTransform, TextLayoutLine.meshModelTransform, selectedMesh, true, false, false, true);
-            DisplayNamePanel.renderLitQueuedMeshFaces(halfVectorZQ8, cameraDepthBasisYQ14OrLightDirectionZQ8LiteralPhase1, meshDepthFromYQ16OrHalfVectorXQ8LiteralPhase1, 6562, boundsCenterZOrLightDirectionXQ8LiteralPhase1, selectedMesh, meshDepthFromZQ16OrHalfVectorYQ8LiteralPhase1, cameraDepthBasisXQ14OrLightDirectionYQ8LiteralPhase1);
+            DisplayNamePanel.renderLitQueuedMeshFaces(halfVectorZQ8, lightDirectionZQ8, halfVectorXQ8, 6562, lightDirectionXQ8, selectedMesh, halfVectorYQ8, lightDirectionYQ8);
           }
-          drawOrderIndexOrFinalGuardQuotientLiteralPhase1 = 123 / ((48 - methodGuard) / 59);
+          unusedFinalGuardQuotient = 123 / ((48 - methodGuard) / 59);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
