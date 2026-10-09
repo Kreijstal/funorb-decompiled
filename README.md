@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,048 bindings,
 preserving 388 override relationships.
 
-## Current exhaustive switch frames (pass 253)
+## Current ordered frame decisions (pass 254)
+
+The character encoder uses 27 ordered if/else-if predicates and explicit
+fallbacks, retaining every read, store and original arm scope. One frame and
+28 terminal breaks disappear without new locals. Generic recovery stays in
+java-tools; game rules/proofs stay in Deko. Compiler/native checks and all-input
+charset-oracle comparisons pass. All 303 sources compile, reproduce and reverse
+exactly, preserving surviving names/dictionary objects and historical proofs.
+Thirty-two smaller frames and 41 finer field purposes remain.
+
+## Previous exhaustive switch frames (pass 253)
 
 Two bulk text encoders now use ordinary switch breaks and explicit fallback
 arms. Their original predicates, selectors and stores retain their order;

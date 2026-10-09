@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 253)
+## Current readability (pass 254)
 
-The export has 20,137 guarded names and 122,113 Java identifier edits, plus 11
-class-name literal edits and 230 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,136 guarded names and 122,113 Java identifier edits, plus 11
+class-name literal edits and 201 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 138,048 bindings, reproduce and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current exhaustive switch frames (pass 253)
+## Current ordered frame decisions (pass 254)
+
+`ByteArrayBuffer.encodeTextCharacter` uses an explicit ordered if/else-if chain
+with inner and outer fallbacks. Character reads and predicates remain at their
+original sites. The extended-byte mappings, unsupported-character replacement,
+false return guard and all original stores retain their behavior. The obsolete
+frame label and its 28 breaks disappear; the method falls from 125 to 73 lines.
+Surviving dictionary metadata stays.
+
+There are zero large methods with plain block labels, 32 smaller frames and
+41 finer field purposes left. The independent Java-tree/binding/transfer check,
+wide native decision fixtures and complete-body charset oracle pass. Exact
+reproduction/reversal is verified; full-game and phone/FPS behavior remain unverified.
+
+## Previous exhaustive switch frames (pass 253)
 
 `DisplayNamePanel.encodeTextSlice` and
 `MultiHandleSliderRenderer.encodeTextBytes` use explicit predicate/switch and

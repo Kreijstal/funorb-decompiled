@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "52c822f9f3262f6286f80e826b9fe2f3070df4fe",
+      "commit": "05f8660ddb5b105ef9066c086fa2e2c758fb2386",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "7fce66e335643f894682ca00040d2a446b4cf316676e0583580cd14a153196ff",
-        "reproduce": "git archive --format=tar 52c822f9f3262f6286f80e826b9fe2f3070df4fe | sha256sum",
+        "sha256": "60ca1558de777974d984970a9bbbd204f2335fb2c376acb4623896bf50c9a484",
+        "reproduce": "git archive --format=tar 05f8660ddb5b105ef9066c086fa2e2c758fb2386 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -34,7 +34,8 @@
         "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
         "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
         "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
-        "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1"
+        "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+        "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1"
       }
     },
     "namingTool": {
@@ -126,7 +127,8 @@
       "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
       "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
       "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
-      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1"
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1"
     }
   },
   "freshVerification": {
@@ -151,9 +153,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
-  "previousSourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7",
+  "previousSourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3321,11 +3323,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6",
+    "commit": "e32c1f4e4ad207571e16f2bdf57dc7216112c28e",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "f1589b240837ad07e44368080bacffec2fc13e148f142d3f06fc184acfcc6755"
+      "sha256": "5ce619145a764aa25214ab150dc6f2cef35b8d690cf82028879043eadc3555c2"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3335,20 +3337,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "3819a4c31f3530662ca0b0897fcaecccbadcabdcfd698cb07dd5d7db5c6478f7",
+    "outputTreeSha256": "57fe0ef78a8ca9d7a10b1f0af55b31a9729025c8f514e61b3b050b73e75c11a1",
     "files": 303,
-    "rules": 20137,
+    "rules": 20136,
     "identifierEdits": 122113,
     "bindingsCompared": 138048,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122354,
+    "totalEdits": 122325,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 230,
-    "labelBindingsCompared": 230,
-    "labelDeclarationsCompared": 61,
+    "labelEdits": 201,
+    "labelBindingsCompared": 201,
+    "labelDeclarationsCompared": 60,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3365,8 +3367,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 253,
-    "semanticPass": 253
+    "structuralPass": 254,
+    "semanticPass": 254
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36844,12 +36846,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "53901f0dbdd5d94cc0421241c727f8cd4f199bd9",
-    "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+    "sourceCommit": "d162d7957976f1e65c33aed5d103372818605183",
+    "sourceTreeSha256": "5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6"
+    "workflowCommit": "e32c1f4e4ad207571e16f2bdf57dc7216112c28e"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -48409,5 +48411,631 @@
     "unresolvedFieldInventoryRechecked": true,
     "sourceWorkflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6",
     "sourceProofWorkflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6"
+  },
+  "exhaustiveIfFrameRecovery": {
+    "version": 254,
+    "changedJavaFiles": 1,
+    "changedMethodBodies": 1,
+    "framesRecovered": 1,
+    "breaksRemoved": 28,
+    "removedLabelOccurrences": 29,
+    "removedLabelDeclarations": 1,
+    "orderedPredicatesPreserved": 27,
+    "newDecisionLocals": 0,
+    "sourceProofTest": "readable/tests/test-geoblox-exhaustive-if-source.mjs",
+    "sourceProofTestSha256": "66b2bbd37c0d343cd422727c5ccc55f84a970a52f24e3b569a633d46dc15d3f3",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "53901f0dbdd5d94cc0421241c727f8cd4f199bd9",
+    "sourceCommit": "d162d7957976f1e65c33aed5d103372818605183",
+    "previousSourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+    "sourceTreeSha256": "5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7",
+    "javaToolsCommit": "05f8660ddb5b105ef9066c086fa2e2c758fb2386",
+    "sourceArchiveSha256": "60ca1558de777974d984970a9bbbd204f2335fb2c376acb4623896bf50c9a484",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1"
+    },
+    "bindingsBefore": 138048,
+    "bindingsCompared": 138048,
+    "transfersCompared": 4807,
+    "originalIdentityMigrations": [],
+    "removedSymbols": [
+      "B:qc.a(CZ)B#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "terminalCaseDestinationsAndCompleteFallbacksIndependentlyCertified": true,
+    "originalPredicatesReadsStoresAndArmScopesPreserved": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 11,
+    "genericExhaustiveIfTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 177872,
+    "characterEncodingOracleCases": 131072,
+    "characterOracle": "Complete before/after method bodies, all UTF-16 values and both return guards. JDK windows-1252 encoding, with original NUL replacement 63 and false-guard value 50. Does not execute class initialization or original game bytecode.",
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 32,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "53901f0dbdd5d94cc0421241c727f8cd4f199bd9",
+      "sourceTreeSha256": "25556c77f469926fa349b805d706531229a3f34d0d67f6643c07de4b437548fa",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "c0a9f64f7ba7829f2e0c8a2ffa2a081c1e3137d6"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass254 reconstructs one exhaustive ordered if ladder as else-if arms and explicit inner/outer fallbacks. Preserve each predicate and read at its original evaluation site, each original arm scope, stores, declarations, aliases, failure/callback order and protected scopes. Remove only direct terminal exits and the obsolete plain label. No predicate inversion, classifier capture, copied operation or new local. Independent javac trees resolve the original exits and complete fallback recipes, comparing all other ordered syntax, bindings, overrides and remaining protected transfers. Complete extracted character bodies match the documented independent charset oracle. Original bytecode and generic defaults are unchanged; generated source is never hand-edited. Whole-game and phone/FPS behavior remain unverified.",
+    "selections": [
+      {
+        "file": "qc.java",
+        "methodStart": 12393,
+        "label": "L0",
+        "region": {
+          "start": 12470,
+          "end": 15352
+        },
+        "body": {
+          "start": 12474,
+          "end": 15352
+        },
+        "guard": {
+          "start": 12486,
+          "end": 15311
+        },
+        "condition": {
+          "start": 12489,
+          "end": 12591
+        },
+        "guardIndex": 0,
+        "predicates": [
+          {
+            "guard": {
+              "start": 12606,
+              "end": 12692
+            },
+            "condition": {
+              "start": 12609,
+              "end": 12625
+            },
+            "scope": {
+              "start": 12626,
+              "end": 12692
+            }
+          },
+          {
+            "guard": {
+              "start": 12705,
+              "end": 12791
+            },
+            "condition": {
+              "start": 12708,
+              "end": 12724
+            },
+            "scope": {
+              "start": 12725,
+              "end": 12791
+            }
+          },
+          {
+            "guard": {
+              "start": 12804,
+              "end": 12889
+            },
+            "condition": {
+              "start": 12807,
+              "end": 12822
+            },
+            "scope": {
+              "start": 12823,
+              "end": 12889
+            }
+          },
+          {
+            "guard": {
+              "start": 12902,
+              "end": 12988
+            },
+            "condition": {
+              "start": 12905,
+              "end": 12921
+            },
+            "scope": {
+              "start": 12922,
+              "end": 12988
+            }
+          },
+          {
+            "guard": {
+              "start": 13001,
+              "end": 13087
+            },
+            "condition": {
+              "start": 13004,
+              "end": 13020
+            },
+            "scope": {
+              "start": 13021,
+              "end": 13087
+            }
+          },
+          {
+            "guard": {
+              "start": 13100,
+              "end": 13186
+            },
+            "condition": {
+              "start": 13103,
+              "end": 13119
+            },
+            "scope": {
+              "start": 13120,
+              "end": 13186
+            }
+          },
+          {
+            "guard": {
+              "start": 13199,
+              "end": 13285
+            },
+            "condition": {
+              "start": 13202,
+              "end": 13218
+            },
+            "scope": {
+              "start": 13219,
+              "end": 13285
+            }
+          },
+          {
+            "guard": {
+              "start": 13298,
+              "end": 13383
+            },
+            "condition": {
+              "start": 13301,
+              "end": 13316
+            },
+            "scope": {
+              "start": 13317,
+              "end": 13383
+            }
+          },
+          {
+            "guard": {
+              "start": 13396,
+              "end": 13482
+            },
+            "condition": {
+              "start": 13399,
+              "end": 13415
+            },
+            "scope": {
+              "start": 13416,
+              "end": 13482
+            }
+          },
+          {
+            "guard": {
+              "start": 13495,
+              "end": 13580
+            },
+            "condition": {
+              "start": 13498,
+              "end": 13513
+            },
+            "scope": {
+              "start": 13514,
+              "end": 13580
+            }
+          },
+          {
+            "guard": {
+              "start": 13593,
+              "end": 13679
+            },
+            "condition": {
+              "start": 13596,
+              "end": 13612
+            },
+            "scope": {
+              "start": 13613,
+              "end": 13679
+            }
+          },
+          {
+            "guard": {
+              "start": 13692,
+              "end": 13777
+            },
+            "condition": {
+              "start": 13695,
+              "end": 13710
+            },
+            "scope": {
+              "start": 13711,
+              "end": 13777
+            }
+          },
+          {
+            "guard": {
+              "start": 13790,
+              "end": 13875
+            },
+            "condition": {
+              "start": 13793,
+              "end": 13808
+            },
+            "scope": {
+              "start": 13809,
+              "end": 13875
+            }
+          },
+          {
+            "guard": {
+              "start": 13888,
+              "end": 13974
+            },
+            "condition": {
+              "start": 13891,
+              "end": 13907
+            },
+            "scope": {
+              "start": 13908,
+              "end": 13974
+            }
+          },
+          {
+            "guard": {
+              "start": 13987,
+              "end": 14073
+            },
+            "condition": {
+              "start": 13990,
+              "end": 14006
+            },
+            "scope": {
+              "start": 14007,
+              "end": 14073
+            }
+          },
+          {
+            "guard": {
+              "start": 14086,
+              "end": 14172
+            },
+            "condition": {
+              "start": 14089,
+              "end": 14105
+            },
+            "scope": {
+              "start": 14106,
+              "end": 14172
+            }
+          },
+          {
+            "guard": {
+              "start": 14185,
+              "end": 14271
+            },
+            "condition": {
+              "start": 14188,
+              "end": 14204
+            },
+            "scope": {
+              "start": 14205,
+              "end": 14271
+            }
+          },
+          {
+            "guard": {
+              "start": 14284,
+              "end": 14370
+            },
+            "condition": {
+              "start": 14287,
+              "end": 14303
+            },
+            "scope": {
+              "start": 14304,
+              "end": 14370
+            }
+          },
+          {
+            "guard": {
+              "start": 14383,
+              "end": 14469
+            },
+            "condition": {
+              "start": 14386,
+              "end": 14402
+            },
+            "scope": {
+              "start": 14403,
+              "end": 14469
+            }
+          },
+          {
+            "guard": {
+              "start": 14482,
+              "end": 14568
+            },
+            "condition": {
+              "start": 14485,
+              "end": 14501
+            },
+            "scope": {
+              "start": 14502,
+              "end": 14568
+            }
+          },
+          {
+            "guard": {
+              "start": 14581,
+              "end": 14666
+            },
+            "condition": {
+              "start": 14584,
+              "end": 14599
+            },
+            "scope": {
+              "start": 14600,
+              "end": 14666
+            }
+          },
+          {
+            "guard": {
+              "start": 14679,
+              "end": 14765
+            },
+            "condition": {
+              "start": 14682,
+              "end": 14698
+            },
+            "scope": {
+              "start": 14699,
+              "end": 14765
+            }
+          },
+          {
+            "guard": {
+              "start": 14778,
+              "end": 14863
+            },
+            "condition": {
+              "start": 14781,
+              "end": 14796
+            },
+            "scope": {
+              "start": 14797,
+              "end": 14863
+            }
+          },
+          {
+            "guard": {
+              "start": 14876,
+              "end": 14962
+            },
+            "condition": {
+              "start": 14879,
+              "end": 14895
+            },
+            "scope": {
+              "start": 14896,
+              "end": 14962
+            }
+          },
+          {
+            "guard": {
+              "start": 14975,
+              "end": 15060
+            },
+            "condition": {
+              "start": 14978,
+              "end": 14993
+            },
+            "scope": {
+              "start": 14994,
+              "end": 15060
+            }
+          },
+          {
+            "guard": {
+              "start": 15073,
+              "end": 15157
+            },
+            "condition": {
+              "start": 15076,
+              "end": 15091
+            },
+            "scope": {
+              "start": 15092,
+              "end": 15157
+            }
+          },
+          {
+            "guard": {
+              "start": 15170,
+              "end": 15253
+            },
+            "condition": {
+              "start": 15173,
+              "end": 15188
+            },
+            "scope": {
+              "start": 15189,
+              "end": 15253
+            }
+          }
+        ],
+        "tail": {
+          "start": 15266,
+          "end": 15277
+        },
+        "tailStatements": 1,
+        "suffix": {
+          "start": 15322,
+          "end": 15342
+        },
+        "suffixStatements": 1,
+        "jumps": [
+          {
+            "start": 12669,
+            "end": 12678
+          },
+          {
+            "start": 12768,
+            "end": 12777
+          },
+          {
+            "start": 12866,
+            "end": 12875
+          },
+          {
+            "start": 12965,
+            "end": 12974
+          },
+          {
+            "start": 13064,
+            "end": 13073
+          },
+          {
+            "start": 13163,
+            "end": 13172
+          },
+          {
+            "start": 13262,
+            "end": 13271
+          },
+          {
+            "start": 13360,
+            "end": 13369
+          },
+          {
+            "start": 13459,
+            "end": 13468
+          },
+          {
+            "start": 13557,
+            "end": 13566
+          },
+          {
+            "start": 13656,
+            "end": 13665
+          },
+          {
+            "start": 13754,
+            "end": 13763
+          },
+          {
+            "start": 13852,
+            "end": 13861
+          },
+          {
+            "start": 13951,
+            "end": 13960
+          },
+          {
+            "start": 14050,
+            "end": 14059
+          },
+          {
+            "start": 14149,
+            "end": 14158
+          },
+          {
+            "start": 14248,
+            "end": 14257
+          },
+          {
+            "start": 14347,
+            "end": 14356
+          },
+          {
+            "start": 14446,
+            "end": 14455
+          },
+          {
+            "start": 14545,
+            "end": 14554
+          },
+          {
+            "start": 14643,
+            "end": 14652
+          },
+          {
+            "start": 14742,
+            "end": 14751
+          },
+          {
+            "start": 14840,
+            "end": 14849
+          },
+          {
+            "start": 14939,
+            "end": 14948
+          },
+          {
+            "start": 15037,
+            "end": 15046
+          },
+          {
+            "start": 15134,
+            "end": 15143
+          },
+          {
+            "start": 15230,
+            "end": 15239
+          },
+          {
+            "start": 15290,
+            "end": 15299
+          }
+        ],
+        "removedSymbol": "B:qc.a(CZ)B#0",
+        "afterStart": 12470
+      }
+    ],
+    "dictionaryIdentities": 20443,
+    "survivingCompleteRulesPreserved": 20136,
+    "survivingDictionaryIdentitiesPreserved": 20443,
+    "historicalSourceProofsPreserved": 96,
+    "historicalRecordsPreserved": 177,
+    "readableIdentifierEdits": 122113,
+    "readableTotalEdits": 122325,
+    "dictionaryReversalByteExact": true,
+    "publicationTestGroupsPassed": 27,
+    "unresolvedFieldInventoryRechecked": true,
+    "characterMethodLinesBefore": 125,
+    "characterMethodLinesAfter": 73,
+    "sourceWorkflowCommit": "e32c1f4e4ad207571e16f2bdf57dc7216112c28e",
+    "sourceProofWorkflowCommit": "e32c1f4e4ad207571e16f2bdf57dc7216112c28e"
   }
 }

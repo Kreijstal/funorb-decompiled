@@ -365,123 +365,71 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final static byte encodeTextCharacter(char character, boolean returnEncodedByte) {
         int encodedByte;
-        encodedTextCharacter: {
+        {
           if ((0 >= character ||
             character >= 128) &&
             (character < 160 ||
             255 < character)) {
             if (character == 8364) {
               encodedByte = -128;
-              break encodedTextCharacter;
-            }
-            if (character == 8218) {
+            } else if (character == 8218) {
               encodedByte = -126;
-              break encodedTextCharacter;
-            }
-            if (402 == character) {
+            } else if (402 == character) {
               encodedByte = -125;
-              break encodedTextCharacter;
-            }
-            if (character == 8222) {
+            } else if (character == 8222) {
               encodedByte = -124;
-              break encodedTextCharacter;
-            }
-            if (character == 8230) {
+            } else if (character == 8230) {
               encodedByte = -123;
-              break encodedTextCharacter;
-            }
-            if (8224 == character) {
+            } else if (8224 == character) {
               encodedByte = -122;
-              break encodedTextCharacter;
-            }
-            if (8225 == character) {
+            } else if (8225 == character) {
               encodedByte = -121;
-              break encodedTextCharacter;
-            }
-            if (character == 710) {
+            } else if (character == 710) {
               encodedByte = -120;
-              break encodedTextCharacter;
-            }
-            if (8240 == character) {
+            } else if (8240 == character) {
               encodedByte = -119;
-              break encodedTextCharacter;
-            }
-            if (character == 352) {
+            } else if (character == 352) {
               encodedByte = -118;
-              break encodedTextCharacter;
-            }
-            if (character == 8249) {
+            } else if (character == 8249) {
               encodedByte = -117;
-              break encodedTextCharacter;
-            }
-            if (character == 338) {
+            } else if (character == 338) {
               encodedByte = -116;
-              break encodedTextCharacter;
-            }
-            if (character == 381) {
+            } else if (character == 381) {
               encodedByte = -114;
-              break encodedTextCharacter;
-            }
-            if (character == 8216) {
+            } else if (character == 8216) {
               encodedByte = -111;
-              break encodedTextCharacter;
-            }
-            if (8217 == character) {
+            } else if (8217 == character) {
               encodedByte = -110;
-              break encodedTextCharacter;
-            }
-            if (character == 8220) {
+            } else if (character == 8220) {
               encodedByte = -109;
-              break encodedTextCharacter;
-            }
-            if (character == 8221) {
+            } else if (character == 8221) {
               encodedByte = -108;
-              break encodedTextCharacter;
-            }
-            if (character == 8226) {
+            } else if (character == 8226) {
               encodedByte = -107;
-              break encodedTextCharacter;
-            }
-            if (character == 8211) {
+            } else if (character == 8211) {
               encodedByte = -106;
-              break encodedTextCharacter;
-            }
-            if (character == 8212) {
+            } else if (character == 8212) {
               encodedByte = -105;
-              break encodedTextCharacter;
-            }
-            if (character == 732) {
+            } else if (character == 732) {
               encodedByte = -104;
-              break encodedTextCharacter;
-            }
-            if (character == 8482) {
+            } else if (character == 8482) {
               encodedByte = -103;
-              break encodedTextCharacter;
-            }
-            if (character == 353) {
+            } else if (character == 353) {
               encodedByte = -102;
-              break encodedTextCharacter;
-            }
-            if (character == 8250) {
+            } else if (character == 8250) {
               encodedByte = -101;
-              break encodedTextCharacter;
-            }
-            if (character == 339) {
+            } else if (character == 339) {
               encodedByte = -100;
-              break encodedTextCharacter;
-            }
-            if (character == 382) {
+            } else if (character == 382) {
               encodedByte = -98;
-              break encodedTextCharacter;
-            }
-            if (character != 376) {
+            } else if (character != 376) {
               encodedByte = 63;
-              break encodedTextCharacter;
+            } else {
+              encodedByte = -97;
             }
-            encodedByte = -97;
-            break encodedTextCharacter;
+          } else {
+            encodedByte = (byte)character;
           }
-          encodedByte = (byte)character;
         }
         if (returnEncodedByte) {
           return (byte) encodedByte;
