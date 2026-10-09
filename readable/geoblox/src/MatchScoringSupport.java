@@ -40,24 +40,24 @@ final class MatchScoringSupport {
         RuntimeException caughtMatchFailure = null;
         int sortInsertionIndex = 0;
         RuntimeException matchFailureForContext = null;
-        int sortCursorThenFirstEntityId = 0;
-        int packedCandidateThenSecondEntityId = 0;
+        int sortCursor = 0;
+        int packedCandidate = 0;
         int thirdEntityId = 0;
         GameplayEntity firstMatchedEntity = null;
         GameplayEntity secondMatchedEntity = null;
         GameplayEntity thirdMatchedEntity = null;
         int awardedPoints = 0;
         GameplayEntity firstBlockedEntity = null;
-        int popupX = 0;
+        int unusedPopupXReset = 0;
         GameplayEntity secondBlockedEntity = null;
-        int popupY = 0;
+        int unusedPopupYReset = 0;
         int controlFlowGuard = 0;
         int candidateIndex = 0;
-        int sortInsertionIndexLiteralPhase1;
-        int sortCursorThenFirstEntityIdLiteralPhase1;
-        int packedCandidateThenSecondEntityIdLiteralPhase1;
-        int popupXLiteralPhase1;
-        int popupYLiteralPhase1;
+        int unusedInitialCandidateIndexSnapshot;
+        int firstEntityId;
+        int secondEntityId;
+        int firstMatchedEntityPopupX;
+        int firstMatchedEntityPopupY;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (0 == EmailAvailabilityQuery.matchCandidateCount &&
@@ -85,33 +85,33 @@ final class MatchScoringSupport {
             SecondaryNodeDeque.recordAchievement(255 ^ IntrusiveDeque.sharedAchievementId, -97, IntrusiveDeque.sharedAchievementId);
           }
           for (sortInsertionIndex = 1; sortInsertionIndex < EmailAvailabilityQuery.matchCandidateCount; sortInsertionIndex++) {
-            sortCursorThenFirstEntityId = sortInsertionIndex - 1;
-            packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[sortInsertionIndex];
-            while (sortCursorThenFirstEntityId >= 0) {
-              if (TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId] > packedCandidateThenSecondEntityId) {
-                TextPairLoginPayload.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = TextPairLoginPayload.packedMatchCandidates[sortCursorThenFirstEntityId];
-                sortCursorThenFirstEntityId--;
+            sortCursor = sortInsertionIndex - 1;
+            packedCandidate = TextPairLoginPayload.packedMatchCandidates[sortInsertionIndex];
+            while (sortCursor >= 0) {
+              if (TextPairLoginPayload.packedMatchCandidates[sortCursor] > packedCandidate) {
+                TextPairLoginPayload.packedMatchCandidates[1 + sortCursor] = TextPairLoginPayload.packedMatchCandidates[sortCursor];
+                sortCursor--;
                 continue;
               }
               break;
             }
-            TextPairLoginPayload.packedMatchCandidates[1 + sortCursorThenFirstEntityId] = packedCandidateThenSecondEntityId;
+            TextPairLoginPayload.packedMatchCandidates[1 + sortCursor] = packedCandidate;
           }
           if (methodGuard != -18913) {
             MatchScoringSupport.processMatchCandidates(-33);
           }
           candidateIndex = 0;
-          sortInsertionIndexLiteralPhase1 = candidateIndex;
+          unusedInitialCandidateIndexSnapshot = candidateIndex;
           while (candidateIndex < EmailAvailabilityQuery.matchCandidateCount) {
             if (-1 + EmailAvailabilityQuery.matchCandidateCount > candidateIndex &&
                 TextPairLoginPayload.packedMatchCandidates[candidateIndex] == TextPairLoginPayload.packedMatchCandidates[candidateIndex + 1]) {
               TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
             } else {
-              sortCursorThenFirstEntityIdLiteralPhase1 = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
-              packedCandidateThenSecondEntityIdLiteralPhase1 = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
+              firstEntityId = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
+              secondEntityId = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
               thirdEntityId = 1023 & TextPairLoginPayload.packedMatchCandidates[candidateIndex];
-              firstMatchedEntity = RasterTargetSnapshot.entitiesById[sortCursorThenFirstEntityIdLiteralPhase1];
-              secondMatchedEntity = RasterTargetSnapshot.entitiesById[packedCandidateThenSecondEntityIdLiteralPhase1];
+              firstMatchedEntity = RasterTargetSnapshot.entitiesById[firstEntityId];
+              secondMatchedEntity = RasterTargetSnapshot.entitiesById[secondEntityId];
               thirdMatchedEntity = RasterTargetSnapshot.entitiesById[thirdEntityId];
               if (firstMatchedEntity.matchCooldownTicks <= 0 &&
                   secondMatchedEntity.matchCooldownTicks <= 0 &&
@@ -127,11 +127,11 @@ final class MatchScoringSupport {
                 } else {
                   awardedPoints = 30 * EntityCollisionSupport.matchChainLength;
                 }
-                popupX = 0;
-                popupXLiteralPhase1 = (int)firstMatchedEntity.positionX;
-                popupY = 0;
-                popupYLiteralPhase1 = (int)firstMatchedEntity.positionY;
-                ScorePopupSupport.spawnScorePopup(awardedPoints, true, popupYLiteralPhase1, EntityCollisionSupport.matchChainLength, popupXLiteralPhase1);
+                unusedPopupXReset = 0;
+                firstMatchedEntityPopupX = (int)firstMatchedEntity.positionX;
+                unusedPopupYReset = 0;
+                firstMatchedEntityPopupY = (int)firstMatchedEntity.positionY;
+                ScorePopupSupport.spawnScorePopup(awardedPoints, true, firstMatchedEntityPopupY, EntityCollisionSupport.matchChainLength, firstMatchedEntityPopupX);
                 TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
               } else {
                 firstBlockedEntity = firstMatchedEntity;

@@ -173,23 +173,23 @@ final class EntityMotionSupport {
         float sharedVelocityXOrCrossProduct = 0.0f;
         float sharedVelocityYOrDirectionScale = 0.0f;
         float velocityMagnitudeSquaredThenSpeedScale = 0.0f;
-        float centerOffsetX = 0.0f;
-        float centerOffsetY = 0.0f;
-        float nextCenterOffsetXThenSquared = 0.0f;
-        float nextCenterOffsetYThenSquared = 0.0f;
+        float contactedCenterOffsetX = 0.0f;
+        float contactedCenterOffsetY = 0.0f;
+        float contactedNextCenterOffsetXThenSquared = 0.0f;
+        float contactedNextCenterOffsetYThenSquared = 0.0f;
         int contactedEntityMovesOutwardInt = 0;
         int movingEntityMovesOutwardInt = 0;
         float midpointInwardSpeedScale = 0.0f;
         int clientControlFlowGuard = 0;
         Object unusedMotionScratch = null;
         GameplayEntity trailEntity = null;
-        int neighborIndexOrKindFlagOrContactIdOrDivisionGuardLiteralPhase1;
-        float centerOffsetXLiteralPhase1;
-        float centerOffsetXLiteralPhase2;
-        float centerOffsetYLiteralPhase1;
-        float centerOffsetYLiteralPhase2;
-        float nextCenterOffsetXThenSquaredLiteralPhase1;
-        float nextCenterOffsetYThenSquaredLiteralPhase1;
+        int unusedMotionGuardRemainder;
+        float movingCenterOffsetX;
+        float midpointCenterOffsetX;
+        float movingCenterOffsetY;
+        float midpointCenterOffsetY;
+        float movingNextCenterOffsetXThenSquared;
+        float movingNextCenterOffsetYThenSquared;
         unusedMotionScratch = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
@@ -247,29 +247,29 @@ final class EntityMotionSupport {
                   velocityMagnitudeSquaredThenSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
                   sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
                   sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
-                  centerOffsetX = -contactedEntity.positionX + 320.0f;
-                  centerOffsetY = 240.0f - contactedEntity.positionY;
-                  nextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
-                  nextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
-                  nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
-                  nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
-                  contactedEntityMovesOutwardIntSnapshot = (!(nextCenterOffsetXThenSquared + nextCenterOffsetYThenSquared > centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX)) ? 0 : 1;
+                  contactedCenterOffsetX = -contactedEntity.positionX + 320.0f;
+                  contactedCenterOffsetY = 240.0f - contactedEntity.positionY;
+                  contactedNextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
+                  contactedNextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
+                  contactedNextCenterOffsetXThenSquared = contactedNextCenterOffsetXThenSquared * contactedNextCenterOffsetXThenSquared;
+                  contactedNextCenterOffsetYThenSquared = contactedNextCenterOffsetYThenSquared * contactedNextCenterOffsetYThenSquared;
+                  contactedEntityMovesOutwardIntSnapshot = (!(contactedNextCenterOffsetXThenSquared + contactedNextCenterOffsetYThenSquared > contactedCenterOffsetY * contactedCenterOffsetY + contactedCenterOffsetX * contactedCenterOffsetX)) ? 0 : 1;
                   contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
-                  centerOffsetXLiteralPhase1 = 320.0f - movingEntity.positionX;
-                  nextCenterOffsetYThenSquaredLiteralPhase1 = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
-                  nextCenterOffsetXThenSquaredLiteralPhase1 = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
-                  centerOffsetYLiteralPhase1 = -movingEntity.positionY + 240.0f;
-                  nextCenterOffsetXThenSquaredLiteralPhase1 = nextCenterOffsetXThenSquaredLiteralPhase1 * nextCenterOffsetXThenSquaredLiteralPhase1;
-                  nextCenterOffsetYThenSquaredLiteralPhase1 = nextCenterOffsetYThenSquaredLiteralPhase1 * nextCenterOffsetYThenSquaredLiteralPhase1;
-                  movingEntityMovesOutwardIntSnapshot = (!(centerOffsetYLiteralPhase1 * centerOffsetYLiteralPhase1 + centerOffsetXLiteralPhase1 * centerOffsetXLiteralPhase1 < nextCenterOffsetYThenSquaredLiteralPhase1 + nextCenterOffsetXThenSquaredLiteralPhase1)) ? 0 : 1;
+                  movingCenterOffsetX = 320.0f - movingEntity.positionX;
+                  movingNextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
+                  movingNextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
+                  movingCenterOffsetY = -movingEntity.positionY + 240.0f;
+                  movingNextCenterOffsetXThenSquared = movingNextCenterOffsetXThenSquared * movingNextCenterOffsetXThenSquared;
+                  movingNextCenterOffsetYThenSquared = movingNextCenterOffsetYThenSquared * movingNextCenterOffsetYThenSquared;
+                  movingEntityMovesOutwardIntSnapshot = (!(movingCenterOffsetY * movingCenterOffsetY + movingCenterOffsetX * movingCenterOffsetX < movingNextCenterOffsetYThenSquared + movingNextCenterOffsetXThenSquared)) ? 0 : 1;
                   movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
                   if (contactedEntityMovesOutwardInt != 0 &&
                       movingEntityMovesOutwardInt != 0) {
-                    centerOffsetXLiteralPhase2 = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
-                    centerOffsetYLiteralPhase2 = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetXLiteralPhase2 * centerOffsetXLiteralPhase2 + centerOffsetYLiteralPhase2 * centerOffsetYLiteralPhase2));
-                    sharedVelocityXOrCrossProduct = centerOffsetXLiteralPhase2 * midpointInwardSpeedScale;
-                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetYLiteralPhase2;
+                    midpointCenterOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                    midpointCenterOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(midpointCenterOffsetX * midpointCenterOffsetX + midpointCenterOffsetY * midpointCenterOffsetY));
+                    sharedVelocityXOrCrossProduct = midpointCenterOffsetX * midpointInwardSpeedScale;
+                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * midpointCenterOffsetY;
                   }
                   movingEntity.velocityY = movingEntity.velocityY * -1.0f;
                   movingEntity.velocityX = movingEntity.velocityX * -1.0f;
@@ -296,7 +296,7 @@ final class EntityMotionSupport {
             }
             movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
-          neighborIndexOrKindFlagOrContactIdOrDivisionGuardLiteralPhase1 = -125 % ((methodGuard - 35) / 49);
+          unusedMotionGuardRemainder = -125 % ((methodGuard - 35) / 49);
           trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (trailEntity != null) {
             trailEntity.eraseEntityTrail(30383);

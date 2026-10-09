@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/6254b929cf0b2ea47a7278ccb10965cbd86e95d0/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c224cf9f8b9ad082ee6cfa6a41e28678fa8d359b/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,040 bindings,
 preserving 388 override relationships.
 
-## Current literal-initialized primitive phases (pass 232)
+## Current gameplay and screen phase names (pass 233)
+
+54 local names now distinguish entity motion, match sorting/IDs/popups,
+menu tile layers, fullscreen controls and tutorial geometry/text. The generated
+export replaces 33 LiteralPhase names; 351 remain. Only names change, including
+explicit names for unused snapshots and effectful guard calculations that remain
+executed. All 303 sources compile, reproduce and reverse exactly; existing
+fixed-bytecode gameplay and scoring probes pass. Five large framed methods and
+41 unknown field purposes remain. See the reading guide for scope and commands.
+
+## Previous literal-initialized primitive phases (pass 232)
 
 258 reused primitive locals now have 386 independently assigned later phases in
 118 methods across 81 classes. Original literal initializers, widths, overflow,

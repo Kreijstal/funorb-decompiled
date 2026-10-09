@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/6254b929cf0b2ea47a7278ccb10965cbd86e95d0/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c224cf9f8b9ad082ee6cfa6a41e28678fa8d359b/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 232)
+## Current readability (pass 233)
 
 The export has 20,044 guarded names and 121,801 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,37 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current literal-initialized primitive phases (pass 232)
+## Current gameplay and screen phase names (pass 233)
+
+54 guarded local names now describe their source-supported roles in
+EntityMotionSupport, MatchScoringSupport and GameScreen. Motion distinguishes
+contacted, moving and midpoint center offsets. Scoring distinguishes the sort
+cursor/packed candidate from first/second entity IDs and popup coordinates.
+Menus distinguish background/foreground tiles, fullscreen dialog buttons and
+tutorial orbit coordinates from text/page/line-height values.
+
+33 LiteralPhase names are retired; 351 remain across the export. Phases that
+still serve multiple roles retain explicit combined names. Unused snapshots,
+resets and the motion guard remainder remain executed; the remainder can throw.
+Only 285 bound identifier occurrences in three Java files change. Raw source,
+compiler/naming/workflow pins, all 19,990 unaffected complete rules and all
+20,351 dictionary identities are preserved. Historical source proofs are unchanged.
+
+Validation: `node readable/build-geoblox-rules.mjs --check`,
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass.
+All 303 files compile with 138,040 binding comparisons and 388 override pairs;
+the dictionary restores every raw file byte-for-byte. The rule-builder suite
+passes 13 groups. Existing gameplay and matching/scoring probes pass against
+fixed transformed bytecode, raw Java and readable Java. Their fixture scopes
+remain unchanged; these names do not establish new whole-game/device coverage.
+
+Five large framed methods and 41 unknown field purposes remain. Source bodies,
+control-flow frames, protected scopes, floating-point associations and original
+effects are unchanged. The tracked decompiler-source tar SHA-256 remains
+`6fa9e00942517d37f35330c93ebbbd3ed421ef9815ee54550cfdaea28734b424`.
+
+## Previous literal-initialized primitive phases (pass 232)
 
 258 reused primitive locals now have 386 independently assigned later phases in
 118 methods across 81 classes. Original literal initializers, widths, overflow,
