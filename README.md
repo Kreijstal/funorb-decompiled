@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2b3aed32a85979375b057e51fec96adeeb0054cd/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ee091b66068724723f6495de18caf6ddc32ac444/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,121 bindings,
 preserving 388 override relationships.
 
-## Current nested primitive recovery (pass 240)
+## Current renderer and avatar purposes (pass 241)
+
+71 local names now identify blur windows, RGB outputs, clipped spans, line axes,
+outline edges and avatar tint branches. Four misleading begin/start/tail names
+are corrected. All 303 sources compile, reproduce and reverse exactly; existing
+native traces match. Source/compiler pins and historical proofs are preserved.
+Five large framed methods, 218 numbered phase-family names and 41 unresolved
+field purposes remain. The workflow documents a structural preview that found
+no additional eligible methods and the remaining decomposition requirements.
+
+## Previous nested primitive recovery (pass 240)
 
 The generic opt-in nested pass exposes 47 additional purpose-named roles across
 40 reused locals in 14 classes. Dialog layout, avatar tints, archive/buffered-read

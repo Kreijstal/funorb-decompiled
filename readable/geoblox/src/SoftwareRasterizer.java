@@ -157,9 +157,9 @@ final class SoftwareRasterizer {
         int radiusSquared;
         int xAdjustedSquaredDistance;
         int edgePixelIndex;
-        int edgePixelIndexNestedPhase2;
-        int edgePixelIndexNestedPhase3;
-        int edgePixelIndexNestedPhase4;
+        int rightEdgeRowCenterIndex;
+        int topEdgePixelIndex;
+        int bottomEdgePixelIndex;
         if (cornerRadius == 0) {
           SoftwareRasterizer.drawRectangle(x, y, width, height, color);
           return;
@@ -198,14 +198,14 @@ final class SoftwareRasterizer {
                 for (edgePixelIndex = upperLeftInnerRowCenterIndex; edgePixelIndex <= lowerLeftInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
                   framebuffer[edgePixelIndex - arcMajorOffset] = color;
                 }
-                for (edgePixelIndexNestedPhase2 = upperRightInnerRowCenterIndex; edgePixelIndexNestedPhase2 <= lowerRightInnerRowCenterIndex; edgePixelIndexNestedPhase2 = edgePixelIndexNestedPhase2 + stride) {
-                  framebuffer[edgePixelIndexNestedPhase2 + arcMajorOffset] = color;
+                for (rightEdgeRowCenterIndex = upperRightInnerRowCenterIndex; rightEdgeRowCenterIndex <= lowerRightInnerRowCenterIndex; rightEdgeRowCenterIndex = rightEdgeRowCenterIndex + stride) {
+                  framebuffer[rightEdgeRowCenterIndex + arcMajorOffset] = color;
                 }
-                for (edgePixelIndexNestedPhase3 = upperLeftOuterRowCenterIndex; edgePixelIndexNestedPhase3 <= upperRightOuterRowCenterIndex; edgePixelIndexNestedPhase3++) {
-                  framebuffer[edgePixelIndexNestedPhase3] = color;
+                for (topEdgePixelIndex = upperLeftOuterRowCenterIndex; topEdgePixelIndex <= upperRightOuterRowCenterIndex; topEdgePixelIndex++) {
+                  framebuffer[topEdgePixelIndex] = color;
                 }
-                for (edgePixelIndexNestedPhase4 = lowerLeftOuterRowCenterIndex; edgePixelIndexNestedPhase4 <= lowerRightOuterRowCenterIndex; edgePixelIndexNestedPhase4++) {
-                  framebuffer[edgePixelIndexNestedPhase4] = color;
+                for (bottomEdgePixelIndex = lowerLeftOuterRowCenterIndex; bottomEdgePixelIndex <= lowerRightOuterRowCenterIndex; bottomEdgePixelIndex++) {
+                  framebuffer[bottomEdgePixelIndex] = color;
                 }
                 while (true) {
                   unclippedMinorOffsetBeforeIncrement = arcMinorOffset;
@@ -338,13 +338,13 @@ final class SoftwareRasterizer {
         int outputRed;
         int outputGreen;
         int outputBlue;
-        int windowXOrNegativeOutputCounterNestedPhase2;
-        int outputRedNestedPhase2;
-        int outputRedNestedPhase3;
-        int outputGreenNestedPhase2;
-        int outputGreenNestedPhase3;
-        int outputBlueNestedPhase2;
-        int outputBlueNestedPhase3;
+        int negativeOutputColumnCounter;
+        int fullWindowOutputRed;
+        int shrinkingWindowOutputRed;
+        int fullWindowOutputGreen;
+        int shrinkingWindowOutputGreen;
+        int fullWindowOutputBlue;
+        int shrinkingWindowOutputBlue;
         reciprocalWindowScaleQ14 = 16384 / (2 * radius + 1);
         growingWindowEndCounter = 1 + radius - regionWidth - regionLeft;
         if (0 < growingWindowEndCounter) {
@@ -386,9 +386,9 @@ final class SoftwareRasterizer {
           initialDestinationIndexBeforeIncrement = destinationIndex;
           destinationIndex++;
           pixels[initialDestinationIndexBeforeIncrement] = (runningRedSum / windowSampleCount << 16) + (runningGreenSum / windowSampleCount << 8) + runningBlueSum / windowSampleCount;
-          for (windowXOrNegativeOutputCounterNestedPhase2 = 1 - regionWidth; windowXOrNegativeOutputCounterNestedPhase2 < growingWindowEndCounter; windowXOrNegativeOutputCounterNestedPhase2++) {
+          for (negativeOutputColumnCounter = 1 - regionWidth; negativeOutputColumnCounter < growingWindowEndCounter; negativeOutputColumnCounter++) {
             leavingPixelIndex++;
-            if (regionLeft + regionWidth + windowXOrNegativeOutputCounterNestedPhase2 + radius < clipRight) {
+            if (regionLeft + regionWidth + negativeOutputColumnCounter + radius < clipRight) {
               scratchPixel = pixels[enteringPixelIndex];
               enteringPixelIndex++;
               runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
@@ -403,7 +403,7 @@ final class SoftwareRasterizer {
             destinationIndex++;
             pixels[growingDestinationIndexBeforeIncrement] = (outputRed << 16) + (outputGreen << 8) + outputBlue;
           }
-          while (windowXOrNegativeOutputCounterNestedPhase2 < fullWindowEndCounter) {
+          while (negativeOutputColumnCounter < fullWindowEndCounter) {
             scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             if (runningRedSum < 0) {
@@ -422,57 +422,57 @@ final class SoftwareRasterizer {
             runningRedSum = runningRedSum + (scratchPixel >> 16 & 255);
             runningGreenSum = runningGreenSum + (scratchPixel >> 8 & 255);
             runningBlueSum = runningBlueSum + (scratchPixel & 255);
-            outputRedNestedPhase2 = runningRedSum * reciprocalWindowScaleQ14 >> 14;
-            outputGreenNestedPhase2 = runningGreenSum * reciprocalWindowScaleQ14 >> 14;
-            outputBlueNestedPhase2 = runningBlueSum * reciprocalWindowScaleQ14 >> 14;
-            if (outputRedNestedPhase2 > 255) {
-              outputRedNestedPhase2 = 255;
+            fullWindowOutputRed = runningRedSum * reciprocalWindowScaleQ14 >> 14;
+            fullWindowOutputGreen = runningGreenSum * reciprocalWindowScaleQ14 >> 14;
+            fullWindowOutputBlue = runningBlueSum * reciprocalWindowScaleQ14 >> 14;
+            if (fullWindowOutputRed > 255) {
+              fullWindowOutputRed = 255;
             }
-            if (outputGreenNestedPhase2 > 255) {
-              outputGreenNestedPhase2 = 255;
+            if (fullWindowOutputGreen > 255) {
+              fullWindowOutputGreen = 255;
             }
-            if (outputBlueNestedPhase2 > 255) {
-              outputBlueNestedPhase2 = 255;
+            if (fullWindowOutputBlue > 255) {
+              fullWindowOutputBlue = 255;
             }
             fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[fullWindowDestinationIndexBeforeIncrement] = (outputRedNestedPhase2 << 16) + (outputGreenNestedPhase2 << 8) + outputBlueNestedPhase2;
-            windowXOrNegativeOutputCounterNestedPhase2++;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (fullWindowOutputRed << 16) + (fullWindowOutputGreen << 8) + fullWindowOutputBlue;
+            negativeOutputColumnCounter++;
           }
-          while (windowXOrNegativeOutputCounterNestedPhase2 < 0) {
+          while (negativeOutputColumnCounter < 0) {
             scratchPixel = pixels[leavingPixelIndex++];
             runningRedSum = runningRedSum - (scratchPixel >> 16 & 255);
             runningGreenSum = runningGreenSum - (scratchPixel >> 8 & 255);
             runningBlueSum = runningBlueSum - (scratchPixel & 255);
             windowSampleCount--;
-            outputRedNestedPhase3 = runningRedSum / windowSampleCount;
-            outputGreenNestedPhase3 = runningGreenSum / windowSampleCount;
-            outputBlueNestedPhase3 = runningBlueSum / windowSampleCount;
-            if (outputRedNestedPhase3 >= 0) {
-              if (outputRedNestedPhase3 > 255) {
-                outputRedNestedPhase3 = 255;
+            shrinkingWindowOutputRed = runningRedSum / windowSampleCount;
+            shrinkingWindowOutputGreen = runningGreenSum / windowSampleCount;
+            shrinkingWindowOutputBlue = runningBlueSum / windowSampleCount;
+            if (shrinkingWindowOutputRed >= 0) {
+              if (shrinkingWindowOutputRed > 255) {
+                shrinkingWindowOutputRed = 255;
               }
             } else {
-              outputRedNestedPhase3 = 0;
+              shrinkingWindowOutputRed = 0;
             }
-            if (outputGreenNestedPhase3 >= 0) {
-              if (outputGreenNestedPhase3 > 255) {
-                outputGreenNestedPhase3 = 255;
+            if (shrinkingWindowOutputGreen >= 0) {
+              if (shrinkingWindowOutputGreen > 255) {
+                shrinkingWindowOutputGreen = 255;
               }
             } else {
-              outputGreenNestedPhase3 = 0;
+              shrinkingWindowOutputGreen = 0;
             }
-            if (outputBlueNestedPhase3 >= 0) {
-              if (outputBlueNestedPhase3 > 255) {
-                outputBlueNestedPhase3 = 255;
+            if (shrinkingWindowOutputBlue >= 0) {
+              if (shrinkingWindowOutputBlue > 255) {
+                shrinkingWindowOutputBlue = 255;
               }
             } else {
-              outputBlueNestedPhase3 = 0;
+              shrinkingWindowOutputBlue = 0;
             }
             shrinkingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[shrinkingDestinationIndexBeforeIncrement] = (outputRedNestedPhase3 << 16) + (outputGreenNestedPhase3 << 8) + outputBlueNestedPhase3;
-            windowXOrNegativeOutputCounterNestedPhase2++;
+            pixels[shrinkingDestinationIndexBeforeIncrement] = (shrinkingWindowOutputRed << 16) + (shrinkingWindowOutputGreen << 8) + shrinkingWindowOutputBlue;
+            negativeOutputColumnCounter++;
           }
           destinationIndex = destinationIndex + rowSkip;
         }
@@ -615,17 +615,17 @@ final class SoftwareRasterizer {
         int spanX;
         int blendedColor;
         int lowerDestinationIndex;
-        int destinationRedWeightedPhase2;
-        int destinationGreenWeightedPhase2;
-        int destinationBlueWeightedPhase2;
-        int xExtentPhase2;
-        int xAdjustedSquaredDistancePhase2;
-        int yAdjustedSquaredDistancePhase2;
-        int spanLeftPhase2;
-        int spanRightExclusiveOrInclusivePhase2;
-        int destinationIndexPhase2;
-        int spanXPhase2;
-        int blendedColorPhase2;
+        int lowerDestinationRedWeighted;
+        int lowerDestinationGreenWeighted;
+        int lowerDestinationBlueWeighted;
+        int lowerXExtent;
+        int lowerXAdjustedSquaredDistance;
+        int lowerYAdjustedSquaredDistance;
+        int lowerSpanLeft;
+        int lowerSpanRightInclusive;
+        int unusedLowerSpanDestinationSnapshot;
+        int lowerSpanX;
+        int lowerBlendedColor;
         if (alpha256 == 0) {
           return;
         }
@@ -692,46 +692,46 @@ final class SoftwareRasterizer {
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
           }
         }
-        xExtentPhase2 = radius;
+        lowerXExtent = radius;
         yOffset = -yOffset;
-        yAdjustedSquaredDistancePhase2 = yOffset * yOffset + radiusSquared;
-        xAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - xExtentPhase2;
-        yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - yOffset;
+        lowerYAdjustedSquaredDistance = yOffset * yOffset + radiusSquared;
+        lowerXAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - lowerXExtent;
+        lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - yOffset;
         while (rowY < clippedBottomExclusive) {
-          while (yAdjustedSquaredDistancePhase2 > radiusSquared) {
-            if (xAdjustedSquaredDistancePhase2 > radiusSquared) {
-              lowerXExtentBeforeDecrement = xExtentPhase2;
-              xExtentPhase2--;
-              yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - (lowerXExtentBeforeDecrement + xExtentPhase2);
-              xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 - (xExtentPhase2 + xExtentPhase2);
+          while (lowerYAdjustedSquaredDistance > radiusSquared) {
+            if (lowerXAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = lowerXExtent;
+              lowerXExtent--;
+              lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + lowerXExtent);
+              lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance - (lowerXExtent + lowerXExtent);
               continue;
             }
             break;
           }
-          spanLeftPhase2 = centerX - xExtentPhase2;
-          if (spanLeftPhase2 < clipLeft) {
-            spanLeftPhase2 = clipLeft;
+          lowerSpanLeft = centerX - lowerXExtent;
+          if (lowerSpanLeft < clipLeft) {
+            lowerSpanLeft = clipLeft;
           }
-          spanRightExclusiveOrInclusivePhase2 = centerX + xExtentPhase2;
-          if (spanRightExclusiveOrInclusivePhase2 > clipRight - 1) {
-            spanRightExclusiveOrInclusivePhase2 = clipRight - 1;
+          lowerSpanRightInclusive = centerX + lowerXExtent;
+          if (lowerSpanRightInclusive > clipRight - 1) {
+            lowerSpanRightInclusive = clipRight - 1;
           }
-          lowerDestinationIndex = spanLeftPhase2 + rowY * stride;
-          destinationIndexPhase2 = lowerDestinationIndex;
-          for (spanXPhase2 = spanLeftPhase2; spanXPhase2 <= spanRightExclusiveOrInclusivePhase2; spanXPhase2++) {
-            destinationRedWeightedPhase2 = (framebuffer[lowerDestinationIndex] >> 16 & 255) * destinationWeight256;
-            destinationGreenWeightedPhase2 = (framebuffer[lowerDestinationIndex] >> 8 & 255) * destinationWeight256;
-            destinationBlueWeightedPhase2 = (framebuffer[lowerDestinationIndex] & 255) * destinationWeight256;
-            blendedColorPhase2 = (sourceRedWeighted + destinationRedWeightedPhase2 >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeightedPhase2 >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeightedPhase2 >> 8);
+          lowerDestinationIndex = lowerSpanLeft + rowY * stride;
+          unusedLowerSpanDestinationSnapshot = lowerDestinationIndex;
+          for (lowerSpanX = lowerSpanLeft; lowerSpanX <= lowerSpanRightInclusive; lowerSpanX++) {
+            lowerDestinationRedWeighted = (framebuffer[lowerDestinationIndex] >> 16 & 255) * destinationWeight256;
+            lowerDestinationGreenWeighted = (framebuffer[lowerDestinationIndex] >> 8 & 255) * destinationWeight256;
+            lowerDestinationBlueWeighted = (framebuffer[lowerDestinationIndex] & 255) * destinationWeight256;
+            lowerBlendedColor = (sourceRedWeighted + lowerDestinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + lowerDestinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + lowerDestinationBlueWeighted >> 8);
             lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
             lowerDestinationIndex++;
-            framebuffer[lowerDestinationIndexBeforeIncrement] = blendedColorPhase2;
+            framebuffer[lowerDestinationIndexBeforeIncrement] = lowerBlendedColor;
           }
           rowY++;
-          yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 + (yOffset + yOffset);
+          lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance + (yOffset + yOffset);
           lowerYOffsetBeforeIncrement = yOffset;
           yOffset++;
-          xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 + (lowerYOffsetBeforeIncrement + yOffset);
+          lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + yOffset);
         }
         return;
     }
@@ -807,14 +807,14 @@ final class SoftwareRasterizer {
         int spanRightExclusiveOrInclusive;
         int destinationIndex;
         int spanX;
-        int xExtentPhase2;
-        int yOffsetPhase2;
-        int xAdjustedSquaredDistancePhase2;
-        int yAdjustedSquaredDistancePhase2;
-        int spanLeftPhase2;
-        int spanRightExclusiveOrInclusivePhase2;
-        int destinationIndexPhase2;
-        int spanXPhase2;
+        int lowerXExtent;
+        int lowerYOffset;
+        int lowerXAdjustedSquaredDistance;
+        int lowerYAdjustedSquaredDistance;
+        int lowerSpanLeft;
+        int lowerSpanRightInclusive;
+        int lowerDestinationIndex;
+        int lowerSpanX;
         if (radius == 0) {
           SoftwareRasterizer.setPixel(centerX, centerY, color);
           return;
@@ -870,41 +870,41 @@ final class SoftwareRasterizer {
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
           }
         }
-        xExtentPhase2 = radius;
-        yOffsetPhase2 = rowY - centerY;
-        yAdjustedSquaredDistancePhase2 = yOffsetPhase2 * yOffsetPhase2 + radiusSquared;
-        xAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - xExtentPhase2;
-        yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - yOffsetPhase2;
+        lowerXExtent = radius;
+        lowerYOffset = rowY - centerY;
+        lowerYAdjustedSquaredDistance = lowerYOffset * lowerYOffset + radiusSquared;
+        lowerXAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - lowerXExtent;
+        lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - lowerYOffset;
         while (rowY < clippedBottomExclusive) {
-          while (yAdjustedSquaredDistancePhase2 > radiusSquared) {
-            if (xAdjustedSquaredDistancePhase2 > radiusSquared) {
-              lowerXExtentBeforeDecrement = xExtentPhase2;
-              xExtentPhase2--;
-              yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - (lowerXExtentBeforeDecrement + xExtentPhase2);
-              xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 - (xExtentPhase2 + xExtentPhase2);
+          while (lowerYAdjustedSquaredDistance > radiusSquared) {
+            if (lowerXAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = lowerXExtent;
+              lowerXExtent--;
+              lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + lowerXExtent);
+              lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance - (lowerXExtent + lowerXExtent);
               continue;
             }
             break;
           }
-          spanLeftPhase2 = centerX - xExtentPhase2;
-          if (spanLeftPhase2 < clipLeft) {
-            spanLeftPhase2 = clipLeft;
+          lowerSpanLeft = centerX - lowerXExtent;
+          if (lowerSpanLeft < clipLeft) {
+            lowerSpanLeft = clipLeft;
           }
-          spanRightExclusiveOrInclusivePhase2 = centerX + xExtentPhase2;
-          if (spanRightExclusiveOrInclusivePhase2 > clipRight - 1) {
-            spanRightExclusiveOrInclusivePhase2 = clipRight - 1;
+          lowerSpanRightInclusive = centerX + lowerXExtent;
+          if (lowerSpanRightInclusive > clipRight - 1) {
+            lowerSpanRightInclusive = clipRight - 1;
           }
-          destinationIndexPhase2 = spanLeftPhase2 + rowY * stride;
-          for (spanXPhase2 = spanLeftPhase2; spanXPhase2 <= spanRightExclusiveOrInclusivePhase2; spanXPhase2++) {
-            lowerDestinationIndexBeforeIncrement = destinationIndexPhase2;
-            destinationIndexPhase2++;
+          lowerDestinationIndex = lowerSpanLeft + rowY * stride;
+          for (lowerSpanX = lowerSpanLeft; lowerSpanX <= lowerSpanRightInclusive; lowerSpanX++) {
+            lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
+            lowerDestinationIndex++;
             framebuffer[lowerDestinationIndexBeforeIncrement] = color;
           }
           rowY++;
-          yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 + (yOffsetPhase2 + yOffsetPhase2);
-          lowerYOffsetBeforeIncrement = yOffsetPhase2;
-          yOffsetPhase2++;
-          xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 + (lowerYOffsetBeforeIncrement + yOffsetPhase2);
+          lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance + (lowerYOffset + lowerYOffset);
+          lowerYOffsetBeforeIncrement = lowerYOffset;
+          lowerYOffset++;
+          lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + lowerYOffset);
         }
         return;
     }
@@ -912,8 +912,8 @@ final class SoftwareRasterizer {
     final static void drawLine(int startX, int startY, int endX, int endY, int color) {
         int minorAxisStepQ16;
         int minorAxisPixel;
-        int minorAxisStepQ16Phase2;
-        int minorAxisPixelPhase2;
+        int yStepPerXQ16;
+        int yPixelForXMajorLine;
         endX = endX - startX;
         endY = endY - startY;
         if (endY == 0) {
@@ -965,22 +965,22 @@ final class SoftwareRasterizer {
         startY = startY << 16;
         startY = startY + 32768;
         endY = endY << 16;
-        minorAxisStepQ16Phase2 = (int)Math.floor((double)endY / (double)endX + 0.5);
+        yStepPerXQ16 = (int)Math.floor((double)endY / (double)endX + 0.5);
         endX = endX + startX;
         if (startX < clipLeft) {
-          startY = startY + minorAxisStepQ16Phase2 * (clipLeft - startX);
+          startY = startY + yStepPerXQ16 * (clipLeft - startX);
           startX = clipLeft;
         }
         if (endX >= clipRight) {
           endX = clipRight - 1;
         }
         while (startX <= endX) {
-          minorAxisPixelPhase2 = startY >> 16;
-          if (minorAxisPixelPhase2 >= clipTop &&
-              minorAxisPixelPhase2 < clipBottom) {
-            framebuffer[startX + minorAxisPixelPhase2 * stride] = color;
+          yPixelForXMajorLine = startY >> 16;
+          if (yPixelForXMajorLine >= clipTop &&
+              yPixelForXMajorLine < clipBottom) {
+            framebuffer[startX + yPixelForXMajorLine * stride] = color;
           }
-          startY = startY + minorAxisStepQ16Phase2;
+          startY = startY + yStepPerXQ16;
           startX++;
         }
     }
@@ -1279,19 +1279,19 @@ final class SoftwareRasterizer {
         int destinationIndex;
         int spanXOrMiddleRowSkip;
         int middleBottomExclusive;
-        int xExtentPhase2;
-        int yOffsetPhase2;
-        int yOffsetPhase3;
-        int xAdjustedSquaredDistancePhase2;
-        int yAdjustedSquaredDistancePhase2;
-        int spanLeftPhase2;
-        int spanLeftPhase3;
-        int spanRightExclusiveOrInclusivePhase2;
-        int spanRightExclusiveOrInclusivePhase3;
-        int destinationIndexPhase2;
-        int destinationIndexPhase3;
-        int spanXOrMiddleRowSkipPhase2;
-        int spanXOrMiddleRowSkipPhase3;
+        int lowerXExtent;
+        int unusedMiddleYOffsetSnapshot;
+        int lowerYOffset;
+        int lowerXAdjustedSquaredDistance;
+        int lowerYAdjustedSquaredDistance;
+        int middleSpanLeft;
+        int lowerSpanLeft;
+        int middleSpanRightExclusive;
+        int lowerSpanRightInclusive;
+        int middleDestinationIndex;
+        int lowerDestinationIndex;
+        int middleRowSkip;
+        int lowerSpanX;
         if (cornerRadius == 0) {
           SoftwareRasterizer.fillRectangle(x, y, width, height, color);
           return;
@@ -1350,65 +1350,65 @@ final class SoftwareRasterizer {
             yAdjustedSquaredDistance = yAdjustedSquaredDistance + (upperXExtentBeforeIncrement + xExtent);
           }
         }
-        yOffsetPhase2 = rowY - topCornerCenterYOrUpperHalfEnd;
-        spanLeftPhase2 = x;
-        if (spanLeftPhase2 < clipLeft) {
-          spanLeftPhase2 = clipLeft;
+        unusedMiddleYOffsetSnapshot = rowY - topCornerCenterYOrUpperHalfEnd;
+        middleSpanLeft = x;
+        if (middleSpanLeft < clipLeft) {
+          middleSpanLeft = clipLeft;
         }
-        spanRightExclusiveOrInclusivePhase2 = x + width;
-        if (spanRightExclusiveOrInclusivePhase2 > clipRight) {
-          spanRightExclusiveOrInclusivePhase2 = clipRight;
+        middleSpanRightExclusive = x + width;
+        if (middleSpanRightExclusive > clipRight) {
+          middleSpanRightExclusive = clipRight;
         }
-        destinationIndexPhase2 = spanLeftPhase2 + rowY * stride;
-        spanXOrMiddleRowSkipPhase2 = stride + spanLeftPhase2 - spanRightExclusiveOrInclusivePhase2;
+        middleDestinationIndex = middleSpanLeft + rowY * stride;
+        middleRowSkip = stride + middleSpanLeft - middleSpanRightExclusive;
         middleBottomExclusive = y + height - cornerRadius - 1;
         if (middleBottomExclusive > clipBottom) {
           middleBottomExclusive = clipBottom;
         }
         while (rowY < middleBottomExclusive) {
-          for (middleSpanX = spanLeftPhase2; middleSpanX < spanRightExclusiveOrInclusivePhase2; middleSpanX++) {
-            middleDestinationIndexBeforeIncrement = destinationIndexPhase2;
-            destinationIndexPhase2++;
+          for (middleSpanX = middleSpanLeft; middleSpanX < middleSpanRightExclusive; middleSpanX++) {
+            middleDestinationIndexBeforeIncrement = middleDestinationIndex;
+            middleDestinationIndex++;
             framebuffer[middleDestinationIndexBeforeIncrement] = color;
           }
           rowY++;
-          destinationIndexPhase2 = destinationIndexPhase2 + spanXOrMiddleRowSkipPhase2;
+          middleDestinationIndex = middleDestinationIndex + middleRowSkip;
         }
-        yOffsetPhase3 = 0;
-        xExtentPhase2 = cornerRadius;
-        yAdjustedSquaredDistancePhase2 = yOffsetPhase3 * yOffsetPhase3 + radiusSquared;
-        xAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - xExtentPhase2;
-        yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - yOffsetPhase3;
+        lowerYOffset = 0;
+        lowerXExtent = cornerRadius;
+        lowerYAdjustedSquaredDistance = lowerYOffset * lowerYOffset + radiusSquared;
+        lowerXAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - lowerXExtent;
+        lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - lowerYOffset;
         while (rowY < clippedBottomExclusive) {
-          while (yAdjustedSquaredDistancePhase2 > radiusSquared) {
-            if (xAdjustedSquaredDistancePhase2 > radiusSquared) {
-              lowerXExtentBeforeDecrement = xExtentPhase2;
-              xExtentPhase2--;
-              yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 - (lowerXExtentBeforeDecrement + xExtentPhase2);
-              xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 - (xExtentPhase2 + xExtentPhase2);
+          while (lowerYAdjustedSquaredDistance > radiusSquared) {
+            if (lowerXAdjustedSquaredDistance > radiusSquared) {
+              lowerXExtentBeforeDecrement = lowerXExtent;
+              lowerXExtent--;
+              lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance - (lowerXExtentBeforeDecrement + lowerXExtent);
+              lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance - (lowerXExtent + lowerXExtent);
               continue;
             }
             break;
           }
-          spanLeftPhase3 = leftCornerCenterX - xExtentPhase2;
-          if (spanLeftPhase3 < clipLeft) {
-            spanLeftPhase3 = clipLeft;
+          lowerSpanLeft = leftCornerCenterX - lowerXExtent;
+          if (lowerSpanLeft < clipLeft) {
+            lowerSpanLeft = clipLeft;
           }
-          spanRightExclusiveOrInclusivePhase3 = leftCornerCenterX + horizontalCenterGap + xExtentPhase2;
-          if (spanRightExclusiveOrInclusivePhase3 > clipRight - 1) {
-            spanRightExclusiveOrInclusivePhase3 = clipRight - 1;
+          lowerSpanRightInclusive = leftCornerCenterX + horizontalCenterGap + lowerXExtent;
+          if (lowerSpanRightInclusive > clipRight - 1) {
+            lowerSpanRightInclusive = clipRight - 1;
           }
-          destinationIndexPhase3 = spanLeftPhase3 + rowY * stride;
-          for (spanXOrMiddleRowSkipPhase3 = spanLeftPhase3; spanXOrMiddleRowSkipPhase3 <= spanRightExclusiveOrInclusivePhase3; spanXOrMiddleRowSkipPhase3++) {
-            lowerDestinationIndexBeforeIncrement = destinationIndexPhase3;
-            destinationIndexPhase3++;
+          lowerDestinationIndex = lowerSpanLeft + rowY * stride;
+          for (lowerSpanX = lowerSpanLeft; lowerSpanX <= lowerSpanRightInclusive; lowerSpanX++) {
+            lowerDestinationIndexBeforeIncrement = lowerDestinationIndex;
+            lowerDestinationIndex++;
             framebuffer[lowerDestinationIndexBeforeIncrement] = color;
           }
           rowY++;
-          yAdjustedSquaredDistancePhase2 = yAdjustedSquaredDistancePhase2 + (yOffsetPhase3 + yOffsetPhase3);
-          lowerYOffsetBeforeIncrement = yOffsetPhase3;
-          yOffsetPhase3++;
-          xAdjustedSquaredDistancePhase2 = xAdjustedSquaredDistancePhase2 + (lowerYOffsetBeforeIncrement + yOffsetPhase3);
+          lowerYAdjustedSquaredDistance = lowerYAdjustedSquaredDistance + (lowerYOffset + lowerYOffset);
+          lowerYOffsetBeforeIncrement = lowerYOffset;
+          lowerYOffset++;
+          lowerXAdjustedSquaredDistance = lowerXAdjustedSquaredDistance + (lowerYOffsetBeforeIncrement + lowerYOffset);
         }
         return;
     }
@@ -1468,23 +1468,23 @@ final class SoftwareRasterizer {
         int[] redSumsSnapshot;
         int[] greenSumsSnapshot;
         int[] blueSumsSnapshot;
-        int initialWindowRowOrNegativeOutputCounterPhase2;
-        int columnIndexOrWindowEndCounterPhase2;
-        int columnIndexOrWindowEndCounterPhase3;
-        int columnIndexOrWindowEndCounterPhase4;
-        int columnIndexPhase2;
-        int columnIndexPhase3;
-        int channelSumAfterRemovalOrOutputRedPhase2;
-        int channelSumAfterRemovalOrOutputRedPhase3;
-        int outputGreenPhase2;
-        int outputGreenPhase3;
-        int outputBluePhase2;
-        int outputBluePhase3;
-        int columnIndexNestedPhase2;
-        int columnIndexPhase2NestedPhase2;
-        int columnIndexPhase2NestedPhase3;
-        int columnIndexPhase3NestedPhase2;
-        int channelSumAfterRemovalOrOutputRedPhase2NestedPhase2;
+        int negativeOutputRowCounter;
+        int initialOutputColumn;
+        int growingWindowEndCounter;
+        int fullWindowEndCounter;
+        int fullWindowLeavingColumn;
+        int shrinkingWindowLeavingColumn;
+        int fullWindowRedSumAfterRemoval;
+        int shrinkingWindowOutputRed;
+        int fullWindowOutputGreen;
+        int shrinkingWindowOutputGreen;
+        int fullWindowOutputBlue;
+        int shrinkingWindowOutputBlue;
+        int growingWindowOutputColumn;
+        int fullWindowEnteringColumn;
+        int fullWindowOutputColumn;
+        int shrinkingWindowOutputColumn;
+        int fullWindowOutputRed;
         int greenSumAfterRemoval;
         int blueSumAfterRemoval;
         if (blurColumnRedSums == null ||
@@ -1529,23 +1529,23 @@ final class SoftwareRasterizer {
           initialWindowRowOrNegativeOutputCounter++;
         }
         enteringPixelIndex = enteringPixelIndex + initialBottomWindowOvershoot * stride;
-        for (columnIndexOrWindowEndCounterPhase2 = 0; columnIndexOrWindowEndCounterPhase2 < regionWidth; columnIndexOrWindowEndCounterPhase2++) {
+        for (initialOutputColumn = 0; initialOutputColumn < regionWidth; initialOutputColumn++) {
           initialDestinationIndexBeforeIncrement = destinationIndex;
           destinationIndex++;
-          pixels[initialDestinationIndexBeforeIncrement] = (redSumsSnapshot[columnIndexOrWindowEndCounterPhase2] / windowSampleCount << 16) + (greenSumsSnapshot[columnIndexOrWindowEndCounterPhase2] / windowSampleCount << 8) + blueSumsSnapshot[columnIndexOrWindowEndCounterPhase2] / windowSampleCount;
+          pixels[initialDestinationIndexBeforeIncrement] = (redSumsSnapshot[initialOutputColumn] / windowSampleCount << 16) + (greenSumsSnapshot[initialOutputColumn] / windowSampleCount << 8) + blueSumsSnapshot[initialOutputColumn] / windowSampleCount;
         }
         destinationIndex = destinationIndex + rowSkip;
-        initialWindowRowOrNegativeOutputCounterPhase2 = 1 - regionHeight;
-        columnIndexOrWindowEndCounterPhase3 = 1 + radius - regionHeight - regionTop;
-        if (0 < columnIndexOrWindowEndCounterPhase3) {
-          columnIndexOrWindowEndCounterPhase3 = 0;
+        negativeOutputRowCounter = 1 - regionHeight;
+        growingWindowEndCounter = 1 + radius - regionHeight - regionTop;
+        if (0 < growingWindowEndCounter) {
+          growingWindowEndCounter = 0;
         }
         leavingPixelIndex = regionLeft + (regionTop - radius) * stride;
-        if (initialWindowRowOrNegativeOutputCounterPhase2 < columnIndexOrWindowEndCounterPhase3) {
-          leavingPixelIndex = leavingPixelIndex + (columnIndexOrWindowEndCounterPhase3 - initialWindowRowOrNegativeOutputCounterPhase2) * stride;
+        if (negativeOutputRowCounter < growingWindowEndCounter) {
+          leavingPixelIndex = leavingPixelIndex + (growingWindowEndCounter - negativeOutputRowCounter) * stride;
         }
-        while (initialWindowRowOrNegativeOutputCounterPhase2 < columnIndexOrWindowEndCounterPhase3) {
-          if (initialWindowRowOrNegativeOutputCounterPhase2 + regionTop + regionHeight + radius < clipBottom) {
+        while (negativeOutputRowCounter < growingWindowEndCounter) {
+          if (negativeOutputRowCounter + regionTop + regionHeight + radius < clipBottom) {
             for (columnIndex = 0; columnIndex < regionWidth; columnIndex++) {
               scratchPixel = pixels[enteringPixelIndex++];
               redSumsForUpdates[columnIndex] = redSumsForUpdates[columnIndex] + (scratchPixel >> 16 & 255);
@@ -1557,45 +1557,45 @@ final class SoftwareRasterizer {
           } else {
             enteringPixelIndex = enteringPixelIndex + stride;
           }
-          for (columnIndexNestedPhase2 = 0; columnIndexNestedPhase2 < regionWidth; columnIndexNestedPhase2++) {
-            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
-            outputGreen = greenSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
-            outputBlue = blueSumsSnapshot[columnIndexNestedPhase2] / windowSampleCount;
+          for (growingWindowOutputColumn = 0; growingWindowOutputColumn < regionWidth; growingWindowOutputColumn++) {
+            channelSumAfterRemovalOrOutputRed = redSumsSnapshot[growingWindowOutputColumn] / windowSampleCount;
+            outputGreen = greenSumsSnapshot[growingWindowOutputColumn] / windowSampleCount;
+            outputBlue = blueSumsSnapshot[growingWindowOutputColumn] / windowSampleCount;
             growingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
             pixels[growingDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRed << 16) + (outputGreen << 8) + outputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          initialWindowRowOrNegativeOutputCounterPhase2++;
+          negativeOutputRowCounter++;
         }
-        columnIndexOrWindowEndCounterPhase4 = framebufferHeight - regionTop - regionHeight - radius;
-        if (0 < columnIndexOrWindowEndCounterPhase4) {
-          columnIndexOrWindowEndCounterPhase4 = 0;
+        fullWindowEndCounter = framebufferHeight - regionTop - regionHeight - radius;
+        if (0 < fullWindowEndCounter) {
+          fullWindowEndCounter = 0;
         }
-        while (initialWindowRowOrNegativeOutputCounterPhase2 < columnIndexOrWindowEndCounterPhase4) {
-          for (columnIndexPhase2 = 0; columnIndexPhase2 < regionWidth; columnIndexPhase2++) {
+        while (negativeOutputRowCounter < fullWindowEndCounter) {
+          for (fullWindowLeavingColumn = 0; fullWindowLeavingColumn < regionWidth; fullWindowLeavingColumn++) {
             scratchPixel = pixels[leavingPixelIndex++];
-            channelSumAfterRemovalOrOutputRedPhase2 = redSumsSnapshot[columnIndexPhase2] - (scratchPixel >> 16 & 255);
+            fullWindowRedSumAfterRemoval = redSumsSnapshot[fullWindowLeavingColumn] - (scratchPixel >> 16 & 255);
             redSumsForClampedStore = redSumsForUpdates;
-            redColumnForClampedStore = columnIndexPhase2;
-            if (channelSumAfterRemovalOrOutputRedPhase2 >= 0) {
-              nonnegativeRedSum = channelSumAfterRemovalOrOutputRedPhase2;
+            redColumnForClampedStore = fullWindowLeavingColumn;
+            if (fullWindowRedSumAfterRemoval >= 0) {
+              nonnegativeRedSum = fullWindowRedSumAfterRemoval;
             } else {
               nonnegativeRedSum = 0;
             }
             redSumsForClampedStore[redColumnForClampedStore] = nonnegativeRedSum;
-            greenSumAfterRemoval = greenSumsSnapshot[columnIndexPhase2] - (scratchPixel >> 8 & 255);
+            greenSumAfterRemoval = greenSumsSnapshot[fullWindowLeavingColumn] - (scratchPixel >> 8 & 255);
             greenSumsForClampedStore = greenSumsForUpdates;
-            greenColumnForClampedStore = columnIndexPhase2;
+            greenColumnForClampedStore = fullWindowLeavingColumn;
             if (greenSumAfterRemoval >= 0) {
               nonnegativeGreenSum = greenSumAfterRemoval;
             } else {
               nonnegativeGreenSum = 0;
             }
             greenSumsForClampedStore[greenColumnForClampedStore] = nonnegativeGreenSum;
-            blueSumAfterRemoval = blueSumsSnapshot[columnIndexPhase2] - (scratchPixel & 255);
+            blueSumAfterRemoval = blueSumsSnapshot[fullWindowLeavingColumn] - (scratchPixel & 255);
             blueSumsForClampedStore = blueSumsForUpdates;
-            blueColumnForClampedStore = columnIndexPhase2;
+            blueColumnForClampedStore = fullWindowLeavingColumn;
             if (blueSumAfterRemoval >= 0) {
               nonnegativeBlueSum = blueSumAfterRemoval;
             } else {
@@ -1604,73 +1604,73 @@ final class SoftwareRasterizer {
             blueSumsForClampedStore[blueColumnForClampedStore] = nonnegativeBlueSum;
           }
           leavingPixelIndex = leavingPixelIndex + rowSkip;
-          for (columnIndexPhase2NestedPhase2 = 0; columnIndexPhase2NestedPhase2 < regionWidth; columnIndexPhase2NestedPhase2++) {
+          for (fullWindowEnteringColumn = 0; fullWindowEnteringColumn < regionWidth; fullWindowEnteringColumn++) {
             scratchPixel = pixels[enteringPixelIndex++];
-            redSumsForUpdates[columnIndexPhase2NestedPhase2] = redSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel >> 16 & 255);
-            greenSumsForUpdates[columnIndexPhase2NestedPhase2] = greenSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel >> 8 & 255);
-            blueSumsForUpdates[columnIndexPhase2NestedPhase2] = blueSumsForUpdates[columnIndexPhase2NestedPhase2] + (scratchPixel & 255);
+            redSumsForUpdates[fullWindowEnteringColumn] = redSumsForUpdates[fullWindowEnteringColumn] + (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[fullWindowEnteringColumn] = greenSumsForUpdates[fullWindowEnteringColumn] + (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[fullWindowEnteringColumn] = blueSumsForUpdates[fullWindowEnteringColumn] + (scratchPixel & 255);
           }
           enteringPixelIndex = enteringPixelIndex + rowSkip;
-          for (columnIndexPhase2NestedPhase3 = 0; columnIndexPhase2NestedPhase3 < regionWidth; columnIndexPhase2NestedPhase3++) {
-            channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 = redSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
-            outputGreenPhase2 = greenSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
-            outputBluePhase2 = blueSumsSnapshot[columnIndexPhase2NestedPhase3] * reciprocalWindowScaleQ14 >> 14;
-            if (channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 > 255) {
-              channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 = 255;
+          for (fullWindowOutputColumn = 0; fullWindowOutputColumn < regionWidth; fullWindowOutputColumn++) {
+            fullWindowOutputRed = redSumsSnapshot[fullWindowOutputColumn] * reciprocalWindowScaleQ14 >> 14;
+            fullWindowOutputGreen = greenSumsSnapshot[fullWindowOutputColumn] * reciprocalWindowScaleQ14 >> 14;
+            fullWindowOutputBlue = blueSumsSnapshot[fullWindowOutputColumn] * reciprocalWindowScaleQ14 >> 14;
+            if (fullWindowOutputRed > 255) {
+              fullWindowOutputRed = 255;
             }
-            if (outputGreenPhase2 > 255) {
-              outputGreenPhase2 = 255;
+            if (fullWindowOutputGreen > 255) {
+              fullWindowOutputGreen = 255;
             }
-            if (outputBluePhase2 > 255) {
-              outputBluePhase2 = 255;
+            if (fullWindowOutputBlue > 255) {
+              fullWindowOutputBlue = 255;
             }
             fullWindowDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[fullWindowDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRedPhase2NestedPhase2 << 16) + (outputGreenPhase2 << 8) + outputBluePhase2;
+            pixels[fullWindowDestinationIndexBeforeIncrement] = (fullWindowOutputRed << 16) + (fullWindowOutputGreen << 8) + fullWindowOutputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          initialWindowRowOrNegativeOutputCounterPhase2++;
+          negativeOutputRowCounter++;
         }
-        while (initialWindowRowOrNegativeOutputCounterPhase2 < 0) {
-          for (columnIndexPhase3 = 0; columnIndexPhase3 < regionWidth; columnIndexPhase3++) {
+        while (negativeOutputRowCounter < 0) {
+          for (shrinkingWindowLeavingColumn = 0; shrinkingWindowLeavingColumn < regionWidth; shrinkingWindowLeavingColumn++) {
             scratchPixel = pixels[leavingPixelIndex++];
-            redSumsForUpdates[columnIndexPhase3] = redSumsForUpdates[columnIndexPhase3] - (scratchPixel >> 16 & 255);
-            greenSumsForUpdates[columnIndexPhase3] = greenSumsForUpdates[columnIndexPhase3] - (scratchPixel >> 8 & 255);
-            blueSumsForUpdates[columnIndexPhase3] = blueSumsForUpdates[columnIndexPhase3] - (scratchPixel & 255);
+            redSumsForUpdates[shrinkingWindowLeavingColumn] = redSumsForUpdates[shrinkingWindowLeavingColumn] - (scratchPixel >> 16 & 255);
+            greenSumsForUpdates[shrinkingWindowLeavingColumn] = greenSumsForUpdates[shrinkingWindowLeavingColumn] - (scratchPixel >> 8 & 255);
+            blueSumsForUpdates[shrinkingWindowLeavingColumn] = blueSumsForUpdates[shrinkingWindowLeavingColumn] - (scratchPixel & 255);
           }
           leavingPixelIndex = leavingPixelIndex + rowSkip;
           windowSampleCount--;
-          for (columnIndexPhase3NestedPhase2 = 0; columnIndexPhase3NestedPhase2 < regionWidth; columnIndexPhase3NestedPhase2++) {
-            channelSumAfterRemovalOrOutputRedPhase3 = redSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
-            outputGreenPhase3 = greenSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
-            outputBluePhase3 = blueSumsSnapshot[columnIndexPhase3NestedPhase2] / windowSampleCount;
-            if (channelSumAfterRemovalOrOutputRedPhase3 >= 0) {
-              if (channelSumAfterRemovalOrOutputRedPhase3 > 255) {
-                channelSumAfterRemovalOrOutputRedPhase3 = 255;
+          for (shrinkingWindowOutputColumn = 0; shrinkingWindowOutputColumn < regionWidth; shrinkingWindowOutputColumn++) {
+            shrinkingWindowOutputRed = redSumsSnapshot[shrinkingWindowOutputColumn] / windowSampleCount;
+            shrinkingWindowOutputGreen = greenSumsSnapshot[shrinkingWindowOutputColumn] / windowSampleCount;
+            shrinkingWindowOutputBlue = blueSumsSnapshot[shrinkingWindowOutputColumn] / windowSampleCount;
+            if (shrinkingWindowOutputRed >= 0) {
+              if (shrinkingWindowOutputRed > 255) {
+                shrinkingWindowOutputRed = 255;
               }
             } else {
-              channelSumAfterRemovalOrOutputRedPhase3 = 0;
+              shrinkingWindowOutputRed = 0;
             }
-            if (outputGreenPhase3 >= 0) {
-              if (outputGreenPhase3 > 255) {
-                outputGreenPhase3 = 255;
+            if (shrinkingWindowOutputGreen >= 0) {
+              if (shrinkingWindowOutputGreen > 255) {
+                shrinkingWindowOutputGreen = 255;
               }
             } else {
-              outputGreenPhase3 = 0;
+              shrinkingWindowOutputGreen = 0;
             }
-            if (outputBluePhase3 >= 0) {
-              if (outputBluePhase3 > 255) {
-                outputBluePhase3 = 255;
+            if (shrinkingWindowOutputBlue >= 0) {
+              if (shrinkingWindowOutputBlue > 255) {
+                shrinkingWindowOutputBlue = 255;
               }
             } else {
-              outputBluePhase3 = 0;
+              shrinkingWindowOutputBlue = 0;
             }
             shrinkingDestinationIndexBeforeIncrement = destinationIndex;
             destinationIndex++;
-            pixels[shrinkingDestinationIndexBeforeIncrement] = (channelSumAfterRemovalOrOutputRedPhase3 << 16) + (outputGreenPhase3 << 8) + outputBluePhase3;
+            pixels[shrinkingDestinationIndexBeforeIncrement] = (shrinkingWindowOutputRed << 16) + (shrinkingWindowOutputGreen << 8) + shrinkingWindowOutputBlue;
           }
           destinationIndex = destinationIndex + rowSkip;
-          initialWindowRowOrNegativeOutputCounterPhase2++;
+          negativeOutputRowCounter++;
         }
     }
 
