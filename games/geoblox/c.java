@@ -605,7 +605,8 @@ final class c extends ka {
                   return;
                 }
               }
-              L37: {
+              {
+                boolean decompiledFrameRemainder0 = true;
                 var5Lifetime1Lifetime2 = this.field_F;
                 if (!this.field_v) {
                   var5Lifetime1Lifetime2 = 640 - var5Lifetime1Lifetime2;
@@ -619,20 +620,20 @@ final class c extends ka {
                   super.a(-28750);
                   vb.e(0, 0, 640, 480);
                   qj.field_c.b((qj.field_c.field_o >> 1) + var5Lifetime1Lifetime2, 240, -49150, 4096);
-                  if (var12 == 0) {
-                    break L37;
-                  }
+                  decompiledFrameRemainder0 = !(var12 == 0);
                 }
-                vb.e(var5Lifetime1Lifetime2, 0, 640, 480);
-                this.b(-17, this.field_n);
-                this.field_S = true;
-                super.a(-28750);
-                this.field_S = false;
-                vb.e(0, 0, var5Lifetime1Lifetime2, 480);
-                this.b(-48, this.field_q);
-                super.a(-28750);
-                vb.e(0, 0, 640, 480);
-                qj.field_c.b(-(qj.field_c.field_o >> 1) + var5Lifetime1Lifetime2, 240, -16383, 4096);
+                if (decompiledFrameRemainder0) {
+                  vb.e(var5Lifetime1Lifetime2, 0, 640, 480);
+                  this.b(-17, this.field_n);
+                  this.field_S = true;
+                  super.a(-28750);
+                  this.field_S = false;
+                  vb.e(0, 0, var5Lifetime1Lifetime2, 480);
+                  this.b(-48, this.field_q);
+                  super.a(-28750);
+                  vb.e(0, 0, 640, 480);
+                  qj.field_c.b(-(qj.field_c.field_o >> 1) + var5Lifetime1Lifetime2, 240, -16383, 4096);
+                }
               }
               if (var12 == 0) {
                 return;

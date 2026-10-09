@@ -1206,43 +1206,44 @@ final class gh {
 
     private final void b(int param0) {
         int var3;
-        L0: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           var3 = Geoblox.field_C;
           if (this.field_t == 2) {
             this.field_p = this.field_p + 1;
             this.field_C = true;
             this.field_t = 0;
-            if (var3 == 0) {
-              break L0;
-            }
+            decompiledFrameRemainder0 = !(var3 == 0);
           }
-          if (1 == this.field_t) {
-            if (this.field_p == 3 ||
-                  this.field_p == 5) {
-              this.c(7000);
-            }
-            if (this.field_d) {
-              this.field_d = false;
-              this.field_t = 2;
-            }
-            if (this.field_p == 0 &&
-                this.field_U > 450) {
-              this.field_t = 2;
-              if (var3 == 0) {
-                break L0;
+          if (decompiledFrameRemainder0) {
+            if (1 == this.field_t) {
+              if (this.field_p == 3 ||
+                    this.field_p == 5) {
+                this.c(7000);
               }
-            }
-            if (this.field_p != 1 ||
-                  !(0 < dd.field_D - this.field_U)) {
-              if (this.field_p == 2 && !(dk.field_b - this.field_U <= 0)) {
+              if (this.field_d) {
+                this.field_d = false;
                 this.field_t = 2;
-                if (var3 != 0) {
+              }
+              if (this.field_p == 0 &&
+                  this.field_U > 450) {
+                this.field_t = 2;
+                decompiledFrameRemainder0 = !(var3 == 0);
+              }
+              if (decompiledFrameRemainder0) {
+              if (this.field_p != 1 ||
+                      !(0 < dd.field_D - this.field_U)) {
+                  if (this.field_p == 2 && !(dk.field_b - this.field_U <= 0)) {
+                    this.field_t = 2;
+                    if (var3 != 0) {
+                      this.field_t = 2;
+                    }
+                  }
+                } else {
                   this.field_t = 2;
                 }
               }
-            } else {
-              this.field_t = 2;
-            }
+          }
           }
         }
         if (param0 < 59) {
