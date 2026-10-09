@@ -43,9 +43,9 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     final void draw(int x, int y) {
-        int clippedEdgePixels = 0;
-        int clippedEdgePixelsLiteralPhase1;
-        int clippedEdgePixelsLiteralPhase2;
+        int topClipPixels = 0;
+        int leftClipPixels;
+        int rightClipPixels;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -55,29 +55,29 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - clippedEdgePixels;
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - topClipPixels;
             y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
-            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+            sourceIndex = sourceIndex + topClipPixels * drawWidth;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - leftClipPixels;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
-            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
+            sourceIndex = sourceIndex + leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceRowSkip = sourceRowSkip + leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
+            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - rightClipPixels;
+            sourceRowSkip = sourceRowSkip + rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -89,9 +89,9 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     final void drawAlpha(int x, int y, int alpha256) {
-        int clippedEdgePixels = 0;
-        int clippedEdgePixelsLiteralPhase1;
-        int clippedEdgePixelsLiteralPhase2;
+        int topClipPixels = 0;
+        int leftClipPixels;
+        int rightClipPixels;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -101,29 +101,29 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - clippedEdgePixels;
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - topClipPixels;
             y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
-            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+            sourceIndex = sourceIndex + topClipPixels * drawWidth;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - leftClipPixels;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
-            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
+            sourceIndex = sourceIndex + leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceRowSkip = sourceRowSkip + leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
+            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - rightClipPixels;
+            sourceRowSkip = sourceRowSkip + rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -184,9 +184,9 @@ final class IndexedSprite extends IndexedSpriteState {
     }
 
     final void drawRunEncoded(int x, int y) {
-        int clippedEdgePixels = 0;
-        int clippedEdgePixelsLiteralPhase1;
-        int clippedEdgePixelsLiteralPhase2;
+        int topClipPixels = 0;
+        int leftClipPixels;
+        int rightClipPixels;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -196,29 +196,29 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            clippedEdgePixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - clippedEdgePixels;
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            drawHeight = drawHeight - topClipPixels;
             y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + clippedEdgePixels * drawWidth;
-            destinationIndex = destinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+            sourceIndex = sourceIndex + topClipPixels * drawWidth;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - leftClipPixels;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
-            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
+            sourceIndex = sourceIndex + leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceRowSkip = sourceRowSkip + leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
+            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - rightClipPixels;
+            sourceRowSkip = sourceRowSkip + rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {

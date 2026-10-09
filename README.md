@@ -17,14 +17,22 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/c224cf9f8b9ad082ee6cfa6a41e28678fa8d359b/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/dda83356dbea82ae699a920af7772d7f780c5917/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,040 bindings,
 preserving 388 override relationships.
 
-## Current gameplay and screen phase names (pass 233)
+## Current renderer names (pass 234)
+
+277 renderer locals now distinguish sampling directions, clipping, trim steps
+and triangle span values. All 84 LiteralPhase names in the four renderer owners
+are replaced. The single generated export compiles, reproduces and reverses
+exactly; existing fixed-bytecode rendering traces pass. See the reading guide
+for direction names and the workflow for verification commands and limits.
+
+## Previous gameplay and screen phase names (pass 233)
 
 54 local names now distinguish entity motion, match sorting/IDs/popups,
 menu tile layers, fullscreen controls and tutorial geometry/text. The generated

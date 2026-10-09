@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/c224cf9f8b9ad082ee6cfa6a41e28678fa8d359b/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/dda83356dbea82ae699a920af7772d7f780c5917/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 233)
+## Current readability (pass 234)
 
 The export has 20,044 guarded names and 121,801 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,37 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current gameplay and screen phase names (pass 233)
+## Current renderer names (pass 234)
+
+The nearest-rotation locals describe which way source coordinates move across
+one destination scanline. Shared row-start coordinates retain their separate
+names. RGB and ARGB use the same directional vocabulary; ARGB also identifies
+the matching destination pixel and stored/inverse alpha values.
+
+| Direction prefix | inverseCosStep | inverseSinStep |
+|---|---|---|
+| fixedXFixedY | zero | zero |
+| fixedXForwardY | zero | positive |
+| fixedXReverseY | zero | negative |
+| forwardXFixedY | positive | zero |
+| forwardXForwardY | positive | positive |
+| forwardXReverseY | positive | negative |
+| reverseXFixedY | negative | zero |
+| reverseXForwardY | negative | positive |
+| reverseXReverseY | negative | negative |
+
+`SkipPixels` means a leading destination skip; `StopCounter` means the negative
+loop limit at the opposite source edge. `ExcessThenSkipPixels` retains the two
+successive units of a reused local. Scaled draws separate trim steps from the
+framebuffer index, and RGB triangle lower spans identify row base, left/width
+and Q16 channel increments. No arithmetic or pixel behavior is simplified.
+
+277 names replace 1,691 bound occurrences in four files. All 84 LiteralPhase
+names in these owners are retired; 267 remain elsewhere. See the workflow for
+all-file compile/reproduction/reversal and the ten unchanged rendering trace
+checks. Five large framed methods and 41 unknown field purposes still remain.
+
+## Previous gameplay and screen phase names (pass 233)
 
 54 guarded local names now describe their source-supported roles in
 EntityMotionSupport, MatchScoringSupport and GameScreen. Motion distinguishes

@@ -562,13 +562,13 @@ abstract class SpriteState extends DualLinkNode {
         int spanGreenStepOrBlueStepOrBottomBlueQ16 = 0;
         int spanBlueStepQ16 = 0;
         int controlFlagSnapshot = 0;
-        int middleVertexOnRightLiteralPhase1;
-        int edgeSegmentRowsThenRowBaseLiteralPhase1;
-        int edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1;
-        int spanStartOrWidthOrBottomXQ16LiteralPhase1;
-        int spanWidthOrRedStepOrBottomRedQ16LiteralPhase1;
-        int spanRedStepOrGreenStepOrBottomGreenQ16LiteralPhase1;
-        int spanGreenStepOrBlueStepOrBottomBlueQ16LiteralPhase1;
+        int lowerSegmentMiddleVertexOnRight;
+        int lowerSegmentRowBase;
+        int lowerSpanLeft;
+        int lowerSpanWidth;
+        int lowerSpanRedStepQ16;
+        int lowerSpanGreenStepQ16;
+        int lowerSpanBlueStepQ16;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
@@ -682,7 +682,7 @@ abstract class SpriteState extends DualLinkNode {
                 leftXStepQ16 = rightXStepQ16;
                 rightXStepQ16 = edgeSwapOrRowBaseOrLowerRowsThenLeftX;
                 rightGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                middleVertexOnRightLiteralPhase1 = 1;
+                lowerSegmentMiddleVertexOnRight = 1;
                 rightBlueStepQ16 = (-topBlue + middleBlue << 16) / edgeSegmentRowsThenRowBase;
                 rightRedStepQ16 = (-topRed + middleRed << 16) / edgeSegmentRowsThenRowBase;
                 if (controlFlagSnapshot != 0) {
@@ -692,7 +692,7 @@ abstract class SpriteState extends DualLinkNode {
                   rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
                   leftBlueStepQ16 = (middleBlue - topBlue << 16) / edgeSegmentRowsThenRowBase;
                   leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                  middleVertexOnRightLiteralPhase1 = 0;
+                  lowerSegmentMiddleVertexOnRight = 0;
                 }
               } else {
                 rightBlueStepQ16 = (-topBlue + bottomBlue << 16) / topToBottomRows;
@@ -701,7 +701,7 @@ abstract class SpriteState extends DualLinkNode {
                 rightRedStepQ16 = (-topRed + bottomRed << 16) / topToBottomRows;
                 leftBlueStepQ16 = (middleBlue - topBlue << 16) / edgeSegmentRowsThenRowBase;
                 leftGreenStepQ16 = (-topGreen + middleGreen << 16) / edgeSegmentRowsThenRowBase;
-                middleVertexOnRightLiteralPhase1 = 0;
+                lowerSegmentMiddleVertexOnRight = 0;
               }
               {
                 boolean upperSegmentCompletionRemainderEnabled = true;
@@ -800,13 +800,13 @@ abstract class SpriteState extends DualLinkNode {
                 spanWidthOrRedStepOrBottomRedQ16 = bottomRed << 16;
                 spanRedStepOrGreenStepOrBottomGreenQ16 = bottomGreen << 16;
                 spanGreenStepOrBlueStepOrBottomBlueQ16 = bottomBlue << 16;
-                if (middleVertexOnRightLiteralPhase1 == 0) {
+                if (lowerSegmentMiddleVertexOnRight == 0) {
                   leftXQ16 = middleX << 16;
                   leftBlueQ16 = middleBlue << 16;
                   leftRedQ16 = middleRed << 16;
                   leftGreenQ16 = middleGreen << 16;
                 }
-                if (middleVertexOnRightLiteralPhase1 != 0 || controlFlagSnapshot != 0) {
+                if (lowerSegmentMiddleVertexOnRight != 0 || controlFlagSnapshot != 0) {
                   rightRedQ16 = middleRed << 16;
                   rightXQ16 = middleX << 16;
                   rightGreenQ16 = middleGreen << 16;
@@ -834,30 +834,30 @@ abstract class SpriteState extends DualLinkNode {
               leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16 * topY;
               topY = 0;
             }
-            edgeSegmentRowsThenRowBaseLiteralPhase1 = TriangleRasterState.rowBaseOffsets[topY];
+            lowerSegmentRowBase = TriangleRasterState.rowBaseOffsets[topY];
             while (bottomY > topY) {
-              edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 = leftXQ16 >> 16;
+              lowerSpanLeft = leftXQ16 >> 16;
               if (controlFlagSnapshot != 0) {
                 return;
               }
-              if (edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 < TriangleRasterState.clipWidth) {
-                spanStartOrWidthOrBottomXQ16LiteralPhase1 = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
-                if (spanStartOrWidthOrBottomXQ16LiteralPhase1 != 0) {
-                  spanWidthOrRedStepOrBottomRedQ16LiteralPhase1 = (rightRedQ16 - leftRedQ16) / spanStartOrWidthOrBottomXQ16LiteralPhase1;
-                  spanRedStepOrGreenStepOrBottomGreenQ16LiteralPhase1 = (rightGreenQ16 - leftGreenQ16) / spanStartOrWidthOrBottomXQ16LiteralPhase1;
-                  spanGreenStepOrBlueStepOrBottomBlueQ16LiteralPhase1 = (-leftBlueQ16 + rightBlueQ16) / spanStartOrWidthOrBottomXQ16LiteralPhase1;
-                  if (spanStartOrWidthOrBottomXQ16LiteralPhase1 + edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 >= TriangleRasterState.clipWidth) {
-                    spanStartOrWidthOrBottomXQ16LiteralPhase1 = TriangleRasterState.clipWidth - edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 - 1;
+              if (lowerSpanLeft < TriangleRasterState.clipWidth) {
+                lowerSpanWidth = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
+                if (lowerSpanWidth != 0) {
+                  lowerSpanRedStepQ16 = (rightRedQ16 - leftRedQ16) / lowerSpanWidth;
+                  lowerSpanGreenStepQ16 = (rightGreenQ16 - leftGreenQ16) / lowerSpanWidth;
+                  lowerSpanBlueStepQ16 = (-leftBlueQ16 + rightBlueQ16) / lowerSpanWidth;
+                  if (lowerSpanWidth + lowerSpanLeft >= TriangleRasterState.clipWidth) {
+                    lowerSpanWidth = TriangleRasterState.clipWidth - lowerSpanLeft - 1;
                   }
-                  if (edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 < 0) {
-                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBaseLiteralPhase1, spanWidthOrRedStepOrBottomRedQ16LiteralPhase1, 33423689, leftRedQ16 - spanWidthOrRedStepOrBottomRedQ16LiteralPhase1 * edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1, spanGreenStepOrBlueStepOrBottomBlueQ16LiteralPhase1, leftGreenQ16 - edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 * spanRedStepOrGreenStepOrBottomGreenQ16LiteralPhase1, spanRedStepOrGreenStepOrBottomGreenQ16LiteralPhase1, spanStartOrWidthOrBottomXQ16LiteralPhase1 + edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1, -(edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 * spanGreenStepOrBlueStepOrBottomBlueQ16LiteralPhase1) + leftBlueQ16, destinationPixels);
+                  if (lowerSpanLeft < 0) {
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(lowerSegmentRowBase, lowerSpanRedStepQ16, 33423689, leftRedQ16 - lowerSpanRedStepQ16 * lowerSpanLeft, lowerSpanBlueStepQ16, leftGreenQ16 - lowerSpanLeft * lowerSpanGreenStepQ16, lowerSpanGreenStepQ16, lowerSpanWidth + lowerSpanLeft, -(lowerSpanLeft * lowerSpanBlueStepQ16) + leftBlueQ16, destinationPixels);
                   } else {
-                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 + edgeSegmentRowsThenRowBaseLiteralPhase1, spanWidthOrRedStepOrBottomRedQ16LiteralPhase1, 33423689, leftRedQ16, spanGreenStepOrBlueStepOrBottomBlueQ16LiteralPhase1, leftGreenQ16, spanRedStepOrGreenStepOrBottomGreenQ16LiteralPhase1, spanStartOrWidthOrBottomXQ16LiteralPhase1, leftBlueQ16, destinationPixels);
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(lowerSpanLeft + lowerSegmentRowBase, lowerSpanRedStepQ16, 33423689, leftRedQ16, lowerSpanBlueStepQ16, leftGreenQ16, lowerSpanGreenStepQ16, lowerSpanWidth, leftBlueQ16, destinationPixels);
                   }
                 } else {
-                  if (edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1 >= 0 &&
-                      TriangleRasterState.clipWidth > edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1) {
-                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(edgeSegmentRowsThenRowBaseLiteralPhase1 + edgeSwapOrRowBaseOrLowerRowsThenLeftXLiteralPhase1, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, spanStartOrWidthOrBottomXQ16LiteralPhase1, leftBlueQ16, destinationPixels);
+                  if (lowerSpanLeft >= 0 &&
+                      TriangleRasterState.clipWidth > lowerSpanLeft) {
+                    MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(lowerSegmentRowBase + lowerSpanLeft, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, lowerSpanWidth, leftBlueQ16, destinationPixels);
                   }
                 }
               }
@@ -867,7 +867,7 @@ abstract class SpriteState extends DualLinkNode {
               }
               rightXQ16 = rightXQ16 + rightXStepQ16;
               rightRedQ16 = rightRedQ16 + rightRedStepQ16;
-              edgeSegmentRowsThenRowBaseLiteralPhase1 = edgeSegmentRowsThenRowBaseLiteralPhase1 + SoftwareRasterizer.stride;
+              lowerSegmentRowBase = lowerSegmentRowBase + SoftwareRasterizer.stride;
               leftGreenQ16 = leftGreenQ16 + leftGreenStepQ16;
               rightGreenQ16 = rightGreenQ16 + rightGreenStepQ16;
               leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16;
