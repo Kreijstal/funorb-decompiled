@@ -103,6 +103,7 @@ final class kc {
         ja var5_ref_jaLifetime1;
         ja var7Lifetime1;
         ja var8Lifetime1;
+        ja var7Lifetime2;
         var9 = Geoblox.field_C;
         try {
           fa.field_a = false;
@@ -216,10 +217,10 @@ final class kc {
                           var6_int++;
                         }
                         var6 = var5_ref_jaLifetime1;
-                        var7 = var5_ref_jaLifetime1;
+                        var7Lifetime2 = var5_ref_jaLifetime1;
                         var5_ref_jaLifetime1.field_L = 0;
                         var6.field_N = 0;
-                        var7.field_m = 0;
+                        var7Lifetime2.field_m = 0;
                         var5_ref_jaLifetime1 = (ja) ((Object) var13.a(true));
                       }
                       break;
