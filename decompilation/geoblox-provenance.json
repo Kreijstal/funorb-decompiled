@@ -3283,11 +3283,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "759d063ee387a7e706853c76217fd8aac4e4b99c",
+    "commit": "0a7d84390d28948e6b526c5b64ee236e20872298",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "4f2d1e1ee49453fad07b32ffddbdf94f43a2244fc3f0ad2551df71423aecdc89"
+      "sha256": "0cccb494a8eed431c8e120dc76382fa977b56b138909b75381ba105197a7abc9"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3297,15 +3297,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "50b77b4d000f1afc59fbbc27f2684de440e5f54926421fdb304d01cc0b1ec872",
+    "outputTreeSha256": "7d2fff178f4f54dd08f4a8ca7ade579c42d939b8a823ac77be00846ae96c5cec",
     "files": 303,
-    "rules": 18655,
-    "identifierEdits": 119361,
+    "rules": 18784,
+    "identifierEdits": 119805,
     "bindingsCompared": 136992,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 119814,
+    "totalEdits": 120258,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3327,7 +3327,7 @@
       "remainingOpaqueFields": 41
     },
     "structuralPass": 218,
-    "semanticPass": 220
+    "semanticPass": 221
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -19540,5 +19540,689 @@
       }
     ],
     "namingWorkflowCommit": "759d063ee387a7e706853c76217fd8aac4e4b99c"
+  },
+  "dialogValidationLocalNames": {
+    "version": 221,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 129,
+    "namedLocalDeclarationsAdded": 123,
+    "namedParameterDeclarationsAdded": 6,
+    "changedReadableJavaFiles": 5,
+    "previousCompleteRules": 18655,
+    "unaffectedCompleteRulesPreserved": 18655,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+    "sourceCommit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
+    "javaToolsCommit": "433ff77e11140811703f28a56e22efa35fc64e07",
+    "sourceArchiveSha256": "f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1"
+    },
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 265,
+    "rawCompilerLocalsAfter": 150,
+    "identifierEditsAdded": 444,
+    "readableIdentifierEdits": 119805,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 120258,
+    "stableDictionaryIdentities": 19366,
+    "bindingsCompared": 136992,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name every remaining opaque local/parameter declaration in MessageDialogContent, ValidationIconWidget, ValidationMessageWidget, LabeledChildWidget and MatchingTextValidator. Trace message/button capacity and identity/action dispatch, callback argument roles from their actual interface/caller, validation state and distinct spinner/render snapshots, text writing and return aliases, label/child geometry, hover-state restoration and mismatch/provider return values. Retain repeated provider queries across rendering, all unused aliases, invalid guard calls, nullable errors, partial effects and the original exceptional hover behavior. Every previous complete rule/dictionary identity and raw/compiler/environment/native pin stays unchanged. No new actual UI/render/audio/network/browser/device or full-game equivalence.",
+    "symbols": [
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#0",
+        "originalName": "stackIn_4_1",
+        "to": "labelPlacementSnapshot"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#1",
+        "originalName": "stackIn_10_0",
+        "to": "selectedChildOffsetX"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#10",
+        "originalName": "var12_int",
+        "to": "labelTextWidth"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#11",
+        "originalName": "var12",
+        "to": "constructionFailureForContext"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#12",
+        "originalName": "var13",
+        "to": "resolvedContainerHeight"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#13",
+        "originalName": "var14",
+        "to": "childOffsetX"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#14",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtConstructionFailure"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#2",
+        "originalName": "stackIn_14_0",
+        "to": "constructionFailureBeforeDescriptions"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#3",
+        "originalName": "stackIn_14_1",
+        "to": "constructionMessagePrefix"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#4",
+        "originalName": "stackIn_15_2",
+        "to": "childDescription"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#5",
+        "originalName": "stackIn_17_1",
+        "to": "constructionMessageBeforeFont"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#6",
+        "originalName": "stackIn_18_2",
+        "to": "fontDescription"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#7",
+        "originalName": "stackIn_20_1",
+        "to": "constructionMessageBeforeText"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#8",
+        "originalName": "stackIn_21_2",
+        "to": "labelTextDescription"
+      },
+      {
+        "symbol": "L:hd.<init>(IIIILel;ZIILm;ILjava/lang/String;)V#9",
+        "originalName": "decompiledCaughtException",
+        "to": "constructionFailure"
+      },
+      {
+        "symbol": "L:hd.a(IIBI)V#0",
+        "originalName": "var5",
+        "to": "widgetScreenX"
+      },
+      {
+        "symbol": "L:hd.a(IIBI)V#1",
+        "originalName": "var6",
+        "to": "widgetScreenY"
+      },
+      {
+        "symbol": "L:hd.a(IIBI)V#2",
+        "originalName": "var7",
+        "to": "renderGuardQuotient"
+      },
+      {
+        "symbol": "L:hd.a(IIBI)V#3",
+        "originalName": "var8",
+        "to": "labelOffsetX"
+      },
+      {
+        "symbol": "L:hd.c(B)Ljava/lang/String;#0",
+        "originalName": "var2",
+        "to": "previousChildHoverFlag"
+      },
+      {
+        "symbol": "L:hd.c(B)Ljava/lang/String;#1",
+        "originalName": "var3",
+        "to": "childHoverText"
+      },
+      {
+        "symbol": "L:n.<init>(Ldj;Ldj;)V#0",
+        "originalName": "runtimeException",
+        "to": "validatorInitializationFailure"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#1",
+        "originalName": "var3_ref",
+        "to": "stateLookupFailureForContext"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#2",
+        "originalName": "stackIn_2_0",
+        "to": "invalidGuardNullState"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#3",
+        "originalName": "stackIn_9_0",
+        "to": "invalidReferenceState"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#4",
+        "originalName": "stackIn_13_0",
+        "to": "textComparisonState"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#5",
+        "originalName": "stackIn_16_0",
+        "to": "stateLookupFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#6",
+        "originalName": "stackIn_16_1",
+        "to": "stateLookupMessagePrefix"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#7",
+        "originalName": "stackIn_17_2",
+        "to": "candidateTextDescription"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#8",
+        "originalName": "decompiledCaughtException",
+        "to": "stateLookupFailure"
+      },
+      {
+        "symbol": "L:n.a(ILjava/lang/String;)Llh;#9",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtStateLookupFailure"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#1",
+        "originalName": "var3_ref",
+        "to": "messageLookupFailureForContext"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#2",
+        "originalName": "stackIn_8_0",
+        "to": "validReferenceMismatchMessage"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#3",
+        "originalName": "stackIn_10_0",
+        "to": "referenceValidationMessage"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#4",
+        "originalName": "stackIn_14_0",
+        "to": "plainReferenceMismatchMessage"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#5",
+        "originalName": "stackIn_18_0",
+        "to": "messageLookupFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#6",
+        "originalName": "stackIn_18_1",
+        "to": "messageLookupMessagePrefix"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#7",
+        "originalName": "stackIn_19_2",
+        "to": "candidateTextDescription"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#8",
+        "originalName": "decompiledCaughtException",
+        "to": "messageLookupFailure"
+      },
+      {
+        "symbol": "L:n.b(ILjava/lang/String;)Ljava/lang/String;#9",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtMessageLookupFailure"
+      },
+      {
+        "symbol": "L:ni.<init>(Lf;Lm;Ljava/lang/String;)V#0",
+        "originalName": "var4_int",
+        "to": "wrappedMessageHeight"
+      },
+      {
+        "symbol": "L:ni.<init>(Lf;Lm;Ljava/lang/String;)V#1",
+        "originalName": "runtimeException",
+        "to": "contentInitializationFailure"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#0",
+        "originalName": "var6_int",
+        "to": "buttonSlotIndex"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#1",
+        "originalName": "var7",
+        "to": "buttonActionId"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#2",
+        "originalName": "var8",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#3",
+        "originalName": "stackIn_14_0",
+        "to": "activationFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#4",
+        "originalName": "stackIn_14_1",
+        "to": "activationMessagePrefix"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#5",
+        "originalName": "stackIn_15_2",
+        "to": "buttonDescription"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#6",
+        "originalName": "decompiledCaughtException",
+        "to": "activationFailure"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#7",
+        "originalName": "var6",
+        "to": "activationFailureForContext"
+      },
+      {
+        "symbol": "L:ni.a(IBIILhk;)V#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtActivationFailure"
+      },
+      {
+        "symbol": "L:ni.a(IIBI)V#0",
+        "originalName": "var5",
+        "to": "renderGuardQuotient"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#0",
+        "originalName": "var4",
+        "to": "createdButton"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#1",
+        "originalName": "var4_ref",
+        "to": "appendFailureForContext"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#10",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtAppendFailure"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#2",
+        "originalName": "var5",
+        "to": "buttonOffsetY"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#3",
+        "originalName": "stackIn_1_0",
+        "to": "buttonBeforeReturn"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#4",
+        "originalName": "stackIn_4_0",
+        "to": "appendFailureBeforeDescriptions"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#5",
+        "originalName": "stackIn_4_1",
+        "to": "appendMessagePrefix"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#6",
+        "originalName": "stackIn_5_2",
+        "to": "labelDescription"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#7",
+        "originalName": "stackIn_7_1",
+        "to": "appendMessageBeforeListener"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#8",
+        "originalName": "stackIn_8_2",
+        "to": "listenerDescription"
+      },
+      {
+        "symbol": "L:ni.a(ILjava/lang/String;Lbb;)Lhk;#9",
+        "originalName": "decompiledCaughtException",
+        "to": "appendFailure"
+      },
+      {
+        "symbol": "L:ni.a(Ljava/lang/String;II)V#0",
+        "originalName": "var4_int",
+        "to": "newButtonSlotIndex"
+      },
+      {
+        "symbol": "L:ni.a(Ljava/lang/String;II)V#1",
+        "originalName": "runtimeException",
+        "to": "actionAppendFailure"
+      },
+      {
+        "symbol": "L:ni.c(II)V#0",
+        "originalName": "var5",
+        "to": "buttonSlotIndex"
+      },
+      {
+        "symbol": "L:ni.c(II)V#1",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:ni.c(II)V#2",
+        "originalName": "var7",
+        "to": "allocatedButtons"
+      },
+      {
+        "symbol": "L:ni.c(II)V#3",
+        "originalName": "var3",
+        "to": "replacementButtonsAlias"
+      },
+      {
+        "symbol": "L:ni.c(II)V#4",
+        "originalName": "var4",
+        "to": "replacementActionIds"
+      },
+      {
+        "symbol": "L:pi.<init>(Ldg;Ljava/lang/String;IIII)V#0",
+        "originalName": "runtimeException",
+        "to": "messageInitializationFailure"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#0",
+        "originalName": "var3",
+        "to": "focusFailureForContext"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#1",
+        "originalName": "stackIn_6_0",
+        "to": "focusFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#2",
+        "originalName": "stackIn_6_1",
+        "to": "focusMessagePrefix"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#3",
+        "originalName": "stackIn_7_2",
+        "to": "focusContextDescription"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#4",
+        "originalName": "decompiledCaughtException",
+        "to": "focusFailure"
+      },
+      {
+        "symbol": "L:pi.a(BLel;)Z#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtFocusFailure"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#0",
+        "originalName": "var5",
+        "to": "displayMessage"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#1",
+        "originalName": "var6",
+        "to": "validationState"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#10",
+        "originalName": "var16",
+        "to": "validIconSprite"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#11",
+        "originalName": "var17",
+        "to": "invalidIconSprite"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#12",
+        "originalName": "var18",
+        "to": "pendingIconSprite"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#13",
+        "originalName": "var19",
+        "to": "debouncingIconSprite"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#2",
+        "originalName": "var14",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#3",
+        "originalName": "var8",
+        "to": "textLayoutRenderer"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#4",
+        "originalName": "var9",
+        "to": "iconScreenX"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#5",
+        "originalName": "var10",
+        "to": "iconCenterY"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#6",
+        "originalName": "var11",
+        "to": "renderGuardRemainder"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#7",
+        "originalName": "var12",
+        "to": "requiredSpinnerWidth"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#8",
+        "originalName": "var13",
+        "to": "requiredSpinnerHeight"
+      },
+      {
+        "symbol": "L:pi.a(IIBI)V#9",
+        "originalName": "var15",
+        "to": "unusedPendingIconAlias"
+      },
+      {
+        "symbol": "L:pi.a(ZILel;I)V#0",
+        "originalName": "runtimeException",
+        "to": "pointerUpdateFailure"
+      },
+      {
+        "symbol": "L:td.<init>(Ldg;)V#0",
+        "originalName": "runtimeException",
+        "to": "validationProviderInitializationFailure"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#0",
+        "originalName": "var3",
+        "to": "focusFailureForContext"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#1",
+        "originalName": "stackIn_6_0",
+        "to": "focusFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#2",
+        "originalName": "stackIn_6_1",
+        "to": "focusMessagePrefix"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#3",
+        "originalName": "stackIn_7_2",
+        "to": "focusContextDescription"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#4",
+        "originalName": "decompiledCaughtException",
+        "to": "focusFailure"
+      },
+      {
+        "symbol": "L:td.a(BLel;)Z#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtFocusFailure"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#0",
+        "originalName": "var5",
+        "to": "iconCenterX"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#1",
+        "originalName": "var6",
+        "to": "iconCenterY"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#2",
+        "originalName": "var7",
+        "to": "renderGuardRemainder"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#3",
+        "originalName": "var9",
+        "to": "validationState"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#4",
+        "originalName": "var10",
+        "to": "requiredScratchWidth"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#5",
+        "originalName": "var11",
+        "to": "requiredScratchHeight"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#6",
+        "originalName": "var12",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#7",
+        "originalName": "var13",
+        "to": "waitingIconSprite"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#8",
+        "originalName": "var14",
+        "to": "invalidIconSprite"
+      },
+      {
+        "symbol": "L:td.a(IIBI)V#9",
+        "originalName": "var15",
+        "to": "validIconSprite"
+      },
+      {
+        "symbol": "L:td.a(ILgd;)V#0",
+        "originalName": "var3",
+        "to": "unusedNullSampleForInvalidGuard"
+      },
+      {
+        "symbol": "L:td.a(ILgd;)V#1",
+        "originalName": "runtimeException",
+        "to": "samplePlaybackFailure"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#10",
+        "originalName": "stackIn_20_0",
+        "to": "textWriteFailureBeforeDescriptions"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#11",
+        "originalName": "stackIn_20_1",
+        "to": "textWriteMessagePrefix"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#12",
+        "originalName": "stackIn_21_2",
+        "to": "sourceTextDescription"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#13",
+        "originalName": "stackIn_23_1",
+        "to": "textWriteMessageBeforeDestination"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#14",
+        "originalName": "stackIn_24_2",
+        "to": "destinationDescription"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#15",
+        "originalName": "decompiledCaughtException",
+        "to": "textWriteFailure"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#16",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtTextWriteFailure"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#3",
+        "originalName": "var4",
+        "to": "textWriteFailureForContext"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#7",
+        "originalName": "var9",
+        "to": "unusedNullSampleForInvalidGuard"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#8",
+        "originalName": "stackIn_9_0",
+        "to": "emptyWriteDestinationBeforeReturn"
+      },
+      {
+        "symbol": "L:td.a(Ljava/lang/CharSequence;Ljava/lang/StringBuilder;II)Ljava/lang/StringBuilder;#9",
+        "originalName": "stackIn_17_0",
+        "to": "writtenDestinationBeforeReturn"
+      },
+      {
+        "symbol": "L:td.a(ZILel;I)V#0",
+        "originalName": "runtimeException",
+        "to": "pointerUpdateFailure"
+      },
+      {
+        "symbol": "P:hd.f(I)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ni.a(IBIILhk;)V#0",
+        "originalName": "param0",
+        "to": "buttonX"
+      },
+      {
+        "symbol": "P:ni.a(IBIILhk;)V#1",
+        "originalName": "param1",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ni.a(IBIILhk;)V#2",
+        "originalName": "param2",
+        "to": "buttonY"
+      },
+      {
+        "symbol": "P:ni.a(IBIILhk;)V#3",
+        "originalName": "param3",
+        "to": "pointerButton"
+      },
+      {
+        "symbol": "P:ni.a(IBIILhk;)V#4",
+        "originalName": "param4",
+        "to": "button"
+      }
+    ],
+    "namingWorkflowCommit": "0a7d84390d28948e6b526c5b64ee236e20872298"
   }
 }

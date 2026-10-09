@@ -7,12 +7,12 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/759d063ee387a7e706853c76217fd8aac4e4b99c/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0a7d84390d28948e6b526c5b64ee236e20872298/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 220)
+## Current readability (pass 221)
 
-The export has 18,655 guarded names and 119,361 Java identifier edits, plus 11
+The export has 18,784 guarded names and 119,805 Java identifier edits, plus 11
 class-name literal edits and 442 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
@@ -25,7 +25,51 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current loading, text, audio and renderer names (pass 220)
+## Current dialog and validation names (pass 221)
+
+A naming pass covers 129 declarations in five classes: 123 locals and six
+callback parameters. MessageDialogContent now names button-array capacity/copy/
+publication, wrapped message height, appended button geometry/return aliases,
+identity-based slot/action dispatch and all failure descriptions. Its activation
+argument names follow ButtonActivationListener and the actual ButtonWidget caller.
+ValidationIconWidget and ValidationMessageWidget name the distinct state/sprite/
+return snapshots, scratch geometry, focus and pointer failures, and partial text
+writes. LabeledChildWidget names label/child bounds and saved hover state;
+MatchingTextValidator names distinct mismatch/provider/state return values.
+
+Keep the original behavior visible: ValidationMessageWidget re-queries its
+provider after superclass rendering, rather than assuming the provider stayed
+unchanged. LabeledChildWidget restores the child's hover flag only after a normal
+callback return; this pass does not invent exceptional restoration. Text writing
+retains the incremented offset used in an error diagnostic. Unused guards and
+snapshots, partial arrays and effects, distinct actual/full sprite dimensions,
+raster and provider call order and original owner strings remain intact.
+
+All 18,655 previous complete rules and 19,366 dictionary identities stay exact.
+Only 129 selected renamedName fields change in dictionary symbols; raw declaration
+positions and every other metadata field are unchanged. Five readable Java files
+change, adding 444 identifier edits. The export has 18,784 guarded rules,
+119,805 identifier edits, 11 literal and 442 label edits (120,258 total).
+Compiler-style declarations fall from 265 to 150; these five classes have no
+remaining unnamed local/parameter declarations. The 41 opaque fields, 85 plain
+block labels and four large framed methods remain unchanged.
+
+From Deko, `node readable/build-geoblox-rules.mjs --check` validates all 129
+explicit additions against the previous Git manifest. Both
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` compile
+all 303 sources with 136,992 binding and 388 override checks. All 303 files
+reverse byte exactly; 27 publication tests, 17 scoped native trace groups and
+fresh sibling reproductions pass. All 73 historical source-proof pins remain
+intact. This naming pass does not newly establish actual UI/audio/network/browser/
+phone, whole-game or heap/presented-FPS acceptance. Raw source, bytecode, compiler,
+environment, frozen naming dependency and native inputs are unchanged.
+
+The unchanged tracked **decompiler-source** Git tar SHA-256 is
+`f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95`; the pinned compiler environment still records
+`CFR_JS_DISABLE_LOOP_TAIL_MERGE=1`.
+
+## Previous loading, text, audio and renderer names (pass 220)
 
 A single naming pass covers 141 declarations across nine classes: 123 locals
 and 18 constructor parameters. TextTemplateDefinition now names opcode/count/

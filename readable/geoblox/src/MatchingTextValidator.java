@@ -11,8 +11,8 @@ final class MatchingTextValidator extends TextInputValidator {
         super(validatedInput);
         try {
             this.referenceInput = referenceInput;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException validatorInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorInitializationFailure), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -169,57 +169,57 @@ final class MatchingTextValidator extends TextInputValidator {
 
     final ValidationState validationStateForText(int guard, String candidateText) {
         ValidationProvider referenceValidation = null;
-        RuntimeException var3_ref = null;
-        ValidationState stackIn_2_0 = null;
-        ValidationState stackIn_9_0 = null;
-        ValidationState stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException stateLookupFailureForContext = null;
+        ValidationState invalidGuardNullState = null;
+        ValidationState invalidReferenceState = null;
+        ValidationState textComparisonState = null;
+        RuntimeException stateLookupFailureBeforeDescription = null;
+        StringBuilder stateLookupMessagePrefix = null;
+        String candidateTextDescription = null;
+        RuntimeException stateLookupFailure = null;
         try {
           if (guard != -257) {
-            stackIn_2_0 = (ValidationState) null;
-            return stackIn_2_0;
+            invalidGuardNullState = (ValidationState) null;
+            return invalidGuardNullState;
           }
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -106);
             if (referenceValidation != null &&
                 referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState) {
-              stackIn_9_0 = WidgetSkinState.invalidInputValidationState;
-              return stackIn_9_0;
+              invalidReferenceState = WidgetSkinState.invalidInputValidationState;
+              return invalidReferenceState;
             }
           }
           if (!candidateText.equals(this.referenceInput.widgetText)) {
-            stackIn_13_0 = WidgetSkinState.invalidInputValidationState;
+            textComparisonState = WidgetSkinState.invalidInputValidationState;
           } else {
-            stackIn_13_0 = SocketArchiveNetworkClient.validInputValidationState;
+            textComparisonState = SocketArchiveNetworkClient.validInputValidationState;
           }
-          return stackIn_13_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("n.D(").append(guard).append(',');
+          return textComparisonState;
+        } catch (java.lang.RuntimeException caughtStateLookupFailure) {
+          stateLookupFailure = caughtStateLookupFailure;
+          stateLookupFailureForContext = stateLookupFailure;
+          stateLookupFailureBeforeDescription = stateLookupFailureForContext;
+          stateLookupMessagePrefix = new StringBuilder().append("n.D(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_17_2 = "null";
+            candidateTextDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            candidateTextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stateLookupFailureBeforeDescription), ((StringBuilder) (Object) stateLookupMessagePrefix).append(candidateTextDescription).append(')').toString());
         }
     }
 
     final String validationMessageForText(int guard, String candidateText) {
         ValidationProvider referenceValidation = null;
-        RuntimeException var3_ref = null;
-        String stackIn_8_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_14_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException messageLookupFailureForContext = null;
+        String validReferenceMismatchMessage = null;
+        String referenceValidationMessage = null;
+        String plainReferenceMismatchMessage = null;
+        RuntimeException messageLookupFailureBeforeDescription = null;
+        StringBuilder messageLookupMessagePrefix = null;
+        String candidateTextDescription = null;
+        RuntimeException messageLookupFailure = null;
         try {
           if (guard != 422) {
             rasterTargetStack = (IntrusiveDeque) null;
@@ -229,29 +229,29 @@ final class MatchingTextValidator extends TextInputValidator {
             if (referenceValidation != null) {
               if (referenceValidation.getDebouncedValidationState((byte) -105) == SocketArchiveNetworkClient.validInputValidationState &&
                   !candidateText.equals(this.referenceInput.widgetText)) {
-                stackIn_8_0 = GrowableIntList.createMismatchAlertText;
-                return stackIn_8_0;
+                validReferenceMismatchMessage = GrowableIntList.createMismatchAlertText;
+                return validReferenceMismatchMessage;
               }
-              stackIn_10_0 = referenceValidation.getDebouncedValidationMessage(-21666);
-              return stackIn_10_0;
+              referenceValidationMessage = referenceValidation.getDebouncedValidationMessage(-21666);
+              return referenceValidationMessage;
             }
           }
           if (candidateText.equals(this.referenceInput.widgetText)) {
             return null;
           }
-          stackIn_14_0 = GrowableIntList.createMismatchAlertText;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("n.A(").append(guard).append(',');
+          plainReferenceMismatchMessage = GrowableIntList.createMismatchAlertText;
+          return plainReferenceMismatchMessage;
+        } catch (java.lang.RuntimeException caughtMessageLookupFailure) {
+          messageLookupFailure = caughtMessageLookupFailure;
+          messageLookupFailureForContext = messageLookupFailure;
+          messageLookupFailureBeforeDescription = messageLookupFailureForContext;
+          messageLookupMessagePrefix = new StringBuilder().append("n.A(").append(guard).append(',');
           if (candidateText == null) {
-            stackIn_19_2 = "null";
+            candidateTextDescription = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            candidateTextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageLookupFailureBeforeDescription), ((StringBuilder) (Object) messageLookupMessagePrefix).append(candidateTextDescription).append(')').toString());
         }
     }
 

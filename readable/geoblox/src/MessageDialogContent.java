@@ -12,20 +12,20 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
     static int fullscreenDialogPointerOriginY;
 
     private final void ensureButtonSlots(int methodGuard, int slotCount) {
-        int var5 = 0;
-        int var6 = Geoblox.clientControlFlowFlag;
+        int buttonSlotIndex = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (this.buttonSlotCount >= slotCount) {
             return;
         }
-        ButtonWidget[] var7 = new ButtonWidget[slotCount];
-        ButtonWidget[] var3 = var7;
-        int[] var4 = new int[slotCount];
-        for (var5 = 0; var5 < this.buttonSlotCount; var5++) {
-            var7[var5] = this.actionButtons[var5];
-            var4[var5] = this.buttonActionIds[var5];
+        ButtonWidget[] allocatedButtons = new ButtonWidget[slotCount];
+        ButtonWidget[] replacementButtonsAlias = allocatedButtons;
+        int[] replacementActionIds = new int[slotCount];
+        for (buttonSlotIndex = 0; buttonSlotIndex < this.buttonSlotCount; buttonSlotIndex++) {
+            allocatedButtons[buttonSlotIndex] = this.actionButtons[buttonSlotIndex];
+            replacementActionIds[buttonSlotIndex] = this.buttonActionIds[buttonSlotIndex];
         }
-        this.actionButtons = var3;
-        this.buttonActionIds = var4;
+        this.actionButtons = replacementButtonsAlias;
+        this.buttonActionIds = replacementActionIds;
         this.buttonSlotCount = slotCount;
         if (methodGuard != -11272) {
             this.messageFont = (BitmapFont) null;
@@ -86,57 +86,57 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
     }
 
     final ButtonWidget appendButton(int verticalOffset, String label, WidgetListener listener) {
-        ButtonWidget var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        ButtonWidget stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
-        String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        ButtonWidget createdButton = null;
+        RuntimeException appendFailureForContext = null;
+        int buttonOffsetY = 0;
+        ButtonWidget buttonBeforeReturn = null;
+        RuntimeException appendFailureBeforeDescriptions = null;
+        StringBuilder appendMessagePrefix = null;
+        String labelDescription = null;
+        StringBuilder appendMessageBeforeListener = null;
+        String listenerDescription = null;
+        RuntimeException appendFailure = null;
         try {
-          var4 = new ButtonWidget(label, listener);
-          var4.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-          var5 = verticalOffset + this.widgetHeight;
+          createdButton = new ButtonWidget(label, listener);
+          createdButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+          buttonOffsetY = verticalOffset + this.widgetHeight;
           this.setWidgetBounds(34 + this.widgetHeight, this.widgetWidth, (byte) -53, 0, 0);
-          var4.setWidgetBounds(30, this.widgetWidth - 14, (byte) -33, var5, 7);
-          this.addChild((byte) -73, var4);
-          stackIn_1_0 = var4;
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_4_0 = var4_ref;
-          stackIn_4_1 = new StringBuilder().append("ni.GA(").append(verticalOffset).append(',');
+          createdButton.setWidgetBounds(30, this.widgetWidth - 14, (byte) -33, buttonOffsetY, 7);
+          this.addChild((byte) -73, createdButton);
+          buttonBeforeReturn = createdButton;
+          return buttonBeforeReturn;
+        } catch (java.lang.RuntimeException caughtAppendFailure) {
+          appendFailure = caughtAppendFailure;
+          appendFailureForContext = appendFailure;
+          appendFailureBeforeDescriptions = appendFailureForContext;
+          appendMessagePrefix = new StringBuilder().append("ni.GA(").append(verticalOffset).append(',');
           if (label == null) {
-            stackIn_5_2 = "null";
+            labelDescription = "null";
           } else {
-            stackIn_5_2 = "{...}";
+            labelDescription = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          appendMessageBeforeListener = ((StringBuilder) (Object) appendMessagePrefix).append(labelDescription).append(',');
           if (listener == null) {
-            stackIn_8_2 = "null";
+            listenerDescription = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            listenerDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) appendFailureBeforeDescriptions), ((StringBuilder) (Object) appendMessageBeforeListener).append(listenerDescription).append(')').toString());
         }
     }
 
     MessageDialogContent(MessageDialog messageDialog, BitmapFont messageFont, String messageText) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
-        int var4_int = 0;
+        int wrappedMessageHeight = 0;
         this.buttonSlotCount = 0;
         try {
             this.messageFont = messageFont;
             this.messageDialog = messageDialog;
             this.messageText = messageText;
-            var4_int = null == this.messageText ? 0 : this.messageFont.measureWrappedHeight(this.messageText, 260, this.messageFont.maxAscent);
-            this.setWidgetBounds(var4_int + 22, 288, (byte) -119, 0, 0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.<init>(" + (messageDialog != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ')');
+            wrappedMessageHeight = null == this.messageText ? 0 : this.messageFont.measureWrappedHeight(this.messageText, 260, this.messageFont.maxAscent);
+            this.setWidgetBounds(wrappedMessageHeight + 22, 288, (byte) -119, 0, 0);
+        } catch (RuntimeException contentInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentInitializationFailure), "ni.<init>(" + (messageDialog != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -166,59 +166,59 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         super.renderWidget(parentX, parentY, (byte) 54, renderPass);
         this.messageFont.drawParagraph(this.messageText, this.widgetX + (parentX + 14), 10 + parentY + this.widgetY, this.widgetWidth - 28, this.widgetHeight, 16777215, -1, 0, 0, this.messageFont.maxAscent);
-        int var5 = 35 / ((methodGuard - 1) / 43);
+        int renderGuardQuotient = 35 / ((methodGuard - 1) / 43);
     }
 
-    public final void onButtonActivated(int param0, byte param1, int param2, int param3, ButtonWidget param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var8 = Geoblox.clientControlFlowFlag;
+    public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
+        int buttonSlotIndex = 0;
+        int buttonActionId = 0;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException activationFailureBeforeDescription = null;
+        StringBuilder activationMessagePrefix = null;
+        String buttonDescription = null;
+        RuntimeException activationFailure = null;
+        RuntimeException activationFailureForContext = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          for (var6_int = 0; var6_int < this.buttonSlotCount; var6_int++) {
-            if (param4 != this.actionButtons[var6_int]) {
+          for (buttonSlotIndex = 0; buttonSlotIndex < this.buttonSlotCount; buttonSlotIndex++) {
+            if (button != this.actionButtons[buttonSlotIndex]) {
               continue;
             }
-            var7 = this.buttonActionIds[var6_int];
-            if (var7 != -1) {
-              MidiNote.setPendingLoginUiAction(this.buttonActionIds[var6_int], false);
+            buttonActionId = this.buttonActionIds[buttonSlotIndex];
+            if (buttonActionId != -1) {
+              MidiNote.setPendingLoginUiAction(this.buttonActionIds[buttonSlotIndex], false);
             } else {
               this.messageDialog.dismissDialog((byte) -104);
             }
             break;
           }
-          if (param1 != -20) {
+          if (methodGuard != -20) {
             MessageDialogContent.releaseStaticReferences((byte) 87);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_14_0 = var6;
-          stackIn_14_1 = new StringBuilder().append("ni.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_15_2 = "null";
+        } catch (java.lang.RuntimeException caughtActivationFailure) {
+          activationFailure = caughtActivationFailure;
+          activationFailureForContext = activationFailure;
+          activationFailureBeforeDescription = activationFailureForContext;
+          activationMessagePrefix = new StringBuilder().append("ni.Q(").append(buttonX).append(',').append(methodGuard).append(',').append(buttonY).append(',').append(pointerButton).append(',');
+          if (button == null) {
+            buttonDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            buttonDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailureBeforeDescription), ((StringBuilder) (Object) activationMessagePrefix).append(buttonDescription).append(')').toString());
         }
     }
 
     final void appendActionButton(String label, int slotIncrement, int actionId) {
-        int var4_int = 0;
+        int newButtonSlotIndex = 0;
         try {
-            var4_int = this.buttonSlotCount;
-            this.ensureButtonSlots(-11272, var4_int + slotIncrement);
-            this.actionButtons[var4_int] = this.appendButton(-2, label, (WidgetListener) (this));
-            this.buttonActionIds[var4_int] = actionId;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ni.IA(" + (label != null ? "{...}" : "null") + ',' + slotIncrement + ',' + actionId + ')');
+            newButtonSlotIndex = this.buttonSlotCount;
+            this.ensureButtonSlots(-11272, newButtonSlotIndex + slotIncrement);
+            this.actionButtons[newButtonSlotIndex] = this.appendButton(-2, label, (WidgetListener) (this));
+            this.buttonActionIds[newButtonSlotIndex] = actionId;
+        } catch (RuntimeException actionAppendFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) actionAppendFailure), "ni.IA(" + (label != null ? "{...}" : "null") + ',' + slotIncrement + ',' + actionId + ')');
         }
     }
 

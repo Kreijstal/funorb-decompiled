@@ -13,15 +13,15 @@ final class LabeledChildWidget extends SingleChildWidget {
     private int labelColor;
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var5 = parentX + this.widgetX;
-        int var6 = parentY + this.widgetY;
+        int widgetScreenX = parentX + this.widgetX;
+        int widgetScreenY = parentY + this.widgetY;
         super.renderWidget(parentX, parentY, (byte) 105, renderPass);
-        int var7 = -79 / ((methodGuard - 1) / 43);
+        int renderGuardQuotient = -79 / ((methodGuard - 1) / 43);
         if (renderPass != 0) {
             return;
         }
-        int var8 = !this.labelAfterChild ? 0 : -this.labelWidth + (this.widgetWidth - this.padding * 2);
-        this.labelFont.drawParagraph(this.labelText, this.padding + (var8 + var5), this.padding + var6, -this.padding + this.labelWidth, -(this.padding * 2) + this.widgetHeight, this.labelColor, -1, !this.labelAfterChild ? 2 : 0, 1, this.labelFont.maxAscent);
+        int labelOffsetX = !this.labelAfterChild ? 0 : -this.labelWidth + (this.widgetWidth - this.padding * 2);
+        this.labelFont.drawParagraph(this.labelText, this.padding + (labelOffsetX + widgetScreenX), this.padding + widgetScreenY, -this.padding + this.labelWidth, -(this.padding * 2) + this.widgetHeight, this.labelColor, -1, !this.labelAfterChild ? 2 : 0, 1, this.labelFont.maxAscent);
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
@@ -33,7 +33,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         nineSliceSavedClip = null;
     }
 
-    final static void recordEntityRelease(int param0) {
+    final static void recordEntityRelease(int methodGuard) {
         if (UiWidget.gameplaySession.tutorialMode) {
           return;
         }
@@ -45,7 +45,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           PlayfieldRules.advanceDifficulty(false);
           DequeCursor.difficultyAdvancesInCurrentTheme = DequeCursor.difficultyAdvancesInCurrentTheme + 1;
         }
-        if (param0 != 2) {
+        if (methodGuard != 2) {
           nineSliceSavedClip = (int[]) null;
         }
         if (MessageDialogSupport.releasesPerTheme == MatchCandidateSupport.releasedInCurrentTheme) {
@@ -62,76 +62,76 @@ final class LabeledChildWidget extends SingleChildWidget {
     }
 
     final String getHoverText(byte methodGuard) {
-        int var2 = this.child.pointerInside ? 1 : 0;
+        int previousChildHoverFlag = this.child.pointerInside ? 1 : 0;
         this.child.pointerInside = this.pointerInside;
-        String var3 = this.child.getHoverText(methodGuard);
-        this.child.pointerInside = var2 != 0 ? true : false;
-        return var3;
+        String childHoverText = this.child.getHoverText(methodGuard);
+        this.child.pointerInside = previousChildHoverFlag != 0 ? true : false;
+        return childHoverText;
     }
 
     LabeledChildWidget(int x, int y, int width, int minimumHeight, UiWidget child, boolean labelAfterChild, int labelWidth, int padding, BitmapFont labelFont, int labelColor, String labelText) {
         super(x, y, width, minimumHeight, (WidgetRenderer) null, (WidgetListener) null);
-        boolean stackIn_4_1 = false;
-        int stackIn_10_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var12_int = 0;
-        RuntimeException var12 = null;
-        int var13 = 0;
-        int var14 = 0;
+        boolean labelPlacementSnapshot = false;
+        int selectedChildOffsetX = 0;
+        RuntimeException constructionFailureBeforeDescriptions = null;
+        StringBuilder constructionMessagePrefix = null;
+        String childDescription = null;
+        StringBuilder constructionMessageBeforeFont = null;
+        String fontDescription = null;
+        StringBuilder constructionMessageBeforeText = null;
+        String labelTextDescription = null;
+        RuntimeException constructionFailure = null;
+        int labelTextWidth = 0;
+        RuntimeException constructionFailureForContext = null;
+        int resolvedContainerHeight = 0;
+        int childOffsetX = 0;
         try {
           this.labelColor = labelColor;
           this.child = child;
           this.padding = padding;
           this.labelFont = labelFont;
-          stackIn_4_1 = !(!labelAfterChild);
-          this.labelAfterChild = stackIn_4_1;
+          labelPlacementSnapshot = !(!labelAfterChild);
+          this.labelAfterChild = labelPlacementSnapshot;
           this.labelWidth = labelWidth;
           this.labelText = labelText;
-          var12_int = this.labelWidth - this.padding;
-          var13 = this.labelFont.measureWrappedHeight(labelText, var12_int, this.labelFont.maxAscent) + 2 * this.padding;
-          if (var13 <= minimumHeight) {
-            var13 = minimumHeight;
+          labelTextWidth = this.labelWidth - this.padding;
+          resolvedContainerHeight = this.labelFont.measureWrappedHeight(labelText, labelTextWidth, this.labelFont.maxAscent) + 2 * this.padding;
+          if (resolvedContainerHeight <= minimumHeight) {
+            resolvedContainerHeight = minimumHeight;
           } else {
-            this.setWidgetBounds(var13, width, (byte) -74, y, x);
+            this.setWidgetBounds(resolvedContainerHeight, width, (byte) -74, y, x);
           }
           if (!this.labelAfterChild) {
-            stackIn_10_0 = this.labelWidth + this.padding * 2;
+            selectedChildOffsetX = this.labelWidth + this.padding * 2;
           } else {
-            stackIn_10_0 = 0;
+            selectedChildOffsetX = 0;
           }
-          var14 = stackIn_10_0;
-          this.child.setWidgetBounds(-(2 * this.padding) + minimumHeight, width - this.labelWidth - this.padding * 3, (byte) -105, (-minimumHeight + var13 >> 1) + this.padding, var14);
+          childOffsetX = selectedChildOffsetX;
+          this.child.setWidgetBounds(-(2 * this.padding) + minimumHeight, width - this.labelWidth - this.padding * 3, (byte) -105, (-minimumHeight + resolvedContainerHeight >> 1) + this.padding, childOffsetX);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var12 = decompiledCaughtException;
-          stackIn_14_0 = var12;
-          stackIn_14_1 = new StringBuilder().append("hd.<init>(").append(x).append(',').append(y).append(',').append(width).append(',').append(minimumHeight).append(',');
+        } catch (java.lang.RuntimeException caughtConstructionFailure) {
+          constructionFailure = caughtConstructionFailure;
+          constructionFailureForContext = constructionFailure;
+          constructionFailureBeforeDescriptions = constructionFailureForContext;
+          constructionMessagePrefix = new StringBuilder().append("hd.<init>(").append(x).append(',').append(y).append(',').append(width).append(',').append(minimumHeight).append(',');
           if (child == null) {
-            stackIn_15_2 = "null";
+            childDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            childDescription = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(labelAfterChild).append(',').append(labelWidth).append(',').append(padding).append(',');
+          constructionMessageBeforeFont = ((StringBuilder) (Object) constructionMessagePrefix).append(childDescription).append(',').append(labelAfterChild).append(',').append(labelWidth).append(',').append(padding).append(',');
           if (labelFont == null) {
-            stackIn_18_2 = "null";
+            fontDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            fontDescription = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(labelColor).append(',');
+          constructionMessageBeforeText = ((StringBuilder) (Object) constructionMessageBeforeFont).append(fontDescription).append(',').append(labelColor).append(',');
           if (labelText == null) {
-            stackIn_21_2 = "null";
+            labelTextDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            labelTextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailureBeforeDescriptions), ((StringBuilder) (Object) constructionMessageBeforeText).append(labelTextDescription).append(')').toString());
         }
     }
 

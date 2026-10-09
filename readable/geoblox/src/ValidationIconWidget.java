@@ -73,62 +73,62 @@ final class ValidationIconWidget extends ButtonWidget {
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var5;
-        int var6;
-        int var7;
-        ValidationState var9;
-        int var10;
-        int var11;
-        int var12;
-        Sprite var13;
-        Sprite var14;
-        Sprite var15;
-        var12 = Geoblox.clientControlFlowFlag;
+        int iconCenterX;
+        int iconCenterY;
+        int renderGuardRemainder;
+        ValidationState validationState;
+        int requiredScratchWidth;
+        int requiredScratchHeight;
+        int clientControlFlowSnapshot;
+        Sprite waitingIconSprite;
+        Sprite invalidIconSprite;
+        Sprite validIconSprite;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         super.renderWidget(parentX, parentY, (byte) -86, renderPass);
         if (0 != renderPass) {
           return;
         }
-        var5 = (this.widgetWidth >> 1) + (this.widgetX + parentX);
-        var7 = -74 % ((methodGuard - 1) / 43);
-        var6 = parentY - (-this.widgetY - (this.widgetHeight >> 1));
-        var9 = this.validationProvider.getDebouncedValidationState((byte) -105);
-        if (var9 != ImageProducerRasterBuffer.debouncingValidationState &&
-            WidgetSkinState.pendingQueryValidationState != var9) {
-          if (WidgetSkinState.invalidInputValidationState == var9) {
-            var14 = ClientClockSupport.validationStateSprites[2];
-            var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
-          } else if (var9 == SocketArchiveNetworkClient.validInputValidationState) {
-            var15 = ClientClockSupport.validationStateSprites[1];
-            var15.drawAdditive(-(var15.width >> 1) + var5, var6 - (var15.height >> 1), 256);
+        iconCenterX = (this.widgetWidth >> 1) + (this.widgetX + parentX);
+        renderGuardRemainder = -74 % ((methodGuard - 1) / 43);
+        iconCenterY = parentY - (-this.widgetY - (this.widgetHeight >> 1));
+        validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
+        if (validationState != ImageProducerRasterBuffer.debouncingValidationState &&
+            WidgetSkinState.pendingQueryValidationState != validationState) {
+          if (WidgetSkinState.invalidInputValidationState == validationState) {
+            invalidIconSprite = ClientClockSupport.validationStateSprites[2];
+            invalidIconSprite.drawAdditive(-(invalidIconSprite.width >> 1) + iconCenterX, iconCenterY - (invalidIconSprite.height >> 1), 256);
+          } else if (validationState == SocketArchiveNetworkClient.validInputValidationState) {
+            validIconSprite = ClientClockSupport.validationStateSprites[1];
+            validIconSprite.drawAdditive(-(validIconSprite.width >> 1) + iconCenterX, iconCenterY - (validIconSprite.height >> 1), 256);
           }
         } else {
-          var13 = ClientClockSupport.validationStateSprites[0];
-          var10 = var13.fullWidth << 1;
-          var11 = var13.fullHeight << 1;
+          waitingIconSprite = ClientClockSupport.validationStateSprites[0];
+          requiredScratchWidth = waitingIconSprite.fullWidth << 1;
+          requiredScratchHeight = waitingIconSprite.fullHeight << 1;
           if (null != ClientOptionSupport.validationIconScratchSprite &&
-              var10 <= ClientOptionSupport.validationIconScratchSprite.width &&
-              var11 <= ClientOptionSupport.validationIconScratchSprite.height) {
+              requiredScratchWidth <= ClientOptionSupport.validationIconScratchSprite.width &&
+              requiredScratchHeight <= ClientOptionSupport.validationIconScratchSprite.height) {
             Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
           } else {
-            ClientOptionSupport.validationIconScratchSprite = new Sprite(var10, var11);
+            ClientOptionSupport.validationIconScratchSprite = new Sprite(requiredScratchWidth, requiredScratchHeight);
             Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
           }
-          var13.rotateSmooth(112, 144, var13.fullWidth << 4, var13.fullHeight << 4, -this.animationTicks << 10, 4096);
+          waitingIconSprite.rotateSmooth(112, 144, waitingIconSprite.fullWidth << 4, waitingIconSprite.fullHeight << 4, -this.animationTicks << 10, 4096);
           RasterTargetRestoreSupport.restoreRasterTarget(true);
-          ClientOptionSupport.validationIconScratchSprite.drawAdditive(-var13.fullWidth + var5, var6 - var13.fullHeight, 256);
+          ClientOptionSupport.validationIconScratchSprite.drawAdditive(-waitingIconSprite.fullWidth + iconCenterX, iconCenterY - waitingIconSprite.fullHeight, 256);
         }
     }
 
     final static void playPcmSample(int methodGuard, PcmSample sample) {
         try {
             if (methodGuard != -348) {
-                PcmSample var3 = (PcmSample) null;
+                PcmSample unusedNullSampleForInvalidGuard = (PcmSample) null;
                 ValidationIconWidget.playPcmSample(-67, (PcmSample) null);
             }
             GameplayEntity.registerAudioStream(false, PcmSampleStream.createForPlaybackRate(sample, 100, 96));
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException samplePlaybackFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) samplePlaybackFailure), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,23 +136,23 @@ final class ValidationIconWidget extends ButtonWidget {
         int sourceCharacterIndex = 0;
         int characterWriteOffset = 0;
         int originalLength = 0;
-        RuntimeException var4 = null;
+        RuntimeException textWriteFailureForContext = null;
         int sourceLength = 0;
         int writeEndOffset = 0;
         int controlFlowGuard = 0;
-        PcmSample var9 = null;
-        StringBuilder stackIn_9_0 = null;
-        StringBuilder stackIn_17_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
-        String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        PcmSample unusedNullSampleForInvalidGuard = null;
+        StringBuilder emptyWriteDestinationBeforeReturn = null;
+        StringBuilder writtenDestinationBeforeReturn = null;
+        RuntimeException textWriteFailureBeforeDescriptions = null;
+        StringBuilder textWriteMessagePrefix = null;
+        String sourceTextDescription = null;
+        StringBuilder textWriteMessageBeforeDestination = null;
+        String destinationDescription = null;
+        RuntimeException textWriteFailure = null;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard <= 23) {
-            var9 = (PcmSample) null;
+            unusedNullSampleForInvalidGuard = (PcmSample) null;
             ValidationIconWidget.playPcmSample(-80, (PcmSample) null);
           }
           originalLength = destination.length();
@@ -160,8 +160,8 @@ final class ValidationIconWidget extends ButtonWidget {
               originalLength >= writeOffset) {
             sourceLength = sourceText.length();
             if (sourceLength == 0) {
-              stackIn_9_0 = (StringBuilder) (destination);
-              return stackIn_9_0;
+              emptyWriteDestinationBeforeReturn = (StringBuilder) (destination);
+              return emptyWriteDestinationBeforeReturn;
             }
             writeEndOffset = writeOffset + sourceLength;
             if (originalLength < writeEndOffset) {
@@ -172,27 +172,27 @@ final class ValidationIconWidget extends ButtonWidget {
               writeOffset++;
               destination.setCharAt(characterWriteOffset, sourceText.charAt(sourceCharacterIndex));
             }
-            stackIn_17_0 = (StringBuilder) (destination);
-            return stackIn_17_0;
+            writtenDestinationBeforeReturn = (StringBuilder) (destination);
+            return writtenDestinationBeforeReturn;
           }
           throw new StringIndexOutOfBoundsException("length=" + originalLength + " startPos=" + writeOffset);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_20_0 = var4;
-          stackIn_20_1 = new StringBuilder().append("td.J(");
+        } catch (java.lang.RuntimeException caughtTextWriteFailure) {
+          textWriteFailure = caughtTextWriteFailure;
+          textWriteFailureForContext = textWriteFailure;
+          textWriteFailureBeforeDescriptions = textWriteFailureForContext;
+          textWriteMessagePrefix = new StringBuilder().append("td.J(");
           if (sourceText == null) {
-            stackIn_21_2 = "null";
+            sourceTextDescription = "null";
           } else {
-            stackIn_21_2 = "{...}";
+            sourceTextDescription = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
+          textWriteMessageBeforeDestination = ((StringBuilder) (Object) textWriteMessagePrefix).append(sourceTextDescription).append(',');
           if (destination == null) {
-            stackIn_24_2 = "null";
+            destinationDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            destinationDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailureBeforeDescriptions), ((StringBuilder) (Object) textWriteMessageBeforeDestination).append(destinationDescription).append(',').append(writeOffset).append(',').append(methodGuard).append(')').toString());
         }
     }
 
@@ -200,8 +200,8 @@ final class ValidationIconWidget extends ButtonWidget {
         try {
             this.animationTicks = this.animationTicks + 1;
             super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+        } catch (RuntimeException pointerUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "td.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -213,27 +213,27 @@ final class ValidationIconWidget extends ButtonWidget {
     }
 
     final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException focusFailureForContext = null;
+        RuntimeException focusFailureBeforeDescription = null;
+        StringBuilder focusMessagePrefix = null;
+        String focusContextDescription = null;
+        RuntimeException focusFailure = null;
         try {
           if (methodGuard > -30) {
             this.renderWidget(89, -88, (byte) -40, -90);
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("td.UA(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException caughtFocusFailure) {
+          focusFailure = caughtFocusFailure;
+          focusFailureForContext = focusFailure;
+          focusFailureBeforeDescription = focusFailureForContext;
+          focusMessagePrefix = new StringBuilder().append("td.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_7_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureBeforeDescription), ((StringBuilder) (Object) focusMessagePrefix).append(focusContextDescription).append(')').toString());
         }
     }
 
@@ -247,8 +247,8 @@ final class ValidationIconWidget extends ButtonWidget {
     ValidationIconWidget(ValidationProvider validationProvider) {
         try {
             this.validationProvider = validationProvider;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "td.<init>(" + (validationProvider != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException validationProviderInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationProviderInitializationFailure), "td.<init>(" + (validationProvider != null ? "{...}" : "null") + ')');
         }
     }
 

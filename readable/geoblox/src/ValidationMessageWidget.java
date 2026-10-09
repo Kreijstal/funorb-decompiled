@@ -84,87 +84,87 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         try {
             this.animationTicks = this.animationTicks + 1;
             super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+        } catch (RuntimeException pointerUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "pi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
     final boolean requestKeyboardFocus(byte methodGuard, UiWidget focusContext) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException focusFailureForContext = null;
+        RuntimeException focusFailureBeforeDescription = null;
+        StringBuilder focusMessagePrefix = null;
+        String focusContextDescription = null;
+        RuntimeException focusFailure = null;
         try {
           if (methodGuard <= -30) {
             return false;
           }
           this.animationTicks = 97;
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("pi.UA(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException caughtFocusFailure) {
+          focusFailure = caughtFocusFailure;
+          focusFailureForContext = focusFailure;
+          focusFailureBeforeDescription = focusFailureForContext;
+          focusMessagePrefix = new StringBuilder().append("pi.UA(").append(methodGuard).append(',');
           if (focusContext == null) {
-            stackIn_7_2 = "null";
+            focusContextDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            focusContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusFailureBeforeDescription), ((StringBuilder) (Object) focusMessagePrefix).append(focusContextDescription).append(')').toString());
         }
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        String var5;
-        ValidationState var6;
-        int var14;
-        TextWidgetLayout var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        Sprite var15;
-        Sprite var16;
-        Sprite var17;
-        Sprite var18;
-        Sprite var19;
-        var14 = Geoblox.clientControlFlowFlag;
-        var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
-        if (var6 != ImageProducerRasterBuffer.debouncingValidationState &&
-            var6 != WidgetSkinState.pendingQueryValidationState) {
-          var5 = this.validationProvider.getDebouncedValidationMessage(-21666);
-          if (var5 == null) {
-            var5 = this.fallbackMessage;
+        String displayMessage;
+        ValidationState validationState;
+        int clientControlFlowSnapshot;
+        TextWidgetLayout textLayoutRenderer;
+        int iconScreenX;
+        int iconCenterY;
+        int renderGuardRemainder;
+        int requiredSpinnerWidth;
+        int requiredSpinnerHeight;
+        Sprite unusedPendingIconAlias;
+        Sprite validIconSprite;
+        Sprite invalidIconSprite;
+        Sprite pendingIconSprite;
+        Sprite debouncingIconSprite;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
+        if (validationState != ImageProducerRasterBuffer.debouncingValidationState &&
+            validationState != WidgetSkinState.pendingQueryValidationState) {
+          displayMessage = this.validationProvider.getDebouncedValidationMessage(-21666);
+          if (displayMessage == null) {
+            displayMessage = this.fallbackMessage;
           }
         } else {
-          var5 = NanoFrameTimer.checkingText;
+          displayMessage = NanoFrameTimer.checkingText;
         }
-        if (!var5.equals(this.widgetText)) {
-          this.widgetText = var5;
+        if (!displayMessage.equals(this.widgetText)) {
+          this.widgetText = displayMessage;
           this.rebuildHotspotBounds(-55);
         }
         super.renderWidget(parentX, parentY, (byte) 106, renderPass);
-        var6 = this.validationProvider.getDebouncedValidationState((byte) -105);
-        var8 = (TextWidgetLayout) ((Object) this.renderer);
-        var9 = this.widgetX + parentX;
-        var10 = var8.getTextOriginY(parentY, -2, (UiWidget) (this)) + (var8.getTextLayout((byte) 125, (UiWidget) (this)).getLayoutHeight(-3111) >> 1);
-        var11 = 7 % ((methodGuard - 1) / 43);
-        if (ImageProducerRasterBuffer.debouncingValidationState == var6) {
-          var19 = ClientClockSupport.validationStateSprites[0];
-          var12 = var19.fullWidth << 1;
-          var13 = var19.fullHeight << 1;
+        validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
+        textLayoutRenderer = (TextWidgetLayout) ((Object) this.renderer);
+        iconScreenX = this.widgetX + parentX;
+        iconCenterY = textLayoutRenderer.getTextOriginY(parentY, -2, (UiWidget) (this)) + (textLayoutRenderer.getTextLayout((byte) 125, (UiWidget) (this)).getLayoutHeight(-3111) >> 1);
+        renderGuardRemainder = 7 % ((methodGuard - 1) / 43);
+        if (ImageProducerRasterBuffer.debouncingValidationState == validationState) {
+          debouncingIconSprite = ClientClockSupport.validationStateSprites[0];
+          requiredSpinnerWidth = debouncingIconSprite.fullWidth << 1;
+          requiredSpinnerHeight = debouncingIconSprite.fullHeight << 1;
           if (this.spinnerSprite == null) {
-            this.spinnerSprite = new Sprite(var12, var13);
+            this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
             Geoblox.setRasterTarget(1, this.spinnerSprite);
           } else {
-            if (this.spinnerSprite.width < var12) {
-              this.spinnerSprite = new Sprite(var12, var13);
+            if (this.spinnerSprite.width < requiredSpinnerWidth) {
+              this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
               Geoblox.setRasterTarget(1, this.spinnerSprite);
             } else {
-              if (this.spinnerSprite.height < var13) {
-                this.spinnerSprite = new Sprite(var12, var13);
+              if (this.spinnerSprite.height < requiredSpinnerHeight) {
+                this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
                 Geoblox.setRasterTarget(1, this.spinnerSprite);
               } else {
                 Geoblox.setRasterTarget(1, this.spinnerSprite);
@@ -172,38 +172,38 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               }
             }
           }
-          var19.rotateSmooth(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.animationTicks << 10, 4096);
+          debouncingIconSprite.rotateSmooth(112, 144, debouncingIconSprite.fullWidth << 4, debouncingIconSprite.fullHeight << 4, -this.animationTicks << 10, 4096);
           RasterTargetRestoreSupport.restoreRasterTarget(true);
-          this.spinnerSprite.drawAdditive(-(var19.fullWidth >> 1) + var9, var10 - var19.fullHeight, 256);
+          this.spinnerSprite.drawAdditive(-(debouncingIconSprite.fullWidth >> 1) + iconScreenX, iconCenterY - debouncingIconSprite.fullHeight, 256);
           return;
         }
-        if (var6 != WidgetSkinState.pendingQueryValidationState) {
-          if (WidgetSkinState.invalidInputValidationState == var6) {
-            var17 = ClientClockSupport.validationStateSprites[2];
-            var17.drawAdditive(var9, var10 - (var17.height >> 1), 256);
+        if (validationState != WidgetSkinState.pendingQueryValidationState) {
+          if (WidgetSkinState.invalidInputValidationState == validationState) {
+            invalidIconSprite = ClientClockSupport.validationStateSprites[2];
+            invalidIconSprite.drawAdditive(iconScreenX, iconCenterY - (invalidIconSprite.height >> 1), 256);
             return;
           }
-          if (SocketArchiveNetworkClient.validInputValidationState != var6) {
+          if (SocketArchiveNetworkClient.validInputValidationState != validationState) {
             return;
           }
-          var16 = ClientClockSupport.validationStateSprites[1];
-          var16.drawAdditive(var9, var10 - (var16.height >> 1), 256);
+          validIconSprite = ClientClockSupport.validationStateSprites[1];
+          validIconSprite.drawAdditive(iconScreenX, iconCenterY - (validIconSprite.height >> 1), 256);
           return;
         }
-        var18 = ClientClockSupport.validationStateSprites[0];
-        var15 = var18;
-        var12 = var18.fullWidth << 1;
-        var13 = var18.fullHeight << 1;
+        pendingIconSprite = ClientClockSupport.validationStateSprites[0];
+        unusedPendingIconAlias = pendingIconSprite;
+        requiredSpinnerWidth = pendingIconSprite.fullWidth << 1;
+        requiredSpinnerHeight = pendingIconSprite.fullHeight << 1;
         if (this.spinnerSprite == null) {
-          this.spinnerSprite = new Sprite(var12, var13);
+          this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
           Geoblox.setRasterTarget(1, this.spinnerSprite);
         } else {
-          if (this.spinnerSprite.width < var12) {
-            this.spinnerSprite = new Sprite(var12, var13);
+          if (this.spinnerSprite.width < requiredSpinnerWidth) {
+            this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
             Geoblox.setRasterTarget(1, this.spinnerSprite);
           } else {
-            if (this.spinnerSprite.height < var13) {
-              this.spinnerSprite = new Sprite(var12, var13);
+            if (this.spinnerSprite.height < requiredSpinnerHeight) {
+              this.spinnerSprite = new Sprite(requiredSpinnerWidth, requiredSpinnerHeight);
               Geoblox.setRasterTarget(1, this.spinnerSprite);
             } else {
               Geoblox.setRasterTarget(1, this.spinnerSprite);
@@ -211,9 +211,9 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
         }
-        var18.rotateSmooth(112, 144, var18.fullWidth << 4, var18.fullHeight << 4, -this.animationTicks << 10, 4096);
+        pendingIconSprite.rotateSmooth(112, 144, pendingIconSprite.fullWidth << 4, pendingIconSprite.fullHeight << 4, -this.animationTicks << 10, 4096);
         RasterTargetRestoreSupport.restoreRasterTarget(true);
-        this.spinnerSprite.drawAdditive(-(var18.fullWidth >> 1) + var9, var10 - var18.fullHeight, 256);
+        this.spinnerSprite.drawAdditive(-(pendingIconSprite.fullWidth >> 1) + iconScreenX, iconCenterY - pendingIconSprite.fullHeight, 256);
         return;
     }
 
@@ -241,8 +241,8 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             this.validationProvider = validationProvider;
             this.fallbackMessage = fallbackMessage;
             this.setWidgetBounds(height, width, (byte) -77, y, x);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "pi.<init>(" + (validationProvider != null ? "{...}" : "null") + ',' + (fallbackMessage != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
+        } catch (RuntimeException messageInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageInitializationFailure), "pi.<init>(" + (validationProvider != null ? "{...}" : "null") + ',' + (fallbackMessage != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 
