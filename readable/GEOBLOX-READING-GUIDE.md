@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/9d6cd0583010a8fbe8519c7973ed8d78a3100629/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/46ff013f3898fcd6233b84c4fd50c1cc0e92afca/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 235)
+## Current readability (pass 236)
 
-The export has 20,044 guarded names and 121,801 Java identifier edits, plus 11
+The export has 20,078 guarded names and 121,835 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,040 bindings, reproduce and
+compile and compare 138,074 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,28 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current patch and envelope names (pass 235)
+## Current array-size and index roles (pass 236)
+
+The decompiler's opt-in array-dimension analysis separates reused primitive
+locals without changing allocations or expressions. InstrumentPatch now has
+independent envelope-assignment and construction indexes, volume/release envelope
+point counts and volume/pan curve point counts. Vorbis setup separates block
+sizes from codebook/floor/residue/mapping/mode counts and indexes.
+
+Sprite cropping distinguishes border scan rows from crop width. Archive unpacking
+distinguishes requested length from write position, and chunk-table lengths from
+allocation-file indexes and copy offsets. Glyph-profile decode, mixed-sample size,
+reflection argument size and login response phases also have precise names.
+Mixed values that still change units within one phase retain combined names.
+
+34 new roles and 18 first-role refinements bring the export to 20,078 rules and
+20,385 reversible dictionary identities. All 303 sources compile, compare 138,074
+bindings, reproduce and reverse exactly. Source certificates retain all 4,941
+transfers/protected scopes; existing native result/rendering traces pass.
+The same five large framed methods, 214 LiteralPhase names and 41 unknown field
+purposes remain. The workflow documents flags, source SHA, tests and limits.
+
+## Previous patch and envelope names (pass 235)
 
 InstrumentPatch decodes five independent run streams. Names distinguish the
 stored-run decode index, run cursor, remaining count, key index and current value.

@@ -14,28 +14,29 @@ final class SynthesizedSoundEffect {
     private final byte[] mixSamples() {
         int sampleIndex = 0;
         int totalDurationMillis;
-        int scanIndexOrSampleCount;
+        int instrumentScanIndex;
         byte[] samples;
         int instrumentIndex;
         int instrumentSampleCount;
         int startSample;
         int mixedSample;
         int[] instrumentSamples;
+        int mixedSampleCount;
         totalDurationMillis = 0;
-        for (scanIndexOrSampleCount = 0; scanIndexOrSampleCount < 10; scanIndexOrSampleCount++) {
-          if (this.instruments[scanIndexOrSampleCount] == null) {
+        for (instrumentScanIndex = 0; instrumentScanIndex < 10; instrumentScanIndex++) {
+          if (this.instruments[instrumentScanIndex] == null) {
             continue;
           }
-          if (this.instruments[scanIndexOrSampleCount].durationMillis + this.instruments[scanIndexOrSampleCount].startDelayMillis <= totalDurationMillis) {
+          if (this.instruments[instrumentScanIndex].durationMillis + this.instruments[instrumentScanIndex].startDelayMillis <= totalDurationMillis) {
             continue;
           }
-          totalDurationMillis = this.instruments[scanIndexOrSampleCount].durationMillis + this.instruments[scanIndexOrSampleCount].startDelayMillis;
+          totalDurationMillis = this.instruments[instrumentScanIndex].durationMillis + this.instruments[instrumentScanIndex].startDelayMillis;
         }
         if (totalDurationMillis == 0) {
           return new byte[]{};
         }
-        scanIndexOrSampleCount = 22050 * totalDurationMillis / 1000;
-        samples = new byte[scanIndexOrSampleCount];
+        mixedSampleCount = 22050 * totalDurationMillis / 1000;
+        samples = new byte[mixedSampleCount];
         instrumentIndex = 0;
         while (true) {
           if (instrumentIndex >= 10) {

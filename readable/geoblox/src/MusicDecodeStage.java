@@ -303,7 +303,7 @@ final class MusicDecodeStage {
         int partitionCount;
         int classCount;
         int partitionOrClassIndexOrRangeBits;
-        int classIdOrSubclassBitsOrBookCountOrPointCursor;
+        int partitionClassId;
         int partitionIndex;
         int[] subclassBooksAlias;
         int subclassBookIndexOrPartitionClass;
@@ -313,6 +313,9 @@ final class MusicDecodeStage {
         int partitionOrClassIndexOrRangeBitsPhase3;
         int partitionIndexPhase2;
         int subclassBookIndexOrPartitionClassPhase2;
+        int subclassBitsThenBookCount;
+        int configuredFloorPointCount;
+        int floorPointCursor;
         floorType = MusicDecoder.readBits(16);
         if (floorType != 1) {
           throw new RuntimeException();
@@ -321,12 +324,12 @@ final class MusicDecodeStage {
         classCount = 0;
         this.partitionClasses = new int[partitionCount];
         for (partitionOrClassIndexOrRangeBits = 0; partitionOrClassIndexOrRangeBits < partitionCount; partitionOrClassIndexOrRangeBits++) {
-          classIdOrSubclassBitsOrBookCountOrPointCursor = MusicDecoder.readBits(4);
-          this.partitionClasses[partitionOrClassIndexOrRangeBits] = classIdOrSubclassBitsOrBookCountOrPointCursor;
-          if (classIdOrSubclassBitsOrBookCountOrPointCursor < classCount) {
+          partitionClassId = MusicDecoder.readBits(4);
+          this.partitionClasses[partitionOrClassIndexOrRangeBits] = partitionClassId;
+          if (partitionClassId < classCount) {
             continue;
           }
-          classCount = classIdOrSubclassBitsOrBookCountOrPointCursor + 1;
+          classCount = partitionClassId + 1;
         }
         this.classDimensions = new int[classCount];
         this.classSubclassBits = new int[classCount];
@@ -336,44 +339,44 @@ final class MusicDecodeStage {
           this.classDimensions[partitionOrClassIndexOrRangeBitsPhase2] = MusicDecoder.readBits(3) + 1;
           subclassBitsSnapshot = MusicDecoder.readBits(2);
           this.classSubclassBits[partitionOrClassIndexOrRangeBitsPhase2] = subclassBitsSnapshot;
-          classIdOrSubclassBitsOrBookCountOrPointCursor = subclassBitsSnapshot;
-          if (classIdOrSubclassBitsOrBookCountOrPointCursor != 0) {
+          subclassBitsThenBookCount = subclassBitsSnapshot;
+          if (subclassBitsThenBookCount != 0) {
             this.classMasterbooks[partitionOrClassIndexOrRangeBitsPhase2] = MusicDecoder.readBits(8);
           }
-          classIdOrSubclassBitsOrBookCountOrPointCursor = 1 << classIdOrSubclassBitsOrBookCountOrPointCursor;
-          allocatedSubclassBooks = new int[classIdOrSubclassBitsOrBookCountOrPointCursor];
+          subclassBitsThenBookCount = 1 << subclassBitsThenBookCount;
+          allocatedSubclassBooks = new int[subclassBitsThenBookCount];
           intermediateSubclassBooksAlias = allocatedSubclassBooks;
           subclassBooksAlias = intermediateSubclassBooksAlias;
           this.classSubclassBooks[partitionOrClassIndexOrRangeBitsPhase2] = allocatedSubclassBooks;
-          for (subclassBookIndexOrPartitionClass = 0; subclassBookIndexOrPartitionClass < classIdOrSubclassBitsOrBookCountOrPointCursor; subclassBookIndexOrPartitionClass++) {
+          for (subclassBookIndexOrPartitionClass = 0; subclassBookIndexOrPartitionClass < subclassBitsThenBookCount; subclassBookIndexOrPartitionClass++) {
             subclassBooksAlias[subclassBookIndexOrPartitionClass] = MusicDecoder.readBits(8) - 1;
           }
         }
         this.floorMultiplier = MusicDecoder.readBits(2) + 1;
         partitionOrClassIndexOrRangeBitsPhase3 = MusicDecoder.readBits(4);
-        classIdOrSubclassBitsOrBookCountOrPointCursor = 2;
+        configuredFloorPointCount = 2;
         for (partitionIndex = 0; partitionIndex < partitionCount; partitionIndex++) {
-          classIdOrSubclassBitsOrBookCountOrPointCursor = classIdOrSubclassBitsOrBookCountOrPointCursor + this.classDimensions[this.partitionClasses[partitionIndex]];
+          configuredFloorPointCount = configuredFloorPointCount + this.classDimensions[this.partitionClasses[partitionIndex]];
         }
-        this.configuredFloorX = new int[classIdOrSubclassBitsOrBookCountOrPointCursor];
+        this.configuredFloorX = new int[configuredFloorPointCount];
         this.configuredFloorX[0] = 0;
         this.configuredFloorX[1] = 1 << partitionOrClassIndexOrRangeBitsPhase3;
-        classIdOrSubclassBitsOrBookCountOrPointCursor = 2;
+        floorPointCursor = 2;
         for (partitionIndexPhase2 = 0; partitionIndexPhase2 < partitionCount; partitionIndexPhase2++) {
           subclassBookIndexOrPartitionClassPhase2 = this.partitionClasses[partitionIndexPhase2];
           for (pointWithinPartition = 0; pointWithinPartition < this.classDimensions[subclassBookIndexOrPartitionClassPhase2]; pointWithinPartition++) {
-            pointCursorBeforeIncrement = classIdOrSubclassBitsOrBookCountOrPointCursor;
-            classIdOrSubclassBitsOrBookCountOrPointCursor++;
+            pointCursorBeforeIncrement = floorPointCursor;
+            floorPointCursor++;
             this.configuredFloorX[pointCursorBeforeIncrement] = MusicDecoder.readBits(partitionOrClassIndexOrRangeBitsPhase3);
           }
         }
         if (sharedFloorX != null &&
-            sharedFloorX.length >= classIdOrSubclassBitsOrBookCountOrPointCursor) {
+            sharedFloorX.length >= floorPointCursor) {
           return;
         }
-        sharedFloorX = new int[classIdOrSubclassBitsOrBookCountOrPointCursor];
-        sharedFloorY = new int[classIdOrSubclassBitsOrBookCountOrPointCursor];
-        sharedStepFlags = new boolean[classIdOrSubclassBitsOrBookCountOrPointCursor];
+        sharedFloorX = new int[floorPointCursor];
+        sharedFloorY = new int[floorPointCursor];
+        sharedStepFlags = new boolean[floorPointCursor];
         return;
     }
 

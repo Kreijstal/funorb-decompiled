@@ -55,7 +55,7 @@ final class GameplaySetupSupport {
             String[] argumentTypeNames = null;
             byte[][] serializedArgumentsAlias = null;
             Class[] resolvedArgumentClasses = null;
-            int serializedArgumentLengthThenClassIndexSnapshot = 0;
+            int serializedArgumentLength = 0;
             int unusedClientControlSnapshot = 0;
             ByteArrayBuffer unusedNullBufferSnapshot = null;
             String fieldOwnerClassName = null;
@@ -65,6 +65,7 @@ final class GameplaySetupSupport {
             byte[][] serializedArgumentsBeforeAlias = null;
             String methodOwnerClassName = null;
             byte[][] allocatedSerializedArguments = null;
+            int unusedInitialArgumentClassIndexSnapshot;
             unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
               reflectionRequest = new ReflectionCheckRequest();
@@ -102,16 +103,16 @@ final class GameplaySetupSupport {
                       serializedArgumentsAlias = serializedArgumentsBeforeAlias;
                       if (operationType == 3) {
                         for (serializedArgumentIndex = 0; serializedArgumentIndex < argumentCountOrIntegerWriteValue; serializedArgumentIndex++) {
-                          serializedArgumentLengthThenClassIndexSnapshot = buffer.readIntBE((byte) -70);
-                          newSerializedArgumentBytes = new byte[serializedArgumentLengthThenClassIndexSnapshot];
+                          serializedArgumentLength = buffer.readIntBE((byte) -70);
+                          newSerializedArgumentBytes = new byte[serializedArgumentLength];
                           serializedArgumentsAlias[serializedArgumentIndex] = newSerializedArgumentBytes;
-                          buffer.readBytes(29915, serializedArgumentLengthThenClassIndexSnapshot, allocatedSerializedArguments[serializedArgumentIndex], 0);
+                          buffer.readBytes(29915, serializedArgumentLength, allocatedSerializedArguments[serializedArgumentIndex], 0);
                         }
                       }
                       reflectionRequest.operationTypes[operationIndex] = operationType;
                       resolvedArgumentClasses = new Class[argumentCountOrIntegerWriteValue];
                       argumentClassIndex = 0;
-                      serializedArgumentLengthThenClassIndexSnapshot = argumentClassIndex;
+                      unusedInitialArgumentClassIndexSnapshot = argumentClassIndex;
                       while (argumentClassIndex < argumentCountOrIntegerWriteValue) {
                         resolvedArgumentClasses[argumentClassIndex] = EmailValidator.resolveReflectionClass(argumentTypeNames[argumentClassIndex], false);
                         argumentClassIndex++;

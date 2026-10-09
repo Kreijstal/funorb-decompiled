@@ -790,7 +790,7 @@ class Sprite extends SpriteState {
         int rowOffsetThenTopEdge;
         int scanThenRightEdge;
         int scanThenLeftEdge;
-        int scanRowThenCroppedWidth;
+        int borderScanRow;
         int croppedHeight;
         int[] croppedPixels;
         int rowOffsetThenTopEdgePhase2;
@@ -798,6 +798,7 @@ class Sprite extends SpriteState {
         int scanThenRightEdgePhase3;
         int scanThenLeftEdgePhase2;
         int scanThenLeftEdgePhase3;
+        int croppedWidth;
         bottomEdge = this.height - 1;
         bottomBorderScan: while (true) {
           if (bottomEdge >= 0) {
@@ -842,8 +843,8 @@ class Sprite extends SpriteState {
         scanThenLeftEdgePhase3 = 0;
         leftBorderScan: while (true) {
           if (scanThenLeftEdgePhase3 < scanThenRightEdgePhase3) {
-            for (scanRowThenCroppedWidth = rowOffsetThenTopEdgePhase2; scanRowThenCroppedWidth <= bottomEdge; scanRowThenCroppedWidth++) {
-              if (this.pixels[scanRowThenCroppedWidth * this.width + scanThenLeftEdgePhase3] != 0) {
+            for (borderScanRow = rowOffsetThenTopEdgePhase2; borderScanRow <= bottomEdge; borderScanRow++) {
+              if (this.pixels[borderScanRow * this.width + scanThenLeftEdgePhase3] != 0) {
                 break leftBorderScan;
               }
             }
@@ -858,16 +859,16 @@ class Sprite extends SpriteState {
             bottomEdge == this.height - 1) {
           return;
         }
-        scanRowThenCroppedWidth = scanThenRightEdgePhase3 + 1 - scanThenLeftEdgePhase3;
+        croppedWidth = scanThenRightEdgePhase3 + 1 - scanThenLeftEdgePhase3;
         croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdgePhase2;
-        croppedPixels = new int[scanRowThenCroppedWidth * croppedHeight];
+        croppedPixels = new int[croppedWidth * croppedHeight];
         for (copyRow = 0; copyRow < croppedHeight; copyRow++) {
-          for (copyColumn = 0; copyColumn < scanRowThenCroppedWidth; copyColumn++) {
-            croppedPixels[copyRow * scanRowThenCroppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdgePhase2) * this.width + (copyColumn + scanThenLeftEdgePhase3)];
+          for (copyColumn = 0; copyColumn < croppedWidth; copyColumn++) {
+            croppedPixels[copyRow * croppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdgePhase2) * this.width + (copyColumn + scanThenLeftEdgePhase3)];
           }
         }
         this.pixels = croppedPixels;
-        this.width = scanRowThenCroppedWidth;
+        this.width = croppedWidth;
         this.height = croppedHeight;
         this.trimX = this.trimX + scanThenLeftEdgePhase3;
         this.trimY = this.trimY + rowOffsetThenTopEdgePhase2;

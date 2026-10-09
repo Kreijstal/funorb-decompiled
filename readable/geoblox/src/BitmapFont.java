@@ -74,7 +74,7 @@ abstract class BitmapFont extends DualLinkNode {
         int profileMetadataGlyphIndex;
         byte[][] leadingProfilesForUpdates;
         byte[][] trailingProfilesForUpdates;
-        int deltaSumOrFirstGlyphIndex;
+        int leadingProfileDeltaSum;
         int profileRowOrDeltaSumOrSecondGlyphIndex;
         int[] profileLengthsForwarded;
         byte[][] leadingProfilesForwarded;
@@ -87,6 +87,8 @@ abstract class BitmapFont extends DualLinkNode {
         int profileMetadataGlyphIndexNestedPhase2;
         int profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2;
         int profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3;
+        int trailingProfileGlyphIndex;
+        int kerningFirstGlyphIndex;
         this.glyphAdvances = new int[256];
         if (metrics.length == 257) {
           for (glyphIndexOrMetricsOffset = 0; glyphIndexOrMetricsOffset < this.glyphAdvances.length; glyphIndexOrMetricsOffset++) {
@@ -122,41 +124,41 @@ abstract class BitmapFont extends DualLinkNode {
           for (leadingProfileGlyphIndex = 0; leadingProfileGlyphIndex < 256; leadingProfileGlyphIndex++) {
             allocatedLeadingProfile = new byte[profileLengthsSnapshot[leadingProfileGlyphIndex]];
             leadingProfilesForUpdates[leadingProfileGlyphIndex] = allocatedLeadingProfile;
-            deltaSumOrFirstGlyphIndex = 0;
+            leadingProfileDeltaSum = 0;
             for (profileRowOrDeltaSumOrSecondGlyphIndex = 0; profileRowOrDeltaSumOrSecondGlyphIndex < leadingProfilesSnapshot[leadingProfileGlyphIndex].length; profileRowOrDeltaSumOrSecondGlyphIndex++) {
               leadingDeltaReadOffsetBeforeIncrement = glyphIndexOrMetricsOffset;
               glyphIndexOrMetricsOffset++;
-              deltaSumOrFirstGlyphIndex = (byte)(deltaSumOrFirstGlyphIndex + metrics[leadingDeltaReadOffsetBeforeIncrement]);
-              leadingProfilesSnapshot[leadingProfileGlyphIndex][profileRowOrDeltaSumOrSecondGlyphIndex] = (byte)deltaSumOrFirstGlyphIndex;
+              leadingProfileDeltaSum = (byte)(leadingProfileDeltaSum + metrics[leadingDeltaReadOffsetBeforeIncrement]);
+              leadingProfilesSnapshot[leadingProfileGlyphIndex][profileRowOrDeltaSumOrSecondGlyphIndex] = (byte)leadingProfileDeltaSum;
             }
           }
           trailingProfilesSnapshot = new byte[256][];
           trailingProfilesForwarded = trailingProfilesSnapshot;
           trailingProfilesForUpdates = trailingProfilesForwarded;
-          for (deltaSumOrFirstGlyphIndex = 0; deltaSumOrFirstGlyphIndex < 256; deltaSumOrFirstGlyphIndex++) {
-            allocatedTrailingProfile = new byte[profileLengthsSnapshot[deltaSumOrFirstGlyphIndex]];
-            trailingProfilesForUpdates[deltaSumOrFirstGlyphIndex] = allocatedTrailingProfile;
+          for (trailingProfileGlyphIndex = 0; trailingProfileGlyphIndex < 256; trailingProfileGlyphIndex++) {
+            allocatedTrailingProfile = new byte[profileLengthsSnapshot[trailingProfileGlyphIndex]];
+            trailingProfilesForUpdates[trailingProfileGlyphIndex] = allocatedTrailingProfile;
             profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 = 0;
-            for (trailingProfileRow = 0; trailingProfileRow < trailingProfilesSnapshot[deltaSumOrFirstGlyphIndex].length; trailingProfileRow++) {
+            for (trailingProfileRow = 0; trailingProfileRow < trailingProfilesSnapshot[trailingProfileGlyphIndex].length; trailingProfileRow++) {
               trailingDeltaReadOffsetBeforeIncrement = glyphIndexOrMetricsOffset;
               glyphIndexOrMetricsOffset++;
               profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 = (byte)(profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2 + metrics[trailingDeltaReadOffsetBeforeIncrement]);
-              trailingProfilesSnapshot[deltaSumOrFirstGlyphIndex][trailingProfileRow] = (byte)profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2;
+              trailingProfilesSnapshot[trailingProfileGlyphIndex][trailingProfileRow] = (byte)profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase2;
             }
           }
           this.pairKerning = new byte[65536];
-          deltaSumOrFirstGlyphIndex = 0;
+          kerningFirstGlyphIndex = 0;
           while (true) {
-            if (deltaSumOrFirstGlyphIndex >= 256) {
+            if (kerningFirstGlyphIndex >= 256) {
               this.lineAdvance = profileOffsetsSnapshot[32] + profileLengthsSnapshot[32];
               break;
             }
-            if (deltaSumOrFirstGlyphIndex == 32) {
-              deltaSumOrFirstGlyphIndex++;
+            if (kerningFirstGlyphIndex == 32) {
+              kerningFirstGlyphIndex++;
               continue;
             }
-            if (deltaSumOrFirstGlyphIndex == 160) {
-              deltaSumOrFirstGlyphIndex++;
+            if (kerningFirstGlyphIndex == 160) {
+              kerningFirstGlyphIndex++;
               continue;
             }
             for (profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 = 0; profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 < 256; profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3++) {
@@ -166,9 +168,9 @@ abstract class BitmapFont extends DualLinkNode {
               if (profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3 == 160) {
                 continue;
               }
-              this.pairKerning[(deltaSumOrFirstGlyphIndex << 8) + profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3] = (byte)BitmapFont.computePairKerning(leadingProfilesSnapshot, trailingProfilesSnapshot, profileOffsetsSnapshot, this.glyphAdvances, profileLengthsSnapshot, deltaSumOrFirstGlyphIndex, profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3);
+              this.pairKerning[(kerningFirstGlyphIndex << 8) + profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3] = (byte)BitmapFont.computePairKerning(leadingProfilesSnapshot, trailingProfilesSnapshot, profileOffsetsSnapshot, this.glyphAdvances, profileLengthsSnapshot, kerningFirstGlyphIndex, profileRowOrDeltaSumOrSecondGlyphIndexNestedPhase3);
             }
-            deltaSumOrFirstGlyphIndex++;
+            kerningFirstGlyphIndex++;
           }
         }
     }

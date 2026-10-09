@@ -251,7 +251,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         RuntimeException caughtRequestFailure = null;
         RuntimeException requestFailureForContext = null;
         String emailText = null;
-        int requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 0;
+        int requestFlagsOrPayloadStart = 0;
         String settingsCookieText = null;
         int creationPayloadStartOrSuggestionPayloadLength = 0;
         String rememberedLoginText = null;
@@ -259,6 +259,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         String loginIdentifierText = null;
         CharSequence passwordCharacters = null;
         int creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1;
+        int replyOpcode;
+        int replyReadLength;
+        int previousSessionPort;
         try {
           loginIdentifierText = loginIdentifierValue.getText(16925);
           emailText = emailValue.getText(16925);
@@ -271,10 +274,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             CacheReference.outgoingSessionBuffer.position = 0;
             IntrusiveNodeHashTable.pendingLoginBooleanReply = null;
             if (passwordText != null) {
-              requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 0;
+              requestFlagsOrPayloadStart = 0;
               EndingAnimationSupport.loginPayloadBuffer.position = 0;
               if (newsOptIn) {
-                requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort | 1;
+                requestFlagsOrPayloadStart = requestFlagsOrPayloadStart | 1;
               }
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
               EndingAnimationSupport.loginPayloadBuffer.writeIntBE((byte) 95, DelegatingCanvas.sharedClientRandom.nextInt());
@@ -284,7 +287,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               EndingAnimationSupport.loginPayloadBuffer.writeZeroPrefixedNullTerminatedText(UsernameAvailabilityQuery.normalizePasswordForPacket(passwordCharacters, 48), (byte) -126);
               EndingAnimationSupport.loginPayloadBuffer.writeShortBE(affiliateId, 28695);
               EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) -94, ageYears);
-              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort);
+              EndingAnimationSupport.loginPayloadBuffer.writeByte((byte) 123, requestFlagsOrPayloadStart);
               CacheReference.outgoingSessionBuffer.writeByte((byte) 127, 18);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 2;
               creationPayloadStartOrSuggestionPayloadLength = CacheReference.outgoingSessionBuffer.position;
@@ -315,34 +318,34 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               ((ByteArrayBuffer) (Object) emailPayloadBuffer).writeZeroPrefixedNullTerminatedText(includedEmailText, (byte) -126);
               CacheReference.outgoingSessionBuffer.writeByte((byte) 124, 16);
               CacheReference.outgoingSessionBuffer.position = CacheReference.outgoingSessionBuffer.position + 1;
-              requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = CacheReference.outgoingSessionBuffer.position;
+              requestFlagsOrPayloadStart = CacheReference.outgoingSessionBuffer.position;
               UiWidget.appendRsaXteaEncryptedBuffer(false, EndingAnimationSupport.loginPayloadBuffer, CacheReference.outgoingSessionBuffer, PlayfieldRules.loginModPowExponent, InstrumentPatch.loginModPowModulus);
-              CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort);
+              CacheReference.outgoingSessionBuffer.backpatchLengthByte(11700, CacheReference.outgoingSessionBuffer.position - requestFlagsOrPayloadStart);
             }
             NanoFrameTimer.flushSessionWrites(-1, -1);
             PacketBuffer.currentProtocolStage = awaitingAccountOrLookupReplyOpcodeStage;
           }
           if (awaitingAccountOrLookupReplyOpcodeStage == PacketBuffer.currentProtocolStage &&
               UiWidget.readSessionBytesIfAvailable(30000, 1)) {
-            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+            replyOpcode = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
             LogoCompositor.sessionPacketBuffer.position = 0;
-            if (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort >= 100 &&
-                requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort <= 105) {
+            if (replyOpcode >= 100 &&
+                replyOpcode <= 105) {
               PacketBuffer.currentProtocolStage = CanvasResizeController.awaitingUsernameSuggestionsStage;
-              WidgetSkinState.pendingUsernameSuggestions = new String[requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort - 100];
+              WidgetSkinState.pendingUsernameSuggestions = new String[replyOpcode - 100];
             } else {
-              if (requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort == 248) {
+              if (replyOpcode == 248) {
                 GrowableIntList.createClientCookieMarker(NodeHashTableIterator.getActiveApplet(124), (byte) 123);
                 AudioService.sessionResponseText = ByteShortQuery.createUnableText;
                 Bzip2DecoderState.closeSessionSocket((byte) -124);
                 TextTemplateArgumentType.loginRetryAttempted = false;
-                unableResponseBeforeReturn = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
+                unableResponseBeforeReturn = replyOpcode;
                 return unableResponseBeforeReturn;
               }
-              if (99 != requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort) {
+              if (99 != replyOpcode) {
                 PacketBuffer.currentProtocolStage = AccountCreationForm.awaitingLoginLookupPayloadStage;
                 AchievementSubmission.sessionPacketPayloadLength = -1;
-                ScorePopup.currentPacketOpcode = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
+                ScorePopup.currentPacketOpcode = replyOpcode;
               } else {
                 UiWidget.readSessionBytesIfAvailable(30000, DualLinkNode.getLoginBooleanReplyLength(112));
                 IntrusiveNodeHashTable.pendingLoginBooleanReply = new Boolean(Bzip2DecoderState.readByteEqualsOne(LogoCompositor.sessionPacketBuffer, 0));
@@ -351,8 +354,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             }
           }
           if (PacketBuffer.currentProtocolStage == CanvasResizeController.awaitingUsernameSuggestionsStage) {
-            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 2;
-            if (UiWidget.readSessionBytesIfAvailable(30000, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort)) {
+            replyReadLength = 2;
+            if (UiWidget.readSessionBytesIfAvailable(30000, replyReadLength)) {
               creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
               LogoCompositor.sessionPacketBuffer.position = 0;
               if (UiWidget.readSessionBytesIfAvailable(30000, creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1)) {
@@ -396,10 +399,10 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
               retryFailureBeforeReturn = 249;
               return retryFailureBeforeReturn;
             }
-            requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = NetworkArchiveRequest.sessionServerPort;
+            previousSessionPort = NetworkArchiveRequest.sessionServerPort;
             NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
             TextTemplateArgumentType.loginRetryAttempted = true;
-            TextInputRenderer.alternateSessionServerPort = requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort;
+            TextInputRenderer.alternateSessionServerPort = previousSessionPort;
           }
           pendingResultBeforeReturn = -1;
           return pendingResultBeforeReturn;

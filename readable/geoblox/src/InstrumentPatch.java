@@ -218,12 +218,12 @@ final class InstrumentPatch extends IntrusiveNode {
         int envelopeCount = 0;
         int currentEnvelopeIndex = 0;
         InstrumentEnvelope[] envelopes = null;
-        int envelopeIndexOrCurvePointCount = 0;
+        int envelopeAssignmentIndex = 0;
         int encodedEnvelopeIndex = 0;
         byte[] volumeCurve = null;
         InstrumentEnvelope newEnvelope = null;
         byte[] panCurve = null;
-        int envelopePointCount = 0;
+        int volumeEnvelopePointCount = 0;
         int sampleRunByteCount = 0;
         byte[] sampleRuns = null;
         int sampleRunDecodeIndex = 0;
@@ -307,6 +307,10 @@ final class InstrumentPatch extends IntrusiveNode {
         int panInterpolationNumerator;
         int unusedPanInterpolationStartKeySnapshot;
         int interpolatedPanCurveOffset;
+        int envelopeConstructionIndex;
+        int volumeCurvePointCount;
+        int panCurvePointCount;
+        int releaseEnvelopePointCount;
         try {
           this.keyPans = new byte[128];
           this.keyEnvelopes = new InstrumentEnvelope[128];
@@ -357,7 +361,7 @@ final class InstrumentPatch extends IntrusiveNode {
             envelopeAssignmentsStorage[1] = (byte) 1;
             currentEnvelopeIndex = 1;
             envelopeCount = 2;
-            for (envelopeIndexOrCurvePointCount = 2; envelopeRunByteCountOrMapLength > envelopeIndexOrCurvePointCount; envelopeIndexOrCurvePointCount++) {
+            for (envelopeAssignmentIndex = 2; envelopeRunByteCountOrMapLength > envelopeAssignmentIndex; envelopeAssignmentIndex++) {
               encodedEnvelopeIndex = patchInput.readUnsignedByte((byte) 34);
               if (0 == encodedEnvelopeIndex) {
                 newEnvelopeIndex = envelopeCount;
@@ -369,40 +373,40 @@ final class InstrumentPatch extends IntrusiveNode {
                 }
                 currentEnvelopeIndex = encodedEnvelopeIndex;
               }
-              envelopeAssignments[envelopeIndexOrCurvePointCount] = (byte)currentEnvelopeIndex;
+              envelopeAssignments[envelopeAssignmentIndex] = (byte)currentEnvelopeIndex;
             }
           } else {
             envelopeCount = envelopeRunByteCountOrMapLength;
           }
           envelopes = new InstrumentEnvelope[envelopeCount];
-          for (envelopeIndexOrCurvePointCount = 0; envelopeIndexOrCurvePointCount < envelopes.length; envelopeIndexOrCurvePointCount++) {
+          for (envelopeConstructionIndex = 0; envelopeConstructionIndex < envelopes.length; envelopeConstructionIndex++) {
             newEnvelopeStorage = new InstrumentEnvelope();
-            envelopes[envelopeIndexOrCurvePointCount] = newEnvelopeStorage;
+            envelopes[envelopeConstructionIndex] = newEnvelopeStorage;
             newEnvelopeAlias = newEnvelopeStorage;
             newEnvelope = newEnvelopeAlias;
-            envelopePointCount = patchInput.readUnsignedByte((byte) 34);
-            if (0 < envelopePointCount) {
-              newEnvelope.volumeEnvelope = new byte[2 * envelopePointCount];
+            volumeEnvelopePointCount = patchInput.readUnsignedByte((byte) 34);
+            if (0 < volumeEnvelopePointCount) {
+              newEnvelope.volumeEnvelope = new byte[2 * volumeEnvelopePointCount];
             }
-            envelopePointCount = patchInput.readUnsignedByte((byte) 34);
-            if (0 < envelopePointCount) {
-              newEnvelope.releaseEnvelope = new byte[2 * envelopePointCount + 2];
+            releaseEnvelopePointCount = patchInput.readUnsignedByte((byte) 34);
+            if (0 < releaseEnvelopePointCount) {
+              newEnvelope.releaseEnvelope = new byte[2 * releaseEnvelopePointCount + 2];
               newEnvelopeAlias.releaseEnvelope[1] = (byte)64;
             }
           }
-          envelopeIndexOrCurvePointCount = patchInput.readUnsignedByte((byte) 34);
-          if (envelopeIndexOrCurvePointCount <= 0) {
+          volumeCurvePointCount = patchInput.readUnsignedByte((byte) 34);
+          if (volumeCurvePointCount <= 0) {
             optionalVolumeCurve = null;
           } else {
-            optionalVolumeCurve = new byte[envelopeIndexOrCurvePointCount * 2];
+            optionalVolumeCurve = new byte[volumeCurvePointCount * 2];
           }
           volumeCurveAlias = optionalVolumeCurve;
           volumeCurve = volumeCurveAlias;
-          envelopeIndexOrCurvePointCount = patchInput.readUnsignedByte((byte) 34);
-          if (0 >= envelopeIndexOrCurvePointCount) {
+          panCurvePointCount = patchInput.readUnsignedByte((byte) 34);
+          if (0 >= panCurvePointCount) {
             optionalPanCurve = null;
           } else {
-            optionalPanCurve = new byte[envelopeIndexOrCurvePointCount * 2];
+            optionalPanCurve = new byte[panCurvePointCount * 2];
           }
           panCurveAlias = optionalPanCurve;
           panCurve = panCurveAlias;
