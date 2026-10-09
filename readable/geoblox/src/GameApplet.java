@@ -479,9 +479,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 selectedContainerOrFailure = VisualPropertyNode.loaderApplet;
                 if (clientControlSnapshot != 0) {
                   selectedContainerOrFailure = PrefixCodeDecoder.activeGameApplet;
-                  if (clientControlSnapshot != 0) {
+                  {
                     selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
-                    if (clientControlSnapshot != 0) {
+                    {
                       selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
                     }
                   }
@@ -490,7 +490,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 selectedContainerOrFailure = PrefixCodeDecoder.activeGameApplet;
                 if (clientControlSnapshot != 0) {
                   selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
-                  if (clientControlSnapshot != 0) {
+                  {
                     selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
                   }
                 }

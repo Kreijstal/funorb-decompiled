@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "956de36de517ce4fbbf8bddd55224ccaec140367",
+      "commit": "0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12",
-        "reproduce": "git archive --format=tar 956de36de517ce4fbbf8bddd55224ccaec140367 | sha256sum",
+        "sha256": "19a69a0d2c9bcdd9fe25ed9f6665359cb7617ea83f97d69fadc78105fd1223b0",
+        "reproduce": "git archive --format=tar 0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -19,7 +19,8 @@
         "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
         "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
         "CFR_JS_LOOP_FRAME_COMPLETION": "1",
-        "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1"
+        "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+        "CFR_JS_FINAL_LOCAL_GUARDS": "1"
       }
     },
     "namingTool": {
@@ -96,7 +97,8 @@
       "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
       "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
       "CFR_JS_LOOP_FRAME_COMPLETION": "1",
-      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1"
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1"
     }
   },
   "freshVerification": {
@@ -121,9 +123,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182",
-  "previousSourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
-  "changedJavaFiles": 18,
+  "sourceTreeSha256": "c76e487442d919775501c3302fd88bf8dfc913841df0900a2da85ca95706372b",
+  "previousSourceTreeSha256": "0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182",
+  "changedJavaFiles": 3,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3291,11 +3293,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def",
+    "commit": "a813b09024e101867835e665908f9bf484b9f03b",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "1ae86053580bd3f35eb33f39a1c42f81ed9a52f834bb024c98aea8c9b73a6c01"
+      "sha256": "8fcd768cbc02af23ea7e5abb0ef262ce9538e7f2b0dc956eac7f39de9e43835e"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3305,15 +3307,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b",
+    "outputTreeSha256": "39f31bff10c8827bdb81140f7c133c799a11a5b39b451474b8f021de1a7c6d00",
     "files": 303,
     "rules": 19521,
-    "identifierEdits": 121269,
-    "bindingsCompared": 137491,
+    "identifierEdits": 121249,
+    "bindingsCompared": 137471,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 121703,
+    "totalEdits": 121683,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 423,
@@ -3335,8 +3337,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 227,
-    "semanticPass": 227
+    "structuralPass": 228,
+    "semanticPass": 228
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -26631,5 +26633,125 @@
     ],
     "sourceWorkflowCommit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def",
     "sourceProofWorkflowCommit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def"
+  },
+  "finalLocalGuardRecovery": {
+    "version": 228,
+    "finalLocalGuards": true,
+    "preserveActions": true,
+    "changedJavaFiles": 3,
+    "changedMethodBodies": 13,
+    "guardsSpecialized": 20,
+    "pureLocalReadsRemoved": 20,
+    "sourceProofTest": "readable/tests/test-geoblox-final-local-guards-source.mjs",
+    "sourceProofTestSha256": "c7e5b33c2bbcd34294f7c7871a07cc6ca1724d5bdf9a7137cfcf2c86a7b86201",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "c324269be5006101482e81f928af1d747bd043ce",
+    "sourceCommit": "53e1bc75d7ff4974dc5b7ba082bed0b96ca25a05",
+    "previousSourceTreeSha256": "0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182",
+    "sourceTreeSha256": "c76e487442d919775501c3302fd88bf8dfc913841df0900a2da85ca95706372b",
+    "javaToolsCommit": "0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8",
+    "sourceArchiveSha256": "19a69a0d2c9bcdd9fe25ed9f6665359cb7617ea83f97d69fadc78105fd1223b0",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1"
+    },
+    "independentlyComparedAstFiles": 303,
+    "bindingsBefore": 137491,
+    "bindingsCompared": 137471,
+    "transfersCompared": 4941,
+    "completeRulesPreserved": 19521,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "allOriginalActionsAssignmentsScopesAndTransfersPreserved": true,
+    "onlyCertifiedPureLocalReadsRemoved": true,
+    "independentAttributedJdkLocalAndBranchFacts": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 9,
+    "genericNativeComparisons": 39960,
+    "actionPreservingNativeComparisons": 8280,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "remainingLargeFramedMethods": 4,
+    "plainBlockLabelsAfter": 77,
+    "remainingUnresolvedFieldPurposes": 41,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Reapply captured-local path specialization after late reconstruction and Boolean cleanup, preserving every original action, assignment, declaration and selected block scope. Remove only true guards on stable primitive int locals proven by enclosing branches. Refuse discarded arms and suffix pruning. Independent attributed JDK branch/local-binding/stability certificates, complete ASTs, surviving binding identities, every transfer target and protected scope remain equal; no field/control-flag value is assumed.",
+    "changedMethods": [
+      {
+        "file": "c.java",
+        "methodStart": 89048,
+        "guards": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 70280,
+        "guards": 2
+      },
+      {
+        "file": "c.java",
+        "methodStart": 60474,
+        "guards": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 38620,
+        "guards": 3
+      },
+      {
+        "file": "c.java",
+        "methodStart": 32879,
+        "guards": 2
+      },
+      {
+        "file": "c.java",
+        "methodStart": 9926,
+        "guards": 1
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 18992,
+        "guards": 3
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 56575,
+        "guards": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 54898,
+        "guards": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 48317,
+        "guards": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 37543,
+        "guards": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19006,
+        "guards": 2
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 6562,
+        "guards": 1
+      }
+    ],
+    "sourceWorkflowCommit": "a813b09024e101867835e665908f9bf484b9f03b",
+    "sourceProofWorkflowCommit": "a813b09024e101867835e665908f9bf484b9f03b"
   }
 }

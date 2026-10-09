@@ -2,10 +2,58 @@
 
 The current export has 19,521 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 145 labels. Both 303-file corpora
-compile, comparing 137,491 bindings and preserving 388 override relationships. Unknown
+compile, comparing 137,471 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current final Boolean conditions (pass 227)
+## Current action-preserving local guards (pass 228)
+
+Twenty redundant true guards in 13 methods across GameScreen, GameplaySession
+and GameApplet now keep their selected block directly. Repeated nested checks
+of an unchanged captured control flag no longer obscure fullscreen pointer work,
+menu/tutorial updates, gameplay rendering, session updates and result preparation.
+Every original action, assignment, declaration and selected brace scope remains.
+No discarded arm or newly unreachable suffix is removed.
+
+The generic opt-in `CFR_JS_FINAL_LOCAL_GUARDS=1` reapplies existing path facts
+after late continuation/lifetime and Boolean cleanup. Its new
+`preserveActions` mode refuses a discarded arm, an unbraced selected action
+or any completion-driven suffix pruning. Existing broader specialization stays
+unchanged. Fields, boxed/shadowed values and later/cyclic writes cannot justify
+specialization; no global control-flag value is assumed. The option defaults off.
+
+Independent attributed JDK certificates prove the exact selected enclosing
+branches, primitive local binding and absence of later/cyclic writes. Complete
+JDK AST fingerprints compare all 303 classes after erasing only those certified
+conditions. Exactly 20 pure local reads disappear; all 137,471 surviving value
+bindings, 388 override pairs and 4,941 transfer targets/protected scopes retain
+their identities. All 19,521 complete naming rules and 19,828 dictionary
+identities stay unchanged. Labels remain at 77. The export records 121,249
+identifier, 11 literal and 423 label edits (121,683 total).
+
+Validation:
+
+- java-tools: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test --experimental-test-isolation=none test/javaAstEmitterPathGuards.test.js test/javaAstEmitterPathGuardSwitches.test.js` — nine groups pass, including 39,960 native comparisons. The new action-preserving mode contributes 8,280 comparisons across zero/nonzero flags, nullable locks, effect failures, loops, cleanup overrides and monitors.
+- Deko: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-final-local-guards-source.mjs ../java-tools` — independently certified local/branch facts, full ASTs, exact compiler bytes, surviving bindings and protected transfers.
+- `node readable/build-geoblox-rules.mjs --check` and
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` /
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass
+  for all 303 files. Dictionary reversal is byte exact. All 27 publication groups
+  and 17 scoped gameplay/result trace groups pass. Fresh sibling checkouts
+  reproduce the complete committed export.
+- A clean tracked compiler-source tar reproduces all raw files and unchanged
+  diagnostics. Fixed bytecode, stubs, naming dependency, native probes, four
+  workflow files and complete historical proof objects remain unchanged.
+
+Four large framed methods and 41 unknown functional field purposes remain.
+This pass reduces repeated decision nesting without establishing whole-game,
+browser/phone behavior or heap/presented-FPS acceptance. Real nonlocal skips and
+protected/outer-loop corridors still require structural work.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`19a69a0d2c9bcdd9fe25ed9f6665359cb7617ea83f97d69fadc78105fd1223b0` at java-tools `0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8`.
+It identifies compiler source, not a game JAR.
+
+## Previous final Boolean conditions (pass 227)
 
 The final cleanup simplifies 80 control conditions and removes 107 redundant
 parenthesis pairs in 42 methods across 18 classes. Menu/tutorial/fullscreen
@@ -4704,41 +4752,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ef94abfd1771d9a66f7d4887c6a2ea0a00a03def/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/a813b09024e101867835e665908f9bf484b9f03b/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ef94abfd1771d9a66f7d4887c6a2ea0a00a03def/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/a813b09024e101867835e665908f9bf484b9f03b/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `ef94abfd1771d9a66f7d4887c6a2ea0a00a03def`; the
-manifest SHA-256 is `1ae86053580bd3f35eb33f39a1c42f81ed9a52f834bb024c98aea8c9b73a6c01`.
+The current Deko workflow/manifest commit is `a813b09024e101867835e665908f9bf484b9f03b`; the
+manifest SHA-256 is `8fcd768cbc02af23ea7e5abb0ef262ce9538e7f2b0dc956eac7f39de9e43835e`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`c324269be5006101482e81f928af1d747bd043ce`. It comes from java-tools
-`956de36de517ce4fbbf8bddd55224ccaec140367` and Deko
+`53e1bc75d7ff4974dc5b7ba082bed0b96ca25a05`. It comes from java-tools
+`0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `59c17f5bbf3f10aec41fbe64df8d656d64b7884a` in Deko; its selected generic-source
 archive SHA-256 is `f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12`:
+`19a69a0d2c9bcdd9fe25ed9f6665359cb7617ea83f97d69fadc78105fd1223b0`:
 
 ```sh
-git archive --format=tar 956de36de517ce4fbbf8bddd55224ccaec140367 | sha256sum
+git archive --format=tar 0153fbdbb826119efbc2c92eaa9d4ca7cc6721b8 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182`.
+`c76e487442d919775501c3302fd88bf8dfc913841df0900a2da85ca95706372b`.
 Current readable tree SHA-256:
-`3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b`.
+`39f31bff10c8827bdb81140f7c133c799a11a5b39b451474b8f021de1a7c6d00`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
@@ -7792,7 +7840,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182` |
-| Readable | `3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b` |
+| Raw | `c76e487442d919775501c3302fd88bf8dfc913841df0900a2da85ca95706372b` |
+| Readable | `39f31bff10c8827bdb81140f7c133c799a11a5b39b451474b8f021de1a7c6d00` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

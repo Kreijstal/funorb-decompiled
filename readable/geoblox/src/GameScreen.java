@@ -310,7 +310,7 @@ final class GameScreen extends MenuScreen {
               if (clientControlFlowGuard != 0) {
                 if (-4 >= this.menuPressOffset) {
                   this.menuPressAnimationActive = false;
-                  if (clientControlFlowGuard != 0) {
+                  {
                     this.menuPressOffset = this.menuPressOffset - 1;
                   }
                 } else {
@@ -950,7 +950,7 @@ final class GameScreen extends MenuScreen {
                 AudioService.screenTitleSprites[3].draw(0, 20);
                 if (clientControlFlowGuard != 0) {
                   AudioService.screenTitleSprites[2].draw(0, 20);
-                  if (clientControlFlowGuard != 0) {
+                  {
                     AudioService.screenTitleSprites[1].draw(0, 20);
                   }
                 }
@@ -1040,7 +1040,7 @@ final class GameScreen extends MenuScreen {
               if (clientControlFlowGuard != 0) {
                 if (!UnderlinedButtonRenderer.isGuestSessionMode(-89)) {
                   statusOrFriendTipText = PasswordValidator.serviceUnavailableText;
-                  if (clientControlFlowGuard != 0) {
+                  {
                     statusOrFriendTipText = ClientTimingSupport.noHighscoresText;
                   }
                 } else {
@@ -1284,9 +1284,9 @@ final class GameScreen extends MenuScreen {
                       this.fullscreenDialogActive = false;
                       ArchiveCatalog.exitFullscreenIfActive(255);
                       this.pointerInteractionActive = true;
-                      if (clientControlFlowGuard != 0) {
+                      {
                         this.pointerInteractionActive = false;
-                        if (clientControlFlowGuard != 0) {
+                        {
                           this.pointerInteractionActive = true;
                           this.fullscreenDialogActive = false;
                         }
@@ -1298,7 +1298,7 @@ final class GameScreen extends MenuScreen {
                     this.pointerInteractionActive = true;
                     if (clientControlFlowGuard != 0) {
                       this.pointerInteractionActive = false;
-                      if (clientControlFlowGuard != 0) {
+                      {
                         this.pointerInteractionActive = true;
                         this.fullscreenDialogActive = false;
                       }
@@ -1625,7 +1625,7 @@ final class GameScreen extends MenuScreen {
                   SocialListEntry.soundEffectVolume = 80 * pointerX / NetworkArchiveRequest.barSprite.fullWidth;
                   if (clientControlFlowGuard != 0) {
                     SocialListEntry.soundEffectVolume = 80;
-                    if (clientControlFlowGuard != 0) {
+                    {
                       SocialListEntry.soundEffectVolume = 0;
                     }
                   }
@@ -2003,7 +2003,7 @@ final class GameScreen extends MenuScreen {
                         UiWidget.gameplayReturnScreenId = 6;
                         if (clientControlFlowGuard != 0) {
                           UiWidget.gameplayReturnScreenId = 5;
-                          if (clientControlFlowGuard != 0) {
+                          {
                             UiWidget.gameplayReturnScreenId = 2;
                           }
                         }
@@ -2057,7 +2057,7 @@ final class GameScreen extends MenuScreen {
                         UiWidget.gameplaySession.submitScore((byte) -70);
                         if (0 < UiWidget.gameplaySession.newActionCount) {
                           ScoreSubmission.requestedScreenId = 6;
-                          if (clientControlFlowGuard != 0) {
+                          {
                             ScoreSubmission.requestedScreenId = 2;
                           }
                         } else {
@@ -2621,7 +2621,7 @@ final class GameScreen extends MenuScreen {
                 if (this.screenId != 6 &&
                     this.screenId != 2) {
                   ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
-                  if (clientControlFlowGuard != 0) {
+                  {
                     ScoreSubmission.requestedScreenId = 0;
                   }
                 } else {
