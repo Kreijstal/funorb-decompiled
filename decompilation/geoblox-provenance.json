@@ -3283,11 +3283,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "77511453225b8fe5a1eed627688ccd8b05313a51",
+    "commit": "6ead341e9de669319bccf2bb5b49b3da3a452420",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "16677ce51b23a0c5ff2f9876ea591fb7b675f28972e8d183d26c8627e01c3fad"
+      "sha256": "a4a7c2fea964d133ad920ba5935907c489331eafdd4c940c849c586f999febcf"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3297,15 +3297,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "83f3eeed01097120de2458aae7f2a75b88b880c1a2b0fa77bee63ba8defad343",
+    "outputTreeSha256": "e14cb37657601d5013df76bfafcb15f072606b04b07d9ac69b350285908a10ae",
     "files": 303,
-    "rules": 18430,
-    "identifierEdits": 118402,
+    "rules": 18514,
+    "identifierEdits": 118625,
     "bindingsCompared": 136992,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 118855,
+    "totalEdits": 119078,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3327,7 +3327,7 @@
       "remainingOpaqueFields": 41
     },
     "structuralPass": 218,
-    "semanticPass": 217
+    "semanticPass": 219
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -18337,5 +18337,464 @@
     ],
     "sourceWorkflowCommit": "77511453225b8fe5a1eed627688ccd8b05313a51",
     "sourceProofWorkflowCommit": "77511453225b8fe5a1eed627688ccd8b05313a51"
+  },
+  "appletCallbackLocalNames": {
+    "version": 219,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 84,
+    "namedLocalDeclarationsAdded": 66,
+    "namedParameterDeclarationsAdded": 18,
+    "changedReadableJavaFiles": 1,
+    "previousCompleteRules": 18430,
+    "unaffectedCompleteRulesPreserved": 18430,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+    "sourceCommit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
+    "javaToolsCommit": "433ff77e11140811703f28a56e22efa35fc64e07",
+    "sourceArchiveSha256": "f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1"
+    },
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 436,
+    "rawCompilerLocalsAfter": 378,
+    "identifierEditsAdded": 223,
+    "readableIdentifierEdits": 118625,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 119078,
+    "stableDictionaryIdentities": 19366,
+    "bindingsCompared": 136992,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name every remaining opaque local/parameter declaration in GameApplet: canvas clipping, focus/start/stop/destroy callbacks, loader assignment, fullscreen/loader/inherited return snapshots, parameter lookup, failure aliases and unused/abstract arguments. Preserve all complete prior rules and dictionary identities, source/compiler/environment pins, guards, exception/monitor behavior, all return/call/effect ordering and unused temporaries. Leave six publicly declared, source-unreferenced applet fields and thirty-five unresolved visual-property fields unchanged. Historical proof objects remain immutable. No new actual AWT/browser, whole-game or FPS/memory coverage.",
+    "symbols": [
+      {
+        "symbol": "L:ch.destroy()V#0",
+        "originalName": "runtimeException",
+        "to": "destructionFailure"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "runtimeException",
+        "to": "focusGainFailureForContext"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#1",
+        "originalName": "stackIn_5_0",
+        "to": "focusGainFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#2",
+        "originalName": "stackIn_5_1",
+        "to": "focusGainMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#3",
+        "originalName": "stackIn_6_2",
+        "to": "focusEventDescription"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "focusGainFailure"
+      },
+      {
+        "symbol": "L:ch.focusGained(Ljava/awt/event/FocusEvent;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtFocusGainFailure"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "runtimeException",
+        "to": "focusLossFailureForContext"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#1",
+        "originalName": "stackIn_5_0",
+        "to": "focusLossFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#2",
+        "originalName": "stackIn_5_1",
+        "to": "focusLossMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#3",
+        "originalName": "stackIn_6_2",
+        "to": "focusEventDescription"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "focusLossFailure"
+      },
+      {
+        "symbol": "L:ch.focusLost(Ljava/awt/event/FocusEvent;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtFocusLossFailure"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#0",
+        "originalName": "var1",
+        "to": "appletContextFailureForContext"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#1",
+        "originalName": "stackIn_2_0",
+        "to": "fullscreenNullAppletContext"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#2",
+        "originalName": "stackIn_8_0",
+        "to": "loaderAppletContext"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#3",
+        "originalName": "stackIn_10_0",
+        "to": "inheritedAppletContext"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#4",
+        "originalName": "decompiledCaughtException",
+        "to": "appletContextFailure"
+      },
+      {
+        "symbol": "L:ch.getAppletContext()Ljava/applet/AppletContext;#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtAppletContextFailure"
+      },
+      {
+        "symbol": "L:ch.getCodeBase()Ljava/net/URL;#0",
+        "originalName": "var1",
+        "to": "unusedCodeBaseFailure"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#0",
+        "originalName": "var1",
+        "to": "documentBaseFailureForContext"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#1",
+        "originalName": "stackIn_4_0",
+        "to": "fullscreenNullDocumentBase"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#2",
+        "originalName": "stackIn_10_0",
+        "to": "loaderDocumentBase"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#3",
+        "originalName": "stackIn_12_0",
+        "to": "inheritedDocumentBase"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#4",
+        "originalName": "decompiledCaughtException",
+        "to": "documentBaseFailure"
+      },
+      {
+        "symbol": "L:ch.getDocumentBase()Ljava/net/URL;#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDocumentBaseFailure"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#0",
+        "originalName": "var2",
+        "to": "parameterLookupFailureForContext"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#1",
+        "originalName": "stackIn_4_0",
+        "to": "fullscreenNullParameterValue"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#2",
+        "originalName": "stackIn_10_0",
+        "to": "loaderParameterValue"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#3",
+        "originalName": "stackIn_12_0",
+        "to": "inheritedParameterValue"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#4",
+        "originalName": "stackIn_16_0",
+        "to": "parameterLookupFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#5",
+        "originalName": "stackIn_16_1",
+        "to": "parameterLookupMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#6",
+        "originalName": "stackIn_17_2",
+        "to": "parameterNameDescription"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#7",
+        "originalName": "decompiledCaughtException",
+        "to": "parameterLookupFailure"
+      },
+      {
+        "symbol": "L:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtParameterLookupFailure"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#0",
+        "originalName": "var2",
+        "to": "graphicsClipBounds"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#1",
+        "originalName": "stackIn_25_0",
+        "to": "paintingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#2",
+        "originalName": "stackIn_25_1",
+        "to": "paintingMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#3",
+        "originalName": "stackIn_26_2",
+        "to": "graphicsDescription"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "paintingFailure"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#5",
+        "originalName": "var2_ref",
+        "to": "paintingFailureForContext"
+      },
+      {
+        "symbol": "L:ch.paint(Ljava/awt/Graphics;)V#6",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtPaintingFailure"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#0",
+        "originalName": "runtimeException",
+        "to": "loaderAssignmentFailureForContext"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#1",
+        "originalName": "stackIn_5_0",
+        "to": "loaderAssignmentFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#2",
+        "originalName": "stackIn_5_1",
+        "to": "loaderAssignmentMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#3",
+        "originalName": "stackIn_6_2",
+        "to": "loaderAppletDescription"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "loaderAssignmentFailure"
+      },
+      {
+        "symbol": "L:ch.provideLoaderApplet(Ljava/applet/Applet;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtLoaderAssignmentFailure"
+      },
+      {
+        "symbol": "L:ch.start()V#0",
+        "originalName": "runtimeException",
+        "to": "startFailureForContext"
+      },
+      {
+        "symbol": "L:ch.start()V#1",
+        "originalName": "decompiledCaughtException",
+        "to": "startFailure"
+      },
+      {
+        "symbol": "L:ch.start()V#2",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtStartFailure"
+      },
+      {
+        "symbol": "L:ch.stop()V#0",
+        "originalName": "runtimeException",
+        "to": "stopFailureForContext"
+      },
+      {
+        "symbol": "L:ch.stop()V#1",
+        "originalName": "decompiledCaughtException",
+        "to": "stopFailure"
+      },
+      {
+        "symbol": "L:ch.stop()V#2",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtStopFailure"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#0",
+        "originalName": "runtimeException",
+        "to": "updateFailureForContext"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#1",
+        "originalName": "stackIn_5_0",
+        "to": "updateFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#2",
+        "originalName": "stackIn_5_1",
+        "to": "updateMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#3",
+        "originalName": "stackIn_6_2",
+        "to": "graphicsDescription"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "updateFailure"
+      },
+      {
+        "symbol": "L:ch.update(Ljava/awt/Graphics;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtUpdateFailure"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "runtimeException",
+        "to": "windowCloseFailureForContext"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#1",
+        "originalName": "stackIn_5_0",
+        "to": "windowCloseFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#2",
+        "originalName": "stackIn_5_1",
+        "to": "windowCloseMessagePrefix"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#3",
+        "originalName": "stackIn_6_2",
+        "to": "windowEventDescription"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "windowCloseFailure"
+      },
+      {
+        "symbol": "L:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtWindowCloseFailure"
+      },
+      {
+        "symbol": "P:ch.a(I)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ch.b(B)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ch.b(I)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ch.c(I)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ch.c(Z)V#0",
+        "originalName": "param0",
+        "to": "methodGuard"
+      },
+      {
+        "symbol": "P:ch.focusGained(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "param0",
+        "to": "focusEvent"
+      },
+      {
+        "symbol": "P:ch.focusLost(Ljava/awt/event/FocusEvent;)V#0",
+        "originalName": "param0",
+        "to": "focusEvent"
+      },
+      {
+        "symbol": "P:ch.getParameter(Ljava/lang/String;)Ljava/lang/String;#0",
+        "originalName": "param0",
+        "to": "parameterName"
+      },
+      {
+        "symbol": "P:ch.paint(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "graphics"
+      },
+      {
+        "symbol": "P:ch.provideLoaderApplet(Ljava/applet/Applet;)V#0",
+        "originalName": "param0",
+        "to": "loaderApplet"
+      },
+      {
+        "symbol": "P:ch.update(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "graphics"
+      },
+      {
+        "symbol": "P:ch.windowActivated(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      },
+      {
+        "symbol": "P:ch.windowClosed(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      },
+      {
+        "symbol": "P:ch.windowClosing(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "windowEvent"
+      },
+      {
+        "symbol": "P:ch.windowDeactivated(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      },
+      {
+        "symbol": "P:ch.windowDeiconified(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      },
+      {
+        "symbol": "P:ch.windowIconified(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      },
+      {
+        "symbol": "P:ch.windowOpened(Ljava/awt/event/WindowEvent;)V#0",
+        "originalName": "param0",
+        "to": "unusedWindowEvent"
+      }
+    ],
+    "namingWorkflowCommit": "6ead341e9de669319bccf2bb5b49b3da3a452420"
   }
 }

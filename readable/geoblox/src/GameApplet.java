@@ -16,73 +16,73 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public static boolean field_j;
 
     public final java.net.URL getDocumentBase() {
-        RuntimeException var1 = null;
-        Object stackIn_4_0 = null;
-        java.net.URL stackIn_10_0 = null;
-        java.net.URL stackIn_12_0 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException documentBaseFailureForContext = null;
+        Object fullscreenNullDocumentBase = null;
+        java.net.URL loaderDocumentBase = null;
+        java.net.URL inheritedDocumentBase = null;
+        RuntimeException documentBaseFailure = null;
         try {
           if (SharedBufferPools.fullscreenFrame != null) {
-            stackIn_4_0 = null;
-            return (java.net.URL) (stackIn_4_0);
+            fullscreenNullDocumentBase = null;
+            return (java.net.URL) (fullscreenNullDocumentBase);
           }
           if (null != VisualPropertyNode.loaderApplet &&
               this != VisualPropertyNode.loaderApplet) {
-            stackIn_10_0 = VisualPropertyNode.loaderApplet.getDocumentBase();
-            return stackIn_10_0;
+            loaderDocumentBase = VisualPropertyNode.loaderApplet.getDocumentBase();
+            return loaderDocumentBase;
           }
-          stackIn_12_0 = super.getDocumentBase();
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ch.getDocumentBase()");
+          inheritedDocumentBase = super.getDocumentBase();
+          return inheritedDocumentBase;
+        } catch (java.lang.RuntimeException caughtDocumentBaseFailure) {
+          documentBaseFailure = caughtDocumentBaseFailure;
+          documentBaseFailureForContext = documentBaseFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) documentBaseFailureForContext), "ch.getDocumentBase()");
         }
     }
 
-    public final static void provideLoaderApplet(java.applet.Applet param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final static void provideLoaderApplet(java.applet.Applet loaderApplet) {
+        RuntimeException loaderAssignmentFailureForContext = null;
+        RuntimeException loaderAssignmentFailureBeforeDescription = null;
+        StringBuilder loaderAssignmentMessagePrefix = null;
+        String loaderAppletDescription = null;
+        RuntimeException loaderAssignmentFailure = null;
         try {
-          VisualPropertyNode.loaderApplet = param0;
+          VisualPropertyNode.loaderApplet = loaderApplet;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("ch.provideLoaderApplet(");
-          if (param0 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtLoaderAssignmentFailure) {
+          loaderAssignmentFailure = caughtLoaderAssignmentFailure;
+          loaderAssignmentFailureForContext = loaderAssignmentFailure;
+          loaderAssignmentFailureBeforeDescription = loaderAssignmentFailureForContext;
+          loaderAssignmentMessagePrefix = new StringBuilder().append("ch.provideLoaderApplet(");
+          if (loaderApplet == null) {
+            loaderAppletDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            loaderAppletDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loaderAssignmentFailureBeforeDescription), ((StringBuilder) (Object) loaderAssignmentMessagePrefix).append(loaderAppletDescription).append(')').toString());
         }
     }
 
-    public final void windowClosing(java.awt.event.WindowEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void windowClosing(java.awt.event.WindowEvent windowEvent) {
+        RuntimeException windowCloseFailureForContext = null;
+        RuntimeException windowCloseFailureBeforeDescription = null;
+        StringBuilder windowCloseMessagePrefix = null;
+        String windowEventDescription = null;
+        RuntimeException windowCloseFailure = null;
         try {
           this.destroy();
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("ch.windowClosing(");
-          if (param0 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtWindowCloseFailure) {
+          windowCloseFailure = caughtWindowCloseFailure;
+          windowCloseFailureForContext = windowCloseFailure;
+          windowCloseFailureBeforeDescription = windowCloseFailureForContext;
+          windowCloseMessagePrefix = new StringBuilder().append("ch.windowClosing(");
+          if (windowEvent == null) {
+            windowEventDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            windowEventDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) windowCloseFailureBeforeDescription), ((StringBuilder) (Object) windowCloseMessagePrefix).append(windowEventDescription).append(')').toString());
         }
     }
 
@@ -147,29 +147,29 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public final void windowIconified(java.awt.event.WindowEvent param0) {
+    public final void windowIconified(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
-    public final void update(java.awt.Graphics param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void update(java.awt.Graphics graphics) {
+        RuntimeException updateFailureForContext = null;
+        RuntimeException updateFailureBeforeDescription = null;
+        StringBuilder updateMessagePrefix = null;
+        String graphicsDescription = null;
+        RuntimeException updateFailure = null;
         try {
-          this.paint(param0);
+          this.paint(graphics);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("ch.update(");
-          if (param0 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtUpdateFailure) {
+          updateFailure = caughtUpdateFailure;
+          updateFailureForContext = updateFailure;
+          updateFailureBeforeDescription = updateFailureForContext;
+          updateMessagePrefix = new StringBuilder().append("ch.update(");
+          if (graphics == null) {
+            graphicsDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            graphicsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) updateFailureBeforeDescription), ((StringBuilder) (Object) updateMessagePrefix).append(graphicsDescription).append(')').toString());
         }
     }
 
@@ -182,30 +182,30 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public final void windowOpened(java.awt.event.WindowEvent param0) {
+    public final void windowOpened(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
-    public final void focusGained(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void focusGained(java.awt.event.FocusEvent focusEvent) {
+        RuntimeException focusGainFailureForContext = null;
+        RuntimeException focusGainFailureBeforeDescription = null;
+        StringBuilder focusGainMessagePrefix = null;
+        String focusEventDescription = null;
+        RuntimeException focusGainFailure = null;
         try {
           CrcAcknowledgedPacket.canvasHasFocus = true;
           UsernameQueryState.canvasRedrawRequested = true;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("ch.focusGained(");
-          if (param0 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtFocusGainFailure) {
+          focusGainFailure = caughtFocusGainFailure;
+          focusGainFailureForContext = focusGainFailure;
+          focusGainFailureBeforeDescription = focusGainFailureForContext;
+          focusGainMessagePrefix = new StringBuilder().append("ch.focusGained(");
+          if (focusEvent == null) {
+            focusEventDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            focusEventDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusGainFailureBeforeDescription), ((StringBuilder) (Object) focusGainMessagePrefix).append(focusEventDescription).append(')').toString());
         }
     }
 
@@ -425,34 +425,34 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final java.applet.AppletContext getAppletContext() {
-        RuntimeException var1 = null;
-        Object stackIn_2_0 = null;
-        java.applet.AppletContext stackIn_8_0 = null;
-        java.applet.AppletContext stackIn_10_0 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException appletContextFailureForContext = null;
+        Object fullscreenNullAppletContext = null;
+        java.applet.AppletContext loaderAppletContext = null;
+        java.applet.AppletContext inheritedAppletContext = null;
+        RuntimeException appletContextFailure = null;
         try {
           if (SharedBufferPools.fullscreenFrame != null) {
-            stackIn_2_0 = null;
-            return (java.applet.AppletContext) (stackIn_2_0);
+            fullscreenNullAppletContext = null;
+            return (java.applet.AppletContext) (fullscreenNullAppletContext);
           }
           if (VisualPropertyNode.loaderApplet != null &&
               this != VisualPropertyNode.loaderApplet) {
-            stackIn_8_0 = VisualPropertyNode.loaderApplet.getAppletContext();
-            return stackIn_8_0;
+            loaderAppletContext = VisualPropertyNode.loaderApplet.getAppletContext();
+            return loaderAppletContext;
           }
-          stackIn_10_0 = super.getAppletContext();
-          return stackIn_10_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "ch.getAppletContext()");
+          inheritedAppletContext = super.getAppletContext();
+          return inheritedAppletContext;
+        } catch (java.lang.RuntimeException caughtAppletContextFailure) {
+          appletContextFailure = caughtAppletContextFailure;
+          appletContextFailureForContext = appletContextFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) appletContextFailureForContext), "ch.getAppletContext()");
         }
     }
 
-    public final void windowClosed(java.awt.event.WindowEvent param0) {
+    public final void windowClosed(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
-    public final void windowDeiconified(java.awt.event.WindowEvent param0) {
+    public final void windowDeiconified(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
     final synchronized void rebuildGameCanvas(boolean visible) {
@@ -529,8 +529,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void start() {
-        RuntimeException runtimeException = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException startFailureForContext = null;
+        RuntimeException startFailure = null;
         try {
           if (this == PrefixCodeDecoder.activeGameApplet &&
               !MidiNoteMixer.appletShutdownStarted) {
@@ -538,10 +538,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.start()");
+        } catch (java.lang.RuntimeException caughtStartFailure) {
+          startFailure = caughtStartFailure;
+          startFailureForContext = startFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) startFailureForContext), "ch.start()");
         }
     }
 
@@ -603,10 +603,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public final void windowDeactivated(java.awt.event.WindowEvent param0) {
+    public final void windowDeactivated(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
-    public final void windowActivated(java.awt.event.WindowEvent param0) {
+    public final void windowActivated(java.awt.event.WindowEvent unusedWindowEvent) {
     }
 
     final boolean isAppletStartupAllowed(boolean unusedMethodGuard) {
@@ -614,7 +614,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final java.net.URL getCodeBase() {
-        RuntimeException var1;
+        RuntimeException unusedCodeBaseFailure;
         if (null != SharedBufferPools.fullscreenFrame) {
           return null;
         }
@@ -625,30 +625,30 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         return super.getCodeBase();
     }
 
-    public final void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final void focusLost(java.awt.event.FocusEvent focusEvent) {
+        RuntimeException focusLossFailureForContext = null;
+        RuntimeException focusLossFailureBeforeDescription = null;
+        StringBuilder focusLossMessagePrefix = null;
+        String focusEventDescription = null;
+        RuntimeException focusLossFailure = null;
         try {
           CrcAcknowledgedPacket.canvasHasFocus = false;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_5_0 = runtimeException;
-          stackIn_5_1 = new StringBuilder().append("ch.focusLost(");
-          if (param0 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtFocusLossFailure) {
+          focusLossFailure = caughtFocusLossFailure;
+          focusLossFailureForContext = focusLossFailure;
+          focusLossFailureBeforeDescription = focusLossFailureForContext;
+          focusLossMessagePrefix = new StringBuilder().append("ch.focusLost(");
+          if (focusEvent == null) {
+            focusEventDescription = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            focusEventDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusLossFailureBeforeDescription), ((StringBuilder) (Object) focusLossMessagePrefix).append(focusEventDescription).append(')').toString());
         }
     }
 
-    abstract void initializeGame(int param0);
+    abstract void initializeGame(int methodGuard);
 
     private final void updateAppletTick(byte methodGuard) {
         long updateTimeMillis = 0L;
@@ -680,29 +680,29 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void releaseGameResources(byte param0);
+    abstract void releaseGameResources(byte methodGuard);
 
     public abstract void init();
 
-    public final synchronized void paint(java.awt.Graphics param0) {
-        java.awt.Rectangle var2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
+    public final synchronized void paint(java.awt.Graphics graphics) {
+        java.awt.Rectangle graphicsClipBounds = null;
+        RuntimeException paintingFailureBeforeDescription = null;
+        StringBuilder paintingMessagePrefix = null;
+        String graphicsDescription = null;
+        RuntimeException paintingFailure = null;
+        RuntimeException paintingFailureForContext = null;
         try {
           if (PrefixCodeDecoder.activeGameApplet == this &&
               !MidiNoteMixer.appletShutdownStarted) {
             UsernameQueryState.canvasRedrawRequested = true;
             if (ResizableDialog.legacyJavaCanvasRefreshRequired &&
                 -Geoblox.canvasCreationTimeMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520) > 1000L) {
-              var2 = param0.getClipBounds();
-              if (null != var2) {
-                if (var2.width < DialWidget.initialCanvasWidth) {
+              graphicsClipBounds = graphics.getClipBounds();
+              if (null != graphicsClipBounds) {
+                if (graphicsClipBounds.width < DialWidget.initialCanvasWidth) {
                   return;
                 }
-                if (NetworkArchiveRequest.initialCanvasHeight > var2.height) {
+                if (NetworkArchiveRequest.initialCanvasHeight > graphicsClipBounds.height) {
                   return;
                 }
               }
@@ -711,17 +711,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_25_0 = var2_ref;
-          stackIn_25_1 = new StringBuilder().append("ch.paint(");
-          if (param0 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException caughtPaintingFailure) {
+          paintingFailure = caughtPaintingFailure;
+          paintingFailureForContext = paintingFailure;
+          paintingFailureBeforeDescription = paintingFailureForContext;
+          paintingMessagePrefix = new StringBuilder().append("ch.paint(");
+          if (graphics == null) {
+            graphicsDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            graphicsDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) paintingFailureBeforeDescription), ((StringBuilder) (Object) paintingMessagePrefix).append(graphicsDescription).append(')').toString());
         }
     }
 
@@ -734,12 +734,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             ByteTextDecodingSupport.sleepMillis(0, 5000L);
             SpriteButtonRenderer.appletTaskDispatcher = null;
             this.shutdownAppletServices((byte) 14, false);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.destroy()");
+        } catch (RuntimeException destructionFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) destructionFailure), "ch.destroy()");
         }
     }
 
-    abstract void updateGame(boolean param0);
+    abstract void updateGame(boolean methodGuard);
 
     final void startAppletServices(int initialCacheVariant, int methodGuard, int gameCrc, int initialCanvasHeight, int initialCanvasWidth, String gameName, int cacheIndexCount) {
         try {
@@ -815,38 +815,38 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public final String getParameter(String param0) {
-        RuntimeException var2 = null;
-        Object stackIn_4_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_12_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    public final String getParameter(String parameterName) {
+        RuntimeException parameterLookupFailureForContext = null;
+        Object fullscreenNullParameterValue = null;
+        String loaderParameterValue = null;
+        String inheritedParameterValue = null;
+        RuntimeException parameterLookupFailureBeforeDescription = null;
+        StringBuilder parameterLookupMessagePrefix = null;
+        String parameterNameDescription = null;
+        RuntimeException parameterLookupFailure = null;
         try {
           if (SharedBufferPools.fullscreenFrame != null) {
-            stackIn_4_0 = null;
-            return (String) (stackIn_4_0);
+            fullscreenNullParameterValue = null;
+            return (String) (fullscreenNullParameterValue);
           }
           if (VisualPropertyNode.loaderApplet != null &&
               this != VisualPropertyNode.loaderApplet) {
-            stackIn_10_0 = VisualPropertyNode.loaderApplet.getParameter(param0);
-            return stackIn_10_0;
+            loaderParameterValue = VisualPropertyNode.loaderApplet.getParameter(parameterName);
+            return loaderParameterValue;
           }
-          stackIn_12_0 = super.getParameter(param0);
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_16_0 = var2;
-          stackIn_16_1 = new StringBuilder().append("ch.getParameter(");
-          if (param0 == null) {
-            stackIn_17_2 = "null";
+          inheritedParameterValue = super.getParameter(parameterName);
+          return inheritedParameterValue;
+        } catch (java.lang.RuntimeException caughtParameterLookupFailure) {
+          parameterLookupFailure = caughtParameterLookupFailure;
+          parameterLookupFailureForContext = parameterLookupFailure;
+          parameterLookupFailureBeforeDescription = parameterLookupFailureForContext;
+          parameterLookupMessagePrefix = new StringBuilder().append("ch.getParameter(");
+          if (parameterName == null) {
+            parameterNameDescription = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            parameterNameDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) parameterLookupFailureBeforeDescription), ((StringBuilder) (Object) parameterLookupMessagePrefix).append(parameterNameDescription).append(')').toString());
         }
     }
 
@@ -900,8 +900,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void stop() {
-        RuntimeException runtimeException = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException stopFailureForContext = null;
+        RuntimeException stopFailure = null;
         try {
           if (this == PrefixCodeDecoder.activeGameApplet &&
               !MidiNoteMixer.appletShutdownStarted) {
@@ -909,16 +909,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "ch.stop()");
+        } catch (java.lang.RuntimeException caughtStopFailure) {
+          stopFailure = caughtStopFailure;
+          stopFailureForContext = stopFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stopFailureForContext), "ch.stop()");
         }
     }
 
-    abstract void renderFrame(int param0);
+    abstract void renderFrame(int methodGuard);
 
-    abstract void serviceAudio(int param0);
+    abstract void serviceAudio(int methodGuard);
 
     protected GameApplet() {
         this.errorPageShown = false;
