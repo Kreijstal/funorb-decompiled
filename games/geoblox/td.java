@@ -10,6 +10,7 @@ final class td extends hk {
 
     final static int a(int param0, byte param1) {
         int var2;
+        int var2Lifetime1;
         if (param0 == 0) {
           return 0;
         }
@@ -37,31 +38,31 @@ final class td extends hk {
           }
           return var2;
         }
-        var2 = 2;
+        var2Lifetime1 = 2;
         if (param0 < -65536) {
-          var2 += 16;
+          var2Lifetime1 += 16;
           param0 = param0 >> 16;
         }
         if (param0 < -256) {
           param0 = param0 >> 8;
-          var2 += 8;
+          var2Lifetime1 += 8;
         }
         if (param1 != 66) {
           field_H = true;
         }
         if (-16 > param0) {
           param0 = param0 >> 4;
-          var2 += 4;
+          var2Lifetime1 += 4;
         }
         if (param0 < -4) {
           param0 = param0 >> 2;
-          var2 += 2;
+          var2Lifetime1 += 2;
         }
         if (-2 > param0) {
-          var2++;
+          var2Lifetime1++;
           param0 = param0 >> 1;
         }
-        return var2;
+        return var2Lifetime1;
     }
 
     public static void f(int param0) {

@@ -738,6 +738,7 @@ final class rh {
         int var3;
         int var4;
         int var5;
+        int var4Lifetime1;
         var5 = Geoblox.field_C;
         if (!this.a(0)) {
           return 0;
@@ -757,8 +758,8 @@ final class rh {
         if (var2 == 0) {
           return 100;
         }
-        var4 = var3 * 100 / var2;
-        return var4;
+        var4Lifetime1 = var3 * 100 / var2;
+        return var4Lifetime1;
     }
 
     final boolean a(byte param0, String param1, String param2) {

@@ -14,6 +14,8 @@ final class eh {
         int var6;
         int var7;
         int var8;
+        int var6Lifetime1;
+        int var7Lifetime1;
         var8 = Geoblox.field_C;
         if (gb.field_f < 0) {
           return;
@@ -182,13 +184,13 @@ final class eh {
             }
           }
         }
-        var6 = gb.field_f - 140;
-        if (var6 > 0) {
-          var7 = 256;
-          if (var6 < 20) {
-            var7 = var6 * 256 / 20;
+        var6Lifetime1 = gb.field_f - 140;
+        if (var6Lifetime1 > 0) {
+          var7Lifetime1 = 256;
+          if (var6Lifetime1 < 20) {
+            var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          cl.field_b.d(15 + var3, var4 + 10, var5 * var7 >> 8);
+          cl.field_b.d(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

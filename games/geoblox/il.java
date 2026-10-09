@@ -340,6 +340,46 @@ final class il extends dm {
         int var39;
         int var40;
         int var41;
+        int var32Lifetime1;
+        int var32Lifetime2;
+        int var32Lifetime3;
+        int var32Lifetime4;
+        int var33Lifetime1;
+        int var33Lifetime2;
+        int var33Lifetime3;
+        int var33Lifetime4;
+        int var34Lifetime1;
+        int var34Lifetime2;
+        int var34Lifetime3;
+        int var34Lifetime4;
+        int var35Lifetime1;
+        int var35Lifetime2;
+        int var35Lifetime3;
+        int var35Lifetime4;
+        int var36Lifetime1;
+        int var36Lifetime2;
+        int var36Lifetime3;
+        int var36Lifetime4;
+        int var37Lifetime1;
+        int var37Lifetime2;
+        int var37Lifetime3;
+        int var37Lifetime4;
+        int var38Lifetime1;
+        int var38Lifetime2;
+        int var38Lifetime3;
+        int var38Lifetime4;
+        int var39Lifetime1;
+        int var39Lifetime2;
+        int var39Lifetime3;
+        int var39Lifetime4;
+        int var40Lifetime1;
+        int var40Lifetime2;
+        int var40Lifetime3;
+        int var40Lifetime4;
+        int var41Lifetime1;
+        int var41Lifetime2;
+        int var41Lifetime3;
+        int var41Lifetime4;
         if (param5 == 0) {
           return;
         }
@@ -538,132 +578,132 @@ final class il extends dm {
         }
         if (var27 >= 0) {
           if (var26 == 0) {
-            var33 = var22;
-            while (var33 < 0) {
-              var34 = var23;
-              var35 = var30 + (var28 * var27 >> 4);
-              var36 = var31;
-              var37 = var20;
-              if (var36 >= 0 &&
-                  var36 - (this.field_m << 12) < 0) {
-                if (var35 < 0) {
-                  var32 = (var27 - 1 - var35) / var27;
-                  var37 = var37 + var32;
-                  var35 = var35 + var27 * var32;
-                  var34 = var34 + var32;
+            var33Lifetime1 = var22;
+            while (var33Lifetime1 < 0) {
+              var34Lifetime1 = var23;
+              var35Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1 = var31;
+              var37Lifetime1 = var20;
+              if (var36Lifetime1 >= 0 &&
+                  var36Lifetime1 - (this.field_m << 12) < 0) {
+                if (var35Lifetime1 < 0) {
+                  var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
+                  var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+                  var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+                  var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
                 }
-                var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-                if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
-                  var37 = var32;
+                var32Lifetime1 = (1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27;
+                if ((1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27 > var37Lifetime1) {
+                  var37Lifetime1 = var32Lifetime1;
                 }
-                while (var37 < 0) {
-                  var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                  var39 = vb.field_c[var34];
-                  var40 = var38 >>> 24;
-                  var41 = 256 - var40;
-                  incrementValue$2 = var34;
-                  var34++;
-                  vb.field_c[incrementValue$2] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                  var35 = var35 + var27;
-                  var37++;
+                while (var37Lifetime1 < 0) {
+                  var38Lifetime1 = this.field_v[(var36Lifetime1 >> 12) * this.field_r + (var35Lifetime1 >> 12)];
+                  var39Lifetime1 = vb.field_c[var34Lifetime1];
+                  var40Lifetime1 = var38Lifetime1 >>> 24;
+                  var41Lifetime1 = 256 - var40Lifetime1;
+                  incrementValue$2 = var34Lifetime1;
+                  var34Lifetime1++;
+                  vb.field_c[incrementValue$2] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+                  var35Lifetime1 = var35Lifetime1 + var27;
+                  var37Lifetime1++;
                 }
               }
-              var33++;
+              var33Lifetime1++;
               var31 = var31 + var27;
               var23 = var23 + vb.field_f;
             }
             return;
           }
           if (var26 >= 0) {
-            var33 = var22;
-            while (var33 < 0) {
-              var34 = var23;
-              var35 = var30 + (var28 * var27 >> 4);
-              var36 = var31 + (var28 * var26 >> 4);
-              var37 = var20;
-              if (var35 < 0) {
-                var32 = (var27 - 1 - var35) / var27;
-                var37 = var37 + var32;
-                var35 = var35 + var27 * var32;
-                var36 = var36 + var26 * var32;
-                var34 = var34 + var32;
+            var33Lifetime1 = var22;
+            while (var33Lifetime1 < 0) {
+              var34Lifetime1 = var23;
+              var35Lifetime1 = var30 + (var28 * var27 >> 4);
+              var36Lifetime1 = var31 + (var28 * var26 >> 4);
+              var37Lifetime1 = var20;
+              if (var35Lifetime1 < 0) {
+                var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
+                var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+                var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+                var36Lifetime1 = var36Lifetime1 + var26 * var32Lifetime1;
+                var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
               }
-              var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-              if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
-                var37 = var32;
+              var32Lifetime1 = (1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27;
+              if ((1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27 > var37Lifetime1) {
+                var37Lifetime1 = var32Lifetime1;
               }
-              if (var36 < 0) {
-                var32 = (var26 - 1 - var36) / var26;
-                var37 = var37 + var32;
-                var35 = var35 + var27 * var32;
-                var36 = var36 + var26 * var32;
-                var34 = var34 + var32;
+              if (var36Lifetime1 < 0) {
+                var32Lifetime1 = (var26 - 1 - var36Lifetime1) / var26;
+                var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+                var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+                var36Lifetime1 = var36Lifetime1 + var26 * var32Lifetime1;
+                var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
               }
-              var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-              if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
-                var37 = var32;
+              var32Lifetime1 = (1 + var36Lifetime1 - (this.field_m << 12) - var26) / var26;
+              if ((1 + var36Lifetime1 - (this.field_m << 12) - var26) / var26 > var37Lifetime1) {
+                var37Lifetime1 = var32Lifetime1;
               }
-              while (var37 < 0) {
-                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                var39 = vb.field_c[var34];
-                var40 = var38 >>> 24;
-                var41 = 256 - var40;
-                incrementValue$0 = var34;
-                var34++;
-                vb.field_c[incrementValue$0] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                var35 = var35 + var27;
-                var36 = var36 + var26;
-                var37++;
+              while (var37Lifetime1 < 0) {
+                var38Lifetime1 = this.field_v[(var36Lifetime1 >> 12) * this.field_r + (var35Lifetime1 >> 12)];
+                var39Lifetime1 = vb.field_c[var34Lifetime1];
+                var40Lifetime1 = var38Lifetime1 >>> 24;
+                var41Lifetime1 = 256 - var40Lifetime1;
+                incrementValue$0 = var34Lifetime1;
+                var34Lifetime1++;
+                vb.field_c[incrementValue$0] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+                var35Lifetime1 = var35Lifetime1 + var27;
+                var36Lifetime1 = var36Lifetime1 + var26;
+                var37Lifetime1++;
               }
-              var33++;
+              var33Lifetime1++;
               var30 = var30 - var26;
               var31 = var31 + var27;
               var23 = var23 + vb.field_f;
             }
             return;
           }
-          var33 = var22;
-          while (var33 < 0) {
-            var34 = var23;
-            var35 = var30 + (var28 * var27 >> 4);
-            var36 = var31 + (var28 * var26 >> 4);
-            var37 = var20;
-            if (var35 < 0) {
-              var32 = (var27 - 1 - var35) / var27;
-              var37 = var37 + var32;
-              var35 = var35 + var27 * var32;
-              var36 = var36 + var26 * var32;
-              var34 = var34 + var32;
+          var33Lifetime1 = var22;
+          while (var33Lifetime1 < 0) {
+            var34Lifetime1 = var23;
+            var35Lifetime1 = var30 + (var28 * var27 >> 4);
+            var36Lifetime1 = var31 + (var28 * var26 >> 4);
+            var37Lifetime1 = var20;
+            if (var35Lifetime1 < 0) {
+              var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
+              var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+              var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+              var36Lifetime1 = var36Lifetime1 + var26 * var32Lifetime1;
+              var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
             }
-            var32 = (1 + var35 - (this.field_r << 12) - var27) / var27;
-            if ((1 + var35 - (this.field_r << 12) - var27) / var27 > var37) {
-              var37 = var32;
+            var32Lifetime1 = (1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27;
+            if ((1 + var35Lifetime1 - (this.field_r << 12) - var27) / var27 > var37Lifetime1) {
+              var37Lifetime1 = var32Lifetime1;
             }
-            var32 = var36 - (this.field_m << 12);
-            if (var36 - (this.field_m << 12) >= 0) {
-              var32 = (var26 - var32) / var26;
-              var37 = var37 + var32;
-              var35 = var35 + var27 * var32;
-              var36 = var36 + var26 * var32;
-              var34 = var34 + var32;
+            var32Lifetime1 = var36Lifetime1 - (this.field_m << 12);
+            if (var36Lifetime1 - (this.field_m << 12) >= 0) {
+              var32Lifetime1 = (var26 - var32Lifetime1) / var26;
+              var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
+              var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
+              var36Lifetime1 = var36Lifetime1 + var26 * var32Lifetime1;
+              var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
             }
-            var32 = (var36 - var26) / var26;
-            if ((var36 - var26) / var26 > var37) {
-              var37 = var32;
+            var32Lifetime1 = (var36Lifetime1 - var26) / var26;
+            if ((var36Lifetime1 - var26) / var26 > var37Lifetime1) {
+              var37Lifetime1 = var32Lifetime1;
             }
-            while (var37 < 0) {
-              var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-              var39 = vb.field_c[var34];
-              var40 = var38 >>> 24;
-              var41 = 256 - var40;
-              incrementValue$1 = var34;
-              var34++;
-              vb.field_c[incrementValue$1] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-              var35 = var35 + var27;
-              var36 = var36 + var26;
-              var37++;
+            while (var37Lifetime1 < 0) {
+              var38Lifetime1 = this.field_v[(var36Lifetime1 >> 12) * this.field_r + (var35Lifetime1 >> 12)];
+              var39Lifetime1 = vb.field_c[var34Lifetime1];
+              var40Lifetime1 = var38Lifetime1 >>> 24;
+              var41Lifetime1 = 256 - var40Lifetime1;
+              incrementValue$1 = var34Lifetime1;
+              var34Lifetime1++;
+              vb.field_c[incrementValue$1] = ((var38Lifetime1 & 16711935) * var40Lifetime1 + (var39Lifetime1 & 16711935) * var41Lifetime1 & -16711936) + ((var38Lifetime1 & 65280) * var40Lifetime1 + (var39Lifetime1 & 65280) * var41Lifetime1 & 16711680) >>> 8;
+              var35Lifetime1 = var35Lifetime1 + var27;
+              var36Lifetime1 = var36Lifetime1 + var26;
+              var37Lifetime1++;
             }
-            var33++;
+            var33Lifetime1++;
             var30 = var30 - var26;
             var31 = var31 + var27;
             var23 = var23 + vb.field_f;
@@ -671,135 +711,135 @@ final class il extends dm {
           return;
         }
         if (var26 == 0) {
-          var33 = var22;
-          while (var33 < 0) {
-            var34 = var23;
-            var35 = var30 + (var28 * var27 >> 4);
-            var36 = var31;
-            var37 = var20;
-            if (var36 >= 0 &&
-                var36 - (this.field_m << 12) < 0) {
-              var32 = var35 - (this.field_r << 12);
-              if (var35 - (this.field_r << 12) >= 0) {
-                var32 = (var27 - var32) / var27;
-                var37 = var37 + var32;
-                var35 = var35 + var27 * var32;
-                var34 = var34 + var32;
+          var33Lifetime2 = var22;
+          while (var33Lifetime2 < 0) {
+            var34Lifetime2 = var23;
+            var35Lifetime2 = var30 + (var28 * var27 >> 4);
+            var36Lifetime2 = var31;
+            var37Lifetime2 = var20;
+            if (var36Lifetime2 >= 0 &&
+                var36Lifetime2 - (this.field_m << 12) < 0) {
+              var32Lifetime2 = var35Lifetime2 - (this.field_r << 12);
+              if (var35Lifetime2 - (this.field_r << 12) >= 0) {
+                var32Lifetime2 = (var27 - var32Lifetime2) / var27;
+                var37Lifetime2 = var37Lifetime2 + var32Lifetime2;
+                var35Lifetime2 = var35Lifetime2 + var27 * var32Lifetime2;
+                var34Lifetime2 = var34Lifetime2 + var32Lifetime2;
               }
-              var32 = (var35 - var27) / var27;
-              if ((var35 - var27) / var27 > var37) {
-                var37 = var32;
+              var32Lifetime2 = (var35Lifetime2 - var27) / var27;
+              if ((var35Lifetime2 - var27) / var27 > var37Lifetime2) {
+                var37Lifetime2 = var32Lifetime2;
               }
-              while (var37 < 0) {
-                var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-                var39 = vb.field_c[var34];
-                var40 = var38 >>> 24;
-                var41 = 256 - var40;
-                incrementValue$5 = var34;
-                var34++;
-                vb.field_c[incrementValue$5] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-                var35 = var35 + var27;
-                var37++;
+              while (var37Lifetime2 < 0) {
+                var38Lifetime2 = this.field_v[(var36Lifetime2 >> 12) * this.field_r + (var35Lifetime2 >> 12)];
+                var39Lifetime2 = vb.field_c[var34Lifetime2];
+                var40Lifetime2 = var38Lifetime2 >>> 24;
+                var41Lifetime2 = 256 - var40Lifetime2;
+                incrementValue$5 = var34Lifetime2;
+                var34Lifetime2++;
+                vb.field_c[incrementValue$5] = ((var38Lifetime2 & 16711935) * var40Lifetime2 + (var39Lifetime2 & 16711935) * var41Lifetime2 & -16711936) + ((var38Lifetime2 & 65280) * var40Lifetime2 + (var39Lifetime2 & 65280) * var41Lifetime2 & 16711680) >>> 8;
+                var35Lifetime2 = var35Lifetime2 + var27;
+                var37Lifetime2++;
               }
             }
-            var33++;
+            var33Lifetime2++;
             var31 = var31 + var27;
             var23 = var23 + vb.field_f;
           }
           return;
         }
         if (var26 >= 0) {
-          var33 = var22;
-          while (var33 < 0) {
-            var34 = var23;
-            var35 = var30 + (var28 * var27 >> 4);
-            var36 = var31 + (var28 * var26 >> 4);
-            var37 = var20;
-            var32 = var35 - (this.field_r << 12);
-            if (var35 - (this.field_r << 12) >= 0) {
-              var32 = (var27 - var32) / var27;
-              var37 = var37 + var32;
-              var35 = var35 + var27 * var32;
-              var36 = var36 + var26 * var32;
-              var34 = var34 + var32;
+          var33Lifetime3 = var22;
+          while (var33Lifetime3 < 0) {
+            var34Lifetime3 = var23;
+            var35Lifetime3 = var30 + (var28 * var27 >> 4);
+            var36Lifetime3 = var31 + (var28 * var26 >> 4);
+            var37Lifetime3 = var20;
+            var32Lifetime3 = var35Lifetime3 - (this.field_r << 12);
+            if (var35Lifetime3 - (this.field_r << 12) >= 0) {
+              var32Lifetime3 = (var27 - var32Lifetime3) / var27;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3;
             }
-            var32 = (var35 - var27) / var27;
-            if ((var35 - var27) / var27 > var37) {
-              var37 = var32;
+            var32Lifetime3 = (var35Lifetime3 - var27) / var27;
+            if ((var35Lifetime3 - var27) / var27 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3;
             }
-            if (var36 < 0) {
-              var32 = (var26 - 1 - var36) / var26;
-              var37 = var37 + var32;
-              var35 = var35 + var27 * var32;
-              var36 = var36 + var26 * var32;
-              var34 = var34 + var32;
+            if (var36Lifetime3 < 0) {
+              var32Lifetime3 = (var26 - 1 - var36Lifetime3) / var26;
+              var37Lifetime3 = var37Lifetime3 + var32Lifetime3;
+              var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3;
+              var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3;
+              var34Lifetime3 = var34Lifetime3 + var32Lifetime3;
             }
-            var32 = (1 + var36 - (this.field_m << 12) - var26) / var26;
-            if ((1 + var36 - (this.field_m << 12) - var26) / var26 > var37) {
-              var37 = var32;
+            var32Lifetime3 = (1 + var36Lifetime3 - (this.field_m << 12) - var26) / var26;
+            if ((1 + var36Lifetime3 - (this.field_m << 12) - var26) / var26 > var37Lifetime3) {
+              var37Lifetime3 = var32Lifetime3;
             }
-            while (var37 < 0) {
-              var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-              var39 = vb.field_c[var34];
-              var40 = var38 >>> 24;
-              var41 = 256 - var40;
-              incrementValue$3 = var34;
-              var34++;
-              vb.field_c[incrementValue$3] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-              var35 = var35 + var27;
-              var36 = var36 + var26;
-              var37++;
+            while (var37Lifetime3 < 0) {
+              var38Lifetime3 = this.field_v[(var36Lifetime3 >> 12) * this.field_r + (var35Lifetime3 >> 12)];
+              var39Lifetime3 = vb.field_c[var34Lifetime3];
+              var40Lifetime3 = var38Lifetime3 >>> 24;
+              var41Lifetime3 = 256 - var40Lifetime3;
+              incrementValue$3 = var34Lifetime3;
+              var34Lifetime3++;
+              vb.field_c[incrementValue$3] = ((var38Lifetime3 & 16711935) * var40Lifetime3 + (var39Lifetime3 & 16711935) * var41Lifetime3 & -16711936) + ((var38Lifetime3 & 65280) * var40Lifetime3 + (var39Lifetime3 & 65280) * var41Lifetime3 & 16711680) >>> 8;
+              var35Lifetime3 = var35Lifetime3 + var27;
+              var36Lifetime3 = var36Lifetime3 + var26;
+              var37Lifetime3++;
             }
-            var33++;
+            var33Lifetime3++;
             var30 = var30 - var26;
             var31 = var31 + var27;
             var23 = var23 + vb.field_f;
           }
           return;
         }
-        var33 = var22;
-        while (var33 < 0) {
-          var34 = var23;
-          var35 = var30 + (var28 * var27 >> 4);
-          var36 = var31 + (var28 * var26 >> 4);
-          var37 = var20;
-          var32 = var35 - (this.field_r << 12);
-          if (var35 - (this.field_r << 12) >= 0) {
-            var32 = (var27 - var32) / var27;
-            var37 = var37 + var32;
-            var35 = var35 + var27 * var32;
-            var36 = var36 + var26 * var32;
-            var34 = var34 + var32;
+        var33Lifetime4 = var22;
+        while (var33Lifetime4 < 0) {
+          var34Lifetime4 = var23;
+          var35Lifetime4 = var30 + (var28 * var27 >> 4);
+          var36Lifetime4 = var31 + (var28 * var26 >> 4);
+          var37Lifetime4 = var20;
+          var32Lifetime4 = var35Lifetime4 - (this.field_r << 12);
+          if (var35Lifetime4 - (this.field_r << 12) >= 0) {
+            var32Lifetime4 = (var27 - var32Lifetime4) / var27;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4;
           }
-          var32 = (var35 - var27) / var27;
-          if ((var35 - var27) / var27 > var37) {
-            var37 = var32;
+          var32Lifetime4 = (var35Lifetime4 - var27) / var27;
+          if ((var35Lifetime4 - var27) / var27 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4;
           }
-          var32 = var36 - (this.field_m << 12);
-          if (var36 - (this.field_m << 12) >= 0) {
-            var32 = (var26 - var32) / var26;
-            var37 = var37 + var32;
-            var35 = var35 + var27 * var32;
-            var36 = var36 + var26 * var32;
-            var34 = var34 + var32;
+          var32Lifetime4 = var36Lifetime4 - (this.field_m << 12);
+          if (var36Lifetime4 - (this.field_m << 12) >= 0) {
+            var32Lifetime4 = (var26 - var32Lifetime4) / var26;
+            var37Lifetime4 = var37Lifetime4 + var32Lifetime4;
+            var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4;
+            var36Lifetime4 = var36Lifetime4 + var26 * var32Lifetime4;
+            var34Lifetime4 = var34Lifetime4 + var32Lifetime4;
           }
-          var32 = (var36 - var26) / var26;
-          if ((var36 - var26) / var26 > var37) {
-            var37 = var32;
+          var32Lifetime4 = (var36Lifetime4 - var26) / var26;
+          if ((var36Lifetime4 - var26) / var26 > var37Lifetime4) {
+            var37Lifetime4 = var32Lifetime4;
           }
-          while (var37 < 0) {
-            var38 = this.field_v[(var36 >> 12) * this.field_r + (var35 >> 12)];
-            var39 = vb.field_c[var34];
-            var40 = var38 >>> 24;
-            var41 = 256 - var40;
-            incrementValue$4 = var34;
-            var34++;
-            vb.field_c[incrementValue$4] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
-            var35 = var35 + var27;
-            var36 = var36 + var26;
-            var37++;
+          while (var37Lifetime4 < 0) {
+            var38Lifetime4 = this.field_v[(var36Lifetime4 >> 12) * this.field_r + (var35Lifetime4 >> 12)];
+            var39Lifetime4 = vb.field_c[var34Lifetime4];
+            var40Lifetime4 = var38Lifetime4 >>> 24;
+            var41Lifetime4 = 256 - var40Lifetime4;
+            incrementValue$4 = var34Lifetime4;
+            var34Lifetime4++;
+            vb.field_c[incrementValue$4] = ((var38Lifetime4 & 16711935) * var40Lifetime4 + (var39Lifetime4 & 16711935) * var41Lifetime4 & -16711936) + ((var38Lifetime4 & 65280) * var40Lifetime4 + (var39Lifetime4 & 65280) * var41Lifetime4 & 16711680) >>> 8;
+            var35Lifetime4 = var35Lifetime4 + var27;
+            var36Lifetime4 = var36Lifetime4 + var26;
+            var37Lifetime4++;
           }
-          var33++;
+          var33Lifetime4++;
           var30 = var30 - var26;
           var31 = var31 + var27;
           var23 = var23 + vb.field_f;

@@ -388,6 +388,12 @@ final class tb {
         int var7;
         int var8;
         int var10;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var8Lifetime3;
+        int var8Lifetime4;
+        int var8Lifetime5;
+        int var8Lifetime6;
         var7 = 0;
         for (var8 = param4; var8 <= param5; var8++) {
           for (var9 = 0; var9 < param6; var9++) {
@@ -398,27 +404,27 @@ final class tb {
             var7++;
           }
         }
-        for (var8 = 0; var8 < 23; var8++) {
-          param1[var8] = 0;
+        for (var8Lifetime1 = 0; var8Lifetime1 < 23; var8Lifetime1++) {
+          param1[var8Lifetime1] = 0;
         }
-        for (var8 = 0; var8 < param6; var8++) {
-          dupTemp$0 = param3[var8] + 1;
+        for (var8Lifetime2 = 0; var8Lifetime2 < param6; var8Lifetime2++) {
+          dupTemp$0 = param3[var8Lifetime2] + 1;
           param1[dupTemp$0] = param1[dupTemp$0] + 1;
         }
-        for (var8 = 1; var8 < 23; var8++) {
-          param1[var8] = param1[var8] + param1[var8 - 1];
+        for (var8Lifetime3 = 1; var8Lifetime3 < 23; var8Lifetime3++) {
+          param1[var8Lifetime3] = param1[var8Lifetime3] + param1[var8Lifetime3 - 1];
         }
-        for (var8 = 0; var8 < 23; var8++) {
-          param0[var8] = 0;
+        for (var8Lifetime4 = 0; var8Lifetime4 < 23; var8Lifetime4++) {
+          param0[var8Lifetime4] = 0;
         }
         var10 = 0;
-        for (var8 = param4; var8 <= param5; var8++) {
-          var10 = var10 + (param1[var8 + 1] - param1[var8]);
-          param0[var8] = var10 - 1;
+        for (var8Lifetime5 = param4; var8Lifetime5 <= param5; var8Lifetime5++) {
+          var10 = var10 + (param1[var8Lifetime5 + 1] - param1[var8Lifetime5]);
+          param0[var8Lifetime5] = var10 - 1;
           var10 = var10 << 1;
         }
-        for (var8 = param4 + 1; var8 <= param5; var8++) {
-          param1[var8] = (param0[var8 - 1] + 1 << 1) - param1[var8];
+        for (var8Lifetime6 = param4 + 1; var8Lifetime6 <= param5; var8Lifetime6++) {
+          param1[var8Lifetime6] = (param0[var8Lifetime6 - 1] + 1 << 1) - param1[var8Lifetime6];
         }
     }
 

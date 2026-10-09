@@ -69,6 +69,7 @@ final class tg extends com.ms.dll.Callback {
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
         int var5;
+        int var5Lifetime1;
         if (this.field_b != param0) {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
@@ -90,8 +91,8 @@ final class tg extends com.ms.dll.Callback {
           com.ms.win32.User32.SetCursor(stackIn_7_0);
           return 0;
         }
-        var5 = 65535 & param3;
-        if (var5 == 1) {
+        var5Lifetime1 = 65535 & param3;
+        if (var5Lifetime1 == 1) {
           if (!this.field_e) {
             stackIn_16_0 = 0;
           } else {

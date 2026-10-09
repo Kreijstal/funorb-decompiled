@@ -331,6 +331,14 @@ final class qa {
         float var1;
         int var1_int;
         int var2;
+        float var1Lifetime1;
+        float var1Lifetime2;
+        float var1Lifetime3;
+        float var1Lifetime4;
+        float var1Lifetime5;
+        float var1Lifetime6;
+        float var1Lifetime7;
+        float var1Lifetime8;
         var2 = Geoblox.field_C;
         if (param0 < 72) {
           return;
@@ -372,7 +380,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$1 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$1 <= 0) {
@@ -381,7 +389,7 @@ final class qa {
             if (fieldTemp$2 <= 0) {
               return;
             }
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime1) << 8) + (r.field_ub + ((int)(var1Lifetime1 * md.field_b) << 16) + (int)(var1Lifetime1 * uk.field_j));
             return;
           }
           ha.field_g = wa.field_a % 15 % 2;
@@ -390,7 +398,7 @@ final class qa {
           if (fieldTemp$3 <= 0) {
             return;
           }
-          rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+          rj.field_c = ((int)(fe.field_c * var1Lifetime1) << 8) + (r.field_ub + ((int)(var1Lifetime1 * md.field_b) << 16) + (int)(var1Lifetime1 * uk.field_j));
           return;
         }
         var1_int = uf.field_b - ka.field_h;
@@ -404,7 +412,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$17 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$17 > 0) {
@@ -413,7 +421,7 @@ final class qa {
             fieldTemp$18 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$18 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
             }
             return;
           }
@@ -426,7 +434,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$19 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$19 > 0) {
@@ -435,7 +443,7 @@ final class qa {
             fieldTemp$20 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$20 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
             }
             return;
           }
@@ -446,7 +454,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$25 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$25 > 0) {
@@ -455,7 +463,7 @@ final class qa {
             fieldTemp$26 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$26 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
             }
             return;
           }
@@ -466,7 +474,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$21 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$21 > 0) {
@@ -475,7 +483,7 @@ final class qa {
             fieldTemp$22 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$22 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
             }
             return;
           }
@@ -486,7 +494,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$23 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$23 > 0) {
@@ -495,7 +503,7 @@ final class qa {
           fieldTemp$24 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$24 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
           }
           return;
         }
@@ -507,7 +515,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime3 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$4 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$4 <= 0) {
@@ -516,14 +524,14 @@ final class qa {
             if (fieldTemp$5 <= 0) {
               return;
             }
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime3) << 8) + (r.field_ub + ((int)(var1Lifetime3 * md.field_b) << 16) + (int)(var1Lifetime3 * uk.field_j));
             return;
           }
           ha.field_g = wa.field_a % 15 % 2;
           fieldTemp$6 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$6 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime3) << 8) + (r.field_ub + ((int)(var1Lifetime3 * md.field_b) << 16) + (int)(var1Lifetime3 * uk.field_j));
           }
           return;
         }
@@ -536,7 +544,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime4 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$7 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$7 > 0) {
@@ -545,7 +553,7 @@ final class qa {
           fieldTemp$8 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$8 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime4) << 8) + (r.field_ub + ((int)(var1Lifetime4 * md.field_b) << 16) + (int)(var1Lifetime4 * uk.field_j));
           }
           return;
         }
@@ -558,7 +566,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime5 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$9 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$9 > 0) {
@@ -567,7 +575,7 @@ final class qa {
           fieldTemp$10 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$10 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime5) << 8) + (r.field_ub + ((int)(var1Lifetime5 * md.field_b) << 16) + (int)(var1Lifetime5 * uk.field_j));
           }
           return;
         }
@@ -578,7 +586,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime6 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$15 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$15 > 0) {
@@ -587,7 +595,7 @@ final class qa {
           fieldTemp$16 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$16 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime6) << 8) + (r.field_ub + ((int)(var1Lifetime6 * md.field_b) << 16) + (int)(var1Lifetime6 * uk.field_j));
           }
           return;
         }
@@ -598,7 +606,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime7 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$11 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$11 > 0) {
@@ -607,7 +615,7 @@ final class qa {
           fieldTemp$12 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$12 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime7) << 8) + (r.field_ub + ((int)(var1Lifetime7 * md.field_b) << 16) + (int)(var1Lifetime7 * uk.field_j));
           }
           return;
         }
@@ -618,7 +626,7 @@ final class qa {
         if (gi.field_e % 600 < 30) {
           uf.field_b = ka.field_h + 0;
         }
-        var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+        var1Lifetime8 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
         fieldTemp$13 = wa.field_a;
         wa.field_a = wa.field_a - 1;
         if (fieldTemp$13 > 0) {
@@ -627,7 +635,7 @@ final class qa {
         fieldTemp$14 = jf.field_j;
         jf.field_j = jf.field_j - 1;
         if (fieldTemp$14 > 0) {
-          rj.field_c = ((int)(fe.field_c * var1) << 8) + (r.field_ub + ((int)(var1 * md.field_b) << 16) + (int)(var1 * uk.field_j));
+          rj.field_c = ((int)(fe.field_c * var1Lifetime8) << 8) + (r.field_ub + ((int)(var1Lifetime8 * md.field_b) << 16) + (int)(var1Lifetime8 * uk.field_j));
         }
         return;
     }

@@ -487,6 +487,7 @@ abstract class m extends rc {
         int var13;
         int var14;
         int var15;
+        int var15Lifetime1;
         if (param0 == null) {
           return 0;
         }
@@ -522,28 +523,28 @@ abstract class m extends rc {
         } else {
           var14 = param2 + this.field_o;
         }
-        for (var15 = 0; var15 < var13; var15++) {
+        for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
           if (param8 == 0) {
-            this.a(field_E[var15], param1, var14);
+            this.a(field_E[var15Lifetime1], param1, var14);
             var14 = var14 + param10;
             continue;
           }
           if (param8 == 1) {
-            this.a(field_E[var15], param1 + (param3 - this.a(field_E[var15])) / 2, var14);
+            this.a(field_E[var15Lifetime1], param1 + (param3 - this.a(field_E[var15Lifetime1])) / 2, var14);
             var14 = var14 + param10;
             continue;
           }
           if (param8 == 2) {
-            this.a(field_E[var15], param1 + param3 - this.a(field_E[var15]), var14);
+            this.a(field_E[var15Lifetime1], param1 + param3 - this.a(field_E[var15Lifetime1]), var14);
             var14 = var14 + param10;
             continue;
           }
-          if (var15 != var13 - 1) {
-            this.a(field_E[var15], param3);
-            this.a(field_E[var15], param1, var14);
+          if (var15Lifetime1 != var13 - 1) {
+            this.a(field_E[var15Lifetime1], param3);
+            this.a(field_E[var15Lifetime1], param1, var14);
             field_t = 0;
           } else {
-            this.a(field_E[var15], param1, var14);
+            this.a(field_E[var15Lifetime1], param1, var14);
           }
           var14 = var14 + param10;
         }

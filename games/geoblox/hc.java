@@ -84,6 +84,7 @@ final class hc extends dj implements nl {
 
     final static char a(char param0, int param1) {
         int var2;
+        int var2Lifetime1;
         if (param1 == -227) {
           var2 = param0;
           if (32 == var2) {
@@ -186,105 +187,105 @@ final class hc extends dj implements nl {
           return param0;
         }
         hc.k(82);
-        var2 = param0;
-        if (32 != var2) {
-          if (var2 == 160) {
+        var2Lifetime1 = param0;
+        if (32 != var2Lifetime1) {
+          if (var2Lifetime1 == 160) {
             return '_';
           }
-          if (var2 != 95 &&
-              var2 != 45) {
-            if (var2 != 91 &&
-                93 != var2 &&
-                35 != var2) {
-              if (var2 != 224 &&
-                  var2 != 225 &&
-                  var2 != 226 &&
-                  var2 != 228 &&
-                  var2 != 227 &&
-                  var2 != 192 &&
-                  var2 != 193 &&
-                  var2 != 194 &&
-                  var2 != 196 &&
-                  var2 != 195) {
-                if (var2 != 232 &&
-                    var2 != 233 &&
-                    var2 != 234 &&
-                    var2 != 235 &&
-                    var2 != 200 &&
-                    var2 != 201 &&
-                    var2 != 202) {
-                  if (var2 == 203) {
+          if (var2Lifetime1 != 95 &&
+              var2Lifetime1 != 45) {
+            if (var2Lifetime1 != 91 &&
+                93 != var2Lifetime1 &&
+                35 != var2Lifetime1) {
+              if (var2Lifetime1 != 224 &&
+                  var2Lifetime1 != 225 &&
+                  var2Lifetime1 != 226 &&
+                  var2Lifetime1 != 228 &&
+                  var2Lifetime1 != 227 &&
+                  var2Lifetime1 != 192 &&
+                  var2Lifetime1 != 193 &&
+                  var2Lifetime1 != 194 &&
+                  var2Lifetime1 != 196 &&
+                  var2Lifetime1 != 195) {
+                if (var2Lifetime1 != 232 &&
+                    var2Lifetime1 != 233 &&
+                    var2Lifetime1 != 234 &&
+                    var2Lifetime1 != 235 &&
+                    var2Lifetime1 != 200 &&
+                    var2Lifetime1 != 201 &&
+                    var2Lifetime1 != 202) {
+                  if (var2Lifetime1 == 203) {
                     return 'e';
                   }
-                  if (var2 == 237) {
+                  if (var2Lifetime1 == 237) {
                     return 'i';
                   }
-                  if (var2 == 238) {
+                  if (var2Lifetime1 == 238) {
                     return 'i';
                   }
-                  if (239 == var2) {
+                  if (239 == var2Lifetime1) {
                     return 'i';
                   }
-                  if (var2 != 205 &&
-                      var2 != 206 &&
-                      var2 != 207) {
-                    if (var2 != 242) {
-                      if (243 == var2) {
+                  if (var2Lifetime1 != 205 &&
+                      var2Lifetime1 != 206 &&
+                      var2Lifetime1 != 207) {
+                    if (var2Lifetime1 != 242) {
+                      if (243 == var2Lifetime1) {
                         return 'o';
                       }
-                      if (var2 == 244) {
+                      if (var2Lifetime1 == 244) {
                         return 'o';
                       }
-                      if (var2 != 246 &&
-                          var2 != 245) {
-                        if (var2 == 210) {
+                      if (var2Lifetime1 != 246 &&
+                          var2Lifetime1 != 245) {
+                        if (var2Lifetime1 == 210) {
                           return 'o';
                         }
-                        if (var2 == 211) {
+                        if (var2Lifetime1 == 211) {
                           return 'o';
                         }
-                        if (var2 != 212 &&
-                            var2 != 214 &&
-                            var2 != 213) {
-                          if (249 != var2) {
-                            if (250 == var2) {
+                        if (var2Lifetime1 != 212 &&
+                            var2Lifetime1 != 214 &&
+                            var2Lifetime1 != 213) {
+                          if (249 != var2Lifetime1) {
+                            if (250 == var2Lifetime1) {
                               return 'u';
                             }
-                            if (var2 == 251) {
+                            if (var2Lifetime1 == 251) {
                               return 'u';
                             }
-                            if (var2 == 252) {
+                            if (var2Lifetime1 == 252) {
                               return 'u';
                             }
-                            if (var2 == 217) {
+                            if (var2Lifetime1 == 217) {
                               return 'u';
                             }
-                            if (218 == var2) {
+                            if (218 == var2Lifetime1) {
                               return 'u';
                             }
-                            if (var2 == 219) {
+                            if (var2Lifetime1 == 219) {
                               return 'u';
                             }
-                            if (var2 != 220) {
-                              if (var2 == 231) {
+                            if (var2Lifetime1 != 220) {
+                              if (var2Lifetime1 == 231) {
                                 return 'c';
                               }
-                              if (var2 == 199) {
+                              if (var2Lifetime1 == 199) {
                                 return 'c';
                               }
-                              if (var2 == 255) {
+                              if (var2Lifetime1 == 255) {
                                 return 'y';
                               }
-                              if (var2 == 376) {
+                              if (var2Lifetime1 == 376) {
                                 return 'y';
                               }
-                              if (var2 == 241) {
+                              if (var2Lifetime1 == 241) {
                                 return 'n';
                               }
-                              if (var2 == 209) {
+                              if (var2Lifetime1 == 209) {
                                 return 'n';
                               }
-                              if (var2 == 223) {
+                              if (var2Lifetime1 == 223) {
                                 return 'b';
                               }
                               return Character.toLowerCase(param0);

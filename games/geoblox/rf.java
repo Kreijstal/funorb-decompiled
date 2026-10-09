@@ -32,6 +32,7 @@ final class rf extends hf {
         int[] var18;
         int[] var20;
         int[] var22;
+        int var6Lifetime1;
         if (this.field_g != null) {
           return;
         }
@@ -53,17 +54,17 @@ final class rf extends hf {
           var4.b(var6);
         }
         while (true) {
-          var6 = var4.c();
-          var7 = var4.field_a[var6];
+          var6Lifetime1 = var4.c();
+          var7 = var4.field_a[var6Lifetime1];
           while (true) {
-            if (var4.field_a[var6] != var7) {
+            if (var4.field_a[var6Lifetime1] != var7) {
               break;
             }
-            var4.a(var6);
-            var8 = var4.e(var6);
+            var4.a(var6Lifetime1);
+            var8 = var4.e(var6Lifetime1);
             if (var8 == 1) {
               var4.d();
-              var4.b(var6);
+              var4.b(var6Lifetime1);
               if (var4.e()) {
                 return;
               }
@@ -100,8 +101,8 @@ final class rf extends hf {
                 var14.field_h[var11] = (byte) 1;
               }
             }
-            var4.f(var6);
-            var4.b(var6);
+            var4.f(var6Lifetime1);
+            var4.b(var6Lifetime1);
           }
         }
     }
@@ -203,6 +204,12 @@ final class rf extends hf {
         int var65;
         int var66;
         int[] var70;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var15Lifetime1;
+        int var15Lifetime2;
+        int var28Lifetime1;
+        int var29Lifetime1;
         param0.field_f = param0.field_j.length - 3;
         var2 = param0.c((byte) 34);
         var3 = param0.b(true);
@@ -266,13 +273,13 @@ final class rf extends hf {
         var4 = var4 + 5 * var5;
         var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
         var4 = var4 + (var10 + var12);
-        var13 = param0.field_f;
-        var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
-        for (var15 = 0; var15 < var14; var15++) {
+        var13Lifetime1 = param0.field_f;
+        var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
+        for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
           param0.g((byte) -110);
         }
-        var4 = var4 + (param0.field_f - var13);
-        var15 = param0.field_f;
+        var4 = var4 + (param0.field_f - var13Lifetime1);
+        var15Lifetime2 = param0.field_f;
         var16 = 0;
         var17 = 0;
         var18 = 0;
@@ -358,7 +365,7 @@ final class rf extends hf {
           }
           var26++;
         }
-        var29 = 0;
+        var29Lifetime1 = 0;
         var30 = param0.field_f;
         param0.field_f = param0.field_f + var26;
         var31 = param0.field_f;
@@ -414,7 +421,7 @@ final class rf extends hf {
         ((qc) (Object) stackIn_66_0).e(stackIn_67_1, 28695);
         var51.e(var2, 28695);
         var51.e(var3, 28695);
-        param0.field_f = var13;
+        param0.field_f = var13Lifetime1;
         var52 = 0;
         var53 = 0;
         var54 = 0;
@@ -423,7 +430,7 @@ final class rf extends hf {
         var57 = 0;
         var58 = 0;
         var70 = new int[128];
-        var28 = 0;
+        var28Lifetime1 = 0;
         var60 = 0;
         while (true) {
           if (var60 >= var2) {
@@ -436,8 +443,8 @@ final class rf extends hf {
           while (true) {
             var63 = param0.g((byte) -125);
             var51.b((byte) -118, var63);
-            incrementValue$0 = var29;
-            var29++;
+            incrementValue$0 = var29Lifetime1;
+            var29Lifetime1++;
             var64 = param0.field_j[incrementValue$0] & 255;
             stackIn_73_0 = (var64 == var62) ? 0 : 1;
             var65 = stackIn_73_0;
@@ -551,57 +558,57 @@ final class rf extends hf {
             if (var65 != 0) {
               var51.d((byte) -19, 176 + var52);
             }
-            incrementValue$7 = var15;
-            var15++;
-            var28 = var28 + param0.field_j[incrementValue$7] & 127;
-            var51.d((byte) 126, var28);
-            if (var28 != 0 &&
-                var28 != 32) {
-              if (var28 == 1) {
+            incrementValue$7 = var15Lifetime2;
+            var15Lifetime2++;
+            var28Lifetime1 = var28Lifetime1 + param0.field_j[incrementValue$7] & 127;
+            var51.d((byte) 126, var28Lifetime1);
+            if (var28Lifetime1 != 0 &&
+                var28Lifetime1 != 32) {
+              if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
                 var66 = param0.field_j[incrementValue$19];
-              } else if (var28 == 33) {
+              } else if (var28Lifetime1 == 33) {
                 incrementValue$18 = var41;
                 var41++;
                 var66 = param0.field_j[incrementValue$18];
-              } else if (var28 == 7) {
+              } else if (var28Lifetime1 == 7) {
                 incrementValue$17 = var35;
                 var35++;
                 var66 = param0.field_j[incrementValue$17];
-              } else if (var28 == 39) {
+              } else if (var28Lifetime1 == 39) {
                 incrementValue$16 = var42;
                 var42++;
                 var66 = param0.field_j[incrementValue$16];
-              } else if (var28 == 10) {
+              } else if (var28Lifetime1 == 10) {
                 incrementValue$15 = var36;
                 var36++;
                 var66 = param0.field_j[incrementValue$15];
-              } else if (var28 == 42) {
+              } else if (var28Lifetime1 == 42) {
                 incrementValue$14 = var43;
                 var43++;
                 var66 = param0.field_j[incrementValue$14];
-              } else if (var28 == 99) {
+              } else if (var28Lifetime1 == 99) {
                 incrementValue$13 = var46;
                 var46++;
                 var66 = param0.field_j[incrementValue$13];
-              } else if (var28 == 98) {
+              } else if (var28Lifetime1 == 98) {
                 incrementValue$12 = var47;
                 var47++;
                 var66 = param0.field_j[incrementValue$12];
-              } else if (var28 == 101) {
+              } else if (var28Lifetime1 == 101) {
                 incrementValue$11 = var48;
                 var48++;
                 var66 = param0.field_j[incrementValue$11];
-              } else if (var28 == 100) {
+              } else if (var28Lifetime1 == 100) {
                 incrementValue$10 = var49;
                 var49++;
                 var66 = param0.field_j[incrementValue$10];
-              } else if (var28 != 64 &&
-                  var28 != 65 &&
-                  var28 != 120 &&
-                  var28 != 121 &&
-                  var28 != 123) {
+              } else if (var28Lifetime1 != 64 &&
+                  var28Lifetime1 != 65 &&
+                  var28Lifetime1 != 120 &&
+                  var28Lifetime1 != 121 &&
+                  var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
                 var66 = param0.field_j[incrementValue$8];
@@ -615,8 +622,8 @@ final class rf extends hf {
               var44++;
               var66 = param0.field_j[incrementValue$20];
             }
-            var66 = var66 + var70[var28];
-            var70[var28] = var66;
+            var66 = var66 + var70[var28Lifetime1];
+            var70[var28Lifetime1] = var66;
             var51.d((byte) -10, var66 & 127);
           }
         }

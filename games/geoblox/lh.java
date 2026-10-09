@@ -14,6 +14,7 @@ final class lh {
         int fieldTemp$7 = 0;
         int var1;
         int var2;
+        int var1Lifetime1;
         var2 = Geoblox.field_C;
         if (param0 <= -78) {
           if (null != pb.field_t.g(0)) {
@@ -52,8 +53,8 @@ final class lh {
         if (null == pb.field_t.g(0)) {
           return;
         }
-        var1 = kj.field_J;
-        if (var1 == 0) {
+        var1Lifetime1 = kj.field_J;
+        if (var1Lifetime1 == 0) {
           eh.field_c = eh.field_c - 1;
           if (eh.field_c > -10 - (tl.field_h - 480)) {
             return;
@@ -62,7 +63,7 @@ final class lh {
           kj.field_J = 1;
           return;
         }
-        if (var1 == 1) {
+        if (var1Lifetime1 == 1) {
           fieldTemp$6 = h.field_d;
           h.field_d = h.field_d + 1;
           if (fieldTemp$6 <= 450) {
@@ -71,7 +72,7 @@ final class lh {
           kj.field_J = 2;
           return;
         }
-        if (var1 != 2) {
+        if (var1Lifetime1 != 2) {
           return;
         }
         fieldTemp$7 = eh.field_c;

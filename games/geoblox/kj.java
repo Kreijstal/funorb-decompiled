@@ -594,6 +594,18 @@ final class kj extends ia {
         int var5;
         int var6;
         int var7;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var4Lifetime4;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
+        int var5Lifetime4;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime3;
+        int var7Lifetime1;
         if (param1 != 38) {
           return;
         }
@@ -606,40 +618,40 @@ final class kj extends ia {
           return;
         }
         if (var3 == 144) {
-          var4 = param0 & 15;
-          var5 = (32525 & param0) >> 8;
-          var6 = 127 & param0 >> 16;
-          if (var6 > 0) {
-            this.c(-1, var4, var6, var5);
+          var4Lifetime1 = param0 & 15;
+          var5Lifetime1 = (32525 & param0) >> 8;
+          var6Lifetime1 = 127 & param0 >> 16;
+          if (var6Lifetime1 > 0) {
+            this.c(-1, var4Lifetime1, var6Lifetime1, var5Lifetime1);
           } else {
-            this.b(23327, var5, 64, var4);
+            this.b(23327, var5Lifetime1, 64, var4Lifetime1);
           }
           return;
         }
         if (var3 == 160) {
-          var4 = 15 & param0;
-          var5 = param0 >> 8 & 127;
-          var6 = (8370933 & param0) >> 16;
-          this.a(-40, var6, var5, var4);
+          var4Lifetime2 = 15 & param0;
+          var5Lifetime2 = param0 >> 8 & 127;
+          var6Lifetime2 = (8370933 & param0) >> 16;
+          this.a(-40, var6Lifetime2, var5Lifetime2, var4Lifetime2);
           return;
         }
         if (var3 != 176) {
           if (192 == var3) {
-            var4 = param0 & 15;
-            var5 = (32632 & param0) >> 8;
-            this.b(var4, param1 - 167, var5 + this.field_K[var4]);
+            var4Lifetime3 = param0 & 15;
+            var5Lifetime3 = (32632 & param0) >> 8;
+            this.b(var4Lifetime3, param1 - 167, var5Lifetime3 + this.field_K[var4Lifetime3]);
             return;
           }
           if (var3 == 208) {
-            var4 = param0 & 15;
-            var5 = (32669 & param0) >> 8;
-            this.d(var5, param1 ^ -2858, var4);
+            var4Lifetime3 = param0 & 15;
+            var5Lifetime3 = (32669 & param0) >> 8;
+            this.d(var5Lifetime3, param1 ^ -2858, var4Lifetime3);
             return;
           }
           if (var3 == 224) {
-            var4 = param0 & 15;
-            var5 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
-            this.c(-108, var5, var4);
+            var4Lifetime3 = param0 & 15;
+            var5Lifetime3 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
+            this.c(-108, var5Lifetime3, var4Lifetime3);
             return;
           }
           var3 = 255 & param0;
@@ -649,112 +661,112 @@ final class kj extends ia {
           this.a(true, param1 ^ 2097113);
           return;
         }
-        var4 = 15 & param0;
-        var5 = (param0 & 32577) >> 8;
-        var6 = param0 >> 16 & 127;
-        if (0 == var5) {
-          this.field_K[var4] = (var6 << 14) + cd.a(this.field_K[var4], -2080769);
+        var4Lifetime4 = 15 & param0;
+        var5Lifetime4 = (param0 & 32577) >> 8;
+        var6Lifetime3 = param0 >> 16 & 127;
+        if (0 == var5Lifetime4) {
+          this.field_K[var4Lifetime4] = (var6Lifetime3 << 14) + cd.a(this.field_K[var4Lifetime4], -2080769);
         }
-        if (var5 == 32) {
-          this.field_K[var4] = (var6 << 7) + cd.a(this.field_K[var4], -16257);
+        if (var5Lifetime4 == 32) {
+          this.field_K[var4Lifetime4] = (var6Lifetime3 << 7) + cd.a(this.field_K[var4Lifetime4], -16257);
         }
-        if (var5 == 1) {
-          this.field_s[var4] = (var6 << 7) + cd.a(this.field_s[var4], -16257);
+        if (var5Lifetime4 == 1) {
+          this.field_s[var4Lifetime4] = (var6Lifetime3 << 7) + cd.a(this.field_s[var4Lifetime4], -16257);
         }
-        if (33 == var5) {
-          this.field_s[var4] = var6 + cd.a(-128, this.field_s[var4]);
+        if (33 == var5Lifetime4) {
+          this.field_s[var4Lifetime4] = var6Lifetime3 + cd.a(-128, this.field_s[var4Lifetime4]);
         }
-        if (var5 == 5) {
-          this.field_M[var4] = cd.a(-16257, this.field_M[var4]) + (var6 << 7);
+        if (var5Lifetime4 == 5) {
+          this.field_M[var4Lifetime4] = cd.a(-16257, this.field_M[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
-        if (var5 == 37) {
-          this.field_M[var4] = cd.a(-128, this.field_M[var4]) + var6;
+        if (var5Lifetime4 == 37) {
+          this.field_M[var4Lifetime4] = cd.a(-128, this.field_M[var4Lifetime4]) + var6Lifetime3;
         }
-        if (var5 == 7) {
-          this.field_p[var4] = cd.a(this.field_p[var4], -16257) + (var6 << 7);
+        if (var5Lifetime4 == 7) {
+          this.field_p[var4Lifetime4] = cd.a(this.field_p[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
-        if (var5 == 39) {
-          this.field_p[var4] = cd.a(-128, this.field_p[var4]) + var6;
+        if (var5Lifetime4 == 39) {
+          this.field_p[var4Lifetime4] = cd.a(-128, this.field_p[var4Lifetime4]) + var6Lifetime3;
         }
-        if (var5 == 10) {
-          this.field_z[var4] = cd.a(-16257, this.field_z[var4]) + (var6 << 7);
+        if (var5Lifetime4 == 10) {
+          this.field_z[var4Lifetime4] = cd.a(-16257, this.field_z[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
-        if (var5 == 42) {
-          this.field_z[var4] = var6 + cd.a(-128, this.field_z[var4]);
+        if (var5Lifetime4 == 42) {
+          this.field_z[var4Lifetime4] = var6Lifetime3 + cd.a(-128, this.field_z[var4Lifetime4]);
         }
-        if (var5 == 11) {
-          this.field_r[var4] = (var6 << 7) + cd.a(-16257, this.field_r[var4]);
+        if (var5Lifetime4 == 11) {
+          this.field_r[var4Lifetime4] = (var6Lifetime3 << 7) + cd.a(-16257, this.field_r[var4Lifetime4]);
         }
-        if (var5 == 43) {
-          this.field_r[var4] = cd.a(-128, this.field_r[var4]) + var6;
+        if (var5Lifetime4 == 43) {
+          this.field_r[var4Lifetime4] = cd.a(-128, this.field_r[var4Lifetime4]) + var6Lifetime3;
         }
-        if (var5 == 64) {
-          if (var6 < 64) {
-            this.field_m[var4] = cd.a(this.field_m[var4], -2);
+        if (var5Lifetime4 == 64) {
+          if (var6Lifetime3 < 64) {
+            this.field_m[var4Lifetime4] = cd.a(this.field_m[var4Lifetime4], -2);
           } else {
-            this.field_m[var4] = lb.a(this.field_m[var4], 1);
+            this.field_m[var4Lifetime4] = lb.a(this.field_m[var4Lifetime4], 1);
           }
         }
-        if (var5 == 65) {
-          if (64 <= var6) {
-            this.field_m[var4] = lb.a(this.field_m[var4], 2);
+        if (var5Lifetime4 == 65) {
+          if (64 <= var6Lifetime3) {
+            this.field_m[var4Lifetime4] = lb.a(this.field_m[var4Lifetime4], 2);
           } else {
-            this.a((byte) 39, var4);
-            this.field_m[var4] = cd.a(this.field_m[var4], -3);
+            this.a((byte) 39, var4Lifetime4);
+            this.field_m[var4Lifetime4] = cd.a(this.field_m[var4Lifetime4], -3);
           }
         }
-        if (var5 == 99) {
-          this.field_w[var4] = cd.a(this.field_w[var4], 127) + (var6 << 7);
+        if (var5Lifetime4 == 99) {
+          this.field_w[var4Lifetime4] = cd.a(this.field_w[var4Lifetime4], 127) + (var6Lifetime3 << 7);
         }
-        if (var5 == 98) {
-          this.field_w[var4] = var6 + cd.a(16256, this.field_w[var4]);
+        if (var5Lifetime4 == 98) {
+          this.field_w[var4Lifetime4] = var6Lifetime3 + cd.a(16256, this.field_w[var4Lifetime4]);
         }
-        if (101 == var5) {
-          this.field_w[var4] = (var6 << 7) + (cd.a(this.field_w[var4], 127) + 16384);
+        if (101 == var5Lifetime4) {
+          this.field_w[var4Lifetime4] = (var6Lifetime3 << 7) + (cd.a(this.field_w[var4Lifetime4], 127) + 16384);
         }
-        if (var5 == 100) {
-          this.field_w[var4] = 16384 + (cd.a(16256, this.field_w[var4]) + var6);
+        if (var5Lifetime4 == 100) {
+          this.field_w[var4Lifetime4] = 16384 + (cd.a(16256, this.field_w[var4Lifetime4]) + var6Lifetime3);
         }
-        if (120 == var5) {
-          this.b(100, var4);
+        if (120 == var5Lifetime4) {
+          this.b(100, var4Lifetime4);
         }
-        if (var5 == 121) {
-          this.b((byte) -72, var4);
+        if (var5Lifetime4 == 121) {
+          this.b((byte) -72, var4Lifetime4);
         }
-        if (var5 == 123) {
-          this.c(var4, param1 ^ 15421);
+        if (var5Lifetime4 == 123) {
+          this.c(var4Lifetime4, param1 ^ 15421);
         }
-        if (var5 == 6) {
-          var7 = this.field_w[var4];
+        if (var5Lifetime4 == 6) {
+          var7 = this.field_w[var4Lifetime4];
           if (16384 == var7) {
-            this.field_v[var4] = cd.a(this.field_v[var4], -16257) + (var6 << 7);
+            this.field_v[var4Lifetime4] = cd.a(this.field_v[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
           }
         }
-        if (var5 == 38) {
-          var7 = this.field_w[var4];
-          if (var7 == 16384) {
-            this.field_v[var4] = cd.a(this.field_v[var4], -128) + var6;
+        if (var5Lifetime4 == 38) {
+          var7Lifetime1 = this.field_w[var4Lifetime4];
+          if (var7Lifetime1 == 16384) {
+            this.field_v[var4Lifetime4] = cd.a(this.field_v[var4Lifetime4], -128) + var6Lifetime3;
           }
         }
-        if (16 == var5) {
-          this.field_u[var4] = cd.a(-16257, this.field_u[var4]) + (var6 << 7);
+        if (16 == var5Lifetime4) {
+          this.field_u[var4Lifetime4] = cd.a(-16257, this.field_u[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
-        if (48 == var5) {
-          this.field_u[var4] = var6 + cd.a(this.field_u[var4], -128);
+        if (48 == var5Lifetime4) {
+          this.field_u[var4Lifetime4] = var6Lifetime3 + cd.a(this.field_u[var4Lifetime4], -128);
         }
-        if (var5 == 81) {
-          if (var6 >= 64) {
-            this.field_m[var4] = lb.a(this.field_m[var4], 4);
+        if (var5Lifetime4 == 81) {
+          if (var6Lifetime3 >= 64) {
+            this.field_m[var4Lifetime4] = lb.a(this.field_m[var4Lifetime4], 4);
           } else {
-            this.a(var4, (byte) 67);
-            this.field_m[var4] = cd.a(this.field_m[var4], -5);
+            this.a(var4Lifetime4, (byte) 67);
+            this.field_m[var4Lifetime4] = cd.a(this.field_m[var4Lifetime4], -5);
           }
         }
-        if (var5 == 17) {
-          this.f(-118, (var6 << 7) + (this.field_Q[var4] & -16257), var4);
+        if (var5Lifetime4 == 17) {
+          this.f(-118, (var6Lifetime3 << 7) + (this.field_Q[var4Lifetime4] & -16257), var4Lifetime4);
         }
-        if (var5 == 49) {
-          this.f(-102, (-128 & this.field_Q[var4]) + var6, var4);
+        if (var5Lifetime4 == 49) {
+          this.f(-102, (-128 & this.field_Q[var4Lifetime4]) + var6Lifetime3, var4Lifetime4);
         }
         return;
     }

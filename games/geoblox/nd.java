@@ -11,6 +11,9 @@ final class nd {
         int var6;
         int var7;
         int var8;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
         hb.field_l[md.field_c] = param1;
         qi.field_i[md.field_c] = md.field_c;
         hg.field_a[md.field_c] = param5;
@@ -44,23 +47,23 @@ final class nd {
         fb.field_m[md.field_c] = param3;
         k.field_i[md.field_c] = param4;
         cj.field_b[md.field_c] = param0;
-        var6 = param0 + (param4 + param3);
-        var8 = -80 / ((30 - param2) / 42);
-        if (var6 != 0) {
-          stackIn_7_0 = param3 * 1000 / var6;
+        var6Lifetime1 = param0 + (param4 + param3);
+        var8Lifetime1 = -80 / ((30 - param2) / 42);
+        if (var6Lifetime1 != 0) {
+          stackIn_7_0 = param3 * 1000 / var6Lifetime1;
         } else {
           stackIn_7_0 = 0;
         }
-        var7 = stackIn_7_0;
-        gk.field_a[md.field_c] = var7;
-        if (va.field_b < var7) {
-          va.field_b = var7;
+        var7Lifetime1 = stackIn_7_0;
+        gk.field_a[md.field_c] = var7Lifetime1;
+        if (va.field_b < var7Lifetime1) {
+          va.field_b = var7Lifetime1;
         }
         md.field_c = md.field_c + 1;
-        if (qg.field_a <= var7) {
+        if (qg.field_a <= var7Lifetime1) {
           return;
         }
-        qg.field_a = var7;
+        qg.field_a = var7Lifetime1;
     }
 
     final static vk a(int param0) {

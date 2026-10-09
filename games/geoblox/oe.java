@@ -415,6 +415,18 @@ abstract class oe extends dd {
         int var14;
         int var15;
         int var16;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
         var16 = Geoblox.field_C;
         vb.d(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
@@ -478,18 +490,18 @@ abstract class oe extends dd {
           var8++;
           var7++;
         }
-        var4 = 22;
-        var5 = 194;
-        var6 = 169;
-        var7 = 0;
-        var8 = 35 + param2;
-        while (var7 < var4) {
-          var9 = var5 + (-var5 + var6) * var7 / var4;
-          var9 = var9 | (var9 << 8 | var9 << 16);
-          vb.c(param0, var8, 6, var9);
-          vb.c(this.field_r + param0 - 6, var8, 6, var9);
-          var7++;
-          var8++;
+        var4Lifetime1 = 22;
+        var5Lifetime1 = 194;
+        var6Lifetime1 = 169;
+        var7Lifetime1 = 0;
+        var8Lifetime1 = 35 + param2;
+        while (var7Lifetime1 < var4Lifetime1) {
+          var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
+          var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
+          vb.c(param0, var8Lifetime1, 6, var9Lifetime1);
+          vb.c(this.field_r + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
+          var7Lifetime1++;
+          var8Lifetime1++;
         }
         jc.field_a.b(-90 + this.field_r + param0, 10 + param2);
         if (param1 != 20) {
@@ -497,18 +509,18 @@ abstract class oe extends dd {
         }
         vl.a(id.field_c, -10 + this.field_r, 35 + param2, 5 + param0, (byte) 107);
         vl.a(fh.field_e, this.field_r, -22 + (this.field_h + param2), param0, (byte) 107);
-        var4 = this.field_h - 79;
-        var5 = 169;
-        var6 = 127;
-        var7 = 0;
-        var8 = param2 + 57;
-        while (var7 < var4) {
-          var9 = var7 * (var6 - var5) / var4 + var5;
-          var9 = var9 | (var9 << 16 | var9 << 8);
-          vb.c(param0, var8, 6, var9);
-          vb.c(-6 + (this.field_r + param0), var8, 6, var9);
-          var8++;
-          var7++;
+        var4Lifetime2 = this.field_h - 79;
+        var5Lifetime2 = 169;
+        var6Lifetime2 = 127;
+        var7Lifetime2 = 0;
+        var8Lifetime2 = param2 + 57;
+        while (var7Lifetime2 < var4Lifetime2) {
+          var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
+          var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
+          vb.c(param0, var8Lifetime2, 6, var9Lifetime2);
+          vb.c(-6 + (this.field_r + param0), var8Lifetime2, 6, var9Lifetime2);
+          var8Lifetime2++;
+          var7Lifetime2++;
         }
     }
 

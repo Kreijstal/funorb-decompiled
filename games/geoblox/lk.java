@@ -32,6 +32,7 @@ final class lk {
     final int a(int param0, int param1) {
         int var3;
         int var4;
+        int var3Lifetime1;
         var4 = Geoblox.field_C;
         if (null == this.field_c) {
           return 0;
@@ -44,7 +45,7 @@ final class lk {
             return var3 - 1;
           }
         }
-        var3 = 35 / ((param0 + 9) / 51);
+        var3Lifetime1 = 35 / ((param0 + 9) / 51);
         return this.field_c.length - 1;
     }
 

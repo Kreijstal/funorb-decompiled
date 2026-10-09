@@ -61,6 +61,8 @@ final class nc extends m {
         int var10;
         int var11;
         int var12;
+        int var12Lifetime1;
+        int var12Lifetime2;
         var8 = param1 + param2 * vb.field_f;
         var9 = vb.field_f - param3;
         var10 = 0;
@@ -76,19 +78,19 @@ final class nc extends m {
           param4 = param4 - (param2 + param4 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-          var12 = vb.field_e - param1;
-          param3 = param3 - var12;
+          var12Lifetime1 = vb.field_e - param1;
+          param3 = param3 - var12Lifetime1;
           param1 = vb.field_e;
-          var11 = var11 + var12;
-          var8 = var8 + var12;
-          var10 = var10 + var12;
-          var9 = var9 + var12;
+          var11 = var11 + var12Lifetime1;
+          var8 = var8 + var12Lifetime1;
+          var10 = var10 + var12Lifetime1;
+          var9 = var9 + var12Lifetime1;
         }
         if (param1 + param3 > vb.field_k) {
-          var12 = param1 + param3 - vb.field_k;
-          param3 = param3 - var12;
-          var10 = var10 + var12;
-          var9 = var9 + var12;
+          var12Lifetime2 = param1 + param3 - vb.field_k;
+          param3 = param3 - var12Lifetime2;
+          var10 = var10 + var12Lifetime2;
+          var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
             param4 > 0) {
@@ -107,6 +109,8 @@ final class nc extends m {
         int var11;
         int var12;
         int var13;
+        int var13Lifetime1;
+        int var13Lifetime2;
         var9 = param1 + param2 * vb.field_f;
         var10 = vb.field_f - param3;
         var11 = 0;
@@ -122,19 +126,19 @@ final class nc extends m {
           param4 = param4 - (param2 + param4 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-          var13 = vb.field_e - param1;
-          param3 = param3 - var13;
+          var13Lifetime1 = vb.field_e - param1;
+          param3 = param3 - var13Lifetime1;
           param1 = vb.field_e;
-          var12 = var12 + var13;
-          var9 = var9 + var13;
-          var11 = var11 + var13;
-          var10 = var10 + var13;
+          var12 = var12 + var13Lifetime1;
+          var9 = var9 + var13Lifetime1;
+          var11 = var11 + var13Lifetime1;
+          var10 = var10 + var13Lifetime1;
         }
         if (param1 + param3 > vb.field_k) {
-          var13 = param1 + param3 - vb.field_k;
-          param3 = param3 - var13;
-          var11 = var11 + var13;
-          var10 = var10 + var13;
+          var13Lifetime2 = param1 + param3 - vb.field_k;
+          param3 = param3 - var13Lifetime2;
+          var11 = var11 + var13Lifetime2;
+          var10 = var10 + var13Lifetime2;
         }
         if (param3 > 0 &&
             param4 > 0) {

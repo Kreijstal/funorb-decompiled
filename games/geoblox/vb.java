@@ -605,6 +605,17 @@ final class vb {
         int var23;
         int var24;
         int var25;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var16Lifetime1;
+        int var18Lifetime1;
+        int var19Lifetime1;
+        int var20Lifetime1;
+        int var21Lifetime1;
+        int var22Lifetime1;
+        int var23Lifetime1;
+        int var24Lifetime1;
         if (param4 == 0) {
           return;
         }
@@ -671,46 +682,46 @@ final class vb {
             var19 = var19 + (incrementValue$5 + var16);
           }
         }
-        var16 = param2;
+        var16Lifetime1 = param2;
         var17 = -var17;
-        var19 = var17 * var17 + var15;
-        var18 = var19 - var16;
-        var19 = var19 - var17;
+        var19Lifetime1 = var17 * var17 + var15;
+        var18Lifetime1 = var19Lifetime1 - var16Lifetime1;
+        var19Lifetime1 = var19Lifetime1 - var17;
         while (var14 < var13) {
-          while (var19 > var15) {
-            if (var18 > var15) {
-              incrementValue$0 = var16;
-              var16--;
-              var19 = var19 - (incrementValue$0 + var16);
-              var18 = var18 - (var16 + var16);
+          while (var19Lifetime1 > var15) {
+            if (var18Lifetime1 > var15) {
+              incrementValue$0 = var16Lifetime1;
+              var16Lifetime1--;
+              var19Lifetime1 = var19Lifetime1 - (incrementValue$0 + var16Lifetime1);
+              var18Lifetime1 = var18Lifetime1 - (var16Lifetime1 + var16Lifetime1);
               continue;
             }
             break;
           }
-          var20 = param0 - var16;
-          if (var20 < field_e) {
-            var20 = field_e;
+          var20Lifetime1 = param0 - var16Lifetime1;
+          if (var20Lifetime1 < field_e) {
+            var20Lifetime1 = field_e;
           }
-          var21 = param0 + var16;
-          if (var21 > field_k - 1) {
-            var21 = field_k - 1;
+          var21Lifetime1 = param0 + var16Lifetime1;
+          if (var21Lifetime1 > field_k - 1) {
+            var21Lifetime1 = field_k - 1;
           }
-          var25 = var20 + var14 * field_f;
-          var22 = var25;
-          for (var23 = var20; var23 <= var21; var23++) {
-            var9 = (field_c[var25] >> 16 & 255) * var5;
-            var10 = (field_c[var25] >> 8 & 255) * var5;
-            var11 = (field_c[var25] & 255) * var5;
-            var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+          var25 = var20Lifetime1 + var14 * field_f;
+          var22Lifetime1 = var25;
+          for (var23Lifetime1 = var20Lifetime1; var23Lifetime1 <= var21Lifetime1; var23Lifetime1++) {
+            var9Lifetime1 = (field_c[var25] >> 16 & 255) * var5;
+            var10Lifetime1 = (field_c[var25] >> 8 & 255) * var5;
+            var11Lifetime1 = (field_c[var25] & 255) * var5;
+            var24Lifetime1 = (var6 + var9Lifetime1 >> 8 << 16) + (var7 + var10Lifetime1 >> 8 << 8) + (var8 + var11Lifetime1 >> 8);
             incrementValue$2 = var25;
             var25++;
-            field_c[incrementValue$2] = var24;
+            field_c[incrementValue$2] = var24Lifetime1;
           }
           var14++;
-          var19 = var19 + (var17 + var17);
+          var19Lifetime1 = var19Lifetime1 + (var17 + var17);
           incrementValue$1 = var17;
           var17++;
-          var18 = var18 + (incrementValue$1 + var17);
+          var18Lifetime1 = var18Lifetime1 + (incrementValue$1 + var17);
         }
         return;
     }
@@ -786,6 +797,14 @@ final class vb {
         int var13;
         int var14;
         int var15;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var15Lifetime1;
         if (param2 == 0) {
           vb.a(param0, param1, param3);
           return;
@@ -841,41 +860,41 @@ final class vb {
             var11 = var11 + (incrementValue$5 + var8);
           }
         }
-        var8 = param2;
-        var9 = var6 - param1;
-        var11 = var9 * var9 + var7;
-        var10 = var11 - var8;
-        var11 = var11 - var9;
+        var8Lifetime1 = param2;
+        var9Lifetime1 = var6 - param1;
+        var11Lifetime1 = var9Lifetime1 * var9Lifetime1 + var7;
+        var10Lifetime1 = var11Lifetime1 - var8Lifetime1;
+        var11Lifetime1 = var11Lifetime1 - var9Lifetime1;
         while (var6 < var5) {
-          while (var11 > var7) {
-            if (var10 > var7) {
-              incrementValue$0 = var8;
-              var8--;
-              var11 = var11 - (incrementValue$0 + var8);
-              var10 = var10 - (var8 + var8);
+          while (var11Lifetime1 > var7) {
+            if (var10Lifetime1 > var7) {
+              incrementValue$0 = var8Lifetime1;
+              var8Lifetime1--;
+              var11Lifetime1 = var11Lifetime1 - (incrementValue$0 + var8Lifetime1);
+              var10Lifetime1 = var10Lifetime1 - (var8Lifetime1 + var8Lifetime1);
               continue;
             }
             break;
           }
-          var12 = param0 - var8;
-          if (var12 < field_e) {
-            var12 = field_e;
+          var12Lifetime1 = param0 - var8Lifetime1;
+          if (var12Lifetime1 < field_e) {
+            var12Lifetime1 = field_e;
           }
-          var13 = param0 + var8;
-          if (var13 > field_k - 1) {
-            var13 = field_k - 1;
+          var13Lifetime1 = param0 + var8Lifetime1;
+          if (var13Lifetime1 > field_k - 1) {
+            var13Lifetime1 = field_k - 1;
           }
-          var14 = var12 + var6 * field_f;
-          for (var15 = var12; var15 <= var13; var15++) {
-            incrementValue$2 = var14;
-            var14++;
+          var14Lifetime1 = var12Lifetime1 + var6 * field_f;
+          for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
+            incrementValue$2 = var14Lifetime1;
+            var14Lifetime1++;
             field_c[incrementValue$2] = param3;
           }
           var6++;
-          var11 = var11 + (var9 + var9);
-          incrementValue$1 = var9;
-          var9++;
-          var10 = var10 + (incrementValue$1 + var9);
+          var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
+          incrementValue$1 = var9Lifetime1;
+          var9Lifetime1++;
+          var10Lifetime1 = var10Lifetime1 + (incrementValue$1 + var9Lifetime1);
         }
         return;
     }
@@ -883,6 +902,8 @@ final class vb {
     final static void g(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
+        int var5Lifetime1;
+        int var6Lifetime1;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 == 0) {
@@ -934,22 +955,22 @@ final class vb {
         param1 = param1 << 16;
         param1 = param1 + 32768;
         param3 = param3 << 16;
-        var5 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
+        var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
         if (param0 < field_e) {
-          param1 = param1 + var5 * (field_e - param0);
+          param1 = param1 + var5Lifetime1 * (field_e - param0);
           param0 = field_e;
         }
         if (param2 >= field_k) {
           param2 = field_k - 1;
         }
         while (param0 <= param2) {
-          var6 = param1 >> 16;
-          if (var6 >= field_i &&
-              var6 < field_d) {
-            field_c[param0 + var6 * field_f] = param4;
+          var6Lifetime1 = param1 >> 16;
+          if (var6Lifetime1 >= field_i &&
+              var6Lifetime1 < field_d) {
+            field_c[param0 + var6Lifetime1 * field_f] = param4;
           }
-          param1 = param1 + var5;
+          param1 = param1 + var5Lifetime1;
           param0++;
         }
     }
@@ -1248,6 +1269,19 @@ final class vb {
         int var19;
         int var20;
         int var21;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var14Lifetime2;
+        int var15Lifetime1;
+        int var16Lifetime1;
+        int var17Lifetime1;
+        int var17Lifetime2;
+        int var18Lifetime1;
+        int var18Lifetime2;
+        int var19Lifetime1;
+        int var19Lifetime2;
+        int var20Lifetime1;
+        int var20Lifetime2;
         if (param4 == 0) {
           vb.a(param0, param1, param2, param3, param5);
           return;
@@ -1306,65 +1340,65 @@ final class vb {
             var16 = var16 + (incrementValue$6 + var13);
           }
         }
-        var14 = var11 - var7;
-        var17 = param0;
-        if (var17 < field_e) {
-          var17 = field_e;
+        var14Lifetime1 = var11 - var7;
+        var17Lifetime1 = param0;
+        if (var17Lifetime1 < field_e) {
+          var17Lifetime1 = field_e;
         }
-        var18 = param0 + param2;
-        if (var18 > field_k) {
-          var18 = field_k;
+        var18Lifetime1 = param0 + param2;
+        if (var18Lifetime1 > field_k) {
+          var18Lifetime1 = field_k;
         }
-        var19 = var17 + var11 * field_f;
-        var20 = field_f + var17 - var18;
+        var19Lifetime1 = var17Lifetime1 + var11 * field_f;
+        var20Lifetime1 = field_f + var17Lifetime1 - var18Lifetime1;
         var21 = param1 + param3 - param4 - 1;
         if (var21 > field_d) {
           var21 = field_d;
         }
         while (var11 < var21) {
-          for (var22 = var17; var22 < var18; var22++) {
-            incrementValue$3 = var19;
-            var19++;
+          for (var22 = var17Lifetime1; var22 < var18Lifetime1; var22++) {
+            incrementValue$3 = var19Lifetime1;
+            var19Lifetime1++;
             field_c[incrementValue$3] = param5;
           }
           var11++;
-          var19 = var19 + var20;
+          var19Lifetime1 = var19Lifetime1 + var20Lifetime1;
         }
-        var14 = 0;
-        var13 = param4;
-        var16 = var14 * var14 + var12;
-        var15 = var16 - var13;
-        var16 = var16 - var14;
+        var14Lifetime2 = 0;
+        var13Lifetime1 = param4;
+        var16Lifetime1 = var14Lifetime2 * var14Lifetime2 + var12;
+        var15Lifetime1 = var16Lifetime1 - var13Lifetime1;
+        var16Lifetime1 = var16Lifetime1 - var14Lifetime2;
         while (var11 < var9) {
-          while (var16 > var12) {
-            if (var15 > var12) {
-              incrementValue$0 = var13;
-              var13--;
-              var16 = var16 - (incrementValue$0 + var13);
-              var15 = var15 - (var13 + var13);
+          while (var16Lifetime1 > var12) {
+            if (var15Lifetime1 > var12) {
+              incrementValue$0 = var13Lifetime1;
+              var13Lifetime1--;
+              var16Lifetime1 = var16Lifetime1 - (incrementValue$0 + var13Lifetime1);
+              var15Lifetime1 = var15Lifetime1 - (var13Lifetime1 + var13Lifetime1);
               continue;
             }
             break;
           }
-          var17 = var6 - var13;
-          if (var17 < field_e) {
-            var17 = field_e;
+          var17Lifetime2 = var6 - var13Lifetime1;
+          if (var17Lifetime2 < field_e) {
+            var17Lifetime2 = field_e;
           }
-          var18 = var6 + var10 + var13;
-          if (var18 > field_k - 1) {
-            var18 = field_k - 1;
+          var18Lifetime2 = var6 + var10 + var13Lifetime1;
+          if (var18Lifetime2 > field_k - 1) {
+            var18Lifetime2 = field_k - 1;
           }
-          var19 = var17 + var11 * field_f;
-          for (var20 = var17; var20 <= var18; var20++) {
-            incrementValue$2 = var19;
-            var19++;
+          var19Lifetime2 = var17Lifetime2 + var11 * field_f;
+          for (var20Lifetime2 = var17Lifetime2; var20Lifetime2 <= var18Lifetime2; var20Lifetime2++) {
+            incrementValue$2 = var19Lifetime2;
+            var19Lifetime2++;
             field_c[incrementValue$2] = param5;
           }
           var11++;
-          var16 = var16 + (var14 + var14);
-          incrementValue$1 = var14;
-          var14++;
-          var15 = var15 + (incrementValue$1 + var14);
+          var16Lifetime1 = var16Lifetime1 + (var14Lifetime2 + var14Lifetime2);
+          incrementValue$1 = var14Lifetime2;
+          var14Lifetime2++;
+          var15Lifetime1 = var15Lifetime1 + (incrementValue$1 + var14Lifetime2);
         }
         return;
     }
@@ -1424,6 +1458,18 @@ final class vb {
         int[] var27;
         int[] var28;
         int[] var29;
+        int var13Lifetime1;
+        int var18Lifetime1;
+        int var18Lifetime2;
+        int var18Lifetime3;
+        int var20Lifetime1;
+        int var20Lifetime2;
+        int var21Lifetime1;
+        int var21Lifetime2;
+        int var22Lifetime1;
+        int var22Lifetime2;
+        int var23Lifetime1;
+        int var23Lifetime2;
         if (field_g == null ||
               !(field_g.length >= param8)) {
           field_g = new int[param8];
@@ -1466,23 +1512,23 @@ final class vb {
           var13++;
         }
         var14 = var14 + var16 * field_f;
-        for (var18 = 0; var18 < param8; var18++) {
+        for (var18Lifetime1 = 0; var18Lifetime1 < param8; var18Lifetime1++) {
           incrementValue$7 = param2;
           param2++;
-          param0[incrementValue$7] = (var27[var18] / var17 << 16) + (var28[var18] / var17 << 8) + var29[var18] / var17;
+          param0[incrementValue$7] = (var27[var18Lifetime1] / var17 << 16) + (var28[var18Lifetime1] / var17 << 8) + var29[var18Lifetime1] / var17;
         }
         param2 = param2 + param6;
-        var13 = 1 - param5;
-        var18 = 1 + param3 - param5 - param4;
-        if (0 < var18) {
-          var18 = 0;
+        var13Lifetime1 = 1 - param5;
+        var18Lifetime2 = 1 + param3 - param5 - param4;
+        if (0 < var18Lifetime2) {
+          var18Lifetime2 = 0;
         }
         var19 = param7 + (param4 - param3) * field_f;
-        if (var13 < var18) {
-          var19 = var19 + (var18 - var13) * field_f;
+        if (var13Lifetime1 < var18Lifetime2) {
+          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * field_f;
         }
-        while (var13 < var18) {
-          if (var13 + param4 + param5 + param3 < field_d) {
+        while (var13Lifetime1 < var18Lifetime2) {
+          if (var13Lifetime1 + param4 + param5 + param3 < field_d) {
             for (var20 = 0; var20 < param8; var20++) {
               param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1503,111 +1549,111 @@ final class vb {
             param0[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
           }
           param2 = param2 + param6;
-          var13++;
+          var13Lifetime1++;
         }
-        var18 = field_b - param4 - param5 - param3;
-        if (0 < var18) {
-          var18 = 0;
+        var18Lifetime3 = field_b - param4 - param5 - param3;
+        if (0 < var18Lifetime3) {
+          var18Lifetime3 = 0;
         }
-        while (var13 < var18) {
-          for (var20 = 0; var20 < param8; var20++) {
+        while (var13Lifetime1 < var18Lifetime3) {
+          for (var20Lifetime1 = 0; var20Lifetime1 < param8; var20Lifetime1++) {
             param1 = param0[var19++];
-            var21 = var27[var20] - (param1 >> 16 & 255);
+            var21Lifetime1 = var27[var20Lifetime1] - (param1 >> 16 & 255);
             stackIn_38_0 = var9;
-            stackIn_38_1 = var20;
-            if (var21 >= 0) {
-              stackIn_39_2 = var21;
+            stackIn_38_1 = var20Lifetime1;
+            if (var21Lifetime1 >= 0) {
+              stackIn_39_2 = var21Lifetime1;
             } else {
               stackIn_39_2 = 0;
             }
             stackIn_38_0[stackIn_38_1] = stackIn_39_2;
-            var21 = var28[var20] - (param1 >> 8 & 255);
+            var21Lifetime1 = var28[var20Lifetime1] - (param1 >> 8 & 255);
             stackIn_41_0 = var10;
-            stackIn_41_1 = var20;
-            if (var21 >= 0) {
-              stackIn_42_2 = var21;
+            stackIn_41_1 = var20Lifetime1;
+            if (var21Lifetime1 >= 0) {
+              stackIn_42_2 = var21Lifetime1;
             } else {
               stackIn_42_2 = 0;
             }
             stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-            var21 = var29[var20] - (param1 & 255);
+            var21Lifetime1 = var29[var20Lifetime1] - (param1 & 255);
             stackIn_44_0 = var11;
-            stackIn_44_1 = var20;
-            if (var21 >= 0) {
-              stackIn_45_2 = var21;
+            stackIn_44_1 = var20Lifetime1;
+            if (var21Lifetime1 >= 0) {
+              stackIn_45_2 = var21Lifetime1;
             } else {
               stackIn_45_2 = 0;
             }
             stackIn_44_0[stackIn_44_1] = stackIn_45_2;
           }
           var19 = var19 + param6;
-          for (var20 = 0; var20 < param8; var20++) {
+          for (var20Lifetime1 = 0; var20Lifetime1 < param8; var20Lifetime1++) {
             param1 = param0[var14++];
-            var9[var20] = var9[var20] + (param1 >> 16 & 255);
-            var10[var20] = var10[var20] + (param1 >> 8 & 255);
-            var11[var20] = var11[var20] + (param1 & 255);
+            var9[var20Lifetime1] = var9[var20Lifetime1] + (param1 >> 16 & 255);
+            var10[var20Lifetime1] = var10[var20Lifetime1] + (param1 >> 8 & 255);
+            var11[var20Lifetime1] = var11[var20Lifetime1] + (param1 & 255);
           }
           var14 = var14 + param6;
-          for (var20 = 0; var20 < param8; var20++) {
-            var21 = var27[var20] * var12 >> 14;
-            var22 = var28[var20] * var12 >> 14;
-            var23 = var29[var20] * var12 >> 14;
-            if (var21 > 255) {
-              var21 = 255;
+          for (var20Lifetime1 = 0; var20Lifetime1 < param8; var20Lifetime1++) {
+            var21Lifetime1 = var27[var20Lifetime1] * var12 >> 14;
+            var22Lifetime1 = var28[var20Lifetime1] * var12 >> 14;
+            var23Lifetime1 = var29[var20Lifetime1] * var12 >> 14;
+            if (var21Lifetime1 > 255) {
+              var21Lifetime1 = 255;
             }
-            if (var22 > 255) {
-              var22 = 255;
+            if (var22Lifetime1 > 255) {
+              var22Lifetime1 = 255;
             }
-            if (var23 > 255) {
-              var23 = 255;
+            if (var23Lifetime1 > 255) {
+              var23Lifetime1 = 255;
             }
             incrementValue$2 = param2;
             param2++;
-            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
+            param0[incrementValue$2] = (var21Lifetime1 << 16) + (var22Lifetime1 << 8) + var23Lifetime1;
           }
           param2 = param2 + param6;
-          var13++;
+          var13Lifetime1++;
         }
-        while (var13 < 0) {
-          for (var20 = 0; var20 < param8; var20++) {
+        while (var13Lifetime1 < 0) {
+          for (var20Lifetime2 = 0; var20Lifetime2 < param8; var20Lifetime2++) {
             param1 = param0[var19++];
-            var9[var20] = var9[var20] - (param1 >> 16 & 255);
-            var10[var20] = var10[var20] - (param1 >> 8 & 255);
-            var11[var20] = var11[var20] - (param1 & 255);
+            var9[var20Lifetime2] = var9[var20Lifetime2] - (param1 >> 16 & 255);
+            var10[var20Lifetime2] = var10[var20Lifetime2] - (param1 >> 8 & 255);
+            var11[var20Lifetime2] = var11[var20Lifetime2] - (param1 & 255);
           }
           var19 = var19 + param6;
           var17--;
-          for (var20 = 0; var20 < param8; var20++) {
-            var21 = var27[var20] / var17;
-            var22 = var28[var20] / var17;
-            var23 = var29[var20] / var17;
-            if (var21 >= 0) {
-              if (var21 > 255) {
-                var21 = 255;
+          for (var20Lifetime2 = 0; var20Lifetime2 < param8; var20Lifetime2++) {
+            var21Lifetime2 = var27[var20Lifetime2] / var17;
+            var22Lifetime2 = var28[var20Lifetime2] / var17;
+            var23Lifetime2 = var29[var20Lifetime2] / var17;
+            if (var21Lifetime2 >= 0) {
+              if (var21Lifetime2 > 255) {
+                var21Lifetime2 = 255;
               }
             } else {
-              var21 = 0;
+              var21Lifetime2 = 0;
             }
-            if (var22 >= 0) {
-              if (var22 > 255) {
-                var22 = 255;
+            if (var22Lifetime2 >= 0) {
+              if (var22Lifetime2 > 255) {
+                var22Lifetime2 = 255;
               }
             } else {
-              var22 = 0;
+              var22Lifetime2 = 0;
             }
-            if (var23 >= 0) {
-              if (var23 > 255) {
-                var23 = 255;
+            if (var23Lifetime2 >= 0) {
+              if (var23Lifetime2 > 255) {
+                var23Lifetime2 = 255;
               }
             } else {
-              var23 = 0;
+              var23Lifetime2 = 0;
             }
             incrementValue$0 = param2;
             param2++;
-            param0[incrementValue$0] = (var21 << 16) + (var22 << 8) + var23;
+            param0[incrementValue$0] = (var21Lifetime2 << 16) + (var22Lifetime2 << 8) + var23Lifetime2;
           }
           param2 = param2 + param6;
-          var13++;
+          var13Lifetime1++;
         }
     }
 

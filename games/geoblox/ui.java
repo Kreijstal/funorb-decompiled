@@ -30,13 +30,14 @@ final class ui {
         int[] var22;
         float[] var27;
         float[] var28;
+        int var4Lifetime1;
         for (var4 = 0; var4 < param1; var4++) {
           param0[var4] = 0.0f;
         }
         if (param2) {
           return;
         }
-        var4 = ua.field_u[this.field_a].field_e;
+        var4Lifetime1 = ua.field_u[this.field_a].field_e;
         var5 = this.field_b - this.field_c;
         var6 = var5 / this.field_f;
         var22 = new int[var6];
@@ -47,7 +48,7 @@ final class ui {
           while (var9 < var6) {
             if (var8 == 0) {
               var10 = ua.field_u[this.field_a].b();
-              for (var11 = var4 - 1; var11 >= 0; var11--) {
+              for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_e;
                 }
@@ -56,7 +57,7 @@ final class ui {
             }
             var22 = var19;
             var10 = 0;
-            while (var10 < var4) {
+            while (var10 < var4Lifetime1) {
               var11 = var22[var9];
               var12 = this.field_g[var11 * 8 + var8];
               if (var12 >= 0) {

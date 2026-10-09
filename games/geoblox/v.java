@@ -247,6 +247,7 @@ final class v {
         int var3;
         int var4;
         int var5;
+        int var4Lifetime1;
         var5 = Geoblox.field_C;
         var2 = this.field_d;
         var3 = this.field_p;
@@ -337,8 +338,8 @@ final class v {
           qa.field_b = (-kh.field_d + this.field_d) / 2;
           return;
         }
-        var4 = (int)(0.5f + (float)var3 * this.field_i);
-        if (var4 > var2) {
+        var4Lifetime1 = (int)(0.5f + (float)var3 * this.field_i);
+        if (var4Lifetime1 > var2) {
           var3 = (int)((float)var2 / this.field_i);
           if (!param0) {
             return;
@@ -351,8 +352,8 @@ final class v {
             }
           }
         } else {
-          if (var4 < var2) {
-            var2 = var4;
+          if (var4Lifetime1 < var2) {
+            var2 = var4Lifetime1;
             if (!param0) {
               return;
             }

@@ -32,6 +32,10 @@ final class ge {
         int var5;
         int var6;
         int var7;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var3Lifetime1;
         var6 = Geoblox.field_C;
         if (param0 < 103) {
           return;
@@ -43,44 +47,44 @@ final class ge {
           var3 += 8;
           var2++;
         }
-        for (var2 = 0; var2 < 8; var2++) {
-          dupTemp$0 = this.field_c[var2];
-          arrayValue$1 = this.field_g[var2];
-          this.field_a[var2] = dupTemp$0;
-          this.field_b[var2] = f.a(arrayValue$1, dupTemp$0);
+        for (var2Lifetime1 = 0; var2Lifetime1 < 8; var2Lifetime1++) {
+          dupTemp$0 = this.field_c[var2Lifetime1];
+          arrayValue$1 = this.field_g[var2Lifetime1];
+          this.field_a[var2Lifetime1] = dupTemp$0;
+          this.field_b[var2Lifetime1] = f.a(arrayValue$1, dupTemp$0);
         }
-        for (var2 = 1; 10 >= var2; var2++) {
-          for (var3 = 0; var3 < 8; var3++) {
-            this.field_k[var3] = 0L;
+        for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
+          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
+            this.field_k[var3Lifetime1] = 0L;
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3 - var4)] >>> var5))]);
+              this.field_k[var3Lifetime1] = f.a(this.field_k[var3Lifetime1], qc.field_g[var4][cd.a(255, (int)(this.field_a[cd.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
           }
-          for (var3 = 0; var3 < 8; var3++) {
-            this.field_a[var3] = this.field_k[var3];
+          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
+            this.field_a[var3Lifetime1] = this.field_k[var3Lifetime1];
           }
-          this.field_a[0] = f.a(this.field_a[0], qc.field_h[var2]);
-          for (var3 = 0; var3 < 8; var3++) {
-            this.field_k[var3] = this.field_a[var3];
+          this.field_a[0] = f.a(this.field_a[0], qc.field_h[var2Lifetime2]);
+          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
+            this.field_k[var3Lifetime1] = this.field_a[var3Lifetime1];
             var7 = 0;
             var4 = var7;
             var5 = 56;
             while (var7 < 8) {
-              this.field_k[var3] = f.a(this.field_k[var3], qc.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3, 7)] >>> var5))]);
+              this.field_k[var3Lifetime1] = f.a(this.field_k[var3Lifetime1], qc.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3Lifetime1, 7)] >>> var5))]);
               var7++;
               var5 -= 8;
             }
           }
-          for (var3 = 0; 8 > var3; var3++) {
-            this.field_b[var3] = this.field_k[var3];
+          for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
+            this.field_b[var3Lifetime1] = this.field_k[var3Lifetime1];
           }
         }
-        for (var2 = 0; var2 < 8; var2++) {
-          this.field_c[var2] = f.a(this.field_c[var2], f.a(this.field_b[var2], this.field_g[var2]));
+        for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
+          this.field_c[var2Lifetime3] = f.a(this.field_c[var2Lifetime3], f.a(this.field_b[var2Lifetime3], this.field_g[var2Lifetime3]));
         }
         return;
     }

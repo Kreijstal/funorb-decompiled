@@ -454,6 +454,11 @@ final class ua extends hf {
         float[] var49;
         float[] var50;
         float[] var52;
+        int var16Lifetime1;
+        int var17_intLifetime1;
+        int var17_intLifetime2;
+        int var17_intLifetime3;
+        int var19Lifetime1;
         ua.a(this.field_p[param0], 0);
         ua.b();
         var2 = ua.b(hj.a((byte) 58, field_D.length - 1));
@@ -498,32 +503,32 @@ final class ua extends hf {
         var17_int = var14.field_c[var16];
         stackIn_22_0 = (field_F[var17_int].b()) ? 0 : 1;
         var15 = stackIn_22_0;
-        var16 = var15;
-        for (var17_int = 0; var17_int < var14.field_b; var17_int++) {
-          var42 = field_k[var14.field_d[var17_int]];
+        var16Lifetime1 = var15;
+        for (var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_b; var17_intLifetime1++) {
+          var42 = field_k[var14.field_d[var17_intLifetime1]];
           var52 = field_B;
-          var42.a(var52, var4 >> 1, var16 != 0);
+          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
         }
         if (var15 == 0) {
-          var17_int = var14.field_a;
-          var18_int = var14.field_c[var17_int];
+          var17_intLifetime2 = var14.field_a;
+          var18_int = var14.field_c[var17_intLifetime2];
           field_F[var18_int].a(field_B, var4 >> 1);
         }
         if (var15 != 0) {
-          for (var17_int = var4 >> 1; var17_int < var4; var17_int++) {
-            field_B[var17_int] = 0.0f;
+          for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
+            field_B[var17_intLifetime3] = 0.0f;
           }
         } else {
-          var17_int = var4 >> 1;
+          var17_intLifetime3 = var4 >> 1;
           var18_int = var4 >> 2;
           var19 = var4 >> 3;
           var49 = field_B;
           var45 = var49;
           var20_ref_float__ = var45;
-          for (var21_int = 0; var21_int < var17_int; var21_int++) {
+          for (var21_int = 0; var21_int < var17_intLifetime3; var21_int++) {
             var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
           }
-          var41 = var17_int;
+          var41 = var17_intLifetime3;
           var21_int = var41;
           while (var41 < var4) {
             var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
@@ -564,14 +569,14 @@ final class ua extends hf {
             var20_ref_float__[var4 - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
           }
           for (var25 = 0; var25 < var19; var25++) {
-            var26_float = var20_ref_float__[var17_int + 3 + 4 * var25];
-            var27 = var20_ref_float__[var17_int + 1 + 4 * var25];
+            var26_float = var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25];
+            var27 = var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25];
             var28 = var20_ref_float__[4 * var25 + 3];
             var29 = var20_ref_float__[4 * var25 + 1];
-            var20_ref_float__[var17_int + 3 + 4 * var25] = var26_float + var28;
-            var20_ref_float__[var17_int + 1 + 4 * var25] = var27 + var29;
-            var30 = var21[var17_int - 4 - 4 * var25];
-            var31 = var21[var17_int - 3 - 4 * var25];
+            var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25] = var26_float + var28;
+            var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25] = var27 + var29;
+            var30 = var21[var17_intLifetime3 - 4 - 4 * var25];
+            var31 = var21[var17_intLifetime3 - 3 - 4 * var25];
             var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
             var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
           }
@@ -624,7 +629,7 @@ final class ua extends hf {
             }
             break;
           }
-          for (var26 = 0; var26 < var17_int; var26++) {
+          for (var26 = 0; var26 < var17_intLifetime3; var26++) {
             var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
           }
           for (var26 = 0; var26 < var19; var26++) {
@@ -636,20 +641,20 @@ final class ua extends hf {
           for (var26 = 0; var26 < var19; var26++) {
             var27 = var23[2 * var26];
             var28 = var23[2 * var26 + 1];
-            var29 = var20_ref_float__[var17_int + 2 * var26];
-            var30 = var20_ref_float__[var17_int + 2 * var26 + 1];
+            var29 = var20_ref_float__[var17_intLifetime3 + 2 * var26];
+            var30 = var20_ref_float__[var17_intLifetime3 + 2 * var26 + 1];
             var31 = var20_ref_float__[var4 - 2 - 2 * var26];
             var32 = var20_ref_float__[var4 - 1 - 2 * var26];
             var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
-            var20_ref_float__[var17_int + 2 * var26] = (var29 + var31 + var33) * 0.5f;
+            var20_ref_float__[var17_intLifetime3 + 2 * var26] = (var29 + var31 + var33) * 0.5f;
             var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
             var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
-            var20_ref_float__[var17_int + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
+            var20_ref_float__[var17_intLifetime3 + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
             var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
           }
           for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26 + 1];
-            var20_ref_float__[var17_int - 1 - var26] = var20_ref_float__[2 * var26 + var17_int] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_int] * var22[2 * var26];
+            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_intLifetime3] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_intLifetime3] * var22[2 * var26 + 1];
+            var20_ref_float__[var17_intLifetime3 - 1 - var26] = var20_ref_float__[2 * var26 + var17_intLifetime3] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_intLifetime3] * var22[2 * var26];
           }
           for (var26 = 0; var26 < var18_int; var26++) {
             var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
@@ -661,7 +666,7 @@ final class ua extends hf {
             var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
           }
           for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var17_int + var26] = var20_ref_float__[var4 - var26 - 1];
+            var20_ref_float__[var17_intLifetime3 + var26] = var20_ref_float__[var4 - var26 - 1];
           }
           for (var26 = var8; var26 < var9; var26++) {
             var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
@@ -680,15 +685,15 @@ final class ua extends hf {
           var40 = var46;
           var17 = var40;
           if (!this.field_i) {
-            for (var19 = 0; var19 < this.field_m; var19++) {
-              var20 = (this.field_M >> 1) + var19;
-              var40[var19] = var40[var19] + this.field_C[var20];
+            for (var19Lifetime1 = 0; var19Lifetime1 < this.field_m; var19Lifetime1++) {
+              var20 = (this.field_M >> 1) + var19Lifetime1;
+              var40[var19Lifetime1] = var40[var19Lifetime1] + this.field_C[var20];
             }
           }
           if (var15 == 0) {
-            for (var19 = var8; var19 < var4 >> 1; var19++) {
-              var20 = var50.length - (var4 >> 1) + var19;
-              var40[var20] = var40[var20] + field_B[var19];
+            for (var19Lifetime1 = var8; var19Lifetime1 < var4 >> 1; var19Lifetime1++) {
+              var20 = var50.length - (var4 >> 1) + var19Lifetime1;
+              var40[var20] = var40[var20] + field_B[var19Lifetime1];
             }
           }
         }

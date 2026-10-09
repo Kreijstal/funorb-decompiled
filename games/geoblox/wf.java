@@ -238,6 +238,8 @@ abstract class wf extends ch {
         java.awt.Dimension var4;
         int var5;
         java.awt.Container var6;
+        int var3Lifetime1;
+        int var3Lifetime2;
         var5 = Geoblox.field_C;
         if (null != rb.field_d) {
           if (vl.field_n == null) {
@@ -273,9 +275,9 @@ abstract class wf extends ch {
         if (ib.field_e == -1 ||
               ib.field_e == 0) {
           stackIn_24_0 = (-1 != ib.field_e) ? 0 : 1;
-          var3 = stackIn_24_0;
+          var3Lifetime1 = stackIn_24_0;
           ib.field_e = ma.b(15869);
-          if (var3 != 0 &&
+          if (var3Lifetime1 != 0 &&
               ib.field_e == 0 &&
               11 == hj.field_a &&
               !sb.a(73)) {
@@ -433,13 +435,13 @@ abstract class wf extends ch {
           mi.field_C = 13;
         }
         if (mi.field_C == 13) {
-          var3 = 1;
+          var3Lifetime2 = 1;
           if (null != b.field_b) {
             stackIn_135_0 = (!b.field_b.a(true)) ? 0 : 1;
-            var3 = stackIn_135_0;
+            var3Lifetime2 = stackIn_135_0;
             lc.a(b.field_b.field_e, -2, b.field_b.field_j);
           }
-          if (var3 != 0) {
+          if (var3Lifetime2 != 0) {
             mi.field_C = 20;
           }
         }

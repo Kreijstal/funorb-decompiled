@@ -109,6 +109,7 @@ final class em {
         int var2;
         int var3;
         bj stackIn_16_0 = null;
+        int var2Lifetime1;
         var3 = Geoblox.field_C;
         if (null == this.field_d) {
           return;
@@ -122,11 +123,11 @@ final class em {
         if (param0 != -65) {
           em.a('', 15);
         }
-        for (var2 = 0; var2 < this.field_d.length; var2++) {
-          if (null == this.field_d[var2]) {
+        for (var2Lifetime1 = 0; var2Lifetime1 < this.field_d.length; var2Lifetime1++) {
+          if (null == this.field_d[var2Lifetime1]) {
             continue;
           }
-          stackIn_16_0 = this.field_d[var2];
+          stackIn_16_0 = this.field_d[var2Lifetime1];
           ((bj) (Object) stackIn_16_0).b((byte) -38);
         }
     }
