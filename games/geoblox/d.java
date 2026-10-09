@@ -88,7 +88,8 @@ final class d implements Runnable {
             while (true) {
               var2 = this;
               synchronized (var2) {
-                L1: {
+                {
+                  boolean decompiledFrameCompleted0 = true;
                   while (!this.field_c) {
                     if (this.field_d != null) {
                       var9 = this.field_d;
@@ -96,7 +97,8 @@ final class d implements Runnable {
                       if (null == this.field_d) {
                         this.field_g = null;
                       }
-                      break L1;
+                      decompiledFrameCompleted0 = false;
+                      break;
                     }
                     try {
                       this.wait();
@@ -105,7 +107,9 @@ final class d implements Runnable {
                       var3 = (InterruptedException) (Object) decompiledCaughtException;
                     }
                   }
-                  return;
+                  if (decompiledFrameCompleted0) {
+                    return;
+                  }
                 }
               }
               try {

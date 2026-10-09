@@ -792,14 +792,16 @@ final class gh {
                   break;
               }
             }
-            L44: {
+            {
+              boolean decompiledFrameCompleted0 = true;
               if (kj.field_o[99] &&
                   !this.field_C) {
                 var4 = (ja) ((Object) ji.field_r.g(0));
                 while (null != var4) {
                   stackIn_233_0 = var4.field_B;
                   if (var5 != 0) {
-                    break L44;
+                    decompiledFrameCompleted0 = false;
+                    break;
                   }
                   if (!stackIn_233_0) {
                     var4.field_v = var4.field_v + 4.0f * var4.field_F;
@@ -809,7 +811,9 @@ final class gh {
                   var4 = (ja) ((Object) ji.field_r.d(1));
                 }
               }
-              stackIn_233_0 = kj.field_o[var3];
+              if (decompiledFrameCompleted0) {
+                stackIn_233_0 = kj.field_o[var3];
+              }
             }
             if (!stackIn_233_0 &&
                 !kj.field_o[var2]) {
@@ -1476,7 +1480,8 @@ final class gh {
             this.field_y = 0;
             return;
           }
-          L1: {
+          {
+            boolean decompiledFrameCompleted0 = true;
             L2: {
               this.field_q = this.field_q + 179;
               this.field_R = a.field_d.c(13519);
@@ -1502,7 +1507,8 @@ final class gh {
                 if (stackIn_11_0 < stackIn_11_1) {
                   stackIn_23_0 = 0;
                   if (var11 != 0) {
-                    break L1;
+                    decompiledFrameCompleted0 = false;
+                    break;
                   }
                   var7 = stackIn_23_0;
                   while (vf.field_L.field_m > var7) {
@@ -1523,10 +1529,14 @@ final class gh {
                 }
                 break;
               }
-              this.field_c = (int)(0.5 + Math.sqrt((double)var3));
+              if (decompiledFrameCompleted0) {
+                this.field_c = (int)(0.5 + Math.sqrt((double)var3));
+              }
             }
-            this.field_W = 920 + (-(2 * this.field_c) - 58 - 1);
-            stackIn_23_0 = param0 ^ 10;
+            if (decompiledFrameCompleted0) {
+              this.field_W = 920 + (-(2 * this.field_c) - 58 - 1);
+              stackIn_23_0 = param0 ^ 10;
+            }
           }
           ra.a(stackIn_23_0, qf.field_bb);
         }

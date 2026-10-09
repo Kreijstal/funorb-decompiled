@@ -401,7 +401,8 @@ abstract class wh extends rc {
         RuntimeException decompiledCaughtException = null;
         var7 = Geoblox.field_C;
         try {
-          L0: {
+          {
+            boolean decompiledFrameCompleted0 = true;
             if (param1 > 0) {
               var4 = new byte[param0];
               var5_int = 0;
@@ -409,11 +410,14 @@ abstract class wh extends rc {
                 var4[var5_int] = param2[param1 + var5_int];
                 var5_int++;
                 if (var7 != 0) {
-                  break L0;
+                  decompiledFrameCompleted0 = false;
+                  break;
                 }
               }
-              if (!(var7 == 0)) {
-                var4 = param2;
+              if (decompiledFrameCompleted0) {
+                if (!(var7 == 0)) {
+                  var4 = param2;
+                }
               }
             } else {
               var4 = param2;
@@ -610,7 +614,8 @@ abstract class wh extends rc {
                 var27 = (-param12 + param3 << 16) / var35;
                 var33 = 0;
               }
-              L10: {
+              {
+                boolean decompiledFrameCompleted0 = true;
                 L11: {
                   {
                     if (param8 < 0) {
@@ -648,7 +653,8 @@ abstract class wh extends rc {
                     stackIn_73_0 = ~mh.field_c;
                     stackIn_73_1 = ~var37;
                     if (var42 != 0) {
-                      break L10;
+                      decompiledFrameCompleted0 = false;
+                      break;
                     }
                     if (stackIn_73_0 < stackIn_73_1) {
                       var38 = (var18 >> 16) - (var17_int >> 16);
@@ -686,9 +692,11 @@ abstract class wh extends rc {
                     var36 = var36 + vb.field_f;
                   }
                 }
-                var36 = param4 - param15;
-                stackIn_73_0 = ~var36;
-                stackIn_73_1 = -1;
+                if (decompiledFrameCompleted0) {
+                  var36 = param4 - param15;
+                  stackIn_73_0 = ~var36;
+                  stackIn_73_1 = -1;
+                }
               }
               if (stackIn_73_0 == stackIn_73_1) {
                 var23 = 0;
@@ -843,7 +851,8 @@ abstract class wh extends rc {
                   decompiledRegionSelector0 = 0;
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  L7: {
+                  {
+                    boolean decompiledFrameCompleted0 = true;
                     var3 = (Exception) (Object) decompiledCaughtException;
                     var4 = 0;
                     while (var4 < 24) {
@@ -851,10 +860,13 @@ abstract class wh extends rc {
                       var4++;
                       if (var5 != 0) {
                         decompiledRegionSelector0 = 1;
-                        break L7;
+                        decompiledFrameCompleted0 = false;
+                        break;
                       }
                     }
-                    decompiledRegionSelector0 = 0;
+                    if (decompiledFrameCompleted0) {
+                      decompiledRegionSelector0 = 0;
+                    }
                   }
                 }
                 if (decompiledRegionSelector0 == 0) {

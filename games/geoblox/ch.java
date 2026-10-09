@@ -280,7 +280,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
               try {
                 L1: {
                   L2: {
-                    L3: {
+                    {
+                      boolean decompiledFrameCompleted0 = true;
                       if (d.field_o != null) {
                         var1 = d.field_o.toLowerCase();
                         if (-1 != ((String) (var1)).indexOf("sun") ||
@@ -307,7 +308,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             while (var2.length() > var3) {
                               stackIn_66_0 = rc.a(-58, var2.charAt(var3));
                               if (var5 != 0) {
-                                break L3;
+                                decompiledFrameCompleted0 = false;
+                                break;
                               }
                               if (stackIn_66_0) {
                                 var3++;
@@ -315,20 +317,24 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               }
                               break;
                             }
-                            var4 = var2.substring(6, var3);
-                            if ((f.b((byte) -115, (CharSequence) ((Object) var4))) && (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10))) {
-                              this.a((byte) 79, "wrongjava");
-                              if (var5 == 0) {
-                                break L1;
+                            if (decompiledFrameCompleted0) {
+                              var4 = var2.substring(6, var3);
+                              if ((f.b((byte) -115, (CharSequence) ((Object) var4))) && (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10))) {
+                                this.a((byte) 79, "wrongjava");
+                                if (var5 == 0) {
+                                  break L1;
+                                }
                               }
                             }
                           }
                         }
                       }
-                      if (d.field_t == null) {
-                        break L2;
+                      if (decompiledFrameCompleted0) {
+                        if (d.field_t == null) {
+                          break L2;
+                        }
+                        stackIn_66_0 = d.field_t.startsWith("1.");
                       }
-                      stackIn_66_0 = d.field_t.startsWith("1.");
                     }
                     if (stackIn_66_0) {
                       var1_int = 2;

@@ -163,6 +163,7 @@ final class kk extends ji {
                       var10 = var8 & 127;
                       stackIn_49_0 = ((128 & var8) == 0) ? 0 : 1;
                       L18: {
+                        boolean decompiledFrameCompleted0 = true;
                         var11 = stackIn_49_0;
                         var12 = (long)var7 + ((long)var6 << 32);
                         var14 = null;
@@ -170,18 +171,23 @@ final class kk extends ji {
                           var14_ref = (sd) ((Object) this.field_c.c((byte) 121));
                           while (var14_ref != null) {
                             if (var12 == var14_ref.field_i) {
-                              break L18;
+                              decompiledFrameCompleted0 = false;
+                              break;
                             }
                             var14_ref = (sd) ((Object) this.field_c.a(-30));
                           }
-                          break L18;
-                        }
-                        var14_ref = (sd) ((Object) this.field_e.c((byte) 121));
-                        while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_i) {
-                            break;
+                          if (decompiledFrameCompleted0) {
+                            break L18;
                           }
-                          var14_ref = (sd) ((Object) this.field_e.a(72));
+                        }
+                        if (decompiledFrameCompleted0) {
+                          var14_ref = (sd) ((Object) this.field_e.c((byte) 121));
+                          while (var14_ref != null) {
+                            if (~var12 == ~var14_ref.field_i) {
+                              break;
+                            }
+                            var14_ref = (sd) ((Object) this.field_e.a(72));
+                          }
                         }
                       }
                       if (var14_ref == null) {
