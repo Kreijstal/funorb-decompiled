@@ -11,7 +11,7 @@ final class re extends hf {
 
     public static void b(int param0) {
         if (param0 != 127) {
-            return;
+          return;
         }
         field_f = null;
         field_h = null;
@@ -24,7 +24,7 @@ final class re extends hf {
         var2.d((byte) 124, 1);
         var2.d((byte) 127, 2);
         if (param0 >= -65) {
-            re.b(116, -127);
+          re.b(116, -127);
         }
     }
 

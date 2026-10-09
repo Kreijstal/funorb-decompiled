@@ -129,14 +129,14 @@ final class p extends hf {
               }
             } else {
               if (null != param2.field_L &&
-                  param2.field_d != null &&
-                  param2.field_C != null &&
-                  param2.field_x != null &&
-                  null != param2.field_a &&
-                  param2.field_y != null &&
-                  param2.field_l != null &&
-                  null != param2.field_p &&
-                  param2.field_b != null) {
+                param2.field_d != null &&
+                param2.field_C != null &&
+                param2.field_x != null &&
+                null != param2.field_a &&
+                param2.field_y != null &&
+                param2.field_l != null &&
+                null != param2.field_p &&
+                param2.field_b != null) {
                 var23Lifetime2 = 0;
                 while (!(var23Lifetime2 >= param2.field_f)) {
                   var24Lifetime1 = param2.field_L[var23Lifetime2];
@@ -244,14 +244,14 @@ final class p extends hf {
 
     p(int param0, int param1, int param2, int param3, int param4, int param5) {
         try {
-            this.field_f = param2;
-            this.field_g = param3;
-            this.field_n = param5;
-            this.field_j = param4;
-            this.field_h = param1;
-            this.field_l = param0;
+          this.field_f = param2;
+          this.field_g = param3;
+          this.field_n = param5;
+          this.field_j = param4;
+          this.field_h = param1;
+          this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "p.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "p.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

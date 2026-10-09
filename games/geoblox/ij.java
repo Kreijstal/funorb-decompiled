@@ -57,17 +57,17 @@ final class ij extends oe implements pl {
     public static void i(byte param0) {
         field_Z = null;
         if (param0 > 0) {
-            ij.i((byte) 25);
-            field_Y = null;
-            return;
+          ij.i((byte) 25);
+          field_Y = null;
+          return;
         }
         field_Y = null;
     }
 
     final static int m(int param0) {
         if (param0 <= 18) {
-            ij.m(48);
-            return qi.b(f.field_qb, 1);
+          ij.m(48);
+          return qi.b(f.field_qb, 1);
         }
         return qi.b(f.field_qb, 1);
     }
@@ -132,7 +132,7 @@ final class ij extends oe implements pl {
 
     private final void j(byte param0) {
         if (!this.field_I) {
-            return;
+          return;
         }
         int var2 = 102 / ((param0 - 6) / 43);
         this.field_I = false;
@@ -173,36 +173,36 @@ final class ij extends oe implements pl {
         int var1Lifetime1;
         int var2Lifetime1;
         if (!el.field_o.field_x) {
-            var1 = el.field_o.field_w - 2;
-            var2 = el.field_o.field_u - 2;
-            if (!(wa.field_a <= 0)) {
-                vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> 1), -(vg.field_f[ha.field_g].field_o >> 1) + 240);
-            }
-            fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.field_a].b(320 + var1, 240 + var2, rj.field_c);
-            if (param0 >= 3) {
-                return;
-            }
-            field_Z = (String) null;
+          var1 = el.field_o.field_w - 2;
+          var2 = el.field_o.field_u - 2;
+          if (!(wa.field_a <= 0)) {
+            vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> 1), -(vg.field_f[ha.field_g].field_o >> 1) + 240);
+          }
+          fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
+          vh.field_H[nd.field_a].b(320 + var1, 240 + var2, rj.field_c);
+          if (param0 >= 3) {
             return;
+          }
+          field_Z = (String) null;
+          return;
         }
         if (null == ul.field_a) {
-            var1Lifetime1 = el.field_o.field_w - 2;
-            var2Lifetime1 = el.field_o.field_u - 2;
-            if (!(wa.field_a <= 0)) {
-                vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> 1), -(vg.field_f[ha.field_g].field_o >> 1) + 240);
-            }
-            fc.field_b[uf.field_b].b(var1Lifetime1 + 320, 240 + var2Lifetime1, rj.field_c);
-            vh.field_H[nd.field_a].b(320 + var1Lifetime1, 240 + var2Lifetime1, rj.field_c);
-            if (param0 >= 3) {
-                return;
-            }
-            field_Z = (String) null;
+          var1Lifetime1 = el.field_o.field_w - 2;
+          var2Lifetime1 = el.field_o.field_u - 2;
+          if (!(wa.field_a <= 0)) {
+            vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> 1), -(vg.field_f[ha.field_g].field_o >> 1) + 240);
+          }
+          fc.field_b[uf.field_b].b(var1Lifetime1 + 320, 240 + var2Lifetime1, rj.field_c);
+          vh.field_H[nd.field_a].b(320 + var1Lifetime1, 240 + var2Lifetime1, rj.field_c);
+          if (param0 >= 3) {
             return;
+          }
+          field_Z = (String) null;
+          return;
         }
         ul.field_a.b(-(ul.field_a.field_s >> 1) + 319, -(ul.field_a.field_o >> 1) + 240);
         if (param0 >= 3) {
-            return;
+          return;
         }
         field_Z = (String) null;
     }

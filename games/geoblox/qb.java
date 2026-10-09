@@ -18,10 +18,10 @@ final class qb extends hk {
         int var6 = Geoblox.field_C;
         mg var5 = (mg) (rh.field_d.g(param2 ^ param2));
         while (var5 != null) {
-            if (~var5.field_i == ~param0) {
-                return var5;
-            }
-            var5 = (mg) (rh.field_d.d(1));
+          if (~var5.field_i == ~param0) {
+            return var5;
+          }
+          var5 = (mg) (rh.field_d.d(1));
         }
         var5 = new mg();
         var5.field_f = param3;
@@ -36,7 +36,7 @@ final class qb extends hk {
         field_F = null;
         field_M = null;
         if (param0 != 0) {
-            field_M = (rf) null;
+          field_M = (rf) null;
         }
         field_N = null;
         field_L = null;

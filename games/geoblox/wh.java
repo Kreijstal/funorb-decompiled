@@ -577,15 +577,15 @@ abstract class wh extends rc {
         var42 = Geoblox.field_C;
         try {
           if (param4 >= 0 &&
-              mh.field_h > param8) {
+            mh.field_h > param8) {
             if (param2 < 0 &&
-                param9 < 0 &&
-                param13 < 0) {
+              param9 < 0 &&
+              param13 < 0) {
               return;
             }
             if (mh.field_c <= param2 &&
-                mh.field_c <= param9 &&
-                param13 >= mh.field_c) {
+              mh.field_c <= param9 &&
+              param13 >= mh.field_c) {
               return;
             }
             if (param16 != -1275583984) {
@@ -764,7 +764,7 @@ abstract class wh extends rc {
                             }
                           } else {
                             if (var37 >= 0 &&
-                                var37 < mh.field_c) {
+                              var37 < mh.field_c) {
                               jf.a(var37 + var36, 0, 33423689, var21, 0, var25, 0, var38, var29, param11);
                             }
                           }
@@ -863,7 +863,7 @@ abstract class wh extends rc {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                      mh.field_c > var36Lifetime1) {
+                    mh.field_c > var36Lifetime1) {
                     jf.a(var35Lifetime1 + var36Lifetime1, 0, 33423689, var21, 0, var25, 0, var37Lifetime1, var29, param11);
                   }
                 }
@@ -901,94 +901,94 @@ abstract class wh extends rc {
 
     final static void a(qc param0, boolean param1) {
         try {
-            RuntimeException runtimeException = null;
-            byte[] var2 = null;
-            int var5 = 0;
-            int stackIn_17_0 = 0;
-            int stackIn_17_1 = 0;
-            RuntimeException stackIn_35_0 = null;
-            StringBuilder stackIn_35_1 = null;
-            String stackIn_36_2 = null;
-            int decompiledRegionSelector0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var3_int = 0;
-            Exception var3 = null;
-            int var4 = 0;
-            var5 = Geoblox.field_C;
-            try {
-              var2 = new byte[24];
-              if (null != af.field_b) {
-                try {
-                  af.field_b.a(51, 0L);
-                  af.field_b.a((byte) -76, var2);
-                  var3_int = 0;
-                  L4: while (true) {
-                    if (var3_int < 24) {
-                      stackIn_17_0 = ~var2[var3_int];
-                      stackIn_17_1 = -1;
-                      if (var5 != 0) {
-                        break L4;
-                      }
-                      if (stackIn_17_0 == stackIn_17_1 ||
-                          var5 != 0) {
-                        var3_int++;
-                        continue;
-                      }
+          RuntimeException runtimeException = null;
+          byte[] var2 = null;
+          int var5 = 0;
+          int stackIn_17_0 = 0;
+          int stackIn_17_1 = 0;
+          RuntimeException stackIn_35_0 = null;
+          StringBuilder stackIn_35_1 = null;
+          String stackIn_36_2 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          int var3_int = 0;
+          Exception var3 = null;
+          int var4 = 0;
+          var5 = Geoblox.field_C;
+          try {
+            var2 = new byte[24];
+            if (null != af.field_b) {
+              try {
+                af.field_b.a(51, 0L);
+                af.field_b.a((byte) -76, var2);
+                var3_int = 0;
+                L4: while (true) {
+                  if (var3_int < 24) {
+                    stackIn_17_0 = ~var2[var3_int];
+                    stackIn_17_1 = -1;
+                    if (var5 != 0) {
+                      break L4;
                     }
-                    stackIn_17_0 = 24;
-                    stackIn_17_1 = var3_int;
-                    break;
+                    if (stackIn_17_0 == stackIn_17_1 ||
+                      var5 != 0) {
+                      var3_int++;
+                      continue;
+                    }
                   }
-                  if (stackIn_17_0 <= stackIn_17_1) {
-                    throw new IOException();
+                  stackIn_17_0 = 24;
+                  stackIn_17_1 = var3_int;
+                  break;
+                }
+                if (stackIn_17_0 <= stackIn_17_1) {
+                  throw new IOException();
+                }
+                decompiledRegionSelector0 = 0;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                {
+                  boolean decompiledFrameCompleted0 = true;
+                  var3 = (Exception) (Object) decompiledCaughtException;
+                  var4 = 0;
+                  while (var4 < 24) {
+                    var2[var4] = (byte) -1;
+                    var4++;
+                    if (var5 != 0) {
+                      decompiledRegionSelector0 = 1;
+                      decompiledFrameCompleted0 = false;
+                      break;
+                    }
                   }
-                  decompiledRegionSelector0 = 0;
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  {
-                    boolean decompiledFrameCompleted0 = true;
-                    var3 = (Exception) (Object) decompiledCaughtException;
-                    var4 = 0;
-                    while (var4 < 24) {
-                      var2[var4] = (byte) -1;
-                      var4++;
-                      if (var5 != 0) {
-                        decompiledRegionSelector0 = 1;
-                        decompiledFrameCompleted0 = false;
-                        break;
-                      }
-                    }
-                    if (decompiledFrameCompleted0) {
-                      decompiledRegionSelector0 = 0;
-                    }
+                  if (decompiledFrameCompleted0) {
+                    decompiledRegionSelector0 = 0;
                   }
                 }
-                if (decompiledRegionSelector0 == 0) {
-                  param0.a(24, -97, var2, 0);
-                }
-              } else {
+              }
+              if (decompiledRegionSelector0 == 0) {
                 param0.a(24, -97, var2, 0);
               }
-              if (!param1) {
-                field_t = (ck) null;
-              }
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_35_0 = runtimeException;
-              stackIn_35_1 = new StringBuilder().append("wh.IA(");
-              if (param0 == null) {
-                stackIn_36_2 = "null";
-              } else {
-                stackIn_36_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+            } else {
+              param0.a(24, -97, var2, 0);
             }
+            if (!param1) {
+              field_t = (ck) null;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_35_0 = runtimeException;
+            stackIn_35_1 = new StringBuilder().append("wh.IA(");
+            if (param0 == null) {
+              stackIn_36_2 = "null";
+            } else {
+              stackIn_36_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

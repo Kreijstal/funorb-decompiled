@@ -97,10 +97,10 @@ class hf {
 
     final void a(boolean param0) {
         if (param0) {
-            return;
+          return;
         }
         if (null == this.field_c) {
-            return;
+          return;
         }
         this.field_c.field_b = this.field_b;
         this.field_b.field_c = this.field_c;
@@ -260,10 +260,10 @@ class hf {
 
     final boolean a(int param0) {
         if (null == this.field_c) {
-            return false;
+          return false;
         }
         if (param0 < 112) {
-            hf.b((byte) 110);
+          hf.b((byte) 110);
         }
         return true;
     }

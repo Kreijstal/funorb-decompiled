@@ -12,7 +12,7 @@ final class pi extends vf {
 
     final String c(byte param0) {
         if (param0 == 69) {
-            return null;
+          return null;
         }
         return (String) null;
     }
@@ -59,33 +59,33 @@ final class pi extends vf {
     final static void c(int param0, int param1) {
         wg.field_a = param0 >> 4 & 3;
         if (!(wg.field_a <= 2)) {
-            wg.field_a = 2;
+          wg.field_a = 2;
         }
         qc.field_i = param0 >> 2 & 3;
         ad.field_j = 3 & param0;
         if (!(qc.field_i <= 2)) {
-            qc.field_i = 2;
+          qc.field_i = 2;
         }
         if (param1 != -12718) {
-            pi.j(-27);
-            if (ad.field_j > 2) {
-                ad.field_j = 2;
-                return;
-            }
+          pi.j(-27);
+          if (ad.field_j > 2) {
+            ad.field_j = 2;
             return;
+          }
+          return;
         }
         if (ad.field_j <= 2) {
-            return;
+          return;
         }
         ad.field_j = 2;
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
-            this.field_P = this.field_P + 1;
-            super.a(param0, param1, param2, param3);
+          this.field_P = this.field_P + 1;
+          super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class pi extends vf {
         var14 = Geoblox.field_C;
         var6 = this.field_M.a((byte) -105);
         if (var6 != bf.field_g &&
-            var6 != si.field_n) {
+          var6 != si.field_n) {
           var5 = this.field_M.c(-21666);
           if (var5 == null) {
             var5 = this.field_N;
@@ -224,16 +224,16 @@ final class pi extends vf {
         field_R = (int[][]) null;
         field_S = null;
         if (param0 != 24033) {
-            field_R = (int[][]) null;
-            field_O = null;
-            return;
+          field_R = (int[][]) null;
+          field_O = null;
+          return;
         }
         field_O = null;
     }
 
     final static void a(boolean param0, boolean param1) {
         if (param1) {
-            return;
+          return;
         }
         kd.field_e.a(0, 0, 0);
     }
@@ -241,11 +241,11 @@ final class pi extends vf {
     pi(dg param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ah.a((byte) -66));
         try {
-            this.field_M = param0;
-            this.field_N = param1;
-            this.a(param5, param4, (byte) -77, param3, param2);
+          this.field_M = param0;
+          this.field_N = param1;
+          this.a(param5, param4, (byte) -77, param3, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

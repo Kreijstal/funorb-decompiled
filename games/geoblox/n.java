@@ -10,9 +10,9 @@ final class n extends q {
     n(dj param0, dj param1) {
         super(param0);
         try {
-            this.field_i = param1;
+          this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class n extends q {
         field_l = null;
         field_k = null;
         if (param0 != 0) {
-            n.c((byte) 89);
+          n.c((byte) 89);
         }
     }
 
@@ -165,7 +165,7 @@ final class n extends q {
 
     final static void c(byte param0) {
         if (Geoblox.field_y != null) {
-            Geoblox.field_y.h((byte) -104);
+          Geoblox.field_y.h((byte) -104);
         }
         vk.field_d = new hi();
         int var1 = 32 / ((param0 - 43) / 47);
@@ -190,7 +190,7 @@ final class n extends q {
           if (this.field_i instanceof nl) {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -106);
             if (var3 != null &&
-                var3.a((byte) -105) != kk.field_w) {
+              var3.a((byte) -105) != kk.field_w) {
               stackIn_9_0 = si.field_m;
               return stackIn_9_0;
             }
@@ -233,7 +233,7 @@ final class n extends q {
             var3 = ((nl) ((Object) this.field_i)).a((byte) -118);
             if (var3 != null) {
               if (var3.a((byte) -105) == kk.field_w &&
-                  !param1.equals(this.field_i.field_s)) {
+                !param1.equals(this.field_i.field_s)) {
                 stackIn_8_0 = sj.field_b;
                 return stackIn_8_0;
               }
@@ -262,12 +262,12 @@ final class n extends q {
 
     final static sl d(byte param0) {
         if (uf.field_l == kd.field_b) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         int var1 = 28 % ((-79 - param0) / 44);
         if (va.field_e == kd.field_b) {
-            kd.field_b = uf.field_l;
-            return dl.field_a;
+          kd.field_b = uf.field_l;
+          return dl.field_a;
         }
         return null;
     }

@@ -8,7 +8,7 @@ final class rf extends hf {
     final static rf a(rh param0, String param1, String param2) {
         byte[] var3 = param0.a(0, param2, param1);
         if (var3 == null) {
-            return null;
+          return null;
         }
         return new rf(new qc(var3));
     }
@@ -568,7 +568,7 @@ final class rf extends hf {
             var28Lifetime1 = var28Lifetime1 + param0.field_j[incrementValue$7] & 127;
             var51.d((byte) 126, var28Lifetime1);
             if (var28Lifetime1 != 0 &&
-                var28Lifetime1 != 32) {
+              var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
@@ -610,10 +610,10 @@ final class rf extends hf {
                 var49++;
                 var66 = param0.field_j[incrementValue$10];
               } else if (var28Lifetime1 != 64 &&
-                  var28Lifetime1 != 65 &&
-                  var28Lifetime1 != 120 &&
-                  var28Lifetime1 != 121 &&
-                  var28Lifetime1 != 123) {
+                var28Lifetime1 != 65 &&
+                var28Lifetime1 != 120 &&
+                var28Lifetime1 != 121 &&
+                var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
                 var66 = param0.field_j[incrementValue$8];

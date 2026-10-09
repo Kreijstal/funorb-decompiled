@@ -54,78 +54,78 @@ class f extends qf implements pl {
 
     final static void b(String param0, String param1, int param2) {
         if (Geoblox.field_y != null) {
-            Geoblox.field_y.h((byte) -104);
+          Geoblox.field_y.h((byte) -104);
         }
         if (param2 != 7697781) {
-            return;
+          return;
         }
         try {
-            ml.field_t = new pf(param0, param1, false, true, true);
-            hk.field_C.b(ml.field_t, -81);
+          ml.field_t = new pf(param0, param1, false, true, true);
+          hk.field_C.b(ml.field_t, -81);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "f.HA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "f.HA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     f(ng param0, m param1, String param2, boolean param3, boolean param4) {
         super(param0, new ni((f) null, param1, param2), 77, 10, 10);
         try {
-            this.field_gb = param4 ? true : false;
-            this.field_ob = false;
-            this.field_rb = false;
-            this.field_jb = param1;
-            this.field_mb = param3 ? true : false;
-            this.field_pb = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_pb.field_C = true;
-            this.b((byte) -61, (el) (this.field_pb));
+          this.field_gb = param4 ? true : false;
+          this.field_ob = false;
+          this.field_rb = false;
+          this.field_jb = param1;
+          this.field_mb = param3 ? true : false;
+          this.field_pb = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_pb.field_C = true;
+          this.b((byte) -61, (el) (this.field_pb));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "f.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     final static void i(byte param0) {
         if (vl.field_n != null) {
-            return;
+          return;
         }
         if (param0 >= -48) {
-            field_qb = -112;
-            vl.field_n = od.a(480, 0, 0, -3, ka.field_i, 640);
-            if (null != vl.field_n) {
-                sl.a(vl.field_n, 57);
-                return;
-            }
+          field_qb = -112;
+          vl.field_n = od.a(480, 0, 0, -3, ka.field_i, 640);
+          if (null != vl.field_n) {
+            sl.a(vl.field_n, 57);
             return;
+          }
+          return;
         }
         vl.field_n = od.a(480, 0, 0, -3, ka.field_i, 640);
         if (null == vl.field_n) {
-            return;
+          return;
         }
         sl.a(vl.field_n, 57);
     }
 
     final void h(byte param0) {
         if (!this.field_I) {
-            return;
+          return;
         }
         this.field_I = false;
         if (param0 != -104) {
-            this.field_ob = true;
-            if (this.field_mb) {
-                tj.b((byte) -65);
-                return;
-            }
-            if (this.field_gb) {
-                wl.b(-1);
-                return;
-            }
-            return;
-        }
-        if (this.field_mb) {
+          this.field_ob = true;
+          if (this.field_mb) {
             tj.b((byte) -65);
             return;
+          }
+          if (this.field_gb) {
+            wl.b(-1);
+            return;
+          }
+          return;
+        }
+        if (this.field_mb) {
+          tj.b((byte) -65);
+          return;
         }
         if (!this.field_gb) {
-            return;
+          return;
         }
         wl.b(-1);
     }
@@ -233,7 +233,7 @@ class f extends qf implements pl {
             uf.field_b = 0 + ka.field_h;
           }
           if (el.field_o.field_x &&
-              gi.field_e % 18 == 0) {
+            gi.field_e % 18 == 0) {
             if (gg.field_b == 0) {
               if (!pf.field_D) {
                 g.field_j = g.field_j % 4;
@@ -333,7 +333,7 @@ class f extends qf implements pl {
           var1_int = -ka.field_h + uf.field_b;
           if (1 != jk.field_d) {
             if (2 == jk.field_d &&
-                5 > var1_int) {
+              5 > var1_int) {
               uf.field_b = uf.field_b + 1;
             } else {
               if (0 == jk.field_d) {
@@ -341,13 +341,13 @@ class f extends qf implements pl {
                   uf.field_b = uf.field_b + 1;
                 } else {
                   if (0 == jk.field_d &&
-                      3 < var1_int) {
+                    3 < var1_int) {
                     uf.field_b = uf.field_b - 1;
                   }
                 }
               } else {
                 if (0 == jk.field_d &&
-                    3 < var1_int) {
+                  3 < var1_int) {
                   uf.field_b = uf.field_b - 1;
                 }
               }
@@ -358,7 +358,7 @@ class f extends qf implements pl {
               uf.field_b = 0 + ka.field_h;
             }
             if (el.field_o.field_x &&
-                gi.field_e % 18 == 0) {
+              gi.field_e % 18 == 0) {
               if (gg.field_b == 0) {
                 if (!pf.field_D) {
                   g.field_j = g.field_j % 4;
@@ -453,7 +453,7 @@ class f extends qf implements pl {
           }
           if (var1_int <= 1) {
             if (2 == jk.field_d &&
-                5 > var1_int) {
+              5 > var1_int) {
               uf.field_b = uf.field_b + 1;
             } else {
               if (0 == jk.field_d) {
@@ -461,13 +461,13 @@ class f extends qf implements pl {
                   uf.field_b = uf.field_b + 1;
                 } else {
                   if (0 == jk.field_d &&
-                      3 < var1_int) {
+                    3 < var1_int) {
                     uf.field_b = uf.field_b - 1;
                   }
                 }
               } else {
                 if (0 == jk.field_d &&
-                    3 < var1_int) {
+                  3 < var1_int) {
                   uf.field_b = uf.field_b - 1;
                 }
               }
@@ -616,23 +616,23 @@ class f extends qf implements pl {
 
     final static wa p(int param0) {
         if (null == uf.field_f) {
-            uf.field_f = new wa();
-            uf.field_f.a(9, ng.field_F);
-            uf.field_f.field_h = 14;
-            uf.field_f.field_f = 2763306;
-            uf.field_f.field_d = 6;
-            uf.field_f.field_n = 7697781;
-            uf.field_f.field_e = 5;
-            uf.field_f.field_i = 0;
-            uf.field_f.field_p = 4;
-            uf.field_f.field_m = hh.field_d;
-            if (param0 >= 71) {
-                return uf.field_f;
-            }
-            return (wa) null;
+          uf.field_f = new wa();
+          uf.field_f.a(9, ng.field_F);
+          uf.field_f.field_h = 14;
+          uf.field_f.field_f = 2763306;
+          uf.field_f.field_d = 6;
+          uf.field_f.field_n = 7697781;
+          uf.field_f.field_e = 5;
+          uf.field_f.field_i = 0;
+          uf.field_f.field_p = 4;
+          uf.field_f.field_m = hh.field_d;
+          if (param0 >= 71) {
+            return uf.field_f;
+          }
+          return (wa) null;
         }
         if (param0 >= 71) {
-            return uf.field_f;
+          return uf.field_f;
         }
         return (wa) null;
     }
@@ -742,10 +742,10 @@ class f extends qf implements pl {
         ni var2Lifetime1;
         this.field_pb.a(4210752, 2121792, (byte) -103);
         if (!param0) {
-            var2 = new ni(this, this.field_jb, oe.field_O);
-            var2.a(jk.field_c, 1, 15);
-            this.b(var2, -23);
-            return;
+          var2 = new ni(this, this.field_jb, oe.field_O);
+          var2.a(jk.field_c, 1, 15);
+          this.b(var2, -23);
+          return;
         }
         field_kb = (java.awt.Canvas) null;
         var2Lifetime1 = new ni(this, this.field_jb, oe.field_O);

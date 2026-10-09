@@ -14,7 +14,7 @@ final class sd extends pb {
 
     public static void e(byte param0) {
         if (param0 < 88) {
-            return;
+          return;
         }
         field_y = null;
         field_z = null;
@@ -24,13 +24,13 @@ final class sd extends pb {
 
     final byte[] e(int param0) {
         if (this.field_u) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         if (this.field_A.field_f >= this.field_A.field_j.length - this.field_E) {
-            if (param0 != 397) {
-                this.g(-105);
-            }
-            return this.field_A.field_j;
+          if (param0 != 397) {
+            this.g(-105);
+          }
+          return this.field_A.field_j;
         }
         throw new RuntimeException();
     }
@@ -92,15 +92,15 @@ final class sd extends pb {
         var19 = Geoblox.field_C;
         try {
           if (param5 >= 0 &&
-              param8 < mh.field_h) {
+            param8 < mh.field_h) {
             if (0 > param1 &&
-                param0 < 0 &&
-                param6 < 0) {
+              param0 < 0 &&
+              param6 < 0) {
               return;
             }
             if (param1 >= mh.field_c &&
-                param0 >= mh.field_c &&
-                mh.field_c <= param6) {
+              param0 >= mh.field_c &&
+              mh.field_c <= param6) {
               return;
             }
             var14 = -param8 + param5;
@@ -175,7 +175,7 @@ final class sd extends pb {
                       }
                     } else {
                       if (var17 >= 0 &&
-                          mh.field_c > var17) {
+                        mh.field_c > var17) {
                         ib.a(-61, param4, var17 + var16Lifetime2, param2, var18);
                       }
                     }
@@ -218,7 +218,7 @@ final class sd extends pb {
                 var18Lifetime1 = (var10 >> 16) - (var9_int >> 16);
                 if (var18Lifetime1 == 0) {
                   if (var17Lifetime1 >= 0 &&
-                      mh.field_c > var17Lifetime1) {
+                    mh.field_c > var17Lifetime1) {
                     ib.a(-67, param4, var17Lifetime1 + var15Lifetime1, param2, var18Lifetime1);
                   }
                 } else {
@@ -259,10 +259,10 @@ final class sd extends pb {
 
     final int g(int param0) {
         if (param0 != 0) {
-            return 76;
+          return 76;
         }
         if (null != this.field_A) {
-            return 100 * this.field_A.field_f / (-this.field_E + this.field_A.field_j.length);
+          return 100 * this.field_A.field_f / (-this.field_E + this.field_A.field_j.length);
         }
         return 0;
     }

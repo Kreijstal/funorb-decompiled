@@ -61,18 +61,18 @@ abstract class ji {
         var8.field_q = param4 ? true : false;
         var8.field_E = param0;
         if (!param4) {
-            if (this.a(false) >= 20) {
-                throw new RuntimeException();
-            }
-            this.field_p.a(8, var8);
+          if (this.a(false) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_p.a(8, var8);
         } else {
-            if (this.a(param2 ^ 108) >= 20) {
-                throw new RuntimeException();
-            }
-            this.field_g.a(param2 ^ -123, var8);
+          if (this.a(param2 ^ 108) >= 20) {
+            throw new RuntimeException();
+          }
+          this.field_g.a(param2 ^ -123, var8);
         }
         if (param2 == -21) {
-            return var8;
+          return var8;
         }
         this.field_g = (wd) null;
         return var8;
@@ -80,7 +80,7 @@ abstract class ji {
 
     final int a(int param0) {
         if (param0 < -39) {
-            return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
+          return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
         }
         ji.a(49L, (byte) 33);
         return this.field_g.b((byte) 67) + this.field_e.b((byte) 67);
@@ -88,28 +88,28 @@ abstract class ji {
 
     final static void a(long param0, byte param1) {
         try {
-            Throwable decompiledCaughtException = null;
-            InterruptedException var3 = null;
-            try {
-              Thread.sleep(param0);
-              if (param1 != -33) {
-                field_a = (String[]) null;
-                return;
-              }
-            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (InterruptedException) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = null;
+          InterruptedException var3 = null;
+          try {
+            Thread.sleep(param0);
+            if (param1 != -33) {
+              field_a = (String[]) null;
+              return;
             }
+          } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (InterruptedException) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final boolean g(int param0) {
         if (param0 == 20) {
-            return this.a(-104) >= 20 ? true : false;
+          return this.a(-104) >= 20 ? true : false;
         }
         field_l = (String) null;
         return this.a(-104) >= 20 ? true : false;
@@ -119,7 +119,7 @@ abstract class ji {
 
     final int a(boolean param0) {
         if (!param0) {
-            return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
+          return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
         }
         this.field_o = -38;
         return this.field_p.b((byte) 67) + this.field_c.b((byte) 67);
@@ -146,7 +146,7 @@ abstract class ji {
             return null;
           }
           if (param0 == null ||
-                var4_int != param0.length) {
+            var4_int != param0.length) {
             param0 = new short[var4_int];
           }
           var5 = param3.e((byte) -17, 4);
@@ -186,7 +186,7 @@ abstract class ji {
 
     final boolean b(int param0) {
         if (param0 == -21) {
-            return this.a(false) >= 20 ? true : false;
+          return this.a(false) >= 20 ? true : false;
         }
         this.a((byte) 74);
         return this.a(false) >= 20 ? true : false;
@@ -197,7 +197,7 @@ abstract class ji {
         int var3 = Geoblox.field_C;
         na[] var1 = new na[sb.field_a];
         for (var2 = param0; sb.field_a > var2; var2++) {
-            var1[var2] = new na(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], mj.field_a[var2], cm.field_j);
+          var1[var2] = new na(pg.field_b, dd.field_C, gh.field_m[var2], md.field_e[var2], rc.field_j[var2], hl.field_K[var2], mj.field_a[var2], cm.field_j);
         }
         kj.c(true);
         return var1;

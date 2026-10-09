@@ -11,12 +11,12 @@ final class tf {
 
     final hf d(int param0) {
         if (param0 != 1) {
-            return (hf) null;
+          return (hf) null;
         }
         hf var2 = this.field_c;
         if (this.field_a == var2) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_b;
         return var2;
@@ -24,7 +24,7 @@ final class tf {
 
     final static dm[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 <= 90) {
-            field_d = (al) null;
+          field_d = (al) null;
         }
         return n.a(param4, 1, param3, 3, (byte) 1, param1, param0, 1, 1);
     }
@@ -32,12 +32,12 @@ final class tf {
     final hf g(int param0) {
         hf var2 = this.field_a.field_b;
         if (this.field_a == var2) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_b;
         if (param0 != 0) {
-            field_f = -122;
+          field_f = -122;
         }
         return var2;
     }
@@ -47,7 +47,7 @@ final class tf {
         int var3;
         var3 = Geoblox.field_C;
         if (null != kf.field_c &&
-            !ag.field_j[param1]) {
+          !ag.field_j[param1]) {
           var2 = param1;
           if (var2 != 4) {
             if (3 != var2) {
@@ -98,7 +98,7 @@ final class tf {
     public static void f(int param0) {
         field_b = null;
         if (param0 != 51) {
-            tf.a(-67, 123, -7, 36, 22);
+          tf.a(-67, 123, -7, 36, 22);
         }
         field_d = null;
         field_e = null;
@@ -107,11 +107,11 @@ final class tf {
     final hf b(int param0) {
         hf var2 = this.field_c;
         if (param0 != 0) {
-            return (hf) null;
+          return (hf) null;
         }
         if (var2 == this.field_a) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_c;
         return var2;
@@ -120,10 +120,10 @@ final class tf {
     final hf b(byte param0) {
         hf var2 = this.field_a.field_b;
         if (param0 >= -94) {
-            this.b((byte) 113);
+          this.b((byte) 113);
         }
         if (this.field_a == var2) {
-            return null;
+          return null;
         }
         var2.a(false);
         return var2;
@@ -131,30 +131,30 @@ final class tf {
 
     final void a(hf param0, boolean param1) {
         try {
-            if (param0.field_c != null) {
-                param0.a(false);
-            }
-            param0.field_b = this.field_a.field_b;
-            param0.field_c = this.field_a;
-            param0.field_c.field_b = param0;
-            if (param1) {
-                field_b = (int[]) null;
-            }
-            param0.field_b.field_c = param0;
+          if (param0.field_c != null) {
+            param0.a(false);
+          }
+          param0.field_b = this.field_a.field_b;
+          param0.field_c = this.field_a;
+          param0.field_c.field_b = param0;
+          if (param1) {
+            field_b = (int[]) null;
+          }
+          param0.field_b.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(tf param0, byte param1) {
         try {
-            this.a(param0, 2541, this.field_a.field_b);
-            if (param1 != -70) {
-                hf var4 = (hf) null;
-                this.a(52, (hf) null);
-            }
+          this.a(param0, 2541, this.field_a.field_b);
+          if (param1 != -70) {
+            hf var4 = (hf) null;
+            this.a(52, (hf) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -163,8 +163,8 @@ final class tf {
         int var2 = 0;
         hf var3 = this.field_a.field_b;
         while (this.field_a != var3) {
-            var3 = var3.field_b;
-            var2++;
+          var3 = var3.field_b;
+          var2++;
         }
         int var4 = -98 / ((param0 - 2) / 51);
         return var2;
@@ -172,11 +172,11 @@ final class tf {
 
     final hf e(int param0) {
         if (param0 != 1) {
-            this.field_a = (hf) null;
+          this.field_a = (hf) null;
         }
         hf var2 = this.field_a.field_c;
         if (var2 == this.field_a) {
-            return null;
+          return null;
         }
         var2.a(false);
         return var2;
@@ -186,26 +186,26 @@ final class tf {
         hf var2 = null;
         int var3 = Geoblox.field_C;
         while (true) {
-            var2 = this.field_a.field_b;
-            if (var2 == this.field_a) {
-                break;
-            }
-            var2.a(false);
+          var2 = this.field_a.field_b;
+          if (var2 == this.field_a) {
+            break;
+          }
+          var2.a(false);
         }
         this.field_c = null;
         if (param0 >= -64) {
-            tf.f(113);
+          tf.f(113);
         }
     }
 
     final hf a(boolean param0) {
         if (param0) {
-            return (hf) null;
+          return (hf) null;
         }
         hf var2 = this.field_a.field_c;
         if (this.field_a == var2) {
-            this.field_c = null;
-            return null;
+          this.field_c = null;
+          return null;
         }
         this.field_c = var2.field_c;
         return var2;
@@ -213,7 +213,7 @@ final class tf {
 
     final boolean c(int param0) {
         if (param0 != 13519) {
-            this.field_c = (hf) null;
+          this.field_c = (hf) null;
         }
         return this.field_a == this.field_a.field_b ? true : false;
     }
@@ -269,18 +269,18 @@ final class tf {
 
     final void a(int param0, hf param1) {
         try {
-            if (null != param1.field_c) {
-                param1.a(false);
-            }
-            param1.field_c = this.field_a.field_c;
-            if (param0 >= -33) {
-                this.field_a = (hf) null;
-            }
-            param1.field_b = this.field_a;
-            param1.field_c.field_b = param1;
-            param1.field_b.field_c = param1;
+          if (null != param1.field_c) {
+            param1.a(false);
+          }
+          param1.field_c = this.field_a.field_c;
+          if (param0 >= -33) {
+            this.field_a = (hf) null;
+          }
+          param1.field_b = this.field_a;
+          param1.field_c.field_b = param1;
+          param1.field_b.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

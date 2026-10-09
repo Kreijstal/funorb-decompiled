@@ -80,7 +80,7 @@ final class fg {
     final static fg a(rh param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, -28153, param2);
         if (var3 == null) {
-            return null;
+          return null;
         }
         return new fg(new qc(var3));
     }

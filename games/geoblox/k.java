@@ -18,7 +18,7 @@ final class k implements Iterator {
 
     public final void remove() {
         if (null == this.field_c) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_c.a(false);
         this.field_c = null;
@@ -26,11 +26,11 @@ final class k implements Iterator {
 
     final static java.applet.Applet c(int param0) {
         if (kg.field_m != null) {
-            return kg.field_m;
+          return kg.field_m;
         }
         if (param0 <= 104) {
-            k.a(83, 4, -82, 86, 115);
-            return (java.applet.Applet) ((Object) qa.field_d);
+          k.a(83, 4, -82, 86, 115);
+          return (java.applet.Applet) ((Object) qa.field_d);
         }
         return (java.applet.Applet) ((Object) qa.field_d);
     }
@@ -43,12 +43,12 @@ final class k implements Iterator {
         param0 += 2;
         param1 += 2;
         if (param3 == -27085) {
-            param4 -= 4;
-            param2 -= 4;
-            var5 = param1 + param0 * vb.field_f;
-            var6 = vb.field_f - param2;
-            w.a(vb.field_c, var5, 0, 0, 0, 0, param2, param4, var6);
-            return;
+          param4 -= 4;
+          param2 -= 4;
+          var5 = param1 + param0 * vb.field_f;
+          var6 = vb.field_f - param2;
+          w.a(vb.field_c, var5, 0, 0, 0, 0, param2, param4, var6);
+          return;
         }
         k.b(32);
         param4 -= 4;
@@ -87,7 +87,7 @@ final class k implements Iterator {
         field_b = null;
         field_e = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_a = null;
         field_f = null;
@@ -98,10 +98,10 @@ final class k implements Iterator {
     k(gi param0) {
         this.field_c = null;
         try {
-            this.field_d = param0;
-            this.a(-1);
+          this.field_d = param0;
+          this.a(-1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,8 +129,8 @@ final class k implements Iterator {
         this.field_j = 1;
         this.field_h = this.field_d.field_a[0].field_b;
         if (param0 != -1) {
-            this.remove();
-            return;
+          this.remove();
+          return;
         }
     }
 

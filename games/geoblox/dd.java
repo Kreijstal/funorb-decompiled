@@ -14,16 +14,16 @@ abstract class dd extends ee {
 
     final static boolean a(byte param0) {
         if (param0 != 47) {
-            field_J = (rh) null;
-            return cg.b(true);
+          field_J = (rh) null;
+          return cg.b(true);
         }
         return cg.b(true);
     }
 
     final void c(int param0, int param1, int param2) {
         if (param1 > 95) {
-            this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
-            return;
+          this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
+          return;
         }
         field_G = (nc) null;
         this.a(param0, param2, (byte) -87, -param0 + fa.field_i >> 1, kb.field_b - param2 >> 1);
@@ -40,23 +40,23 @@ abstract class dd extends ee {
         int var2 = this.g(-75);
         int var3 = -this.field_H + var2;
         if (~var3 < param0) {
-            this.field_H = this.field_H + (var3 + 8 - 1) / 8;
+          this.field_H = this.field_H + (var3 + 8 - 1) / 8;
         }
         if (var3 < 0) {
-            this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
-            if (this.field_H != 0) {
-                return false;
-            }
-            if (0 == var2) {
-                return !this.field_I ? true : false;
-            }
+          this.field_H = this.field_H + (-16 + (var3 + 1)) / 16;
+          if (this.field_H != 0) {
             return false;
+          }
+          if (0 == var2) {
+            return !this.field_I ? true : false;
+          }
+          return false;
         }
         if (this.field_H != 0) {
-            return false;
+          return false;
         }
         if (0 == var2) {
-            return !this.field_I ? true : false;
+          return !this.field_I ? true : false;
         }
         return false;
     }
@@ -64,11 +64,11 @@ abstract class dd extends ee {
     dd(ng param0, int param1, int param2) {
         super(kb.field_b - param1 >> 1, -param2 + fa.field_i >> 1, param1, param2, (dh) null);
         try {
-            this.field_K = param0;
-            this.field_H = 0;
-            this.field_I = false;
+          this.field_K = param0;
+          this.field_H = 0;
+          this.field_I = false;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -129,24 +129,24 @@ abstract class dd extends ee {
     boolean h(int param0) {
         this.field_H = this.g(param0 - 297);
         if (param0 != 229) {
-            return true;
+          return true;
         }
         if (0 != this.field_H) {
-            return false;
+          return false;
         }
         if (!this.field_I) {
-            return true;
+          return true;
         }
         return false;
     }
 
     public static void i(int param0) {
         if (param0 == 256) {
-            field_J = null;
-            field_F = null;
-            field_G = null;
-            field_E = null;
-            return;
+          field_J = null;
+          field_F = null;
+          field_G = null;
+          field_E = null;
+          return;
         }
         dd.a((byte) -87);
         field_J = null;
@@ -158,14 +158,14 @@ abstract class dd extends ee {
     final el f(byte param0) {
         el var2 = super.f((byte) -62);
         if (param0 > -60) {
-            this.field_I = false;
-            if (var2 != null) {
-                return var2;
-            }
-            return (el) (this);
+          this.field_I = false;
+          if (var2 != null) {
+            return var2;
+          }
+          return (el) (this);
         }
         if (var2 != null) {
-            return var2;
+          return var2;
         }
         return (el) (this);
     }
@@ -176,48 +176,48 @@ abstract class dd extends ee {
         int var5Lifetime2;
         int var5Lifetime3;
         if (this.field_H == 0) {
-            return;
+          return;
         }
         if (256 <= this.field_H) {
-            if (param3 != 0) {
-                return;
-            }
-            this.b(this.field_v + param0, 20, param1 + this.field_m);
-            super.a(param0, param1, (byte) -52, param3);
+          if (param3 != 0) {
             return;
+          }
+          this.b(this.field_v + param0, 20, param1 + this.field_m);
+          super.a(param0, param1, (byte) -52, param3);
+          return;
         }
         if (oi.field_b == null) {
-            oi.field_b = new dm(this.field_r, this.field_h);
-            var5 = 111 / ((1 - param2) / 43);
-            Geoblox.a(1, oi.field_b);
-            vb.c();
-            this.b(0, 20, 0);
-            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-            id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-            return;
+          oi.field_b = new dm(this.field_r, this.field_h);
+          var5 = 111 / ((1 - param2) / 43);
+          Geoblox.a(1, oi.field_b);
+          vb.c();
+          this.b(0, 20, 0);
+          super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+          id.a(true);
+          oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+          return;
         }
         if (oi.field_b.field_r < this.field_r) {
-            oi.field_b = new dm(this.field_r, this.field_h);
-            var5Lifetime1 = 111 / ((1 - param2) / 43);
-            Geoblox.a(1, oi.field_b);
-            vb.c();
-            this.b(0, 20, 0);
-            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-            id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-            return;
+          oi.field_b = new dm(this.field_r, this.field_h);
+          var5Lifetime1 = 111 / ((1 - param2) / 43);
+          Geoblox.a(1, oi.field_b);
+          vb.c();
+          this.b(0, 20, 0);
+          super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+          id.a(true);
+          oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+          return;
         }
         if (oi.field_b.field_m < this.field_h) {
-            oi.field_b = new dm(this.field_r, this.field_h);
-            var5Lifetime2 = 111 / ((1 - param2) / 43);
-            Geoblox.a(1, oi.field_b);
-            vb.c();
-            this.b(0, 20, 0);
-            super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
-            id.a(true);
-            oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
-            return;
+          oi.field_b = new dm(this.field_r, this.field_h);
+          var5Lifetime2 = 111 / ((1 - param2) / 43);
+          Geoblox.a(1, oi.field_b);
+          vb.c();
+          this.b(0, 20, 0);
+          super.a(-param0 - this.field_v, -param1 - this.field_m, (byte) 104, param3);
+          id.a(true);
+          oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
+          return;
         }
         var5Lifetime3 = 111 / ((1 - param2) / 43);
         Geoblox.a(1, oi.field_b);

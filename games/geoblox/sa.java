@@ -19,7 +19,7 @@ final class sa extends RuntimeException {
         var3 = Geoblox.field_C;
         try {
           if (-1 == k.field_g &&
-              gb.field_e == -1) {
+            gb.field_e == -1) {
             k.field_g = qa.field_a;
             gb.field_e = ue.field_e;
           }
@@ -67,15 +67,15 @@ final class sa extends RuntimeException {
             }
           }
           if (!vl.field_q &&
-              wg.field_e > oe.field_V &&
-              wb.field_a) {
+            wg.field_e > oe.field_V &&
+            wb.field_a) {
             oe.field_V = 0;
             bc.field_a = k.field_g;
             nj.field_g = gb.field_e;
           }
           tc.field_a = param0;
           if (vl.field_q &&
-              cl.field_a == oe.field_V) {
+            cl.field_a == oe.field_V) {
             vl.field_q = false;
             oe.field_V = 0;
           }
@@ -104,17 +104,17 @@ final class sa extends RuntimeException {
         int var1 = (int)(201.0f / og.field_r * ij.field_ab + 0.5f);
         kb.field_c = var1;
         if (!param0) {
-            field_b = -10;
-            return;
+          field_b = -10;
+          return;
         }
     }
 
     final static String a(boolean param0) {
         if (!param0) {
-            return (String) null;
+          return (String) null;
         }
         if (kd.field_b == tf.field_d) {
-            return oj.field_a;
+          return oj.field_a;
         }
         return hg.field_d;
     }

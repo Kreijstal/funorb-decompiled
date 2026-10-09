@@ -22,121 +22,121 @@ final class ne {
         int var2Lifetime1;
         int var2Lifetime2;
         if (!param0) {
-            return;
+          return;
         }
         int var4 = -1640531527;
         int var3 = -1640531527;
         int var7 = -1640531527;
         int var9 = -1640531527;
         for (var2 = 0; 4 > var2; var2++) {
-            var3 = var3 ^ var4 << 11;
-            var6 = var6 + var3;
-            var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 2;
-            var5 = var5 + var6;
-            var7 = var7 + var4;
-            var5 = var5 ^ var6 << 8;
-            var6 = var6 + var7;
-            var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> 16;
-            var9 = var9 + var6;
-            var7 = var7 + var8;
-            var7 = var7 ^ var8 << 10;
-            var10 = var10 + var7;
-            var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> 4;
-            var3 = var3 + var8;
-            var9 = var9 + var10;
-            var9 = var9 ^ var10 << 8;
-            var4 = var4 + var9;
-            var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 9;
-            var3 = var3 + var4;
-            var5 = var5 + var10;
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var5 = var5 + var6;
+          var7 = var7 + var4;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var4 = var4 + var9;
+          var10 = var10 + var3;
+          var10 = var10 ^ var3 >>> 9;
+          var3 = var3 + var4;
+          var5 = var5 + var10;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
-            var8 = var8 + this.field_e[var2Lifetime1 + 5];
-            var6 = var6 + this.field_e[3 + var2Lifetime1];
-            var10 = var10 + this.field_e[7 + var2Lifetime1];
-            var3 = var3 + this.field_e[var2Lifetime1];
-            var5 = var5 + this.field_e[2 + var2Lifetime1];
-            var7 = var7 + this.field_e[4 + var2Lifetime1];
-            var4 = var4 + this.field_e[1 + var2Lifetime1];
-            var9 = var9 + this.field_e[var2Lifetime1 + 6];
-            var3 = var3 ^ var4 << 11;
-            var4 = var4 + var5;
-            var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> 2;
-            var5 = var5 + var6;
-            var7 = var7 + var4;
-            var5 = var5 ^ var6 << 8;
-            var8 = var8 + var5;
-            var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> 16;
-            var9 = var9 + var6;
-            var7 = var7 + var8;
-            var7 = var7 ^ var8 << 10;
-            var10 = var10 + var7;
-            var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> 4;
-            var9 = var9 + var10;
-            var3 = var3 + var8;
-            var9 = var9 ^ var10 << 8;
-            var10 = var10 + var3;
-            var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> 9;
-            var5 = var5 + var10;
-            var3 = var3 + var4;
-            this.field_a[var2Lifetime1] = var3;
-            this.field_a[1 + var2Lifetime1] = var4;
-            this.field_a[2 + var2Lifetime1] = var5;
-            this.field_a[3 + var2Lifetime1] = var6;
-            this.field_a[var2Lifetime1 + 4] = var7;
-            this.field_a[var2Lifetime1 + 5] = var8;
-            this.field_a[6 + var2Lifetime1] = var9;
-            this.field_a[7 + var2Lifetime1] = var10;
+          var8 = var8 + this.field_e[var2Lifetime1 + 5];
+          var6 = var6 + this.field_e[3 + var2Lifetime1];
+          var10 = var10 + this.field_e[7 + var2Lifetime1];
+          var3 = var3 + this.field_e[var2Lifetime1];
+          var5 = var5 + this.field_e[2 + var2Lifetime1];
+          var7 = var7 + this.field_e[4 + var2Lifetime1];
+          var4 = var4 + this.field_e[1 + var2Lifetime1];
+          var9 = var9 + this.field_e[var2Lifetime1 + 6];
+          var3 = var3 ^ var4 << 11;
+          var4 = var4 + var5;
+          var6 = var6 + var3;
+          var4 = var4 ^ var5 >>> 2;
+          var5 = var5 + var6;
+          var7 = var7 + var4;
+          var5 = var5 ^ var6 << 8;
+          var8 = var8 + var5;
+          var6 = var6 + var7;
+          var6 = var6 ^ var7 >>> 16;
+          var9 = var9 + var6;
+          var7 = var7 + var8;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var9 = var9 + var10;
+          var3 = var3 + var8;
+          var9 = var9 ^ var10 << 8;
+          var10 = var10 + var3;
+          var4 = var4 + var9;
+          var10 = var10 ^ var3 >>> 9;
+          var5 = var5 + var10;
+          var3 = var3 + var4;
+          this.field_a[var2Lifetime1] = var3;
+          this.field_a[1 + var2Lifetime1] = var4;
+          this.field_a[2 + var2Lifetime1] = var5;
+          this.field_a[3 + var2Lifetime1] = var6;
+          this.field_a[var2Lifetime1 + 4] = var7;
+          this.field_a[var2Lifetime1 + 5] = var8;
+          this.field_a[6 + var2Lifetime1] = var9;
+          this.field_a[7 + var2Lifetime1] = var10;
         }
         for (var2Lifetime2 = 0; 256 > var2Lifetime2; var2Lifetime2 += 8) {
-            var9 = var9 + this.field_a[var2Lifetime2 + 6];
-            var3 = var3 + this.field_a[var2Lifetime2];
-            var10 = var10 + this.field_a[var2Lifetime2 + 7];
-            var6 = var6 + this.field_a[3 + var2Lifetime2];
-            var4 = var4 + this.field_a[1 + var2Lifetime2];
-            var8 = var8 + this.field_a[5 + var2Lifetime2];
-            var5 = var5 + this.field_a[var2Lifetime2 + 2];
-            var7 = var7 + this.field_a[var2Lifetime2 + 4];
-            var3 = var3 ^ var4 << 11;
-            var6 = var6 + var3;
-            var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 2;
-            var7 = var7 + var4;
-            var5 = var5 + var6;
-            var5 = var5 ^ var6 << 8;
-            var6 = var6 + var7;
-            var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> 16;
-            var7 = var7 + var8;
-            var9 = var9 + var6;
-            var7 = var7 ^ var8 << 10;
-            var10 = var10 + var7;
-            var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> 4;
-            var3 = var3 + var8;
-            var9 = var9 + var10;
-            var9 = var9 ^ var10 << 8;
-            var4 = var4 + var9;
-            var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 9;
-            var3 = var3 + var4;
-            var5 = var5 + var10;
-            this.field_a[var2Lifetime2] = var3;
-            this.field_a[1 + var2Lifetime2] = var4;
-            this.field_a[var2Lifetime2 + 2] = var5;
-            this.field_a[3 + var2Lifetime2] = var6;
-            this.field_a[4 + var2Lifetime2] = var7;
-            this.field_a[5 + var2Lifetime2] = var8;
-            this.field_a[6 + var2Lifetime2] = var9;
-            this.field_a[7 + var2Lifetime2] = var10;
+          var9 = var9 + this.field_a[var2Lifetime2 + 6];
+          var3 = var3 + this.field_a[var2Lifetime2];
+          var10 = var10 + this.field_a[var2Lifetime2 + 7];
+          var6 = var6 + this.field_a[3 + var2Lifetime2];
+          var4 = var4 + this.field_a[1 + var2Lifetime2];
+          var8 = var8 + this.field_a[5 + var2Lifetime2];
+          var5 = var5 + this.field_a[var2Lifetime2 + 2];
+          var7 = var7 + this.field_a[var2Lifetime2 + 4];
+          var3 = var3 ^ var4 << 11;
+          var6 = var6 + var3;
+          var4 = var4 + var5;
+          var4 = var4 ^ var5 >>> 2;
+          var7 = var7 + var4;
+          var5 = var5 + var6;
+          var5 = var5 ^ var6 << 8;
+          var6 = var6 + var7;
+          var8 = var8 + var5;
+          var6 = var6 ^ var7 >>> 16;
+          var7 = var7 + var8;
+          var9 = var9 + var6;
+          var7 = var7 ^ var8 << 10;
+          var10 = var10 + var7;
+          var8 = var8 + var9;
+          var8 = var8 ^ var9 >>> 4;
+          var3 = var3 + var8;
+          var9 = var9 + var10;
+          var9 = var9 ^ var10 << 8;
+          var4 = var4 + var9;
+          var10 = var10 + var3;
+          var10 = var10 ^ var3 >>> 9;
+          var3 = var3 + var4;
+          var5 = var5 + var10;
+          this.field_a[var2Lifetime2] = var3;
+          this.field_a[1 + var2Lifetime2] = var4;
+          this.field_a[var2Lifetime2 + 2] = var5;
+          this.field_a[3 + var2Lifetime2] = var6;
+          this.field_a[4 + var2Lifetime2] = var7;
+          this.field_a[5 + var2Lifetime2] = var8;
+          this.field_a[6 + var2Lifetime2] = var9;
+          this.field_a[7 + var2Lifetime2] = var10;
         }
         this.a(-108);
         this.field_i = 256;
@@ -144,8 +144,8 @@ final class ne {
 
     final int b(int param0) {
         if (this.field_i == param0) {
-            this.a(-125);
-            this.field_i = 256;
+          this.a(-125);
+          this.field_i = 256;
         }
         int fieldTemp$0 = this.field_i - 1;
         this.field_i = this.field_i - 1;
@@ -203,10 +203,10 @@ final class ne {
     public static void b(byte param0) {
         field_b = null;
         if (param0 > -92) {
-            field_d = (String) null;
-            field_c = null;
-            field_d = null;
-            return;
+          field_d = (String) null;
+          field_c = null;
+          field_d = null;
+          return;
         }
         field_c = null;
         field_d = null;
@@ -215,14 +215,14 @@ final class ne {
     ne(int[] param0) {
         int var2_int = 0;
         try {
-            this.field_a = new int[256];
-            this.field_e = new int[256];
-            for (var2_int = 0; param0.length > var2_int; var2_int++) {
-                this.field_e[var2_int] = param0[var2_int];
-            }
-            this.a(true);
+          this.field_a = new int[256];
+          this.field_e = new int[256];
+          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+            this.field_e[var2_int] = param0[var2_int];
+          }
+          this.a(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

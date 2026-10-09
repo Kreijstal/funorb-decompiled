@@ -18,15 +18,15 @@ class dj extends hk {
         int var2 = 0;
         int var3 = 0;
         if (param0 != 0) {
-            this.field_J = -7;
+          this.field_J = -7;
         }
         if (this.field_L != this.field_H) {
-            var2 = this.field_L >= this.field_H ? this.field_H : this.field_L;
-            var3 = this.field_H > this.field_L ? this.field_H : this.field_L;
-            this.field_H = var2;
-            this.field_L = var2;
-            this.field_s = this.field_s.substring(0, var2) + this.field_s.substring(var3, this.field_s.length());
-            this.g((byte) -117);
+          var2 = this.field_L >= this.field_H ? this.field_H : this.field_L;
+          var3 = this.field_H > this.field_L ? this.field_H : this.field_L;
+          this.field_H = var2;
+          this.field_L = var2;
+          this.field_s = this.field_s.substring(0, var2) + this.field_s.substring(var3, this.field_s.length());
+          this.g((byte) -117);
         }
     }
 
@@ -47,8 +47,8 @@ class dj extends hk {
               var6 = var7.a((el) (this), qa.field_a, -15539, param1, ue.field_e, param3);
               if (-1 != var6) {
                 if (this.field_G &&
-                    this.field_J > var6 &&
-                    this.field_L < var6) {
+                  this.field_J > var6 &&
+                  this.field_L < var6) {
                   var6 = this.field_J;
                 }
                 this.field_H = var6;
@@ -107,7 +107,7 @@ class dj extends hk {
 
     final static dm[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 != -70) {
-            field_F = (byte[]) null;
+          field_F = (byte[]) null;
         }
         dm[] var6 = new dm[9];
         dm[] var5 = var6;
@@ -122,7 +122,7 @@ class dj extends hk {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 != 0) {
-            var6[4] = ef.a(0, param3, 64);
+          var6[4] = ef.a(0, param3, 64);
         }
         return var5;
     }
@@ -133,20 +133,20 @@ class dj extends hk {
         this.field_P = 0L;
         this.field_J = -1;
         try {
-            this.field_M = param2;
-            this.field_q = hb.field_j.field_g;
-            this.a(-128, param0, true);
-            this.field_E = true;
-            this.field_O = oa.a(-12520);
+          this.field_M = param2;
+          this.field_q = hb.field_j.field_g;
+          this.a(-128, param0, true);
+          this.field_E = true;
+          this.field_O = oa.a(-12520);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "dj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     private final void h(int param0) {
         this.i(-23161);
         if (param0 <= 29) {
-            this.field_G = false;
+          this.field_G = false;
         }
         this.g(0);
     }
@@ -194,17 +194,17 @@ class dj extends hk {
     private final void a(int param0, byte param1) {
         this.field_H = param0;
         if (param1 >= -114) {
-            this.j(-114);
+          this.j(-114);
         }
         if (!kj.field_o[81]) {
-            this.field_L = this.field_H;
+          this.field_L = this.field_H;
         }
     }
 
     public static void l(byte param0) {
         field_F = null;
         if (param0 != -15) {
-            return;
+          return;
         }
         field_N = null;
         field_I = (byte[][]) null;
@@ -223,7 +223,7 @@ class dj extends hk {
         int var8_intLifetime1;
         try {
           if (super.a(param0, 104, param2, param3, param4, param5, param6) &&
-              this.field_q instanceof cc) {
+            this.field_q instanceof cc) {
             var8_int = ((cc) ((Object) this.field_q)).a((el) (this), qa.field_a, -15539, param0, ue.field_e, param2);
             if (var8_int != -1) {
               stackIn_5_1 = var8_int;
@@ -238,7 +238,7 @@ class dj extends hk {
               this.field_L = this.j((byte) 77);
               this.field_H = this.h((byte) -57);
               if (0 < this.field_H &&
-                  this.field_s.charAt(this.field_H - 1) == 32) {
+                this.field_s.charAt(this.field_H - 1) == 32) {
                 this.field_H = this.field_H - 1;
               }
               this.field_J = this.field_H;
@@ -264,21 +264,21 @@ class dj extends hk {
 
     private final void f(int param0) {
         try {
-            Throwable decompiledCaughtException = null;
-            String var2 = null;
-            Exception var2_ref = null;
-            try {
-              var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-              this.g(param0 ^ param0);
-              this.a(var2, param0 ^ 43);
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-            }
+          Throwable decompiledCaughtException = null;
+          String var2 = null;
+          Exception var2_ref = null;
+          try {
+            var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
+            this.g(param0 ^ param0);
+            this.a(var2, param0 ^ 43);
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -288,7 +288,7 @@ class dj extends hk {
         long var7;
         var5 = -124 % ((param2 - 1) / 43);
         if (this.field_q != null &&
-            param3 == 0) {
+          param3 == 0) {
           this.field_q.a(param0, -8, param1, this.field_D, (el) (this));
           if (this.field_q instanceof cc) {
             var6 = (cc) ((Object) this.field_q);
@@ -305,10 +305,10 @@ class dj extends hk {
 
     private final void m(byte param0) {
         if (this.field_u instanceof ga) {
-            ((ga) (this.field_u)).a(this, -18649);
+          ((ga) (this.field_u)).a(this, -18649);
         }
         if (param0 < 107) {
-            this.field_G = true;
+          this.field_G = true;
         }
     }
 
@@ -333,11 +333,11 @@ class dj extends hk {
 
     private final void i(int param0) {
         if (param0 != -23161) {
-            return;
+          return;
         }
         String var2 = this.k((byte) -128);
         if (var2.length() > 0) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.k((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -347,7 +347,7 @@ class dj extends hk {
         this.field_s = "";
         this.g((byte) -78);
         if (param0 <= 20) {
-            this.field_E = true;
+          this.field_E = true;
         }
     }
 
@@ -372,12 +372,12 @@ class dj extends hk {
             return false;
           }
           if (32 <= param2 &&
-              param2 <= 126) {
+            param2 <= 126) {
             if (this.field_H != this.field_L) {
               this.g(0);
             }
             if (-1 == this.field_M ||
-                  !(this.field_s.length() >= this.field_M)) {
+              !(this.field_s.length() >= this.field_M)) {
               if (this.field_H >= this.field_s.length()) {
                 this.field_s = this.field_s + param2;
                 dupTemp$0 = this.field_s.length();
@@ -443,17 +443,17 @@ class dj extends hk {
                     return true;
                   }
                   if (kj.field_o[82] &&
-                      param0 == 65) {
+                    param0 == 65) {
                     this.h(112);
                     return true;
                   }
                   if (kj.field_o[82] &&
-                      param0 == 66) {
+                    param0 == 66) {
                     this.i(-23161);
                     return true;
                   }
                   if (kj.field_o[82] &&
-                      67 == param0) {
+                    67 == param0) {
                     this.f(82);
                     return true;
                   }
@@ -550,7 +550,7 @@ class dj extends hk {
           this.field_s = param1;
           var5 = param1.length();
           if (this.field_M != -1 &&
-              this.field_M < var5) {
+            this.field_M < var5) {
             this.field_s = this.field_s.substring(0, this.field_M);
           }
           dupTemp$1 = this.field_s.length();
@@ -576,10 +576,10 @@ class dj extends hk {
 
     void g(byte param0) {
         if (param0 >= -16) {
-            return;
+          return;
         }
         if (this.field_u instanceof ga) {
-            ((ga) (this.field_u)).a(this, (byte) 74);
+          ((ga) (this.field_u)).a(this, (byte) 74);
         }
     }
 

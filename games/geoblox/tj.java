@@ -9,25 +9,25 @@ final class tj {
         pk var6 = null;
         int var4 = 0;
         try {
-            var6 = fj.field_q;
-            var6.a(param0, (byte) -63);
-            var6.field_f = var6.field_f + 1;
-            if (param1 != 86) {
-                se var5 = (se) null;
-                tj.a(-12, 107, (se) null);
-            }
-            var4 = var6.field_f;
-            var6.d((byte) 127, 1);
-            var6.d((byte) 124, param2.field_g);
-            var6.c(param2.field_j, param1 - 6048);
-            var6.c((byte) 95, param2.field_k);
-            var6.c((byte) 95, param2.field_h);
-            var6.c((byte) 95, param2.field_l);
-            var6.c((byte) 95, param2.field_f);
-            var6.d(104, var4);
-            var6.f(11700, -var4 + var6.field_f);
+          var6 = fj.field_q;
+          var6.a(param0, (byte) -63);
+          var6.field_f = var6.field_f + 1;
+          if (param1 != 86) {
+            se var5 = (se) null;
+            tj.a(-12, 107, (se) null);
+          }
+          var4 = var6.field_f;
+          var6.d((byte) 127, 1);
+          var6.d((byte) 124, param2.field_g);
+          var6.c(param2.field_j, param1 - 6048);
+          var6.c((byte) 95, param2.field_k);
+          var6.c((byte) 95, param2.field_h);
+          var6.c((byte) 95, param2.field_l);
+          var6.c((byte) 95, param2.field_f);
+          var6.d(104, var4);
+          var6.f(11700, -var4 + var6.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "tj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,33 +36,33 @@ final class tj {
         String var2 = null;
         String var5 = null;
         if (!cf.field_i) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         if (Geoblox.field_y != null) {
-            Geoblox.field_y.h((byte) -104);
-            if (param0 >= -47) {
-                field_a = (String) null;
-                var3 = ml.c(7789);
-                ml.field_t = new pf(var3, (String) null, true, false, false);
-                kd.field_e.a(false, hk.field_C);
-                hk.field_C.b(ml.field_t, -85);
-                hk.field_C.b(true);
-                return;
-            }
-            var2 = ml.c(7789);
-            ml.field_t = new pf(var2, (String) null, true, false, false);
+          Geoblox.field_y.h((byte) -104);
+          if (param0 >= -47) {
+            field_a = (String) null;
+            var3 = ml.c(7789);
+            ml.field_t = new pf(var3, (String) null, true, false, false);
             kd.field_e.a(false, hk.field_C);
             hk.field_C.b(ml.field_t, -85);
             hk.field_C.b(true);
             return;
+          }
+          var2 = ml.c(7789);
+          ml.field_t = new pf(var2, (String) null, true, false, false);
+          kd.field_e.a(false, hk.field_C);
+          hk.field_C.b(ml.field_t, -85);
+          hk.field_C.b(true);
+          return;
         }
         if (param0 < -47) {
-            var5 = ml.c(7789);
-            ml.field_t = new pf(var5, (String) null, true, false, false);
-            kd.field_e.a(false, hk.field_C);
-            hk.field_C.b(ml.field_t, -85);
-            hk.field_C.b(true);
-            return;
+          var5 = ml.c(7789);
+          ml.field_t = new pf(var5, (String) null, true, false, false);
+          kd.field_e.a(false, hk.field_C);
+          hk.field_C.b(ml.field_t, -85);
+          hk.field_C.b(true);
+          return;
         }
         field_a = (String) null;
         String var4 = ml.c(7789);
@@ -74,9 +74,9 @@ final class tj {
 
     public static void a(int param0) {
         if (param0 < 1) {
-            field_a = (String) null;
-            field_a = null;
-            return;
+          field_a = (String) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

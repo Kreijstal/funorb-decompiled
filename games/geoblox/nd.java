@@ -68,24 +68,24 @@ final class nd {
 
     final static vk a(int param0) {
         try {
-            Throwable var1 = null;
-            vk stackIn_3_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (param0 < 2) {
-              field_b = -62L;
-            }
-            try {
-              stackIn_3_0 = (vk) (Class.forName("gl").newInstance());
-              return stackIn_3_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = decompiledCaughtException;
-              return null;
-            }
+          Throwable var1 = null;
+          vk stackIn_3_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (param0 < 2) {
+            field_b = -62L;
+          }
+          try {
+            stackIn_3_0 = (vk) (Class.forName("gl").newInstance());
+            return stackIn_3_0;
+          } catch (java.lang.Throwable decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = decompiledCaughtException;
+            return null;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

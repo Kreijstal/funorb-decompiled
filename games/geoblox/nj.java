@@ -8,13 +8,13 @@ final class nj extends hf {
 
     final static void a(byte param0) {
         if (!hl.field_G) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         kf.field_e = true;
         if (param0 > 115) {
-            q.a((byte) 107, false);
-            hj.field_a = 0;
-            return;
+          q.a((byte) 107, false);
+          hj.field_a = 0;
+          return;
         }
         field_f = (tf) null;
         q.a((byte) 107, false);

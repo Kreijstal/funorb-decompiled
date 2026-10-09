@@ -11,22 +11,22 @@ final class hc extends dj implements nl {
 
     final String c(byte param0) {
         if (param0 != 69) {
-            this.c((byte) -87);
-            if (!this.field_l) {
-                return null;
-            }
-            if (null != this.field_j) {
-                oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
-                return this.field_j;
-            }
+          this.c((byte) -87);
+          if (!this.field_l) {
             return null;
-        }
-        if (!this.field_l) {
-            return null;
-        }
-        if (null != this.field_j) {
+          }
+          if (null != this.field_j) {
             oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
             return this.field_j;
+          }
+          return null;
+        }
+        if (!this.field_l) {
+          return null;
+        }
+        if (null != this.field_j) {
+          oe.a(ue.field_e, (byte) -84, qa.field_a + this.field_r - this.field_S);
+          return this.field_j;
         }
         return null;
     }
@@ -60,13 +60,13 @@ final class hc extends dj implements nl {
 
     final void a(boolean param0, int param1, el param2, int param3) {
         if (param0) {
-            return;
+          return;
         }
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_S = -this.field_v + (qa.field_a - param3);
+          super.a(param0, param1, param2, param3);
+          this.field_S = -this.field_v + (qa.field_a - param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hc.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -76,8 +76,8 @@ final class hc extends dj implements nl {
 
     public final dg a(byte param0) {
         if (param0 > -97) {
-            field_U = (String) null;
-            return this.field_Q;
+          field_U = (String) null;
+          return this.field_Q;
         }
         return this.field_Q;
     }
@@ -103,46 +103,46 @@ final class hc extends dj implements nl {
             return param0;
           }
           if (93 != var2 &&
-              35 != var2) {
+            35 != var2) {
             if (var2 != 224 &&
-                var2 != 225 &&
-                var2 != 226 &&
-                var2 != 228 &&
-                var2 != 227 &&
-                var2 != 192 &&
-                var2 != 193 &&
-                var2 != 194 &&
-                var2 != 196 &&
-                var2 != 195) {
+              var2 != 225 &&
+              var2 != 226 &&
+              var2 != 228 &&
+              var2 != 227 &&
+              var2 != 192 &&
+              var2 != 193 &&
+              var2 != 194 &&
+              var2 != 196 &&
+              var2 != 195) {
               if (var2 != 232 &&
-                  var2 != 233 &&
-                  var2 != 234 &&
-                  var2 != 235 &&
-                  var2 != 200 &&
-                  var2 != 201 &&
-                  var2 != 202 &&
-                  var2 != 203) {
+                var2 != 233 &&
+                var2 != 234 &&
+                var2 != 235 &&
+                var2 != 200 &&
+                var2 != 201 &&
+                var2 != 202 &&
+                var2 != 203) {
                 if (var2 != 237 &&
-                    var2 != 238 &&
-                    239 != var2 &&
-                    var2 != 205 &&
-                    var2 != 206 &&
-                    var2 != 207) {
+                  var2 != 238 &&
+                  239 != var2 &&
+                  var2 != 205 &&
+                  var2 != 206 &&
+                  var2 != 207) {
                   if (var2 != 242 &&
-                      243 != var2 &&
-                      var2 != 244 &&
-                      var2 != 246 &&
-                      var2 != 245 &&
-                      var2 != 210 &&
-                      var2 != 211 &&
-                      var2 != 212 &&
-                      var2 != 214 &&
-                      var2 != 213) {
+                    243 != var2 &&
+                    var2 != 244 &&
+                    var2 != 246 &&
+                    var2 != 245 &&
+                    var2 != 210 &&
+                    var2 != 211 &&
+                    var2 != 212 &&
+                    var2 != 214 &&
+                    var2 != 213) {
                     if (249 != var2 &&
-                        250 != var2 &&
-                        var2 != 251 &&
-                        var2 != 252 &&
-                        var2 != 217) {
+                      250 != var2 &&
+                      var2 != 251 &&
+                      var2 != 252 &&
+                      var2 != 217) {
                       if (218 == var2) {
                         return 'u';
                       }
@@ -193,27 +193,27 @@ final class hc extends dj implements nl {
             return '_';
           }
           if (var2Lifetime1 != 95 &&
-              var2Lifetime1 != 45) {
+            var2Lifetime1 != 45) {
             if (var2Lifetime1 != 91 &&
-                93 != var2Lifetime1 &&
-                35 != var2Lifetime1) {
+              93 != var2Lifetime1 &&
+              35 != var2Lifetime1) {
               if (var2Lifetime1 != 224 &&
-                  var2Lifetime1 != 225 &&
-                  var2Lifetime1 != 226 &&
-                  var2Lifetime1 != 228 &&
-                  var2Lifetime1 != 227 &&
-                  var2Lifetime1 != 192 &&
-                  var2Lifetime1 != 193 &&
-                  var2Lifetime1 != 194 &&
-                  var2Lifetime1 != 196 &&
-                  var2Lifetime1 != 195) {
+                var2Lifetime1 != 225 &&
+                var2Lifetime1 != 226 &&
+                var2Lifetime1 != 228 &&
+                var2Lifetime1 != 227 &&
+                var2Lifetime1 != 192 &&
+                var2Lifetime1 != 193 &&
+                var2Lifetime1 != 194 &&
+                var2Lifetime1 != 196 &&
+                var2Lifetime1 != 195) {
                 if (var2Lifetime1 != 232 &&
-                    var2Lifetime1 != 233 &&
-                    var2Lifetime1 != 234 &&
-                    var2Lifetime1 != 235 &&
-                    var2Lifetime1 != 200 &&
-                    var2Lifetime1 != 201 &&
-                    var2Lifetime1 != 202) {
+                  var2Lifetime1 != 233 &&
+                  var2Lifetime1 != 234 &&
+                  var2Lifetime1 != 235 &&
+                  var2Lifetime1 != 200 &&
+                  var2Lifetime1 != 201 &&
+                  var2Lifetime1 != 202) {
                   if (var2Lifetime1 == 203) {
                     return 'e';
                   }
@@ -227,8 +227,8 @@ final class hc extends dj implements nl {
                     return 'i';
                   }
                   if (var2Lifetime1 != 205 &&
-                      var2Lifetime1 != 206 &&
-                      var2Lifetime1 != 207) {
+                    var2Lifetime1 != 206 &&
+                    var2Lifetime1 != 207) {
                     if (var2Lifetime1 != 242) {
                       if (243 == var2Lifetime1) {
                         return 'o';
@@ -237,7 +237,7 @@ final class hc extends dj implements nl {
                         return 'o';
                       }
                       if (var2Lifetime1 != 246 &&
-                          var2Lifetime1 != 245) {
+                        var2Lifetime1 != 245) {
                         if (var2Lifetime1 == 210) {
                           return 'o';
                         }
@@ -245,8 +245,8 @@ final class hc extends dj implements nl {
                           return 'o';
                         }
                         if (var2Lifetime1 != 212 &&
-                            var2Lifetime1 != 214 &&
-                            var2Lifetime1 != 213) {
+                          var2Lifetime1 != 214 &&
+                          var2Lifetime1 != 213) {
                           if (249 != var2Lifetime1) {
                             if (250 == var2Lifetime1) {
                               return 'u';
@@ -327,25 +327,25 @@ final class hc extends dj implements nl {
 
     final void a(byte param0, dg param1) {
         try {
-            this.field_Q = param1;
-            int var3_int = 48 % ((param0 - 34) / 39);
+          this.field_Q = param1;
+          int var3_int = 48 % ((param0 - 34) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hc.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void g(byte param0) {
         super.g((byte) -66);
         if (this.field_Q != null) {
-            this.field_Q.b(-28133);
-            if (param0 > -16) {
-                this.field_S = -4;
-                return;
-            }
+          this.field_Q.b(-28133);
+          if (param0 > -16) {
+            this.field_S = -4;
             return;
+          }
+          return;
         }
         if (param0 <= -16) {
-            return;
+          return;
         }
         this.field_S = -4;
     }
@@ -354,7 +354,7 @@ final class hc extends dj implements nl {
         field_U = null;
         field_K = null;
         if (param0 != -243) {
-            field_T = -90;
+          field_T = -90;
         }
     }
 

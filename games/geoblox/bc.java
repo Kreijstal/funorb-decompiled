@@ -6,13 +6,13 @@ final class bc {
 
     final static void a(int param0, long param1) {
         if (param1 <= 0L) {
-            return;
+          return;
         }
         if (param1 % 10L == (long)param0) {
-            ji.a(-1L + param1, (byte) -33);
-            ji.a(1L, (byte) -33);
+          ji.a(-1L + param1, (byte) -33);
+          ji.a(1L, (byte) -33);
         } else {
-            ji.a(param1, (byte) -33);
+          ji.a(param1, (byte) -33);
         }
     }
 
@@ -45,7 +45,7 @@ final class bc {
             var7 = param1[param2 + var6] & 255;
             if (var7 != 0) {
               if (var7 >= 128 &&
-                  var7 < 160) {
+                var7 < 160) {
                 var8 = lf.field_e[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;

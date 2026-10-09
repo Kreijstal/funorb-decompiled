@@ -21,7 +21,7 @@ class hk extends el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_D &&
-              this.a(param4, -1, param5, param0, param2)) {
+            this.a(param4, -1, param5, param0, param2)) {
             this.a((byte) -116, param6);
             this.field_f = param3;
             if (null != this.field_u) {
@@ -50,17 +50,17 @@ class hk extends el {
 
     void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_u) {
-            if (!(this.field_u instanceof pl)) {
-                if (param1 != -28922) {
-                    field_B = -42;
-                    return;
-                }
-                return;
+          if (!(this.field_u instanceof pl)) {
+            if (param1 != -28922) {
+              field_B = -42;
+              return;
             }
-            ((pl) (this.field_u)).a(param2, (byte) -20, param0, param3, this);
+            return;
+          }
+          ((pl) (this.field_u)).a(param2, (byte) -20, param0, param3, this);
         }
         if (param1 == -28922) {
-            return;
+          return;
         }
         field_B = -42;
     }
@@ -77,19 +77,19 @@ class hk extends el {
 
     void a(boolean param0, int param1, el param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            if (0 != this.field_f) {
-                if (gf.field_a == this.field_f) {
-                    return;
-                }
-                if (this.a(qa.field_a, -1, ue.field_e, param1, param3) &&
-                    gf.field_a == 0) {
-                    this.a(ue.field_e - param1, -28922, qa.field_a - param3, this.field_f);
-                }
-                this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
+          super.a(param0, param1, param2, param3);
+          if (0 != this.field_f) {
+            if (gf.field_a == this.field_f) {
+              return;
             }
+            if (this.a(qa.field_a, -1, ue.field_e, param1, param3) &&
+              gf.field_a == 0) {
+              this.a(ue.field_e - param1, -28922, qa.field_a - param3, this.field_f);
+            }
+            this.a(param3, qa.field_a, !param0 ? true : false, param2, param1, ue.field_e);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hk.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -108,7 +108,7 @@ class hk extends el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.e((byte) 54) && (param0 == 84 ||
-              param0 == 83)) {
+            param0 == 83)) {
             this.a(-1, -28922, -1, 1);
             return true;
           }
@@ -133,37 +133,37 @@ class hk extends el {
 
     final boolean e(byte param0) {
         if (param0 != 54) {
-            this.e((byte) -35);
-            return this.field_A;
+          this.e((byte) -35);
+          return this.field_A;
         }
         return this.field_A;
     }
 
     final void d(int param0) {
         if (param0 >= -122) {
-            this.field_y = false;
-            if (!this.field_A) {
-                return;
-            }
-            this.field_A = false;
-            if (null == this.field_u) {
-                return;
-            }
-            if (!(this.field_u instanceof rk)) {
-                return;
-            }
-            ((rk) (this.field_u)).a(3520, (el) (this), this.field_A);
+          this.field_y = false;
+          if (!this.field_A) {
             return;
+          }
+          this.field_A = false;
+          if (null == this.field_u) {
+            return;
+          }
+          if (!(this.field_u instanceof rk)) {
+            return;
+          }
+          ((rk) (this.field_u)).a(3520, (el) (this), this.field_A);
+          return;
         }
         if (!this.field_A) {
-            return;
+          return;
         }
         this.field_A = false;
         if (null == this.field_u) {
-            return;
+          return;
         }
         if (!(this.field_u instanceof rk)) {
-            return;
+          return;
         }
         ((rk) (this.field_u)).a(3520, (el) (this), this.field_A);
     }
@@ -172,7 +172,7 @@ class hk extends el {
         rd.c(520);
         pc.a(4, false);
         if (param0 != 83) {
-            hk.f((byte) -65);
+          hk.f((byte) -65);
         }
     }
 
@@ -184,11 +184,11 @@ class hk extends el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_D &&
-              this.field_z) {
+            this.field_z) {
             param1.d(-128);
             this.field_A = true;
             if (null != this.field_u &&
-                this.field_u instanceof rk) {
+              this.field_u instanceof rk) {
               ((rk) (this.field_u)).a(3520, (el) (this), this.field_A);
             }
             if (param0 <= -30) {
@@ -260,15 +260,15 @@ class hk extends el {
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
         if (null != this.field_u && this.field_u instanceof ti) {
-            ((ti) (this.field_u)).a(param4, param5, (byte) 55, this, param0, param1);
+          ((ti) (this.field_u)).a(param4, param5, (byte) 55, this, param0, param1);
         }
         if (!param2) {
-            return;
+          return;
         }
         try {
-            this.field_f = 0;
+          this.field_f = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

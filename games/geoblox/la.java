@@ -15,10 +15,10 @@ final class la extends sh {
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
         try {
-            super.a(param0, param1, param2, param3, param4, param5);
-            this.field_f = 0;
+          super.a(param0, param1, param2, param3, param4, param5);
+          this.field_f = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -36,12 +36,12 @@ final class la extends sh {
         int var6 = 0;
         try {
           if ((!(this.field_A instanceof hk) ||
-                ((hk) (this.field_A)).field_D) &&
-              this.field_f == 1) {
+            ((hk) (this.field_A)).field_D) &&
+            this.field_f == 1) {
             var5_int = qa.field_a - this.field_D - param3;
             var6 = -this.field_H + (ue.field_e - param1);
             if (this.field_v != var5_int ||
-                var6 != this.field_m) {
+              var6 != this.field_m) {
               this.field_m = var6;
               this.field_v = var5_int;
               if (this.field_u instanceof de) {
@@ -105,11 +105,11 @@ final class la extends sh {
         this.field_G = 2147483647;
         this.field_B = 2147483647;
         try {
-            this.field_A = param6;
-            this.field_C = param7 ? true : false;
-            this.field_F = param8 ? true : false;
+          this.field_A = param6;
+          this.field_C = param7 ? true : false;
+          this.field_F = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "la.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "la.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class la extends sh {
             this.b(param3, param1, param2, param0 + 0);
             discarded$70 = param1.append(" revert=").append(this.field_C);
             if (this.field_B != 2147483647 &&
-                this.field_G != 2147483647) {
+              this.field_G != 2147483647) {
               discarded$71 = param1.append(" to ").append(this.field_B).append(',').append(this.field_G);
             }
           }
@@ -172,7 +172,7 @@ final class la extends sh {
           var8_int = super.a(param0, 53, param2, param3, param4, param5, param6) ? 1 : 0;
           var9 = 5 % ((-3 - param1) / 38);
           if (var8_int != 0 &&
-              this.field_F) {
+            this.field_F) {
             return true;
           }
           if (!this.a(param4, -1, param5, param0, param2)) {
@@ -203,12 +203,12 @@ final class la extends sh {
 
     final static void f(byte param0) {
         if (param0 == 24) {
-            fh.b(-6011);
-            ii.field_a = true;
-            cf.field_i = true;
-            kd.field_e.f(param0 + 10912);
-            fa.a(ah.field_b, 480, false);
-            return;
+          fh.b(-6011);
+          ii.field_a = true;
+          cf.field_i = true;
+          kd.field_e.f(param0 + 10912);
+          fa.a(ah.field_b, 480, false);
+          return;
         }
         la.g((byte) 86);
         fh.b(-6011);

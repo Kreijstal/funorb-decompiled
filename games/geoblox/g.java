@@ -12,10 +12,10 @@ final class g extends q {
     g(dj param0, dj param1, dj param2) {
         super(param0);
         try {
-            this.field_n = param2;
-            this.field_k = param1;
+          this.field_n = param2;
+          this.field_k = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,10 +110,10 @@ final class g extends q {
           var3 = this.field_n.field_s.toLowerCase();
           var4 = param0.toLowerCase();
           if (0 < var3.length() &&
-              var4.length() > 0) {
+            var4.length() > 0) {
             var5 = var3.lastIndexOf("@");
             if (0 <= var5 &&
-                var3.length() - 1 > var5) {
+              var3.length() - 1 > var5) {
               var6 = var3.substring(0, var5);
               var7 = var3.substring(var5 + 1);
               if (var4.indexOf(var6) >= 0) {
@@ -191,7 +191,7 @@ final class g extends q {
 
     public static void g(int param0) {
         if (param0 >= -90) {
-            return;
+          return;
         }
         field_i = null;
         field_m = null;

@@ -9,13 +9,13 @@ final class b {
         String var4 = (String) null;
         og.a(2274, (String) null, param1, param0);
         if (param2) {
-            b.a(true, false, true);
+          b.a(true, false, true);
         }
     }
 
     public static void a(int param0) {
         if (param0 != 17062) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

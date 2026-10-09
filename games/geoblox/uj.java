@@ -10,7 +10,7 @@ final class uj {
 
     final static boolean a(boolean param0, int param1) {
         if (param0) {
-            return (param1 & -param1) == param1 ? true : false;
+          return (param1 & -param1) == param1 ? true : false;
         }
         return true;
     }
@@ -48,7 +48,7 @@ final class uj {
         field_c = null;
         field_a = null;
         if (param0 > 0) {
-            uj.a(false, -95);
+          uj.a(false, -95);
         }
     }
 

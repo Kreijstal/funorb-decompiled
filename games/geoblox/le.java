@@ -25,7 +25,7 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         pf.field_D = false;
         re.field_j = false;
         if (param0 != -39) {
-            le.a((byte) 97);
+          le.a((byte) 97);
         }
     }
 
@@ -57,31 +57,31 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-            if (pg.field_c != null) {
-                gh.field_P = 0;
-                lj.field_b = param0.getX();
-                eg.field_h = param0.getY();
-                fc.field_f = true;
-            }
+          if (pg.field_c != null) {
+            gh.field_P = 0;
+            lj.field_b = param0.getX();
+            eg.field_h = param0.getY();
+            fc.field_f = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "le.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "le.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(hf param0, int param1, hf param2) {
         try {
-            if (null != param2.field_c) {
-                param2.a(false);
-            }
-            if (param1 < 80) {
-                field_b = (String[]) null;
-            }
-            param2.field_c = param0.field_c;
-            param2.field_b = param0;
-            param2.field_c.field_b = param2;
-            param2.field_b.field_c = param2;
+          if (null != param2.field_c) {
+            param2.a(false);
+          }
+          if (param1 < 80) {
+            field_b = (String[]) null;
+          }
+          param2.field_c = param0.field_c;
+          param2.field_b = param0;
+          param2.field_c.field_b = param2;
+          param2.field_b.field_c = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "le.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,21 +129,21 @@ final class le implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public static void a(int param0) {
         if (param0 != -29313) {
-            return;
+          return;
         }
         field_b = null;
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-            if (null != pg.field_c) {
-                gh.field_P = 0;
-                lj.field_b = param0.getX();
-                eg.field_h = param0.getY();
-                fc.field_f = true;
-            }
+          if (null != pg.field_c) {
+            gh.field_P = 0;
+            lj.field_b = param0.getX();
+            eg.field_h = param0.getY();
+            fc.field_f = true;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "le.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "le.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

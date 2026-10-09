@@ -16,18 +16,18 @@ final class vg {
     final void a(long param0, int param1, rc param2) {
         rc var5 = null;
         try {
-            if (null != param2.field_l) {
-                param2.a((byte) 65);
-            }
-            int var6 = -92 % ((param1 - 34) / 51);
-            var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_h))];
-            param2.field_k = var5;
-            param2.field_l = var5.field_l;
-            param2.field_l.field_k = param2;
-            param2.field_i = param0;
-            param2.field_k.field_l = param2;
+          if (null != param2.field_l) {
+            param2.a((byte) 65);
+          }
+          int var6 = -92 % ((param1 - 34) / 51);
+          var5 = this.field_g[(int)(param0 & (long)(-1 + this.field_h))];
+          param2.field_k = var5;
+          param2.field_l = var5.field_l;
+          param2.field_l.field_k = param2;
+          param2.field_i = param0;
+          param2.field_k.field_l = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class vg {
     public static void a(boolean param0) {
         field_i = null;
         if (!param0) {
-            return;
+          return;
         }
         field_f = null;
         field_d = null;

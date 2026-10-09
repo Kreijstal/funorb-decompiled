@@ -8,18 +8,18 @@ final class dl {
 
     public static void a(boolean param0) {
         if (!param0) {
-            dl.a(false);
-            field_a = null;
-            return;
+          dl.a(false);
+          field_a = null;
+          return;
         }
         field_a = null;
     }
 
     final static void a(int param0) {
         if (param0 == 11560) {
-            fb.field_l = false;
-            eh.field_d.c((byte) 34);
-            return;
+          fb.field_l = false;
+          eh.field_d.c((byte) 34);
+          return;
         }
         field_b = false;
         fb.field_l = false;

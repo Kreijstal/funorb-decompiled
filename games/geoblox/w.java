@@ -73,7 +73,7 @@ final class w {
         field_e = null;
         field_a = null;
         if (param0 < 51) {
-            field_b = (String[]) null;
+          field_b = (String[]) null;
         }
         field_d = null;
         field_c = null;
@@ -137,45 +137,45 @@ final class w {
 
     final static boolean a(boolean param0, int param1) {
         try {
-            pk var4 = null;
-            pk var5 = null;
-            if (null == sd.field_B) {
-                sd.field_B = ja.field_D.a(sd.field_x, ol.field_I, false);
+          pk var4 = null;
+          pk var5 = null;
+          if (null == sd.field_B) {
+            sd.field_B = ja.field_D.a(sd.field_x, ol.field_I, false);
+          }
+          if (param1 != 52) {
+            field_d = (ck) null;
+          }
+          if (sd.field_B.field_a == 0) {
+            return false;
+          }
+          long dupTemp$0 = oa.a(param1 ^ -12500);
+          v.field_r = dupTemp$0;
+          kh.field_e = dupTemp$0;
+          if (1 != sd.field_B.field_a) {
+            pk.field_l = qi.field_h;
+          } else {
+            try {
+              oc.field_e = new ba((java.net.Socket) (sd.field_B.field_b), ja.field_D);
+              var4 = eh.field_d;
+              var5 = var4;
+              fj.field_q.field_f = 0;
+              var5.field_f = 0;
+              ad.field_o = param0 ? -2 : -1;
+              dc.field_b = param0 ? -2 : -1;
+              kg.field_n = param0 ? -2 : -1;
+              pk.field_l = gi.field_d;
+              ke.a(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
+              cm.a(param1 ^ -53, -1);
+            } catch (IOException iOException) {
+              pk.field_l = qi.field_h;
             }
-            if (param1 != 52) {
-                field_d = (ck) null;
-            }
-            if (sd.field_B.field_a == 0) {
-                return false;
-            }
-            long dupTemp$0 = oa.a(param1 ^ -12500);
-            v.field_r = dupTemp$0;
-            kh.field_e = dupTemp$0;
-            if (1 != sd.field_B.field_a) {
-                pk.field_l = qi.field_h;
-            } else {
-                try {
-                    oc.field_e = new ba((java.net.Socket) (sd.field_B.field_b), ja.field_D);
-                    var4 = eh.field_d;
-                    var5 = var4;
-                    fj.field_q.field_f = 0;
-                    var5.field_f = 0;
-                    ad.field_o = param0 ? -2 : -1;
-                    dc.field_b = param0 ? -2 : -1;
-                    kg.field_n = param0 ? -2 : -1;
-                    pk.field_l = gi.field_d;
-                    ke.a(qe.field_b, true, ok.field_f, mk.field_l, fj.field_q);
-                    cm.a(param1 ^ -53, -1);
-                } catch (IOException iOException) {
-                    pk.field_l = qi.field_h;
-                }
-            }
-            sd.field_B = null;
-            return true;
+          }
+          sd.field_B = null;
+          return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -238,32 +238,32 @@ final class w {
         int var7 = vb.field_f - var6;
         int var8 = 0;
         if (param2 < vb.field_i) {
-            var9 = vb.field_i - param2;
-            var5 = var5 - var9;
-            param2 = vb.field_i;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * vb.field_f;
+          var9 = vb.field_i - param2;
+          var5 = var5 - var9;
+          param2 = vb.field_i;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * vb.field_f;
         }
         if (param2 + var5 > vb.field_d) {
-            var5 = var5 - (param2 + var5 - vb.field_d);
+          var5 = var5 - (param2 + var5 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-            var9Lifetime1 = vb.field_e - param1;
-            var6 = var6 - var9Lifetime1;
-            param1 = vb.field_e;
-            var4 = var4 + var9Lifetime1;
-            var3 = var3 + var9Lifetime1;
-            var8 = var8 + var9Lifetime1;
-            var7 = var7 + var9Lifetime1;
+          var9Lifetime1 = vb.field_e - param1;
+          var6 = var6 - var9Lifetime1;
+          param1 = vb.field_e;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param1 + var6 > vb.field_k) {
-            var9Lifetime2 = param1 + var6 - vb.field_k;
-            var6 = var6 - var9Lifetime2;
-            var8 = var8 + var9Lifetime2;
-            var7 = var7 + var9Lifetime2;
+          var9Lifetime2 = param1 + var6 - vb.field_k;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 <= 0 || var5 <= 0) {
-            return;
+          return;
         }
         w.a(vb.field_c, param0.field_v, var4, var3, var6, var5, var7, var8);
     }

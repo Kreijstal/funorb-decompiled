@@ -93,7 +93,7 @@ final class nc extends m {
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
-            param4 > 0) {
+          param4 > 0) {
           if (!param6) {
             nc.a(0, vb.field_c, this.field_L[param0], this.field_K[param5], var11, var8, param3, param4, var9, var10);
           } else {
@@ -141,7 +141,7 @@ final class nc extends m {
           var10 = var10 + var13Lifetime2;
         }
         if (param3 > 0 &&
-            param4 > 0) {
+          param4 > 0) {
           if (!param7) {
             nc.a(0, vb.field_c, this.field_L[param0], this.field_K[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {

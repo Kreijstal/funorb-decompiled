@@ -27,7 +27,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             return (java.net.URL) (stackIn_4_0);
           }
           if (null != kg.field_m &&
-              this != kg.field_m) {
+            this != kg.field_m) {
             stackIn_10_0 = kg.field_m.getDocumentBase();
             return stackIn_10_0;
           }
@@ -175,10 +175,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     public static void c(byte param0) {
         try {
-            field_d = null;
-            int var1_int = 30 % ((30 - param0) / 52);
+          field_d = null;
+          int var1_int = 30 % ((30 - param0) / 52);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ch.E(" + param0 + ')');
         }
     }
 
@@ -211,231 +211,231 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     final void a(byte param0, String param1) {
         try {
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var3 = null;
-            Exception var3_ref = null;
-            RuntimeException var3_ref2 = null;
-            try {
-              if (this.field_a) {
-                return;
-              }
-              this.field_a = true;
-              System.out.println("error_game_" + param1);
-              if (param0 != 79) {
-                ch.c((byte) -125);
-              }
-              try {
-                wk.a((byte) -6, k.c(115), "loggedout");
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var3 = decompiledCaughtException;
-              }
-              try {
-                this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param1 + ".ws"), "_top");
-              } catch (java.lang.Exception decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var3_ref = (Exception) (Object) decompiledCaughtException;
-              }
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var3 = null;
+          Exception var3_ref = null;
+          RuntimeException var3_ref2 = null;
+          try {
+            if (this.field_a) {
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = var3_ref2;
-              stackIn_15_1 = new StringBuilder().append("ch.A(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_16_2 = "null";
-              } else {
-                stackIn_16_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
             }
+            this.field_a = true;
+            System.out.println("error_game_" + param1);
+            if (param0 != 79) {
+              ch.c((byte) -125);
+            }
+            try {
+              wk.a((byte) -6, k.c(115), "loggedout");
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = decompiledCaughtException;
+            }
+            try {
+              this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param1 + ".ws"), "_top");
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var3_ref = (Exception) (Object) decompiledCaughtException;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = var3_ref2;
+            stackIn_15_1 = new StringBuilder().append("ch.A(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     public final void run() {
         try {
-            boolean stackIn_66_0 = false;
-            int stackIn_78_0 = 0;
-            int stackIn_78_1 = 0;
-            int stackIn_99_0 = 0;
-            Throwable decompiledCaughtException = null;
-            Object var1 = null;
-            int var1_int = 0;
-            String var2 = null;
-            int var2_int = 0;
-            java.lang.reflect.Method var2_ref = null;
-            int var3 = 0;
-            Throwable var3_ref_Throwable = null;
-            String var4 = null;
-            int var5 = 0;
-            var5 = Geoblox.field_C;
+          boolean stackIn_66_0 = false;
+          int stackIn_78_0 = 0;
+          int stackIn_78_1 = 0;
+          int stackIn_99_0 = 0;
+          Throwable decompiledCaughtException = null;
+          Object var1 = null;
+          int var1_int = 0;
+          String var2 = null;
+          int var2_int = 0;
+          java.lang.reflect.Method var2_ref = null;
+          int var3 = 0;
+          Throwable var3_ref_Throwable = null;
+          String var4 = null;
+          int var5 = 0;
+          var5 = Geoblox.field_C;
+          try {
             try {
-              try {
-                L1: {
+              L1: {
+                {
+                  boolean decompiledFrameRemainder2 = true;
                   {
-                    boolean decompiledFrameRemainder2 = true;
-                    {
-                      boolean decompiledFrameCompleted0 = true;
-                      if (d.field_o != null) {
-                        var1 = d.field_o.toLowerCase();
-                        if (-1 != ((String) (var1)).indexOf("sun") ||
-                            ((String) (var1)).indexOf("apple") != -1) {
-                          var2 = d.field_t;
-                          if (var2.equals("1.1") ||
-                              var2.startsWith("1.1.") ||
-                              var2.equals("1.2") ||
-                              var2.startsWith("1.2.") ||
-                              var2.equals("1.3") ||
-                              var2.startsWith("1.3.") ||
-                              var2.equals("1.4") ||
-                              var2.startsWith("1.4.") ||
-                              var2.equals("1.5") ||
-                              var2.startsWith("1.5.") ||
-                              var2.equals("1.6.0")) {
-                            this.a((byte) 79, "wrongjava");
-                            if (var5 == 0) {
-                              break L1;
-                            }
-                          }
-                          if (var2.startsWith("1.6.0_")) {
-                            var3 = 6;
-                            while (var2.length() > var3) {
-                              stackIn_66_0 = rc.a(-58, var2.charAt(var3));
-                              if (var5 != 0) {
-                                decompiledFrameCompleted0 = false;
-                                break;
-                              }
-                              if (stackIn_66_0) {
-                                var3++;
-                                continue;
-                              }
-                              break;
-                            }
-                            if (decompiledFrameCompleted0) {
-                              var4 = var2.substring(6, var3);
-                              if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
-                                this.a((byte) 79, "wrongjava");
-                                if (var5 == 0) {
-                                  break L1;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      if (decompiledFrameCompleted0) {
-                        decompiledFrameRemainder2 = !(d.field_t == null);
-                        if (decompiledFrameRemainder2) {
-                          stackIn_66_0 = d.field_t.startsWith("1.");
-                        }
-                      }
-                    }
-                    if (decompiledFrameRemainder2) {
-                      if (stackIn_66_0) {
-                        var1_int = 2;
-                        var2_int = 0;
-                        while (true) {
-                          {
-                            boolean decompiledFrameRemainder1 = true;
-                            if (d.field_t.length() > var1_int) {
-                              var3 = d.field_t.charAt(var1_int);
-                              stackIn_78_0 = var3;
-                              stackIn_78_1 = 48;
-                              decompiledFrameRemainder1 = !(var5 != 0);
-                              if (decompiledFrameRemainder1) {
-                                if (stackIn_78_0 >= stackIn_78_1 &&
-                                    var3 <= 57) {
-                                  var2_int = 10 * var2_int - 48 + var3;
-                                  var1_int++;
-                                  continue;
-                                }
-                              }
-                            }
-                            if (decompiledFrameRemainder1) {
-                              stackIn_78_0 = ~var2_int;
-                              stackIn_78_1 = -6;
-                            }
-                          }
-                          if (stackIn_78_0 > stackIn_78_1) {
-                            break;
-                          }
-                          oe.field_S = true;
-                          break;
-                        }
-                      }
-                    }
-                  }
-                  var1 = qa.field_d;
-                  if (null != kg.field_m) {
-                    var1 = kg.field_m;
-                  }
-                  var2_ref = d.field_v;
-                  if (null != var2_ref) {
-                    try {
-                      var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
-                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var3_ref_Throwable = decompiledCaughtException;
-                    }
-                  }
-                  oc.a(75);
-                  this.b(true);
-                  sh.field_y = fk.a(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
-                  this.b(117);
-                  eg.field_p = ba.a(5000);
-                  do {
-                    {
-                      boolean decompiledFrameRemainder0 = true;
-                      if (0L != ka.field_a) {
-                        stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
-                        decompiledFrameRemainder0 = !(var5 != 0);
-                        if (decompiledFrameRemainder0) {
-                          if (stackIn_99_0 >= 0) {
+                    boolean decompiledFrameCompleted0 = true;
+                    if (d.field_o != null) {
+                      var1 = d.field_o.toLowerCase();
+                      if (-1 != ((String) (var1)).indexOf("sun") ||
+                        ((String) (var1)).indexOf("apple") != -1) {
+                        var2 = d.field_t;
+                        if (var2.equals("1.1") ||
+                          var2.startsWith("1.1.") ||
+                          var2.equals("1.2") ||
+                          var2.startsWith("1.2.") ||
+                          var2.equals("1.3") ||
+                          var2.startsWith("1.3.") ||
+                          var2.equals("1.4") ||
+                          var2.startsWith("1.4.") ||
+                          var2.equals("1.5") ||
+                          var2.startsWith("1.5.") ||
+                          var2.equals("1.6.0")) {
+                          this.a((byte) 79, "wrongjava");
+                          if (var5 == 0) {
                             break L1;
                           }
                         }
-                      }
-                      if (decompiledFrameRemainder0) {
-                        nf.field_w = eg.field_p.a((byte) -6, oj.field_c);
-                        stackIn_99_0 = 0;
+                        if (var2.startsWith("1.6.0_")) {
+                          var3 = 6;
+                          while (var2.length() > var3) {
+                            stackIn_66_0 = rc.a(-58, var2.charAt(var3));
+                            if (var5 != 0) {
+                              decompiledFrameCompleted0 = false;
+                              break;
+                            }
+                            if (stackIn_66_0) {
+                              var3++;
+                              continue;
+                            }
+                            break;
+                          }
+                          if (decompiledFrameCompleted0) {
+                            var4 = var2.substring(6, var3);
+                            if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
+                              this.a((byte) 79, "wrongjava");
+                              if (var5 == 0) {
+                                break L1;
+                              }
+                            }
+                          }
+                        }
                       }
                     }
-                    var3 = stackIn_99_0;
-                    do {
-                      if (!(nf.field_w > var3)) {
-                        this.d(32000);
-                        wj.a(ka.field_i, (byte) 83, f.field_kb);
+                    if (decompiledFrameCompleted0) {
+                      decompiledFrameRemainder2 = !(d.field_t == null);
+                      if (decompiledFrameRemainder2) {
+                        stackIn_66_0 = d.field_t.startsWith("1.");
+                      }
+                    }
+                  }
+                  if (decompiledFrameRemainder2) {
+                    if (stackIn_66_0) {
+                      var1_int = 2;
+                      var2_int = 0;
+                      while (true) {
+                        {
+                          boolean decompiledFrameRemainder1 = true;
+                          if (d.field_t.length() > var1_int) {
+                            var3 = d.field_t.charAt(var1_int);
+                            stackIn_78_0 = var3;
+                            stackIn_78_1 = 48;
+                            decompiledFrameRemainder1 = !(var5 != 0);
+                            if (decompiledFrameRemainder1) {
+                              if (stackIn_78_0 >= stackIn_78_1 &&
+                                var3 <= 57) {
+                                var2_int = 10 * var2_int - 48 + var3;
+                                var1_int++;
+                                continue;
+                              }
+                            }
+                          }
+                          if (decompiledFrameRemainder1) {
+                            stackIn_78_0 = ~var2_int;
+                            stackIn_78_1 = -6;
+                          }
+                        }
+                        if (stackIn_78_0 > stackIn_78_1) {
+                          break;
+                        }
+                        oe.field_S = true;
                         break;
                       }
-                      this.a((byte) -10);
-                      var3++;
-                    } while (var5 == 0);
-                  } while (var5 == 0);
+                    }
+                  }
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var1 = decompiledCaughtException;
-                gi.a((Throwable) (var1), (String) null, (byte) 125);
-                this.a((byte) 79, "crash");
+                var1 = qa.field_d;
+                if (null != kg.field_m) {
+                  var1 = kg.field_m;
+                }
+                var2_ref = d.field_v;
+                if (null != var2_ref) {
+                  try {
+                    var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    var3_ref_Throwable = decompiledCaughtException;
+                  }
+                }
+                oc.a(75);
+                this.b(true);
+                sh.field_y = fk.a(false, (java.awt.Component) ((Object) f.field_kb), ok.field_c, kh.field_d);
+                this.b(117);
+                eg.field_p = ba.a(5000);
+                do {
+                  {
+                    boolean decompiledFrameRemainder0 = true;
+                    if (0L != ka.field_a) {
+                      stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
+                      decompiledFrameRemainder0 = !(var5 != 0);
+                      if (decompiledFrameRemainder0) {
+                        if (stackIn_99_0 >= 0) {
+                          break L1;
+                        }
+                      }
+                    }
+                    if (decompiledFrameRemainder0) {
+                      nf.field_w = eg.field_p.a((byte) -6, oj.field_c);
+                      stackIn_99_0 = 0;
+                    }
+                  }
+                  var3 = stackIn_99_0;
+                  do {
+                    if (!(nf.field_w > var3)) {
+                      this.d(32000);
+                      wj.a(ka.field_i, (byte) 83, f.field_kb);
+                      break;
+                    }
+                    this.a((byte) -10);
+                    var3++;
+                  } while (var5 == 0);
+                } while (var5 == 0);
               }
-              this.a((byte) 14, true);
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) (var1), "ch.run()");
+            } catch (java.lang.Throwable decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var1 = decompiledCaughtException;
+              gi.a((Throwable) (var1), (String) null, (byte) 125);
+              this.a((byte) 79, "crash");
             }
+            this.a((byte) 14, true);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw t.a((Throwable) (var1), "ch.run()");
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -451,7 +451,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             return (java.applet.AppletContext) (stackIn_2_0);
           }
           if (kg.field_m != null &&
-              this != kg.field_m) {
+            this != kg.field_m) {
             stackIn_8_0 = kg.field_m.getAppletContext();
             return stackIn_8_0;
           }
@@ -541,7 +541,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == qa.field_d &&
-              !ad.field_p) {
+            !ad.field_p) {
             ka.field_a = 0L;
             return;
           }
@@ -601,7 +601,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           var11 = var11.substring(1 + var11.lastIndexOf('\t'));
           var2 = var2 + var11;
           if (var9 != -1 &&
-              -1 != var10) {
+            -1 != var10) {
             var12 = var8.indexOf(".java:", var9);
             if (var12 >= 0) {
               var2 = var2 + var8.substring(var12 + 5, var10);
@@ -627,7 +627,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           return null;
         }
         if (null != kg.field_m &&
-            kg.field_m != this) {
+          kg.field_m != this) {
           return kg.field_m.getCodeBase();
         }
         return super.getCodeBase();
@@ -673,7 +673,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           tl.field_l[ij.field_cb] = var2_long;
           ij.field_cb = 31 & 1 + ij.field_cb;
           if (var4 != 0L &&
-              var2_long > var4) {
+            var2_long > var4) {
           }
           var6 = this;
           synchronized (var6) {
@@ -701,10 +701,10 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var2_ref = null;
         try {
           if (qa.field_d == this &&
-              !ad.field_p) {
+            !ad.field_p) {
             dl.field_c = true;
             if (oe.field_S &&
-                -Geoblox.field_D + oa.a(-12520) > 1000L) {
+              -Geoblox.field_D + oa.a(-12520) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (var2.width < qb.field_G) {
@@ -735,15 +735,15 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     public final void destroy() {
         if (qa.field_d != this || ad.field_p) {
-            return;
+          return;
         }
         try {
-            ka.field_a = oa.a(-12520);
-            bc.a(0, 5000L);
-            ml.field_s = null;
-            this.a((byte) 14, false);
+          ka.field_a = oa.a(-12520);
+          bc.a(0, 5000L);
+          ml.field_s = null;
+          this.a((byte) 14, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ch.destroy()");
+          throw t.a((Throwable) ((Object) runtimeException), "ch.destroy()");
         }
     }
 
@@ -751,75 +751,75 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-            d dupTemp$0 = null;
-            RuntimeException stackIn_23_0 = null;
-            StringBuilder stackIn_23_1 = null;
-            String stackIn_24_2 = null;
-            Throwable decompiledCaughtException = null;
-            cb var8 = null;
-            Throwable var8_ref = null;
-            RuntimeException var8_ref2 = null;
-            int var9 = 0;
-            var9 = Geoblox.field_C;
+          d dupTemp$0 = null;
+          RuntimeException stackIn_23_0 = null;
+          StringBuilder stackIn_23_1 = null;
+          String stackIn_24_2 = null;
+          Throwable decompiledCaughtException = null;
+          cb var8 = null;
+          Throwable var8_ref = null;
+          RuntimeException var8_ref2 = null;
+          int var9 = 0;
+          var9 = Geoblox.field_C;
+          try {
             try {
-              try {
-                if (qa.field_d != null) {
-                  wg.field_j = wg.field_j + 1;
-                  if (wg.field_j < 3) {
-                    this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
-                    return;
-                  }
-                  this.a((byte) 79, "alreadyloaded");
+              if (qa.field_d != null) {
+                wg.field_j = wg.field_j + 1;
+                if (wg.field_j < 3) {
+                  this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                   return;
                 }
-                kk.field_t = param2;
-                ok.field_c = param3;
-                sd.field_w = param3;
-                qa.field_b = 0;
-                hk.field_B = 0;
-                kh.field_d = param4;
-                qb.field_G = param4;
-                qa.field_d = this;
-                c.field_x = k.c(107);
-                if (param1 != -14948) {
-                  return;
-                }
-                dupTemp$0 = new d(param0, param5, param6, true);
-                ka.field_i = dupTemp$0;
-                ml.field_s = dupTemp$0;
-                var8 = ka.field_i.a((Runnable) (this), 0, 1);
-                while (true) {
-                  if (var8.field_a == 0) {
-                    bc.a(0, 10L);
-                    if (var9 == 0) {
-                      continue;
-                    }
+                this.a((byte) 79, "alreadyloaded");
+                return;
+              }
+              kk.field_t = param2;
+              ok.field_c = param3;
+              sd.field_w = param3;
+              qa.field_b = 0;
+              hk.field_B = 0;
+              kh.field_d = param4;
+              qb.field_G = param4;
+              qa.field_d = this;
+              c.field_x = k.c(107);
+              if (param1 != -14948) {
+                return;
+              }
+              dupTemp$0 = new d(param0, param5, param6, true);
+              ka.field_i = dupTemp$0;
+              ml.field_s = dupTemp$0;
+              var8 = ka.field_i.a((Runnable) (this), 0, 1);
+              while (true) {
+                if (var8.field_a == 0) {
+                  bc.a(0, 10L);
+                  if (var9 == 0) {
+                    continue;
                   }
-                  break;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var8_ref = decompiledCaughtException;
-                gi.a(var8_ref, (String) null, (byte) 125);
-                this.a((byte) 79, "crash");
+                break;
               }
-              return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_23_0 = var8_ref2;
-              stackIn_23_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-              if (param5 == null) {
-                stackIn_24_2 = "null";
-              } else {
-                stackIn_24_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var8_ref = decompiledCaughtException;
+              gi.a(var8_ref, (String) null, (byte) 125);
+              this.a((byte) 79, "crash");
             }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_23_0 = var8_ref2;
+            stackIn_23_1 = new StringBuilder().append("ch.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+            if (param5 == null) {
+              stackIn_24_2 = "null";
+            } else {
+              stackIn_24_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param6).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -838,7 +838,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             return (String) (stackIn_4_0);
           }
           if (kg.field_m != null &&
-              this != kg.field_m) {
+            this != kg.field_m) {
             stackIn_10_0 = kg.field_m.getParameter(param0);
             return stackIn_10_0;
           }
@@ -875,7 +875,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           pb.field_p[fe.field_k] = var2_long;
           fe.field_k = 31 & fe.field_k + 1;
           if (0L != var4 &&
-              var4 < var2_long) {
+            var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
             ec.field_b = (32000 + (var6_int >> 1)) / var6_int;
           }
@@ -887,7 +887,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             f.field_kb.setSize(kh.field_d, ok.field_c);
             f.field_kb.setVisible(true);
             boolean decompiledSharedTail0 = !(sg.field_a == null ||
-                he.field_a != null);
+              he.field_a != null);
             if (!decompiledSharedTail0) {
               f.field_kb.setLocation(qa.field_b, hk.field_B);
               decompiledSharedTail0 = (Geoblox.field_C != 0);
@@ -911,7 +911,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == qa.field_d &&
-              !ad.field_p) {
+            !ad.field_p) {
             ka.field_a = 4000L + oa.a(-12520);
             return;
           }

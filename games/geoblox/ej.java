@@ -10,11 +10,11 @@ final class ej {
 
     public static void a(int param0) {
         if (param0 < -2) {
-            field_b = null;
-            field_a = null;
-            field_c = null;
-            field_d = null;
-            return;
+          field_b = null;
+          field_a = null;
+          field_c = null;
+          field_d = null;
+          return;
         }
         ej.a(1);
         field_b = null;

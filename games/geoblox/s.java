@@ -13,29 +13,29 @@ final class s extends ee implements pe, pl {
 
     final static void g(int param0) {
         if (null == tl.field_f) {
-            jk.field_b = wj.a(jk.field_b, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            mj.field_c = wj.a(mj.field_c, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
-            tl.field_f = new String[19];
-            tl.field_f[12] = lh.field_a;
-            tl.field_f[7] = tc.field_b;
-            tl.field_f[6] = df.field_b;
-            tl.field_f[8] = wb.field_c;
-            tl.field_f[14] = ne.field_c;
-            tl.field_f[5] = ij.field_Z;
-            tl.field_f[0] = nk.field_g;
-            tl.field_f[4] = wf.field_q;
-            tl.field_f[param0] = fc.field_e;
-            tl.field_f[10] = bl.field_a;
-            tl.field_f[11] = tl.field_o;
-            tl.field_f[15] = em.field_a;
-            tl.field_f[1] = id.field_a;
-            tl.field_f[13] = gj.field_t;
-            tl.field_f[3] = ef.field_c;
-            tl.field_f[2] = ii.field_b;
-            tl.field_f[18] = vd.field_m[2];
-            tl.field_f[16] = vd.field_m[0];
-            tl.field_f[17] = vd.field_m[1];
-            return;
+          jk.field_b = wj.a(jk.field_b, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+          mj.field_c = wj.a(mj.field_c, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+          tl.field_f = new String[19];
+          tl.field_f[12] = lh.field_a;
+          tl.field_f[7] = tc.field_b;
+          tl.field_f[6] = df.field_b;
+          tl.field_f[8] = wb.field_c;
+          tl.field_f[14] = ne.field_c;
+          tl.field_f[5] = ij.field_Z;
+          tl.field_f[0] = nk.field_g;
+          tl.field_f[4] = wf.field_q;
+          tl.field_f[param0] = fc.field_e;
+          tl.field_f[10] = bl.field_a;
+          tl.field_f[11] = tl.field_o;
+          tl.field_f[15] = em.field_a;
+          tl.field_f[1] = id.field_a;
+          tl.field_f[13] = gj.field_t;
+          tl.field_f[3] = ef.field_c;
+          tl.field_f[2] = ii.field_b;
+          tl.field_f[18] = vd.field_m[2];
+          tl.field_f[16] = vd.field_m[0];
+          tl.field_f[17] = vd.field_m[1];
+          return;
         }
     }
 
@@ -57,12 +57,12 @@ final class s extends ee implements pe, pl {
             return;
           }
           if (param0.field_o != 0 ||
-              0 != param0.field_d) {
+            0 != param0.field_d) {
             for (var2_int = 0; oj.field_b > var2_int; var2_int++) {
               var3 = n.field_k[var2_int];
               if (2 == var3.field_f &&
-                  param0.field_o == var3.field_o &&
-                  param0.field_d == var3.field_d) {
+                param0.field_o == var3.field_o &&
+                param0.field_d == var3.field_d) {
                 return;
               }
             }
@@ -93,29 +93,29 @@ final class s extends ee implements pe, pl {
         int var5 = 0;
         int var6 = 0;
         try {
-            this.field_C = param0;
-            this.field_K = new hk(cl.field_d, (bb) null);
-            this.field_K.field_q = (dh) ((Object) new ml());
-            var7 = wj.a(nk.field_i, new String[]{this.f(11501), this.c(false)}, (byte) -114);
-            var3 = 20;
-            var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
-            this.field_J = new vf(var7, var4);
-            this.field_J.field_j = "";
-            this.field_J.a(0, -47, eh.field_a);
-            this.field_J.a(1, 118, eh.field_a);
-            this.field_J.field_u = (bb) (this);
-            this.field_J.field_r = this.field_r - 40;
-            this.field_J.b(26, 0, var3, this.field_r - 40);
-            var3 = var3 + (this.field_J.field_h + 15);
-            this.b((byte) -108, this.field_J);
-            var5 = 4;
-            var6 = 200;
-            this.field_K.a(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
-            this.field_K.field_u = (bb) (this);
-            this.b((byte) -63, this.field_K);
-            this.a(var3 + (55 + var5), 300, (byte) -104, 0, 0);
+          this.field_C = param0;
+          this.field_K = new hk(cl.field_d, (bb) null);
+          this.field_K.field_q = (dh) ((Object) new ml());
+          var7 = wj.a(nk.field_i, new String[]{this.f(11501), this.c(false)}, (byte) -114);
+          var3 = 20;
+          var4 = new ff(ng.field_F, 0, 0, 0, 0, 16777215, -1, 3, 0, ng.field_F.field_o, -1, 2147483647, true);
+          this.field_J = new vf(var7, var4);
+          this.field_J.field_j = "";
+          this.field_J.a(0, -47, eh.field_a);
+          this.field_J.a(1, 118, eh.field_a);
+          this.field_J.field_u = (bb) (this);
+          this.field_J.field_r = this.field_r - 40;
+          this.field_J.b(26, 0, var3, this.field_r - 40);
+          var3 = var3 + (this.field_J.field_h + 15);
+          this.b((byte) -108, this.field_J);
+          var5 = 4;
+          var6 = 200;
+          this.field_K.a(40, var6, (byte) -71, var3, -var6 + 300 >> 1);
+          this.field_K.field_u = (bb) (this);
+          this.b((byte) -63, this.field_K);
+          this.a(var3 + (55 + var5), 300, (byte) -104, 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,8 +161,8 @@ final class s extends ee implements pe, pl {
     private final String f(int param0) {
         String discarded$0 = null;
         if (param0 != 11501) {
-            discarded$0 = this.c(true);
-            return "<u=2164A2><col=2164A2>";
+          discarded$0 = this.c(true);
+          return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -204,10 +204,10 @@ final class s extends ee implements pe, pl {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_G = (dm[][]) null;
-            field_E = null;
-            field_F = null;
-            return;
+          field_G = (dm[][]) null;
+          field_E = null;
+          field_F = null;
+          return;
         }
         field_I = 58;
         field_G = (dm[][]) null;
@@ -217,8 +217,8 @@ final class s extends ee implements pe, pl {
 
     private final String c(boolean param0) {
         if (param0) {
-            field_E = (ck) null;
-            return "</col></u>";
+          field_E = (ck) null;
+          return "</col></u>";
         }
         return "</col></u>";
     }
@@ -255,64 +255,64 @@ final class s extends ee implements pe, pl {
 
     final static String a(int param0, java.applet.Applet param1) {
         try {
-            int var6 = 0;
-            String var3 = null;
-            String var4 = null;
-            String[] var5 = null;
-            int var7 = 0;
-            String var8 = null;
-            String stackIn_5_0 = null;
-            String stackIn_13_0 = null;
-            String stackIn_15_0 = null;
-            RuntimeException stackIn_18_0 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
+          int var6 = 0;
+          String var3 = null;
+          String var4 = null;
+          String[] var5 = null;
+          int var7 = 0;
+          String var8 = null;
+          String stackIn_5_0 = null;
+          String stackIn_13_0 = null;
+          String stackIn_15_0 = null;
+          RuntimeException stackIn_18_0 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          try {
             try {
-              try {
-                var8 = param1.getParameter("cookieprefix");
-                var3 = var8 + "settings";
-                var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                var5 = uj.a(';', true, var4);
-                for (var6 = 0; var5.length > var6; var6++) {
-                  var7 = var5[var6].indexOf('=');
-                  if (var7 >= 0 &&
-                      var5[var6].substring(0, var7).trim().equals(var3)) {
-                    stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
-                    return stackIn_5_0;
-                  }
+              var8 = param1.getParameter("cookieprefix");
+              var3 = var8 + "settings";
+              var4 = (String) (wk.a((byte) -6, param1, "getcookies"));
+              var5 = uj.a(';', true, var4);
+              for (var6 = 0; var5.length > var6; var6++) {
+                var7 = var5[var6].indexOf('=');
+                if (var7 >= 0 &&
+                  var5[var6].substring(0, var7).trim().equals(var3)) {
+                  stackIn_5_0 = var5[var6].substring(var7 + 1).trim();
+                  return stackIn_5_0;
                 }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = decompiledCaughtException;
               }
-              if (param0 != -1) {
-                s.g(14);
-              }
-              if (null == sd.field_z) {
-                stackIn_15_0 = param1.getParameter("settings");
-                return stackIn_15_0;
-              }
-              stackIn_13_0 = sd.field_z;
-              return stackIn_13_0;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_18_0 = var2_ref;
-              stackIn_18_1 = new StringBuilder().append("s.B(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_19_2 = "null";
-              } else {
-                stackIn_19_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
             }
+            if (param0 != -1) {
+              s.g(14);
+            }
+            if (null == sd.field_z) {
+              stackIn_15_0 = param1.getParameter("settings");
+              return stackIn_15_0;
+            }
+            stackIn_13_0 = sd.field_z;
+            return stackIn_13_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_18_0 = var2_ref;
+            stackIn_18_1 = new StringBuilder().append("s.B(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

@@ -47,8 +47,8 @@ final class ug {
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
         me var5 = (me) (ue.field_f.e(1));
         if (var5 == null) {
-            el.field_o.a((byte) 127, param0);
-            return;
+          el.field_o.a((byte) 127, param0);
+          return;
         }
         var5.field_k = 0.0f;
         var5.field_f = param0;
@@ -56,9 +56,9 @@ final class ug {
         var5.field_n = (float)param4;
         var5.field_h = param3;
         if (param1) {
-            var5.field_i = (float)param2;
-            md.field_a.a(-95, var5);
-            return;
+          var5.field_i = (float)param2;
+          md.field_a.a(-95, var5);
+          return;
         }
         field_b = (String) null;
         var5.field_i = (float)param2;
@@ -118,8 +118,8 @@ final class ug {
         field_b = null;
         field_a = null;
         if (param0 != 9144) {
-            String var2 = (String) null;
-            ug.a((String) null, (rh) null, (byte) 53, (String) null);
+          String var2 = (String) null;
+          ug.a((String) null, (rh) null, (byte) 53, (String) null);
         }
     }
 

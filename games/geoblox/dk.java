@@ -15,14 +15,14 @@ abstract class dk {
         lk[] var7 = this.field_a;
         lk[] var3 = var7;
         for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (var5.field_c.length > param0) {
-                return var5.field_c[param0];
-            }
-            param0 = param0 - (var5.field_c.length - 1);
+          var5 = var7[var4];
+          if (var5.field_c.length > param0) {
+            return var5.field_c[param0];
+          }
+          param0 = param0 - (var5.field_c.length - 1);
         }
         if (param1 <= 109) {
-            return 67;
+          return 67;
         }
         return 0;
     }
@@ -88,7 +88,7 @@ abstract class dk {
             if (var10 != 60) {
               if (var10 != 62) {
                 if (var6 == 0 &&
-                    32 == var10) {
+                  32 == var10) {
                   var5_int++;
                 }
               } else {
@@ -122,55 +122,55 @@ abstract class dk {
 
     final static void a(byte param0) {
         try {
-            int var1_int = 0;
-            IOException iOException = null;
-            int var3 = 0;
-            Throwable decompiledCaughtException = null;
-            RuntimeException var1 = null;
-            IOException var2 = null;
-            var3 = Geoblox.field_C;
-            try {
-              if (null != wg.field_i) {
-                wg.field_i.h(-70);
+          int var1_int = 0;
+          IOException iOException = null;
+          int var3 = 0;
+          Throwable decompiledCaughtException = null;
+          RuntimeException var1 = null;
+          IOException var2 = null;
+          var3 = Geoblox.field_C;
+          try {
+            if (null != wg.field_i) {
+              wg.field_i.h(-70);
+            }
+            if (param0 >= -65) {
+              field_b = 18;
+            }
+            if (cl.field_c != null) {
+              cl.field_c.a((byte) 51);
+            }
+            if (null != af.field_d) {
+              try {
+                af.field_d.b(27034);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
               }
-              if (param0 >= -65) {
-                field_b = 18;
-              }
-              if (cl.field_c != null) {
-                cl.field_c.a((byte) 51);
-              }
-              if (null != af.field_d) {
+            }
+            if (null != je.field_h) {
+              for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
+                if (null == je.field_h[var1_int]) {
+                  continue;
+                }
                 try {
-                  af.field_d.b(27034);
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  iOException = (IOException) (Object) decompiledCaughtException;
+                  je.field_h[var1_int].b(27034);
+                } catch (java.io.IOException decompiledCaughtParameter1) {
+                  decompiledCaughtException = decompiledCaughtParameter1;
+                  var2 = (IOException) (Object) decompiledCaughtException;
                 }
-              }
-              if (null != je.field_h) {
-                for (var1_int = 0; je.field_h.length > var1_int; var1_int++) {
-                  if (null == je.field_h[var1_int]) {
-                    continue;
-                  }
-                  try {
-                    je.field_h[var1_int].b(27034);
-                  } catch (java.io.IOException decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    var2 = (IOException) (Object) decompiledCaughtException;
-                  }
-                }
-                return;
               }
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
-              decompiledCaughtException = decompiledCaughtParameter2;
-              var1 = (RuntimeException) (Object) decompiledCaughtException;
-              throw t.a((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
             }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+            decompiledCaughtException = decompiledCaughtParameter2;
+            var1 = (RuntimeException) (Object) decompiledCaughtException;
+            throw t.a((Throwable) ((Object) var1), "dk.O(" + param0 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -180,7 +180,7 @@ abstract class dk {
           field_b = 49;
         }
         if (null != this.field_a &&
-            this.field_a.length > 0) {
+          this.field_a.length > 0) {
           stackIn_7_0 = this.field_a[this.field_a.length - 1].field_a - this.field_a[0].field_d;
         } else {
           stackIn_7_0 = 0;
@@ -193,14 +193,14 @@ abstract class dk {
         lk var4 = null;
         int var5 = Geoblox.field_C;
         if (param0 != 24) {
-            return -10;
+          return -10;
         }
         for (var3 = 0; this.field_a.length > var3; var3++) {
-            var4 = this.field_a[var3];
-            if (!(var4.field_c.length <= param1)) {
-                return var3;
-            }
-            param1 = param1 - (var4.field_c.length - 1);
+          var4 = this.field_a[var3];
+          if (!(var4.field_c.length <= param1)) {
+            return var3;
+          }
+          param1 = param1 - (var4.field_c.length - 1);
         }
         return this.field_a.length;
     }
@@ -214,8 +214,8 @@ abstract class dk {
         int var9;
         var9 = Geoblox.field_C;
         if (null != this.field_a &&
-            this.field_a.length != 0 &&
-            this.field_a[0].field_d <= param2) {
+          this.field_a.length != 0 &&
+          this.field_a[0].field_d <= param2) {
           if (this.field_a[-1 + this.field_a.length].field_a < param2) {
             return -1;
           }
@@ -227,7 +227,7 @@ abstract class dk {
           for (var6 = 0; var6 < this.field_a.length; var6++) {
             var7 = this.field_a[var6];
             if (param2 >= var7.field_d &&
-                var7.field_a >= param2) {
+              var7.field_a >= param2) {
               var8 = var7.a(-79, param0);
               if (-1 != var8) {
                 return var4 + var8;

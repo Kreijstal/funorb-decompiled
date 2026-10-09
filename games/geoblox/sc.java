@@ -21,11 +21,11 @@ abstract class sc {
         byte[] var2 = mj.field_a[0];
         int[] var3 = new int[var1];
         if (param0 != -60) {
-            Random var5 = (Random) null;
-            sc.a((byte) 50, (Random) null, 37);
+          Random var5 = (Random) null;
+          sc.a((byte) 50, (Random) null, 37);
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
-            var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
+          var3[var4_int] = cm.field_j[cd.a(255, (int) var2[var4_int])];
         }
         dm var4 = new dm(pg.field_b, dd.field_C, gh.field_m[0], md.field_e[0], rc.field_j[0], hl.field_K[0], var3);
         kj.c(true);
@@ -35,8 +35,8 @@ abstract class sc {
     public static void b(byte param0) {
         field_b = null;
         if (param0 != 58) {
-            Random var2 = (Random) null;
-            sc.a((byte) 47, (Random) null, -73);
+          Random var2 = (Random) null;
+          sc.a((byte) 47, (Random) null, -73);
         }
     }
 
@@ -86,8 +86,8 @@ abstract class sc {
     final void a(int param0) {
         vb.a(this.field_d, this.field_a, this.field_c);
         if (param0 != 255) {
-            Random var3 = (Random) null;
-            sc.a((byte) -94, (Random) null, 54);
+          Random var3 = (Random) null;
+          sc.a((byte) -94, (Random) null, 54);
         }
     }
 

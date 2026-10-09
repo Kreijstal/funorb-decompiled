@@ -14,7 +14,7 @@ final class uk extends q {
     final void c(byte param0) {
         this.field_k = null;
         if (param0 > -78) {
-            field_j = -0.8683637976646423f;
+          field_j = -0.8683637976646423f;
         }
     }
 
@@ -61,40 +61,40 @@ final class uk extends q {
         int var3 = Geoblox.field_C;
         int var2Lifetime1;
         if (param1 != 24146) {
-            field_m = (dm) null;
-            var2 = param0;
-            if (var2 == 0) {
-                return vh.field_E;
+          field_m = (dm) null;
+          var2 = param0;
+          if (var2 == 0) {
+            return vh.field_E;
+          }
+          if (var2 == 1) {
+            return oi.field_d;
+          }
+          if (var2 != 2) {
+            if (var2 == 3) {
+              return li.field_b;
             }
-            if (var2 == 1) {
-                return oi.field_d;
+            if (var2 == 5) {
+              return qh.field_S;
             }
-            if (var2 != 2) {
-                if (var2 == 3) {
-                    return li.field_b;
-                }
-                if (var2 == 5) {
-                    return qh.field_S;
-                }
-                return null;
-            }
-            return vd.field_e;
+            return null;
+          }
+          return vd.field_e;
         }
         var2Lifetime1 = param0;
         if (var2Lifetime1 == 0) {
-            return vh.field_E;
+          return vh.field_E;
         }
         if (var2Lifetime1 == 1) {
-            return oi.field_d;
+          return oi.field_d;
         }
         if (var2Lifetime1 != 2) {
-            if (var2Lifetime1 == 3) {
-                return li.field_b;
-            }
-            if (var2Lifetime1 == 5) {
-                return qh.field_S;
-            }
-            return null;
+          if (var2Lifetime1 == 3) {
+            return li.field_b;
+          }
+          if (var2Lifetime1 == 5) {
+            return qh.field_S;
+          }
+          return null;
         }
         return vd.field_e;
     }
@@ -307,7 +307,7 @@ final class uk extends q {
           if (!param1.equals(this.field_k)) {
             var3 = cl.a((byte) 108, param1);
             if (var3 != null &&
-                var3.field_e == null) {
+              var3.field_e == null) {
               this.field_n = var3.field_g;
               this.field_k = param1;
             } else {
@@ -337,42 +337,42 @@ final class uk extends q {
 
     final static boolean g(int param0) {
         if (param0 < 29) {
-            field_m = (dm) null;
-            qg.b(9313);
-            if (!fh.c(-117)) {
-                return hj.field_c ? true : false;
-            }
-            return true;
+          field_m = (dm) null;
+          qg.b(9313);
+          if (!fh.c(-117)) {
+            return hj.field_c ? true : false;
+          }
+          return true;
         }
         qg.b(9313);
         if (fh.c(-117)) {
-            return true;
+          return true;
         }
         if (!hj.field_c) {
-            return false;
+          return false;
         }
         return true;
     }
 
     final static void a(boolean param0, String param1) {
         try {
-            if (param0) {
-                uk.d((byte) 81);
-            }
-            v.field_e = param1;
-            pc.a(12, param0);
+          if (param0) {
+            uk.d((byte) 81);
+          }
+          v.field_e = param1;
+          pc.a(12, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "uk.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void d(byte param0) {
         if (param0 >= 70) {
-            field_m = null;
-            field_p = null;
-            field_i = null;
-            field_l = null;
-            return;
+          field_m = null;
+          field_p = null;
+          field_i = null;
+          field_l = null;
+          return;
         }
         field_m = (dm) null;
         field_m = null;

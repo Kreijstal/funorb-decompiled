@@ -182,14 +182,14 @@ final class qh extends ee implements pe, pl, ta {
 
     private final boolean g(int param0) {
         if (!this.f(param0 ^ -19038)) {
-            return false;
+          return false;
         }
         int var2 = -1;
         if (param0 != -21440) {
-            field_C = (boolean[]) null;
+          field_C = (boolean[]) null;
         }
         try {
-            var2 = Integer.parseInt(this.field_R.field_s);
+          var2 = Integer.parseInt(this.field_R.field_s);
         } catch (NumberFormatException numberFormatException) {
         }
         return mc.a(this.field_H.field_s, this.field_I.field_s, var2, this, 0, this.field_P.field_y, this.field_M.field_s);
@@ -198,14 +198,14 @@ final class qh extends ee implements pe, pl, ta {
     final static mb i(int param0) {
         String var1 = al.b(0);
         if (param0 == 25) {
-            if (var1 != null && var1.indexOf('@') >= 0) {
-                var1 = "";
-            }
-            return new mb(al.b(0), rl.n(-1071908447));
+          if (var1 != null && var1.indexOf('@') >= 0) {
+            var1 = "";
+          }
+          return new mb(al.b(0), rl.n(-1071908447));
         }
         field_J = 84;
         if (var1 != null && var1.indexOf('@') >= 0) {
-            var1 = "";
+          var1 = "";
         }
         return new mb(al.b(0), rl.n(-1071908447));
     }
@@ -301,8 +301,8 @@ final class qh extends ee implements pe, pl, ta {
 
     private final String c(boolean param0) {
         if (param0) {
-            field_J = 75;
-            return "</col></u>";
+          field_J = 75;
+          return "</col></u>";
         }
         return "</col></u>";
     }
@@ -389,10 +389,10 @@ final class qh extends ee implements pe, pl, ta {
         field_Q = null;
         field_O = null;
         if (param0 == 0) {
-            field_C = null;
-            field_S = null;
-            field_F = null;
-            return;
+          field_C = null;
+          field_S = null;
+          field_F = null;
+          return;
         }
         field_Q = (String) null;
         field_C = null;
@@ -402,25 +402,25 @@ final class qh extends ee implements pe, pl, ta {
 
     private final boolean f(int param0) {
         if (!this.a((byte) -104, (nl) (this.field_H))) {
-            return false;
+          return false;
         }
         if (!this.a((byte) -118, (nl) (this.field_I))) {
-            return false;
+          return false;
         }
         if (!this.a((byte) -108, (nl) (this.field_G))) {
-            return false;
+          return false;
         }
         if (!this.a((byte) -103, (nl) (this.field_M))) {
-            return false;
+          return false;
         }
         if (!this.a((byte) -117, (nl) (this.field_N))) {
-            return false;
+          return false;
         }
         if (!this.a((byte) -128, (nl) (this.field_R))) {
-            return false;
+          return false;
         }
         if (param0 == 6626) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -429,18 +429,18 @@ final class qh extends ee implements pe, pl, ta {
         hc var3 = this.field_H;
         String var4 = param0;
         if (param1 != 20) {
-            return;
+          return;
         }
         try {
-            ((dj) ((Object) var3)).a(-121, var4, false);
+          ((dj) ((Object) var3)).a(-121, var4, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qh.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qh.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private final String b(boolean param0) {
         if (param0) {
-            return (String) null;
+          return (String) null;
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -531,16 +531,16 @@ final class qh extends ee implements pe, pl, ta {
     public final void a(byte param0) {
         ((uk) (this.field_H.a((byte) -128))).c((byte) -89);
         if (param0 != 83) {
-            this.a((byte) -25);
+          this.a((byte) -25);
         }
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_D.field_D = this.f(6626);
+          super.a(param0, param1, param2, param3);
+          this.field_D.field_D = this.f(6626);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qh.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

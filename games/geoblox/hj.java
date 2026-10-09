@@ -9,41 +9,41 @@ final class hj {
     final static int a(byte param0, int param1) {
         int var2 = 0;
         if (0 > param1 || param1 >= 65536) {
-            param1 = param1 >>> 16;
-            var2 += 16;
+          param1 = param1 >>> 16;
+          var2 += 16;
         }
         if (param1 >= 256) {
-            var2 += 8;
-            param1 = param1 >>> 8;
+          var2 += 8;
+          param1 = param1 >>> 8;
         }
         if (16 <= param1) {
-            var2 += 4;
-            param1 = param1 >>> 4;
+          var2 += 4;
+          param1 = param1 >>> 4;
         }
         if (param1 >= 4) {
-            var2 += 2;
-            param1 = param1 >>> 2;
+          var2 += 2;
+          param1 = param1 >>> 2;
         }
         if (1 <= param1) {
-            param1 = param1 >>> 1;
-            var2++;
+          param1 = param1 >>> 1;
+          var2++;
         }
         if (param0 != 58) {
-            return -21;
+          return -21;
         }
         return param1 + var2;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-            if (param0 != -85) {
-                field_c = false;
-            }
-            param1.setFocusTraversalKeysEnabled(false);
-            param1.addKeyListener(je.field_j);
-            param1.addFocusListener(je.field_j);
+          if (param0 != -85) {
+            field_c = false;
+          }
+          param1.setFocusTraversalKeysEnabled(false);
+          param1.addKeyListener(je.field_j);
+          param1.addFocusListener(je.field_j);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

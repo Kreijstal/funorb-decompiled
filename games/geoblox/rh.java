@@ -15,10 +15,10 @@ final class rh {
 
     final int a(boolean param0) {
         if (!this.a(0)) {
-            return -1;
+          return -1;
         }
         if (param0) {
-            return 84;
+          return 84;
         }
         return this.field_c.field_k.length;
     }
@@ -45,8 +45,8 @@ final class rh {
             if (null == var2.field_K) {
               var2.b(true);
               if (3 == var2.field_z &&
-                  var2.field_t &&
-                  0 >= var2.field_E) {
+                var2.field_t &&
+                0 >= var2.field_E) {
                 w.field_f = true;
               }
               if (var1_float < (var2.field_o - 320.0f) * (-320.0f + var2.field_o) + (var2.field_v - 240.0f) * (var2.field_v - 240.0f)) {
@@ -76,10 +76,10 @@ final class rh {
 
     final int c(int param0, int param1) {
         if (!this.b(param1, 3)) {
-            return 0;
+          return 0;
         }
         if (param0 != -9467) {
-            rh.b(91);
+          rh.b(91);
         }
         return this.field_c.field_k[param1];
     }
@@ -87,18 +87,18 @@ final class rh {
     private final synchronized void a(int param0, int param1) {
         boolean discarded$0 = false;
         if (!this.field_h) {
-            this.field_f[param0] = hf.a(-105, this.field_g.b(4, param0), false);
+          this.field_f[param0] = hf.a(-105, this.field_g.b(4, param0), false);
         } else {
-            this.field_f[param0] = this.field_g.b(4, param0);
+          this.field_f[param0] = this.field_g.b(4, param0);
         }
         if (param1 >= -103) {
-            discarded$0 = this.b(((int[]) (this.field_f[5]))[9], 37);
+          discarded$0 = this.b(((int[]) (this.field_f[5]))[9], 37);
         }
     }
 
     final byte[] a(int param0, int param1, int param2) {
         if (param1 != -28153) {
-            this.a((byte) -106, (String) null, (String) (this.field_f[14]));
+          this.a((byte) -106, (String) null, (String) (this.field_f[14]));
         }
         return this.a(param0, true, (int[]) null, param2);
     }
@@ -165,16 +165,16 @@ final class rh {
 
     private final synchronized boolean b(int param0, int param1, int param2) {
         if (param1 != -1) {
-            return ((boolean[]) (this.field_f[3]))[0];
+          return ((boolean[]) (this.field_f[3]))[0];
         }
         if (!this.a(0)) {
-            return false;
+          return false;
         }
         if (0 > param2 || param0 < 0 || this.field_c.field_k.length <= param2 || this.field_c.field_k[param2] <= param0) {
-            if (!vf.field_K) {
-                return false;
-            }
-            throw new IllegalArgumentException(param2 + " " + param0);
+          if (!vf.field_K) {
+            return false;
+          }
+          throw new IllegalArgumentException(param2 + " " + param0);
         }
         return true;
     }
@@ -223,14 +223,14 @@ final class rh {
 
     final synchronized boolean a(int param0) {
         if (param0 != 0) {
-            this.c(70, -80);
+          this.c(70, -80);
         }
         if (this.field_c != null) {
-            return true;
+          return true;
         }
         this.field_c = this.field_g.a((byte) 113);
         if (this.field_c == null) {
-            return false;
+          return false;
         }
         this.field_f = new Object[this.field_c.field_b];
         this.field_e = new Object[this.field_c.field_b][];
@@ -273,16 +273,16 @@ final class rh {
 
     private final synchronized boolean b(int param0, int param1) {
         if (!this.a(0)) {
-            return false;
+          return false;
         }
         if (param1 != 3) {
-            field_j = (String) null;
+          field_j = (String) null;
         }
         if (param0 >= 0 && param0 < this.field_c.field_k.length && this.field_c.field_k[param0] != 0) {
-            return true;
+          return true;
         }
         if (vf.field_K) {
-            throw new IllegalArgumentException(Integer.toString(param0));
+          throw new IllegalArgumentException(Integer.toString(param0));
         }
         return false;
     }
@@ -292,43 +292,43 @@ final class rh {
         field_d = null;
         field_j = null;
         if (param0 != 30261) {
-            field_a = (tf) null;
+          field_a = (tf) null;
         }
         field_i = null;
     }
 
     final synchronized byte[] d(int param0, int param1) {
         if (!this.a(0)) {
-            return null;
+          return null;
         }
         if (this.field_c.field_k.length == 1) {
-            return this.a(0, param0 - 56472, param1);
+          return this.a(0, param0 - 56472, param1);
         }
         if (param0 != 28319) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         if (!this.b(param1, 3)) {
-            return null;
+          return null;
         }
         if (this.field_c.field_k[param1] == 1) {
-            return this.a(param1, param0 ^ -872, 0);
+          return this.a(param1, param0 ^ -872, 0);
         }
         throw new RuntimeException();
     }
 
     final synchronized boolean a(byte param0, int param1) {
         if (!this.b(param1, 3)) {
-            return false;
+          return false;
         }
         if (this.field_f[param1] != null) {
-            return true;
+          return true;
         }
         if (param0 != 102) {
-            this.b((byte) -65, 111);
+          this.b((byte) -65, 111);
         }
         this.a(param1, -108);
         if (this.field_f[param1] == null) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -429,9 +429,9 @@ final class rh {
           }
           L4: {
             if (param2 != null && (param2[0] != 0 ||
-                param2[1] != 0 ||
-                param2[2] != 0 ||
-                0 != param2[3])) {
+              param2[1] != 0 ||
+              param2[2] != 0 ||
+              0 != param2[3])) {
               var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
               var24 = var34;
               var9 = var24;
@@ -587,21 +587,21 @@ final class rh {
 
     final synchronized boolean a(byte param0, int param1, int param2) {
         if (!this.b(param2, -1, param1)) {
-            return false;
+          return false;
         }
         if (param0 != 37) {
-            return true;
+          return true;
         }
         if (null != this.field_e[param1] &&
-            this.field_e[param1][param2] != null) {
-            return true;
+          this.field_e[param1][param2] != null) {
+          return true;
         }
         if (this.field_f[param1] != null) {
-            return true;
+          return true;
         }
         this.a(param1, -118);
         if (this.field_f[param1] != null) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -833,14 +833,14 @@ final class rh {
     rh(nh param0, boolean param1, int param2) {
         this.field_c = null;
         try {
-            if (0 > param2 || 2 < param2) {
-                throw new IllegalArgumentException("");
-            }
-            this.field_b = param2;
-            this.field_g = param0;
-            this.field_h = param1 ? true : false;
+          if (0 > param2 || 2 < param2) {
+            throw new IllegalArgumentException("");
+          }
+          this.field_b = param2;
+          this.field_g = param0;
+          this.field_h = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -897,13 +897,13 @@ final class rh {
     final synchronized int b(byte param0, int param1) {
         boolean discarded$0 = false;
         if (!this.b(param1, 3)) {
-            return 0;
+          return 0;
         }
         if (null != this.field_f[param1]) {
-            return 100;
+          return 100;
         }
         if (param0 <= 31) {
-            discarded$0 = this.b(-88, ((int[]) (((Object[]) (this.field_f[0]))[2]))[7]);
+          discarded$0 = this.b(-88, ((int[]) (((Object[]) (this.field_f[0]))[2]))[7]);
         }
         return this.field_g.a(126, param1);
     }
@@ -933,14 +933,14 @@ final class rh {
             var2_long = var2_long * 37L;
             var6 = param0.charAt(var5);
             if (var6 >= 65 &&
-                var6 <= 90) {
+              var6 <= 90) {
               var2_long = var2_long + (long)(-65 + (1 + var6));
             } else if (var6 >= 97 &&
-                var6 <= 122) {
+              var6 <= 122) {
               var2_long = var2_long + (long)(-96 + var6);
             } else {
               if (48 <= var6 &&
-                  57 >= var6) {
+                57 >= var6) {
                 var2_long = var2_long + (long)(-48 + var6 + 27);
               }
             }

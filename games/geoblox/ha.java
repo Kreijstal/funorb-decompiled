@@ -80,61 +80,61 @@ abstract class ha {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-            id.field_c = wj.a("frame_top", "commonui", param2, 0);
-            fh.field_e = wj.a("frame_bottom", "commonui", param2, 0);
-            jc.field_a = ug.a("jagex_logo_grey", param2, (byte) -78, "commonui");
-            vk.field_e = wj.a("button", "commonui", param2, 0);
-            oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
-            hh.field_d = (m) ((Object) q.a(param3, 1, "arezzo12", "commonui", param2));
-            ng.field_F = (m) ((Object) q.a(param3, 1, "arezzo14", "commonui", param2));
-            hh.field_c = (m) ((Object) q.a(param3, 1, "arezzo14bold", "commonui", param2));
-            var18 = new dm(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
-            jg.a(param2, 1, "commonui", "dropdown");
-            var5 = ka.a("commonui", "screen_options", true, param2);
-            ek.field_a = new na[4];
-            sb.field_e = new na[4];
-            lj.field_c = new na[4];
-            var6 = new na[][]{ek.field_a, sb.field_e, lj.field_c};
-            var20 = new int[4][];
-            var17 = var20;
-            var7 = var17;
-            var7[0] = var5[0].field_h;
-            for (var8 = 1; var20.length > var8; var8++) {
-                var7[var8] = (int[]) ((Object) var20[0].clone());
+          id.field_c = wj.a("frame_top", "commonui", param2, 0);
+          fh.field_e = wj.a("frame_bottom", "commonui", param2, 0);
+          jc.field_a = ug.a("jagex_logo_grey", param2, (byte) -78, "commonui");
+          vk.field_e = wj.a("button", "commonui", param2, 0);
+          oa.field_e = oi.a((byte) -39, "validation", "commonui", param2);
+          hh.field_d = (m) ((Object) q.a(param3, 1, "arezzo12", "commonui", param2));
+          ng.field_F = (m) ((Object) q.a(param3, 1, "arezzo14", "commonui", param2));
+          hh.field_c = (m) ((Object) q.a(param3, 1, "arezzo14bold", "commonui", param2));
+          var18 = new dm(param1.a(0, "", "button.gif"), (java.awt.Component) ((Object) f.field_kb));
+          jg.a(param2, 1, "commonui", "dropdown");
+          var5 = ka.a("commonui", "screen_options", true, param2);
+          ek.field_a = new na[4];
+          sb.field_e = new na[4];
+          lj.field_c = new na[4];
+          var6 = new na[][]{ek.field_a, sb.field_e, lj.field_c};
+          var20 = new int[4][];
+          var17 = var20;
+          var7 = var17;
+          var7[0] = var5[0].field_h;
+          for (var8 = 1; var20.length > var8; var8++) {
+            var7[var8] = (int[]) ((Object) var20[0].clone());
+          }
+          var8Lifetime1 = var5[0].field_i[0];
+          var20[2][var8Lifetime1] = 16777215;
+          var20[1][var8Lifetime1] = 2394342;
+          var20[3][var8Lifetime1] = 4767999;
+          for (var9 = 0; var9 < 3; var9++) {
+            var15 = var6[var9];
+            na[] var10 = var15;
+            for (var11_int = 0; var11_int < var15.length; var11_int++) {
+              var15[var11_int] = ha.a(-84, var20[var11_int], var5[var9]);
             }
-            var8Lifetime1 = var5[0].field_i[0];
-            var20[2][var8Lifetime1] = 16777215;
-            var20[1][var8Lifetime1] = 2394342;
-            var20[3][var8Lifetime1] = 4767999;
-            for (var9 = 0; var9 < 3; var9++) {
-                var15 = var6[var9];
-                na[] var10 = var15;
-                for (var11_int = 0; var11_int < var15.length; var11_int++) {
-                    var15[var11_int] = ha.a(-84, var20[var11_int], var5[var9]);
-                }
-            }
-            var9Lifetime1 = var18.field_m;
-            oc.b(-105);
-            if (param0 <= 98) {
-                na var14 = (na) null;
-                ha.a(72, (int[]) null, (na) null);
-            }
-            var18.e();
-            vb.a(0, 0, vb.field_f, vb.field_b);
-            var16 = new dm(var9Lifetime1, var9Lifetime1);
-            var19 = var16;
-            var19.e();
-            var18.c(0, 0);
-            var11 = new dm(var9Lifetime1, var9Lifetime1);
-            var11.e();
-            var18.c(var9Lifetime1 - var18.field_r, 0);
-            var12 = new dm(var18.field_r - 2 * var9Lifetime1, var9Lifetime1);
-            var12.e();
-            var18.c(-var9Lifetime1, 0);
-            id.a(true);
-            vk.field_e = new dm[]{var16, var12, var11};
+          }
+          var9Lifetime1 = var18.field_m;
+          oc.b(-105);
+          if (param0 <= 98) {
+            na var14 = (na) null;
+            ha.a(72, (int[]) null, (na) null);
+          }
+          var18.e();
+          vb.a(0, 0, vb.field_f, vb.field_b);
+          var16 = new dm(var9Lifetime1, var9Lifetime1);
+          var19 = var16;
+          var19.e();
+          var18.c(0, 0);
+          var11 = new dm(var9Lifetime1, var9Lifetime1);
+          var11.e();
+          var18.c(var9Lifetime1 - var18.field_r, 0);
+          var12 = new dm(var18.field_r - 2 * var9Lifetime1, var9Lifetime1);
+          var12.e();
+          var18.c(-var9Lifetime1, 0);
+          id.a(true);
+          vk.field_e = new dm[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ha.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -71,7 +71,7 @@ final class kl extends ia {
 
     final int d() {
         if (this.field_u == 0 && this.field_l == 0) {
-            return 0;
+          return 0;
         }
         return 1;
     }
@@ -90,8 +90,8 @@ final class kl extends ia {
           var1 = 0;
         }
         if (this.field_k == var1 &&
-            this.field_n == var2 &&
-            this.field_s == var3) {
+          this.field_n == var2 &&
+          this.field_s == var3) {
           if (this.field_u != -2147483648) {
             this.e();
             return false;
@@ -120,21 +120,21 @@ final class kl extends ia {
           } else {
             this.field_t = -1;
             if (this.field_l == 0 ||
-                this.field_l > this.field_n - var2) {
+              this.field_l > this.field_n - var2) {
               this.field_l = this.field_n - var2;
             }
           }
         } else {
           this.field_t = 1;
           if (this.field_l == 0 ||
-              this.field_l > var2 - this.field_n) {
+            this.field_l > var2 - this.field_n) {
             this.field_l = var2 - this.field_n;
           }
         }
         if (this.field_s < var3) {
           this.field_w = 1;
           if (this.field_l != 0 &&
-              this.field_l <= var3 - this.field_s) {
+            this.field_l <= var3 - this.field_s) {
             return false;
           }
           this.field_l = var3 - this.field_s;
@@ -145,7 +145,7 @@ final class kl extends ia {
         } else {
           this.field_w = -1;
           if (this.field_l == 0 ||
-              this.field_l > this.field_s - var3) {
+            this.field_l > this.field_s - var3) {
             this.field_l = this.field_s - var3;
           }
         }
@@ -157,7 +157,7 @@ final class kl extends ia {
         do {
           if (this.field_l <= 0) {
             if (this.field_p == -256 &&
-                (this.field_x & 255) == 0) {
+              (this.field_x & 255) == 0) {
               if (qk.field_q) {
                 return kl.b(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
@@ -174,7 +174,7 @@ final class kl extends ia {
           }
           this.field_l = this.field_l + param1;
           if (this.field_p == -256 &&
-              (this.field_x & 255) == 0) {
+            (this.field_x & 255) == 0) {
             if (!qk.field_q) {
               param1 = kl.a(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
@@ -208,7 +208,7 @@ final class kl extends ia {
         do {
           if (this.field_l <= 0) {
             if (this.field_p == 256 &&
-                (this.field_x & 255) == 0) {
+              (this.field_x & 255) == 0) {
               if (qk.field_q) {
                 return kl.a(0, ((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_n, this.field_s, 0, param3, param2, this);
               }
@@ -225,7 +225,7 @@ final class kl extends ia {
           }
           this.field_l = this.field_l + param1;
           if (this.field_p == 256 &&
-              (this.field_x & 255) == 0) {
+            (this.field_x & 255) == 0) {
             if (!qk.field_q) {
               param1 = kl.b(((gd) (this.field_g)).field_k, param0, this.field_x, param1, this.field_k, this.field_j, 0, var6, param2, this);
             } else {
@@ -250,11 +250,11 @@ final class kl extends ia {
         int var1 = this.field_k * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_v == 0) {
-            var1 = var1 - var1 * this.field_x / (((gd) (this.field_g)).field_k.length << 8);
+          var1 = var1 - var1 * this.field_x / (((gd) (this.field_g)).field_k.length << 8);
         } else {
-            if (this.field_v >= 0) {
-                var1 = var1 - var1 * this.field_q / ((gd) (this.field_g)).field_k.length;
-            }
+          if (this.field_v >= 0) {
+            var1 = var1 - var1 * this.field_q / ((gd) (this.field_g)).field_k.length;
+          }
         }
         return var1 > 255 ? 255 : var1;
     }
@@ -280,45 +280,45 @@ final class kl extends ia {
         param5 = param5 << 2;
         param6 = param3 + param8 - param2;
         if (param3 + param8 - param2 > param7) {
-            param6 = param7;
+          param6 = param7;
         }
         param9.field_n = param9.field_n + param9.field_t * (param6 - param3);
         param9.field_s = param9.field_s + param9.field_w * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
-            incrementValue$0 = param3;
-            param3++;
-            incrementValue$1 = param2;
-            param2++;
-            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            param4 = param4 + param5;
-            incrementValue$2 = param3;
-            param3++;
-            incrementValue$3 = param2;
-            param2++;
-            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            param4 = param4 + param5;
-            incrementValue$4 = param3;
-            param3++;
-            incrementValue$5 = param2;
-            param2++;
-            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            param4 = param4 + param5;
-            incrementValue$6 = param3;
-            param3++;
-            incrementValue$7 = param2;
-            param2++;
-            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
-            param4 = param4 + param5;
+          incrementValue$0 = param3;
+          param3++;
+          incrementValue$1 = param2;
+          param2++;
+          param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+          param4 = param4 + param5;
+          incrementValue$2 = param3;
+          param3++;
+          incrementValue$3 = param2;
+          param2++;
+          param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+          param4 = param4 + param5;
+          incrementValue$4 = param3;
+          param3++;
+          incrementValue$5 = param2;
+          param2++;
+          param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+          param4 = param4 + param5;
+          incrementValue$6 = param3;
+          param3++;
+          incrementValue$7 = param2;
+          param2++;
+          param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
+          param4 = param4 + param5;
         }
         param6 += 3;
         while (param3 < param6) {
-            incrementValue$8 = param3;
-            param3++;
-            incrementValue$9 = param2;
-            param2++;
-            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
-            param4 = param4 + param5;
+          incrementValue$8 = param3;
+          param3++;
+          incrementValue$9 = param2;
+          param2++;
+          param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+          param4 = param4 + param5;
         }
         param9.field_k = param4 >> 2;
         param9.field_x = param2 << 8;
@@ -393,38 +393,38 @@ final class kl extends ia {
         param4 = param4 << 2;
         param5 = param3 + param7 - param2;
         if (param3 + param7 - param2 > param6) {
-            param5 = param6;
+          param5 = param6;
         }
         param5 -= 3;
         while (param3 < param5) {
-            incrementValue$0 = param3;
-            param3++;
-            incrementValue$1 = param2;
-            param2++;
-            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            incrementValue$2 = param3;
-            param3++;
-            incrementValue$3 = param2;
-            param2++;
-            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            incrementValue$4 = param3;
-            param3++;
-            incrementValue$5 = param2;
-            param2++;
-            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            incrementValue$6 = param3;
-            param3++;
-            incrementValue$7 = param2;
-            param2++;
-            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
+          incrementValue$0 = param3;
+          param3++;
+          incrementValue$1 = param2;
+          param2++;
+          param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+          incrementValue$2 = param3;
+          param3++;
+          incrementValue$3 = param2;
+          param2++;
+          param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+          incrementValue$4 = param3;
+          param3++;
+          incrementValue$5 = param2;
+          param2++;
+          param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+          incrementValue$6 = param3;
+          param3++;
+          incrementValue$7 = param2;
+          param2++;
+          param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            incrementValue$8 = param3;
-            param3++;
-            incrementValue$9 = param2;
-            param2++;
-            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+          incrementValue$8 = param3;
+          param3++;
+          incrementValue$9 = param2;
+          param2++;
+          param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_x = param2 << 8;
         return param3;
@@ -449,61 +449,61 @@ final class kl extends ia {
         param8 = param8 << 2;
         param9 = param4 + param3 - (param11 - 1);
         if (param4 + param3 - (param11 - 1) > param10) {
-            param9 = param10;
+          param9 = param10;
         }
         param12.field_k = param12.field_k + param12.field_j * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
         while (param4 < param9) {
-            param0 = param1[param3--];
-            incrementValue$1 = param4;
-            param4++;
-            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$2 = param4;
-            param4++;
-            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3--];
-            incrementValue$4 = param4;
-            param4++;
-            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$5 = param4;
-            param4++;
-            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3--];
-            incrementValue$7 = param4;
-            param4++;
-            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$8 = param4;
-            param4++;
-            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3--];
-            incrementValue$10 = param4;
-            param4++;
-            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$11 = param4;
-            param4++;
-            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
-            param6 = param6 + param8;
+          param0 = param1[param3--];
+          incrementValue$1 = param4;
+          param4++;
+          param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$2 = param4;
+          param4++;
+          param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3--];
+          incrementValue$4 = param4;
+          param4++;
+          param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$5 = param4;
+          param4++;
+          param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3--];
+          incrementValue$7 = param4;
+          param4++;
+          param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$8 = param4;
+          param4++;
+          param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3--];
+          incrementValue$10 = param4;
+          param4++;
+          param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$11 = param4;
+          param4++;
+          param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
+          param6 = param6 + param8;
         }
         param9 += 6;
         while (param4 < param9) {
-            param0 = param1[param3--];
-            incrementValue$13 = param4;
-            param4++;
-            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$14 = param4;
-            param4++;
-            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
-            param6 = param6 + param8;
+          param0 = param1[param3--];
+          incrementValue$13 = param4;
+          param4++;
+          param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$14 = param4;
+          param4++;
+          param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+          param6 = param6 + param8;
         }
         param12.field_n = param5 >> 2;
         param12.field_s = param6 >> 2;
@@ -519,63 +519,63 @@ final class kl extends ia {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-            this.f(0);
-            this.a(false);
-            return;
+          this.f(0);
+          this.a(false);
+          return;
         }
         if (this.field_n != 0) {
-            var2 = -this.field_k;
-            if (this.field_k > var2) {
-                var2 = this.field_k;
-            }
-            if (-this.field_n > var2) {
-                var2 = -this.field_n;
-            }
-            if (this.field_n > var2) {
-                var2 = this.field_n;
-            }
-            if (-this.field_s > var2) {
-                var2 = -this.field_s;
-            }
-            if (this.field_s > var2) {
-                var2 = this.field_s;
-            }
-            if (param0 > var2) {
-                param0 = var2;
-            }
-            this.field_l = param0;
-            this.field_u = -2147483648;
-            this.field_j = -this.field_k / param0;
-            this.field_t = -this.field_n / param0;
-            this.field_w = -this.field_s / param0;
-            return;
+          var2 = -this.field_k;
+          if (this.field_k > var2) {
+            var2 = this.field_k;
+          }
+          if (-this.field_n > var2) {
+            var2 = -this.field_n;
+          }
+          if (this.field_n > var2) {
+            var2 = this.field_n;
+          }
+          if (-this.field_s > var2) {
+            var2 = -this.field_s;
+          }
+          if (this.field_s > var2) {
+            var2 = this.field_s;
+          }
+          if (param0 > var2) {
+            param0 = var2;
+          }
+          this.field_l = param0;
+          this.field_u = -2147483648;
+          this.field_j = -this.field_k / param0;
+          this.field_t = -this.field_n / param0;
+          this.field_w = -this.field_s / param0;
+          return;
         }
         if (this.field_s != 0) {
-            var2Lifetime1 = -this.field_k;
-            if (this.field_k > var2Lifetime1) {
-                var2Lifetime1 = this.field_k;
-            }
-            if (-this.field_n > var2Lifetime1) {
-                var2Lifetime1 = -this.field_n;
-            }
-            if (this.field_n > var2Lifetime1) {
-                var2Lifetime1 = this.field_n;
-            }
-            if (-this.field_s > var2Lifetime1) {
-                var2Lifetime1 = -this.field_s;
-            }
-            if (this.field_s > var2Lifetime1) {
-                var2Lifetime1 = this.field_s;
-            }
-            if (param0 > var2Lifetime1) {
-                param0 = var2Lifetime1;
-            }
-            this.field_l = param0;
-            this.field_u = -2147483648;
-            this.field_j = -this.field_k / param0;
-            this.field_t = -this.field_n / param0;
-            this.field_w = -this.field_s / param0;
-            return;
+          var2Lifetime1 = -this.field_k;
+          if (this.field_k > var2Lifetime1) {
+            var2Lifetime1 = this.field_k;
+          }
+          if (-this.field_n > var2Lifetime1) {
+            var2Lifetime1 = -this.field_n;
+          }
+          if (this.field_n > var2Lifetime1) {
+            var2Lifetime1 = this.field_n;
+          }
+          if (-this.field_s > var2Lifetime1) {
+            var2Lifetime1 = -this.field_s;
+          }
+          if (this.field_s > var2Lifetime1) {
+            var2Lifetime1 = this.field_s;
+          }
+          if (param0 > var2Lifetime1) {
+            param0 = var2Lifetime1;
+          }
+          this.field_l = param0;
+          this.field_u = -2147483648;
+          this.field_j = -this.field_k / param0;
+          this.field_t = -this.field_n / param0;
+          this.field_w = -this.field_s / param0;
+          return;
         }
         this.field_l = 0;
         this.field_u = 0;
@@ -593,7 +593,7 @@ final class kl extends ia {
     final synchronized void b(boolean param0) {
         this.field_p = (this.field_p ^ this.field_p >> 31) + (this.field_p >>> 31);
         if (!param0) {
-            return;
+          return;
         }
         this.field_p = -this.field_p;
     }
@@ -756,19 +756,19 @@ final class kl extends ia {
 
     final synchronized void d(int param0) {
         if (this.field_p < 0) {
-            this.field_p = -param0;
+          this.field_p = -param0;
         } else {
-            this.field_p = param0;
+          this.field_p = param0;
         }
     }
 
     final synchronized void e(int param0) {
         int var2 = ((gd) (this.field_g)).field_k.length << 8;
         if (param0 < -1) {
-            param0 = -1;
+          param0 = -1;
         }
         if (param0 > var2) {
-            param0 = var2;
+          param0 = var2;
         }
         this.field_x = param0;
     }
@@ -964,50 +964,50 @@ final class kl extends ia {
         param6 = param6 << 2;
         param7 = param4 + param9 - param3;
         if (param4 + param9 - param3 > param8) {
-            param7 = param8;
+          param7 = param8;
         }
         param4 = param4 << 1;
         param7 = param7 << 1;
         param7 -= 6;
         while (param4 < param7) {
-            param0 = param1[param3++];
-            incrementValue$1 = param4;
-            param4++;
-            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-            incrementValue$2 = param4;
-            param4++;
-            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            param0 = param1[param3++];
-            incrementValue$4 = param4;
-            param4++;
-            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-            incrementValue$5 = param4;
-            param4++;
-            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            param0 = param1[param3++];
-            incrementValue$7 = param4;
-            param4++;
-            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-            incrementValue$8 = param4;
-            param4++;
-            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            param0 = param1[param3++];
-            incrementValue$10 = param4;
-            param4++;
-            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-            incrementValue$11 = param4;
-            param4++;
-            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
+          param0 = param1[param3++];
+          incrementValue$1 = param4;
+          param4++;
+          param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+          incrementValue$2 = param4;
+          param4++;
+          param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+          param0 = param1[param3++];
+          incrementValue$4 = param4;
+          param4++;
+          param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+          incrementValue$5 = param4;
+          param4++;
+          param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+          param0 = param1[param3++];
+          incrementValue$7 = param4;
+          param4++;
+          param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+          incrementValue$8 = param4;
+          param4++;
+          param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+          param0 = param1[param3++];
+          incrementValue$10 = param4;
+          param4++;
+          param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+          incrementValue$11 = param4;
+          param4++;
+          param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
         param7 += 6;
         while (param4 < param7) {
-            param0 = param1[param3++];
-            incrementValue$13 = param4;
-            param4++;
-            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-            incrementValue$14 = param4;
-            param4++;
-            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+          param0 = param1[param3++];
+          incrementValue$13 = param4;
+          param4++;
+          param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+          incrementValue$14 = param4;
+          param4++;
+          param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
         param10.field_x = param3 << 8;
         return param4 >> 1;
@@ -1029,38 +1029,38 @@ final class kl extends ia {
         param4 = param4 << 2;
         param5 = param3 + param2 - (param7 - 1);
         if (param3 + param2 - (param7 - 1) > param6) {
-            param5 = param6;
+          param5 = param6;
         }
         param5 -= 3;
         while (param3 < param5) {
-            incrementValue$0 = param3;
-            param3++;
-            incrementValue$1 = param2;
-            param2--;
-            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            incrementValue$2 = param3;
-            param3++;
-            incrementValue$3 = param2;
-            param2--;
-            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            incrementValue$4 = param3;
-            param3++;
-            incrementValue$5 = param2;
-            param2--;
-            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            incrementValue$6 = param3;
-            param3++;
-            incrementValue$7 = param2;
-            param2--;
-            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
+          incrementValue$0 = param3;
+          param3++;
+          incrementValue$1 = param2;
+          param2--;
+          param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+          incrementValue$2 = param3;
+          param3++;
+          incrementValue$3 = param2;
+          param2--;
+          param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+          incrementValue$4 = param3;
+          param3++;
+          incrementValue$5 = param2;
+          param2--;
+          param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+          incrementValue$6 = param3;
+          param3++;
+          incrementValue$7 = param2;
+          param2--;
+          param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
         }
         param5 += 3;
         while (param3 < param5) {
-            incrementValue$8 = param3;
-            param3++;
-            incrementValue$9 = param2;
-            param2--;
-            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+          incrementValue$8 = param3;
+          param3++;
+          incrementValue$9 = param2;
+          param2--;
+          param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
         param8.field_x = param2 << 8;
         return param3;
@@ -1081,7 +1081,7 @@ final class kl extends ia {
         int var10;
         int var10Lifetime1;
         if (this.field_u == 0 &&
-            this.field_l == 0) {
+          this.field_l == 0) {
           this.b(param2);
           return;
         }
@@ -1298,78 +1298,78 @@ final class kl extends ia {
         int var6 = 0;
         int var6Lifetime1;
         if (param0 == 0) {
-            this.b(param1, param2);
-            return;
+          this.b(param1, param2);
+          return;
         }
         int var4 = kl.e(param1, param2);
         int var5 = kl.d(param1, param2);
         if (this.field_n != var4) {
-            var6 = param1 - this.field_k;
-            if (this.field_k - param1 > var6) {
-                var6 = this.field_k - param1;
-            }
-            if (var4 - this.field_n > var6) {
-                var6 = var4 - this.field_n;
-            }
-            if (this.field_n - var4 > var6) {
-                var6 = this.field_n - var4;
-            }
-            if (var5 - this.field_s > var6) {
-                var6 = var5 - this.field_s;
-            }
-            if (this.field_s - var5 > var6) {
-                var6 = this.field_s - var5;
-            }
-            if (param0 > var6) {
-                param0 = var6;
-            }
-            this.field_l = param0;
-            this.field_u = param1;
-            this.field_o = param2;
-            this.field_j = (param1 - this.field_k) / param0;
-            this.field_t = (var4 - this.field_n) / param0;
-            this.field_w = (var5 - this.field_s) / param0;
-            return;
+          var6 = param1 - this.field_k;
+          if (this.field_k - param1 > var6) {
+            var6 = this.field_k - param1;
+          }
+          if (var4 - this.field_n > var6) {
+            var6 = var4 - this.field_n;
+          }
+          if (this.field_n - var4 > var6) {
+            var6 = this.field_n - var4;
+          }
+          if (var5 - this.field_s > var6) {
+            var6 = var5 - this.field_s;
+          }
+          if (this.field_s - var5 > var6) {
+            var6 = this.field_s - var5;
+          }
+          if (param0 > var6) {
+            param0 = var6;
+          }
+          this.field_l = param0;
+          this.field_u = param1;
+          this.field_o = param2;
+          this.field_j = (param1 - this.field_k) / param0;
+          this.field_t = (var4 - this.field_n) / param0;
+          this.field_w = (var5 - this.field_s) / param0;
+          return;
         }
         if (this.field_s != var5) {
-            var6Lifetime1 = param1 - this.field_k;
-            if (this.field_k - param1 > var6Lifetime1) {
-                var6Lifetime1 = this.field_k - param1;
-            }
-            if (var4 - this.field_n > var6Lifetime1) {
-                var6Lifetime1 = var4 - this.field_n;
-            }
-            if (this.field_n - var4 > var6Lifetime1) {
-                var6Lifetime1 = this.field_n - var4;
-            }
-            if (var5 - this.field_s > var6Lifetime1) {
-                var6Lifetime1 = var5 - this.field_s;
-            }
-            if (this.field_s - var5 > var6Lifetime1) {
-                var6Lifetime1 = this.field_s - var5;
-            }
-            if (param0 > var6Lifetime1) {
-                param0 = var6Lifetime1;
-            }
-            this.field_l = param0;
-            this.field_u = param1;
-            this.field_o = param2;
-            this.field_j = (param1 - this.field_k) / param0;
-            this.field_t = (var4 - this.field_n) / param0;
-            this.field_w = (var5 - this.field_s) / param0;
-            return;
+          var6Lifetime1 = param1 - this.field_k;
+          if (this.field_k - param1 > var6Lifetime1) {
+            var6Lifetime1 = this.field_k - param1;
+          }
+          if (var4 - this.field_n > var6Lifetime1) {
+            var6Lifetime1 = var4 - this.field_n;
+          }
+          if (this.field_n - var4 > var6Lifetime1) {
+            var6Lifetime1 = this.field_n - var4;
+          }
+          if (var5 - this.field_s > var6Lifetime1) {
+            var6Lifetime1 = var5 - this.field_s;
+          }
+          if (this.field_s - var5 > var6Lifetime1) {
+            var6Lifetime1 = this.field_s - var5;
+          }
+          if (param0 > var6Lifetime1) {
+            param0 = var6Lifetime1;
+          }
+          this.field_l = param0;
+          this.field_u = param1;
+          this.field_o = param2;
+          this.field_j = (param1 - this.field_k) / param0;
+          this.field_t = (var4 - this.field_n) / param0;
+          this.field_w = (var5 - this.field_s) / param0;
+          return;
         }
         this.field_l = 0;
     }
 
     private final void f() {
         if (this.field_l != 0) {
-            if (this.field_u == -2147483648) {
-                this.field_u = 0;
-            }
-            this.field_l = 0;
-            this.e();
-            return;
+          if (this.field_u == -2147483648) {
+            this.field_u = 0;
+          }
+          this.field_l = 0;
+          this.e();
+          return;
         }
     }
 
@@ -1432,45 +1432,45 @@ final class kl extends ia {
         param5 = param5 << 2;
         param6 = param3 + param2 - (param8 - 1);
         if (param3 + param2 - (param8 - 1) > param7) {
-            param6 = param7;
+          param6 = param7;
         }
         param9.field_n = param9.field_n + param9.field_t * (param6 - param3);
         param9.field_s = param9.field_s + param9.field_w * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
-            incrementValue$0 = param3;
-            param3++;
-            incrementValue$1 = param2;
-            param2--;
-            param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
-            param4 = param4 + param5;
-            incrementValue$2 = param3;
-            param3++;
-            incrementValue$3 = param2;
-            param2--;
-            param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
-            param4 = param4 + param5;
-            incrementValue$4 = param3;
-            param3++;
-            incrementValue$5 = param2;
-            param2--;
-            param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
-            param4 = param4 + param5;
-            incrementValue$6 = param3;
-            param3++;
-            incrementValue$7 = param2;
-            param2--;
-            param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
-            param4 = param4 + param5;
+          incrementValue$0 = param3;
+          param3++;
+          incrementValue$1 = param2;
+          param2--;
+          param1[incrementValue$0] = param1[incrementValue$0] + param0[incrementValue$1] * param4;
+          param4 = param4 + param5;
+          incrementValue$2 = param3;
+          param3++;
+          incrementValue$3 = param2;
+          param2--;
+          param1[incrementValue$2] = param1[incrementValue$2] + param0[incrementValue$3] * param4;
+          param4 = param4 + param5;
+          incrementValue$4 = param3;
+          param3++;
+          incrementValue$5 = param2;
+          param2--;
+          param1[incrementValue$4] = param1[incrementValue$4] + param0[incrementValue$5] * param4;
+          param4 = param4 + param5;
+          incrementValue$6 = param3;
+          param3++;
+          incrementValue$7 = param2;
+          param2--;
+          param1[incrementValue$6] = param1[incrementValue$6] + param0[incrementValue$7] * param4;
+          param4 = param4 + param5;
         }
         param6 += 3;
         while (param3 < param6) {
-            incrementValue$8 = param3;
-            param3++;
-            incrementValue$9 = param2;
-            param2--;
-            param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
-            param4 = param4 + param5;
+          incrementValue$8 = param3;
+          param3++;
+          incrementValue$9 = param2;
+          param2--;
+          param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
+          param4 = param4 + param5;
         }
         param9.field_k = param4 >> 2;
         param9.field_x = param2 << 8;
@@ -1496,61 +1496,61 @@ final class kl extends ia {
         param8 = param8 << 2;
         param9 = param4 + param11 - param3;
         if (param4 + param11 - param3 > param10) {
-            param9 = param10;
+          param9 = param10;
         }
         param12.field_k = param12.field_k + param12.field_j * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
         while (param4 < param9) {
-            param0 = param1[param3++];
-            incrementValue$1 = param4;
-            param4++;
-            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$2 = param4;
-            param4++;
-            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3++];
-            incrementValue$4 = param4;
-            param4++;
-            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$5 = param4;
-            param4++;
-            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3++];
-            incrementValue$7 = param4;
-            param4++;
-            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$8 = param4;
-            param4++;
-            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            param6 = param6 + param8;
-            param0 = param1[param3++];
-            incrementValue$10 = param4;
-            param4++;
-            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$11 = param4;
-            param4++;
-            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
-            param6 = param6 + param8;
+          param0 = param1[param3++];
+          incrementValue$1 = param4;
+          param4++;
+          param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$2 = param4;
+          param4++;
+          param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3++];
+          incrementValue$4 = param4;
+          param4++;
+          param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$5 = param4;
+          param4++;
+          param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3++];
+          incrementValue$7 = param4;
+          param4++;
+          param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$8 = param4;
+          param4++;
+          param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+          param6 = param6 + param8;
+          param0 = param1[param3++];
+          incrementValue$10 = param4;
+          param4++;
+          param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$11 = param4;
+          param4++;
+          param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
+          param6 = param6 + param8;
         }
         param9 += 6;
         while (param4 < param9) {
-            param0 = param1[param3++];
-            incrementValue$13 = param4;
-            param4++;
-            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-            param5 = param5 + param7;
-            incrementValue$14 = param4;
-            param4++;
-            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
-            param6 = param6 + param8;
+          param0 = param1[param3++];
+          incrementValue$13 = param4;
+          param4++;
+          param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+          param5 = param5 + param7;
+          incrementValue$14 = param4;
+          param4++;
+          param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+          param6 = param6 + param8;
         }
         param12.field_n = param5 >> 2;
         param12.field_s = param6 >> 2;
@@ -1560,10 +1560,10 @@ final class kl extends ia {
 
     final static kl a(gd param0, int param1, int param2, int param3) {
         if (param0.field_k == null) {
-            return null;
+          return null;
         }
         if (param0.field_k.length != 0) {
-            return new kl(param0, param1, param2, param3);
+          return new kl(param0, param1, param2, param3);
         }
         return null;
     }
@@ -1578,10 +1578,10 @@ final class kl extends ia {
 
     final static kl a(gd param0, int param1, int param2) {
         if (param0.field_k == null) {
-            return null;
+          return null;
         }
         if (param0.field_k.length != 0) {
-            return new kl(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qk.field_j)), param2 << 6);
+          return new kl(param0, (int)((long)param0.field_h * 256L * (long)param1 / (long)(100 * qk.field_j)), param2 << 6);
         }
         return null;
     }
@@ -1650,50 +1650,50 @@ final class kl extends ia {
         param6 = param6 << 2;
         param7 = param4 + param3 - (param9 - 1);
         if (param4 + param3 - (param9 - 1) > param8) {
-            param7 = param8;
+          param7 = param8;
         }
         param4 = param4 << 1;
         param7 = param7 << 1;
         param7 -= 6;
         while (param4 < param7) {
-            param0 = param1[param3--];
-            incrementValue$1 = param4;
-            param4++;
-            param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
-            incrementValue$2 = param4;
-            param4++;
-            param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
-            param0 = param1[param3--];
-            incrementValue$4 = param4;
-            param4++;
-            param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
-            incrementValue$5 = param4;
-            param4++;
-            param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
-            param0 = param1[param3--];
-            incrementValue$7 = param4;
-            param4++;
-            param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
-            incrementValue$8 = param4;
-            param4++;
-            param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
-            param0 = param1[param3--];
-            incrementValue$10 = param4;
-            param4++;
-            param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
-            incrementValue$11 = param4;
-            param4++;
-            param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
+          param0 = param1[param3--];
+          incrementValue$1 = param4;
+          param4++;
+          param2[incrementValue$1] = param2[incrementValue$1] + param0 * param5;
+          incrementValue$2 = param4;
+          param4++;
+          param2[incrementValue$2] = param2[incrementValue$2] + param0 * param6;
+          param0 = param1[param3--];
+          incrementValue$4 = param4;
+          param4++;
+          param2[incrementValue$4] = param2[incrementValue$4] + param0 * param5;
+          incrementValue$5 = param4;
+          param4++;
+          param2[incrementValue$5] = param2[incrementValue$5] + param0 * param6;
+          param0 = param1[param3--];
+          incrementValue$7 = param4;
+          param4++;
+          param2[incrementValue$7] = param2[incrementValue$7] + param0 * param5;
+          incrementValue$8 = param4;
+          param4++;
+          param2[incrementValue$8] = param2[incrementValue$8] + param0 * param6;
+          param0 = param1[param3--];
+          incrementValue$10 = param4;
+          param4++;
+          param2[incrementValue$10] = param2[incrementValue$10] + param0 * param5;
+          incrementValue$11 = param4;
+          param4++;
+          param2[incrementValue$11] = param2[incrementValue$11] + param0 * param6;
         }
         param7 += 6;
         while (param4 < param7) {
-            param0 = param1[param3--];
-            incrementValue$13 = param4;
-            param4++;
-            param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
-            incrementValue$14 = param4;
-            param4++;
-            param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
+          param0 = param1[param3--];
+          incrementValue$13 = param4;
+          param4++;
+          param2[incrementValue$13] = param2[incrementValue$13] + param0 * param5;
+          incrementValue$14 = param4;
+          param4++;
+          param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
         param10.field_x = param3 << 8;
         return param4 >> 1;

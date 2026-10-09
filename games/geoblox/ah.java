@@ -20,17 +20,17 @@ final class ah {
         char[] var6 = new char[param2];
         char[] var3 = var6;
         for (var4 = param0; var4 < param2; var4++) {
-            var6[var4] = param1;
+          var6[var4] = param1;
         }
         return new String(var6);
     }
 
     final static ff a(byte param0) {
         if (ac.field_t == null) {
-            ac.field_t = new ff(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.field_o, -1, 2147483647, true);
+          ac.field_t = new ff(hh.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, hh.field_d.field_o, -1, 2147483647, true);
         }
         if (param0 >= -39) {
-            ah.a(-8);
+          ah.a(-8);
         }
         return ac.field_t;
     }

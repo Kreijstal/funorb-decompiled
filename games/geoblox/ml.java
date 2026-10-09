@@ -71,10 +71,10 @@ final class ml extends ff {
 
     public static void b(int param0) {
         if (param0 == 16777215) {
-            field_u = null;
-            field_t = null;
-            field_s = null;
-            return;
+          field_u = null;
+          field_t = null;
+          field_s = null;
+          return;
         }
         ml.b(11);
         field_u = null;
@@ -93,17 +93,17 @@ final class ml extends ff {
     final static String c(int param0) {
         String var1 = null;
         if (param0 == 7789) {
-            var1 = "";
-            if (null != field_t) {
-                var1 = field_t.h(87);
-            }
-            if (var1.length() == 0) {
-                var1 = rc.d((byte) -53);
-            }
-            if (var1.length() == 0) {
-                var1 = th.field_g;
-            }
-            return var1;
+          var1 = "";
+          if (null != field_t) {
+            var1 = field_t.h(87);
+          }
+          if (var1.length() == 0) {
+            var1 = rc.d((byte) -53);
+          }
+          if (var1.length() == 0) {
+            var1 = th.field_g;
+          }
+          return var1;
         }
         return (String) null;
     }

@@ -10,7 +10,7 @@ final class jc {
         int var3;
         var3 = Geoblox.field_C;
         if (7 == param0 &&
-            ka.field_h != 36) {
+          ka.field_h != 36) {
           ka.field_h = 36;
           pa.field_g = 110;
           nd.field_a = 6;
@@ -51,9 +51,9 @@ final class jc {
                   }
                 } else {
                   if (12 != ka.field_h &&
-                      ka.field_h != 24 &&
-                      30 != ka.field_h &&
-                      36 != ka.field_h) {
+                    ka.field_h != 24 &&
+                    30 != ka.field_h &&
+                    36 != ka.field_h) {
                     td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;
@@ -62,9 +62,9 @@ final class jc {
               }
             } else {
               if (ka.field_h != 0 &&
-                  24 != ka.field_h &&
-                  ka.field_h != 30 &&
-                  ka.field_h != 36) {
+                24 != ka.field_h &&
+                ka.field_h != 30 &&
+                ka.field_h != 36) {
                 td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
@@ -74,9 +74,9 @@ final class jc {
             field_a = (dm) null;
             if (param0 == 0) {
               if (ka.field_h != 0 &&
-                  24 != ka.field_h &&
-                  ka.field_h != 30 &&
-                  ka.field_h != 36) {
+                24 != ka.field_h &&
+                ka.field_h != 30 &&
+                ka.field_h != 36) {
                 td.a(-348, fl.field_c[25]);
               }
               ka.field_h = 0;
@@ -109,9 +109,9 @@ final class jc {
                   }
                 } else {
                   if (12 != ka.field_h &&
-                      ka.field_h != 24 &&
-                      30 != ka.field_h &&
-                      36 != ka.field_h) {
+                    ka.field_h != 24 &&
+                    30 != ka.field_h &&
+                    36 != ka.field_h) {
                     td.a(-348, fl.field_c[26]);
                   }
                   nd.field_a = 2;
@@ -189,9 +189,9 @@ final class jc {
         field_b = null;
         field_a = null;
         if (param0 > -13) {
-            field_a = (dm) null;
-            field_c = null;
-            return;
+          field_a = (dm) null;
+          field_c = null;
+          return;
         }
         field_c = null;
     }
@@ -199,8 +199,8 @@ final class jc {
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
         if (param2 <= -33) {
-            var3 = param0 >> 31 & param1 - 1;
-            return var3 + ((param0 >>> 31) + param0) % param1;
+          var3 = param0 >> 31 & param1 - 1;
+          return var3 + ((param0 >>> 31) + param0) % param1;
         }
         return 80;
     }

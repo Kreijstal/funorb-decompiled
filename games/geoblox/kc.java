@@ -14,13 +14,13 @@ final class kc {
     final static void a(java.awt.Component param0, int param1) {
         param0.removeKeyListener(je.field_j);
         if (param1 != 0) {
-            return;
+          return;
         }
         try {
-            param0.removeFocusListener(je.field_j);
-            ii.field_c = -1;
+          param0.removeFocusListener(je.field_j);
+          ii.field_c = -1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -141,101 +141,101 @@ final class kc {
               if (decompiledFrameRemainder1) {
                 var1 = (ja) (((tf) (Object) stackIn_12_0).g(0));
                 {
-                boolean decompiledNaturalLoopExit1 = false;
-                while (!(decompiledNaturalLoopExit1 = (var1 == null))) {
-                  stackOut_14_0 = pk.field_o[var1.field_H];
-                  stackIn_56_0 = stackOut_14_0 ? 1 : 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  if (var9 == 0) {
-                    if (!stackIn_15_0) {
-                      var11 = new wd();
-                      var13 = new wd();
-                      var11.a(var1, false);
-                      var4_int = 1;
-                      while (true) {
-                        stackIn_20_0 = (ja) (var11.a(true));
-                        var10 = stackIn_20_0;
-                        var12 = var10;
-                        var5_ref_ja = var12;
-                        if (var12 != null) {
-                          pk.field_o[var10.field_H] = true;
-                          stackOut_21_0 = var12.field_t;
-                          stackIn_44_0 = stackOut_21_0 ? 1 : 0;
-                          stackIn_22_0 = stackOut_21_0;
-                          if (stackIn_22_0) {
-                            var4_int = 0;
-                          } else {
-                            var13.a(var12, false);
-                            var6_int = 0;
-                            while (var6_int < var12.field_L) {
-                              var7 = var10.field_n[var6_int];
-                              stackIn_20_0Lifetime1 = (ja) (var13.c((byte) 121));
-                              var8 = stackIn_20_0Lifetime1;
-                              L20: while (true) {
-                                if (var8 != null) {
-                                  stackIn_51_0 = var8;
-                                  stackIn_51_1 = var7;
-                                  if (stackIn_51_0 != stackIn_51_1) {
-                                    var8 = (ja) (var13.a(-45));
-                                    continue;
-                                  }
-                                } else {
-                                  var8 = (ja) (var11.c((byte) 121));
-                                  while (var8 != null) {
+                  boolean decompiledNaturalLoopExit1 = false;
+                  while (!(decompiledNaturalLoopExit1 = (var1 == null))) {
+                    stackOut_14_0 = pk.field_o[var1.field_H];
+                    stackIn_56_0 = stackOut_14_0 ? 1 : 0;
+                    stackIn_15_0 = stackOut_14_0;
+                    if (var9 == 0) {
+                      if (!stackIn_15_0) {
+                        var11 = new wd();
+                        var13 = new wd();
+                        var11.a(var1, false);
+                        var4_int = 1;
+                        while (true) {
+                          stackIn_20_0 = (ja) (var11.a(true));
+                          var10 = stackIn_20_0;
+                          var12 = var10;
+                          var5_ref_ja = var12;
+                          if (var12 != null) {
+                            pk.field_o[var10.field_H] = true;
+                            stackOut_21_0 = var12.field_t;
+                            stackIn_44_0 = stackOut_21_0 ? 1 : 0;
+                            stackIn_22_0 = stackOut_21_0;
+                            if (stackIn_22_0) {
+                              var4_int = 0;
+                            } else {
+                              var13.a(var12, false);
+                              var6_int = 0;
+                              while (var6_int < var12.field_L) {
+                                var7 = var10.field_n[var6_int];
+                                stackIn_20_0Lifetime1 = (ja) (var13.c((byte) 121));
+                                var8 = stackIn_20_0Lifetime1;
+                                L20: while (true) {
+                                  if (var8 != null) {
                                     stackIn_51_0 = var8;
                                     stackIn_51_1 = var7;
-                                    if (stackIn_51_0 == stackIn_51_1) {
-                                      break L20;
+                                    if (stackIn_51_0 != stackIn_51_1) {
+                                      var8 = (ja) (var13.a(-45));
+                                      continue;
                                     }
-                                    var8 = (ja) (var11.a(54));
+                                  } else {
+                                    var8 = (ja) (var11.c((byte) 121));
+                                    while (var8 != null) {
+                                      stackIn_51_0 = var8;
+                                      stackIn_51_1 = var7;
+                                      if (stackIn_51_0 == stackIn_51_1) {
+                                        break L20;
+                                      }
+                                      var8 = (ja) (var11.a(54));
+                                    }
+                                    var11.a(var7, false);
                                   }
-                                  var11.a(var7, false);
+                                  break;
                                 }
-                                break;
+                                var6_int++;
                               }
-                              var6_int++;
+                              continue;
                             }
-                            continue;
                           }
-                        }
-                        stackIn_44_0Lifetime1 = var4_int;
-                        if (stackIn_44_0Lifetime1 == 0) {
+                          stackIn_44_0Lifetime1 = var4_int;
+                          if (stackIn_44_0Lifetime1 == 0) {
+                            break;
+                          }
+                          var5_ref_jaLifetime1 = (ja) (var13.a(true));
+                          while (var5_ref_jaLifetime1 != null) {
+                            var5_ref_jaLifetime1.field_K = ji.field_r;
+                            var5_ref_jaLifetime1.field_t = false;
+                            var5_ref_jaLifetime1.field_B = true;
+                            fa.field_a = true;
+                            stackIn_56_0 = 0;
+                            var6_intLifetime1 = stackIn_56_0;
+                            while (var6_intLifetime1 < var5_ref_jaLifetime1.field_L) {
+                              stackIn_51_0Lifetime1 = var5_ref_jaLifetime1.field_n[var6_intLifetime1];
+                              stackIn_51_1Lifetime1 = var5_ref_jaLifetime1;
+                              ((ja) (Object) stackIn_51_0Lifetime1).a(stackIn_51_1Lifetime1, 0);
+                              var6_intLifetime1++;
+                            }
+                            var6 = var5_ref_jaLifetime1;
+                            var7Lifetime2 = var5_ref_jaLifetime1;
+                            var5_ref_jaLifetime1.field_L = 0;
+                            var6.field_N = 0;
+                            var7Lifetime2.field_m = 0;
+                            var5_ref_jaLifetime1 = (ja) (var13.a(true));
+                          }
                           break;
                         }
-                        var5_ref_jaLifetime1 = (ja) (var13.a(true));
-                        while (var5_ref_jaLifetime1 != null) {
-                          var5_ref_jaLifetime1.field_K = ji.field_r;
-                          var5_ref_jaLifetime1.field_t = false;
-                          var5_ref_jaLifetime1.field_B = true;
-                          fa.field_a = true;
-                          stackIn_56_0 = 0;
-                          var6_intLifetime1 = stackIn_56_0;
-                          while (var6_intLifetime1 < var5_ref_jaLifetime1.field_L) {
-                            stackIn_51_0Lifetime1 = var5_ref_jaLifetime1.field_n[var6_intLifetime1];
-                            stackIn_51_1Lifetime1 = var5_ref_jaLifetime1;
-                            ((ja) (Object) stackIn_51_0Lifetime1).a(stackIn_51_1Lifetime1, 0);
-                            var6_intLifetime1++;
-                          }
-                          var6 = var5_ref_jaLifetime1;
-                          var7Lifetime2 = var5_ref_jaLifetime1;
-                          var5_ref_jaLifetime1.field_L = 0;
-                          var6.field_N = 0;
-                          var7Lifetime2.field_m = 0;
-                          var5_ref_jaLifetime1 = (ja) (var13.a(true));
-                        }
-                        break;
                       }
+                      var1 = (ja) (a.field_d.d(1));
+                      continue;
                     }
-                    var1 = (ja) (a.field_d.d(1));
-                    continue;
+                    break;
                   }
-                  break;
-                }
-                if (decompiledNaturalLoopExit1) {
+                  if (decompiledNaturalLoopExit1) {
                     re.field_j = false;
                     el.field_o.field_B = true;
                     stackIn_56_0 = 0;
-                    }
+                  }
                 }
                 var1_int = stackIn_56_0;
                 while (1000 > var1_int) {
@@ -253,8 +253,8 @@ final class kc {
           var2_ref_ja = (ja) (a.field_d.g(0));
           while (var2_ref_ja != null) {
             if (null != var2_ref_ja.field_K ||
-                w.field_f &&
-                  var2_ref_ja.field_t) {
+              w.field_f &&
+              var2_ref_ja.field_t) {
               {
                 boolean decompiledFrameCompleted1 = true;
                 boolean decompiledFrameCompleted0 = true;
@@ -296,7 +296,7 @@ final class kc {
                   if (decompiledFrameRemainder0) {
                     if (decompiledFrameCompleted1) {
                       if (var2_ref_ja.field_K == bh.field_c ||
-                          w.field_f) {
+                        w.field_f) {
                         var3_int = 0;
                         while (var3_int < var2_ref_ja.field_L) {
                           var2_ref_ja.field_n[var3_int].a(var2_ref_ja, 0);
@@ -317,12 +317,12 @@ final class kc {
                           bh.field_c.a(-100, var2_ref_ja);
                           var2_ref_ja.field_G = 0;
                           if (var2_ref_ja.field_t &&
-                              w.field_f) {
+                            w.field_f) {
                             stackIn_88_0 = (int)var2_ref_ja.field_v;
                             stackIn_88_1 = (int)var2_ref_ja.field_o;
                             stackIn_88_2 = 117;
                             if (var2_ref_ja.field_z != 4 &&
-                                var2_ref_ja.field_z != 3) {
+                              var2_ref_ja.field_z != 3) {
                               stackIn_90_3 = 10;
                             } else {
                               stackIn_90_3 = 100;
@@ -361,26 +361,26 @@ final class kc {
           var2 = -23 / ((param0 - 69) / 46);
           var3Lifetime1 = (ja) (bh.field_c.g(0));
           {
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var3Lifetime1 == null))) {
-            if (var9 == 0) {
-              if (ra.field_a == var3Lifetime1.field_K) {
-                var3Lifetime1.a(false);
-                var3Lifetime1.a((byte) 51);
-                ra.field_a.a(-44, var3Lifetime1);
-                var3Lifetime1.field_K = null;
+            boolean decompiledNaturalLoopExit0 = false;
+            while (!(decompiledNaturalLoopExit0 = (var3Lifetime1 == null))) {
+              if (var9 == 0) {
+                if (ra.field_a == var3Lifetime1.field_K) {
+                  var3Lifetime1.a(false);
+                  var3Lifetime1.a((byte) 51);
+                  ra.field_a.a(-44, var3Lifetime1);
+                  var3Lifetime1.field_K = null;
+                }
+                var3Lifetime1 = (ja) (bh.field_c.d(1));
+                continue;
               }
-              var3Lifetime1 = (ja) (bh.field_c.d(1));
-              continue;
+              break;
             }
-            break;
-          }
-          if (decompiledNaturalLoopExit0) {
+            if (decompiledNaturalLoopExit0) {
               if (w.field_f) {
                 jc.a(3, false);
                 jl.field_t = false;
               }
-              }
+            }
           }
           stackIn_110_0 = el.field_o;
           stackIn_112_1 = (el.field_o.field_F) || (ab.field_f) || (w.field_f);

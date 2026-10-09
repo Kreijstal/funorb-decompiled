@@ -115,8 +115,8 @@ abstract class pb extends rc {
         field_m = null;
         field_v = null;
         if (param0 != 31735) {
-            String var2 = (String) null;
-            pb.a(68, (java.awt.Color) null, true, true, (String) null);
+          String var2 = (String) null;
+          pb.a(68, (java.awt.Color) null, true, true, (String) null);
         }
     }
 

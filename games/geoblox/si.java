@@ -65,7 +65,7 @@ final class si {
     final si a(int param0, int param1) {
         this.field_f = param1;
         if (param0 != 0) {
-            return (si) null;
+          return (si) null;
         }
         return this;
     }
@@ -73,7 +73,7 @@ final class si {
     final si b(int param0, int param1) {
         this.field_e = param1;
         if (param0 != 256) {
-            return (si) null;
+          return (si) null;
         }
         return this;
     }
@@ -81,8 +81,8 @@ final class si {
     final si a(boolean param0, byte param1) {
         this.field_h = param0 ? true : false;
         if (param1 != 73) {
-            si.a(false);
-            return this;
+          si.a(false);
+          return this;
         }
         return this;
     }
@@ -135,7 +135,7 @@ final class si {
           }
           var6 = param0.c(120, param3);
           if (var6 != null &&
-              null != param0.field_n) {
+            null != param0.field_n) {
             if (this.field_e < 0) {
               return;
             }
@@ -190,7 +190,7 @@ final class si {
     final si a(byte param0, int param1) {
         this.field_d = param1;
         if (param0 != 16) {
-            return (si) null;
+          return (si) null;
         }
         return this;
     }
@@ -198,8 +198,8 @@ final class si {
     final si b(byte param0, int param1) {
         this.field_b = param1;
         if (param0 != -53) {
-            this.field_h = true;
-            return this;
+          this.field_h = true;
+          return this;
         }
         return this;
     }
@@ -209,9 +209,9 @@ final class si {
         field_m = null;
         field_g = null;
         if (param0) {
-            field_c = true;
-            field_n = null;
-            return;
+          field_c = true;
+          field_n = null;
+          return;
         }
         field_n = null;
     }
@@ -285,20 +285,20 @@ final class si {
 
     final void a(int param0, si param1) {
         try {
-            param1.field_e = this.field_e;
-            if (param0 != 2) {
-                dm[] var4 = (dm[]) null;
-                this.a((dm[]) null, true);
-            }
-            param1.field_k = this.field_k;
-            param1.field_b = this.field_b;
-            param1.field_a = this.field_a;
-            param1.field_l = this.field_l;
-            param1.field_h = this.field_h;
-            param1.field_f = this.field_f;
-            param1.field_d = this.field_d;
+          param1.field_e = this.field_e;
+          if (param0 != 2) {
+            dm[] var4 = (dm[]) null;
+            this.a((dm[]) null, true);
+          }
+          param1.field_k = this.field_k;
+          param1.field_b = this.field_b;
+          param1.field_a = this.field_a;
+          param1.field_l = this.field_l;
+          param1.field_h = this.field_h;
+          param1.field_f = this.field_f;
+          param1.field_d = this.field_d;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "si.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "si.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

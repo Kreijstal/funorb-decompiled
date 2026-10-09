@@ -8,43 +8,43 @@ abstract class q extends ib implements ga {
 
     final static void a(byte param0, boolean param1) {
         if (param0 < 102) {
-            return;
+          return;
         }
         b.a(false, param1, false);
     }
 
     final lh e(int param0) {
         if (param0 != 32) {
-            return (lh) null;
+          return (lh) null;
         }
         return this.a(-257, this.field_g.field_s);
     }
 
     public final boolean a(int param0) {
         if (param0 != -26556) {
-            String var3 = (String) null;
-            this.b(-33, (String) null);
-            if (this.field_g.field_s != null) {
-                return this.field_g.field_s.length() == 0 ? true : false;
-            }
-            return true;
+          String var3 = (String) null;
+          this.b(-33, (String) null);
+          if (this.field_g.field_s != null) {
+            return this.field_g.field_s.length() == 0 ? true : false;
+          }
+          return true;
         }
         if (this.field_g.field_s == null) {
-            return true;
+          return true;
         }
         if (this.field_g.field_s.length() != 0) {
-            return false;
+          return false;
         }
         return true;
     }
 
     public final void a(dj param0, int param1) {
         try {
-            if (param1 != -18649) {
-                this.field_g = (dj) null;
-            }
+          if (param1 != -18649) {
+            this.field_g = (dj) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "q.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -52,47 +52,47 @@ abstract class q extends ib implements ga {
 
     final static boolean a(char param0, byte param1) {
         if (Character.isISOControl(param0)) {
-            return false;
+          return false;
         }
         if (pf.a(-123, param0)) {
-            return true;
+          return true;
         }
         if (param0 == 45) {
-            return true;
+          return true;
         }
         if (param0 == 160) {
-            return true;
+          return true;
         }
         if (32 == param0) {
-            return true;
+          return true;
         }
         if (param0 == 95) {
-            return true;
+          return true;
         }
         if (param1 > 88) {
-            return false;
+          return false;
         }
         return false;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, d param5, String param6, int param7, int param8) {
         try {
-            ag.field_l = param7;
-            bm.field_u = param3;
-            gh.field_z = param6;
-            hc.field_T = param0;
-            pc.field_C = param1;
-            vg.field_a = param2;
-            ph.field_i = param5;
-            if (param4 != -23949) {
-                field_f = -0.8279321027589008;
-            }
-            ij.field_W = param8;
-            wg.field_i = (ji) ((Object) new kk());
-            cl.field_c = new uf(param5);
-            gb.field_b = new em(wg.field_i, cl.field_c);
+          ag.field_l = param7;
+          bm.field_u = param3;
+          gh.field_z = param6;
+          hc.field_T = param0;
+          pc.field_C = param1;
+          vg.field_a = param2;
+          ph.field_i = param5;
+          if (param4 != -23949) {
+            field_f = -0.8279321027589008;
+          }
+          ij.field_W = param8;
+          wg.field_i = (ji) ((Object) new kk());
+          cl.field_c = new uf(param5);
+          gb.field_b = new em(wg.field_i, cl.field_c);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "q.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -136,7 +136,7 @@ abstract class q extends ib implements ga {
           va.field_d = false;
           ii.field_a = false;
           if (null != Geoblox.field_y &&
-              Geoblox.field_y.field_I) {
+            Geoblox.field_y.field_I) {
             if (8 == param1) {
               param1 = 2;
               if (!cf.field_i) {
@@ -161,8 +161,8 @@ abstract class q extends ib implements ga {
               Geoblox.field_y.a(param1, param0 + 19686, param2);
             }
             if (param1 != 256 &&
-                param1 != 10 &&
-                !cf.field_i) {
+              param1 != 10 &&
+              !cf.field_i) {
               ml.field_t.i(-119);
             }
           }
@@ -247,7 +247,7 @@ abstract class q extends ib implements ga {
 
     final String b(byte param0) {
         if (param0 == -103) {
-            return this.b(422, this.field_g.field_s);
+          return this.b(422, this.field_g.field_s);
         }
         this.field_g = (dj) null;
         return this.b(422, this.field_g.field_s);
@@ -256,15 +256,15 @@ abstract class q extends ib implements ga {
     public static void f(int param0) {
         field_h = null;
         if (param0 != 1) {
-            field_h = (uj) null;
+          field_h = (uj) null;
         }
     }
 
     q(dj param0) {
         try {
-            this.field_g = param0;
+          this.field_g = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "q.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

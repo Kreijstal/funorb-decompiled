@@ -55,8 +55,8 @@ final class cg extends ia {
 
     final void b(int param0) {
         if (param0 < this.field_j) {
-            this.field_j = this.field_j - param0;
-            return;
+          this.field_j = this.field_j - param0;
+          return;
         }
         param0 = param0 - this.field_j;
         this.field_j = 0;
@@ -67,7 +67,7 @@ final class cg extends ia {
         this.field_c = null;
         this.field_b = null;
         if (0 < param0) {
-            this.field_l.b(param0);
+          this.field_l.b(param0);
         }
     }
 
@@ -81,7 +81,7 @@ final class cg extends ia {
 
     public static void c(byte param0) {
         if (param0 > -107) {
-            cg.c((byte) -13);
+          cg.c((byte) -13);
         }
         field_k = null;
     }
@@ -92,7 +92,7 @@ final class cg extends ia {
 
     final static boolean a(byte param0) {
         if (param0 <= 18) {
-            return false;
+          return false;
         }
         return bj.field_s;
     }
@@ -137,11 +137,11 @@ final class cg extends ia {
 
     cg(ia param0, int param1) {
         try {
-            this.field_l = param0;
-            this.field_g = this.field_l.field_g;
-            this.field_j = param1;
+          this.field_l = param0;
+          this.field_g = this.field_l.field_g;
+          this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "cg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

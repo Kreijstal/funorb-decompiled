@@ -59,8 +59,8 @@ final class tg extends com.ms.dll.Callback {
     final void a(int param0, int param1, int param2) {
         com.ms.win32.User32.SetCursorPos(param2, param1);
         if (param0 > -45) {
-            java.awt.Component var5 = (java.awt.Component) null;
-            this.a(74, true, (java.awt.Component) null);
+          java.awt.Component var5 = (java.awt.Component) null;
+          this.a(74, true, (java.awt.Component) null);
         }
     }
 

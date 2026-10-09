@@ -19,32 +19,32 @@ final class ue {
 
     final int b(int param0, int param1) {
         if (param1 != 6) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
         if (this.field_a != null) {
-            param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_i) + 6;
+          param0 = (int)((long)param0 * (long)this.field_h / (long)this.field_i) + 6;
         }
         return param0;
     }
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param1) {
-            vb.b(0, 0, vb.field_f, vb.field_b, 0, 192);
+          vb.b(0, 0, vb.field_f, vb.field_b, 0, 192);
         } else {
-            vb.c();
+          vb.c();
         }
         if (param2 != -102) {
-            return;
+          return;
         }
         pi.a(param1, false);
     }
 
     final int a(int param0, int param1) {
         if (param0 != -128) {
-            this.b(23, -122);
+          this.b(23, -122);
         }
         if (null != this.field_a) {
-            param1 = (int)((long)param1 * (long)this.field_h / (long)this.field_i);
+          param1 = (int)((long)param1 * (long)this.field_h / (long)this.field_i);
         }
         return param1;
     }
@@ -54,7 +54,7 @@ final class ue {
         field_b = null;
         field_c = null;
         if (!param0) {
-            ue.a(false);
+          ue.a(false);
         }
         field_g = null;
         field_d = null;
@@ -95,7 +95,7 @@ final class ue {
             var12 = ((double)var8 - var6) * 3.141592653589793;
             var14 = var10;
             if (var12 < -0.0001 ||
-                0.0001 < var12) {
+              0.0001 < var12) {
               var14 = var14 * (Math.sin(var12) / var12);
             }
             var14 = var14 * (Math.cos(0.2243994752564138 * (-var6 + (double)var8)) * 0.46 + 0.54);
@@ -190,7 +190,7 @@ final class ue {
         field_e = 0;
         field_f = new tf();
         for (var0 = 0; var0 < 20; var0++) {
-            field_f.a(-83, new me());
+          field_f.a(-83, new me());
         }
         field_j = 250;
     }

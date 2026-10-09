@@ -20,19 +20,19 @@ final class kd {
 
     final static void b(byte param0) {
         if (param0 <= 79) {
-            return;
+          return;
         }
         if (10 == hj.field_a) {
-            la.f((byte) 24);
-            hj.field_a = 11;
-            lb.field_a = true;
-            return;
+          la.f((byte) 24);
+          hj.field_a = 11;
+          lb.field_a = true;
+          return;
         }
         if (!ck.b(0)) {
-            la.f((byte) 24);
-            hj.field_a = 11;
-            lb.field_a = true;
-            return;
+          la.f((byte) 24);
+          hj.field_a = 11;
+          lb.field_a = true;
+          return;
         }
         lb.field_a = true;
     }

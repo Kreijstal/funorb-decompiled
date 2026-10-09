@@ -11,16 +11,16 @@ public final class Geoblox extends wf {
 
     private final void n(int param0) {
         if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("sports", (byte) -126)) {
-                return;
-            }
-            if (param0 <= 37) {
-                this.m(92);
-            }
-            hd.field_H = ug.a("sports_foreground", ll.field_f, (byte) -78, "sports");
-            th.field_f = jg.a(ll.field_f, 1, "sports", "sports_background");
-            ll.field_g[5] = true;
+          if (!ll.field_f.a("sports", (byte) -126)) {
             return;
+          }
+          if (param0 <= 37) {
+            this.m(92);
+          }
+          hd.field_H = ug.a("sports_foreground", ll.field_f, (byte) -78, "sports");
+          th.field_f = jg.a(ll.field_f, 1, "sports", "sports_background");
+          ll.field_g[5] = true;
+          return;
         }
     }
 
@@ -29,11 +29,11 @@ public final class Geoblox extends wf {
 
     final void c(int param0) {
         if (param0 != 1) {
-            this.h(true);
+          this.h(true);
         }
         me.b(122);
         if (vl.field_n != null) {
-            vl.field_n.a(0, ka.field_i);
+          vl.field_n.a(0, ka.field_i);
         }
         pc.a((byte) 124);
     }
@@ -67,177 +67,177 @@ public final class Geoblox extends wf {
         int var9Lifetime1;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
-            lc.a(ca.field_h, -2, 60.0f);
-            this.a(25853);
-            jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
-            ah.field_c = null;
-            wj.field_F = null;
-            cd.field_m = null;
-            fe.field_a = null;
-            ih.b(127);
-            return false;
+          lc.a(ca.field_h, -2, 60.0f);
+          this.a(25853);
+          jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
+          ah.field_c = null;
+          wj.field_F = null;
+          cd.field_m = null;
+          fe.field_a = null;
+          ih.b(127);
+          return false;
         }
         if (null != ll.field_f && null != ii.field_k && ki.field_b != null) {
-            lc.a(oh.field_c, param0 - 25871, 80.0f);
-            this.a(25853);
-            dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
-            wf.field_p = dd.field_G.e(1);
-            dd.field_G.field_K[0][wf.field_p] = 16689938;
-            dd.field_G.field_K[0][dd.field_G.e(16777215)] = 1;
-            var2 = dd.field_G.field_K[0].length;
-            array$0 = new int[var2];
-            dd.field_G.field_K[1] = array$0;
-            sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
-            dd.field_G.field_K[1][wf.field_p] = 16777215;
-            var12 = wj.a("geoms", "", ll.field_f, 0);
-            var3 = var12;
-            var4 = -1;
-            for (var5_int = 0; var12.length > var5_int; var5_int++) {
-                var6_int = var5_int % 7;
-                if (var6_int == 0) {
-                    var4++;
-                    if (var4 >= 7) {
-                        break;
-                    }
-                }
-                var7_int = var12[var5_int].field_s;
-                var8_int = var12[var5_int].field_o;
-                s.field_G[var4][var6_int] = var12[var5_int];
-                for (var9 = 0; var9 < 7; var9++) {
-                    ke.field_a[var4][var6_int][var9] = new dm(var7_int, var8_int);
-                    ke.field_a[var4][var6_int][var9].e();
-                    var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
-                }
+          lc.a(oh.field_c, param0 - 25871, 80.0f);
+          this.a(25853);
+          dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
+          wf.field_p = dd.field_G.e(1);
+          dd.field_G.field_K[0][wf.field_p] = 16689938;
+          dd.field_G.field_K[0][dd.field_G.e(16777215)] = 1;
+          var2 = dd.field_G.field_K[0].length;
+          array$0 = new int[var2];
+          dd.field_G.field_K[1] = array$0;
+          sf.a(dd.field_G.field_K[0], 0, dd.field_G.field_K[1], 0, var2);
+          dd.field_G.field_K[1][wf.field_p] = 16777215;
+          var12 = wj.a("geoms", "", ll.field_f, 0);
+          var3 = var12;
+          var4 = -1;
+          for (var5_int = 0; var12.length > var5_int; var5_int++) {
+            var6_int = var5_int % 7;
+            if (var6_int == 0) {
+              var4++;
+              if (var4 >= 7) {
+                break;
+              }
             }
-            var3Lifetime1 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-            for (var4Lifetime1 = 0; var4Lifetime1 < 7; var4Lifetime1++) {
-                for (var5_intLifetime1 = 0; var5_intLifetime1 < 7; var5_intLifetime1++) {
-                    for (var6_intLifetime1 = 0; var6_intLifetime1 < var3Lifetime1.length; var6_intLifetime1++) {
-                        ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1] = new dm(4 + var3Lifetime1[var6_intLifetime1].field_s, 4 + var3Lifetime1[var6_intLifetime1].field_o);
-                        ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].e();
-                        var3Lifetime1[var6_intLifetime1].b(2, 2, jg.field_f[var4Lifetime1][var5_intLifetime1]);
-                        k.a(0, 0, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_s, param0 ^ -3266, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_o);
-                    }
-                }
+            var7_int = var12[var5_int].field_s;
+            var8_int = var12[var5_int].field_o;
+            s.field_G[var4][var6_int] = var12[var5_int];
+            for (var9 = 0; var9 < 7; var9++) {
+              ke.field_a[var4][var6_int][var9] = new dm(var7_int, var8_int);
+              ke.field_a[var4][var6_int][var9].e();
+              var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
             }
-            sh.field_y.a(255);
-            fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
-            fc.field_g = wj.a("black", "", ll.field_f, 0);
-            hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
-            hb.field_d = wj.a("silver", "", ll.field_f, 0);
-            ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
-            i.field_a = ug.a("player_back", ll.field_f, (byte) -78, "");
-            var5 = wj.a("player_eyes", "", ll.field_f, 0);
-            if (da.a(0, 125)) {
-                var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
+          }
+          var3Lifetime1 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
+          for (var4Lifetime1 = 0; var4Lifetime1 < 7; var4Lifetime1++) {
+            for (var5_intLifetime1 = 0; var5_intLifetime1 < 7; var5_intLifetime1++) {
+              for (var6_intLifetime1 = 0; var6_intLifetime1 < var3Lifetime1.length; var6_intLifetime1++) {
+                ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1] = new dm(4 + var3Lifetime1[var6_intLifetime1].field_s, 4 + var3Lifetime1[var6_intLifetime1].field_o);
+                ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].e();
+                var3Lifetime1[var6_intLifetime1].b(2, 2, jg.field_f[var4Lifetime1][var5_intLifetime1]);
+                k.a(0, 0, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_s, param0 ^ -3266, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_o);
+              }
             }
-            fc.field_b = new dm[var5.length];
-            for (var6_intLifetime2 = 0; var5.length > var6_intLifetime2; var6_intLifetime2++) {
-                fc.field_b[var6_intLifetime2] = new dm(4 + var5[var6_intLifetime2].field_s, var5[var6_intLifetime2].field_o + 4);
-                fc.field_b[var6_intLifetime2].e();
-                var5[var6_intLifetime2].c(2, 2);
-                k.a(0, 0, fc.field_b[var6_intLifetime2].field_s, -27085, fc.field_b[var6_intLifetime2].field_m);
-                fc.field_b[var6_intLifetime2].d();
-            }
-            var6 = wj.a("player_mouth", "", ll.field_f, 0);
-            if (da.a(0, param0 - 25774)) {
-                var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
-            }
-            vh.field_H = new dm[var6.length];
-            for (var7_intLifetime1 = 0; var6.length > var7_intLifetime1; var7_intLifetime1++) {
-                vh.field_H[var7_intLifetime1] = new dm(var6[var7_intLifetime1].field_s + 4, var6[var7_intLifetime1].field_o + 4);
-                vh.field_H[var7_intLifetime1].e();
-                var6[var7_intLifetime1].c(2, 2);
-                k.a(2 + var6[var7_intLifetime1].field_p, 0, vh.field_H[var7_intLifetime1].field_s, -27085, var6[var7_intLifetime1].field_m);
-                vh.field_H[var7_intLifetime1].d();
-            }
-            sh.field_y.a(255);
-            fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
-            ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun");
-            ll.field_g[1] = true;
-            ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
-            vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
-            qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
-            vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
-            mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
-            for (var7_intLifetime2 = 0; mi.field_B.length > var7_intLifetime2; var7_intLifetime2++) {
-                mi.field_B[var7_intLifetime2].g(1);
-            }
-            vj.field_a = wj.a("bang", "", ll.field_f, 0);
-            eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
-            pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
-            k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
-            eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
-            vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
-            ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
-            ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
-            if (da.a(0, 110)) {
-                vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
-                ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
-                ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
-            }
-            var7 = new na[8];
-            var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
-            var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
-            var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
-            var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
-            var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
-            var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
-            var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
-            var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
-            var14 = new int[var7.length];
-            var13 = var14;
-            var8 = var13;
-            var11 = 0;
-            var9Lifetime1 = var11;
-            while (var11 < var14.length) {
-                var8[var11] = var7[var11].field_c - 3;
-                var11++;
-            }
-            fi.field_d.a(var7, var14);
-            sh.field_y.a(255);
-            kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, "");
-            kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, "");
-            kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, "");
-            kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, "");
-            kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, "");
-            kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, "");
-            kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, "");
-            kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, "");
-            kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, "");
-            ll.field_h = new dm[9];
-            ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, "");
-            ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, "");
-            ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, "");
-            ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, "");
-            ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, "");
-            ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, "");
-            ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, "");
-            ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, "");
-            ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, "");
-            re.field_h = ug.a("widget", ll.field_f, (byte) -78, "");
-            sd.field_y = ug.a("bar", ll.field_f, (byte) -78, "");
-            lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
-            g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
-            vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
-            tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
-            if (da.a(0, -105)) {
-                tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
-            }
-            qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
-            sl.field_f = wj.a("achievements", "", ll.field_f, 0);
-            am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
-            ug.a("locked", ki.field_b, (byte) -78, "basic");
-            uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
-            c.field_ab = 1;
-            cd.a((byte) 79);
-            ih.b(-62);
-            ii.field_k = null;
-            ki.field_b = null;
-            return false;
+          }
+          sh.field_y.a(255);
+          fi.field_d = gi.a(ii.field_k, 1, ll.field_f, "small_font", "");
+          fc.field_g = wj.a("black", "", ll.field_f, 0);
+          hg.field_b = wj.a("black_implode", "", ll.field_f, 0);
+          hb.field_d = wj.a("silver", "", ll.field_f, 0);
+          ej.field_a = wj.a("amorph_crack", "", ll.field_f, 0);
+          i.field_a = ug.a("player_back", ll.field_f, (byte) -78, "");
+          var5 = wj.a("player_eyes", "", ll.field_f, 0);
+          if (da.a(0, 125)) {
+            var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
+          }
+          fc.field_b = new dm[var5.length];
+          for (var6_intLifetime2 = 0; var5.length > var6_intLifetime2; var6_intLifetime2++) {
+            fc.field_b[var6_intLifetime2] = new dm(4 + var5[var6_intLifetime2].field_s, var5[var6_intLifetime2].field_o + 4);
+            fc.field_b[var6_intLifetime2].e();
+            var5[var6_intLifetime2].c(2, 2);
+            k.a(0, 0, fc.field_b[var6_intLifetime2].field_s, -27085, fc.field_b[var6_intLifetime2].field_m);
+            fc.field_b[var6_intLifetime2].d();
+          }
+          var6 = wj.a("player_mouth", "", ll.field_f, 0);
+          if (da.a(0, param0 - 25774)) {
+            var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
+          }
+          vh.field_H = new dm[var6.length];
+          for (var7_intLifetime1 = 0; var6.length > var7_intLifetime1; var7_intLifetime1++) {
+            vh.field_H[var7_intLifetime1] = new dm(var6[var7_intLifetime1].field_s + 4, var6[var7_intLifetime1].field_o + 4);
+            vh.field_H[var7_intLifetime1].e();
+            var6[var7_intLifetime1].c(2, 2);
+            k.a(2 + var6[var7_intLifetime1].field_p, 0, vh.field_H[var7_intLifetime1].field_s, -27085, var6[var7_intLifetime1].field_m);
+            vh.field_H[var7_intLifetime1].d();
+          }
+          sh.field_y.a(255);
+          fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
+          ne.field_b = ug.a("sky_foreground", ll.field_f, (byte) -78, "sun");
+          ll.field_g[1] = true;
+          ee.field_A = ug.a("menu_background", ll.field_f, (byte) -78, "");
+          vc.field_j = ug.a("menu_foreground", ll.field_f, (byte) -78, "");
+          qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
+          vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
+          mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
+          for (var7_intLifetime2 = 0; mi.field_B.length > var7_intLifetime2; var7_intLifetime2++) {
+            mi.field_B[var7_intLifetime2].g(1);
+          }
+          vj.field_a = wj.a("bang", "", ll.field_f, 0);
+          eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
+          pk.field_k = ug.a("bubble", ll.field_f, (byte) -78, "");
+          k.field_a = ug.a("pop", ll.field_f, (byte) -78, "");
+          eb.field_g = wj.a("box_mouse", "", ll.field_f, 0);
+          vf.field_H = wj.a("cry_begin", "", ll.field_f, 0);
+          ok.field_a = wj.a("cry_middle", "", ll.field_f, 0);
+          ld.field_b = wj.a("cry_end", "", ll.field_f, 0);
+          if (da.a(0, 110)) {
+            vf.field_H = wj.a("cry_begin", "halloween", ll.field_f, 0);
+            ok.field_a = wj.a("cry_middle", "halloween", ll.field_f, 0);
+            ld.field_b = wj.a("cry_end", "halloween", ll.field_f, 0);
+          }
+          var7 = new na[8];
+          var7[0] = jg.a(ll.field_f, 1, "", "keyboard_left");
+          var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
+          var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
+          var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
+          var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
+          var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
+          var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
+          var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
+          var14 = new int[var7.length];
+          var13 = var14;
+          var8 = var13;
+          var11 = 0;
+          var9Lifetime1 = var11;
+          while (var11 < var14.length) {
+            var8[var11] = var7[var11].field_c - 3;
+            var11++;
+          }
+          fi.field_d.a(var7, var14);
+          sh.field_y.a(255);
+          kh.field_h[0] = ug.a("main_title", ll.field_f, (byte) -78, "");
+          kh.field_h[2] = ug.a("bestscoreseach_title", ll.field_f, (byte) -78, "");
+          kh.field_h[3] = ug.a("myscores_title", ll.field_f, (byte) -78, "");
+          kh.field_h[1] = ug.a("allscores_title", ll.field_f, (byte) -78, "");
+          kh.field_h[6] = ug.a("gameover_title", ll.field_f, (byte) -78, "");
+          kh.field_h[4] = ug.a("achievements_title", ll.field_f, (byte) -78, "");
+          kh.field_h[5] = ug.a("instructions_title", ll.field_f, (byte) -78, "");
+          kh.field_h[7] = ug.a("achievements_tg_title", ll.field_f, (byte) -78, "");
+          kh.field_h[8] = ug.a("login_title", ll.field_f, (byte) -78, "");
+          ll.field_h = new dm[9];
+          ll.field_h[0] = ug.a("frame_topleft", ll.field_f, (byte) -78, "");
+          ll.field_h[1] = ug.a("frame_top", ll.field_f, (byte) -78, "");
+          ll.field_h[2] = ug.a("frame_topright", ll.field_f, (byte) -78, "");
+          ll.field_h[3] = ug.a("frame_left", ll.field_f, (byte) -78, "");
+          ll.field_h[4] = ug.a("frame_centre", ll.field_f, (byte) -78, "");
+          ll.field_h[5] = ug.a("frame_right", ll.field_f, (byte) -78, "");
+          ll.field_h[6] = ug.a("frame_bottomleft", ll.field_f, (byte) -78, "");
+          ll.field_h[7] = ug.a("frame_bottom", ll.field_f, (byte) -78, "");
+          ll.field_h[8] = ug.a("frame_bottomright", ll.field_f, (byte) -78, "");
+          re.field_h = ug.a("widget", ll.field_f, (byte) -78, "");
+          sd.field_y = ug.a("bar", ll.field_f, (byte) -78, "");
+          lj.field_d = ug.a("box_sml", ll.field_f, (byte) -78, "");
+          g.field_i = ug.a("box_count", ll.field_f, (byte) -78, "");
+          vh.field_G = ug.a("box_lgr", ll.field_f, (byte) -78, "");
+          tl.field_r = wj.a("intro_faces", "", ll.field_f, 0);
+          if (da.a(0, -105)) {
+            tl.field_r = wj.a("intro_faces", "halloween", ll.field_f, 0);
+          }
+          qh.field_O = wj.a("intro_geoms", "", ll.field_f, 0);
+          sl.field_f = wj.a("achievements", "", ll.field_f, 0);
+          am.field_b = ug.a("unachieved", ki.field_b, (byte) -78, "basic");
+          ug.a("locked", ki.field_b, (byte) -78, "basic");
+          uk.field_m = ug.a("orbcoin", ki.field_b, (byte) -78, "basic");
+          c.field_ab = 1;
+          cd.a((byte) 79);
+          ih.b(-62);
+          ii.field_k = null;
+          ki.field_b = null;
+          return false;
         }
         if (param0 != 25869) {
-            field_z = (String[]) null;
+          field_z = (String[]) null;
         }
         lc.a(uj.field_a, -2, 100.0f);
         this.a(param0 ^ 496);
@@ -263,28 +263,28 @@ public final class Geoblox extends wf {
         }
         s.g(9);
         if (wj.field_F.a(0) &&
-            wj.field_F.b(true)) {
+          wj.field_F.b(true)) {
           if (ah.field_c.a(0)) {
             stackIn_10_0 = ah.field_c;
             stackIn_11_1 = (param0) ? false : true;
             if (((rh) (Object) stackIn_10_0).b(stackIn_11_1)) {
               if (fe.field_a.a(0) &&
-                  fe.field_a.b(true)) {
+                fe.field_a.b(true)) {
                 if (cd.field_m.a(0) &&
-                    cd.field_m.b(true)) {
+                  cd.field_m.b(true)) {
                   if (ii.field_k.a(0) &&
-                      ii.field_k.b(true)) {
+                    ii.field_k.b(true)) {
                     if (ll.field_f.a(0) &&
-                        ll.field_f.a("", (byte) -127)) {
+                      ll.field_f.a("", (byte) -127)) {
                       if (ll.field_f.a(0) &&
-                          ll.field_f.a("sun", (byte) -127)) {
+                        ll.field_f.a("sun", (byte) -127)) {
                         if (da.a(0, -112) && (!ll.field_f.a(0) ||
-                            !ll.field_f.a("halloween", (byte) -127))) {
+                          !ll.field_f.a("halloween", (byte) -127))) {
                           lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
                           return false;
                         }
                         if (ki.field_b.a(0) &&
-                            ki.field_b.a("basic", (byte) -124)) {
+                          ki.field_b.a("basic", (byte) -124)) {
                           if (param0) {
                             return true;
                           }
@@ -568,14 +568,14 @@ public final class Geoblox extends wf {
 
     private final void i(byte param0) {
         if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("germs", (byte) -126)) {
-                return;
-            }
-            sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs");
-            sg.field_e = jg.a(ll.field_f, 1, "germs", "germs_background");
-            int var2 = -24 / ((param0 + 13) / 61);
-            ll.field_g[3] = true;
+          if (!ll.field_f.a("germs", (byte) -126)) {
             return;
+          }
+          sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs");
+          sg.field_e = jg.a(ll.field_f, 1, "germs", "germs_background");
+          int var2 = -24 / ((param0 + 13) / 61);
+          ll.field_g[3] = true;
+          return;
         }
     }
 
@@ -585,14 +585,14 @@ public final class Geoblox extends wf {
 
     final static void a(int param0, dm param1) {
         try {
-            oc.b(9);
-            vb.a(param1.field_v, param1.field_s, param1.field_o);
-            if (param0 != 1) {
-                dm var3 = (dm) null;
-                Geoblox.a(-34, (dm) null);
-            }
+          oc.b(9);
+          vb.a(param1.field_v, param1.field_s, param1.field_o);
+          if (param0 != 1) {
+            dm var3 = (dm) null;
+            Geoblox.a(-34, (dm) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "Geoblox.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "Geoblox.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -600,8 +600,8 @@ public final class Geoblox extends wf {
         field_B = null;
         field_z = null;
         if (param0 != 0) {
-            dm var2 = (dm) null;
-            Geoblox.a(30, (dm) null);
+          dm var2 = (dm) null;
+          Geoblox.a(30, (dm) null);
         }
         field_A = null;
         field_y = null;
@@ -623,7 +623,7 @@ public final class Geoblox extends wf {
           return;
         }
         if (vl.field_n != null &&
-            vl.field_n.field_c) {
+          vl.field_n.field_c) {
           vl.field_n.a(0, ka.field_i);
           vl.field_n = null;
         }
@@ -642,7 +642,7 @@ public final class Geoblox extends wf {
             if (!ib.field_a) {
               oj.a(vc.field_i, (byte) -98);
               if (this.g(false) &&
-                  this.o(25869)) {
+                this.o(25869)) {
                 ib.field_a = true;
                 this.m(82);
                 break L6;
@@ -654,12 +654,12 @@ public final class Geoblox extends wf {
               lc.a(ph.field_g, -2, 100.0f);
             } else {
               if (dd.a((byte) 47) &&
-                  !jk.field_a) {
+                !jk.field_a) {
                 stackIn_91_0 = !(vl.field_n == null);
                 var2 = sl.a(stackIn_91_0, (wf) (this), false);
                 if (var2 != 2364824) {
                   if (var2 == 1 ||
-                      2 == var2) {
+                    2 == var2) {
                     if (null != vl.field_n) {
                       vl.field_n.a(0, ka.field_i);
                       vl.field_n = null;
@@ -717,7 +717,7 @@ public final class Geoblox extends wf {
                     }
                   }
                   if (null != el.field_o &&
-                      el.field_o.field_o > 0) {
+                    el.field_o.field_o > 0) {
                     el.field_o.e((byte) -70);
                   }
                   ai.field_p = el.field_i;
@@ -730,7 +730,7 @@ public final class Geoblox extends wf {
               }
               if (ai.field_p != tc.field_c) {
                 if (6 == ai.field_p &&
-                    ug.field_c <= 0) {
+                  ug.field_c <= 0) {
                   ai.field_p = 2;
                 }
                 if (-1 < tc.field_c) {
@@ -752,7 +752,7 @@ public final class Geoblox extends wf {
                 nf.field_A = nf.field_A + 1;
                 if (fieldTemp$0 == 160) {
                   if (el.field_i != -1 &&
-                      fh.c(-109)) {
+                    fh.c(-109)) {
                     if (cd.field_j != 0) {
                       kb.a(-106);
                     } else {
@@ -841,7 +841,7 @@ public final class Geoblox extends wf {
         sh.field_y.a(param0 - 25598);
         vb.c();
         if (tc.field_c == ai.field_p &&
-            el.field_i == -1) {
+          el.field_i == -1) {
           if (tc.field_c != -1) {
             og.field_q[tc.field_c].a(-28750);
           } else if (!dl.field_b) {
@@ -852,7 +852,7 @@ public final class Geoblox extends wf {
         } else {
           var3 = -480 + (nf.field_A * 6 + 35);
           if (el.field_i == -1 &&
-              !qj.field_b) {
+            !qj.field_b) {
             if (ai.field_p == -1) {
               el.field_o.a((byte) -68);
             } else if (tc.field_c == -1) {
@@ -891,54 +891,54 @@ public final class Geoblox extends wf {
 
     private final void h(boolean param0) {
         if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("jewels", (byte) -128)) {
-                return;
-            }
-            if (param0) {
-                return;
-            }
-            kj.field_E = ug.a("jewls_foreground", ll.field_f, (byte) -78, "jewels");
-            bj.field_r = jg.a(ll.field_f, 1, "jewels", "jewls_background");
-            ll.field_g[0] = true;
+          if (!ll.field_f.a("jewels", (byte) -128)) {
             return;
+          }
+          if (param0) {
+            return;
+          }
+          kj.field_E = ug.a("jewls_foreground", ll.field_f, (byte) -78, "jewels");
+          bj.field_r = jg.a(ll.field_f, 1, "jewels", "jewls_background");
+          ll.field_g[0] = true;
+          return;
         }
     }
 
     private final void q(int param0) {
         if (ll.field_f.a(param0 - 2)) {
-            if (!ll.field_f.a("baking", (byte) -125)) {
-                return;
-            }
-            hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking");
-            if (param0 != 2) {
-                return;
-            }
-            ca.field_g = jg.a(ll.field_f, param0 - 1, "baking", "baking_background");
-            ll.field_g[4] = true;
+          if (!ll.field_f.a("baking", (byte) -125)) {
             return;
+          }
+          hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking");
+          if (param0 != 2) {
+            return;
+          }
+          ca.field_g = jg.a(ll.field_f, param0 - 1, "baking", "baking_background");
+          ll.field_g[4] = true;
+          return;
         }
     }
 
     private final void e(boolean param0) {
         if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("space", (byte) -127)) {
-                return;
-            }
-            fl.field_a = ug.a("space_foreground", ll.field_f, (byte) -78, "space");
-            df.field_a = jg.a(ll.field_f, 1, "space", "space_background");
-            if (param0) {
-                return;
-            }
-            ll.field_g[6] = true;
+          if (!ll.field_f.a("space", (byte) -127)) {
             return;
+          }
+          fl.field_a = ug.a("space_foreground", ll.field_f, (byte) -78, "space");
+          df.field_a = jg.a(ll.field_f, 1, "space", "space_background");
+          if (param0) {
+            return;
+          }
+          ll.field_g[6] = true;
+          return;
         }
     }
 
     private final void f(boolean param0) {
         if (ak.field_b != null) {
-            wh.a(true, ak.field_b);
-            ak.field_b = null;
-            ih.b(-105);
+          wh.a(true, ak.field_b);
+          ak.field_b = null;
+          ih.b(-105);
         }
         ll.field_f = je.a(1, true, param0, true, (byte) -111);
         wj.field_F = kk.a(2, (byte) -62);
@@ -991,7 +991,7 @@ public final class Geoblox extends wf {
           var4 = 1;
         }
         if (7 == param1 ||
-              8 == param1) {
+          8 == param1) {
           var5 = -1;
           var4 = -1;
         }
@@ -1021,10 +1021,10 @@ public final class Geoblox extends wf {
         int var2 = 0;
         int var3 = field_C;
         if (!(og.field_n > 0)) {
-            t.field_i[1] = new int[]{1, 8, 9, 3, 6};
+          t.field_i[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (var2 = 0; var2 < 9; var2++) {
-            og.field_q[var2] = new c(this, var2);
+          og.field_q[var2] = new c(this, var2);
         }
         ai.field_p = -1;
         tc.field_c = -1;
@@ -1039,29 +1039,29 @@ public final class Geoblox extends wf {
         el.field_g = 8801;
         sc.field_f = 3382;
         if (param0 <= 68) {
-            this.h(true);
+          this.h(true);
         }
         da.b(150, 20);
     }
 
     private final void p(int param0) {
         if (ll.field_f.a(0)) {
-            if (!ll.field_f.a("sweets", (byte) -128)) {
-                return;
-            }
-            lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets");
-            if (param0 != 7) {
-                return;
-            }
-            pi.field_O = jg.a(ll.field_f, 1, "sweets", "sweets_background");
-            ll.field_g[2] = true;
+          if (!ll.field_f.a("sweets", (byte) -128)) {
             return;
+          }
+          lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets");
+          if (param0 != 7) {
+            return;
+          }
+          pi.field_O = jg.a(ll.field_f, 1, "sweets", "sweets_background");
+          ll.field_g[2] = true;
+          return;
         }
     }
 
     final void b(int param0) {
         if (param0 <= 109) {
-            return;
+          return;
         }
         this.a((byte) -70, 9, 8, 10, 0, false, 7, 1);
         kj var2 = new kj();

@@ -131,9 +131,9 @@ final class bj extends nh {
         var12 = (pb) (this.field_g.a((long)param2, (byte) -124));
         var4 = var12;
         if (var12 != null &&
-            param1 == 0 &&
-            !var12.field_q &&
-            var12.field_u) {
+          param1 == 0 &&
+          !var12.field_q &&
+          var12.field_u) {
           var12.a(false);
           var4 = null;
         }
@@ -161,7 +161,7 @@ final class bj extends nh {
             }
           } else {
             if (null != this.field_e &&
-                -1 != this.field_k[param2]) {
+              -1 != this.field_k[param2]) {
               var4 = this.field_i.a(this.field_e, param2, 15079962);
             } else {
               if (this.field_f.g(20)) {
@@ -184,7 +184,7 @@ final class bj extends nh {
         if (var4 instanceof o) {
           try {
             if (var5 != null &&
-                var18.length > 2) {
+              var18.length > 2) {
               ge.field_f.reset();
               ge.field_f.update(var5, 0, var18.length - 2);
               var6_int = (int)ge.field_f.getValue();
@@ -192,7 +192,7 @@ final class bj extends nh {
                 throw new RuntimeException();
               }
               if (this.field_u.field_r != null &&
-                  null != this.field_u.field_r[param2]) {
+                null != this.field_u.field_r[param2]) {
                 var27 = this.field_u.field_r[param2];
                 var28 = wh.a(-2 + var18.length, 0, var18, 8);
                 for (var9 = 0; var9 < 64; var9++) {
@@ -235,7 +235,7 @@ final class bj extends nh {
         }
         try {
           if (var5 != null &&
-              var18.length > 2) {
+            var18.length > 2) {
             ge.field_f.reset();
             ge.field_f.update(var5, 0, var18.length - 2);
             var6_int = (int)ge.field_f.getValue();
@@ -243,7 +243,7 @@ final class bj extends nh {
               throw new RuntimeException();
             }
             if (null != this.field_u.field_r &&
-                null != this.field_u.field_r[param2]) {
+              null != this.field_u.field_r[param2]) {
               var30 = this.field_u.field_r[param2];
               var29 = wh.a(-2 + var18.length, 0, var18, 8);
               var11 = 0;
@@ -266,7 +266,7 @@ final class bj extends nh {
           this.field_f.e(20);
           ((pb) (var4)).a(false);
           if (((pb) (var4)).field_q &&
-              !this.field_f.g(param0 ^ -83)) {
+            !this.field_f.g(param0 ^ -83)) {
             var4 = this.field_f.a((byte) 2, this.field_p, -21, param2, true);
             this.field_g.a((byte) 102, (hf) (var4), (long)param2);
           }
@@ -330,12 +330,12 @@ final class bj extends nh {
     final byte[] b(int param0, int param1) {
         pb var3 = this.a((byte) -71, 0, param1);
         if (var3 == null) {
-            return null;
+          return null;
         }
         byte[] var4 = var3.e(397);
         var3.a(false);
         if (param0 != 4) {
-            this.b(49);
+          this.b(49);
         }
         return var4;
     }
@@ -343,17 +343,17 @@ final class bj extends nh {
     final int a(int param0, int param1) {
         pb var3 = (pb) (this.field_g.a((long)param1, (byte) -102));
         if (param0 < 125) {
-            return -119;
+          return -119;
         }
         if (var3 != null) {
-            return var3.g(0);
+          return var3.g(0);
         }
         return 0;
     }
 
     public static void b(boolean param0) {
         if (!param0) {
-            return;
+          return;
         }
         field_r = null;
         field_j = null;
@@ -361,14 +361,14 @@ final class bj extends nh {
 
     final void b(int param0) {
         if (this.field_e == null) {
-            return;
+          return;
         }
         if (param0 < 80) {
-            this.field_n = -51L;
+          this.field_n = -51L;
         }
         this.field_v = true;
         if (this.field_d == null) {
-            this.field_d = new tf();
+          this.field_d = new tf();
         }
     }
 
@@ -378,39 +378,39 @@ final class bj extends nh {
         pb discarded$1 = null;
         int var4 = Geoblox.field_C;
         if (param0 != 6924) {
-            this.b((byte) -7);
+          this.b((byte) -7);
         }
         if (this.field_d == null) {
-            return;
+          return;
         }
         if (null == this.a((byte) 126)) {
-            return;
+          return;
         }
         hf var2 = this.field_t.g(0);
         while (var2 != null) {
-            var3 = (int)var2.field_a;
-            if (var3 < 0) {
-                var2.a(false);
+          var3 = (int)var2.field_a;
+          if (var3 < 0) {
+            var2.a(false);
+          } else {
+            if (var3 >= this.field_u.field_b) {
+              var2.a(false);
             } else {
-                if (var3 >= this.field_u.field_b) {
-                    var2.a(false);
-                } else {
-                    if (this.field_u.field_a[var3] == 0) {
-                        var2.a(false);
-                    } else {
-                        if (this.field_k[var3] == 0) {
-                            discarded$0 = this.a((byte) -71, 1, var3);
-                        }
-                        if (-1 == this.field_k[var3]) {
-                            discarded$1 = this.a((byte) -71, 2, var3);
-                        }
-                        if (this.field_k[var3] == 1) {
-                            var2.a(false);
-                        }
-                    }
+              if (this.field_u.field_a[var3] == 0) {
+                var2.a(false);
+              } else {
+                if (this.field_k[var3] == 0) {
+                  discarded$0 = this.a((byte) -71, 1, var3);
                 }
+                if (-1 == this.field_k[var3]) {
+                  discarded$1 = this.a((byte) -71, 2, var3);
+                }
+                if (this.field_k[var3] == 1) {
+                  var2.a(false);
+                }
+              }
             }
-            var2 = this.field_t.d(1);
+          }
+          var2 = this.field_t.d(1);
         }
     }
 
@@ -565,9 +565,9 @@ final class bj extends nh {
                   }
                   decompiledFrameRemainder1 = !(!this.field_w);
                   if (decompiledFrameRemainder1) {
-                  decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
+                    decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
                     if (decompiledFrameRemainder0) {
-                    var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
+                      var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
                       while (var2Lifetime1 != null) {
                         if (!var2Lifetime1.field_u) {
                           if (var2Lifetime1.field_n) {
@@ -581,9 +581,9 @@ final class bj extends nh {
                         }
                         var2Lifetime1 = (pb) (this.field_g.b(74));
                       }
+                    }
                   }
-                  }
-              }
+                }
               }
             }
             if (decompiledFrameRemainder1) {

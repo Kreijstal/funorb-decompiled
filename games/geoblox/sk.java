@@ -35,25 +35,25 @@ final class sk {
           var2 = -1L;
           var4 = -1L;
           if (this.field_c >= this.field_g &&
-              ((long)this.field_i + this.field_g) > this.field_c) {
+            ((long)this.field_i + this.field_g) > this.field_c) {
             var2 = this.field_c;
           } else {
             if (this.field_c <= this.field_g &&
-                this.field_g < (this.field_c + (long)this.field_d)) {
+              this.field_g < (this.field_c + (long)this.field_d)) {
               var2 = this.field_g;
             }
           }
           if (this.field_g < (this.field_c + (long)this.field_d) &&
-              this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c) {
+            this.field_g + (long)this.field_i >= (long)this.field_d + this.field_c) {
             var4 = (long)this.field_d + this.field_c;
           } else {
             if (((long)this.field_i + this.field_g) > this.field_c &&
-                (this.field_c + (long)this.field_d) >= ((long)this.field_i + this.field_g)) {
+              (this.field_c + (long)this.field_d) >= ((long)this.field_i + this.field_g)) {
               var4 = this.field_g + (long)this.field_i;
             }
           }
           if (var2 > -1L &&
-              var4 > var2) {
+            var4 > var2) {
             var6 = (int)(var4 - var2);
             sf.a(this.field_j, (int)(-this.field_c + var2), this.field_h, (int)(-this.field_g + var2), var6);
           }
@@ -69,13 +69,13 @@ final class sk {
         this.b((byte) 91);
         this.field_a.a((byte) -5);
         if (param0 != 27034) {
-            this.a((byte) 92);
+          this.a((byte) 92);
         }
     }
 
     final long a(byte param0) {
         if (param0 != 46) {
-            this.field_h = (byte[]) null;
+          this.field_h = (byte[]) null;
         }
         return this.field_k;
     }
@@ -108,8 +108,8 @@ final class sk {
               throw new ArrayIndexOutOfBoundsException(-param0.length + param2 + param1);
             }
             if (-1L != this.field_c &&
-                this.field_f >= this.field_c &&
-                (long)this.field_d + this.field_c >= (long)param1 + this.field_f) {
+              this.field_f >= this.field_c &&
+              (long)this.field_d + this.field_c >= (long)param1 + this.field_f) {
               sf.a(this.field_j, (int)(-this.field_c + this.field_f), param0, param2, param1);
               this.field_f = this.field_f + (long)param1;
               return;
@@ -121,7 +121,7 @@ final class sk {
               sk.a(-115);
             }
             if (this.field_f >= this.field_g &&
-                ((long)this.field_i + this.field_g) > this.field_f) {
+              ((long)this.field_i + this.field_g) > this.field_f) {
               var9_int = (int)((long)this.field_i - this.field_f + this.field_g);
               if (param1 < var9_int) {
                 var9_int = param1;
@@ -186,26 +186,26 @@ final class sk {
               }
               var9 = -1L;
               if (this.field_c >= var5_long &&
-                  this.field_c < ((long)var8 + var5_long)) {
+                this.field_c < ((long)var8 + var5_long)) {
                 var9 = this.field_c;
               } else {
                 if (this.field_c <= var5_long &&
-                    var5_long < this.field_c + (long)this.field_d) {
+                  var5_long < this.field_c + (long)this.field_d) {
                   var9 = var5_long;
                 }
               }
               var11 = -1L;
               if (var5_long < ((long)this.field_d + this.field_c) &&
-                  (long)var8 + var5_long >= (long)this.field_d + this.field_c) {
+                (long)var8 + var5_long >= (long)this.field_d + this.field_c) {
                 var11 = this.field_c + (long)this.field_d;
               } else {
                 if (this.field_c < var5_long + (long)var8 &&
-                    (var5_long + (long)var8) <= (this.field_c + (long)this.field_d)) {
+                  (var5_long + (long)var8) <= (this.field_c + (long)this.field_d)) {
                   var11 = (long)var8 + var5_long;
                 }
               }
               if (var9 > -1L &&
-                  var9 < var11) {
+                var9 < var11) {
                 var13 = (int)(-var9 + var11);
                 sf.a(this.field_j, (int)(var9 - this.field_c), param0, var7 + (int)(-var5_long + var9), var13);
                 if (var11 > this.field_f) {
@@ -269,7 +269,7 @@ final class sk {
               }
             }
             if (-1L != this.field_c &&
-                (long)param0 + this.field_f > (long)this.field_j.length + this.field_c) {
+              (long)param0 + this.field_f > (long)this.field_j.length + this.field_c) {
               var5_int = (int)((long)this.field_j.length + this.field_c - this.field_f);
               sf.a(param2, param1, this.field_j, (int)(-this.field_c + this.field_f), var5_int);
               this.field_f = this.field_f + (long)var5_int;
@@ -310,25 +310,25 @@ final class sk {
             var5_long = -1L;
             var7 = -1L;
             if (this.field_g <= this.field_f &&
-                this.field_f < (this.field_g + (long)this.field_i)) {
+              this.field_f < (this.field_g + (long)this.field_i)) {
               var5_long = this.field_f;
             } else {
               if (this.field_g >= this.field_f &&
-                  this.field_g < (this.field_f + (long)param0)) {
+                this.field_g < (this.field_f + (long)param0)) {
                 var5_long = this.field_g;
               }
             }
             if (this.field_g < ((long)param0 + this.field_f) &&
-                ((long)this.field_i + this.field_g) >= (this.field_f + (long)param0)) {
+              ((long)this.field_i + this.field_g) >= (this.field_f + (long)param0)) {
               var7 = this.field_f + (long)param0;
             } else {
               if (this.field_f < this.field_g + (long)this.field_i &&
-                  (this.field_g + (long)this.field_i) <= (this.field_f + (long)param0)) {
+                (this.field_g + (long)this.field_i) <= (this.field_f + (long)param0)) {
                 var7 = (long)this.field_i + this.field_g;
               }
             }
             if (var5_long > -1L &&
-                var5_long < var7) {
+              var5_long < var7) {
               var9 = (int)(-var5_long + var7);
               sf.a(param2, (int)(var5_long + ((long)param1 - this.field_f)), this.field_h, (int)(var5_long - this.field_g), var9);
             }
@@ -356,10 +356,10 @@ final class sk {
 
     final void a(byte param0, byte[] param1) throws IOException {
         try {
-            this.a(param1, param1.length, 0, 9868);
-            int var3_int = -83 / ((param0 + 9) / 39);
+          this.a(param1, param1.length, 0, 9868);
+          int var3_int = -83 / ((param0 + 9) / 39);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "sk.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sk.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -394,7 +394,7 @@ final class sk {
 
     final void a(int param0, long param1) throws IOException {
         if (param1 < 0L) {
-            throw new IOException();
+          throw new IOException();
         }
         int var4 = -65 / ((-57 - param0) / 37);
         this.field_f = param1;
@@ -495,15 +495,15 @@ final class sk {
         this.field_c = -1L;
         this.field_g = -1L;
         try {
-            this.field_a = param0;
-            dupTemp$0 = param0.a(1);
-            this.field_e = dupTemp$0;
-            this.field_k = dupTemp$0;
-            this.field_j = new byte[param2];
-            this.field_h = new byte[param1];
-            this.field_f = 0L;
+          this.field_a = param0;
+          dupTemp$0 = param0.a(1);
+          this.field_e = dupTemp$0;
+          this.field_k = dupTemp$0;
+          this.field_j = new byte[param2];
+          this.field_h = new byte[param1];
+          this.field_f = 0L;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

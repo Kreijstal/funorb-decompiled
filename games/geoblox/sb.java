@@ -13,7 +13,7 @@ final class sb {
         field_e = null;
         field_c = null;
         if (param0) {
-            field_a = 105;
+          field_a = 105;
         }
         field_b = null;
         field_f = null;
@@ -21,7 +21,7 @@ final class sb {
 
     final static int a(boolean param0) {
         if (!param0) {
-            return 104;
+          return 104;
         }
         return (int)(1000000000L / oj.field_c);
     }

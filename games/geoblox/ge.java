@@ -127,7 +127,7 @@ final class ge {
           while (8L < param1) {
             var8 = 255 & param0[var5_int] << var6 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
-                256 > var8) {
+              256 > var8) {
               this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
               this.field_h = this.field_h + (-var7 + 8);
               this.field_e = this.field_e + 1;
@@ -275,85 +275,85 @@ final class ge {
 
     final static int a(byte param0) {
         try {
-            int stackIn_12_0 = 0;
-            int stackIn_24_0 = 0;
-            int stackIn_27_0 = 0;
-            int stackIn_32_0 = 0;
-            Throwable decompiledCaughtException = null;
-            int var1_int = 0;
-            IOException var1 = null;
-            String var2 = null;
-            qc var3 = null;
-            if (wg.field_i.field_b >= 4) {
-              if (wg.field_i.field_q == -1) {
-                return 3;
-              }
-              if (wg.field_i.field_q != -2) {
-                return 1;
-              }
-              return 4;
+          int stackIn_12_0 = 0;
+          int stackIn_24_0 = 0;
+          int stackIn_27_0 = 0;
+          int stackIn_32_0 = 0;
+          Throwable decompiledCaughtException = null;
+          int var1_int = 0;
+          IOException var1 = null;
+          String var2 = null;
+          qc var3 = null;
+          if (wg.field_i.field_b >= 4) {
+            if (wg.field_i.field_q == -1) {
+              return 3;
             }
-            try {
-              if (qh.field_J == 0) {
-                gj.field_s = ph.field_i.a(vg.field_a, gh.field_z, false);
+            if (wg.field_i.field_q != -2) {
+              return 1;
+            }
+            return 4;
+          }
+          try {
+            if (qh.field_J == 0) {
+              gj.field_s = ph.field_i.a(vg.field_a, gh.field_z, false);
+              qh.field_J = qh.field_J + 1;
+            }
+            if (qh.field_J == 1) {
+              if (gj.field_s.field_a == 2) {
+                stackIn_12_0 = eb.a(-1, 28625);
+                return stackIn_12_0;
+              }
+              if (1 == gj.field_s.field_a) {
                 qh.field_J = qh.field_J + 1;
               }
-              if (qh.field_J == 1) {
-                if (gj.field_s.field_a == 2) {
-                  stackIn_12_0 = eb.a(-1, 28625);
-                  return stackIn_12_0;
-                }
-                if (1 == gj.field_s.field_a) {
-                  qh.field_J = qh.field_J + 1;
-                }
-              }
-              if (param0 != -74) {
-                var2 = (String) null;
-                ge.a((String) null, (byte) -15);
-              }
-              if (2 == qh.field_J) {
-                li.field_a = new ba((java.net.Socket) (gj.field_s.field_b), ph.field_i);
-                var3 = new qc(13);
-                ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
-                var3.d((byte) -54, 15);
-                var3.c((byte) 95, ag.field_l);
-                li.field_a.a(100, 0, 13, var3.field_j);
-                qh.field_J = qh.field_J + 1;
-                eb.field_b = 30000L + oa.a(param0 - 12446);
-              }
-              if (qh.field_J == 3) {
-                if (0 < li.field_a.a((byte) 78)) {
-                  var1_int = li.field_a.c(-17422);
-                  if (var1_int != 0) {
-                    stackIn_27_0 = eb.a(var1_int, 28625);
-                    return stackIn_27_0;
-                  }
-                  qh.field_J = qh.field_J + 1;
-                } else {
-                  if (oa.a(-12520) > eb.field_b) {
-                    stackIn_24_0 = eb.a(-2, param0 ^ -28569);
-                    return stackIn_24_0;
-                  }
-                }
-              }
-              if (4 != qh.field_J) {
-                return -1;
-              }
-              wg.field_i.a(li.field_a, false, si.field_c);
-              gj.field_s = null;
-              qh.field_J = 0;
-              li.field_a = null;
-              stackIn_32_0 = 0;
-              return stackIn_32_0;
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (IOException) (Object) decompiledCaughtException;
-              return eb.a(-3, 28625);
             }
+            if (param0 != -74) {
+              var2 = (String) null;
+              ge.a((String) null, (byte) -15);
+            }
+            if (2 == qh.field_J) {
+              li.field_a = new ba((java.net.Socket) (gj.field_s.field_b), ph.field_i);
+              var3 = new qc(13);
+              ke.a(pc.field_C, true, hc.field_T, bm.field_u, var3);
+              var3.d((byte) -54, 15);
+              var3.c((byte) 95, ag.field_l);
+              li.field_a.a(100, 0, 13, var3.field_j);
+              qh.field_J = qh.field_J + 1;
+              eb.field_b = 30000L + oa.a(param0 - 12446);
+            }
+            if (qh.field_J == 3) {
+              if (0 < li.field_a.a((byte) 78)) {
+                var1_int = li.field_a.c(-17422);
+                if (var1_int != 0) {
+                  stackIn_27_0 = eb.a(var1_int, 28625);
+                  return stackIn_27_0;
+                }
+                qh.field_J = qh.field_J + 1;
+              } else {
+                if (oa.a(-12520) > eb.field_b) {
+                  stackIn_24_0 = eb.a(-2, param0 ^ -28569);
+                  return stackIn_24_0;
+                }
+              }
+            }
+            if (4 != qh.field_J) {
+              return -1;
+            }
+            wg.field_i.a(li.field_a, false, si.field_c);
+            gj.field_s = null;
+            qh.field_J = 0;
+            li.field_a = null;
+            stackIn_32_0 = 0;
+            return stackIn_32_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (IOException) (Object) decompiledCaughtException;
+            return eb.a(-3, 28625);
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -362,16 +362,16 @@ final class ge {
         int var3 = Geoblox.field_C;
         int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
-            this.field_j[var2] = (byte) 0;
+          this.field_j[var2] = (byte) 0;
         }
         this.field_i[0] = (byte) 0;
         this.field_h = 0;
         this.field_e = 0;
         for (var2Lifetime1 = 0; 8 > var2Lifetime1; var2Lifetime1++) {
-            this.field_c[var2Lifetime1] = 0L;
+          this.field_c[var2Lifetime1] = 0L;
         }
         if (param0 <= 51) {
-            this.field_e = 101;
+          this.field_e = 101;
         }
     }
 

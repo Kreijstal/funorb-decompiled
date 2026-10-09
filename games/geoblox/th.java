@@ -63,14 +63,14 @@ final class th extends lf {
         field_f = null;
         field_g = null;
         if (param0 != -109) {
-            field_f = (na) null;
+          field_f = (na) null;
         }
     }
 
     final qg a(byte param0) {
         if (param0 != -32) {
-            this.a((byte) 104);
-            return vh.field_D;
+          this.a((byte) 104);
+          return vh.field_D;
         }
         return vh.field_D;
     }

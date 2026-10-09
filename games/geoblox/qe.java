@@ -41,11 +41,11 @@ final class qe {
               }
               if (var10[var8].field_f == param2) {
                 if (param5 != 0 &&
-                    param5 != var10[var8].field_a) {
+                  param5 != var10[var8].field_a) {
                   continue;
                 }
                 if (var7_int != 0 &&
-                    param0 >= var10[var8].field_h) {
+                  param0 >= var10[var8].field_h) {
                   continue;
                 }
                 var7_int = 1;
@@ -87,7 +87,7 @@ final class qe {
 
     public static void a(int param0) {
         if (param0 != -8616) {
-            qe.a(87);
+          qe.a(87);
         }
         field_c = null;
     }
@@ -99,7 +99,7 @@ final class qe {
         var2 = Geoblox.field_C;
         try {
           if (ji.field_h != 0 &&
-              ji.field_h < 21) {
+            ji.field_h < 21) {
             fa.field_b = fa.field_b + 10;
           }
           fa.field_b = fa.field_b + param0;
@@ -117,12 +117,12 @@ final class qe {
 
     final static void a(rh param0, rh param1, int param2) {
         try {
-            if (param2 > -66) {
-                d var4 = (d) null;
-                qe.a(91, -118, 58, -45, (d) null, -79);
-            }
+          if (param2 > -66) {
+            d var4 = (d) null;
+            qe.a(91, -118, 58, -45, (d) null, -79);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "qe.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -22,36 +22,36 @@ final class wg implements Runnable {
     final qc b(byte param0) {
         int var2 = 62 / ((param0 - 9) / 53);
         if (this.field_l == 3) {
-            return this.field_n;
+          return this.field_n;
         }
         return null;
     }
 
     protected final void finalize() {
         if (null != this.field_f) {
-            if (this.field_f.field_b != null) {
-                try {
-                    ((DataInputStream) (this.field_f.field_b)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_f = null;
-        }
-        if (this.field_k != null) {
-            if (null != this.field_k.field_b) {
-                try {
-                    ((java.net.Socket) (this.field_k.field_b)).close();
-                } catch (Exception exception) {
-                }
-            }
-            this.field_k = null;
-        }
-        if (null != this.field_c) {
+          if (this.field_f.field_b != null) {
             try {
-                this.field_c.close();
+              ((DataInputStream) (this.field_f.field_b)).close();
             } catch (Exception exception) {
             }
-            this.field_c = null;
+          }
+          this.field_f = null;
+        }
+        if (this.field_k != null) {
+          if (null != this.field_k.field_b) {
+            try {
+              ((java.net.Socket) (this.field_k.field_b)).close();
+            } catch (Exception exception) {
+            }
+          }
+          this.field_k = null;
+        }
+        if (null != this.field_c) {
+          try {
+            this.field_c.close();
+          } catch (Exception exception) {
+          }
+          this.field_c = null;
         }
         this.field_g = null;
     }
@@ -157,45 +157,45 @@ final class wg implements Runnable {
 
     public final void run() {
         try {
-            int var1_int = 0;
-            Object var1 = null;
-            Object var2 = null;
-            Throwable var3 = null;
-            int var4 = 0;
-            Throwable decompiledCaughtException = null;
-            var4 = Geoblox.field_C;
-            try {
-              while (this.field_n.field_f < this.field_n.field_j.length) {
-                var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
-                if (0 <= var1_int) {
-                  this.field_n.field_f = this.field_n.field_f + var1_int;
-                  continue;
-                }
-                break;
+          int var1_int = 0;
+          Object var1 = null;
+          Object var2 = null;
+          Throwable var3 = null;
+          int var4 = 0;
+          Throwable decompiledCaughtException = null;
+          var4 = Geoblox.field_C;
+          try {
+            while (this.field_n.field_f < this.field_n.field_j.length) {
+              var1_int = this.field_c.read(this.field_n.field_j, this.field_n.field_f, -this.field_n.field_f + this.field_n.field_j.length);
+              if (0 <= var1_int) {
+                this.field_n.field_f = this.field_n.field_f + var1_int;
+                continue;
               }
-              if (this.field_n.field_j.length == this.field_n.field_f) {
-                throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.field_j.length + " " + this.field_h));
-              }
-              var1 = this;
-              synchronized (var1) {
-                this.finalize();
-                this.field_l = 3;
-              }
-              return;
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
-              var2 = this;
-              synchronized (var2) {
-                this.finalize();
-                this.field_l = this.field_l + 1;
-              }
-              return;
+              break;
             }
+            if (this.field_n.field_j.length == this.field_n.field_f) {
+              throw wg.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_n.field_j.length + " " + this.field_h));
+            }
+            var1 = this;
+            synchronized (var1) {
+              this.finalize();
+              this.field_l = 3;
+            }
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (Exception) (Object) decompiledCaughtException;
+            var2 = this;
+            synchronized (var2) {
+              this.finalize();
+              this.field_l = this.field_l + 1;
+            }
+            return;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -203,17 +203,17 @@ final class wg implements Runnable {
         oc.field_c = param1;
         uh.field_y.b((int)((float)(64 * param1 / 80) * 1.399999976158142f), (byte) 22);
         if (param0 != -15346) {
-            wg.a(-15, 68);
+          wg.a(-15, 68);
         }
     }
 
     wg(d param0, java.net.URL param1, int param2) {
         try {
-            this.field_b = param0;
-            this.field_h = param1;
-            this.field_n = new qc(param2);
+          this.field_b = param0;
+          this.field_h = param1;
+          this.field_n = new qc(param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "wg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

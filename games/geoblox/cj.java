@@ -12,7 +12,7 @@ abstract class cj {
     public static void b(int param0) {
         field_a = null;
         if (param0 > -59) {
-            return;
+          return;
         }
         field_b = null;
     }
@@ -20,10 +20,10 @@ abstract class cj {
     final int a(byte param0, long param1) {
         long var4 = this.a((byte) -49);
         if (0L < var4) {
-            bc.a(0, var4);
+          bc.a(0, var4);
         }
         if (param0 == -6) {
-            return this.a(true, param1);
+          return this.a(true, param1);
         }
         return -30;
     }

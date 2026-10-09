@@ -9,7 +9,7 @@ final class hg {
 
     final static void b(int param0) {
         if (param0 != -23738) {
-            return;
+          return;
         }
         pc.a(4, false);
     }
@@ -17,7 +17,7 @@ final class hg {
     public static void a(int param0) {
         field_c = null;
         if (param0 != -17525) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;

@@ -35,19 +35,19 @@ final class hl extends el {
         Geoblox.a(1, var14);
         int var5 = this.field_h >> 1;
         for (var6 = 0; this.field_h > var6; var6++) {
-            var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
-            var8 = 16711935 & param2;
-            var9 = 65280 & param2;
-            var10 = -var5 + var6;
-            var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-            var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
-            vb.c(var7, var6, this.field_H, var12);
-            vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
-            var9Lifetime1 = param0 & 65280;
-            var8Lifetime1 = param0 & 16711935;
-            var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | -16711936 & var11 * var8Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
-            vb.c(this.field_H + var7, var6, this.field_H, var12Lifetime1);
-            vb.c(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          var7 = (var6 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
+          var8 = 16711935 & param2;
+          var9 = 65280 & param2;
+          var10 = -var5 + var6;
+          var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
+          var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
+          vb.c(var7, var6, this.field_H, var12);
+          vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
+          var9Lifetime1 = param0 & 65280;
+          var8Lifetime1 = param0 & 16711935;
+          var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | -16711936 & var11 * var8Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
+          vb.c(this.field_H + var7, var6, this.field_H, var12Lifetime1);
+          vb.c(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         id.a(param1);
         return var14;
@@ -58,7 +58,7 @@ final class hl extends el {
         this.field_E = param1;
         this.field_J = param1 >> 1 & 8355711;
         if (param2 != -103) {
-            this.e(-107);
+          this.e(-107);
         }
         this.field_L = param0;
         this.e(-1326628703);
@@ -73,19 +73,19 @@ final class hl extends el {
         int var2 = this.field_h >> 1;
         dm var3 = new dm(var2, this.field_h);
         if (param0 != 255) {
-            return (dm) null;
+          return (dm) null;
         }
         Geoblox.a(1, var3);
         for (var4 = 0; var4 < this.field_h; var4++) {
-            for (var5 = 0; var5 < var2; var5++) {
-                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
-                var8 = 1;
-                if (var6 < 1.0) {
-                    var6 = Math.sqrt(1.0 - var6);
-                    var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
-                }
-                vb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+          for (var5 = 0; var5 < var2; var5++) {
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_h));
+            var8 = 1;
+            if (var6 < 1.0) {
+              var6 = Math.sqrt(1.0 - var6);
+              var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
             }
+            vb.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+          }
         }
         id.a(true);
         return var3;
@@ -150,15 +150,15 @@ final class hl extends el {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = -76 % ((param2 - 1) / 43);
         if (param3 != 0) {
-            return;
+          return;
         }
         int var6 = param0 + this.field_v;
         int var7 = param1 + this.field_m;
         this.a(this.field_F[0], var7, var6, -12276);
         if (this.field_x < 65536) {
-            uh.a(var7, var6 + (this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
-            this.a(this.field_F[1], var7, var6, -12276);
-            id.a(true);
+          uh.a(var7, var6 + (this.field_r * this.field_x >> 16), -14045, var7 + this.field_h, this.field_r + var6);
+          this.a(this.field_F[1], var7, var6, -12276);
+          id.a(true);
         }
     }
 
@@ -167,7 +167,7 @@ final class hl extends el {
         super.a(param0, param1, (byte) -74, param3, param4);
         this.e(-1326628703);
         if (param2 > -6) {
-            discarded$0 = this.g(109);
+          discarded$0 = this.g(109);
         }
     }
 
@@ -175,7 +175,7 @@ final class hl extends el {
         this.field_F = new dm[]{this.a(this.field_L, true, this.field_E), this.a(this.field_A, true, this.field_J)};
         this.field_M = this.g(255);
         if (param0 != -1326628703) {
-            return;
+          return;
         }
         this.field_y = this.field_M.c();
         this.field_z = new dm(this.field_h >> 1, this.field_h);
@@ -196,7 +196,7 @@ final class hl extends el {
 
     public static void f(int param0) {
         if (param0 != 407213000) {
-            hl.f(93);
+          hl.f(93);
         }
         field_B = null;
         field_K = null;

@@ -17,8 +17,8 @@ final class da {
 
     final static boolean a(int param0, int param1) {
         if (param0 != -1) {
-            int var2 = 43 / ((24 - param1) / 50);
-            return (field_a & 1 << param0) != 0 ? true : false;
+          int var2 = 43 / ((24 - param1) / 50);
+          return (field_a & 1 << param0) != 0 ? true : false;
         }
         return true;
     }
@@ -28,10 +28,10 @@ final class da {
         param1 = param1 | param1 >>> 1;
         param1 = param1 | param1 >>> 2;
         if (param0 > 88) {
-            param1 = param1 | param1 >>> 4;
-            param1 = param1 | param1 >>> 8;
-            param1 = param1 | param1 >>> 16;
-            return param1 + 1;
+          param1 = param1 | param1 >>> 4;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
+          return param1 + 1;
         }
         return -15;
     }
@@ -41,7 +41,7 @@ final class da {
         ri.field_c = tf.field_e[param1];
         vc.field_g = le.field_b[param1];
         if (!param0) {
-            field_d = (int[]) null;
+          field_d = (int[]) null;
         }
     }
 
@@ -49,10 +49,10 @@ final class da {
         field_b = null;
         field_e = null;
         if (param0 == 50) {
-            field_d = null;
-            field_g = null;
-            field_f = null;
-            return;
+          field_d = null;
+          field_g = null;
+          field_f = null;
+          return;
         }
         field_d = (int[]) null;
         field_d = null;

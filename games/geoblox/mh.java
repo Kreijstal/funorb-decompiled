@@ -26,12 +26,12 @@ final class mh {
         field_h = param3 - param1;
         mh.a();
         if (field_b.length < field_h) {
-            field_b = new int[da.a((byte) 107, field_h)];
+          field_b = new int[da.a((byte) 107, field_h)];
         }
         int var4 = param1 * vb.field_f + param0;
         for (var5 = 0; var5 < field_h; var5++) {
-            field_b[var5] = var4;
-            var4 = var4 + vb.field_f;
+          field_b[var5] = var4;
+          var4 = var4 + vb.field_f;
         }
     }
 
@@ -54,14 +54,14 @@ final class mh {
         field_a = new int[2048];
         field_g = new int[2048];
         for (var0 = 1; var0 < 512; var0++) {
-            field_e[var0] = 32768 / var0;
+          field_e[var0] = 32768 / var0;
         }
         for (var0Lifetime1 = 1; var0Lifetime1 < 2048; var0Lifetime1++) {
-            field_a[var0Lifetime1] = 65536 / var0Lifetime1;
+          field_a[var0Lifetime1] = 65536 / var0Lifetime1;
         }
         for (var0Lifetime2 = 0; var0Lifetime2 < 2048; var0Lifetime2++) {
-            field_f[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
-            field_g[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
+          field_f[var0Lifetime2] = (int)(65536.0 * Math.sin((double)var0Lifetime2 * 0.0030679615));
+          field_g[var0Lifetime2] = (int)(65536.0 * Math.cos((double)var0Lifetime2 * 0.0030679615));
         }
     }
 }

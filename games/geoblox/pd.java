@@ -11,21 +11,21 @@ final class pd {
         java.awt.DisplayMode[] var1 = var4;
         int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 2] = var4[var3].getWidth();
-            var2[(var3 << 2) + 1] = var4[var3].getHeight();
-            var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
-            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
+          var2[var3 << 2] = var4[var3].getWidth();
+          var2[(var3 << 2) + 1] = var4[var3].getHeight();
+          var2[2 + (var3 << 2)] = var4[var3].getBitDepth();
+          var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     public final void exit() {
         if (this.field_b != null) {
-            this.field_a.setDisplayMode(this.field_b);
-            if (!this.field_a.getDisplayMode().equals(this.field_b)) {
-                throw new RuntimeException("");
-            }
-            this.field_b = null;
+          this.field_a.setDisplayMode(this.field_b);
+          if (!this.field_a.getDisplayMode().equals(this.field_b)) {
+            throw new RuntimeException("");
+          }
+          this.field_b = null;
         }
         this.a(-779675038, (java.awt.Frame) null);
     }
@@ -103,7 +103,7 @@ final class pd {
             }
             var10 = var7[var9].getRefreshRate();
             if (var8 != 0 &&
-                Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
+              Math.abs(-var6 + var10) >= Math.abs(-var6 + param4)) {
               var9++;
               continue;
             }

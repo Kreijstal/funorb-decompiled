@@ -17,12 +17,12 @@ final class uf implements Runnable {
 
     public static void a(int param0) {
         if (param0 < -35) {
-            field_e = null;
-            field_h = null;
-            field_f = null;
-            field_i = null;
-            field_l = null;
-            return;
+          field_e = null;
+          field_h = null;
+          field_f = null;
+          field_i = null;
+          field_l = null;
+          return;
         }
         field_e = (ob) null;
         field_e = null;
@@ -101,8 +101,8 @@ final class uf implements Runnable {
             var6 = (o) (this.field_k.c((byte) 121));
             while (var6 != null) {
               if ((long)param1 == var6.field_i &&
-                  var6.field_w == param0 &&
-                  2 == var6.field_x) {
+                var6.field_w == param0 &&
+                2 == var6.field_x) {
                 var4.field_y = var6.field_y;
                 var4.field_u = false;
                 stackIn_11_0 = var4;
@@ -211,29 +211,29 @@ final class uf implements Runnable {
 
     final static void a(int param0, int param1) {
         if (param0 < 87) {
-            String var3 = (String) null;
-            uf.a((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
+          String var3 = (String) null;
+          uf.a((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
         }
     }
 
     final void a(byte param0) {
         try {
-            this.field_j = true;
-            synchronized (this.field_k) {
-                this.field_k.notifyAll();
-            }
-            if (param0 != 51) {
-                return;
-            }
-            try {
-                this.field_g.join();
-            } catch (InterruptedException interruptedException) {
-            }
-            this.field_g = null;
+          this.field_j = true;
+          synchronized (this.field_k) {
+            this.field_k.notifyAll();
+          }
+          if (param0 != 51) {
+            return;
+          }
+          try {
+            this.field_g.join();
+          } catch (InterruptedException interruptedException) {
+          }
+          this.field_g = null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -273,67 +273,67 @@ final class uf implements Runnable {
 
     public final void run() {
         try {
-            InterruptedException interruptedException = null;
-            Object var2 = null;
-            int var5 = 0;
-            o var7 = null;
-            int decompiledRegionSelector0 = 0;
-            int decompiledRegionSelector1 = 0;
-            Throwable decompiledCaughtException = null;
-            Exception var2_ref = null;
-            String var6 = null;
-            var5 = Geoblox.field_C;
-            while (!this.field_j) {
-              var2 = this.field_k;
-              synchronized (var2) {
-                var7 = (o) (this.field_k.a(true));
-                if (var7 == null) {
-                  try {
-                    this.field_k.wait();
-                  } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    interruptedException = (InterruptedException) (Object) decompiledCaughtException;
-                  }
-                  decompiledRegionSelector0 = 0;
-                } else {
-                  this.field_d = this.field_d - 1;
-                  decompiledRegionSelector0 = 1;
+          InterruptedException interruptedException = null;
+          Object var2 = null;
+          int var5 = 0;
+          o var7 = null;
+          int decompiledRegionSelector0 = 0;
+          int decompiledRegionSelector1 = 0;
+          Throwable decompiledCaughtException = null;
+          Exception var2_ref = null;
+          String var6 = null;
+          var5 = Geoblox.field_C;
+          while (!this.field_j) {
+            var2 = this.field_k;
+            synchronized (var2) {
+              var7 = (o) (this.field_k.a(true));
+              if (var7 == null) {
+                try {
+                  this.field_k.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                 }
+                decompiledRegionSelector0 = 0;
+              } else {
+                this.field_d = this.field_d - 1;
+                decompiledRegionSelector0 = 1;
               }
-              if (decompiledRegionSelector0 == 0) {
-                continue;
-              }
-              try {
-                L4: {
-                  if (var7.field_x != 2) {
-                    if (3 == var7.field_x) {
-                      var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
-                      decompiledRegionSelector1 = 1;
-                      break L4;
-                    }
-                    var7.field_u = false;
-                  } else {
-                    var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
-                    var7.field_u = false;
-                  }
-                  decompiledRegionSelector1 = 0;
-                }
-              } catch (java.lang.Exception decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var6 = (String) null;
-                gi.a((Throwable) ((Object) var2_ref), (String) null, (byte) 125);
-                decompiledRegionSelector1 = 1;
-              }
-              if (decompiledRegionSelector1 == 0) {
-                continue;
-              }
-              var7.field_u = false;
             }
+            if (decompiledRegionSelector0 == 0) {
+              continue;
+            }
+            try {
+              L4: {
+                if (var7.field_x != 2) {
+                  if (3 == var7.field_x) {
+                    var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
+                    decompiledRegionSelector1 = 1;
+                    break L4;
+                  }
+                  var7.field_u = false;
+                } else {
+                  var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
+                  var7.field_u = false;
+                }
+                decompiledRegionSelector1 = 0;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              gi.a((Throwable) ((Object) var2_ref), (String) null, (byte) 125);
+              decompiledRegionSelector1 = 1;
+            }
+            if (decompiledRegionSelector1 == 0) {
+              continue;
+            }
+            var7.field_u = false;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -343,16 +343,16 @@ final class uf implements Runnable {
         this.field_d = 0;
         this.field_j = false;
         try {
-            var2 = param0.a((Runnable) (this), 0, 5);
-            while (var2.field_a == 0) {
-                bc.a(0, 10L);
-            }
-            if (2 == var2.field_a) {
-                throw new RuntimeException();
-            }
-            this.field_g = (Thread) (var2.field_b);
+          var2 = param0.a((Runnable) (this), 0, 5);
+          while (var2.field_a == 0) {
+            bc.a(0, 10L);
+          }
+          if (2 == var2.field_a) {
+            throw new RuntimeException();
+          }
+          this.field_g = (Thread) (var2.field_b);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

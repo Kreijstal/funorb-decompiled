@@ -10,8 +10,8 @@ abstract class nh {
 
     public static void a(boolean param0) {
         if (!param0) {
-            byte[] var2 = (byte[]) null;
-            nh.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (qc) null, (byte[]) null, -60, false);
+          byte[] var2 = (byte[]) null;
+          nh.a((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (qc) null, (byte[]) null, -60, false);
         }
         field_b = null;
         field_a = null;
@@ -53,7 +53,7 @@ abstract class nh {
             var8[var9] = cl.field_e.nextInt();
           }
           if (null == fa.field_c ||
-                !(fa.field_c.field_j.length >= var7_int)) {
+            !(fa.field_c.field_j.length >= var7_int)) {
             fa.field_c = new qc(var7_int);
           }
           fa.field_c.field_f = 0;
@@ -61,7 +61,7 @@ abstract class nh {
           fa.field_c.a((byte) -84, var7_int);
           fa.field_c.a(var12, (byte) -33);
           if (vf.field_I == null ||
-              !(vf.field_I.field_j.length >= 100)) {
+            !(vf.field_I.field_j.length >= 100)) {
             vf.field_I = new qc(100);
           }
           vf.field_I.field_f = 0;

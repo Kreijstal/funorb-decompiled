@@ -12,9 +12,9 @@ final class ob extends ia {
         param0.a();
         hf var2 = this.field_j.field_a.field_b;
         if (var2 == this.field_j.field_a) {
-            this.field_k = -1;
+          this.field_k = -1;
         } else {
-            this.field_k = ((jd) (var2)).field_f;
+          this.field_k = ((jd) (var2)).field_f;
         }
     }
 
@@ -81,8 +81,8 @@ final class ob extends ia {
     private final void c(int[] param0, int param1, int param2) {
         ia var4 = (ia) (this.field_m.g(0));
         while (var4 != null) {
-            var4.b(param0, param1, param2);
-            var4 = (ia) (this.field_m.d(1));
+          var4.b(param0, param1, param2);
+          var4 = (ia) (this.field_m.d(1));
         }
     }
 
@@ -130,13 +130,13 @@ final class ob extends ia {
     private final void e() {
         jd var1 = null;
         if (this.field_l > 0) {
-            var1 = (jd) (this.field_j.g(0));
-            while (var1 != null) {
-                var1.field_f = var1.field_f - this.field_l;
-                var1 = (jd) (this.field_j.d(1));
-            }
-            this.field_k = this.field_k - this.field_l;
-            this.field_l = 0;
+          var1 = (jd) (this.field_j.g(0));
+          while (var1 != null) {
+            var1.field_f = var1.field_f - this.field_l;
+            var1 = (jd) (this.field_j.d(1));
+          }
+          this.field_k = this.field_k - this.field_l;
+          this.field_l = 0;
         }
     }
 
@@ -147,8 +147,8 @@ final class ob extends ia {
     private final void c(int param0) {
         ia var2 = (ia) (this.field_m.g(0));
         while (var2 != null) {
-            var2.b(param0);
-            var2 = (ia) (this.field_m.d(1));
+          var2.b(param0);
+          var2 = (ia) (this.field_m.d(1));
         }
     }
 

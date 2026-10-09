@@ -12,14 +12,14 @@ final class nk extends df {
 
     final void a(int param0, qc param1) {
         try {
-            if (param0 <= 107) {
-                byte[] var4 = (byte[]) null;
-                nk.a((byte[]) null, -72);
-            }
-            param1.a(this.field_d, (byte) -126);
-            param1.a(this.field_h, false);
+          if (param0 <= 107) {
+            byte[] var4 = (byte[]) null;
+            nk.a((byte[]) null, -72);
+          }
+          param1.a(this.field_d, (byte) -126);
+          param1.a(this.field_h, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "nk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,24 +58,24 @@ final class nk extends df {
         field_g = null;
         field_c = null;
         if (param0 != -17226) {
-            field_g = (String) null;
+          field_g = (String) null;
         }
     }
 
     final qg a(byte param0) {
         if (param0 != -32) {
-            field_c = (int[]) null;
-            return ej.field_b;
+          field_c = (int[]) null;
+          return ej.field_b;
         }
         return ej.field_b;
     }
 
     nk(String param0, String param1) {
         try {
-            this.field_h = param1;
-            this.field_d = param0;
+          this.field_h = param1;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "nk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

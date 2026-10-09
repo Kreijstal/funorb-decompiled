@@ -281,17 +281,17 @@ final class u {
         var9 = var9 - (var10 < 0 ? -var10 : var10) * var8;
         param4[param0] = param4[param0] * field_k[var11];
         if (param2 > param5) {
-            param2 = param5;
+          param2 = param5;
         }
         for (var14 = param0 + 1; var14 < param2; var14++) {
-            var12 = var12 + var9;
-            if (var12 >= var8) {
-                var12 = var12 - var8;
-                var11 = var11 + var13;
-            } else {
-                var11 = var11 + var10;
-            }
-            param4[var14] = param4[var14] * field_k[var11];
+          var12 = var12 + var9;
+          if (var12 >= var8) {
+            var12 = var12 - var8;
+            var11 = var11 + var13;
+          } else {
+            var11 = var11 + var10;
+          }
+          param4[var14] = param4[var14] * field_k[var11];
         }
     }
 
@@ -371,7 +371,7 @@ final class u {
           }
         }
         if (field_a != null &&
-            field_a.length >= var5Lifetime3) {
+          field_a.length >= var5Lifetime3) {
           return;
         }
         field_a = new int[var5Lifetime3];

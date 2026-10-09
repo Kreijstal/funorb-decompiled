@@ -7,20 +7,20 @@ final class od {
 
     final static boolean a(int param0) {
         if (param0 != -3) {
-            field_b = (String) null;
-            if (gg.field_b != 2) {
-                return false;
-            }
-            if (pa.field_g < 0) {
-                return true;
-            }
+          field_b = (String) null;
+          if (gg.field_b != 2) {
             return false;
+          }
+          if (pa.field_g < 0) {
+            return true;
+          }
+          return false;
         }
         if (gg.field_b != 2) {
-            return false;
+          return false;
         }
         if (pa.field_g < 0) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -55,19 +55,19 @@ final class od {
     public static void a(byte param0) {
         field_b = null;
         if (param0 >= -8) {
-            od.b((byte) -78);
+          od.b((byte) -78);
         }
     }
 
     final void a(java.applet.Applet param0, int param1) {
         try {
-            ea.a((byte) -25, 31536000L, param0, "jagex-last-login-method", this.field_a);
-            if (param1 != 0) {
-                java.applet.Applet var4 = (java.applet.Applet) null;
-                this.a((java.applet.Applet) null, -71);
-            }
+          ea.a((byte) -25, 31536000L, param0, "jagex-last-login-method", this.field_a);
+          if (param1 != 0) {
+            java.applet.Applet var4 = (java.applet.Applet) null;
+            this.a((java.applet.Applet) null, -71);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "od.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -148,9 +148,9 @@ final class od {
 
     od(String param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "od.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -26,71 +26,71 @@ final class fe {
 
     final void a(int param0, qc param1, byte[] param2) {
         try {
-            Exception exception = null;
-            RuntimeException runtimeException = null;
-            RuntimeException stackIn_15_0 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            StringBuilder stackIn_18_1 = null;
-            String stackIn_19_2 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              if (param1.field_j[param1.field_f] == 31 &&
-                  -117 == param1.field_j[1 + param1.field_f]) {
-                if (this.field_i == null) {
-                  this.field_i = new java.util.zip.Inflater(true);
+          Exception exception = null;
+          RuntimeException runtimeException = null;
+          RuntimeException stackIn_15_0 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          StringBuilder stackIn_18_1 = null;
+          String stackIn_19_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param1.field_j[param1.field_f] == 31 &&
+              -117 == param1.field_j[1 + param1.field_f]) {
+              if (this.field_i == null) {
+                this.field_i = new java.util.zip.Inflater(true);
+              }
+              try {
+                this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
+                if (param0 != -1) {
+                  fe.a(76);
                 }
-                try {
-                  this.field_i.setInput(param1.field_j, param1.field_f + 10, param1.field_j.length - 8 - (param1.field_f + 10));
-                  if (param0 != -1) {
-                    fe.a(76);
-                  }
-                  this.field_i.inflate(param2);
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  exception = (Exception) (Object) decompiledCaughtException;
-                  this.field_i.reset();
-                  throw new RuntimeException("");
-                }
+                this.field_i.inflate(param2);
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                exception = (Exception) (Object) decompiledCaughtException;
                 this.field_i.reset();
-                return;
+                throw new RuntimeException("");
               }
-              throw new RuntimeException("");
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_15_0 = runtimeException;
-              stackIn_15_1 = new StringBuilder().append("fe.D(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_16_2 = "null";
-              } else {
-                stackIn_16_2 = "{...}";
-              }
-              stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-              if (param2 == null) {
-                stackIn_19_2 = "null";
-              } else {
-                stackIn_19_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+              this.field_i.reset();
+              return;
             }
+            throw new RuntimeException("");
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_15_0 = runtimeException;
+            stackIn_15_1 = new StringBuilder().append("fe.D(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+            if (param2 == null) {
+              stackIn_19_2 = "null";
+            } else {
+              stackIn_19_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static int b(int param0) {
         if (param0 <= 103) {
-            return 4;
+          return 4;
         }
         return qe.field_a;
     }
 
     final static ck[] a(int param0) {
         if (param0 == -1) {
-            return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, wh.field_t, qj.field_a, fk.field_B, am.field_d, bd.field_c, va.field_f, field_h};
+          return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, wh.field_t, qj.field_a, fk.field_B, am.field_d, bd.field_c, va.field_f, field_h};
         }
         field_c = -1.1302366256713867f;
         return new ck[]{pj.field_g, w.field_d, ab.field_c, wg.field_d, lj.field_e, s.field_E, cd.field_i, wh.field_t, qj.field_a, fk.field_B, am.field_d, bd.field_c, va.field_f, field_h};

@@ -121,18 +121,18 @@ final class og extends rc {
         int var2 = 0;
         int var3 = Geoblox.field_C;
         if (param0 != 119) {
-            field_r = 0.380857914686203f;
+          field_r = 0.380857914686203f;
         }
         if (this.field_m != null) {
-            for (var2 = 0; this.field_m.length > var2; var2++) {
-                this.field_m[var2] = lb.a(this.field_m[var2], 32768);
-            }
+          for (var2 = 0; this.field_m.length > var2; var2++) {
+            this.field_m[var2] = lb.a(this.field_m[var2], 32768);
+          }
         }
     }
 
     public static void f(int param0) {
         if (param0 < 71) {
-            og.e(41);
+          og.e(41);
         }
         field_q = null;
     }
@@ -145,15 +145,15 @@ final class og extends rc {
         StringBuilder var5 = new StringBuilder(80);
         StringBuilder var2 = var5;
         if (param0 > -7) {
-            og.f(41);
+          og.f(41);
         }
         if (null == this.field_p) {
-            return "";
+          return "";
         }
         StringBuilder discarded$0 = var5.append(this.field_p[0]);
         for (var3 = 1; this.field_p.length > var3; var3++) {
-            discarded$1 = var2.append("...");
-            discarded$2 = var5.append(this.field_p[var3]);
+          discarded$1 = var2.append("...");
+          discarded$2 = var5.append(this.field_p[var3]);
         }
         return var2.toString();
     }
@@ -165,14 +165,14 @@ final class og extends rc {
         fh.b(-6011);
         kd.field_e.f(10936);
         if (param0 != 2274) {
-            return;
+          return;
         }
         try {
-            ml.field_t = new pf(b.field_a, (String) null, cf.field_i, param2, param3);
-            hk.field_C = new ei(kd.field_e, ml.field_t);
-            kd.field_e.a(false, hk.field_C);
+          ml.field_t = new pf(b.field_a, (String) null, cf.field_i, param2, param3);
+          hk.field_C = new ei(kd.field_e, ml.field_t);
+          kd.field_e.a(false, hk.field_C);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "og.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -212,13 +212,13 @@ final class og extends rc {
 
     final static String a(String param0, String param1, boolean param2, String param3) {
         if (!param2) {
-            String var5 = (String) null;
-            og.a((String) null, (String) null, true, (String) null);
+          String var5 = (String) null;
+          og.a((String) null, (String) null, true, (String) null);
         }
         int var4 = param0.indexOf(param3);
         while (var4 != -1) {
-            param0 = param0.substring(0, var4) + param1 + param0.substring(param3.length() + var4);
-            var4 = param0.indexOf(param3, param1.length() + var4);
+          param0 = param0.substring(0, var4) + param1 + param0.substring(param3.length() + var4);
+          var4 = param0.indexOf(param3, param1.length() + var4);
         }
         return param0;
     }

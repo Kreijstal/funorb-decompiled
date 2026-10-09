@@ -23,10 +23,10 @@ class rc extends hf {
 
     final static String d(byte param0) {
         if (param0 > -43) {
-            return (String) null;
+          return (String) null;
         }
         if (null == wd.field_f) {
-            return "";
+          return "";
         }
         return wd.field_f;
     }
@@ -36,20 +36,20 @@ class rc extends hf {
         CharSequence var2 = (CharSequence) ((Object) wd.field_f);
         vg.field_b = oe.a(var2, 12);
         if (param0 != 1) {
-            rc.b(83);
+          rc.b(83);
         }
     }
 
     final void a(byte param0) {
         if (this.field_l == null) {
-            return;
+          return;
         }
         this.field_l.field_k = this.field_k;
         if (param0 > 39) {
-            this.field_k.field_l = this.field_l;
-            this.field_l = null;
-            this.field_k = null;
-            return;
+          this.field_k.field_l = this.field_l;
+          this.field_l = null;
+          this.field_k = null;
+          return;
         }
         field_g = (String) null;
         this.field_k.field_l = this.field_l;
@@ -59,21 +59,21 @@ class rc extends hf {
 
     final static int d(int param0) {
         if (param0 < 101) {
-            rc.c((byte) 20);
-            return 1;
+          rc.c((byte) 20);
+          return 1;
         }
         return 1;
     }
 
     final static boolean a(int param0, char param1) {
         if (param0 != -58) {
-            return false;
+          return false;
         }
         if (48 > param1) {
-            return false;
+          return false;
         }
         if (param1 > 57) {
-            return false;
+          return false;
         }
         return true;
     }

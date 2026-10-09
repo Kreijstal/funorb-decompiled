@@ -16,7 +16,7 @@ final class wj extends sh {
 
     final static boolean f(int param0) {
         if (param0 != 7426) {
-            field_E = (String) null;
+          field_E = (String) null;
         }
         return 250 < gb.field_f ? true : false;
     }
@@ -24,11 +24,11 @@ final class wj extends sh {
     wj(el param0) {
         super(param0.field_v, param0.field_m, param0.field_r, param0.field_h, (dh) null, (bb) null);
         try {
-            param0.a(this.field_h, this.field_r, (byte) -113, 0, 0);
-            this.field_D = 256;
-            this.field_A = param0;
+          param0.a(this.field_h, this.field_r, (byte) -113, 0, 0);
+          this.field_D = 256;
+          this.field_A = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "wj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,17 +146,17 @@ final class wj extends sh {
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = 16 % ((param2 - 1) / 43);
         if (param3 != 0) {
-            return;
+          return;
         }
         if (null == this.field_A) {
-            return;
+          return;
         }
         if (this.field_D == 0) {
-            return;
+          return;
         }
         if (this.field_D == 256) {
-            this.field_A.a(param0 + this.field_v, param1 + this.field_m, (byte) 83, param3);
-            return;
+          this.field_A.a(param0 + this.field_v, param1 + this.field_m, (byte) 83, param3);
+          return;
         }
         dm var6 = new dm(this.field_A.field_r, this.field_A.field_h);
         Geoblox.a(1, var6);
@@ -170,7 +170,7 @@ final class wj extends sh {
         field_B = null;
         field_C = null;
         if (param0 != -60) {
-            return;
+          return;
         }
         field_F = null;
         field_E = null;

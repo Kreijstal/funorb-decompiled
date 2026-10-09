@@ -92,10 +92,10 @@ final class lh {
     public static void b(int param0) {
         field_b = null;
         if (param0 != -481) {
-            lh.a(90);
-            field_a = null;
-            field_c = null;
-            return;
+          lh.a(90);
+          field_a = null;
+          field_c = null;
+          return;
         }
         field_a = null;
         field_c = null;

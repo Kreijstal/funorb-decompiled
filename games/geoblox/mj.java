@@ -128,7 +128,7 @@ final class mj {
         field_c = null;
         field_a = (byte[][]) null;
         if (param0 < 66) {
-            field_b = 91;
+          field_b = 91;
         }
     }
 

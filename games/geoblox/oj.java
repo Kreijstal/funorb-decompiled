@@ -10,49 +10,49 @@ abstract class oj {
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
-            RuntimeException stackIn_8_0 = null;
-            StringBuilder stackIn_8_1 = null;
-            String stackIn_9_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2 = null;
-            RuntimeException var2_ref = null;
-            String var3 = null;
-            java.net.URL var4 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          String var3 = null;
+          java.net.URL var4 = null;
+          try {
             try {
-              try {
-                var4 = param0.getCodeBase();
-                if (param1 != 20000000) {
-                  oj.a(-109);
-                }
-                var3 = wf.a(var4, param1 - 19999938, param0).getFile();
-                wk.a(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
-                wk.a(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
-                wk.a(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
-                return;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = decompiledCaughtException;
-                return;
+              var4 = param0.getCodeBase();
+              if (param1 != 20000000) {
+                oj.a(-109);
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_8_0 = var2_ref;
-              stackIn_8_1 = new StringBuilder().append("oj.F(");
-              if (param0 == null) {
-                stackIn_9_2 = "null";
-              } else {
-                stackIn_9_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+              var3 = wf.a(var4, param1 - 19999938, param0).getFile();
+              wk.a(param1 - 20014882, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
+              wk.a(-14882, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
+              wk.a(-14882, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
+              wk.a(param1 - 20014882, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
+              wk.a(-14882, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
+              wk.a(-14882, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref;
+            stackIn_8_1 = new StringBuilder().append("oj.F(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -60,7 +60,7 @@ abstract class oj {
         field_d = null;
         field_a = null;
         if (param0 > -50) {
-            return;
+          return;
         }
         field_e = null;
     }
@@ -68,7 +68,7 @@ abstract class oj {
     final static void a(int param0, byte param1) {
         gb.a(-1);
         if (param1 >= -89) {
-            oj.a(70);
+          oj.a(70);
         }
     }
 

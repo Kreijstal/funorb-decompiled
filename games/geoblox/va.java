@@ -12,7 +12,7 @@ final class va {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-            return;
+          return;
         }
         field_e = null;
         field_c = null;
@@ -20,35 +20,35 @@ final class va {
 
     final static void a(String param0, java.applet.Applet param1, int param2) {
         try {
-            String var3 = null;
-            String var4 = null;
-            String var5 = null;
+          String var3 = null;
+          String var4 = null;
+          String var5 = null;
+          try {
+            me.field_j = param0;
             try {
-                me.field_j = param0;
-                try {
-                    var3 = param1.getParameter("cookieprefix");
-                    var4 = param1.getParameter("cookiehost");
-                    var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                    if (~param0.length() == param2) {
-                        var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    wk.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -92);
-                } catch (Throwable throwable) {
-                }
-                oj.a(param1, 20000000);
-            } catch (RuntimeException runtimeException) {
-                throw t.a((Throwable) ((Object) runtimeException), "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+              var3 = param1.getParameter("cookieprefix");
+              var4 = param1.getParameter("cookiehost");
+              var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+              if (~param0.length() == param2) {
+                var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              wk.a(param1, "document.cookie=\"" + var5 + "\"", (byte) -92);
+            } catch (Throwable throwable) {
             }
+            oj.a(param1, 20000000);
+          } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "va.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static dm[] a(int param0, byte param1) {
         if (param1 != -112) {
-            field_e = (al) null;
+          field_e = (al) null;
         }
         dm[] var3 = new dm[9];
         dm[] var2 = var3;

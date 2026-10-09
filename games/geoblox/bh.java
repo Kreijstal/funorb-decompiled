@@ -11,11 +11,11 @@ final class bh extends java.awt.Canvas {
 
     final static int a(byte param0, int param1) {
         if (param0 <= 7) {
-            return -8;
+          return -8;
         }
         param1 = param1 & 8191;
         if (param1 < 4096) {
-            return param1 < 2048 ? ai.field_l[param1] : ai.field_l[4096 - param1];
+          return param1 < 2048 ? ai.field_l[param1] : ai.field_l[4096 - param1];
         }
         return param1 >= 6144 ? -ai.field_l[-param1 + 8192] : -ai.field_l[param1 - 4096];
     }
@@ -29,9 +29,9 @@ final class bh extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-            this.field_b.update(param0);
+          this.field_b.update(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class bh extends java.awt.Canvas {
               var18[0][4 * var10 + 2] = k.field_i[var11];
               var18[0][4 * var10 + 3] = cj.field_b[var11];
               if (ge.a(oi.field_a[var11], (byte) 12) &&
-                  cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
+                cj.field_b[var11] + (fb.field_m[var11] + k.field_i[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -123,7 +123,7 @@ final class bh extends java.awt.Canvas {
               var18[1][var13 * 4 + 2] = k.field_i[var11Lifetime1];
               var18[1][var13 * 4 + 3] = cj.field_b[var11Lifetime1];
               if (ge.a(oi.field_a[var11Lifetime1], (byte) 12) &&
-                  cj.field_b[var11Lifetime1] + k.field_i[var11Lifetime1] + fb.field_m[var11Lifetime1] == 0) {
+                cj.field_b[var11Lifetime1] + k.field_i[var11Lifetime1] + fb.field_m[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -144,9 +144,9 @@ final class bh extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics param0) {
         try {
-            this.field_b.paint(param0);
+          this.field_b.paint(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -203,46 +203,46 @@ final class bh extends java.awt.Canvas {
             }
             var11 = 0;
             {
-            L5: while (!(var11 >= var10.field_L)) {
-              if (var10.field_n[var11].field_z != 1 ||
-                    !param4) {
-                if (2 != var10.field_n[var11].field_z) {
+              L5: while (!(var11 >= var10.field_L)) {
+                if (var10.field_n[var11].field_z != 1 ||
+                  !param4) {
+                  if (2 != var10.field_n[var11].field_z) {
+                    var11++;
+                    continue;
+                  }
+                  if (!param0) {
+                    var11++;
+                    continue;
+                  }
+                }
+                var12 = (ja) (var6.c((byte) 121));
+                while (var12 != null) {
+                  if (var10 != var12) {
+                    var12 = (ja) (var6.a(param2 - 60));
+                    continue;
+                  }
                   var11++;
-                  continue;
+                  continue L5;
                 }
-                if (!param0) {
-                  var11++;
-                  continue;
+                if (param4) {
+                  var10.field_m = var10.field_m + 1;
+                  dupTemp$1 = var10.field_n[var11];
+                  stackIn_31_0 = dupTemp$1;
+                  stackIn_31_1 = dupTemp$1;
+                  stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
                 }
-              }
-              var12 = (ja) (var6.c((byte) 121));
-              while (var12 != null) {
-                if (var10 != var12) {
-                  var12 = (ja) (var6.a(param2 - 60));
-                  continue;
+                if (param0) {
+                  var10.field_u = param1.field_u;
+                  var10.field_N = var10.field_N + 1;
+                  dupTemp$2 = var10.field_n[var11];
+                  dupTemp$2.field_N = dupTemp$2.field_N + 1;
                 }
+                var14.a(var10.field_n[var11], false);
                 var11++;
-                continue L5;
               }
-              if (param4) {
-                var10.field_m = var10.field_m + 1;
-                dupTemp$1 = var10.field_n[var11];
-                stackIn_31_0 = dupTemp$1;
-                stackIn_31_1 = dupTemp$1;
-                stackIn_31_0.field_m = stackIn_31_1.field_m + 1;
-              }
-              if (param0) {
-                var10.field_u = param1.field_u;
-                var10.field_N = var10.field_N + 1;
-                dupTemp$2 = var10.field_n[var11];
-                dupTemp$2.field_N = dupTemp$2.field_N + 1;
-              }
-              var14.a(var10.field_n[var11], false);
-              var11++;
-            }
-             {
+              {
                 var6.a(var10, false);
-                }
+              }
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -267,9 +267,9 @@ final class bh extends java.awt.Canvas {
 
     bh(java.awt.Component param0) {
         try {
-            this.field_b = param0;
+          this.field_b = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

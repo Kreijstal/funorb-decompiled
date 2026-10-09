@@ -12,8 +12,8 @@ final class ul {
         field_c = null;
         field_a = null;
         if (param0 > -58) {
-            j var2 = (j) null;
-            ul.a((j) null, (j) null, (byte) -96);
+          j var2 = (j) null;
+          ul.a((j) null, (j) null, (byte) -96);
         }
     }
 
@@ -61,7 +61,7 @@ final class ul {
           }
           while (var3 != null) {
             if (!(var3.field_m <= 1) ||
-                !(var3.field_N <= 1)) {
+              !(var3.field_N <= 1)) {
               var3.field_K = bh.field_c;
               stackIn_10_0 = (var3.field_m <= 1) ? 0 : 1;
               var4 = stackIn_10_0;
@@ -82,7 +82,7 @@ final class ul {
                 }
                 var8 = stackIn_27_0;
                 if (var7 != 0 ||
-                    var8 != 0) {
+                  var8 != 0) {
                   for (var9 = var6 + 1; var9 < var3.field_L; var9++) {
                     if (var8 != 0) {
                       stackIn_38_0 = (var3.field_n[var9].field_C == var3.field_C) ? 1 : 0;
@@ -97,7 +97,7 @@ final class ul {
                     }
                     var11 = stackIn_44_0;
                     if (var10 != 0 ||
-                        var11 != 0) {
+                      var11 != 0) {
                       var3.field_n[var6].field_K = bh.field_c;
                       var3.field_n[var9].field_K = bh.field_c;
                       var13 = var3.field_n[var6].field_H;
@@ -112,7 +112,7 @@ final class ul {
                         dd.field_D = dd.field_D + 1;
                       }
                       if (var11 != 0 &&
-                          var10 != 0) {
+                        var10 != 0) {
                       }
                       if (var10 != 0) {
                         dk.field_b = dk.field_b + 1;
@@ -230,23 +230,23 @@ final class ul {
         int var3 = 0;
         int var4 = 0;
         try {
-            var2 = new dm(param1.a(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) f.field_kb));
-            var3 = var2.field_r;
-            var4 = var2.field_m;
-            oc.b(param0 + 21619);
-            bk.field_b = new dm(var3, 3 * var4 / 4);
-            bk.field_b.e();
-            var2.c(0, 0);
-            cl.field_b = new dm(var3, var4 - bk.field_b.field_m);
-            cl.field_b.e();
-            if (param0 != -21541) {
-                field_a = (dm) null;
-            }
-            var2.c(0, -bk.field_b.field_m);
-            cl.field_b.field_p = bk.field_b.field_m;
-            id.a(true);
+          var2 = new dm(param1.a(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) f.field_kb));
+          var3 = var2.field_r;
+          var4 = var2.field_m;
+          oc.b(param0 + 21619);
+          bk.field_b = new dm(var3, 3 * var4 / 4);
+          bk.field_b.e();
+          var2.c(0, 0);
+          cl.field_b = new dm(var3, var4 - bk.field_b.field_m);
+          cl.field_b.e();
+          if (param0 != -21541) {
+            field_a = (dm) null;
+          }
+          var2.c(0, -bk.field_b.field_m);
+          cl.field_b.field_p = bk.field_b.field_m;
+          id.a(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ul.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

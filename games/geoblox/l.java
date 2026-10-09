@@ -12,7 +12,7 @@ final class l extends oj {
         field_i = null;
         field_h = null;
         if (param0 > -1) {
-            field_i = (fd[]) null;
+          field_i = (fd[]) null;
         }
     }
 
@@ -32,12 +32,12 @@ final class l extends oj {
         this.field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
         this.field_f.position(0);
         if (!param1) {
-            return;
+          return;
         }
         try {
-            this.field_f.put(param0);
+          this.field_f.put(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "l.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

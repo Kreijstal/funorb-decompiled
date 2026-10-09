@@ -10,14 +10,14 @@ final class qj {
         field_c = null;
         field_a = null;
         if (param0 != -23) {
-            qj.b((byte) 28);
+          qj.b((byte) 28);
         }
     }
 
     final static int b(byte param0) {
         if (param0 != 81) {
-            qj.b((byte) -12);
-            return rd.field_u;
+          qj.b((byte) -12);
+          return rd.field_u;
         }
         return rd.field_u;
     }

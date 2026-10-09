@@ -29,81 +29,81 @@ class qk {
 
     final static qk a(d param0, java.awt.Component param1, int param2, int param3) {
         try {
-            ce var4 = null;
-            Throwable var4_ref = null;
-            ce var5 = null;
-            ce stackIn_10_0 = null;
-            int stackIn_10_1 = 0;
-            int stackIn_11_2 = 0;
-            ce stackIn_21_0 = null;
-            Throwable decompiledCaughtException = null;
-            if (field_j == 0) {
-              throw new IllegalStateException();
+          ce var4 = null;
+          Throwable var4_ref = null;
+          ce var5 = null;
+          ce stackIn_10_0 = null;
+          int stackIn_10_1 = 0;
+          int stackIn_11_2 = 0;
+          ce stackIn_21_0 = null;
+          Throwable decompiledCaughtException = null;
+          if (field_j == 0) {
+            throw new IllegalStateException();
+          }
+          if (param2 >= 0 &&
+            param2 < 2) {
+            if (param3 < 256) {
+              param3 = 256;
             }
-            if (param2 >= 0 &&
-                param2 < 2) {
-              if (param3 < 256) {
-                param3 = 256;
+            try {
+              var5 = new ce();
+              var4 = var5;
+              stackIn_10_0 = var4;
+              stackIn_10_1 = 256;
+              if (!field_q) {
+                stackIn_11_2 = 1;
+              } else {
+                stackIn_11_2 = 2;
               }
-              try {
-                var5 = new ce();
-                var4 = var5;
-                stackIn_10_0 = var4;
-                stackIn_10_1 = 256;
-                if (!field_q) {
-                  stackIn_11_2 = 1;
-                } else {
-                  stackIn_11_2 = 2;
-                }
-                ((qk) ((Object) stackIn_10_0)).field_c = new int[stackIn_10_1 * stackIn_11_2];
-                ((qk) ((Object) var4)).field_i = param3;
-                ((qk) ((Object) var4)).a(param1);
-                ((qk) ((Object) var4)).field_g = (param3 & -1024) + 1024;
-                if (((qk) ((Object) var4)).field_g > 16384) {
-                  ((qk) ((Object) var4)).field_g = 16384;
-                }
-                ((qk) ((Object) var4)).a(((qk) ((Object) var4)).field_g);
-                if (field_d > 0 &&
-                    field_r == null) {
-                  field_r = new kh();
-                  field_r.field_b = param0;
-                  param0.a((Runnable) ((Object) field_r), 0, field_d);
-                }
-                if (field_r != null) {
-                  if (field_r.field_g[param2] != null) {
-                    throw new IllegalArgumentException();
-                  }
-                  field_r.field_g[param2] = (qk) ((Object) var5);
-                }
-                stackIn_21_0 = var4;
-                return (qk) ((Object) stackIn_21_0);
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                return new qk();
+              ((qk) ((Object) stackIn_10_0)).field_c = new int[stackIn_10_1 * stackIn_11_2];
+              ((qk) ((Object) var4)).field_i = param3;
+              ((qk) ((Object) var4)).a(param1);
+              ((qk) ((Object) var4)).field_g = (param3 & -1024) + 1024;
+              if (((qk) ((Object) var4)).field_g > 16384) {
+                ((qk) ((Object) var4)).field_g = 16384;
               }
+              ((qk) ((Object) var4)).a(((qk) ((Object) var4)).field_g);
+              if (field_d > 0 &&
+                field_r == null) {
+                field_r = new kh();
+                field_r.field_b = param0;
+                param0.a((Runnable) ((Object) field_r), 0, field_d);
+              }
+              if (field_r != null) {
+                if (field_r.field_g[param2] != null) {
+                  throw new IllegalArgumentException();
+                }
+                field_r.field_g[param2] = (qk) ((Object) var5);
+              }
+              stackIn_21_0 = var4;
+              return (qk) ((Object) stackIn_21_0);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              return new qk();
             }
-            throw new IllegalArgumentException();
+          }
+          throw new IllegalArgumentException();
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final synchronized void a() {
         try {
-            this.field_o = true;
-            try {
-                this.d();
-            } catch (Exception exception) {
-                this.f();
-                this.field_m = oa.a(-12520) + 2000L;
-            }
+          this.field_o = true;
+          try {
+            this.d();
+          } catch (Exception exception) {
+            this.f();
+            this.field_m = oa.a(-12520) + 2000L;
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -147,12 +147,12 @@ class qk {
     private final static void a(ia param0) {
         param0.field_f = false;
         if (param0.field_g != null) {
-            param0.field_g.field_f = 0;
+          param0.field_g.field_f = 0;
         }
         ia var1 = param0.b();
         while (var1 != null) {
-            qk.a(var1);
-            var1 = param0.c();
+          qk.a(var1);
+          var1 = param0.c();
         }
     }
 
@@ -162,7 +162,7 @@ class qk {
 
     final static void a(int param0, boolean param1, int param2) {
         if (param0 < 8000 || param0 > 48000) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         field_j = param0;
         field_q = param1 ? true : false;
@@ -171,96 +171,96 @@ class qk {
 
     final synchronized void b() {
         try {
-            Throwable decompiledCaughtException = null;
-            long var1 = 0L;
-            Exception var3 = null;
-            int var3_int = 0;
-            int var4 = 0;
-            if (this.field_h) {
-              return;
+          Throwable decompiledCaughtException = null;
+          long var1 = 0L;
+          Exception var3 = null;
+          int var3_int = 0;
+          int var4 = 0;
+          if (this.field_h) {
+            return;
+          }
+          var1 = oa.a(-12520);
+          try {
+            if (var1 > this.field_n + 6000L) {
+              this.field_n = var1 - 6000L;
             }
-            var1 = oa.a(-12520);
-            try {
-              if (var1 > this.field_n + 6000L) {
-                this.field_n = var1 - 6000L;
+            while (var1 > this.field_n + 5000L) {
+              this.b(256);
+              this.field_n = this.field_n + (long)(256000 / field_j);
+              var1 = oa.a(-12520);
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            this.field_n = var1;
+          }
+          if (this.field_c == null) {
+            return;
+          }
+          try {
+            if (this.field_m != 0L) {
+              if (var1 < this.field_m) {
+                return;
               }
-              while (var1 > this.field_n + 5000L) {
-                this.b(256);
-                this.field_n = this.field_n + (long)(256000 / field_j);
-                var1 = oa.a(-12520);
+              this.a(this.field_g);
+              this.field_m = 0L;
+              this.field_o = true;
+            }
+            var3_int = this.g();
+            if (this.field_t - var3_int > this.field_s) {
+              this.field_s = this.field_t - var3_int;
+            }
+            var4 = this.field_i + this.field_p;
+            if (var4 + 256 > 16384) {
+              var4 = 16128;
+            }
+            if (var4 + 256 > this.field_g) {
+              this.field_g = this.field_g + 1024;
+              if (this.field_g > 16384) {
+                this.field_g = 16384;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              this.field_n = var1;
+              this.f();
+              this.a(this.field_g);
+              var3_int = 0;
+              this.field_o = true;
+              if (var4 + 256 > this.field_g) {
+                var4 = this.field_g - 256;
+                this.field_p = var4 - this.field_i;
+              }
             }
-            if (this.field_c == null) {
-              return;
+            while (var3_int < var4) {
+              this.a(this.field_c, 256);
+              this.e();
+              var3_int += 256;
             }
-            try {
-              if (this.field_m != 0L) {
-                if (var1 < this.field_m) {
+            if (var1 > this.field_e) {
+              if (this.field_o) {
+                this.field_o = false;
+              } else {
+                if (this.field_s == 0 &&
+                  this.field_f == 0) {
+                  this.f();
+                  this.field_m = var1 + 2000L;
                   return;
                 }
-                this.a(this.field_g);
-                this.field_m = 0L;
-                this.field_o = true;
+                this.field_p = Math.min(this.field_f, this.field_s);
+                this.field_f = this.field_s;
               }
-              var3_int = this.g();
-              if (this.field_t - var3_int > this.field_s) {
-                this.field_s = this.field_t - var3_int;
-              }
-              var4 = this.field_i + this.field_p;
-              if (var4 + 256 > 16384) {
-                var4 = 16128;
-              }
-              if (var4 + 256 > this.field_g) {
-                this.field_g = this.field_g + 1024;
-                if (this.field_g > 16384) {
-                  this.field_g = 16384;
-                }
-                this.f();
-                this.a(this.field_g);
-                var3_int = 0;
-                this.field_o = true;
-                if (var4 + 256 > this.field_g) {
-                  var4 = this.field_g - 256;
-                  this.field_p = var4 - this.field_i;
-                }
-              }
-              while (var3_int < var4) {
-                this.a(this.field_c, 256);
-                this.e();
-                var3_int += 256;
-              }
-              if (var1 > this.field_e) {
-                if (this.field_o) {
-                  this.field_o = false;
-                } else {
-                  if (this.field_s == 0 &&
-                      this.field_f == 0) {
-                    this.f();
-                    this.field_m = var1 + 2000L;
-                    return;
-                  }
-                  this.field_p = Math.min(this.field_f, this.field_s);
-                  this.field_f = this.field_s;
-                }
-                this.field_s = 0;
-                this.field_e = var1 + 2000L;
-              }
-              this.field_t = var3_int;
-            } catch (java.lang.Exception decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var3 = (Exception) (Object) decompiledCaughtException;
-              this.f();
-              this.field_m = var1 + 2000L;
+              this.field_s = 0;
+              this.field_e = var1 + 2000L;
             }
-            return;
+            this.field_t = var3_int;
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3 = (Exception) (Object) decompiledCaughtException;
+            this.f();
+            this.field_m = var1 + 2000L;
+          }
+          return;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -268,9 +268,9 @@ class qk {
         int var3 = param1 >> 5;
         ia var4 = this.field_b[var3];
         if (var4 == null) {
-            this.field_a[var3] = param0;
+          this.field_a[var3] = param0;
         } else {
-            var4.field_h = param0;
+          var4.field_h = param0;
         }
         this.field_b[var3] = param0;
         param0.field_i = param1;
@@ -305,7 +305,7 @@ class qk {
         sf.a(param0, 0, var3);
         this.field_u = this.field_u - param1;
         if (this.field_k != null &&
-            this.field_u <= 0) {
+          this.field_u <= 0) {
           this.field_u = this.field_u + (field_j >> 4);
           qk.a(this.field_k);
           this.a(this.field_k, this.field_k.a());
@@ -332,7 +332,7 @@ class qk {
                   while (var11 != null) {
                     var12 = var11.field_g;
                     if (var12 != null &&
-                        var12.field_f > var8_int) {
+                      var12.field_f > var8_int) {
                       var5 = var5 | 1 << var7_int;
                       var10 = var11;
                       var11 = var11.field_h;
@@ -402,11 +402,11 @@ class qk {
     private final void b(int param0) {
         this.field_u = this.field_u - param0;
         if (this.field_u < 0) {
-            this.field_u = 0;
+          this.field_u = 0;
         }
         if (this.field_k != null) {
-            this.field_k.b(param0);
-            return;
+          this.field_k.b(param0);
+          return;
         }
     }
 

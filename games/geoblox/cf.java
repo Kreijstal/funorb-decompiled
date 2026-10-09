@@ -9,7 +9,7 @@ final class cf extends q {
     final static void h(int param0) {
         sj.a(k.c(108), (byte) 110);
         if (param0 >= -24) {
-            field_k = true;
+          field_k = true;
         }
     }
 
@@ -37,7 +37,7 @@ final class cf extends q {
           var5 = (CharSequence) ((Object) param1);
           var3_int = ol.a(false, var5);
           if (var3_int > 0 &&
-              130 >= var3_int) {
+            130 >= var3_int) {
             stackIn_11_0 = kk.field_w;
             return stackIn_11_0;
           }
@@ -60,7 +60,7 @@ final class cf extends q {
     public static void g(int param0) {
         field_j = null;
         if (param0 > -11) {
-            field_j = (String) null;
+          field_j = (String) null;
         }
     }
 
@@ -156,11 +156,11 @@ final class cf extends q {
           }
           for (var2 = 0; var1.field_f > var2; var2++) {
             if (null != var4.field_n[var2] &&
-                var4.field_n[var2].field_a == 0) {
+              var4.field_n[var2].field_a == 0) {
               return false;
             }
             if (var4.field_i[var2] != null &&
-                var4.field_i[var2].field_a == 0) {
+              var4.field_i[var2].field_a == 0) {
               return false;
             }
           }

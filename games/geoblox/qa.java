@@ -295,10 +295,10 @@ final class qa {
 
     public static void a(byte param0) {
         if (param0 > -1) {
-            qa.b((byte) -72);
-            field_e = null;
-            field_f = null;
-            return;
+          qa.b((byte) -72);
+          field_e = null;
+          field_f = null;
+          return;
         }
         field_e = null;
         field_f = null;
@@ -415,7 +415,7 @@ final class qa {
         var1_int = uf.field_b - ka.field_h;
         if (jk.field_d != 1) {
           if (jk.field_d == 2 &&
-              var1_int < 5) {
+            var1_int < 5) {
             uf.field_b = uf.field_b + 1;
             af.field_c = 20;
             pa.field_g = pa.field_g - 1;
@@ -437,7 +437,7 @@ final class qa {
             return;
           }
           if (jk.field_d == 0 &&
-              var1_int < 3) {
+            var1_int < 3) {
             uf.field_b = uf.field_b + 1;
             af.field_c = 20;
             pa.field_g = pa.field_g - 1;
@@ -547,7 +547,7 @@ final class qa {
           return;
         }
         if (jk.field_d == 2 &&
-            var1_int < 5) {
+          var1_int < 5) {
           uf.field_b = uf.field_b + 1;
           af.field_c = 20;
           pa.field_g = pa.field_g - 1;
@@ -569,7 +569,7 @@ final class qa {
           return;
         }
         if (jk.field_d == 0 &&
-            var1_int < 3) {
+          var1_int < 3) {
           uf.field_b = uf.field_b + 1;
           af.field_c = 20;
           pa.field_g = pa.field_g - 1;

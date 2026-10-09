@@ -15,14 +15,14 @@ final class fa {
     final static void a(String param0, int param1, boolean param2) {
         mi.field_I = param2;
         if (param1 != 480) {
-            return;
+          return;
         }
         try {
-            va.field_d = true;
-            Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
-            kd.field_e.a(false, Geoblox.field_y);
+          va.field_d = true;
+          Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
+          kd.field_e.a(false, Geoblox.field_y);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class fa {
         field_c = null;
         field_d = null;
         if (param0 != 30970) {
-            return;
+          return;
         }
         field_h = null;
         field_g = null;

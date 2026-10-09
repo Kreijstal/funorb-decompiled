@@ -6,7 +6,7 @@ final class ek {
 
     public static void a(int param0) {
         if (param0 >= -127) {
-            return;
+          return;
         }
         field_a = null;
     }

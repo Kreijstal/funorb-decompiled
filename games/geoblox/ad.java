@@ -13,7 +13,7 @@ final class ad extends ia {
     public static void c(int param0) {
         field_n = null;
         if (param0 != -1) {
-            ad.a((byte) -81);
+          ad.a((byte) -81);
         }
     }
 
@@ -79,7 +79,7 @@ final class ad extends ia {
         int var5 = 0;
         try {
           if ((this.field_k.field_m[param1.field_t] & 4) != 0 &&
-              param1.field_y < 0) {
+            param1.field_y < 0) {
             var4_int = this.field_k.field_n[param1.field_t] / qk.field_j;
             var5 = (-param1.field_B + (1048575 + var4_int)) / var4_int;
             param1.field_B = 1048575 & param1.field_B + param2 * var4_int;
@@ -125,25 +125,25 @@ final class ad extends ia {
         int var3 = 0;
         int var4 = Geoblox.field_C;
         try {
-            if (param0 != -32) {
-                field_p = false;
-            }
-            var1 = new dm(540, 140);
-            Geoblox.a(1, var1);
-            mh.b();
-            vb.c();
-            gb.field_f = 0;
-            ck.a((byte) -73);
-            var2 = var1.b();
-            for (var3 = 0; var3 < 15; var3++) {
-                var2.a(-2, -2, 16777215);
-                vb.e(4, 4, 0, 0, 540, 140);
-            }
-            cd.field_l.e();
-            var1.d(0, 0);
-            id.a(true);
+          if (param0 != -32) {
+            field_p = false;
+          }
+          var1 = new dm(540, 140);
+          Geoblox.a(1, var1);
+          mh.b();
+          vb.c();
+          gb.field_f = 0;
+          ck.a((byte) -73);
+          var2 = var1.b();
+          for (var3 = 0; var3 < 15; var3++) {
+            var2.a(-2, -2, 16777215);
+            vb.e(4, 4, 0, 0, 540, 140);
+          }
+          cd.field_l.e();
+          var1.d(0, 0);
+          id.a(true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ad.H(" + param0 + ')');
         }
     }
 
@@ -189,10 +189,10 @@ final class ad extends ia {
     final ia b() {
         pc var1 = (pc) (this.field_l.g(0));
         if (var1 == null) {
-            return null;
+          return null;
         }
         if (null != var1.field_u) {
-            return (ia) ((Object) var1.field_u);
+          return (ia) ((Object) var1.field_u);
         }
         return this.c();
     }
@@ -216,7 +216,7 @@ final class ad extends ia {
         kl var11 = null;
         try {
           if ((4 & this.field_k.field_m[param4.field_t]) != 0 &&
-              param4.field_y < 0) {
+            param4.field_y < 0) {
             var7_int = this.field_k.field_n[param4.field_t] / qk.field_j;
             while (true) {
               var8 = (-param4.field_B + (var7_int + 1048575)) / var7_int;
@@ -285,9 +285,9 @@ final class ad extends ia {
         this.field_l = new tf();
         this.field_m = new ob();
         try {
-            this.field_k = param0;
+          this.field_k = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

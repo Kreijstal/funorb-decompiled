@@ -18,8 +18,8 @@ final class jf implements dh {
     final static void a(byte param0) {
         gf.field_d = new qh();
         if (param0 >= 19) {
-            hk.field_C.b(gf.field_d, -54);
-            return;
+          hk.field_C.b(gf.field_d, -54);
+          return;
         }
         field_a = (dm) null;
         hk.field_C.b(gf.field_d, -54);
@@ -80,11 +80,11 @@ final class jf implements dh {
 
     final static java.awt.Container a(boolean param0) {
         if (sg.field_a != null) {
-            return (java.awt.Container) ((Object) sg.field_a);
+          return (java.awt.Container) ((Object) sg.field_a);
         }
         if (!param0) {
-            field_c = 78;
-            return (java.awt.Container) ((Object) k.c(122));
+          field_c = 78;
+          return (java.awt.Container) ((Object) k.c(122));
         }
         return (java.awt.Container) ((Object) k.c(122));
     }
@@ -163,7 +163,7 @@ final class jf implements dh {
         var11 = Geoblox.field_C;
         try {
           if (param0 != null &&
-              param3 > 0) {
+            param3 > 0) {
             var6_int = param0[0].field_s;
             var7 = param0[2].field_s;
             var8 = param0[1].field_s;
@@ -225,7 +225,7 @@ final class jf implements dh {
               var5 = param0.charAt(var4);
               if ((var5 <= 0 ||
                 var5 >= 128) && (var5 < 160 ||
-                  255 < var5)) {
+                255 < var5)) {
                 switch (var5) {
                   case 8364:
                     var3[var4] = (byte)-128;
@@ -312,7 +312,7 @@ final class jf implements dh {
                     var3[var4] = (byte)-97;
                     break L2;
                 }
-                  }
+              }
               var3[var4] = (byte)var5;
             }
           }
@@ -334,15 +334,15 @@ final class jf implements dh {
 
     jf(m param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-            this.field_d = param3;
-            this.field_h = param4;
-            this.field_e = param6;
-            this.field_f = param0;
-            this.field_i = param5;
-            this.field_k = param1;
-            this.field_l = param2;
+          this.field_d = param3;
+          this.field_h = param4;
+          this.field_e = param6;
+          this.field_f = param0;
+          this.field_i = param5;
+          this.field_k = param1;
+          this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

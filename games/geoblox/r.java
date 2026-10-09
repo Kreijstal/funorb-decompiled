@@ -15,12 +15,12 @@ final class r extends f implements pl {
 
     final static void a(String param0, byte param1, boolean param2, String param3) {
         try {
-            b.field_a = param0;
-            hg.field_d = param3;
-            int var4_int = -62 % ((13 - param1) / 62);
-            fa.a(rj.field_g, 480, param2);
+          b.field_a = param0;
+          hg.field_d = param3;
+          int var4_int = -62 % ((13 - param1) / 62);
+          fa.a(rj.field_g, 480, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "r.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,9 +103,9 @@ final class r extends f implements pl {
     r(ng param0, qh param1) {
         super(param0, hh.field_c, se.field_i, false, false);
         try {
-            this.field_tb = param1;
+          this.field_tb = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class r extends f implements pl {
                 var3 = stackIn_22_0;
               } else {
                 if (var5 == 34 &&
-                    var3 == 0) {
+                  var3 == 0) {
                   stackIn_27_0 = ii.field_h;
                   return stackIn_27_0;
                 }
@@ -170,8 +170,8 @@ final class r extends f implements pl {
               var5Lifetime1 = param0.charAt(var4Lifetime1);
               if (var5Lifetime1 == 46) {
                 if (0 != var4Lifetime1 &&
-                    var4Lifetime1 != -1 + var2_int &&
-                    var3Lifetime1 == 0) {
+                  var4Lifetime1 != -1 + var2_int &&
+                  var3Lifetime1 == 0) {
                   var3Lifetime1 = 1;
                   break L1;
                 }
@@ -208,37 +208,37 @@ final class r extends f implements pl {
     final void q(int param0) {
         this.a(true, ig.a(hi.field_I, 248, false), (byte) -57);
         if (param0 != 12086) {
-            this.field_wb = false;
+          this.field_wb = false;
         }
     }
 
     public final void a(int param0, byte param1, int param2, int param3, hk param4) {
         if (this.field_vb) {
-            b.a(true, false, false);
-            return;
+          b.a(true, false, false);
+          return;
         }
         if (param1 != -20) {
-            return;
+          return;
         }
         try {
-            ki.a(-112);
-            this.h((byte) -104);
+          ki.a(-112);
+          this.h((byte) -104);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "r.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "r.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean f(int param0) {
         sl var2 = null;
         if (param0 != -1) {
-            field_sb = (String) null;
+          field_sb = (String) null;
         }
         if (this.field_I &&
-            !this.field_wb) {
-            var2 = n.d((byte) 93);
-            if (var2 != null) {
-                this.a(false, var2, (byte) -69);
-            }
+          !this.field_wb) {
+          var2 = n.d((byte) 93);
+          if (var2 != null) {
+            this.a(false, var2, (byte) -69);
+          }
         }
         return super.f(-1);
     }

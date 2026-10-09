@@ -39,7 +39,7 @@ final class vl extends hf {
           var7 = null;
           for (var8 = 0; var8 < 128; var8++) {
             if (param1 == null ||
-                  param1[var8] != 0) {
+              param1[var8] != 0) {
               var9 = this.field_h[var8];
               if (var9 != 0) {
                 if (var9 != var6) {
@@ -94,7 +94,7 @@ final class vl extends hf {
 
     public static void b(boolean param0) {
         if (!param0) {
-            field_l = (java.math.BigInteger) null;
+          field_l = (java.math.BigInteger) null;
         }
         field_n = null;
         field_l = null;
@@ -138,7 +138,7 @@ final class vl extends hf {
 
     final void a(byte param0) {
         if (param0 > -94) {
-            this.field_j = (short[]) null;
+          this.field_j = (short[]) null;
         }
         this.field_h = null;
     }
@@ -158,7 +158,7 @@ final class vl extends hf {
         var10 = Geoblox.field_C;
         try {
           if (param0 != null &&
-              param1 > 0) {
+            param1 > 0) {
             var5_int = param0[0].field_s;
             var6 = param0[2].field_s;
             var7 = param0[1].field_s;

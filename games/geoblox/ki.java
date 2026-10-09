@@ -80,8 +80,8 @@ final class ki {
         field_a = null;
         field_b = null;
         if (param0 != -64) {
-            vd var2 = (vd) null;
-            ki.a((vd) null, -13);
+          vd var2 = (vd) null;
+          ki.a((vd) null, -13);
         }
     }
 

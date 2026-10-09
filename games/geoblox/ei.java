@@ -108,7 +108,7 @@ final class ei extends qf {
 
     public static void n(int param0) {
         if (param0 > -59) {
-            return;
+          return;
         }
         field_hb = null;
         field_gb = null;
@@ -116,12 +116,12 @@ final class ei extends qf {
 
     final void b(el param0, int param1) {
         try {
-            if (param1 > -10) {
-                field_gb = (String) null;
-            }
-            super.b(param0, -22);
+          if (param1 > -10) {
+            field_gb = (String) null;
+          }
+          super.b(param0, -22);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ei.PB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

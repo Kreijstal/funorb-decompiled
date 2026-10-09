@@ -11,20 +11,20 @@ final class lk {
 
     final int a(int param0) {
         if (param0 != 0) {
-            field_f = (int[]) null;
-            if (this.field_c == null) {
-                return 0;
-            }
-            if (0 != this.field_c.length) {
-                return this.field_c[-1 + this.field_c.length];
-            }
+          field_f = (int[]) null;
+          if (this.field_c == null) {
             return 0;
+          }
+          if (0 != this.field_c.length) {
+            return this.field_c[-1 + this.field_c.length];
+          }
+          return 0;
         }
         if (this.field_c == null) {
-            return 0;
+          return 0;
         }
         if (0 != this.field_c.length) {
-            return this.field_c[-1 + this.field_c.length];
+          return this.field_c[-1 + this.field_c.length];
         }
         return 0;
     }
@@ -51,9 +51,9 @@ final class lk {
 
     public static void a(byte param0) {
         if (param0 != 0) {
-            lk.a((byte) 43);
-            field_f = null;
-            return;
+          lk.a((byte) 43);
+          field_f = null;
+          return;
         }
         field_f = null;
     }

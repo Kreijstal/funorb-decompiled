@@ -17,30 +17,30 @@ final class t {
     final static sa a(Throwable param0, String param1) {
         sa var2 = null;
         if (param0 instanceof sa) {
-            var2 = (sa) ((Object) param0);
-            var2.field_d = var2.field_d + ' ' + param1;
+          var2 = (sa) ((Object) param0);
+          var2.field_d = var2.field_d + ' ' + param1;
         } else {
-            var2 = new sa(param0, param1);
+          var2 = new sa(param0, param1);
         }
         return var2;
     }
 
     final static boolean b(int param0) {
         if (param0 != 13) {
-            field_k = (String[]) null;
-            if (oc.field_e == null) {
-                return false;
-            }
-            if (pk.field_l == eh.field_b) {
-                return true;
-            }
+          field_k = (String[]) null;
+          if (oc.field_e == null) {
             return false;
+          }
+          if (pk.field_l == eh.field_b) {
+            return true;
+          }
+          return false;
         }
         if (oc.field_e == null) {
-            return false;
+          return false;
         }
         if (pk.field_l == eh.field_b) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -49,7 +49,7 @@ final class t {
         field_i = (int[][]) null;
         field_k = null;
         if (param0 != 17348) {
-            t.b(-123);
+          t.b(-123);
         }
     }
 

@@ -55,7 +55,7 @@ final class cd extends jg {
 
     public static void e(int param0) {
         if (param0 != 1353) {
-            return;
+          return;
         }
         field_m = null;
         field_l = null;
@@ -227,7 +227,7 @@ final class cd extends jg {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-              if (false) throw (bd) null;
+            if (false) throw (bd) null;
             var12 = this.a(var11, (byte) -18);
             if (var12 != null) {
               stackIn_21_0 = var12;
@@ -289,9 +289,9 @@ final class cd extends jg {
             var8 = var7.readLine();
             if (var8 != null) {
               if (!var8.startsWith("HTTP/1.0 200") &&
-                  !var8.startsWith("HTTP/1.1 200")) {
+                !var8.startsWith("HTTP/1.1 200")) {
                 decompiledFrameRemainder0 = !(!var8.startsWith("HTTP/1.0 407") &&
-                    !var8.startsWith("HTTP/1.1 407"));
+                  !var8.startsWith("HTTP/1.1 407"));
                 if (decompiledFrameRemainder0) {
                   var10 = 0;
                   var11 = "proxy-authenticate: ";

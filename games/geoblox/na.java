@@ -55,36 +55,36 @@ final class na extends ha {
         int var7 = vb.field_f - var6;
         int var8 = 0;
         if (param1 < vb.field_i) {
-            var9 = vb.field_i - param1;
-            var5 = var5 - var9;
-            param1 = vb.field_i;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * vb.field_f;
+          var9 = vb.field_i - param1;
+          var5 = var5 - var9;
+          param1 = vb.field_i;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * vb.field_f;
         }
         if (param1 + var5 > vb.field_d) {
-            var5 = var5 - (param1 + var5 - vb.field_d);
+          var5 = var5 - (param1 + var5 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var9Lifetime1 = vb.field_e - param0;
-            var6 = var6 - var9Lifetime1;
-            param0 = vb.field_e;
-            var4 = var4 + var9Lifetime1;
-            var3 = var3 + var9Lifetime1;
-            var8 = var8 + var9Lifetime1;
-            var7 = var7 + var9Lifetime1;
+          var9Lifetime1 = vb.field_e - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = vb.field_e;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > vb.field_k) {
-            var9Lifetime2 = param0 + var6 - vb.field_k;
-            var6 = var6 - var9Lifetime2;
-            var8 = var8 + var9Lifetime2;
-            var7 = var7 + var9Lifetime2;
+          var9Lifetime2 = param0 + var6 - vb.field_k;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
-            if (var5 <= 0) {
-                return;
-            }
-            na.a(vb.field_c, this.field_i, this.field_h, 0, var4, var3, var6, var5, var7, var8);
+          if (var5 <= 0) {
             return;
+          }
+          na.a(vb.field_c, this.field_i, this.field_h, 0, var4, var3, var6, var5, var7, var8);
+          return;
         }
     }
 
@@ -101,36 +101,36 @@ final class na extends ha {
         int var8 = vb.field_f - var7;
         int var9 = 0;
         if (param1 < vb.field_i) {
-            var10 = vb.field_i - param1;
-            var6 = var6 - var10;
-            param1 = vb.field_i;
-            var5 = var5 + var10 * var7;
-            var4 = var4 + var10 * vb.field_f;
+          var10 = vb.field_i - param1;
+          var6 = var6 - var10;
+          param1 = vb.field_i;
+          var5 = var5 + var10 * var7;
+          var4 = var4 + var10 * vb.field_f;
         }
         if (param1 + var6 > vb.field_d) {
-            var6 = var6 - (param1 + var6 - vb.field_d);
+          var6 = var6 - (param1 + var6 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var10Lifetime1 = vb.field_e - param0;
-            var7 = var7 - var10Lifetime1;
-            param0 = vb.field_e;
-            var5 = var5 + var10Lifetime1;
-            var4 = var4 + var10Lifetime1;
-            var9 = var9 + var10Lifetime1;
-            var8 = var8 + var10Lifetime1;
+          var10Lifetime1 = vb.field_e - param0;
+          var7 = var7 - var10Lifetime1;
+          param0 = vb.field_e;
+          var5 = var5 + var10Lifetime1;
+          var4 = var4 + var10Lifetime1;
+          var9 = var9 + var10Lifetime1;
+          var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > vb.field_k) {
-            var10Lifetime2 = param0 + var7 - vb.field_k;
-            var7 = var7 - var10Lifetime2;
-            var9 = var9 + var10Lifetime2;
-            var8 = var8 + var10Lifetime2;
+          var10Lifetime2 = param0 + var7 - vb.field_k;
+          var7 = var7 - var10Lifetime2;
+          var9 = var9 + var10Lifetime2;
+          var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
-            if (var6 <= 0) {
-                return;
-            }
-            na.b(vb.field_c, this.field_i, this.field_h, var5, var4, var7, var6, var8, var9, param2);
+          if (var6 <= 0) {
             return;
+          }
+          na.b(vb.field_c, this.field_i, this.field_h, var5, var4, var7, var6, var8, var9, param2);
+          return;
         }
     }
 
@@ -144,42 +144,42 @@ final class na extends ha {
           }
           param4 = param7;
           if (param2 > 0 &&
-              param1[param2 - 1] == -1) {
+            param1[param2 - 1] == -1) {
             param4--;
             param2++;
             param3++;
           }
           {
-          while (!(param4 <= 0)) {
-            param0 = param1[param2++];
-            param4--;
-            if (param0 == 0) {
-              param3++;
-              continue;
+            while (!(param4 <= 0)) {
+              param0 = param1[param2++];
+              param4--;
+              if (param0 == 0) {
+                param3++;
+                continue;
+              }
+              if (param0 != -1) {
+                incrementValue$13 = param3;
+                param3++;
+                param5[incrementValue$13] = param6[param0 & 255];
+                continue;
+              }
+              incrementValue$14 = param2;
+              param2++;
+              param0 = param1[incrementValue$14] & 255;
+              param4--;
+              param0 = param0 + param0;
+              if (param0 > param4) {
+                param0 = param4;
+              }
+              param2 = param2 + param0;
+              param4 = param4 - param0;
+              param3 = param3 + (param0 + 2);
             }
-            if (param0 != -1) {
-              incrementValue$13 = param3;
-              param3++;
-              param5[incrementValue$13] = param6[param0 & 255];
-              continue;
-            }
-            incrementValue$14 = param2;
-            param2++;
-            param0 = param1[incrementValue$14] & 255;
-            param4--;
-            param0 = param0 + param0;
-            if (param0 > param4) {
-              param0 = param4;
-            }
-            param2 = param2 + param0;
-            param4 = param4 - param0;
-            param3 = param3 + (param0 + 2);
-          }
-           {
+            {
               param3 = param3 + param8;
               param2 = param2 + param9;
               param10++;
-              }
+            }
           }
         }
     }
@@ -197,36 +197,36 @@ final class na extends ha {
         int var7 = vb.field_f - var6;
         int var8 = 0;
         if (param1 < vb.field_i) {
-            var9 = vb.field_i - param1;
-            var5 = var5 - var9;
-            param1 = vb.field_i;
-            var4 = var4 + var9 * var6;
-            var3 = var3 + var9 * vb.field_f;
+          var9 = vb.field_i - param1;
+          var5 = var5 - var9;
+          param1 = vb.field_i;
+          var4 = var4 + var9 * var6;
+          var3 = var3 + var9 * vb.field_f;
         }
         if (param1 + var5 > vb.field_d) {
-            var5 = var5 - (param1 + var5 - vb.field_d);
+          var5 = var5 - (param1 + var5 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var9Lifetime1 = vb.field_e - param0;
-            var6 = var6 - var9Lifetime1;
-            param0 = vb.field_e;
-            var4 = var4 + var9Lifetime1;
-            var3 = var3 + var9Lifetime1;
-            var8 = var8 + var9Lifetime1;
-            var7 = var7 + var9Lifetime1;
+          var9Lifetime1 = vb.field_e - param0;
+          var6 = var6 - var9Lifetime1;
+          param0 = vb.field_e;
+          var4 = var4 + var9Lifetime1;
+          var3 = var3 + var9Lifetime1;
+          var8 = var8 + var9Lifetime1;
+          var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > vb.field_k) {
-            var9Lifetime2 = param0 + var6 - vb.field_k;
-            var6 = var6 - var9Lifetime2;
-            var8 = var8 + var9Lifetime2;
-            var7 = var7 + var9Lifetime2;
+          var9Lifetime2 = param0 + var6 - vb.field_k;
+          var6 = var6 - var9Lifetime2;
+          var8 = var8 + var9Lifetime2;
+          var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
-            if (var5 <= 0) {
-                return;
-            }
-            na.a(0, this.field_i, var4, var3, 0, vb.field_c, this.field_h, var6, var7, var8, 0, var5);
+          if (var5 <= 0) {
             return;
+          }
+          na.a(0, this.field_i, var4, var3, 0, vb.field_c, this.field_h, var6, var7, var8, 0, var5);
+          return;
         }
     }
 

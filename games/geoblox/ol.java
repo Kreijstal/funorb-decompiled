@@ -22,25 +22,25 @@ final class ol extends hk {
         var5.c((byte) 95, param1.field_n);
         var5.d(127, var4);
         if (param2 != 30175) {
-            return;
+          return;
         }
         try {
-            var5.f(11700, -var4 + var5.field_f);
+          var5.f(11700, -var4 + var5.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ol.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     public static void f(int param0) {
         field_I = null;
         if (param0 != 0) {
-            field_I = (String) null;
+          field_I = (String) null;
         }
     }
 
     final int c(int param0, int param1) {
         if (param1 < 0 || this.field_F.a((byte) 101) <= param1) {
-            return -1;
+          return -1;
         }
         int var3 = 34 / ((param0 - 88) / 32);
         return this.field_F.a(param1, (byte) 94);
@@ -143,7 +143,7 @@ final class ol extends hk {
 
     final int g(int param0) {
         if (param0 >= -121) {
-            return -39;
+          return -39;
         }
         return this.field_E;
     }

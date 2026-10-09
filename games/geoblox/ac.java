@@ -19,15 +19,15 @@ class ac extends ff {
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
         try {
-            if (param3) {
-                ik.a(param0 + param4.field_v, param4.field_h, param4.field_m + param2, param4.field_r, -1540604944);
-            }
-            if (param1 > -5) {
-                field_t = (ff) null;
-            }
-            super.a(param0, -11, param2, param3, param4);
+          if (param3) {
+            ik.a(param0 + param4.field_v, param4.field_h, param4.field_m + param2, param4.field_r, -1540604944);
+          }
+          if (param1 > -5) {
+            field_t = (ff) null;
+          }
+          super.a(param0, -11, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ac.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,8 +131,8 @@ class ac extends ff {
           if (param1) {
             for (var10 = 16; var10 >= 0; var10--) {
               if ((da.a(0, -100) ||
-                    var10 != 16) &&
-                  (1 << var10 & var5) == 0) {
+                var10 != 16) &&
+                (1 << var10 & var5) == 0) {
                 var9++;
                 var8 += 20;
               }
@@ -143,16 +143,16 @@ class ac extends ff {
           }
           for (var10Lifetime1 = 0; var10Lifetime1 < pg.field_a.length; var10Lifetime1++) {
             if (!da.a(0, -119) &&
-                var10Lifetime1 == 16 &&
-                !qi.d(105)) {
+              var10Lifetime1 == 16 &&
+              !qi.d(105)) {
               continue;
             }
             if ((0 != (1 << var10Lifetime1 & var5) ||
-                  !param1) &&
-                (qa.field_a >= var3_int &&
-                  32 + var3_int >= qa.field_a &&
-                  var4 <= ue.field_e &&
-                  32 + var4 >= ue.field_e)) {
+              !param1) &&
+              (qa.field_a >= var3_int &&
+              32 + var3_int >= qa.field_a &&
+              var4 <= ue.field_e &&
+              32 + var4 >= ue.field_e)) {
               vb.c(var3_int, var4, 32, 32, 2, 16689938);
               if (var7 < 0) {
                 var7 = var10Lifetime1;
@@ -241,7 +241,7 @@ class ac extends ff {
         field_w = null;
         field_v = null;
         if (param0 < 62) {
-            field_s = -128;
+          field_s = -128;
         }
     }
 

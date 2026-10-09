@@ -71,10 +71,10 @@ final class ma extends hf {
     final static int b(int param0) {
         gb.field_b.a((byte) -65);
         if (param0 != 15869) {
-            return 61;
+          return 61;
         }
         if (!wg.field_i.a((byte) 95)) {
-            return ge.a((byte) -74);
+          return ge.a((byte) -74);
         }
         return 0;
     }
@@ -121,7 +121,7 @@ final class ma extends hf {
             return;
           }
           if (param4 > 0 &&
-              0 < param2) {
+            0 < param2) {
             if (param5[3] == null) {
               stackIn_10_0 = 0;
             } else {
@@ -189,7 +189,7 @@ final class ma extends hf {
               vb.b(hd.field_I);
             }
             if (null != param5[1] &&
-                param5[1].field_s != 0) {
+              param5[1].field_s != 0) {
               vb.b(var16, param0, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param5[1].field_s) {
                 param5[1].b(var20, param0);
@@ -197,7 +197,7 @@ final class ma extends hf {
               vb.b(hd.field_I);
             }
             if (param5[7] != null &&
-                0 != param5[7].field_s) {
+              0 != param5[7].field_s) {
               vb.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].field_s) {
                 param5[7].b(var20Lifetime1, var15);
@@ -205,7 +205,7 @@ final class ma extends hf {
               vb.b(hd.field_I);
             }
             if (param5[3] != null &&
-                0 != param5[3].field_o) {
+              0 != param5[3].field_o) {
               vb.b(param1, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param5[3].field_o) {
                 param5[3].b(param1, var20Lifetime2);
@@ -213,7 +213,7 @@ final class ma extends hf {
               vb.b(hd.field_I);
             }
             if (param5[5] != null &&
-                param5[5].field_o != 0) {
+              param5[5].field_o != 0) {
               vb.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].field_o) {
                 param5[5].b(var13, var20Lifetime3);
@@ -221,8 +221,8 @@ final class ma extends hf {
               vb.b(hd.field_I);
             }
             if (param5[4] != null &&
-                param5[4].field_s != 0 &&
-                0 != param5[4].field_o) {
+              param5[4].field_s != 0 &&
+              0 != param5[4].field_o) {
               vb.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param5[4].field_o) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
@@ -261,14 +261,14 @@ final class ma extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2.a(0) &&
-              param2.a("commonui", (byte) -127)) {
+            param2.a("commonui", (byte) -127)) {
             if (param1.a(param3 + 11652) &&
-                param1.a("commonui", (byte) -124)) {
+              param1.a("commonui", (byte) -124)) {
               if (param3 != -11652) {
                 return false;
               }
               if (param0.a(0) &&
-                  param0.a("button.gif", (byte) -125)) {
+                param0.a("button.gif", (byte) -125)) {
                 return true;
               }
               return false;
@@ -304,11 +304,11 @@ final class ma extends hf {
 
     ma(long param0, int param1, byte[] param2) {
         try {
-            this.field_h = param1;
-            this.field_g = param2;
-            this.field_f = param0;
+          this.field_h = param1;
+          this.field_g = param2;
+          this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ma.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ma.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

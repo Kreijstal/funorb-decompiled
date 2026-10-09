@@ -61,7 +61,7 @@ final class ec {
         var11 = Geoblox.field_C;
         try {
           if (0 == h.field_a &&
-              0 < wb.field_b) {
+            0 < wb.field_b) {
             if (w.field_f) {
               return false;
             }
@@ -104,7 +104,7 @@ final class ec {
           var1_intLifetime1 = var12;
           while (var12 < h.field_a) {
             if (-1 + h.field_a > var12 &&
-                nk.field_f[var12] == nk.field_f[var12 + 1]) {
+              nk.field_f[var12] == nk.field_f[var12 + 1]) {
               nk.field_f[var12] = 0;
             } else {
               var2Lifetime1 = (nk.field_f[var12] & 1072693248) >> 20;
@@ -114,8 +114,8 @@ final class ec {
               var6 = tl.field_g[var3Lifetime1];
               var7 = tl.field_g[var4];
               if (var5.field_E <= 0 &&
-                  var6.field_E <= 0 &&
-                  var7.field_E <= 0) {
+                var6.field_E <= 0 &&
+                var7.field_E <= 0) {
                 td.a(-348, fl.field_c[31]);
                 gf.field_f = gf.field_f + 1;
                 if (gf.field_f > 1) {
@@ -156,8 +156,8 @@ final class ec {
     final static void a(int param0) {
         ph var1 = (ph) (el.field_p.g(param0 ^ param0));
         if (var1 == null) {
-            jl.a((byte) -122);
-            return;
+          jl.a((byte) -122);
+          return;
         }
         pk var2 = eh.field_d;
         var2.a((byte) -102);
@@ -169,7 +169,7 @@ final class ec {
 
     public static void a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
+          field_a = (String) null;
         }
         field_c = null;
         field_a = null;

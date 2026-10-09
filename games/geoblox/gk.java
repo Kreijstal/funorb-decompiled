@@ -22,25 +22,25 @@ final class gk {
         field_a = null;
         field_c = null;
         if (param0 != 0) {
-            gk.a(103, 65, true, (byte) -104);
-            field_d = null;
-            return;
+          gk.a(103, 65, true, (byte) -104);
+          field_d = null;
+          return;
         }
         field_d = null;
     }
 
     final boolean a(boolean param0) {
         if (!param0) {
-            return true;
+          return true;
         }
         if (this == da.field_g) {
-            return true;
+          return true;
         }
         if (da.field_f == this) {
-            return true;
+          return true;
         }
         if (eh.field_b != this) {
-            return false;
+          return false;
         }
         return true;
     }

@@ -42,7 +42,7 @@ final class bg extends m {
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
-            param4 > 0) {
+          param4 > 0) {
           if (vb.field_a == null) {
             bg.a(vb.field_c, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
@@ -130,32 +130,32 @@ final class bg extends m {
         int var13Lifetime1;
         int var13Lifetime2;
         if (param2 < vb.field_i) {
-            var13 = vb.field_i - param2;
-            param4 = param4 - var13;
-            param2 = vb.field_i;
-            var12 = var12 + var13 * param3;
-            var9 = var9 + var13 * vb.field_f;
+          var13 = vb.field_i - param2;
+          param4 = param4 - var13;
+          param2 = vb.field_i;
+          var12 = var12 + var13 * param3;
+          var9 = var9 + var13 * vb.field_f;
         }
         if (param2 + param4 > vb.field_d) {
-            param4 = param4 - (param2 + param4 - vb.field_d);
+          param4 = param4 - (param2 + param4 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-            var13Lifetime1 = vb.field_e - param1;
-            param3 = param3 - var13Lifetime1;
-            param1 = vb.field_e;
-            var12 = var12 + var13Lifetime1;
-            var9 = var9 + var13Lifetime1;
-            var11 = var11 + var13Lifetime1;
-            var10 = var10 + var13Lifetime1;
+          var13Lifetime1 = vb.field_e - param1;
+          param3 = param3 - var13Lifetime1;
+          param1 = vb.field_e;
+          var12 = var12 + var13Lifetime1;
+          var9 = var9 + var13Lifetime1;
+          var11 = var11 + var13Lifetime1;
+          var10 = var10 + var13Lifetime1;
         }
         if (param1 + param3 > vb.field_k) {
-            var13Lifetime2 = param1 + param3 - vb.field_k;
-            param3 = param3 - var13Lifetime2;
-            var11 = var11 + var13Lifetime2;
-            var10 = var10 + var13Lifetime2;
+          var13Lifetime2 = param1 + param3 - vb.field_k;
+          param3 = param3 - var13Lifetime2;
+          var11 = var11 + var13Lifetime2;
+          var10 = var10 + var13Lifetime2;
         }
         if (param3 <= 0 || param4 <= 0) {
-            return;
+          return;
         }
         bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }

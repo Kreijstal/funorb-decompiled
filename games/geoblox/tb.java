@@ -261,7 +261,7 @@ final class tb {
               param0.field_q = var14;
               tb.d(param0);
               if (param0.field_G == param0.field_q + 1 &&
-                  param0.field_k == 0) {
+                param0.field_k == 0) {
                 var26 = 1;
                 break;
               }
@@ -269,7 +269,7 @@ final class tb {
               break;
             }
             if (var13 != 0 &&
-                var13 != 1) {
+              var13 != 1) {
               var33 = var13 - 1;
               if (var33 < 16) {
                 var30 = param0.field_y[0];

@@ -78,7 +78,7 @@ abstract class ka {
             this.a((byte) 90, param0);
           } else {
             if (ki.field_d == 84 ||
-                ki.field_d == 83) {
+              ki.field_d == 83) {
               this.b(param0, (byte) -2);
             }
           }
@@ -90,25 +90,25 @@ abstract class ka {
     void a(int param0, int param1, boolean param2, int param3, boolean param4, int param5) {
         int var8 = Geoblox.field_C;
         if (!param4) {
-            if (1 != param5) {
-                this.a(param0, (byte) -121);
-            } else {
-                this.b(param0, (byte) -2);
-            }
-            s.field_H = lj.field_a;
+          if (1 != param5) {
+            this.a(param0, (byte) -121);
+          } else {
+            this.b(param0, (byte) -2);
+          }
+          s.field_H = lj.field_a;
         } else {
-            s.field_H = s.field_H - 1;
-            if (s.field_H <= 0) {
-                if (param5 == 1) {
-                    this.b(param0, (byte) -2);
-                } else {
-                    this.a(param0, (byte) 6);
-                }
-                s.field_H = fj.field_o;
+          s.field_H = s.field_H - 1;
+          if (s.field_H <= 0) {
+            if (param5 == 1) {
+              this.b(param0, (byte) -2);
+            } else {
+              this.a(param0, (byte) 6);
             }
+            s.field_H = fj.field_o;
+          }
         }
         if (param2) {
-            this.field_l = false;
+          this.field_l = false;
         }
     }
 
@@ -123,8 +123,8 @@ abstract class ka {
     int a(int param0, int param1, byte param2) {
         int var4;
         if (this.field_j <= param0 &&
-            param0 < this.field_f &&
-            this.field_k <= param1) {
+          param0 < this.field_f &&
+          this.field_k <= param1) {
           if (param2 < 20) {
             return 81;
           }
@@ -168,7 +168,7 @@ abstract class ka {
             }
           } else {
             if (gf.field_a != 0 &&
-                this.field_g) {
+              this.field_g) {
               var2 = this.field_b;
               if (var2 == -1) {
                 break L0;
@@ -212,13 +212,13 @@ abstract class ka {
         int var4 = Geoblox.field_C;
         int var2 = 0;
         if (param0 != -28750) {
-            this.a(false);
+          this.a(false);
         }
         int var3 = this.field_k;
         while (var2 < this.field_e) {
-            this.a(this.field_b == var2 ? true : false, (byte) -112, var2, var3);
-            var3 = var3 + this.field_d;
-            var2++;
+          this.a(this.field_b == var2 ? true : false, (byte) -112, var2, var3);
+          var3 = var3 + this.field_d;
+          var2++;
         }
     }
 

@@ -43,19 +43,19 @@ final class ed {
 
     private final int a(int param0, int param1, int param2) {
         if (param2 == 1) {
-            if ((param0 & 32767) < 16384) {
-                return param1;
-            }
-            return -param1;
+          if ((param0 & 32767) < 16384) {
+            return param1;
+          }
+          return -param1;
         }
         if (param2 == 2) {
-            return field_g[param0 & 32767] * param1 >> 14;
+          return field_g[param0 & 32767] * param1 >> 14;
         }
         if (param2 == 3) {
-            return ((param0 & 32767) * param1 >> 14) - param1;
+          return ((param0 & 32767) * param1 >> 14) - param1;
         }
         if (param2 == 4) {
-            return field_b[param0 / 2607 & 32767] * param1;
+          return field_b[param0 / 2607 & 32767] * param1;
         }
         return 0;
     }
@@ -69,36 +69,36 @@ final class ed {
         this.field_o.a(param0);
         int var2 = param0.c((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
-            this.field_y = new uc();
-            this.field_y.a(param0);
-            this.field_w = new uc();
-            this.field_w.a(param0);
+          param0.field_f = param0.field_f - 1;
+          this.field_y = new uc();
+          this.field_y.a(param0);
+          this.field_w = new uc();
+          this.field_w.a(param0);
         }
         var2 = param0.c((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
-            this.field_u = new uc();
-            this.field_u.a(param0);
-            this.field_n = new uc();
-            this.field_n.a(param0);
+          param0.field_f = param0.field_f - 1;
+          this.field_u = new uc();
+          this.field_u.a(param0);
+          this.field_n = new uc();
+          this.field_n.a(param0);
         }
         var2 = param0.c((byte) 34);
         if (var2 != 0) {
-            param0.field_f = param0.field_f - 1;
-            this.field_q = new uc();
-            this.field_q.a(param0);
-            this.field_m = new uc();
-            this.field_m.a(param0);
+          param0.field_f = param0.field_f - 1;
+          this.field_q = new uc();
+          this.field_q.a(param0);
+          this.field_m = new uc();
+          this.field_m.a(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-            var4 = param0.c(1);
-            if (var4 == 0) {
-                break;
-            }
-            this.field_a[var3] = var4;
-            this.field_j[var3] = param0.h(-125);
-            this.field_x[var3] = param0.c(1);
+          var4 = param0.c(1);
+          if (var4 == 0) {
+            break;
+          }
+          this.field_a[var3] = var4;
+          this.field_j[var3] = param0.h(-125);
+          this.field_x[var3] = param0.c(1);
         }
         this.field_h = param0.c(1);
         this.field_r = param0.c(1);
@@ -242,14 +242,14 @@ final class ed {
           }
         }
         if (this.field_h > 0 &&
-            this.field_r > 0) {
+          this.field_r > 0) {
           var11Lifetime3 = (int)((double)this.field_h * var3);
           for (var12Lifetime2 = var11Lifetime3; var12Lifetime2 < param0; var12Lifetime2++) {
             field_f[var12Lifetime2] = field_f[var12Lifetime2] + field_f[var12Lifetime2 - var11Lifetime3] * this.field_r / 100;
           }
         }
         if (!(this.field_e.field_b[0] <= 0) ||
-            !(this.field_e.field_b[1] <= 0)) {
+          !(this.field_e.field_b[1] <= 0)) {
           this.field_k.a();
           var11Lifetime4 = this.field_k.a(param0 + 1);
           var12Lifetime3 = this.field_e.a(0, (float)var11Lifetime4 / 65536.0f);
@@ -339,11 +339,11 @@ final class ed {
         field_b = new int[32768];
         Random var0 = new Random(0L);
         for (var1 = 0; var1 < 32768; var1++) {
-            field_b[var1] = (var0.nextInt() & 2) - 1;
+          field_b[var1] = (var0.nextInt() & 2) - 1;
         }
         field_g = new int[32768];
         for (var1Lifetime1 = 0; var1Lifetime1 < 32768; var1Lifetime1++) {
-            field_g[var1Lifetime1] = (int)(Math.sin((double)var1Lifetime1 / 5215.1903) * 16384.0);
+          field_g[var1Lifetime1] = (int)(Math.sin((double)var1Lifetime1 / 5215.1903) * 16384.0);
         }
         field_f = new int[220500];
         field_p = new int[5];

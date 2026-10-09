@@ -45,9 +45,9 @@ final class hh {
         field_b = null;
         field_d = null;
         if (param0) {
-            hh.a(102, true);
-            field_c = null;
-            return;
+          hh.a(102, true);
+          field_c = null;
+          return;
         }
         field_c = null;
     }

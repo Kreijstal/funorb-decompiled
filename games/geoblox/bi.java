@@ -118,7 +118,7 @@ final class bi implements dh {
 
     public static void a(int param0) {
         if (param0 != 1) {
-            return;
+          return;
         }
         field_c = null;
     }
@@ -127,18 +127,18 @@ final class bi implements dh {
         this.field_a = 1;
         this.field_l = 1;
         try {
-            this.field_f = param4;
-            this.field_m = param1;
-            this.field_b = param0;
-            this.field_n = param8;
-            this.field_h = param7;
-            this.field_e = param3;
-            this.field_i = param2;
-            this.field_k = param5;
-            this.field_d = param9;
-            this.field_j = param6;
+          this.field_f = param4;
+          this.field_m = param1;
+          this.field_b = param0;
+          this.field_n = param8;
+          this.field_h = param7;
+          this.field_e = param3;
+          this.field_i = param2;
+          this.field_k = param5;
+          this.field_d = param9;
+          this.field_j = param6;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

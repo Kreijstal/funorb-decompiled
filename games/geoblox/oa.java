@@ -12,11 +12,11 @@ final class oa {
     final synchronized static long a(int param0) {
         long var1 = System.currentTimeMillis();
         if (!(nd.field_b <= var1)) {
-            rj.field_b = rj.field_b + (nd.field_b - var1);
+          rj.field_b = rj.field_b + (nd.field_b - var1);
         }
         nd.field_b = var1;
         if (param0 != -12520) {
-            field_d = (String[]) null;
+          field_d = (String[]) null;
         }
         return rj.field_b + var1;
     }
@@ -52,7 +52,7 @@ final class oa {
 
     public static void b(int param0) {
         if (param0 != 8192) {
-            field_e = (dm[]) null;
+          field_e = (dm[]) null;
         }
         field_b = null;
         field_d = null;

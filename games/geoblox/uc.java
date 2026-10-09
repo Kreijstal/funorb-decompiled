@@ -35,24 +35,24 @@ final class uc {
         this.field_c = new int[this.field_k];
         this.field_i = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-            this.field_c[var2] = param0.b(true);
-            this.field_i[var2] = param0.b(true);
+          this.field_c[var2] = param0.b(true);
+          this.field_i[var2] = param0.b(true);
         }
     }
 
     final int a(int param0) {
         int fieldTemp$0 = 0;
         if (this.field_b >= this.field_h) {
-            fieldTemp$0 = this.field_a;
-            this.field_a = this.field_a + 1;
-            this.field_d = this.field_i[fieldTemp$0] << 15;
-            if (this.field_a >= this.field_k) {
-                this.field_a = this.field_k - 1;
-            }
-            this.field_h = (int)((double)this.field_c[this.field_a] / 65536.0 * (double)param0);
-            if (this.field_h > this.field_b) {
-                this.field_f = ((this.field_i[this.field_a] << 15) - this.field_d) / (this.field_h - this.field_b);
-            }
+          fieldTemp$0 = this.field_a;
+          this.field_a = this.field_a + 1;
+          this.field_d = this.field_i[fieldTemp$0] << 15;
+          if (this.field_a >= this.field_k) {
+            this.field_a = this.field_k - 1;
+          }
+          this.field_h = (int)((double)this.field_c[this.field_a] / 65536.0 * (double)param0);
+          if (this.field_h > this.field_b) {
+            this.field_f = ((this.field_i[this.field_a] << 15) - this.field_d) / (this.field_h - this.field_b);
+          }
         }
         this.field_d = this.field_d + this.field_f;
         this.field_b = this.field_b + 1;

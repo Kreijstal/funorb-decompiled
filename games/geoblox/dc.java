@@ -9,7 +9,7 @@ final class dc {
     public static void b(int param0) {
         field_c = null;
         if (param0 < 121) {
-            field_b = 78;
+          field_b = 78;
         }
     }
 

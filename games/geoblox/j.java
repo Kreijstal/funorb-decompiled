@@ -14,7 +14,7 @@ final class j extends mi {
         wg.field_i.field_b = 0;
         wg.field_i.field_q = 0;
         if (param0 != -21754) {
-            field_lb = (String) null;
+          field_lb = (String) null;
         }
     }
 
@@ -26,9 +26,9 @@ final class j extends mi {
         field_lb = null;
         field_jb = null;
         if (param0 != -128) {
-            j.f((byte) 1);
-            field_ib = null;
-            return;
+          j.f((byte) 1);
+          field_ib = null;
+          return;
         }
         field_ib = null;
     }

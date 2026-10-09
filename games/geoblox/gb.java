@@ -31,7 +31,7 @@ final class gb {
             return true;
           }
           if (0 == n.field_j % 40 &&
-              vc.field_h < 11) {
+            vc.field_h < 11) {
             fh.field_c = n.field_j;
             vc.field_h = vc.field_h + 1;
             if (10 == vc.field_h) {
@@ -45,12 +45,12 @@ final class gb {
           var2 = tl.field_r[vc.field_h].field_s >> 1;
           var3 = n.field_j << 2;
           if (!sg.field_d &&
-              -var3 + 900 <= 320 + var2) {
+            -var3 + 900 <= 320 + var2) {
             td.a(-348, fl.field_c[7]);
             sg.field_d = true;
           }
           if (!ab.field_d &&
-              -var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3) {
+            -var2 + (320 - qh.field_O[1].field_s) <= -1200 + var3) {
             td.a(-348, fl.field_c[8]);
             ab.field_d = true;
           }
@@ -66,12 +66,12 @@ final class gb {
     final hf c(byte param0) {
         hf var2 = this.field_a.field_a.field_b;
         if (var2 == this.field_a.field_a) {
-            this.field_d = null;
-            return null;
+          this.field_d = null;
+          return null;
         }
         if (param0 == 88) {
-            this.field_d = var2.field_b;
-            return var2;
+          this.field_d = var2.field_b;
+          return var2;
         }
         field_g = -4;
         this.field_d = var2.field_b;
@@ -81,12 +81,12 @@ final class gb {
     final hf d(int param0) {
         hf var2 = this.field_a.field_a.field_c;
         if (this.field_a.field_a == var2) {
-            this.field_d = null;
-            return null;
+          this.field_d = null;
+          return null;
         }
         if (param0 == 1) {
-            this.field_d = var2.field_c;
-            return var2;
+          this.field_d = var2.field_c;
+          return var2;
         }
         this.a((byte) 55);
         this.field_d = var2.field_c;
@@ -96,12 +96,12 @@ final class gb {
     final hf c(int param0) {
         hf var2 = this.field_d;
         if (var2 == this.field_a.field_a) {
-            this.field_d = null;
-            return null;
+          this.field_d = null;
+          return null;
         }
         this.field_d = var2.field_c;
         if (param0 == 26) {
-            return var2;
+          return var2;
         }
         return (hf) null;
     }
@@ -206,20 +206,20 @@ final class gb {
 
     gb(tf param0) {
         try {
-            this.field_a = param0;
+          this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final hf a(byte param0) {
         hf var2 = this.field_d;
         if (param0 <= 105) {
-            return (hf) null;
+          return (hf) null;
         }
         if (var2 == this.field_a.field_a) {
-            this.field_d = null;
-            return null;
+          this.field_d = null;
+          return null;
         }
         this.field_d = var2.field_b;
         return var2;

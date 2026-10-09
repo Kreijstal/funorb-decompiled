@@ -18,10 +18,10 @@ final class eg extends hf {
     public static void b(boolean param0) {
         field_q = null;
         if (param0) {
-            field_l = (String) null;
-            field_p = null;
-            field_l = null;
-            return;
+          field_l = (String) null;
+          field_p = null;
+          field_l = null;
+          return;
         }
         field_p = null;
         field_l = null;
@@ -44,7 +44,7 @@ final class eg extends hf {
         CharSequence var11 = null;
         try {
           if (2 <= param2 &&
-              param2 <= 36) {
+            param2 <= 36) {
             var4_int = 0;
             var5 = 0;
             var6 = 0;
@@ -63,15 +63,15 @@ final class eg extends hf {
                   }
                 }
                 if (var8 != 0 || (var9 != 43 ||
-                      !param3)) {
+                  !param3)) {
                   if (48 <= var9 &&
-                      var9 <= 57) {
+                    var9 <= 57) {
                     var9 -= 48;
                   } else if (65 <= var9 &&
-                      90 >= var9) {
+                    90 >= var9) {
                     var9 -= 55;
                   } else if (var9 >= 97 &&
-                      122 >= var9) {
+                    122 >= var9) {
                     var9 -= 87;
                   } else {
                     throw new NumberFormatException();

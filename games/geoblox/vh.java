@@ -55,16 +55,16 @@ final class vh extends ee implements pl {
 
     final static String f(int param0) {
         if (param0 != 100) {
-            vh.f(29);
+          vh.f(29);
         }
         if (kd.field_b == tf.field_d) {
-            return rh.field_i;
+          return rh.field_i;
         }
         if (!ih.field_c.a(-113)) {
-            return ih.field_c.b(param0 + 19391);
+          return ih.field_c.b(param0 + 19391);
         }
         if (si.field_g == tf.field_d) {
-            return ih.field_c.b(19491);
+          return ih.field_c.b(19491);
         }
         return b.field_a;
     }
@@ -73,7 +73,7 @@ final class vh extends ee implements pl {
         field_H = null;
         field_D = null;
         if (!param0) {
-            field_H = (dm[]) null;
+          field_H = (dm[]) null;
         }
         field_E = null;
         field_G = null;
@@ -82,21 +82,21 @@ final class vh extends ee implements pl {
     final void a(int param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) 88, param3);
         if (param3 != 0) {
-            return;
+          return;
         }
         m var5 = ng.field_F;
         int var6 = -69 / ((1 - param2) / 43);
         if (this.field_C != null) {
-            var5.a(ab.field_e, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
+          var5.a(ab.field_e, this.field_v + param0, param1 + this.field_m, this.field_r, 20, 16777215, -1, 0, 0, var5.field_q + var5.field_o);
         }
     }
 
     vh(ta param0) {
         super(0, 0, 0, 0, (dh) null);
         try {
-            this.field_J = param0;
+          this.field_J = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class vh extends ee implements pl {
             return;
           }
           if (param1 != null &&
-              param1.length != 0) {
+            param1.length != 0) {
             var3_int = param1.length;
             this.field_C = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {

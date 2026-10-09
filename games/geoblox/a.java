@@ -14,9 +14,9 @@ final class a {
         field_c = null;
         field_d = null;
         if (param0 > -63) {
-            a.a((byte) 92);
-            field_a = null;
-            return;
+          a.a((byte) 92);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

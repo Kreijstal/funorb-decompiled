@@ -20,7 +20,7 @@ final class oi {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param1 == 100 &&
-            hb.field_b > 0) {
+          hb.field_b > 0) {
           fieldTemp$3 = hb.field_b - 1;
           hb.field_b = hb.field_b - 1;
           var2_ref_byte__ = dj.field_I[fieldTemp$3];
@@ -28,7 +28,7 @@ final class oi {
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
-            0 < ah.field_d) {
+          0 < ah.field_d) {
           fieldTemp$4 = ah.field_d - 1;
           ah.field_d = ah.field_d - 1;
           var2_ref_byte__Lifetime1 = rd.field_s[fieldTemp$4];
@@ -39,7 +39,7 @@ final class oi {
           return (byte[]) null;
         }
         if (param1 == 30000 &&
-            ag.field_i > 0) {
+          ag.field_i > 0) {
           fieldTemp$5 = ag.field_i - 1;
           ag.field_i = ag.field_i - 1;
           var2_ref_byte__Lifetime2 = sd.field_C[fieldTemp$5];

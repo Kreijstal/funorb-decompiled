@@ -8,63 +8,63 @@ class lf extends df {
 
     qg a(byte param0) {
         if (param0 != -32) {
-            return (qg) null;
+          return (qg) null;
         }
         return Geoblox.field_B;
     }
 
     public static void b(int param0) {
         if (param0 != 8221) {
-            lf.b(91);
-            field_e = null;
-            return;
+          lf.b(91);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final void a(int param0, qc param1) {
         try {
-            param1.b((byte) 59, this.field_c);
-            param1.a(this.field_d, false);
-            if (param0 < 107) {
-                field_e = (char[]) null;
-            }
+          param1.b((byte) 59, this.field_c);
+          param1.a(this.field_d, false);
+          if (param0 < 107) {
+            field_e = (char[]) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "lf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     lf(long param0, String param1) {
         try {
-            this.field_c = param0;
-            this.field_d = param1;
+          this.field_c = param0;
+          this.field_d = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "lf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "lf.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String c(byte param0) {
         if (param0 <= 14) {
-            field_e = (char[]) null;
-            if (vl.field_q) {
-                return null;
-            }
-            if (wg.field_e > oe.field_V) {
-                return null;
-            }
-            if (!(ue.field_j + wg.field_e <= oe.field_V)) {
-                return tc.field_a;
-            }
+          field_e = (char[]) null;
+          if (vl.field_q) {
             return null;
+          }
+          if (wg.field_e > oe.field_V) {
+            return null;
+          }
+          if (!(ue.field_j + wg.field_e <= oe.field_V)) {
+            return tc.field_a;
+          }
+          return null;
         }
         if (vl.field_q) {
-            return null;
+          return null;
         }
         if (wg.field_e > oe.field_V) {
-            return null;
+          return null;
         }
         if (!(ue.field_j + wg.field_e <= oe.field_V)) {
-            return tc.field_a;
+          return tc.field_a;
         }
         return null;
     }

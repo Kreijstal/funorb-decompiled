@@ -12,12 +12,12 @@ final class ef implements Iterator {
 
     final static void a(String param0, byte param1, String param2) {
         try {
-            if (param1 != 66) {
-                field_c = (String) null;
-            }
-            r.a(param2, (byte) 87, false, param0);
+          if (param1 != 66) {
+            field_c = (String) null;
+          }
+          r.a(param2, (byte) 87, false, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ef.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class ef implements Iterator {
 
     public final void remove() {
         if (null == this.field_b) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.field_b.a((byte) 92);
         this.field_b = null;
@@ -71,18 +71,18 @@ final class ef implements Iterator {
     ef(ra param0) {
         this.field_b = null;
         try {
-            this.field_a = param0;
-            this.field_d = this.field_a.field_c.field_k;
-            this.field_b = null;
+          this.field_a = param0;
+          this.field_d = this.field_a.field_c.field_k;
+          this.field_b = null;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
         if (param0 != 101) {
-            field_e = false;
+          field_e = false;
         }
     }
 
@@ -92,7 +92,7 @@ final class ef implements Iterator {
         dm var6 = new dm(param2, param2);
         dm var3 = var6;
         for (var4 = param0; var3.field_v.length > var4; var4++) {
-            var6.field_v[var4] = param1;
+          var6.field_v[var4] = param1;
         }
         return var3;
     }
@@ -100,10 +100,10 @@ final class ef implements Iterator {
     public final Object next() {
         Object var1 = this.field_d;
         if (var1 != this.field_a.field_c) {
-            this.field_d = ((rc) (var1)).field_k;
+          this.field_d = ((rc) (var1)).field_k;
         } else {
-            var1 = null;
-            this.field_d = null;
+          var1 = null;
+          this.field_d = null;
         }
         this.field_b = (rc) (var1);
         return var1;

@@ -31,40 +31,40 @@ final class ub {
         int var4Lifetime1;
         int var4Lifetime2;
         if (param0 == 0) {
-            var3 = (float)this.field_e[0] + (float)(this.field_e[1] - this.field_e[0]) * param1;
-            var3 = var3 * 0.0030517578125f;
-            field_d = (float)Math.pow(0.1, (double)(var3 / 20.0f));
-            field_a = (int)(field_d * 65536.0f);
+          var3 = (float)this.field_e[0] + (float)(this.field_e[1] - this.field_e[0]) * param1;
+          var3 = var3 * 0.0030517578125f;
+          field_d = (float)Math.pow(0.1, (double)(var3 / 20.0f));
+          field_a = (int)(field_d * 65536.0f);
         }
         if (this.field_b[param0] == 0) {
-            return 0;
+          return 0;
         }
         var3Lifetime1 = this.a(param0, 0, param1);
         field_f[param0][0] = -2.0f * var3Lifetime1 * (float)Math.cos((double)this.b(param0, 0, param1));
         field_f[param0][1] = var3Lifetime1 * var3Lifetime1;
         for (var4 = 1; var4 < this.field_b[param0]; var4++) {
-            var3Lifetime2 = this.a(param0, var4, param1);
-            var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.b(param0, var4, param1));
-            var6 = var3Lifetime2 * var3Lifetime2;
-            field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
-            field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
-            for (var7 = var4 * 2 - 1; var7 >= 2; var7--) {
-                dupTemp$0 = field_f[param0];
-                dupTemp$0[var7] = dupTemp$0[var7] + (field_f[param0][var7 - 1] * var5 + field_f[param0][var7 - 2] * var6);
-            }
-            dupTemp$1 = field_f[param0];
-            dupTemp$1[1] = dupTemp$1[1] + (field_f[param0][0] * var5 + var6);
-            dupTemp$2 = field_f[param0];
-            dupTemp$2[0] = dupTemp$2[0] + var5;
+          var3Lifetime2 = this.a(param0, var4, param1);
+          var5 = -2.0f * var3Lifetime2 * (float)Math.cos((double)this.b(param0, var4, param1));
+          var6 = var3Lifetime2 * var3Lifetime2;
+          field_f[param0][var4 * 2 + 1] = field_f[param0][var4 * 2 - 1] * var6;
+          field_f[param0][var4 * 2] = field_f[param0][var4 * 2 - 1] * var5 + field_f[param0][var4 * 2 - 2] * var6;
+          for (var7 = var4 * 2 - 1; var7 >= 2; var7--) {
+            dupTemp$0 = field_f[param0];
+            dupTemp$0[var7] = dupTemp$0[var7] + (field_f[param0][var7 - 1] * var5 + field_f[param0][var7 - 2] * var6);
+          }
+          dupTemp$1 = field_f[param0];
+          dupTemp$1[1] = dupTemp$1[1] + (field_f[param0][0] * var5 + var6);
+          dupTemp$2 = field_f[param0];
+          dupTemp$2[0] = dupTemp$2[0] + var5;
         }
         if (param0 == 0) {
-            for (var4Lifetime1 = 0; var4Lifetime1 < this.field_b[0] * 2; var4Lifetime1++) {
-                dupTemp$3 = field_f[0];
-                dupTemp$3[var4Lifetime1] = dupTemp$3[var4Lifetime1] * field_d;
-            }
+          for (var4Lifetime1 = 0; var4Lifetime1 < this.field_b[0] * 2; var4Lifetime1++) {
+            dupTemp$3 = field_f[0];
+            dupTemp$3[var4Lifetime1] = dupTemp$3[var4Lifetime1] * field_d;
+          }
         }
         for (var4Lifetime2 = 0; var4Lifetime2 < this.field_b[param0] * 2; var4Lifetime2++) {
-            field_g[param0][var4Lifetime2] = (int)(field_f[param0][var4Lifetime2] * 65536.0f);
+          field_g[param0][var4Lifetime2] = (int)(field_f[param0][var4Lifetime2] * 65536.0f);
         }
         return this.field_b[param0] * 2;
     }
@@ -112,7 +112,7 @@ final class ub {
             }
           }
           if (var4 != 0 ||
-                this.field_e[1] != this.field_e[0]) {
+            this.field_e[1] != this.field_e[0]) {
             param1.b(param0);
           }
         } else {

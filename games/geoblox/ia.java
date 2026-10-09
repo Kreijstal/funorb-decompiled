@@ -21,9 +21,9 @@ abstract class ia extends hf {
 
     final void b(int[] param0, int param1, int param2) {
         if (this.field_f) {
-            this.a(param0, param1, param2);
+          this.a(param0, param1, param2);
         } else {
-            this.b(param2);
+          this.b(param2);
         }
     }
 

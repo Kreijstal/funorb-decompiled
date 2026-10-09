@@ -64,15 +64,15 @@ final class ab {
           }
           var3_int = param2.length();
           if (var3_int >= 1 &&
-              var3_int <= 12) {
+            var3_int <= 12) {
             var4 = oe.a(param2, 12);
             if (param1 != 2) {
               ab.a((byte) 112);
             }
             if (var4 != null &&
-                var4.length() >= 1) {
+              var4.length() >= 1) {
               if (!gg.a((byte) -32, var4.charAt(0)) &&
-                  !gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
+                !gg.a((byte) -75, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
@@ -82,7 +82,7 @@ final class ab {
                     var5 = 0;
                   }
                   if (2 <= var5 &&
-                      !param0) {
+                    !param0) {
                     stackIn_31_0 = fa.field_h;
                     return stackIn_31_0;
                   }
@@ -221,7 +221,7 @@ final class ab {
                   var3 = stackIn_17_0;
                   ih.a(-1, td.field_E, var2, ng.field_G);
                   if (var3 == 0 ||
-                      var2.field_z == 2) {
+                    var2.field_z == 2) {
                     if (var2.field_z != 2) {
                       var2.field_u = var2.field_u - param1;
                     }
@@ -265,7 +265,7 @@ final class ab {
                   stackIn_39_0 = (!(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 < var11Lifetime1 + var10Lifetime1)) ? 0 : 1;
                   var13 = stackIn_39_0;
                   if (var12 != 0 &&
-                      var13 != 0) {
+                    var13 != 0) {
                     var8Lifetime2 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
                     var9Lifetime2 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
                     var14 = og.field_r / (float)Math.sqrt((double)(var8Lifetime2 * var8Lifetime2 + var9Lifetime2 * var9Lifetime2));
@@ -284,7 +284,7 @@ final class ab {
                   var4_float = 240.0f - var2.field_v;
                   var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
                   if (var2.field_L == 0 &&
-                      var5 * var5 > 0.30000001192092896f) {
+                    var5 * var5 > 0.30000001192092896f) {
                     var2.field_w = var3_float;
                     var2.field_F = var4_float;
                     var6 = og.field_r / (float)Math.sqrt((double)(var2.field_w * var2.field_w + var2.field_F * var2.field_F));

@@ -13,10 +13,10 @@ final class of implements be {
         com.ms.directX.DirectSound discarded$0 = new com.ms.directX.DirectSound();
         com.ms.directX.WaveFormatEx discarded$1 = new com.ms.directX.WaveFormatEx();
         for (var1 = 0; var1 < 2; var1++) {
-            this.field_b[var1] = new com.ms.directX.DSBufferDesc();
+          this.field_b[var1] = new com.ms.directX.DSBufferDesc();
         }
         for (var1Lifetime1 = 0; var1Lifetime1 < 2; var1Lifetime1++) {
-            this.field_a[var1Lifetime1] = new com.ms.directX.DSCursors();
+          this.field_a[var1Lifetime1] = new com.ms.directX.DSCursors();
         }
     }
 }

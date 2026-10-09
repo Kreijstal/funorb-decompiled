@@ -34,7 +34,7 @@ final class bm {
         int var9 = (int)((long)var4 * (long)var5 >> 16);
         int var10 = (int)((long)var6 * (long)var4 >> 16);
         if (param1 > -65) {
-            return (int[]) null;
+          return (int[]) null;
         }
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
@@ -90,7 +90,7 @@ final class bm {
           var18 = new qc(v.a(param1, -1));
           var4 = var18.c((byte) 34);
           if (5 <= var4 &&
-              var4 <= 7) {
+            var4 <= 7) {
             if (var4 < 6) {
               this.field_g = 0;
             } else {
@@ -267,30 +267,30 @@ final class bm {
         int var5 = 0;
         int var6 = Geoblox.field_C;
         try {
-            var7 = fj.field_q;
-            var8 = var7;
-            var8.a(param1, (byte) -125);
-            var8.field_f = var8.field_f + 1;
-            var4 = var8.field_f;
-            var8.d((byte) 122, 1);
-            var8.e(param0.field_q, 28695);
-            var8.e(param0.field_f, 28695);
-            var8.e(param0.field_k, 28695);
-            var8.c((byte) 95, param0.field_m);
-            var8.c((byte) 95, param0.field_g);
-            var8.c((byte) 95, param0.field_j);
-            if (param2 > -126) {
-                field_j = 61;
-            }
-            var8.c((byte) 95, param0.field_i);
-            var8.d((byte) 126, param0.field_o.length);
-            for (var5 = 0; var5 < param0.field_o.length; var5++) {
-                var7.c((byte) 95, param0.field_o[var5]);
-            }
-            var8.d(78, var4);
-            var8.f(11700, -var4 + var8.field_f);
+          var7 = fj.field_q;
+          var8 = var7;
+          var8.a(param1, (byte) -125);
+          var8.field_f = var8.field_f + 1;
+          var4 = var8.field_f;
+          var8.d((byte) 122, 1);
+          var8.e(param0.field_q, 28695);
+          var8.e(param0.field_f, 28695);
+          var8.e(param0.field_k, 28695);
+          var8.c((byte) 95, param0.field_m);
+          var8.c((byte) 95, param0.field_g);
+          var8.c((byte) 95, param0.field_j);
+          if (param2 > -126) {
+            field_j = 61;
+          }
+          var8.c((byte) 95, param0.field_i);
+          var8.d((byte) 126, param0.field_o.length);
+          for (var5 = 0; var5 < param0.field_o.length; var5++) {
+            var7.c((byte) 95, param0.field_o[var5]);
+          }
+          var8.d(78, var4);
+          var8.f(11700, -var4 + var8.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -303,24 +303,24 @@ final class bm {
     bm(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-            this.field_m = gg.a(param0, 107, param0.length);
-            if (param1 != this.field_m) {
+          this.field_m = gg.a(param0, 107, param0.length);
+          if (param1 != this.field_m) {
+            throw new RuntimeException();
+          }
+          if (param2 != null) {
+            if (param2.length != 64) {
+              throw new RuntimeException();
+            }
+            this.field_c = wh.a(param0.length, 0, param0, 8);
+            for (var4_int = 0; 64 > var4_int; var4_int++) {
+              if (this.field_c[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();
+              }
             }
-            if (param2 != null) {
-                if (param2.length != 64) {
-                    throw new RuntimeException();
-                }
-                this.field_c = wh.a(param0.length, 0, param0, 8);
-                for (var4_int = 0; 64 > var4_int; var4_int++) {
-                    if (this.field_c[var4_int] != param2[var4_int]) {
-                        throw new RuntimeException();
-                    }
-                }
-            }
-            this.a((byte) 119, param0);
+          }
+          this.a((byte) 119, param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -11,10 +11,10 @@ final class lj {
 
     public static void a(int param0) {
         if (param0 == -1) {
-            field_d = null;
-            field_e = null;
-            field_c = null;
-            return;
+          field_d = null;
+          field_e = null;
+          field_c = null;
+          return;
         }
         field_b = -112;
         field_d = null;

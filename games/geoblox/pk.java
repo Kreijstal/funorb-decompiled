@@ -48,7 +48,7 @@ final class pk extends qc {
     final static int a(int param0, byte param1, int param2) {
         int var3 = param2 >>> 31;
         if (param1 != -6) {
-            pk.k((byte) 101);
+          pk.k((byte) 101);
         }
         return -var3 + (param2 + var3) / param0;
     }
@@ -56,18 +56,18 @@ final class pk extends qc {
     final static void k(byte param0) {
         da.field_a = 0;
         if (param0 != -13) {
-            pk.a(106, (byte) 22, 96);
+          pk.a(106, (byte) 22, 96);
         }
     }
 
     final void a(int[] param0, boolean param1) {
         try {
-            this.field_p = new ne(param0);
-            if (param1) {
-                this.i(-68);
-            }
+          this.field_p = new ne(param0);
+          if (param1) {
+            this.i(-68);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pk.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pk.JB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class pk extends qc {
             }
             if (!vg.field_j[var2_int]) {
               if (10 <= var2_int &&
-                  26 >= var2_int) {
+                26 >= var2_int) {
                 var3 = te.field_c.c(-1879044097, w.field_b[var2_int]);
               } else {
                 var3 = te.field_c.b(1, w.field_b[var2_int]);
@@ -129,7 +129,7 @@ final class pk extends qc {
         field_o = null;
         field_k = null;
         if (param0 != 0) {
-            field_r = (String) null;
+          field_r = (String) null;
         }
         field_r = null;
         field_q = null;
@@ -141,22 +141,22 @@ final class pk extends qc {
         int var6 = Geoblox.field_C;
         int var3 = this.field_s >> 3;
         if (param0 != -17) {
-            return -69;
+          return -69;
         }
         int var4 = 8 - (7 & this.field_s);
         int var5 = 0;
         this.field_s = this.field_s + param1;
         while (var4 < param1) {
-            incrementValue$0 = var3;
-            var3++;
-            var5 = var5 + ((this.field_j[incrementValue$0] & kj.field_G[var4]) << -var4 + param1);
-            param1 = param1 - var4;
-            var4 = 8;
+          incrementValue$0 = var3;
+          var3++;
+          var5 = var5 + ((this.field_j[incrementValue$0] & kj.field_G[var4]) << -var4 + param1);
+          param1 = param1 - var4;
+          var4 = 8;
         }
         if (param1 == var4) {
-            var5 = var5 + (this.field_j[var3] & kj.field_G[var4]);
+          var5 = var5 + (this.field_j[var3] & kj.field_G[var4]);
         } else {
-            var5 = var5 + (this.field_j[var3] >> var4 - param1 & kj.field_G[param1]);
+          var5 = var5 + (this.field_j[var3] >> var4 - param1 & kj.field_G[param1]);
         }
         return var5;
     }
@@ -166,20 +166,20 @@ final class pk extends qc {
         this.field_f = this.field_f + 1;
         this.field_j[fieldTemp$0] = (byte)(param0 + this.field_p.b(0));
         if (param1 >= -12) {
-            pk.h(-6, -80);
+          pk.h(-6, -80);
         }
     }
 
     final void i(int param0) {
         this.field_f = (7 + this.field_s) / 8;
         if (param0 != -16989) {
-            this.field_p = (ne) null;
+          this.field_p = (ne) null;
         }
     }
 
     final int j(byte param0) {
         if (param0 != 122) {
-            this.k(-51);
+          this.k(-51);
         }
         int fieldTemp$0 = this.field_f;
         this.field_f = this.field_f + 1;

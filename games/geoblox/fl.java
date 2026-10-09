@@ -10,10 +10,10 @@ final class fl {
     public static void a(int param0) {
         field_a = null;
         if (param0 != 33) {
-            fl.a(76);
-            field_c = null;
-            field_b = null;
-            return;
+          fl.a(76);
+          field_c = null;
+          field_b = null;
+          return;
         }
         field_c = null;
         field_b = null;

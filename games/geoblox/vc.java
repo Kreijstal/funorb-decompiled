@@ -59,10 +59,10 @@ final class vc extends dk {
             return;
           }
           if (this.field_p == param3 &&
-              this.field_d &&
-              this.field_k == 2 &&
-              null != this.field_n &&
-              this.field_n.equals(param4)) {
+            this.field_d &&
+            this.field_k == 2 &&
+            null != this.field_n &&
+            this.field_n.equals(param4)) {
             return;
           }
           this.field_p = param3;
@@ -103,26 +103,26 @@ final class vc extends dk {
         lk var8 = null;
         int var7 = 0;
         if (param0 == null) {
-            this.field_a = null;
-            return;
+          this.field_a = null;
+          return;
         }
         if (param3 != 58) {
-            vc.d(-90);
+          vc.d(-90);
         }
         if (this.field_p == param4 && this.field_d && this.field_k == 1 && null != this.field_n && this.field_n.equals(param0)) {
-            return;
+          return;
         }
         try {
-            this.field_k = 1;
-            this.field_d = true;
-            this.field_p = param4;
-            var8 = this.a(-1, param1, param4, param0);
-            var7 = param4.a(param0);
-            var8.field_c[0] = param2 - (var7 >> 1);
-            var8.field_c[param0.length()] = (var7 >> 1) + param2;
-            qb.a(0, var8, param0, 60, param4);
+          this.field_k = 1;
+          this.field_d = true;
+          this.field_p = param4;
+          var8 = this.a(-1, param1, param4, param0);
+          var7 = param4.a(param0);
+          var8.field_c[0] = param2 - (var7 >> 1);
+          var8.field_c[param0.length()] = (var7 >> 1) + param2;
+          qb.a(0, var8, param0, 60, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,28 +130,28 @@ final class vc extends dk {
         lk var7 = null;
         lk var8 = null;
         if (param2 == null) {
-            this.field_a = null;
-            return;
+          this.field_a = null;
+          return;
         }
         if (param3 > -89) {
-            field_j = (dm) null;
+          field_j = (dm) null;
         }
         if (this.field_p == param4 && this.field_d && 0 == this.field_k && this.field_n != null &&
-            this.field_n.equals(param2)) {
-            return;
+          this.field_n.equals(param2)) {
+          return;
         }
         try {
-            this.field_n = param2;
-            this.field_k = 0;
-            this.field_d = true;
-            this.field_p = param4;
-            var7 = this.a(-1, param0, param4, param2);
-            var8 = var7;
-            var7.field_c[0] = param1;
-            var8.field_c[param2.length()] = param4.a(param2) + param1;
-            qb.a(0, var8, param2, 60, param4);
+          this.field_n = param2;
+          this.field_k = 0;
+          this.field_d = true;
+          this.field_p = param4;
+          var7 = this.a(-1, param0, param4, param2);
+          var8 = var7;
+          var7.field_c[0] = param1;
+          var8.field_c[param2.length()] = param4.a(param2) + param1;
+          qb.a(0, var8, param2, 60, param4);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vc.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,14 +190,14 @@ final class vc extends dk {
             return;
           }
           if (param4 == this.field_p &&
-              !this.field_d &&
-              this.field_k == param6 &&
-              this.field_m == param0 &&
-              this.field_e == param3 &&
-              param7 == this.field_o &&
-              param5 == this.field_l &&
-              null != this.field_n &&
-              this.field_n.equals(param2)) {
+            !this.field_d &&
+            this.field_k == param6 &&
+            this.field_m == param0 &&
+            this.field_e == param3 &&
+            param7 == this.field_o &&
+            param5 == this.field_l &&
+            null != this.field_n &&
+            this.field_n.equals(param2)) {
             return;
           }
           this.field_o = param7;
@@ -212,7 +212,7 @@ final class vc extends dk {
           var17 = var16;
           var10 = Math.max(1, param4.a(param2, new int[]{param5}, var17));
           if (this.field_m == 3 &&
-              var10 == 1) {
+            var10 == 1) {
             this.field_m = 1;
           }
           this.field_a = new lk[var10];
@@ -287,15 +287,15 @@ final class vc extends dk {
     final static void c(int param0) {
         int var2 = 0;
         if (param0 != -1) {
-            field_h = 119;
+          field_h = 119;
         }
         nj var3 = (nj) (pb.field_t.g(0));
         nj var1 = var3;
         if (var1 != null) {
-            var2 = eh.field_c;
-            ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.field_h);
-            sl.field_f[var3.field_h].f(25, var2 + (-32 + (tl.field_h - 15)) / 2);
-            dd.field_G.a(pg.field_a[var3.field_h], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
+          var2 = eh.field_c;
+          ma.a(var2, 10, tl.field_h, (byte) -92, jf.field_c, ll.field_h);
+          sl.field_f[var3.field_h].f(25, var2 + (-32 + (tl.field_h - 15)) / 2);
+          dd.field_G.a(pg.field_a[var3.field_h], 67, 15 + var2, jf.field_c - 42 - 30, tl.field_h - 30, 0, -1, 1, 1, 30);
         }
     }
 

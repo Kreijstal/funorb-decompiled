@@ -7,10 +7,10 @@ final class uh extends ac {
 
     public static void c(int param0) {
         if (param0 != 0) {
-            field_x = (int[]) null;
-            field_y = null;
-            field_x = null;
-            return;
+          field_x = (int[]) null;
+          field_y = null;
+          field_x = null;
+          return;
         }
         field_y = null;
         field_x = null;
@@ -51,7 +51,7 @@ final class uh extends ac {
 
     final static int b(int param0) {
         if (param0 == 16) {
-            return ee.field_B[el.field_t % ee.field_B.length];
+          return ee.field_B[el.field_t % ee.field_B.length];
         }
         field_x = (int[]) null;
         return ee.field_B[el.field_t % ee.field_B.length];
@@ -65,7 +65,7 @@ final class uh extends ac {
         oc.b(-96);
         vb.b(param1, param0, param4, param3);
         if (param2 == -14045) {
-            return;
+          return;
         }
         uh.b(-111);
     }

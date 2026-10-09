@@ -10,8 +10,8 @@ final class ck {
 
     final static boolean b(int param0) {
         if (param0 != 0) {
-            field_c = (int[]) null;
-            return true;
+          field_c = (int[]) null;
+          return true;
         }
         return true;
     }
@@ -83,7 +83,7 @@ final class ck {
           var8Lifetime1 = bh.a((byte) 81, var6Lifetime1) >> 8;
           var9Lifetime1 = fi.a(var6Lifetime1, 2048) >> 8;
           if (qa.field_a != -1 &&
-              ue.field_e != -1) {
+            ue.field_e != -1) {
             var7Lifetime1 = -320 + qa.field_a;
             var9Lifetime1 = -128;
             var8Lifetime1 = -ue.field_e + 240;
@@ -143,7 +143,7 @@ final class ck {
         try {
           if (!tf.a((byte) 124)) {
             if (vl.field_n != null &&
-                vl.field_n.field_c) {
+              vl.field_n.field_c) {
               jk.a((byte) -87);
               oh.field_b.a(false, new ij(oh.field_b, ei.field_hb));
             }
@@ -175,13 +175,13 @@ final class ck {
         field_d = "Cancel";
         field_c = new int[33];
         for (var0 = 0; var0 < 3; var0++) {
-            field_c[var0 + 10] = 4;
-            field_c[13 + var0] = 3;
-            field_c[7 + var0] = 1;
-            field_c[var0 + 1] = 0;
-            field_c[var0 + 4] = 6;
-            field_c[16 + var0] = 5;
-            field_c[19 + var0] = 2;
+          field_c[var0 + 10] = 4;
+          field_c[13 + var0] = 3;
+          field_c[7 + var0] = 1;
+          field_c[var0 + 1] = 0;
+          field_c[var0 + 4] = 6;
+          field_c[16 + var0] = 5;
+          field_c[19 + var0] = 2;
         }
     }
 }

@@ -15,22 +15,22 @@ final class fh implements dh {
         si.field_g = uf.field_l;
         kd.field_b = uf.field_l;
         if (param0 != -6011) {
-            field_c = 36;
+          field_c = 36;
         }
     }
 
     public static void a(int param0) {
         if (param0 != 1) {
-            fh.a(51);
-            field_e = null;
-            return;
+          fh.a(51);
+          field_e = null;
+          return;
         }
         field_e = null;
     }
 
     final static boolean c(int param0) {
         if (param0 > -78) {
-            return false;
+          return false;
         }
         return hl.field_G;
     }
@@ -45,34 +45,34 @@ final class fh implements dh {
         StringBuilder discarded$0 = null;
         int var11 = Geoblox.field_C;
         if (param0 <= 0L) {
-            return null;
+          return null;
         }
         if (param0 >= 6582952005840035281L) {
-            return null;
+          return null;
         }
         if (0L != param0 % 37L) {
-            var3 = 0;
-            var4 = param0;
-            while (var4 != 0L) {
-                var4 = var4 / 37L;
-                var3++;
+          var3 = 0;
+          var4 = param0;
+          while (var4 != 0L) {
+            var4 = var4 / 37L;
+            var3++;
+          }
+          var6 = new StringBuilder(var3);
+          while (param0 != 0L) {
+            var7_long = param0;
+            param0 = param0 / 37L;
+            var9 = w.field_c[(int)(-(37L * param0) + var7_long)];
+            if (95 == var9) {
+              var10 = -1 + var6.length();
+              var9 = 160;
+              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
             }
-            var6 = new StringBuilder(var3);
-            while (param0 != 0L) {
-                var7_long = param0;
-                param0 = param0 / 37L;
-                var9 = w.field_c[(int)(-(37L * param0) + var7_long)];
-                if (95 == var9) {
-                    var10 = -1 + var6.length();
-                    var9 = 160;
-                    var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-                }
-                discarded$0 = var6.append((char) var9);
-            }
-            var6.reverse();
-            int var7 = 49 % ((27 - param1) / 36);
-            var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
-            return var6.toString();
+            discarded$0 = var6.append((char) var9);
+          }
+          var6.reverse();
+          int var7 = 49 % ((27 - param1) / 36);
+          var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
+          return var6.toString();
         }
         return null;
     }
@@ -93,7 +93,7 @@ final class fh implements dh {
         var11 = Geoblox.field_C;
         try {
           if (!param4.field_l &&
-              !param4.e((byte) 54)) {
+            !param4.e((byte) 54)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
@@ -148,11 +148,11 @@ final class fh implements dh {
 
     fh(m param0, int param1, int param2) {
         try {
-            this.field_a = param2;
-            this.field_b = param1;
-            this.field_d = param0;
+          this.field_a = param2;
+          this.field_b = param1;
+          this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

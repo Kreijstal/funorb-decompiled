@@ -9,33 +9,33 @@ final class jk {
 
     final static void a(byte param0) {
         if (vl.field_n == null) {
-            return;
+          return;
         }
         nb.a(-2, vl.field_n);
         vl.field_n.a(0, ka.field_i);
         if (param0 <= -14) {
-            vl.field_n = null;
-            if (null != rb.field_d) {
-                rb.field_d.b((byte) -101);
-            }
-            f.field_kb.requestFocus();
-            return;
+          vl.field_n = null;
+          if (null != rb.field_d) {
+            rb.field_d.b((byte) -101);
+          }
+          f.field_kb.requestFocus();
+          return;
         }
         d var2 = (d) null;
         jk.a((java.awt.Frame) null, 17, (d) null);
         vl.field_n = null;
         if (null != rb.field_d) {
-            rb.field_d.b((byte) -101);
+          rb.field_d.b((byte) -101);
         }
         f.field_kb.requestFocus();
     }
 
     public static void a(int param0) {
         if (param0 != -10848) {
-            field_c = (String) null;
-            field_b = null;
-            field_c = null;
-            return;
+          field_c = (String) null;
+          field_b = null;
+          field_c = null;
+          return;
         }
         field_b = null;
         field_c = null;
@@ -76,8 +76,8 @@ final class jk {
 
     final static int a(boolean param0) {
         if (param0) {
-            jk.a(-65);
-            return gh.field_P;
+          jk.a(-65);
+          return gh.field_P;
         }
         return gh.field_P;
     }
@@ -114,7 +114,7 @@ final class jk {
             var4 = param1.charAt(var3);
             if (45 == var4) {
               if (var3 == 0 ||
-                  var3 == -1 + var2_int) {
+                var3 == -1 + var2_int) {
                 stackIn_18_0 = ii.field_h;
                 return stackIn_18_0;
               }

@@ -7,7 +7,7 @@ final class gl extends vk implements java.awt.event.MouseWheelListener {
     final void a(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 < 121) {
-            this.field_f = -83;
+          this.field_f = -83;
         }
     }
 
@@ -15,9 +15,9 @@ final class gl extends vk implements java.awt.event.MouseWheelListener {
         int var2 = 0;
         int var2Lifetime1;
         if (param0) {
-            var2 = this.field_f;
-            this.field_f = 0;
-            return var2;
+          var2 = this.field_f;
+          this.field_f = 0;
+          return var2;
         }
         java.awt.event.MouseWheelEvent var3 = (java.awt.event.MouseWheelEvent) null;
         this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);

@@ -13,14 +13,14 @@ final class ie implements com.ms.directX.IEnumModesCallback {
         int[] var2Lifetime1;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (param0 == 8) {
-            field_a = new int[field_b];
-            field_b = 0;
-            this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-            var3 = field_a;
-            var2 = var3;
-            field_b = 0;
-            field_a = null;
-            return var3;
+          field_a = new int[field_b];
+          field_b = 0;
+          this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+          var3 = field_a;
+          var2 = var3;
+          field_b = 0;
+          field_a = null;
+          return var3;
         }
         this.a(-65);
         field_a = new int[field_b];
@@ -58,20 +58,20 @@ final class ie implements com.ms.directX.IEnumModesCallback {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         if (field_a != null) {
-            fieldTemp$1 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$1] = param0.width;
-            fieldTemp$2 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$2] = param0.height;
-            fieldTemp$3 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$3] = param0.rgbBitCount;
-            fieldTemp$4 = field_b;
-            field_b = field_b + 1;
-            field_a[fieldTemp$4] = param0.refreshRate;
+          fieldTemp$1 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$1] = param0.width;
+          fieldTemp$2 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$2] = param0.height;
+          fieldTemp$3 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$3] = param0.rgbBitCount;
+          fieldTemp$4 = field_b;
+          field_b = field_b + 1;
+          field_a[fieldTemp$4] = param0.refreshRate;
         } else {
-            field_b = field_b + 4;
+          field_b = field_b + 4;
         }
     }
 

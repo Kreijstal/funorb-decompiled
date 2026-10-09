@@ -121,7 +121,7 @@ final class cm extends cj {
                     var12++;
                   }
                   if (var21 != null &&
-                      ge.a(var21, (byte) 12)) {
+                    ge.a(var21, (byte) 12)) {
                     var8[1][var13] = wd.field_f;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
@@ -134,7 +134,7 @@ final class cm extends cj {
                     }
                   }
                   if (var14 < var6 &&
-                      !id.field_b[var20].field_c) {
+                    !id.field_b[var20].field_c) {
                     id.field_b[var20].field_c = true;
                     var8[2][var14] = var21;
                     var9[2][var14] = id.field_b[var20].field_a;
@@ -185,48 +185,48 @@ final class cm extends cj {
     public static void a(boolean param0) {
         field_j = null;
         if (param0) {
-            cm.a(false);
+          cm.a(false);
         }
         field_h = null;
     }
 
     final static void a(int param0, int param1) {
         try {
-            IOException iOException = null;
-            Throwable decompiledCaughtException = null;
-            if (null != oc.field_e && (param1 < 0 ||
-                pk.field_l == eh.field_b)) {
-              if (0 == fj.field_q.field_f &&
-                  oa.a(-12520) > (10000L + v.field_r)) {
-                fj.field_q.a(param1, (byte) -76);
-              }
-              if (param0 > ~fj.field_q.field_f) {
-                try {
-                  oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
-                  v.field_r = oa.a(-12520);
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  iOException = (IOException) (Object) decompiledCaughtException;
-                  jl.a((byte) -117);
-                }
-                fj.field_q.field_f = 0;
-              }
-              return;
+          IOException iOException = null;
+          Throwable decompiledCaughtException = null;
+          if (null != oc.field_e && (param1 < 0 ||
+            pk.field_l == eh.field_b)) {
+            if (0 == fj.field_q.field_f &&
+              oa.a(-12520) > (10000L + v.field_r)) {
+              fj.field_q.a(param1, (byte) -76);
             }
-            fj.field_q.field_f = 0;
+            if (param0 > ~fj.field_q.field_f) {
+              try {
+                oc.field_e.a(100, 0, fj.field_q.field_f, fj.field_q.field_j);
+                v.field_r = oa.a(-12520);
+              } catch (java.io.IOException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                iOException = (IOException) (Object) decompiledCaughtException;
+                jl.a((byte) -117);
+              }
+              fj.field_q.field_f = 0;
+            }
+            return;
+          }
+          fj.field_q.field_f = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final void a(int param0) {
         if (this.field_e < this.field_c) {
-            this.field_e = this.field_e + (this.field_c - this.field_e);
+          this.field_e = this.field_e + (this.field_c - this.field_e);
         }
         if (param0 < 60) {
-            return;
+          return;
         }
         this.field_i = 0L;
     }
@@ -249,7 +249,7 @@ final class cm extends cj {
           var4++;
           this.field_c = this.field_c + param1;
         } while (var4 < 10 &&
-              this.field_c < this.field_e);
+          this.field_c < this.field_e);
         if (this.field_e > this.field_c) {
           this.field_c = this.field_e;
         }
@@ -263,16 +263,16 @@ final class cm extends cj {
         long var4 = -this.field_i + var2;
         this.field_i = var2;
         if (-5000000000L < var4 &&
-            5000000000L > var4) {
-            this.field_f[this.field_d] = var4;
-            if (this.field_g < 1) {
-                this.field_g = this.field_g + 1;
-            }
-            this.field_d = (this.field_d + 1) % 10;
+          5000000000L > var4) {
+          this.field_f[this.field_d] = var4;
+          if (this.field_g < 1) {
+            this.field_g = this.field_g + 1;
+          }
+          this.field_d = (this.field_d + 1) % 10;
         }
         long var6 = (long)param0;
         for (var8 = 1; var8 <= this.field_g; var8++) {
-            var6 = var6 + this.field_f[(-var8 + (this.field_d + 10)) % 10];
+          var6 = var6 + this.field_f[(-var8 + (this.field_d + 10)) % 10];
         }
         return var6 / (long)this.field_g;
     }
@@ -280,10 +280,10 @@ final class cm extends cj {
     final long a(byte param0) {
         this.field_e = this.field_e + this.d(0);
         if (param0 != -49) {
-            this.a(false, 97L);
+          this.a(false, 97L);
         }
         if (this.field_c > this.field_e) {
-            return (this.field_c - this.field_e) / 1000000L;
+          return (this.field_c - this.field_e) / 1000000L;
         }
         return 0L;
     }

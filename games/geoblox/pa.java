@@ -14,18 +14,18 @@ final class pa {
 
     final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
         try {
-            if (this.field_f < (long)param3 + this.field_c) {
-                this.field_d.seek(this.field_f);
-                this.field_d.write(1);
-                throw new EOFException();
-            }
-            if (param2 != 90) {
-                pa.b((byte) 102);
-            }
-            this.field_d.write(param0, param1, param3);
-            this.field_c = this.field_c + (long)param3;
+          if (this.field_f < (long)param3 + this.field_c) {
+            this.field_d.seek(this.field_f);
+            this.field_d.write(1);
+            throw new EOFException();
+          }
+          if (param2 != 90) {
+            pa.b((byte) 102);
+          }
+          this.field_d.write(param0, param1, param3);
+          this.field_c = this.field_c + (long)param3;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class pa {
 
     final long a(int param0) throws IOException {
         if (param0 != 1) {
-            return -83L;
+          return -83L;
         }
         return this.field_d.length();
     }
@@ -71,7 +71,7 @@ final class pa {
     public static void b(byte param0) {
         field_e = null;
         if (param0 <= 3) {
-            return;
+          return;
         }
         field_b = null;
         field_a = null;
@@ -93,7 +93,7 @@ final class pa {
         int var10 = 0;
         try {
           if (2 <= param2 &&
-              param2 <= 36) {
+            param2 <= 36) {
             var4_int = 0;
             var5 = 0;
             var6 = 0;
@@ -111,15 +111,15 @@ final class pa {
                   }
                 }
                 if (var8 != 0 || (var9 != 43 ||
-                      !param1)) {
+                  !param1)) {
                   if (var9 >= 48 &&
-                      var9 <= 57) {
+                    var9 <= 57) {
                     var9 -= 48;
                   } else if (var9 >= 65 &&
-                      var9 <= 90) {
+                    var9 <= 90) {
                     var9 -= 55;
                   } else if (var9 >= 97 &&
-                      var9 <= 122) {
+                    var9 <= 122) {
                     var9 -= 87;
                   } else {
                     return false;
@@ -159,81 +159,81 @@ final class pa {
 
     protected final void finalize() throws Throwable {
         if (null != this.field_d) {
-            System.out.println("");
-            this.a((byte) -5);
+          System.out.println("");
+          this.a((byte) -5);
         }
     }
 
     final static void a(String param0, byte param1, boolean param2, java.applet.Applet param3) {
         try {
-            int var4_int = 0;
-            RuntimeException stackIn_10_0 = null;
-            StringBuilder stackIn_10_1 = null;
-            String stackIn_11_2 = null;
-            StringBuilder stackIn_13_1 = null;
-            String stackIn_14_2 = null;
-            Throwable decompiledCaughtException = null;
-            java.net.MalformedURLException var4 = null;
-            RuntimeException var4_ref = null;
-            try {
-              if (d.field_b.startsWith("win") &&
-                  gh.a(param0, false)) {
-                return;
-              }
-              try {
-                var4_int = -83 / ((param1 + 55) / 62);
-                param3.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
-              } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-                gi.a((Throwable) null, "MGR1: " + param0, (byte) 125);
-              }
+          int var4_int = 0;
+          RuntimeException stackIn_10_0 = null;
+          StringBuilder stackIn_10_1 = null;
+          String stackIn_11_2 = null;
+          StringBuilder stackIn_13_1 = null;
+          String stackIn_14_2 = null;
+          Throwable decompiledCaughtException = null;
+          java.net.MalformedURLException var4 = null;
+          RuntimeException var4_ref = null;
+          try {
+            if (d.field_b.startsWith("win") &&
+              gh.a(param0, false)) {
               return;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_10_0 = var4_ref;
-              stackIn_10_1 = new StringBuilder().append("pa.F(");
-              if (param0 == null) {
-                stackIn_11_2 = "null";
-              } else {
-                stackIn_11_2 = "{...}";
-              }
-              stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
-              if (param3 == null) {
-                stackIn_14_2 = "null";
-              } else {
-                stackIn_14_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
             }
+            try {
+              var4_int = -83 / ((param1 + 55) / 62);
+              param3.getAppletContext().showDocument(new java.net.URL(param0), "_blank");
+            } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
+              gi.a((Throwable) null, "MGR1: " + param0, (byte) 125);
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_10_0 = var4_ref;
+            stackIn_10_1 = new StringBuilder().append("pa.F(");
+            if (param0 == null) {
+              stackIn_11_2 = "null";
+            } else {
+              stackIn_11_2 = "{...}";
+            }
+            stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
+            if (param3 == null) {
+              stackIn_14_2 = "null";
+            } else {
+              stackIn_14_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     pa(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
-            if (param2 == -1L) {
-                param2 = 9223372036854775807L;
-            }
-            if (param2 < param0.length()) {
-                param0.delete();
-            }
-            this.field_d = new RandomAccessFile(param0, param1);
-            this.field_f = param2;
-            this.field_c = 0L;
-            var5_int = this.field_d.read();
-            if (var5_int != -1 && !param1.equals("r")) {
-                this.field_d.seek(0L);
-                this.field_d.write(var5_int);
-            }
+          if (param2 == -1L) {
+            param2 = 9223372036854775807L;
+          }
+          if (param2 < param0.length()) {
+            param0.delete();
+          }
+          this.field_d = new RandomAccessFile(param0, param1);
+          this.field_f = param2;
+          this.field_c = 0L;
+          var5_int = this.field_d.read();
+          if (var5_int != -1 && !param1.equals("r")) {
             this.field_d.seek(0L);
+            this.field_d.write(var5_int);
+          }
+          this.field_d.seek(0L);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "pa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -241,17 +241,17 @@ final class pa {
         this.field_d.seek(param0);
         this.field_c = param0;
         if (!param1) {
-            field_e = (String) null;
+          field_e = (String) null;
         }
     }
 
     final void a(byte param0) throws IOException {
         if (param0 != -5) {
-            return;
+          return;
         }
         if (null != this.field_d) {
-            this.field_d.close();
-            this.field_d = null;
+          this.field_d.close();
+          this.field_d = null;
         }
     }
 

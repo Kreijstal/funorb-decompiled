@@ -11,7 +11,7 @@ final class qg {
     public static void a(int param0) {
         field_b = null;
         if (param0 <= 55) {
-            return;
+          return;
         }
         field_e = null;
     }
@@ -26,22 +26,22 @@ final class qg {
 
     final static void b(int param0) {
         if (param0 != 9313) {
-            qg.a(116);
-            if (fh.c(-114)) {
-                return;
-            }
-            if (vk.field_b == null) {
-                vk.field_b = cf.a(4, 94);
-                return;
-            }
+          qg.a(116);
+          if (fh.c(-114)) {
             return;
-        }
-        if (fh.c(-114)) {
-            return;
-        }
-        if (vk.field_b == null) {
+          }
+          if (vk.field_b == null) {
             vk.field_b = cf.a(4, 94);
             return;
+          }
+          return;
+        }
+        if (fh.c(-114)) {
+          return;
+        }
+        if (vk.field_b == null) {
+          vk.field_b = cf.a(4, 94);
+          return;
         }
     }
 

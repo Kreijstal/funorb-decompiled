@@ -13,8 +13,8 @@ final class mb {
 
     final String b(int param0) {
         if (param0 != 16925) {
-            this.a((byte) -83);
-            return this.field_d;
+          this.a((byte) -83);
+          return this.field_d;
         }
         return this.field_d;
     }
@@ -54,7 +54,7 @@ final class mb {
 
     public static void a(int param0) {
         if (param0 != -1) {
-            return;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -62,7 +62,7 @@ final class mb {
 
     final boolean a(byte param0) {
         if (param0 <= 74) {
-            return false;
+          return false;
         }
         return this.field_c;
     }

@@ -203,10 +203,10 @@ final class ag extends q {
     public static void g(int param0) {
         field_j = null;
         if (param0 > -13) {
-            byte[] var2 = (byte[]) null;
-            ag.a(95, (byte[]) null);
-            field_m = null;
-            return;
+          byte[] var2 = (byte[]) null;
+          ag.a(95, (byte[]) null);
+          field_m = null;
+          return;
         }
         field_m = null;
     }
@@ -217,13 +217,13 @@ final class ag extends q {
 
     final static void c(int param0, String param1) {
         try {
-            rd.a(-119, param1);
-            if (param0 != 12607) {
-                field_l = 32;
-            }
-            fa.a(rj.field_g, 480, false);
+          rd.a(-119, param1);
+          if (param0 != 12607) {
+            field_l = 32;
+          }
+          fa.a(rj.field_g, 480, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ag.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

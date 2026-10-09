@@ -14,21 +14,21 @@ final class di {
         byte[] var5 = null;
         og var3 = (og) (this.field_f.a((byte) 106, (long)param1));
         if (var3 == null) {
-            int var4 = 3 % ((param0 - 57) / 42);
-            if (param1 < 32768) {
-                var5 = this.field_d.a(1, -28153, param1);
-            } else {
-                var5 = this.field_b.a(1, -28153, 32767 & param1);
-            }
-            var3 = new og();
-            if (var5 != null) {
-                var3.a(0, new qc(var5));
-            }
-            if (param1 >= 32768) {
-                var3.f((byte) 119);
-            }
-            this.field_f.a(-126, (long)param1, var3);
-            return var3;
+          int var4 = 3 % ((param0 - 57) / 42);
+          if (param1 < 32768) {
+            var5 = this.field_d.a(1, -28153, param1);
+          } else {
+            var5 = this.field_b.a(1, -28153, 32767 & param1);
+          }
+          var3 = new og();
+          if (var5 != null) {
+            var3.a(0, new qc(var5));
+          }
+          if (param1 >= 32768) {
+            var3.f((byte) 119);
+          }
+          this.field_f.a(-126, (long)param1, var3);
+          return var3;
         }
         return var3;
     }

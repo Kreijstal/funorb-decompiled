@@ -110,60 +110,60 @@ final class al {
 
     final static boolean a(byte param0, java.applet.Applet param1) {
         try {
-            int var5 = 0;
-            RuntimeException var2 = null;
-            String var3 = null;
-            String[] var4 = null;
-            int var6 = 0;
-            int var7 = 0;
-            String var8 = null;
-            boolean stackIn_21_0 = false;
-            RuntimeException stackIn_24_0 = null;
-            StringBuilder stackIn_24_1 = null;
-            String stackIn_25_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var2_ref = null;
-            var7 = Geoblox.field_C;
-            try {
-              if (td.field_H) {
-                return true;
-              }
-              try {
-                var8 = "tuhstatbut";
-                var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
-                var4 = uj.a(';', true, var3);
-                for (var5 = 0; var5 < var4.length; var5++) {
-                  var6 = var4[var5].indexOf('=');
-                  if (var6 >= 0 &&
-                      var4[var5].substring(0, var6).trim().equals(var8)) {
-                    return true;
-                  }
-                }
-                if (param0 != -109) {
-                  al.a(114, -32);
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
-              }
-              stackIn_21_0 = !(null == param1.getParameter("tuhstatbut"));
-              return stackIn_21_0;
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_24_0 = var2;
-              stackIn_24_1 = new StringBuilder().append("al.A(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_25_2 = "null";
-              } else {
-                stackIn_25_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          int var5 = 0;
+          RuntimeException var2 = null;
+          String var3 = null;
+          String[] var4 = null;
+          int var6 = 0;
+          int var7 = 0;
+          String var8 = null;
+          boolean stackIn_21_0 = false;
+          RuntimeException stackIn_24_0 = null;
+          StringBuilder stackIn_24_1 = null;
+          String stackIn_25_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2_ref = null;
+          var7 = Geoblox.field_C;
+          try {
+            if (td.field_H) {
+              return true;
             }
+            try {
+              var8 = "tuhstatbut";
+              var3 = (String) (wk.a((byte) -6, param1, "getcookies"));
+              var4 = uj.a(';', true, var3);
+              for (var5 = 0; var5 < var4.length; var5++) {
+                var6 = var4[var5].indexOf('=');
+                if (var6 >= 0 &&
+                  var4[var5].substring(0, var6).trim().equals(var8)) {
+                  return true;
+                }
+              }
+              if (param0 != -109) {
+                al.a(114, -32);
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = decompiledCaughtException;
+            }
+            stackIn_21_0 = !(null == param1.getParameter("tuhstatbut"));
+            return stackIn_21_0;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_24_0 = var2;
+            stackIn_24_1 = new StringBuilder().append("al.A(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_25_2 = "null";
+            } else {
+              stackIn_25_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -173,16 +173,16 @@ final class al {
 
     final static String b(int param0) {
         if (tf.field_d == kd.field_b) {
-            return oc.field_a;
+          return oc.field_a;
         }
         if (tf.field_d == si.field_g) {
-            return cg.field_k;
+          return cg.field_k;
         }
         if (param0 != 0) {
-            al.b(66);
+          al.b(66);
         }
         if (!ih.field_c.a(-91)) {
-            return cg.field_k;
+          return cg.field_k;
         }
         return b.field_a;
     }

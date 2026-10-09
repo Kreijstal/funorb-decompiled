@@ -67,8 +67,8 @@ final class td extends hk {
 
     public static void f(int param0) {
         if (param0 > -114) {
-            StringBuilder var2 = (StringBuilder) null;
-            td.a((CharSequence) null, (StringBuilder) null, -1, -77);
+          StringBuilder var2 = (StringBuilder) null;
+          td.a((CharSequence) null, (StringBuilder) null, -1, -77);
         }
         field_I = null;
     }
@@ -94,7 +94,7 @@ final class td extends hk {
         var6 = param1 - (-this.field_m - (this.field_h >> 1));
         var9 = this.field_F.a((byte) -105);
         if (var9 != bf.field_g &&
-            si.field_n != var9) {
+          si.field_n != var9) {
           if (si.field_m == var9) {
             var14 = oa.field_e[2];
             var14.c(-(var14.field_r >> 1) + var5, var6 - (var14.field_m >> 1), 256);
@@ -107,8 +107,8 @@ final class td extends hk {
           var10 = var13.field_s << 1;
           var11 = var13.field_o << 1;
           if (null != da.field_b &&
-              var10 <= da.field_b.field_r &&
-              var11 <= da.field_b.field_m) {
+            var10 <= da.field_b.field_r &&
+            var11 <= da.field_b.field_m) {
             Geoblox.a(1, da.field_b);
             vb.c();
           } else {
@@ -123,13 +123,13 @@ final class td extends hk {
 
     final static void a(int param0, gd param1) {
         try {
-            if (param0 != -348) {
-                gd var3 = (gd) null;
-                td.a(-67, (gd) null);
-            }
-            ja.a(false, kl.a(param1, 100, 96));
+          if (param0 != -348) {
+            gd var3 = (gd) null;
+            td.a(-67, (gd) null);
+          }
+          ja.a(false, kl.a(param1, 100, 96));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "td.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class td extends hk {
           }
           var4_int = param1.length();
           if (param2 >= 0 &&
-              var4_int >= param2) {
+            var4_int >= param2) {
             var5 = param0.length();
             if (var5 == 0) {
               stackIn_9_0 = (StringBuilder) (param1);
@@ -199,10 +199,10 @@ final class td extends hk {
 
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
-            this.field_G = this.field_G + 1;
-            super.a(param0, param1, param2, param3);
+          this.field_G = this.field_G + 1;
+          super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "td.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -240,25 +240,25 @@ final class td extends hk {
 
     final static void a(byte param0) {
         if (param0 != -93) {
-            return;
+          return;
         }
         md.field_a.a(ue.field_f, (byte) -70);
     }
 
     td(dg param0) {
         try {
-            this.field_F = param0;
+          this.field_F = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "td.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     final String c(byte param0) {
         if (param0 != 69) {
-            return (String) null;
+          return (String) null;
         }
         if (this.field_l) {
-            return this.field_F.c(-21666);
+          return this.field_F.c(-21666);
         }
         return null;
     }

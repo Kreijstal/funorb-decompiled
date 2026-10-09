@@ -191,7 +191,7 @@ class mi extends kg {
     public static void b(boolean param0) {
         field_R = null;
         if (param0) {
-            return;
+          return;
         }
         field_E = null;
         field_y = null;

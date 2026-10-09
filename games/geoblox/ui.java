@@ -110,20 +110,20 @@ final class ui {
         this.field_a = ua.b(8);
         int[] var1 = new int[this.field_e];
         for (var2 = 0; var2 < this.field_e; var2++) {
-            var3 = 0;
-            var4 = ua.b(3);
-            var5 = ua.b() != 0 ? 1 : 0;
-            if (var5 != 0) {
-                var3 = ua.b(5);
-            }
-            var1[var2] = var3 << 3 | var4;
+          var3 = 0;
+          var4 = ua.b(3);
+          var5 = ua.b() != 0 ? 1 : 0;
+          if (var5 != 0) {
+            var3 = ua.b(5);
+          }
+          var1[var2] = var3 << 3 | var4;
         }
         this.field_g = new int[this.field_e * 8];
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_e * 8) {
-            this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ua.b(8) : -1;
-            var6++;
+          this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ua.b(8) : -1;
+          var6++;
         }
     }
 }

@@ -15,8 +15,8 @@ final class ce extends qk {
 
     final void f() {
         if (this.field_x != null) {
-            this.field_x.close();
-            this.field_x = null;
+          this.field_x.close();
+          this.field_x = null;
         }
     }
 
@@ -25,15 +25,15 @@ final class ce extends qk {
         int var3 = 0;
         int var1 = 256;
         if (field_q) {
-            var1 = var1 << 1;
+          var1 = var1 << 1;
         }
         for (var2 = 0; var2 < var1; var2++) {
-            var3 = this.field_c[var2];
-            if ((var3 + 8388608 & -16777216) != 0) {
-                var3 = 8388607 ^ var3 >> 31;
-            }
-            this.field_z[var2 * 2] = (byte)(var3 >> 8);
-            this.field_z[var2 * 2 + 1] = (byte)(var3 >> 16);
+          var3 = this.field_c[var2];
+          if ((var3 + 8388608 & -16777216) != 0) {
+            var3 = 8388607 ^ var3 >> 31;
+          }
+          this.field_z[var2 * 2] = (byte)(var3 >> 8);
+          this.field_z[var2 * 2 + 1] = (byte)(var3 >> 16);
         }
         this.field_x.write(this.field_z, 0, var1 << 1);
     }
@@ -108,18 +108,18 @@ final class ce extends qk {
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
         try {
-            var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, param0 << (field_q ? 2 : 1));
-            this.field_x = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
-            this.field_x.open();
-            this.field_x.start();
-            this.field_w = param0;
+          var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, param0 << (field_q ? 2 : 1));
+          this.field_x = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var2)));
+          this.field_x.open();
+          this.field_x.start();
+          this.field_w = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (bl.a(param0, (byte) 70) != 1) {
-                this.a(da.a((byte) 90, param0));
-                return;
-            }
-            this.field_x = null;
-            throw lineUnavailableException;
+          if (bl.a(param0, (byte) 70) != 1) {
+            this.a(da.a((byte) 90, param0));
+            return;
+          }
+          this.field_x = null;
+          throw lineUnavailableException;
         }
     }
 
@@ -127,12 +127,12 @@ final class ce extends qk {
         javax.sound.sampled.DataLine.Info var1 = null;
         this.field_x.flush();
         if (this.field_v) {
-            this.field_x.close();
-            this.field_x = null;
-            var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, this.field_w << (field_q ? 2 : 1));
-            this.field_x = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var1)));
-            this.field_x.open();
-            this.field_x.start();
+          this.field_x.close();
+          this.field_x = null;
+          var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.field_y, this.field_w << (field_q ? 2 : 1));
+          this.field_x = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) var1)));
+          this.field_x.open();
+          this.field_x.start();
         }
     }
 

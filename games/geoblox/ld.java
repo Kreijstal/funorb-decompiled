@@ -9,10 +9,10 @@ final class ld {
     public static void a(boolean param0) {
         field_c = null;
         if (!param0) {
-            field_b = (dm[]) null;
-            field_a = null;
-            field_b = null;
-            return;
+          field_b = (dm[]) null;
+          field_a = null;
+          field_b = null;
+          return;
         }
         field_a = null;
         field_b = null;
@@ -112,14 +112,14 @@ final class ld {
             sa.b(!param0);
           }
           if ((kd.field_f[ji.field_h] & 1) != 0 &&
-              ag.field_k < 7) {
+            ag.field_k < 7) {
             ag.field_k = ag.field_k + 1;
           }
           if (param0) {
             ld.b(true);
           }
           if ((kd.field_f[ji.field_h] & 2) != 0 &&
-              f.field_qb < 7) {
+            f.field_qb < 7) {
             f.field_qb = f.field_qb + 1;
           }
           if (0 != (kd.field_f[ji.field_h] & 16)) {
@@ -140,7 +140,7 @@ final class ld {
     final static void a(int param0, int param1, int param2, int param3) {
         ug.a(param3, true, param0, 1, param1);
         if (param2 > 39) {
-            return;
+          return;
         }
         ld.a(118);
     }

@@ -12,7 +12,7 @@ final class kf {
         field_b = null;
         field_a = null;
         if (param0 != -15647) {
-            return;
+          return;
         }
         field_c = null;
     }

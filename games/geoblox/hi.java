@@ -13,11 +13,11 @@ final class hi extends ee implements ta, pl {
 
     private final boolean h(byte param0) {
         if (!this.a(-115, (nl) (this.field_E))) {
-            return false;
+          return false;
         }
         if (param0 != -118) {
-            this.field_H = (hk) null;
-            return true;
+          this.field_H = (hk) null;
+          return true;
         }
         return true;
     }
@@ -165,7 +165,7 @@ final class hi extends ee implements ta, pl {
         try {
           var44 = param5;
           if (null != var44.field_n &&
-              var44.field_v > 1) {
+            var44.field_v > 1) {
             var60 = var44.field_n;
             va.a(0, var60, 0, uh.field_x, (byte) -85);
           } else {
@@ -233,10 +233,10 @@ final class hi extends ee implements ta, pl {
             }
             var20 = stackIn_33_0;
             if (l.field_i != null &&
-                param5.field_G != null &&
-                param5.field_G.length > var14Lifetime1 &&
-                param5.field_G[var14Lifetime1] != -1 &&
-                l.field_i.length > param5.field_G[var14Lifetime1]) {
+              param5.field_G != null &&
+              param5.field_G.length > var14Lifetime1 &&
+              param5.field_G[var14Lifetime1] != -1 &&
+              l.field_i.length > param5.field_G[var14Lifetime1]) {
               stackIn_40_0 = l.field_i[param5.field_G[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
@@ -249,7 +249,7 @@ final class hi extends ee implements ta, pl {
             var26 = sh.field_x[var17];
             var27 = dj.field_N[var17];
             if (var18 == var19 &&
-                var20 == var19) {
+              var20 == var19) {
               var28 = var54[var18];
               var29 = var64[var18];
               if (var21 != null) {
@@ -326,7 +326,7 @@ final class hi extends ee implements ta, pl {
               var8 = param0.charAt(param2 + var7);
               if ((0 >= var8 ||
                 var8 >= 128) && (var8 < 160 ||
-                  var8 > 255)) {
+                var8 > 255)) {
                 switch (var8) {
                   case 8364:
                     param1[var7 + param4] = (byte)-128;
@@ -413,7 +413,7 @@ final class hi extends ee implements ta, pl {
                     param1[var7 + param4] = (byte)-97;
                     break L1;
                 }
-                  }
+              }
               param1[param4 + var7] = (byte)var8;
             }
           }
@@ -511,29 +511,29 @@ final class hi extends ee implements ta, pl {
         hc var3 = null;
         String var4 = null;
         try {
-            if (param1 != 20) {
-                this.field_J = (hk) null;
-            }
-            var3 = this.field_E;
-            var4 = param0;
-            ((dj) ((Object) var3)).a(param1 - 136, var4, false);
+          if (param1 != 20) {
+            this.field_J = (hk) null;
+          }
+          var3 = this.field_E;
+          var4 = param0;
+          ((dj) ((Object) var3)).a(param1 - 136, var4, false);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hi.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
         try {
-            super.a(param0, param1, param2, param3);
-            this.field_H.field_D = this.h((byte) -118);
+          super.a(param0, param1, param2, param3);
+          this.field_H.field_D = this.h((byte) -118);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "hi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "hi.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public static void i(byte param0) {
         if (param0 > -45) {
-            return;
+          return;
         }
         field_I = null;
         field_F = null;
@@ -581,7 +581,7 @@ final class hi extends ee implements ta, pl {
     public final void a(byte param0) {
         ((uk) (this.field_E.a((byte) -117))).c((byte) -80);
         if (param0 != 83) {
-            this.field_H = (hk) null;
+          this.field_H = (hk) null;
         }
     }
 
@@ -630,10 +630,10 @@ final class hi extends ee implements ta, pl {
 
     private final void f(int param0) {
         if (!this.h((byte) -118)) {
-            return;
+          return;
         }
         if (param0 >= -42) {
-            return;
+          return;
         }
         ag.c(12607, this.field_E.field_s);
     }

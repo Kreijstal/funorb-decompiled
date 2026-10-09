@@ -78,20 +78,20 @@ final class vd {
 
     final static int a(int param0) {
         if (param0 != 741924304) {
-            return 104;
+          return 104;
         }
         if (!(Math.random() < sa.field_c)) {
-            return 0;
+          return 0;
         }
         double var1 = Math.random();
         if (0.13 > var1) {
-            return 3;
+          return 3;
         }
         if (var1 < 0.25) {
-            return 4;
+          return 4;
         }
         if (!(var1 < 0.65)) {
-            return 2;
+          return 2;
         }
         return 1;
     }
@@ -101,14 +101,14 @@ final class vd {
           return 2;
         }
         if (this.field_f == 2 &&
-            this.field_c > 0) {
+          this.field_c > 0) {
           return 2;
         }
         if (wh.field_n == this.field_h) {
           return 1;
         }
         if (vk.field_a == 2 &&
-            v.a(this.field_i, (byte) 89)) {
+          v.a(this.field_i, (byte) 89)) {
           return 1;
         }
         if (param0 > 113) {
@@ -126,9 +126,9 @@ final class vd {
         this.field_k = re.field_f;
         this.field_j = field_l;
         if (param0) {
-            this.field_g = vj.field_c;
+          this.field_g = vj.field_c;
         } else {
-            this.field_g = null;
+          this.field_g = null;
         }
         this.field_o = tj.field_b;
         this.field_c = bm.field_s;

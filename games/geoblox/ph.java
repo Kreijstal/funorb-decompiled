@@ -14,9 +14,9 @@ final class ph extends hf {
         field_k = null;
         field_i = null;
         if (param0 != 112) {
-            field_k = (String) null;
-            field_g = null;
-            return;
+          field_k = (String) null;
+          field_g = null;
+          return;
         }
         field_g = null;
     }

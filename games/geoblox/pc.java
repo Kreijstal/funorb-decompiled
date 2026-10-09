@@ -32,25 +32,25 @@ final class pc extends hf {
         int var1 = -125 / ((param0 - 56) / 54);
         jk.a((byte) -90);
         if (null != f.field_kb) {
-            nb.a(-2, f.field_kb);
-            kj.c(-11099);
-            hc.b(true);
-            dk.a((byte) -121);
-            if (vh.g(-88)) {
-                fj.field_q.a(1, (byte) -27);
-                cm.a(-1, 0);
-                jl.a((byte) -126);
-                return;
-            }
+          nb.a(-2, f.field_kb);
+          kj.c(-11099);
+          hc.b(true);
+          dk.a((byte) -121);
+          if (vh.g(-88)) {
+            fj.field_q.a(1, (byte) -27);
+            cm.a(-1, 0);
             jl.a((byte) -126);
             return;
+          }
+          jl.a((byte) -126);
+          return;
         }
         kj.c(-11099);
         hc.b(true);
         dk.a((byte) -121);
         if (!vh.g(-88)) {
-            jl.a((byte) -126);
-            return;
+          jl.a((byte) -126);
+          return;
         }
         fj.field_q.a(1, (byte) -27);
         cm.a(-1, 0);
@@ -59,9 +59,9 @@ final class pc extends hf {
 
     final static void a(int param0, boolean param1) {
         if (param1) {
-            field_C = 99;
-            fe.field_d = param0;
-            return;
+          field_C = 99;
+          fe.field_d = param0;
+          return;
         }
         fe.field_d = param0;
     }
@@ -70,9 +70,9 @@ final class pc extends hf {
         this.field_u = null;
         this.field_x = null;
         if (param0 == -1) {
-            this.field_i = null;
-            this.field_z = null;
-            return;
+          this.field_i = null;
+          this.field_z = null;
+          return;
         }
         field_f = 41;
         this.field_i = null;

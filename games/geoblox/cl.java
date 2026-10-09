@@ -13,9 +13,9 @@ final class cl {
         field_e = null;
         field_c = null;
         if (param0 != -9474) {
-            cl.a(62);
-            field_b = null;
-            return;
+          cl.a(62);
+          field_b = null;
+          return;
         }
         field_b = null;
     }
@@ -36,7 +36,7 @@ final class cl {
             return null;
           }
           if (si.field_g == va.field_e &&
-              param1.equals(cg.field_k)) {
+            param1.equals(cg.field_k)) {
             si.field_g = uf.field_l;
             stackIn_8_0 = me.field_g;
             return stackIn_8_0;

@@ -42,12 +42,12 @@ final class fd {
         cg var5 = rl.a(param0, var4, 1000);
         qa.field_f.a(-103, new je(var4, var5));
         if (param2) {
-            return;
+          return;
         }
         try {
-            ge.field_d.a(var5);
+          ge.field_d.a(var5);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class jj {
         fj var4 = (fj) (this.field_f.a(param0, (byte) -72));
         this.a(param1 - 117, var4);
         if (param1 == 0) {
-            return;
+          return;
         }
         field_c = (String) null;
     }
@@ -24,46 +24,46 @@ final class jj {
         gj var6_ref = null;
         int var7 = Geoblox.field_C;
         try {
-            if (param1 > this.field_b) {
-                throw new IllegalStateException();
-            }
-            this.a(param0, 0);
-            this.field_d = this.field_d - param1;
-            while (0 > this.field_d) {
-                var6 = (fj) (this.field_e.a((byte) -41));
-                this.a(114, var6);
-            }
-            var6_ref = new gj(param3, param1);
-            this.field_f.a(param0, -99, var6_ref);
-            if (param2) {
-                jj.b(-85);
-            }
-            this.field_e.a(-1, var6_ref);
-            ((fj) ((Object) var6_ref)).field_i = 0L;
+          if (param1 > this.field_b) {
+            throw new IllegalStateException();
+          }
+          this.a(param0, 0);
+          this.field_d = this.field_d - param1;
+          while (0 > this.field_d) {
+            var6 = (fj) (this.field_e.a((byte) -41));
+            this.a(114, var6);
+          }
+          var6_ref = new gj(param3, param1);
+          this.field_f.a(param0, -99, var6_ref);
+          if (param2) {
+            jj.b(-85);
+          }
+          this.field_e.a(-1, var6_ref);
+          ((fj) ((Object) var6_ref)).field_i = 0L;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "jj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     final Object a(byte param0, long param1) {
         fj var7 = (fj) (this.field_f.a(param1, (byte) 61));
         if (var7 == null) {
-            return null;
+          return null;
         }
         Object var5 = var7.e((byte) 120);
         if (param0 < 56) {
-            return (Object) null;
+          return (Object) null;
         }
         if (var5 == null) {
-            var7.a(false);
-            var7.a((byte) 92);
-            this.field_d = this.field_d + var7.field_n;
-            return null;
+          var7.a(false);
+          var7.a((byte) 92);
+          this.field_d = this.field_d + var7.field_n;
+          return null;
         }
         if (!var7.g(13)) {
-            this.field_e.a(-1, var7);
-            var7.field_i = 0L;
-            return var5;
+          this.field_e.a(-1, var7);
+          var7.field_i = 0L;
+          return var5;
         }
         gj var6 = new gj(var5, var7.field_n);
         this.field_f.a(var7.field_a, -81, var6);
@@ -76,18 +76,18 @@ final class jj {
 
     final void a(int param0, long param1, Object param2) {
         try {
-            int var5_int = 4 / ((param0 - 56) / 59);
-            this.a(param1, 1, false, param2);
+          int var5_int = 4 / ((param0 - 56) / 59);
+          this.a(param1, 1, false, param2);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "jj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void b(int param0) {
         if (param0 > -96) {
-            field_c = (String) null;
-            jk.field_d = 0;
-            return;
+          field_c = (String) null;
+          jk.field_d = 0;
+          return;
         }
         jk.field_d = 0;
     }

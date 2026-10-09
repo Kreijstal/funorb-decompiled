@@ -12,7 +12,7 @@ final class rd extends ff {
 
     final si a(int param0, int param1) {
         if (param0 >= -93) {
-            return (si) null;
+          return (si) null;
         }
         si dupTemp$0 = new si();
         this.field_x[param1] = dupTemp$0;
@@ -152,12 +152,12 @@ final class rd extends ff {
 
     final static void c(int param0) {
         if (param0 != 520) {
-            String var2 = (String) null;
-            rd.a(38, (String) null);
+          String var2 = (String) null;
+          rd.a(38, (String) null);
         }
         kd.field_e.f(10936);
         if (null == vg.field_i) {
-            vg.field_i = new rl(kd.field_e, ff.field_d);
+          vg.field_i = new rl(kd.field_e, ff.field_d);
         }
         kd.field_e.a(false, vg.field_i);
     }
@@ -265,7 +265,7 @@ final class rd extends ff {
             if (var10.field_l) {
               var12 = this.field_x[3];
               if (var10.field_f != 0 &&
-                  var12 != null) {
+                var12 != null) {
                 var12.a(param0, param2, this.field_t, this, -16566, param4);
               } else {
                 var9 = this.field_x[2];
@@ -306,21 +306,21 @@ final class rd extends ff {
 
     final static void a(int param0, String param1) {
         if (param0 > -116) {
-            return;
+          return;
         }
         try {
-            fl.field_b = param1;
+          fl.field_b = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rd.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     rd(rd param0, boolean param1) {
         this();
         try {
-            param0.a(true, this, param1);
+          param0.a(true, this, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

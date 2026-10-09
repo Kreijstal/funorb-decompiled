@@ -17,7 +17,7 @@ class vf extends hk {
         int var6 = param0 - this.field_m;
         fb var7 = this.a((byte) -114, var6, var5);
         if (var7 != null && null != this.field_u) {
-            ((pe) ((Object) this.field_u)).a(this, var7.field_g, param1 + 28924, param3);
+          ((pe) ((Object) this.field_u)).a(this, var7.field_g, param1 + 28924, param3);
         }
     }
 
@@ -69,7 +69,7 @@ class vf extends hk {
 
     public static void h(int param0) {
         if (param0 != 0) {
-            field_K = false;
+          field_K = false;
         }
         field_L = null;
         field_I = null;
@@ -81,24 +81,24 @@ class vf extends hk {
         super(param0, (bb) null);
         this.field_G = null;
         try {
-            this.field_q = param1;
+          this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     String c(byte param0) {
         if (null == this.field_G) {
-            return null;
+          return null;
         }
         if (this.field_J == null) {
-            return null;
+          return null;
         }
         if (this.field_J.length <= this.field_G.field_g) {
-            return null;
+          return null;
         }
         if (param0 != 69) {
-            return (String) null;
+          return (String) null;
         }
         return this.field_J[this.field_G.field_g];
     }
@@ -143,18 +143,18 @@ class vf extends hk {
         int var5 = 46 / ((1 - param2) / 43);
         super.a(param0, param1, (byte) -42, param3);
         if (param3 != 0) {
-            return;
+          return;
         }
         cc var6 = (cc) ((Object) this.field_q);
         fb var7 = this.field_G;
         if (var7 == null) {
         } else {
-            var8 = var6.a(param0, (el) (this), (byte) 46);
-            var9 = var6.a(param1, -2, (el) (this));
-            do {
-                bf.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
-                var7 = var7.field_h;
-            } while (var7 != null);
+          var8 = var6.a(param0, (el) (this), (byte) 46);
+          var9 = var6.a(param1, -2, (el) (this));
+          do {
+            bf.a(-2 + var9 + var7.field_i, 2 + var7.field_f, 14164, 2 + var7.field_n, var7.field_k + (var8 - 2));
+            var7 = var7.field_h;
+          } while (var7 != null);
         }
     }
 
@@ -216,8 +216,8 @@ class vf extends hk {
 
     final static String i(int param0) {
         if (param0 != 1000) {
-            String var2 = (String) null;
-            vf.a(false, (String) null, (String) null, true);
+          String var2 = (String) null;
+          vf.a(false, (String) null, (String) null, true);
         }
         return eh.field_d.e((byte) 101);
     }
@@ -302,7 +302,7 @@ class vf extends hk {
         try {
           var4_int = 122 % ((41 - param1) / 55);
           if (null == this.field_J ||
-              param0 >= this.field_J.length) {
+            param0 >= this.field_J.length) {
             var5 = new String[param0 + 1];
             if (null != this.field_J) {
               for (var6 = 0; var6 < this.field_J.length; var6++) {
@@ -329,14 +329,14 @@ class vf extends hk {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
-            field_I = (qc) null;
+          field_I = (qc) null;
         }
         this.a(((cc) ((Object) this.field_q)).a(14, (el) (this)), param3, (byte) -40, param2, param0);
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 > -6) {
-            field_E = (byte[][]) null;
+          field_E = (byte[][]) null;
         }
         super.a(param0, param1, (byte) -123, param3, param4);
         this.g(-96);
@@ -354,9 +354,9 @@ class vf extends hk {
           var6 = var4;
           while (var6 != null) {
             if (var6.field_k <= param2 &&
-                param1 >= var6.field_i &&
-                param2 < var6.field_f + var6.field_k &&
-                param1 <= var6.field_i + var6.field_n) {
+              param1 >= var6.field_i &&
+              param2 < var6.field_f + var6.field_k &&
+              param1 <= var6.field_i + var6.field_n) {
               return var4;
             }
             var6 = var6.field_h;

@@ -14,9 +14,9 @@ final class se extends hf {
     public static void b(int param0) {
         field_m = null;
         if (param0 < 120) {
-            field_i = (String) null;
-            field_i = null;
-            return;
+          field_i = (String) null;
+          field_i = null;
+          return;
         }
         field_i = null;
     }

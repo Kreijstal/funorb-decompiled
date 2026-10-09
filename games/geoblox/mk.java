@@ -14,17 +14,17 @@ final class mk extends q {
         this.field_j = "";
         this.field_i = false;
         try {
-            this.field_m = new n(param0, param1);
+          this.field_m = new n(param0, param1);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (param0 >= 0) {
-            mk.a(83, true);
-            ih.field_c.a((byte) -110, param1);
-            return;
+          mk.a(83, true);
+          ih.field_c.a((byte) -110, param1);
+          return;
         }
         ih.field_c.a((byte) -110, param1);
     }
@@ -112,7 +112,7 @@ final class mk extends q {
         field_k = null;
         field_n = null;
         if (param0 != -9) {
-            field_k = (int[]) null;
+          field_k = (int[]) null;
         }
     }
 

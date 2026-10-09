@@ -14,9 +14,9 @@ final class rj {
 
     final static void a(byte param0, int param1) {
         if (param0 != 121) {
-            field_e = (String) null;
-            oj.field_c = 1000000000L / (long)param1;
-            return;
+          field_e = (String) null;
+          oj.field_c = 1000000000L / (long)param1;
+          return;
         }
         oj.field_c = 1000000000L / (long)param1;
     }
@@ -29,7 +29,7 @@ final class rj {
 
     final static rh a(int param0, byte param1, boolean param2, boolean param3, int param4) {
         if (param1 >= -13) {
-            return (rh) null;
+          return (rh) null;
         }
         return am.a(-90, param0, param3, param4, param2, false);
     }

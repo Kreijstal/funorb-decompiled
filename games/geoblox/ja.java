@@ -46,7 +46,7 @@ final class ja extends rc {
         }
         var5 = (int)(Math.sin((double)el.field_o.field_J) * (double)var2 + (double)var3 * Math.cos((double)el.field_o.field_J) + 240.0);
         if (this.field_z != 2 &&
-            1 != this.field_z) {
+          1 != this.field_z) {
           vf.field_L.e();
           vb.c();
           this.field_J.c(-this.field_J.field_s + vf.field_L.field_s >> 1, vf.field_L.field_o - this.field_J.field_o >> 1);
@@ -97,7 +97,7 @@ final class ja extends rc {
         var5 = (int)(320.0 + ((double)var2 * Math.cos((double)var4) - Math.sin((double)var4) * (double)var3));
         var6 = (int)(240.0 + ((double)var2 * Math.sin((double)var4) + Math.cos((double)var4) * (double)var3));
         if (this.field_z != 1 &&
-            2 != this.field_z) {
+          2 != this.field_z) {
           vf.field_L.e();
           vb.c();
           this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)(((double)this.field_u - (double)var4 / 6.283185307179586) * 65535.0), 4096);
@@ -216,7 +216,7 @@ final class ja extends rc {
     final void a(float param0, int param1) {
         double var5 = 0.0;
         if (param1 > -79) {
-            this.a(0.2609390318393707f, 75);
+          this.a(0.2609390318393707f, 75);
         }
         float var3 = this.field_o - 320.0f;
         float var4 = this.field_v - 240.0f;
@@ -225,12 +225,12 @@ final class ja extends rc {
         this.field_F = 240.0f - this.field_v;
         this.field_w = 320.0f - this.field_o;
         if (this.field_w * this.field_w + this.field_F * this.field_F > og.field_r * og.field_r) {
-            var5 = (double)og.field_r / Math.sqrt((double)(this.field_w * this.field_w + this.field_F * this.field_F));
-            this.field_w = (float)((double)this.field_w * var5);
-            this.field_F = (float)((double)this.field_F * var5);
+          var5 = (double)og.field_r / Math.sqrt((double)(this.field_w * this.field_w + this.field_F * this.field_F));
+          this.field_w = (float)((double)this.field_w * var5);
+          this.field_F = (float)((double)this.field_F * var5);
         }
         if (this.field_z != 2) {
-            this.field_u = this.field_u - param0;
+          this.field_u = this.field_u - param0;
         }
     }
 
@@ -279,7 +279,7 @@ final class ja extends rc {
         vb.c();
         this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)((double)(this.field_u - el.field_o.field_J) / 6.283185307179586 * 65535.0), 4096);
         if (param0 <= 46) {
-            this.field_y = 17;
+          this.field_y = 17;
         }
         vf.field_L.g(this.field_H + 1);
         wd.field_b.e();
@@ -291,7 +291,7 @@ final class ja extends rc {
         this.field_o = this.field_o + this.field_w;
         this.field_v = this.field_v + this.field_F;
         if (param0 != -59) {
-            this.field_m = -29;
+          this.field_m = -29;
         }
     }
 
@@ -309,10 +309,10 @@ final class ja extends rc {
     final static int b(int param0, int param1) {
         int var2 = 0;
         if ((param1 & 7) != 0) {
-            var2 = -(param1 & 7) + 8;
+          var2 = -(param1 & 7) + 8;
         }
         if (param0 != 1221916132) {
-            return 89;
+          return 89;
         }
         int var3 = var2 + param1;
         return var3;
@@ -345,7 +345,7 @@ final class ja extends rc {
               }
             } else {
               if (8 == this.field_z &&
-                  this.field_I % 24 == 0) {
+                this.field_I % 24 == 0) {
                 fieldTemp$1 = this.field_G;
                 this.field_G = this.field_G + 1;
                 this.field_J = ej.field_a[fieldTemp$1];
@@ -375,8 +375,8 @@ final class ja extends rc {
               if (this.field_z == 6) {
                 this.field_r = this.field_r - 1;
                 if (this.field_r < 0 &&
-                    this.field_I % 24 == 0 &&
-                    4 > this.field_G) {
+                  this.field_I % 24 == 0 &&
+                  4 > this.field_G) {
                   fieldTemp$3 = this.field_G;
                   this.field_G = this.field_G + 1;
                   this.field_J = vj.field_a[fieldTemp$3];
@@ -449,7 +449,7 @@ final class ja extends rc {
             break;
           }
           if (this.field_m <= this.field_L &&
-              this.field_L >= this.field_N) {
+            this.field_L >= this.field_N) {
             return;
           }
           throw new IllegalStateException("");
@@ -531,10 +531,10 @@ final class ja extends rc {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (param0 != 320) {
-            this.field_u = -1.9950387477874756f;
+          this.field_u = -1.9950387477874756f;
         }
         if (this.field_z == 2) {
-            this.field_E = 60;
+          this.field_E = 60;
         }
         this.field_M = param2;
         this.field_z = param3;
@@ -565,37 +565,37 @@ final class ja extends rc {
 
     final static void a(boolean param0, kl param1) {
         try {
-            qa.field_f.a(-74, new je(param1, param1));
-            ge.field_d.a(param1);
-            if (param0) {
-                kl var3 = (kl) null;
-                ja.a(false, (kl) null);
-            }
+          qa.field_f.a(-74, new je(param1, param1));
+          ge.field_d.a(param1);
+          if (param0) {
+            kl var3 = (kl) null;
+            ja.a(false, (kl) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void e(int param0) {
         if (param0 != 1643839728) {
-            this.field_H = -123;
+          this.field_H = -123;
         }
         if (this.field_z == 1) {
-            vf.field_L.e();
-            vb.c();
-            this.field_J.b(vf.field_L.field_s - this.field_J.field_s >> 1, -this.field_J.field_o + vf.field_L.field_o >> 1, this.field_q);
-            oc.field_d.e();
-            vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
+          vf.field_L.e();
+          vb.c();
+          this.field_J.b(vf.field_L.field_s - this.field_J.field_s >> 1, -this.field_J.field_o + vf.field_L.field_o >> 1, this.field_q);
+          oc.field_d.e();
+          vf.field_L.a(vf.field_L.field_s << 3, vf.field_L.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
         } else {
-            oc.field_d.e();
-            this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
+          oc.field_d.e();
+          this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
         }
     }
 
     final void l(int param0) {
         if (param0 != 1915952803) {
-            ja var3 = (ja) null;
-            this.a((ja) null, -128);
+          ja var3 = (ja) null;
+          this.a((ja) null, -128);
         }
         this.field_J.a(this.field_J.field_s << 3, this.field_J.field_o << 3, (int)this.field_o << 4, (int)this.field_v << 4, (int)((double)this.field_u / 6.283185307179586 * 65535.0), 4096);
     }

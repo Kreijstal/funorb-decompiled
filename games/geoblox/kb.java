@@ -68,20 +68,20 @@ final class kb {
 
     final static void a(int param0) {
         if (!hl.field_G) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         kf.field_e = true;
         q.a((byte) 123, true);
         hj.field_a = 0;
         if (param0 < -90) {
-            return;
+          return;
         }
         kb.c(-89);
     }
 
     final static void a(boolean param0, boolean param1) {
         if (param1) {
-            return;
+          return;
         }
         ue.a(param0, true, (byte) -102);
     }
@@ -92,21 +92,21 @@ final class kb {
         int var1Lifetime2;
         int var1Lifetime3;
         if (null != kd.field_e) {
-            kd.field_e.l(0);
-            if (vg.field_i != null) {
-                vg.field_i.m(23181);
-                eh.a((byte) -2);
-                var1 = -121 % ((-38 - param0) / 59);
-                return;
-            }
+          kd.field_e.l(0);
+          if (vg.field_i != null) {
+            vg.field_i.m(23181);
             eh.a((byte) -2);
-            var1Lifetime3 = -121 % ((-38 - param0) / 59);
+            var1 = -121 % ((-38 - param0) / 59);
             return;
+          }
+          eh.a((byte) -2);
+          var1Lifetime3 = -121 % ((-38 - param0) / 59);
+          return;
         }
         if (vg.field_i == null) {
-            eh.a((byte) -2);
-            var1Lifetime1 = -121 % ((-38 - param0) / 59);
-            return;
+          eh.a((byte) -2);
+          var1Lifetime1 = -121 % ((-38 - param0) / 59);
+          return;
         }
         vg.field_i.m(23181);
         eh.a((byte) -2);
@@ -115,9 +115,9 @@ final class kb {
 
     public static void c(int param0) {
         if (param0 != 105) {
-            field_c = 71;
-            field_a = null;
-            return;
+          field_c = 71;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

@@ -8,10 +8,10 @@ final class bk {
 
     public static void a(boolean param0) {
         if (param0) {
-            field_b = null;
-            field_c = null;
-            field_a = null;
-            return;
+          field_b = null;
+          field_c = null;
+          field_a = null;
+          return;
         }
         field_b = (dm) null;
         field_b = null;
@@ -21,18 +21,18 @@ final class bk {
 
     final static void a(rh param0, int param1, int param2, ob param3) {
         try {
-            uf.field_a = param1 * sb.a(true) / 1000;
-            ab.a(99, param0);
-            ni.a(param0, 0);
-            if (param2 < 97) {
-                bk.a(true, -54);
-            }
-            ul.a(-21541, param0);
-            jk.b((byte) -91);
-            ad.a((byte) -32);
-            gb.field_f = -uf.field_a + 0;
+          uf.field_a = param1 * sb.a(true) / 1000;
+          ab.a(99, param0);
+          ni.a(param0, 0);
+          if (param2 < 97) {
+            bk.a(true, -54);
+          }
+          ul.a(-21541, param0);
+          jk.b((byte) -91);
+          ad.a((byte) -32);
+          gb.field_f = -uf.field_a + 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

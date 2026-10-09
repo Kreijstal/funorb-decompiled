@@ -6,24 +6,24 @@ final class mf {
 
     final static void b(boolean param0) {
         if (!el.field_o.field_Y) {
-            fj.field_m = fj.field_m + 1;
-            if (param0) {
-                mf.a(false);
-                return;
-            }
+          fj.field_m = fj.field_m + 1;
+          if (param0) {
+            mf.a(false);
             return;
+          }
+          return;
         }
         if (!param0) {
-            return;
+          return;
         }
         mf.a(false);
     }
 
     public static void a(boolean param0) {
         if (param0) {
-            field_a = (na) null;
-            field_a = null;
-            return;
+          field_a = (na) null;
+          field_a = null;
+          return;
         }
         field_a = null;
     }

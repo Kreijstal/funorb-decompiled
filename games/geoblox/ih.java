@@ -12,17 +12,17 @@ final class ih {
         int var3 = Geoblox.field_C;
         int var1_intLifetime1;
         try {
-            eg.field_p.a(111);
-            var1_int = 10 / ((param0 - 68) / 57);
-            for (var2 = 0; var2 < 32; var2++) {
-                pb.field_p[var2] = 0L;
-            }
-            for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-                tl.field_l[var1_intLifetime1] = 0L;
-            }
-            nf.field_w = 0;
+          eg.field_p.a(111);
+          var1_int = 10 / ((param0 - 68) / 57);
+          for (var2 = 0; var2 < 32; var2++) {
+            pb.field_p[var2] = 0L;
+          }
+          for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+            tl.field_l[var1_intLifetime1] = 0L;
+          }
+          nf.field_w = 0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ih.C(" + param0 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class ih {
 
     public static void a(byte param0) {
         if (param0 <= 46) {
-            return;
+          return;
         }
         field_a = null;
         field_c = null;
@@ -141,7 +141,7 @@ final class ih {
                       var26_ref = (ja) (ra.field_a.e(1));
                       if (var26_ref != null) {
                         if (param2.field_z == 2 &&
-                            var25 != 0) {
+                          var25 != 0) {
                           var26_ref.a(param0 ^ -97, (float)param3, 8, param2.field_w, param2.field_M, 0, param2.field_u, (float)param1, param2.field_F, param2.field_C, 0.0f);
                         } else {
                           var26_ref.a(-121, var24.field_o, 8, var24.field_w, var24.field_M, 0, var24.field_u, var24.field_v, var24.field_F, var24.field_C, 0.0f);

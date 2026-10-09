@@ -91,7 +91,7 @@ final class nb {
           stackIn_21_8 = (float)param3;
           stackIn_21_9 = (float)(-param3 + 240);
           if (var12 != 2 &&
-              1 != var12) {
+            1 != var12) {
             stackIn_23_10 = -1;
           } else {
             stackIn_23_10 = param2;
@@ -105,56 +105,56 @@ final class nb {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17 = Geoblox.field_C;
         if (param10 != -2) {
-            return;
+          return;
         }
         if (param4 <= param7) {
-            if (param15 > param7) {
-                wh.a(param3, param11, param13, param1, param15, param9, param2, param0, param4, param14, param6, vb.field_c, param12, param8, param5, param7, -1275583984);
-                return;
-            }
-            if (param15 > param4) {
-                wh.a(param1, param11, param13, param3, param7, param0, param6, param9, param4, param8, param2, vb.field_c, param12, param14, param5, param15, -1275583984);
-                return;
-            }
-            wh.a(param1, param2, param8, param12, param7, param0, param6, param5, param15, param13, param11, vb.field_c, param3, param14, param9, param4, -1275583984);
+          if (param15 > param7) {
+            wh.a(param3, param11, param13, param1, param15, param9, param2, param0, param4, param14, param6, vb.field_c, param12, param8, param5, param7, -1275583984);
             return;
+          }
+          if (param15 > param4) {
+            wh.a(param1, param11, param13, param3, param7, param0, param6, param9, param4, param8, param2, vb.field_c, param12, param14, param5, param15, -1275583984);
+            return;
+          }
+          wh.a(param1, param2, param8, param12, param7, param0, param6, param5, param15, param13, param11, vb.field_c, param3, param14, param9, param4, -1275583984);
+          return;
         }
         if (param4 < param15) {
-            wh.a(param3, param6, param14, param12, param15, param9, param2, param5, param7, param13, param11, vb.field_c, param1, param8, param0, param4, param10 ^ 1275583982);
-            return;
+          wh.a(param3, param6, param14, param12, param15, param9, param2, param5, param7, param13, param11, vb.field_c, param1, param8, param0, param4, param10 ^ 1275583982);
+          return;
         }
         if (param15 > param7) {
-            wh.a(param12, param6, param14, param3, param4, param5, param11, param9, param7, param8, param2, vb.field_c, param1, param13, param0, param15, -1275583984);
-            return;
+          wh.a(param12, param6, param14, param3, param4, param5, param11, param9, param7, param8, param2, vb.field_c, param1, param13, param0, param15, -1275583984);
+          return;
         }
         wh.a(param12, param2, param8, param1, param4, param5, param11, param0, param15, param14, param6, vb.field_c, param3, param13, param9, param7, -1275583984);
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-            field_a = (String) null;
-            if (rb.field_d == null) {
-                return false;
-            }
-            if (rb.field_d.a(-119)) {
-                return true;
-            }
+          field_a = (String) null;
+          if (rb.field_d == null) {
             return false;
+          }
+          if (rb.field_d.a(-119)) {
+            return true;
+          }
+          return false;
         }
         if (rb.field_d == null) {
-            return false;
+          return false;
         }
         if (rb.field_d.a(-119)) {
-            return true;
+          return true;
         }
         return false;
     }
 
     public static void a(int param0) {
         if (param0 >= -80) {
-            nb.a(108);
-            field_a = null;
-            return;
+          nb.a(108);
+          field_a = null;
+          return;
         }
         field_a = null;
     }

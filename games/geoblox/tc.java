@@ -17,9 +17,9 @@ final class tc {
         var5 = Geoblox.field_C;
         try {
           if ((0 >= param1 ||
-                128 <= param1) &&
-              (param1 < 160 ||
-                255 < param1)) {
+            128 <= param1) &&
+            (param1 < 160 ||
+            255 < param1)) {
             if (param0 != -112) {
               field_b = (String) null;
             }
@@ -48,51 +48,51 @@ final class tc {
         field_b = null;
         field_a = null;
         if (!param0) {
-            tc.a(false);
+          tc.a(false);
         }
     }
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
         try {
-            String var7 = null;
-            String var5 = null;
-            String var4 = null;
-            String var8 = null;
-            String var5Lifetime1;
-            String var5Lifetime2;
-            String var5Lifetime3;
-            String var5Lifetime4;
-            String var5Lifetime5;
-            String var5Lifetime6;
+          String var7 = null;
+          String var5 = null;
+          String var4 = null;
+          String var8 = null;
+          String var5Lifetime1;
+          String var5Lifetime2;
+          String var5Lifetime3;
+          String var5Lifetime4;
+          String var5Lifetime5;
+          String var5Lifetime6;
+          try {
+            sd.field_z = param1;
             try {
-                sd.field_z = param1;
-                try {
-                    var7 = param2.getParameter("cookieprefix");
-                    var5 = var7;
-                    var5Lifetime1 = var7;
-                    var4 = param2.getParameter("cookiehost");
-                    var5Lifetime2 = var4;
-                    var5Lifetime3 = var4;
-                    var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                    var5Lifetime4 = var8;
-                    var5Lifetime5 = var8;
-                    if (param1.length() != 0) {
-                        var5Lifetime6 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
-                    } else {
-                        var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    int var6 = -93 % ((-64 - param0) / 61);
-                    wk.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -92);
-                } catch (Throwable throwable) {
-                }
-                oj.a(param2, 20000000);
-            } catch (RuntimeException runtimeException) {
-                throw t.a((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+              var7 = param2.getParameter("cookieprefix");
+              var5 = var7;
+              var5Lifetime1 = var7;
+              var4 = param2.getParameter("cookiehost");
+              var5Lifetime2 = var4;
+              var5Lifetime3 = var4;
+              var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+              var5Lifetime4 = var8;
+              var5Lifetime5 = var8;
+              if (param1.length() != 0) {
+                var5Lifetime6 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
+              } else {
+                var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              int var6 = -93 % ((-64 - param0) / 61);
+              wk.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -92);
+            } catch (Throwable throwable) {
             }
+            oj.a(param2, 20000000);
+          } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

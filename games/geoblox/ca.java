@@ -23,7 +23,7 @@ final class ca extends hf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
-              0 != param0.length()) {
+            0 != param0.length()) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
               stackIn_7_0 = pj.field_f;
@@ -60,7 +60,7 @@ final class ca extends hf {
         field_f = null;
         field_g = null;
         if (param0) {
-            field_g = (na) null;
+          field_g = (na) null;
         }
     }
 

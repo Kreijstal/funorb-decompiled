@@ -90,7 +90,7 @@ final class kj extends ia {
 
     private final void d(int param0, int param1, int param2) {
         if (param1 != -2832) {
-            this.d(44);
+          this.d(44);
         }
     }
 
@@ -141,7 +141,7 @@ final class kj extends ia {
             var4 = var4 * var7 + 32 >> 6;
           }
           if (param1.field_y > 0 &&
-              var11.field_e != null) {
+            var11.field_e != null) {
             var6Lifetime1 = param1.field_y;
             var7Lifetime1 = var11.field_e[1 + param1.field_q];
             if (-2 + var11.field_e.length > param1.field_q) {
@@ -186,7 +186,7 @@ final class kj extends ia {
           var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
           var4 = param1.field_x;
           if (0 < var4.field_d && (!(var4.field_b <= 0) ||
-              this.field_s[param1.field_t] > 0)) {
+            this.field_s[param1.field_t] > 0)) {
             var5 = var4.field_b << 2;
             var6 = var4.field_j << 1;
             if (var6 > param1.field_j) {
@@ -220,7 +220,7 @@ final class kj extends ia {
     final static void c(boolean param0) {
         md.field_e = null;
         if (!param0) {
-            return;
+          return;
         }
         hl.field_K = null;
         mj.field_a = (byte[][]) null;
@@ -232,16 +232,16 @@ final class kj extends ia {
     private final void a(byte param0, int param1) {
         pc var3 = null;
         if (param0 != 39) {
-            this.b((byte) -85, -70);
+          this.b((byte) -85, -70);
         }
         if ((this.field_m[param1] & 2) != 0) {
-            var3 = (pc) (this.field_I.field_l.g(0));
-            while (var3 != null) {
-                if (param1 == var3.field_t && null == this.field_j[param1][var3.field_D] && var3.field_y < 0) {
-                    var3.field_y = 0;
-                }
-                var3 = (pc) (this.field_I.field_l.d(1));
+          var3 = (pc) (this.field_I.field_l.g(0));
+          while (var3 != null) {
+            if (param1 == var3.field_t && null == this.field_j[param1][var3.field_D] && var3.field_y < 0) {
+              var3.field_y = 0;
             }
+            var3 = (pc) (this.field_I.field_l.d(1));
+          }
         }
     }
 
@@ -260,11 +260,11 @@ final class kj extends ia {
         try {
           param3.field_g = qk.field_j / 100;
           if (param3.field_y >= 0 && (null == param3.field_u ||
-              param3.field_u.l())) {
+            param3.field_u.l())) {
             param3.b(-1);
             param3.a(param4);
             if (0 < param3.field_r &&
-                param3 == this.field_D[param3.field_t][param3.field_r]) {
+              param3 == this.field_D[param3.field_t][param3.field_r]) {
               this.field_D[param3.field_t][param3.field_r] = null;
               return true;
             }
@@ -308,14 +308,14 @@ final class kj extends ia {
               break;
             }
             if (param3.field_k == -2 + var7.field_f.length &&
-                var7.field_f[param3.field_k + 1] == 0) {
+              var7.field_f[param3.field_k + 1] == 0) {
               var8 = 1;
             }
           }
           if (param3.field_y >= 0 &&
             var7.field_e != null &&
             (this.field_m[param3.field_t] & 1) == 0 && (!(0 <= param3.field_r) ||
-              param3 != this.field_D[param3.field_t][param3.field_r])) {
+            param3 != this.field_D[param3.field_t][param3.field_r])) {
             if (0 < var7.field_a) {
               param3.field_y = param3.field_y + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_a) * 128.0);
             } else {
@@ -349,7 +349,7 @@ final class kj extends ia {
           if (0 <= param3.field_y) {
             param3.a(false);
             if (0 < param3.field_r &&
-                this.field_D[param3.field_t][param3.field_r] == param3) {
+              this.field_D[param3.field_t][param3.field_r] == param3) {
               this.field_D[param3.field_t][param3.field_r] = null;
             }
           }
@@ -377,16 +377,16 @@ final class kj extends ia {
     private final void a(int param0, byte param1) {
         pc var3 = null;
         if ((this.field_m[param0] & 4) != 0) {
-            var3 = (pc) (this.field_I.field_l.g(0));
-            while (var3 != null) {
-                if (var3.field_t == param0) {
-                    var3.field_B = 0;
-                }
-                var3 = (pc) (this.field_I.field_l.d(1));
+          var3 = (pc) (this.field_I.field_l.g(0));
+          while (var3 != null) {
+            if (var3.field_t == param0) {
+              var3.field_B = 0;
             }
+            var3 = (pc) (this.field_I.field_l.d(1));
+          }
         }
         if (param1 != 67) {
-            this.field_l = (rf) null;
+          this.field_l = (rf) null;
         }
     }
 
@@ -428,7 +428,7 @@ final class kj extends ia {
               }
             }
             if (var10 != null &&
-                !var10.a((int[]) (var7), var8.field_h, param2 + 36, param0)) {
+              !var10.a((int[]) (var7), var8.field_h, param2 + 36, param0)) {
               var6_int = 0;
             }
             var8 = (pj) (param3.field_g.b(param2 - 100));
@@ -466,10 +466,10 @@ final class kj extends ia {
 
     private final void b(byte param0, int param1) {
         if (param1 < 0) {
-            for (param1 = 0; param1 < 16; param1++) {
-                this.b((byte) -22, param1);
-            }
-            return;
+          for (param1 = 0; param1 < 16; param1++) {
+            this.b((byte) -22, param1);
+          }
+          return;
         }
         this.field_p[param1] = 12800;
         this.field_z[param1] = 8192;
@@ -481,7 +481,7 @@ final class kj extends ia {
         this.a(param1, (byte) 67);
         this.field_m[param1] = 0;
         if (param0 >= -12) {
-            this.field_k = 55;
+          this.field_k = 55;
         }
         this.field_w[param1] = 32767;
         this.field_v[param1] = 256;
@@ -493,7 +493,7 @@ final class kj extends ia {
         this.field_F[param1] = param2;
         this.field_K[param1] = cd.a(param2, -128);
         if (param0 != -8581) {
-            this.field_z = (int[]) null;
+          this.field_z = (int[]) null;
         }
         this.b(param1, -129, param2);
     }
@@ -550,7 +550,7 @@ final class kj extends ia {
           }
           var4_int = param0.field_i.field_k.length;
           if (param2 &&
-              param0.field_i.field_i) {
+            param0.field_i.field_i) {
             var6 = -param0.field_i.field_g + var4_int + var4_int;
             var4_int = var4_int << 8;
             var5 = (int)((long)var6 * (long)this.field_u[param0.field_t] >> 6);
@@ -584,12 +584,12 @@ final class kj extends ia {
     private final void c(int param0, int param1) {
         pc var3 = (pc) (this.field_I.field_l.g(param1 ^ param1));
         while (var3 != null) {
-            if ((param0 < 0 || param0 == var3.field_t) &&
-                !(var3.field_y >= 0)) {
-                this.field_j[var3.field_t][var3.field_D] = null;
-                var3.field_y = 0;
-            }
-            var3 = (pc) (this.field_I.field_l.d(1));
+          if ((param0 < 0 || param0 == var3.field_t) &&
+            !(var3.field_y >= 0)) {
+            this.field_j[var3.field_t][var3.field_D] = null;
+            var3.field_y = 0;
+          }
+          var3 = (pc) (this.field_I.field_l.d(1));
         }
     }
 
@@ -784,21 +784,21 @@ final class kj extends ia {
         int var4 = 0;
         int var5 = Geoblox.field_C;
         if (param1 >= 0) {
-            this.field_L[param1] = param2;
+          this.field_L[param1] = param2;
         } else {
-            for (var4 = 0; var4 < 16; var4++) {
-                this.field_L[var4] = param2;
-            }
+          for (var4 = 0; var4 < 16; var4++) {
+            this.field_L[var4] = param2;
+          }
         }
         if (param0 != 74) {
-            this.a((byte) 100, 93);
+          this.a((byte) 100, 93);
         }
     }
 
     final synchronized void b(int param0, byte param1) {
         this.field_R = param0;
         if (param1 != 22) {
-            this.field_x = 84L;
+          this.field_x = 84L;
         }
     }
 
@@ -813,7 +813,7 @@ final class kj extends ia {
         var4 = this.field_k;
         var5 = this.field_A;
         if (this.field_l != null &&
-            this.field_U == var4) {
+          this.field_U == var4) {
           this.a(121, this.field_l, this.field_B, this.field_P);
           this.a((byte) 73);
           return;
@@ -824,7 +824,7 @@ final class kj extends ia {
             this.field_A = var5;
             this.field_t = var2;
             if (null != this.field_l &&
-                this.field_U < var4) {
+              this.field_U < var4) {
               this.field_k = this.field_U;
               this.field_t = -1;
               this.field_A = this.field_C.d(this.field_k);
@@ -851,7 +851,7 @@ final class kj extends ia {
                 return;
               }
               if (this.field_B &&
-                  var4 != 0) {
+                var4 != 0) {
                 this.field_C.a(var5);
               } else {
                 this.a(true, 2097151);
@@ -869,12 +869,12 @@ final class kj extends ia {
 
     final synchronized void a(boolean param0, rf param1, int param2) {
         try {
-            if (param2 != -1706) {
-                this.field_t = -24;
-            }
-            this.a(param2 + 1832, param1, param0, true);
+          if (param2 != -1706) {
+            this.field_t = -24;
+          }
+          this.a(param2 + 1832, param1, param0, true);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "kj.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "kj.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -894,8 +894,8 @@ final class kj extends ia {
             var6 = (pc) (this.field_I.field_l.g(param0 ^ 23327));
             while (var6 != null) {
               if (var7.field_t == var6.field_t &&
-                  0 > var6.field_y &&
-                  var7 != var6) {
+                0 > var6.field_y &&
+                var7 != var6) {
                 var7.field_y = 0;
                 break L1;
               }
@@ -912,7 +912,7 @@ final class kj extends ia {
         var3 = (pc) (this.field_I.field_l.g(param0 - 100));
         while (var3 != null) {
           if (param1 < 0 ||
-                param1 == var3.field_t) {
+            param1 == var3.field_t) {
             if (null != var3.field_u) {
               var3.field_u.c(qk.field_j / 100);
               if (var3.field_u.g()) {
@@ -935,19 +935,19 @@ final class kj extends ia {
     final synchronized void c(byte param0) {
         int var3 = Geoblox.field_C;
         if (param0 <= 65) {
-            this.c(-76, (byte) -34);
+          this.c(-76, (byte) -34);
         }
         vl var4 = (vl) (this.field_q.a((byte) 125));
         while (var4 != null) {
-            var4.a((byte) -121);
-            var4 = (vl) (this.field_q.b(-52));
+          var4.a((byte) -121);
+          var4 = (vl) (this.field_q.b(-52));
         }
     }
 
     private final void f(int param0, int param1, int param2) {
         this.field_Q[param2] = param1;
         if (param0 > -100) {
-            this.a(-75, 124, -68);
+          this.a(-75, 124, -68);
         }
         this.field_n[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
     }
@@ -955,13 +955,13 @@ final class kj extends ia {
     private final void b(int param0, int param1, int param2) {
         int var4 = 0;
         if (param2 != this.field_S[param0]) {
-            this.field_S[param0] = param2;
-            for (var4 = 0; var4 < 128; var4++) {
-                this.field_D[param0][var4] = null;
-            }
+          this.field_S[param0] = param2;
+          for (var4 = 0; var4 < 128; var4++) {
+            this.field_D[param0][var4] = null;
+          }
         }
         if (param1 != -129) {
-            this.field_v = (int[]) null;
+          this.field_v = (int[]) null;
         }
     }
 
@@ -971,7 +971,7 @@ final class kj extends ia {
         field_o = null;
         field_G = null;
         if (param0) {
-            kj.c(-77);
+          kj.c(-77);
         }
     }
 
@@ -979,22 +979,22 @@ final class kj extends ia {
         int var3 = 0;
         int var3Lifetime1;
         if (!param0) {
-            this.c(-1, 15387);
+          this.c(-1, 15387);
         } else {
-            this.b(100, -1);
+          this.b(100, -1);
         }
         if (param1 != 2097151) {
-            this.b(108);
+          this.b(108);
         }
         this.b((byte) -109, -1);
         for (var3 = 0; var3 < 16; var3++) {
-            this.field_S[var3] = this.field_F[var3];
+          this.field_S[var3] = this.field_F[var3];
         }
         int var4 = 0;
         var3Lifetime1 = var4;
         while (var4 < 16) {
-            this.field_K[var4] = cd.a(this.field_F[var4], -128);
-            var4++;
+          this.field_K[var4] = cd.a(this.field_F[var4], -128);
+          var4++;
         }
     }
 
@@ -1040,7 +1040,7 @@ final class kj extends ia {
           if (param0.field_y >= 0) {
             param0.a(false);
             if (0 < param0.field_r &&
-                this.field_D[param0.field_t][param0.field_r] == param0) {
+              this.field_D[param0.field_t][param0.field_r] == param0) {
               this.field_D[param0.field_t][param0.field_r] = null;
               return true;
             }
@@ -1063,7 +1063,7 @@ final class kj extends ia {
     private final synchronized void a(byte param0, boolean param1) {
         this.field_C.a();
         if (param0 < 78) {
-            this.field_y = (int[]) null;
+          this.field_y = (int[]) null;
         }
         this.field_l = null;
         this.a(param1, 2097151);
@@ -1086,7 +1086,7 @@ final class kj extends ia {
           var5 = (pc) (this.field_I.field_l.a(false));
           while (var5 != null) {
             if (param1 == var5.field_t &&
-                var5.field_y < 0) {
+              var5.field_y < 0) {
               this.field_j[param1][var5.field_D] = null;
               this.field_j[param1][param3] = var5;
               var6_int = (var5.field_n * var5.field_s >> 12) + var5.field_E;
@@ -1144,7 +1144,7 @@ final class kj extends ia {
         if (0 <= var7.field_r) {
           var8 = this.field_D[param1][var7.field_r];
           if (var8 != null &&
-              var8.field_y < 0) {
+            var8.field_y < 0) {
             this.field_j[param1][var8.field_D] = null;
             var8.field_y = 0;
           }
@@ -1157,22 +1157,22 @@ final class kj extends ia {
 
     private final void c(int param0, int param1, int param2) {
         if (param0 > -107) {
-            return;
+          return;
         }
         this.field_y[param2] = param1;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
         if (param0 != -40) {
-            int[] var6 = (int[]) null;
-            this.a((int[]) null, -107, 119);
+          int[] var6 = (int[]) null;
+          this.a((int[]) null, -107, 119);
         }
     }
 
     final synchronized void d(int param0) {
         this.a((byte) 106, true);
         if (param0 != -9268) {
-            this.field_F = (int[]) null;
+          this.field_F = (int[]) null;
         }
     }
 
@@ -1194,30 +1194,30 @@ final class kj extends ia {
         int var5_int = 0;
         int var6 = 0;
         try {
-            this.a((byte) 98, param3);
-            this.field_C.a(param1.field_f);
-            this.field_x = 0L;
-            this.field_B = param2 ? true : false;
-            var5_int = this.field_C.g();
-            if (param0 <= 92) {
-                this.a(60, (byte) -45);
-            }
-            for (var6 = 0; var6 < var5_int; var6++) {
-                this.field_C.a(var6);
-                this.field_C.f(var6);
-                this.field_C.b(var6);
-            }
-            this.field_t = this.field_C.c();
-            this.field_k = this.field_C.field_a[this.field_t];
-            this.field_A = this.field_C.d(this.field_k);
+          this.a((byte) 98, param3);
+          this.field_C.a(param1.field_f);
+          this.field_x = 0L;
+          this.field_B = param2 ? true : false;
+          var5_int = this.field_C.g();
+          if (param0 <= 92) {
+            this.a(60, (byte) -45);
+          }
+          for (var6 = 0; var6 < var5_int; var6++) {
+            this.field_C.a(var6);
+            this.field_C.f(var6);
+            this.field_C.b(var6);
+          }
+          this.field_t = this.field_C.c();
+          this.field_k = this.field_C.field_a[this.field_t];
+          this.field_A = this.field_C.d(this.field_k);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "kj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final synchronized void e(int param0, int param1, int param2) {
         if (param0 != -1636) {
-            this.b((byte) -86, 98);
+          this.b((byte) -86, 98);
         }
         this.a(-8581, param1, param2);
     }

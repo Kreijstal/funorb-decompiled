@@ -15,20 +15,20 @@ final class ni extends ee implements pl {
         int var5 = 0;
         int var6 = Geoblox.field_C;
         if (this.field_D >= param1) {
-            return;
+          return;
         }
         hk[] var7 = new hk[param1];
         hk[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_D; var5++) {
-            var7[var5] = this.field_F[var5];
-            var4[var5] = this.field_H[var5];
+          var7[var5] = this.field_F[var5];
+          var4[var5] = this.field_H[var5];
         }
         this.field_F = var3;
         this.field_H = var4;
         this.field_D = param1;
         if (param0 != -11272) {
-            this.field_G = (m) null;
+          this.field_G = (m) null;
         }
     }
 
@@ -131,13 +131,13 @@ final class ni extends ee implements pl {
         int var4_int = 0;
         this.field_D = 0;
         try {
-            this.field_G = param1;
-            this.field_J = param0;
-            this.field_K = param2;
-            var4_int = null == this.field_K ? 0 : this.field_G.b(this.field_K, 260, this.field_G.field_o);
-            this.a(var4_int + 22, 288, (byte) -119, 0, 0);
+          this.field_G = param1;
+          this.field_J = param0;
+          this.field_K = param2;
+          var4_int = null == this.field_K ? 0 : this.field_G.b(this.field_K, 260, this.field_G.field_o);
+          this.a(var4_int + 22, 288, (byte) -119, 0, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ni.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -214,19 +214,19 @@ final class ni extends ee implements pl {
     final void a(String param0, int param1, int param2) {
         int var4_int = 0;
         try {
-            var4_int = this.field_D;
-            this.c(-11272, var4_int + param1);
-            this.field_F[var4_int] = this.a(-2, param0, (bb) (this));
-            this.field_H[var4_int] = param2;
+          var4_int = this.field_D;
+          this.c(-11272, var4_int + param1);
+          this.field_F[var4_int] = this.a(-2, param0, (bb) (this));
+          this.field_H[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ni.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ni.IA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     public static void a(byte param0) {
         field_C = null;
         if (param0 >= -19) {
-            field_C = (String) null;
+          field_C = (String) null;
         }
     }
 

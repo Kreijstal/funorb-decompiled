@@ -18,7 +18,7 @@ final class hd extends sh {
         super.a(param0, param1, (byte) 105, param3);
         int var7 = -79 / ((param2 - 1) / 43);
         if (param3 != 0) {
-            return;
+          return;
         }
         int var8 = !this.field_B ? 0 : -this.field_K + (this.field_r - this.field_C * 2);
         this.field_F.a(this.field_J, this.field_C + (var8 + var5), this.field_C + var6, -this.field_C + this.field_K, -(this.field_C * 2) + this.field_h, this.field_G, -1, !this.field_B ? 2 : 0, 1, this.field_F.field_o);
@@ -27,7 +27,7 @@ final class hd extends sh {
     public static void f(byte param0) {
         field_H = null;
         if (param0 != -52) {
-            return;
+          return;
         }
         field_D = null;
         field_I = null;
@@ -40,7 +40,7 @@ final class hd extends sh {
         di.field_g = di.field_g + 1;
         ul.field_b = ul.field_b + 1;
         if (sa.field_b == di.field_g &&
-            gb.field_c < 2) {
+          gb.field_c < 2) {
           di.field_g = 0;
           ld.b(false);
           gb.field_c = gb.field_c + 1;

@@ -13,8 +13,8 @@ final class ll {
 
     final static long a(byte param0) {
         if (param0 != 12) {
-            rh var2 = (rh) null;
-            ll.a(55, (byte) -55, -85, (rh) null);
+          rh var2 = (rh) null;
+          ll.a(55, (byte) -55, -85, (rh) null);
         }
         return -kh.field_e + oa.a(-12520);
     }
@@ -61,7 +61,7 @@ final class ll {
         field_d = null;
         field_h = null;
         if (param0 != 7) {
-            return;
+          return;
         }
         field_g = null;
     }

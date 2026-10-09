@@ -50,33 +50,33 @@ final class ua extends hf {
         int var2 = param0 & -2147483648;
         int var3 = (param0 & 2145386496) >> 21;
         if (var2 != 0) {
-            var1 = -var1;
+          var1 = -var1;
         }
         return (float)((double)var1 * Math.pow(2.0, (double)(var3 - 788)));
     }
 
     final static ua a(rh param0, int param1, int param2) {
         try {
-            ua var4_ref = null;
-            if (!ua.a(param0)) {
-                param0.a((byte) 37, param1, param2);
-                return null;
-            }
-            byte[] var3 = param0.a(param1, -28153, param2);
-            if (var3 == null) {
-                return null;
-            }
-            Object var4 = null;
-            try {
-                var4_ref = new ua(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
-            }
-            return var4_ref;
+          ua var4_ref = null;
+          if (!ua.a(param0)) {
+            param0.a((byte) 37, param1, param2);
+            return null;
+          }
+          byte[] var3 = param0.a(param1, -28153, param2);
+          if (var3 == null) {
+            return null;
+          }
+          Object var4 = null;
+          try {
+            var4_ref = new ua(var3);
+          } catch (IOException iOException) {
+            iOException.printStackTrace();
+          }
+          return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -89,7 +89,7 @@ final class ua extends hf {
         float[] var7;
         byte[] var12;
         if (param0 != null &&
-            param0[0] <= 0) {
+          param0[0] <= 0) {
           return null;
         }
         if (this.field_E == null) {
@@ -101,7 +101,7 @@ final class ua extends hf {
         }
         while (this.field_x < this.field_p.length) {
           if (param0 != null &&
-              param0[0] <= 0) {
+            param0[0] <= 0) {
             return null;
           }
           var7 = this.c(this.field_x);
@@ -148,44 +148,44 @@ final class ua extends hf {
         int var2 = 0;
         int var3Lifetime1;
         while (param0 >= 8 - field_j) {
-            var3 = 8 - field_j;
-            var4 = (1 << var3) - 1;
-            var1 = var1 + ((field_L[field_y] >> field_j & var4) << var2);
-            field_j = 0;
-            field_y = field_y + 1;
-            var2 = var2 + var3;
-            param0 = param0 - var3;
+          var3 = 8 - field_j;
+          var4 = (1 << var3) - 1;
+          var1 = var1 + ((field_L[field_y] >> field_j & var4) << var2);
+          field_j = 0;
+          field_y = field_y + 1;
+          var2 = var2 + var3;
+          param0 = param0 - var3;
         }
         if (param0 > 0) {
-            var3Lifetime1 = (1 << param0) - 1;
-            var1 = var1 + ((field_L[field_y] >> field_j & var3Lifetime1) << var2);
-            field_j = field_j + param0;
+          var3Lifetime1 = (1 << param0) - 1;
+          var1 = var1 + ((field_L[field_y] >> field_j & var3Lifetime1) << var2);
+          field_j = field_j + param0;
         }
         return var1;
     }
 
     final static ua a(rh param0, String param1, String param2) {
         try {
-            ua var4_ref = null;
-            if (!ua.a(param0)) {
-                param0.a((byte) 113, param2, param1);
-                return null;
-            }
-            byte[] var3 = param0.a(0, param2, param1);
-            if (var3 == null) {
-                return null;
-            }
-            Object var4 = null;
-            try {
-                var4_ref = new ua(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
-            }
-            return var4_ref;
+          ua var4_ref = null;
+          if (!ua.a(param0)) {
+            param0.a((byte) 113, param2, param1);
+            return null;
+          }
+          byte[] var3 = param0.a(0, param2, param1);
+          if (var3 == null) {
+            return null;
+          }
+          Object var4 = null;
+          try {
+            var4_ref = new ua(var3);
+          } catch (IOException iOException) {
+            iOException.printStackTrace();
+          }
+          return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
@@ -200,23 +200,23 @@ final class ua extends hf {
         this.field_I = var2.a((byte) -128);
         this.field_n = var2.a((byte) -89);
         if (this.field_n < 0) {
-            this.field_n = ~this.field_n;
-            this.field_A = true;
+          this.field_n = ~this.field_n;
+          this.field_A = true;
         }
         int var3 = var2.a((byte) -108);
         if (var3 < 0) {
-            throw new IOException();
+          throw new IOException();
         }
         this.field_p = new byte[var3][];
         for (var4 = 0; var4 < var3; var4++) {
-            var5 = 0;
-            do {
-                var6_int = var2.c((byte) 34);
-                var5 = var5 + var6_int;
-            } while (var6_int >= 255);
-            var6 = new byte[var5];
-            var2.b(29915, var5, var6, 0);
-            this.field_p[var4] = var6;
+          var5 = 0;
+          do {
+            var6_int = var2.c((byte) 34);
+            var5 = var5 + var6_int;
+          } while (var6_int >= 255);
+          var6 = new byte[var5];
+          var2.b(29915, var5, var6, 0);
+          this.field_p[var4] = var6;
         }
     }
 
@@ -528,7 +528,7 @@ final class ua extends hf {
         }
         var7 = var4 >> 1;
         if (var3 != 0 &&
-            var5 == 0) {
+          var5 == 0) {
           var8 = (var4 >> 2) - (field_v >> 2);
           var9 = (var4 >> 2) + (field_v >> 2);
           var10 = field_v >> 1;
@@ -538,7 +538,7 @@ final class ua extends hf {
           var10 = var4 >> 1;
         }
         if (var3 != 0 &&
-            var6 == 0) {
+          var6 == 0) {
           var11 = var4 - (var4 >> 2) - (field_v >> 2);
           var12 = var4 - (var4 >> 2) + (field_v >> 2);
           var13 = field_v >> 1;
@@ -759,11 +759,11 @@ final class ua extends hf {
     private final static boolean a(rh param0) {
         byte[] var1 = null;
         if (!field_z) {
-            var1 = param0.a(0, -28153, 0);
-            if (var1 == null) {
-                return false;
-            }
-            ua.a(var1);
+          var1 = param0.a(0, -28153, 0);
+          if (var1 == null) {
+            return false;
+          }
+          ua.a(var1);
         }
         return true;
     }

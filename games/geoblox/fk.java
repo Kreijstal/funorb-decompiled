@@ -35,104 +35,104 @@ final class fk extends sh {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-            param0.addMouseListener(pg.field_c);
-            if (param1 != 1) {
-                field_B = (ck) null;
-            }
-            param0.addMouseMotionListener(pg.field_c);
-            param0.addFocusListener(pg.field_c);
+          param0.addMouseListener(pg.field_c);
+          if (param1 != 1) {
+            field_B = (ck) null;
+          }
+          param0.addMouseMotionListener(pg.field_c);
+          param0.addFocusListener(pg.field_c);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     private fk(int param0, int param1, int param2, int param3, dh param4, bb param5, el param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-            this.field_A = param6;
+          this.field_A = param6;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void f(int param0) {
         field_B = null;
         if (param0 != 14512) {
-            field_B = (ck) null;
+          field_B = (ck) null;
         }
     }
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
         la var7 = null;
         try {
-            super.a(param0, param1, param2, param3, param4, param5);
-            var7 = lh.field_b;
-            if (var7 != null && this.a(param1, -1, param5, param4, param0)) {
-                if (this.field_u instanceof rg) {
-                    ((rg) (this.field_u)).a(this, var7, 22176);
-                    lh.field_b = null;
-                    return;
-                }
-                if (!(var7.field_u instanceof rg)) {
-                    return;
-                }
-                ((rg) (var7.field_u)).a(this, var7, 22176);
-                lh.field_b = null;
+          super.a(param0, param1, param2, param3, param4, param5);
+          var7 = lh.field_b;
+          if (var7 != null && this.a(param1, -1, param5, param4, param0)) {
+            if (this.field_u instanceof rg) {
+              ((rg) (this.field_u)).a(this, var7, 22176);
+              lh.field_b = null;
+              return;
             }
+            if (!(var7.field_u instanceof rg)) {
+              return;
+            }
+            ((rg) (var7.field_u)).a(this, var7, 22176);
+            lh.field_b = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fk.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final static sc a(boolean param0, java.awt.Component param1, int param2, int param3) {
         try {
-            Class var4 = null;
-            Throwable var4_ref = null;
-            RuntimeException var4_ref2 = null;
-            sc var5 = null;
-            bf var5_ref = null;
-            sc stackIn_2_0 = null;
-            sc stackIn_4_0 = null;
-            bf stackIn_6_0 = null;
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_10_2 = null;
-            Throwable decompiledCaughtException = null;
+          Class var4 = null;
+          Throwable var4_ref = null;
+          RuntimeException var4_ref2 = null;
+          sc var5 = null;
+          bf var5_ref = null;
+          sc stackIn_2_0 = null;
+          sc stackIn_4_0 = null;
+          bf stackIn_6_0 = null;
+          RuntimeException stackIn_9_0 = null;
+          StringBuilder stackIn_9_1 = null;
+          String stackIn_10_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              try {
-                var4 = Class.forName("ve");
-                if (param0) {
-                  stackIn_2_0 = (sc) null;
-                  return stackIn_2_0;
-                }
-                var5 = (sc) (var4.newInstance());
-                var5.a(param2, param1, param3, (byte) 127);
-                stackIn_4_0 = var5;
-                return stackIn_4_0;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var4_ref = decompiledCaughtException;
-                var5_ref = new bf();
-                ((sc) ((Object) var5_ref)).a(param2, param1, param3, (byte) 117);
-                stackIn_6_0 = var5_ref;
-                return (sc) ((Object) stackIn_6_0);
+              var4 = Class.forName("ve");
+              if (param0) {
+                stackIn_2_0 = (sc) null;
+                return stackIn_2_0;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = var4_ref2;
-              stackIn_9_1 = new StringBuilder().append("fk.E(").append(param0).append(',');
-              if (param1 == null) {
-                stackIn_10_2 = "null";
-              } else {
-                stackIn_10_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+              var5 = (sc) (var4.newInstance());
+              var5.a(param2, param1, param3, (byte) 127);
+              stackIn_4_0 = var5;
+              return stackIn_4_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var4_ref = decompiledCaughtException;
+              var5_ref = new bf();
+              ((sc) ((Object) var5_ref)).a(param2, param1, param3, (byte) 117);
+              stackIn_6_0 = var5_ref;
+              return (sc) ((Object) stackIn_6_0);
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_9_0 = var4_ref2;
+            stackIn_9_1 = new StringBuilder().append("fk.E(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_10_2 = "null";
+            } else {
+              stackIn_10_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

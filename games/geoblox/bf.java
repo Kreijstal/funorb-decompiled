@@ -38,12 +38,12 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     private final synchronized void a(boolean param0) {
         if (null == this.field_h) {
-            return;
+          return;
         }
         this.field_h.setPixels(0, 0, this.field_a, this.field_c, this.field_j, this.field_d, 0, this.field_a);
         if (param0) {
-            this.field_h.imageComplete(2);
-            return;
+          this.field_h.imageComplete(2);
+          return;
         }
         field_i = (rh) null;
         this.field_h.imageComplete(2);
@@ -54,14 +54,14 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, java.awt.Graphics param1, int param2, int param3) {
         try {
-            if (param3 != 0) {
-                java.awt.Image var6 = (java.awt.Image) null;
-                this.imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
-            }
-            this.a(true);
-            param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) (this));
+          if (param3 != 0) {
+            java.awt.Image var6 = (java.awt.Image) null;
+            this.imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
+          }
+          this.a(true);
+          param1.drawImage(this.field_e, param2, param0, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -71,21 +71,21 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
         try {
-            this.addConsumer(param0);
+          this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            this.field_h = param0;
-            param0.setDimensions(this.field_a, this.field_c);
-            param0.setProperties((Hashtable) null);
-            param0.setColorModel(this.field_j);
-            param0.setHints(14);
+          this.field_h = param0;
+          param0.setDimensions(this.field_a, this.field_c);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_j);
+          param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,23 +113,23 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     final void a(int param0, java.awt.Component param1, int param2, byte param3) {
         try {
-            this.field_c = param0;
-            this.field_a = param2;
-            this.field_d = new int[param0 * param2 + 1];
-            this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(true);
-            param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
-            this.a(255);
-            if (param3 <= 116) {
-                this.field_j = (java.awt.image.ColorModel) null;
-            }
+          this.field_c = param0;
+          this.field_a = param2;
+          this.field_d = new int[param0 * param2 + 1];
+          this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_e = param1.createImage((java.awt.image.ImageProducer) (this));
+          this.a(true);
+          param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.a(true);
+          param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.a(true);
+          param1.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.a(255);
+          if (param3 <= 116) {
+            this.field_j = (java.awt.image.ColorModel) null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             return;
           }
           if (param4 >= vb.field_e &&
-              param4 < vb.field_k) {
+            param4 < vb.field_k) {
             var11 = param4 + var8 * vb.field_f;
             var12 = var10 + 1 - var8 >> 1;
             while (true) {
@@ -200,7 +200,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
           if (param0 >= vb.field_i &&
-              vb.field_d > var6) {
+            vb.field_d > var6) {
             var11Lifetime1 = var7 + vb.field_f * param0;
             var12Lifetime1 = -var7 + 1 + var9 >> 1;
             while (true) {
@@ -213,7 +213,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
           if (var5_int >= vb.field_e &&
-              vb.field_k > var5_int) {
+            vb.field_k > var5_int) {
             var11Lifetime2 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
             var12Lifetime2 = -var8 + 1 + var10 >> 1;
             while (true) {
@@ -226,7 +226,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
             }
           }
           if (vb.field_i <= param0 &&
-              vb.field_d > var6) {
+            vb.field_d > var6) {
             var11Lifetime3 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
             var12Lifetime3 = 1 - (-var9 + var7) >> 1;
             while (true) {
@@ -248,11 +248,11 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-            if (param0 == this.field_h) {
-                this.field_h = null;
-            }
+          if (param0 == this.field_h) {
+            this.field_h = null;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "bf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "bf.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         field_i = null;
         field_g = null;
         if (param0 >= -101) {
-            field_g = (lh) null;
+          field_g = (lh) null;
         }
     }
 

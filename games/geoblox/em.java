@@ -13,10 +13,10 @@ final class em {
 
     final static boolean b(int param0) {
         if (param0 != 255) {
-            return false;
+          return false;
         }
         if (null == vl.field_n) {
-            return false;
+          return false;
         }
         nb.a(-2, vl.field_n);
         vl.field_n.a(0, ka.field_i);
@@ -30,15 +30,15 @@ final class em {
           field_a = (String) null;
         }
         stackIn_10_0 = !((65 > param0 ||
-              param0 > 90) &&
-            (97 > param0 ||
-              param0 > 122));
+          param0 > 90) &&
+          (97 > param0 ||
+          param0 > 122));
         return stackIn_10_0;
     }
 
     public static void a(int param0) {
         if (param0 < 8) {
-            return;
+          return;
         }
         field_a = null;
     }
@@ -66,7 +66,7 @@ final class em {
             throw new RuntimeException();
           }
           if (param0 >= 0 &&
-              this.field_d.length > param0) {
+            this.field_d.length > param0) {
             if (null != this.field_d[param0]) {
               stackIn_9_0 = this.field_d[param0];
               return stackIn_9_0;
@@ -169,7 +169,7 @@ final class em {
         var4 = var11;
         var10.b(29915, var13.length, var13, 0);
         if (this.field_c != null &&
-            this.field_e != null) {
+          this.field_e != null) {
           var12 = new java.math.BigInteger(var13);
           var7_ref_java_math_BigInteger = var12.modPow(this.field_c, this.field_e);
           var5 = var7_ref_java_math_BigInteger.toByteArray();
@@ -254,7 +254,7 @@ final class em {
             em.a(26);
           }
           if (param0 != null &&
-              param0.length() >= wg.field_m) {
+            param0.length() >= wg.field_m) {
             if (param0.length() > bm.field_j) {
               return true;
             }

@@ -13,7 +13,7 @@ final class am {
         field_b = null;
         field_d = null;
         if (param0 != 49) {
-            am.a((byte) 72);
+          am.a((byte) 72);
         }
         field_a = null;
     }
@@ -41,49 +41,49 @@ final class am {
 
     final static rh a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
-            Object var6 = null;
-            Object var7 = null;
-            bj var8 = null;
-            rh stackIn_2_0 = null;
-            rh stackIn_15_0 = null;
-            Throwable decompiledCaughtException = null;
-            try {
-              if (param0 > -49) {
-                stackIn_2_0 = (rh) null;
-                return stackIn_2_0;
-              }
-              var6 = null;
-              if (ph.field_i.field_j != null) {
-                af.field_d = new sk(ph.field_i.field_j, 5200, 0);
-                ph.field_i.field_j = null;
-                var6 = new jh(255, af.field_d, new sk(ph.field_i.field_s, 12000, 0), 2097152);
-              }
-              var7 = null;
-              if (af.field_d != null) {
-                if (je.field_h == null) {
-                  je.field_h = new sk[ph.field_i.field_r.length];
-                }
-                if (je.field_h[param1] == null) {
-                  je.field_h[param1] = new sk(ph.field_i.field_r[param1], 12000, 0);
-                  ph.field_i.field_r[param1] = null;
-                }
-                var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
-              }
-              var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
-              if (param2) {
-                var8.b(92);
-              }
-              stackIn_15_0 = new rh(var8, param4, param3);
-              return stackIn_15_0;
-            } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (IOException) (Object) decompiledCaughtException;
-              throw new RuntimeException(((IOException) (var6)).toString());
+          Object var6 = null;
+          Object var7 = null;
+          bj var8 = null;
+          rh stackIn_2_0 = null;
+          rh stackIn_15_0 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            if (param0 > -49) {
+              stackIn_2_0 = (rh) null;
+              return stackIn_2_0;
             }
+            var6 = null;
+            if (ph.field_i.field_j != null) {
+              af.field_d = new sk(ph.field_i.field_j, 5200, 0);
+              ph.field_i.field_j = null;
+              var6 = new jh(255, af.field_d, new sk(ph.field_i.field_s, 12000, 0), 2097152);
+            }
+            var7 = null;
+            if (af.field_d != null) {
+              if (je.field_h == null) {
+                je.field_h = new sk[ph.field_i.field_r.length];
+              }
+              if (je.field_h[param1] == null) {
+                je.field_h[param1] = new sk(ph.field_i.field_r[param1], 12000, 0);
+                ph.field_i.field_r[param1] = null;
+              }
+              var7 = new jh(param1, af.field_d, je.field_h[param1], 2097152);
+            }
+            var8 = gb.field_b.a(param1, (byte) -9, param5, (jh) (var6), (jh) (var7));
+            if (param2) {
+              var8.b(92);
+            }
+            stackIn_15_0 = new rh(var8, param4, param3);
+            return stackIn_15_0;
+          } catch (java.io.IOException decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var6 = (IOException) (Object) decompiledCaughtException;
+            throw new RuntimeException(((IOException) (var6)).toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

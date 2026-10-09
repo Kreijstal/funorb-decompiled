@@ -13,18 +13,18 @@ final class rl extends oe {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
-            this.field_Y = param1;
-            if (this.field_Y != null) {
-                var3_int = hh.field_c.b(this.field_Y, 260, hh.field_c.field_o);
-                this.c(var3_int + 150, 103, 300);
-            }
-            this.field_bb = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.field_ab = false;
-            this.field_bb.field_C = true;
-            this.field_Z = false;
-            this.b((byte) -98, this.field_bb);
+          this.field_Y = param1;
+          if (this.field_Y != null) {
+            var3_int = hh.field_c.b(this.field_Y, 260, hh.field_c.field_o);
+            this.c(var3_int + 150, 103, 300);
+          }
+          this.field_bb = new hl(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_ab = false;
+          this.field_bb.field_C = true;
+          this.field_Z = false;
+          this.b((byte) -98, this.field_bb);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "rl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class rl extends oe {
 
     final static boolean n(int param0) {
         if (param0 != -1071908447) {
-            return false;
+          return false;
         }
         return tf.field_d == si.field_g ? true : false;
     }
@@ -66,8 +66,8 @@ final class rl extends oe {
         this.field_bb.field_C = false;
         this.field_ab = true;
         if (param0 != 23181) {
-            ia var3 = (ia) null;
-            rl.a(9, (ia) null, 122);
+          ia var3 = (ia) null;
+          rl.a(9, (ia) null, 122);
         }
     }
 
@@ -104,9 +104,9 @@ final class rl extends oe {
 
     public static void h(byte param0) {
         if (param0 != 57) {
-            field_W = (od) null;
-            field_W = null;
-            return;
+          field_W = (od) null;
+          field_W = null;
+          return;
         }
         field_W = null;
     }
@@ -166,8 +166,8 @@ final class rl extends oe {
         super.b(param0, param1, param2);
         hh.field_c.b(this.field_X, (this.field_r >> 1) + param0, param2 + 103, 16777215, -1);
         if (this.field_Y != null) {
-            vb.c(20 + param0, -7 + param2 + 120, 260, 8421504);
-            hh.field_c.a(this.field_Y, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.field_o);
+          vb.c(20 + param0, -7 + param2 + 120, 260, 8421504);
+          hh.field_c.a(this.field_Y, param0 + 20, 8 + (120 + param2), 260, 100, 16777215, -1, 1, 0, hh.field_c.field_o);
         }
     }
 

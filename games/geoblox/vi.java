@@ -9,8 +9,8 @@ final class vi extends hk {
 
     public static void f(int param0) {
         if (param0 >= -65) {
-            d var2 = (d) null;
-            vi.a(98, (d) null);
+          d var2 = (d) null;
+          vi.a(98, (d) null);
         }
         field_F = null;
         field_G = null;
@@ -19,9 +19,9 @@ final class vi extends hk {
     private vi(String param0, bb param1) {
         this(param0, hb.field_j.field_j, param1);
         try {
-            this.field_q = hb.field_j.field_c;
+          this.field_q = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,9 +33,9 @@ final class vi extends hk {
     private vi(String param0, dh param1, bb param2) {
         super(param0, param1, param2);
         try {
-            this.field_q = hb.field_j.field_c;
+          this.field_q = hb.field_j.field_c;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,9 +104,9 @@ final class vi extends hk {
     vi(String param0, bb param1, boolean param2) {
         this(param0, param1);
         try {
-            this.field_y = param2 ? true : false;
+          this.field_y = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "vi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

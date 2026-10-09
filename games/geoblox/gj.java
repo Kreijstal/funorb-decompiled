@@ -10,14 +10,14 @@ final class gj extends fj {
     final static void a(byte param0, int param1, ea param2) {
         pk var3 = null;
         try {
-            var3 = fj.field_q;
-            var3.a(param1, (byte) -80);
-            int var4 = 66 % ((param0 - 23) / 51);
-            var3.d((byte) 122, 2);
-            var3.d((byte) 125, 0);
-            var3.d((byte) -90, param2.field_f);
+          var3 = fj.field_q;
+          var3.a(param1, (byte) -80);
+          int var4 = 66 % ((param0 - 23) / 51);
+          var3.d((byte) 122, 2);
+          var3.d((byte) 125, 0);
+          var3.d((byte) -90, param2.field_f);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gj.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,16 +76,16 @@ final class gj extends fj {
 
     final Object e(byte param0) {
         if (param0 <= 50) {
-            String[] var3 = (String[]) null;
-            gj.a((String) null, 21, (byte) -91, (String[]) null);
-            return this.field_r;
+          String[] var3 = (String[]) null;
+          gj.a((String) null, 21, (byte) -91, (String[]) null);
+          return this.field_r;
         }
         return this.field_r;
     }
 
     final boolean g(int param0) {
         if (param0 != 13) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -94,28 +94,28 @@ final class gj extends fj {
         ja var1 = null;
         int var2 = Geoblox.field_C;
         try {
-            var1 = (ja) (a.field_d.g(0));
-            while (var1 != null) {
-                if (var1.field_z != 0) {
-                    var1.e(1643839728);
-                }
-                var1 = (ja) (a.field_d.d(1));
+          var1 = (ja) (a.field_d.g(0));
+          while (var1 != null) {
+            if (var1.field_z != 0) {
+              var1.e(1643839728);
             }
-            if (param0 > -33) {
-                gj.f((byte) 90);
-                return;
-            }
+            var1 = (ja) (a.field_d.d(1));
+          }
+          if (param0 > -33) {
+            gj.f((byte) 90);
+            return;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ')');
         }
     }
 
     public static void h(int param0) {
         if (param0 != -1) {
-            gj.h(-23);
-            field_s = null;
-            field_t = null;
-            return;
+          gj.h(-23);
+          field_s = null;
+          field_t = null;
+          return;
         }
         field_s = null;
         field_t = null;
@@ -124,9 +124,9 @@ final class gj extends fj {
     gj(Object param0, int param1) {
         super(param1);
         try {
-            this.field_r = param0;
+          this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "gj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

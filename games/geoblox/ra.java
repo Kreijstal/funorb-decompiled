@@ -44,18 +44,18 @@ final class ra implements Iterable {
 
     final static void a(int param0, rf param1) {
         if (param1 == null || fe.field_e == param1) {
-            return;
+          return;
         }
         try {
-            if (param0 != 0) {
-                field_d = -114;
-            }
-            uh.field_y.d(-9268);
-            fj.field_p.a();
-            fe.field_e = param1;
-            uh.field_y.a(false, fe.field_e, -1706);
+          if (param0 != 0) {
+            field_d = -114;
+          }
+          uh.field_y.d(-9268);
+          fj.field_p.a();
+          fe.field_e = param1;
+          uh.field_y.a(false, fe.field_e, -1706);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ra.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class ra implements Iterable {
         field_a = null;
         field_b = null;
         if (param0 != -1) {
-            field_d = -36;
+          field_d = -36;
         }
     }
 
@@ -175,8 +175,8 @@ final class ra implements Iterable {
         rc var2 = this.field_c.field_k;
         int var3 = -14 % ((72 - param0) / 46);
         if (this.field_c != var2) {
-            var2.a((byte) 126);
-            return var2;
+          var2.a((byte) 126);
+          return var2;
         }
         return null;
     }

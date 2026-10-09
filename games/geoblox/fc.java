@@ -36,8 +36,8 @@ final class fc {
           while (var1Lifetime1 != null) {
             var1Lifetime1.b(true);
             if (5 == var1Lifetime1.field_z ||
-                var1Lifetime1.field_z == 7 ||
-                var1Lifetime1.field_z == 8) {
+              var1Lifetime1.field_z == 7 ||
+              var1Lifetime1.field_z == 8) {
               pf.field_D = false;
               if (var1Lifetime1.field_G >= 3) {
                 ra.field_a.a(-115, var1Lifetime1);
@@ -55,16 +55,16 @@ final class fc {
 
     final static void a(boolean param0, java.awt.Canvas param1) {
         if (hj.field_a == 11) {
-            w.a(31);
+          w.a(31);
         }
         if (!param0) {
-            return;
+          return;
         }
         try {
-            qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
-            i.a(0, (byte) 117, param1, 0);
+          qc.a(pb.field_s, oi.field_e, lb.field_a, (byte) -40);
+          i.a(0, (byte) 117, param1, 0);
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,9 +72,9 @@ final class fc {
         field_b = null;
         field_g = null;
         if (param0 < -79) {
-            field_d = null;
-            field_e = null;
-            return;
+          field_d = null;
+          field_e = null;
+          return;
         }
         fc.a(-17);
         field_d = null;

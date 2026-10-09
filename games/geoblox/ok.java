@@ -20,7 +20,7 @@ final class ok {
         field_h = null;
         field_e = null;
         if (!param0) {
-            field_d = (String) null;
+          field_d = (String) null;
         }
     }
 

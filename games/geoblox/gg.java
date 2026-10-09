@@ -10,16 +10,16 @@ final class gg {
     final static boolean a(byte param0, char param1) {
         int var2 = 87 / ((param0 - 25) / 53);
         if (param1 == 160) {
-            return true;
+          return true;
         }
         if (param1 == 32) {
-            return true;
+          return true;
         }
         if (param1 == 95) {
-            return true;
+          return true;
         }
         if (param1 != 45) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -55,10 +55,10 @@ final class gg {
 
     public static void a(int param0) {
         if (param0 == 45) {
-            field_a = null;
-            field_d = null;
-            field_c = null;
-            return;
+          field_a = null;
+          field_d = null;
+          field_c = null;
+          return;
         }
         byte[] var2 = (byte[]) null;
         gg.a((byte[]) null, 124, 46);

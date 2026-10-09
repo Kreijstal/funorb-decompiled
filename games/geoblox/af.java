@@ -13,7 +13,7 @@ final class af {
         field_b = null;
         field_d = null;
         if (param0 > -86) {
-            field_d = (sk) null;
+          field_d = (sk) null;
         }
     }
 

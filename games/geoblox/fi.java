@@ -16,17 +16,17 @@ final class fi {
         hf var4 = this.field_e[(int)((long)(-1 + this.field_c) & param0)];
         this.field_g = var4.field_b;
         while (var4 != this.field_g) {
-            if (~this.field_g.field_a == ~param0) {
-                var5 = this.field_g;
-                this.field_g = this.field_g.field_b;
-                return var5;
-            }
+          if (~this.field_g.field_a == ~param0) {
+            var5 = this.field_g;
             this.field_g = this.field_g.field_b;
+            return var5;
+          }
+          this.field_g = this.field_g.field_b;
         }
         if (param1 >= -73) {
-            this.a((byte) -38);
-            this.field_g = null;
-            return null;
+          this.a((byte) -38);
+          this.field_g = null;
+          return null;
         }
         this.field_g = null;
         return null;
@@ -34,16 +34,16 @@ final class fi {
 
     final static int a(int param0, int param1) {
         if (param1 != 2048) {
-            field_h = (String) null;
-            param0 = param0 & 8191;
-            if (param0 >= 4096) {
-                return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
-            }
-            return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
+          field_h = (String) null;
+          param0 = param0 & 8191;
+          if (param0 >= 4096) {
+            return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+          }
+          return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-            return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
+          return param0 >= 6144 ? ai.field_l[-6144 + param0] : -ai.field_l[-param0 + 6144];
         }
         return 2048 <= param0 ? -ai.field_l[param0 - 2048] : ai.field_l[-param0 + 2048];
     }
@@ -51,20 +51,20 @@ final class fi {
     final void a(byte param0, hf param1, long param2) {
         hf var5 = null;
         try {
-            if (null != param1.field_c) {
-                param1.a(false);
-            }
-            var5 = this.field_e[(int)((long)(this.field_c - 1) & param2)];
-            param1.field_b = var5;
-            param1.field_c = var5.field_c;
-            param1.field_c.field_b = param1;
-            param1.field_a = param2;
-            if (param0 != 102) {
-                field_d = (bg) null;
-            }
-            param1.field_b.field_c = param1;
+          if (null != param1.field_c) {
+            param1.a(false);
+          }
+          var5 = this.field_e[(int)((long)(this.field_c - 1) & param2)];
+          param1.field_b = var5;
+          param1.field_c = var5.field_c;
+          param1.field_c.field_b = param1;
+          param1.field_a = param2;
+          if (param0 != 102) {
+            field_d = (bg) null;
+          }
+          param1.field_b.field_c = param1;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "fi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "fi.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class fi {
             field_h = (String) null;
           }
           if (param1 != null &&
-              param1 != fe.field_e) {
+            param1 != fe.field_e) {
             uh.field_y.d(-9268);
             fj.field_p.a();
             fe.field_e = param1;
@@ -103,9 +103,9 @@ final class fi {
 
     final hf a(byte param0) {
         if (param0 != 125) {
-            fi.a(103);
-            this.field_f = 0;
-            return this.b(param0 - 195);
+          fi.a(103);
+          this.field_f = 0;
+          return this.b(param0 - 195);
         }
         this.field_f = 0;
         return this.b(param0 - 195);
@@ -114,7 +114,7 @@ final class fi {
     public static void a(int param0) {
         field_h = null;
         if (param0 >= -113) {
-            return;
+          return;
         }
         field_b = null;
         field_d = null;

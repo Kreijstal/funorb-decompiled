@@ -73,7 +73,7 @@ class ff implements dh, cc {
               if (var12 != 0) {
                 if (var12 != 2) {
                   if (var12 != 3 &&
-                      var12 != 1) {
+                    var12 != 1) {
                   }
                   var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
                 } else {
@@ -84,7 +84,7 @@ class ff implements dh, cc {
               }
               var12Lifetime1 = this.field_g;
               if (var12Lifetime1 != 0 &&
-                  var12Lifetime1 != 3) {
+                var12Lifetime1 != 3) {
                 if (var12Lifetime1 == 1) {
                   this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                   break L0;
@@ -121,13 +121,13 @@ class ff implements dh, cc {
 
     private final void a(int param0, int param1, el param2, boolean param3) {
         try {
-            this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
-            if (!param3) {
-                el var6 = (el) null;
-                this.b((byte) -108, (el) null);
-            }
+          this.a(param1, this.field_p, param2, 0, 0, this.field_o, 0, param0);
+          if (!param3) {
+            el var6 = (el) null;
+            this.b((byte) -108, (el) null);
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ff.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ff.P(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -157,7 +157,7 @@ class ff implements dh, cc {
           if (var6 != 0) {
             if (var6 != 2) {
               if (var6 != 3 &&
-                  var6 == 1) {
+                var6 == 1) {
               }
               var5 = (var4 - (this.field_n.field_o + this.field_n.field_q) >> 1) + this.field_n.field_o;
             } else {
@@ -168,7 +168,7 @@ class ff implements dh, cc {
           }
           var6Lifetime1 = this.field_g;
           if (var6Lifetime1 != 0 &&
-              var6Lifetime1 != 3) {
+            var6Lifetime1 != 3) {
             if (var6Lifetime1 == 1) {
               if (!(param1.field_w instanceof vc)) {
                 return;
@@ -334,30 +334,30 @@ class ff implements dh, cc {
         field_d = null;
         field_a = null;
         if (!param0) {
-            field_a = (java.awt.Image) null;
+          field_a = (java.awt.Image) null;
         }
     }
 
     final void a(ff param0, boolean param1) {
         try {
-            param0.field_i = this.field_i;
-            param0.field_c = this.field_c;
-            param0.field_m = this.field_m;
-            param0.field_e = this.field_e;
-            param0.field_f = this.field_f;
-            param0.field_n = this.field_n;
-            if (!param1) {
-                this.field_m = 34;
-            }
-            param0.field_j = this.field_j;
-            param0.field_b = this.field_b;
-            param0.field_q = this.field_q;
-            param0.field_o = this.field_o;
-            param0.field_h = this.field_h;
-            param0.field_p = this.field_p;
-            param0.field_g = this.field_g;
+          param0.field_i = this.field_i;
+          param0.field_c = this.field_c;
+          param0.field_m = this.field_m;
+          param0.field_e = this.field_e;
+          param0.field_f = this.field_f;
+          param0.field_n = this.field_n;
+          if (!param1) {
+            this.field_m = 34;
+          }
+          param0.field_j = this.field_j;
+          param0.field_b = this.field_b;
+          param0.field_q = this.field_q;
+          param0.field_o = this.field_o;
+          param0.field_h = this.field_h;
+          param0.field_p = this.field_p;
+          param0.field_g = this.field_g;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ff.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ff.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -475,22 +475,22 @@ class ff implements dh, cc {
 
     public void a(int param0, int param1, int param2, boolean param3, el param4) {
         if (null == this.field_n) {
-            return;
+          return;
         }
         try {
-            this.a(param0, param2, param4, true);
-            if (param1 >= -5) {
-                this.field_c = -8;
-            }
+          this.a(param0, param2, param4, true);
+          if (param1 >= -5) {
+            this.field_c = -8;
+          }
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ff.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final int a(int param0) {
         if (param0 != 1) {
-            el var3 = (el) null;
-            this.a(79, -83, (el) null, -31, 118, 54, 3, -68);
+          el var3 = (el) null;
+          this.a(79, -83, (el) null, -31, 118, 54, 3, -68);
         }
         return this.field_n.field_o + this.field_n.field_q;
     }
@@ -698,21 +698,21 @@ class ff implements dh, cc {
 
     ff(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
-            this.field_i = param8;
-            this.field_q = param12 ? true : false;
-            this.field_j = param2;
-            this.field_n = param0;
-            this.field_h = param11;
-            this.field_p = param6;
-            this.field_f = param9;
-            this.field_o = param5;
-            this.field_e = param1;
-            this.field_b = param4;
-            this.field_m = param3;
-            this.field_c = param10;
-            this.field_g = param7;
+          this.field_i = param8;
+          this.field_q = param12 ? true : false;
+          this.field_j = param2;
+          this.field_n = param0;
+          this.field_h = param11;
+          this.field_p = param6;
+          this.field_f = param9;
+          this.field_o = param5;
+          this.field_e = param1;
+          this.field_b = param4;
+          this.field_m = param3;
+          this.field_c = param10;
+          this.field_g = param7;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 

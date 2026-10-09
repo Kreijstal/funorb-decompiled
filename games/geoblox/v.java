@@ -30,9 +30,9 @@ final class v {
         field_m = null;
         field_l = null;
         if (param0) {
-            field_q = null;
-            field_e = null;
-            return;
+          field_q = null;
+          field_e = null;
+          return;
         }
         byte[] var2 = (byte[]) null;
         v.a((byte[]) null, -18);
@@ -43,9 +43,9 @@ final class v {
     final void a(byte param0, int param1, int param2) {
         this.field_d = param2;
         if (param0 < 125) {
-            this.a((byte) 31);
-            this.field_p = param1;
-            return;
+          this.a((byte) 31);
+          this.field_p = param1;
+          return;
         }
         this.field_p = param1;
     }
@@ -74,7 +74,7 @@ final class v {
           var3 = var9.c((byte) 34);
           var4 = var9.a((byte) -97);
           if (var4 >= 0 && (uj.field_b == 0 ||
-              !(var4 > uj.field_b))) {
+            !(var4 > uj.field_b))) {
             if (param1 == ~var3) {
               var12 = new byte[var4];
               var10 = var12;
@@ -85,7 +85,7 @@ final class v {
             }
             var5 = var9.a((byte) -49);
             if (var5 >= 0 && (uj.field_b == 0 ||
-                !(uj.field_b < var5))) {
+              !(uj.field_b < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
@@ -120,7 +120,7 @@ final class v {
     final void b(byte param0) {
         this.field_u.a(-2964, this.field_g, this.field_b);
         if (param0 > -5) {
-            this.b(false);
+          this.b(false);
         }
     }
 
@@ -180,7 +180,7 @@ final class v {
             }
           }
           if (kh.field_d == this.field_a &&
-              ok.field_c == this.field_h) {
+            ok.field_c == this.field_h) {
             return;
           }
           this.field_u.a(-2964, this.field_a, this.field_h);
@@ -393,20 +393,20 @@ final class v {
 
     final boolean a(int param0) {
         if (param0 > -91) {
-            field_m = (String) null;
-            if (li.field_c < this.field_k) {
-                return false;
-            }
-            if (og.field_n > 0) {
-                return true;
-            }
+          field_m = (String) null;
+          if (li.field_c < this.field_k) {
             return false;
+          }
+          if (og.field_n > 0) {
+            return true;
+          }
+          return false;
         }
         if (li.field_c < this.field_k) {
-            return false;
+          return false;
         }
         if (og.field_n > 0) {
-            return true;
+          return true;
         }
         return false;
     }

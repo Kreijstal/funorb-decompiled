@@ -11,7 +11,7 @@ final class h {
 
     final void a(byte param0, boolean param1) {
         if (param0 > -47) {
-            return;
+          return;
         }
         this.field_e = param1 ? true : false;
         this.field_f = true;
@@ -23,59 +23,59 @@ final class h {
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            String var2 = null;
-            Exception var2_ref = null;
-            RuntimeException var2_ref2 = null;
-            int var3 = 0;
-            String var4 = null;
-            java.net.URL var5 = null;
-            RuntimeException stackIn_11_0 = null;
-            StringBuilder stackIn_11_1 = null;
-            String stackIn_12_2 = null;
-            Throwable decompiledCaughtException = null;
+          String var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          int var3 = 0;
+          String var4 = null;
+          java.net.URL var5 = null;
+          RuntimeException stackIn_11_0 = null;
+          StringBuilder stackIn_11_1 = null;
+          String stackIn_12_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
             try {
-              try {
-                if (param1) {
-                  return;
-                }
-                var2 = param0.getDocumentBase().getFile();
-                var3 = var2.indexOf('?');
-                var4 = "reload.ws";
-                if (var3 >= 0) {
-                  var4 = var4 + var2.substring(var3);
-                }
-                var5 = new java.net.URL(param0.getCodeBase(), var4);
-                param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
-                return;
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
+              if (param1) {
                 return;
               }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_11_0 = var2_ref2;
-              stackIn_11_1 = new StringBuilder().append("h.A(");
-              if (param0 == null) {
-                stackIn_12_2 = "null";
-              } else {
-                stackIn_12_2 = "{...}";
+              var2 = param0.getDocumentBase().getFile();
+              var3 = var2.indexOf('?');
+              var4 = "reload.ws";
+              if (var3 >= 0) {
+                var4 = var4 + var2.substring(var3);
               }
-              throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+              var5 = new java.net.URL(param0.getCodeBase(), var4);
+              param0.getAppletContext().showDocument(wf.a(var5, 58, param0), "_self");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_11_0 = var2_ref2;
+            stackIn_11_1 = new StringBuilder().append("h.A(");
+            if (param0 == null) {
+              stackIn_12_2 = "null";
+            } else {
+              stackIn_12_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final boolean a(int param0) {
         if (param0 > -74) {
-            this.a(19);
-            return this.field_f;
+          this.a(19);
+          return this.field_f;
         }
         return this.field_f;
     }
@@ -106,17 +106,17 @@ final class h {
 
     final boolean a(byte param0) {
         if (param0 >= -45) {
-            java.applet.Applet var3 = (java.applet.Applet) null;
-            h.a((java.applet.Applet) null, true);
-            return this.field_e;
+          java.applet.Applet var3 = (java.applet.Applet) null;
+          h.a((java.applet.Applet) null, true);
+          return this.field_e;
         }
         return this.field_e;
     }
 
     final String b(int param0) {
         if (param0 != 19491) {
-            this.a((byte) -82);
-            return this.field_c;
+          this.a((byte) -82);
+          return this.field_c;
         }
         return this.field_c;
     }
@@ -125,9 +125,9 @@ final class h {
         this.field_f = false;
         this.field_e = false;
         try {
-            this.field_c = param0;
+          this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-            throw t.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw t.a((Throwable) ((Object) runtimeException), "h.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

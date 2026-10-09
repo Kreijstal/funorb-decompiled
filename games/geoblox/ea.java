@@ -12,80 +12,80 @@ final class ea extends hf {
 
     public static void b(int param0) {
         if (param0 != 1000) {
-            return;
+          return;
         }
         field_g = null;
     }
 
     final static void a(byte param0, long param1, java.applet.Applet param2, String param3, String param4) {
         try {
-            RuntimeException stackIn_9_0 = null;
-            StringBuilder stackIn_9_1 = null;
-            String stackIn_10_2 = null;
-            StringBuilder stackIn_12_1 = null;
-            String stackIn_13_2 = null;
-            StringBuilder stackIn_15_1 = null;
-            String stackIn_16_2 = null;
-            Throwable decompiledCaughtException = null;
-            Throwable var6 = null;
-            RuntimeException var6_ref = null;
-            String var7 = null;
-            int var8 = 0;
-            String var9 = null;
-            String var10 = null;
-            String var7Lifetime1;
-            String var7Lifetime2;
-            String var7Lifetime3;
-            String var7Lifetime4;
+          RuntimeException stackIn_9_0 = null;
+          StringBuilder stackIn_9_1 = null;
+          String stackIn_10_2 = null;
+          StringBuilder stackIn_12_1 = null;
+          String stackIn_13_2 = null;
+          StringBuilder stackIn_15_1 = null;
+          String stackIn_16_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var6 = null;
+          RuntimeException var6_ref = null;
+          String var7 = null;
+          int var8 = 0;
+          String var9 = null;
+          String var10 = null;
+          String var7Lifetime1;
+          String var7Lifetime2;
+          String var7Lifetime3;
+          String var7Lifetime4;
+          try {
             try {
-              try {
-                var9 = param2.getParameter("cookiehost");
-                var7 = var9;
-                var7Lifetime1 = var9;
-                var8 = -108 / ((48 - param0) / 59);
-                var10 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var9;
-                var7Lifetime2 = var10;
-                var7Lifetime3 = var10;
-                if (param1 < 0L) {
-                  var7Lifetime4 = var10 + "; Discard;";
-                } else {
-                  var7Lifetime4 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
-                }
-                wk.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -10);
-                return;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var6 = decompiledCaughtException;
-                return;
-              }
-            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-              decompiledCaughtException = decompiledCaughtParameter1;
-              var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-              stackIn_9_0 = var6_ref;
-              stackIn_9_1 = new StringBuilder().append("ea.A(").append(param0).append(',').append(param1).append(',');
-              if (param2 == null) {
-                stackIn_10_2 = "null";
+              var9 = param2.getParameter("cookiehost");
+              var7 = var9;
+              var7Lifetime1 = var9;
+              var8 = -108 / ((48 - param0) / 59);
+              var10 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var9;
+              var7Lifetime2 = var10;
+              var7Lifetime3 = var10;
+              if (param1 < 0L) {
+                var7Lifetime4 = var10 + "; Discard;";
               } else {
-                stackIn_10_2 = "{...}";
+                var7Lifetime4 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
               }
-              stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-              if (param3 == null) {
-                stackIn_13_2 = "null";
-              } else {
-                stackIn_13_2 = "{...}";
-              }
-              stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-              if (param4 == null) {
-                stackIn_16_2 = "null";
-              } else {
-                stackIn_16_2 = "{...}";
-              }
-              throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+              wk.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -10);
+              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var6 = decompiledCaughtException;
+              return;
             }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_9_0 = var6_ref;
+            stackIn_9_1 = new StringBuilder().append("ea.A(").append(param0).append(',').append(param1).append(',');
+            if (param2 == null) {
+              stackIn_10_2 = "null";
+            } else {
+              stackIn_10_2 = "{...}";
+            }
+            stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+            if (param3 == null) {
+              stackIn_13_2 = "null";
+            } else {
+              stackIn_13_2 = "{...}";
+            }
+            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+            if (param4 == null) {
+              stackIn_16_2 = "null";
+            } else {
+              stackIn_16_2 = "{...}";
+            }
+            throw t.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          }
         } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
+          throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          throw new RuntimeException(decompiledCheckedException);
         }
     }
 

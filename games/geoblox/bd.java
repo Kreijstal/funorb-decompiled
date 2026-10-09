@@ -46,7 +46,7 @@ final class bd extends IOException {
         field_b = null;
         field_c = null;
         if (param0 == -20152) {
-            return;
+          return;
         }
         field_a = 79;
     }
