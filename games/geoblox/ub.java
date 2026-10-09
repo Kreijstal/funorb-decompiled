@@ -77,6 +77,8 @@ final class ub {
         int var6;
         int var7;
         int[] var11;
+        int var5Lifetime1;
+        int var6Lifetime1;
         var3 = param0.c((byte) 34);
         this.field_b[0] = var3 >> 4;
         this.field_b[1] = var3 & 15;
@@ -90,18 +92,18 @@ final class ub {
               this.field_h[var5][0][var6] = param0.b(true);
             }
           }
-          for (var5 = 0; var5 < 2; var5++) {
+          for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var7 = 0;
-            var6 = var7;
-            while (var7 < this.field_b[var5]) {
-              if ((var4 & 1 << var5 * 4 << var7) == 0) {
-                this.field_c[var5][1][var7] = this.field_c[var5][0][var7];
-                this.field_h[var5][1][var7] = this.field_h[var5][0][var7];
+            var6Lifetime1 = var7;
+            while (var7 < this.field_b[var5Lifetime1]) {
+              if ((var4 & 1 << var5Lifetime1 * 4 << var7) == 0) {
+                this.field_c[var5Lifetime1][1][var7] = this.field_c[var5Lifetime1][0][var7];
+                this.field_h[var5Lifetime1][1][var7] = this.field_h[var5Lifetime1][0][var7];
                 var7++;
                 continue;
               }
-              this.field_c[var5][1][var7] = param0.b(true);
-              this.field_h[var5][1][var7] = param0.b(true);
+              this.field_c[var5Lifetime1][1][var7] = param0.b(true);
+              this.field_h[var5Lifetime1][1][var7] = param0.b(true);
               var7++;
             }
           }

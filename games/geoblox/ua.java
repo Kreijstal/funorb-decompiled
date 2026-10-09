@@ -459,6 +459,38 @@ final class ua extends hf {
         int var17_intLifetime2;
         int var17_intLifetime3;
         int var19Lifetime1;
+        int var20Lifetime1;
+        int var21_intLifetime1;
+        int var25Lifetime1;
+        int var25Lifetime2;
+        int var26Lifetime1;
+        int var26Lifetime2;
+        int var26Lifetime3;
+        int var26Lifetime4;
+        int var26Lifetime5;
+        int var26Lifetime6;
+        int var26Lifetime7;
+        int var26Lifetime8;
+        int var26Lifetime9;
+        int var26Lifetime10;
+        int var26Lifetime11;
+        float var26_floatLifetime1;
+        float var27Lifetime1;
+        float var27Lifetime2;
+        float var27Lifetime3;
+        float var27Lifetime4;
+        int var27_intLifetime1;
+        float var28Lifetime1;
+        float var28Lifetime2;
+        int var28_intLifetime1;
+        float var29Lifetime1;
+        float var29Lifetime2;
+        int var29_intLifetime1;
+        float var30Lifetime1;
+        float var30Lifetime2;
+        float var31Lifetime1;
+        float var33Lifetime1;
+        int var19Lifetime1Lifetime1;
         ua.a(this.field_p[param0], 0);
         ua.b();
         var2 = ua.b(hj.a((byte) 58, field_D.length - 1));
@@ -529,7 +561,7 @@ final class ua extends hf {
             var20_ref_float__[var21_int] = var20_ref_float__[var21_int] * 0.5f;
           }
           var41 = var17_intLifetime3;
-          var21_int = var41;
+          var21_intLifetime1 = var41;
           while (var41 < var4) {
             var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
             var41++;
@@ -568,20 +600,20 @@ final class ua extends hf {
             var20_ref_float__[var4 - 4 * var25 - 1] = var26_float * var28 - var27 * var29;
             var20_ref_float__[var4 - 4 * var25 - 3] = var26_float * var29 + var27 * var28;
           }
-          for (var25 = 0; var25 < var19; var25++) {
-            var26_float = var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25];
-            var27 = var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25];
-            var28 = var20_ref_float__[4 * var25 + 3];
-            var29 = var20_ref_float__[4 * var25 + 1];
-            var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25] = var26_float + var28;
-            var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25] = var27 + var29;
-            var30 = var21[var17_intLifetime3 - 4 - 4 * var25];
-            var31 = var21[var17_intLifetime3 - 3 - 4 * var25];
-            var20_ref_float__[4 * var25 + 3] = (var26_float - var28) * var30 - (var27 - var29) * var31;
-            var20_ref_float__[4 * var25 + 1] = (var27 - var29) * var30 + (var26_float - var28) * var31;
+          for (var25Lifetime1 = 0; var25Lifetime1 < var19; var25Lifetime1++) {
+            var26_floatLifetime1 = var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25Lifetime1];
+            var27Lifetime1 = var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25Lifetime1];
+            var28Lifetime1 = var20_ref_float__[4 * var25Lifetime1 + 3];
+            var29Lifetime1 = var20_ref_float__[4 * var25Lifetime1 + 1];
+            var20_ref_float__[var17_intLifetime3 + 3 + 4 * var25Lifetime1] = var26_floatLifetime1 + var28Lifetime1;
+            var20_ref_float__[var17_intLifetime3 + 1 + 4 * var25Lifetime1] = var27Lifetime1 + var29Lifetime1;
+            var30 = var21[var17_intLifetime3 - 4 - 4 * var25Lifetime1];
+            var31 = var21[var17_intLifetime3 - 3 - 4 * var25Lifetime1];
+            var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
+            var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          var25 = hj.a((byte) 58, var4 - 1);
-          for (var26 = 0; var26 < var25 - 3; var26++) {
+          var25Lifetime2 = hj.a((byte) 58, var4 - 1);
+          for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             var27_int = var4 >> var26 + 2;
             var28_int = 8 << var26;
             for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
@@ -602,79 +634,79 @@ final class ua extends hf {
               }
             }
           }
-          var26 = 1;
+          var26Lifetime1 = 1;
           while (true) {
-            if (var26 < var19 - 1) {
-              var27_int = var48[var26];
-              if (var26 >= var27_int) {
-                var26++;
+            if (var26Lifetime1 < var19 - 1) {
+              var27_intLifetime1 = var48[var26Lifetime1];
+              if (var26Lifetime1 >= var27_intLifetime1) {
+                var26Lifetime1++;
                 continue;
               }
-              var28_int = 8 * var26;
-              var29_int = 8 * var27_int;
-              var30 = var20_ref_float__[var28_int + 1];
-              var20_ref_float__[var28_int + 1] = var20_ref_float__[var29_int + 1];
-              var20_ref_float__[var29_int + 1] = var30;
-              var30 = var20_ref_float__[var28_int + 3];
-              var20_ref_float__[var28_int + 3] = var20_ref_float__[var29_int + 3];
-              var20_ref_float__[var29_int + 3] = var30;
-              var30 = var20_ref_float__[var28_int + 5];
-              var20_ref_float__[var28_int + 5] = var20_ref_float__[var29_int + 5];
-              var20_ref_float__[var29_int + 5] = var30;
-              var30 = var20_ref_float__[var28_int + 7];
-              var20_ref_float__[var28_int + 7] = var20_ref_float__[var29_int + 7];
-              var20_ref_float__[var29_int + 7] = var30;
-              var26++;
+              var28_intLifetime1 = 8 * var26Lifetime1;
+              var29_intLifetime1 = 8 * var27_intLifetime1;
+              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 1];
+              var20_ref_float__[var28_intLifetime1 + 1] = var20_ref_float__[var29_intLifetime1 + 1];
+              var20_ref_float__[var29_intLifetime1 + 1] = var30Lifetime1;
+              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 3];
+              var20_ref_float__[var28_intLifetime1 + 3] = var20_ref_float__[var29_intLifetime1 + 3];
+              var20_ref_float__[var29_intLifetime1 + 3] = var30Lifetime1;
+              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 5];
+              var20_ref_float__[var28_intLifetime1 + 5] = var20_ref_float__[var29_intLifetime1 + 5];
+              var20_ref_float__[var29_intLifetime1 + 5] = var30Lifetime1;
+              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 7];
+              var20_ref_float__[var28_intLifetime1 + 7] = var20_ref_float__[var29_intLifetime1 + 7];
+              var20_ref_float__[var29_intLifetime1 + 7] = var30Lifetime1;
+              var26Lifetime1++;
               continue;
             }
             break;
           }
-          for (var26 = 0; var26 < var17_intLifetime3; var26++) {
-            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + 1];
+          for (var26Lifetime2 = 0; var26Lifetime2 < var17_intLifetime3; var26Lifetime2++) {
+            var20_ref_float__[var26Lifetime2] = var20_ref_float__[2 * var26Lifetime2 + 1];
           }
-          for (var26 = 0; var26 < var19; var26++) {
-            var20_ref_float__[var4 - 1 - 2 * var26] = var20_ref_float__[4 * var26];
-            var20_ref_float__[var4 - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 1];
-            var20_ref_float__[var4 - var18_int - 1 - 2 * var26] = var20_ref_float__[4 * var26 + 2];
-            var20_ref_float__[var4 - var18_int - 2 - 2 * var26] = var20_ref_float__[4 * var26 + 3];
+          for (var26Lifetime3 = 0; var26Lifetime3 < var19; var26Lifetime3++) {
+            var20_ref_float__[var4 - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3];
+            var20_ref_float__[var4 - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 1];
+            var20_ref_float__[var4 - var18_int - 1 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 2];
+            var20_ref_float__[var4 - var18_int - 2 - 2 * var26Lifetime3] = var20_ref_float__[4 * var26Lifetime3 + 3];
           }
-          for (var26 = 0; var26 < var19; var26++) {
-            var27 = var23[2 * var26];
-            var28 = var23[2 * var26 + 1];
-            var29 = var20_ref_float__[var17_intLifetime3 + 2 * var26];
-            var30 = var20_ref_float__[var17_intLifetime3 + 2 * var26 + 1];
-            var31 = var20_ref_float__[var4 - 2 - 2 * var26];
-            var32 = var20_ref_float__[var4 - 1 - 2 * var26];
-            var33 = var28 * (var29 - var31) + var27 * (var30 + var32);
-            var20_ref_float__[var17_intLifetime3 + 2 * var26] = (var29 + var31 + var33) * 0.5f;
-            var20_ref_float__[var4 - 2 - 2 * var26] = (var29 + var31 - var33) * 0.5f;
-            var33 = var28 * (var30 + var32) - var27 * (var29 - var31);
-            var20_ref_float__[var17_intLifetime3 + 2 * var26 + 1] = (var30 - var32 + var33) * 0.5f;
-            var20_ref_float__[var4 - 1 - 2 * var26] = (-var30 + var32 + var33) * 0.5f;
+          for (var26Lifetime4 = 0; var26Lifetime4 < var19; var26Lifetime4++) {
+            var27Lifetime2 = var23[2 * var26Lifetime4];
+            var28Lifetime2 = var23[2 * var26Lifetime4 + 1];
+            var29Lifetime2 = var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4];
+            var30Lifetime2 = var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4 + 1];
+            var31Lifetime1 = var20_ref_float__[var4 - 2 - 2 * var26Lifetime4];
+            var32 = var20_ref_float__[var4 - 1 - 2 * var26Lifetime4];
+            var33 = var28Lifetime2 * (var29Lifetime2 - var31Lifetime1) + var27Lifetime2 * (var30Lifetime2 + var32);
+            var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 + var33) * 0.5f;
+            var20_ref_float__[var4 - 2 - 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 - var33) * 0.5f;
+            var33Lifetime1 = var28Lifetime2 * (var30Lifetime2 + var32) - var27Lifetime2 * (var29Lifetime2 - var31Lifetime1);
+            var20_ref_float__[var17_intLifetime3 + 2 * var26Lifetime4 + 1] = (var30Lifetime2 - var32 + var33Lifetime1) * 0.5f;
+            var20_ref_float__[var4 - 1 - 2 * var26Lifetime4] = (-var30Lifetime2 + var32 + var33Lifetime1) * 0.5f;
           }
-          for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var26] = var20_ref_float__[2 * var26 + var17_intLifetime3] * var22[2 * var26] + var20_ref_float__[2 * var26 + 1 + var17_intLifetime3] * var22[2 * var26 + 1];
-            var20_ref_float__[var17_intLifetime3 - 1 - var26] = var20_ref_float__[2 * var26 + var17_intLifetime3] * var22[2 * var26 + 1] - var20_ref_float__[2 * var26 + 1 + var17_intLifetime3] * var22[2 * var26];
+          for (var26Lifetime5 = 0; var26Lifetime5 < var18_int; var26Lifetime5++) {
+            var20_ref_float__[var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5] + var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1];
+            var20_ref_float__[var17_intLifetime3 - 1 - var26Lifetime5] = var20_ref_float__[2 * var26Lifetime5 + var17_intLifetime3] * var22[2 * var26Lifetime5 + 1] - var20_ref_float__[2 * var26Lifetime5 + 1 + var17_intLifetime3] * var22[2 * var26Lifetime5];
           }
-          for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var4 - var18_int + var26] = -var49[var26];
+          for (var26Lifetime6 = 0; var26Lifetime6 < var18_int; var26Lifetime6++) {
+            var20_ref_float__[var4 - var18_int + var26Lifetime6] = -var49[var26Lifetime6];
           }
-          for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var26] = var20_ref_float__[var18_int + var26];
+          for (var26Lifetime7 = 0; var26Lifetime7 < var18_int; var26Lifetime7++) {
+            var20_ref_float__[var26Lifetime7] = var20_ref_float__[var18_int + var26Lifetime7];
           }
-          for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var18_int + var26] = -var20_ref_float__[var18_int - var26 - 1];
+          for (var26Lifetime8 = 0; var26Lifetime8 < var18_int; var26Lifetime8++) {
+            var20_ref_float__[var18_int + var26Lifetime8] = -var20_ref_float__[var18_int - var26Lifetime8 - 1];
           }
-          for (var26 = 0; var26 < var18_int; var26++) {
-            var20_ref_float__[var17_intLifetime3 + var26] = var20_ref_float__[var4 - var26 - 1];
+          for (var26Lifetime9 = 0; var26Lifetime9 < var18_int; var26Lifetime9++) {
+            var20_ref_float__[var17_intLifetime3 + var26Lifetime9] = var20_ref_float__[var4 - var26Lifetime9 - 1];
           }
-          for (var26 = var8; var26 < var9; var26++) {
-            var27 = (float)Math.sin(((double)(var26 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
-            field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+          for (var26Lifetime10 = var8; var26Lifetime10 < var9; var26Lifetime10++) {
+            var27Lifetime3 = (float)Math.sin(((double)(var26Lifetime10 - var8) + 0.5) / (double)var10 * 0.5 * 3.141592653589793);
+            field_B[var26Lifetime10] = field_B[var26Lifetime10] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime3 * (double)var27Lifetime3);
           }
-          for (var26 = var11; var26 < var12; var26++) {
-            var27 = (float)Math.sin(((double)(var26 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
-            field_B[var26] = field_B[var26] * (float)Math.sin(1.5707963267948966 * (double)var27 * (double)var27);
+          for (var26Lifetime11 = var11; var26Lifetime11 < var12; var26Lifetime11++) {
+            var27Lifetime4 = (float)Math.sin(((double)(var26Lifetime11 - var11) + 0.5) / (double)var13 * 0.5 * 3.141592653589793 + 1.5707963267948966);
+            field_B[var26Lifetime11] = field_B[var26Lifetime11] * (float)Math.sin(1.5707963267948966 * (double)var27Lifetime4 * (double)var27Lifetime4);
           }
         }
         var17 = null;
@@ -691,9 +723,9 @@ final class ua extends hf {
             }
           }
           if (var15 == 0) {
-            for (var19Lifetime1 = var8; var19Lifetime1 < var4 >> 1; var19Lifetime1++) {
-              var20 = var50.length - (var4 >> 1) + var19Lifetime1;
-              var40[var20] = var40[var20] + field_B[var19Lifetime1];
+            for (var19Lifetime1Lifetime1 = var8; var19Lifetime1Lifetime1 < var4 >> 1; var19Lifetime1Lifetime1++) {
+              var20Lifetime1 = var50.length - (var4 >> 1) + var19Lifetime1Lifetime1;
+              var40[var20Lifetime1] = var40[var20Lifetime1] + field_B[var19Lifetime1Lifetime1];
             }
           }
         }

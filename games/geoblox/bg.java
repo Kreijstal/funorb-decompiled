@@ -62,6 +62,7 @@ final class bg extends m {
         int var18;
         int var19;
         int var20;
+        int var19Lifetime1;
         var13 = param2 - vb.field_e;
         var14 = param3 - vb.field_i;
         var15 = var14;
@@ -93,17 +94,17 @@ final class bg extends m {
             }
             var17 = var17 - var19;
           }
-          var19 = 0;
+          var19Lifetime1 = 0;
           if (var18 >= var17) {
-            var19 = var18 - var17;
+            var19Lifetime1 = var18 - var17;
           } else {
             var17 = var18;
           }
           var20 = -var17;
           while (true) {
             if (var20 >= 0) {
-              param7 = param7 + (var19 + param10);
-              param8 = param8 + (var19 + param9);
+              param7 = param7 + (var19Lifetime1 + param10);
+              param8 = param8 + (var19Lifetime1 + param9);
               var15++;
               break;
             }

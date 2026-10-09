@@ -33,6 +33,11 @@ final class rf extends hf {
         int[] var20;
         int[] var22;
         int var6Lifetime1;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var12Lifetime1;
         if (this.field_g != null) {
           return;
         }
@@ -83,22 +88,22 @@ final class rf extends hf {
               }
             }
             if (var9 == 192) {
-              var10 = var8 & 15;
-              var11 = var8 >> 8 & 127;
-              var2[var10] = var20[var10] + var11;
+              var10Lifetime1 = var8 & 15;
+              var11Lifetime1 = var8 >> 8 & 127;
+              var2[var10Lifetime1] = var20[var10Lifetime1] + var11Lifetime1;
             }
             if (var9 == 144) {
-              var10 = var8 & 15;
-              var11 = var8 >> 8 & 127;
-              var12 = var8 >> 16 & 127;
-              if (var12 > 0) {
-                var13 = var18[var10];
+              var10Lifetime2 = var8 & 15;
+              var11Lifetime2 = var8 >> 8 & 127;
+              var12Lifetime1 = var8 >> 16 & 127;
+              if (var12Lifetime1 > 0) {
+                var13 = var18[var10Lifetime2];
                 var14 = (pj) ((Object) this.field_g.a((long)var13, (byte) -76));
                 if (var14 == null) {
                   var14 = new pj(new byte[128]);
                   this.field_g.a((byte) 102, var14, (long)var13);
                 }
-                var14.field_h[var11] = (byte) 1;
+                var14.field_h[var11Lifetime2] = (byte) 1;
               }
             }
             var4.f(var6Lifetime1);

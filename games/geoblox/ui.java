@@ -31,6 +31,8 @@ final class ui {
         float[] var27;
         float[] var28;
         int var4Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
         for (var4 = 0; var4 < param1; var4++) {
           param0[var4] = 0.0f;
         }
@@ -56,10 +58,10 @@ final class ui {
               }
             }
             var22 = var19;
-            var10 = 0;
-            while (var10 < var4Lifetime1) {
-              var11 = var22[var9];
-              var12 = this.field_g[var11 * 8 + var8];
+            var10Lifetime1 = 0;
+            while (var10Lifetime1 < var4Lifetime1) {
+              var11Lifetime1 = var22[var9];
+              var12 = this.field_g[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_c + var9 * this.field_f;
                 var14 = ua.field_u[var12];
@@ -86,7 +88,7 @@ final class ui {
               if (var9 >= var6) {
                 break;
               }
-              var10++;
+              var10Lifetime1++;
             }
           }
         }

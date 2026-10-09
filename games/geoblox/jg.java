@@ -256,6 +256,7 @@ abstract class jg {
         float var16;
         int[] var17;
         int[] var18;
+        int var2Lifetime1;
         field_a = 9;
         field_c = "This game has been updated! Please reload this page.";
         field_g = 35;
@@ -320,10 +321,10 @@ abstract class jg {
             }
             var0[var2] = (int)(var12 * 255.0f) << (int)(var11 * 255.0f) + 16 << 8 + (int)(255.0f * var10);
           }
-          for (var2 = 1; 7 > var2; var2++) {
-            var3 = -1 + var2;
-            var4 = var18[var2];
-            var5 = field_h[var1][var2];
+          for (var2Lifetime1 = 1; 7 > var2Lifetime1; var2Lifetime1++) {
+            var3 = -1 + var2Lifetime1;
+            var4 = var18[var2Lifetime1];
+            var5 = field_h[var1][var2Lifetime1];
             while (var3 >= 0) {
               if (var18[var3] > var4) {
                 var0[var3 + 1] = var18[var3];

@@ -606,6 +606,10 @@ final class kj extends ia {
         int var6Lifetime2;
         int var6Lifetime3;
         int var7Lifetime1;
+        int var4Lifetime3Lifetime1;
+        int var4Lifetime3Lifetime2;
+        int var5Lifetime3Lifetime1;
+        int var5Lifetime3Lifetime2;
         if (param1 != 38) {
           return;
         }
@@ -643,15 +647,15 @@ final class kj extends ia {
             return;
           }
           if (var3 == 208) {
-            var4Lifetime3 = param0 & 15;
-            var5Lifetime3 = (32669 & param0) >> 8;
-            this.d(var5Lifetime3, param1 ^ -2858, var4Lifetime3);
+            var4Lifetime3Lifetime1 = param0 & 15;
+            var5Lifetime3Lifetime1 = (32669 & param0) >> 8;
+            this.d(var5Lifetime3Lifetime1, param1 ^ -2858, var4Lifetime3Lifetime1);
             return;
           }
           if (var3 == 224) {
-            var4Lifetime3 = param0 & 15;
-            var5Lifetime3 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
-            this.c(-108, var5Lifetime3, var4Lifetime3);
+            var4Lifetime3Lifetime2 = param0 & 15;
+            var5Lifetime3Lifetime2 = (param0 >> 9 & 16256) + ((32673 & param0) >> 8);
+            this.c(-108, var5Lifetime3Lifetime2, var4Lifetime3Lifetime2);
             return;
           }
           var3 = 255 & param0;

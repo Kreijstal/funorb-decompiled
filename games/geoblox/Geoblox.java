@@ -608,6 +608,7 @@ public final class Geoblox extends wf {
         boolean stackIn_91_0 = false;
         int var2;
         int var3;
+        int var2Lifetime1;
         var3 = field_C;
         ng.h(78);
         if (param0) {
@@ -780,8 +781,8 @@ public final class Geoblox extends wf {
           je.c((byte) -122);
           cm.a(-1, 0);
           if (sb.a(54)) {
-            var2 = this.d((byte) -67);
-            if (var2 == 2) {
+            var2Lifetime1 = this.d((byte) -67);
+            if (var2Lifetime1 == 2) {
               oh.a(320, 240, fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
             }
           }

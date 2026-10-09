@@ -40,6 +40,8 @@ final class ae {
         int var7Lifetime1;
         int var8Lifetime1;
         int var10Lifetime1;
+        int var8Lifetime2;
+        int var9_intLifetime1;
         var17 = new int[this.field_f];
         var14 = new int[33];
         var12 = var14;
@@ -72,12 +74,12 @@ final class ae {
             var7 = var2_ref_int__[var4 - 1];
           }
           var14[var4] = var7;
-          for (var8 = var4 + 1; var8 <= 32; var8++) {
-            var9_int = var14[var8];
-            if (var9_int != var6) {
+          for (var8Lifetime2 = var4 + 1; var8Lifetime2 <= 32; var8Lifetime2++) {
+            var9_intLifetime1 = var14[var8Lifetime2];
+            if (var9_intLifetime1 != var6) {
               continue;
             }
-            var14[var8] = var7;
+            var14[var8Lifetime2] = var7;
           }
         }
         this.field_d = new int[8];
@@ -161,6 +163,7 @@ final class ae {
         int var14;
         int var2Lifetime1;
         int var5Lifetime1;
+        int var8Lifetime1;
         ua.b(24);
         this.field_e = ua.b(16);
         this.field_f = ua.b(24);
@@ -214,13 +217,13 @@ final class ae {
           }
           this.field_c = new float[this.field_f][this.field_e];
           if (var2Lifetime1 == 1) {
-            for (var8 = 0; var8 < this.field_f; var8++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
               var9 = 0.0f;
               var10 = 1;
               for (var11 = 0; var11 < this.field_e; var11++) {
-                var12_int = var8 / var10 % var7;
+                var12_int = var8Lifetime1 / var10 % var7;
                 var13 = (float)this.field_b[var12_int] * var4 + var3 + var9;
-                this.field_c[var8][var11] = var13;
+                this.field_c[var8Lifetime1][var11] = var13;
                 if (var6 != 0) {
                   var9 = var13;
                 }
@@ -228,12 +231,12 @@ final class ae {
               }
             }
           } else {
-            for (var8 = 0; var8 < this.field_f; var8++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_f; var8Lifetime1++) {
               var9 = 0.0f;
-              var10 = var8 * this.field_e;
+              var10 = var8Lifetime1 * this.field_e;
               for (var11 = 0; var11 < this.field_e; var11++) {
                 var12 = (float)this.field_b[var10] * var4 + var3 + var9;
-                this.field_c[var8][var11] = var12;
+                this.field_c[var8Lifetime1][var11] = var12;
                 if (var6 == 0) {
                   var10++;
                   continue;

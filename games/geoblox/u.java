@@ -127,6 +127,10 @@ final class u {
         boolean[] var14;
         int var15;
         int var16;
+        int var7Lifetime1;
+        int var8_intLifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var3 = this.field_c.length;
         var4 = field_b[this.field_d - 1];
         var5 = field_e;
@@ -163,32 +167,32 @@ final class u {
               var16++;
             }
           }
-          var7 = u.a(field_a, var6);
-          var8_int = u.b(field_a, var6);
-          var9 = this.a(field_a[var7], field_g[var7], field_a[var8_int], field_g[var8_int], field_a[var6]);
-          var10 = field_g[var6];
-          var11 = var4 - var9;
-          var12 = var9;
+          var7Lifetime1 = u.a(field_a, var6);
+          var8_intLifetime1 = u.b(field_a, var6);
+          var9Lifetime1 = this.a(field_a[var7Lifetime1], field_g[var7Lifetime1], field_a[var8_intLifetime1], field_g[var8_intLifetime1], field_a[var6]);
+          var10Lifetime1 = field_g[var6];
+          var11 = var4 - var9Lifetime1;
+          var12 = var9Lifetime1;
           stackIn_5_0 = (var11 >= var12) ? var12 : var11;
           var13 = stackIn_5_0 << 1;
-          if (var10 == 0) {
+          if (var10Lifetime1 == 0) {
             field_e[var6] = false;
-            field_g[var6] = var9;
+            field_g[var6] = var9Lifetime1;
             var6++;
             continue;
           }
           var14 = field_e;
-          var15 = var7;
-          field_e[var8_int] = true;
+          var15 = var7Lifetime1;
+          field_e[var8_intLifetime1] = true;
           var14[var15] = true;
           field_e[var6] = true;
-          if (var10 < var13) {
+          if (var10Lifetime1 < var13) {
             stackIn_13_0 = (int[]) (field_g);
             stackIn_13_1 = var6;
-            if ((var10 & 1) == 0) {
-              stackIn_14_2 = var9 + var10 / 2;
+            if ((var10Lifetime1 & 1) == 0) {
+              stackIn_14_2 = var9Lifetime1 + var10Lifetime1 / 2;
             } else {
-              stackIn_14_2 = var9 - (var10 + 1) / 2;
+              stackIn_14_2 = var9Lifetime1 - (var10Lifetime1 + 1) / 2;
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
             var6++;
@@ -197,9 +201,9 @@ final class u {
           stackIn_9_0 = (int[]) (field_g);
           stackIn_9_1 = var6;
           if (var11 <= var12) {
-            stackIn_10_2 = var9 - var10 + var11 - 1;
+            stackIn_10_2 = var9Lifetime1 - var10Lifetime1 + var11 - 1;
           } else {
-            stackIn_10_2 = var10 - var12 + var9;
+            stackIn_10_2 = var10Lifetime1 - var12 + var9Lifetime1;
           }
           stackIn_9_0[stackIn_9_1] = stackIn_10_2;
           var6++;

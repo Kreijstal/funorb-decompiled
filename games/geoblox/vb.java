@@ -157,6 +157,9 @@ final class vb {
         int var20;
         int var21;
         int var22;
+        int var22Lifetime1;
+        int var22Lifetime2;
+        int var22Lifetime3;
         if (param4 == 0) {
           vb.d(param0, param1, param2, param3, param5);
           return;
@@ -195,14 +198,14 @@ final class vb {
                 for (var22 = var12; var22 <= var14; var22 = var22 + field_f) {
                   field_c[var22 - var18] = param5;
                 }
-                for (var22 = var13; var22 <= var15; var22 = var22 + field_f) {
-                  field_c[var22 + var18] = param5;
+                for (var22Lifetime1 = var13; var22Lifetime1 <= var15; var22Lifetime1 = var22Lifetime1 + field_f) {
+                  field_c[var22Lifetime1 + var18] = param5;
                 }
-                for (var22 = var10; var22 <= var11; var22++) {
-                  field_c[var22] = param5;
+                for (var22Lifetime2 = var10; var22Lifetime2 <= var11; var22Lifetime2++) {
+                  field_c[var22Lifetime2] = param5;
                 }
-                for (var22 = var16; var22 <= var17; var22++) {
-                  field_c[var22] = param5;
+                for (var22Lifetime3 = var16; var22Lifetime3 <= var17; var22Lifetime3++) {
+                  field_c[var22Lifetime3] = param5;
                 }
                 while (true) {
                   incrementValue$0 = var19;
@@ -335,6 +338,13 @@ final class vb {
         int var21;
         int var22;
         int var23;
+        int var19Lifetime1;
+        int var21Lifetime1;
+        int var21Lifetime2;
+        int var22Lifetime1;
+        int var22Lifetime2;
+        int var23Lifetime1;
+        int var23Lifetime2;
         var8 = 16384 / (2 * param3 + 1);
         var9 = 1 + param3 - param5 - param4;
         if (0 < var9) {
@@ -376,9 +386,9 @@ final class vb {
           incrementValue$0 = param2;
           param2++;
           param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
-          for (var19 = 1 - param5; var19 < var9; var19++) {
+          for (var19Lifetime1 = 1 - param5; var19Lifetime1 < var9; var19Lifetime1++) {
             var18++;
-            if (param4 + param5 + var19 + param3 < field_k) {
+            if (param4 + param5 + var19Lifetime1 + param3 < field_k) {
               param1 = param0[var17];
               var17++;
               var14 = var14 + (param1 >> 16 & 255);
@@ -393,7 +403,7 @@ final class vb {
             param2++;
             param0[incrementValue$5] = (var21 << 16) + (var22 << 8) + var23;
           }
-          while (var19 < var10) {
+          while (var19Lifetime1 < var10) {
             param1 = param0[var18++];
             var14 = var14 - (param1 >> 16 & 255);
             if (var14 < 0) {
@@ -412,57 +422,57 @@ final class vb {
             var14 = var14 + (param1 >> 16 & 255);
             var15 = var15 + (param1 >> 8 & 255);
             var16 = var16 + (param1 & 255);
-            var21 = var14 * var8 >> 14;
-            var22 = var15 * var8 >> 14;
-            var23 = var16 * var8 >> 14;
-            if (var21 > 255) {
-              var21 = 255;
+            var21Lifetime1 = var14 * var8 >> 14;
+            var22Lifetime1 = var15 * var8 >> 14;
+            var23Lifetime1 = var16 * var8 >> 14;
+            if (var21Lifetime1 > 255) {
+              var21Lifetime1 = 255;
             }
-            if (var22 > 255) {
-              var22 = 255;
+            if (var22Lifetime1 > 255) {
+              var22Lifetime1 = 255;
             }
-            if (var23 > 255) {
-              var23 = 255;
+            if (var23Lifetime1 > 255) {
+              var23Lifetime1 = 255;
             }
             incrementValue$4 = param2;
             param2++;
-            param0[incrementValue$4] = (var21 << 16) + (var22 << 8) + var23;
-            var19++;
+            param0[incrementValue$4] = (var21Lifetime1 << 16) + (var22Lifetime1 << 8) + var23Lifetime1;
+            var19Lifetime1++;
           }
-          while (var19 < 0) {
+          while (var19Lifetime1 < 0) {
             param1 = param0[var18++];
             var14 = var14 - (param1 >> 16 & 255);
             var15 = var15 - (param1 >> 8 & 255);
             var16 = var16 - (param1 & 255);
             var20--;
-            var21 = var14 / var20;
-            var22 = var15 / var20;
-            var23 = var16 / var20;
-            if (var21 >= 0) {
-              if (var21 > 255) {
-                var21 = 255;
+            var21Lifetime2 = var14 / var20;
+            var22Lifetime2 = var15 / var20;
+            var23Lifetime2 = var16 / var20;
+            if (var21Lifetime2 >= 0) {
+              if (var21Lifetime2 > 255) {
+                var21Lifetime2 = 255;
               }
             } else {
-              var21 = 0;
+              var21Lifetime2 = 0;
             }
-            if (var22 >= 0) {
-              if (var22 > 255) {
-                var22 = 255;
+            if (var22Lifetime2 >= 0) {
+              if (var22Lifetime2 > 255) {
+                var22Lifetime2 = 255;
               }
             } else {
-              var22 = 0;
+              var22Lifetime2 = 0;
             }
-            if (var23 >= 0) {
-              if (var23 > 255) {
-                var23 = 255;
+            if (var23Lifetime2 >= 0) {
+              if (var23Lifetime2 > 255) {
+                var23Lifetime2 = 255;
               }
             } else {
-              var23 = 0;
+              var23Lifetime2 = 0;
             }
             incrementValue$2 = param2;
             param2++;
-            param0[incrementValue$2] = (var21 << 16) + (var22 << 8) + var23;
-            var19++;
+            param0[incrementValue$2] = (var21Lifetime2 << 16) + (var22Lifetime2 << 8) + var23Lifetime2;
+            var19Lifetime1++;
           }
           param2 = param2 + param6;
         }
@@ -1470,6 +1480,11 @@ final class vb {
         int var22Lifetime2;
         int var23Lifetime1;
         int var23Lifetime2;
+        int var20Lifetime3;
+        int var20Lifetime1Lifetime1;
+        int var20Lifetime1Lifetime2;
+        int var20Lifetime2Lifetime1;
+        int var21Lifetime1Lifetime1;
         if (field_g == null ||
               !(field_g.length >= param8)) {
           field_g = new int[param8];
@@ -1540,10 +1555,10 @@ final class vb {
           } else {
             var14 = var14 + field_f;
           }
-          for (var20 = 0; var20 < param8; var20++) {
-            var21 = var27[var20] / var17;
-            var22 = var28[var20] / var17;
-            var23 = var29[var20] / var17;
+          for (var20Lifetime3 = 0; var20Lifetime3 < param8; var20Lifetime3++) {
+            var21 = var27[var20Lifetime3] / var17;
+            var22 = var28[var20Lifetime3] / var17;
+            var23 = var29[var20Lifetime3] / var17;
             incrementValue$6 = param2;
             param2++;
             param0[incrementValue$6] = (var21 << 16) + (var22 << 8) + var23;
@@ -1587,19 +1602,19 @@ final class vb {
             stackIn_44_0[stackIn_44_1] = stackIn_45_2;
           }
           var19 = var19 + param6;
-          for (var20Lifetime1 = 0; var20Lifetime1 < param8; var20Lifetime1++) {
+          for (var20Lifetime1Lifetime1 = 0; var20Lifetime1Lifetime1 < param8; var20Lifetime1Lifetime1++) {
             param1 = param0[var14++];
-            var9[var20Lifetime1] = var9[var20Lifetime1] + (param1 >> 16 & 255);
-            var10[var20Lifetime1] = var10[var20Lifetime1] + (param1 >> 8 & 255);
-            var11[var20Lifetime1] = var11[var20Lifetime1] + (param1 & 255);
+            var9[var20Lifetime1Lifetime1] = var9[var20Lifetime1Lifetime1] + (param1 >> 16 & 255);
+            var10[var20Lifetime1Lifetime1] = var10[var20Lifetime1Lifetime1] + (param1 >> 8 & 255);
+            var11[var20Lifetime1Lifetime1] = var11[var20Lifetime1Lifetime1] + (param1 & 255);
           }
           var14 = var14 + param6;
-          for (var20Lifetime1 = 0; var20Lifetime1 < param8; var20Lifetime1++) {
-            var21Lifetime1 = var27[var20Lifetime1] * var12 >> 14;
-            var22Lifetime1 = var28[var20Lifetime1] * var12 >> 14;
-            var23Lifetime1 = var29[var20Lifetime1] * var12 >> 14;
-            if (var21Lifetime1 > 255) {
-              var21Lifetime1 = 255;
+          for (var20Lifetime1Lifetime2 = 0; var20Lifetime1Lifetime2 < param8; var20Lifetime1Lifetime2++) {
+            var21Lifetime1Lifetime1 = var27[var20Lifetime1Lifetime2] * var12 >> 14;
+            var22Lifetime1 = var28[var20Lifetime1Lifetime2] * var12 >> 14;
+            var23Lifetime1 = var29[var20Lifetime1Lifetime2] * var12 >> 14;
+            if (var21Lifetime1Lifetime1 > 255) {
+              var21Lifetime1Lifetime1 = 255;
             }
             if (var22Lifetime1 > 255) {
               var22Lifetime1 = 255;
@@ -1609,7 +1624,7 @@ final class vb {
             }
             incrementValue$2 = param2;
             param2++;
-            param0[incrementValue$2] = (var21Lifetime1 << 16) + (var22Lifetime1 << 8) + var23Lifetime1;
+            param0[incrementValue$2] = (var21Lifetime1Lifetime1 << 16) + (var22Lifetime1 << 8) + var23Lifetime1;
           }
           param2 = param2 + param6;
           var13Lifetime1++;
@@ -1623,10 +1638,10 @@ final class vb {
           }
           var19 = var19 + param6;
           var17--;
-          for (var20Lifetime2 = 0; var20Lifetime2 < param8; var20Lifetime2++) {
-            var21Lifetime2 = var27[var20Lifetime2] / var17;
-            var22Lifetime2 = var28[var20Lifetime2] / var17;
-            var23Lifetime2 = var29[var20Lifetime2] / var17;
+          for (var20Lifetime2Lifetime1 = 0; var20Lifetime2Lifetime1 < param8; var20Lifetime2Lifetime1++) {
+            var21Lifetime2 = var27[var20Lifetime2Lifetime1] / var17;
+            var22Lifetime2 = var28[var20Lifetime2Lifetime1] / var17;
+            var23Lifetime2 = var29[var20Lifetime2Lifetime1] / var17;
             if (var21Lifetime2 >= 0) {
               if (var21Lifetime2 > 255) {
                 var21Lifetime2 = 255;

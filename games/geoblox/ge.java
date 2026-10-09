@@ -36,6 +36,11 @@ final class ge {
         int var2Lifetime2;
         int var2Lifetime3;
         int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var3Lifetime1Lifetime1;
+        int var3Lifetime1Lifetime2;
+        int var3Lifetime1Lifetime3;
         var6 = Geoblox.field_C;
         if (param0 < 103) {
           return;
@@ -64,23 +69,23 @@ final class ge {
               var4++;
             }
           }
-          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
-            this.field_a[var3Lifetime1] = this.field_k[var3Lifetime1];
+          for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
+            this.field_a[var3Lifetime1Lifetime1] = this.field_k[var3Lifetime1Lifetime1];
           }
           this.field_a[0] = f.a(this.field_a[0], qc.field_h[var2Lifetime2]);
-          for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
-            this.field_k[var3Lifetime1] = this.field_a[var3Lifetime1];
+          for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
+            this.field_k[var3Lifetime1Lifetime2] = this.field_a[var3Lifetime1Lifetime2];
             var7 = 0;
-            var4 = var7;
-            var5 = 56;
+            var4Lifetime1 = var7;
+            var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_k[var3Lifetime1] = f.a(this.field_k[var3Lifetime1], qc.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_k[var3Lifetime1Lifetime2] = f.a(this.field_k[var3Lifetime1Lifetime2], qc.field_g[var7][cd.a(255, (int)(this.field_b[cd.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1))]);
               var7++;
-              var5 -= 8;
+              var5Lifetime1 -= 8;
             }
           }
-          for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
-            this.field_b[var3Lifetime1] = this.field_k[var3Lifetime1];
+          for (var3Lifetime1Lifetime3 = 0; 8 > var3Lifetime1Lifetime3; var3Lifetime1Lifetime3++) {
+            this.field_b[var3Lifetime1Lifetime3] = this.field_k[var3Lifetime1Lifetime3];
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {

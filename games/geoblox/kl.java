@@ -1078,6 +1078,7 @@ final class kl extends ia {
         int var8;
         int var9;
         int var10;
+        int var10Lifetime1;
         if (this.field_u == 0 &&
             this.field_l == 0) {
           this.b(param2);
@@ -1177,10 +1178,10 @@ final class kl extends ia {
                 if (this.field_x < var6) {
                   return;
                 }
-                var10 = (this.field_x - var5) / var8;
-                if (var10 < this.field_v) {
-                  this.field_x = this.field_x - var8 * var10;
-                  this.field_v = this.field_v - var10;
+                var10Lifetime1 = (this.field_x - var5) / var8;
+                if (var10Lifetime1 < this.field_v) {
+                  this.field_x = this.field_x - var8 * var10Lifetime1;
+                  this.field_v = this.field_v - var10Lifetime1;
                   continue;
                 }
                 break;

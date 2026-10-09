@@ -293,6 +293,8 @@ class qk {
         ia var14;
         int var15_int;
         ia var15;
+        int var6Lifetime1;
+        int var9Lifetime1;
         var3 = param1;
         if (field_q) {
           var3 = var3 << 1;
@@ -372,12 +374,12 @@ class qk {
             }
             break;
           }
-          for (var6 = 0; var6 < 8; var6++) {
-            var7 = this.field_a[var6];
+          for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
+            var7 = this.field_a[var6Lifetime1];
             var8 = this.field_a;
-            var9 = var6;
-            this.field_b[var6] = null;
-            var8[var9] = null;
+            var9Lifetime1 = var6Lifetime1;
+            this.field_b[var6Lifetime1] = null;
+            var8[var9Lifetime1] = null;
             while (var7 != null) {
               var10 = ((ia) (var7)).field_h;
               ((ia) (var7)).field_h = null;

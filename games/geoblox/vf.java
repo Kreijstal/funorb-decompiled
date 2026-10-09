@@ -241,6 +241,7 @@ class vf extends hk {
         int var15;
         fb var16;
         int var17;
+        int var8Lifetime1;
         var17 = Geoblox.field_C;
         this.field_F = new tf();
         var2 = 83 / ((param0 - 48) / 55);
@@ -254,7 +255,7 @@ class vf extends hk {
           }
           var8 = this.field_s.indexOf(">", var6);
           var7 = this.field_s.substring(var6 + 9, var8);
-          var8 = Integer.parseInt(var7);
+          var8Lifetime1 = Integer.parseInt(var7);
           var3 = this.field_s.indexOf("</hotspot>", var6);
           var9 = var5.a((byte) 24, var6);
           var10 = var5.a((byte) 24, var3);
@@ -277,7 +278,7 @@ class vf extends hk {
               }
             }
             var15 = stackIn_12_0;
-            var16 = new fb(var8, var14, var13.field_d, var15 - var14, Math.max(var4.a(1), -var13.field_d + var13.field_a));
+            var16 = new fb(var8Lifetime1, var14, var13.field_d, var15 - var14, Math.max(var4.a(1), -var13.field_d + var13.field_a));
             if (var11 != null) {
               ((fb) (var11)).field_h = var16;
             }

@@ -84,6 +84,9 @@ abstract class m extends rc {
         byte[][] var15;
         byte[][] var16;
         int[] var17;
+        int var5_intLifetime1;
+        int var8Lifetime1;
+        int var8Lifetime2;
         this.field_v = new int[256];
         if (param0.length == 257) {
           for (var2 = 0; var2 < this.field_v.length; var2++) {
@@ -108,10 +111,10 @@ abstract class m extends rc {
             var2++;
             var3[var5_int] = param0[incrementValue$5] & 255;
           }
-          for (var5_int = 0; var5_int < 256; var5_int++) {
+          for (var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
             incrementValue$4 = var2;
             var2++;
-            var4[var5_int] = param0[incrementValue$4] & 255;
+            var4[var5_intLifetime1] = param0[incrementValue$4] & 255;
           }
           var15 = new byte[256][];
           var11 = var15;
@@ -133,12 +136,12 @@ abstract class m extends rc {
           for (var7 = 0; var7 < 256; var7++) {
             array$0 = new byte[var14[var7]];
             var6[var7] = array$0;
-            var8 = 0;
+            var8Lifetime1 = 0;
             for (var9 = 0; var9 < var16[var7].length; var9++) {
               incrementValue$1 = var2;
               var2++;
-              var8 = (byte)(var8 + param0[incrementValue$1]);
-              var16[var7][var9] = (byte)var8;
+              var8Lifetime1 = (byte)(var8Lifetime1 + param0[incrementValue$1]);
+              var16[var7][var9] = (byte)var8Lifetime1;
             }
           }
           this.field_x = new byte[65536];
@@ -156,14 +159,14 @@ abstract class m extends rc {
               var7++;
               continue;
             }
-            for (var8 = 0; var8 < 256; var8++) {
-              if (var8 == 32) {
+            for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
+              if (var8Lifetime2 == 32) {
                 continue;
               }
-              if (var8 == 160) {
+              if (var8Lifetime2 == 160) {
                 continue;
               }
-              this.field_x[(var7 << 8) + var8] = (byte)m.a(var15, var16, var17, this.field_v, var14, var7, var8);
+              this.field_x[(var7 << 8) + var8Lifetime2] = (byte)m.a(var15, var16, var17, this.field_v, var14, var7, var8Lifetime2);
             }
             var7++;
           }

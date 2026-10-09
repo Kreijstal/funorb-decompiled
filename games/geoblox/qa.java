@@ -339,6 +339,10 @@ final class qa {
         float var1Lifetime6;
         float var1Lifetime7;
         float var1Lifetime8;
+        float var1Lifetime2Lifetime1;
+        float var1Lifetime2Lifetime2;
+        float var1Lifetime2Lifetime3;
+        float var1Lifetime2Lifetime4;
         var2 = Geoblox.field_C;
         if (param0 < 72) {
           return;
@@ -434,7 +438,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$19 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$19 > 0) {
@@ -443,7 +447,7 @@ final class qa {
             fieldTemp$20 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$20 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2Lifetime1) << 8) + (r.field_ub + ((int)(var1Lifetime2Lifetime1 * md.field_b) << 16) + (int)(var1Lifetime2Lifetime1 * uk.field_j));
             }
             return;
           }
@@ -454,7 +458,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$25 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$25 > 0) {
@@ -463,7 +467,7 @@ final class qa {
             fieldTemp$26 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$26 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2Lifetime2 * uk.field_j));
             }
             return;
           }
@@ -474,7 +478,7 @@ final class qa {
             if (gi.field_e % 600 < 30) {
               uf.field_b = ka.field_h + 0;
             }
-            var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime2Lifetime3 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$21 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$21 > 0) {
@@ -483,7 +487,7 @@ final class qa {
             fieldTemp$22 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$22 > 0) {
-              rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
+              rj.field_c = ((int)(fe.field_c * var1Lifetime2Lifetime3) << 8) + (r.field_ub + ((int)(var1Lifetime2Lifetime3 * md.field_b) << 16) + (int)(var1Lifetime2Lifetime3 * uk.field_j));
             }
             return;
           }
@@ -494,7 +498,7 @@ final class qa {
           if (gi.field_e % 600 < 30) {
             uf.field_b = ka.field_h + 0;
           }
-          var1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+          var1Lifetime2Lifetime4 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
           fieldTemp$23 = wa.field_a;
           wa.field_a = wa.field_a - 1;
           if (fieldTemp$23 > 0) {
@@ -503,7 +507,7 @@ final class qa {
           fieldTemp$24 = jf.field_j;
           jf.field_j = jf.field_j - 1;
           if (fieldTemp$24 > 0) {
-            rj.field_c = ((int)(fe.field_c * var1Lifetime2) << 8) + (r.field_ub + ((int)(var1Lifetime2 * md.field_b) << 16) + (int)(var1Lifetime2 * uk.field_j));
+            rj.field_c = ((int)(fe.field_c * var1Lifetime2Lifetime4) << 8) + (r.field_ub + ((int)(var1Lifetime2Lifetime4 * md.field_b) << 16) + (int)(var1Lifetime2Lifetime4 * uk.field_j));
           }
           return;
         }

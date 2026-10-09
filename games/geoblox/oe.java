@@ -427,6 +427,8 @@ abstract class oe extends dd {
         int var8Lifetime2;
         int var9Lifetime1;
         int var9Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var16 = Geoblox.field_C;
         vb.d(param0 + 6, param2 + 35, -12 + this.field_r, -40 + this.field_h, 2105376, 0);
         var5 = 211;
@@ -465,13 +467,13 @@ abstract class oe extends dd {
             }
           }
           if (20 >= var7) {
-            var12 = var11;
+            var12Lifetime1 = var11;
             var11 -= 21;
-            for (var13 = 0; var13 <= 20; var13++) {
-              var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
+            for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+              var14 = (-var7 + 20) * (-var7 + 20) + var13Lifetime1 * var13Lifetime1;
               if (var14 <= 462) {
                 if (var14 < 420) {
-                  var12 = var11 + 1;
+                  var12Lifetime1 = var11 + 1;
                   var11++;
                   continue;
                 }
@@ -483,7 +485,7 @@ abstract class oe extends dd {
               }
               break;
             }
-            var11 = var12;
+            var11 = var12Lifetime1;
           }
           var9 = var9 | (var9 << 16 | var9 << 8);
           vb.c(var10 + param0, var8, var11 - var10, var9);

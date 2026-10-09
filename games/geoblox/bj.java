@@ -426,6 +426,8 @@ final class bj extends nh {
         int var5;
         hf var6;
         hf var7;
+        int var2_intLifetime1;
+        int var4Lifetime1;
         L0: {
           L1: {
             L2: {
@@ -479,15 +481,15 @@ final class bj extends nh {
                     break L3;
                   }
                   if (this.field_v) {
-                    var2_int = 1;
+                    var2_intLifetime1 = 1;
                     var3 = this.field_d.g(0);
                     while (var3 != null) {
-                      var4 = (int)var3.field_a;
-                      if (this.field_k[var4] != 1) {
-                        discarded$3 = this.a((byte) -71, 2, var4);
+                      var4Lifetime1 = (int)var3.field_a;
+                      if (this.field_k[var4Lifetime1] != 1) {
+                        discarded$3 = this.a((byte) -71, 2, var4Lifetime1);
                       }
-                      if (this.field_k[var4] != 1) {
-                        var2_int = 0;
+                      if (this.field_k[var4Lifetime1] != 1) {
+                        var2_intLifetime1 = 0;
                       } else {
                         var3.a(false);
                       }
@@ -497,7 +499,7 @@ final class bj extends nh {
                       if (this.field_o < this.field_u.field_a.length) {
                         if (this.field_u.field_a[this.field_o] != 0) {
                           if (this.field_f.b(-21)) {
-                            var2_int = 0;
+                            var2_intLifetime1 = 0;
                             break L13;
                           }
                           if (this.field_k[this.field_o] != 1) {
@@ -506,7 +508,7 @@ final class bj extends nh {
                           if (this.field_k[this.field_o] != 1) {
                             var6 = new hf();
                             var6.field_a = (long)this.field_o;
-                            var2_int = 0;
+                            var2_intLifetime1 = 0;
                             this.field_d.a(-97, var6);
                           }
                         }
@@ -515,7 +517,7 @@ final class bj extends nh {
                       }
                       break;
                     }
-                    if (var2_int != 0) {
+                    if (var2_intLifetime1 != 0) {
                       this.field_v = false;
                       this.field_o = 0;
                       break L3;
