@@ -203,7 +203,7 @@ class UiWidget extends IntrusiveNode {
 
     final boolean processPointerFrame(boolean pointerEventsAvailable, int methodGuard, int parentX, int parentY) {
         int focusFlag;
-        DraggableWidget releasedDragWidgetAlias;
+        DraggableWidget releasedDragWithWheelAndNoPressAlias;
         int clientControlFlowSnapshot;
         DraggableWidget releasedDragWithoutPressOrWheel;
         DraggableWidget releasedDragAfterRejectedPressWithoutFocusOrWheel;
@@ -215,6 +215,7 @@ class UiWidget extends IntrusiveNode {
         DraggableWidget releasedDragAfterRejectedPressWithWheel;
         DraggableWidget releasedDragAfterPressWithWheel;
         DraggableWidget dragReleaseTargetAlias;
+        DraggableWidget releasedDragAfterPressWithWheelAlias;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard <= 126) {
           return true;
@@ -315,7 +316,7 @@ class UiWidget extends IntrusiveNode {
                 0 != FullscreenErrorDialog.previousUiPointerButton) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithWheelAndNoPress = ValidationState.activeDragWidget;
-              releasedDragWidgetAlias = releasedDragWithWheelAndNoPress;
+              releasedDragWithWheelAndNoPressAlias = releasedDragWithWheelAndNoPress;
               if (releasedDragWithWheelAndNoPress != null) {
                 if (releasedDragWithWheelAndNoPress.listener instanceof DropListener) {
                   ((DropListener) ((Object) releasedDragWithWheelAndNoPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithWheelAndNoPress, 22176);
@@ -351,7 +352,7 @@ class UiWidget extends IntrusiveNode {
           }
           this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
           releasedDragAfterPressWithWheel = ValidationState.activeDragWidget;
-          releasedDragWidgetAlias = releasedDragAfterPressWithWheel;
+          releasedDragAfterPressWithWheelAlias = releasedDragAfterPressWithWheel;
           if (releasedDragAfterPressWithWheel != null) {
             if (releasedDragAfterPressWithWheel.listener instanceof DropListener) {
               ((DropListener) ((Object) releasedDragAfterPressWithWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithWheel, 22176);

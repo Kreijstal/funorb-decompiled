@@ -88,7 +88,7 @@ final class BoardReconciliationSupport {
         double radialVelocityScale = 0.0;
         int componentNeighborIndex = 0;
         GameplayEntity entityForComponentCategoryReset = null;
-        GameplayEntity neighborThenCountResetEntity = null;
+        GameplayEntity connectivityNeighbor = null;
         int relatedEntityIndex = 0;
         GameplayEntity componentSearchEntity = null;
         int clientControlSnapshot = 0;
@@ -103,6 +103,7 @@ final class BoardReconciliationSupport {
         GameplayEntity detachingComponentEntity;
         GameplayEntity routedEntityForCategoryReset;
         GameplayEntity routedEntityForVariantReset;
+        GameplayEntity detachingEntityForVariantReset;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           MessageDialogSupport.entitiesDetachedThisTick = false;
@@ -167,13 +168,13 @@ final class BoardReconciliationSupport {
                           visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
                           componentNeighborIndex = 0;
                           while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
-                            neighborThenCountResetEntity = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
+                            connectivityNeighbor = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
                             visitedNeighborSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
                             componentSearchEntity = visitedNeighborSearchStart;
                             enqueueUnseenNeighbor: while (true) {
                               if (componentSearchEntity != null) {
                                 comparisonEntity = componentSearchEntity;
-                                neighborForConnectivityComparison = neighborThenCountResetEntity;
+                                neighborForConnectivityComparison = connectivityNeighbor;
                                 if (comparisonEntity != neighborForConnectivityComparison) {
                                   componentSearchEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.nextForIteration(-45));
                                   continue;
@@ -182,13 +183,13 @@ final class BoardReconciliationSupport {
                                 componentSearchEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.firstForIteration((byte) 121));
                                 while (componentSearchEntity != null) {
                                   comparisonEntity = componentSearchEntity;
-                                  neighborForConnectivityComparison = neighborThenCountResetEntity;
+                                  neighborForConnectivityComparison = connectivityNeighbor;
                                   if (comparisonEntity == neighborForConnectivityComparison) {
                                     break enqueueUnseenNeighbor;
                                   }
                                   componentSearchEntity = (GameplayEntity) ((Object) pendingConnectivityEntities.nextForIteration(54));
                                 }
-                                pendingConnectivityEntities.addFirst(neighborThenCountResetEntity, false);
+                                pendingConnectivityEntities.addFirst(connectivityNeighbor, false);
                               }
                               break;
                             }
@@ -216,10 +217,10 @@ final class BoardReconciliationSupport {
                           componentNeighborIndex++;
                         }
                         entityForComponentCategoryReset = detachingComponentEntity;
-                        neighborThenCountResetEntity = detachingComponentEntity;
+                        detachingEntityForVariantReset = detachingComponentEntity;
                         detachingComponentEntity.relatedEntityCount = 0;
                         entityForComponentCategoryReset.sameCategoryEntityCount = 0;
-                        neighborThenCountResetEntity.sameVariantEntityCount = 0;
+                        detachingEntityForVariantReset.sameVariantEntityCount = 0;
                         detachingComponentEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
                       }
                       break;

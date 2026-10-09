@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "626be757181bf3183a28c54bc44d5fbbf9401edf",
+      "commit": "94697aa4c0c1e51ac75120577c633dfdb22e4df7",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "f40de094559b7e200092a0400cd5dac847decc2e5e4af0e4b6af0594b85ae04b",
-        "reproduce": "git archive --format=tar 626be757181bf3183a28c54bc44d5fbbf9401edf | sha256sum",
+        "sha256": "f7c04f521e715d39807639045c40858287f87139340cc38d7f145746e174088e",
+        "reproduce": "git archive --format=tar 94697aa4c0c1e51ac75120577c633dfdb22e4df7 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -22,7 +22,8 @@
         "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
         "CFR_JS_FINAL_LOCAL_GUARDS": "1",
         "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
-        "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1"
+        "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+        "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1"
       }
     },
     "namingTool": {
@@ -102,7 +103,8 @@
       "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
       "CFR_JS_FINAL_LOCAL_GUARDS": "1",
       "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
-      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1"
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1"
     }
   },
   "freshVerification": {
@@ -127,9 +129,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "30c8dc3f8cd35379686b5a6405cbc7fccef0336f1d605f88e1ff5c8c081b1c23",
-  "previousSourceTreeSha256": "734140532f86c40c178819085a4b231cae5cbbc4f1331930cfd8d6ec5ca51167",
-  "changedJavaFiles": 26,
+  "sourceTreeSha256": "b51738b5d7d03f8f5b642b220eaaed2fe47f760116fe791f53d61763289f63c8",
+  "previousSourceTreeSha256": "30c8dc3f8cd35379686b5a6405cbc7fccef0336f1d605f88e1ff5c8c081b1c23",
+  "changedJavaFiles": 2,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3297,11 +3299,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "b08d3ad84e62cccff56cb021b0e4e70547b5317a",
+    "commit": "66fdb40ec656ef51db6baf4f4ab82eeb510559c4",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "04b7d6ffb6c3fcc0af0d11a977d83b7d77b05dd3ce32266d7ada45f7402f8203"
+      "sha256": "5803ac54b009f527c21107cc68225223e35403a82790434c3ce4bff7cfaf4cc1"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3311,15 +3313,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "4a6c633e719d26e74248b9ef6cd6ec7f503e6949b2a0a51144bd64fa9d4b4113",
+    "outputTreeSha256": "c78c1fa76c71e77eabd786f491867d5c37f3827c6aa851df598e88d788b2007a",
     "files": 303,
-    "rules": 19656,
-    "identifierEdits": 121411,
-    "bindingsCompared": 137650,
+    "rules": 19658,
+    "identifierEdits": 121415,
+    "bindingsCompared": 137654,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 121845,
+    "totalEdits": 121849,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 423,
@@ -3341,8 +3343,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 230,
-    "semanticPass": 230
+    "structuralPass": 231,
+    "semanticPass": 231
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -28087,5 +28089,124 @@
     "allUnaffectedCompleteNamingRulesPreserved": true,
     "sourceWorkflowCommit": "b08d3ad84e62cccff56cb021b0e4e70547b5317a",
     "sourceProofWorkflowCommit": "b08d3ad84e62cccff56cb021b0e4e70547b5317a"
+  },
+  "nestedReferenceLocalLifetimeRecovery": {
+    "version": 231,
+    "nestedReferenceLifetimes": true,
+    "changedJavaFiles": 2,
+    "changedMethodBodies": 2,
+    "localsSplit": 2,
+    "declarationsAdded": 2,
+    "firstPhaseNamesRefined": 2,
+    "sourceProofTest": "readable/tests/test-geoblox-reference-lifetimes-source.mjs",
+    "sourceProofTestSha256": "0c12712cdd60d4ed95b3867b09c6701e8c26221f76af3d725bc7445add632c8d",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "fc3252abf6c7292532267b30940c8828aebb656b",
+    "sourceCommit": "23b0cc0a940826d81f8f79ce2c7037cfbecbe3a1",
+    "previousSourceTreeSha256": "30c8dc3f8cd35379686b5a6405cbc7fccef0336f1d605f88e1ff5c8c081b1c23",
+    "sourceTreeSha256": "b51738b5d7d03f8f5b642b220eaaed2fe47f760116fe791f53d61763289f63c8",
+    "javaToolsCommit": "94697aa4c0c1e51ac75120577c633dfdb22e4df7",
+    "sourceArchiveSha256": "f7c04f521e715d39807639045c40858287f87139340cc38d7f145746e174088e",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1"
+    },
+    "bindingsBefore": 137650,
+    "bindingsCompared": 137654,
+    "transfersCompared": 4941,
+    "originalIdentityMigrations": [
+      {
+        "before": "L:kc.b(I)V#47",
+        "after": "L:kc.b(I)V#48"
+      },
+      {
+        "before": "L:kc.b(I)V#48",
+        "after": "L:kc.b(I)V#49"
+      },
+      {
+        "before": "L:kc.b(I)V#49",
+        "after": "L:kc.b(I)V#50"
+      }
+    ],
+    "originalNullInitializersPreserved": true,
+    "allOriginalBindingsAndProtectedTransfersPreserved": true,
+    "newReferencesIndependentlyTypedAndDefinitelyAssigned": true,
+    "loopIncomingValuesRetained": true,
+    "rootReferenceOutputsUnchangedBySafetyFix": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 18,
+    "genericReferenceTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 11200,
+    "previousReferenceOracleCasesReverified": 192000,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "stableDictionaryIdentities": 19965,
+    "readableIdentifierEdits": 121415,
+    "readableTotalEdits": 121849,
+    "remainingLargeFramedMethods": 4,
+    "plainBlockLabelsAfter": 77,
+    "remainingUnresolvedFieldPurposes": 41,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "An initial reference split exposes independent roles inside one nested block. Every new phase assigns its value independently before each read, including each loop iteration. A root null initializer cannot justify an incoming read in a loop body. Preserve original null initializers, all assignments/calls, object identity, types, protected boundaries and every original binding occurrence under explicit phase/ordinal maps. Only exact new uninitialized declarations and independently bound identifier replacements are allowed.",
+    "changedMethods": [
+      {
+        "file": "el.java",
+        "methodStart": 6394,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var6",
+            "type": "la",
+            "resolvedType": "la",
+            "initialized": false,
+            "groups": 2,
+            "symbol": "L:el.a(ZIII)Z#1",
+            "newNames": [
+              "var6Lifetime2"
+            ],
+            "newSymbols": [
+              "L:el.a(ZIII)Z#13"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1860,
+        "localsSplit": 1,
+        "declarationsAdded": 1,
+        "locals": [
+          {
+            "name": "var7",
+            "type": "ja",
+            "resolvedType": "ja",
+            "initialized": true,
+            "groups": 2,
+            "symbol": "L:kc.b(I)V#32",
+            "newNames": [
+              "var7Lifetime2"
+            ],
+            "newSymbols": [
+              "L:kc.b(I)V#47"
+            ]
+          }
+        ]
+      }
+    ],
+    "sourceWorkflowCommit": "66fdb40ec656ef51db6baf4f4ab82eeb510559c4",
+    "sourceProofWorkflowCommit": "66fdb40ec656ef51db6baf4f4ab82eeb510559c4"
   }
 }
