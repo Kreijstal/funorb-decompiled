@@ -101,6 +101,7 @@ final class ui {
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
+        int var2Lifetime1;
         this.field_d = ua.b(16);
         this.field_c = ua.b(24);
         this.field_b = ua.b(24);
@@ -119,7 +120,7 @@ final class ui {
         }
         this.field_g = new int[this.field_e * 8];
         int var6 = 0;
-        var2 = var6;
+        var2Lifetime1 = var6;
         while (var6 < this.field_e * 8) {
             this.field_g[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? ua.b(8) : -1;
             var6++;

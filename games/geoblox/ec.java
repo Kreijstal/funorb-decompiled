@@ -53,6 +53,11 @@ final class ec {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        int var1_intLifetime1;
+        int var2Lifetime1;
+        int var3Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var11 = Geoblox.field_C;
         try {
           if (0 == h.field_a &&
@@ -96,17 +101,17 @@ final class ec {
             ec.b(-33);
           }
           var12 = 0;
-          var1_int = var12;
+          var1_intLifetime1 = var12;
           while (var12 < h.field_a) {
             if (-1 + h.field_a > var12 &&
                 nk.field_f[var12] == nk.field_f[var12 + 1]) {
               nk.field_f[var12] = 0;
             } else {
-              var2 = (nk.field_f[var12] & 1072693248) >> 20;
-              var3 = nk.field_f[var12] >> 10 & 1023;
+              var2Lifetime1 = (nk.field_f[var12] & 1072693248) >> 20;
+              var3Lifetime1 = nk.field_f[var12] >> 10 & 1023;
               var4 = 1023 & nk.field_f[var12];
-              var5 = tl.field_g[var2];
-              var6 = tl.field_g[var3];
+              var5 = tl.field_g[var2Lifetime1];
+              var6 = tl.field_g[var3Lifetime1];
               var7 = tl.field_g[var4];
               if (var5.field_E <= 0 &&
                   var6.field_E <= 0 &&
@@ -123,10 +128,10 @@ final class ec {
                   var8 = 30 * gf.field_f;
                 }
                 var9 = 0;
-                var9 = (int)var5.field_o;
+                var9Lifetime1 = (int)var5.field_o;
                 var10 = 0;
-                var10 = (int)var5.field_v;
-                ug.a(var8, true, var10, gf.field_f, var9);
+                var10Lifetime1 = (int)var5.field_v;
+                ug.a(var8, true, var10Lifetime1, gf.field_f, var9Lifetime1);
                 nk.field_f[var12] = 0;
               } else {
                 var8_ref_ja = var5;

@@ -77,6 +77,8 @@ abstract class ha {
         int var8 = 0;
         int var9 = 0;
         int var13 = Geoblox.field_C;
+        int var8Lifetime1;
+        int var9Lifetime1;
         try {
             id.field_c = wj.a("frame_top", "commonui", param2, 0);
             fh.field_e = wj.a("frame_bottom", "commonui", param2, 0);
@@ -100,10 +102,10 @@ abstract class ha {
             for (var8 = 1; var20.length > var8; var8++) {
                 var7[var8] = (int[]) ((Object) var20[0].clone());
             }
-            var8 = var5[0].field_i[0];
-            var20[2][var8] = 16777215;
-            var20[1][var8] = 2394342;
-            var20[3][var8] = 4767999;
+            var8Lifetime1 = var5[0].field_i[0];
+            var20[2][var8Lifetime1] = 16777215;
+            var20[1][var8Lifetime1] = 2394342;
+            var20[3][var8Lifetime1] = 4767999;
             for (var9 = 0; var9 < 3; var9++) {
                 var15 = var6[var9];
                 na[] var10 = var15;
@@ -111,7 +113,7 @@ abstract class ha {
                     var15[var11_int] = ha.a(-84, var20[var11_int], var5[var9]);
                 }
             }
-            var9 = var18.field_m;
+            var9Lifetime1 = var18.field_m;
             oc.b(-105);
             if (param0 <= 98) {
                 na var14 = (na) null;
@@ -119,16 +121,16 @@ abstract class ha {
             }
             var18.e();
             vb.a(0, 0, vb.field_f, vb.field_b);
-            var16 = new dm(var9, var9);
+            var16 = new dm(var9Lifetime1, var9Lifetime1);
             var19 = var16;
             var19.e();
             var18.c(0, 0);
-            var11 = new dm(var9, var9);
+            var11 = new dm(var9Lifetime1, var9Lifetime1);
             var11.e();
-            var18.c(var9 - var18.field_r, 0);
-            var12 = new dm(var18.field_r - 2 * var9, var9);
+            var18.c(var9Lifetime1 - var18.field_r, 0);
+            var12 = new dm(var18.field_r - 2 * var9Lifetime1, var9Lifetime1);
             var12.e();
-            var18.c(-var9, 0);
+            var18.c(-var9Lifetime1, 0);
             id.a(true);
             vk.field_e = new dm[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {

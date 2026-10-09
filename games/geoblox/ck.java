@@ -43,6 +43,16 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         nf var17 = null;
+        int var3Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        double var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var15Lifetime1;
         var19 = Geoblox.field_C;
         try {
           am.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
@@ -65,30 +75,30 @@ final class ck {
             var13 = var10_int * lk.field_f[11] + (var8 * lk.field_f[9] + lk.field_f[10] * var9) >> 14;
             var2[var3] = var5 * var11 + var12 * var6 + var13 * var7 >> 16;
           }
-          var3 = am.field_a[9] >> 8;
+          var3Lifetime1 = am.field_a[9] >> 8;
           var4 = am.field_a[10] >> 8;
-          var5 = am.field_a[11] >> 8;
-          var6 = gb.field_f << 4;
-          var7 = 0;
-          var8 = bh.a((byte) 81, var6) >> 8;
-          var9 = fi.a(var6, 2048) >> 8;
+          var5Lifetime1 = am.field_a[11] >> 8;
+          var6Lifetime1 = gb.field_f << 4;
+          var7Lifetime1 = 0;
+          var8Lifetime1 = bh.a((byte) 81, var6Lifetime1) >> 8;
+          var9Lifetime1 = fi.a(var6Lifetime1, 2048) >> 8;
           if (qa.field_a != -1 &&
               ue.field_e != -1) {
-            var7 = -320 + qa.field_a;
-            var9 = -128;
-            var8 = -ue.field_e + 240;
+            var7Lifetime1 = -320 + qa.field_a;
+            var9Lifetime1 = -128;
+            var8Lifetime1 = -ue.field_e + 240;
           }
-          var10 = 256.0 / Math.sqrt((double)(var8 * var8 + (var7 * var7 + var9 * var9)));
-          var8 = (int)((double)var8 * var10);
-          var7 = (int)((double)var7 * var10);
-          var9 = (int)((double)var9 * var10);
-          var12 = var7 - var3;
-          var13 = var8 - var4;
-          var14 = -var5 + var9;
-          var10 = 256.0 / Math.sqrt((double)(var14 * var14 + (var13 * var13 + var12 * var12)));
-          var14 = (int)((double)var14 * var10);
-          var12 = (int)((double)var12 * var10);
-          var13 = (int)((double)var13 * var10);
+          var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + (var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1)));
+          var8Lifetime1 = (int)((double)var8Lifetime1 * var10);
+          var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
+          var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
+          var12Lifetime1 = var7Lifetime1 - var3Lifetime1;
+          var13Lifetime1 = var8Lifetime1 - var4;
+          var14 = -var5Lifetime1 + var9Lifetime1;
+          var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + (var13Lifetime1 * var13Lifetime1 + var12Lifetime1 * var12Lifetime1)));
+          var14 = (int)((double)var14 * var10Lifetime1);
+          var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
+          var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           for (var15 = 0; bm.field_l.length > var15; var15++) {
             var16 = 0;
             for (var17_int = 1; bm.field_l.length > var17_int; var17_int++) {
@@ -104,9 +114,9 @@ final class ck {
               lk.field_f[var18] = lk.field_f[var18] + pi.field_R[var15][var18];
             }
             p.a(am.field_a, lk.field_f, var17, true, false, false, true);
-            hi.a(var14, var9, var12, 6562, var7, var17, var13, var8);
+            hi.a(var14, var9Lifetime1, var12Lifetime1, 6562, var7Lifetime1, var17, var13Lifetime1, var8Lifetime1);
           }
-          var15 = 123 / ((48 - param0) / 59);
+          var15Lifetime1 = 123 / ((48 - param0) / 59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

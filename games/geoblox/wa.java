@@ -176,6 +176,8 @@ final class wa {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        int var11Lifetime1;
+        int var13Lifetime1;
         var15 = Geoblox.field_C;
         try {
           var5_int = this.field_e + this.field_d;
@@ -202,10 +204,10 @@ final class wa {
               var13 = var9 / var8;
               var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
             }
-            var11 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
+            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
             var9 = 0;
-            var10 = var10 + (var11 - 1) * var7;
-            for (var13 = 0; var13 < var11; var13++) {
+            var10 = var10 + (var11Lifetime1 - 1) * var7;
+            for (var13 = 0; var13 < var11Lifetime1; var13++) {
               var14 = this.field_m.a(dd.field_E[var13]);
               if (var14 <= var9) {
                 continue;
@@ -217,13 +219,13 @@ final class wa {
           if (var5_int + var9 + var12 > vb.field_f) {
             var12 = -var5_int + (vb.field_f - var9);
           }
-          var13 = 32 + (-this.field_m.field_y + param0);
-          if (vb.field_b < var10 + (var13 + var6)) {
-            var13 = param0 - var10 - var6;
+          var13Lifetime1 = 32 + (-this.field_m.field_y + param0);
+          if (vb.field_b < var10 + (var13Lifetime1 + var6)) {
+            var13Lifetime1 = param0 - var10 - var6;
           }
-          vb.d(var12, var13, var5_int + var9, var10 + var6, this.field_n);
-          vb.a(1 + var12, 1 + var13, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
-          this.field_m.a(param1, this.field_d + var12, this.field_i + var13, var9, var10, this.field_k, -1, 0, 0, var7);
+          vb.d(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_n);
+          vb.a(1 + var12, 1 + var13Lifetime1, var9 + (var5_int - 2), -2 + (var10 + var6), this.field_f);
+          this.field_m.a(param1, this.field_d + var12, this.field_i + var13Lifetime1, var9, var10, this.field_k, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

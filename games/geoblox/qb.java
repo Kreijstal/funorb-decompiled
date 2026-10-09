@@ -52,16 +52,17 @@ final class qb extends hk {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
+        int var8_intLifetime1;
         var12 = Geoblox.field_C;
         try {
           if (!super.a(param0, -52, param2, param3, param4, param5, param6)) {
             var8_int = 35 % ((-3 - param1) / 38);
             return false;
           }
-          var8_int = -this.field_E - (this.field_v + (param2 - param4));
+          var8_intLifetime1 = -this.field_E - (this.field_v + (param2 - param4));
           var9 = param5 - (this.field_m + param0 + this.field_O);
-          if (var8_int * var8_int + var9 * var9 < this.field_K * this.field_K) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - q.field_f;
+          if (var8_intLifetime1 * var8_intLifetime1 + var9 * var9 < this.field_K * this.field_K) {
+            var10 = Math.atan2((double)var9, (double)var8_intLifetime1) - q.field_f;
             if (!(var10 < 0.0)) {
               if (0.0 < var10) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_H;

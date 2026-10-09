@@ -17,6 +17,12 @@ final class md {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        int var4Lifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
         ul.field_c.setTime(new Date(param1));
         int var3 = ul.field_c.get(7);
         if (param0 <= -43) {
@@ -29,13 +35,13 @@ final class md {
             return ji.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mb.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         md.a((byte) -70, -99L);
-        var4 = ul.field_c.get(5);
-        var5 = ul.field_c.get(2);
-        var6 = ul.field_c.get(1);
-        var7 = ul.field_c.get(11);
-        var8 = ul.field_c.get(12);
-        var9 = ul.field_c.get(13);
-        return ji.field_a[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + mb.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        var4Lifetime1 = ul.field_c.get(5);
+        var5Lifetime1 = ul.field_c.get(2);
+        var6Lifetime1 = ul.field_c.get(1);
+        var7Lifetime1 = ul.field_c.get(11);
+        var8Lifetime1 = ul.field_c.get(12);
+        var9Lifetime1 = ul.field_c.get(13);
+        return ji.field_a[-1 + var3] + ", " + var4Lifetime1 / 10 + var4Lifetime1 % 10 + "-" + mb.field_a[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
     public static void a(byte param0) {

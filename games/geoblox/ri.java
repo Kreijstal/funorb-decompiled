@@ -33,6 +33,9 @@ final class ri {
             String var10 = null;
             String var11 = null;
             CharSequence var12 = null;
+            int var6_intLifetime1;
+            int var6_intLifetime2;
+            int var8Lifetime1;
             var9 = Geoblox.field_C;
             try {
               if (null == oc.field_e &&
@@ -79,20 +82,20 @@ final class ri {
               L6: {
                 if (da.field_g == pk.field_l &&
                     el.b(30000, 1)) {
-                  var6_int = eh.field_d.c((byte) 34);
+                  var6_intLifetime1 = eh.field_d.c((byte) 34);
                   eh.field_d.field_f = 0;
                   fl.field_b = null;
-                  me.field_l = var6_int;
-                  if (var6_int != 0 &&
-                      var6_int != 1) {
-                    if (var6_int != 8) {
+                  me.field_l = var6_intLifetime1;
+                  if (var6_intLifetime1 != 0 &&
+                      var6_intLifetime1 != 1) {
+                    if (var6_intLifetime1 != 8) {
                       pk.field_l = ac.field_v;
                       p.field_k = -1;
                       break L6;
                     }
                     jl.a((byte) -116);
                     ck.field_e = false;
-                    stackIn_33_0 = var6_int;
+                    stackIn_33_0 = var6_intLifetime1;
                     return stackIn_33_0;
                   }
                   p.field_k = -1;
@@ -164,8 +167,8 @@ final class ri {
                   rb.field_c = true;
                 }
                 fj.field_q.a(hl.field_D, false);
-                for (var8 = 0; var8 < 4; var8++) {
-                  hl.field_D[var8] = hl.field_D[var8] + 50;
+                for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
+                  hl.field_D[var8Lifetime1] = hl.field_D[var8Lifetime1] + 50;
                 }
                 eh.field_d.a(hl.field_D, false);
                 stackIn_78_0 = me.field_l;
@@ -199,9 +202,9 @@ final class ri {
                   stackIn_99_0 = 3;
                   return stackIn_99_0;
                 }
-                var6_int = sd.field_x;
+                var6_intLifetime2 = sd.field_x;
                 sd.field_x = ac.field_s;
-                ac.field_s = var6_int;
+                ac.field_s = var6_intLifetime2;
                 ck.field_e = true;
               }
               stackIn_102_0 = -1;

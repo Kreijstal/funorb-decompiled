@@ -128,6 +128,9 @@ final class r extends f implements pl {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
+        int var5Lifetime1;
         var6 = Geoblox.field_C;
         try {
           var2_int = param0.length();
@@ -161,25 +164,25 @@ final class r extends f implements pl {
             }
             return null;
           }
-          var3 = 0;
-          for (var4 = 0; var4 < var2_int; var4++) {
+          var3Lifetime1 = 0;
+          for (var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
             L1: {
-              var5 = param0.charAt(var4);
-              if (var5 == 46) {
-                if (0 != var4 &&
-                    var4 != -1 + var2_int &&
-                    var3 == 0) {
-                  var3 = 1;
+              var5Lifetime1 = param0.charAt(var4Lifetime1);
+              if (var5Lifetime1 == 46) {
+                if (0 != var4Lifetime1 &&
+                    var4Lifetime1 != -1 + var2_int &&
+                    var3Lifetime1 == 0) {
+                  var3Lifetime1 = 1;
                   break L1;
                 }
                 stackIn_41_0 = ii.field_h;
                 return stackIn_41_0;
               }
-              if (rd.field_w.indexOf(var5) == -1) {
+              if (rd.field_w.indexOf(var5Lifetime1) == -1) {
                 stackIn_46_0 = ii.field_h;
                 return stackIn_46_0;
               }
-              var3 = 0;
+              var3Lifetime1 = 0;
             }
           }
           if (param1) {

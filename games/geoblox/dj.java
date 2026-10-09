@@ -220,6 +220,7 @@ class dj extends hk {
         int var8_int = 0;
         long var8_long = 0L;
         RuntimeException var8 = null;
+        int var8_intLifetime1;
         try {
           if (super.a(param0, 104, param2, param3, param4, param5, param6) &&
               this.field_q instanceof cc) {
@@ -245,7 +246,7 @@ class dj extends hk {
             this.field_P = var8_long;
             return true;
           }
-          var8_int = 70 / ((param1 + 3) / 38);
+          var8_intLifetime1 = 70 / ((param1 + 3) / 38);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

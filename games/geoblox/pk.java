@@ -85,6 +85,7 @@ final class pk extends qc {
         RuntimeException var2 = null;
         gd var3 = null;
         int var4 = 0;
+        int var2_intLifetime1;
         try {
           var2_int = 0;
           if (param0 >= -117) {
@@ -108,7 +109,7 @@ final class pk extends qc {
             var2_int++;
           }
           var4 = 0;
-          var2_int = var4;
+          var2_intLifetime1 = var4;
           while (var4 < 33) {
             if (!vg.field_j[var4]) {
               return;

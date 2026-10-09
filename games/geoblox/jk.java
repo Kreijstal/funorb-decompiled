@@ -49,6 +49,7 @@ final class jk {
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
+        int var1_intLifetime1;
         var5 = Geoblox.field_C;
         try {
           mh.b();
@@ -60,7 +61,7 @@ final class jk {
             jf.field_b[var2] = (int)(255.0 * Math.pow((double)((float)var2 / 256.0f), var3));
           }
           var6 = 256;
-          var1_int = var6;
+          var1_intLifetime1 = var6;
           while (jf.field_b.length > var6) {
             jf.field_b[var6] = 255;
             var6++;

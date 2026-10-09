@@ -49,6 +49,18 @@ final class p extends hf {
         int var28 = 0;
         int var29 = 0;
         int var30 = 0;
+        int var21Lifetime1;
+        int var21Lifetime2;
+        int var22Lifetime1;
+        int var22Lifetime2;
+        int var23Lifetime1;
+        int var23Lifetime2;
+        int var24Lifetime1;
+        int var25Lifetime1;
+        int var26Lifetime1;
+        int var27Lifetime1;
+        int var28Lifetime1;
+        int var29Lifetime1;
         var30 = Geoblox.field_C;
         try {
           var7_int = 2147483647;
@@ -71,48 +83,48 @@ final class p extends hf {
           var19 = param1[10] * var25 + var24 * param1[9] + param1[11] * var26 >> 14;
           var20 = var27 * param1[9] + var28 * param1[10] + param1[11] * var29 >> 14;
           var17 = param1[8] * var29 + param1[6] * var27 + var28 * param1[7] >> 14;
-          var21 = param1[0] - param0[0];
-          var22 = -param0[1] + param1[1];
-          var23 = param1[2] - param0[2];
-          var9 = param0[3] * var21 - (-(var22 * param0[4]) - param0[5] * var23) >> -ok.field_g + 16;
-          var10 = var23 * param0[8] + (var21 * param0[6] + var22 * param0[7]) >> 16 - ok.field_g;
-          var11 = param0[11] * var23 + var21 * param0[9] + var22 * param0[10] >> 16;
+          var21Lifetime1 = param1[0] - param0[0];
+          var22Lifetime1 = -param0[1] + param1[1];
+          var23Lifetime1 = param1[2] - param0[2];
+          var9 = param0[3] * var21Lifetime1 - (-(var22Lifetime1 * param0[4]) - param0[5] * var23Lifetime1) >> -ok.field_g + 16;
+          var10 = var23Lifetime1 * param0[8] + (var21Lifetime1 * param0[6] + var22Lifetime1 * param0[7]) >> 16 - ok.field_g;
+          var11 = param0[11] * var23Lifetime1 + var21Lifetime1 * param0[9] + var22Lifetime1 * param0[10] >> 16;
           if (!param3) {
             p.b(-2);
           }
-          var21 = mh.field_d;
-          var22 = mh.field_i;
-          var23 = 0;
+          var21Lifetime2 = mh.field_d;
+          var22Lifetime2 = mh.field_i;
+          var23Lifetime2 = 0;
           L3: while (true) {
-            if (param2.field_o > var23) {
-              var24 = param2.field_O[var23];
-              var25 = param2.field_q[var23];
-              var26 = param2.field_K[var23];
-              var27 = (var24 * var12 + var25 * var15 + var18 * var26 >> -ok.field_g + 16) + var9;
-              var28 = var10 + (var13 * var24 + var25 * var16 + var26 * var19 >> 16 - ok.field_g);
-              var29 = var11 + (var26 * var20 + var14 * var24 + var17 * var25 >> 16);
+            if (param2.field_o > var23Lifetime2) {
+              var24Lifetime1 = param2.field_O[var23Lifetime2];
+              var25Lifetime1 = param2.field_q[var23Lifetime2];
+              var26Lifetime1 = param2.field_K[var23Lifetime2];
+              var27Lifetime1 = (var24Lifetime1 * var12 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> -ok.field_g + 16) + var9;
+              var28Lifetime1 = var10 + (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16 - ok.field_g);
+              var29Lifetime1 = var11 + (var26Lifetime1 * var20 + var14 * var24Lifetime1 + var17 * var25Lifetime1 >> 16);
               stackIn_66_0 = -51;
-              stackIn_66_1 = ~var29;
+              stackIn_66_1 = ~var29Lifetime1;
               if (var30 == 0) {
                 if (stackIn_66_0 >= stackIn_66_1) {
-                  sh.field_x[var23] = var27 / var29 + var21;
-                  dj.field_N[var23] = var22 + var28 / var29;
-                  if (var29 < var7_int) {
-                    var7_int = var29;
+                  sh.field_x[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  dj.field_N[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
+                  if (var29Lifetime1 < var7_int) {
+                    var7_int = var29Lifetime1;
                   }
-                  if (var8 < var29) {
-                    var8 = var29;
+                  if (var8 < var29Lifetime1) {
+                    var8 = var29Lifetime1;
                   }
-                  bj.field_j[var23] = var29;
+                  bj.field_j[var23Lifetime2] = var29Lifetime1;
                 } else {
-                  bj.field_j[var23] = -2147483648;
+                  bj.field_j[var23Lifetime2] = -2147483648;
                 }
                 if (param4) {
-                  a.field_c[var23] = var27 >> ok.field_g;
-                  uk.field_i[var23] = var28 >> ok.field_g;
-                  gf.field_b[var23] = var29;
+                  a.field_c[var23Lifetime2] = var27Lifetime1 >> ok.field_g;
+                  uk.field_i[var23Lifetime2] = var28Lifetime1 >> ok.field_g;
+                  gf.field_b[var23Lifetime2] = var29Lifetime1;
                 }
-                var23++;
+                var23Lifetime2++;
                 continue;
               }
             } else {
@@ -125,27 +137,27 @@ final class p extends hf {
                   param2.field_l != null &&
                   null != param2.field_p &&
                   param2.field_b != null) {
-                var23 = 0;
-                while (!(var23 >= param2.field_f)) {
-                  var24 = param2.field_L[var23];
-                  var25 = param2.field_d[var23];
-                  var26 = param2.field_C[var23];
-                  ii.field_d[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
-                  pg.field_d[var23] = var10 + (var26 * var19 + var16 * var25 + var24 * var13 >> 16);
-                  kf.field_a[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
-                  var24 = param2.field_x[var23];
-                  var25 = param2.field_a[var23];
-                  var26 = param2.field_y[var23];
-                  qf.field_Y[var23] = (var15 * var25 + var12 * var24 + var26 * var18 >> 16) + var9;
-                  ac.field_w[var23] = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16);
-                  vk.field_c[var23] = (var26 * var20 + var24 * var14 + var17 * var25 >> 16) + var11;
-                  var24 = param2.field_l[var23];
-                  var25 = param2.field_p[var23];
-                  var26 = param2.field_b[var23];
-                  qe.field_c[var23] = (var25 * var15 + (var12 * var24 + var26 * var18) >> 16) + var9;
-                  ba.field_h[var23] = var10 + (var24 * var13 + (var16 * var25 + var19 * var26) >> 16);
-                  hg.field_c[var23] = var11 + (var26 * var20 + var25 * var17 + var14 * var24 >> 16);
-                  var23++;
+                var23Lifetime2 = 0;
+                while (!(var23Lifetime2 >= param2.field_f)) {
+                  var24Lifetime1 = param2.field_L[var23Lifetime2];
+                  var25Lifetime1 = param2.field_d[var23Lifetime2];
+                  var26Lifetime1 = param2.field_C[var23Lifetime2];
+                  ii.field_d[var23Lifetime2] = (var12 * var24Lifetime1 - (-(var15 * var25Lifetime1) - var18 * var26Lifetime1) >> 16) + var9;
+                  pg.field_d[var23Lifetime2] = var10 + (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var24Lifetime1 * var13 >> 16);
+                  kf.field_a[var23Lifetime2] = (var26Lifetime1 * var20 + (var17 * var25Lifetime1 + var14 * var24Lifetime1) >> 16) + var11;
+                  var24Lifetime1 = param2.field_x[var23Lifetime2];
+                  var25Lifetime1 = param2.field_a[var23Lifetime2];
+                  var26Lifetime1 = param2.field_y[var23Lifetime2];
+                  qf.field_Y[var23Lifetime2] = (var15 * var25Lifetime1 + var12 * var24Lifetime1 + var26Lifetime1 * var18 >> 16) + var9;
+                  ac.field_w[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var25Lifetime1 * var16 + var13 * var24Lifetime1 >> 16);
+                  vk.field_c[var23Lifetime2] = (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16) + var11;
+                  var24Lifetime1 = param2.field_l[var23Lifetime2];
+                  var25Lifetime1 = param2.field_p[var23Lifetime2];
+                  var26Lifetime1 = param2.field_b[var23Lifetime2];
+                  qe.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + (var12 * var24Lifetime1 + var26Lifetime1 * var18) >> 16) + var9;
+                  ba.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + (var16 * var25Lifetime1 + var19 * var26Lifetime1) >> 16);
+                  hg.field_c[var23Lifetime2] = var11 + (var26Lifetime1 * var20 + var25Lifetime1 * var17 + var14 * var24Lifetime1 >> 16);
+                  var23Lifetime2++;
                   if (var30 != 0) {
                     return;
                   }
@@ -173,10 +185,10 @@ final class p extends hf {
                   }
                   var19 = param2.field_M[var18];
                   var20 = param2.field_t[var18];
-                  var21 = param2.field_i[var18];
-                  ok.field_h[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
-                  oa.field_f[var18] = var16 * var21 + (var19 * var10 + var20 * var13) >> 16;
-                  gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21) >> 16;
+                  var21Lifetime2 = param2.field_i[var18];
+                  ok.field_h[var18] = var21Lifetime2 * var15 + (var12 * var20 + var19 * var9) >> 16;
+                  oa.field_f[var18] = var16 * var21Lifetime2 + (var19 * var10 + var20 * var13) >> 16;
+                  gi.field_b[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
               }

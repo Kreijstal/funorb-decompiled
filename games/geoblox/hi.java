@@ -156,6 +156,9 @@ final class hi extends ee implements ta, pl {
         int[] var62 = null;
         int[] var63 = null;
         int[] var64 = null;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var15Lifetime1;
         var40 = Geoblox.field_C;
         try {
           var44 = param5;
@@ -204,41 +207,41 @@ final class hi extends ee implements ta, pl {
             var54[var13] = var14;
             var64[var13] = var15;
           }
-          for (var13 = 0; var13 < ch.field_b; var13++) {
-            var14 = pj.field_i[var13];
-            var15 = param5.field_r[var14];
-            var16 = param5.field_B[var14];
-            var17 = param5.field_c[var14];
-            if (param5.field_P[var14] >= ok.field_h.length) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < ch.field_b; var13Lifetime1++) {
+            var14Lifetime1 = pj.field_i[var13Lifetime1];
+            var15Lifetime1 = param5.field_r[var14Lifetime1];
+            var16 = param5.field_B[var14Lifetime1];
+            var17 = param5.field_c[var14Lifetime1];
+            if (param5.field_P[var14Lifetime1] >= ok.field_h.length) {
               stackIn_27_0 = -1;
             } else {
-              stackIn_27_0 = param5.field_P[var14];
+              stackIn_27_0 = param5.field_P[var14Lifetime1];
             }
             var18 = stackIn_27_0;
-            if (ok.field_h.length > param5.field_u[var14]) {
-              stackIn_30_0 = param5.field_u[var14];
+            if (ok.field_h.length > param5.field_u[var14Lifetime1]) {
+              stackIn_30_0 = param5.field_u[var14Lifetime1];
             } else {
               stackIn_30_0 = -1;
             }
             var19 = stackIn_30_0;
-            if (ok.field_h.length > param5.field_e[var14]) {
-              stackIn_33_0 = param5.field_e[var14];
+            if (ok.field_h.length > param5.field_e[var14Lifetime1]) {
+              stackIn_33_0 = param5.field_e[var14Lifetime1];
             } else {
               stackIn_33_0 = -1;
             }
             var20 = stackIn_33_0;
             if (l.field_i != null &&
                 param5.field_G != null &&
-                param5.field_G.length > var14 &&
-                param5.field_G[var14] != -1 &&
-                l.field_i.length > param5.field_G[var14]) {
-              stackIn_40_0 = l.field_i[param5.field_G[var14]];
+                param5.field_G.length > var14Lifetime1 &&
+                param5.field_G[var14Lifetime1] != -1 &&
+                l.field_i.length > param5.field_G[var14Lifetime1]) {
+              stackIn_40_0 = l.field_i[param5.field_G[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = sh.field_x[var15];
-            var23 = dj.field_N[var15];
+            var22 = sh.field_x[var15Lifetime1];
+            var23 = dj.field_N[var15Lifetime1];
             var24 = sh.field_x[var16];
             var25 = dj.field_N[var16];
             var26 = sh.field_x[var17];

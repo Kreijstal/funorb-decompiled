@@ -23,6 +23,7 @@ final class hb implements dh {
         int var11 = 0;
         int var12 = 0;
         qb var14 = param4 instanceof qb ? (qb) ((Object) param4) : null;
+        double var9Lifetime1;
         vb.a(param0 + param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, this.field_f);
         if (var14 != null) {
         }
@@ -36,9 +37,9 @@ final class hb implements dh {
             vb.d(var7 + var11, var8 + var12, 1, this.field_g);
         }
         vb.d(var7, var8, 2, 1);
-        var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
-        var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
-        var12 = (int)(Math.cos(var9) * (double)var14.field_K);
+        var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
+        var11 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_K);
+        var12 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_K);
         if (param1 > -5) {
             return;
         }

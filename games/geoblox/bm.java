@@ -72,6 +72,15 @@ final class bm {
         byte[] var17 = null;
         qc var18 = null;
         byte[] var22 = null;
+        int var8Lifetime1;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var10Lifetime3;
+        int var10Lifetime4;
+        int var10Lifetime5;
+        int var10Lifetime6;
+        int var13Lifetime1;
+        int var14Lifetime1;
         var16 = Geoblox.field_C;
         try {
           var18 = new qc(v.a(param1, -1));
@@ -126,47 +135,47 @@ final class bm {
             this.field_o = new int[this.field_b][];
             if (var6 != 0) {
               this.field_d = new int[this.field_b];
-              for (var10 = 0; this.field_b > var10; var10++) {
-                this.field_d[var10] = -1;
+              for (var10Lifetime1 = 0; this.field_b > var10Lifetime1; var10Lifetime1++) {
+                this.field_d[var10Lifetime1] = -1;
               }
-              for (var10 = 0; var10 < this.field_h; var10++) {
-                this.field_d[this.field_i[var10]] = var18.a((byte) -76);
+              for (var10Lifetime1 = 0; var10Lifetime1 < this.field_h; var10Lifetime1++) {
+                this.field_d[this.field_i[var10Lifetime1]] = var18.a((byte) -76);
               }
               this.field_n = new am(this.field_d);
             }
-            for (var10 = 0; var10 < this.field_h; var10++) {
-              this.field_q[this.field_i[var10]] = var18.a((byte) -95);
+            for (var10Lifetime2 = 0; var10Lifetime2 < this.field_h; var10Lifetime2++) {
+              this.field_q[this.field_i[var10Lifetime2]] = var18.a((byte) -95);
             }
             if (var7 != 0) {
-              for (var10 = 0; this.field_h > var10; var10++) {
+              for (var10Lifetime3 = 0; this.field_h > var10Lifetime3; var10Lifetime3++) {
                 var22 = new byte[64];
                 var18.b(29915, 64, var22, 0);
-                this.field_r[this.field_i[var10]] = var22;
+                this.field_r[this.field_i[var10Lifetime3]] = var22;
               }
             }
-            var10 = 0;
+            var10Lifetime4 = 0;
             if (param0 < 109) {
               var17 = (byte[]) null;
               this.a((byte) -96, (byte[]) null);
             }
-            while (this.field_h > var10) {
-              this.field_t[this.field_i[var10]] = var18.a((byte) -110);
-              var10++;
+            while (this.field_h > var10Lifetime4) {
+              this.field_t[this.field_i[var10Lifetime4]] = var18.a((byte) -110);
+              var10Lifetime4++;
             }
             if (var4 >= 7) {
-              for (var10 = 0; var10 < this.field_h; var10++) {
-                this.field_a[this.field_i[var10]] = var18.d((byte) -27);
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
+                this.field_a[this.field_i[var10Lifetime5]] = var18.d((byte) -27);
               }
-              for (var10 = 0; this.field_h > var10; var10++) {
-                var11 = this.field_i[var10];
-                var8 = 0;
+              for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
+                var11 = this.field_i[var10Lifetime5];
+                var8Lifetime1 = 0;
                 var12 = this.field_a[var11];
                 var13 = -1;
                 array$2 = new int[var12];
                 this.field_o[var11] = array$2;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$3 = var8 + var18.d((byte) -27);
-                  var8 = dupTemp$3;
+                  dupTemp$3 = var8Lifetime1 + var18.d((byte) -27);
+                  var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_o[var11];
                   dupTemp$4[var14] = dupTemp$3;
                   var15 = dupTemp$3;
@@ -180,19 +189,19 @@ final class bm {
                 }
               }
             } else {
-              for (var10 = 0; this.field_h > var10; var10++) {
-                this.field_a[this.field_i[var10]] = var18.b(true);
+              for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
+                this.field_a[this.field_i[var10Lifetime5]] = var18.b(true);
               }
-              for (var10 = 0; var10 < this.field_h; var10++) {
-                var11 = this.field_i[var10];
-                var8 = 0;
+              for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
+                var11 = this.field_i[var10Lifetime5];
+                var8Lifetime1 = 0;
                 var12 = this.field_a[var11];
                 array$5 = new int[var12];
                 this.field_o[var11] = array$5;
                 var13 = -1;
                 for (var14 = 0; var12 > var14; var14++) {
-                  dupTemp$6 = var8 + var18.b(true);
-                  var8 = dupTemp$6;
+                  dupTemp$6 = var8Lifetime1 + var18.b(true);
+                  var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_o[var11];
                   dupTemp$7[var14] = dupTemp$6;
                   var15 = dupTemp$6;
@@ -210,21 +219,21 @@ final class bm {
             if (var6 != 0) {
               this.field_e = new int[var9 + 1][];
               this.field_f = new am[1 + var9];
-              for (var10 = 0; var10 < this.field_h; var10++) {
-                var11 = this.field_i[var10];
+              for (var10Lifetime6 = 0; var10Lifetime6 < this.field_h; var10Lifetime6++) {
+                var11 = this.field_i[var10Lifetime6];
                 var12 = this.field_a[var11];
                 array$8 = new int[this.field_k[var11]];
                 this.field_e[var11] = array$8;
-                for (var13 = 0; this.field_k[var11] > var13; var13++) {
-                  this.field_e[var11][var13] = -1;
+                for (var13Lifetime1 = 0; this.field_k[var11] > var13Lifetime1; var13Lifetime1++) {
+                  this.field_e[var11][var13Lifetime1] = -1;
                 }
-                for (var13 = 0; var13 < var12; var13++) {
+                for (var13Lifetime1 = 0; var13Lifetime1 < var12; var13Lifetime1++) {
                   if (this.field_o[var11] != null) {
-                    var14 = this.field_o[var11][var13];
+                    var14Lifetime1 = this.field_o[var11][var13Lifetime1];
                   } else {
-                    var14 = var13;
+                    var14Lifetime1 = var13Lifetime1;
                   }
-                  this.field_e[var11][var14] = var18.a((byte) -78);
+                  this.field_e[var11][var14Lifetime1] = var18.a((byte) -78);
                 }
                 this.field_f[var11] = new am(this.field_e[var11]);
               }

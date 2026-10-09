@@ -13,6 +13,7 @@ final class ic {
         int var4 = 0;
         int stackIn_8_0 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var3_intLifetime1;
         var4 = Geoblox.field_C;
         try {
           if (param1 > param0) {
@@ -21,9 +22,9 @@ final class ic {
             param1 = var3_int;
           }
           while (param1 != 0) {
-            var3_int = param0 % param1;
+            var3_intLifetime1 = param0 % param1;
             param0 = param1;
-            param1 = var3_int;
+            param1 = var3_intLifetime1;
           }
           if (param2 > -120) {
             ic.a(6);

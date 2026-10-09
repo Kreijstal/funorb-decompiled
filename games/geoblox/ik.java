@@ -88,6 +88,9 @@ final class ik {
         int var7 = 0;
         ja var5Lifetime1;
         ja var6Lifetime1;
+        int var3_intLifetime1;
+        int var5_intLifetime1;
+        int var5_intLifetime2;
         var7 = Geoblox.field_C;
         try {
           for (var3_int = 0; var3_int < param1.field_L; var3_int++) {
@@ -95,7 +98,7 @@ final class ik {
               return false;
             }
           }
-          var3_int = param2 ? 1 : 0;
+          var3_intLifetime1 = param2 ? 1 : 0;
           var4 = 0;
           fieldTemp$0 = param1.field_L;
           param1.field_L = param1.field_L + 1;
@@ -124,7 +127,7 @@ final class ik {
                 } else {
                   if (param0.field_z == 2 &&
                       param1.field_z == 1) {
-                    var3_int = 1;
+                    var3_intLifetime1 = 1;
                     var4 = 1;
                     var6_int = 1;
                     param1.a(320, param1.field_C, param0.field_M, 0);
@@ -133,7 +136,7 @@ final class ik {
                         param1.field_z == 2) {
                       param1.a(320, param0.field_C, param1.field_M, 0);
                       var5_int = 1;
-                      var3_int = 1;
+                      var3_intLifetime1 = 1;
                     }
                   }
                 }
@@ -144,13 +147,13 @@ final class ik {
                 if (param1.field_z == 2 &&
                     2 != param0.field_z) {
                   param1.a(320, param0.field_C, param1.field_M, param0.field_z);
-                  var3_int = 1;
+                  var3_intLifetime1 = 1;
                 } else {
                   if (param0.field_z == 2 &&
                       2 != param1.field_z) {
                     var4 = 1;
                     var6_int = 1;
-                    var3_int = 1;
+                    var3_intLifetime1 = 1;
                     param0.a(320, param1.field_C, param0.field_M, param1.field_z);
                   }
                 }
@@ -185,9 +188,9 @@ final class ik {
               param0.field_m = param0.field_m + 1;
             }
           }
-          if (var3_int != 0) {
-            for (var5_int = 0; param1.field_L > var5_int; var5_int++) {
-              param1.field_n[var5_int].a(param1, 0);
+          if (var3_intLifetime1 != 0) {
+            for (var5_intLifetime1 = 0; param1.field_L > var5_intLifetime1; var5_intLifetime1++) {
+              param1.field_n[var5_intLifetime1].a(param1, 0);
             }
             var5 = param1;
             param1.field_N = 0;
@@ -198,8 +201,8 @@ final class ik {
             param1.field_B = true;
           }
           if (var4 != 0) {
-            for (var5_int = 0; param0.field_L > var5_int; var5_int++) {
-              param0.field_n[var5_int].a(param0, 0);
+            for (var5_intLifetime2 = 0; param0.field_L > var5_intLifetime2; var5_intLifetime2++) {
+              param0.field_n[var5_intLifetime2].a(param0, 0);
             }
             var5Lifetime1 = param0;
             param0.field_N = 0;
@@ -210,7 +213,7 @@ final class ik {
             param0.field_K = ji.field_r;
             var6Lifetime1.field_m = 0;
           }
-          stackIn_77_0 = var3_int;
+          stackIn_77_0 = var3_intLifetime1;
           return stackIn_77_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

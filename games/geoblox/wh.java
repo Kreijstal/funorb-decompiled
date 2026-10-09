@@ -562,6 +562,13 @@ abstract class wh extends rc {
         int var40 = 0;
         int var41 = 0;
         int var42 = 0;
+        int var33Lifetime1;
+        int var35Lifetime1;
+        int var36Lifetime1;
+        int var37Lifetime1;
+        int var38Lifetime1;
+        int var39Lifetime1;
+        int var40Lifetime1;
         var42 = Geoblox.field_C;
         try {
           if (param4 >= 0 &&
@@ -675,7 +682,7 @@ abstract class wh extends rc {
                 var19 = var20;
                 var20 = var36;
                 var28 = (-param12 + param3 << 16) / var35;
-                var33 = 1;
+                var33Lifetime1 = 1;
                 var32 = (-param14 + param7 << 16) / var35;
                 var24 = (-param1 + param10 << 16) / var35;
                 if (var42 != 0) {
@@ -685,7 +692,7 @@ abstract class wh extends rc {
                   var24 = (-param1 + param6 << 16) / var34;
                   var31 = (param7 - param14 << 16) / var35;
                   var27 = (-param12 + param3 << 16) / var35;
-                  var33 = 0;
+                  var33Lifetime1 = 0;
                 }
               } else {
                 var32 = (-param14 + param5 << 16) / var34;
@@ -694,7 +701,7 @@ abstract class wh extends rc {
                 var24 = (-param1 + param6 << 16) / var34;
                 var31 = (param7 - param14 << 16) / var35;
                 var27 = (-param12 + param3 << 16) / var35;
-                var33 = 0;
+                var33Lifetime1 = 0;
               }
               {
                 boolean decompiledFrameCompleted0 = true;
@@ -793,13 +800,13 @@ abstract class wh extends rc {
                 var38 = param6 << 16;
                 var39 = param0 << 16;
                 var40 = param5 << 16;
-                if (var33 == 0) {
+                if (var33Lifetime1 == 0) {
                   var17_int = param9 << 16;
                   var29 = param7 << 16;
                   var21 = param10 << 16;
                   var25 = param3 << 16;
                 }
-                if (var33 != 0 || var42 != 0) {
+                if (var33Lifetime1 != 0 || var42 != 0) {
                   var22 = param10 << 16;
                   var18 = param9 << 16;
                   var26 = param3 << 16;
@@ -827,30 +834,30 @@ abstract class wh extends rc {
               var25 = var25 + var27 * param8;
               param8 = 0;
             }
-            var35 = mh.field_b[param8];
+            var35Lifetime1 = mh.field_b[param8];
             while (param4 > param8) {
-              var36 = var17_int >> 16;
+              var36Lifetime1 = var17_int >> 16;
               if (var42 != 0) {
                 return;
               }
-              if (var36 < mh.field_c) {
-                var37 = -(var17_int >> 16) + (var18 >> 16);
-                if (var37 != 0) {
-                  var38 = (var22 - var21) / var37;
-                  var39 = (var26 - var25) / var37;
-                  var40 = (-var29 + var30) / var37;
-                  if (var37 + var36 >= mh.field_c) {
-                    var37 = mh.field_c - var36 - 1;
+              if (var36Lifetime1 < mh.field_c) {
+                var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
+                if (var37Lifetime1 != 0) {
+                  var38Lifetime1 = (var22 - var21) / var37Lifetime1;
+                  var39Lifetime1 = (var26 - var25) / var37Lifetime1;
+                  var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
+                  if (var37Lifetime1 + var36Lifetime1 >= mh.field_c) {
+                    var37Lifetime1 = mh.field_c - var36Lifetime1 - 1;
                   }
-                  if (var36 < 0) {
-                    jf.a(var35, var38, 33423689, var21 - var38 * var36, var40, var25 - var36 * var39, var39, var37 + var36, -(var36 * var40) + var29, param11);
+                  if (var36Lifetime1 < 0) {
+                    jf.a(var35Lifetime1, var38Lifetime1, 33423689, var21 - var38Lifetime1 * var36Lifetime1, var40Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, var39Lifetime1, var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, param11);
                   } else {
-                    jf.a(var36 + var35, var38, 33423689, var21, var40, var25, var39, var37, var29, param11);
+                    jf.a(var36Lifetime1 + var35Lifetime1, var38Lifetime1, 33423689, var21, var40Lifetime1, var25, var39Lifetime1, var37Lifetime1, var29, param11);
                   }
                 } else {
-                  if (var36 >= 0 &&
-                      mh.field_c > var36) {
-                    jf.a(var35 + var36, 0, 33423689, var21, 0, var25, 0, var37, var29, param11);
+                  if (var36Lifetime1 >= 0 &&
+                      mh.field_c > var36Lifetime1) {
+                    jf.a(var35Lifetime1 + var36Lifetime1, 0, 33423689, var21, 0, var25, 0, var37Lifetime1, var29, param11);
                   }
                 }
               }
@@ -860,7 +867,7 @@ abstract class wh extends rc {
               }
               var18 = var18 + var20;
               var22 = var22 + var24;
-              var35 = var35 + vb.field_f;
+              var35Lifetime1 = var35Lifetime1 + vb.field_f;
               var25 = var25 + var27;
               var26 = var26 + var28;
               var29 = var29 + var31;

@@ -46,6 +46,7 @@ final class ni extends ee implements pl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var4Lifetime1;
         var7 = Geoblox.field_C;
         try {
           var8 = new pk(param0.a(param1 + param1, "", "logo.fo3d"));
@@ -60,7 +61,7 @@ final class ni extends ee implements pl {
           }
           var10.i(-16989);
           var9 = 0;
-          var4 = var9;
+          var4Lifetime1 = var9;
           while (var3 > var9) {
             var5 = bm.field_l[var9];
             var5.a(6, 1, (byte) 89, 6, 6);

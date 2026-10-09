@@ -1485,6 +1485,8 @@ final class vb {
         int var20Lifetime1Lifetime2;
         int var20Lifetime2Lifetime1;
         int var21Lifetime1Lifetime1;
+        int var21Lifetime1Lifetime2;
+        int var21Lifetime1Lifetime3;
         if (field_g == null ||
               !(field_g.length >= param8)) {
           field_g = new int[param8];
@@ -1582,20 +1584,20 @@ final class vb {
               stackIn_39_2 = 0;
             }
             stackIn_38_0[stackIn_38_1] = stackIn_39_2;
-            var21Lifetime1 = var28[var20Lifetime1] - (param1 >> 8 & 255);
+            var21Lifetime1Lifetime2 = var28[var20Lifetime1] - (param1 >> 8 & 255);
             stackIn_41_0 = var10;
             stackIn_41_1 = var20Lifetime1;
-            if (var21Lifetime1 >= 0) {
-              stackIn_42_2 = var21Lifetime1;
+            if (var21Lifetime1Lifetime2 >= 0) {
+              stackIn_42_2 = var21Lifetime1Lifetime2;
             } else {
               stackIn_42_2 = 0;
             }
             stackIn_41_0[stackIn_41_1] = stackIn_42_2;
-            var21Lifetime1 = var29[var20Lifetime1] - (param1 & 255);
+            var21Lifetime1Lifetime3 = var29[var20Lifetime1] - (param1 & 255);
             stackIn_44_0 = var11;
             stackIn_44_1 = var20Lifetime1;
-            if (var21Lifetime1 >= 0) {
-              stackIn_45_2 = var21Lifetime1;
+            if (var21Lifetime1Lifetime3 >= 0) {
+              stackIn_45_2 = var21Lifetime1Lifetime3;
             } else {
               stackIn_45_2 = 0;
             }

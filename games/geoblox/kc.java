@@ -104,6 +104,8 @@ final class kc {
         ja var7Lifetime1;
         ja var8Lifetime1;
         ja var7Lifetime2;
+        int stackIn_44_0Lifetime1;
+        int var6_intLifetime1;
         var9 = Geoblox.field_C;
         try {
           fa.field_a = false;
@@ -198,8 +200,8 @@ final class kc {
                           continue;
                         }
                       }
-                      stackIn_44_0 = var4_int;
-                      if (stackIn_44_0 == 0) {
+                      stackIn_44_0Lifetime1 = var4_int;
+                      if (stackIn_44_0Lifetime1 == 0) {
                         break;
                       }
                       var5_ref_jaLifetime1 = (ja) ((Object) var13.a(true));
@@ -209,12 +211,12 @@ final class kc {
                         var5_ref_jaLifetime1.field_B = true;
                         fa.field_a = true;
                         stackIn_56_0 = 0;
-                        var6_int = stackIn_56_0;
-                        while (var6_int < var5_ref_jaLifetime1.field_L) {
-                          stackIn_51_0Lifetime1 = var5_ref_jaLifetime1.field_n[var6_int];
+                        var6_intLifetime1 = stackIn_56_0;
+                        while (var6_intLifetime1 < var5_ref_jaLifetime1.field_L) {
+                          stackIn_51_0Lifetime1 = var5_ref_jaLifetime1.field_n[var6_intLifetime1];
                           stackIn_51_1Lifetime1 = var5_ref_jaLifetime1;
                           ((ja) (Object) stackIn_51_0Lifetime1).a(stackIn_51_1Lifetime1, 0);
-                          var6_int++;
+                          var6_intLifetime1++;
                         }
                         var6 = var5_ref_jaLifetime1;
                         var7Lifetime2 = var5_ref_jaLifetime1;

@@ -44,6 +44,8 @@ final class na extends ha {
 
     final void a(int param0, int param1) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
         int var3 = param0 + param1 * vb.field_f;
@@ -63,19 +65,19 @@ final class na extends ha {
             var5 = var5 - (param1 + var5 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var9 = vb.field_e - param0;
-            var6 = var6 - var9;
+            var9Lifetime1 = vb.field_e - param0;
+            var6 = var6 - var9Lifetime1;
             param0 = vb.field_e;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var4 = var4 + var9Lifetime1;
+            var3 = var3 + var9Lifetime1;
+            var8 = var8 + var9Lifetime1;
+            var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > vb.field_k) {
-            var9 = param0 + var6 - vb.field_k;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var9Lifetime2 = param0 + var6 - vb.field_k;
+            var6 = var6 - var9Lifetime2;
+            var8 = var8 + var9Lifetime2;
+            var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
             if (var5 <= 0) {
@@ -88,6 +90,8 @@ final class na extends ha {
 
     final void a(int param0, int param1, int param2) {
         int var10 = 0;
+        int var10Lifetime1;
+        int var10Lifetime2;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
         int var4 = param0 + param1 * vb.field_f;
@@ -107,19 +111,19 @@ final class na extends ha {
             var6 = var6 - (param1 + var6 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var10 = vb.field_e - param0;
-            var7 = var7 - var10;
+            var10Lifetime1 = vb.field_e - param0;
+            var7 = var7 - var10Lifetime1;
             param0 = vb.field_e;
-            var5 = var5 + var10;
-            var4 = var4 + var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+            var5 = var5 + var10Lifetime1;
+            var4 = var4 + var10Lifetime1;
+            var9 = var9 + var10Lifetime1;
+            var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > vb.field_k) {
-            var10 = param0 + var7 - vb.field_k;
-            var7 = var7 - var10;
-            var9 = var9 + var10;
-            var8 = var8 + var10;
+            var10Lifetime2 = param0 + var7 - vb.field_k;
+            var7 = var7 - var10Lifetime2;
+            var9 = var9 + var10Lifetime2;
+            var8 = var8 + var10Lifetime2;
         }
         if (var7 > 0) {
             if (var6 <= 0) {
@@ -181,6 +185,8 @@ final class na extends ha {
 
     final void b(int param0, int param1) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param0 = param0 + this.field_b;
         param1 = param1 + this.field_f;
         int var3 = param0 + param1 * vb.field_f;
@@ -200,19 +206,19 @@ final class na extends ha {
             var5 = var5 - (param1 + var5 - vb.field_d);
         }
         if (param0 < vb.field_e) {
-            var9 = vb.field_e - param0;
-            var6 = var6 - var9;
+            var9Lifetime1 = vb.field_e - param0;
+            var6 = var6 - var9Lifetime1;
             param0 = vb.field_e;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var4 = var4 + var9Lifetime1;
+            var3 = var3 + var9Lifetime1;
+            var8 = var8 + var9Lifetime1;
+            var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > vb.field_k) {
-            var9 = param0 + var6 - vb.field_k;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var9Lifetime2 = param0 + var6 - vb.field_k;
+            var6 = var6 - var9Lifetime2;
+            var8 = var8 + var9Lifetime2;
+            var7 = var7 + var9Lifetime2;
         }
         if (var6 > 0) {
             if (var5 <= 0) {

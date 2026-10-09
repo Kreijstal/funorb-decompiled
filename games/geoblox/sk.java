@@ -98,6 +98,8 @@ final class sk {
         long var11 = 0L;
         int var13 = 0;
         int var14 = 0;
+        int var9_intLifetime1;
+        int var9_intLifetime2;
         var14 = Geoblox.field_C;
         try {
           try {
@@ -134,15 +136,15 @@ final class sk {
                 this.field_a.a(this.field_f, true);
                 this.field_b = this.field_f;
                 while (param1 > 0) {
-                  var9_int = this.field_a.a(param1, param0, param2, false);
-                  if (-1 == var9_int) {
+                  var9_intLifetime1 = this.field_a.a(param1, param0, param2, false);
+                  if (-1 == var9_intLifetime1) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  this.field_f = this.field_f + (long)var9_int;
-                  this.field_b = this.field_b + (long)var9_int;
-                  param1 = param1 - var9_int;
-                  param2 = param2 + var9_int;
+                  this.field_f = this.field_f + (long)var9_intLifetime1;
+                  this.field_b = this.field_b + (long)var9_intLifetime1;
+                  param1 = param1 - var9_intLifetime1;
+                  param2 = param2 + var9_intLifetime1;
                 }
                 if (decompiledFrameCompleted0) {
                   break L5;
@@ -151,14 +153,14 @@ final class sk {
               if (decompiledFrameCompleted0) {
                 if (param1 > 0) {
                   this.a(true);
-                  var9_int = param1;
-                  if (this.field_i < var9_int) {
-                    var9_int = this.field_i;
+                  var9_intLifetime1 = param1;
+                  if (this.field_i < var9_intLifetime1) {
+                    var9_intLifetime1 = this.field_i;
                   }
-                  sf.a(this.field_h, 0, param0, param2, var9_int);
-                  param1 = param1 - var9_int;
-                  param2 = param2 + var9_int;
-                  this.field_f = this.field_f + (long)var9_int;
+                  sf.a(this.field_h, 0, param0, param2, var9_intLifetime1);
+                  param1 = param1 - var9_intLifetime1;
+                  param2 = param2 + var9_intLifetime1;
+                  this.field_f = this.field_f + (long)var9_intLifetime1;
                 }
               }
             }
@@ -167,11 +169,11 @@ final class sk {
                 stackIn_32_0 = -1;
                 stackIn_32_1 = ~param1;
                 if (stackIn_32_0 > stackIn_32_1) {
-                  var9_int = param2 + (int)(-this.field_f + this.field_c);
-                  if (param2 + param1 < var9_int) {
-                    var9_int = param2 + param1;
+                  var9_intLifetime2 = param2 + (int)(-this.field_f + this.field_c);
+                  if (param2 + param1 < var9_intLifetime2) {
+                    var9_intLifetime2 = param2 + param1;
                   }
-                  while (var9_int > param2) {
+                  while (var9_intLifetime2 > param2) {
                     param1--;
                     incrementValue$0 = param2;
                     param2++;

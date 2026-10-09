@@ -7,6 +7,7 @@ final class of implements be {
 
     public of() throws Exception {
         int var1 = 0;
+        int var1Lifetime1;
         this.field_b = new com.ms.directX.DSBufferDesc[2];
         this.field_a = new com.ms.directX.DSCursors[2];
         com.ms.directX.DirectSound discarded$0 = new com.ms.directX.DirectSound();
@@ -14,8 +15,8 @@ final class of implements be {
         for (var1 = 0; var1 < 2; var1++) {
             this.field_b[var1] = new com.ms.directX.DSBufferDesc();
         }
-        for (var1 = 0; var1 < 2; var1++) {
-            this.field_a[var1] = new com.ms.directX.DSCursors();
+        for (var1Lifetime1 = 0; var1Lifetime1 < 2; var1Lifetime1++) {
+            this.field_a[var1Lifetime1] = new com.ms.directX.DSCursors();
         }
     }
 }

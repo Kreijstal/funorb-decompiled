@@ -172,6 +172,9 @@ abstract class dd extends ee {
 
     final void a(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
+        int var5Lifetime1;
+        int var5Lifetime2;
+        int var5Lifetime3;
         if (this.field_H == 0) {
             return;
         }
@@ -196,7 +199,7 @@ abstract class dd extends ee {
         }
         if (oi.field_b.field_r < this.field_r) {
             oi.field_b = new dm(this.field_r, this.field_h);
-            var5 = 111 / ((1 - param2) / 43);
+            var5Lifetime1 = 111 / ((1 - param2) / 43);
             Geoblox.a(1, oi.field_b);
             vb.c();
             this.b(0, 20, 0);
@@ -207,7 +210,7 @@ abstract class dd extends ee {
         }
         if (oi.field_b.field_m < this.field_h) {
             oi.field_b = new dm(this.field_r, this.field_h);
-            var5 = 111 / ((1 - param2) / 43);
+            var5Lifetime2 = 111 / ((1 - param2) / 43);
             Geoblox.a(1, oi.field_b);
             vb.c();
             this.b(0, 20, 0);
@@ -216,7 +219,7 @@ abstract class dd extends ee {
             oi.field_b.d(param0 + this.field_v, this.field_m + param1, this.field_H);
             return;
         }
-        var5 = 111 / ((1 - param2) / 43);
+        var5Lifetime3 = 111 / ((1 - param2) / 43);
         Geoblox.a(1, oi.field_b);
         vb.c();
         this.b(0, 20, 0);

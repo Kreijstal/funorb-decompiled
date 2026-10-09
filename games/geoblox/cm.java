@@ -48,6 +48,9 @@ final class cm extends cj {
         int var26 = 0;
         pk var27 = null;
         long[][] var31 = null;
+        int var3Lifetime1;
+        int var25Lifetime1;
+        int var25Lifetime2;
         var26 = Geoblox.field_C;
         try {
           if (param0 != -24839) {
@@ -124,7 +127,7 @@ final class cm extends cj {
                     var31[1][var13] = var22;
                     var13++;
                     var27.field_f = var24;
-                    for (var25 = 0; var25 < var7; var25++) {
+                    for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$3 = var16;
                       var16++;
                       var11[1][incrementValue$3] = var27.a((byte) -122);
@@ -138,7 +141,7 @@ final class cm extends cj {
                     var31[2][var14] = var22;
                     var14++;
                     var27.field_f = var24;
-                    for (var25 = 0; var7 > var25; var25++) {
+                    for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$4 = var17;
                       var17++;
                       var11[2][incrementValue$4] = var27.a((byte) -101);
@@ -152,11 +155,11 @@ final class cm extends cj {
             return;
           }
           if (1 == var2) {
-            var3 = var27.b(true);
+            var3Lifetime1 = var27.b(true);
             var27.b(param0 + 27740);
             var4_ref = (ai) ((Object) nf.field_j.g(0));
             while (var4_ref != null) {
-              if (var3 != var4_ref.field_q) {
+              if (var3Lifetime1 != var4_ref.field_q) {
                 var4_ref = (ai) ((Object) nf.field_j.d(1));
                 continue;
               }

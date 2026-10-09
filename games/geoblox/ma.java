@@ -111,6 +111,10 @@ final class ma extends hf {
         int var19 = 0;
         int var20 = 0;
         int var22 = 0;
+        int var20Lifetime1;
+        int var20Lifetime2;
+        int var20Lifetime3;
+        int var20Lifetime4;
         var22 = Geoblox.field_C;
         try {
           if (param5 == null) {
@@ -195,24 +199,24 @@ final class ma extends hf {
             if (param5[7] != null &&
                 0 != param5[7].field_s) {
               vb.b(var16, var19, var17, var11);
-              for (var20 = var12; var20 < var13; var20 = var20 + param5[7].field_s) {
-                param5[7].b(var20, var15);
+              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].field_s) {
+                param5[7].b(var20Lifetime1, var15);
               }
               vb.b(hd.field_I);
             }
             if (param5[3] != null &&
                 0 != param5[3].field_o) {
               vb.b(param1, var18, var16, var19);
-              for (var20 = var14; var15 > var20; var20 = var20 + param5[3].field_o) {
-                param5[3].b(param1, var20);
+              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param5[3].field_o) {
+                param5[3].b(param1, var20Lifetime2);
               }
               vb.b(hd.field_I);
             }
             if (param5[5] != null &&
                 param5[5].field_o != 0) {
               vb.b(var17, var18, var10, var19);
-              for (var20 = var14; var20 < var15; var20 = var20 + param5[5].field_o) {
-                param5[5].b(var13, var20);
+              for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].field_o) {
+                param5[5].b(var13, var20Lifetime3);
               }
               vb.b(hd.field_I);
             }
@@ -220,9 +224,9 @@ final class ma extends hf {
                 param5[4].field_s != 0 &&
                 0 != param5[4].field_o) {
               vb.b(var16, var18, var17, var19);
-              for (var20 = var14; var15 > var20; var20 = var20 + param5[4].field_o) {
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param5[4].field_o) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param5[4].field_s) {
-                  param5[4].b(var21, var20);
+                  param5[4].b(var21, var20Lifetime4);
                 }
               }
               vb.b(hd.field_I);

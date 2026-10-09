@@ -13,6 +13,7 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var3Lifetime1;
         try {
           if (je.field_j == null) {
             return;
@@ -44,8 +45,8 @@ final class wl implements java.awt.event.KeyListener, java.awt.event.FocusListen
               ba.field_c = var3;
             }
           }
-          var3 = param0.getModifiers();
-          if ((var3 & 10) == 0 &&
+          var3Lifetime1 = param0.getModifiers();
+          if ((var3Lifetime1 & 10) == 0 &&
               85 != var2_int &&
               var2_int != 10) {
             return;

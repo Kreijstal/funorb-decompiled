@@ -10,14 +10,15 @@ final class ih {
         int var1_int = 0;
         int var2 = 0;
         int var3 = Geoblox.field_C;
+        int var1_intLifetime1;
         try {
             eg.field_p.a(111);
             var1_int = 10 / ((param0 - 68) / 57);
             for (var2 = 0; var2 < 32; var2++) {
                 pb.field_p[var2] = 0L;
             }
-            for (var1_int = 0; var1_int < 32; var1_int++) {
-                tl.field_l[var1_int] = 0L;
+            for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
+                tl.field_l[var1_intLifetime1] = 0L;
             }
             nf.field_w = 0;
         } catch (RuntimeException runtimeException) {

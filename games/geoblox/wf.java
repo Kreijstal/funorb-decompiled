@@ -505,6 +505,8 @@ abstract class wf extends ch {
             String var10 = null;
             Boolean var11 = null;
             qc var12 = null;
+            int var5_intLifetime1;
+            int var5_intLifetime2;
             var8 = Geoblox.field_C;
             var4 = gk.a(va.field_a, vc.field_i, param1, (byte) -117);
             if (param2 == ~var4) {
@@ -523,9 +525,9 @@ abstract class wf extends ch {
               }
             }
             if (var4 == 2) {
-              var5_int = uf.a((byte) -94, sa.a(true), qj.b((byte) 81), this.field_r, vh.f(100), al.b(0), cg.a((byte) 27));
-              if (var5_int != -1) {
-                gj.a(kh.field_a, var5_int, (byte) 30, si.field_i);
+              var5_intLifetime1 = uf.a((byte) -94, sa.a(true), qj.b((byte) 81), this.field_r, vh.f(100), al.b(0), cg.a((byte) 27));
+              if (var5_intLifetime1 != -1) {
+                gj.a(kh.field_a, var5_intLifetime1, (byte) 30, si.field_i);
                 kh.field_a = null;
                 si.field_i = null;
               }
@@ -537,15 +539,15 @@ abstract class wf extends ch {
                 j.e(-21754);
               }
               if (!param0) {
-                var5_int = ri.a(false, sa.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
-                if (var5_int != -1) {
-                  if (var5_int == 0) {
+                var5_intLifetime2 = ri.a(false, sa.a(true), this.field_r, this.field_v, al.b(~param2), ~param2);
+                if (var5_intLifetime2 != -1) {
+                  if (var5_intLifetime2 == 0) {
                     vi.field_H = oa.field_c;
                     gi.b(-12618);
                     hl.field_G = false;
                     hj.field_a = 10;
                   } else {
-                    q.a((byte) 124, var5_int, kh.field_a);
+                    q.a((byte) 124, var5_intLifetime2, kh.field_a);
                     kh.field_a = null;
                   }
                 }

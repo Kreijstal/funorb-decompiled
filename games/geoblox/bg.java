@@ -127,6 +127,8 @@ final class bg extends m {
         int var10 = vb.field_f - param3;
         int var11 = 0;
         int var12 = 0;
+        int var13Lifetime1;
+        int var13Lifetime2;
         if (param2 < vb.field_i) {
             var13 = vb.field_i - param2;
             param4 = param4 - var13;
@@ -138,19 +140,19 @@ final class bg extends m {
             param4 = param4 - (param2 + param4 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-            var13 = vb.field_e - param1;
-            param3 = param3 - var13;
+            var13Lifetime1 = vb.field_e - param1;
+            param3 = param3 - var13Lifetime1;
             param1 = vb.field_e;
-            var12 = var12 + var13;
-            var9 = var9 + var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
+            var12 = var12 + var13Lifetime1;
+            var9 = var9 + var13Lifetime1;
+            var11 = var11 + var13Lifetime1;
+            var10 = var10 + var13Lifetime1;
         }
         if (param1 + param3 > vb.field_k) {
-            var13 = param1 + param3 - vb.field_k;
-            param3 = param3 - var13;
-            var11 = var11 + var13;
-            var10 = var10 + var13;
+            var13Lifetime2 = param1 + param3 - vb.field_k;
+            param3 = param3 - var13Lifetime2;
+            var11 = var11 + var13Lifetime2;
+            var10 = var10 + var13Lifetime2;
         }
         if (param3 <= 0 || param4 <= 0) {
             return;

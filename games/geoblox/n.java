@@ -40,6 +40,9 @@ final class n extends q {
         dm var13 = null;
         int var14 = 0;
         int var15 = 0;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var12Lifetime2;
         var15 = Geoblox.field_C;
         var9 = param1 + param7 + param8;
         var10 = new dm[]{new dm(var9, var9), new dm(param3, var9), new dm(var9, var9), new dm(var9, param3), new dm(64, 64), new dm(var9, param3), new dm(var9, var9), new dm(param3, var9), new dm(var9, var9)};
@@ -70,13 +73,13 @@ final class n extends q {
             if (var15 != 0) {
               break L6;
             }
-            var12 = stackIn_22_0;
-            while (var9 > var12) {
-              var10[6].field_v[var12 + (var9 - var11 - 1) * var9] = param6;
-              var10[8].field_v[var12 + (-1 - var11 + var9) * var9] = param6;
-              var10[2].field_v[var12 * var9 - var11 + var9 - 1] = param6;
-              var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12)] = param6;
-              var12++;
+            var12Lifetime1 = stackIn_22_0;
+            while (var9 > var12Lifetime1) {
+              var10[6].field_v[var12Lifetime1 + (var9 - var11 - 1) * var9] = param6;
+              var10[8].field_v[var12Lifetime1 + (-1 - var11 + var9) * var9] = param6;
+              var10[2].field_v[var12Lifetime1 * var9 - var11 + var9 - 1] = param6;
+              var10[8].field_v[-var11 - 1 - (-var9 - var9 * var12Lifetime1)] = param6;
+              var12Lifetime1++;
             }
             var11++;
             continue L6;
@@ -84,68 +87,68 @@ final class n extends q {
           stackIn_22_0 = 0;
           break;
         }
-        var11 = stackIn_22_0;
+        var11Lifetime1 = stackIn_22_0;
         while (true) {
-          stackIn_24_0 = var11;
+          stackIn_24_0 = var11Lifetime1;
           stackIn_24_1 = param8;
           if (stackIn_24_0 < stackIn_24_1) {
             stackIn_34_0 = 0;
             if (var15 == 0) {
-              var12 = stackIn_34_0;
-              while (var9 > var12) {
-                var10[0].field_v[var12 + var11 * var9] = param2;
-                var10[0].field_v[var11 + var12 * var9] = param2;
-                stackIn_24_0 = ~(-var11 + var9);
-                stackIn_24_1 = ~var12;
+              var12Lifetime2 = stackIn_34_0;
+              while (var9 > var12Lifetime2) {
+                var10[0].field_v[var12Lifetime2 + var11Lifetime1 * var9] = param2;
+                var10[0].field_v[var11Lifetime1 + var12Lifetime2 * var9] = param2;
+                stackIn_24_0 = ~(-var11Lifetime1 + var9);
+                stackIn_24_1 = ~var12Lifetime2;
                 if (stackIn_24_0 < stackIn_24_1) {
-                  var10[2].field_v[var9 * var11 + var12] = param2;
-                  var10[6].field_v[var11 + var12 * var9] = param2;
+                  var10[2].field_v[var9 * var11Lifetime1 + var12Lifetime2] = param2;
+                  var10[6].field_v[var11Lifetime1 + var12Lifetime2 * var9] = param2;
                 }
-                var12++;
+                var12Lifetime2++;
               }
-              var11++;
+              var11Lifetime1++;
               continue;
             }
           } else {
             stackIn_34_0 = 0;
           }
-          var11 = stackIn_34_0;
+          var11Lifetime1 = stackIn_34_0;
           L19: while (true) {
-            if (var11 < param3) {
+            if (var11Lifetime1 < param3) {
               stackIn_45_0 = 0;
               if (var15 != 0) {
                 break L19;
               }
-              var12 = stackIn_45_0;
-              while (param8 > var12) {
-                var10[7].field_v[param3 * (var9 - var12 - 1) + var11] = param6;
-                var10[5].field_v[-1 + (var9 - var12 + var11 * var9)] = param6;
-                var10[1].field_v[param3 * var12 + var11] = param2;
-                var10[3].field_v[var12 + var9 * var11] = param2;
-                var12++;
+              var12Lifetime2 = stackIn_45_0;
+              while (param8 > var12Lifetime2) {
+                var10[7].field_v[param3 * (var9 - var12Lifetime2 - 1) + var11Lifetime1] = param6;
+                var10[5].field_v[-1 + (var9 - var12Lifetime2 + var11Lifetime1 * var9)] = param6;
+                var10[1].field_v[param3 * var12Lifetime2 + var11Lifetime1] = param2;
+                var10[3].field_v[var12Lifetime2 + var9 * var11Lifetime1] = param2;
+                var12Lifetime2++;
               }
-              var11++;
+              var11Lifetime1++;
               continue L19;
             }
             stackIn_45_0 = 0;
             break;
           }
-          var11 = stackIn_45_0;
+          var11Lifetime1 = stackIn_45_0;
           L25: while (true) {
-            if (var11 < param3 >> 1) {
+            if (var11Lifetime1 < param3 >> 1) {
               stackIn_56_0 = 0;
               if (var15 != 0) {
                 break L25;
               }
-              var12 = stackIn_56_0;
-              while (param1 > var12) {
-                var10[1].field_v[param3 * (-1 + (-var12 + var9)) + var11] = param0;
-                var10[3].field_v[-1 + var9 + (-var12 + var9 * var11)] = param0;
-                var10[7].field_v[var11 + param3 * var12] = param0;
-                var10[5].field_v[var9 * var11 + var12] = param0;
-                var12++;
+              var12Lifetime2 = stackIn_56_0;
+              while (param1 > var12Lifetime2) {
+                var10[1].field_v[param3 * (-1 + (-var12Lifetime2 + var9)) + var11Lifetime1] = param0;
+                var10[3].field_v[-1 + var9 + (-var12Lifetime2 + var9 * var11Lifetime1)] = param0;
+                var10[7].field_v[var11Lifetime1 + param3 * var12Lifetime2] = param0;
+                var10[5].field_v[var9 * var11Lifetime1 + var12Lifetime2] = param0;
+                var12Lifetime2++;
               }
-              var11++;
+              var11Lifetime1++;
               continue L25;
             }
             stackIn_56_0 = param4;

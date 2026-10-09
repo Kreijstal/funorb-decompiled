@@ -55,6 +55,8 @@ final class wj extends sh {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
+        int var5Lifetime1;
+        int var8Lifetime1;
         try {
           var3_int = param0.length();
           var4 = var3_int;
@@ -87,38 +89,38 @@ final class wj extends sh {
           }
           var6 = new StringBuilder(var4);
           var7 = 0;
-          var5 = 0;
+          var5Lifetime1 = 0;
           if (param2 >= -12) {
             stackIn_12_0 = (String) null;
             return stackIn_12_0;
           }
           while (true) {
-            var8 = param0.indexOf("<%", var5);
-            if (0 > var8) {
+            var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
+            if (0 > var8Lifetime1) {
               discarded$2 = var6.append(param0.substring(var7));
               stackIn_25_0 = var6.toString();
               return stackIn_25_0;
             }
-            for (var5 = var8 + 2; var5 < var3_int; var5++) {
-              if (rc.a(-58, param0.charAt(var5))) {
+            for (var5Lifetime1 = var8Lifetime1 + 2; var5Lifetime1 < var3_int; var5Lifetime1++) {
+              if (rc.a(-58, param0.charAt(var5Lifetime1))) {
                 continue;
               }
               break;
             }
-            var9 = param0.substring(2 + var8, var5);
+            var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
             if (!f.b((byte) -125, (CharSequence) ((Object) var9))) {
               continue;
             }
-            if (var3_int <= var5) {
+            if (var3_int <= var5Lifetime1) {
               continue;
             }
-            if (param0.charAt(var5) != 62) {
+            if (param0.charAt(var5Lifetime1) != 62) {
               continue;
             }
-            var5++;
+            var5Lifetime1++;
             var10 = ol.a(false, (CharSequence) ((Object) var9));
-            discarded$0 = var6.append(param0.substring(var7, var8));
-            var7 = var5;
+            discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
+            var7 = var5Lifetime1;
             discarded$1 = var6.append(param1[var10]);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

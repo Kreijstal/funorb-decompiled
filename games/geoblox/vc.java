@@ -179,6 +179,7 @@ final class vc extends dk {
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
+        int var12Lifetime1;
         var15 = Geoblox.field_C;
         try {
           if (param3 == 0) {
@@ -233,8 +234,8 @@ final class vc extends dk {
           } else {
             var11 = param4.field_o;
           }
-          for (var12 = 0; var12 < var10; var12++) {
-            var13 = var16[var12];
+          for (var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
+            var13 = var16[var12Lifetime1];
             stackIn_35_0 = null;
             stackIn_35_1 = null;
             stackIn_35_2 = -param4.field_o + var11;
@@ -259,7 +260,7 @@ final class vc extends dk {
               }
               qb.a(stackIn_40_0, var14, var13, 60, param4);
             }
-            this.field_a[var12] = var14;
+            this.field_a[var12Lifetime1] = var14;
             var11 = var11 + param3;
           }
           return;

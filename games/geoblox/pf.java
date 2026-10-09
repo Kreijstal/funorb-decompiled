@@ -258,6 +258,7 @@ final class pf extends ee implements ga, pl {
         int var11 = 0;
         String var13 = null;
         CharSequence var14 = null;
+        int var10Lifetime1;
         try {
           var13 = param2.b(16925);
           var8 = param3.b(16925);
@@ -352,9 +353,9 @@ final class pf extends ee implements ga, pl {
           if (pk.field_l == v.field_l) {
             var9 = 2;
             if (el.b(30000, var9)) {
-              var10 = eh.field_d.b(true);
+              var10Lifetime1 = eh.field_d.b(true);
               eh.field_d.field_f = 0;
-              if (el.b(30000, var10)) {
+              if (el.b(30000, var10Lifetime1)) {
                 var11 = si.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   si.field_i[var12] = eh.field_d.f(27425);
@@ -515,6 +516,7 @@ final class pf extends ee implements ga, pl {
             java.lang.reflect.Field var25 = null;
             java.lang.reflect.Method var26 = null;
             java.lang.reflect.Method var27 = null;
+            int var9Lifetime1;
             var18 = null;
             var19 = null;
             var21 = null;
@@ -598,9 +600,9 @@ final class pf extends ee implements ga, pl {
                     } else {
                       if (var7_int == 4) {
                         var26 = (java.lang.reflect.Method) (var13.field_i[var6].field_b);
-                        var9 = var26.getModifiers();
+                        var9Lifetime1 = var26.getModifiers();
                         param1.d((byte) 123, 0);
-                        param1.c((byte) 95, var9);
+                        param1.c((byte) 95, var9Lifetime1);
                       }
                     }
                   } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {

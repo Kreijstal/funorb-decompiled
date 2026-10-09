@@ -48,6 +48,10 @@ abstract class sh extends el implements ql {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int var7_intLifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
         var14 = Geoblox.field_C;
         try {
           if (param1 <= param0) {
@@ -92,13 +96,13 @@ abstract class sh extends el implements ql {
             sh.a(var8, param1, param2, var10, (byte) 107, param5, param6);
             return;
           }
-          for (var7_int = -1 + param5; var7_int > param0; var7_int--) {
-            for (var8 = param0; var8 < var7_int; var8++) {
-              var9 = qi.field_i[var8];
-              var10 = qi.field_i[1 + var8];
-              if (ig.a(param6, var10, (byte) -125, var9)) {
-                qi.field_i[var8] = var10;
-                qi.field_i[var8 + 1] = var9;
+          for (var7_intLifetime1 = -1 + param5; var7_intLifetime1 > param0; var7_intLifetime1--) {
+            for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
+              var9Lifetime1 = qi.field_i[var8Lifetime1];
+              var10Lifetime1 = qi.field_i[1 + var8Lifetime1];
+              if (ig.a(param6, var10Lifetime1, (byte) -125, var9Lifetime1)) {
+                qi.field_i[var8Lifetime1] = var10Lifetime1;
+                qi.field_i[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }

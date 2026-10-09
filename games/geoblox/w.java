@@ -227,6 +227,8 @@ final class w {
 
     final static void a(dm param0, int param1, int param2) {
         int var9 = 0;
+        int var9Lifetime1;
+        int var9Lifetime2;
         param1 = param1 + param0.field_u;
         param2 = param2 + param0.field_p;
         int var3 = param1 + param2 * vb.field_f;
@@ -246,19 +248,19 @@ final class w {
             var5 = var5 - (param2 + var5 - vb.field_d);
         }
         if (param1 < vb.field_e) {
-            var9 = vb.field_e - param1;
-            var6 = var6 - var9;
+            var9Lifetime1 = vb.field_e - param1;
+            var6 = var6 - var9Lifetime1;
             param1 = vb.field_e;
-            var4 = var4 + var9;
-            var3 = var3 + var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var4 = var4 + var9Lifetime1;
+            var3 = var3 + var9Lifetime1;
+            var8 = var8 + var9Lifetime1;
+            var7 = var7 + var9Lifetime1;
         }
         if (param1 + var6 > vb.field_k) {
-            var9 = param1 + var6 - vb.field_k;
-            var6 = var6 - var9;
-            var8 = var8 + var9;
-            var7 = var7 + var9;
+            var9Lifetime2 = param1 + var6 - vb.field_k;
+            var6 = var6 - var9Lifetime2;
+            var8 = var8 + var9Lifetime2;
+            var7 = var7 + var9Lifetime2;
         }
         if (var6 <= 0 || var5 <= 0) {
             return;

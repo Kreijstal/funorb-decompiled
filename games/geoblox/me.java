@@ -45,22 +45,24 @@ final class me extends hf {
 
     final static void a(int param0, qc param1) {
         int var2_int = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         try {
             rd.field_v = param1.b(true) << 5;
             var2_int = param1.c((byte) 34);
             rd.field_v = rd.field_v + (var2_int >> 3);
             h.field_b = var2_int << 18 & 1835008;
             h.field_b = h.field_b + (param1.b(true) << 2);
-            var2_int = param1.c((byte) 34);
+            var2_intLifetime1 = param1.c((byte) 34);
             if (param0 <= 105) {
                 me.a((byte) 114);
             }
-            fe.field_g = var2_int << 15 & 2064384;
-            h.field_b = h.field_b + (var2_int >> 6);
+            fe.field_g = var2_intLifetime1 << 15 & 2064384;
+            h.field_b = h.field_b + (var2_intLifetime1 >> 6);
             fe.field_g = fe.field_g + (param1.c((byte) 34) << 7);
-            var2_int = param1.c((byte) 34);
-            fe.field_g = fe.field_g + (var2_int >> 1);
-            lc.field_b = (var2_int & 1) << 16;
+            var2_intLifetime2 = param1.c((byte) 34);
+            fe.field_g = fe.field_g + (var2_intLifetime2 >> 1);
+            lc.field_b = (var2_intLifetime2 & 1) << 16;
             lc.field_b = lc.field_b + param1.b(true);
         } catch (RuntimeException runtimeException) {
             throw t.a((Throwable) ((Object) runtimeException), "me.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

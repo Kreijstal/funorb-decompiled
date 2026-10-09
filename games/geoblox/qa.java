@@ -119,6 +119,13 @@ final class qa {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var11Lifetime4;
+        int var11Lifetime5;
+        int var11Lifetime6;
+        int var11Lifetime7;
         var12 = Geoblox.field_C;
         try {
           if (0 == param5) {
@@ -153,11 +160,11 @@ final class qa {
               var7_int = this.field_c[var7_int];
             }
             dupTemp$2 = this.field_c[var7_int];
-            var11 = dupTemp$2;
+            var11Lifetime1 = dupTemp$2;
             if (dupTemp$2 < 0) {
               incrementValue$3 = param3;
               param3++;
-              param0[incrementValue$3] = (byte)(~var11);
+              param0[incrementValue$3] = (byte)(~var11Lifetime1);
               if (param3 >= param5) {
                 break L2;
               }
@@ -169,11 +176,11 @@ final class qa {
               var7_int++;
             }
             dupTemp$4 = this.field_c[var7_int];
-            var11 = dupTemp$4;
+            var11Lifetime2 = dupTemp$4;
             if (dupTemp$4 < 0) {
               incrementValue$5 = param3;
               param3++;
-              param0[incrementValue$5] = (byte)(~var11);
+              param0[incrementValue$5] = (byte)(~var11Lifetime2);
               if (param5 <= param3) {
                 break L2;
               }
@@ -185,11 +192,11 @@ final class qa {
               var7_int = this.field_c[var7_int];
             }
             dupTemp$6 = this.field_c[var7_int];
-            var11 = dupTemp$6;
+            var11Lifetime3 = dupTemp$6;
             if (dupTemp$6 < 0) {
               incrementValue$7 = param3;
               param3++;
-              param0[incrementValue$7] = (byte)(~var11);
+              param0[incrementValue$7] = (byte)(~var11Lifetime3);
               if (param5 <= param3) {
                 break L2;
               }
@@ -201,11 +208,11 @@ final class qa {
               var7_int = this.field_c[var7_int];
             }
             dupTemp$8 = this.field_c[var7_int];
-            var11 = dupTemp$8;
+            var11Lifetime4 = dupTemp$8;
             if (dupTemp$8 < 0) {
               incrementValue$9 = param3;
               param3++;
-              param0[incrementValue$9] = (byte)(~var11);
+              param0[incrementValue$9] = (byte)(~var11Lifetime4);
               if (param5 <= param3) {
                 break L2;
               }
@@ -217,11 +224,11 @@ final class qa {
               var7_int++;
             }
             dupTemp$10 = this.field_c[var7_int];
-            var11 = dupTemp$10;
+            var11Lifetime5 = dupTemp$10;
             if (dupTemp$10 < 0) {
               incrementValue$11 = param3;
               param3++;
-              param0[incrementValue$11] = (byte)(~var11);
+              param0[incrementValue$11] = (byte)(~var11Lifetime5);
               if (param5 <= param3) {
                 return var9 + 1 - param1;
               }
@@ -233,11 +240,11 @@ final class qa {
               var7_int++;
             }
             dupTemp$12 = this.field_c[var7_int];
-            var11 = dupTemp$12;
+            var11Lifetime6 = dupTemp$12;
             if (dupTemp$12 < 0) {
               incrementValue$13 = param3;
               param3++;
-              param0[incrementValue$13] = (byte)(~var11);
+              param0[incrementValue$13] = (byte)(~var11Lifetime6);
               if (param3 >= param5) {
                 break L2;
               }
@@ -249,14 +256,14 @@ final class qa {
               var7_int = this.field_c[var7_int];
             }
             dupTemp$14 = this.field_c[var7_int];
-            var11 = dupTemp$14;
+            var11Lifetime7 = dupTemp$14;
             if (dupTemp$14 >= 0) {
               var9++;
               continue;
             }
             incrementValue$15 = param3;
             param3++;
-            param0[incrementValue$15] = (byte)(~var11);
+            param0[incrementValue$15] = (byte)(~var11Lifetime7);
             if (param3 < param5) {
               var7_int = 0;
               var9++;

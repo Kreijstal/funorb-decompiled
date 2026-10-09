@@ -82,6 +82,10 @@ final class sd extends pb {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        int var15Lifetime1;
+        int var16Lifetime1;
+        int var17Lifetime1;
+        int var18Lifetime1;
         var19 = Geoblox.field_C;
         try {
           if (param5 >= 0 &&
@@ -203,25 +207,25 @@ final class sd extends pb {
               var9_int = var9_int + param8 * var11;
               param8 = 0;
             }
-            var16 = -91 % ((param3 - 74) / 33);
-            var15 = mh.field_b[param8];
+            var16Lifetime1 = -91 % ((param3 - 74) / 33);
+            var15Lifetime1 = mh.field_b[param8];
             while (param5 > param8) {
-              var17 = var9_int >> 16;
-              if (mh.field_c > var17) {
-                var18 = (var10 >> 16) - (var9_int >> 16);
-                if (var18 == 0) {
-                  if (var17 >= 0 &&
-                      mh.field_c > var17) {
-                    ib.a(-67, param4, var17 + var15, param2, var18);
+              var17Lifetime1 = var9_int >> 16;
+              if (mh.field_c > var17Lifetime1) {
+                var18Lifetime1 = (var10 >> 16) - (var9_int >> 16);
+                if (var18Lifetime1 == 0) {
+                  if (var17Lifetime1 >= 0 &&
+                      mh.field_c > var17Lifetime1) {
+                    ib.a(-67, param4, var17Lifetime1 + var15Lifetime1, param2, var18Lifetime1);
                   }
                 } else {
-                  if (mh.field_c <= var18 + var17) {
-                    var18 = -var17 + mh.field_c - 1;
+                  if (mh.field_c <= var18Lifetime1 + var17Lifetime1) {
+                    var18Lifetime1 = -var17Lifetime1 + mh.field_c - 1;
                   }
-                  if (0 > var17) {
-                    ib.a(127, param4, var15, param2, var17 + var18);
+                  if (0 > var17Lifetime1) {
+                    ib.a(127, param4, var15Lifetime1, param2, var17Lifetime1 + var18Lifetime1);
                   } else {
-                    ib.a(115, param4, var17 + var15, param2, var18);
+                    ib.a(115, param4, var17Lifetime1 + var15Lifetime1, param2, var18Lifetime1);
                   }
                 }
               }
@@ -231,7 +235,7 @@ final class sd extends pb {
               }
               var9_int = var9_int + var11;
               var10 = var10 + var12;
-              var15 = var15 + vb.field_f;
+              var15Lifetime1 = var15Lifetime1 + vb.field_f;
             }
             return;
           }

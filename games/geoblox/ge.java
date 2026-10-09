@@ -108,6 +108,7 @@ final class ge {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var8Lifetime1;
         var13 = Geoblox.field_C;
         try {
           var5_int = 0;
@@ -144,10 +145,10 @@ final class ge {
             throw new RuntimeException("LOGIC ERROR");
           }
           if (param1 <= 0L) {
-            var8 = 0;
+            var8Lifetime1 = 0;
           } else {
-            var8 = param0[var5_int] << var6 & 255;
-            this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8 >>> var7);
+            var8Lifetime1 = param0[var5_int] << var6 & 255;
+            this.field_i[this.field_e] = (byte)lb.a((int) this.field_i[this.field_e], var8Lifetime1 >>> var7);
           }
           if (8L > param1 + (long)var7) {
             this.field_h = (int)((long)this.field_h + param1);
@@ -160,7 +161,7 @@ final class ge {
               this.field_h = 0;
               this.field_e = 0;
             }
-            this.field_i[this.field_e] = (byte)cd.a(var8 << -var7 + 8, 255);
+            this.field_i[this.field_e] = (byte)cd.a(var8Lifetime1 << -var7 + 8, 255);
             this.field_h = this.field_h + (int)param1;
           }
           return;
@@ -359,14 +360,15 @@ final class ge {
     final void a(int param0) {
         int var2 = 0;
         int var3 = Geoblox.field_C;
+        int var2Lifetime1;
         for (var2 = 0; var2 < 32; var2++) {
             this.field_j[var2] = (byte) 0;
         }
         this.field_i[0] = (byte) 0;
         this.field_h = 0;
         this.field_e = 0;
-        for (var2 = 0; 8 > var2; var2++) {
-            this.field_c[var2] = 0L;
+        for (var2Lifetime1 = 0; 8 > var2Lifetime1; var2Lifetime1++) {
+            this.field_c[var2Lifetime1] = 0L;
         }
         if (param0 <= 51) {
             this.field_e = 101;

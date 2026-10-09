@@ -40,6 +40,7 @@ abstract class nh {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
+        int var9Lifetime1;
         try {
           var7_int = ja.b(1221916132, param5);
           if (cl.field_e == null) {
@@ -66,7 +67,7 @@ abstract class nh {
           vf.field_I.field_f = 0;
           vf.field_I.d((byte) -69, 10);
           var10 = 0;
-          var9 = var10;
+          var9Lifetime1 = var10;
           while (var10 < 4) {
             vf.field_I.c((byte) 95, var12[var10]);
             var10++;

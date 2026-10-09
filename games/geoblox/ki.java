@@ -22,14 +22,16 @@ final class ki {
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
+        int var2_intLifetime1;
+        int var2_intLifetime2;
         var5 = Geoblox.field_C;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             p.field_o[var2_int] = 0;
           }
-          for (var2_int = 0; var2_int < oj.field_b; var2_int++) {
-            if (n.field_k[var2_int].field_f == param0.field_f) {
-              dupTemp$3 = n.field_k[var2_int].c(124);
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < oj.field_b; var2_intLifetime1++) {
+            if (n.field_k[var2_intLifetime1].field_f == param0.field_f) {
+              dupTemp$3 = n.field_k[var2_intLifetime1].c(124);
               p.field_o[dupTemp$3] = p.field_o[dupTemp$3] + 1;
             }
           }
@@ -38,7 +40,7 @@ final class ki {
           }
           dupTemp$0 = param0.c(125);
           p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
-          var2_int = 0;
+          var2_intLifetime2 = 0;
           for (var3 = 0; oj.field_b > var3; var3++) {
             L3: {
               if (param0.field_f == n.field_k[var3].field_f) {
@@ -48,12 +50,12 @@ final class ki {
                   break L3;
                 }
               }
-              incrementValue$2 = var2_int;
-              var2_int++;
+              incrementValue$2 = var2_intLifetime2;
+              var2_intLifetime2++;
               n.field_k[incrementValue$2] = n.field_k[var3];
             }
           }
-          oj.field_b = var2_int;
+          oj.field_b = var2_intLifetime2;
           fieldTemp$1 = oj.field_b;
           oj.field_b = oj.field_b + 1;
           n.field_k[fieldTemp$1] = param0;

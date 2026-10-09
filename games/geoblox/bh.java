@@ -52,6 +52,10 @@ final class bh extends java.awt.Canvas {
         int var13 = 0;
         pk var14 = null;
         int[][] var18 = null;
+        int var6_intLifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var11Lifetime1;
         var12 = Geoblox.field_C;
         try {
           var14 = eh.field_d;
@@ -79,12 +83,12 @@ final class bh extends java.awt.Canvas {
               oi.field_a[var6_int] = var14.e((byte) 120);
             }
             nf.a(2147483647, var5, var4);
-            for (var6_int = 0; var4 > var6_int; var6_int++) {
+            for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               me.a(116, var14);
-              if (var6_int != 0) {
-                nd.a(fe.field_g, var6_int, (byte) 123, rd.field_v, h.field_b, lc.field_b);
+              if (var6_intLifetime1 != 0) {
+                nd.a(fe.field_g, var6_intLifetime1, (byte) 123, rd.field_v, h.field_b, lc.field_b);
               } else {
-                nd.a(fe.field_g, var6_int, (byte) -97, rd.field_v, h.field_b, lc.field_b);
+                nd.a(fe.field_g, var6_intLifetime1, (byte) -97, rd.field_v, h.field_b, lc.field_b);
               }
             }
             kc.a(var5, (byte) -98);
@@ -108,23 +112,23 @@ final class bh extends java.awt.Canvas {
               var9++;
               var10++;
             }
-            var9 = 0;
+            var9Lifetime1 = 0;
             var13 = 0;
-            var10 = var13;
-            while (var9 < var8) {
-              var11 = qi.field_i[var9 + var5];
-              var6[1][var13] = oi.field_a[var11];
-              var18[1][4 * var13] = hg.field_a[var11];
-              var18[1][1 + 4 * var13] = fb.field_m[var11];
-              var18[1][var13 * 4 + 2] = k.field_i[var11];
-              var18[1][var13 * 4 + 3] = cj.field_b[var11];
-              if (ge.a(oi.field_a[var11], (byte) 12) &&
-                  cj.field_b[var11] + k.field_i[var11] + fb.field_m[var11] == 0) {
+            var10Lifetime1 = var13;
+            while (var9Lifetime1 < var8) {
+              var11Lifetime1 = qi.field_i[var9Lifetime1 + var5];
+              var6[1][var13] = oi.field_a[var11Lifetime1];
+              var18[1][4 * var13] = hg.field_a[var11Lifetime1];
+              var18[1][1 + 4 * var13] = fb.field_m[var11Lifetime1];
+              var18[1][var13 * 4 + 2] = k.field_i[var11Lifetime1];
+              var18[1][var13 * 4 + 3] = cj.field_b[var11Lifetime1];
+              if (ge.a(oi.field_a[var11Lifetime1], (byte) 12) &&
+                  cj.field_b[var11Lifetime1] + k.field_i[var11Lifetime1] + fb.field_m[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }
               var13++;
-              var9++;
+              var9Lifetime1++;
             }
             var3.a(false);
             return;

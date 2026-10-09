@@ -249,6 +249,8 @@ final class c extends ka {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int var2_intLifetime1;
+        int var3Lifetime1;
         var4 = Geoblox.field_C;
         try {
           if (param0) {
@@ -276,17 +278,17 @@ final class c extends ka {
             stackIn_16_0 = this.field_u + (vc.field_j.field_s + 640);
             break;
           }
-          var2_int = stackIn_16_0;
-          while (-vc.field_j.field_s <= var2_int) {
+          var2_intLifetime1 = stackIn_16_0;
+          while (-vc.field_j.field_s <= var2_intLifetime1) {
             if (var4 != 0) {
               return;
             }
-            var3 = this.field_I + vc.field_j.field_o + 480;
-            while (var3 >= -vc.field_j.field_o) {
-              vc.field_j.b(var2_int, var3);
-              var3 = var3 - vc.field_j.field_o;
+            var3Lifetime1 = this.field_I + vc.field_j.field_o + 480;
+            while (var3Lifetime1 >= -vc.field_j.field_o) {
+              vc.field_j.b(var2_intLifetime1, var3Lifetime1);
+              var3Lifetime1 = var3Lifetime1 - vc.field_j.field_o;
             }
-            var2_int = var2_int - vc.field_j.field_s;
+            var2_intLifetime1 = var2_intLifetime1 - vc.field_j.field_s;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -355,6 +357,19 @@ final class c extends ka {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
+        int var2_intLifetime1;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var6Lifetime3;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var11Lifetime1;
         var12 = Geoblox.field_C;
         try {
           if (param0 != -28750) {
@@ -367,7 +382,7 @@ final class c extends ka {
           if (this.field_K != 0 &&
               this.field_K != 1 &&
               this.field_K != 4) {
-            var2_int = (2 == this.field_K) && (var12 == 0) ? (235) : (285);
+            var2_intLifetime1 = (2 == this.field_K) && (var12 == 0) ? (235) : (285);
             var5 = 120;
             if (this.field_K == 3) {
               var5 += 10;
@@ -385,7 +400,7 @@ final class c extends ka {
                 var5 -= 10;
               }
             }
-            ma.a(var3, var5, var2_int, (byte) -92, var4, ll.field_h);
+            ma.a(var3, var5, var2_intLifetime1, (byte) -92, var4, ll.field_h);
           }
           if (!this.field_E) {
             super.a(param0 + 0);
@@ -404,10 +419,10 @@ final class c extends ka {
               if (this.field_K == 4) {
                 kh.field_h[8].b(0, 20);
                 ma.a(var3 + 10, 120, 100, (byte) -92, var4, ll.field_h);
-                var5 = 184;
-                dd.field_G.b(Geoblox.field_A, 320, var5, 0, -1);
-                var5 = 185;
-                fi.field_d.a(r.field_sb, 130, var5, 380, 300, 0, -1, 1, 0, 14);
+                var5Lifetime1 = 184;
+                dd.field_G.b(Geoblox.field_A, 320, var5Lifetime1, 0, -1);
+                var5Lifetime1 = 185;
+                fi.field_d.a(r.field_sb, 130, var5Lifetime1, 380, 300, 0, -1, 1, 0, 14);
                 ma.a(320, 120, 60, (byte) -92, var4, ll.field_h);
                 fi.field_d.a(bd.field_b, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (var12 == 0) {
@@ -429,8 +444,8 @@ final class c extends ka {
                   } else {
                     stackIn_73_0 = 200;
                   }
-                  var5 = stackIn_73_0;
-                  vb.b(0, 0, 640, 480, 0, var5);
+                  var5Lifetime1 = stackIn_73_0;
+                  vb.b(0, 0, 640, 480, 0, var5Lifetime1);
                   ma.a(160, 150, 80, (byte) -92, 340, ll.field_h);
                   var6 = 170;
                   fi.field_d.a(ki.field_a, 160, var6, 320, 300, 0, -1, 1, 0, 16);
@@ -474,16 +489,16 @@ final class c extends ka {
                     } else {
                       stackIn_122_0 = this.field_y;
                     }
-                    var5 = stackIn_122_0;
-                    vb.b(0, 0, 640, 480, 0, var5);
+                    var5Lifetime1 = stackIn_122_0;
+                    vb.b(0, 0, 640, 480, 0, var5Lifetime1);
                     ma.a(160, 160, 95, (byte) -92, 320, ll.field_h);
-                    var6 = 170;
-                    var6 = var6 + 16 * fi.field_d.a(sj.field_e, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                    var6 += 40;
-                    var7 = 100;
-                    var8 = 320 - (var7 + 20 >> 1);
-                    var9 = (var7 >> 1) + (var8 + 10);
-                    ma.a(var6, var8, 36, (byte) -92, 20 + var7, eb.field_g);
+                    var6Lifetime1 = 170;
+                    var6Lifetime1 = var6Lifetime1 + 16 * fi.field_d.a(sj.field_e, 170, var6Lifetime1, 300, 300, 0, -1, 1, 0, 16);
+                    var6Lifetime1 += 40;
+                    var7Lifetime1 = 100;
+                    var8Lifetime1 = 320 - (var7Lifetime1 + 20 >> 1);
+                    var9Lifetime1 = (var7Lifetime1 >> 1) + (var8Lifetime1 + 10);
+                    ma.a(var6Lifetime1, var8Lifetime1, 36, (byte) -92, 20 + var7Lifetime1, eb.field_g);
                     if (0 == this.field_o ||
                         !(260 >= qa.field_a) &&
                           !(qa.field_a >= 380) &&
@@ -491,7 +506,7 @@ final class c extends ka {
                           !(ue.field_e >= 309)) {
                       dd.field_G.field_K[0][wf.field_p] = 15488514;
                     }
-                    dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
+                    dd.field_G.b(hh.field_b, var9Lifetime1, 30 + var6Lifetime1, 0, -1);
                     dd.field_G.field_K[0][wf.field_p] = 16689938;
                     if (var12 == 0) {
                       return;
@@ -502,27 +517,27 @@ final class c extends ka {
                   } else {
                     stackIn_144_0 = 200;
                   }
-                  var5 = stackIn_144_0;
-                  vb.b(0, 0, 640, 480, 0, var5);
+                  var5Lifetime1 = stackIn_144_0;
+                  vb.b(0, 0, 640, 480, 0, var5Lifetime1);
                   ma.a(160, 160, 140, (byte) -92, 320, ll.field_h);
-                  var6 = 170;
+                  var6Lifetime1 = 170;
                   var7_ref_String = ue.field_c + " " + pb.field_v + " " + wj.field_C + " " + rb.field_a + " " + uj.field_d;
-                  var6 = var6 + 16 * fi.field_d.a(var7_ref_String, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                  var6 += 10;
+                  var6Lifetime1 = var6Lifetime1 + 16 * fi.field_d.a(var7_ref_String, 170, var6Lifetime1, 300, 300, 0, -1, 1, 0, 16);
+                  var6Lifetime1 += 10;
                   var8_ref_String = Integer.toString((1500 - this.field_y) / 150 + 1);
                   if ((1500 - this.field_y) / 150 <= 0) {
-                    var6 = var6 + fi.field_d.a(wj.a(mj.field_c, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    var6Lifetime1 = var6Lifetime1 + fi.field_d.a(wj.a(mj.field_c, new String[]{var8_ref_String}, (byte) -51), 170, var6Lifetime1, 300, 300, 0, -1, 1, 0, 16) * 16;
                     if (var12 != 0) {
-                      var6 = var6 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                      var6Lifetime1 = var6Lifetime1 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6Lifetime1, 300, 300, 0, -1, 1, 0, 16) * 16;
                     }
                   } else {
-                    var6 = var6 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
+                    var6Lifetime1 = var6Lifetime1 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6Lifetime1, 300, 300, 0, -1, 1, 0, 16) * 16;
                   }
-                  var6 += 40;
-                  var9 = 100;
-                  var10 = -(20 + var9 >> 1) + 320 + 90;
-                  ma.a(var6, var10, 36, (byte) -92, var9 + 20, eb.field_g);
-                  var11 = 10 + ((var9 >> 1) + var10);
+                  var6Lifetime1 += 40;
+                  var9Lifetime1 = 100;
+                  var10 = -(20 + var9Lifetime1 >> 1) + 320 + 90;
+                  ma.a(var6Lifetime1, var10, 36, (byte) -92, var9Lifetime1 + 20, eb.field_g);
+                  var11 = 10 + ((var9Lifetime1 >> 1) + var10);
                   if (this.field_o == 1 ||
                       0 > this.field_o &&
                         !(qa.field_a <= 350) &&
@@ -531,11 +546,11 @@ final class c extends ka {
                         !(ue.field_e >= 352)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
-                  dd.field_G.b(rb.field_a, var11, 30 + var6, 0, -1);
+                  dd.field_G.b(rb.field_a, var11, 30 + var6Lifetime1, 0, -1);
                   dd.field_G.field_K[0][wf.field_p] = 16689938;
-                  var10 = 320 - (20 + var9 >> 1) - 90;
-                  var11 = 10 + (var9 >> 1) + var10;
-                  ma.a(var6, var10, 36, (byte) -92, 20 + var9, eb.field_g);
+                  var10Lifetime1 = 320 - (20 + var9Lifetime1 >> 1) - 90;
+                  var11Lifetime1 = 10 + (var9Lifetime1 >> 1) + var10Lifetime1;
+                  ma.a(var6Lifetime1, var10Lifetime1, 36, (byte) -92, 20 + var9Lifetime1, eb.field_g);
                   if (this.field_o == 0 ||
                       this.field_o < 0 &&
                         !(qa.field_a <= 170) &&
@@ -544,7 +559,7 @@ final class c extends ka {
                         !(ue.field_e >= 352)) {
                     dd.field_G.field_K[0][wf.field_p] = 15488514;
                   }
-                  dd.field_G.b(pb.field_v, var11, 30 + var6, 0, -1);
+                  dd.field_G.b(pb.field_v, var11Lifetime1, 30 + var6Lifetime1, 0, -1);
                   dd.field_G.field_K[0][wf.field_p] = 16689938;
                   if (var12 == 0) {
                     return;
@@ -555,16 +570,16 @@ final class c extends ka {
                 } else {
                   stackIn_191_0 = this.field_y;
                 }
-                var5 = stackIn_191_0;
-                vb.b(0, 0, 640, 480, 0, var5);
+                var5Lifetime1 = stackIn_191_0;
+                vb.b(0, 0, 640, 480, 0, var5Lifetime1);
                 ma.a(170, 160, 80, (byte) -92, 320, ll.field_h);
-                var6 = 180;
-                fi.field_d.a(ki.field_a, 170, var6, 300, 300, 0, -1, 1, 0, 16);
-                var7 = 242;
-                var8 = 320 - (var7 + 20 >> 1);
-                var9 = 10 + (var8 + (var7 >> 1));
-                var6 = 265;
-                ma.a(var6, var8, 36, (byte) -92, var7 + 20, eb.field_g);
+                var6Lifetime2 = 180;
+                fi.field_d.a(ki.field_a, 170, var6Lifetime2, 300, 300, 0, -1, 1, 0, 16);
+                var7Lifetime2 = 242;
+                var8Lifetime2 = 320 - (var7Lifetime2 + 20 >> 1);
+                var9Lifetime2 = 10 + (var8Lifetime2 + (var7Lifetime2 >> 1));
+                var6Lifetime3 = 265;
+                ma.a(var6Lifetime3, var8Lifetime2, 36, (byte) -92, var7Lifetime2 + 20, eb.field_g);
                 if (this.field_o == 0 ||
                     !(qa.field_a <= 190) &&
                       !(qa.field_a >= 449) &&
@@ -572,7 +587,7 @@ final class c extends ka {
                       !(299 <= ue.field_e)) {
                   dd.field_G.field_K[0][wf.field_p] = 15488514;
                 }
-                dd.field_G.b(hh.field_b, var9, 30 + var6, 0, -1);
+                dd.field_G.b(hh.field_b, var9Lifetime2, 30 + var6Lifetime3, 0, -1);
                 dd.field_G.field_K[0][wf.field_p] = 16689938;
                 if (var12 == 0) {
                   return;
@@ -586,33 +601,33 @@ final class c extends ka {
                 }
               }
               L37: {
-                var5 = this.field_F;
+                var5Lifetime1 = this.field_F;
                 if (!this.field_v) {
-                  var5 = 640 - var5;
-                  vb.e(0, 0, var5, 480);
+                  var5Lifetime1 = 640 - var5Lifetime1;
+                  vb.e(0, 0, var5Lifetime1, 480);
                   this.b(-85, this.field_n);
                   this.field_S = true;
                   super.a(-28750);
                   this.field_S = false;
-                  vb.e(var5, 0, 640, 480);
+                  vb.e(var5Lifetime1, 0, 640, 480);
                   this.b(param0 ^ 28757, this.field_q);
                   super.a(-28750);
                   vb.e(0, 0, 640, 480);
-                  qj.field_c.b((qj.field_c.field_o >> 1) + var5, 240, -49150, 4096);
+                  qj.field_c.b((qj.field_c.field_o >> 1) + var5Lifetime1, 240, -49150, 4096);
                   if (var12 == 0) {
                     break L37;
                   }
                 }
-                vb.e(var5, 0, 640, 480);
+                vb.e(var5Lifetime1, 0, 640, 480);
                 this.b(-17, this.field_n);
                 this.field_S = true;
                 super.a(-28750);
                 this.field_S = false;
-                vb.e(0, 0, var5, 480);
+                vb.e(0, 0, var5Lifetime1, 480);
                 this.b(-48, this.field_q);
                 super.a(-28750);
                 vb.e(0, 0, 640, 480);
-                qj.field_c.b(-(qj.field_c.field_o >> 1) + var5, 240, -16383, 4096);
+                qj.field_c.b(-(qj.field_c.field_o >> 1) + var5Lifetime1, 240, -16383, 4096);
               }
               if (var12 == 0) {
                 return;
@@ -935,6 +950,7 @@ final class c extends ka {
         String var9 = null;
         int var10 = 0;
         String var2Lifetime1;
+        int var6Lifetime1;
         var10 = Geoblox.field_C;
         try {
           if (ca.field_f == null &&
@@ -1029,8 +1045,8 @@ final class c extends ka {
               }
               if (var2_int == 0) {
                 var5_ref = sb.field_f;
-                var6 = 76 + dd.field_G.field_o + 150;
-                dd.field_G.b(var5_ref, 322, var6, 0, -1);
+                var6Lifetime1 = 76 + dd.field_G.field_o + 150;
+                dd.field_G.b(var5_ref, 322, var6Lifetime1, 0, -1);
               }
               if (var10 != 0) {
                 if (!fh.c(-89)) {
@@ -1414,6 +1430,12 @@ final class c extends ka {
         double var9 = 0.0;
         int var11 = 0;
         RuntimeException decompiledCaughtException = null;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        int var6Lifetime2;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var8Lifetime2;
         var11 = Geoblox.field_C;
         try {
           var3_int = 180;
@@ -1491,7 +1513,7 @@ final class c extends ka {
               vb.b(this.field_P);
               vb.b(40, 355, 103, 415);
               wl.field_a.b(var6 - (wl.field_a.field_s >> 1), var7 - (wl.field_a.field_s >> 1));
-              var8 = (int)((this.field_A + var9) / 6.283185307179586 * 65535.0 + 0.5);
+              var8Lifetime1 = (int)((this.field_A + var9) / 6.283185307179586 * 65535.0 + 0.5);
               var6 = (int)(-Math.sin(var9 + this.field_A) * (double)this.field_Z + 0.5) + var4_int;
               var7 = var5 + (int)(0.5 + Math.cos(var9 + this.field_A) * (double)this.field_Z);
               wl.field_a.e();
@@ -1502,7 +1524,7 @@ final class c extends ka {
               vb.b(40, 355, 103, 415);
               wl.field_a.b(var6 - (wl.field_a.field_s >> 1), -(wl.field_a.field_s >> 1) + var7);
               var9 = var9 * 2.0;
-              var8 = (int)(0.5 + (this.field_A + var9) / 6.283185307179586 * 65535.0);
+              var8Lifetime2 = (int)(0.5 + (this.field_A + var9) / 6.283185307179586 * 65535.0);
               var6 = (int)(0.5 + -Math.sin(var9 + this.field_A) * (double)this.field_Z) + var4_int;
               var7 = var5 + (int)(Math.cos(this.field_A + var9) * (double)this.field_Z + 0.5);
               wl.field_a.e();
@@ -1518,23 +1540,23 @@ final class c extends ka {
           ma.a(140, 550, 40, (byte) -92, 60, ll.field_h);
           dd.field_G.b(param1 + 1 + "/5", 580, 170, 0, -1);
           var4 = null;
-          var5 = 155;
-          var6 = param1;
-          if (var6 == 0) {
-            dd.field_G.a(a.field_a[0], var5, var3_int, 0, -1);
+          var5Lifetime1 = 155;
+          var6Lifetime1 = param1;
+          if (var6Lifetime1 == 0) {
+            dd.field_G.a(a.field_a[0], var5Lifetime1, var3_int, 0, -1);
             var4 = ec.field_e[0];
-            dd.field_G.a(a.field_a[1], var5, var3_int + 110, 0, -1);
+            dd.field_G.a(a.field_a[1], var5Lifetime1, var3_int + 110, 0, -1);
           } else {
-            if (1 == var6 &&
+            if (1 == var6Lifetime1 &&
                 var11 == 0) {
-              dd.field_G.a(a.field_a[2], var5, var3_int, 0, -1);
+              dd.field_G.a(a.field_a[2], var5Lifetime1, var3_int, 0, -1);
               var4 = ec.field_e[1];
             } else {
-              if (var6 == 2) {
-                dd.field_G.a(a.field_a[3], var5, var3_int, 0, -1);
+              if (var6Lifetime1 == 2) {
+                dd.field_G.a(a.field_a[3], var5Lifetime1, var3_int, 0, -1);
                 var4 = ec.field_e[2];
               } else {
-                if (var6 == 3) {
+                if (var6Lifetime1 == 3) {
                   vf.field_L.e();
                   vb.c();
                   ka.field_m[1][this.field_L][this.field_w].b(-(ka.field_m[1][this.field_L][this.field_w].field_s >> 1) + (vf.field_L.field_s >> 1), (vf.field_L.field_o >> 1) - (ka.field_m[1][this.field_L][this.field_w].field_o >> 1));
@@ -1548,10 +1570,10 @@ final class c extends ka {
                   vb.b(this.field_P);
                   vf.field_L.g(1);
                   vf.field_L.b(70 - (vf.field_L.field_s >> 1), 282 - (vf.field_L.field_o >> 1));
-                  dd.field_G.a(a.field_a[4], var5, var3_int, 0, -1);
+                  dd.field_G.a(a.field_a[4], var5Lifetime1, var3_int, 0, -1);
                   var4 = ec.field_e[3];
                 } else {
-                  if (4 == var6) {
+                  if (4 == var6Lifetime1) {
                     vf.field_L.e();
                     vb.c();
                     fc.field_g[this.field_w].b(-(fc.field_g[this.field_w].field_s >> 1) + (vf.field_L.field_s >> 1), -(fc.field_g[this.field_w].field_o >> 1) + (vf.field_L.field_o >> 1));
@@ -1569,19 +1591,19 @@ final class c extends ka {
                     sh.field_y.a(255);
                     vb.b(this.field_P);
                     vf.field_L.b(70 - (vf.field_L.field_s >> 1), -(vf.field_L.field_o >> 1) + 282);
-                    dd.field_G.a(a.field_a[5], var5, var3_int, 0, -1);
+                    dd.field_G.a(a.field_a[5], var5Lifetime1, var3_int, 0, -1);
                     var4 = ec.field_e[4];
                   }
                 }
               }
             }
           }
-          var6 = fi.field_d.field_o + fi.field_d.field_q;
+          var6Lifetime2 = fi.field_d.field_o + fi.field_d.field_q;
           if (param0 > -14) {
             this.a(-3, -61, false, -67, true, 116);
           }
-          var7 = 355;
-          var3_int = var3_int + fi.field_d.a((String) (var4), var5, var3_int, var7, 300, 0, -1, 0, 0, 16) * var6;
+          var7Lifetime1 = 355;
+          var3_int = var3_int + fi.field_d.a((String) (var4), var5Lifetime1, var3_int, var7Lifetime1, 300, 0, -1, 0, 0, 16) * var6Lifetime2;
           vb.b(this.field_P);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

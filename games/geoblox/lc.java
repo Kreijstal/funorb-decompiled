@@ -130,6 +130,8 @@ final class lc {
         int var35 = 0;
         int var36 = 0;
         int var37 = 0;
+        int stackIn_23_0Lifetime1;
+        int var25Lifetime1;
         var37 = Geoblox.field_C;
         try {
           if (param10 > -74) {
@@ -166,10 +168,10 @@ final class lc {
                   var27 = var15 * (var25 << 16 >>> 16) >>> 8;
                   var28 = (var25 << 8) * var16 >>> 24;
                   var29 = var17 * var25 >>> 8;
-                  var25 = (var28 << 8) + (var27 << 16) + var29;
-                  var30 = var26 * ((16711680 & var25) >> 16);
-                  var31 = (255 & var25 >> 8) * var26;
-                  var32 = (var25 & 255) * var26;
+                  var25Lifetime1 = (var28 << 8) + (var27 << 16) + var29;
+                  var30 = var26 * ((16711680 & var25Lifetime1) >> 16);
+                  var31 = (255 & var25Lifetime1 >> 8) * var26;
+                  var32 = (var25Lifetime1 & 255) * var26;
                   var33 = ((16711680 & var21) >>> 16) * ((param12 & 16711680) >>> 16) >>> 8;
                   var34 = (var21 & 65280) * (param12 & 65280) >>> 24;
                   var35 = (255 & var21) * (255 & param12) >>> 8;
@@ -186,8 +188,8 @@ final class lc {
             }
             param6 = param6 + param4;
             param8 = param8 + param7;
-            stackIn_23_0 = var13_int;
-            param0 = stackIn_23_0;
+            stackIn_23_0Lifetime1 = var13_int;
+            param0 = stackIn_23_0Lifetime1;
             var18++;
           }
           return;

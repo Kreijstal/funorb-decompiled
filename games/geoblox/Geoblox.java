@@ -58,6 +58,13 @@ public final class Geoblox extends wf {
         int var9 = 0;
         int var10 = field_C;
         dm[] var3Lifetime1;
+        int var4Lifetime1;
+        int var5_intLifetime1;
+        int var6_intLifetime1;
+        int var6_intLifetime2;
+        int var7_intLifetime1;
+        int var7_intLifetime2;
+        int var9Lifetime1;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.field_h, -2, 60.0f);
@@ -103,13 +110,13 @@ public final class Geoblox extends wf {
                 }
             }
             var3Lifetime1 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-            for (var4 = 0; var4 < 7; var4++) {
-                for (var5_int = 0; var5_int < 7; var5_int++) {
-                    for (var6_int = 0; var6_int < var3Lifetime1.length; var6_int++) {
-                        ka.field_m[var4][var5_int][var6_int] = new dm(4 + var3Lifetime1[var6_int].field_s, 4 + var3Lifetime1[var6_int].field_o);
-                        ka.field_m[var4][var5_int][var6_int].e();
-                        var3Lifetime1[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
-                        k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, ka.field_m[var4][var5_int][var6_int].field_o);
+            for (var4Lifetime1 = 0; var4Lifetime1 < 7; var4Lifetime1++) {
+                for (var5_intLifetime1 = 0; var5_intLifetime1 < 7; var5_intLifetime1++) {
+                    for (var6_intLifetime1 = 0; var6_intLifetime1 < var3Lifetime1.length; var6_intLifetime1++) {
+                        ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1] = new dm(4 + var3Lifetime1[var6_intLifetime1].field_s, 4 + var3Lifetime1[var6_intLifetime1].field_o);
+                        ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].e();
+                        var3Lifetime1[var6_intLifetime1].b(2, 2, jg.field_f[var4Lifetime1][var5_intLifetime1]);
+                        k.a(0, 0, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_s, param0 ^ -3266, ka.field_m[var4Lifetime1][var5_intLifetime1][var6_intLifetime1].field_o);
                     }
                 }
             }
@@ -125,24 +132,24 @@ public final class Geoblox extends wf {
                 var5 = wj.a("player_eyes", "halloween", ll.field_f, 0);
             }
             fc.field_b = new dm[var5.length];
-            for (var6_int = 0; var5.length > var6_int; var6_int++) {
-                fc.field_b[var6_int] = new dm(4 + var5[var6_int].field_s, var5[var6_int].field_o + 4);
-                fc.field_b[var6_int].e();
-                var5[var6_int].c(2, 2);
-                k.a(0, 0, fc.field_b[var6_int].field_s, -27085, fc.field_b[var6_int].field_m);
-                fc.field_b[var6_int].d();
+            for (var6_intLifetime2 = 0; var5.length > var6_intLifetime2; var6_intLifetime2++) {
+                fc.field_b[var6_intLifetime2] = new dm(4 + var5[var6_intLifetime2].field_s, var5[var6_intLifetime2].field_o + 4);
+                fc.field_b[var6_intLifetime2].e();
+                var5[var6_intLifetime2].c(2, 2);
+                k.a(0, 0, fc.field_b[var6_intLifetime2].field_s, -27085, fc.field_b[var6_intLifetime2].field_m);
+                fc.field_b[var6_intLifetime2].d();
             }
             var6 = wj.a("player_mouth", "", ll.field_f, 0);
             if (da.a(0, param0 - 25774)) {
                 var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
             }
             vh.field_H = new dm[var6.length];
-            for (var7_int = 0; var6.length > var7_int; var7_int++) {
-                vh.field_H[var7_int] = new dm(var6[var7_int].field_s + 4, var6[var7_int].field_o + 4);
-                vh.field_H[var7_int].e();
-                var6[var7_int].c(2, 2);
-                k.a(2 + var6[var7_int].field_p, 0, vh.field_H[var7_int].field_s, -27085, var6[var7_int].field_m);
-                vh.field_H[var7_int].d();
+            for (var7_intLifetime1 = 0; var6.length > var7_intLifetime1; var7_intLifetime1++) {
+                vh.field_H[var7_intLifetime1] = new dm(var6[var7_intLifetime1].field_s + 4, var6[var7_intLifetime1].field_o + 4);
+                vh.field_H[var7_intLifetime1].e();
+                var6[var7_intLifetime1].c(2, 2);
+                k.a(2 + var6[var7_intLifetime1].field_p, 0, vh.field_H[var7_intLifetime1].field_s, -27085, var6[var7_intLifetime1].field_m);
+                vh.field_H[var7_intLifetime1].d();
             }
             sh.field_y.a(255);
             fe.field_j = jg.a(ll.field_f, 1, "sun", "sky_background");
@@ -153,8 +160,8 @@ public final class Geoblox extends wf {
             qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
             vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
             mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
-            for (var7_int = 0; mi.field_B.length > var7_int; var7_int++) {
-                mi.field_B[var7_int].g(1);
+            for (var7_intLifetime2 = 0; mi.field_B.length > var7_intLifetime2; var7_intLifetime2++) {
+                mi.field_B[var7_intLifetime2].g(1);
             }
             vj.field_a = wj.a("bang", "", ll.field_f, 0);
             eg.field_q = wj.a("bonus_glow", "", ll.field_f, 0);
@@ -182,7 +189,7 @@ public final class Geoblox extends wf {
             var13 = var14;
             var8 = var13;
             var11 = 0;
-            var9 = var11;
+            var9Lifetime1 = var11;
             while (var11 < var14.length) {
                 var8[var11] = var7[var11].field_c - 3;
                 var11++;

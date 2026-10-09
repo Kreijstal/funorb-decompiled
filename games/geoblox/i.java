@@ -115,6 +115,12 @@ final class i {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        int stackIn_39_0Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var19 = Geoblox.field_C;
         try {
           var5_int = hj.a((byte) 58, (param3 - param0) * 3);
@@ -148,13 +154,13 @@ final class i {
                 var17 = -var13 + dj.field_N[var11];
               }
               if (!stackIn_11_0 || !(-(var16 * var15) + var14 * var17 >= 0)) {
-                var12 = bj.field_j[var9];
-                if (-2147483648 != var12) {
-                  var13 = bj.field_j[var10];
-                  if (-2147483648 != var13) {
+                var12Lifetime1 = bj.field_j[var9];
+                if (-2147483648 != var12Lifetime1) {
+                  var13Lifetime1 = bj.field_j[var10];
+                  if (-2147483648 != var13Lifetime1) {
                     var14 = bj.field_j[var11];
                     if (var14 != -2147483648) {
-                      var15 = var13 + (var12 + var14 - var6);
+                      var15 = var13Lifetime1 + (var12Lifetime1 + var14 - var6);
                       if (var7 < 0) {
                         stackIn_28_0 = var15 << -var7;
                       } else {
@@ -173,8 +179,8 @@ final class i {
                           var17 = ch.field_d[var16];
                           continue;
                         }
-                        stackIn_39_0 = (var16 << 4) + var17;
-                        var18 = stackIn_39_0;
+                        stackIn_39_0Lifetime1 = (var16 << 4) + var17;
+                        var18 = stackIn_39_0Lifetime1;
                         pj.field_i[var18] = var8;
                         ch.field_d[var16] = 1 + var17;
                         if (0 < param2.field_v &&
@@ -196,13 +202,13 @@ final class i {
           }
           if (stackIn_49_0 > ~param2.field_v &&
               null != param2.field_n) {
-            var8 = 0;
-            var9 = 0;
-            while (!(uh.field_x.length <= var9)) {
-              var10 = uh.field_x[var9];
-              uh.field_x[var9] = var8;
-              var8 = var8 + var10;
-              var9++;
+            var8Lifetime1 = 0;
+            var9Lifetime1 = 0;
+            while (!(uh.field_x.length <= var9Lifetime1)) {
+              var10Lifetime1 = uh.field_x[var9Lifetime1];
+              uh.field_x[var9Lifetime1] = var8Lifetime1;
+              var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
+              var9Lifetime1++;
               if (var19 != 0) {
                 return;
               }
@@ -257,6 +263,12 @@ final class i {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
+        int stackIn_39_0Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var10Lifetime1;
+        int var12Lifetime1;
+        int var13Lifetime1;
         var19 = Geoblox.field_C;
         try {
           var5_int = hj.a((byte) 58, (param3 - param0) * 3);
@@ -290,13 +302,13 @@ final class i {
                 var17 = -var13 + dj.field_N[var11];
               }
               if (!stackIn_11_0 || !(-(var16 * var15) + var14 * var17 >= 0)) {
-                var12 = bj.field_j[var9];
-                if (-2147483648 != var12) {
-                  var13 = bj.field_j[var10];
-                  if (-2147483648 != var13) {
+                var12Lifetime1 = bj.field_j[var9];
+                if (-2147483648 != var12Lifetime1) {
+                  var13Lifetime1 = bj.field_j[var10];
+                  if (-2147483648 != var13Lifetime1) {
                     var14 = bj.field_j[var11];
                     if (var14 != -2147483648) {
-                      var15 = var13 + (var12 + var14 - var6);
+                      var15 = var13Lifetime1 + (var12Lifetime1 + var14 - var6);
                       if (var7 < 0) {
                         stackIn_28_0 = var15 << -var7;
                       } else {
@@ -315,8 +327,8 @@ final class i {
                           var17 = ch.field_d[var16];
                           continue;
                         }
-                        stackIn_39_0 = (var16 << 4) + var17;
-                        var18 = stackIn_39_0;
+                        stackIn_39_0Lifetime1 = (var16 << 4) + var17;
+                        var18 = stackIn_39_0Lifetime1;
                         pj.field_i[var18] = var8;
                         ch.field_d[var16] = 1 + var17;
                         if (0 < param2.field_v &&
@@ -338,13 +350,13 @@ final class i {
           }
           if (stackIn_49_0 > ~param2.field_v &&
               null != param2.field_n) {
-            var8 = 0;
-            var9 = 0;
-            while (!(uh.field_x.length <= var9)) {
-              var10 = uh.field_x[var9];
-              uh.field_x[var9] = var8;
-              var8 = var8 + var10;
-              var9++;
+            var8Lifetime1 = 0;
+            var9Lifetime1 = 0;
+            while (!(uh.field_x.length <= var9Lifetime1)) {
+              var10Lifetime1 = uh.field_x[var9Lifetime1];
+              uh.field_x[var9Lifetime1] = var8Lifetime1;
+              var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
+              var9Lifetime1++;
               if (var19 != 0) {
                 return;
               }

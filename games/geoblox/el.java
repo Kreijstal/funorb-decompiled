@@ -27,6 +27,8 @@ class el extends hf {
     final boolean a(byte param0, char param1, int param2) {
         int var4 = 0;
         int var5 = 0;
+        int var4Lifetime1;
+        int var5Lifetime1;
         if (!this.e((byte) 54)) {
             var4 = 71 / ((param0 + 40) / 63);
             var5 = param2;
@@ -38,9 +40,9 @@ class el extends hf {
         if (this.a(param2, 13, param1, this)) {
             return true;
         }
-        var4 = 71 / ((param0 + 40) / 63);
-        var5 = param2;
-        if (var5 != 80) {
+        var4Lifetime1 = 71 / ((param0 + 40) / 63);
+        var5Lifetime1 = param2;
+        if (var5Lifetime1 != 80) {
             return false;
         }
         return this.a((byte) -75, this);
@@ -56,16 +58,18 @@ class el extends hf {
 
     void a(int param0, int param1, byte param2, int param3) {
         int var5 = 0;
+        int var5Lifetime1;
+        int var5Lifetime2;
         if (param3 != 0) {
             var5 = 35 % ((1 - param2) / 43);
             return;
         }
         if (null != this.field_q) {
             this.field_q.a(param0, -81, param1, true, this);
-            var5 = 35 % ((1 - param2) / 43);
+            var5Lifetime1 = 35 % ((1 - param2) / 43);
             return;
         }
-        var5 = 35 % ((1 - param2) / 43);
+        var5Lifetime2 = 35 % ((1 - param2) / 43);
     }
 
     int d(byte param0) {

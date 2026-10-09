@@ -131,6 +131,7 @@ final class u {
         int var8_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
+        int var9Lifetime2;
         var3 = this.field_c.length;
         var4 = field_b[this.field_d - 1];
         var5 = field_e;
@@ -156,13 +157,13 @@ final class u {
                 var16++;
                 continue;
               }
-              var9 = field_a[var16];
+              var9Lifetime2 = field_a[var16];
               var10 = field_g[var16] * this.field_d;
-              this.a(var6, var7, var9, var10, param0, param1);
-              if (var9 >= param1) {
+              this.a(var6, var7, var9Lifetime2, var10, param0, param1);
+              if (var9Lifetime2 >= param1) {
                 return;
               }
-              var6 = var9;
+              var6 = var9Lifetime2;
               var7 = var10;
               var16++;
             }

@@ -70,6 +70,8 @@ final class jb {
         int var6 = 0;
         int var3 = 0;
         int var4 = 0;
+        int var3Lifetime1;
+        int var4Lifetime1;
         if (param1 == 255) {
             var3 = this.field_g.c((byte) 34);
             var4 = this.field_g.g((byte) -110);
@@ -89,15 +91,15 @@ final class jb {
             this.field_g.field_f = this.field_g.field_f + var4;
             return 3;
         }
-        var3 = field_f[param1 - 128];
-        var4 = param1;
-        if (var3 >= 1) {
-            var4 = var4 | this.field_g.c((byte) 34) << 8;
+        var3Lifetime1 = field_f[param1 - 128];
+        var4Lifetime1 = param1;
+        if (var3Lifetime1 >= 1) {
+            var4Lifetime1 = var4Lifetime1 | this.field_g.c((byte) 34) << 8;
         }
-        if (var3 >= 2) {
-            var4 = var4 | this.field_g.c((byte) 34) << 16;
+        if (var3Lifetime1 >= 2) {
+            var4Lifetime1 = var4Lifetime1 | this.field_g.c((byte) 34) << 16;
         }
-        return var4;
+        return var4Lifetime1;
     }
 
     final boolean f() {
@@ -141,6 +143,7 @@ final class jb {
     final void a(byte[] param0) {
         int var4 = 0;
         int var5 = 0;
+        int var3Lifetime1;
         this.field_g.field_j = param0;
         this.field_g.field_f = 10;
         int var2 = this.field_g.b(true);
@@ -160,7 +163,7 @@ final class jb {
         this.field_h = 0L;
         this.field_e = new int[var2];
         int var6 = 0;
-        var3 = var6;
+        var3Lifetime1 = var6;
         while (var6 < var2) {
             this.field_e[var6] = this.field_i[var6];
             var6++;

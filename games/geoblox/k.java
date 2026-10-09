@@ -38,6 +38,8 @@ final class k implements Iterator {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
+        int var5Lifetime1;
+        int var6Lifetime1;
         param0 += 2;
         param1 += 2;
         if (param3 == -27085) {
@@ -51,9 +53,9 @@ final class k implements Iterator {
         k.b(32);
         param4 -= 4;
         param2 -= 4;
-        var5 = param1 + param0 * vb.field_f;
-        var6 = vb.field_f - param2;
-        w.a(vb.field_c, var5, 0, 0, 0, 0, param2, param4, var6);
+        var5Lifetime1 = param1 + param0 * vb.field_f;
+        var6Lifetime1 = vb.field_f - param2;
+        w.a(vb.field_c, var5Lifetime1, 0, 0, 0, 0, param2, param4, var6Lifetime1);
     }
 
     public final Object next() {

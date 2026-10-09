@@ -59,6 +59,7 @@ final class uk extends q {
     final static String a(int param0, int param1) {
         int var2 = 0;
         int var3 = Geoblox.field_C;
+        int var2Lifetime1;
         if (param1 != 24146) {
             field_m = (dm) null;
             var2 = param0;
@@ -79,18 +80,18 @@ final class uk extends q {
             }
             return vd.field_e;
         }
-        var2 = param0;
-        if (var2 == 0) {
+        var2Lifetime1 = param0;
+        if (var2Lifetime1 == 0) {
             return vh.field_E;
         }
-        if (var2 == 1) {
+        if (var2Lifetime1 == 1) {
             return oi.field_d;
         }
-        if (var2 != 2) {
-            if (var2 == 3) {
+        if (var2Lifetime1 != 2) {
+            if (var2Lifetime1 == 3) {
                 return li.field_b;
             }
-            if (var2 == 5) {
+            if (var2Lifetime1 == 5) {
                 return qh.field_S;
             }
             return null;

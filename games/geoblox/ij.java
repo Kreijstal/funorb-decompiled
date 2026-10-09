@@ -170,6 +170,8 @@ final class ij extends oe implements pl {
     final static void h(byte param0) {
         int var1 = 0;
         int var2 = 0;
+        int var1Lifetime1;
+        int var2Lifetime1;
         if (!el.field_o.field_x) {
             var1 = el.field_o.field_w - 2;
             var2 = el.field_o.field_u - 2;
@@ -185,13 +187,13 @@ final class ij extends oe implements pl {
             return;
         }
         if (null == ul.field_a) {
-            var1 = el.field_o.field_w - 2;
-            var2 = el.field_o.field_u - 2;
+            var1Lifetime1 = el.field_o.field_w - 2;
+            var2Lifetime1 = el.field_o.field_u - 2;
             if (!(wa.field_a <= 0)) {
                 vg.field_f[ha.field_g].b(320 - (vg.field_f[ha.field_g].field_s >> 1), -(vg.field_f[ha.field_g].field_o >> 1) + 240);
             }
-            fc.field_b[uf.field_b].b(var1 + 320, 240 + var2, rj.field_c);
-            vh.field_H[nd.field_a].b(320 + var1, 240 + var2, rj.field_c);
+            fc.field_b[uf.field_b].b(var1Lifetime1 + 320, 240 + var2Lifetime1, rj.field_c);
+            vh.field_H[nd.field_a].b(320 + var1Lifetime1, 240 + var2Lifetime1, rj.field_c);
             if (param0 >= 3) {
                 return;
             }

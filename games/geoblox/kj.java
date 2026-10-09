@@ -110,6 +110,10 @@ final class kj extends ia {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
+        int var6Lifetime1;
+        int var7Lifetime1;
+        int var8Lifetime1;
+        int var9Lifetime1;
         try {
           if (this.field_L[param1.field_t] == 0) {
             stackIn_3_0 = 0;
@@ -138,14 +142,14 @@ final class kj extends ia {
           }
           if (param1.field_y > 0 &&
               var11.field_e != null) {
-            var6 = param1.field_y;
-            var7 = var11.field_e[1 + param1.field_q];
+            var6Lifetime1 = param1.field_y;
+            var7Lifetime1 = var11.field_e[1 + param1.field_q];
             if (-2 + var11.field_e.length > param1.field_q) {
-              var8 = var10.field_e[param1.field_q] << 8 & 65280;
-              var9 = var11.field_e[param1.field_q + 2] << 8 & 65280;
-              var7 = var7 + (var11.field_e[param1.field_q + 3] - var7) * (-var8 + var6) / (-var8 + var9);
+              var8Lifetime1 = var10.field_e[param1.field_q] << 8 & 65280;
+              var9Lifetime1 = var11.field_e[param1.field_q + 2] << 8 & 65280;
+              var7Lifetime1 = var7Lifetime1 + (var11.field_e[param1.field_q + 3] - var7Lifetime1) * (-var8Lifetime1 + var6Lifetime1) / (-var8Lifetime1 + var9Lifetime1);
             }
-            var4 = var7 * var4 + 32 >> 6;
+            var4 = var7Lifetime1 * var4 + 32 >> 6;
           }
           stackIn_19_0 = var4;
           return stackIn_19_0;
@@ -176,6 +180,7 @@ final class kj extends ia {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
+        int var5Lifetime1;
         try {
           var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
           var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
@@ -195,8 +200,8 @@ final class kj extends ia {
             stackIn_10_0 = -116;
             return stackIn_10_0;
           }
-          var5 = (int)((double)(256 * param1.field_i.field_h) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)qk.field_j + 0.5);
-          stackIn_14_0 = (var5 < 1) ? 1 : var5;
+          var5Lifetime1 = (int)((double)(256 * param1.field_i.field_h) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)qk.field_j + 0.5);
+          stackIn_14_0 = (var5Lifetime1 < 1) ? 1 : var5Lifetime1;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -972,6 +977,7 @@ final class kj extends ia {
 
     private final void a(boolean param0, int param1) {
         int var3 = 0;
+        int var3Lifetime1;
         if (!param0) {
             this.c(-1, 15387);
         } else {
@@ -985,7 +991,7 @@ final class kj extends ia {
             this.field_S[var3] = this.field_F[var3];
         }
         int var4 = 0;
-        var3 = var4;
+        var3Lifetime1 = var4;
         while (var4 < 16) {
             this.field_K[var4] = cd.a(this.field_F[var4], -128);
             var4++;

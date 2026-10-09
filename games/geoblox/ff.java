@@ -61,6 +61,7 @@ class ff implements dh, cc {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var12Lifetime1;
         var13 = Geoblox.field_C;
         try {
           L0: {
@@ -81,14 +82,14 @@ class ff implements dh, cc {
               } else {
                 var11 = this.field_n.field_o;
               }
-              var12 = this.field_g;
-              if (var12 != 0 &&
-                  var12 != 3) {
-                if (var12 == 1) {
+              var12Lifetime1 = this.field_g;
+              if (var12Lifetime1 != 0 &&
+                  var12Lifetime1 != 3) {
+                if (var12Lifetime1 == 1) {
                   this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                   break L0;
                 }
-                if (var12 != 2) {
+                if (var12Lifetime1 != 2) {
                   break L0;
                 }
                 this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
@@ -141,6 +142,7 @@ class ff implements dh, cc {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        int var6Lifetime1;
         var7 = Geoblox.field_C;
         try {
           if (null == param1.field_w) {
@@ -164,17 +166,17 @@ class ff implements dh, cc {
           } else {
             var5 = this.field_n.field_o;
           }
-          var6 = this.field_g;
-          if (var6 != 0 &&
-              var6 != 3) {
-            if (var6 == 1) {
+          var6Lifetime1 = this.field_g;
+          if (var6Lifetime1 != 0 &&
+              var6Lifetime1 != 3) {
+            if (var6Lifetime1 == 1) {
               if (!(param1.field_w instanceof vc)) {
                 return;
               }
               ((vc) ((Object) param1.field_w)).a(this.c(122, param1), var5, var3_int >> 1, (byte) 58, this.field_n);
               return;
             }
-            if (var6 != 2) {
+            if (var6Lifetime1 != 2) {
               return;
             }
             if (!(param1.field_w instanceof vc)) {

@@ -96,6 +96,7 @@ final class am {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
+        int var3Lifetime1;
         try {
           var2_int = 1;
           while (param0.length + (param0.length >> 1) >= var2_int) {
@@ -105,11 +106,11 @@ final class am {
           for (var3 = 0; var3 < var2_int + var2_int; var3++) {
             this.field_c[var3] = -1;
           }
-          for (var3 = 0; var3 < param0.length; var3++) {
-            for (var4 = param0[var3] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
+          for (var3Lifetime1 = 0; var3Lifetime1 < param0.length; var3Lifetime1++) {
+            for (var4 = param0[var3Lifetime1] & var2_int - 1; this.field_c[var4 + var4 + 1] != -1; var4 = var4 + 1 & -1 + var2_int) {
             }
-            this.field_c[var4 + var4] = param0[var3];
-            this.field_c[1 + var4 + var4] = var3;
+            this.field_c[var4 + var4] = param0[var3Lifetime1];
+            this.field_c[1 + var4 + var4] = var3Lifetime1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -29,6 +29,9 @@ final class hl extends el {
         int var12 = 0;
         int var13 = Geoblox.field_C;
         dm var14 = new dm(this.field_H * 2, this.field_h);
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var12Lifetime1;
         Geoblox.a(1, var14);
         int var5 = this.field_h >> 1;
         for (var6 = 0; this.field_h > var6; var6++) {
@@ -40,11 +43,11 @@ final class hl extends el {
             var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
             vb.c(var7, var6, this.field_H, var12);
             vb.c(-(2 * this.field_H) + var7, var6, this.field_H, var12);
-            var9 = param0 & 65280;
-            var8 = param0 & 16711935;
-            var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-            vb.c(this.field_H + var7, var6, this.field_H, var12);
-            vb.c(-this.field_H + var7, var6, this.field_H, var12);
+            var9Lifetime1 = param0 & 65280;
+            var8Lifetime1 = param0 & 16711935;
+            var12Lifetime1 = 256 > var11 ? (16711680 & var9Lifetime1 * var11 | -16711936 & var11 * var8Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
+            vb.c(this.field_H + var7, var6, this.field_H, var12Lifetime1);
+            vb.c(-this.field_H + var7, var6, this.field_H, var12Lifetime1);
         }
         id.a(param1);
         return var14;

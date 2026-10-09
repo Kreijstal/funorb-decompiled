@@ -146,6 +146,7 @@ final class ua extends hf {
         int var3 = 0;
         int var1 = 0;
         int var2 = 0;
+        int var3Lifetime1;
         while (param0 >= 8 - field_j) {
             var3 = 8 - field_j;
             var4 = (1 << var3) - 1;
@@ -156,8 +157,8 @@ final class ua extends hf {
             param0 = param0 - var3;
         }
         if (param0 > 0) {
-            var3 = (1 << param0) - 1;
-            var1 = var1 + ((field_L[field_y] >> field_j & var3) << var2);
+            var3Lifetime1 = (1 << param0) - 1;
+            var1 = var1 + ((field_L[field_y] >> field_j & var3Lifetime1) << var2);
             field_j = field_j + param0;
         }
         return var1;
@@ -491,6 +492,9 @@ final class ua extends hf {
         float var31Lifetime1;
         float var33Lifetime1;
         int var19Lifetime1Lifetime1;
+        float var30Lifetime1Lifetime1;
+        float var30Lifetime1Lifetime2;
+        float var30Lifetime1Lifetime3;
         ua.a(this.field_p[param0], 0);
         ua.b();
         var2 = ua.b(hj.a((byte) 58, field_D.length - 1));
@@ -647,15 +651,15 @@ final class ua extends hf {
               var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 1];
               var20_ref_float__[var28_intLifetime1 + 1] = var20_ref_float__[var29_intLifetime1 + 1];
               var20_ref_float__[var29_intLifetime1 + 1] = var30Lifetime1;
-              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 3];
+              var30Lifetime1Lifetime1 = var20_ref_float__[var28_intLifetime1 + 3];
               var20_ref_float__[var28_intLifetime1 + 3] = var20_ref_float__[var29_intLifetime1 + 3];
-              var20_ref_float__[var29_intLifetime1 + 3] = var30Lifetime1;
-              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 5];
+              var20_ref_float__[var29_intLifetime1 + 3] = var30Lifetime1Lifetime1;
+              var30Lifetime1Lifetime2 = var20_ref_float__[var28_intLifetime1 + 5];
               var20_ref_float__[var28_intLifetime1 + 5] = var20_ref_float__[var29_intLifetime1 + 5];
-              var20_ref_float__[var29_intLifetime1 + 5] = var30Lifetime1;
-              var30Lifetime1 = var20_ref_float__[var28_intLifetime1 + 7];
+              var20_ref_float__[var29_intLifetime1 + 5] = var30Lifetime1Lifetime2;
+              var30Lifetime1Lifetime3 = var20_ref_float__[var28_intLifetime1 + 7];
               var20_ref_float__[var28_intLifetime1 + 7] = var20_ref_float__[var29_intLifetime1 + 7];
-              var20_ref_float__[var29_intLifetime1 + 7] = var30Lifetime1;
+              var20_ref_float__[var29_intLifetime1 + 7] = var30Lifetime1Lifetime3;
               var26Lifetime1++;
               continue;
             }

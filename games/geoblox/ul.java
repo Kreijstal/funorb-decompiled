@@ -49,6 +49,7 @@ final class ul {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
+        int var15Lifetime1;
         var16 = Geoblox.field_C;
         try {
           h.field_a = 0;
@@ -118,15 +119,15 @@ final class ul {
                       }
                       if (var12 >= var14) {
                         if (var13 > var12) {
-                          var15 = var12;
+                          var15Lifetime1 = var12;
                           var12 = var13;
-                          var13 = var15;
+                          var13 = var15Lifetime1;
                         }
                       } else {
-                        var15 = var13;
+                        var15Lifetime1 = var13;
                         var13 = var14;
                         var14 = var12;
-                        var12 = var15;
+                        var12 = var15Lifetime1;
                       }
                       stackIn_64_0 = nk.field_f;
                       stackIn_64_1 = h.field_a;

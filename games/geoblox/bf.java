@@ -149,6 +149,12 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime3;
         var13 = Geoblox.field_C;
         try {
           var5_int = param1 + param4;
@@ -195,41 +201,41 @@ final class bf extends sc implements java.awt.image.ImageProducer, java.awt.imag
           }
           if (param0 >= vb.field_i &&
               vb.field_d > var6) {
-            var11 = var7 + vb.field_f * param0;
-            var12 = -var7 + 1 + var9 >> 1;
+            var11Lifetime1 = var7 + vb.field_f * param0;
+            var12Lifetime1 = -var7 + 1 + var9 >> 1;
             while (true) {
-              var12--;
-              if (var12 < 0) {
+              var12Lifetime1--;
+              if (var12Lifetime1 < 0) {
                 break;
               }
-              vb.field_c[var11] = 16777215;
-              var11 += 2;
+              vb.field_c[var11Lifetime1] = 16777215;
+              var11Lifetime1 += 2;
             }
           }
           if (var5_int >= vb.field_e &&
               vb.field_k > var5_int) {
-            var11 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
-            var12 = -var8 + 1 + var10 >> 1;
+            var11Lifetime2 = var5_int + ((1 & -param4 + var5_int) + var8) * vb.field_f;
+            var12Lifetime2 = -var8 + 1 + var10 >> 1;
             while (true) {
-              var12--;
-              if (0 > var12) {
+              var12Lifetime2--;
+              if (0 > var12Lifetime2) {
                 break;
               }
-              vb.field_c[var11] = 16777215;
-              var11 = var11 + 2 * vb.field_f;
+              vb.field_c[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * vb.field_f;
             }
           }
           if (vb.field_i <= param0 &&
               vb.field_d > var6) {
-            var11 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
-            var12 = 1 - (-var9 + var7) >> 1;
+            var11Lifetime3 = vb.field_f * var6 + (var7 + (1 & -param0 + var6));
+            var12Lifetime3 = 1 - (-var9 + var7) >> 1;
             while (true) {
-              var12--;
-              if (var12 < 0) {
+              var12Lifetime3--;
+              if (var12Lifetime3 < 0) {
                 return;
               }
-              vb.field_c[var11] = 16777215;
-              var11 += 2;
+              vb.field_c[var11Lifetime3] = 16777215;
+              var11Lifetime3 += 2;
             }
           }
           return;

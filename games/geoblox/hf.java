@@ -138,6 +138,11 @@ class hf {
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
+        int var4Lifetime1;
+        int var4Lifetime2;
+        int var4Lifetime3;
+        int var4Lifetime4;
+        int var4Lifetime5;
         try {
           var15 = new qc(param1);
           var16 = var15;
@@ -157,36 +162,36 @@ class hf {
           for (var4 = 0; var4 < sb.field_a; var4++) {
             gh.field_m[var4] = var15.b(param0);
           }
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            md.field_e[var4] = var15.b(true);
+          for (var4Lifetime1 = 0; var4Lifetime1 < sb.field_a; var4Lifetime1++) {
+            md.field_e[var4Lifetime1] = var15.b(true);
           }
-          for (var4 = 0; sb.field_a > var4; var4++) {
-            rc.field_j[var4] = var15.b(true);
+          for (var4Lifetime2 = 0; sb.field_a > var4Lifetime2; var4Lifetime2++) {
+            rc.field_j[var4Lifetime2] = var15.b(true);
           }
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            hl.field_K[var4] = var15.b(true);
+          for (var4Lifetime3 = 0; var4Lifetime3 < sb.field_a; var4Lifetime3++) {
+            hl.field_K[var4Lifetime3] = var15.b(true);
           }
           var16.field_f = -(var3 * 3) + 3 - 8 * sb.field_a - 7 + param1.length;
           cm.field_j = new int[var3];
-          for (var4 = 1; var4 < var3; var4++) {
-            cm.field_j[var4] = var15.e(108);
-            if (cm.field_j[var4] == 0) {
-              cm.field_j[var4] = 1;
+          for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
+            cm.field_j[var4Lifetime4] = var15.e(108);
+            if (cm.field_j[var4Lifetime4] == 0) {
+              cm.field_j[var4Lifetime4] = 1;
             }
           }
           var16.field_f = 0;
-          for (var4 = 0; var4 < sb.field_a; var4++) {
-            var5 = rc.field_j[var4];
-            var6 = hl.field_K[var4];
+          for (var4Lifetime5 = 0; var4Lifetime5 < sb.field_a; var4Lifetime5++) {
+            var5 = rc.field_j[var4Lifetime5];
+            var6 = hl.field_K[var4Lifetime5];
             var7 = var5 * var6;
             var19 = new byte[var7];
             var17 = var19;
             var8 = var17;
-            mj.field_a[var4] = var19;
+            mj.field_a[var4Lifetime5] = var19;
             var20 = new byte[var7];
             var18 = var20;
             var9 = var18;
-            vf.field_E[var4] = var20;
+            vf.field_E[var4Lifetime5] = var20;
             var10 = 0;
             var11 = var16.c((byte) 34);
             if ((var11 & 1) == 0) {
@@ -230,7 +235,7 @@ class hf {
                 }
               }
             }
-            ng.field_E[var4] = var10 != 0;
+            ng.field_E[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

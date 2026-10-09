@@ -183,6 +183,13 @@ final class ab {
         int var15 = 0;
         Object var16 = null;
         ja var17 = null;
+        int var3Lifetime1;
+        float var8Lifetime1;
+        float var8Lifetime2;
+        float var9Lifetime1;
+        float var9Lifetime2;
+        float var10Lifetime1;
+        float var11Lifetime1;
         var16 = null;
         var15 = Geoblox.field_C;
         try {
@@ -248,21 +255,21 @@ final class ab {
                   var11 = var11 * var11;
                   stackIn_36_0 = (!(var10 + var11 > var9 * var9 + var8 * var8)) ? 0 : 1;
                   var12 = stackIn_36_0;
-                  var8 = 320.0f - var2.field_o;
-                  var11 = 240.0f - (var6 + var2.field_v);
-                  var10 = -var2.field_o - var5 + 320.0f;
-                  var9 = -var2.field_v + 240.0f;
-                  var10 = var10 * var10;
-                  var11 = var11 * var11;
-                  stackIn_39_0 = (!(var9 * var9 + var8 * var8 < var11 + var10)) ? 0 : 1;
+                  var8Lifetime1 = 320.0f - var2.field_o;
+                  var11Lifetime1 = 240.0f - (var6 + var2.field_v);
+                  var10Lifetime1 = -var2.field_o - var5 + 320.0f;
+                  var9Lifetime1 = -var2.field_v + 240.0f;
+                  var10Lifetime1 = var10Lifetime1 * var10Lifetime1;
+                  var11Lifetime1 = var11Lifetime1 * var11Lifetime1;
+                  stackIn_39_0 = (!(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 < var11Lifetime1 + var10Lifetime1)) ? 0 : 1;
                   var13 = stackIn_39_0;
                   if (var12 != 0 &&
                       var13 != 0) {
-                    var8 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
-                    var9 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
-                    var14 = og.field_r / (float)Math.sqrt((double)(var8 * var8 + var9 * var9));
-                    var5 = var8 * var14;
-                    var6 = var14 * var9;
+                    var8Lifetime2 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
+                    var9Lifetime2 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
+                    var14 = og.field_r / (float)Math.sqrt((double)(var8Lifetime2 * var8Lifetime2 + var9Lifetime2 * var9Lifetime2));
+                    var5 = var8Lifetime2 * var14;
+                    var6 = var14 * var9Lifetime2;
                   }
                   var2.field_F = var2.field_F * -1.0f;
                   var2.field_w = var2.field_w * -1.0f;
@@ -289,7 +296,7 @@ final class ab {
             }
             var2 = (ja) ((Object) ji.field_r.d(1));
           }
-          var3 = -125 % ((param0 - 35) / 49);
+          var3Lifetime1 = -125 % ((param0 - 35) / 49);
           var17 = (ja) ((Object) ji.field_r.g(0));
           while (var17 != null) {
             var17.j(30383);

@@ -215,6 +215,10 @@ class f extends qf implements pl {
         float var1Lifetime5;
         float var1Lifetime1Lifetime1;
         float var1Lifetime3Lifetime1;
+        float var1Lifetime6;
+        float var1Lifetime1Lifetime2;
+        float var1Lifetime3Lifetime2;
+        float var1Lifetime3Lifetime1Lifetime1;
         var2 = Geoblox.field_C;
         int fieldTemp$23 = af.field_c;
         af.field_c = af.field_c - 1;
@@ -265,7 +269,7 @@ class f extends qf implements pl {
               if (ok.field_a.length > g.field_j) {
                 ul.field_a = ok.field_a[g.field_j];
                 g.field_j = g.field_j + 1;
-                var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                var1Lifetime6 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                 fieldTemp$55 = wa.field_a;
                 wa.field_a = wa.field_a - 1;
                 if (fieldTemp$55 > 0) {
@@ -274,14 +278,14 @@ class f extends qf implements pl {
                 fieldTemp$56 = jf.field_j;
                 jf.field_j = jf.field_j - 1;
                 if (fieldTemp$56 > 0) {
-                  rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                  rj.field_c = ((int)(md.field_b * var1Lifetime6) << 16) + (r.field_ub + ((int)(var1Lifetime6 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime6));
                 }
                 return;
               }
               gg.field_b = gg.field_b + 1;
               pa.field_g = 200;
               g.field_j = g.field_j + 1;
-              var1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+              var1Lifetime6 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
               fieldTemp$57 = wa.field_a;
               wa.field_a = wa.field_a - 1;
               if (fieldTemp$57 > 0) {
@@ -290,7 +294,7 @@ class f extends qf implements pl {
               fieldTemp$58 = jf.field_j;
               jf.field_j = jf.field_j - 1;
               if (fieldTemp$58 > 0) {
-                rj.field_c = ((int)(md.field_b * var1) << 16) + (r.field_ub + ((int)(var1 * fe.field_c) << 8) + (int)(uk.field_j * var1));
+                rj.field_c = ((int)(md.field_b * var1Lifetime6) << 16) + (r.field_ub + ((int)(var1Lifetime6 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime6));
               }
               return;
             }
@@ -390,7 +394,7 @@ class f extends qf implements pl {
                 if (ok.field_a.length > g.field_j) {
                   ul.field_a = ok.field_a[g.field_j];
                   g.field_j = g.field_j + 1;
-                  var1Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                  var1Lifetime1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                   fieldTemp$28 = wa.field_a;
                   wa.field_a = wa.field_a - 1;
                   if (fieldTemp$28 > 0) {
@@ -399,14 +403,14 @@ class f extends qf implements pl {
                   fieldTemp$29 = jf.field_j;
                   jf.field_j = jf.field_j - 1;
                   if (fieldTemp$29 > 0) {
-                    rj.field_c = ((int)(md.field_b * var1Lifetime1) << 16) + (r.field_ub + ((int)(var1Lifetime1 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime1));
+                    rj.field_c = ((int)(md.field_b * var1Lifetime1Lifetime2) << 16) + (r.field_ub + ((int)(var1Lifetime1Lifetime2 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime1Lifetime2));
                   }
                   return;
                 }
                 gg.field_b = gg.field_b + 1;
                 pa.field_g = 200;
                 g.field_j = g.field_j + 1;
-                var1Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+                var1Lifetime1Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
                 fieldTemp$30 = wa.field_a;
                 wa.field_a = wa.field_a - 1;
                 if (fieldTemp$30 > 0) {
@@ -415,7 +419,7 @@ class f extends qf implements pl {
                 fieldTemp$31 = jf.field_j;
                 jf.field_j = jf.field_j - 1;
                 if (fieldTemp$31 > 0) {
-                  rj.field_c = ((int)(md.field_b * var1Lifetime1) << 16) + (r.field_ub + ((int)(var1Lifetime1 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime1));
+                  rj.field_c = ((int)(md.field_b * var1Lifetime1Lifetime2) << 16) + (r.field_ub + ((int)(var1Lifetime1Lifetime2 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime1Lifetime2));
                 }
                 return;
               }
@@ -526,7 +530,7 @@ class f extends qf implements pl {
             g.field_j = 0;
             fd.a(300, fl.field_c[22], false, j.field_gb);
             g.field_j = g.field_j + 1;
-            var1Lifetime3 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime3Lifetime2 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$38 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$38 <= 0) {
@@ -535,14 +539,14 @@ class f extends qf implements pl {
               if (fieldTemp$39 <= 0) {
                 return;
               }
-              rj.field_c = ((int)(md.field_b * var1Lifetime3) << 16) + (r.field_ub + ((int)(var1Lifetime3 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3));
+              rj.field_c = ((int)(md.field_b * var1Lifetime3Lifetime2) << 16) + (r.field_ub + ((int)(var1Lifetime3Lifetime2 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3Lifetime2));
               return;
             }
             ha.field_g = wa.field_a % 15 % 2;
             fieldTemp$40 = jf.field_j;
             jf.field_j = jf.field_j - 1;
             if (fieldTemp$40 > 0) {
-              rj.field_c = ((int)(md.field_b * var1Lifetime3) << 16) + (r.field_ub + ((int)(var1Lifetime3 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3));
+              rj.field_c = ((int)(md.field_b * var1Lifetime3Lifetime2) << 16) + (r.field_ub + ((int)(var1Lifetime3Lifetime2 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3Lifetime2));
             }
             return;
           }
@@ -566,7 +570,7 @@ class f extends qf implements pl {
             gg.field_b = gg.field_b + 1;
             pa.field_g = 200;
             g.field_j = g.field_j + 1;
-            var1Lifetime3Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
+            var1Lifetime3Lifetime1Lifetime1 = (float)(50 - jf.field_j) * 0.0066999997943639755f;
             fieldTemp$41 = wa.field_a;
             wa.field_a = wa.field_a - 1;
             if (fieldTemp$41 > 0) {
@@ -577,7 +581,7 @@ class f extends qf implements pl {
             if (fieldTemp$42 <= 0) {
               return;
             }
-            rj.field_c = ((int)(md.field_b * var1Lifetime3Lifetime1) << 16) + (r.field_ub + ((int)(var1Lifetime3Lifetime1 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3Lifetime1));
+            rj.field_c = ((int)(md.field_b * var1Lifetime3Lifetime1Lifetime1) << 16) + (r.field_ub + ((int)(var1Lifetime3Lifetime1Lifetime1 * fe.field_c) << 8) + (int)(uk.field_j * var1Lifetime3Lifetime1Lifetime1));
             return;
           }
           g.field_j = g.field_j % 4;

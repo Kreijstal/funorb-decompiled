@@ -517,6 +517,7 @@ final class kl extends ia {
 
     final synchronized void c(int param0) {
         int var2 = 0;
+        int var2Lifetime1;
         if (param0 == 0) {
             this.f(0);
             this.a(false);
@@ -550,24 +551,24 @@ final class kl extends ia {
             return;
         }
         if (this.field_s != 0) {
-            var2 = -this.field_k;
-            if (this.field_k > var2) {
-                var2 = this.field_k;
+            var2Lifetime1 = -this.field_k;
+            if (this.field_k > var2Lifetime1) {
+                var2Lifetime1 = this.field_k;
             }
-            if (-this.field_n > var2) {
-                var2 = -this.field_n;
+            if (-this.field_n > var2Lifetime1) {
+                var2Lifetime1 = -this.field_n;
             }
-            if (this.field_n > var2) {
-                var2 = this.field_n;
+            if (this.field_n > var2Lifetime1) {
+                var2Lifetime1 = this.field_n;
             }
-            if (-this.field_s > var2) {
-                var2 = -this.field_s;
+            if (-this.field_s > var2Lifetime1) {
+                var2Lifetime1 = -this.field_s;
             }
-            if (this.field_s > var2) {
-                var2 = this.field_s;
+            if (this.field_s > var2Lifetime1) {
+                var2Lifetime1 = this.field_s;
             }
-            if (param0 > var2) {
-                param0 = var2;
+            if (param0 > var2Lifetime1) {
+                param0 = var2Lifetime1;
             }
             this.field_l = param0;
             this.field_u = -2147483648;
@@ -1295,6 +1296,7 @@ final class kl extends ia {
 
     final synchronized void a(int param0, int param1, int param2) {
         int var6 = 0;
+        int var6Lifetime1;
         if (param0 == 0) {
             this.b(param1, param2);
             return;
@@ -1330,24 +1332,24 @@ final class kl extends ia {
             return;
         }
         if (this.field_s != var5) {
-            var6 = param1 - this.field_k;
-            if (this.field_k - param1 > var6) {
-                var6 = this.field_k - param1;
+            var6Lifetime1 = param1 - this.field_k;
+            if (this.field_k - param1 > var6Lifetime1) {
+                var6Lifetime1 = this.field_k - param1;
             }
-            if (var4 - this.field_n > var6) {
-                var6 = var4 - this.field_n;
+            if (var4 - this.field_n > var6Lifetime1) {
+                var6Lifetime1 = var4 - this.field_n;
             }
-            if (this.field_n - var4 > var6) {
-                var6 = this.field_n - var4;
+            if (this.field_n - var4 > var6Lifetime1) {
+                var6Lifetime1 = this.field_n - var4;
             }
-            if (var5 - this.field_s > var6) {
-                var6 = var5 - this.field_s;
+            if (var5 - this.field_s > var6Lifetime1) {
+                var6Lifetime1 = var5 - this.field_s;
             }
-            if (this.field_s - var5 > var6) {
-                var6 = this.field_s - var5;
+            if (this.field_s - var5 > var6Lifetime1) {
+                var6Lifetime1 = this.field_s - var5;
             }
-            if (param0 > var6) {
-                param0 = var6;
+            if (param0 > var6Lifetime1) {
+                param0 = var6Lifetime1;
             }
             this.field_l = param0;
             this.field_u = param1;

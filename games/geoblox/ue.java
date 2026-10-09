@@ -125,6 +125,9 @@ final class ue {
         int[] var14 = null;
         int[] var16 = null;
         int[] var18 = null;
+        int var8Lifetime1;
+        int var9Lifetime1;
+        int var11Lifetime1;
         try {
           var3_int = -6 / ((param0 + 18) / 49);
           if (this.field_a != null) {
@@ -141,20 +144,20 @@ final class ue {
                 var5[var6 + var11] = var5[var6 + var11] + var9 * var18[var11];
               }
               var7 = var7 + this.field_h;
-              var11 = var7 / this.field_i;
-              var6 = var6 + var11;
-              var7 = var7 - this.field_i * var11;
+              var11Lifetime1 = var7 / this.field_i;
+              var6 = var6 + var11Lifetime1;
+              var7 = var7 - this.field_i * var11Lifetime1;
             }
             param1 = new byte[var4];
             var12 = 0;
-            var8 = var12;
+            var8Lifetime1 = var12;
             while (var12 < var4) {
-              var9 = var16[var12] + 32768 >> 16;
-              if (-128 > var9) {
+              var9Lifetime1 = var16[var12] + 32768 >> 16;
+              if (-128 > var9Lifetime1) {
                 param1[var12] = (byte)-128;
               } else {
-                if (var9 <= 127) {
-                  param1[var12] = (byte)var9;
+                if (var9Lifetime1 <= 127) {
+                  param1[var12] = (byte)var9Lifetime1;
                 } else {
                   param1[var12] = (byte)127;
                 }
