@@ -44,18 +44,18 @@ final class SecondaryNodeDeque implements Iterable {
 
     final static void selectBackgroundMusic(int methodGuard, MusicScore track) {
         if (track == null || GzipInflater.currentMusicTrack == track) {
-            return;
+          return;
         }
         try {
-            if (methodGuard != 0) {
-                receivedAchievementMask = -114;
-            }
-            PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
-            CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
-            GzipInflater.currentMusicTrack = track;
-            PasswordWidgetRenderer.gameMusicStream.startMusicScore(false, GzipInflater.currentMusicTrack, -1706);
+          if (methodGuard != 0) {
+            receivedAchievementMask = -114;
+          }
+          PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
+          CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
+          GzipInflater.currentMusicTrack = track;
+          PasswordWidgetRenderer.gameMusicStream.startMusicScore(false, GzipInflater.currentMusicTrack, -1706);
         } catch (RuntimeException playbackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailure), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailure), "ra.A(" + methodGuard + ',' + (track != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class SecondaryNodeDeque implements Iterable {
         availableEntities = null;
         ticketingUnreadCountText = null;
         if (methodGuard != -1) {
-            receivedAchievementMask = -36;
+          receivedAchievementMask = -36;
         }
     }
 
@@ -175,8 +175,8 @@ final class SecondaryNodeDeque implements Iterable {
         DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
         int guardResidue = -14 % ((72 - methodGuard) / 46);
         if (this.sentinel != firstNode) {
-            firstNode.unlinkSecondaryNode((byte) 126);
-            return firstNode;
+          firstNode.unlinkSecondaryNode((byte) 126);
+          return firstNode;
         }
         return null;
     }

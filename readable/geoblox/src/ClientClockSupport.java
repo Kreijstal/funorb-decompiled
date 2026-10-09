@@ -12,11 +12,11 @@ final class ClientClockSupport {
     final synchronized static long correctedCurrentTimeMillis(int methodGuard) {
         long wallClockMillis = System.currentTimeMillis();
         if (!(TextValidationFailure.previousWallClockMillis <= wallClockMillis)) {
-            DisplayModeInfo.backwardClockCorrectionMillis = DisplayModeInfo.backwardClockCorrectionMillis + (TextValidationFailure.previousWallClockMillis - wallClockMillis);
+          DisplayModeInfo.backwardClockCorrectionMillis = DisplayModeInfo.backwardClockCorrectionMillis + (TextValidationFailure.previousWallClockMillis - wallClockMillis);
         }
         TextValidationFailure.previousWallClockMillis = wallClockMillis;
         if (methodGuard != -12520) {
-            subscriptionMonthlyCostTexts = (String[]) null;
+          subscriptionMonthlyCostTexts = (String[]) null;
         }
         return DisplayModeInfo.backwardClockCorrectionMillis + wallClockMillis;
     }
@@ -52,7 +52,7 @@ final class ClientClockSupport {
 
     public static void clearClockAndGraphicsResources(int methodGuard) {
         if (methodGuard != 8192) {
-            validationStateSprites = (Sprite[]) null;
+          validationStateSprites = (Sprite[]) null;
         }
         additionalByteArrayPoolCounts = null;
         subscriptionMonthlyCostTexts = null;

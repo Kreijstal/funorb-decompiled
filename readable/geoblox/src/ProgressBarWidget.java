@@ -35,19 +35,19 @@ final class ProgressBarWidget extends UiWidget {
         Geoblox.setRasterTarget(1, stripeSprite);
         int halfHeight = this.widgetHeight >> 1;
         for (stripeRow = 0; this.widgetHeight > stripeRow; stripeRow++) {
-            stripeStartX = (stripeRow >> 1) * (-1 + this.stripeWidth * 2) % (this.stripeWidth * 2);
-            primaryRedBlueChannels = 16711935 & stripeColor;
-            primaryGreenChannel = 65280 & stripeColor;
-            rowOffsetFromMidpoint = -halfHeight + stripeRow;
-            brightnessQ8 = (int)(128.0 * (Math.sqrt((double)(-(rowOffsetFromMidpoint * rowOffsetFromMidpoint) + halfHeight * halfHeight)) / (double)halfHeight)) + 128;
-            shadedPrimaryStripeColor = brightnessQ8 >= 256 ? primaryGreenChannel | primaryRedBlueChannels : (-16711936 & brightnessQ8 * primaryRedBlueChannels | 16711680 & brightnessQ8 * primaryGreenChannel) >>> 8;
-            SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
-            SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
-            alternateGreenChannel = alternateColor & 65280;
-            alternateRedBlueChannels = alternateColor & 16711935;
-            shadedAlternateStripeColor = 256 > brightnessQ8 ? (16711680 & alternateGreenChannel * brightnessQ8 | -16711936 & brightnessQ8 * alternateRedBlueChannels) >>> 8 : alternateGreenChannel | alternateRedBlueChannels;
-            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
-            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
+          stripeStartX = (stripeRow >> 1) * (-1 + this.stripeWidth * 2) % (this.stripeWidth * 2);
+          primaryRedBlueChannels = 16711935 & stripeColor;
+          primaryGreenChannel = 65280 & stripeColor;
+          rowOffsetFromMidpoint = -halfHeight + stripeRow;
+          brightnessQ8 = (int)(128.0 * (Math.sqrt((double)(-(rowOffsetFromMidpoint * rowOffsetFromMidpoint) + halfHeight * halfHeight)) / (double)halfHeight)) + 128;
+          shadedPrimaryStripeColor = brightnessQ8 >= 256 ? primaryGreenChannel | primaryRedBlueChannels : (-16711936 & brightnessQ8 * primaryRedBlueChannels | 16711680 & brightnessQ8 * primaryGreenChannel) >>> 8;
+          SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
+          alternateGreenChannel = alternateColor & 65280;
+          alternateRedBlueChannels = alternateColor & 16711935;
+          shadedAlternateStripeColor = 256 > brightnessQ8 ? (16711680 & alternateGreenChannel * brightnessQ8 | -16711936 & brightnessQ8 * alternateRedBlueChannels) >>> 8 : alternateGreenChannel | alternateRedBlueChannels;
+          SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
+          SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
         }
         RasterTargetRestoreSupport.restoreRasterTarget(restoreGuard);
         return stripeSprite;
@@ -58,7 +58,7 @@ final class ProgressBarWidget extends UiWidget {
         this.stripeColor = stripeColor;
         this.dimStripeColor = stripeColor >> 1 & 8355711;
         if (methodGuard != -103) {
-            this.rebuildSprites(-107);
+          this.rebuildSprites(-107);
         }
         this.alternateStripeColor = alternateStripeColor;
         this.rebuildSprites(-1326628703);
@@ -73,19 +73,19 @@ final class ProgressBarWidget extends UiWidget {
         int halfHeight = this.widgetHeight >> 1;
         Sprite endMaskSprite = new Sprite(halfHeight, this.widgetHeight);
         if (methodGuard != 255) {
-            return (Sprite) null;
+          return (Sprite) null;
         }
         Geoblox.setRasterTarget(1, endMaskSprite);
         for (maskRow = 0; maskRow < this.widgetHeight; maskRow++) {
-            for (maskColumn = 0; maskColumn < halfHeight; maskColumn++) {
-                coverageRatioThenRoot = (double)maskColumn * (double)maskColumn / (double)(maskRow * (-maskRow + this.widgetHeight));
-                maskIntensity = 1;
-                if (coverageRatioThenRoot < 1.0) {
-                    coverageRatioThenRoot = Math.sqrt(1.0 - coverageRatioThenRoot);
-                    maskIntensity = coverageRatioThenRoot >= 1.0 ? 255 : (int)(coverageRatioThenRoot * 255.0);
-                }
-                SoftwareRasterizer.setPixel(maskColumn, maskRow, maskIntensity << 16 | (maskIntensity | maskIntensity << 8));
+          for (maskColumn = 0; maskColumn < halfHeight; maskColumn++) {
+            coverageRatioThenRoot = (double)maskColumn * (double)maskColumn / (double)(maskRow * (-maskRow + this.widgetHeight));
+            maskIntensity = 1;
+            if (coverageRatioThenRoot < 1.0) {
+              coverageRatioThenRoot = Math.sqrt(1.0 - coverageRatioThenRoot);
+              maskIntensity = coverageRatioThenRoot >= 1.0 ? 255 : (int)(coverageRatioThenRoot * 255.0);
             }
+            SoftwareRasterizer.setPixel(maskColumn, maskRow, maskIntensity << 16 | (maskIntensity | maskIntensity << 8));
+          }
         }
         RasterTargetRestoreSupport.restoreRasterTarget(true);
         return endMaskSprite;
@@ -150,15 +150,15 @@ final class ProgressBarWidget extends UiWidget {
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int renderGuardRemainder = -76 % ((methodGuard - 1) / 43);
         if (renderPass != 0) {
-            return;
+          return;
         }
         int widgetScreenX = parentX + this.widgetX;
         int widgetScreenY = parentY + this.widgetY;
         this.drawRoundedStripes(this.stripeSprites[0], widgetScreenY, widgetScreenX, -12276);
         if (this.fillFractionQ16 < 65536) {
-            PasswordWidgetRenderer.pushWidgetClip(widgetScreenY, widgetScreenX + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, widgetScreenY + this.widgetHeight, this.widgetWidth + widgetScreenX);
-            this.drawRoundedStripes(this.stripeSprites[1], widgetScreenY, widgetScreenX, -12276);
-            RasterTargetRestoreSupport.restoreRasterTarget(true);
+          PasswordWidgetRenderer.pushWidgetClip(widgetScreenY, widgetScreenX + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, widgetScreenY + this.widgetHeight, this.widgetWidth + widgetScreenX);
+          this.drawRoundedStripes(this.stripeSprites[1], widgetScreenY, widgetScreenX, -12276);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
         }
     }
 
@@ -167,7 +167,7 @@ final class ProgressBarWidget extends UiWidget {
         super.setWidgetBounds(height, width, (byte) -74, y, x);
         this.rebuildSprites(-1326628703);
         if (methodGuard > -6) {
-            ignoredBoundsGuardMaskResult = this.buildRightEndMask(109);
+          ignoredBoundsGuardMaskResult = this.buildRightEndMask(109);
         }
     }
 
@@ -175,7 +175,7 @@ final class ProgressBarWidget extends UiWidget {
         this.stripeSprites = new Sprite[]{this.buildStripeSprite(this.alternateStripeColor, true, this.stripeColor), this.buildStripeSprite(this.dimAlternateStripeColor, true, this.dimStripeColor)};
         this.rightEndMask = this.buildRightEndMask(255);
         if (methodGuard != -1326628703) {
-            return;
+          return;
         }
         this.leftEndMask = this.rightEndMask.copyMirroredHorizontally();
         this.endScratchSprite = new Sprite(this.widgetHeight >> 1, this.widgetHeight);
@@ -196,7 +196,7 @@ final class ProgressBarWidget extends UiWidget {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 407213000) {
-            ProgressBarWidget.releaseStaticReferences(93);
+          ProgressBarWidget.releaseStaticReferences(93);
         }
         primarySocialEntriesInOrder = null;
         decodedSpriteHeights = null;

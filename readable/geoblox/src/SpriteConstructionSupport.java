@@ -9,41 +9,41 @@ final class SpriteConstructionSupport {
     final static int unsignedBitLength(byte methodGuard, int remainingBits) {
         int shiftedBitCount = 0;
         if (0 > remainingBits || remainingBits >= 65536) {
-            remainingBits = remainingBits >>> 16;
-            shiftedBitCount += 16;
+          remainingBits = remainingBits >>> 16;
+          shiftedBitCount += 16;
         }
         if (remainingBits >= 256) {
-            shiftedBitCount += 8;
-            remainingBits = remainingBits >>> 8;
+          shiftedBitCount += 8;
+          remainingBits = remainingBits >>> 8;
         }
         if (16 <= remainingBits) {
-            shiftedBitCount += 4;
-            remainingBits = remainingBits >>> 4;
+          shiftedBitCount += 4;
+          remainingBits = remainingBits >>> 4;
         }
         if (remainingBits >= 4) {
-            shiftedBitCount += 2;
-            remainingBits = remainingBits >>> 2;
+          shiftedBitCount += 2;
+          remainingBits = remainingBits >>> 2;
         }
         if (1 <= remainingBits) {
-            remainingBits = remainingBits >>> 1;
-            shiftedBitCount++;
+          remainingBits = remainingBits >>> 1;
+          shiftedBitCount++;
         }
         if (methodGuard != 58) {
-            return -21;
+          return -21;
         }
         return remainingBits + shiftedBitCount;
     }
 
     final static void attachKeyboardListeners(byte methodGuard, java.awt.Component component) {
         try {
-            if (methodGuard != -85) {
-                achievementMaskReceived = false;
-            }
-            component.setFocusTraversalKeysEnabled(false);
-            component.addKeyListener(TrackedPcmStream.keyboardListener);
-            component.addFocusListener(TrackedPcmStream.keyboardListener);
+          if (methodGuard != -85) {
+            achievementMaskReceived = false;
+          }
+          component.setFocusTraversalKeysEnabled(false);
+          component.addKeyListener(TrackedPcmStream.keyboardListener);
+          component.addFocusListener(TrackedPcmStream.keyboardListener);
         } catch (RuntimeException listenerAttachmentFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) listenerAttachmentFailure), "hj.A(" + methodGuard + ',' + (component != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) listenerAttachmentFailure), "hj.A(" + methodGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -22,25 +22,25 @@ final class ClientProtocolStage {
         rankedEntryKeyOne = null;
         createDisplayNameHintText = null;
         if (methodGuard != 0) {
-            ClientProtocolStage.pollAccountUiAction(103, 65, true, (byte) -104);
-            spriteVariantRandom = null;
-            return;
+          ClientProtocolStage.pollAccountUiAction(103, 65, true, (byte) -104);
+          spriteVariantRandom = null;
+          return;
         }
         spriteVariantRandom = null;
     }
 
     final boolean isPostRequestStage(boolean checkEnabled) {
         if (!checkEnabled) {
-            return true;
+          return true;
         }
         if (this == ClientOptionSupport.awaitingLoginResultStage) {
-            return true;
+          return true;
         }
         if (ClientOptionSupport.awaitingLoginDetailsStage == this) {
-            return true;
+          return true;
         }
         if (LogoCompositor.connectedSessionStage != this) {
-            return false;
+          return false;
         }
         return true;
     }

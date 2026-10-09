@@ -14,7 +14,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard < 88) {
-            return;
+          return;
         }
         barSprite = null;
         settingsCookieValue = null;
@@ -24,13 +24,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     final byte[] getBytes(int methodGuard) {
         if (this.pending) {
-            throw new RuntimeException();
+          throw new RuntimeException();
         }
         if (this.responseBuffer.position >= this.responseBuffer.bytes.length - this.reservedTailBytes) {
-            if (methodGuard != 397) {
-                this.getProgress(-105);
-            }
-            return this.responseBuffer.bytes;
+          if (methodGuard != 397) {
+            this.getProgress(-105);
+          }
+          return this.responseBuffer.bytes;
         }
         throw new RuntimeException();
     }
@@ -92,15 +92,15 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
-              topY < TriangleRasterState.clipHeight) {
+            topY < TriangleRasterState.clipHeight) {
             if (0 > topX &&
-                middleX < 0 &&
-                bottomX < 0) {
+              middleX < 0 &&
+              bottomX < 0) {
               return;
             }
             if (topX >= TriangleRasterState.clipWidth &&
-                middleX >= TriangleRasterState.clipWidth &&
-                TriangleRasterState.clipWidth <= bottomX) {
+              middleX >= TriangleRasterState.clipWidth &&
+              TriangleRasterState.clipWidth <= bottomX) {
               return;
             }
             topToBottomRows = -topY + bottomY;
@@ -175,7 +175,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                       }
                     } else {
                       if (upperSpanLeft >= 0 &&
-                          TriangleRasterState.clipWidth > upperSpanLeft) {
+                        TriangleRasterState.clipWidth > upperSpanLeft) {
                         DebouncedValidationProvider.drawHalfBlendSolidSpan(-61, destinationPixels, upperSpanLeft + upperSegmentRowBase, halfRgb, spanWidth);
                       }
                     }
@@ -218,7 +218,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 lowerSpanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
                 if (lowerSpanWidth == 0) {
                   if (lowerSpanLeft >= 0 &&
-                      TriangleRasterState.clipWidth > lowerSpanLeft) {
+                    TriangleRasterState.clipWidth > lowerSpanLeft) {
                     DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, lowerSpanLeft + lowerSegmentRowBase, halfRgb, lowerSpanWidth);
                   }
                 } else {
@@ -259,10 +259,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     final int getProgress(int methodGuard) {
         if (methodGuard != 0) {
-            return 76;
+          return 76;
         }
         if (null != this.responseBuffer) {
-            return 100 * this.responseBuffer.position / (-this.reservedTailBytes + this.responseBuffer.bytes.length);
+          return 100 * this.responseBuffer.position / (-this.reservedTailBytes + this.responseBuffer.bytes.length);
         }
         return 0;
     }

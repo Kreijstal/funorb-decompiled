@@ -10,16 +10,16 @@ final class NameCharacterSupport {
     final static boolean isNameSeparator(byte methodGuard, char character) {
         int sentinelDivision = 87 / ((methodGuard - 25) / 53);
         if (character == 160) {
-            return true;
+          return true;
         }
         if (character == 32) {
-            return true;
+          return true;
         }
         if (character == 95) {
-            return true;
+          return true;
         }
         if (character != 45) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -55,10 +55,10 @@ final class NameCharacterSupport {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard == 45) {
-            createRepeatedPasswordAlertText = null;
-            createNameLengthAlertText = null;
-            createPasswordContainsPartialNameAlertText = null;
-            return;
+          createRepeatedPasswordAlertText = null;
+          createNameLengthAlertText = null;
+          createPasswordContainsPartialNameAlertText = null;
+          return;
         }
         byte[] unusedNullBytesSnapshot = (byte[]) null;
         NameCharacterSupport.computePrefixCrc32((byte[]) null, 124, 46);

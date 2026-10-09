@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0e929ce8abf26ce37b1c752f603a5c40b12b319d/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/3db79a3eb140b8063dbfa89e6787bdbffeaa0be3/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,063 bindings,
+identities. Both 303-file Java corpora compile and compare 138,048 bindings,
 preserving 388 override relationships.
 
-## Current initialized frame prefixes (pass 251)
+## Current compound guards and indentation (pass 252)
+
+Menu hit-testing combines 15 nested guards into nine ordered compound guards,
+retaining every conditional flag write and failure. Consistent indentation
+clarifies 1,253 bodies. All 303 sources compile, reproduce and reverse exactly;
+all naming objects, dictionary identities and historical proofs remain.
+The independent source certificate, 14,040 new native cases and existing
+native/raw/readable probes pass. Thirty-five smaller frames and further guard/
+alias refinement remain. See the current workflow for hashes and coverage.
+
+## Previous initialized frame prefixes (pass 251)
 
 The final large rendering frame and a smaller tutorial-step frame now use
 named continuation decisions and ordinary guards. Their original prefix

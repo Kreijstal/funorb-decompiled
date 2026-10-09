@@ -10,14 +10,14 @@ final class CharacterReplacementSupport {
         transitionCurtain = null;
         textTemplateArgumentTypeTen = null;
         if (methodGuard != -23) {
-            CharacterReplacementSupport.getAccountAgeYears((byte) 28);
+          CharacterReplacementSupport.getAccountAgeYears((byte) 28);
         }
     }
 
     final static int getAccountAgeYears(byte methodGuard) {
         if (methodGuard != 81) {
-            CharacterReplacementSupport.getAccountAgeYears((byte) -12);
-            return StatefulWidgetRenderer.accountCreationAgeYears;
+          CharacterReplacementSupport.getAccountAgeYears((byte) -12);
+          return StatefulWidgetRenderer.accountCreationAgeYears;
         }
         return StatefulWidgetRenderer.accountCreationAgeYears;
     }

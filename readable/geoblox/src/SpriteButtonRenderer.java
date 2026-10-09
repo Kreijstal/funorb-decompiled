@@ -71,10 +71,10 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard == 16777215) {
-            createSelectAlternativeText = null;
-            activeLoginPanel = null;
-            appletTaskDispatcher = null;
-            return;
+          createSelectAlternativeText = null;
+          activeLoginPanel = null;
+          appletTaskDispatcher = null;
+          return;
         }
         SpriteButtonRenderer.releaseStaticReferences(11);
         createSelectAlternativeText = null;
@@ -93,17 +93,17 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
     final static String getLoginIdentifierWithSessionFallback(int methodGuard) {
         String identifierText = null;
         if (methodGuard == 7789) {
-            identifierText = "";
-            if (null != activeLoginPanel) {
-                identifierText = activeLoginPanel.getLoginIdentifierOrEmpty(87);
-            }
-            if (identifierText.length() == 0) {
-                identifierText = DualLinkNode.getSessionTextOrEmpty((byte) -53);
-            }
-            if (identifierText.length() == 0) {
-                identifierText = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
-            }
-            return identifierText;
+          identifierText = "";
+          if (null != activeLoginPanel) {
+            identifierText = activeLoginPanel.getLoginIdentifierOrEmpty(87);
+          }
+          if (identifierText.length() == 0) {
+            identifierText = DualLinkNode.getSessionTextOrEmpty((byte) -53);
+          }
+          if (identifierText.length() == 0) {
+            identifierText = AlternateLongAndTextLoginPayload.defaultPlayerNameText;
+          }
+          return identifierText;
         }
         return (String) null;
     }

@@ -226,7 +226,7 @@ abstract class BitmapFont extends DualLinkNode {
             continue;
           }
           if (characterOrGlyphCode == 62 &&
-              tagStart != -1) {
+            tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             builderAfterTagOpen = wrappingBuffer.append('<');
@@ -255,7 +255,7 @@ abstract class BitmapFont extends DualLinkNode {
                             } else {
                               lineWidth = lineWidth + this.measureCharacterAdvance('®');
                               if (this.pairKerning != null &&
-                                  previousGlyph != 0) {
+                                previousGlyph != 0) {
                                 lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 174];
                               }
                               previousGlyph = 174;
@@ -263,7 +263,7 @@ abstract class BitmapFont extends DualLinkNode {
                           } else {
                             lineWidth = lineWidth + this.measureCharacterAdvance('©');
                             if (this.pairKerning != null &&
-                                previousGlyph != 0) {
+                              previousGlyph != 0) {
                               lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 169];
                             }
                             previousGlyph = 169;
@@ -271,7 +271,7 @@ abstract class BitmapFont extends DualLinkNode {
                         } else {
                           lineWidth = lineWidth + this.measureCharacterAdvance('€');
                           if (this.pairKerning != null &&
-                              previousGlyph != 0) {
+                            previousGlyph != 0) {
                             lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 128];
                           }
                           previousGlyph = 8364;
@@ -279,7 +279,7 @@ abstract class BitmapFont extends DualLinkNode {
                       } else {
                         lineWidth = lineWidth + this.measureCharacterAdvance('×');
                         if (this.pairKerning != null &&
-                            previousGlyph != 0) {
+                          previousGlyph != 0) {
                           lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 215];
                         }
                         previousGlyph = 215;
@@ -287,7 +287,7 @@ abstract class BitmapFont extends DualLinkNode {
                     } else {
                       lineWidth = lineWidth + this.measureCharacterAdvance('­');
                       if (this.pairKerning != null &&
-                          previousGlyph != 0) {
+                        previousGlyph != 0) {
                         lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 173];
                       }
                       previousGlyph = 173;
@@ -295,7 +295,7 @@ abstract class BitmapFont extends DualLinkNode {
                   } else {
                     lineWidth = lineWidth + this.measureCharacterAdvance(' ');
                     if (this.pairKerning != null &&
-                        previousGlyph != 0) {
+                      previousGlyph != 0) {
                       lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 160];
                     }
                     previousGlyph = 160;
@@ -303,7 +303,7 @@ abstract class BitmapFont extends DualLinkNode {
                 } else {
                   lineWidth = lineWidth + this.measureCharacterAdvance('>');
                   if (this.pairKerning != null &&
-                      previousGlyph != 0) {
+                    previousGlyph != 0) {
                     lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 62];
                   }
                   previousGlyph = 62;
@@ -311,7 +311,7 @@ abstract class BitmapFont extends DualLinkNode {
               } else {
                 lineWidth = lineWidth + this.measureCharacterAdvance('<');
                 if (this.pairKerning != null &&
-                    previousGlyph != 0) {
+                  previousGlyph != 0) {
                   lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + 60];
                 }
                 previousGlyph = 60;
@@ -334,7 +334,7 @@ abstract class BitmapFont extends DualLinkNode {
             characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
             lineWidth = lineWidth + this.glyphAdvances[characterOrGlyphCode];
             if (this.pairKerning != null &&
-                previousGlyph != 0) {
+              previousGlyph != 0) {
               lineWidth = lineWidth + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
             }
             previousGlyph = characterOrGlyphCode;
@@ -353,7 +353,7 @@ abstract class BitmapFont extends DualLinkNode {
               widthLimitIndex = lineCount;
             }
             if (lineWidthBeforeLimitLookup > widthLimitsBeforeLookup[widthLimitIndex] &&
-                breakPosition >= 0) {
+              breakPosition >= 0) {
               outputLines[lineCount] = wrappingBuffer.toString().substring(outputLineStart, breakPosition - breakCharacterTrim);
               lineCount++;
               outputLineStart = breakPosition;
@@ -502,12 +502,12 @@ abstract class BitmapFont extends DualLinkNode {
         }
         lineWidthLimits = new int[]{width};
         if (height < this.maxAscent + this.maxDescent + lineSpacing &&
-            height < lineSpacing + lineSpacing) {
+          height < lineSpacing + lineSpacing) {
           lineWidthLimits = null;
         }
         lineCount = this.wrapText(text, lineWidthLimits, wrappedLines);
         if (verticalAlignment == 3 &&
-            lineCount == 1) {
+          lineCount == 1) {
           verticalAlignment = 1;
         }
         if (verticalAlignment != 0) {
@@ -577,7 +577,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     final void drawCenteredText(String text, int centerX, int baselineY, int textColor, int shadowColor) {
         if (text == null) {
-            return;
+          return;
         }
         this.resetOpaqueTextStyle(textColor, shadowColor);
         this.drawStyledText(text, centerX - this.measureTextWidth(text) / 2, baselineY);
@@ -589,7 +589,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     final void drawRightAlignedText(String text, int rightX, int baselineY, int textColor, int shadowColor) {
         if (text == null) {
-            return;
+          return;
         }
         this.resetOpaqueTextStyle(textColor, shadowColor);
         this.drawStyledText(text, rightX - this.measureTextWidth(text), baselineY);
@@ -597,7 +597,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     final void drawText(String text, int leftX, int baselineY, int textColor, int shadowColor) {
         if (text == null) {
-            return;
+          return;
         }
         this.resetOpaqueTextStyle(textColor, shadowColor);
         this.drawStyledText(text, leftX, baselineY);
@@ -633,7 +633,7 @@ abstract class BitmapFont extends DualLinkNode {
             continue;
           }
           if (characterOrGlyphCode == 62 &&
-              tagStart != -1) {
+            tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             if (!tag.equals("lt")) {
@@ -691,7 +691,7 @@ abstract class BitmapFont extends DualLinkNode {
           characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
           textWidth = textWidth + this.glyphAdvances[characterOrGlyphCode];
           if (this.pairKerning != null &&
-              previousGlyph != 0) {
+            previousGlyph != 0) {
             textWidth = textWidth + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
           }
           previousGlyph = characterOrGlyphCode;
@@ -702,7 +702,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     final int measureWrappedHeight(String text, int wrapWidth, int lineSpacing) {
         if (lineSpacing == 0) {
-            lineSpacing = this.lineAdvance;
+          lineSpacing = this.lineAdvance;
         }
         int lineCount = this.wrapText(text, new int[]{wrapWidth}, wrappedLines);
         int baselineSpan = (lineCount - 1) * lineSpacing;
@@ -761,7 +761,7 @@ abstract class BitmapFont extends DualLinkNode {
 
     final void setInlineImages(IndexedSpriteState[] images, int[] baselineOffsets) {
         if (baselineOffsets != null && baselineOffsets.length != images.length) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         this.inlineImages = images;
         this.inlineImageBaselineOffsets = baselineOffsets;
@@ -799,7 +799,7 @@ abstract class BitmapFont extends DualLinkNode {
             continue;
           }
           if (characterOrGlyphCode == 62 &&
-              tagStart != -1) {
+            tagStart != -1) {
             tag = text.substring(tagStart + 1, textIndex).toLowerCase();
             tagStart = -1;
             if (!tag.equals("lt")) {
@@ -869,7 +869,7 @@ abstract class BitmapFont extends DualLinkNode {
           }
           characterOrGlyphCode = (char)(ByteArrayBuffer.encodeTextCharacter((char) characterOrGlyphCode, true) & 255);
           if (this.pairKerning != null &&
-              previousGlyph != 0) {
+            previousGlyph != 0) {
             penX = penX + this.pairKerning[(previousGlyph << 8) + characterOrGlyphCode];
           }
           glyphWidth = this.glyphWidths[characterOrGlyphCode];
@@ -920,7 +920,7 @@ abstract class BitmapFont extends DualLinkNode {
         maximumGlyphBottom = -2147483648;
         for (glyphIndex = 0; glyphIndex < 256; glyphIndex++) {
           if (this.glyphYOffsets[glyphIndex] < minimumGlyphTop &&
-              this.glyphHeights[glyphIndex] != 0) {
+            this.glyphHeights[glyphIndex] != 0) {
             minimumGlyphTop = this.glyphYOffsets[glyphIndex];
           }
           if (this.glyphYOffsets[glyphIndex] + this.glyphHeights[glyphIndex] <= maximumGlyphBottom) {

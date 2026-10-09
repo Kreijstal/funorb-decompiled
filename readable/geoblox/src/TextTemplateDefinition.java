@@ -121,18 +121,18 @@ final class TextTemplateDefinition extends DualLinkNode {
         int referencedTemplateIndex = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != 119) {
-            entityMotionSpeed = 0.380857914686203f;
+          entityMotionSpeed = 0.380857914686203f;
         }
         if (this.referencedTemplateIds != null) {
-            for (referencedTemplateIndex = 0; this.referencedTemplateIds.length > referencedTemplateIndex; referencedTemplateIndex++) {
-                this.referencedTemplateIds[referencedTemplateIndex] = SessionInstanceState.orInt(this.referencedTemplateIds[referencedTemplateIndex], 32768);
-            }
+          for (referencedTemplateIndex = 0; this.referencedTemplateIds.length > referencedTemplateIndex; referencedTemplateIndex++) {
+            this.referencedTemplateIds[referencedTemplateIndex] = SessionInstanceState.orInt(this.referencedTemplateIds[referencedTemplateIndex], 32768);
+          }
         }
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard < 71) {
-            TextTemplateDefinition.formatSessionPacketDiagnostic(41);
+          TextTemplateDefinition.formatSessionPacketDiagnostic(41);
         }
         screens = null;
     }
@@ -145,15 +145,15 @@ final class TextTemplateDefinition extends DualLinkNode {
         StringBuilder literalSummaryBuilder = new StringBuilder(80);
         StringBuilder literalSummaryBuilderAlias = literalSummaryBuilder;
         if (methodGuard > -7) {
-            TextTemplateDefinition.releaseStaticReferences(41);
+          TextTemplateDefinition.releaseStaticReferences(41);
         }
         if (null == this.literalSegments) {
-            return "";
+          return "";
         }
         StringBuilder ignoredInitialAppendResult = literalSummaryBuilder.append(this.literalSegments[0]);
         for (literalSegmentIndex = 1; this.literalSegments.length > literalSegmentIndex; literalSegmentIndex++) {
-            ignoredEllipsisAppendResult = literalSummaryBuilderAlias.append("...");
-            ignoredSegmentAppendResult = literalSummaryBuilder.append(this.literalSegments[literalSegmentIndex]);
+          ignoredEllipsisAppendResult = literalSummaryBuilderAlias.append("...");
+          ignoredSegmentAppendResult = literalSummaryBuilder.append(this.literalSegments[literalSegmentIndex]);
         }
         return literalSummaryBuilderAlias.toString();
     }
@@ -165,14 +165,14 @@ final class TextTemplateDefinition extends DualLinkNode {
         UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (methodGuard != 2274) {
-            return;
+          return;
         }
         try {
-            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, showCreateAccount, allowJustPlay);
-            ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.activeLoginPanel);
-            ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
+          SpriteButtonRenderer.activeLoginPanel = new LoginPanel(TextTemplateLookupSupport.currentLoginIdentifier, (String) null, AgeValidator.reconnectingLoginMode, showCreateAccount, allowJustPlay);
+          ButtonWidget.accountContentDialog = new AccountContentDialog(ClientFlowState.accountDialogLayer, SpriteButtonRenderer.activeLoginPanel);
+          ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
         } catch (RuntimeException panelFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelFailure), "og.C(" + methodGuard + ',' + (messageForFailureContext != null ? "{...}" : "null") + ',' + showCreateAccount + ',' + allowJustPlay + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelFailure), "og.C(" + methodGuard + ',' + (messageForFailureContext != null ? "{...}" : "null") + ',' + showCreateAccount + ',' + allowJustPlay + ')');
         }
     }
 
@@ -212,13 +212,13 @@ final class TextTemplateDefinition extends DualLinkNode {
 
     final static String replaceLiteralOccurrences(String textThenReplacedText, String replacementText, boolean methodGuard, String targetText) {
         if (!methodGuard) {
-            String unusedNullTextSnapshot = (String) null;
-            TextTemplateDefinition.replaceLiteralOccurrences((String) null, (String) null, true, (String) null);
+          String unusedNullTextSnapshot = (String) null;
+          TextTemplateDefinition.replaceLiteralOccurrences((String) null, (String) null, true, (String) null);
         }
         int matchIndex = textThenReplacedText.indexOf(targetText);
         while (matchIndex != -1) {
-            textThenReplacedText = textThenReplacedText.substring(0, matchIndex) + replacementText + textThenReplacedText.substring(targetText.length() + matchIndex);
-            matchIndex = textThenReplacedText.indexOf(targetText, replacementText.length() + matchIndex);
+          textThenReplacedText = textThenReplacedText.substring(0, matchIndex) + replacementText + textThenReplacedText.substring(targetText.length() + matchIndex);
+          matchIndex = textThenReplacedText.indexOf(targetText, replacementText.length() + matchIndex);
         }
         return textThenReplacedText;
     }

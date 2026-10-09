@@ -15,10 +15,10 @@ final class DraggableWidget extends SingleChildWidget {
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         try {
-            super.handlePointerRelease(parentX, pointerX, releaseGuard, eventContext, parentY, pointerY);
-            this.pressedPointerButton = 0;
+          super.handlePointerRelease(parentX, pointerX, releaseGuard, eventContext, parentY, pointerY);
+          this.pressedPointerButton = 0;
         } catch (RuntimeException dragReleaseFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dragReleaseFailure), "la.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dragReleaseFailure), "la.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
@@ -36,12 +36,12 @@ final class DraggableWidget extends SingleChildWidget {
         int dragTargetY = 0;
         try {
           if ((!(this.child instanceof ButtonWidget) ||
-                ((ButtonWidget) (this.child)).enabled) &&
-              this.pressedPointerButton == 1) {
+            ((ButtonWidget) (this.child)).enabled) &&
+            this.pressedPointerButton == 1) {
             dragTargetXOrLayoutDelta = PrefixCodeDecoder.pointerXSnapshot - this.grabOffsetX - parentX;
             dragTargetY = -this.grabOffsetY + (PcmResampler.pointerYSnapshot - parentY);
             if (this.widgetX != dragTargetXOrLayoutDelta ||
-                dragTargetY != this.widgetY) {
+              dragTargetY != this.widgetY) {
               this.widgetY = dragTargetY;
               this.widgetX = dragTargetXOrLayoutDelta;
               if (this.listener instanceof DragMovementListener) {
@@ -105,11 +105,11 @@ final class DraggableWidget extends SingleChildWidget {
         this.layoutTargetY = 2147483647;
         this.layoutTargetX = 2147483647;
         try {
-            this.child = child;
-            this.easeToLayoutPosition = easeToLayoutPosition ? true : false;
-            this.childPressTakesPriority = childPressTakesPriority ? true : false;
+          this.child = child;
+          this.easeToLayoutPosition = easeToLayoutPosition ? true : false;
+          this.childPressTakesPriority = childPressTakesPriority ? true : false;
         } catch (RuntimeException dragWidgetConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dragWidgetConstructionFailure), "la.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ',' + easeToLayoutPosition + ',' + childPressTakesPriority + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dragWidgetConstructionFailure), "la.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ',' + easeToLayoutPosition + ',' + childPressTakesPriority + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class DraggableWidget extends SingleChildWidget {
             this.appendChildDiagnostics(depth, output, visitedWidgets, methodGuard + 0);
             discardedRevertAppend = output.append(" revert=").append(this.easeToLayoutPosition);
             if (this.layoutTargetX != 2147483647 &&
-                this.layoutTargetY != 2147483647) {
+              this.layoutTargetY != 2147483647) {
               discardedTargetPositionAppend = output.append(" to ").append(this.layoutTargetX).append(',').append(this.layoutTargetY);
             }
           }
@@ -172,7 +172,7 @@ final class DraggableWidget extends SingleChildWidget {
           childHandledFlag = super.handlePointerPress(parentY, 53, parentX, pointerButton, pointerX, pointerY, eventContext) ? 1 : 0;
           guardResidue = 5 % ((-3 - methodGuard) / 38);
           if (childHandledFlag != 0 &&
-              this.childPressTakesPriority) {
+            this.childPressTakesPriority) {
             return true;
           }
           if (!this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
@@ -203,12 +203,12 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void showConnectionLostLogin(byte methodGuard) {
         if (methodGuard == 24) {
-            UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
-            ArchiveLoadStep.connectionLostMessagePending = true;
-            AgeValidator.reconnectingLoginMode = true;
-            ClientFlowState.accountDialogLayer.hideAllDialogs(methodGuard + 10912);
-            MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
-            return;
+          UnderlinedButtonRenderer.resetAccountUiFlow(-6011);
+          ArchiveLoadStep.connectionLostMessagePending = true;
+          AgeValidator.reconnectingLoginMode = true;
+          ClientFlowState.accountDialogLayer.hideAllDialogs(methodGuard + 10912);
+          MessageDialogSupport.showMessageDialog(TextWidgetSupport.connectionLostReconnectingText, 480, false);
+          return;
         }
         DraggableWidget.releaseStaticReferences((byte) 86);
         UnderlinedButtonRenderer.resetAccountUiFlow(-6011);

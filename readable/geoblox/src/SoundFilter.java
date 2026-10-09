@@ -31,40 +31,40 @@ final class SoundFilter {
         int forwardGainCoefficientIndex;
         int quantizedCoefficientIndex;
         if (channel == 0) {
-            interpolatedValue = (float)this.gainEndpoints[0] + (float)(this.gainEndpoints[1] - this.gainEndpoints[0]) * fraction;
-            interpolatedValue = interpolatedValue * 0.0030517578125f;
-            forwardGain = (float)Math.pow(0.1, (double)(interpolatedValue / 20.0f));
-            forwardMultiplierQ16 = (int)(forwardGain * 65536.0f);
+          interpolatedValue = (float)this.gainEndpoints[0] + (float)(this.gainEndpoints[1] - this.gainEndpoints[0]) * fraction;
+          interpolatedValue = interpolatedValue * 0.0030517578125f;
+          forwardGain = (float)Math.pow(0.1, (double)(interpolatedValue / 20.0f));
+          forwardMultiplierQ16 = (int)(forwardGain * 65536.0f);
         }
         if (this.pairCounts[channel] == 0) {
-            return 0;
+          return 0;
         }
         firstPairRadius = this.interpolateRadius(channel, 0, fraction);
         coefficientWorkspace[channel][0] = -2.0f * firstPairRadius * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
         coefficientWorkspace[channel][1] = firstPairRadius * firstPairRadius;
         for (pairOrCoefficientIndex = 1; pairOrCoefficientIndex < this.pairCounts[channel]; pairOrCoefficientIndex++) {
-            currentPairRadius = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
-            firstOrderTerm = -2.0f * currentPairRadius * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
-            secondOrderTerm = currentPairRadius * currentPairRadius;
-            coefficientWorkspace[channel][pairOrCoefficientIndex * 2 + 1] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * secondOrderTerm;
-            coefficientWorkspace[channel][pairOrCoefficientIndex * 2] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * firstOrderTerm + coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 2] * secondOrderTerm;
-            for (coefficientIndex = pairOrCoefficientIndex * 2 - 1; coefficientIndex >= 2; coefficientIndex--) {
-                recurrenceCoefficients = coefficientWorkspace[channel];
-                recurrenceCoefficients[coefficientIndex] = recurrenceCoefficients[coefficientIndex] + (coefficientWorkspace[channel][coefficientIndex - 1] * firstOrderTerm + coefficientWorkspace[channel][coefficientIndex - 2] * secondOrderTerm);
-            }
-            lowOrderCoefficients = coefficientWorkspace[channel];
-            lowOrderCoefficients[1] = lowOrderCoefficients[1] + (coefficientWorkspace[channel][0] * firstOrderTerm + secondOrderTerm);
-            leadingCoefficients = coefficientWorkspace[channel];
-            leadingCoefficients[0] = leadingCoefficients[0] + firstOrderTerm;
+          currentPairRadius = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
+          firstOrderTerm = -2.0f * currentPairRadius * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
+          secondOrderTerm = currentPairRadius * currentPairRadius;
+          coefficientWorkspace[channel][pairOrCoefficientIndex * 2 + 1] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * secondOrderTerm;
+          coefficientWorkspace[channel][pairOrCoefficientIndex * 2] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * firstOrderTerm + coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 2] * secondOrderTerm;
+          for (coefficientIndex = pairOrCoefficientIndex * 2 - 1; coefficientIndex >= 2; coefficientIndex--) {
+            recurrenceCoefficients = coefficientWorkspace[channel];
+            recurrenceCoefficients[coefficientIndex] = recurrenceCoefficients[coefficientIndex] + (coefficientWorkspace[channel][coefficientIndex - 1] * firstOrderTerm + coefficientWorkspace[channel][coefficientIndex - 2] * secondOrderTerm);
+          }
+          lowOrderCoefficients = coefficientWorkspace[channel];
+          lowOrderCoefficients[1] = lowOrderCoefficients[1] + (coefficientWorkspace[channel][0] * firstOrderTerm + secondOrderTerm);
+          leadingCoefficients = coefficientWorkspace[channel];
+          leadingCoefficients[0] = leadingCoefficients[0] + firstOrderTerm;
         }
         if (channel == 0) {
-            for (forwardGainCoefficientIndex = 0; forwardGainCoefficientIndex < this.pairCounts[0] * 2; forwardGainCoefficientIndex++) {
-                forwardCoefficients = coefficientWorkspace[0];
-                forwardCoefficients[forwardGainCoefficientIndex] = forwardCoefficients[forwardGainCoefficientIndex] * forwardGain;
-            }
+          for (forwardGainCoefficientIndex = 0; forwardGainCoefficientIndex < this.pairCounts[0] * 2; forwardGainCoefficientIndex++) {
+            forwardCoefficients = coefficientWorkspace[0];
+            forwardCoefficients[forwardGainCoefficientIndex] = forwardCoefficients[forwardGainCoefficientIndex] * forwardGain;
+          }
         }
         for (quantizedCoefficientIndex = 0; quantizedCoefficientIndex < this.pairCounts[channel] * 2; quantizedCoefficientIndex++) {
-            coefficientsQ16[channel][quantizedCoefficientIndex] = (int)(coefficientWorkspace[channel][quantizedCoefficientIndex] * 65536.0f);
+          coefficientsQ16[channel][quantizedCoefficientIndex] = (int)(coefficientWorkspace[channel][quantizedCoefficientIndex] * 65536.0f);
         }
         return this.pairCounts[channel] * 2;
     }
@@ -112,7 +112,7 @@ final class SoundFilter {
             }
           }
           if (variantMask != 0 ||
-                this.gainEndpoints[1] != this.gainEndpoints[0]) {
+            this.gainEndpoints[1] != this.gainEndpoints[0]) {
             envelope.decodeSegments(buffer);
           }
         } else {

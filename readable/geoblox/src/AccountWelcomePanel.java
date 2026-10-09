@@ -14,29 +14,29 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         int buttonRowWidth = 0;
         int halfRowButtonWidth = 0;
         try {
-            this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) null);
-            this.goBackButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
-            this.justPlayButton = new ButtonWidget(ClientRenderingState.justPlayText, (WidgetListener) null);
-            sharedButtonRenderer = new SpriteButtonRenderer();
-            this.createAccountButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
-            this.goBackButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
-            this.justPlayButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
-            buttonGap = 4;
-            buttonRowWidth = 326;
-            halfRowButtonWidth = buttonRowWidth - buttonGap >> 1;
-            this.goBackButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -38, -48 + (this.widgetHeight - buttonGap), this.widgetWidth - buttonRowWidth >> 1);
-            this.justPlayButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -77, -buttonGap - 48 + this.widgetHeight, buttonGap + ((-buttonRowWidth + this.widgetWidth >> 1) + halfRowButtonWidth));
-            this.createAccountButton.setWidgetBounds(30, buttonRowWidth, (byte) -73, this.widgetHeight - (78 + 2 * buttonGap), -buttonRowWidth + this.widgetWidth >> 1);
-            this.goBackButton.listener = (WidgetListener) (this);
-            this.createAccountButton.listener = (WidgetListener) (this);
-            this.createAccountButton.hoverText = SessionBootstrapSupport.loginCreateTooltipText;
-            this.justPlayButton.listener = (WidgetListener) (this);
-            this.justPlayButton.hoverText = CheckboxWidget.loginJustPlayTooltipText;
-            this.addChild((byte) -88, this.goBackButton);
-            this.addChild((byte) -102, this.createAccountButton);
-            this.addChild((byte) -104, this.justPlayButton);
+          this.createAccountButton = new ButtonWidget(KeyedIntRecordSubmission.createAnAccountText, (WidgetListener) null);
+          this.goBackButton = new ButtonWidget(ValidatedTextInputWidget.goBackText, (WidgetListener) null);
+          this.justPlayButton = new ButtonWidget(ClientRenderingState.justPlayText, (WidgetListener) null);
+          sharedButtonRenderer = new SpriteButtonRenderer();
+          this.createAccountButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+          this.goBackButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+          this.justPlayButton.renderer = (WidgetRenderer) ((Object) sharedButtonRenderer);
+          buttonGap = 4;
+          buttonRowWidth = 326;
+          halfRowButtonWidth = buttonRowWidth - buttonGap >> 1;
+          this.goBackButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -38, -48 + (this.widgetHeight - buttonGap), this.widgetWidth - buttonRowWidth >> 1);
+          this.justPlayButton.setWidgetBounds(30, halfRowButtonWidth, (byte) -77, -buttonGap - 48 + this.widgetHeight, buttonGap + ((-buttonRowWidth + this.widgetWidth >> 1) + halfRowButtonWidth));
+          this.createAccountButton.setWidgetBounds(30, buttonRowWidth, (byte) -73, this.widgetHeight - (78 + 2 * buttonGap), -buttonRowWidth + this.widgetWidth >> 1);
+          this.goBackButton.listener = (WidgetListener) (this);
+          this.createAccountButton.listener = (WidgetListener) (this);
+          this.createAccountButton.hoverText = SessionBootstrapSupport.loginCreateTooltipText;
+          this.justPlayButton.listener = (WidgetListener) (this);
+          this.justPlayButton.hoverText = CheckboxWidget.loginJustPlayTooltipText;
+          this.addChild((byte) -88, this.goBackButton);
+          this.addChild((byte) -102, this.createAccountButton);
+          this.addChild((byte) -104, this.justPlayButton);
         } catch (RuntimeException panelInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "wi.<init>()");
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "wi.<init>()");
         }
     }
 
@@ -82,13 +82,13 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
         int widgetScreenX = 0;
         int widgetScreenY = 0;
         try {
-            int renderGuardRemainder = 90 % ((1 - methodGuard) / 43);
-            widgetScreenX = parentX + this.widgetX;
-            widgetScreenY = parentY + this.widgetY;
-            DialogLayer.sharedUiFont.drawParagraph(ArchiveNetworkClient.createWelcomeText, widgetScreenX + 20, 20 + widgetScreenY, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
-            super.renderWidget(parentX, parentY, (byte) 63, renderPass);
+          int renderGuardRemainder = 90 % ((1 - methodGuard) / 43);
+          widgetScreenX = parentX + this.widgetX;
+          widgetScreenY = parentY + this.widgetY;
+          DialogLayer.sharedUiFont.drawParagraph(ArchiveNetworkClient.createWelcomeText, widgetScreenX + 20, 20 + widgetScreenY, -40 + this.widgetWidth, this.widgetHeight - 50, 16777215, -1, 1, 0, DialogLayer.sharedUiFont.maxAscent);
+          super.renderWidget(parentX, parentY, (byte) 63, renderPass);
         } catch (RuntimeException renderFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailure), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) renderFailure), "wi.FA(" + parentX + ',' + parentY + ',' + methodGuard + ',' + renderPass + ')');
         }
     }
 
@@ -136,12 +136,12 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
 
     public static void releaseStaticReferences(int methodGuard) {
         try {
-            loadingGraphicsText = null;
-            if (methodGuard != 1) {
-                AccountWelcomePanel.releaseStaticReferences(69);
-            }
+          loadingGraphicsText = null;
+          if (methodGuard != 1) {
+            AccountWelcomePanel.releaseStaticReferences(69);
+          }
         } catch (RuntimeException cleanupFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cleanupFailure), "wi.B(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cleanupFailure), "wi.B(" + methodGuard + ')');
         }
     }
 

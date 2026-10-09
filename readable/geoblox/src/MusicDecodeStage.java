@@ -281,17 +281,17 @@ final class MusicDecodeStage {
         absoluteDeltaYOrRemainder = absoluteDeltaYOrRemainder - (baseStep < 0 ? -baseStep : baseStep) * deltaX;
         spectrum[x0] = spectrum[x0] * inverseDbGains[currentY];
         if (x1 > sampleLimit) {
-            x1 = sampleLimit;
+          x1 = sampleLimit;
         }
         for (xIndex = x0 + 1; xIndex < x1; xIndex++) {
-            errorAccumulator = errorAccumulator + absoluteDeltaYOrRemainder;
-            if (errorAccumulator >= deltaX) {
-                errorAccumulator = errorAccumulator - deltaX;
-                currentY = currentY + correctionStep;
-            } else {
-                currentY = currentY + baseStep;
-            }
-            spectrum[xIndex] = spectrum[xIndex] * inverseDbGains[currentY];
+          errorAccumulator = errorAccumulator + absoluteDeltaYOrRemainder;
+          if (errorAccumulator >= deltaX) {
+            errorAccumulator = errorAccumulator - deltaX;
+            currentY = currentY + correctionStep;
+          } else {
+            currentY = currentY + baseStep;
+          }
+          spectrum[xIndex] = spectrum[xIndex] * inverseDbGains[currentY];
         }
     }
 
@@ -371,7 +371,7 @@ final class MusicDecodeStage {
           }
         }
         if (sharedFloorX != null &&
-            sharedFloorX.length >= floorPointCursor) {
+          sharedFloorX.length >= floorPointCursor) {
           return;
         }
         sharedFloorX = new int[floorPointCursor];

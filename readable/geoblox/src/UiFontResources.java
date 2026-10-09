@@ -45,9 +45,9 @@ final class UiFontResources {
         fullscreenCloseButtonText = null;
         commonUiSmallFont = null;
         if (methodGuard) {
-            UiFontResources.createAcceptedUsernameQuery(102, true);
-            commonUiBoldFont = null;
-            return;
+          UiFontResources.createAcceptedUsernameQuery(102, true);
+          commonUiBoldFont = null;
+          return;
         }
         commonUiBoldFont = null;
     }

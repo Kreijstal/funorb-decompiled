@@ -295,10 +295,10 @@ final class PrefixCodeDecoder {
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard > -1) {
-            PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
-            pendingFifoAcknowledgements = null;
-            trackedSoundEffectStreams = null;
-            return;
+          PrefixCodeDecoder.advanceMenuAvatarAnimation((byte) -72);
+          pendingFifoAcknowledgements = null;
+          trackedSoundEffectStreams = null;
+          return;
         }
         pendingFifoAcknowledgements = null;
         trackedSoundEffectStreams = null;
@@ -415,7 +415,7 @@ final class PrefixCodeDecoder {
         avatarFrameOffsetInSegment = DiskCacheWorker.avatarFeedbackFrameIndex - MenuScreen.avatarFeedbackFrameBase;
         if (FullscreenSupport.avatarSteeringDirectionId != 1) {
           if (FullscreenSupport.avatarSteeringDirectionId == 2 &&
-              avatarFrameOffsetInSegment < 5) {
+            avatarFrameOffsetInSegment < 5) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -437,7 +437,7 @@ final class PrefixCodeDecoder {
             return;
           }
           if (FullscreenSupport.avatarSteeringDirectionId == 0 &&
-              avatarFrameOffsetInSegment < 3) {
+            avatarFrameOffsetInSegment < 3) {
             DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             CacheFileState.avatarFrameStepTicks = 20;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -547,7 +547,7 @@ final class PrefixCodeDecoder {
           return;
         }
         if (FullscreenSupport.avatarSteeringDirectionId == 2 &&
-            avatarFrameOffsetInSegment < 5) {
+          avatarFrameOffsetInSegment < 5) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
           CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;
@@ -569,7 +569,7 @@ final class PrefixCodeDecoder {
           return;
         }
         if (FullscreenSupport.avatarSteeringDirectionId == 0 &&
-            avatarFrameOffsetInSegment < 3) {
+          avatarFrameOffsetInSegment < 3) {
           DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
           CacheFileState.avatarFrameStepTicks = 20;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = LimitedRandomAccessFile.avatarFeedbackHoldTicks - 1;

@@ -14,7 +14,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
     public static void releaseStaticReferences(int methodGuard) {
         achievementOrbCoinIconCounts = null;
         if (methodGuard > -69) {
-            return;
+          return;
         }
         loginUsernameTooltipText = null;
         validInputValidationState = null;
@@ -22,224 +22,224 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final boolean pollResponses(byte methodGuard) {
         try {
-            int receiveIteration = 0;
-            int backgroundFlagBeforeMatch = 0;
-            int archiveHeaderSizeBeforeAllocation = 0;
-            Throwable caughtTransportFailure = null;
-            long currentTimeMillis = 0L;
-            NetworkArchiveRequest requestToSend = null;
-            IOException pollIoFailure = null;
-            int availableBytes = 0;
-            Exception closeFailureAfterPollError = null;
-            int elapsedMillisOrHeaderTargetBytes = 0;
-            Exception timeoutCloseFailure = null;
-            int responseLimitOrHeaderReadLength = 0;
-            int bodyReadLengthOrHeaderXorIndexOrArchiveId = 0;
-            int bodyXorStartSnapshotOrGroupId = 0;
-            int compressionAndQueueFlags = 0;
-            int packedLength = 0;
-            int compressionType = 0;
-            int backgroundResponseFlag = 0;
-            long responseKey = 0L;
-            Object unusedResponseMatchSnapshot = null;
-            NetworkArchiveRequest matchedRequest = null;
-            int archiveHeaderSize = 0;
-            int unusedClientGuardSnapshot = 0;
-            int bodyXorByteIndex = 0;
-            NetworkArchiveRequest nextRequestToSend;
-            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-            if (this.socket != null) {
-              currentTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-              elapsedMillisOrHeaderTargetBytes = (int)(-this.lastPollMillis + currentTimeMillis);
-              if (elapsedMillisOrHeaderTargetBytes > 200) {
-                elapsedMillisOrHeaderTargetBytes = 200;
-              }
-              this.lastPollMillis = currentTimeMillis;
-              this.responseIdleMillis = this.responseIdleMillis + elapsedMillisOrHeaderTargetBytes;
-              if (this.responseIdleMillis > 30000) {
-                try {
-                  this.socket.close(methodGuard ^ -43);
-                } catch (java.lang.Exception timeoutCloseException) {
-                  caughtTransportFailure = timeoutCloseException;
-                  timeoutCloseFailure = (Exception) (Object) caughtTransportFailure;
-                }
-                this.socket = null;
-              }
+          int receiveIteration = 0;
+          int backgroundFlagBeforeMatch = 0;
+          int archiveHeaderSizeBeforeAllocation = 0;
+          Throwable caughtTransportFailure = null;
+          long currentTimeMillis = 0L;
+          NetworkArchiveRequest requestToSend = null;
+          IOException pollIoFailure = null;
+          int availableBytes = 0;
+          Exception closeFailureAfterPollError = null;
+          int elapsedMillisOrHeaderTargetBytes = 0;
+          Exception timeoutCloseFailure = null;
+          int responseLimitOrHeaderReadLength = 0;
+          int bodyReadLengthOrHeaderXorIndexOrArchiveId = 0;
+          int bodyXorStartSnapshotOrGroupId = 0;
+          int compressionAndQueueFlags = 0;
+          int packedLength = 0;
+          int compressionType = 0;
+          int backgroundResponseFlag = 0;
+          long responseKey = 0L;
+          Object unusedResponseMatchSnapshot = null;
+          NetworkArchiveRequest matchedRequest = null;
+          int archiveHeaderSize = 0;
+          int unusedClientGuardSnapshot = 0;
+          int bodyXorByteIndex = 0;
+          NetworkArchiveRequest nextRequestToSend;
+          unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
+          if (this.socket != null) {
+            currentTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            elapsedMillisOrHeaderTargetBytes = (int)(-this.lastPollMillis + currentTimeMillis);
+            if (elapsedMillisOrHeaderTargetBytes > 200) {
+              elapsedMillisOrHeaderTargetBytes = 200;
             }
-            if (this.socket == null) {
-              if (this.countPriorityRequests(-78) == 0 &&
-                  0 == this.countBackgroundRequests(false)) {
+            this.lastPollMillis = currentTimeMillis;
+            this.responseIdleMillis = this.responseIdleMillis + elapsedMillisOrHeaderTargetBytes;
+            if (this.responseIdleMillis > 30000) {
+              try {
+                this.socket.close(methodGuard ^ -43);
+              } catch (java.lang.Exception timeoutCloseException) {
+                caughtTransportFailure = timeoutCloseException;
+                timeoutCloseFailure = (Exception) (Object) caughtTransportFailure;
+              }
+              this.socket = null;
+            }
+          }
+          if (this.socket == null) {
+            if (this.countPriorityRequests(-78) == 0 &&
+              0 == this.countBackgroundRequests(false)) {
+              return true;
+            }
+            return false;
+          }
+          try {
+            this.socket.checkWriteFailure(-108);
+            requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.firstForIteration((byte) 121));
+            while (requestToSend != null) {
+              this.outboundPacketBuffer.position = 0;
+              this.outboundPacketBuffer.writeByte((byte) -54, 1);
+              this.outboundPacketBuffer.writeLong40BE((byte) -127, requestToSend.secondaryKey);
+              this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+              this.sentPriorityRequests.addLast(-93, requestToSend);
+              requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.nextForIteration(methodGuard ^ 41));
+            }
+            nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.firstForIteration((byte) 121));
+            if (methodGuard != 95) {
+              this.resetAfterValidationFailure(-90);
+            }
+            while (nextRequestToSend != null) {
+              this.outboundPacketBuffer.position = 0;
+              this.outboundPacketBuffer.writeByte((byte) 8, 0);
+              this.outboundPacketBuffer.writeLong40BE((byte) -127, nextRequestToSend.secondaryKey);
+              this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+              this.sentBackgroundRequests.addLast(112, nextRequestToSend);
+              nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.nextForIteration(54));
+            }
+            for (receiveIteration = 0; receiveIteration < 100; receiveIteration++) {
+              availableBytes = this.socket.available((byte) 82);
+              if (availableBytes < 0) {
+                throw new IOException();
+              }
+              if (availableBytes == 0) {
                 return true;
               }
-              return false;
-            }
-            try {
-              this.socket.checkWriteFailure(-108);
-              requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.firstForIteration((byte) 121));
-              while (requestToSend != null) {
-                this.outboundPacketBuffer.position = 0;
-                this.outboundPacketBuffer.writeByte((byte) -54, 1);
-                this.outboundPacketBuffer.writeLong40BE((byte) -127, requestToSend.secondaryKey);
-                this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-                this.sentPriorityRequests.addLast(-93, requestToSend);
-                requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.nextForIteration(methodGuard ^ 41));
-              }
-              nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.firstForIteration((byte) 121));
-              if (methodGuard != 95) {
-                this.resetAfterValidationFailure(-90);
-              }
-              while (nextRequestToSend != null) {
-                this.outboundPacketBuffer.position = 0;
-                this.outboundPacketBuffer.writeByte((byte) 8, 0);
-                this.outboundPacketBuffer.writeLong40BE((byte) -127, nextRequestToSend.secondaryKey);
-                this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-                this.sentBackgroundRequests.addLast(112, nextRequestToSend);
-                nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.nextForIteration(54));
-              }
-              for (receiveIteration = 0; receiveIteration < 100; receiveIteration++) {
-                availableBytes = this.socket.available((byte) 82);
-                if (availableBytes < 0) {
-                  throw new IOException();
+              this.responseIdleMillis = 0;
+              elapsedMillisOrHeaderTargetBytes = 0;
+              if (this.currentResponseRequest != null) {
+                if (this.currentResponseRequest.blockPosition == 0) {
+                  elapsedMillisOrHeaderTargetBytes = 1;
                 }
-                if (availableBytes == 0) {
-                  return true;
+              } else {
+                elapsedMillisOrHeaderTargetBytes = 10;
+              }
+              if (0 >= elapsedMillisOrHeaderTargetBytes) {
+                responseLimitOrHeaderReadLength = this.currentResponseRequest.responseBuffer.bytes.length - this.currentResponseRequest.reservedTailBytes;
+                bodyReadLengthOrHeaderXorIndexOrArchiveId = 512 - this.currentResponseRequest.blockPosition;
+                if (-this.currentResponseRequest.responseBuffer.position + responseLimitOrHeaderReadLength < bodyReadLengthOrHeaderXorIndexOrArchiveId) {
+                  bodyReadLengthOrHeaderXorIndexOrArchiveId = -this.currentResponseRequest.responseBuffer.position + responseLimitOrHeaderReadLength;
                 }
-                this.responseIdleMillis = 0;
-                elapsedMillisOrHeaderTargetBytes = 0;
-                if (this.currentResponseRequest != null) {
-                  if (this.currentResponseRequest.blockPosition == 0) {
-                    elapsedMillisOrHeaderTargetBytes = 1;
+                if (bodyReadLengthOrHeaderXorIndexOrArchiveId > availableBytes) {
+                  bodyReadLengthOrHeaderXorIndexOrArchiveId = availableBytes;
+                }
+                this.socket.readFully(this.currentResponseRequest.responseBuffer.bytes, (byte) -97, this.currentResponseRequest.responseBuffer.position, bodyReadLengthOrHeaderXorIndexOrArchiveId);
+                if (this.responseXorKey != 0) {
+                  bodyXorByteIndex = 0;
+                  bodyXorStartSnapshotOrGroupId = bodyXorByteIndex;
+                  while (bodyReadLengthOrHeaderXorIndexOrArchiveId > bodyXorByteIndex) {
+                    this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)EmailAvailabilityQuery.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
+                    bodyXorByteIndex++;
                   }
+                }
+                this.currentResponseRequest.blockPosition = this.currentResponseRequest.blockPosition + bodyReadLengthOrHeaderXorIndexOrArchiveId;
+                this.currentResponseRequest.responseBuffer.position = this.currentResponseRequest.responseBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId;
+                if (responseLimitOrHeaderReadLength == this.currentResponseRequest.responseBuffer.position) {
+                  this.currentResponseRequest.unlinkSecondaryNode((byte) 57);
+                  this.currentResponseRequest.pending = false;
+                  this.currentResponseRequest = null;
                 } else {
-                  elapsedMillisOrHeaderTargetBytes = 10;
+                  if (this.currentResponseRequest.blockPosition == 512) {
+                    this.currentResponseRequest.blockPosition = 0;
+                  }
                 }
-                if (0 >= elapsedMillisOrHeaderTargetBytes) {
-                  responseLimitOrHeaderReadLength = this.currentResponseRequest.responseBuffer.bytes.length - this.currentResponseRequest.reservedTailBytes;
-                  bodyReadLengthOrHeaderXorIndexOrArchiveId = 512 - this.currentResponseRequest.blockPosition;
-                  if (-this.currentResponseRequest.responseBuffer.position + responseLimitOrHeaderReadLength < bodyReadLengthOrHeaderXorIndexOrArchiveId) {
-                    bodyReadLengthOrHeaderXorIndexOrArchiveId = -this.currentResponseRequest.responseBuffer.position + responseLimitOrHeaderReadLength;
+              } else {
+                responseLimitOrHeaderReadLength = -this.responseHeaderBuffer.position + elapsedMillisOrHeaderTargetBytes;
+                if (responseLimitOrHeaderReadLength > availableBytes) {
+                  responseLimitOrHeaderReadLength = availableBytes;
+                }
+                this.socket.readFully(this.responseHeaderBuffer.bytes, (byte) -97, this.responseHeaderBuffer.position, responseLimitOrHeaderReadLength);
+                if (this.responseXorKey != 0) {
+                  for (bodyReadLengthOrHeaderXorIndexOrArchiveId = 0; bodyReadLengthOrHeaderXorIndexOrArchiveId < responseLimitOrHeaderReadLength; bodyReadLengthOrHeaderXorIndexOrArchiveId++) {
+                    this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)EmailAvailabilityQuery.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
                   }
-                  if (bodyReadLengthOrHeaderXorIndexOrArchiveId > availableBytes) {
-                    bodyReadLengthOrHeaderXorIndexOrArchiveId = availableBytes;
-                  }
-                  this.socket.readFully(this.currentResponseRequest.responseBuffer.bytes, (byte) -97, this.currentResponseRequest.responseBuffer.position, bodyReadLengthOrHeaderXorIndexOrArchiveId);
-                  if (this.responseXorKey != 0) {
-                    bodyXorByteIndex = 0;
-                    bodyXorStartSnapshotOrGroupId = bodyXorByteIndex;
-                    while (bodyReadLengthOrHeaderXorIndexOrArchiveId > bodyXorByteIndex) {
-                      this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex] = (byte)EmailAvailabilityQuery.xorInt((int) this.currentResponseRequest.responseBuffer.bytes[this.currentResponseRequest.responseBuffer.position + bodyXorByteIndex], (int) this.responseXorKey);
-                      bodyXorByteIndex++;
-                    }
-                  }
-                  this.currentResponseRequest.blockPosition = this.currentResponseRequest.blockPosition + bodyReadLengthOrHeaderXorIndexOrArchiveId;
-                  this.currentResponseRequest.responseBuffer.position = this.currentResponseRequest.responseBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId;
-                  if (responseLimitOrHeaderReadLength == this.currentResponseRequest.responseBuffer.position) {
-                    this.currentResponseRequest.unlinkSecondaryNode((byte) 57);
-                    this.currentResponseRequest.pending = false;
-                    this.currentResponseRequest = null;
-                  } else {
-                    if (this.currentResponseRequest.blockPosition == 512) {
-                      this.currentResponseRequest.blockPosition = 0;
-                    }
-                  }
-                } else {
-                  responseLimitOrHeaderReadLength = -this.responseHeaderBuffer.position + elapsedMillisOrHeaderTargetBytes;
-                  if (responseLimitOrHeaderReadLength > availableBytes) {
-                    responseLimitOrHeaderReadLength = availableBytes;
-                  }
-                  this.socket.readFully(this.responseHeaderBuffer.bytes, (byte) -97, this.responseHeaderBuffer.position, responseLimitOrHeaderReadLength);
-                  if (this.responseXorKey != 0) {
-                    for (bodyReadLengthOrHeaderXorIndexOrArchiveId = 0; bodyReadLengthOrHeaderXorIndexOrArchiveId < responseLimitOrHeaderReadLength; bodyReadLengthOrHeaderXorIndexOrArchiveId++) {
-                      this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId] = (byte)EmailAvailabilityQuery.xorInt((int) this.responseHeaderBuffer.bytes[this.responseHeaderBuffer.position + bodyReadLengthOrHeaderXorIndexOrArchiveId], (int) this.responseXorKey);
-                    }
-                  }
-                  this.responseHeaderBuffer.position = this.responseHeaderBuffer.position + responseLimitOrHeaderReadLength;
-                  if (this.responseHeaderBuffer.position >= elapsedMillisOrHeaderTargetBytes) {
-                    if (null == this.currentResponseRequest) {
-                      this.responseHeaderBuffer.position = 0;
-                      bodyReadLengthOrHeaderXorIndexOrArchiveId = this.responseHeaderBuffer.readUnsignedByte((byte) 34);
-                      bodyXorStartSnapshotOrGroupId = this.responseHeaderBuffer.readIntBE((byte) -90);
-                      compressionAndQueueFlags = this.responseHeaderBuffer.readUnsignedByte((byte) 34);
-                      packedLength = this.responseHeaderBuffer.readIntBE((byte) -61);
-                      compressionType = compressionAndQueueFlags & 127;
-                      backgroundFlagBeforeMatch = ((128 & compressionAndQueueFlags) == 0) ? 0 : 1;
-                      {
-                        boolean archiveResponseRequestLookupFrameContinues = true;
-                        boolean archiveResponseRequestLookupRemainderEnabled = true;
-                        backgroundResponseFlag = backgroundFlagBeforeMatch;
-                        responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
-                        unusedResponseMatchSnapshot = null;
-                        if (backgroundResponseFlag != 0) {
-                          matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.firstForIteration((byte) 121));
+                }
+                this.responseHeaderBuffer.position = this.responseHeaderBuffer.position + responseLimitOrHeaderReadLength;
+                if (this.responseHeaderBuffer.position >= elapsedMillisOrHeaderTargetBytes) {
+                  if (null == this.currentResponseRequest) {
+                    this.responseHeaderBuffer.position = 0;
+                    bodyReadLengthOrHeaderXorIndexOrArchiveId = this.responseHeaderBuffer.readUnsignedByte((byte) 34);
+                    bodyXorStartSnapshotOrGroupId = this.responseHeaderBuffer.readIntBE((byte) -90);
+                    compressionAndQueueFlags = this.responseHeaderBuffer.readUnsignedByte((byte) 34);
+                    packedLength = this.responseHeaderBuffer.readIntBE((byte) -61);
+                    compressionType = compressionAndQueueFlags & 127;
+                    backgroundFlagBeforeMatch = ((128 & compressionAndQueueFlags) == 0) ? 0 : 1;
+                    {
+                      boolean archiveResponseRequestLookupFrameContinues = true;
+                      boolean archiveResponseRequestLookupRemainderEnabled = true;
+                      backgroundResponseFlag = backgroundFlagBeforeMatch;
+                      responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
+                      unusedResponseMatchSnapshot = null;
+                      if (backgroundResponseFlag != 0) {
+                        matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.firstForIteration((byte) 121));
+                        while (matchedRequest != null) {
+                          if (responseKey == matchedRequest.secondaryKey) {
+                            archiveResponseRequestLookupRemainderEnabled = false;
+                            break;
+                          }
+                          matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
+                        }
+                        archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
+                      }
+                      if (archiveResponseRequestLookupFrameContinues) {
+                        if (archiveResponseRequestLookupRemainderEnabled) {
+                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
                           while (matchedRequest != null) {
-                            if (responseKey == matchedRequest.secondaryKey) {
-                              archiveResponseRequestLookupRemainderEnabled = false;
+                            if (~responseKey == ~matchedRequest.secondaryKey) {
                               break;
                             }
-                            matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
-                          }
-                          archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
-                        }
-                        if (archiveResponseRequestLookupFrameContinues) {
-                          if (archiveResponseRequestLookupRemainderEnabled) {
-                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
-                            while (matchedRequest != null) {
-                              if (~responseKey == ~matchedRequest.secondaryKey) {
-                                break;
-                              }
-                              matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
-                            }
+                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                           }
                         }
                       }
-                      if (matchedRequest == null) {
-                        throw new IOException();
-                      }
-                      this.currentResponseRequest = matchedRequest;
-                      archiveHeaderSizeBeforeAllocation = (0 != compressionType) ? 9 : 5;
-                      archiveHeaderSize = archiveHeaderSizeBeforeAllocation;
-                      this.currentResponseRequest.responseBuffer = new ByteArrayBuffer(packedLength + archiveHeaderSize + this.currentResponseRequest.reservedTailBytes);
-                      this.currentResponseRequest.responseBuffer.writeByte((byte) -26, compressionType);
-                      this.currentResponseRequest.responseBuffer.writeIntBE((byte) 95, packedLength);
+                    }
+                    if (matchedRequest == null) {
+                      throw new IOException();
+                    }
+                    this.currentResponseRequest = matchedRequest;
+                    archiveHeaderSizeBeforeAllocation = (0 != compressionType) ? 9 : 5;
+                    archiveHeaderSize = archiveHeaderSizeBeforeAllocation;
+                    this.currentResponseRequest.responseBuffer = new ByteArrayBuffer(packedLength + archiveHeaderSize + this.currentResponseRequest.reservedTailBytes);
+                    this.currentResponseRequest.responseBuffer.writeByte((byte) -26, compressionType);
+                    this.currentResponseRequest.responseBuffer.writeIntBE((byte) 95, packedLength);
+                    this.responseHeaderBuffer.position = 0;
+                    this.currentResponseRequest.blockPosition = 10;
+                  } else {
+                    if (0 != this.currentResponseRequest.blockPosition) {
+                      throw new IOException();
+                    }
+                    if (-1 == this.responseHeaderBuffer.bytes[0]) {
                       this.responseHeaderBuffer.position = 0;
-                      this.currentResponseRequest.blockPosition = 10;
+                      this.currentResponseRequest.blockPosition = 1;
                     } else {
-                      if (0 != this.currentResponseRequest.blockPosition) {
-                        throw new IOException();
-                      }
-                      if (-1 == this.responseHeaderBuffer.bytes[0]) {
-                        this.responseHeaderBuffer.position = 0;
-                        this.currentResponseRequest.blockPosition = 1;
-                      } else {
-                        this.currentResponseRequest = null;
-                      }
+                      this.currentResponseRequest = null;
                     }
                   }
                 }
               }
-              return true;
-            } catch (java.io.IOException pollIOException) {
-              caughtTransportFailure = pollIOException;
-              pollIoFailure = (IOException) (Object) caughtTransportFailure;
-              try {
-                this.socket.close(-122);
-              } catch (java.lang.Exception pollErrorCloseException) {
-                caughtTransportFailure = pollErrorCloseException;
-                closeFailureAfterPollError = (Exception) (Object) caughtTransportFailure;
-              }
-              this.failureCount = this.failureCount + 1;
-              this.failureCode = -2;
-              this.socket = null;
-              if (0 == this.countPriorityRequests(methodGuard - 216) &&
-                  this.countBackgroundRequests(false) == 0) {
-                return true;
-              }
-              return false;
             }
+            return true;
+          } catch (java.io.IOException pollIOException) {
+            caughtTransportFailure = pollIOException;
+            pollIoFailure = (IOException) (Object) caughtTransportFailure;
+            try {
+              this.socket.close(-122);
+            } catch (java.lang.Exception pollErrorCloseException) {
+              caughtTransportFailure = pollErrorCloseException;
+              closeFailureAfterPollError = (Exception) (Object) caughtTransportFailure;
+            }
+            this.failureCount = this.failureCount + 1;
+            this.failureCode = -2;
+            this.socket = null;
+            if (0 == this.countPriorityRequests(methodGuard - 216) &&
+              this.countBackgroundRequests(false) == 0) {
+              return true;
+            }
+            return false;
+          }
         } catch (RuntimeException | Error uncheckedPollFailure) {
-            throw uncheckedPollFailure;
+          throw uncheckedPollFailure;
         } catch (Throwable checkedPollFailure) {
-            throw new RuntimeException(checkedPollFailure);
+          throw new RuntimeException(checkedPollFailure);
         }
     }
 
@@ -262,7 +262,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           }
           nameLength = nameText.length();
           if (nameLength >= 1 &&
-              12 >= nameLength) {
+            12 >= nameLength) {
             normalizedName = ResizableDialog.normalizeSessionName(nameText, methodGuard ^ 122);
             if (normalizedName == null) {
               return false;
@@ -271,7 +271,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               return false;
             }
             if (!NameCharacterSupport.isNameSeparator((byte) -62, normalizedName.charAt(0)) &&
-                !NameCharacterSupport.isNameSeparator((byte) -98, normalizedName.charAt(-1 + normalizedName.length()))) {
+              !NameCharacterSupport.isNameSeparator((byte) -98, normalizedName.charAt(-1 + normalizedName.length()))) {
               consecutiveSeparators = 0;
               for (characterIndex = 0; characterIndex < nameText.length(); characterIndex++) {
                 characterCode = nameText.charAt(characterIndex);
@@ -281,7 +281,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                   consecutiveSeparators++;
                 }
                 if (consecutiveSeparators >= 2 &&
-                    !allowRepeatedSeparators) {
+                  !allowRepeatedSeparators) {
                   return false;
                 }
               }
@@ -312,7 +312,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final static ResourceArchive createResourceArchive(int archiveId, byte methodGuard) {
         if (methodGuard != -62) {
-            SocketArchiveNetworkClient.releaseStaticReferences(118);
+          SocketArchiveNetworkClient.releaseStaticReferences(118);
         }
         return IntKeyLookup.createResourceArchive(methodGuard - 10, archiveId, false, 1, true, false);
     }
@@ -322,148 +322,148 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     final void attachSocket(Object socketObject, boolean methodGuard, boolean useControlOpcode2) {
         try {
-            RuntimeException attachmentFailureBeforeContext = null;
-            StringBuilder attachmentMessagePrefix = null;
-            String socketDescription = null;
-            Throwable caughtAttachmentFailure = null;
-            Exception oldSocketCloseFailure = null;
-            NetworkArchiveRequest requestToRequeue = null;
-            IOException xorSetupIoFailure = null;
-            RuntimeException attachmentFailureForContext = null;
-            Exception xorSetupCloseFailure = null;
-            int unusedClientGuardSnapshot = 0;
-            NetworkArchiveRequest nextRequestToRequeue;
-            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-            try {
-              if (null != this.socket) {
+          RuntimeException attachmentFailureBeforeContext = null;
+          StringBuilder attachmentMessagePrefix = null;
+          String socketDescription = null;
+          Throwable caughtAttachmentFailure = null;
+          Exception oldSocketCloseFailure = null;
+          NetworkArchiveRequest requestToRequeue = null;
+          IOException xorSetupIoFailure = null;
+          RuntimeException attachmentFailureForContext = null;
+          Exception xorSetupCloseFailure = null;
+          int unusedClientGuardSnapshot = 0;
+          NetworkArchiveRequest nextRequestToRequeue;
+          unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
+          try {
+            if (null != this.socket) {
+              try {
+                this.socket.close(-120);
+              } catch (java.lang.Exception oldSocketCloseException) {
+                caughtAttachmentFailure = oldSocketCloseException;
+                oldSocketCloseFailure = (Exception) (Object) caughtAttachmentFailure;
+              }
+              this.socket = null;
+            }
+            this.socket = (BufferedSocket) (socketObject);
+            this.sendSetupPacket((byte) -113);
+            this.sendControlPacket(methodGuard, useControlOpcode2);
+            this.responseHeaderBuffer.position = 0;
+            this.currentResponseRequest = null;
+            while (true) {
+              requestToRequeue = (NetworkArchiveRequest) (this.sentPriorityRequests.removeFirst(true));
+              if (requestToRequeue != null) {
+                this.pendingPriorityRequests.addLast(-74, requestToRequeue);
+                continue;
+              }
+              break;
+            }
+            if (methodGuard) {
+              errorReportGameCrc = 110;
+            }
+            while (true) {
+              nextRequestToRequeue = (NetworkArchiveRequest) (this.sentBackgroundRequests.removeFirst(true));
+              if (nextRequestToRequeue != null) {
+                this.pendingBackgroundRequests.addLast(116, nextRequestToRequeue);
+                continue;
+              }
+              break;
+            }
+            if (this.responseXorKey != 0) {
+              try {
+                this.outboundPacketBuffer.position = 0;
+                this.outboundPacketBuffer.writeByte((byte) -62, 4);
+                this.outboundPacketBuffer.writeByte((byte) 122, (int) this.responseXorKey);
+                this.outboundPacketBuffer.writeIntBE((byte) 95, 0);
+                this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+              } catch (java.io.IOException xorSetupIOException) {
+                caughtAttachmentFailure = xorSetupIOException;
+                xorSetupIoFailure = (IOException) (Object) caughtAttachmentFailure;
                 try {
-                  this.socket.close(-120);
-                } catch (java.lang.Exception oldSocketCloseException) {
-                  caughtAttachmentFailure = oldSocketCloseException;
-                  oldSocketCloseFailure = (Exception) (Object) caughtAttachmentFailure;
+                  this.socket.close(-126);
+                } catch (java.lang.Exception xorSetupCloseException) {
+                  caughtAttachmentFailure = xorSetupCloseException;
+                  xorSetupCloseFailure = (Exception) (Object) caughtAttachmentFailure;
                 }
+                this.failureCode = -2;
+                this.failureCount = this.failureCount + 1;
                 this.socket = null;
               }
-              this.socket = (BufferedSocket) (socketObject);
-              this.sendSetupPacket((byte) -113);
-              this.sendControlPacket(methodGuard, useControlOpcode2);
-              this.responseHeaderBuffer.position = 0;
-              this.currentResponseRequest = null;
-              while (true) {
-                requestToRequeue = (NetworkArchiveRequest) (this.sentPriorityRequests.removeFirst(true));
-                if (requestToRequeue != null) {
-                  this.pendingPriorityRequests.addLast(-74, requestToRequeue);
-                  continue;
-                }
-                break;
-              }
-              if (methodGuard) {
-                errorReportGameCrc = 110;
-              }
-              while (true) {
-                nextRequestToRequeue = (NetworkArchiveRequest) (this.sentBackgroundRequests.removeFirst(true));
-                if (nextRequestToRequeue != null) {
-                  this.pendingBackgroundRequests.addLast(116, nextRequestToRequeue);
-                  continue;
-                }
-                break;
-              }
-              if (this.responseXorKey != 0) {
-                try {
-                  this.outboundPacketBuffer.position = 0;
-                  this.outboundPacketBuffer.writeByte((byte) -62, 4);
-                  this.outboundPacketBuffer.writeByte((byte) 122, (int) this.responseXorKey);
-                  this.outboundPacketBuffer.writeIntBE((byte) 95, 0);
-                  this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-                } catch (java.io.IOException xorSetupIOException) {
-                  caughtAttachmentFailure = xorSetupIOException;
-                  xorSetupIoFailure = (IOException) (Object) caughtAttachmentFailure;
-                  try {
-                    this.socket.close(-126);
-                  } catch (java.lang.Exception xorSetupCloseException) {
-                    caughtAttachmentFailure = xorSetupCloseException;
-                    xorSetupCloseFailure = (Exception) (Object) caughtAttachmentFailure;
-                  }
-                  this.failureCode = -2;
-                  this.failureCount = this.failureCount + 1;
-                  this.socket = null;
-                }
-              }
-              this.responseIdleMillis = 0;
-              this.lastPollMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-              return;
-            } catch (java.lang.RuntimeException attachmentRuntimeException) {
-              caughtAttachmentFailure = attachmentRuntimeException;
-              attachmentFailureForContext = (RuntimeException) (Object) caughtAttachmentFailure;
-              attachmentFailureBeforeContext = attachmentFailureForContext;
-              attachmentMessagePrefix = new StringBuilder().append("kk.C(");
-              if (socketObject == null) {
-                socketDescription = "null";
-              } else {
-                socketDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) attachmentFailureBeforeContext), ((StringBuilder) (Object) attachmentMessagePrefix).append(socketDescription).append(',').append(methodGuard).append(',').append(useControlOpcode2).append(')').toString());
             }
+            this.responseIdleMillis = 0;
+            this.lastPollMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            return;
+          } catch (java.lang.RuntimeException attachmentRuntimeException) {
+            caughtAttachmentFailure = attachmentRuntimeException;
+            attachmentFailureForContext = (RuntimeException) (Object) caughtAttachmentFailure;
+            attachmentFailureBeforeContext = attachmentFailureForContext;
+            attachmentMessagePrefix = new StringBuilder().append("kk.C(");
+            if (socketObject == null) {
+              socketDescription = "null";
+            } else {
+              socketDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) attachmentFailureBeforeContext), ((StringBuilder) (Object) attachmentMessagePrefix).append(socketDescription).append(',').append(methodGuard).append(',').append(useControlOpcode2).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedAttachmentFailure) {
-            throw uncheckedAttachmentFailure;
+          throw uncheckedAttachmentFailure;
         } catch (Throwable checkedAttachmentFailure) {
-            throw new RuntimeException(checkedAttachmentFailure);
+          throw new RuntimeException(checkedAttachmentFailure);
         }
     }
 
     final void closeSocket(int methodGuard) {
         if (methodGuard > -50) {
-            validInputValidationState = (ValidationState) null;
+          validInputValidationState = (ValidationState) null;
         }
         if (this.socket != null) {
-            this.socket.close(-123);
+          this.socket.close(-123);
         }
     }
 
     private final void sendSetupPacket(byte methodGuard) {
         try {
-            Throwable caughtSetupFailure = null;
-            IOException setupIoFailure = null;
-            Exception setupCloseFailure = null;
-            if (this.socket == null) {
-              return;
+          Throwable caughtSetupFailure = null;
+          IOException setupIoFailure = null;
+          Exception setupCloseFailure = null;
+          if (this.socket == null) {
+            return;
+          }
+          try {
+            this.outboundPacketBuffer.position = 0;
+            this.outboundPacketBuffer.writeByte((byte) 126, 6);
+            this.outboundPacketBuffer.writeMediumBE(-12, 3);
+            this.outboundPacketBuffer.writeShortBE(0, 28695);
+            this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+            if (methodGuard > -56) {
+              SocketArchiveNetworkClient.createResourceArchive(-8, (byte) 62);
             }
+          } catch (java.io.IOException setupIOException) {
+            caughtSetupFailure = setupIOException;
+            setupIoFailure = (IOException) (Object) caughtSetupFailure;
             try {
-              this.outboundPacketBuffer.position = 0;
-              this.outboundPacketBuffer.writeByte((byte) 126, 6);
-              this.outboundPacketBuffer.writeMediumBE(-12, 3);
-              this.outboundPacketBuffer.writeShortBE(0, 28695);
-              this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-              if (methodGuard > -56) {
-                SocketArchiveNetworkClient.createResourceArchive(-8, (byte) 62);
-              }
-            } catch (java.io.IOException setupIOException) {
-              caughtSetupFailure = setupIOException;
-              setupIoFailure = (IOException) (Object) caughtSetupFailure;
-              try {
-                this.socket.close(-121);
-              } catch (java.lang.Exception setupCloseException) {
-                caughtSetupFailure = setupCloseException;
-                setupCloseFailure = (Exception) (Object) caughtSetupFailure;
-              }
-              this.socket = null;
-              this.failureCode = -2;
-              this.failureCount = this.failureCount + 1;
+              this.socket.close(-121);
+            } catch (java.lang.Exception setupCloseException) {
+              caughtSetupFailure = setupCloseException;
+              setupCloseFailure = (Exception) (Object) caughtSetupFailure;
             }
+            this.socket = null;
+            this.failureCode = -2;
+            this.failureCount = this.failureCount + 1;
+          }
         } catch (RuntimeException | Error uncheckedSetupFailure) {
-            throw uncheckedSetupFailure;
+          throw uncheckedSetupFailure;
         } catch (Throwable checkedSetupFailure) {
-            throw new RuntimeException(checkedSetupFailure);
+          throw new RuntimeException(checkedSetupFailure);
         }
     }
 
     final void resetAfterValidationFailure(int methodGuard) {
         try {
-            this.socket.close(methodGuard ^ -106);
+          this.socket.close(methodGuard ^ -106);
         } catch (Exception ignoredCloseFailure) {
         }
         if (methodGuard != 20) {
-            return;
+          return;
         }
         this.failureCount = this.failureCount + 1;
         this.failureCode = -1;
@@ -473,47 +473,47 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
 
     private final void sendControlPacket(boolean methodGuard, boolean useControlOpcode2) {
         try {
-            ByteArrayBuffer controlBufferBeforeOpcode = null;
-            int opcodeWriterGuard = 0;
-            int controlOpcode = 0;
-            Throwable caughtControlFailure = null;
-            IOException controlIoFailure = null;
-            Exception controlCloseFailure = null;
-            if (null == this.socket) {
-              return;
+          ByteArrayBuffer controlBufferBeforeOpcode = null;
+          int opcodeWriterGuard = 0;
+          int controlOpcode = 0;
+          Throwable caughtControlFailure = null;
+          IOException controlIoFailure = null;
+          Exception controlCloseFailure = null;
+          if (null == this.socket) {
+            return;
+          }
+          try {
+            this.outboundPacketBuffer.position = 0;
+            controlBufferBeforeOpcode = this.outboundPacketBuffer;
+            opcodeWriterGuard = 124;
+            if (useControlOpcode2) {
+              controlOpcode = 2;
+            } else {
+              controlOpcode = 3;
             }
+            ((ByteArrayBuffer) (Object) controlBufferBeforeOpcode).writeByte((byte) opcodeWriterGuard, controlOpcode);
+            this.outboundPacketBuffer.writeLong40BE((byte) -127, 0L);
+            this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
+            if (methodGuard) {
+              this.sendControlPacket(false, false);
+            }
+          } catch (java.io.IOException controlIOException) {
+            caughtControlFailure = controlIOException;
+            controlIoFailure = (IOException) (Object) caughtControlFailure;
             try {
-              this.outboundPacketBuffer.position = 0;
-              controlBufferBeforeOpcode = this.outboundPacketBuffer;
-              opcodeWriterGuard = 124;
-              if (useControlOpcode2) {
-                controlOpcode = 2;
-              } else {
-                controlOpcode = 3;
-              }
-              ((ByteArrayBuffer) (Object) controlBufferBeforeOpcode).writeByte((byte) opcodeWriterGuard, controlOpcode);
-              this.outboundPacketBuffer.writeLong40BE((byte) -127, 0L);
-              this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
-              if (methodGuard) {
-                this.sendControlPacket(false, false);
-              }
-            } catch (java.io.IOException controlIOException) {
-              caughtControlFailure = controlIOException;
-              controlIoFailure = (IOException) (Object) caughtControlFailure;
-              try {
-                this.socket.close(-126);
-              } catch (java.lang.Exception controlCloseException) {
-                caughtControlFailure = controlCloseException;
-                controlCloseFailure = (Exception) (Object) caughtControlFailure;
-              }
-              this.socket = null;
-              this.failureCode = -2;
-              this.failureCount = this.failureCount + 1;
+              this.socket.close(-126);
+            } catch (java.lang.Exception controlCloseException) {
+              caughtControlFailure = controlCloseException;
+              controlCloseFailure = (Exception) (Object) caughtControlFailure;
             }
+            this.socket = null;
+            this.failureCode = -2;
+            this.failureCount = this.failureCount + 1;
+          }
         } catch (RuntimeException | Error uncheckedControlFailure) {
-            throw uncheckedControlFailure;
+          throw uncheckedControlFailure;
         } catch (Throwable checkedControlFailure) {
-            throw new RuntimeException(checkedControlFailure);
+          throw new RuntimeException(checkedControlFailure);
         }
     }
 

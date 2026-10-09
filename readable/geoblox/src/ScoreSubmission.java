@@ -19,9 +19,9 @@ final class ScoreSubmission extends IntrusiveNode {
         queuedKeyboardEventCharacters = null;
         createPasswordCharacterAlertText = null;
         if (methodGuard != 46695) {
-            ScoreSubmission.releaseStaticReferences(-13);
-            quarterSineQ16 = null;
-            return;
+          ScoreSubmission.releaseStaticReferences(-13);
+          quarterSineQ16 = null;
+          return;
         }
         quarterSineQ16 = null;
     }
@@ -29,163 +29,163 @@ final class ScoreSubmission extends IntrusiveNode {
     ScoreSubmission(int firstShortValue, int secondShortValue, int firstContextValue, int secondContextValue, int thirdContextValue, int fourthContextValue, int[] scores) {
         int submissionIdBeforeIncrement = 0;
         try {
-            this.thirdContextValue = thirdContextValue;
-            submissionIdBeforeIncrement = EndingAnimationSupport.nextScoreSubmissionId;
-            EndingAnimationSupport.nextScoreSubmissionId = EndingAnimationSupport.nextScoreSubmissionId + 1;
-            this.submissionId = 65535 & submissionIdBeforeIncrement;
-            this.secondContextValue = secondContextValue;
-            this.fourthContextValue = fourthContextValue;
-            this.firstContextValue = firstContextValue;
-            this.scores = scores;
-            this.secondShortValue = secondShortValue;
-            this.firstShortValue = firstShortValue;
+          this.thirdContextValue = thirdContextValue;
+          submissionIdBeforeIncrement = EndingAnimationSupport.nextScoreSubmissionId;
+          EndingAnimationSupport.nextScoreSubmissionId = EndingAnimationSupport.nextScoreSubmissionId + 1;
+          this.submissionId = 65535 & submissionIdBeforeIncrement;
+          this.secondContextValue = secondContextValue;
+          this.fourthContextValue = fourthContextValue;
+          this.firstContextValue = firstContextValue;
+          this.scores = scores;
+          this.secondShortValue = secondShortValue;
+          this.firstShortValue = firstShortValue;
         } catch (RuntimeException submissionInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionInitializationFailure), "ai.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionInitializationFailure), "ai.<init>(" + firstShortValue + ',' + secondShortValue + ',' + firstContextValue + ',' + secondContextValue + ',' + thirdContextValue + ',' + fourthContextValue + ',' + (scores != null ? "{...}" : "null") + ')');
         }
     }
 
     final static java.net.URL rewriteSessionUrlPath(String sessionValue, String settingsValue, java.net.URL url, int languageId, boolean methodGuard) {
         try {
-            StringBuilder discardedPrefixAppend = null;
-            StringBuilder discardedLanguagePrefixAppend = null;
-            StringBuilder discardedLanguageValueAppend = null;
-            StringBuilder discardedSettingsPrefixAppend = null;
-            StringBuilder discardedSettingsValueAppend = null;
-            StringBuilder discardedSessionPrefixAppend = null;
-            StringBuilder discardedSessionValueAppend = null;
-            StringBuilder discardedEmptyPathSlashAppend = null;
-            StringBuilder discardedRemainingPathAppend = null;
-            java.net.URL rewrittenUrlBeforeReturn = null;
-            java.net.URL originalUrlAfterConstructionFailure = null;
-            RuntimeException urlFailureBeforeContext = null;
-            StringBuilder urlMessagePrefix = null;
-            String sessionValueDescription = null;
-            StringBuilder messageBeforeSettingsDescription = null;
-            String settingsValueDescription = null;
-            StringBuilder messageBeforeUrlDescription = null;
-            String urlDescription = null;
-            Throwable caughtUrlRewriteFailure = null;
-            String urlFile = null;
-            RuntimeException urlFailureForContext = null;
-            int prefixEnd = 0;
-            int segmentEnd = 0;
-            StringBuilder rewrittenFile = null;
-            Exception urlConstructionFailureForReport = null;
-            java.net.URL unusedNullRecursiveUrl = null;
-            try {
-              urlFile = url.getFile();
-              prefixEnd = 0;
-              while (true) {
-                {
-                  boolean sessionUrlSegmentSelectionFrameContinues = true;
-                  if (urlFile.regionMatches(prefixEnd, "/l=", 0, 3)) {
-                    segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
-                    if (segmentEnd >= 0) {
-                      sessionUrlSegmentSelectionFrameContinues = !(languageId < 0);
-                      if (sessionUrlSegmentSelectionFrameContinues) {
-                        urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
-                        continue;
-                      }
-                    }
-                  }
-                  if (sessionUrlSegmentSelectionFrameContinues) {
-                    if (urlFile.regionMatches(prefixEnd, "/a=", 0, 3)) {
-                      segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
-                      sessionUrlSegmentSelectionFrameContinues = !(segmentEnd >= 0);
-                    }
+          StringBuilder discardedPrefixAppend = null;
+          StringBuilder discardedLanguagePrefixAppend = null;
+          StringBuilder discardedLanguageValueAppend = null;
+          StringBuilder discardedSettingsPrefixAppend = null;
+          StringBuilder discardedSettingsValueAppend = null;
+          StringBuilder discardedSessionPrefixAppend = null;
+          StringBuilder discardedSessionValueAppend = null;
+          StringBuilder discardedEmptyPathSlashAppend = null;
+          StringBuilder discardedRemainingPathAppend = null;
+          java.net.URL rewrittenUrlBeforeReturn = null;
+          java.net.URL originalUrlAfterConstructionFailure = null;
+          RuntimeException urlFailureBeforeContext = null;
+          StringBuilder urlMessagePrefix = null;
+          String sessionValueDescription = null;
+          StringBuilder messageBeforeSettingsDescription = null;
+          String settingsValueDescription = null;
+          StringBuilder messageBeforeUrlDescription = null;
+          String urlDescription = null;
+          Throwable caughtUrlRewriteFailure = null;
+          String urlFile = null;
+          RuntimeException urlFailureForContext = null;
+          int prefixEnd = 0;
+          int segmentEnd = 0;
+          StringBuilder rewrittenFile = null;
+          Exception urlConstructionFailureForReport = null;
+          java.net.URL unusedNullRecursiveUrl = null;
+          try {
+            urlFile = url.getFile();
+            prefixEnd = 0;
+            while (true) {
+              {
+                boolean sessionUrlSegmentSelectionFrameContinues = true;
+                if (urlFile.regionMatches(prefixEnd, "/l=", 0, 3)) {
+                  segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
+                  if (segmentEnd >= 0) {
+                    sessionUrlSegmentSelectionFrameContinues = !(languageId < 0);
                     if (sessionUrlSegmentSelectionFrameContinues) {
-                    if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
-                        segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
-                        if (segmentEnd >= 0) {
-                          sessionUrlSegmentSelectionFrameContinues = !(settingsValue == null);
-                          if (sessionUrlSegmentSelectionFrameContinues) {
-                        urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
-                            continue;
-                          }
+                      urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
+                      continue;
                     }
-                      }
-                      if (sessionUrlSegmentSelectionFrameContinues) {
-                    if (urlFile.regionMatches(prefixEnd, "/s=", 0, 3) ||
-                              urlFile.regionMatches(prefixEnd, "/c=", 0, 3)) {
-                          segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
-                          if (0 <= segmentEnd) {
-                            if (sessionValue != null) {
-                              urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
-                              continue;
-                            }
-                            prefixEnd = segmentEnd;
-                            continue;
-                          }
-                        }
-                        if (!methodGuard) {
-                          unusedNullRecursiveUrl = (java.net.URL) null;
-                          ScoreSubmission.rewriteSessionUrlPath((String) null, (String) null, (java.net.URL) null, 80, true);
-                        }
-                        rewrittenFile = new StringBuilder(prefixEnd);
-                        discardedPrefixAppend = rewrittenFile.append(urlFile.substring(0, prefixEnd));
-                        if (languageId > 0) {
-                          discardedLanguagePrefixAppend = rewrittenFile.append("/l=");
-                          discardedLanguageValueAppend = rewrittenFile.append(Integer.toString(languageId));
-                        }
-                        if (settingsValue != null &&
-                            settingsValue.length() > 0) {
-                          discardedSettingsPrefixAppend = rewrittenFile.append("/p=");
-                          discardedSettingsValueAppend = rewrittenFile.append(settingsValue);
-                        }
-                        if (sessionValue != null &&
-                            sessionValue.length() > 0) {
-                          discardedSessionPrefixAppend = rewrittenFile.append("/s=");
-                          discardedSessionValueAppend = rewrittenFile.append(sessionValue);
-                        }
-                        if (urlFile.length() <= prefixEnd) {
-                          discardedEmptyPathSlashAppend = rewrittenFile.append('/');
-                        } else {
-                          discardedRemainingPathAppend = rewrittenFile.append(urlFile.substring(prefixEnd, urlFile.length()));
-                        }
-                        try {
-                          rewrittenUrlBeforeReturn = new java.net.URL(url, rewrittenFile.toString());
-                          return rewrittenUrlBeforeReturn;
-                        } catch (java.lang.Exception urlConstructionFailure) {
-                          caughtUrlRewriteFailure = urlConstructionFailure;
-                          urlConstructionFailureForReport = (Exception) (Object) caughtUrlRewriteFailure;
-                          urlConstructionFailureForReport.printStackTrace();
-                          originalUrlAfterConstructionFailure = (java.net.URL) (url);
-                          return originalUrlAfterConstructionFailure;
-                        }
-                  }
-                  }
                   }
                 }
-                prefixEnd = segmentEnd;
+                if (sessionUrlSegmentSelectionFrameContinues) {
+                  if (urlFile.regionMatches(prefixEnd, "/a=", 0, 3)) {
+                    segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
+                    sessionUrlSegmentSelectionFrameContinues = !(segmentEnd >= 0);
+                  }
+                  if (sessionUrlSegmentSelectionFrameContinues) {
+                    if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
+                      segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
+                      if (segmentEnd >= 0) {
+                        sessionUrlSegmentSelectionFrameContinues = !(settingsValue == null);
+                        if (sessionUrlSegmentSelectionFrameContinues) {
+                          urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
+                          continue;
+                        }
+                      }
+                    }
+                    if (sessionUrlSegmentSelectionFrameContinues) {
+                      if (urlFile.regionMatches(prefixEnd, "/s=", 0, 3) ||
+                        urlFile.regionMatches(prefixEnd, "/c=", 0, 3)) {
+                        segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
+                        if (0 <= segmentEnd) {
+                          if (sessionValue != null) {
+                            urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
+                            continue;
+                          }
+                          prefixEnd = segmentEnd;
+                          continue;
+                        }
+                      }
+                      if (!methodGuard) {
+                        unusedNullRecursiveUrl = (java.net.URL) null;
+                        ScoreSubmission.rewriteSessionUrlPath((String) null, (String) null, (java.net.URL) null, 80, true);
+                      }
+                      rewrittenFile = new StringBuilder(prefixEnd);
+                      discardedPrefixAppend = rewrittenFile.append(urlFile.substring(0, prefixEnd));
+                      if (languageId > 0) {
+                        discardedLanguagePrefixAppend = rewrittenFile.append("/l=");
+                        discardedLanguageValueAppend = rewrittenFile.append(Integer.toString(languageId));
+                      }
+                      if (settingsValue != null &&
+                        settingsValue.length() > 0) {
+                        discardedSettingsPrefixAppend = rewrittenFile.append("/p=");
+                        discardedSettingsValueAppend = rewrittenFile.append(settingsValue);
+                      }
+                      if (sessionValue != null &&
+                        sessionValue.length() > 0) {
+                        discardedSessionPrefixAppend = rewrittenFile.append("/s=");
+                        discardedSessionValueAppend = rewrittenFile.append(sessionValue);
+                      }
+                      if (urlFile.length() <= prefixEnd) {
+                        discardedEmptyPathSlashAppend = rewrittenFile.append('/');
+                      } else {
+                        discardedRemainingPathAppend = rewrittenFile.append(urlFile.substring(prefixEnd, urlFile.length()));
+                      }
+                      try {
+                        rewrittenUrlBeforeReturn = new java.net.URL(url, rewrittenFile.toString());
+                        return rewrittenUrlBeforeReturn;
+                      } catch (java.lang.Exception urlConstructionFailure) {
+                        caughtUrlRewriteFailure = urlConstructionFailure;
+                        urlConstructionFailureForReport = (Exception) (Object) caughtUrlRewriteFailure;
+                        urlConstructionFailureForReport.printStackTrace();
+                        originalUrlAfterConstructionFailure = (java.net.URL) (url);
+                        return originalUrlAfterConstructionFailure;
+                      }
+                    }
+                  }
+                }
               }
-            } catch (java.lang.RuntimeException urlContextFailure) {
-              caughtUrlRewriteFailure = urlContextFailure;
-              urlFailureForContext = (RuntimeException) (Object) caughtUrlRewriteFailure;
-              urlFailureBeforeContext = urlFailureForContext;
-              urlMessagePrefix = new StringBuilder().append("ai.B(");
-              if (sessionValue == null) {
-                sessionValueDescription = "null";
-              } else {
-                sessionValueDescription = "{...}";
-              }
-              messageBeforeSettingsDescription = ((StringBuilder) (Object) urlMessagePrefix).append(sessionValueDescription).append(',');
-              if (settingsValue == null) {
-                settingsValueDescription = "null";
-              } else {
-                settingsValueDescription = "{...}";
-              }
-              messageBeforeUrlDescription = ((StringBuilder) (Object) messageBeforeSettingsDescription).append(settingsValueDescription).append(',');
-              if (url == null) {
-                urlDescription = "null";
-              } else {
-                urlDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) urlFailureBeforeContext), ((StringBuilder) (Object) messageBeforeUrlDescription).append(urlDescription).append(',').append(languageId).append(',').append(methodGuard).append(')').toString());
+              prefixEnd = segmentEnd;
             }
+          } catch (java.lang.RuntimeException urlContextFailure) {
+            caughtUrlRewriteFailure = urlContextFailure;
+            urlFailureForContext = (RuntimeException) (Object) caughtUrlRewriteFailure;
+            urlFailureBeforeContext = urlFailureForContext;
+            urlMessagePrefix = new StringBuilder().append("ai.B(");
+            if (sessionValue == null) {
+              sessionValueDescription = "null";
+            } else {
+              sessionValueDescription = "{...}";
+            }
+            messageBeforeSettingsDescription = ((StringBuilder) (Object) urlMessagePrefix).append(sessionValueDescription).append(',');
+            if (settingsValue == null) {
+              settingsValueDescription = "null";
+            } else {
+              settingsValueDescription = "{...}";
+            }
+            messageBeforeUrlDescription = ((StringBuilder) (Object) messageBeforeSettingsDescription).append(settingsValueDescription).append(',');
+            if (url == null) {
+              urlDescription = "null";
+            } else {
+              urlDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) urlFailureBeforeContext), ((StringBuilder) (Object) messageBeforeUrlDescription).append(urlDescription).append(',').append(languageId).append(',').append(methodGuard).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedUrlFailure) {
-            throw uncheckedUrlFailure;
+          throw uncheckedUrlFailure;
         } catch (Throwable checkedUrlFailure) {
-            throw new RuntimeException(checkedUrlFailure);
+          throw new RuntimeException(checkedUrlFailure);
         }
     }
 

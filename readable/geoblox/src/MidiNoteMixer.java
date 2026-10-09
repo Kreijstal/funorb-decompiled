@@ -13,7 +13,7 @@ final class MidiNoteMixer extends PcmStream {
     public static void clearFullscreenFailureText(int methodGuard) {
         fullscreenFocusOrResolutionText = null;
         if (methodGuard != -1) {
-            MidiNoteMixer.prepareLogoGlowRaster((byte) -81);
+          MidiNoteMixer.prepareLogoGlowRaster((byte) -81);
         }
     }
 
@@ -79,7 +79,7 @@ final class MidiNoteMixer extends PcmStream {
         int framesToPhaseWrap = 0;
         try {
           if ((this.midiStream.channelFlags[note.channelIndex] & 4) != 0 &&
-              note.releaseEnvelopeTime < 0) {
+            note.releaseEnvelopeTime < 0) {
             phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
             framesToPhaseWrap = (-note.retriggerPhaseFixed + (1048575 + phaseIncrement)) / phaseIncrement;
             note.retriggerPhaseFixed = 1048575 & note.retriggerPhaseFixed + frameCount * phaseIncrement;
@@ -125,25 +125,25 @@ final class MidiNoteMixer extends PcmStream {
         int blurPass = 0;
         int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-            if (methodGuard != -32) {
-                appletShutdownStarted = false;
-            }
-            logoRenderRaster = new Sprite(540, 140);
-            Geoblox.setRasterTarget(1, logoRenderRaster);
-            TriangleRasterState.prepareTriangleClipFromRasterizer();
-            SoftwareRasterizer.clearFramebuffer();
-            DequeCursor.logoAnimationTick = 0;
-            TextTemplateArgumentType.renderLogoMeshes((byte) -73);
-            logoSilhouette = logoRenderRaster.copy();
-            for (blurPass = 0; blurPass < 15; blurPass++) {
-                logoSilhouette.drawSilhouette(-2, -2, 16777215);
-                SoftwareRasterizer.blurRasterRegion(4, 4, 0, 0, 540, 140);
-            }
-            ProxySocketConnector.logoGlowRaster.setAsRasterTarget();
-            logoRenderRaster.drawHalfSize(0, 0);
-            RasterTargetRestoreSupport.restoreRasterTarget(true);
+          if (methodGuard != -32) {
+            appletShutdownStarted = false;
+          }
+          logoRenderRaster = new Sprite(540, 140);
+          Geoblox.setRasterTarget(1, logoRenderRaster);
+          TriangleRasterState.prepareTriangleClipFromRasterizer();
+          SoftwareRasterizer.clearFramebuffer();
+          DequeCursor.logoAnimationTick = 0;
+          TextTemplateArgumentType.renderLogoMeshes((byte) -73);
+          logoSilhouette = logoRenderRaster.copy();
+          for (blurPass = 0; blurPass < 15; blurPass++) {
+            logoSilhouette.drawSilhouette(-2, -2, 16777215);
+            SoftwareRasterizer.blurRasterRegion(4, 4, 0, 0, 540, 140);
+          }
+          ProxySocketConnector.logoGlowRaster.setAsRasterTarget();
+          logoRenderRaster.drawHalfSize(0, 0);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
         } catch (RuntimeException glowPreparationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) glowPreparationFailure), "ad.H(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) glowPreparationFailure), "ad.H(" + methodGuard + ')');
         }
     }
 
@@ -189,10 +189,10 @@ final class MidiNoteMixer extends PcmStream {
     final PcmStream firstChildStream() {
         MidiNote note = (MidiNote) (this.notes.firstForIteration(0));
         if (note == null) {
-            return null;
+          return null;
         }
         if (null != note.sampleStream) {
-            return (PcmStream) ((Object) note.sampleStream);
+          return (PcmStream) ((Object) note.sampleStream);
         }
         return this.nextChildStream();
     }
@@ -216,7 +216,7 @@ final class MidiNoteMixer extends PcmStream {
         PcmSampleStream previousStream = null;
         try {
           if ((4 & this.midiStream.channelFlags[note.channelIndex]) != 0 &&
-              note.releaseEnvelopeTime < 0) {
+            note.releaseEnvelopeTime < 0) {
             phaseIncrement = this.midiStream.channelRetriggerPhaseRates[note.channelIndex] / AudioOutput.sampleRateHz;
             while (true) {
               framesToPhaseWrap = (-note.retriggerPhaseFixed + (phaseIncrement + 1048575)) / phaseIncrement;
@@ -285,9 +285,9 @@ final class MidiNoteMixer extends PcmStream {
         this.notes = new IntrusiveDeque();
         this.fadingStreams = new PcmStreamMixer();
         try {
-            this.midiStream = midiStream;
+          this.midiStream = midiStream;
         } catch (RuntimeException noteMixerConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) noteMixerConstructionFailure), "ad.<init>(" + (midiStream != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) noteMixerConstructionFailure), "ad.<init>(" + (midiStream != null ? "{...}" : "null") + ')');
         }
     }
 

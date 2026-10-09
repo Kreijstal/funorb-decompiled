@@ -47,8 +47,8 @@ final class ScorePopupSupport {
     final static void spawnScorePopup(int points, boolean methodGuard, int originY, int chainMultiplier, int originX) {
         ScorePopup popup = (ScorePopup) (PcmResampler.availableScorePopups.removeLast(1));
         if (popup == null) {
-            UiWidget.gameplaySession.addScore((byte) 127, points);
-            return;
+          UiWidget.gameplaySession.addScore((byte) 127, points);
+          return;
         }
         popup.progress = 0.0f;
         popup.points = points;
@@ -56,9 +56,9 @@ final class ScorePopupSupport {
         popup.originX = (float)originX;
         popup.chainMultiplier = chainMultiplier;
         if (methodGuard) {
-            popup.originY = (float)originY;
-            GmtTimestampSupport.activeScorePopups.addLast(-95, popup);
-            return;
+          popup.originY = (float)originY;
+          GmtTimestampSupport.activeScorePopups.addLast(-95, popup);
+          return;
         }
         createEmailText = (String) null;
         popup.originY = (float)originY;
@@ -118,8 +118,8 @@ final class ScorePopupSupport {
         createEmailText = null;
         secondarySocialEntriesByNameHash = null;
         if (methodGuard != 9144) {
-            String unusedNullResourceNameSnapshot = (String) null;
-            ScorePopupSupport.loadSprite((String) null, (ResourceArchive) null, (byte) 53, (String) null);
+          String unusedNullResourceNameSnapshot = (String) null;
+          ScorePopupSupport.loadSprite((String) null, (ResourceArchive) null, (byte) 53, (String) null);
         }
     }
 

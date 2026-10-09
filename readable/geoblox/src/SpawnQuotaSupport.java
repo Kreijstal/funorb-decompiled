@@ -6,24 +6,24 @@ final class SpawnQuotaSupport {
 
     final static void recordGeneratedEntity(boolean methodGuard) {
         if (!UiWidget.gameplaySession.tutorialMode) {
-            CacheReference.generatedInCurrentTheme = CacheReference.generatedInCurrentTheme + 1;
-            if (methodGuard) {
-                SpawnQuotaSupport.releaseSelectedThemeBackground(false);
-                return;
-            }
+          CacheReference.generatedInCurrentTheme = CacheReference.generatedInCurrentTheme + 1;
+          if (methodGuard) {
+            SpawnQuotaSupport.releaseSelectedThemeBackground(false);
             return;
+          }
+          return;
         }
         if (!methodGuard) {
-            return;
+          return;
         }
         SpawnQuotaSupport.releaseSelectedThemeBackground(false);
     }
 
     public static void releaseSelectedThemeBackground(boolean methodGuard) {
         if (methodGuard) {
-            selectedThemeBackground = (IndexedSprite) null;
-            selectedThemeBackground = null;
-            return;
+          selectedThemeBackground = (IndexedSprite) null;
+          selectedThemeBackground = null;
+          return;
         }
         selectedThemeBackground = null;
     }

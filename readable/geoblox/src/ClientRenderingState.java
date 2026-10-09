@@ -20,7 +20,7 @@ final class ClientRenderingState {
         transformedMeshNormalX = null;
         createEmailConfirmationText = null;
         if (!methodGuard) {
-            justPlayText = (String) null;
+          justPlayText = (String) null;
         }
     }
 

@@ -12,12 +12,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void startLogin(String password, byte methodGuard, String loginIdentifier) {
         try {
-            if (methodGuard != 66) {
-                instructionsText = (String) null;
-            }
-            AccountCreationDialog.showLoggingInDialog(loginIdentifier, (byte) 87, false, password);
+          if (methodGuard != 66) {
+            instructionsText = (String) null;
+          }
+          AccountCreationDialog.showLoggingInDialog(loginIdentifier, (byte) 87, false, password);
         } catch (RuntimeException loginFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFailure), "ef.C(" + (password != null ? "{...}" : "null") + ',' + methodGuard + ',' + (loginIdentifier != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFailure), "ef.C(" + (password != null ? "{...}" : "null") + ',' + methodGuard + ',' + (loginIdentifier != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     public final void remove() {
         if (null == this.lastReturnedNode) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.lastReturnedNode.unlinkSecondaryNode((byte) 92);
         this.lastReturnedNode = null;
@@ -71,18 +71,18 @@ final class SecondaryNodeDequeIterator implements Iterator {
     SecondaryNodeDequeIterator(SecondaryNodeDeque deque) {
         this.lastReturnedNode = null;
         try {
-            this.deque = deque;
-            this.nextNode = this.deque.sentinel.nextSecondaryNode;
-            this.lastReturnedNode = null;
+          this.deque = deque;
+          this.nextNode = this.deque.sentinel.nextSecondaryNode;
+          this.lastReturnedNode = null;
         } catch (RuntimeException iteratorInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) iteratorInitializationFailure), "ef.<init>(" + (deque != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) iteratorInitializationFailure), "ef.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseSharedResources(byte methodGuard) {
         instructionsText = null;
         if (methodGuard != 101) {
-            archiveLoadingComplete = false;
+          archiveLoadingComplete = false;
         }
     }
 
@@ -92,7 +92,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         Sprite allocatedSprite = new Sprite(sideLength, sideLength);
         Sprite spriteAlias = allocatedSprite;
         for (pixelIndex = firstFilledPixelIndex; spriteAlias.pixels.length > pixelIndex; pixelIndex++) {
-            allocatedSprite.pixels[pixelIndex] = fillColor;
+          allocatedSprite.pixels[pixelIndex] = fillColor;
         }
         return spriteAlias;
     }
@@ -100,10 +100,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
     public final Object next() {
         Object returnedNodeOrNull = this.nextNode;
         if (returnedNodeOrNull != this.deque.sentinel) {
-            this.nextNode = ((DualLinkNode) (returnedNodeOrNull)).nextSecondaryNode;
+          this.nextNode = ((DualLinkNode) (returnedNodeOrNull)).nextSecondaryNode;
         } else {
-            returnedNodeOrNull = null;
-            this.nextNode = null;
+          returnedNodeOrNull = null;
+          this.nextNode = null;
         }
         this.lastReturnedNode = (DualLinkNode) (returnedNodeOrNull);
         return returnedNodeOrNull;

@@ -17,30 +17,30 @@ final class InstrumentEnvelope {
     final static ContextualRuntimeException withFailureContext(Throwable cause, String context) {
         ContextualRuntimeException wrappedFailure = null;
         if (cause instanceof ContextualRuntimeException) {
-            wrappedFailure = (ContextualRuntimeException) ((Object) cause);
-            wrappedFailure.contextPath = wrappedFailure.contextPath + ' ' + context;
+          wrappedFailure = (ContextualRuntimeException) ((Object) cause);
+          wrappedFailure.contextPath = wrappedFailure.contextPath + ' ' + context;
         } else {
-            wrappedFailure = new ContextualRuntimeException(cause, context);
+          wrappedFailure = new ContextualRuntimeException(cause, context);
         }
         return wrappedFailure;
     }
 
     final static boolean isSessionConnected(int methodGuard) {
         if (methodGuard != 13) {
-            connectingToUpdateServerTextByLanguage = (String[]) null;
-            if (SpriteCheckboxRenderer.sessionSocket == null) {
-                return false;
-            }
-            if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
-                return true;
-            }
+          connectingToUpdateServerTextByLanguage = (String[]) null;
+          if (SpriteCheckboxRenderer.sessionSocket == null) {
             return false;
+          }
+          if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
+            return true;
+          }
+          return false;
         }
         if (SpriteCheckboxRenderer.sessionSocket == null) {
-            return false;
+          return false;
         }
         if (PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -49,7 +49,7 @@ final class InstrumentEnvelope {
         menuActionIds = (int[][]) null;
         connectingToUpdateServerTextByLanguage = null;
         if (methodGuard != 17348) {
-            InstrumentEnvelope.isSessionConnected(-123);
+          InstrumentEnvelope.isSessionConnected(-123);
         }
     }
 

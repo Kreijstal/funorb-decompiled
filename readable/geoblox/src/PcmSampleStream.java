@@ -71,7 +71,7 @@ final class PcmSampleStream extends PcmStream {
 
     final int getSchedulingCost() {
         if (this.targetVolume == 0 && this.rampFramesRemaining == 0) {
-            return 0;
+          return 0;
         }
         return 1;
     }
@@ -90,8 +90,8 @@ final class PcmSampleStream extends PcmStream {
           targetVolume = 0;
         }
         if (this.currentVolume == targetVolume &&
-            this.currentLeftVolume == targetLeftVolume &&
-            this.currentRightVolume == targetRightVolume) {
+          this.currentLeftVolume == targetLeftVolume &&
+          this.currentRightVolume == targetRightVolume) {
           if (this.targetVolume != -2147483648) {
             this.refreshCurrentVolumes();
             return false;
@@ -120,21 +120,21 @@ final class PcmSampleStream extends PcmStream {
           } else {
             this.leftVolumeStepPerFrame = -1;
             if (this.rampFramesRemaining == 0 ||
-                this.rampFramesRemaining > this.currentLeftVolume - targetLeftVolume) {
+              this.rampFramesRemaining > this.currentLeftVolume - targetLeftVolume) {
               this.rampFramesRemaining = this.currentLeftVolume - targetLeftVolume;
             }
           }
         } else {
           this.leftVolumeStepPerFrame = 1;
           if (this.rampFramesRemaining == 0 ||
-              this.rampFramesRemaining > targetLeftVolume - this.currentLeftVolume) {
+            this.rampFramesRemaining > targetLeftVolume - this.currentLeftVolume) {
             this.rampFramesRemaining = targetLeftVolume - this.currentLeftVolume;
           }
         }
         if (this.currentRightVolume < targetRightVolume) {
           this.rightVolumeStepPerFrame = 1;
           if (this.rampFramesRemaining != 0 &&
-              this.rampFramesRemaining <= targetRightVolume - this.currentRightVolume) {
+            this.rampFramesRemaining <= targetRightVolume - this.currentRightVolume) {
             return false;
           }
           this.rampFramesRemaining = targetRightVolume - this.currentRightVolume;
@@ -145,7 +145,7 @@ final class PcmSampleStream extends PcmStream {
         } else {
           this.rightVolumeStepPerFrame = -1;
           if (this.rampFramesRemaining == 0 ||
-              this.rampFramesRemaining > this.currentRightVolume - targetRightVolume) {
+            this.rampFramesRemaining > this.currentRightVolume - targetRightVolume) {
             this.rampFramesRemaining = this.currentRightVolume - targetRightVolume;
           }
         }
@@ -157,7 +157,7 @@ final class PcmSampleStream extends PcmStream {
         do {
           if (this.rampFramesRemaining <= 0) {
             if (this.sampleStepFixed == -256 &&
-                (this.samplePositionFixed & 255) == 0) {
+              (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
                 return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
               }
@@ -174,7 +174,7 @@ final class PcmSampleStream extends PcmStream {
           }
           this.rampFramesRemaining = this.rampFramesRemaining + destinationOffset;
           if (this.sampleStepFixed == -256 &&
-              (this.samplePositionFixed & 255) == 0) {
+            (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
               destinationOffset = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             } else {
@@ -208,7 +208,7 @@ final class PcmSampleStream extends PcmStream {
         do {
           if (this.rampFramesRemaining <= 0) {
             if (this.sampleStepFixed == 256 &&
-                (this.samplePositionFixed & 255) == 0) {
+              (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
                 return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
               }
@@ -225,7 +225,7 @@ final class PcmSampleStream extends PcmStream {
           }
           this.rampFramesRemaining = this.rampFramesRemaining + destinationOffset;
           if (this.sampleStepFixed == 256 &&
-              (this.samplePositionFixed & 255) == 0) {
+            (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
               destinationOffset = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             } else {
@@ -250,11 +250,11 @@ final class PcmSampleStream extends PcmStream {
         int priority = this.currentVolume * 3 >> 6;
         priority = (priority ^ priority >> 31) + (priority >>> 31);
         if (this.loopsRemaining == 0) {
-            priority = priority - priority * this.samplePositionFixed / (((PcmSample) (this.sample)).samples.length << 8);
+          priority = priority - priority * this.samplePositionFixed / (((PcmSample) (this.sample)).samples.length << 8);
         } else {
-            if (this.loopsRemaining >= 0) {
-                priority = priority - priority * this.loopStart / ((PcmSample) (this.sample)).samples.length;
-            }
+          if (this.loopsRemaining >= 0) {
+            priority = priority - priority * this.loopStart / ((PcmSample) (this.sample)).samples.length;
+          }
         }
         return priority > 255 ? 255 : priority;
     }
@@ -280,45 +280,45 @@ final class PcmSampleStream extends PcmStream {
         volumeStep = volumeStep << 2;
         destinationLimit = destinationIndex + sampleBoundaryOrIndex - samplePositionOrIndex;
         if (destinationIndex + sampleBoundaryOrIndex - samplePositionOrIndex > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         stream.currentLeftVolume = stream.currentLeftVolume + stream.leftVolumeStepPerFrame * (destinationLimit - destinationIndex);
         stream.currentRightVolume = stream.currentRightVolume + stream.rightVolumeStepPerFrame * (destinationLimit - destinationIndex);
         destinationLimit -= 3;
         while (destinationIndex < destinationLimit) {
-            firstDestinationIndex = destinationIndex;
-            destinationIndex++;
-            firstSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
-            volume = volume + volumeStep;
-            secondDestinationIndex = destinationIndex;
-            destinationIndex++;
-            secondSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
-            volume = volume + volumeStep;
-            thirdDestinationIndex = destinationIndex;
-            destinationIndex++;
-            thirdSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
-            volume = volume + volumeStep;
-            fourthDestinationIndex = destinationIndex;
-            destinationIndex++;
-            fourthSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
-            volume = volume + volumeStep;
+          firstDestinationIndex = destinationIndex;
+          destinationIndex++;
+          firstSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
+          volume = volume + volumeStep;
+          secondDestinationIndex = destinationIndex;
+          destinationIndex++;
+          secondSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
+          volume = volume + volumeStep;
+          thirdDestinationIndex = destinationIndex;
+          destinationIndex++;
+          thirdSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
+          volume = volume + volumeStep;
+          fourthDestinationIndex = destinationIndex;
+          destinationIndex++;
+          fourthSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
+          volume = volume + volumeStep;
         }
         destinationLimit += 3;
         while (destinationIndex < destinationLimit) {
-            tailDestinationIndex = destinationIndex;
-            destinationIndex++;
-            tailSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
-            volume = volume + volumeStep;
+          tailDestinationIndex = destinationIndex;
+          destinationIndex++;
+          tailSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
+          volume = volume + volumeStep;
         }
         stream.currentVolume = volume >> 2;
         stream.samplePositionFixed = samplePositionOrIndex << 8;
@@ -393,38 +393,38 @@ final class PcmSampleStream extends PcmStream {
         volume = volume << 2;
         destinationLimit = destinationIndex + sampleBoundaryOrIndex - samplePositionOrIndex;
         if (destinationIndex + sampleBoundaryOrIndex - samplePositionOrIndex > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         destinationLimit -= 3;
         while (destinationIndex < destinationLimit) {
-            firstDestinationIndex = destinationIndex;
-            destinationIndex++;
-            firstSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
-            secondDestinationIndex = destinationIndex;
-            destinationIndex++;
-            secondSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
-            thirdDestinationIndex = destinationIndex;
-            destinationIndex++;
-            thirdSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
-            fourthDestinationIndex = destinationIndex;
-            destinationIndex++;
-            fourthSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
+          firstDestinationIndex = destinationIndex;
+          destinationIndex++;
+          firstSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
+          secondDestinationIndex = destinationIndex;
+          destinationIndex++;
+          secondSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
+          thirdDestinationIndex = destinationIndex;
+          destinationIndex++;
+          thirdSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
+          fourthDestinationIndex = destinationIndex;
+          destinationIndex++;
+          fourthSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
         }
         destinationLimit += 3;
         while (destinationIndex < destinationLimit) {
-            tailDestinationIndex = destinationIndex;
-            destinationIndex++;
-            tailSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex++;
-            destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
+          tailDestinationIndex = destinationIndex;
+          destinationIndex++;
+          tailSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex++;
+          destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
         }
         stream.samplePositionFixed = samplePositionOrIndex << 8;
         return destinationIndex;
@@ -449,61 +449,61 @@ final class PcmSampleStream extends PcmStream {
         rightVolumeStep = rightVolumeStep << 2;
         destinationLimit = destinationFrameOrSampleIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1);
         if (destinationFrameOrSampleIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1) > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         stream.currentVolume = stream.currentVolume + stream.volumeStepPerFrame * (destinationLimit - destinationFrameOrSampleIndex);
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
         destinationLimit = destinationLimit << 1;
         destinationLimit -= 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex--];
-            firstLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            firstRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex--];
-            secondLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            secondRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex--];
-            thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            thirdRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex--];
-            fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            fourthRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex--];
+          firstLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          firstRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex--];
+          secondLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          secondRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex--];
+          thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          thirdRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex--];
+          fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          fourthRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
         }
         destinationLimit += 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex--];
-            tailLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            tailRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex--];
+          tailLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          tailRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
         }
         stream.currentLeftVolume = leftVolume >> 2;
         stream.currentRightVolume = rightVolume >> 2;
@@ -519,63 +519,63 @@ final class PcmSampleStream extends PcmStream {
         int maxVolumeMagnitude = 0;
         int maximumFadeVolumeMagnitude;
         if (fadeFrames == 0) {
-            this.setVolume(0);
-            this.unlinkNode(false);
-            return;
+          this.setVolume(0);
+          this.unlinkNode(false);
+          return;
         }
         if (this.currentLeftVolume != 0) {
-            maxVolumeMagnitude = -this.currentVolume;
-            if (this.currentVolume > maxVolumeMagnitude) {
-                maxVolumeMagnitude = this.currentVolume;
-            }
-            if (-this.currentLeftVolume > maxVolumeMagnitude) {
-                maxVolumeMagnitude = -this.currentLeftVolume;
-            }
-            if (this.currentLeftVolume > maxVolumeMagnitude) {
-                maxVolumeMagnitude = this.currentLeftVolume;
-            }
-            if (-this.currentRightVolume > maxVolumeMagnitude) {
-                maxVolumeMagnitude = -this.currentRightVolume;
-            }
-            if (this.currentRightVolume > maxVolumeMagnitude) {
-                maxVolumeMagnitude = this.currentRightVolume;
-            }
-            if (fadeFrames > maxVolumeMagnitude) {
-                fadeFrames = maxVolumeMagnitude;
-            }
-            this.rampFramesRemaining = fadeFrames;
-            this.targetVolume = -2147483648;
-            this.volumeStepPerFrame = -this.currentVolume / fadeFrames;
-            this.leftVolumeStepPerFrame = -this.currentLeftVolume / fadeFrames;
-            this.rightVolumeStepPerFrame = -this.currentRightVolume / fadeFrames;
-            return;
+          maxVolumeMagnitude = -this.currentVolume;
+          if (this.currentVolume > maxVolumeMagnitude) {
+            maxVolumeMagnitude = this.currentVolume;
+          }
+          if (-this.currentLeftVolume > maxVolumeMagnitude) {
+            maxVolumeMagnitude = -this.currentLeftVolume;
+          }
+          if (this.currentLeftVolume > maxVolumeMagnitude) {
+            maxVolumeMagnitude = this.currentLeftVolume;
+          }
+          if (-this.currentRightVolume > maxVolumeMagnitude) {
+            maxVolumeMagnitude = -this.currentRightVolume;
+          }
+          if (this.currentRightVolume > maxVolumeMagnitude) {
+            maxVolumeMagnitude = this.currentRightVolume;
+          }
+          if (fadeFrames > maxVolumeMagnitude) {
+            fadeFrames = maxVolumeMagnitude;
+          }
+          this.rampFramesRemaining = fadeFrames;
+          this.targetVolume = -2147483648;
+          this.volumeStepPerFrame = -this.currentVolume / fadeFrames;
+          this.leftVolumeStepPerFrame = -this.currentLeftVolume / fadeFrames;
+          this.rightVolumeStepPerFrame = -this.currentRightVolume / fadeFrames;
+          return;
         }
         if (this.currentRightVolume != 0) {
-            maximumFadeVolumeMagnitude = -this.currentVolume;
-            if (this.currentVolume > maximumFadeVolumeMagnitude) {
-                maximumFadeVolumeMagnitude = this.currentVolume;
-            }
-            if (-this.currentLeftVolume > maximumFadeVolumeMagnitude) {
-                maximumFadeVolumeMagnitude = -this.currentLeftVolume;
-            }
-            if (this.currentLeftVolume > maximumFadeVolumeMagnitude) {
-                maximumFadeVolumeMagnitude = this.currentLeftVolume;
-            }
-            if (-this.currentRightVolume > maximumFadeVolumeMagnitude) {
-                maximumFadeVolumeMagnitude = -this.currentRightVolume;
-            }
-            if (this.currentRightVolume > maximumFadeVolumeMagnitude) {
-                maximumFadeVolumeMagnitude = this.currentRightVolume;
-            }
-            if (fadeFrames > maximumFadeVolumeMagnitude) {
-                fadeFrames = maximumFadeVolumeMagnitude;
-            }
-            this.rampFramesRemaining = fadeFrames;
-            this.targetVolume = -2147483648;
-            this.volumeStepPerFrame = -this.currentVolume / fadeFrames;
-            this.leftVolumeStepPerFrame = -this.currentLeftVolume / fadeFrames;
-            this.rightVolumeStepPerFrame = -this.currentRightVolume / fadeFrames;
-            return;
+          maximumFadeVolumeMagnitude = -this.currentVolume;
+          if (this.currentVolume > maximumFadeVolumeMagnitude) {
+            maximumFadeVolumeMagnitude = this.currentVolume;
+          }
+          if (-this.currentLeftVolume > maximumFadeVolumeMagnitude) {
+            maximumFadeVolumeMagnitude = -this.currentLeftVolume;
+          }
+          if (this.currentLeftVolume > maximumFadeVolumeMagnitude) {
+            maximumFadeVolumeMagnitude = this.currentLeftVolume;
+          }
+          if (-this.currentRightVolume > maximumFadeVolumeMagnitude) {
+            maximumFadeVolumeMagnitude = -this.currentRightVolume;
+          }
+          if (this.currentRightVolume > maximumFadeVolumeMagnitude) {
+            maximumFadeVolumeMagnitude = this.currentRightVolume;
+          }
+          if (fadeFrames > maximumFadeVolumeMagnitude) {
+            fadeFrames = maximumFadeVolumeMagnitude;
+          }
+          this.rampFramesRemaining = fadeFrames;
+          this.targetVolume = -2147483648;
+          this.volumeStepPerFrame = -this.currentVolume / fadeFrames;
+          this.leftVolumeStepPerFrame = -this.currentLeftVolume / fadeFrames;
+          this.rightVolumeStepPerFrame = -this.currentRightVolume / fadeFrames;
+          return;
         }
         this.rampFramesRemaining = 0;
         this.targetVolume = 0;
@@ -593,7 +593,7 @@ final class PcmSampleStream extends PcmStream {
     final synchronized void setReversePlayback(boolean reverse) {
         this.sampleStepFixed = (this.sampleStepFixed ^ this.sampleStepFixed >> 31) + (this.sampleStepFixed >>> 31);
         if (!reverse) {
-            return;
+          return;
         }
         this.sampleStepFixed = -this.sampleStepFixed;
     }
@@ -756,19 +756,19 @@ final class PcmSampleStream extends PcmStream {
 
     final synchronized void setSampleStepMagnitude(int stepMagnitude) {
         if (this.sampleStepFixed < 0) {
-            this.sampleStepFixed = -stepMagnitude;
+          this.sampleStepFixed = -stepMagnitude;
         } else {
-            this.sampleStepFixed = stepMagnitude;
+          this.sampleStepFixed = stepMagnitude;
         }
     }
 
     final synchronized void setSamplePositionFixed(int positionFixed) {
         int sampleEndFixed = ((PcmSample) (this.sample)).samples.length << 8;
         if (positionFixed < -1) {
-            positionFixed = -1;
+          positionFixed = -1;
         }
         if (positionFixed > sampleEndFixed) {
-            positionFixed = sampleEndFixed;
+          positionFixed = sampleEndFixed;
         }
         this.samplePositionFixed = positionFixed;
     }
@@ -964,50 +964,50 @@ final class PcmSampleStream extends PcmStream {
         rightVolume = rightVolume << 2;
         destinationLimit = destinationFrameOrSampleIndex + sampleBoundaryOrIndex - samplePositionOrIndex;
         if (destinationFrameOrSampleIndex + sampleBoundaryOrIndex - samplePositionOrIndex > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
         destinationLimit = destinationLimit << 1;
         destinationLimit -= 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex++];
-            firstLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
-            firstRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex++];
-            secondLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
-            secondRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex++];
-            thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
-            thirdRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex++];
-            fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
-            fourthRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex++];
+          firstLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
+          firstRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex++];
+          secondLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
+          secondRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex++];
+          thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
+          thirdRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex++];
+          fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
+          fourthRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
         }
         destinationLimit += 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex++];
-            tailLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
-            tailRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex++];
+          tailLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
+          tailRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
         }
         stream.samplePositionFixed = samplePositionOrIndex << 8;
         return destinationFrameOrSampleIndex >> 1;
@@ -1029,38 +1029,38 @@ final class PcmSampleStream extends PcmStream {
         volume = volume << 2;
         destinationLimit = destinationIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1);
         if (destinationIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1) > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         destinationLimit -= 3;
         while (destinationIndex < destinationLimit) {
-            firstDestinationIndex = destinationIndex;
-            destinationIndex++;
-            firstSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
-            secondDestinationIndex = destinationIndex;
-            destinationIndex++;
-            secondSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
-            thirdDestinationIndex = destinationIndex;
-            destinationIndex++;
-            thirdSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
-            fourthDestinationIndex = destinationIndex;
-            destinationIndex++;
-            fourthSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
+          firstDestinationIndex = destinationIndex;
+          destinationIndex++;
+          firstSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
+          secondDestinationIndex = destinationIndex;
+          destinationIndex++;
+          secondSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
+          thirdDestinationIndex = destinationIndex;
+          destinationIndex++;
+          thirdSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
+          fourthDestinationIndex = destinationIndex;
+          destinationIndex++;
+          fourthSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
         }
         destinationLimit += 3;
         while (destinationIndex < destinationLimit) {
-            tailDestinationIndex = destinationIndex;
-            destinationIndex++;
-            tailSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
+          tailDestinationIndex = destinationIndex;
+          destinationIndex++;
+          tailSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
         }
         stream.samplePositionFixed = samplePositionOrIndex << 8;
         return destinationIndex;
@@ -1081,7 +1081,7 @@ final class PcmSampleStream extends PcmStream {
         int loopsCrossed;
         int forwardLoopCrossingCount;
         if (this.targetVolume == 0 &&
-            this.rampFramesRemaining == 0) {
+          this.rampFramesRemaining == 0) {
           this.skipFrames(frameCount);
           return;
         }
@@ -1298,78 +1298,78 @@ final class PcmSampleStream extends PcmStream {
         int maxVolumeDelta = 0;
         int maximumRampVolumeDelta;
         if (rampFrames == 0) {
-            this.setVolumeAndPan(targetVolume, targetPan);
-            return;
+          this.setVolumeAndPan(targetVolume, targetPan);
+          return;
         }
         int targetLeftVolume = PcmSampleStream.computeLeftVolume(targetVolume, targetPan);
         int targetRightVolume = PcmSampleStream.computeRightVolume(targetVolume, targetPan);
         if (this.currentLeftVolume != targetLeftVolume) {
-            maxVolumeDelta = targetVolume - this.currentVolume;
-            if (this.currentVolume - targetVolume > maxVolumeDelta) {
-                maxVolumeDelta = this.currentVolume - targetVolume;
-            }
-            if (targetLeftVolume - this.currentLeftVolume > maxVolumeDelta) {
-                maxVolumeDelta = targetLeftVolume - this.currentLeftVolume;
-            }
-            if (this.currentLeftVolume - targetLeftVolume > maxVolumeDelta) {
-                maxVolumeDelta = this.currentLeftVolume - targetLeftVolume;
-            }
-            if (targetRightVolume - this.currentRightVolume > maxVolumeDelta) {
-                maxVolumeDelta = targetRightVolume - this.currentRightVolume;
-            }
-            if (this.currentRightVolume - targetRightVolume > maxVolumeDelta) {
-                maxVolumeDelta = this.currentRightVolume - targetRightVolume;
-            }
-            if (rampFrames > maxVolumeDelta) {
-                rampFrames = maxVolumeDelta;
-            }
-            this.rampFramesRemaining = rampFrames;
-            this.targetVolume = targetVolume;
-            this.targetPan = targetPan;
-            this.volumeStepPerFrame = (targetVolume - this.currentVolume) / rampFrames;
-            this.leftVolumeStepPerFrame = (targetLeftVolume - this.currentLeftVolume) / rampFrames;
-            this.rightVolumeStepPerFrame = (targetRightVolume - this.currentRightVolume) / rampFrames;
-            return;
+          maxVolumeDelta = targetVolume - this.currentVolume;
+          if (this.currentVolume - targetVolume > maxVolumeDelta) {
+            maxVolumeDelta = this.currentVolume - targetVolume;
+          }
+          if (targetLeftVolume - this.currentLeftVolume > maxVolumeDelta) {
+            maxVolumeDelta = targetLeftVolume - this.currentLeftVolume;
+          }
+          if (this.currentLeftVolume - targetLeftVolume > maxVolumeDelta) {
+            maxVolumeDelta = this.currentLeftVolume - targetLeftVolume;
+          }
+          if (targetRightVolume - this.currentRightVolume > maxVolumeDelta) {
+            maxVolumeDelta = targetRightVolume - this.currentRightVolume;
+          }
+          if (this.currentRightVolume - targetRightVolume > maxVolumeDelta) {
+            maxVolumeDelta = this.currentRightVolume - targetRightVolume;
+          }
+          if (rampFrames > maxVolumeDelta) {
+            rampFrames = maxVolumeDelta;
+          }
+          this.rampFramesRemaining = rampFrames;
+          this.targetVolume = targetVolume;
+          this.targetPan = targetPan;
+          this.volumeStepPerFrame = (targetVolume - this.currentVolume) / rampFrames;
+          this.leftVolumeStepPerFrame = (targetLeftVolume - this.currentLeftVolume) / rampFrames;
+          this.rightVolumeStepPerFrame = (targetRightVolume - this.currentRightVolume) / rampFrames;
+          return;
         }
         if (this.currentRightVolume != targetRightVolume) {
-            maximumRampVolumeDelta = targetVolume - this.currentVolume;
-            if (this.currentVolume - targetVolume > maximumRampVolumeDelta) {
-                maximumRampVolumeDelta = this.currentVolume - targetVolume;
-            }
-            if (targetLeftVolume - this.currentLeftVolume > maximumRampVolumeDelta) {
-                maximumRampVolumeDelta = targetLeftVolume - this.currentLeftVolume;
-            }
-            if (this.currentLeftVolume - targetLeftVolume > maximumRampVolumeDelta) {
-                maximumRampVolumeDelta = this.currentLeftVolume - targetLeftVolume;
-            }
-            if (targetRightVolume - this.currentRightVolume > maximumRampVolumeDelta) {
-                maximumRampVolumeDelta = targetRightVolume - this.currentRightVolume;
-            }
-            if (this.currentRightVolume - targetRightVolume > maximumRampVolumeDelta) {
-                maximumRampVolumeDelta = this.currentRightVolume - targetRightVolume;
-            }
-            if (rampFrames > maximumRampVolumeDelta) {
-                rampFrames = maximumRampVolumeDelta;
-            }
-            this.rampFramesRemaining = rampFrames;
-            this.targetVolume = targetVolume;
-            this.targetPan = targetPan;
-            this.volumeStepPerFrame = (targetVolume - this.currentVolume) / rampFrames;
-            this.leftVolumeStepPerFrame = (targetLeftVolume - this.currentLeftVolume) / rampFrames;
-            this.rightVolumeStepPerFrame = (targetRightVolume - this.currentRightVolume) / rampFrames;
-            return;
+          maximumRampVolumeDelta = targetVolume - this.currentVolume;
+          if (this.currentVolume - targetVolume > maximumRampVolumeDelta) {
+            maximumRampVolumeDelta = this.currentVolume - targetVolume;
+          }
+          if (targetLeftVolume - this.currentLeftVolume > maximumRampVolumeDelta) {
+            maximumRampVolumeDelta = targetLeftVolume - this.currentLeftVolume;
+          }
+          if (this.currentLeftVolume - targetLeftVolume > maximumRampVolumeDelta) {
+            maximumRampVolumeDelta = this.currentLeftVolume - targetLeftVolume;
+          }
+          if (targetRightVolume - this.currentRightVolume > maximumRampVolumeDelta) {
+            maximumRampVolumeDelta = targetRightVolume - this.currentRightVolume;
+          }
+          if (this.currentRightVolume - targetRightVolume > maximumRampVolumeDelta) {
+            maximumRampVolumeDelta = this.currentRightVolume - targetRightVolume;
+          }
+          if (rampFrames > maximumRampVolumeDelta) {
+            rampFrames = maximumRampVolumeDelta;
+          }
+          this.rampFramesRemaining = rampFrames;
+          this.targetVolume = targetVolume;
+          this.targetPan = targetPan;
+          this.volumeStepPerFrame = (targetVolume - this.currentVolume) / rampFrames;
+          this.leftVolumeStepPerFrame = (targetLeftVolume - this.currentLeftVolume) / rampFrames;
+          this.rightVolumeStepPerFrame = (targetRightVolume - this.currentRightVolume) / rampFrames;
+          return;
         }
         this.rampFramesRemaining = 0;
     }
 
     private final void cancelVolumeRamp() {
         if (this.rampFramesRemaining != 0) {
-            if (this.targetVolume == -2147483648) {
-                this.targetVolume = 0;
-            }
-            this.rampFramesRemaining = 0;
-            this.refreshCurrentVolumes();
-            return;
+          if (this.targetVolume == -2147483648) {
+            this.targetVolume = 0;
+          }
+          this.rampFramesRemaining = 0;
+          this.refreshCurrentVolumes();
+          return;
         }
     }
 
@@ -1432,45 +1432,45 @@ final class PcmSampleStream extends PcmStream {
         volumeStep = volumeStep << 2;
         destinationLimit = destinationIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1);
         if (destinationIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1) > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         stream.currentLeftVolume = stream.currentLeftVolume + stream.leftVolumeStepPerFrame * (destinationLimit - destinationIndex);
         stream.currentRightVolume = stream.currentRightVolume + stream.rightVolumeStepPerFrame * (destinationLimit - destinationIndex);
         destinationLimit -= 3;
         while (destinationIndex < destinationLimit) {
-            firstDestinationIndex = destinationIndex;
-            destinationIndex++;
-            firstSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
-            volume = volume + volumeStep;
-            secondDestinationIndex = destinationIndex;
-            destinationIndex++;
-            secondSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
-            volume = volume + volumeStep;
-            thirdDestinationIndex = destinationIndex;
-            destinationIndex++;
-            thirdSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
-            volume = volume + volumeStep;
-            fourthDestinationIndex = destinationIndex;
-            destinationIndex++;
-            fourthSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
-            volume = volume + volumeStep;
+          firstDestinationIndex = destinationIndex;
+          destinationIndex++;
+          firstSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[firstDestinationIndex] = destination[firstDestinationIndex] + samples[firstSourceIndex] * volume;
+          volume = volume + volumeStep;
+          secondDestinationIndex = destinationIndex;
+          destinationIndex++;
+          secondSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[secondDestinationIndex] = destination[secondDestinationIndex] + samples[secondSourceIndex] * volume;
+          volume = volume + volumeStep;
+          thirdDestinationIndex = destinationIndex;
+          destinationIndex++;
+          thirdSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[thirdDestinationIndex] = destination[thirdDestinationIndex] + samples[thirdSourceIndex] * volume;
+          volume = volume + volumeStep;
+          fourthDestinationIndex = destinationIndex;
+          destinationIndex++;
+          fourthSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[fourthDestinationIndex] = destination[fourthDestinationIndex] + samples[fourthSourceIndex] * volume;
+          volume = volume + volumeStep;
         }
         destinationLimit += 3;
         while (destinationIndex < destinationLimit) {
-            tailDestinationIndex = destinationIndex;
-            destinationIndex++;
-            tailSourceIndex = samplePositionOrIndex;
-            samplePositionOrIndex--;
-            destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
-            volume = volume + volumeStep;
+          tailDestinationIndex = destinationIndex;
+          destinationIndex++;
+          tailSourceIndex = samplePositionOrIndex;
+          samplePositionOrIndex--;
+          destination[tailDestinationIndex] = destination[tailDestinationIndex] + samples[tailSourceIndex] * volume;
+          volume = volume + volumeStep;
         }
         stream.currentVolume = volume >> 2;
         stream.samplePositionFixed = samplePositionOrIndex << 8;
@@ -1496,61 +1496,61 @@ final class PcmSampleStream extends PcmStream {
         rightVolumeStep = rightVolumeStep << 2;
         destinationLimit = destinationFrameOrSampleIndex + sampleBoundaryOrIndex - samplePositionOrIndex;
         if (destinationFrameOrSampleIndex + sampleBoundaryOrIndex - samplePositionOrIndex > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         stream.currentVolume = stream.currentVolume + stream.volumeStepPerFrame * (destinationLimit - destinationFrameOrSampleIndex);
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
         destinationLimit = destinationLimit << 1;
         destinationLimit -= 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex++];
-            firstLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            firstRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex++];
-            secondLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            secondRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex++];
-            thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            thirdRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
-            sampleValue = samples[samplePositionOrIndex++];
-            fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            fourthRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex++];
+          firstLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          firstRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex++];
+          secondLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          secondRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex++];
+          thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          thirdRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex++];
+          fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          fourthRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
         }
         destinationLimit += 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex++];
-            tailLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
-            leftVolume = leftVolume + leftVolumeStep;
-            tailRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
-            rightVolume = rightVolume + rightVolumeStep;
+          sampleValue = samples[samplePositionOrIndex++];
+          tailLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
+          leftVolume = leftVolume + leftVolumeStep;
+          tailRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
+          rightVolume = rightVolume + rightVolumeStep;
         }
         stream.currentLeftVolume = leftVolume >> 2;
         stream.currentRightVolume = rightVolume >> 2;
@@ -1560,10 +1560,10 @@ final class PcmSampleStream extends PcmStream {
 
     final static PcmSampleStream createForSampleStep(PcmSample sample, int sampleStepFixed, int volume, int pan) {
         if (sample.samples == null) {
-            return null;
+          return null;
         }
         if (sample.samples.length != 0) {
-            return new PcmSampleStream(sample, sampleStepFixed, volume, pan);
+          return new PcmSampleStream(sample, sampleStepFixed, volume, pan);
         }
         return null;
     }
@@ -1578,10 +1578,10 @@ final class PcmSampleStream extends PcmStream {
 
     final static PcmSampleStream createForPlaybackRate(PcmSample sample, int ratePercent, int volume) {
         if (sample.samples == null) {
-            return null;
+          return null;
         }
         if (sample.samples.length != 0) {
-            return new PcmSampleStream(sample, (int)((long)sample.sampleRateHz * 256L * (long)ratePercent / (long)(100 * AudioOutput.sampleRateHz)), volume << 6);
+          return new PcmSampleStream(sample, (int)((long)sample.sampleRateHz * 256L * (long)ratePercent / (long)(100 * AudioOutput.sampleRateHz)), volume << 6);
         }
         return null;
     }
@@ -1650,50 +1650,50 @@ final class PcmSampleStream extends PcmStream {
         rightVolume = rightVolume << 2;
         destinationLimit = destinationFrameOrSampleIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1);
         if (destinationFrameOrSampleIndex + samplePositionOrIndex - (sampleBoundaryOrIndex - 1) > destinationEnd) {
-            destinationLimit = destinationEnd;
+          destinationLimit = destinationEnd;
         }
         destinationFrameOrSampleIndex = destinationFrameOrSampleIndex << 1;
         destinationLimit = destinationLimit << 1;
         destinationLimit -= 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex--];
-            firstLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
-            firstRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex--];
-            secondLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
-            secondRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex--];
-            thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
-            thirdRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
-            sampleValue = samples[samplePositionOrIndex--];
-            fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
-            fourthRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex--];
+          firstLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstLeftDestinationIndex] = destination[firstLeftDestinationIndex] + sampleValue * leftVolume;
+          firstRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[firstRightDestinationIndex] = destination[firstRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex--];
+          secondLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondLeftDestinationIndex] = destination[secondLeftDestinationIndex] + sampleValue * leftVolume;
+          secondRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[secondRightDestinationIndex] = destination[secondRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex--];
+          thirdLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdLeftDestinationIndex] = destination[thirdLeftDestinationIndex] + sampleValue * leftVolume;
+          thirdRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[thirdRightDestinationIndex] = destination[thirdRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex--];
+          fourthLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthLeftDestinationIndex] = destination[fourthLeftDestinationIndex] + sampleValue * leftVolume;
+          fourthRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[fourthRightDestinationIndex] = destination[fourthRightDestinationIndex] + sampleValue * rightVolume;
         }
         destinationLimit += 6;
         while (destinationFrameOrSampleIndex < destinationLimit) {
-            sampleValue = samples[samplePositionOrIndex--];
-            tailLeftDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
-            tailRightDestinationIndex = destinationFrameOrSampleIndex;
-            destinationFrameOrSampleIndex++;
-            destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
+          sampleValue = samples[samplePositionOrIndex--];
+          tailLeftDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailLeftDestinationIndex] = destination[tailLeftDestinationIndex] + sampleValue * leftVolume;
+          tailRightDestinationIndex = destinationFrameOrSampleIndex;
+          destinationFrameOrSampleIndex++;
+          destination[tailRightDestinationIndex] = destination[tailRightDestinationIndex] + sampleValue * rightVolume;
         }
         stream.samplePositionFixed = samplePositionOrIndex << 8;
         return destinationFrameOrSampleIndex >> 1;

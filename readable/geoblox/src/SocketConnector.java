@@ -15,7 +15,7 @@ abstract class SocketConnector {
 
     final java.net.Socket connectDirect(int methodGuard) throws IOException {
         if (methodGuard != 1) {
-            return (java.net.Socket) null;
+          return (java.net.Socket) null;
         }
         return new java.net.Socket(this.destinationHost, this.destinationPort);
     }
@@ -24,7 +24,7 @@ abstract class SocketConnector {
 
     final static boolean isEmailAvailabilityPending(int methodGuard) {
         if (methodGuard != 7) {
-            return true;
+          return true;
         }
         return !EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-95) ? true : false;
     }
@@ -141,7 +141,7 @@ abstract class SocketConnector {
         bootstrapLoginPanelMessage = null;
         loginGameUpdatedText = null;
         if (methodGuard != 16712207) {
-            SocketConnector.isEmailAvailabilityPending(56);
+          SocketConnector.isEmailAvailabilityPending(56);
         }
         themeSpriteColors = (int[][]) null;
         themeCycleColors = (int[][]) null;
@@ -185,12 +185,12 @@ abstract class SocketConnector {
           }
           while (soundIndex < 33) {
             if (TextTemplateArgumentType.gameSoundThemeIds[soundIndex] > 0 &&
-                TextTemplateArgumentType.gameSoundThemeIds[soundIndex] != 1) {
+              TextTemplateArgumentType.gameSoundThemeIds[soundIndex] != 1) {
               soundIndex++;
               continue;
             }
             if (soundIndex >= 10 &&
-                26 >= soundIndex) {
+              26 >= soundIndex) {
               sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
             } else {
               sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndex]);
@@ -275,7 +275,7 @@ abstract class SocketConnector {
             blueFraction = (float)(255 & themeSpriteColors[sortedThemeIndex][colorIndex]) / 255.0f;
             dominantChannelId = 0;
             if (maskedRedFraction > maskedGreenFraction &&
-                maskedRedFraction > blueFraction) {
+              maskedRedFraction > blueFraction) {
               selectedHighChannel = maskedRedFraction;
               if (!(maskedGreenFraction > blueFraction)) {
                 selectedLowChannel = maskedGreenFraction;
@@ -283,7 +283,7 @@ abstract class SocketConnector {
                 selectedLowChannel = blueFraction;
               }
             } else if (maskedGreenFraction > maskedRedFraction &&
-                maskedGreenFraction > blueFraction) {
+              maskedGreenFraction > blueFraction) {
               selectedLowChannel = (!(maskedRedFraction > blueFraction)) ? maskedRedFraction : blueFraction;
               dominantChannelId = 1;
               selectedHighChannel = maskedGreenFraction;

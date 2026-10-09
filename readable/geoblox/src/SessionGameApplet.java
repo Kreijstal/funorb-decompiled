@@ -33,7 +33,7 @@ abstract class SessionGameApplet extends GameApplet {
           return -1;
         }
         if (handshakeResult != 0 &&
-            handshakeResult != 1) {
+          handshakeResult != 1) {
           if (!TextWidgetRenderer.suppressReconnectErrorPage) {
             this.showGameError((byte) 79, "reconnect");
           }
@@ -69,13 +69,13 @@ abstract class SessionGameApplet extends GameApplet {
           settingsOverrideOrFailure = null;
           sessionOverrideOrSettingsAlias = null;
           if (null != NetworkArchiveRequest.settingsCookieValue &&
-              !NetworkArchiveRequest.settingsCookieValue.equals(applet.getParameter("settings"))) {
+            !NetworkArchiveRequest.settingsCookieValue.equals(applet.getParameter("settings"))) {
             settingsOverrideOrFailure = NetworkArchiveRequest.settingsCookieValue;
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
             sessionOverrideOrSettingsAlias = settingsOverrideOrFailure;
           }
           if (ScorePopup.sessionCookieOverride != null &&
-              !ScorePopup.sessionCookieOverride.equals(applet.getParameter("session"))) {
+            !ScorePopup.sessionCookieOverride.equals(applet.getParameter("session"))) {
             sessionOverrideOrSettingsAlias = ScorePopup.sessionCookieOverride;
           }
           urlBeforeReturn = ScoreSubmission.rewriteSessionUrlPath((String) (sessionOverrideOrSettingsAlias), (String) (settingsOverrideOrFailure), url, -1, true);
@@ -108,25 +108,25 @@ abstract class SessionGameApplet extends GameApplet {
         MeshPrioritySupport.bootstrapLanguageId = this.languageId;
         ClientOptionSupport.selectBootstrapLanguageText(true, MeshPrioritySupport.bootstrapLanguageId);
         if (methodGuard == -70) {
-            SessionBootstrapSupport.initializeSessionServices(this.gameCrc, this.instanceId, 5000, clientId, this.requestedMemberMode, responseExtensionEnabled, MeshPrioritySupport.bootstrapLanguageId, this.alternateServerPort, 5000, this.serverHost, this.serverNumber, MenuScreen.platformTaskDispatcher, 64, this.primaryServerPort);
-            TextInputValidator.initializeArchiveServices(clientId, MeshPrioritySupport.bootstrapLanguageId, this.primaryServerPort, this.serverNumber, -23949, MenuScreen.platformTaskDispatcher, this.serverHost, this.gameCrc, this.alternateServerPort);
-            StatefulWidgetRenderer.initializePunctuationKeyCodes(28);
-            CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(methodGuard + 113);
-            UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
-            TextLayoutLine.interfaceTextArchiveId = interfaceTextArchiveId;
-            DebouncedValidationProvider.commonUiSpriteArchiveId = commonUiSpriteArchiveId;
-            ArchiveRequest.uiFontArchiveId = uiFontArchiveId;
-            ClientTimingSupport.buttonAndLogoArchiveId = buttonAndLogoArchiveId;
-            TextWidgetSupport.gameTextArchiveId = gameTextArchiveId;
-            this.initializeSessionPacketLengths(123);
-            PacketBuffer.resetClientOptionMask((byte) -13);
-            return;
+          SessionBootstrapSupport.initializeSessionServices(this.gameCrc, this.instanceId, 5000, clientId, this.requestedMemberMode, responseExtensionEnabled, MeshPrioritySupport.bootstrapLanguageId, this.alternateServerPort, 5000, this.serverHost, this.serverNumber, MenuScreen.platformTaskDispatcher, 64, this.primaryServerPort);
+          TextInputValidator.initializeArchiveServices(clientId, MeshPrioritySupport.bootstrapLanguageId, this.primaryServerPort, this.serverNumber, -23949, MenuScreen.platformTaskDispatcher, this.serverHost, this.gameCrc, this.alternateServerPort);
+          StatefulWidgetRenderer.initializePunctuationKeyCodes(28);
+          CachedTextLayout.mouseWheelInput = TextValidationFailure.createMouseWheelInput(methodGuard + 113);
+          UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
+          TextLayoutLine.interfaceTextArchiveId = interfaceTextArchiveId;
+          DebouncedValidationProvider.commonUiSpriteArchiveId = commonUiSpriteArchiveId;
+          ArchiveRequest.uiFontArchiveId = uiFontArchiveId;
+          ClientTimingSupport.buttonAndLogoArchiveId = buttonAndLogoArchiveId;
+          TextWidgetSupport.gameTextArchiveId = gameTextArchiveId;
+          this.initializeSessionPacketLengths(123);
+          PacketBuffer.resetClientOptionMask((byte) -13);
+          return;
         }
     }
 
     private final void handleSessionCookiePacket(int methodGuard) {
         if (methodGuard != -11) {
-            return;
+          return;
         }
         String sessionCookieValue = HotspotTextWidget.readSessionPacketText(1000);
         MeshPrioritySupport.updateSessionCookie(sessionCookieValue, NodeHashTableIterator.getActiveApplet(111), methodGuard + 10);
@@ -135,27 +135,27 @@ abstract class SessionGameApplet extends GameApplet {
     final void enableOptionalSessionPacketFamilies(boolean allowIntRecordReplies, boolean allowSessionAcknowledgements, boolean allowScoreReplies, boolean allowByteShortReplies, int methodGuard) {
         this.enableBaseSessionPacketFamilies(false, (byte) -91);
         if (allowByteShortReplies) {
-            this.enableByteShortReplies((byte) 32);
+          this.enableByteShortReplies((byte) 32);
         }
         if (allowScoreReplies) {
-            this.enableScoreReplies(16072);
+          this.enableScoreReplies(16072);
         }
         if (methodGuard > -87) {
-            this.alternateServerPort = -34;
+          this.alternateServerPort = -34;
         }
         if (allowIntRecordReplies) {
-            this.enableIntRecordReplies((byte) -19);
+          this.enableIntRecordReplies((byte) -19);
         }
         if (allowSessionAcknowledgements) {
-            this.setSessionAcknowledgementsEnabled(true);
+          this.setSessionAcknowledgementsEnabled(true);
         }
     }
 
     final void initializeGameApplet(int cacheIndexCount, String gameName, int canvasWidth) {
         try {
-            this.initializeFromAppletParameters(480, gameName, cacheIndexCount, (byte) 81, canvasWidth);
+          this.initializeFromAppletParameters(480, gameName, cacheIndexCount, (byte) 81, canvasWidth);
         } catch (RuntimeException initializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "wf.EA(" + cacheIndexCount + ',' + (gameName != null ? "{...}" : "null") + ',' + canvasWidth + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "wf.EA(" + cacheIndexCount + ',' + (gameName != null ? "{...}" : "null") + ',' + canvasWidth + ')');
         }
     }
 
@@ -168,7 +168,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         handshakeResult = this.pollReconnectHandshake(-1);
         if (handshakeResult == 0 ||
-            1 == handshakeResult) {
+          1 == handshakeResult) {
           if (OpacityWidget.enabledSessionPacketOpcodes[1]) {
             ByteArrayBuffer.resendByteShortQueries(true, 2);
           }
@@ -201,7 +201,7 @@ abstract class SessionGameApplet extends GameApplet {
         OpacityWidget.enabledSessionPacketOpcodes[0] = true;
         OpacityWidget.enabledSessionPacketOpcodes[3] = true;
         if (methodGuard != -91) {
-            this.enableIntRecordReplies((byte) 55);
+          this.enableIntRecordReplies((byte) 55);
         }
         OpacityWidget.enabledSessionPacketOpcodes[7] = true;
         OpacityWidget.enabledSessionPacketOpcodes[16] = true;
@@ -252,7 +252,7 @@ abstract class SessionGameApplet extends GameApplet {
         RankedListQuery.updateKeyboardStateForFrame(true);
         AccountCreationSupport.snapshotPointerInput((byte) -128);
         if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255) &&
-            SpriteConstructionSupport.clientScreenStage != 11) {
+          SpriteConstructionSupport.clientScreenStage != 11) {
           TextTemplateArgumentType.updateFullscreenDialogFrame(1);
         }
         if (null != CachedTextLayout.mouseWheelInput) {
@@ -261,8 +261,8 @@ abstract class SessionGameApplet extends GameApplet {
         if (InstrumentEnvelope.isSessionConnected(methodGuard ^ 19649)) {
           idleThresholdOrArchivePendingOrSequenceReady = 1200 * ClientTimingSupport.getConfiguredUpdateRate(true);
           if (this.forceIdleDisconnect ||
-              !(idleThresholdOrArchivePendingOrSequenceReady >= IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
-                !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))) {
+            !(idleThresholdOrArchivePendingOrSequenceReady >= IndexedSpriteState.getKeyboardIdleTicks(-76)) &&
+            !(idleThresholdOrArchivePendingOrSequenceReady >= FullscreenSupport.getPointerIdleTicks(false))) {
             this.forceIdleDisconnect = false;
             Bzip2DecoderState.closeSessionSocket((byte) -115);
             ClientFlowState.requestSessionExit((byte) 81);
@@ -273,23 +273,23 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if (DebouncedValidationProvider.archiveLoadStatus == -1 ||
-              DebouncedValidationProvider.archiveLoadStatus == 0) {
+          DebouncedValidationProvider.archiveLoadStatus == 0) {
           archiveWasPendingSnapshot = (-1 != DebouncedValidationProvider.archiveLoadStatus) ? 0 : 1;
           archiveWasPendingValue = archiveWasPendingSnapshot;
           DebouncedValidationProvider.archiveLoadStatus = DelayedIncomingPacket.tickArchiveLoading(15869);
           if (archiveWasPendingValue != 0 &&
-              DebouncedValidationProvider.archiveLoadStatus == 0 &&
-              11 == SpriteConstructionSupport.clientScreenStage &&
-              !ClientTimingSupport.isClientReadyForSessionActions(73)) {
+            DebouncedValidationProvider.archiveLoadStatus == 0 &&
+            11 == SpriteConstructionSupport.clientScreenStage &&
+            !ClientTimingSupport.isClientReadyForSessionActions(73)) {
             IterableNodeHashTable.refreshLoginTicketMessage(-12618);
           }
           if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
-              DebouncedValidationProvider.archiveLoadStatus != 0) {
+            DebouncedValidationProvider.archiveLoadStatus != 0) {
             DisplayNamePanel.connectionRetryDeadlineMillis = 15000L + ClientClockSupport.correctedCurrentTimeMillis(-12520);
           }
         }
         if (DebouncedValidationProvider.archiveLoadStatus != -1 &&
-            DebouncedValidationProvider.archiveLoadStatus != 0) {
+          DebouncedValidationProvider.archiveLoadStatus != 0) {
           if (VisualPropertyOverrides.clientBootstrapStage >= 10) {
             if (SpriteConstructionSupport.clientScreenStage >= 10) {
               ClientFlowState.requestSessionExit((byte) 114);
@@ -333,22 +333,22 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if ((DebouncedValidationProvider.archiveLoadStatus != -1 &&
-                DebouncedValidationProvider.archiveLoadStatus != 0 ||
-              ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)) &&
-            DisplayNamePanel.connectionRetryDeadlineMillis <= ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180)) {
+          DebouncedValidationProvider.archiveLoadStatus != 0 ||
+          ClientTimingSupport.isClientReadyForSessionActions(methodGuard - 19585)) &&
+          DisplayNamePanel.connectionRetryDeadlineMillis <= ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 32180)) {
           ArchiveLoadStep.loginRetrySuspended = false;
           if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
-              DebouncedValidationProvider.archiveLoadStatus != 0) {
+            DebouncedValidationProvider.archiveLoadStatus != 0) {
             DebouncedValidationProvider.archiveLoadStatus = -1;
             SocialListEntry.resetArchiveConnectionFailures(-21754);
           }
         }
         if (DebouncedValidationProvider.archiveLoadStatus == 0 &&
-            !ClientTimingSupport.isClientReadyForSessionActions(93)) {
+          !ClientTimingSupport.isClientReadyForSessionActions(93)) {
           SessionInstanceState.sessionExitRequested = false;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 0 &&
-            AchievementQuery.ensureArchiveCatalogLoaded(108)) {
+          AchievementQuery.ensureArchiveCatalogLoaded(108)) {
           VisualPropertyOverrides.clientBootstrapStage = 1;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 1) {
@@ -364,7 +364,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 2) {
           if (FadingDialog.interfaceTextArchive != null &&
-              FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
+            FadingDialog.interfaceTextArchive.ensureIndexLoaded(0)) {
             if (!FadingDialog.interfaceTextArchive.hasGroupName((byte) -116, "")) {
               FadingDialog.interfaceTextArchive = null;
             } else {
@@ -380,15 +380,15 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if (3 == VisualPropertyOverrides.clientBootstrapStage &&
-            DelayedIncomingPacket.loadRequiredLoginUiGroups(DialRenderer.initialButtonAndLogoArchive, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive, -11652) &&
-            DisplayModeInfo.loadAllArchiveGroups((byte) -127, DialRenderer.initialButtonAndLogoArchive)) {
+          DelayedIncomingPacket.loadRequiredLoginUiGroups(DialRenderer.initialButtonAndLogoArchive, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive, -11652) &&
+          DisplayModeInfo.loadAllArchiveGroups((byte) -127, DialRenderer.initialButtonAndLogoArchive)) {
           LoginUiSupport.releaseAwtLoadingFonts((byte) -105);
           ConnectionHeaderSupport.evaluateConnectionHeaderGuard((byte) 120);
           ByteArrayPoolSupport.loadingStatusText = ArchiveSource.loadingText;
           AccountEligibilitySupport.loginReturnAllowed = false;
           CacheReference.initializeAccountUiResources((byte) 114, DialRenderer.initialButtonAndLogoArchive, FontLoadingSupport.memberAccountMode, AttachedEntityRenderer.initialUiFontArchive, DirectByteStorage.initialCommonUiSpriteArchive);
           if (LoginProtocolSupport.lockBootstrapLoginPanelActions ||
-              SocketConnector.bootstrapLoginPanelMessage != null) {
+            SocketConnector.bootstrapLoginPanelMessage != null) {
             loginPanelGuardSnapshot = 2274;
             loginPanelMessageSnapshot = SocketConnector.bootstrapLoginPanelMessage;
             allowRetrySnapshot = !(LoginProtocolSupport.lockBootstrapLoginPanelActions);
@@ -419,7 +419,7 @@ abstract class SessionGameApplet extends GameApplet {
         bootstrapTextArchiveGate: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
             if (null != TextValidationSupport.bootstrapGameTextArchive && (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
-                !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))) {
+              !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))) {
               HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
               break bootstrapTextArchiveGate;
             }
@@ -431,7 +431,7 @@ abstract class SessionGameApplet extends GameApplet {
           return;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 12 &&
-            !AgeValidator.gameArchiveRequestPending) {
+          !AgeValidator.gameArchiveRequestPending) {
           VisualPropertyOverrides.clientBootstrapStage = 13;
         }
         if (VisualPropertyOverrides.clientBootstrapStage == 13) {
@@ -446,7 +446,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if (!fullscreenActive &&
-            EntityMotionSupport.canvasReplacementRequested) {
+          EntityMotionSupport.canvasReplacementRequested) {
           EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
           this.rebuildGameCanvas(true);
           UsernameAvailabilityQuery.attachCanvasInputListeners(MessageDialog.gameCanvas, 57);
@@ -489,144 +489,144 @@ abstract class SessionGameApplet extends GameApplet {
         spaceMusicTrack = null;
         fullscreenText = null;
         if (methodGuard != 30344) {
-            SessionGameApplet.createAchievementStateValues(-29);
+          SessionGameApplet.createAchievementStateValues(-29);
         }
     }
 
     private final int processAccountUiActions(boolean suppressLoginHandshake, boolean fullscreenActive, int actionGuard) {
         try {
-            Throwable caughtUiFailure = null;
-            int uiAction = 0;
-            int queryOrHandshakeResult = 0;
-            Exception countryListFailureForReport = null;
-            String countryListText = null;
-            int clientControlFlowGuard = 0;
-            String unusedNullCountryList = null;
-            String unusedNullCountryListAfterFailure = null;
-            Boolean emailAvailabilityResult = null;
-            ByteArrayBuffer countryListBytes = null;
-            int accountCreationResultCode;
-            int loginHandshakeResultCode;
-            clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-            uiAction = ClientProtocolStage.pollAccountUiAction(MeshPrioritySupport.bootstrapLanguageId, CachedTextLayout.wheelRotationSnapshot, fullscreenActive, (byte) -117);
-            if (actionGuard == ~uiAction) {
-              throw new IllegalStateException();
+          Throwable caughtUiFailure = null;
+          int uiAction = 0;
+          int queryOrHandshakeResult = 0;
+          Exception countryListFailureForReport = null;
+          String countryListText = null;
+          int clientControlFlowGuard = 0;
+          String unusedNullCountryList = null;
+          String unusedNullCountryListAfterFailure = null;
+          Boolean emailAvailabilityResult = null;
+          ByteArrayBuffer countryListBytes = null;
+          int accountCreationResultCode;
+          int loginHandshakeResultCode;
+          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+          uiAction = ClientProtocolStage.pollAccountUiAction(MeshPrioritySupport.bootstrapLanguageId, CachedTextLayout.wheelRotationSnapshot, fullscreenActive, (byte) -117);
+          if (actionGuard == ~uiAction) {
+            throw new IllegalStateException();
+          }
+          if (uiAction == 1) {
+            queryOrHandshakeResult = ByteArrayBuffer.advanceAccountLookupRequest(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.createActiveEmailLookupValue((byte) -42), -121);
+            if (queryOrHandshakeResult != -1) {
+              UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
+              AudioService.sessionResponseText = null;
+              WidgetSkinState.pendingUsernameSuggestions = null;
             }
-            if (uiAction == 1) {
-              queryOrHandshakeResult = ByteArrayBuffer.advanceAccountLookupRequest(AccountCreationForm.createActiveLoginLookupValue(actionGuard ^ -26), LoginPanel.createActiveEmailLookupValue((byte) -42), -121);
-              if (queryOrHandshakeResult != -1) {
-                UsernameResponseSupport.handleUsernameResponse(queryOrHandshakeResult, 6568, WidgetSkinState.pendingUsernameSuggestions, AudioService.sessionResponseText);
-                AudioService.sessionResponseText = null;
-                WidgetSkinState.pendingUsernameSuggestions = null;
-              }
-              emailAvailabilityResult = HotspotTextWidget.takePendingLoginBooleanReply((byte) 111);
-              if (emailAvailabilityResult != null) {
-                EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
-              }
+            emailAvailabilityResult = HotspotTextWidget.takePendingLoginBooleanReply((byte) 111);
+            if (emailAvailabilityResult != null) {
+              EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(actionGuard ^ 110, emailAvailabilityResult.booleanValue());
             }
-            if (uiAction == 2) {
-              accountCreationResultCode = DiskCacheWorker.advanceAccountCreationRequest((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
-              if (accountCreationResultCode != -1) {
-                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, accountCreationResultCode, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
-                AudioService.sessionResponseText = null;
-                WidgetSkinState.pendingUsernameSuggestions = null;
-              }
+          }
+          if (uiAction == 2) {
+            accountCreationResultCode = DiskCacheWorker.advanceAccountCreationRequest((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
+            if (accountCreationResultCode != -1) {
+              StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, accountCreationResultCode, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
+              AudioService.sessionResponseText = null;
+              WidgetSkinState.pendingUsernameSuggestions = null;
             }
-            if (uiAction == 3) {
-              if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
-                  DebouncedValidationProvider.archiveLoadStatus != 0) {
-                DebouncedValidationProvider.archiveLoadStatus = -1;
-                SocialListEntry.resetArchiveConnectionFailures(-21754);
-              }
-              if (!suppressLoginHandshake) {
-                loginHandshakeResultCode = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
-                if (loginHandshakeResultCode != -1) {
-                  if (loginHandshakeResultCode == 0) {
-                    CheckboxWidget.errorReportLoginLongValue = ClientClockSupport.loginResponseLongValue;
-                    IterableNodeHashTable.refreshLoginTicketMessage(-12618);
-                    ProgressBarWidget.guestSessionMode = false;
-                    SpriteConstructionSupport.clientScreenStage = 10;
-                  } else {
-                    TextInputValidator.handleLoginUiResponse((byte) 124, loginHandshakeResultCode, AudioService.sessionResponseText);
-                    AudioService.sessionResponseText = null;
-                  }
+          }
+          if (uiAction == 3) {
+            if (-1 != DebouncedValidationProvider.archiveLoadStatus &&
+              DebouncedValidationProvider.archiveLoadStatus != 0) {
+              DebouncedValidationProvider.archiveLoadStatus = -1;
+              SocialListEntry.resetArchiveConnectionFailures(-21754);
+            }
+            if (!suppressLoginHandshake) {
+              loginHandshakeResultCode = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
+              if (loginHandshakeResultCode != -1) {
+                if (loginHandshakeResultCode == 0) {
+                  CheckboxWidget.errorReportLoginLongValue = ClientClockSupport.loginResponseLongValue;
+                  IterableNodeHashTable.refreshLoginTicketMessage(-12618);
+                  ProgressBarWidget.guestSessionMode = false;
+                  SpriteConstructionSupport.clientScreenStage = 10;
+                } else {
+                  TextInputValidator.handleLoginUiResponse((byte) 124, loginHandshakeResultCode, AudioService.sessionResponseText);
+                  AudioService.sessionResponseText = null;
                 }
-              } else {
-                ArchiveLoadStep.loginRetrySuspended = false;
               }
+            } else {
+              ArchiveLoadStep.loginRetrySuspended = false;
             }
-            if (uiAction == 4) {
-              if (!FontLoadingSupport.memberAccountMode) {
-                ProgressBarWidget.guestSessionMode = true;
-                SpriteConstructionSupport.clientScreenStage = 10;
-              } else {
-                BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(actionGuard ^ -122));
-              }
-            }
-            if (5 == uiAction) {
-              EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(120), 62);
-            }
-            if (uiAction == 6 &&
-                AccountEligibilitySupport.loginReturnAllowed) {
+          }
+          if (uiAction == 4) {
+            if (!FontLoadingSupport.memberAccountMode) {
+              ProgressBarWidget.guestSessionMode = true;
               SpriteConstructionSupport.clientScreenStage = 10;
+            } else {
+              BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(actionGuard ^ -122));
             }
-            if (uiAction == 7) {
-              TrackedPcmStream.navigateToServerListPage((byte) 114, NodeHashTableIterator.getActiveApplet(107));
-            }
-            if (uiAction == 8) {
-              BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(119));
-            }
-            if (9 == uiAction) {
-              RasterTargetSnapshot.navigateToSupportPage(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
-            }
-            if (uiAction == 10) {
-              CacheReference.outgoingSessionBuffer.writeCipherByte(17, (byte) -21);
-            }
-            if (uiAction == 11) {
-              EmailAvailabilityQuery.navigateToReloadPage(NodeHashTableIterator.getActiveApplet(110), false);
-            }
-            if (uiAction == 12) {
-              ArchiveLoadSequence.openRelativeUrlInNewWindow(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(actionGuard ^ -241));
-            }
-            if (uiAction == 13) {
-              try {
-                if (null == EmailAvailabilityValidator.countryListDownloader) {
-                  EmailAvailabilityValidator.countryListDownloader = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+          }
+          if (5 == uiAction) {
+            EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(120), 62);
+          }
+          if (uiAction == 6 &&
+            AccountEligibilitySupport.loginReturnAllowed) {
+            SpriteConstructionSupport.clientScreenStage = 10;
+          }
+          if (uiAction == 7) {
+            TrackedPcmStream.navigateToServerListPage((byte) 114, NodeHashTableIterator.getActiveApplet(107));
+          }
+          if (uiAction == 8) {
+            BufferedSocket.clearSessionAndReload((byte) 116, NodeHashTableIterator.getActiveApplet(119));
+          }
+          if (9 == uiAction) {
+            RasterTargetSnapshot.navigateToSupportPage(NodeHashTableIterator.getActiveApplet(115), (byte) -91);
+          }
+          if (uiAction == 10) {
+            CacheReference.outgoingSessionBuffer.writeCipherByte(17, (byte) -21);
+          }
+          if (uiAction == 11) {
+            EmailAvailabilityQuery.navigateToReloadPage(NodeHashTableIterator.getActiveApplet(110), false);
+          }
+          if (uiAction == 12) {
+            ArchiveLoadSequence.openRelativeUrlInNewWindow(NodeHashTableIterator.getActiveApplet(121), (byte) 117, EntityCollisionSupport.getSharedNavigationTarget(actionGuard ^ -241));
+          }
+          if (uiAction == 13) {
+            try {
+              if (null == EmailAvailabilityValidator.countryListDownloader) {
+                EmailAvailabilityValidator.countryListDownloader = new AsyncResourceDownloader(MenuScreen.platformTaskDispatcher, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              }
+              if (EmailAvailabilityValidator.countryListDownloader.pollDownloadAttempts((byte) 45)) {
+                countryListBytes = EmailAvailabilityValidator.countryListDownloader.getDownloadedBuffer((byte) 91);
+                if (countryListBytes == null) {
+                  unusedNullCountryList = (String) null;
+                  SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
+                } else {
+                  countryListText = ByteTextDecodingSupport.decodeTextSlice(-46, countryListBytes.bytes, 0, countryListBytes.position);
+                  SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, countryListText);
                 }
-                if (EmailAvailabilityValidator.countryListDownloader.pollDownloadAttempts((byte) 45)) {
-                  countryListBytes = EmailAvailabilityValidator.countryListDownloader.getDownloadedBuffer((byte) 91);
-                  if (countryListBytes == null) {
-                    unusedNullCountryList = (String) null;
-                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
-                  } else {
-                    countryListText = ByteTextDecodingSupport.decodeTextSlice(-46, countryListBytes.bytes, 0, countryListBytes.position);
-                    SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, countryListText);
-                  }
-                  EmailAvailabilityValidator.countryListDownloader = null;
-                }
-              } catch (java.lang.Exception countryListFailure) {
-                caughtUiFailure = countryListFailure;
-                countryListFailureForReport = (Exception) (Object) caughtUiFailure;
-                IterableNodeHashTable.reportClientError((Throwable) ((Object) countryListFailureForReport), "S1", (byte) 125);
-                unusedNullCountryListAfterFailure = (String) null;
-                SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
                 EmailAvailabilityValidator.countryListDownloader = null;
               }
+            } catch (java.lang.Exception countryListFailure) {
+              caughtUiFailure = countryListFailure;
+              countryListFailureForReport = (Exception) (Object) caughtUiFailure;
+              IterableNodeHashTable.reportClientError((Throwable) ((Object) countryListFailureForReport), "S1", (byte) 125);
+              unusedNullCountryListAfterFailure = (String) null;
+              SecondaryDeque.applyCountryListGuardSideEffect((byte) 69, (String) null);
+              EmailAvailabilityValidator.countryListDownloader = null;
             }
-            if (uiAction == 15) {
-              SpriteConstructionSupport.clientScreenStage = 10;
-            }
-            if (16 == uiAction) {
-              return 1;
-            }
-            if (uiAction != 17) {
-              return 0;
-            }
-            return 2;
+          }
+          if (uiAction == 15) {
+            SpriteConstructionSupport.clientScreenStage = 10;
+          }
+          if (16 == uiAction) {
+            return 1;
+          }
+          if (uiAction != 17) {
+            return 0;
+          }
+          return 2;
         } catch (RuntimeException | Error uncheckedUiFailure) {
-            throw uncheckedUiFailure;
+          throw uncheckedUiFailure;
         } catch (Throwable checkedUiFailure) {
-            throw new RuntimeException(checkedUiFailure);
+          throw new RuntimeException(checkedUiFailure);
         }
     }
 
@@ -706,7 +706,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     final static int[] createAchievementStateValues(int methodGuard) {
         if (methodGuard < 81) {
-            uiAccentPaletteIndex = -43;
+          uiAccentPaletteIndex = -43;
         }
         return new int[8];
     }
@@ -722,7 +722,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         packetOpcode = ScorePopup.currentPacketOpcode;
         if (packetOpcode < 64 &&
-            OpacityWidget.enabledSessionPacketOpcodes[packetOpcode]) {
+          OpacityWidget.enabledSessionPacketOpcodes[packetOpcode]) {
           if (packetOpcode == 0) {
             return;
           }
@@ -750,7 +750,7 @@ abstract class SessionGameApplet extends GameApplet {
                             DualLinkNode.readSessionNameAndNormalize(1);
                           } else {
                             if (11 != packetOpcode &&
-                                12 != packetOpcode) {
+                              12 != packetOpcode) {
                               if (packetOpcode == 13) {
                                 HighscoreNameEntry.handleSocialListResponse((byte) 104);
                                 return;
@@ -793,7 +793,7 @@ abstract class SessionGameApplet extends GameApplet {
         int urlHeaderByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
         int navigationFlagInt = (urlHeaderByte & 1) != 0 ? 1 : 0;
         if (methodGuard != 12) {
-            this.updateBootstrapUi(106);
+          this.updateBootstrapUi(106);
         }
         int urlByteCount = -1 + AchievementSubmission.sessionPacketPayloadLength;
         byte[] cipheredUrlBytes = new byte[urlByteCount];
@@ -804,7 +804,7 @@ abstract class SessionGameApplet extends GameApplet {
     private final void enableScoreReplies(int methodGuard) {
         OpacityWidget.enabledSessionPacketOpcodes[2] = true;
         if (methodGuard != 16072) {
-            SessionGameApplet.releaseSessionAppletResources(124);
+          SessionGameApplet.releaseSessionAppletResources(124);
         }
     }
 
@@ -814,7 +814,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     private final void enableByteShortReplies(byte methodGuard) {
         if (methodGuard != 32) {
-            this.languageId = 72;
+          this.languageId = 72;
         }
         OpacityWidget.enabledSessionPacketOpcodes[1] = true;
     }
@@ -826,7 +826,7 @@ abstract class SessionGameApplet extends GameApplet {
 
     final int processAccountUiActionsWithoutLogin(boolean fullscreenActive, int methodGuard) {
         if (methodGuard != -17978) {
-            this.initializeSessionPacketLengths(-61);
+          this.initializeSessionPacketLengths(-61);
         }
         return this.processAccountUiActions(true, fullscreenActive, -1);
     }

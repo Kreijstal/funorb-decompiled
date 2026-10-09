@@ -20,19 +20,19 @@ final class ClientFlowState {
 
     final static void requestSessionExit(byte methodGuard) {
         if (methodGuard <= 79) {
-            return;
+          return;
         }
         if (10 == SpriteConstructionSupport.clientScreenStage) {
-            DraggableWidget.showConnectionLostLogin((byte) 24);
-            SpriteConstructionSupport.clientScreenStage = 11;
-            SessionInstanceState.sessionExitRequested = true;
-            return;
+          DraggableWidget.showConnectionLostLogin((byte) 24);
+          SpriteConstructionSupport.clientScreenStage = 11;
+          SessionInstanceState.sessionExitRequested = true;
+          return;
         }
         if (!TextTemplateArgumentType.returnTrueWithSoundThemeGuard(0)) {
-            DraggableWidget.showConnectionLostLogin((byte) 24);
-            SpriteConstructionSupport.clientScreenStage = 11;
-            SessionInstanceState.sessionExitRequested = true;
-            return;
+          DraggableWidget.showConnectionLostLogin((byte) 24);
+          SpriteConstructionSupport.clientScreenStage = 11;
+          SessionInstanceState.sessionExitRequested = true;
+          return;
         }
         SessionInstanceState.sessionExitRequested = true;
     }

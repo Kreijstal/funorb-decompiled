@@ -14,8 +14,8 @@ final class SecondaryDeque {
         int unusedIterationGuardRemainder = -123 % ((methodGuard - 21) / 32);
         DualLinkNode iterationNode = this.iterationCursor;
         if (this.sentinel != iterationNode) {
-            this.iterationCursor = iterationNode.nextSecondaryNode;
-            return iterationNode;
+          this.iterationCursor = iterationNode.nextSecondaryNode;
+          return iterationNode;
         }
         this.iterationCursor = null;
         return null;
@@ -24,10 +24,10 @@ final class SecondaryDeque {
     public static void releaseSharedResources(int methodGuard) {
         contactProbeRaster = null;
         if (methodGuard != -10943) {
-            receivedSessionName = (String) null;
-            receivedSessionName = null;
-            spawnQueue = null;
-            return;
+          receivedSessionName = (String) null;
+          receivedSessionName = null;
+          spawnQueue = null;
+          return;
         }
         receivedSessionName = null;
         spawnQueue = null;
@@ -35,41 +35,41 @@ final class SecondaryDeque {
 
     final void addFirst(DualLinkNode node, boolean methodGuard) {
         if (node.previousSecondaryNode != null) {
-            node.unlinkSecondaryNode((byte) 45);
+          node.unlinkSecondaryNode((byte) 45);
         }
         node.nextSecondaryNode = this.sentinel.nextSecondaryNode;
         node.previousSecondaryNode = this.sentinel;
         if (methodGuard) {
-            return;
+          return;
         }
         try {
-            node.previousSecondaryNode.nextSecondaryNode = node;
-            node.nextSecondaryNode.previousSecondaryNode = node;
+          node.previousSecondaryNode.nextSecondaryNode = node;
+          node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.L(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     final static void settleAccountDialogAnimations(int methodGuard) {
         UsernameResponseSupport.settleAccountDialogAnimations(-120);
         if (methodGuard != 480) {
-            contactProbeOffsetY = -37;
+          contactProbeOffsetY = -37;
         }
     }
 
     final DualLinkNode removeFirst(boolean methodGuard) {
         DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
         if (!methodGuard) {
-            SecondaryDeque.setAvatarPositiveRotationSteering((byte) -92);
-            if (this.sentinel != firstNode) {
-                firstNode.unlinkSecondaryNode((byte) 65);
-                return firstNode;
-            }
-            return null;
-        }
-        if (this.sentinel != firstNode) {
+          SecondaryDeque.setAvatarPositiveRotationSteering((byte) -92);
+          if (this.sentinel != firstNode) {
             firstNode.unlinkSecondaryNode((byte) 65);
             return firstNode;
+          }
+          return null;
+        }
+        if (this.sentinel != firstNode) {
+          firstNode.unlinkSecondaryNode((byte) 65);
+          return firstNode;
         }
         return null;
     }
@@ -80,41 +80,41 @@ final class SecondaryDeque {
         int nodeCount = 0;
         DualLinkNode currentNodeToCount;
         if (methodGuard == 67) {
-            initialNodeToCount = this.sentinel.nextSecondaryNode;
-            while (this.sentinel != initialNodeToCount) {
-                initialNodeToCount = initialNodeToCount.nextSecondaryNode;
-                nodeCount++;
-            }
-            return nodeCount;
+          initialNodeToCount = this.sentinel.nextSecondaryNode;
+          while (this.sentinel != initialNodeToCount) {
+            initialNodeToCount = initialNodeToCount.nextSecondaryNode;
+            nodeCount++;
+          }
+          return nodeCount;
         }
         contactProbeRaster = (Sprite) null;
         currentNodeToCount = this.sentinel.nextSecondaryNode;
         while (this.sentinel != currentNodeToCount) {
-            currentNodeToCount = currentNodeToCount.nextSecondaryNode;
-            nodeCount++;
+          currentNodeToCount = currentNodeToCount.nextSecondaryNode;
+          nodeCount++;
         }
         return nodeCount;
     }
 
     final void addLast(int methodGuard, DualLinkNode node) {
         try {
-            if (node.previousSecondaryNode != null) {
-                node.unlinkSecondaryNode((byte) 62);
-            }
-            int unusedInsertionGuardRemainder = -75 % ((methodGuard - 62) / 46);
-            node.previousSecondaryNode = this.sentinel.previousSecondaryNode;
-            node.nextSecondaryNode = this.sentinel;
-            node.previousSecondaryNode.nextSecondaryNode = node;
-            node.nextSecondaryNode.previousSecondaryNode = node;
+          if (node.previousSecondaryNode != null) {
+            node.unlinkSecondaryNode((byte) 62);
+          }
+          int unusedInsertionGuardRemainder = -75 % ((methodGuard - 62) / 46);
+          node.previousSecondaryNode = this.sentinel.previousSecondaryNode;
+          node.nextSecondaryNode = this.sentinel;
+          node.previousSecondaryNode.nextSecondaryNode = node;
+          node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "wd.I(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void setAvatarPositiveRotationSteering(byte methodGuard) {
         FullscreenSupport.avatarSteeringDirectionId = 2;
         if (methodGuard < 45) {
-            SecondaryDeque.resendRankedListQueries(true, -75);
+          SecondaryDeque.resendRankedListQueries(true, -75);
         }
     }
 
@@ -144,11 +144,11 @@ final class SecondaryDeque {
 
     final static void applyCountryListGuardSideEffect(byte methodGuard, String unusedCountryListText) {
         try {
-            if (methodGuard != 69) {
-                contactProbeOffsetX = 99;
-            }
+          if (methodGuard != 69) {
+            contactProbeOffsetX = 99;
+          }
         } catch (RuntimeException countryListGuardFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) countryListGuardFailure), "wd.F(" + methodGuard + ',' + (unusedCountryListText != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) countryListGuardFailure), "wd.F(" + methodGuard + ',' + (unusedCountryListText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -174,7 +174,7 @@ final class SecondaryDeque {
             receivedSessionName = (String) null;
           }
           if (longValue == 0L &&
-              loginText != null) {
+            loginText != null) {
             textPairPayload = new TextPairLoginPayload(loginText, base38Text);
             return (LoginPayload) ((Object) textPairPayload);
           }
@@ -207,12 +207,12 @@ final class SecondaryDeque {
     final DualLinkNode firstForIteration(byte methodGuard) {
         DualLinkNode firstNode = this.sentinel.nextSecondaryNode;
         if (firstNode == this.sentinel) {
-            this.iterationCursor = null;
-            return null;
+          this.iterationCursor = null;
+          return null;
         }
         this.iterationCursor = firstNode.nextSecondaryNode;
         if (methodGuard == 121) {
-            return firstNode;
+          return firstNode;
         }
         SecondaryDeque.releaseSharedResources(67);
         return firstNode;

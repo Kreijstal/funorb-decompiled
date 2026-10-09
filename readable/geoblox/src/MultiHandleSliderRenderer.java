@@ -18,8 +18,8 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     final static void openAccountCreationForm(byte methodGuard) {
         EntityCollisionSupport.activeAccountCreationForm = new AccountCreationForm();
         if (methodGuard >= 19) {
-            ButtonWidget.accountContentDialog.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
-            return;
+          ButtonWidget.accountContentDialog.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
+          return;
         }
         rotatedThemeForegroundRaster = (Sprite) null;
         ButtonWidget.accountContentDialog.replaceContent(EntityCollisionSupport.activeAccountCreationForm, -54);
@@ -80,11 +80,11 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
 
     final static java.awt.Container getActiveCanvasContainer(boolean preservePendingActionPanelWidth) {
         if (SharedBufferPools.fullscreenFrame != null) {
-            return (java.awt.Container) ((Object) SharedBufferPools.fullscreenFrame);
+          return (java.awt.Container) ((Object) SharedBufferPools.fullscreenFrame);
         }
         if (!preservePendingActionPanelWidth) {
-            pendingActionPanelWidth = 78;
-            return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
+          pendingActionPanelWidth = 78;
+          return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
         }
         return (java.awt.Container) ((Object) NodeHashTableIterator.getActiveApplet(122));
     }
@@ -163,7 +163,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (sprites != null &&
-              stripWidth > 0) {
+            stripWidth > 0) {
             leftWidth = sprites[0].fullWidth;
             rightWidth = sprites[2].fullWidth;
             tileWidth = sprites[1].fullWidth;
@@ -225,7 +225,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
               characterCode = text.charAt(characterIndex);
               if ((characterCode <= 0 ||
                 characterCode >= 128) && (characterCode < 160 ||
-                  255 < characterCode)) {
+                255 < characterCode)) {
                 switch (characterCode) {
                   case 8364:
                     encodedBytes[characterIndex] = (byte)-128;
@@ -312,7 +312,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
                     encodedBytes[characterIndex] = (byte)-97;
                     break encodedTextCharacter;
                 }
-                  }
+              }
               encodedBytes[characterIndex] = (byte)characterCode;
             }
           }
@@ -334,15 +334,15 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
 
     MultiHandleSliderRenderer(BitmapFont font, int textColor, int textShadowColor, int railColor, int backgroundColor, int handleRadius, int handleColor) {
         try {
-            this.railColor = railColor;
-            this.backgroundColor = backgroundColor;
-            this.handleColor = handleColor;
-            this.font = font;
-            this.handleRadius = handleRadius;
-            this.textColor = textColor;
-            this.textShadowColor = textShadowColor;
+          this.railColor = railColor;
+          this.backgroundColor = backgroundColor;
+          this.handleColor = handleColor;
+          this.font = font;
+          this.handleRadius = handleRadius;
+          this.textColor = textColor;
+          this.textShadowColor = textShadowColor;
         } catch (RuntimeException rendererInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "jf.<init>(" + (font != null ? "{...}" : "null") + ',' + textColor + ',' + textShadowColor + ',' + railColor + ',' + backgroundColor + ',' + handleRadius + ',' + handleColor + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "jf.<init>(" + (font != null ? "{...}" : "null") + ',' + textColor + ',' + textShadowColor + ',' + railColor + ',' + backgroundColor + ',' + handleRadius + ',' + handleColor + ')');
         }
     }
 

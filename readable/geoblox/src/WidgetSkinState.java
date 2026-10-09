@@ -65,7 +65,7 @@ final class WidgetSkinState {
     final WidgetSkinState setOffsetY(int methodGuard, int yOffset) {
         this.offsetY = yOffset;
         if (methodGuard != 0) {
-            return (WidgetSkinState) null;
+          return (WidgetSkinState) null;
         }
         return this;
     }
@@ -73,7 +73,7 @@ final class WidgetSkinState {
     final WidgetSkinState setTextColor(int methodGuard, int color) {
         this.textColor = color;
         if (methodGuard != 256) {
-            return (WidgetSkinState) null;
+          return (WidgetSkinState) null;
         }
         return this;
     }
@@ -81,8 +81,8 @@ final class WidgetSkinState {
     final WidgetSkinState setFlushBeforeOverlay(boolean flushEnabled, byte methodGuard) {
         this.flushBeforeOverlay = flushEnabled ? true : false;
         if (methodGuard != 73) {
-            WidgetSkinState.releaseSharedResources(false);
-            return this;
+          WidgetSkinState.releaseSharedResources(false);
+          return this;
         }
         return this;
     }
@@ -135,7 +135,7 @@ final class WidgetSkinState {
           }
           displayText = renderer.getDisplayText(120, widget);
           if (displayText != null &&
-              null != renderer.font) {
+            null != renderer.font) {
             if (this.textColor < 0) {
               return;
             }
@@ -190,7 +190,7 @@ final class WidgetSkinState {
     final WidgetSkinState setTextShadowColor(byte methodGuard, int shadowColor) {
         this.textShadowColor = shadowColor;
         if (methodGuard != 16) {
-            return (WidgetSkinState) null;
+          return (WidgetSkinState) null;
         }
         return this;
     }
@@ -198,8 +198,8 @@ final class WidgetSkinState {
     final WidgetSkinState setOffsetX(byte methodGuard, int xOffset) {
         this.offsetX = xOffset;
         if (methodGuard != -53) {
-            this.flushBeforeOverlay = true;
-            return this;
+          this.flushBeforeOverlay = true;
+          return this;
         }
         return this;
     }
@@ -209,9 +209,9 @@ final class WidgetSkinState {
         invalidInputValidationState = null;
         usernameQueryFlowState = null;
         if (enableArchiveControlOpcode) {
-            archiveUseControlOpcode2 = true;
-            pendingQueryValidationState = null;
-            return;
+          archiveUseControlOpcode2 = true;
+          pendingQueryValidationState = null;
+          return;
         }
         pendingQueryValidationState = null;
     }
@@ -285,20 +285,20 @@ final class WidgetSkinState {
 
     final void copyPropertiesTo(int methodGuard, WidgetSkinState targetSkin) {
         try {
-            targetSkin.textColor = this.textColor;
-            if (methodGuard != 2) {
-                Sprite[] unusedNullPanelSprites = (Sprite[]) null;
-                this.setPanelSprites((Sprite[]) null, true);
-            }
-            targetSkin.textAlpha = this.textAlpha;
-            targetSkin.offsetX = this.offsetX;
-            targetSkin.panelSprites = this.panelSprites;
-            targetSkin.icon = this.icon;
-            targetSkin.flushBeforeOverlay = this.flushBeforeOverlay;
-            targetSkin.offsetY = this.offsetY;
-            targetSkin.textShadowColor = this.textShadowColor;
+          targetSkin.textColor = this.textColor;
+          if (methodGuard != 2) {
+            Sprite[] unusedNullPanelSprites = (Sprite[]) null;
+            this.setPanelSprites((Sprite[]) null, true);
+          }
+          targetSkin.textAlpha = this.textAlpha;
+          targetSkin.offsetX = this.offsetX;
+          targetSkin.panelSprites = this.panelSprites;
+          targetSkin.icon = this.icon;
+          targetSkin.flushBeforeOverlay = this.flushBeforeOverlay;
+          targetSkin.offsetY = this.offsetY;
+          targetSkin.textShadowColor = this.textShadowColor;
         } catch (RuntimeException copyFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailure), "si.G(" + methodGuard + ',' + (targetSkin != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) copyFailure), "si.G(" + methodGuard + ',' + (targetSkin != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -13,7 +13,7 @@ final class ClientTimingSupport {
         screenOptionTwoStateSprites = null;
         loginNoDisplayNameText = null;
         if (changeDecodedSpriteCount) {
-            decodedSpriteCount = 105;
+          decodedSpriteCount = 105;
         }
         crc32Table = null;
         noHighscoresText = null;
@@ -21,7 +21,7 @@ final class ClientTimingSupport {
 
     final static int getConfiguredUpdateRate(boolean readConfiguredRate) {
         if (!readConfiguredRate) {
-            return 104;
+          return 104;
         }
         return (int)(1000000000L / ByteStorage.updatePeriodNanoseconds);
     }

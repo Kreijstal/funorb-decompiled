@@ -18,20 +18,20 @@ abstract class CacheReference extends DualLinkNode {
 
     final static boolean haveRequiredClientStages(int methodGuard) {
         if (methodGuard != -31456) {
-            outgoingSessionBuffer = (PacketBuffer) null;
-            if (SpriteConstructionSupport.clientScreenStage < 10) {
-                return false;
-            }
-            if (VisualPropertyOverrides.clientBootstrapStage >= 13) {
-                return true;
-            }
+          outgoingSessionBuffer = (PacketBuffer) null;
+          if (SpriteConstructionSupport.clientScreenStage < 10) {
             return false;
+          }
+          if (VisualPropertyOverrides.clientBootstrapStage >= 13) {
+            return true;
+          }
+          return false;
         }
         if (SpriteConstructionSupport.clientScreenStage < 10) {
-            return false;
+          return false;
         }
         if (VisualPropertyOverrides.clientBootstrapStage >= 13) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -39,24 +39,24 @@ abstract class CacheReference extends DualLinkNode {
     public static void releaseCacheReferenceResources(int methodGuard) {
         gameMusicOutput = null;
         if (methodGuard > -92) {
-            CacheReference.haveRequiredClientStages(64);
-            outgoingSessionBuffer = null;
-            return;
+          CacheReference.haveRequiredClientStages(64);
+          outgoingSessionBuffer = null;
+          return;
         }
         outgoingSessionBuffer = null;
     }
 
     final static void initializeAccountUiResources(byte methodGuard, ResourceArchive buttonImageArchive, boolean unusedMemberAccountMode, ResourceArchive fontArchive, ResourceArchive commonUiSpriteArchive) {
         try {
-            EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, "");
-            int guardResidue = 103 / ((methodGuard - 70) / 34);
-            EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
-            IndexedSpriteState.loadCommonUiResources((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);
-            AccountCreationForm.rebuildAccountDialogLayerAndOpenLogin((byte) -121);
-            ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
-            WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
+          EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, "");
+          int guardResidue = 103 / ((methodGuard - 70) / 34);
+          EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -126, false);
+          IndexedSpriteState.loadCommonUiResources((byte) 103, buttonImageArchive, commonUiSpriteArchive, fontArchive);
+          AccountCreationForm.rebuildAccountDialogLayerAndOpenLogin((byte) -121);
+          ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
+          WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         } catch (RuntimeException resourceInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) resourceInitializationFailure), "fj.H(" + methodGuard + ',' + (buttonImageArchive != null ? "{...}" : "null") + ',' + unusedMemberAccountMode + ',' + (fontArchive != null ? "{...}" : "null") + ',' + (commonUiSpriteArchive != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) resourceInitializationFailure), "fj.H(" + methodGuard + ',' + (buttonImageArchive != null ? "{...}" : "null") + ',' + unusedMemberAccountMode + ',' + (fontArchive != null ? "{...}" : "null") + ',' + (commonUiSpriteArchive != null ? "{...}" : "null") + ')');
         }
     }
 

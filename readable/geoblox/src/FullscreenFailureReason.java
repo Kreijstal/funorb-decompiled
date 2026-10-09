@@ -10,7 +10,7 @@ final class FullscreenFailureReason {
 
     final static boolean isSingleBitOrZero(boolean performCheck, int value) {
         if (performCheck) {
-            return (value & -value) == value ? true : false;
+          return (value & -value) == value ? true : false;
         }
         return true;
     }
@@ -48,7 +48,7 @@ final class FullscreenFailureReason {
         loadingPumpkinText = null;
         startingGameText = null;
         if (methodGuard > 0) {
-            FullscreenFailureReason.isSingleBitOrZero(false, -95);
+          FullscreenFailureReason.isSingleBitOrZero(false, -95);
         }
     }
 

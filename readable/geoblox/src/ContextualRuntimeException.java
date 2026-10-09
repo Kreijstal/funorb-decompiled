@@ -19,7 +19,7 @@ final class ContextualRuntimeException extends RuntimeException {
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (-1 == NodeHashTableIterator.pendingTooltipAnchorX &&
-              DequeCursor.pendingTooltipAnchorY == -1) {
+            DequeCursor.pendingTooltipAnchorY == -1) {
             NodeHashTableIterator.pendingTooltipAnchorX = PrefixCodeDecoder.pointerXSnapshot;
             DequeCursor.pendingTooltipAnchorY = PcmResampler.pointerYSnapshot;
           }
@@ -67,15 +67,15 @@ final class ContextualRuntimeException extends RuntimeException {
             }
           }
           if (!InstrumentPatch.tooltipSuppressed &&
-              AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks &&
-              AttachmentPointerState.pointerActivitySnapshot) {
+            AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks &&
+            AttachmentPointerState.pointerActivitySnapshot) {
             ResizableDialog.tooltipAgeTicks = 0;
             ByteTextDecodingSupport.tooltipAnchorX = NodeHashTableIterator.pendingTooltipAnchorX;
             PendingActionMarker.tooltipAnchorY = DequeCursor.pendingTooltipAnchorY;
           }
           SettingsCookieSupport.currentTooltipText = tooltipText;
           if (InstrumentPatch.tooltipSuppressed &&
-              UsernameQuerySupport.tooltipSuppressionResetAge == ResizableDialog.tooltipAgeTicks) {
+            UsernameQuerySupport.tooltipSuppressionResetAge == ResizableDialog.tooltipAgeTicks) {
             InstrumentPatch.tooltipSuppressed = false;
             ResizableDialog.tooltipAgeTicks = 0;
           }
@@ -104,17 +104,17 @@ final class ContextualRuntimeException extends RuntimeException {
         int intervalTicks = (int)(201.0f / TextTemplateDefinition.entityMotionSpeed * FullscreenErrorDialog.spawnIntervalScale + 0.5f);
         UsernameResponseSupport.spawnReleaseIntervalTicks = intervalTicks;
         if (!preserveReleaseQuota) {
-            releasesPerDifficultyStep = -10;
-            return;
+          releasesPerDifficultyStep = -10;
+          return;
         }
     }
 
     final static String getActiveLoginPassword(boolean readPassword) {
         if (!readPassword) {
-            return (String) null;
+          return (String) null;
         }
         if (ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken) {
-            return ByteStorage.accountCreationPassword;
+          return ByteStorage.accountCreationPassword;
         }
         return LoginPasswordSupport.currentLoginPassword;
     }

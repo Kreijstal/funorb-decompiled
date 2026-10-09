@@ -11,22 +11,22 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     final String getHoverText(byte methodGuard) {
         if (methodGuard != 69) {
-            this.getHoverText((byte) -87);
-            if (!this.pointerInside) {
-                return null;
-            }
-            if (null != this.hoverText) {
-                ResizableDialog.setPendingTooltipAnchor(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.pointerLocalX);
-                return this.hoverText;
-            }
+          this.getHoverText((byte) -87);
+          if (!this.pointerInside) {
             return null;
-        }
-        if (!this.pointerInside) {
-            return null;
-        }
-        if (null != this.hoverText) {
+          }
+          if (null != this.hoverText) {
             ResizableDialog.setPendingTooltipAnchor(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.pointerLocalX);
             return this.hoverText;
+          }
+          return null;
+        }
+        if (!this.pointerInside) {
+          return null;
+        }
+        if (null != this.hoverText) {
+          ResizableDialog.setPendingTooltipAnchor(PcmResampler.pointerYSnapshot, (byte) -84, PrefixCodeDecoder.pointerXSnapshot + this.widgetWidth - this.pointerLocalX);
+          return this.hoverText;
         }
         return null;
     }
@@ -60,13 +60,13 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         if (hoverGuard) {
-            return;
+          return;
         }
         try {
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            this.pointerLocalX = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - parentX);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          this.pointerLocalX = -this.widgetX + (PrefixCodeDecoder.pointerXSnapshot - parentX);
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hc.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hc.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -76,8 +76,8 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     public final ValidationProvider getValidationProvider(byte methodGuard) {
         if (methodGuard > -97) {
-            goBackText = (String) null;
-            return this.validationProvider;
+          goBackText = (String) null;
+          return this.validationProvider;
         }
         return this.validationProvider;
     }
@@ -103,46 +103,46 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             return character;
           }
           if (93 != characterCode &&
-              35 != characterCode) {
+            35 != characterCode) {
             if (characterCode != 224 &&
-                characterCode != 225 &&
-                characterCode != 226 &&
-                characterCode != 228 &&
-                characterCode != 227 &&
-                characterCode != 192 &&
-                characterCode != 193 &&
-                characterCode != 194 &&
-                characterCode != 196 &&
-                characterCode != 195) {
+              characterCode != 225 &&
+              characterCode != 226 &&
+              characterCode != 228 &&
+              characterCode != 227 &&
+              characterCode != 192 &&
+              characterCode != 193 &&
+              characterCode != 194 &&
+              characterCode != 196 &&
+              characterCode != 195) {
               if (characterCode != 232 &&
-                  characterCode != 233 &&
-                  characterCode != 234 &&
-                  characterCode != 235 &&
-                  characterCode != 200 &&
-                  characterCode != 201 &&
-                  characterCode != 202 &&
-                  characterCode != 203) {
+                characterCode != 233 &&
+                characterCode != 234 &&
+                characterCode != 235 &&
+                characterCode != 200 &&
+                characterCode != 201 &&
+                characterCode != 202 &&
+                characterCode != 203) {
                 if (characterCode != 237 &&
-                    characterCode != 238 &&
-                    239 != characterCode &&
-                    characterCode != 205 &&
-                    characterCode != 206 &&
-                    characterCode != 207) {
+                  characterCode != 238 &&
+                  239 != characterCode &&
+                  characterCode != 205 &&
+                  characterCode != 206 &&
+                  characterCode != 207) {
                   if (characterCode != 242 &&
-                      243 != characterCode &&
-                      characterCode != 244 &&
-                      characterCode != 246 &&
-                      characterCode != 245 &&
-                      characterCode != 210 &&
-                      characterCode != 211 &&
-                      characterCode != 212 &&
-                      characterCode != 214 &&
-                      characterCode != 213) {
+                    243 != characterCode &&
+                    characterCode != 244 &&
+                    characterCode != 246 &&
+                    characterCode != 245 &&
+                    characterCode != 210 &&
+                    characterCode != 211 &&
+                    characterCode != 212 &&
+                    characterCode != 214 &&
+                    characterCode != 213) {
                     if (249 != characterCode &&
-                        250 != characterCode &&
-                        characterCode != 251 &&
-                        characterCode != 252 &&
-                        characterCode != 217) {
+                      250 != characterCode &&
+                      characterCode != 251 &&
+                      characterCode != 252 &&
+                      characterCode != 217) {
                       if (218 == characterCode) {
                         return 'u';
                       }
@@ -193,27 +193,27 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
             return '_';
           }
           if (fallbackCharacterCode != 95 &&
-              fallbackCharacterCode != 45) {
+            fallbackCharacterCode != 45) {
             if (fallbackCharacterCode != 91 &&
-                93 != fallbackCharacterCode &&
-                35 != fallbackCharacterCode) {
+              93 != fallbackCharacterCode &&
+              35 != fallbackCharacterCode) {
               if (fallbackCharacterCode != 224 &&
-                  fallbackCharacterCode != 225 &&
-                  fallbackCharacterCode != 226 &&
-                  fallbackCharacterCode != 228 &&
-                  fallbackCharacterCode != 227 &&
-                  fallbackCharacterCode != 192 &&
-                  fallbackCharacterCode != 193 &&
-                  fallbackCharacterCode != 194 &&
-                  fallbackCharacterCode != 196 &&
-                  fallbackCharacterCode != 195) {
+                fallbackCharacterCode != 225 &&
+                fallbackCharacterCode != 226 &&
+                fallbackCharacterCode != 228 &&
+                fallbackCharacterCode != 227 &&
+                fallbackCharacterCode != 192 &&
+                fallbackCharacterCode != 193 &&
+                fallbackCharacterCode != 194 &&
+                fallbackCharacterCode != 196 &&
+                fallbackCharacterCode != 195) {
                 if (fallbackCharacterCode != 232 &&
-                    fallbackCharacterCode != 233 &&
-                    fallbackCharacterCode != 234 &&
-                    fallbackCharacterCode != 235 &&
-                    fallbackCharacterCode != 200 &&
-                    fallbackCharacterCode != 201 &&
-                    fallbackCharacterCode != 202) {
+                  fallbackCharacterCode != 233 &&
+                  fallbackCharacterCode != 234 &&
+                  fallbackCharacterCode != 235 &&
+                  fallbackCharacterCode != 200 &&
+                  fallbackCharacterCode != 201 &&
+                  fallbackCharacterCode != 202) {
                   if (fallbackCharacterCode == 203) {
                     return 'e';
                   }
@@ -227,8 +227,8 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                     return 'i';
                   }
                   if (fallbackCharacterCode != 205 &&
-                      fallbackCharacterCode != 206 &&
-                      fallbackCharacterCode != 207) {
+                    fallbackCharacterCode != 206 &&
+                    fallbackCharacterCode != 207) {
                     if (fallbackCharacterCode != 242) {
                       if (243 == fallbackCharacterCode) {
                         return 'o';
@@ -237,7 +237,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                         return 'o';
                       }
                       if (fallbackCharacterCode != 246 &&
-                          fallbackCharacterCode != 245) {
+                        fallbackCharacterCode != 245) {
                         if (fallbackCharacterCode == 210) {
                           return 'o';
                         }
@@ -245,8 +245,8 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
                           return 'o';
                         }
                         if (fallbackCharacterCode != 212 &&
-                            fallbackCharacterCode != 214 &&
-                            fallbackCharacterCode != 213) {
+                          fallbackCharacterCode != 214 &&
+                          fallbackCharacterCode != 213) {
                           if (249 != fallbackCharacterCode) {
                             if (250 == fallbackCharacterCode) {
                               return 'u';
@@ -327,25 +327,25 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
 
     final void setValidationProvider(byte methodGuard, ValidationProvider provider) {
         try {
-            this.validationProvider = provider;
-            int guardResidue = 48 % ((methodGuard - 34) / 39);
+          this.validationProvider = provider;
+          int guardResidue = 48 % ((methodGuard - 34) / 39);
         } catch (RuntimeException providerAssignmentFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) providerAssignmentFailure), "hc.GA(" + methodGuard + ',' + (provider != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) providerAssignmentFailure), "hc.GA(" + methodGuard + ',' + (provider != null ? "{...}" : "null") + ')');
         }
     }
 
     final void notifyTextInputChanged(byte methodGuard) {
         super.notifyTextInputChanged((byte) -66);
         if (this.validationProvider != null) {
-            this.validationProvider.resetValidationDelay(-28133);
-            if (methodGuard > -16) {
-                this.pointerLocalX = -4;
-                return;
-            }
+          this.validationProvider.resetValidationDelay(-28133);
+          if (methodGuard > -16) {
+            this.pointerLocalX = -4;
             return;
+          }
+          return;
         }
         if (methodGuard <= -16) {
-            return;
+          return;
         }
         this.pointerLocalX = -4;
     }
@@ -354,7 +354,7 @@ final class ValidatedTextInputWidget extends TextInputWidget implements Validati
         goBackText = null;
         loginResponseExtensionBytes = null;
         if (methodGuard != -243) {
-            archiveClientId = -90;
+          archiveClientId = -90;
         }
     }
 

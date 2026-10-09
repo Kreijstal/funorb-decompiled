@@ -59,10 +59,10 @@ final class CachedTextLayout extends TextLayout {
             return;
           }
           if (this.cachedFont == font &&
-              this.singleLineMode &&
-              this.cachedHorizontalAlignment == 2 &&
-              null != this.cachedText &&
-              this.cachedText.equals(text)) {
+            this.singleLineMode &&
+            this.cachedHorizontalAlignment == 2 &&
+            null != this.cachedText &&
+            this.cachedText.equals(text)) {
             return;
           }
           this.cachedFont = font;
@@ -103,26 +103,26 @@ final class CachedTextLayout extends TextLayout {
         TextLayoutLine line = null;
         int textWidth = 0;
         if (text == null) {
-            this.lines = null;
-            return;
+          this.lines = null;
+          return;
         }
         if (methodGuard != 58) {
-            CachedTextLayout.compactDepthBucketFaceOrder(-90);
+          CachedTextLayout.compactDepthBucketFaceOrder(-90);
         }
         if (this.cachedFont == font && this.singleLineMode && this.cachedHorizontalAlignment == 1 && null != this.cachedText && this.cachedText.equals(text)) {
-            return;
+          return;
         }
         try {
-            this.cachedHorizontalAlignment = 1;
-            this.singleLineMode = true;
-            this.cachedFont = font;
-            line = this.createSingleLine(-1, baselineY, font, text);
-            textWidth = font.measureTextWidth(text);
-            line.caretX[0] = centerX - (textWidth >> 1);
-            line.caretX[text.length()] = (textWidth >> 1) + centerX;
-            DialWidget.populateCaretPositions(0, line, text, 60, font);
+          this.cachedHorizontalAlignment = 1;
+          this.singleLineMode = true;
+          this.cachedFont = font;
+          line = this.createSingleLine(-1, baselineY, font, text);
+          textWidth = font.measureTextWidth(text);
+          line.caretX[0] = centerX - (textWidth >> 1);
+          line.caretX[text.length()] = (textWidth >> 1) + centerX;
+          DialWidget.populateCaretPositions(0, line, text, 60, font);
         } catch (RuntimeException centeredLayoutFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) centeredLayoutFailure), "vc.A(" + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + centerX + ',' + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) centeredLayoutFailure), "vc.A(" + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + centerX + ',' + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,28 +130,28 @@ final class CachedTextLayout extends TextLayout {
         TextLayoutLine line = null;
         TextLayoutLine lineAlias = null;
         if (text == null) {
-            this.lines = null;
-            return;
+          this.lines = null;
+          return;
         }
         if (methodGuard > -89) {
-            menuForegroundSprite = (Sprite) null;
+          menuForegroundSprite = (Sprite) null;
         }
         if (this.cachedFont == font && this.singleLineMode && 0 == this.cachedHorizontalAlignment && this.cachedText != null &&
-            this.cachedText.equals(text)) {
-            return;
+          this.cachedText.equals(text)) {
+          return;
         }
         try {
-            this.cachedText = text;
-            this.cachedHorizontalAlignment = 0;
-            this.singleLineMode = true;
-            this.cachedFont = font;
-            line = this.createSingleLine(-1, baselineY, font, text);
-            lineAlias = line;
-            line.caretX[0] = leftX;
-            lineAlias.caretX[text.length()] = font.measureTextWidth(text) + leftX;
-            DialWidget.populateCaretPositions(0, lineAlias, text, 60, font);
+          this.cachedText = text;
+          this.cachedHorizontalAlignment = 0;
+          this.singleLineMode = true;
+          this.cachedFont = font;
+          line = this.createSingleLine(-1, baselineY, font, text);
+          lineAlias = line;
+          line.caretX[0] = leftX;
+          lineAlias.caretX[text.length()] = font.measureTextWidth(text) + leftX;
+          DialWidget.populateCaretPositions(0, lineAlias, text, 60, font);
         } catch (RuntimeException leftLayoutFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) leftLayoutFailure), "vc.E(" + baselineY + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) leftLayoutFailure), "vc.E(" + baselineY + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -190,14 +190,14 @@ final class CachedTextLayout extends TextLayout {
             return;
           }
           if (font == this.cachedFont &&
-              !this.singleLineMode &&
-              this.cachedHorizontalAlignment == horizontalAlignment &&
-              this.cachedVerticalAlignment == verticalAlignment &&
-              this.cachedLineSpacing == lineSpacing &&
-              availableHeight == this.cachedAvailableHeight &&
-              availableWidth == this.cachedAvailableWidth &&
-              null != this.cachedText &&
-              this.cachedText.equals(text)) {
+            !this.singleLineMode &&
+            this.cachedHorizontalAlignment == horizontalAlignment &&
+            this.cachedVerticalAlignment == verticalAlignment &&
+            this.cachedLineSpacing == lineSpacing &&
+            availableHeight == this.cachedAvailableHeight &&
+            availableWidth == this.cachedAvailableWidth &&
+            null != this.cachedText &&
+            this.cachedText.equals(text)) {
             return;
           }
           this.cachedAvailableHeight = availableHeight;
@@ -212,7 +212,7 @@ final class CachedTextLayout extends TextLayout {
           wrappedLinesAlias = wrappedLines;
           lineCount = Math.max(1, font.wrapText(text, new int[]{availableWidth}, wrappedLinesAlias));
           if (this.cachedVerticalAlignment == 3 &&
-              lineCount == 1) {
+            lineCount == 1) {
             this.cachedVerticalAlignment = 1;
           }
           this.lines = new TextLayoutLine[lineCount];
@@ -287,15 +287,15 @@ final class CachedTextLayout extends TextLayout {
     final static void drawPendingActionPanel(int methodGuard) {
         int pendingActionDrawTop = 0;
         if (methodGuard != -1) {
-            introFaceFrameIndex = 119;
+          introFaceFrameIndex = 119;
         }
         PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) (ArchiveRequest.pendingActionMarkers.firstForIteration(0));
         PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
         if (pendingActionMarkerBeforeNullCheck != null) {
-            pendingActionDrawTop = LogoCompositor.pendingActionPanelTop;
-            DelayedIncomingPacket.drawNineSlicePanel(pendingActionDrawTop, 10, RasterTargetSnapshot.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, GameGraphicsResources.frameNineSliceSprites);
-            UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (RasterTargetSnapshot.pendingActionPanelHeight - 15)) / 2);
-            FadingDialog.uiPaletteFont.drawParagraph(GameplaySetupSupport.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, RasterTargetSnapshot.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
+          pendingActionDrawTop = LogoCompositor.pendingActionPanelTop;
+          DelayedIncomingPacket.drawNineSlicePanel(pendingActionDrawTop, 10, RasterTargetSnapshot.pendingActionPanelHeight, (byte) -92, MultiHandleSliderRenderer.pendingActionPanelWidth, GameGraphicsResources.frameNineSliceSprites);
+          UsernameAvailabilityQuery.achievementSprites[pendingActionMarkerForDrawing.actionId].drawQuarterSize(25, pendingActionDrawTop + (-32 + (RasterTargetSnapshot.pendingActionPanelHeight - 15)) / 2);
+          FadingDialog.uiPaletteFont.drawParagraph(GameplaySetupSupport.achievementTitles[pendingActionMarkerForDrawing.actionId], 67, 15 + pendingActionDrawTop, MultiHandleSliderRenderer.pendingActionPanelWidth - 42 - 30, RasterTargetSnapshot.pendingActionPanelHeight - 30, 0, -1, 1, 1, 30);
         }
     }
 

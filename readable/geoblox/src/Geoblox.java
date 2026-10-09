@@ -11,16 +11,16 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadSportsTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sports", (byte) -126)) {
-                return;
-            }
-            if (methodGuard <= 37) {
-                this.initializeScreens(92);
-            }
-            LabeledChildWidget.sportsForegroundSprite = ScorePopupSupport.loadSprite("sports_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sports");
-            AlternateLongAndTextLoginPayload.sportsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sports", "sports_background");
-            GameGraphicsResources.themesLoaded[5] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sports", (byte) -126)) {
             return;
+          }
+          if (methodGuard <= 37) {
+            this.initializeScreens(92);
+          }
+          LabeledChildWidget.sportsForegroundSprite = ScorePopupSupport.loadSprite("sports_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sports");
+          AlternateLongAndTextLoginPayload.sportsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sports", "sports_background");
+          GameGraphicsResources.themesLoaded[5] = true;
+          return;
         }
     }
 
@@ -29,11 +29,11 @@ public final class Geoblox extends SessionGameApplet {
 
     final void serviceAudio(int methodGuard) {
         if (methodGuard != 1) {
-            this.loadJewelsTheme(true);
+          this.loadJewelsTheme(true);
         }
         ScorePopup.disposeGameAudioOutputs(122);
         if (InstrumentPatch.activeFullscreenCanvas != null) {
-            InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
+          InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         }
         MidiNote.releaseSessionInputAndCloseSocket((byte) 124);
     }
@@ -67,177 +67,177 @@ public final class Geoblox extends SessionGameApplet {
         int unusedInitialKeyboardIconIndexSnapshot;
         ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.initialMusicScoreArchive && TextWidgetSupport.initialVorbisArchive != null && null != ProxySocketConnector.instrumentPatchArchive) {
-            HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
-            this.renderFrame(25853);
-            SocketConnector.prepareInitialGameAudio(OpacityWidget.synthesizedSoundArchive, (byte) 80, TextWidgetSupport.initialVorbisArchive, GzipInflater.initialMusicScoreArchive, ProxySocketConnector.instrumentPatchArchive);
-            TextWidgetSupport.initialVorbisArchive = null;
-            OpacityWidget.synthesizedSoundArchive = null;
-            ProxySocketConnector.instrumentPatchArchive = null;
-            GzipInflater.initialMusicScoreArchive = null;
-            EntityContactSupport.resetFrameTimingHistory(127);
-            return false;
+          HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
+          this.renderFrame(25853);
+          SocketConnector.prepareInitialGameAudio(OpacityWidget.synthesizedSoundArchive, (byte) 80, TextWidgetSupport.initialVorbisArchive, GzipInflater.initialMusicScoreArchive, ProxySocketConnector.instrumentPatchArchive);
+          TextWidgetSupport.initialVorbisArchive = null;
+          OpacityWidget.synthesizedSoundArchive = null;
+          ProxySocketConnector.instrumentPatchArchive = null;
+          GzipInflater.initialMusicScoreArchive = null;
+          EntityContactSupport.resetFrameTimingHistory(127);
+          return false;
         }
         if (null != GameGraphicsResources.gameGraphicsArchive && null != ArchiveLoadStep.fontMetricsArchive && SessionTextHistorySupport.basicUiGraphicsArchive != null) {
-            HighscoreNameEntry.setLoadingProgress(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
-            this.renderFrame(25853);
-            FadingDialog.uiPaletteFont = SessionSocketSupport.loadPaletteFont("", GameGraphicsResources.gameGraphicsArchive, ArchiveLoadStep.fontMetricsArchive, true, "font");
-            SessionGameApplet.uiAccentPaletteIndex = FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(1);
-            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-            FadingDialog.uiPaletteFont.colorPalettes[0][FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(16777215)] = 1;
-            uiPaletteSize = FadingDialog.uiPaletteFont.colorPalettes[0].length;
-            alternateUiPalette = new int[uiPaletteSize];
-            FadingDialog.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
-            ArrayOperations.copyInts(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
-            FadingDialog.uiPaletteFont.colorPalettes[1][SessionGameApplet.uiAccentPaletteIndex] = 16777215;
-            geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            geometryFramesAlias = geometrySourceFrames;
-            geometryThemeIndex = -1;
-            for (geometryFrameIndex = 0; geometrySourceFrames.length > geometryFrameIndex; geometryFrameIndex++) {
-                geometryCategoryIndex = geometryFrameIndex % 7;
-                if (geometryCategoryIndex == 0) {
-                    geometryThemeIndex++;
-                    if (geometryThemeIndex >= 7) {
-                        break;
-                    }
-                }
-                geometryCanvasWidth = geometrySourceFrames[geometryFrameIndex].fullWidth;
-                geometryCanvasHeight = geometrySourceFrames[geometryFrameIndex].fullHeight;
-                Under13TermsPanel.geometrySpritesByThemeAndCategory[geometryThemeIndex][geometryCategoryIndex] = geometrySourceFrames[geometryFrameIndex];
-                for (geometryPaletteVariant = 0; geometryPaletteVariant < 7; geometryPaletteVariant++) {
-                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant] = new Sprite(geometryCanvasWidth, geometryCanvasHeight);
-                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant].setAsRasterTarget();
-                    geometrySourceFrames[geometryFrameIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[geometryThemeIndex][geometryPaletteVariant]);
-                }
+          HighscoreNameEntry.setLoadingProgress(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
+          this.renderFrame(25853);
+          FadingDialog.uiPaletteFont = SessionSocketSupport.loadPaletteFont("", GameGraphicsResources.gameGraphicsArchive, ArchiveLoadStep.fontMetricsArchive, true, "font");
+          SessionGameApplet.uiAccentPaletteIndex = FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(1);
+          FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
+          FadingDialog.uiPaletteFont.colorPalettes[0][FadingDialog.uiPaletteFont.findNearestBasePaletteIndex(16777215)] = 1;
+          uiPaletteSize = FadingDialog.uiPaletteFont.colorPalettes[0].length;
+          alternateUiPalette = new int[uiPaletteSize];
+          FadingDialog.uiPaletteFont.colorPalettes[1] = alternateUiPalette;
+          ArrayOperations.copyInts(FadingDialog.uiPaletteFont.colorPalettes[0], 0, FadingDialog.uiPaletteFont.colorPalettes[1], 0, uiPaletteSize);
+          FadingDialog.uiPaletteFont.colorPalettes[1][SessionGameApplet.uiAccentPaletteIndex] = 16777215;
+          geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          geometryFramesAlias = geometrySourceFrames;
+          geometryThemeIndex = -1;
+          for (geometryFrameIndex = 0; geometrySourceFrames.length > geometryFrameIndex; geometryFrameIndex++) {
+            geometryCategoryIndex = geometryFrameIndex % 7;
+            if (geometryCategoryIndex == 0) {
+              geometryThemeIndex++;
+              if (geometryThemeIndex >= 7) {
+                break;
+              }
             }
-            amorphousSpriteFrames = OpacityWidget.loadSpriteFrames("amorphic", "", GameGraphicsResources.gameGraphicsArchive, methodGuard ^ 25869);
-            for (amorphousThemeIndex = 0; amorphousThemeIndex < 7; amorphousThemeIndex++) {
-                for (amorphousVariantIndex = 0; amorphousVariantIndex < 7; amorphousVariantIndex++) {
-                    for (amorphousFrameIndex = 0; amorphousFrameIndex < amorphousSpriteFrames.length; amorphousFrameIndex++) {
-                        MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex] = new Sprite(4 + amorphousSpriteFrames[amorphousFrameIndex].fullWidth, 4 + amorphousSpriteFrames[amorphousFrameIndex].fullHeight);
-                        MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].setAsRasterTarget();
-                        amorphousSpriteFrames[amorphousFrameIndex].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[amorphousThemeIndex][amorphousVariantIndex]);
-                        NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullHeight);
-                    }
-                }
+            geometryCanvasWidth = geometrySourceFrames[geometryFrameIndex].fullWidth;
+            geometryCanvasHeight = geometrySourceFrames[geometryFrameIndex].fullHeight;
+            Under13TermsPanel.geometrySpritesByThemeAndCategory[geometryThemeIndex][geometryCategoryIndex] = geometrySourceFrames[geometryFrameIndex];
+            for (geometryPaletteVariant = 0; geometryPaletteVariant < 7; geometryPaletteVariant++) {
+              ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant] = new Sprite(geometryCanvasWidth, geometryCanvasHeight);
+              ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant].setAsRasterTarget();
+              geometrySourceFrames[geometryFrameIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[geometryThemeIndex][geometryPaletteVariant]);
             }
-            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-            IntrusiveNodeHashTable.smallFont = IterableNodeHashTable.loadBitmapFont(ArchiveLoadStep.fontMetricsArchive, 1, GameGraphicsResources.gameGraphicsArchive, "small_font", "");
-            EndingAnimationSupport.blackOrbFrames = OpacityWidget.loadSpriteFrames("black", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            LoginPasswordSupport.blackOrbImplosionFrames = OpacityWidget.loadSpriteFrames("black_implode", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            DialRenderer.silverStarFrames = OpacityWidget.loadSpriteFrames("silver", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            RatingPresentationResources.amorphousCrackFrames = OpacityWidget.loadSpriteFrames("amorph_crack", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            MeshDepthSupport.avatarMaskRaster = ScorePopupSupport.loadSprite("player_back", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if (ClientOptionSupport.isClientOptionEnabled(0, 125)) {
-                avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+          }
+          amorphousSpriteFrames = OpacityWidget.loadSpriteFrames("amorphic", "", GameGraphicsResources.gameGraphicsArchive, methodGuard ^ 25869);
+          for (amorphousThemeIndex = 0; amorphousThemeIndex < 7; amorphousThemeIndex++) {
+            for (amorphousVariantIndex = 0; amorphousVariantIndex < 7; amorphousVariantIndex++) {
+              for (amorphousFrameIndex = 0; amorphousFrameIndex < amorphousSpriteFrames.length; amorphousFrameIndex++) {
+                MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex] = new Sprite(4 + amorphousSpriteFrames[amorphousFrameIndex].fullWidth, 4 + amorphousSpriteFrames[amorphousFrameIndex].fullHeight);
+                MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].setAsRasterTarget();
+                amorphousSpriteFrames[amorphousFrameIndex].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[amorphousThemeIndex][amorphousVariantIndex]);
+                NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullHeight);
+              }
             }
-            EndingAnimationSupport.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
-            for (avatarEyeFrameIndex = 0; avatarEyeSourceFrames.length > avatarEyeFrameIndex; avatarEyeFrameIndex++) {
-                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[avatarEyeFrameIndex].fullWidth, avatarEyeSourceFrames[avatarEyeFrameIndex].fullHeight + 4);
-                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].setAsRasterTarget();
-                avatarEyeSourceFrames[avatarEyeFrameIndex].drawUnmasked(2, 2);
-                NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].fullWidth, -27085, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].height);
-                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].trimTransparentBorders();
-            }
-            avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if (ClientOptionSupport.isClientOptionEnabled(0, methodGuard - 25774)) {
-                avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
-            }
-            UsernameSuggestionsPanel.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
-            for (avatarMouthFrameIndex = 0; avatarMouthSourceFrames.length > avatarMouthFrameIndex; avatarMouthFrameIndex++) {
-                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex] = new Sprite(avatarMouthSourceFrames[avatarMouthFrameIndex].fullWidth + 4, avatarMouthSourceFrames[avatarMouthFrameIndex].fullHeight + 4);
-                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].setAsRasterTarget();
-                avatarMouthSourceFrames[avatarMouthFrameIndex].drawUnmasked(2, 2);
-                NodeHashTableIterator.markInsetZeroOutlinePixels(2 + avatarMouthSourceFrames[avatarMouthFrameIndex].trimY, 0, UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[avatarMouthFrameIndex].height);
-                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].trimTransparentBorders();
-            }
-            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-            GzipInflater.sunBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sun", "sky_background");
-            PacketByteCipher.sunForegroundSprite = ScorePopupSupport.loadSprite("sky_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sun");
-            GameGraphicsResources.themesLoaded[1] = true;
-            WidgetContainer.menuBackgroundSprite = ScorePopupSupport.loadSprite("menu_background", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            CachedTextLayout.menuForegroundSprite = ScorePopupSupport.loadSprite("menu_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            CharacterReplacementSupport.transitionCurtain = ScorePopupSupport.loadSprite("transition", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            SecondaryNodeHashTable.silverStarShockFrames = OpacityWidget.loadSpriteFrames("silver_shock", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            VisualPropertyOverrides.sparkleFrames = OpacityWidget.loadSpriteFrames("sparkle", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            for (sparkleFrameIndex = 0; VisualPropertyOverrides.sparkleFrames.length > sparkleFrameIndex; sparkleFrameIndex++) {
-                VisualPropertyOverrides.sparkleFrames[sparkleFrameIndex].addOutline(1);
-            }
-            SessionTextState.bangFrames = OpacityWidget.loadSpriteFrames("bang", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            ReflectionCheckRequest.pointsPanelGlowFrames = OpacityWidget.loadSpriteFrames("bonus_glow", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            PacketBuffer.resultBubbleSprite = ScorePopupSupport.loadSprite("bubble", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            NodeHashTableIterator.popSprite = ScorePopupSupport.loadSprite("pop", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            ArchiveLoadSequence.mouseBoxFrames = OpacityWidget.loadSpriteFrames("box_mouse", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if (ClientOptionSupport.isClientOptionEnabled(0, 110)) {
-                HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
-                ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
-                PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
-            }
-            keyboardIconSprites = new IndexedSprite[8];
-            keyboardIconSprites[0] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_left");
-            keyboardIconSprites[1] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_right");
-            keyboardIconSprites[2] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_enter");
-            keyboardIconSprites[3] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_space");
-            keyboardIconSprites[4] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, EmailAvailabilityQuery.xorInt(methodGuard, 25868), "", "keyboard_esc");
-            keyboardIconSprites[5] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_backspace");
-            keyboardIconSprites[6] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_down");
-            keyboardIconSprites[7] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_i");
-            keyboardIconAdvanceWidths = new int[keyboardIconSprites.length];
-            keyboardWidthAlias = keyboardIconAdvanceWidths;
-            keyboardWidthsForFill = keyboardWidthAlias;
-            keyboardIconIndex = 0;
-            unusedInitialKeyboardIconIndexSnapshot = keyboardIconIndex;
-            while (keyboardIconIndex < keyboardIconAdvanceWidths.length) {
-                keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].fullHeight - 3;
-                keyboardIconIndex++;
-            }
-            IntrusiveNodeHashTable.smallFont.setInlineImages(keyboardIconSprites, keyboardIconAdvanceWidths);
-            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-            AudioService.screenTitleSprites[0] = ScorePopupSupport.loadSprite("main_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[2] = ScorePopupSupport.loadSprite("bestscoreseach_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[3] = ScorePopupSupport.loadSprite("myscores_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[1] = ScorePopupSupport.loadSprite("allscores_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[6] = ScorePopupSupport.loadSprite("gameover_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[4] = ScorePopupSupport.loadSprite("achievements_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[5] = ScorePopupSupport.loadSprite("instructions_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[7] = ScorePopupSupport.loadSprite("achievements_tg_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            AudioService.screenTitleSprites[8] = ScorePopupSupport.loadSprite("login_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites = new Sprite[9];
-            GameGraphicsResources.frameNineSliceSprites[0] = ScorePopupSupport.loadSprite("frame_topleft", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[1] = ScorePopupSupport.loadSprite("frame_top", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[2] = ScorePopupSupport.loadSprite("frame_topright", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[3] = ScorePopupSupport.loadSprite("frame_left", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[4] = ScorePopupSupport.loadSprite("frame_centre", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[5] = ScorePopupSupport.loadSprite("frame_right", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[6] = ScorePopupSupport.loadSprite("frame_bottomleft", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[7] = ScorePopupSupport.loadSprite("frame_bottom", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            GameGraphicsResources.frameNineSliceSprites[8] = ScorePopupSupport.loadSprite("frame_bottomright", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            RankedListQuery.widgetSprite = ScorePopupSupport.loadSprite("widget", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            NetworkArchiveRequest.barSprite = ScorePopupSupport.loadSprite("bar", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            PointerMenuState.smallBoxSprite = ScorePopupSupport.loadSprite("box_sml", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            PasswordValidator.countBoxSprite = ScorePopupSupport.loadSprite("box_count", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            UsernameSuggestionsPanel.largeBoxSprite = ScorePopupSupport.loadSprite("box_lgr", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
-            RasterTargetSnapshot.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            if (ClientOptionSupport.isClientOptionEnabled(0, -105)) {
-                RasterTargetSnapshot.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
-            }
-            AccountCreationForm.introGeometryFrames = OpacityWidget.loadSpriteFrames("intro_geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            UsernameAvailabilityQuery.achievementSprites = OpacityWidget.loadSpriteFrames("achievements", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            IntKeyLookup.unachievedSprite = ScorePopupSupport.loadSprite("unachieved", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
-            ScorePopupSupport.loadSprite("locked", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
-            UsernameAvailabilityValidator.orbCoinSprite = ScorePopupSupport.loadSprite("orbcoin", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
-            GameScreen.selectedThemeId = 1;
-            ProxySocketConnector.selectThemeRenderAssets((byte) 79);
-            EntityContactSupport.resetFrameTimingHistory(-62);
-            ArchiveLoadStep.fontMetricsArchive = null;
-            SessionTextHistorySupport.basicUiGraphicsArchive = null;
-            return false;
+          }
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+          IntrusiveNodeHashTable.smallFont = IterableNodeHashTable.loadBitmapFont(ArchiveLoadStep.fontMetricsArchive, 1, GameGraphicsResources.gameGraphicsArchive, "small_font", "");
+          EndingAnimationSupport.blackOrbFrames = OpacityWidget.loadSpriteFrames("black", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          LoginPasswordSupport.blackOrbImplosionFrames = OpacityWidget.loadSpriteFrames("black_implode", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          DialRenderer.silverStarFrames = OpacityWidget.loadSpriteFrames("silver", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          RatingPresentationResources.amorphousCrackFrames = OpacityWidget.loadSpriteFrames("amorph_crack", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          MeshDepthSupport.avatarMaskRaster = ScorePopupSupport.loadSprite("player_back", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          if (ClientOptionSupport.isClientOptionEnabled(0, 125)) {
+            avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+          }
+          EndingAnimationSupport.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
+          for (avatarEyeFrameIndex = 0; avatarEyeSourceFrames.length > avatarEyeFrameIndex; avatarEyeFrameIndex++) {
+            EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[avatarEyeFrameIndex].fullWidth, avatarEyeSourceFrames[avatarEyeFrameIndex].fullHeight + 4);
+            EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].setAsRasterTarget();
+            avatarEyeSourceFrames[avatarEyeFrameIndex].drawUnmasked(2, 2);
+            NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].fullWidth, -27085, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].height);
+            EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].trimTransparentBorders();
+          }
+          avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          if (ClientOptionSupport.isClientOptionEnabled(0, methodGuard - 25774)) {
+            avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+          }
+          UsernameSuggestionsPanel.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
+          for (avatarMouthFrameIndex = 0; avatarMouthSourceFrames.length > avatarMouthFrameIndex; avatarMouthFrameIndex++) {
+            UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex] = new Sprite(avatarMouthSourceFrames[avatarMouthFrameIndex].fullWidth + 4, avatarMouthSourceFrames[avatarMouthFrameIndex].fullHeight + 4);
+            UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].setAsRasterTarget();
+            avatarMouthSourceFrames[avatarMouthFrameIndex].drawUnmasked(2, 2);
+            NodeHashTableIterator.markInsetZeroOutlinePixels(2 + avatarMouthSourceFrames[avatarMouthFrameIndex].trimY, 0, UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[avatarMouthFrameIndex].height);
+            UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].trimTransparentBorders();
+          }
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+          GzipInflater.sunBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sun", "sky_background");
+          PacketByteCipher.sunForegroundSprite = ScorePopupSupport.loadSprite("sky_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sun");
+          GameGraphicsResources.themesLoaded[1] = true;
+          WidgetContainer.menuBackgroundSprite = ScorePopupSupport.loadSprite("menu_background", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          CachedTextLayout.menuForegroundSprite = ScorePopupSupport.loadSprite("menu_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          CharacterReplacementSupport.transitionCurtain = ScorePopupSupport.loadSprite("transition", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          SecondaryNodeHashTable.silverStarShockFrames = OpacityWidget.loadSpriteFrames("silver_shock", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          VisualPropertyOverrides.sparkleFrames = OpacityWidget.loadSpriteFrames("sparkle", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          for (sparkleFrameIndex = 0; VisualPropertyOverrides.sparkleFrames.length > sparkleFrameIndex; sparkleFrameIndex++) {
+            VisualPropertyOverrides.sparkleFrames[sparkleFrameIndex].addOutline(1);
+          }
+          SessionTextState.bangFrames = OpacityWidget.loadSpriteFrames("bang", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          ReflectionCheckRequest.pointsPanelGlowFrames = OpacityWidget.loadSpriteFrames("bonus_glow", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          PacketBuffer.resultBubbleSprite = ScorePopupSupport.loadSprite("bubble", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          NodeHashTableIterator.popSprite = ScorePopupSupport.loadSprite("pop", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          ArchiveLoadSequence.mouseBoxFrames = OpacityWidget.loadSpriteFrames("box_mouse", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          if (ClientOptionSupport.isClientOptionEnabled(0, 110)) {
+            HotspotTextWidget.avatarCryBeginFrames = OpacityWidget.loadSpriteFrames("cry_begin", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+            ClientRenderingState.avatarCryMiddleFrames = OpacityWidget.loadSpriteFrames("cry_middle", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+            PlayfieldRules.avatarCryEndFrames = OpacityWidget.loadSpriteFrames("cry_end", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+          }
+          keyboardIconSprites = new IndexedSprite[8];
+          keyboardIconSprites[0] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_left");
+          keyboardIconSprites[1] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_right");
+          keyboardIconSprites[2] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_enter");
+          keyboardIconSprites[3] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_space");
+          keyboardIconSprites[4] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, EmailAvailabilityQuery.xorInt(methodGuard, 25868), "", "keyboard_esc");
+          keyboardIconSprites[5] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_backspace");
+          keyboardIconSprites[6] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_down");
+          keyboardIconSprites[7] = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "", "keyboard_i");
+          keyboardIconAdvanceWidths = new int[keyboardIconSprites.length];
+          keyboardWidthAlias = keyboardIconAdvanceWidths;
+          keyboardWidthsForFill = keyboardWidthAlias;
+          keyboardIconIndex = 0;
+          unusedInitialKeyboardIconIndexSnapshot = keyboardIconIndex;
+          while (keyboardIconIndex < keyboardIconAdvanceWidths.length) {
+            keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].fullHeight - 3;
+            keyboardIconIndex++;
+          }
+          IntrusiveNodeHashTable.smallFont.setInlineImages(keyboardIconSprites, keyboardIconAdvanceWidths);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+          AudioService.screenTitleSprites[0] = ScorePopupSupport.loadSprite("main_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[2] = ScorePopupSupport.loadSprite("bestscoreseach_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[3] = ScorePopupSupport.loadSprite("myscores_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[1] = ScorePopupSupport.loadSprite("allscores_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[6] = ScorePopupSupport.loadSprite("gameover_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[4] = ScorePopupSupport.loadSprite("achievements_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[5] = ScorePopupSupport.loadSprite("instructions_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[7] = ScorePopupSupport.loadSprite("achievements_tg_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          AudioService.screenTitleSprites[8] = ScorePopupSupport.loadSprite("login_title", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites = new Sprite[9];
+          GameGraphicsResources.frameNineSliceSprites[0] = ScorePopupSupport.loadSprite("frame_topleft", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[1] = ScorePopupSupport.loadSprite("frame_top", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[2] = ScorePopupSupport.loadSprite("frame_topright", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[3] = ScorePopupSupport.loadSprite("frame_left", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[4] = ScorePopupSupport.loadSprite("frame_centre", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[5] = ScorePopupSupport.loadSprite("frame_right", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[6] = ScorePopupSupport.loadSprite("frame_bottomleft", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[7] = ScorePopupSupport.loadSprite("frame_bottom", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          GameGraphicsResources.frameNineSliceSprites[8] = ScorePopupSupport.loadSprite("frame_bottomright", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          RankedListQuery.widgetSprite = ScorePopupSupport.loadSprite("widget", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          NetworkArchiveRequest.barSprite = ScorePopupSupport.loadSprite("bar", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          PointerMenuState.smallBoxSprite = ScorePopupSupport.loadSprite("box_sml", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          PasswordValidator.countBoxSprite = ScorePopupSupport.loadSprite("box_count", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          UsernameSuggestionsPanel.largeBoxSprite = ScorePopupSupport.loadSprite("box_lgr", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
+          RasterTargetSnapshot.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          if (ClientOptionSupport.isClientOptionEnabled(0, -105)) {
+            RasterTargetSnapshot.introFaceFrames = OpacityWidget.loadSpriteFrames("intro_faces", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
+          }
+          AccountCreationForm.introGeometryFrames = OpacityWidget.loadSpriteFrames("intro_geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          UsernameAvailabilityQuery.achievementSprites = OpacityWidget.loadSpriteFrames("achievements", "", GameGraphicsResources.gameGraphicsArchive, 0);
+          IntKeyLookup.unachievedSprite = ScorePopupSupport.loadSprite("unachieved", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
+          ScorePopupSupport.loadSprite("locked", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
+          UsernameAvailabilityValidator.orbCoinSprite = ScorePopupSupport.loadSprite("orbcoin", SessionTextHistorySupport.basicUiGraphicsArchive, (byte) -78, "basic");
+          GameScreen.selectedThemeId = 1;
+          ProxySocketConnector.selectThemeRenderAssets((byte) 79);
+          EntityContactSupport.resetFrameTimingHistory(-62);
+          ArchiveLoadStep.fontMetricsArchive = null;
+          SessionTextHistorySupport.basicUiGraphicsArchive = null;
+          return false;
         }
         if (methodGuard != 25869) {
-            reconnectMessages = (String[]) null;
+          reconnectMessages = (String[]) null;
         }
         HighscoreNameEntry.setLoadingProgress(FullscreenFailureReason.startingGameText, -2, 100.0f);
         this.renderFrame(methodGuard ^ 496);
@@ -263,28 +263,28 @@ public final class Geoblox extends SessionGameApplet {
         }
         Under13TermsPanel.initializeMenuActionTexts(9);
         if (OpacityWidget.synthesizedSoundArchive.ensureIndexLoaded(0) &&
-            OpacityWidget.synthesizedSoundArchive.loadAllGroups(true)) {
+          OpacityWidget.synthesizedSoundArchive.loadAllGroups(true)) {
           if (TextWidgetSupport.initialVorbisArchive.ensureIndexLoaded(0)) {
             soundArchiveSnapshot = TextWidgetSupport.initialVorbisArchive;
             soundLoadGroupsGuard = (archivePollGuard) ? false : true;
             if (((ResourceArchive) (Object) soundArchiveSnapshot).loadAllGroups(soundLoadGroupsGuard)) {
               if (GzipInflater.initialMusicScoreArchive.ensureIndexLoaded(0) &&
-                  GzipInflater.initialMusicScoreArchive.loadAllGroups(true)) {
+                GzipInflater.initialMusicScoreArchive.loadAllGroups(true)) {
                 if (ProxySocketConnector.instrumentPatchArchive.ensureIndexLoaded(0) &&
-                    ProxySocketConnector.instrumentPatchArchive.loadAllGroups(true)) {
+                  ProxySocketConnector.instrumentPatchArchive.loadAllGroups(true)) {
                   if (ArchiveLoadStep.fontMetricsArchive.ensureIndexLoaded(0) &&
-                      ArchiveLoadStep.fontMetricsArchive.loadAllGroups(true)) {
+                    ArchiveLoadStep.fontMetricsArchive.loadAllGroups(true)) {
                     if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) &&
-                        GameGraphicsResources.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
+                      GameGraphicsResources.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
                       if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) &&
-                          GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
+                        GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
                         if (ClientOptionSupport.isClientOptionEnabled(0, -112) && (!GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) ||
-                            !GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))) {
+                          !GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))) {
                           HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.waitingForPumpkinText, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.loadingPumpkinText, true), -2, 45.0f);
                           return false;
                         }
                         if (SessionTextHistorySupport.basicUiGraphicsArchive.ensureIndexLoaded(0) &&
-                            SessionTextHistorySupport.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124)) {
+                          SessionTextHistorySupport.basicUiGraphicsArchive.loadGroupByName("basic", (byte) -124)) {
                           if (archivePollGuard) {
                             return true;
                           }
@@ -568,14 +568,14 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadGermsTheme(byte methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("germs", (byte) -126)) {
-                return;
-            }
-            UsernameAvailabilityQuery.germsForegroundSprite = ScorePopupSupport.loadSprite("germs_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "germs");
-            SharedBufferPools.germsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "germs", "germs_background");
-            int guardQuotient = -24 / ((methodGuard + 13) / 61);
-            GameGraphicsResources.themesLoaded[3] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("germs", (byte) -126)) {
             return;
+          }
+          UsernameAvailabilityQuery.germsForegroundSprite = ScorePopupSupport.loadSprite("germs_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "germs");
+          SharedBufferPools.germsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "germs", "germs_background");
+          int guardQuotient = -24 / ((methodGuard + 13) / 61);
+          GameGraphicsResources.themesLoaded[3] = true;
+          return;
         }
     }
 
@@ -585,14 +585,14 @@ public final class Geoblox extends SessionGameApplet {
 
     final static void setRasterTarget(int methodGuard, Sprite targetSprite) {
         try {
-            SpriteCheckboxRenderer.pushRasterTarget(9);
-            SoftwareRasterizer.setRasterTarget(targetSprite.pixels, targetSprite.fullWidth, targetSprite.fullHeight);
-            if (methodGuard != 1) {
-                Sprite guardedNullSpriteSnapshot = (Sprite) null;
-                Geoblox.setRasterTarget(-34, (Sprite) null);
-            }
+          SpriteCheckboxRenderer.pushRasterTarget(9);
+          SoftwareRasterizer.setRasterTarget(targetSprite.pixels, targetSprite.fullWidth, targetSprite.fullHeight);
+          if (methodGuard != 1) {
+            Sprite guardedNullSpriteSnapshot = (Sprite) null;
+            Geoblox.setRasterTarget(-34, (Sprite) null);
+          }
         } catch (RuntimeException rasterTargetFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rasterTargetFailure), "Geoblox.T(" + methodGuard + ',' + (targetSprite != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rasterTargetFailure), "Geoblox.T(" + methodGuard + ',' + (targetSprite != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -600,8 +600,8 @@ public final class Geoblox extends SessionGameApplet {
         longAndNameLoginType = null;
         reconnectMessages = null;
         if (methodGuard != 0) {
-            Sprite guardedNullSpriteSnapshot = (Sprite) null;
-            Geoblox.setRasterTarget(30, (Sprite) null);
+          Sprite guardedNullSpriteSnapshot = (Sprite) null;
+          Geoblox.setRasterTarget(30, (Sprite) null);
         }
         loginMessage = null;
         activeMessageDialog = null;
@@ -623,7 +623,7 @@ public final class Geoblox extends SessionGameApplet {
           return;
         }
         if (InstrumentPatch.activeFullscreenCanvas != null &&
-            InstrumentPatch.activeFullscreenCanvas.focusLost) {
+          InstrumentPatch.activeFullscreenCanvas.focusLost) {
           InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
           InstrumentPatch.activeFullscreenCanvas = null;
         }
@@ -642,7 +642,7 @@ public final class Geoblox extends SessionGameApplet {
             if (!DebouncedValidationProvider.gameAssetsInitialized) {
               ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
               if (this.pollArchiveLoading(false) &&
-                  this.prepareGameAssets(25869)) {
+                this.prepareGameAssets(25869)) {
                 DebouncedValidationProvider.gameAssetsInitialized = true;
                 this.initializeScreens(82);
                 break assetAndSessionPreparation;
@@ -654,12 +654,12 @@ public final class Geoblox extends SessionGameApplet {
               HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
             } else {
               if (FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47) &&
-                  !FullscreenSupport.fullscreenDialogActiveSnapshot) {
+                !FullscreenSupport.fullscreenDialogActiveSnapshot) {
                 fullscreenAvailableForUiSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
                 uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
                 if (uiServiceResultOrOverlayMode != 2364824) {
                   if (uiServiceResultOrOverlayMode == 1 ||
-                      2 == uiServiceResultOrOverlayMode) {
+                    2 == uiServiceResultOrOverlayMode) {
                     if (null != InstrumentPatch.activeFullscreenCanvas) {
                       InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
                       InstrumentPatch.activeFullscreenCanvas = null;
@@ -717,7 +717,7 @@ public final class Geoblox extends SessionGameApplet {
                     }
                   }
                   if (null != UiWidget.gameplaySession &&
-                      UiWidget.gameplaySession.score > 0) {
+                    UiWidget.gameplaySession.score > 0) {
                     UiWidget.gameplaySession.submitScore((byte) -70);
                   }
                   ScoreSubmission.requestedScreenId = UiWidget.gameplayReturnScreenId;
@@ -730,7 +730,7 @@ public final class Geoblox extends SessionGameApplet {
               }
               if (ScoreSubmission.requestedScreenId != SettingsCookieSupport.currentScreenId) {
                 if (6 == ScoreSubmission.requestedScreenId &&
-                    ScorePopupSupport.newAchievementMask <= 0) {
+                  ScorePopupSupport.newAchievementMask <= 0) {
                   ScoreSubmission.requestedScreenId = 2;
                 }
                 if (-1 < SettingsCookieSupport.currentScreenId) {
@@ -752,7 +752,7 @@ public final class Geoblox extends SessionGameApplet {
                 TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
                 if (nextScreenTransitionTickSnapshot == 160) {
                   if (UiWidget.gameplayReturnScreenId != -1 &&
-                      UnderlinedButtonRenderer.isGuestSessionMode(-109)) {
+                    UnderlinedButtonRenderer.isGuestSessionMode(-109)) {
                     if (ProxySocketConnector.gameplayOriginScreenId != 0) {
                       UsernameResponseSupport.returnToLoginStage(-106);
                     } else {
@@ -841,7 +841,7 @@ public final class Geoblox extends SessionGameApplet {
         SingleChildWidget.mainRasterBuffer.setAsRasterTarget(methodGuard - 25598);
         SoftwareRasterizer.clearFramebuffer();
         if (SettingsCookieSupport.currentScreenId == ScoreSubmission.requestedScreenId &&
-            UiWidget.gameplayReturnScreenId == -1) {
+          UiWidget.gameplayReturnScreenId == -1) {
           if (SettingsCookieSupport.currentScreenId != -1) {
             TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].renderScreen(-28750);
           } else if (!UsernameQueryState.introAnimationRunning) {
@@ -852,7 +852,7 @@ public final class Geoblox extends SessionGameApplet {
         } else {
           transitionSplitY = -480 + (TriangleMesh.screenTransitionTick * 6 + 35);
           if (UiWidget.gameplayReturnScreenId == -1 &&
-              !CharacterReplacementSupport.clearGameplayDuringTransition) {
+            !CharacterReplacementSupport.clearGameplayDuringTransition) {
             if (ScoreSubmission.requestedScreenId == -1) {
               UiWidget.gameplaySession.renderSession((byte) -68);
             } else if (SettingsCookieSupport.currentScreenId == -1) {
@@ -891,54 +891,54 @@ public final class Geoblox extends SessionGameApplet {
 
     private final void loadJewelsTheme(boolean methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128)) {
-                return;
-            }
-            if (methodGuard) {
-                return;
-            }
-            MidiPcmStream.jewelsForegroundSprite = ScorePopupSupport.loadSprite("jewls_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "jewels");
-            CachedArchiveSource.jewelsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "jewels", "jewls_background");
-            GameGraphicsResources.themesLoaded[0] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("jewels", (byte) -128)) {
             return;
+          }
+          if (methodGuard) {
+            return;
+          }
+          MidiPcmStream.jewelsForegroundSprite = ScorePopupSupport.loadSprite("jewls_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "jewels");
+          CachedArchiveSource.jewelsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "jewels", "jewls_background");
+          GameGraphicsResources.themesLoaded[0] = true;
+          return;
         }
     }
 
     private final void loadBakingTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(methodGuard - 2)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("baking", (byte) -125)) {
-                return;
-            }
-            DisplayNamePanel.bakingForegroundSprite = ScorePopupSupport.loadSprite("baking_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "baking");
-            if (methodGuard != 2) {
-                return;
-            }
-            FifoResponseToken.bakingBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, methodGuard - 1, "baking", "baking_background");
-            GameGraphicsResources.themesLoaded[4] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("baking", (byte) -125)) {
             return;
+          }
+          DisplayNamePanel.bakingForegroundSprite = ScorePopupSupport.loadSprite("baking_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "baking");
+          if (methodGuard != 2) {
+            return;
+          }
+          FifoResponseToken.bakingBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, methodGuard - 1, "baking", "baking_background");
+          GameGraphicsResources.themesLoaded[4] = true;
+          return;
         }
     }
 
     private final void loadSpaceTheme(boolean methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("space", (byte) -127)) {
-                return;
-            }
-            GameSoundResources.spaceForegroundSprite = ScorePopupSupport.loadSprite("space_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "space");
-            LoginPayload.spaceBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "space", "space_background");
-            if (methodGuard) {
-                return;
-            }
-            GameGraphicsResources.themesLoaded[6] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("space", (byte) -127)) {
             return;
+          }
+          GameSoundResources.spaceForegroundSprite = ScorePopupSupport.loadSprite("space_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "space");
+          LoginPayload.spaceBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "space", "space_background");
+          if (methodGuard) {
+            return;
+          }
+          GameGraphicsResources.themesLoaded[6] = true;
+          return;
         }
     }
 
     private final void requestGameArchives(boolean graphicsArchiveGuard) {
         if (TextValidationSupport.bootstrapGameTextArchive != null) {
-            SpriteState.loadGameTextResources(true, TextValidationSupport.bootstrapGameTextArchive);
-            TextValidationSupport.bootstrapGameTextArchive = null;
-            EntityContactSupport.resetFrameTimingHistory(-105);
+          SpriteState.loadGameTextResources(true, TextValidationSupport.bootstrapGameTextArchive);
+          TextValidationSupport.bootstrapGameTextArchive = null;
+          EntityContactSupport.resetFrameTimingHistory(-105);
         }
         GameGraphicsResources.gameGraphicsArchive = TrackedPcmStream.createGameResourceArchive(1, true, graphicsArchiveGuard, true, (byte) -111);
         OpacityWidget.synthesizedSoundArchive = SocketArchiveNetworkClient.createResourceArchive(2, (byte) -62);
@@ -991,7 +991,7 @@ public final class Geoblox extends SessionGameApplet {
           xRotationSign = 1;
         }
         if (7 == meshIndex ||
-              8 == meshIndex) {
+          8 == meshIndex) {
           yRotationSign = -1;
           xRotationSign = -1;
         }
@@ -1021,10 +1021,10 @@ public final class Geoblox extends SessionGameApplet {
         int screenIndex = 0;
         int clientControlFlowGuard = clientControlFlowFlag;
         if (!(TextTemplateDefinition.loginMembershipGateValue > 0)) {
-            InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
+          InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 3, 6};
         }
         for (screenIndex = 0; screenIndex < 9; screenIndex++) {
-            TextTemplateDefinition.screens[screenIndex] = new GameScreen(this, screenIndex);
+          TextTemplateDefinition.screens[screenIndex] = new GameScreen(this, screenIndex);
         }
         ScoreSubmission.requestedScreenId = -1;
         SettingsCookieSupport.currentScreenId = -1;
@@ -1039,29 +1039,29 @@ public final class Geoblox extends SessionGameApplet {
         UiWidget.achievementTrackingAccumulator = 8801;
         AwtRasterBuffer.primaryAchievementTrackingCounter = 3382;
         if (methodGuard <= 68) {
-            this.loadJewelsTheme(true);
+          this.loadJewelsTheme(true);
         }
         ClientOptionSupport.configureMenuPointerRepeat(150, 20);
     }
 
     private final void loadSweetsTheme(int methodGuard) {
         if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0)) {
-            if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128)) {
-                return;
-            }
-            SessionInstanceState.sweetsForegroundSprite = ScorePopupSupport.loadSprite("sweets_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sweets");
-            if (methodGuard != 7) {
-                return;
-            }
-            ValidationMessageWidget.sweetsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sweets", "sweets_background");
-            GameGraphicsResources.themesLoaded[2] = true;
+          if (!GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sweets", (byte) -128)) {
             return;
+          }
+          SessionInstanceState.sweetsForegroundSprite = ScorePopupSupport.loadSprite("sweets_foreground", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "sweets");
+          if (methodGuard != 7) {
+            return;
+          }
+          ValidationMessageWidget.sweetsBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sweets", "sweets_background");
+          GameGraphicsResources.themesLoaded[2] = true;
+          return;
         }
     }
 
     final void initializeGame(int methodGuard) {
         if (methodGuard <= 109) {
-            return;
+          return;
         }
         this.initializeSessionAppletServices((byte) -70, 9, 8, 10, 0, false, 7, 1);
         MidiPcmStream musicPlaybackStream = new MidiPcmStream();

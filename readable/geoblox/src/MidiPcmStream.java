@@ -90,7 +90,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void handleChannelPressureStub(int pressureValue, int methodGuard, int channelIndex) {
         if (methodGuard != -2832) {
-            this.stopMusicPlayback(44);
+          this.stopMusicPlayback(44);
         }
     }
 
@@ -141,7 +141,7 @@ final class MidiPcmStream extends PcmStream {
             volume = volume * volumeEnvelopeValue + 32 >> 6;
           }
           if (note.releaseEnvelopeTime > 0 &&
-              envelope.releaseEnvelope != null) {
+            envelope.releaseEnvelope != null) {
             releaseEnvelopeTime = note.releaseEnvelopeTime;
             releaseEnvelopeValue = envelope.releaseEnvelope[1 + note.releaseEnvelopeIndex];
             if (-2 + envelope.releaseEnvelope.length > note.releaseEnvelopeIndex) {
@@ -186,7 +186,7 @@ final class MidiPcmStream extends PcmStream {
           pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
           envelope = note.envelope;
           if (0 < envelope.vibratoPhaseStep && (!(envelope.vibratoDepth <= 0) ||
-              this.channelModulation[note.channelIndex] > 0)) {
+            this.channelModulation[note.channelIndex] > 0)) {
             vibratoDepth = envelope.vibratoDepth << 2;
             vibratoRampUpdates = envelope.vibratoRampTicks << 1;
             if (vibratoRampUpdates > note.ageUpdates) {
@@ -220,7 +220,7 @@ final class MidiPcmStream extends PcmStream {
     final static void clearDecodedSpriteWorkingArrays(boolean clearRemainingArrays) {
         GmtTimestampSupport.decodedSpriteYOffsets = null;
         if (!clearRemainingArrays) {
-            return;
+          return;
         }
         ProgressBarWidget.decodedSpriteHeights = null;
         TextConcatenationSupport.decodedSpriteIndices = (byte[][]) null;
@@ -232,16 +232,16 @@ final class MidiPcmStream extends PcmStream {
     private final void releaseUnmappedPortamentoNotes(byte methodGuard, int channelIndex) {
         MidiNote note = null;
         if (methodGuard != 39) {
-            this.resetChannelControllers((byte) -85, -70);
+          this.resetChannelControllers((byte) -85, -70);
         }
         if ((this.channelFlags[channelIndex] & 2) != 0) {
-            note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
-            while (note != null) {
-                if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
-                    note.releaseEnvelopeTime = 0;
-                }
-                note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
+          note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
+          while (note != null) {
+            if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
+              note.releaseEnvelopeTime = 0;
             }
+            note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
+          }
         }
     }
 
@@ -260,11 +260,11 @@ final class MidiPcmStream extends PcmStream {
         try {
           note.framesUntilUpdate = AudioOutput.sampleRateHz / 100;
           if (note.releaseEnvelopeTime >= 0 && (null == note.sampleStream ||
-              note.sampleStream.isSamplePositionOutOfRange())) {
+            note.sampleStream.isSamplePositionOutOfRange())) {
             note.clearAudioReferences(-1);
             note.unlinkNode(completionOrUnlinkFlag);
             if (0 < note.keyGroup &&
-                note == this.notesByKeyGroup[note.channelIndex][note.keyGroup]) {
+              note == this.notesByKeyGroup[note.channelIndex][note.keyGroup]) {
               this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
               return true;
             }
@@ -308,14 +308,14 @@ final class MidiPcmStream extends PcmStream {
               break;
             }
             if (note.volumeEnvelopeIndex == -2 + envelope.volumeEnvelope.length &&
-                envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] == 0) {
+              envelope.volumeEnvelope[note.volumeEnvelopeIndex + 1] == 0) {
               finishNoteInt = 1;
             }
           }
           if (note.releaseEnvelopeTime >= 0 &&
             envelope.releaseEnvelope != null &&
             (this.channelFlags[note.channelIndex] & 1) == 0 && (!(0 <= note.keyGroup) ||
-              note != this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
+            note != this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
             if (0 < envelope.releaseEnvelopeKeyScaling) {
               note.releaseEnvelopeTime = note.releaseEnvelopeTime + (int)(0.5 + Math.pow(2.0, keyScalingExponent * (double)envelope.releaseEnvelopeKeyScaling) * 128.0);
             } else {
@@ -349,7 +349,7 @@ final class MidiPcmStream extends PcmStream {
           if (0 <= note.releaseEnvelopeTime) {
             note.unlinkNode(false);
             if (0 < note.keyGroup &&
-                this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
+              this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
               this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
             }
           }
@@ -377,16 +377,16 @@ final class MidiPcmStream extends PcmStream {
     private final void resetChannelRetriggerPhases(int channelIndex, byte methodGuard) {
         MidiNote note = null;
         if ((this.channelFlags[channelIndex] & 4) != 0) {
-            note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
-            while (note != null) {
-                if (note.channelIndex == channelIndex) {
-                    note.retriggerPhaseFixed = 0;
-                }
-                note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
+          note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
+          while (note != null) {
+            if (note.channelIndex == channelIndex) {
+              note.retriggerPhaseFixed = 0;
             }
+            note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
+          }
         }
         if (methodGuard != 67) {
-            this.pendingScore = (MusicScore) null;
+          this.pendingScore = (MusicScore) null;
         }
     }
 
@@ -428,7 +428,7 @@ final class MidiPcmStream extends PcmStream {
               }
             }
             if (instrumentPatch != null &&
-                !instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache)) {
+              !instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache)) {
               allInstrumentsPreparedFlag = 0;
             }
             instrumentNoteMask = (InstrumentNoteMask) (score.instrumentNoteMasks.nextForIteration(methodGuard - 100));
@@ -466,10 +466,10 @@ final class MidiPcmStream extends PcmStream {
 
     private final void resetChannelControllers(byte methodGuard, int channelIndex) {
         if (channelIndex < 0) {
-            for (channelIndex = 0; channelIndex < 16; channelIndex++) {
-                this.resetChannelControllers((byte) -22, channelIndex);
-            }
-            return;
+          for (channelIndex = 0; channelIndex < 16; channelIndex++) {
+            this.resetChannelControllers((byte) -22, channelIndex);
+          }
+          return;
         }
         this.channelVolume[channelIndex] = 12800;
         this.channelPan[channelIndex] = 8192;
@@ -481,7 +481,7 @@ final class MidiPcmStream extends PcmStream {
         this.resetChannelRetriggerPhases(channelIndex, (byte) 67);
         this.channelFlags[channelIndex] = 0;
         if (methodGuard >= -12) {
-            this.nextEventTick = 55;
+          this.nextEventTick = 55;
         }
         this.channelSelectedParameter[channelIndex] = 32767;
         this.channelPitchBendSensitivity[channelIndex] = 256;
@@ -493,7 +493,7 @@ final class MidiPcmStream extends PcmStream {
         this.defaultChannelInstrumentIds[channelIndex] = instrumentId;
         this.channelBankOffsets[channelIndex] = ProxySocketConnector.andInt(instrumentId, -128);
         if (methodGuard != -8581) {
-            this.channelPan = (int[]) null;
+          this.channelPan = (int[]) null;
         }
         this.selectChannelInstrument(channelIndex, -129, instrumentId);
     }
@@ -550,7 +550,7 @@ final class MidiPcmStream extends PcmStream {
           }
           sampleLengthOrFixedEnd = note.pcmSample.samples.length;
           if (loopEnabled &&
-              note.pcmSample.pingPongLoop) {
+            note.pcmSample.pingPongLoop) {
             reflectedLoopLength = -note.pcmSample.loopStart + sampleLengthOrFixedEnd + sampleLengthOrFixedEnd;
             sampleLengthOrFixedEnd = sampleLengthOrFixedEnd << 8;
             sampleOffsetFixed = (int)((long)reflectedLoopLength * (long)this.channelSampleOffsets[note.channelIndex] >> 6);
@@ -584,12 +584,12 @@ final class MidiPcmStream extends PcmStream {
     private final void releaseChannelNotes(int channelIndex, int methodGuard) {
         MidiNote note = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard ^ methodGuard));
         while (note != null) {
-            if ((channelIndex < 0 || channelIndex == note.channelIndex) &&
-                !(note.releaseEnvelopeTime >= 0)) {
-                this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
-                note.releaseEnvelopeTime = 0;
-            }
-            note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
+          if ((channelIndex < 0 || channelIndex == note.channelIndex) &&
+            !(note.releaseEnvelopeTime >= 0)) {
+            this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
+            note.releaseEnvelopeTime = 0;
+          }
+          note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
         }
     }
 
@@ -784,21 +784,21 @@ final class MidiPcmStream extends PcmStream {
         int channel = 0;
         int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (channelIndex >= 0) {
-            this.channelVolumeScale[channelIndex] = volumeScale;
+          this.channelVolumeScale[channelIndex] = volumeScale;
         } else {
-            for (channel = 0; channel < 16; channel++) {
-                this.channelVolumeScale[channel] = volumeScale;
-            }
+          for (channel = 0; channel < 16; channel++) {
+            this.channelVolumeScale[channel] = volumeScale;
+          }
         }
         if (methodGuard != 74) {
-            this.releaseUnmappedPortamentoNotes((byte) 100, 93);
+          this.releaseUnmappedPortamentoNotes((byte) 100, 93);
         }
     }
 
     final synchronized void setMasterVolume(int volume, byte methodGuard) {
         this.masterVolume = volume;
         if (methodGuard != 22) {
-            this.playbackTime = 84L;
+          this.playbackTime = 84L;
         }
     }
 
@@ -813,7 +813,7 @@ final class MidiPcmStream extends PcmStream {
         eventTick = this.nextEventTick;
         eventTime = this.nextEventTime;
         if (this.pendingScore != null &&
-            this.pendingScoreTick == eventTick) {
+          this.pendingScoreTick == eventTick) {
           this.loadScoreAndResetSynthesis(121, this.pendingScore, this.loopScore, this.pendingScoreFadeOutNotes);
           this.advanceMidiEvents((byte) 73);
           return;
@@ -824,7 +824,7 @@ final class MidiPcmStream extends PcmStream {
             this.nextEventTime = eventTime;
             this.nextTrackIndex = trackIndex;
             if (null != this.pendingScore &&
-                this.pendingScoreTick < eventTick) {
+              this.pendingScoreTick < eventTick) {
               this.nextEventTick = this.pendingScoreTick;
               this.nextTrackIndex = -1;
               this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
@@ -851,7 +851,7 @@ final class MidiPcmStream extends PcmStream {
                 return;
               }
               if (this.loopScore &&
-                  eventTick != 0) {
+                eventTick != 0) {
                 this.midiReader.restartTracks(eventTime);
               } else {
                 this.resetSynthesisState(true, 2097151);
@@ -869,12 +869,12 @@ final class MidiPcmStream extends PcmStream {
 
     final synchronized void startMusicScore(boolean loopPlayback, MusicScore score, int methodGuard) {
         try {
-            if (methodGuard != -1706) {
-                this.nextTrackIndex = -24;
-            }
-            this.loadScoreAndResetSynthesis(methodGuard + 1832, score, loopPlayback, true);
+          if (methodGuard != -1706) {
+            this.nextTrackIndex = -24;
+          }
+          this.loadScoreAndResetSynthesis(methodGuard + 1832, score, loopPlayback, true);
         } catch (RuntimeException musicStartFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) musicStartFailure), "kj.PA(" + loopPlayback + ',' + (score != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) musicStartFailure), "kj.PA(" + loopPlayback + ',' + (score != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -894,8 +894,8 @@ final class MidiPcmStream extends PcmStream {
             otherHeldNote = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
             while (otherHeldNote != null) {
               if (note.channelIndex == otherHeldNote.channelIndex &&
-                  0 > otherHeldNote.releaseEnvelopeTime &&
-                  note != otherHeldNote) {
+                0 > otherHeldNote.releaseEnvelopeTime &&
+                note != otherHeldNote) {
                 note.releaseEnvelopeTime = 0;
                 break portamentoReleaseSelection;
               }
@@ -912,7 +912,7 @@ final class MidiPcmStream extends PcmStream {
         note = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard - 100));
         while (note != null) {
           if (channelIndex < 0 ||
-                channelIndex == note.channelIndex) {
+            channelIndex == note.channelIndex) {
             if (null != note.sampleStream) {
               note.sampleStream.fadeOutAndUnlink(AudioOutput.sampleRateHz / 100);
               if (note.sampleStream.hasRemainingRampFrames()) {
@@ -935,19 +935,19 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void clearInstrumentSampleIds(byte methodGuard) {
         int clientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard <= 65) {
-            this.dispatchMidiEvent(-76, (byte) -34);
+          this.dispatchMidiEvent(-76, (byte) -34);
         }
         InstrumentPatch instrumentPatch = (InstrumentPatch) (this.instrumentPatches.firstForIteration((byte) 125));
         while (instrumentPatch != null) {
-            instrumentPatch.clearEncodedSampleIds((byte) -121);
-            instrumentPatch = (InstrumentPatch) (this.instrumentPatches.nextForIteration(-52));
+          instrumentPatch.clearEncodedSampleIds((byte) -121);
+          instrumentPatch = (InstrumentPatch) (this.instrumentPatches.nextForIteration(-52));
         }
     }
 
     private final void setChannelRetriggerControl(int methodGuard, int controlValue, int channelIndex) {
         this.channelRetriggerControl[channelIndex] = controlValue;
         if (methodGuard > -100) {
-            this.setDefaultInstrumentAndBank(-75, 124, -68);
+          this.setDefaultInstrumentAndBank(-75, 124, -68);
         }
         this.channelRetriggerPhaseRates[channelIndex] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)controlValue));
     }
@@ -955,13 +955,13 @@ final class MidiPcmStream extends PcmStream {
     private final void selectChannelInstrument(int channelIndex, int methodGuard, int instrumentId) {
         int keyGroup = 0;
         if (instrumentId != this.channelInstrumentIds[channelIndex]) {
-            this.channelInstrumentIds[channelIndex] = instrumentId;
-            for (keyGroup = 0; keyGroup < 128; keyGroup++) {
-                this.notesByKeyGroup[channelIndex][keyGroup] = null;
-            }
+          this.channelInstrumentIds[channelIndex] = instrumentId;
+          for (keyGroup = 0; keyGroup < 128; keyGroup++) {
+            this.notesByKeyGroup[channelIndex][keyGroup] = null;
+          }
         }
         if (methodGuard != -129) {
-            this.channelPitchBendSensitivity = (int[]) null;
+          this.channelPitchBendSensitivity = (int[]) null;
         }
     }
 
@@ -971,7 +971,7 @@ final class MidiPcmStream extends PcmStream {
         heldInternalKeys = null;
         lowBitMasks = null;
         if (detachKeyboardWithGuardSideEffect) {
-            MidiPcmStream.detachKeyboardListener(-77);
+          MidiPcmStream.detachKeyboardListener(-77);
         }
     }
 
@@ -979,22 +979,22 @@ final class MidiPcmStream extends PcmStream {
         int instrumentResetChannelIndex = 0;
         int unusedInitialBankChannelSnapshot;
         if (!fadeOutNotes) {
-            this.releaseChannelNotes(-1, 15387);
+          this.releaseChannelNotes(-1, 15387);
         } else {
-            this.fadeOutChannelNotes(100, -1);
+          this.fadeOutChannelNotes(100, -1);
         }
         if (methodGuard != 2097151) {
-            this.skipFrames(108);
+          this.skipFrames(108);
         }
         this.resetChannelControllers((byte) -109, -1);
         for (instrumentResetChannelIndex = 0; instrumentResetChannelIndex < 16; instrumentResetChannelIndex++) {
-            this.channelInstrumentIds[instrumentResetChannelIndex] = this.defaultChannelInstrumentIds[instrumentResetChannelIndex];
+          this.channelInstrumentIds[instrumentResetChannelIndex] = this.defaultChannelInstrumentIds[instrumentResetChannelIndex];
         }
         int bankChannelIndex = 0;
         unusedInitialBankChannelSnapshot = bankChannelIndex;
         while (bankChannelIndex < 16) {
-            this.channelBankOffsets[bankChannelIndex] = ProxySocketConnector.andInt(this.defaultChannelInstrumentIds[bankChannelIndex], -128);
-            bankChannelIndex++;
+          this.channelBankOffsets[bankChannelIndex] = ProxySocketConnector.andInt(this.defaultChannelInstrumentIds[bankChannelIndex], -128);
+          bankChannelIndex++;
         }
     }
 
@@ -1040,7 +1040,7 @@ final class MidiPcmStream extends PcmStream {
           if (note.releaseEnvelopeTime >= 0) {
             note.unlinkNode(false);
             if (0 < note.keyGroup &&
-                this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
+              this.notesByKeyGroup[note.channelIndex][note.keyGroup] == note) {
               this.notesByKeyGroup[note.channelIndex][note.keyGroup] = null;
               return true;
             }
@@ -1063,7 +1063,7 @@ final class MidiPcmStream extends PcmStream {
     private final synchronized void unloadScoreAndResetSynthesis(byte methodGuard, boolean fadeOutNotes) {
         this.midiReader.unload();
         if (methodGuard < 78) {
-            this.channelPitchBend = (int[]) null;
+          this.channelPitchBend = (int[]) null;
         }
         this.pendingScore = null;
         this.resetSynthesisState(fadeOutNotes, 2097151);
@@ -1086,7 +1086,7 @@ final class MidiPcmStream extends PcmStream {
           heldNote = (MidiNote) (this.noteMixer.notes.lastForIteration(false));
           while (heldNote != null) {
             if (channelIndex == heldNote.channelIndex &&
-                heldNote.releaseEnvelopeTime < 0) {
+              heldNote.releaseEnvelopeTime < 0) {
               this.heldNotesByKey[channelIndex][heldNote.keyNumber] = null;
               this.heldNotesByKey[channelIndex][keyNumber] = heldNote;
               previousPitchFixed = (heldNote.portamentoPitchDelta * heldNote.portamentoScale >> 12) + heldNote.basePitchFixed;
@@ -1144,7 +1144,7 @@ final class MidiPcmStream extends PcmStream {
         if (0 <= note.keyGroup) {
           previousGroupNote = this.notesByKeyGroup[channelIndex][note.keyGroup];
           if (previousGroupNote != null &&
-              previousGroupNote.releaseEnvelopeTime < 0) {
+            previousGroupNote.releaseEnvelopeTime < 0) {
             this.heldNotesByKey[channelIndex][previousGroupNote.keyNumber] = null;
             previousGroupNote.releaseEnvelopeTime = 0;
           }
@@ -1157,22 +1157,22 @@ final class MidiPcmStream extends PcmStream {
 
     private final void setChannelPitchBend(int methodGuard, int pitchBend, int channelIndex) {
         if (methodGuard > -107) {
-            return;
+          return;
         }
         this.channelPitchBend[channelIndex] = pitchBend;
     }
 
     private final void handlePolyphonicPressureStub(int methodGuard, int pressureValue, int keyNumber, int channelIndex) {
         if (methodGuard != -40) {
-            int[] unusedNullDestinationBeforeBadGuardMix = (int[]) null;
-            this.mixInto((int[]) null, -107, 119);
+          int[] unusedNullDestinationBeforeBadGuardMix = (int[]) null;
+          this.mixInto((int[]) null, -107, 119);
         }
     }
 
     final synchronized void stopMusicPlayback(int methodGuard) {
         this.unloadScoreAndResetSynthesis((byte) 106, true);
         if (methodGuard != -9268) {
-            this.defaultChannelInstrumentIds = (int[]) null;
+          this.defaultChannelInstrumentIds = (int[]) null;
         }
     }
 
@@ -1194,30 +1194,30 @@ final class MidiPcmStream extends PcmStream {
         int trackCount = 0;
         int trackIndex = 0;
         try {
-            this.unloadScoreAndResetSynthesis((byte) 98, fadeOutNotes);
-            this.midiReader.load(score.midiBytes);
-            this.playbackTime = 0L;
-            this.loopScore = loopPlayback ? true : false;
-            trackCount = this.midiReader.getTrackCount();
-            if (methodGuard <= 92) {
-                this.resetChannelRetriggerPhases(60, (byte) -45);
-            }
-            for (trackIndex = 0; trackIndex < trackCount; trackIndex++) {
-                this.midiReader.seekTrack(trackIndex);
-                this.midiReader.readTrackDelta(trackIndex);
-                this.midiReader.saveTrackPosition(trackIndex);
-            }
-            this.nextTrackIndex = this.midiReader.selectEarliestTrack();
-            this.nextEventTick = this.midiReader.trackTicks[this.nextTrackIndex];
-            this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
+          this.unloadScoreAndResetSynthesis((byte) 98, fadeOutNotes);
+          this.midiReader.load(score.midiBytes);
+          this.playbackTime = 0L;
+          this.loopScore = loopPlayback ? true : false;
+          trackCount = this.midiReader.getTrackCount();
+          if (methodGuard <= 92) {
+            this.resetChannelRetriggerPhases(60, (byte) -45);
+          }
+          for (trackIndex = 0; trackIndex < trackCount; trackIndex++) {
+            this.midiReader.seekTrack(trackIndex);
+            this.midiReader.readTrackDelta(trackIndex);
+            this.midiReader.saveTrackPosition(trackIndex);
+          }
+          this.nextTrackIndex = this.midiReader.selectEarliestTrack();
+          this.nextEventTick = this.midiReader.trackTicks[this.nextTrackIndex];
+          this.nextEventTime = this.midiReader.getTickTime(this.nextEventTick);
         } catch (RuntimeException scoreLoadFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) scoreLoadFailure), "kj.P(" + methodGuard + ',' + (score != null ? "{...}" : "null") + ',' + loopPlayback + ',' + fadeOutNotes + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) scoreLoadFailure), "kj.P(" + methodGuard + ',' + (score != null ? "{...}" : "null") + ',' + loopPlayback + ',' + fadeOutNotes + ')');
         }
     }
 
     final synchronized void setChannelDefaultInstrument(int methodGuard, int channelIndex, int instrumentId) {
         if (methodGuard != -1636) {
-            this.resetChannelControllers((byte) -86, 98);
+          this.resetChannelControllers((byte) -86, 98);
         }
         this.setDefaultInstrumentAndBank(-8581, channelIndex, instrumentId);
     }

@@ -10,9 +10,9 @@ final class MatchingTextValidator extends TextInputValidator {
     MatchingTextValidator(TextInputWidget validatedInput, TextInputWidget referenceInput) {
         super(validatedInput);
         try {
-            this.referenceInput = referenceInput;
+          this.referenceInput = referenceInput;
         } catch (RuntimeException validatorInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorInitializationFailure), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorInitializationFailure), "n.<init>(" + (validatedInput != null ? "{...}" : "null") + ',' + (referenceInput != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class MatchingTextValidator extends TextInputValidator {
         rasterTargetStack = null;
         retainedTextRecords = null;
         if (guard != 0) {
-            MatchingTextValidator.openDisplayNamePanel((byte) 89);
+          MatchingTextValidator.openDisplayNamePanel((byte) 89);
         }
     }
 
@@ -165,7 +165,7 @@ final class MatchingTextValidator extends TextInputValidator {
 
     final static void openDisplayNamePanel(byte methodGuard) {
         if (Geoblox.activeMessageDialog != null) {
-            Geoblox.activeMessageDialog.dismissDialog((byte) -104);
+          Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         MouseWheelInput.activeDisplayNamePanel = new DisplayNamePanel();
         int guardQuotient = 32 / ((methodGuard - 43) / 47);
@@ -190,7 +190,7 @@ final class MatchingTextValidator extends TextInputValidator {
           if (this.referenceInput instanceof ValidationProviderSource) {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -106);
             if (referenceValidation != null &&
-                referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState) {
+              referenceValidation.getDebouncedValidationState((byte) -105) != SocketArchiveNetworkClient.validInputValidationState) {
               invalidReferenceState = WidgetSkinState.invalidInputValidationState;
               return invalidReferenceState;
             }
@@ -233,7 +233,7 @@ final class MatchingTextValidator extends TextInputValidator {
             referenceValidation = ((ValidationProviderSource) ((Object) this.referenceInput)).getValidationProvider((byte) -118);
             if (referenceValidation != null) {
               if (referenceValidation.getDebouncedValidationState((byte) -105) == SocketArchiveNetworkClient.validInputValidationState &&
-                  !candidateText.equals(this.referenceInput.widgetText)) {
+                !candidateText.equals(this.referenceInput.widgetText)) {
                 validReferenceMismatchMessage = GrowableIntList.createMismatchAlertText;
                 return validReferenceMismatchMessage;
               }
@@ -262,12 +262,12 @@ final class MatchingTextValidator extends TextInputValidator {
 
     final static UsernameAvailabilityQuery pollAccountCreationUsernameResult(byte methodGuard) {
         if (DiskCacheWorker.idleClientFlowToken == ClientFlowState.accountCreationFlowState) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         int guardRemainder = 28 % ((-79 - methodGuard) / 44);
         if (MeshPrioritySupport.completedClientFlowToken == ClientFlowState.accountCreationFlowState) {
-            ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
-            return UsernameQueryState.pendingAccountUsernameResult;
+          ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
+          return UsernameQueryState.pendingAccountUsernameResult;
         }
         return null;
     }

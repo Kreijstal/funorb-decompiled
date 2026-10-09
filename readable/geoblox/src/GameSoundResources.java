@@ -10,10 +10,10 @@ final class GameSoundResources {
     public static void releaseStaticReferences(int methodGuard) {
         spaceForegroundSprite = null;
         if (methodGuard != 33) {
-            GameSoundResources.releaseStaticReferences(76);
-            gameSoundSamples = null;
-            optionalLoginText = null;
-            return;
+          GameSoundResources.releaseStaticReferences(76);
+          gameSoundSamples = null;
+          optionalLoginText = null;
+          return;
         }
         gameSoundSamples = null;
         optionalLoginText = null;

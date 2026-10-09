@@ -11,12 +11,12 @@ final class IntrusiveDeque {
 
     final IntrusiveNode nextForIteration(int methodGuard) {
         if (methodGuard != 1) {
-            return (IntrusiveNode) null;
+          return (IntrusiveNode) null;
         }
         IntrusiveNode node = this.iterationCursor;
         if (this.sentinel == node) {
-            this.iterationCursor = null;
-            return null;
+          this.iterationCursor = null;
+          return null;
         }
         this.iterationCursor = node.nextNode;
         return node;
@@ -24,7 +24,7 @@ final class IntrusiveDeque {
 
     final static Sprite[] buildUnitBorderNineSliceSprites(int bottomRightBorderColor, int fillColor, int guard, int topLeftBorderColor, int innerAccentColor) {
         if (guard <= 90) {
-            pendingClientFlowToken = (ClientFlowToken) null;
+          pendingClientFlowToken = (ClientFlowToken) null;
         }
         return MatchingTextValidator.buildNineSliceSprites(innerAccentColor, 1, topLeftBorderColor, 3, (byte) 1, fillColor, bottomRightBorderColor, 1, 1);
     }
@@ -32,12 +32,12 @@ final class IntrusiveDeque {
     final IntrusiveNode firstForIteration(int methodGuard) {
         IntrusiveNode firstNode = this.sentinel.nextNode;
         if (this.sentinel == firstNode) {
-            this.iterationCursor = null;
-            return null;
+          this.iterationCursor = null;
+          return null;
         }
         this.iterationCursor = firstNode.nextNode;
         if (methodGuard != 0) {
-            sharedAchievementId = -122;
+          sharedAchievementId = -122;
         }
         return firstNode;
     }
@@ -47,7 +47,7 @@ final class IntrusiveDeque {
         int clientControlSnapshot;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (null != AccountEligibilitySupport.musicScoreArchive &&
-            !EmailValidator.themeMusicPreparationFlags[themeId]) {
+          !EmailValidator.themeMusicPreparationFlags[themeId]) {
           selectedThemeId = themeId;
           if (selectedThemeId != 4) {
             if (3 != selectedThemeId) {
@@ -98,7 +98,7 @@ final class IntrusiveDeque {
     public static void releaseSharedResources(int methodGuard) {
         preparedColorRamp = null;
         if (methodGuard != 51) {
-            IntrusiveDeque.buildUnitBorderNineSliceSprites(-67, 123, -7, 36, 22);
+          IntrusiveDeque.buildUnitBorderNineSliceSprites(-67, 123, -7, 36, 22);
         }
         pendingClientFlowToken = null;
         waitingForTextByLanguage = null;
@@ -107,11 +107,11 @@ final class IntrusiveDeque {
     final IntrusiveNode previousForIteration(int methodGuard) {
         IntrusiveNode node = this.iterationCursor;
         if (methodGuard != 0) {
-            return (IntrusiveNode) null;
+          return (IntrusiveNode) null;
         }
         if (node == this.sentinel) {
-            this.iterationCursor = null;
-            return null;
+          this.iterationCursor = null;
+          return null;
         }
         this.iterationCursor = node.previousNode;
         return node;
@@ -120,10 +120,10 @@ final class IntrusiveDeque {
     final IntrusiveNode removeFirst(byte methodGuard) {
         IntrusiveNode firstNode = this.sentinel.nextNode;
         if (methodGuard >= -94) {
-            this.removeFirst((byte) 113);
+          this.removeFirst((byte) 113);
         }
         if (this.sentinel == firstNode) {
-            return null;
+          return null;
         }
         firstNode.unlinkNode(false);
         return firstNode;
@@ -131,30 +131,30 @@ final class IntrusiveDeque {
 
     final void addFirst(IntrusiveNode node, boolean methodGuard) {
         try {
-            if (node.previousNode != null) {
-                node.unlinkNode(false);
-            }
-            node.nextNode = this.sentinel.nextNode;
-            node.previousNode = this.sentinel;
-            node.previousNode.nextNode = node;
-            if (methodGuard) {
-                preparedColorRamp = (int[]) null;
-            }
-            node.nextNode.previousNode = node;
+          if (node.previousNode != null) {
+            node.unlinkNode(false);
+          }
+          node.nextNode = this.sentinel.nextNode;
+          node.previousNode = this.sentinel;
+          node.previousNode.nextNode = node;
+          if (methodGuard) {
+            preparedColorRamp = (int[]) null;
+          }
+          node.nextNode.previousNode = node;
         } catch (RuntimeException prependFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) prependFailure), "tf.A(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) prependFailure), "tf.A(" + (node != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     final void moveAllTo(IntrusiveDeque destination, byte methodGuard) {
         try {
-            this.moveSuffixTo(destination, 2541, this.sentinel.nextNode);
-            if (methodGuard != -70) {
-                IntrusiveNode discardedNullNode = (IntrusiveNode) null;
-                this.addLast(52, (IntrusiveNode) null);
-            }
+          this.moveSuffixTo(destination, 2541, this.sentinel.nextNode);
+          if (methodGuard != -70) {
+            IntrusiveNode discardedNullNode = (IntrusiveNode) null;
+            this.addLast(52, (IntrusiveNode) null);
+          }
         } catch (RuntimeException transferFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) transferFailure), "tf.I(" + (destination != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) transferFailure), "tf.I(" + (destination != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -163,8 +163,8 @@ final class IntrusiveDeque {
         int nodeCount = 0;
         IntrusiveNode node = this.sentinel.nextNode;
         while (this.sentinel != node) {
-            node = node.nextNode;
-            nodeCount++;
+          node = node.nextNode;
+          nodeCount++;
         }
         int guardResidue = -98 / ((methodGuard - 2) / 51);
         return nodeCount;
@@ -172,11 +172,11 @@ final class IntrusiveDeque {
 
     final IntrusiveNode removeLast(int methodGuard) {
         if (methodGuard != 1) {
-            this.sentinel = (IntrusiveNode) null;
+          this.sentinel = (IntrusiveNode) null;
         }
         IntrusiveNode lastNode = this.sentinel.previousNode;
         if (lastNode == this.sentinel) {
-            return null;
+          return null;
         }
         lastNode.unlinkNode(false);
         return lastNode;
@@ -186,26 +186,26 @@ final class IntrusiveDeque {
         IntrusiveNode removedNode = null;
         int clientControlSnapshot = Geoblox.clientControlFlowFlag;
         while (true) {
-            removedNode = this.sentinel.nextNode;
-            if (removedNode == this.sentinel) {
-                break;
-            }
-            removedNode.unlinkNode(false);
+          removedNode = this.sentinel.nextNode;
+          if (removedNode == this.sentinel) {
+            break;
+          }
+          removedNode.unlinkNode(false);
         }
         this.iterationCursor = null;
         if (methodGuard >= -64) {
-            IntrusiveDeque.releaseSharedResources(113);
+          IntrusiveDeque.releaseSharedResources(113);
         }
     }
 
     final IntrusiveNode lastForIteration(boolean methodGuard) {
         if (methodGuard) {
-            return (IntrusiveNode) null;
+          return (IntrusiveNode) null;
         }
         IntrusiveNode lastNode = this.sentinel.previousNode;
         if (this.sentinel == lastNode) {
-            this.iterationCursor = null;
-            return null;
+          this.iterationCursor = null;
+          return null;
         }
         this.iterationCursor = lastNode.previousNode;
         return lastNode;
@@ -213,7 +213,7 @@ final class IntrusiveDeque {
 
     final boolean isEmpty(int methodGuard) {
         if (methodGuard != 13519) {
-            this.iterationCursor = (IntrusiveNode) null;
+          this.iterationCursor = (IntrusiveNode) null;
         }
         return this.sentinel == this.sentinel.nextNode ? true : false;
     }
@@ -269,18 +269,18 @@ final class IntrusiveDeque {
 
     final void addLast(int methodGuard, IntrusiveNode node) {
         try {
-            if (null != node.previousNode) {
-                node.unlinkNode(false);
-            }
-            node.previousNode = this.sentinel.previousNode;
-            if (methodGuard >= -33) {
-                this.sentinel = (IntrusiveNode) null;
-            }
-            node.nextNode = this.sentinel;
-            node.previousNode.nextNode = node;
-            node.nextNode.previousNode = node;
+          if (null != node.previousNode) {
+            node.unlinkNode(false);
+          }
+          node.previousNode = this.sentinel.previousNode;
+          if (methodGuard >= -33) {
+            this.sentinel = (IntrusiveNode) null;
+          }
+          node.nextNode = this.sentinel;
+          node.previousNode.nextNode = node;
+          node.nextNode.previousNode = node;
         } catch (RuntimeException appendFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) appendFailure), "tf.P(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) appendFailure), "tf.P(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

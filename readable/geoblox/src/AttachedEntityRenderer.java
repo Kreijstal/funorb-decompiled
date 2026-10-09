@@ -9,7 +9,7 @@ final class AttachedEntityRenderer {
     public static void releaseStaticReferences(int methodGuard) {
         initialUiFontArchive = null;
         if (methodGuard < 121) {
-            secondPreviousPacketOpcode = 78;
+          secondPreviousPacketOpcode = 78;
         }
     }
 

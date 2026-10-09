@@ -179,7 +179,7 @@ final class SoundSampleCache {
         RuntimeException caughtQueryFailure = null;
         try {
           if (EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-87) &&
-              !candidateEmail.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491))) {
+            !candidateEmail.equals(EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491))) {
             EntityContactSupport.activeEmailAvailabilityQuery = ImageProducerRasterBuffer.createEmailAvailabilityQuery((byte) 86, candidateEmail);
           }
           if (methodGuard != -1) {
@@ -284,7 +284,7 @@ final class SoundSampleCache {
             return cachedSampleAtReturn;
           }
           if (byteBudget != null &&
-              byteBudget[0] <= 0) {
+            byteBudget[0] <= 0) {
             return null;
           }
           soundEffect = SynthesizedSoundEffect.load(this.synthesizedSoundArchive, groupId, fileId);
@@ -344,7 +344,7 @@ final class SoundSampleCache {
             return cachedSampleAtReturn;
           }
           if (byteBudget != null &&
-              byteBudget[0] <= 0) {
+            byteBudget[0] <= 0) {
             exhaustedBudgetResult = null;
             return (PcmSample) (exhaustedBudgetResult);
           }
@@ -515,10 +515,10 @@ final class SoundSampleCache {
         this.pendingVorbisDecoders = new IntrusiveNodeHashTable(256);
         this.decodedSamples = new IntrusiveNodeHashTable(256);
         try {
-            this.synthesizedSoundArchive = synthesizedSoundArchive;
-            this.vorbisArchive = vorbisArchive;
+          this.synthesizedSoundArchive = synthesizedSoundArchive;
+          this.vorbisArchive = vorbisArchive;
         } catch (RuntimeException cacheInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cacheInitializationFailure), "ci.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisArchive != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cacheInitializationFailure), "ci.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisArchive != null ? "{...}" : "null") + ')');
         }
     }
 

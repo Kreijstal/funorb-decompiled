@@ -118,7 +118,7 @@ final class CheckboxRenderer implements WidgetRenderer {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 1) {
-            return;
+          return;
         }
         mustLogin3Texts = null;
     }
@@ -127,18 +127,18 @@ final class CheckboxRenderer implements WidgetRenderer {
         this.horizontalAlignment = 1;
         this.verticalAlignment = 1;
         try {
-            this.textShadowColor = textShadowColor;
-            this.padding = padding;
-            this.font = font;
-            this.checkboxWidth = checkboxWidth;
-            this.checkboxHeight = checkboxHeight;
-            this.textColor = textColor;
-            this.textOffsetY = textOffsetY;
-            this.checkboxOffsetX = checkboxOffsetX;
-            this.backgroundColor = backgroundColor;
-            this.checkboxOffsetY = checkboxOffsetY;
+          this.textShadowColor = textShadowColor;
+          this.padding = padding;
+          this.font = font;
+          this.checkboxWidth = checkboxWidth;
+          this.checkboxHeight = checkboxHeight;
+          this.textColor = textColor;
+          this.textOffsetY = textOffsetY;
+          this.checkboxOffsetX = checkboxOffsetX;
+          this.backgroundColor = backgroundColor;
+          this.checkboxOffsetY = checkboxOffsetY;
         } catch (RuntimeException rendererConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "bi.<init>(" + (font != null ? "{...}" : "null") + ',' + padding + ',' + textOffsetY + ',' + textColor + ',' + textShadowColor + ',' + checkboxOffsetX + ',' + checkboxOffsetY + ',' + checkboxHeight + ',' + checkboxWidth + ',' + backgroundColor + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "bi.<init>(" + (font != null ? "{...}" : "null") + ',' + padding + ',' + textOffsetY + ',' + textColor + ',' + textShadowColor + ',' + checkboxOffsetX + ',' + checkboxOffsetY + ',' + checkboxHeight + ',' + checkboxWidth + ',' + backgroundColor + ')');
         }
     }
 

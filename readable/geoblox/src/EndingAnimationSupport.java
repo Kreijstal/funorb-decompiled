@@ -36,8 +36,8 @@ final class EndingAnimationSupport {
           while (transientEntityToReset != null) {
             transientEntityToReset.advanceEntityAnimation(true);
             if (5 == transientEntityToReset.entitySpriteKindId ||
-                transientEntityToReset.entitySpriteKindId == 7 ||
-                transientEntityToReset.entitySpriteKindId == 8) {
+              transientEntityToReset.entitySpriteKindId == 7 ||
+              transientEntityToReset.entitySpriteKindId == 8) {
               LoginPanel.endingEntityScanClear = false;
               if (transientEntityToReset.animationFrameIndex >= 3) {
                 SecondaryNodeDeque.availableEntities.addLast(-115, transientEntityToReset);
@@ -55,16 +55,16 @@ final class EndingAnimationSupport {
 
     final static void presentPreparedFrame(boolean drawEnabled, java.awt.Canvas canvas) {
         if (SpriteConstructionSupport.clientScreenStage == 11) {
-            SessionSocketSupport.evaluateSessionSupportGuard(31);
+          SessionSocketSupport.evaluateSessionSupportGuard(31);
         }
         if (!drawEnabled) {
-            return;
+          return;
         }
         try {
-            ByteArrayBuffer.drawLoadingProgressDialog(ArchiveRequest.loadingScaledProgress, ByteArrayPoolSupport.loadingStatusText, SessionInstanceState.sessionExitRequested, (byte) -40);
-            MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 117, canvas, 0);
+          ByteArrayBuffer.drawLoadingProgressDialog(ArchiveRequest.loadingScaledProgress, ByteArrayPoolSupport.loadingStatusText, SessionInstanceState.sessionExitRequested, (byte) -40);
+          MeshDepthSupport.drawMainRasterToCanvas(0, (byte) 117, canvas, 0);
         } catch (RuntimeException framePresentationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) framePresentationFailure), "fc.A(" + drawEnabled + ',' + (canvas != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) framePresentationFailure), "fc.A(" + drawEnabled + ',' + (canvas != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,9 +72,9 @@ final class EndingAnimationSupport {
         avatarEyeFrames = null;
         blackOrbFrames = null;
         if (methodGuard < -79) {
-            loginPayloadBuffer = null;
-            musicLabelText = null;
-            return;
+          loginPayloadBuffer = null;
+          musicLabelText = null;
+          return;
         }
         EndingAnimationSupport.advanceEndingEntityAnimations(-17);
         loginPayloadBuffer = null;

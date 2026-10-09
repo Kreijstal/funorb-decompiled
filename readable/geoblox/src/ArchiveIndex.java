@@ -34,7 +34,7 @@ final class ArchiveIndex {
         int cosXsinYQ16 = (int)((long)cosXQ16 * (long)sinYQ16 >> 16);
         int cosXcosYQ16 = (int)((long)cosYQ16 * (long)cosXQ16 >> 16);
         if (methodGuard > -65) {
-            return (int[]) null;
+          return (int[]) null;
         }
         return new int[]{0, 0, 0, cosYQ16, 0, sinYQ16, sinXsinYQ16, cosXQ16, -sinXcosYQ16, -cosXsinYQ16, sinXQ16, cosXcosYQ16};
     }
@@ -90,7 +90,7 @@ final class ArchiveIndex {
           indexBuffer = new ByteArrayBuffer(CanvasResizeController.decompressArchive(packedIndexBytes, -1));
           formatVersion = indexBuffer.readUnsignedByte((byte) 34);
           if (5 <= formatVersion &&
-              formatVersion <= 7) {
+            formatVersion <= 7) {
             if (formatVersion < 6) {
               this.indexRevision = 0;
             } else {
@@ -267,30 +267,30 @@ final class ArchiveIndex {
         int scoreIndex = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            outgoingBufferForScores = CacheReference.outgoingSessionBuffer;
-            outgoingBufferForHeader = outgoingBufferForScores;
-            outgoingBufferForHeader.writeCipherByte(packetOpcode, (byte) -125);
-            outgoingBufferForHeader.position = outgoingBufferForHeader.position + 1;
-            payloadStart = outgoingBufferForHeader.position;
-            outgoingBufferForHeader.writeByte((byte) 122, 1);
-            outgoingBufferForHeader.writeShortBE(submission.submissionId, 28695);
-            outgoingBufferForHeader.writeShortBE(submission.firstShortValue, 28695);
-            outgoingBufferForHeader.writeShortBE(submission.secondShortValue, 28695);
-            outgoingBufferForHeader.writeIntBE((byte) 95, submission.firstContextValue);
-            outgoingBufferForHeader.writeIntBE((byte) 95, submission.secondContextValue);
-            outgoingBufferForHeader.writeIntBE((byte) 95, submission.thirdContextValue);
-            if (methodGuard > -126) {
-                maximumPasswordLength = 61;
-            }
-            outgoingBufferForHeader.writeIntBE((byte) 95, submission.fourthContextValue);
-            outgoingBufferForHeader.writeByte((byte) 126, submission.scores.length);
-            for (scoreIndex = 0; scoreIndex < submission.scores.length; scoreIndex++) {
-                outgoingBufferForScores.writeIntBE((byte) 95, submission.scores[scoreIndex]);
-            }
-            outgoingBufferForHeader.appendCrc32(78, payloadStart);
-            outgoingBufferForHeader.backpatchLengthByte(11700, -payloadStart + outgoingBufferForHeader.position);
+          outgoingBufferForScores = CacheReference.outgoingSessionBuffer;
+          outgoingBufferForHeader = outgoingBufferForScores;
+          outgoingBufferForHeader.writeCipherByte(packetOpcode, (byte) -125);
+          outgoingBufferForHeader.position = outgoingBufferForHeader.position + 1;
+          payloadStart = outgoingBufferForHeader.position;
+          outgoingBufferForHeader.writeByte((byte) 122, 1);
+          outgoingBufferForHeader.writeShortBE(submission.submissionId, 28695);
+          outgoingBufferForHeader.writeShortBE(submission.firstShortValue, 28695);
+          outgoingBufferForHeader.writeShortBE(submission.secondShortValue, 28695);
+          outgoingBufferForHeader.writeIntBE((byte) 95, submission.firstContextValue);
+          outgoingBufferForHeader.writeIntBE((byte) 95, submission.secondContextValue);
+          outgoingBufferForHeader.writeIntBE((byte) 95, submission.thirdContextValue);
+          if (methodGuard > -126) {
+            maximumPasswordLength = 61;
+          }
+          outgoingBufferForHeader.writeIntBE((byte) 95, submission.fourthContextValue);
+          outgoingBufferForHeader.writeByte((byte) 126, submission.scores.length);
+          for (scoreIndex = 0; scoreIndex < submission.scores.length; scoreIndex++) {
+            outgoingBufferForScores.writeIntBE((byte) 95, submission.scores[scoreIndex]);
+          }
+          outgoingBufferForHeader.appendCrc32(78, payloadStart);
+          outgoingBufferForHeader.backpatchLengthByte(11700, -payloadStart + outgoingBufferForHeader.position);
         } catch (RuntimeException submissionWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionWriteFailure), "bm.C(" + (submission != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionWriteFailure), "bm.C(" + (submission != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
         }
     }
 
@@ -303,24 +303,24 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] packedIndexBytes, int expectedCrc32, byte[] expectedWhirlpoolDigest) {
         int digestByteIndex = 0;
         try {
-            this.indexCrc32 = NameCharacterSupport.computePrefixCrc32(packedIndexBytes, 107, packedIndexBytes.length);
-            if (expectedCrc32 != this.indexCrc32) {
+          this.indexCrc32 = NameCharacterSupport.computePrefixCrc32(packedIndexBytes, 107, packedIndexBytes.length);
+          if (expectedCrc32 != this.indexCrc32) {
+            throw new RuntimeException();
+          }
+          if (expectedWhirlpoolDigest != null) {
+            if (expectedWhirlpoolDigest.length != 64) {
+              throw new RuntimeException();
+            }
+            this.indexWhirlpoolDigest = SpriteState.computeWhirlpoolDigest(packedIndexBytes.length, 0, packedIndexBytes, 8);
+            for (digestByteIndex = 0; 64 > digestByteIndex; digestByteIndex++) {
+              if (this.indexWhirlpoolDigest[digestByteIndex] != expectedWhirlpoolDigest[digestByteIndex]) {
                 throw new RuntimeException();
+              }
             }
-            if (expectedWhirlpoolDigest != null) {
-                if (expectedWhirlpoolDigest.length != 64) {
-                    throw new RuntimeException();
-                }
-                this.indexWhirlpoolDigest = SpriteState.computeWhirlpoolDigest(packedIndexBytes.length, 0, packedIndexBytes, 8);
-                for (digestByteIndex = 0; 64 > digestByteIndex; digestByteIndex++) {
-                    if (this.indexWhirlpoolDigest[digestByteIndex] != expectedWhirlpoolDigest[digestByteIndex]) {
-                        throw new RuntimeException();
-                    }
-                }
-            }
-            this.decodeIndex((byte) 119, packedIndexBytes);
+          }
+          this.decodeIndex((byte) 119, packedIndexBytes);
         } catch (RuntimeException constructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "bm.<init>(" + (packedIndexBytes != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedWhirlpoolDigest != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "bm.<init>(" + (packedIndexBytes != null ? "{...}" : "null") + ',' + expectedCrc32 + ',' + (expectedWhirlpoolDigest != null ? "{...}" : "null") + ')');
         }
     }
 

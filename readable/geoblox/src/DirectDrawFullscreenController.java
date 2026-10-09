@@ -13,14 +13,14 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
         int[] unusedAlternateModeValuesAlias;
         this.directDraw.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (methodGuard == 8) {
-            modeValues = new int[modeValueIndex];
-            modeValueIndex = 0;
-            this.directDraw.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-            enumeratedModeValues = modeValues;
-            unusedModeValuesAlias = enumeratedModeValues;
-            modeValueIndex = 0;
-            modeValues = null;
-            return enumeratedModeValues;
+          modeValues = new int[modeValueIndex];
+          modeValueIndex = 0;
+          this.directDraw.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
+          enumeratedModeValues = modeValues;
+          unusedModeValuesAlias = enumeratedModeValues;
+          modeValueIndex = 0;
+          modeValues = null;
+          return enumeratedModeValues;
         }
         this.listDisplayModes(-65);
         modeValues = new int[modeValueIndex];
@@ -58,20 +58,20 @@ final class DirectDrawFullscreenController implements com.ms.directX.IEnumModesC
         int bitDepthWriteIndex = 0;
         int refreshRateWriteIndex = 0;
         if (modeValues != null) {
-            widthWriteIndex = modeValueIndex;
-            modeValueIndex = modeValueIndex + 1;
-            modeValues[widthWriteIndex] = mode.width;
-            heightWriteIndex = modeValueIndex;
-            modeValueIndex = modeValueIndex + 1;
-            modeValues[heightWriteIndex] = mode.height;
-            bitDepthWriteIndex = modeValueIndex;
-            modeValueIndex = modeValueIndex + 1;
-            modeValues[bitDepthWriteIndex] = mode.rgbBitCount;
-            refreshRateWriteIndex = modeValueIndex;
-            modeValueIndex = modeValueIndex + 1;
-            modeValues[refreshRateWriteIndex] = mode.refreshRate;
+          widthWriteIndex = modeValueIndex;
+          modeValueIndex = modeValueIndex + 1;
+          modeValues[widthWriteIndex] = mode.width;
+          heightWriteIndex = modeValueIndex;
+          modeValueIndex = modeValueIndex + 1;
+          modeValues[heightWriteIndex] = mode.height;
+          bitDepthWriteIndex = modeValueIndex;
+          modeValueIndex = modeValueIndex + 1;
+          modeValues[bitDepthWriteIndex] = mode.rgbBitCount;
+          refreshRateWriteIndex = modeValueIndex;
+          modeValueIndex = modeValueIndex + 1;
+          modeValues[refreshRateWriteIndex] = mode.refreshRate;
         } else {
-            modeValueIndex = modeValueIndex + 4;
+          modeValueIndex = modeValueIndex + 4;
         }
     }
 

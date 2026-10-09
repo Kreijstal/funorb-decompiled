@@ -22,25 +22,25 @@ final class MultiHandleSliderWidget extends ButtonWidget {
         packet.writeIntBE((byte) 95, submission.secondaryTrackingCounterSnapshot);
         packet.appendCrc32(127, payloadStart);
         if (methodGuard != 30175) {
-            return;
+          return;
         }
         try {
-            packet.backpatchLengthByte(11700, -payloadStart + packet.position);
+          packet.backpatchLengthByte(11700, -payloadStart + packet.position);
         } catch (RuntimeException packetWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetWriteFailure), "ol.A(" + packetOpcode + ',' + (submission != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetWriteFailure), "ol.A(" + packetOpcode + ',' + (submission != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         sessionServerHost = null;
         if (methodGuard != 0) {
-            sessionServerHost = (String) null;
+          sessionServerHost = (String) null;
         }
     }
 
     final int handleValueAt(int methodGuard, int index) {
         if (index < 0 || this.handleValues.size((byte) 101) <= index) {
-            return -1;
+          return -1;
         }
         int handleLookupGuardQuotient = 34 / ((methodGuard - 88) / 32);
         return this.handleValues.get(index, (byte) 94);
@@ -143,7 +143,7 @@ final class MultiHandleSliderWidget extends ButtonWidget {
 
     final int maximumValue(int methodGuard) {
         if (methodGuard >= -121) {
-            return -39;
+          return -39;
         }
         return this.maximumValue;
     }

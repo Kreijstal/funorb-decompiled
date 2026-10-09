@@ -18,10 +18,10 @@ final class ReflectionCheckRequest extends IntrusiveNode {
     public static void releaseStaticReferences(boolean methodGuard) {
         pointsPanelGlowFrames = null;
         if (methodGuard) {
-            currentSocialLocationLabel = (String) null;
-            frameTimer = null;
-            currentSocialLocationLabel = null;
-            return;
+          currentSocialLocationLabel = (String) null;
+          frameTimer = null;
+          currentSocialLocationLabel = null;
+          return;
         }
         frameTimer = null;
         currentSocialLocationLabel = null;
@@ -44,7 +44,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         CharSequence guardedNullTextSnapshot = null;
         try {
           if (2 <= radix &&
-              radix <= 36) {
+            radix <= 36) {
             negativeSignInt = 0;
             digitSeenInt = 0;
             accumulator = 0;
@@ -63,15 +63,15 @@ final class ReflectionCheckRequest extends IntrusiveNode {
                   }
                 }
                 if (characterIndex != 0 || (characterCodeOrSignedDigit != 43 ||
-                      !allowLeadingPlus)) {
+                  !allowLeadingPlus)) {
                   if (48 <= characterCodeOrSignedDigit &&
-                      characterCodeOrSignedDigit <= 57) {
+                    characterCodeOrSignedDigit <= 57) {
                     characterCodeOrSignedDigit -= 48;
                   } else if (65 <= characterCodeOrSignedDigit &&
-                      90 >= characterCodeOrSignedDigit) {
+                    90 >= characterCodeOrSignedDigit) {
                     characterCodeOrSignedDigit -= 55;
                   } else if (characterCodeOrSignedDigit >= 97 &&
-                      122 >= characterCodeOrSignedDigit) {
+                    122 >= characterCodeOrSignedDigit) {
                     characterCodeOrSignedDigit -= 87;
                   } else {
                     throw new NumberFormatException();

@@ -13,7 +13,7 @@ final class CacheFileState {
         randomSeedFile = null;
         cacheDataFile = null;
         if (methodGuard > -86) {
-            cacheDataFile = (BufferedRandomAccessFile) null;
+          cacheDataFile = (BufferedRandomAccessFile) null;
         }
     }
 

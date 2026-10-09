@@ -55,8 +55,8 @@ final class DelayedPcmStream extends PcmStream {
 
     final void skipFrames(int frameCount) {
         if (frameCount < this.remainingDelayFrames) {
-            this.remainingDelayFrames = this.remainingDelayFrames - frameCount;
-            return;
+          this.remainingDelayFrames = this.remainingDelayFrames - frameCount;
+          return;
         }
         frameCount = frameCount - this.remainingDelayFrames;
         this.remainingDelayFrames = 0;
@@ -67,7 +67,7 @@ final class DelayedPcmStream extends PcmStream {
         this.previousNode = null;
         this.nextNode = null;
         if (0 < frameCount) {
-            this.wrappedStream.skipFrames(frameCount);
+          this.wrappedStream.skipFrames(frameCount);
         }
     }
 
@@ -81,7 +81,7 @@ final class DelayedPcmStream extends PcmStream {
 
     public static void clearUsernameQueryCandidate(byte methodGuard) {
         if (methodGuard > -107) {
-            DelayedPcmStream.clearUsernameQueryCandidate((byte) -13);
+          DelayedPcmStream.clearUsernameQueryCandidate((byte) -13);
         }
         usernameQueryCandidate = null;
     }
@@ -92,7 +92,7 @@ final class DelayedPcmStream extends PcmStream {
 
     final static boolean getAccountNewsOptIn(byte methodGuard) {
         if (methodGuard <= 18) {
-            return false;
+          return false;
         }
         return CachedArchiveSource.accountCreationNewsOptIn;
     }
@@ -137,11 +137,11 @@ final class DelayedPcmStream extends PcmStream {
 
     DelayedPcmStream(PcmStream stream, int delayFrames) {
         try {
-            this.wrappedStream = stream;
-            this.sample = this.wrappedStream.sample;
-            this.remainingDelayFrames = delayFrames;
+          this.wrappedStream = stream;
+          this.sample = this.wrappedStream.sample;
+          this.remainingDelayFrames = delayFrames;
         } catch (RuntimeException delayConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delayConstructionFailure), "cg.<init>(" + (stream != null ? "{...}" : "null") + ',' + delayFrames + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delayConstructionFailure), "cg.<init>(" + (stream != null ? "{...}" : "null") + ',' + delayFrames + ')');
         }
     }
 

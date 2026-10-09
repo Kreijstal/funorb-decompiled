@@ -67,8 +67,8 @@ final class ValidationIconWidget extends ButtonWidget {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard > -114) {
-            StringBuilder unusedNullBuilderSnapshot = (StringBuilder) null;
-            ValidationIconWidget.writeTextAtOffset((CharSequence) null, (StringBuilder) null, -1, -77);
+          StringBuilder unusedNullBuilderSnapshot = (StringBuilder) null;
+          ValidationIconWidget.writeTextAtOffset((CharSequence) null, (StringBuilder) null, -1, -77);
         }
         emptyNameLoginMethod = null;
     }
@@ -94,7 +94,7 @@ final class ValidationIconWidget extends ButtonWidget {
         iconCenterY = parentY - (-this.widgetY - (this.widgetHeight >> 1));
         validationState = this.validationProvider.getDebouncedValidationState((byte) -105);
         if (validationState != ImageProducerRasterBuffer.debouncingValidationState &&
-            WidgetSkinState.pendingQueryValidationState != validationState) {
+          WidgetSkinState.pendingQueryValidationState != validationState) {
           if (WidgetSkinState.invalidInputValidationState == validationState) {
             invalidIconSprite = ClientClockSupport.validationStateSprites[2];
             invalidIconSprite.drawAdditive(-(invalidIconSprite.width >> 1) + iconCenterX, iconCenterY - (invalidIconSprite.height >> 1), 256);
@@ -107,8 +107,8 @@ final class ValidationIconWidget extends ButtonWidget {
           requiredScratchWidth = waitingIconSprite.fullWidth << 1;
           requiredScratchHeight = waitingIconSprite.fullHeight << 1;
           if (null != ClientOptionSupport.validationIconScratchSprite &&
-              requiredScratchWidth <= ClientOptionSupport.validationIconScratchSprite.width &&
-              requiredScratchHeight <= ClientOptionSupport.validationIconScratchSprite.height) {
+            requiredScratchWidth <= ClientOptionSupport.validationIconScratchSprite.width &&
+            requiredScratchHeight <= ClientOptionSupport.validationIconScratchSprite.height) {
             Geoblox.setRasterTarget(1, ClientOptionSupport.validationIconScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
           } else {
@@ -123,13 +123,13 @@ final class ValidationIconWidget extends ButtonWidget {
 
     final static void playPcmSample(int methodGuard, PcmSample sample) {
         try {
-            if (methodGuard != -348) {
-                PcmSample unusedNullSampleForInvalidGuard = (PcmSample) null;
-                ValidationIconWidget.playPcmSample(-67, (PcmSample) null);
-            }
-            GameplayEntity.registerAudioStream(false, PcmSampleStream.createForPlaybackRate(sample, 100, 96));
+          if (methodGuard != -348) {
+            PcmSample unusedNullSampleForInvalidGuard = (PcmSample) null;
+            ValidationIconWidget.playPcmSample(-67, (PcmSample) null);
+          }
+          GameplayEntity.registerAudioStream(false, PcmSampleStream.createForPlaybackRate(sample, 100, 96));
         } catch (RuntimeException samplePlaybackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) samplePlaybackFailure), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) samplePlaybackFailure), "td.G(" + methodGuard + ',' + (sample != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class ValidationIconWidget extends ButtonWidget {
           }
           originalLength = destination.length();
           if (writeOffset >= 0 &&
-              originalLength >= writeOffset) {
+            originalLength >= writeOffset) {
             sourceLength = sourceText.length();
             if (sourceLength == 0) {
               emptyWriteDestinationBeforeReturn = (StringBuilder) (destination);
@@ -199,10 +199,10 @@ final class ValidationIconWidget extends ButtonWidget {
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            this.animationTicks = this.animationTicks + 1;
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          this.animationTicks = this.animationTicks + 1;
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "td.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "td.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -240,25 +240,25 @@ final class ValidationIconWidget extends ButtonWidget {
 
     final static void recycleAllScorePopups(byte methodGuard) {
         if (methodGuard != -93) {
-            return;
+          return;
         }
         GmtTimestampSupport.activeScorePopups.moveAllTo(PcmResampler.availableScorePopups, (byte) -70);
     }
 
     ValidationIconWidget(ValidationProvider validationProvider) {
         try {
-            this.validationProvider = validationProvider;
+          this.validationProvider = validationProvider;
         } catch (RuntimeException validationProviderInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationProviderInitializationFailure), "td.<init>(" + (validationProvider != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validationProviderInitializationFailure), "td.<init>(" + (validationProvider != null ? "{...}" : "null") + ')');
         }
     }
 
     final String getHoverText(byte methodGuard) {
         if (methodGuard != 69) {
-            return (String) null;
+          return (String) null;
         }
         if (this.pointerInside) {
-            return this.validationProvider.getDebouncedValidationMessage(-21666);
+          return this.validationProvider.getDebouncedValidationMessage(-21666);
         }
         return null;
     }

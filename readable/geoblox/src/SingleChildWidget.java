@@ -61,7 +61,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             return;
           }
           if (startIndex + 5 < endIndexExclusive &&
-              upperKeyBound != lowerKeyBound) {
+            upperKeyBound != lowerKeyBound) {
             midpointOrBubbleEnd = (1 & (upperKeyBound & lowerKeyBound)) + (lowerKeyBound >> 1) + (upperKeyBound >> 1);
             partitionOrBubbleIndex = startIndex;
             leastUpperKeyOrLeftEntry = upperKeyBound;
@@ -165,10 +165,10 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           }
           nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           if (EntityMotionSupport.incomingPacketBaseDelayMillis != 0 &&
-              MidiNote.stagedIncomingPacketOpcode < 0) {
+            MidiNote.stagedIncomingPacketOpcode < 0) {
             queuedPacket = (DelayedIncomingPacket) (MeshPrioritySupport.delayedIncomingPackets.firstForIteration(0));
             if (queuedPacket != null &&
-                nowMillis > queuedPacket.deliveryTimeMillis) {
+              nowMillis > queuedPacket.deliveryTimeMillis) {
               queuedPacket.unlinkNode(false);
               AchievementSubmission.sessionPacketPayloadLength = queuedPacket.payload.length;
               LogoCompositor.sessionPacketBuffer.position = 0;
@@ -273,11 +273,11 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     UiWidget findFocusTarget(int methodGuard) {
         UiWidget childSnapshot = this.child;
         if (childSnapshot != null &&
-            childSnapshot.hasKeyboardFocus((byte) 54)) {
-            return childSnapshot;
+          childSnapshot.hasKeyboardFocus((byte) 54)) {
+          return childSnapshot;
         }
         if (methodGuard == -4863) {
-            return null;
+          return null;
         }
         UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
         this.handlePointerPress(114, -49, -37, 74, 126, 94, (UiWidget) null);
@@ -286,32 +286,32 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         if (0 == renderPass &&
-            this.renderer != null) {
-            this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
+          this.renderer != null) {
+          this.renderer.drawWidget(parentX, -50, parentY, true, (UiWidget) (this));
         }
         int guardResidue = 85 % ((methodGuard - 1) / 43);
         if (this.child != null) {
-            this.child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) -74, renderPass);
+          this.child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) -74, renderPass);
         }
     }
 
     void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         if (!releaseGuard) {
-            return;
+          return;
         }
         try {
-            if (null != this.child) {
-                this.child.handlePointerRelease(this.widgetX + parentX, pointerX, true, eventContext, parentY + this.widgetY, pointerY);
-            }
+          if (null != this.child) {
+            this.child.handlePointerRelease(this.widgetX + parentX, pointerX, true, eventContext, parentY + this.widgetY, pointerY);
+          }
         } catch (RuntimeException pointerReleaseFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "sh.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "sh.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
     final int getLastRenderPass(byte methodGuard) {
         if (methodGuard <= 82) {
-            UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
-            this.handlePointerWheel(-119, 24, -30, 98, 113, (UiWidget) null, 116);
+          UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
+          this.handlePointerWheel(-119, 24, -30, 98, 113, (UiWidget) null, 116);
         }
         return this.child != null ? this.child.getLastRenderPass((byte) 123) : 0;
     }
@@ -365,10 +365,10 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         String childHoverText = null;
         String parentHoverText = super.getHoverText(methodGuard);
         if (this.child != null) {
-            childHoverText = this.child.getHoverText((byte) 69);
-            if (childHoverText != null) {
-                return childHoverText;
-            }
+          childHoverText = this.child.getHoverText((byte) 69);
+          if (childHoverText != null) {
+            return childHoverText;
+          }
         }
         return parentHoverText;
     }
@@ -428,8 +428,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     final boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
-            UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
-            this.updatePointerState(false, 15, (UiWidget) null, 31);
+          UiWidget guardedNullWidgetSnapshot = (UiWidget) null;
+          this.updatePointerState(false, 15, (UiWidget) null, 31);
         }
         return this.findFocusTarget(-4863) != null ? true : false;
     }
@@ -463,25 +463,25 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     final void clearKeyboardFocus(int methodGuard) {
         if (null != this.child) {
-            this.child.clearKeyboardFocus(-123);
+          this.child.clearKeyboardFocus(-123);
         }
         if (methodGuard >= -122) {
-            SingleChildWidget.releaseStaticReferences((byte) 83);
+          SingleChildWidget.releaseStaticReferences((byte) 83);
         }
     }
 
     void refreshChildLayout(boolean layoutGuard) {
         if (null != this.child) {
-            this.child.refreshLayout(-73);
+          this.child.refreshLayout(-73);
         }
         if (!layoutGuard) {
-            projectedMeshVertexX = (int[]) null;
+          projectedMeshVertexX = (int[]) null;
         }
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard != -3) {
-            return;
+          return;
         }
         mainRasterBuffer = null;
         fpsTextTemplate = null;
@@ -490,12 +490,12 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            if (this.child != null) {
-                this.child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
-            }
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          if (this.child != null) {
+            this.child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
+          }
         } catch (RuntimeException pointerStateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerStateFailure), "sh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerStateFailure), "sh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -509,8 +509,8 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         RuntimeException caughtKeyFailure = null;
         try {
           if (null != this.child &&
-              this.child.hasKeyboardFocus((byte) 54) &&
-              this.child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
+            this.child.hasKeyboardFocus((byte) 54) &&
+            this.child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
             return true;
           }
           if (methodGuard != 13) {
@@ -547,7 +547,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         super.setWidgetBounds(height, width, (byte) -40, y, x);
         if (methodGuard > -6) {
-            fpsTextTemplate = (String) null;
+          fpsTextTemplate = (String) null;
         }
         this.refreshChildLayout(true);
     }

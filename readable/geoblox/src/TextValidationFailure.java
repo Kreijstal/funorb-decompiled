@@ -68,24 +68,24 @@ final class TextValidationFailure {
 
     final static MouseWheelInput createMouseWheelInput(int methodGuard) {
         try {
-            Throwable ignoredWheelFactoryFailure = null;
-            MouseWheelInput wheelInputBeforeReturn = null;
-            Throwable caughtWheelFactoryFailure = null;
-            if (methodGuard < 2) {
-              previousWallClockMillis = -62L;
-            }
-            try {
-              wheelInputBeforeReturn = (MouseWheelInput) (Class.forName("AwtMouseWheelListener").newInstance());
-              return wheelInputBeforeReturn;
-            } catch (java.lang.Throwable wheelFactoryFailure) {
-              caughtWheelFactoryFailure = wheelFactoryFailure;
-              ignoredWheelFactoryFailure = caughtWheelFactoryFailure;
-              return null;
-            }
+          Throwable ignoredWheelFactoryFailure = null;
+          MouseWheelInput wheelInputBeforeReturn = null;
+          Throwable caughtWheelFactoryFailure = null;
+          if (methodGuard < 2) {
+            previousWallClockMillis = -62L;
+          }
+          try {
+            wheelInputBeforeReturn = (MouseWheelInput) (Class.forName("AwtMouseWheelListener").newInstance());
+            return wheelInputBeforeReturn;
+          } catch (java.lang.Throwable wheelFactoryFailure) {
+            caughtWheelFactoryFailure = wheelFactoryFailure;
+            ignoredWheelFactoryFailure = caughtWheelFactoryFailure;
+            return null;
+          }
         } catch (RuntimeException | Error uncheckedWheelFactoryFailure) {
-            throw uncheckedWheelFactoryFailure;
+          throw uncheckedWheelFactoryFailure;
         } catch (Throwable checkedWheelFactoryFailure) {
-            throw new RuntimeException(checkedWheelFactoryFailure);
+          throw new RuntimeException(checkedWheelFactoryFailure);
         }
     }
 

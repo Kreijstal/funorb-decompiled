@@ -12,8 +12,8 @@ final class MatchCandidateSupport {
         gmtCalendar = null;
         currentAvatarCryFrame = null;
         if (methodGuard > -58) {
-            SocialListEntry unusedNullSocialEntrySnapshot = (SocialListEntry) null;
-            MatchCandidateSupport.socialEntrySortsAfter((SocialListEntry) null, (SocialListEntry) null, (byte) -96);
+          SocialListEntry unusedNullSocialEntrySnapshot = (SocialListEntry) null;
+          MatchCandidateSupport.socialEntrySortsAfter((SocialListEntry) null, (SocialListEntry) null, (byte) -96);
         }
     }
 
@@ -61,7 +61,7 @@ final class MatchCandidateSupport {
           }
           while (centralEntity != null) {
             if (!(centralEntity.sameVariantEntityCount <= 1) ||
-                !(centralEntity.sameCategoryEntityCount <= 1)) {
+              !(centralEntity.sameCategoryEntityCount <= 1)) {
               centralEntity.entityQueue = DelegatingCanvas.transientEntities;
               variantMatchEligibilityValue = (centralEntity.sameVariantEntityCount <= 1) ? 0 : 1;
               variantMatchingAllowed = variantMatchEligibilityValue;
@@ -82,7 +82,7 @@ final class MatchCandidateSupport {
                 }
                 firstNeighborSharesCategory = firstNeighborCategoryMatchValue;
                 if (firstNeighborSharesVariant != 0 ||
-                    firstNeighborSharesCategory != 0) {
+                  firstNeighborSharesCategory != 0) {
                   for (secondNeighborIndex = firstNeighborIndex + 1; secondNeighborIndex < centralEntity.relatedEntityCount; secondNeighborIndex++) {
                     if (firstNeighborSharesCategory != 0) {
                       tripleCategoryMatchValue = (centralEntity.relatedEntities[secondNeighborIndex].entityCategoryKey == centralEntity.entityCategoryKey) ? 1 : 0;
@@ -97,7 +97,7 @@ final class MatchCandidateSupport {
                     }
                     tripleSharesVariant = tripleVariantMatchValue;
                     if (tripleSharesCategory != 0 ||
-                        tripleSharesVariant != 0) {
+                      tripleSharesVariant != 0) {
                       centralEntity.relatedEntities[firstNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
                       centralEntity.relatedEntities[secondNeighborIndex].entityQueue = DelegatingCanvas.transientEntities;
                       middlePackedEntityId = centralEntity.relatedEntities[firstNeighborIndex].entityId;
@@ -112,7 +112,7 @@ final class MatchCandidateSupport {
                         FadingDialog.variantMatchCandidateCount = FadingDialog.variantMatchCandidateCount + 1;
                       }
                       if (tripleSharesVariant != 0 &&
-                          tripleSharesCategory != 0) {
+                        tripleSharesCategory != 0) {
                       }
                       if (tripleSharesCategory != 0) {
                         TextLayout.categoryMatchCandidateCount = TextLayout.categoryMatchCandidateCount + 1;
@@ -230,23 +230,23 @@ final class MatchCandidateSupport {
         int finalFrameWidth = 0;
         int finalFrameHeight = 0;
         try {
-            finalFrameSprite = new Sprite(graphicsArchive.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            finalFrameWidth = finalFrameSprite.width;
-            finalFrameHeight = finalFrameSprite.height;
-            SpriteCheckboxRenderer.pushRasterTarget(methodGuard + 21619);
-            LogoPreparationSupport.logoFinalFrameTop = new Sprite(finalFrameWidth, 3 * finalFrameHeight / 4);
-            LogoPreparationSupport.logoFinalFrameTop.setAsRasterTarget();
-            finalFrameSprite.drawUnmasked(0, 0);
-            UsernameQuerySupport.logoFinalFrameBottom = new Sprite(finalFrameWidth, finalFrameHeight - LogoPreparationSupport.logoFinalFrameTop.height);
-            UsernameQuerySupport.logoFinalFrameBottom.setAsRasterTarget();
-            if (methodGuard != -21541) {
-                currentAvatarCryFrame = (Sprite) null;
-            }
-            finalFrameSprite.drawUnmasked(0, -LogoPreparationSupport.logoFinalFrameTop.height);
-            UsernameQuerySupport.logoFinalFrameBottom.trimY = LogoPreparationSupport.logoFinalFrameTop.height;
-            RasterTargetRestoreSupport.restoreRasterTarget(true);
+          finalFrameSprite = new Sprite(graphicsArchive.getNamedFile(0, "", "final_frame.jpg"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
+          finalFrameWidth = finalFrameSprite.width;
+          finalFrameHeight = finalFrameSprite.height;
+          SpriteCheckboxRenderer.pushRasterTarget(methodGuard + 21619);
+          LogoPreparationSupport.logoFinalFrameTop = new Sprite(finalFrameWidth, 3 * finalFrameHeight / 4);
+          LogoPreparationSupport.logoFinalFrameTop.setAsRasterTarget();
+          finalFrameSprite.drawUnmasked(0, 0);
+          UsernameQuerySupport.logoFinalFrameBottom = new Sprite(finalFrameWidth, finalFrameHeight - LogoPreparationSupport.logoFinalFrameTop.height);
+          UsernameQuerySupport.logoFinalFrameBottom.setAsRasterTarget();
+          if (methodGuard != -21541) {
+            currentAvatarCryFrame = (Sprite) null;
+          }
+          finalFrameSprite.drawUnmasked(0, -LogoPreparationSupport.logoFinalFrameTop.height);
+          UsernameQuerySupport.logoFinalFrameBottom.trimY = LogoPreparationSupport.logoFinalFrameTop.height;
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
         } catch (RuntimeException slicePreparationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) slicePreparationFailure), "ul.A(" + methodGuard + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) slicePreparationFailure), "ul.A(" + methodGuard + ',' + (graphicsArchive != null ? "{...}" : "null") + ')');
         }
     }
 

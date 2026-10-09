@@ -8,10 +8,10 @@ final class LogoPreparationSupport {
 
     public static void releaseStaticReferences(boolean methodGuard) {
         if (methodGuard) {
-            logoFinalFrameTop = null;
-            loginUsernameText = null;
-            boardOwnershipRaster = null;
-            return;
+          logoFinalFrameTop = null;
+          loginUsernameText = null;
+          boardOwnershipRaster = null;
+          return;
         }
         logoFinalFrameTop = (Sprite) null;
         logoFinalFrameTop = null;
@@ -21,18 +21,18 @@ final class LogoPreparationSupport {
 
     final static void prepareLogoAnimation(ResourceArchive logoArchive, int startDelayMillis, int methodGuard, PcmStreamMixer unusedPcmMixer) {
         try {
-            DiskCacheWorker.logoStartDelayTicks = startDelayMillis * ClientTimingSupport.getConfiguredUpdateRate(true) / 1000;
-            EntityMotionSupport.decodeLogoAudio(99, logoArchive);
-            MessageDialogContent.loadLogoMeshesAndMaterials(logoArchive, 0);
-            if (methodGuard < 97) {
-                LogoPreparationSupport.readSessionTextRecord(true, -54);
-            }
-            MatchCandidateSupport.prepareFinalFrameSlices(-21541, logoArchive);
-            FullscreenSupport.prepareMeshSpecularResponse((byte) -91);
-            MidiNoteMixer.prepareLogoGlowRaster((byte) -32);
-            DequeCursor.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;
+          DiskCacheWorker.logoStartDelayTicks = startDelayMillis * ClientTimingSupport.getConfiguredUpdateRate(true) / 1000;
+          EntityMotionSupport.decodeLogoAudio(99, logoArchive);
+          MessageDialogContent.loadLogoMeshesAndMaterials(logoArchive, 0);
+          if (methodGuard < 97) {
+            LogoPreparationSupport.readSessionTextRecord(true, -54);
+          }
+          MatchCandidateSupport.prepareFinalFrameSlices(-21541, logoArchive);
+          FullscreenSupport.prepareMeshSpecularResponse((byte) -91);
+          MidiNoteMixer.prepareLogoGlowRaster((byte) -32);
+          DequeCursor.logoAnimationTick = -DiskCacheWorker.logoStartDelayTicks + 0;
         } catch (RuntimeException logoPreparationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) logoPreparationFailure), "bk.B(" + (logoArchive != null ? "{...}" : "null") + ',' + startDelayMillis + ',' + methodGuard + ',' + (unusedPcmMixer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) logoPreparationFailure), "bk.B(" + (logoArchive != null ? "{...}" : "null") + ',' + startDelayMillis + ',' + methodGuard + ',' + (unusedPcmMixer != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -20,17 +20,17 @@ final class TextWidgetSupport {
         char[] characters = new char[length];
         char[] unusedCharactersAlias = characters;
         for (characterIndex = startIndex; characterIndex < length; characterIndex++) {
-            characters[characterIndex] = character;
+          characters[characterIndex] = character;
         }
         return new String(characters);
     }
 
     final static TextWidgetRenderer getDefaultTextWidgetRenderer(byte methodGuard) {
         if (TextInputRenderer.sharedDefaultTextWidgetRenderer == null) {
-            TextInputRenderer.sharedDefaultTextWidgetRenderer = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 20, 0, 0, 0, 11579568, -1, 0, 0, UiFontResources.commonUiSmallFont.maxAscent, -1, 2147483647, true);
+          TextInputRenderer.sharedDefaultTextWidgetRenderer = new TextWidgetRenderer(UiFontResources.commonUiSmallFont, 20, 0, 0, 0, 11579568, -1, 0, 0, UiFontResources.commonUiSmallFont.maxAscent, -1, 2147483647, true);
         }
         if (methodGuard >= -39) {
-            TextWidgetSupport.clearTextWidgetResources(-8);
+          TextWidgetSupport.clearTextWidgetResources(-8);
         }
         return TextInputRenderer.sharedDefaultTextWidgetRenderer;
     }

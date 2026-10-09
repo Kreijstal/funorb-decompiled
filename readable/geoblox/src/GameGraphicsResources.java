@@ -13,8 +13,8 @@ final class GameGraphicsResources {
 
     final static long elapsedSinceSessionActivity(byte methodGuard) {
         if (methodGuard != 12) {
-            ResourceArchive guardedNullGraphicsArchiveSnapshot = (ResourceArchive) null;
-            GameGraphicsResources.loadRgbSpritesById(55, (byte) -55, -85, (ResourceArchive) null);
+          ResourceArchive guardedNullGraphicsArchiveSnapshot = (ResourceArchive) null;
+          GameGraphicsResources.loadRgbSpritesById(55, (byte) -55, -85, (ResourceArchive) null);
         }
         return -AudioService.sessionActivityStartMillis + ClientClockSupport.correctedCurrentTimeMillis(-12520);
     }
@@ -61,7 +61,7 @@ final class GameGraphicsResources {
         titleMusicTrack = null;
         frameNineSliceSprites = null;
         if (methodGuard != 7) {
-            return;
+          return;
         }
         themesLoaded = null;
     }

@@ -9,9 +9,9 @@ final class InstrumentNoteMask extends IntrusiveNode {
 
     InstrumentNoteMask(byte[] notesUsed) {
         try {
-            this.notesUsed = notesUsed;
+          this.notesUsed = notesUsed;
         } catch (RuntimeException caughtFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtFailure), "pj.<init>(" + (notesUsed != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtFailure), "pj.<init>(" + (notesUsed != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -19,9 +19,9 @@ final class InstrumentNoteMask extends IntrusiveNode {
         meshFaceOrder = null;
         textTemplateArgumentTypeZero = null;
         if (recursiveCleanup) {
-            InstrumentNoteMask.releaseStaticReferences(false);
-            missingTextComponentFailure = null;
-            return;
+          InstrumentNoteMask.releaseStaticReferences(false);
+          missingTextComponentFailure = null;
+          return;
         }
         missingTextComponentFailure = null;
     }

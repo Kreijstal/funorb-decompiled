@@ -15,20 +15,20 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         int buttonSlotIndex = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (this.buttonSlotCount >= slotCount) {
-            return;
+          return;
         }
         ButtonWidget[] allocatedButtons = new ButtonWidget[slotCount];
         ButtonWidget[] replacementButtonsAlias = allocatedButtons;
         int[] replacementActionIds = new int[slotCount];
         for (buttonSlotIndex = 0; buttonSlotIndex < this.buttonSlotCount; buttonSlotIndex++) {
-            allocatedButtons[buttonSlotIndex] = this.actionButtons[buttonSlotIndex];
-            replacementActionIds[buttonSlotIndex] = this.buttonActionIds[buttonSlotIndex];
+          allocatedButtons[buttonSlotIndex] = this.actionButtons[buttonSlotIndex];
+          replacementActionIds[buttonSlotIndex] = this.buttonActionIds[buttonSlotIndex];
         }
         this.actionButtons = replacementButtonsAlias;
         this.buttonActionIds = replacementActionIds;
         this.buttonSlotCount = slotCount;
         if (methodGuard != -11272) {
-            this.messageFont = (BitmapFont) null;
+          this.messageFont = (BitmapFont) null;
         }
     }
 
@@ -131,13 +131,13 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         int wrappedMessageHeight = 0;
         this.buttonSlotCount = 0;
         try {
-            this.messageFont = messageFont;
-            this.messageDialog = messageDialog;
-            this.messageText = messageText;
-            wrappedMessageHeight = null == this.messageText ? 0 : this.messageFont.measureWrappedHeight(this.messageText, 260, this.messageFont.maxAscent);
-            this.setWidgetBounds(wrappedMessageHeight + 22, 288, (byte) -119, 0, 0);
+          this.messageFont = messageFont;
+          this.messageDialog = messageDialog;
+          this.messageText = messageText;
+          wrappedMessageHeight = null == this.messageText ? 0 : this.messageFont.measureWrappedHeight(this.messageText, 260, this.messageFont.maxAscent);
+          this.setWidgetBounds(wrappedMessageHeight + 22, 288, (byte) -119, 0, 0);
         } catch (RuntimeException contentInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentInitializationFailure), "ni.<init>(" + (messageDialog != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentInitializationFailure), "ni.<init>(" + (messageDialog != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -214,19 +214,19 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
     final void appendActionButton(String label, int slotIncrement, int actionId) {
         int newButtonSlotIndex = 0;
         try {
-            newButtonSlotIndex = this.buttonSlotCount;
-            this.ensureButtonSlots(-11272, newButtonSlotIndex + slotIncrement);
-            this.actionButtons[newButtonSlotIndex] = this.appendButton(-2, label, (WidgetListener) (this));
-            this.buttonActionIds[newButtonSlotIndex] = actionId;
+          newButtonSlotIndex = this.buttonSlotCount;
+          this.ensureButtonSlots(-11272, newButtonSlotIndex + slotIncrement);
+          this.actionButtons[newButtonSlotIndex] = this.appendButton(-2, label, (WidgetListener) (this));
+          this.buttonActionIds[newButtonSlotIndex] = actionId;
         } catch (RuntimeException actionAppendFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) actionAppendFailure), "ni.IA(" + (label != null ? "{...}" : "null") + ',' + slotIncrement + ',' + actionId + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) actionAppendFailure), "ni.IA(" + (label != null ? "{...}" : "null") + ',' + slotIncrement + ',' + actionId + ')');
         }
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
         createToUseText = null;
         if (methodGuard >= -19) {
-            createToUseText = (String) null;
+          createToUseText = (String) null;
         }
     }
 

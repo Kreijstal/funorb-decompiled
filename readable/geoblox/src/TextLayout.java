@@ -15,14 +15,14 @@ abstract class TextLayout {
         TextLayoutLine[] lines = this.lines;
         TextLayoutLine[] linesAlias = lines;
         for (lineIndex = 0; lines.length > lineIndex; lineIndex++) {
-            line = lines[lineIndex];
-            if (line.caretX.length > caretIndex) {
-                return line.caretX[caretIndex];
-            }
-            caretIndex = caretIndex - (line.caretX.length - 1);
+          line = lines[lineIndex];
+          if (line.caretX.length > caretIndex) {
+            return line.caretX[caretIndex];
+          }
+          caretIndex = caretIndex - (line.caretX.length - 1);
         }
         if (methodGuard <= 109) {
-            return 67;
+          return 67;
         }
         return 0;
     }
@@ -88,7 +88,7 @@ abstract class TextLayout {
             if (characterCode != 60) {
               if (characterCode != 62) {
                 if (insideMarkup == 0 &&
-                    32 == characterCode) {
+                  32 == characterCode) {
                   spaceCount++;
                 }
               } else {
@@ -122,55 +122,55 @@ abstract class TextLayout {
 
     final static void closeArchiveAndCacheServices(byte methodGuard) {
         try {
-            int cacheFileIndex = 0;
-            IOException dataFileCloseFailure = null;
-            int clientControlFlowSnapshot = 0;
-            Throwable caughtCloseFailure = null;
-            RuntimeException archiveCloseFailure = null;
-            IOException indexFileCloseFailure = null;
-            clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
-            try {
-              if (null != AsyncResourceDownloader.archiveNetworkClient) {
-                AsyncResourceDownloader.archiveNetworkClient.closeSocket(-70);
+          int cacheFileIndex = 0;
+          IOException dataFileCloseFailure = null;
+          int clientControlFlowSnapshot = 0;
+          Throwable caughtCloseFailure = null;
+          RuntimeException archiveCloseFailure = null;
+          IOException indexFileCloseFailure = null;
+          clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+          try {
+            if (null != AsyncResourceDownloader.archiveNetworkClient) {
+              AsyncResourceDownloader.archiveNetworkClient.closeSocket(-70);
+            }
+            if (methodGuard >= -65) {
+              categoryMatchCandidateCount = 18;
+            }
+            if (UsernameQuerySupport.archiveDiskWorker != null) {
+              UsernameQuerySupport.archiveDiskWorker.shutdown((byte) 51);
+            }
+            if (null != CacheFileState.cacheDataFile) {
+              try {
+                CacheFileState.cacheDataFile.close(27034);
+              } catch (java.io.IOException caughtDataFileCloseFailure) {
+                caughtCloseFailure = caughtDataFileCloseFailure;
+                dataFileCloseFailure = (IOException) (Object) caughtCloseFailure;
               }
-              if (methodGuard >= -65) {
-                categoryMatchCandidateCount = 18;
-              }
-              if (UsernameQuerySupport.archiveDiskWorker != null) {
-                UsernameQuerySupport.archiveDiskWorker.shutdown((byte) 51);
-              }
-              if (null != CacheFileState.cacheDataFile) {
+            }
+            if (null != TrackedPcmStream.openedCacheIndexFiles) {
+              for (cacheFileIndex = 0; TrackedPcmStream.openedCacheIndexFiles.length > cacheFileIndex; cacheFileIndex++) {
+                if (null == TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex]) {
+                  continue;
+                }
                 try {
-                  CacheFileState.cacheDataFile.close(27034);
-                } catch (java.io.IOException caughtDataFileCloseFailure) {
-                  caughtCloseFailure = caughtDataFileCloseFailure;
-                  dataFileCloseFailure = (IOException) (Object) caughtCloseFailure;
+                  TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex].close(27034);
+                } catch (java.io.IOException caughtIndexFileCloseFailure) {
+                  caughtCloseFailure = caughtIndexFileCloseFailure;
+                  indexFileCloseFailure = (IOException) (Object) caughtCloseFailure;
                 }
-              }
-              if (null != TrackedPcmStream.openedCacheIndexFiles) {
-                for (cacheFileIndex = 0; TrackedPcmStream.openedCacheIndexFiles.length > cacheFileIndex; cacheFileIndex++) {
-                  if (null == TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex]) {
-                    continue;
-                  }
-                  try {
-                    TrackedPcmStream.openedCacheIndexFiles[cacheFileIndex].close(27034);
-                  } catch (java.io.IOException caughtIndexFileCloseFailure) {
-                    caughtCloseFailure = caughtIndexFileCloseFailure;
-                    indexFileCloseFailure = (IOException) (Object) caughtCloseFailure;
-                  }
-                }
-                return;
               }
               return;
-            } catch (java.lang.RuntimeException caughtArchiveCloseFailure) {
-              caughtCloseFailure = caughtArchiveCloseFailure;
-              archiveCloseFailure = (RuntimeException) (Object) caughtCloseFailure;
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) archiveCloseFailure), "dk.O(" + methodGuard + ')');
             }
+            return;
+          } catch (java.lang.RuntimeException caughtArchiveCloseFailure) {
+            caughtCloseFailure = caughtArchiveCloseFailure;
+            archiveCloseFailure = (RuntimeException) (Object) caughtCloseFailure;
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) archiveCloseFailure), "dk.O(" + methodGuard + ')');
+          }
         } catch (RuntimeException | Error uncheckedCloseFailure) {
-            throw uncheckedCloseFailure;
+          throw uncheckedCloseFailure;
         } catch (Throwable checkedCloseFailure) {
-            throw new RuntimeException(checkedCloseFailure);
+          throw new RuntimeException(checkedCloseFailure);
         }
     }
 
@@ -180,7 +180,7 @@ abstract class TextLayout {
           categoryMatchCandidateCount = 49;
         }
         if (null != this.lines &&
-            this.lines.length > 0) {
+          this.lines.length > 0) {
           heightBeforeReturn = this.lines[this.lines.length - 1].bottomY - this.lines[0].topY;
         } else {
           heightBeforeReturn = 0;
@@ -193,14 +193,14 @@ abstract class TextLayout {
         TextLayoutLine line = null;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != 24) {
-            return -10;
+          return -10;
         }
         for (lineIndex = 0; this.lines.length > lineIndex; lineIndex++) {
-            line = this.lines[lineIndex];
-            if (!(line.caretX.length <= caretIndex)) {
-                return lineIndex;
-            }
-            caretIndex = caretIndex - (line.caretX.length - 1);
+          line = this.lines[lineIndex];
+          if (!(line.caretX.length <= caretIndex)) {
+            return lineIndex;
+          }
+          caretIndex = caretIndex - (line.caretX.length - 1);
         }
         return this.lines.length;
     }
@@ -214,8 +214,8 @@ abstract class TextLayout {
         int clientControlFlowSnapshot;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (null != this.lines &&
-            this.lines.length != 0 &&
-            this.lines[0].topY <= y) {
+          this.lines.length != 0 &&
+          this.lines[0].topY <= y) {
           if (this.lines[-1 + this.lines.length].bottomY < y) {
             return -1;
           }
@@ -227,7 +227,7 @@ abstract class TextLayout {
           for (lineIndex = 0; lineIndex < this.lines.length; lineIndex++) {
             line = this.lines[lineIndex];
             if (y >= line.topY &&
-                line.bottomY >= y) {
+              line.bottomY >= y) {
               lineCaretIndex = line.findNearestCaretIndex(-79, x);
               if (-1 != lineCaretIndex) {
                 return precedingCharacterCount + lineCaretIndex;

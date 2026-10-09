@@ -37,7 +37,7 @@ abstract class MouseWheelInput {
             return (byte[]) (nullArrayBeforeReturn);
           }
           if (destination == null ||
-                destination.length != arrayLength) {
+            destination.length != arrayLength) {
             destination = new byte[arrayLength];
           }
           deltaBitCount = buffer.readBits((byte) -17, 3);
@@ -78,7 +78,7 @@ abstract class MouseWheelInput {
         commonButtonSprites = null;
         achievementStateQuery = null;
         if (methodGuard >= -9) {
-            return;
+          return;
         }
         activeDisplayNamePanel = null;
     }

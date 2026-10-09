@@ -57,17 +57,17 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
     public static void releaseStaticReferences(byte methodGuard) {
         menuText = null;
         if (methodGuard > 0) {
-            FullscreenErrorDialog.releaseStaticReferences((byte) 25);
-            createPasswordTooltipText = null;
-            return;
+          FullscreenErrorDialog.releaseStaticReferences((byte) 25);
+          createPasswordTooltipText = null;
+          return;
         }
         createPasswordTooltipText = null;
     }
 
     final static int chooseSpawnEntityCategory(int methodGuard) {
         if (methodGuard <= 18) {
-            FullscreenErrorDialog.chooseSpawnEntityCategory(48);
-            return AchievementQuery.nextSpriteVariantIndex(MessageDialog.availableEntityCategoryCount, 1);
+          FullscreenErrorDialog.chooseSpawnEntityCategory(48);
+          return AchievementQuery.nextSpriteVariantIndex(MessageDialog.availableEntityCategoryCount, 1);
         }
         return AchievementQuery.nextSpriteVariantIndex(MessageDialog.availableEntityCategoryCount, 1);
     }
@@ -132,7 +132,7 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
 
     private final void hideFullscreenError(byte methodGuard) {
         if (!this.dialogVisible) {
-            return;
+          return;
         }
         int hideGuardQuotient = 102 / ((methodGuard - 6) / 43);
         this.dialogVisible = false;
@@ -173,36 +173,36 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
         int normalFaceOffsetX;
         int normalFaceOffsetY;
         if (!UiWidget.gameplaySession.sessionEnding) {
-            avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
-            avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
-            if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
-                SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
-            }
-            EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
-            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
-            if (methodGuard >= 3) {
-                return;
-            }
-            menuText = (String) null;
+          avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
+          avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
+          if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
+            SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
+          }
+          EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
+          UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
+          if (methodGuard >= 3) {
             return;
+          }
+          menuText = (String) null;
+          return;
         }
         if (null == MatchCandidateSupport.currentAvatarCryFrame) {
-            normalFaceOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
-            normalFaceOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
-            if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
-                SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
-            }
-            EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(normalFaceOffsetX + 320, 240 + normalFaceOffsetY, DisplayModeInfo.avatarTintColor);
-            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + normalFaceOffsetX, 240 + normalFaceOffsetY, DisplayModeInfo.avatarTintColor);
-            if (methodGuard >= 3) {
-                return;
-            }
-            menuText = (String) null;
+          normalFaceOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
+          normalFaceOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
+          if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
+            SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
+          }
+          EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(normalFaceOffsetX + 320, 240 + normalFaceOffsetY, DisplayModeInfo.avatarTintColor);
+          UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + normalFaceOffsetX, 240 + normalFaceOffsetY, DisplayModeInfo.avatarTintColor);
+          if (methodGuard >= 3) {
             return;
+          }
+          menuText = (String) null;
+          return;
         }
         MatchCandidateSupport.currentAvatarCryFrame.draw(-(MatchCandidateSupport.currentAvatarCryFrame.fullWidth >> 1) + 319, -(MatchCandidateSupport.currentAvatarCryFrame.fullHeight >> 1) + 240);
         if (methodGuard >= 3) {
-            return;
+          return;
         }
         menuText = (String) null;
     }

@@ -71,10 +71,10 @@ final class DelayedIncomingPacket extends IntrusiveNode {
     final static int tickArchiveLoading(int methodGuard) {
         DequeCursor.archiveCatalog.advanceArchiveLoading((byte) -65);
         if (methodGuard != 15869) {
-            return 61;
+          return 61;
         }
         if (!AsyncResourceDownloader.archiveNetworkClient.pollResponses((byte) 95)) {
-            return WhirlpoolHash.advanceArchiveHandshake((byte) -74);
+          return WhirlpoolHash.advanceArchiveHandshake((byte) -74);
         }
         return 0;
     }
@@ -121,7 +121,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
             return;
           }
           if (panelWidth > 0 &&
-              0 < panelHeight) {
+            0 < panelHeight) {
             if (nineSliceSprites[3] == null) {
               selectedLeftBorderWidth = 0;
             } else {
@@ -189,7 +189,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (null != nineSliceSprites[1] &&
-                nineSliceSprites[1].fullWidth != 0) {
+              nineSliceSprites[1].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(centerClipLeft, panelTop, centerClipRight, centerClipTop);
               for (topEdgeTileX = centerTileLeft; centerTileRight > topEdgeTileX; topEdgeTileX = topEdgeTileX + nineSliceSprites[1].fullWidth) {
                 nineSliceSprites[1].draw(topEdgeTileX, panelTop);
@@ -197,7 +197,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[7] != null &&
-                0 != nineSliceSprites[7].fullWidth) {
+              0 != nineSliceSprites[7].fullWidth) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipBottom, centerClipRight, panelBottom);
               for (bottomEdgeTileX = centerTileLeft; bottomEdgeTileX < centerTileRight; bottomEdgeTileX = bottomEdgeTileX + nineSliceSprites[7].fullWidth) {
                 nineSliceSprites[7].draw(bottomEdgeTileX, centerTileBottom);
@@ -205,7 +205,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[3] != null &&
-                0 != nineSliceSprites[3].fullHeight) {
+              0 != nineSliceSprites[3].fullHeight) {
               SoftwareRasterizer.intersectClip(panelLeft, centerClipTop, centerClipLeft, centerClipBottom);
               for (leftEdgeTileY = centerTileTop; centerTileBottom > leftEdgeTileY; leftEdgeTileY = leftEdgeTileY + nineSliceSprites[3].fullHeight) {
                 nineSliceSprites[3].draw(panelLeft, leftEdgeTileY);
@@ -213,7 +213,7 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[5] != null &&
-                nineSliceSprites[5].fullHeight != 0) {
+              nineSliceSprites[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(centerClipRight, centerClipTop, panelRight, centerClipBottom);
               for (rightEdgeTileY = centerTileTop; rightEdgeTileY < centerTileBottom; rightEdgeTileY = rightEdgeTileY + nineSliceSprites[5].fullHeight) {
                 nineSliceSprites[5].draw(centerTileRight, rightEdgeTileY);
@@ -221,8 +221,8 @@ final class DelayedIncomingPacket extends IntrusiveNode {
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[4] != null &&
-                nineSliceSprites[4].fullWidth != 0 &&
-                0 != nineSliceSprites[4].fullHeight) {
+              nineSliceSprites[4].fullWidth != 0 &&
+              0 != nineSliceSprites[4].fullHeight) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipTop, centerClipRight, centerClipBottom);
               for (centerTileY = centerTileTop; centerTileBottom > centerTileY; centerTileY = centerTileY + nineSliceSprites[4].fullHeight) {
                 for (centerTileX = centerTileLeft; centerTileX < centerTileRight; centerTileX = centerTileX + nineSliceSprites[4].fullWidth) {
@@ -261,14 +261,14 @@ final class DelayedIncomingPacket extends IntrusiveNode {
         RuntimeException caughtLoadFailure = null;
         try {
           if (spriteArchive.ensureIndexLoaded(0) &&
-              spriteArchive.loadGroupByName("commonui", (byte) -127)) {
+            spriteArchive.loadGroupByName("commonui", (byte) -127)) {
             if (fontArchive.ensureIndexLoaded(methodGuard + 11652) &&
-                fontArchive.loadGroupByName("commonui", (byte) -124)) {
+              fontArchive.loadGroupByName("commonui", (byte) -124)) {
               if (methodGuard != -11652) {
                 return false;
               }
               if (buttonAndLogoArchive.ensureIndexLoaded(0) &&
-                  buttonAndLogoArchive.loadGroupByName("button.gif", (byte) -125)) {
+                buttonAndLogoArchive.loadGroupByName("button.gif", (byte) -125)) {
                 return true;
               }
               return false;
@@ -304,11 +304,11 @@ final class DelayedIncomingPacket extends IntrusiveNode {
 
     DelayedIncomingPacket(long deliveryTimeMillis, int packetOpcode, byte[] payload) {
         try {
-            this.packetOpcode = packetOpcode;
-            this.payload = payload;
-            this.deliveryTimeMillis = deliveryTimeMillis;
+          this.packetOpcode = packetOpcode;
+          this.payload = payload;
+          this.deliveryTimeMillis = deliveryTimeMillis;
         } catch (RuntimeException packetInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetInitializationFailure), "ma.<init>(" + deliveryTimeMillis + ',' + packetOpcode + ',' + (payload != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) packetInitializationFailure), "ma.<init>(" + deliveryTimeMillis + ',' + packetOpcode + ',' + (payload != null ? "{...}" : "null") + ')');
         }
     }
 

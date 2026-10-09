@@ -9,13 +9,13 @@ final class TextTemplateLookupSupport {
         String unusedLoginMessage = (String) null;
         TextTemplateDefinition.showAccountLoginPanel(2274, (String) null, showCreateAccount, allowJustPlay);
         if (methodGuard) {
-            TextTemplateLookupSupport.openLoginPanel(true, false, true);
+          TextTemplateLookupSupport.openLoginPanel(true, false, true);
         }
     }
 
     public static void releaseTemplateLookupState(int methodGuard) {
         if (methodGuard != 17062) {
-            return;
+          return;
         }
         currentLoginIdentifier = null;
         bootstrapArchiveLoadSequence = null;

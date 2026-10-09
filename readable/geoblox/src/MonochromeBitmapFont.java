@@ -42,7 +42,7 @@ final class MonochromeBitmapFont extends BitmapFont {
           destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width > 0 &&
-            height > 0) {
+          height > 0) {
           if (SoftwareRasterizer.scanlineMaskStarts == null) {
             MonochromeBitmapFont.blitGlyphMask(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
           } else {
@@ -130,32 +130,32 @@ final class MonochromeBitmapFont extends BitmapFont {
         int leftClipPixels;
         int rightClipPixels;
         if (y < SoftwareRasterizer.clipTop) {
-            clippedPixels = SoftwareRasterizer.clipTop - y;
-            height = height - clippedPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + clippedPixels * width;
-            destinationIndex = destinationIndex + clippedPixels * SoftwareRasterizer.stride;
+          clippedPixels = SoftwareRasterizer.clipTop - y;
+          height = height - clippedPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + clippedPixels * width;
+          destinationIndex = destinationIndex + clippedPixels * SoftwareRasterizer.stride;
         }
         if (y + height > SoftwareRasterizer.clipBottom) {
-            height = height - (y + height - SoftwareRasterizer.clipBottom);
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            width = width - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          width = width - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + width - SoftwareRasterizer.clipRight;
-            width = width - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + width - SoftwareRasterizer.clipRight;
+          width = width - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width <= 0 || height <= 0) {
-            return;
+          return;
         }
         MonochromeBitmapFont.blitGlyphMaskAlpha(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
     }

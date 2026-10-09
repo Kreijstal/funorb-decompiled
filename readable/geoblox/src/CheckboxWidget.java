@@ -9,8 +9,8 @@ final class CheckboxWidget extends ButtonWidget {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard >= -65) {
-            PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
-            CheckboxWidget.queryDisplayModesAndWait(98, (PlatformTaskDispatcher) null);
+          PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
+          CheckboxWidget.queryDisplayModesAndWait(98, (PlatformTaskDispatcher) null);
         }
         loginJustPlayTooltipText = null;
         createNewsOptInTooltipText = null;
@@ -19,9 +19,9 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String label, WidgetListener listener) {
         this(label, DialRenderer.accountUiTheme.buttonRenderer, listener);
         try {
-            this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
+          this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
         } catch (RuntimeException checkboxInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -33,9 +33,9 @@ final class CheckboxWidget extends ButtonWidget {
     private CheckboxWidget(String label, WidgetRenderer initialButtonRenderer, WidgetListener listener) {
         super(label, initialButtonRenderer, listener);
         try {
-            this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
+          this.renderer = DialRenderer.accountUiTheme.checkboxRenderer;
         } catch (RuntimeException checkboxInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (initialButtonRenderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (initialButtonRenderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,9 +104,9 @@ final class CheckboxWidget extends ButtonWidget {
     CheckboxWidget(String label, WidgetListener listener, boolean initiallyActive) {
         this(label, listener);
         try {
-            this.active = initiallyActive ? true : false;
+          this.active = initiallyActive ? true : false;
         } catch (RuntimeException checkboxInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + initiallyActive + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) checkboxInitializationFailure), "vi.<init>(" + (label != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + initiallyActive + ')');
         }
     }
 

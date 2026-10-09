@@ -17,7 +17,7 @@ abstract class ResizableDialog extends FadingDialog {
     public static void releaseResizableDialogResources(int methodGuard) {
         awaitingInitialLoginReplyStage = null;
         if (methodGuard != 89) {
-            legacyJavaCanvasRefreshRequired = false;
+          legacyJavaCanvasRefreshRequired = false;
         }
         awtKeyCodeToInternalCode = null;
         connectionRestoredText = null;
@@ -26,20 +26,20 @@ abstract class ResizableDialog extends FadingDialog {
     boolean settleDialogAnimation(int methodGuard) {
         this.finishTransition(true);
         if (methodGuard != 229) {
-            this.advanceDialogAnimation(45);
+          this.advanceDialogAnimation(45);
         }
         return super.settleDialogAnimation(229);
     }
 
     final void startResizeTransition(int targetHeight, int targetWidth, int methodGuard, int durationTicks) {
         if (durationTicks <= 0) {
-            this.resizeAndCenter(targetHeight, methodGuard + 5373, targetWidth);
-            return;
+          this.resizeAndCenter(targetHeight, methodGuard + 5373, targetWidth);
+          return;
         }
         this.resizeStartWidth = this.widgetWidth;
         this.resizeTick = 0;
         if (methodGuard != -5269) {
-            this.resizeStartWidth = 59;
+          this.resizeStartWidth = 59;
         }
         this.resizeTargetHeight = targetHeight;
         this.resizeStartHeight = this.widgetHeight;
@@ -78,10 +78,10 @@ abstract class ResizableDialog extends FadingDialog {
 
     void finishTransition(boolean finishResize) {
         if (this.resizeDurationTicks <= 0) {
-            return;
+          return;
         }
         if (!finishResize) {
-            return;
+          return;
         }
         this.resizeAndCenter(this.resizeTargetHeight, 105, this.resizeTargetWidth);
         this.resizeDurationTicks = 0;
@@ -128,7 +128,7 @@ abstract class ResizableDialog extends FadingDialog {
 
     void onResizeTransitionComplete(int methodGuard) {
         if (methodGuard > -20) {
-            this.resizeTargetWidth = 122;
+          this.resizeTargetWidth = 122;
         }
     }
 
@@ -175,20 +175,20 @@ abstract class ResizableDialog extends FadingDialog {
         int durationSquared = 0;
         int easingNumerator = 0;
         if (~this.resizeDurationTicks < methodGuard) {
-            frameWidth = this.resizeTargetWidth;
-            frameHeight = this.resizeTargetHeight;
-            nextResizeTick = this.resizeTick + 1;
-            this.resizeTick = this.resizeTick + 1;
-            if (nextResizeTick < this.resizeDurationTicks) {
-                easingNumerator = (-this.resizeTick + 2 * this.resizeDurationTicks) * this.resizeTick;
-                durationSquared = this.resizeDurationTicks * this.resizeDurationTicks;
-                frameWidth = this.resizeStartWidth + easingNumerator * (this.resizeTargetWidth - this.resizeStartWidth) / durationSquared;
-                frameHeight = easingNumerator * (this.resizeTargetHeight - this.resizeStartHeight) / durationSquared + this.resizeStartHeight;
-            } else {
-                this.resizeDurationTicks = 0;
-                this.onResizeTransitionComplete(-31);
-            }
-            this.resizeAndCenter(frameHeight, 113, frameWidth);
+          frameWidth = this.resizeTargetWidth;
+          frameHeight = this.resizeTargetHeight;
+          nextResizeTick = this.resizeTick + 1;
+          this.resizeTick = this.resizeTick + 1;
+          if (nextResizeTick < this.resizeDurationTicks) {
+            easingNumerator = (-this.resizeTick + 2 * this.resizeDurationTicks) * this.resizeTick;
+            durationSquared = this.resizeDurationTicks * this.resizeDurationTicks;
+            frameWidth = this.resizeStartWidth + easingNumerator * (this.resizeTargetWidth - this.resizeStartWidth) / durationSquared;
+            frameHeight = easingNumerator * (this.resizeTargetHeight - this.resizeStartHeight) / durationSquared + this.resizeStartHeight;
+          } else {
+            this.resizeDurationTicks = 0;
+            this.onResizeTransitionComplete(-31);
+          }
+          this.resizeAndCenter(frameHeight, 113, frameWidth);
         }
         return super.advanceDialogAnimation(methodGuard ^ 0);
     }
@@ -196,7 +196,7 @@ abstract class ResizableDialog extends FadingDialog {
     final static void setPendingTooltipAnchor(int anchorY, byte methodGuard, int anchorX) {
         NodeHashTableIterator.pendingTooltipAnchorX = anchorX;
         if (methodGuard > -20) {
-            return;
+          return;
         }
         DequeCursor.pendingTooltipAnchorY = anchorY;
     }
@@ -316,14 +316,14 @@ abstract class ResizableDialog extends FadingDialog {
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
               if (((1 << achievementIndex & selectedAchievementMask) != 0 ||
-                    !onlyNewAchievements) &&
-                  (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
-                    achievementIndex != 16 ||
-                    AchievementQuery.hasReceivedAchievementSixteen(109))) {
+                !onlyNewAchievements) &&
+                (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
+                achievementIndex != 16 ||
+                AchievementQuery.hasReceivedAchievementSixteen(109))) {
                 if (AccountCreationSupport.pointerPressXSnapshot >= iconX &&
-                    AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
-                    iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
-                    FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
+                  AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
+                  iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
+                  FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
                   if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
@@ -342,7 +342,7 @@ abstract class ResizableDialog extends FadingDialog {
                     iconY += 5;
                   }
                   if (onlyNewAchievements &&
-                      missingFirstSixteenCount < 8) {
+                    missingFirstSixteenCount < 8) {
                     iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }
@@ -360,14 +360,14 @@ abstract class ResizableDialog extends FadingDialog {
             }
             for (achievementIndex = 0; GameplaySetupSupport.achievementTitles.length > achievementIndex; achievementIndex++) {
               if (((1 << achievementIndex & selectedAchievementMask) != 0 ||
-                    !onlyNewAchievements) &&
-                  (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
-                    achievementIndex != 16 ||
-                    AchievementQuery.hasReceivedAchievementSixteen(109))) {
+                !onlyNewAchievements) &&
+                (ClientOptionSupport.isClientOptionEnabled(0, 88) ||
+                achievementIndex != 16 ||
+                AchievementQuery.hasReceivedAchievementSixteen(109))) {
                 if (AccountCreationSupport.pointerPressXSnapshot >= iconX &&
-                    AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
-                    iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
-                    FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
+                  AccountCreationSupport.pointerPressXSnapshot <= iconX + 32 &&
+                  iconY <= FullscreenFocusCanvas.pointerPressYSnapshot &&
+                  FullscreenFocusCanvas.pointerPressYSnapshot <= iconY + 32) {
                   if (BoardEntityState.selectedAchievementIndex == achievementIndex) {
                     BoardEntityState.selectedAchievementIndex = -1;
                     return;
@@ -386,7 +386,7 @@ abstract class ResizableDialog extends FadingDialog {
                     iconY += 5;
                   }
                   if (onlyNewAchievements &&
-                      missingFirstSixteenCount < 8) {
+                    missingFirstSixteenCount < 8) {
                     iconX = iconX + missingMaskHorizontalOffset;
                   }
                 }

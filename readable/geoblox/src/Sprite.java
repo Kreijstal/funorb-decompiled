@@ -131,36 +131,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitSilhouette(SoftwareRasterizer.framebuffer, this.pixels, color, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitSilhouette(SoftwareRasterizer.framebuffer, this.pixels, color, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -383,8 +383,8 @@ class Sprite extends SpriteState {
                 continue;
               }
               if (fixedXFixedYSourceYQ12 >= 0 &&
-                  fixedXFixedYSourceXQ12 - (this.width << 12) < 0 &&
-                  fixedXFixedYSourceYQ12 - (this.height << 12) < 0) {
+                fixedXFixedYSourceXQ12 - (this.width << 12) < 0 &&
+                fixedXFixedYSourceYQ12 - (this.height << 12) < 0) {
                 while (fixedXFixedYNegativePixelCounter < 0) {
                   fixedXFixedYSampledPixel = this.pixels[(fixedXFixedYSourceYQ12 >> 12) * this.width + (fixedXFixedYSourceXQ12 >> 12)];
                   if (fixedXFixedYSampledPixel == 0) {
@@ -411,7 +411,7 @@ class Sprite extends SpriteState {
               fixedXForwardYSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
               fixedXForwardYNegativePixelCounter = rightThenNegativeWidth;
               if (fixedXForwardYSourceXQ12 >= 0 &&
-                  fixedXForwardYSourceXQ12 - (this.width << 12) < 0) {
+                fixedXForwardYSourceXQ12 - (this.width << 12) < 0) {
                 if (fixedXForwardYSourceYQ12 < 0) {
                   fixedXForwardYTopSkipPixels = (inverseSinStep - 1 - fixedXForwardYSourceYQ12) / inverseSinStep;
                   fixedXForwardYNegativePixelCounter = fixedXForwardYNegativePixelCounter + fixedXForwardYTopSkipPixels;
@@ -493,7 +493,7 @@ class Sprite extends SpriteState {
               forwardXFixedYSourceYQ12 = rowSourceYQ12;
               forwardXFixedYNegativePixelCounter = rightThenNegativeWidth;
               if (forwardXFixedYSourceYQ12 >= 0 &&
-                  forwardXFixedYSourceYQ12 - (this.height << 12) < 0) {
+                forwardXFixedYSourceYQ12 - (this.height << 12) < 0) {
                 if (forwardXFixedYSourceXQ12 < 0) {
                   forwardXFixedYLeftSkipPixels = (inverseCosStep - 1 - forwardXFixedYSourceXQ12) / inverseCosStep;
                   forwardXFixedYNegativePixelCounter = forwardXFixedYNegativePixelCounter + forwardXFixedYLeftSkipPixels;
@@ -629,7 +629,7 @@ class Sprite extends SpriteState {
             reverseXFixedYSourceYQ12 = rowSourceYQ12;
             reverseXFixedYNegativePixelCounter = rightThenNegativeWidth;
             if (reverseXFixedYSourceYQ12 >= 0 &&
-                reverseXFixedYSourceYQ12 - (this.height << 12) < 0) {
+              reverseXFixedYSourceYQ12 - (this.height << 12) < 0) {
               reverseXFixedYRightExcessThenSkipPixels = reverseXFixedYSourceXQ12 - (this.width << 12);
               if (reverseXFixedYSourceXQ12 - (this.width << 12) >= 0) {
                 reverseXFixedYRightExcessThenSkipPixels = (inverseCosStep - reverseXFixedYRightExcessThenSkipPixels) / inverseCosStep;
@@ -767,19 +767,19 @@ class Sprite extends SpriteState {
         int negativeColumn = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
-                if (sourcePixel != 0) {
-                    destinationPixels[destinationIndex++] = sourcePixel;
-                } else {
-                    destinationIndex++;
-                }
-                sourceX16 = sourceX16 + stepX16;
+          sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+            if (sourcePixel != 0) {
+              destinationPixels[destinationIndex++] = sourcePixel;
+            } else {
+              destinationIndex++;
             }
-            sourceY16 = sourceY16 + stepY16;
-            sourceX16 = rowSourceX16;
-            destinationIndex = destinationIndex + destinationRowSkip;
+            sourceX16 = sourceX16 + stepX16;
+          }
+          sourceY16 = sourceY16 + stepY16;
+          sourceX16 = rowSourceX16;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -854,9 +854,9 @@ class Sprite extends SpriteState {
           break;
         }
         if (leftEdgeColumn == 0 &&
-            rightEdgeColumn == this.width - 1 &&
-            topEdgeRow == 0 &&
-            bottomEdge == this.height - 1) {
+          rightEdgeColumn == this.width - 1 &&
+          topEdgeRow == 0 &&
+          bottomEdge == this.height - 1) {
           return;
         }
         croppedWidth = rightEdgeColumn + 1 - leftEdgeColumn;
@@ -888,19 +888,19 @@ class Sprite extends SpriteState {
             pixelOrOutlineColor = this.pixels[pixelIndex];
             if (pixelOrOutlineColor == 0) {
               if (column > 0 &&
-                  this.pixels[pixelIndex - 1] != 0) {
+                this.pixels[pixelIndex - 1] != 0) {
                 pixelOrOutlineColor = color;
               } else {
                 if (row > 0 &&
-                    this.pixels[pixelIndex - this.width] != 0) {
+                  this.pixels[pixelIndex - this.width] != 0) {
                   pixelOrOutlineColor = color;
                 } else {
                   if (column < this.width - 1 &&
-                      this.pixels[pixelIndex + 1] != 0) {
+                    this.pixels[pixelIndex + 1] != 0) {
                     pixelOrOutlineColor = color;
                   } else {
                     if (row < this.height - 1 &&
-                        this.pixels[pixelIndex + this.width] != 0) {
+                      this.pixels[pixelIndex + this.width] != 0) {
                       pixelOrOutlineColor = color;
                     }
                   }
@@ -961,36 +961,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitMultiply(0, SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitMultiply(0, SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -1011,58 +1011,58 @@ class Sprite extends SpriteState {
         int rightClipPixels;
         int leftClipPixels;
         if (destinationWidth > 0) {
-            if (destinationHeight <= 0) {
-                return;
-            }
-            sourceWidth = this.width;
-            sourceHeight = this.height;
-            sourceX16 = 0;
-            sourceY16 = 0;
-            canvasWidth = this.fullWidth;
-            canvasHeight = this.fullHeight;
-            stepX16 = (canvasWidth << 16) / destinationWidth;
-            stepY16 = (canvasHeight << 16) / destinationHeight;
-            if (this.trimX > 0) {
-                horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
-                x = x + horizontalTrimSteps;
-                sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
-            }
-            if (this.trimY > 0) {
-                verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + verticalTrimSteps;
-                sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
-            }
-            if (sourceWidth < canvasWidth) {
-                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
-            }
-            if (sourceHeight < canvasHeight) {
-                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
-            }
-            destinationIndex = x + y * SoftwareRasterizer.stride;
-            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
-            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
-                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
-            }
-            if (y < SoftwareRasterizer.clipTop) {
-                topClipPixels = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - topClipPixels;
-                destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
-                sourceY16 = sourceY16 + stepY16 * topClipPixels;
-            }
-            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - rightClipPixels;
-                destinationRowSkip = destinationRowSkip + rightClipPixels;
-            }
-            if (x < SoftwareRasterizer.clipLeft) {
-                leftClipPixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - leftClipPixels;
-                destinationIndex = destinationIndex + leftClipPixels;
-                sourceX16 = sourceX16 + stepX16 * leftClipPixels;
-                destinationRowSkip = destinationRowSkip + leftClipPixels;
-            }
-            Sprite.blitColorKeyScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
+          if (destinationHeight <= 0) {
             return;
+          }
+          sourceWidth = this.width;
+          sourceHeight = this.height;
+          sourceX16 = 0;
+          sourceY16 = 0;
+          canvasWidth = this.fullWidth;
+          canvasHeight = this.fullHeight;
+          stepX16 = (canvasWidth << 16) / destinationWidth;
+          stepY16 = (canvasHeight << 16) / destinationHeight;
+          if (this.trimX > 0) {
+            horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+            x = x + horizontalTrimSteps;
+            sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
+          }
+          if (this.trimY > 0) {
+            verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+            y = y + verticalTrimSteps;
+            sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
+          }
+          if (sourceWidth < canvasWidth) {
+            destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
+          }
+          if (sourceHeight < canvasHeight) {
+            destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
+          }
+          destinationIndex = x + y * SoftwareRasterizer.stride;
+          destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+          if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
+          }
+          if (y < SoftwareRasterizer.clipTop) {
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            destinationHeight = destinationHeight - topClipPixels;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+            sourceY16 = sourceY16 + stepY16 * topClipPixels;
+          }
+          if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+            rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+            destinationWidth = destinationWidth - rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          }
+          if (x < SoftwareRasterizer.clipLeft) {
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            destinationWidth = destinationWidth - leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceX16 = sourceX16 + stepX16 * leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          }
+          Sprite.blitColorKeyScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
+          return;
         }
     }
 
@@ -1083,58 +1083,58 @@ class Sprite extends SpriteState {
         int rightClipPixels;
         int leftClipPixels;
         if (destinationWidth > 0) {
-            if (destinationHeight <= 0) {
-                return;
-            }
-            sourceWidth = this.width;
-            sourceHeight = this.height;
-            sourceX16 = 0;
-            sourceY16 = 0;
-            canvasWidth = this.fullWidth;
-            canvasHeight = this.fullHeight;
-            stepX16 = (canvasWidth << 16) / destinationWidth;
-            stepY16 = (canvasHeight << 16) / destinationHeight;
-            if (this.trimX > 0) {
-                horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
-                x = x + horizontalTrimSteps;
-                sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
-            }
-            if (this.trimY > 0) {
-                verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + verticalTrimSteps;
-                sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
-            }
-            if (sourceWidth < canvasWidth) {
-                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
-            }
-            if (sourceHeight < canvasHeight) {
-                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
-            }
-            destinationIndex = x + y * SoftwareRasterizer.stride;
-            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
-            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
-                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
-            }
-            if (y < SoftwareRasterizer.clipTop) {
-                topClipPixels = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - topClipPixels;
-                destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
-                sourceY16 = sourceY16 + stepY16 * topClipPixels;
-            }
-            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - rightClipPixels;
-                destinationRowSkip = destinationRowSkip + rightClipPixels;
-            }
-            if (x < SoftwareRasterizer.clipLeft) {
-                leftClipPixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - leftClipPixels;
-                destinationIndex = destinationIndex + leftClipPixels;
-                sourceX16 = sourceX16 + stepX16 * leftClipPixels;
-                destinationRowSkip = destinationRowSkip + leftClipPixels;
-            }
-            Sprite.blitColorKeyScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
+          if (destinationHeight <= 0) {
             return;
+          }
+          sourceWidth = this.width;
+          sourceHeight = this.height;
+          sourceX16 = 0;
+          sourceY16 = 0;
+          canvasWidth = this.fullWidth;
+          canvasHeight = this.fullHeight;
+          stepX16 = (canvasWidth << 16) / destinationWidth;
+          stepY16 = (canvasHeight << 16) / destinationHeight;
+          if (this.trimX > 0) {
+            horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+            x = x + horizontalTrimSteps;
+            sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
+          }
+          if (this.trimY > 0) {
+            verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+            y = y + verticalTrimSteps;
+            sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
+          }
+          if (sourceWidth < canvasWidth) {
+            destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
+          }
+          if (sourceHeight < canvasHeight) {
+            destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
+          }
+          destinationIndex = x + y * SoftwareRasterizer.stride;
+          destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+          if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
+          }
+          if (y < SoftwareRasterizer.clipTop) {
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            destinationHeight = destinationHeight - topClipPixels;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+            sourceY16 = sourceY16 + stepY16 * topClipPixels;
+          }
+          if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+            rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+            destinationWidth = destinationWidth - rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          }
+          if (x < SoftwareRasterizer.clipLeft) {
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            destinationWidth = destinationWidth - leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceX16 = sourceX16 + stepX16 * leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          }
+          Sprite.blitColorKeyScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
+          return;
         }
     }
 
@@ -1198,22 +1198,22 @@ class Sprite extends SpriteState {
         int inverseAlpha256 = 256 - alpha256;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
-                if (sourcePixel != 0) {
-                    destinationPixel = destinationPixels[destinationIndex];
-                    destinationWriteIndex = destinationIndex;
-                    destinationIndex++;
-                    destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
-                } else {
-                    destinationIndex++;
-                }
-                sourceX16 = sourceX16 + stepX16;
+          sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+            if (sourcePixel != 0) {
+              destinationPixel = destinationPixels[destinationIndex];
+              destinationWriteIndex = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * alpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * alpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >> 8;
+            } else {
+              destinationIndex++;
             }
-            sourceY16 = sourceY16 + stepY16;
-            sourceX16 = rowSourceX16;
-            destinationIndex = destinationIndex + destinationRowSkip;
+            sourceX16 = sourceX16 + stepX16;
+          }
+          sourceY16 = sourceY16 + stepY16;
+          sourceX16 = rowSourceX16;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -1259,7 +1259,7 @@ class Sprite extends SpriteState {
             sourceGreen = sourcePixel >> 8 & 255;
             sourceBlue = sourcePixel & 255;
             if (sourceRed == sourceGreen &&
-                sourceGreen == sourceBlue) {
+              sourceGreen == sourceBlue) {
               if (sourceRed > 128) {
                 destinationWriteIndex = destinationIndex;
                 destinationIndex++;
@@ -1292,40 +1292,40 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            if (intensity256 == 256) {
-                Sprite.blitAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
-            } else {
-                Sprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
-            }
+          if (drawHeight <= 0) {
             return;
+          }
+          if (intensity256 == 256) {
+            Sprite.blitAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          } else {
+            Sprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
+          }
+          return;
         }
     }
 
@@ -1339,11 +1339,11 @@ class Sprite extends SpriteState {
         int originalHeight;
         int originalFullHeight;
         for (sourceColumn = 0; sourceColumn < this.width; sourceColumn++) {
-            for (sourceRow = this.height - 1; sourceRow >= 0; sourceRow--) {
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                rotatedPixels[destinationWriteIndex] = this.pixels[sourceColumn + sourceRow * this.width];
-            }
+          for (sourceRow = this.height - 1; sourceRow >= 0; sourceRow--) {
+            destinationWriteIndex = destinationIndex;
+            destinationIndex++;
+            rotatedPixels[destinationWriteIndex] = this.pixels[sourceColumn + sourceRow * this.width];
+          }
         }
         this.pixels = rotatedPixels;
         originalTrimY = this.trimY;
@@ -1370,9 +1370,9 @@ class Sprite extends SpriteState {
         mirroredSprite.trimX = this.fullWidth - this.width - this.trimX;
         mirroredSprite.trimY = this.trimY;
         for (copyRow = 0; copyRow < this.height; copyRow++) {
-            for (copyColumn = 0; copyColumn < this.width; copyColumn++) {
-                mirroredSprite.pixels[copyRow * this.width + copyColumn] = this.pixels[copyRow * this.width + this.width - 1 - copyColumn];
-            }
+          for (copyColumn = 0; copyColumn < this.width; copyColumn++) {
+            mirroredSprite.pixels[copyRow * this.width + copyColumn] = this.pixels[copyRow * this.width + this.width - 1 - copyColumn];
+          }
         }
         return mirroredSprite;
     }
@@ -1400,36 +1400,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitColorKey(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitColorKey(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -1446,36 +1446,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          return;
         }
     }
 
@@ -1762,62 +1762,62 @@ class Sprite extends SpriteState {
         int rightClipPixels;
         int leftClipPixels;
         if (destinationWidth > 0) {
-            if (destinationHeight <= 0) {
-                return;
-            }
-            if (destinationWidth == this.width && destinationHeight == this.height) {
-                this.drawSilhouette(x, y, color);
-                return;
-            }
-            sourceWidth = this.width;
-            sourceHeight = this.height;
-            sourceX16 = 0;
-            sourceY16 = 0;
-            canvasWidth = this.fullWidth;
-            canvasHeight = this.fullHeight;
-            stepX16 = (canvasWidth << 16) / destinationWidth;
-            stepY16 = (canvasHeight << 16) / destinationHeight;
-            if (this.trimX > 0) {
-                horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
-                x = x + horizontalTrimSteps;
-                sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
-            }
-            if (this.trimY > 0) {
-                verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + verticalTrimSteps;
-                sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
-            }
-            if (sourceWidth < canvasWidth) {
-                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
-            }
-            if (sourceHeight < canvasHeight) {
-                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
-            }
-            destinationIndex = x + y * SoftwareRasterizer.stride;
-            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
-            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
-                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
-            }
-            if (y < SoftwareRasterizer.clipTop) {
-                topClipPixels = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - topClipPixels;
-                destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
-                sourceY16 = sourceY16 + stepY16 * topClipPixels;
-            }
-            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - rightClipPixels;
-                destinationRowSkip = destinationRowSkip + rightClipPixels;
-            }
-            if (x < SoftwareRasterizer.clipLeft) {
-                leftClipPixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - leftClipPixels;
-                destinationIndex = destinationIndex + leftClipPixels;
-                sourceX16 = sourceX16 + stepX16 * leftClipPixels;
-                destinationRowSkip = destinationRowSkip + leftClipPixels;
-            }
-            Sprite.blitScaledSilhouette(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, color);
+          if (destinationHeight <= 0) {
             return;
+          }
+          if (destinationWidth == this.width && destinationHeight == this.height) {
+            this.drawSilhouette(x, y, color);
+            return;
+          }
+          sourceWidth = this.width;
+          sourceHeight = this.height;
+          sourceX16 = 0;
+          sourceY16 = 0;
+          canvasWidth = this.fullWidth;
+          canvasHeight = this.fullHeight;
+          stepX16 = (canvasWidth << 16) / destinationWidth;
+          stepY16 = (canvasHeight << 16) / destinationHeight;
+          if (this.trimX > 0) {
+            horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+            x = x + horizontalTrimSteps;
+            sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
+          }
+          if (this.trimY > 0) {
+            verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+            y = y + verticalTrimSteps;
+            sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
+          }
+          if (sourceWidth < canvasWidth) {
+            destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
+          }
+          if (sourceHeight < canvasHeight) {
+            destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
+          }
+          destinationIndex = x + y * SoftwareRasterizer.stride;
+          destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+          if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
+          }
+          if (y < SoftwareRasterizer.clipTop) {
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            destinationHeight = destinationHeight - topClipPixels;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+            sourceY16 = sourceY16 + stepY16 * topClipPixels;
+          }
+          if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+            rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+            destinationWidth = destinationWidth - rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          }
+          if (x < SoftwareRasterizer.clipLeft) {
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            destinationWidth = destinationWidth - leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceX16 = sourceX16 + stepX16 * leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          }
+          Sprite.blitScaledSilhouette(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, color);
+          return;
         }
     }
 
@@ -1830,29 +1830,29 @@ class Sprite extends SpriteState {
           }
           negativeColumnScratch = -drawWidth;
           {
-          while (!(negativeColumnScratch >= 0)) {
-            sourceColorScratch = sourcePixels[sourceIndex++];
-            if (sourceColorScratch == 0) {
+            while (!(negativeColumnScratch >= 0)) {
+              sourceColorScratch = sourcePixels[sourceIndex++];
+              if (sourceColorScratch == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
+                continue;
+              }
+              blendScratch = (sourceColorScratch & 16711935) * intensity256;
+              sourceColorScratch = (blendScratch & -16711936) + (sourceColorScratch * intensity256 - blendScratch & 16711680) >>> 8;
+              blendScratch = destinationPixels[destinationIndex];
+              rgbSum = sourceColorScratch + blendScratch;
+              sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
+              blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
+              destinationWriteIndex = destinationIndex;
               destinationIndex++;
+              destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
               negativeColumnScratch++;
-              continue;
             }
-            blendScratch = (sourceColorScratch & 16711935) * intensity256;
-            sourceColorScratch = (blendScratch & -16711936) + (sourceColorScratch * intensity256 - blendScratch & 16711680) >>> 8;
-            blendScratch = destinationPixels[destinationIndex];
-            rgbSum = sourceColorScratch + blendScratch;
-            sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
-            blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
-            destinationWriteIndex = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
-            negativeColumnScratch++;
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -1861,19 +1861,19 @@ class Sprite extends SpriteState {
         int negativeRow = 0;
         int quadEndThenRowEnd = 0;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            quadEndThenRowEnd = destinationIndex + drawWidth - 3;
-            while (destinationIndex < quadEndThenRowEnd) {
-                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
-                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
-                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
-                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
-            }
-            quadEndThenRowEnd += 3;
-            while (destinationIndex < quadEndThenRowEnd) {
-                destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
-            }
-            destinationIndex = destinationIndex + destinationRowSkip;
-            sourceIndex = sourceIndex + sourceRowSkip;
+          quadEndThenRowEnd = destinationIndex + drawWidth - 3;
+          while (destinationIndex < quadEndThenRowEnd) {
+            destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+            destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+            destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+            destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+          }
+          quadEndThenRowEnd += 3;
+          while (destinationIndex < quadEndThenRowEnd) {
+            destinationPixels[destinationIndex++] = sourcePixels[sourceIndex++];
+          }
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
@@ -1890,36 +1890,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitUnmasked(SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitUnmasked(SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -1936,29 +1936,29 @@ class Sprite extends SpriteState {
           }
           negativeColumnScratch = -drawWidth;
           {
-          while (!(negativeColumnScratch >= 0)) {
-            sourcePixel = sourcePixels[sourceIndex++];
-            if (sourcePixel == 0) {
+            while (!(negativeColumnScratch >= 0)) {
+              sourcePixel = sourcePixels[sourceIndex++];
+              if (sourcePixel == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
+                continue;
+              }
+              if (sourcePixel >> 8 != (sourcePixel & 65535)) {
+                destinationPixels[destinationIndex++] = sourcePixel;
+                negativeColumnScratch++;
+                continue;
+              }
+              sourcePixel = sourcePixel & 255;
+              destinationWriteIndex2 = destinationIndex;
               destinationIndex++;
+              destinationPixels[destinationWriteIndex2] = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
               negativeColumnScratch++;
-              continue;
             }
-            if (sourcePixel >> 8 != (sourcePixel & 65535)) {
-              destinationPixels[destinationIndex++] = sourcePixel;
-              negativeColumnScratch++;
-              continue;
-            }
-            sourcePixel = sourcePixel & 255;
-            destinationWriteIndex2 = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex2] = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
-            negativeColumnScratch++;
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -2355,7 +2355,7 @@ class Sprite extends SpriteState {
             if (leftUpSampleGate != 0) {
               while (leftUpNegativePixel < 0) {
                 if (leftUpSourceXQ12 >= -4096 &&
-                    leftUpSourceYQ12 >= -4096) {
+                  leftUpSourceYQ12 >= -4096) {
                   leftUpPixelX = leftUpSourceXQ12 >> 12;
                   leftUpPixelY = leftUpSourceYQ12 >> 12;
                   this.sampleBilinear(destinationIndex, leftUpPixelX, leftUpPixelY, leftUpSourceXQ12, leftUpSourceYQ12);
@@ -2391,36 +2391,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitGrayModulated(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitGrayModulated(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          return;
         }
     }
 
@@ -2433,7 +2433,7 @@ class Sprite extends SpriteState {
         copiedSprite.trimY = this.trimY;
         int pixelCount = this.pixels.length;
         for (copyIndex = 0; copyIndex < pixelCount; copyIndex++) {
-            copiedSprite.pixels[copyIndex] = this.pixels[copyIndex];
+          copiedSprite.pixels[copyIndex] = this.pixels[copyIndex];
         }
         return copiedSprite;
     }
@@ -2457,27 +2457,27 @@ class Sprite extends SpriteState {
           }
           negativeColumnScratch = -drawWidth;
           {
-          while (!(negativeColumnScratch >= 0)) {
-            sourceColorScratch = sourcePixels[sourceIndex++];
-            if (sourceColorScratch == 0) {
+            while (!(negativeColumnScratch >= 0)) {
+              sourceColorScratch = sourcePixels[sourceIndex++];
+              if (sourceColorScratch == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
+                continue;
+              }
+              blendScratch = destinationPixels[destinationIndex];
+              rgbSum = sourceColorScratch + blendScratch;
+              sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
+              blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
+              destinationWriteIndex = destinationIndex;
               destinationIndex++;
+              destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
               negativeColumnScratch++;
-              continue;
             }
-            blendScratch = destinationPixels[destinationIndex];
-            rgbSum = sourceColorScratch + blendScratch;
-            sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
-            blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
-            destinationWriteIndex = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
-            negativeColumnScratch++;
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -2495,36 +2495,36 @@ class Sprite extends SpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            Sprite.blitColorKeyAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          if (drawHeight <= 0) {
             return;
+          }
+          Sprite.blitColorKeyAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          return;
         }
     }
 
@@ -2534,19 +2534,19 @@ class Sprite extends SpriteState {
         int negativeColumn = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
-                if (sourcePixel != 0) {
-                    destinationPixels[destinationIndex++] = color;
-                } else {
-                    destinationIndex++;
-                }
-                sourceX16 = sourceX16 + stepX16;
+          sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+            if (sourcePixel != 0) {
+              destinationPixels[destinationIndex++] = color;
+            } else {
+              destinationIndex++;
             }
-            sourceY16 = sourceY16 + stepY16;
-            sourceX16 = rowSourceX16;
-            destinationIndex = destinationIndex + destinationRowSkip;
+            sourceX16 = sourceX16 + stepX16;
+          }
+          sourceY16 = sourceY16 + stepY16;
+          sourceX16 = rowSourceX16;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 

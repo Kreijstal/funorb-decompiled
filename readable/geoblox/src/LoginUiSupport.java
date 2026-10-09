@@ -9,25 +9,25 @@ final class LoginUiSupport {
         PacketBuffer outputPacket = null;
         int payloadStart = 0;
         try {
-            outputPacket = CacheReference.outgoingSessionBuffer;
-            outputPacket.writeCipherByte(packetOpcode, (byte) -63);
-            outputPacket.position = outputPacket.position + 1;
-            if (methodGuard != 86) {
-                KeyedIntRecordSubmission guardedNullSubmissionSnapshot = (KeyedIntRecordSubmission) null;
-                LoginUiSupport.writeIntRecordSubmission(-12, 107, (KeyedIntRecordSubmission) null);
-            }
-            payloadStart = outputPacket.position;
-            outputPacket.writeByte((byte) 127, 1);
-            outputPacket.writeByte((byte) 124, submission.byteKey);
-            outputPacket.writeSignedSmart(submission.signedSmartKey, methodGuard - 6048);
-            outputPacket.writeIntBE((byte) 95, submission.firstValue);
-            outputPacket.writeIntBE((byte) 95, submission.secondValue);
-            outputPacket.writeIntBE((byte) 95, submission.thirdValue);
-            outputPacket.writeIntBE((byte) 95, submission.fourthValue);
-            outputPacket.appendCrc32(104, payloadStart);
-            outputPacket.backpatchLengthByte(11700, -payloadStart + outputPacket.position);
+          outputPacket = CacheReference.outgoingSessionBuffer;
+          outputPacket.writeCipherByte(packetOpcode, (byte) -63);
+          outputPacket.position = outputPacket.position + 1;
+          if (methodGuard != 86) {
+            KeyedIntRecordSubmission guardedNullSubmissionSnapshot = (KeyedIntRecordSubmission) null;
+            LoginUiSupport.writeIntRecordSubmission(-12, 107, (KeyedIntRecordSubmission) null);
+          }
+          payloadStart = outputPacket.position;
+          outputPacket.writeByte((byte) 127, 1);
+          outputPacket.writeByte((byte) 124, submission.byteKey);
+          outputPacket.writeSignedSmart(submission.signedSmartKey, methodGuard - 6048);
+          outputPacket.writeIntBE((byte) 95, submission.firstValue);
+          outputPacket.writeIntBE((byte) 95, submission.secondValue);
+          outputPacket.writeIntBE((byte) 95, submission.thirdValue);
+          outputPacket.writeIntBE((byte) 95, submission.fourthValue);
+          outputPacket.appendCrc32(104, payloadStart);
+          outputPacket.backpatchLengthByte(11700, -payloadStart + outputPacket.position);
         } catch (RuntimeException submissionFailureForContext) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailureForContext), "tj.B(" + packetOpcode + ',' + methodGuard + ',' + (submission != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailureForContext), "tj.B(" + packetOpcode + ',' + methodGuard + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,33 +36,33 @@ final class LoginUiSupport {
         String loginIdentifierAfterDismissal = null;
         String loginIdentifierWithoutDismissal = null;
         if (!AgeValidator.reconnectingLoginMode) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         if (Geoblox.activeMessageDialog != null) {
-            Geoblox.activeMessageDialog.dismissDialog((byte) -104);
-            if (methodGuard >= -47) {
-                lastGeobloxOfLevelText = (String) null;
-                loginIdentifierAfterGuardClear = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
-                SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterGuardClear, (String) null, true, false, false);
-                ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-                ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
-                ButtonWidget.accountContentDialog.finishTransition(true);
-                return;
-            }
-            loginIdentifierAfterDismissal = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
-            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterDismissal, (String) null, true, false, false);
+          Geoblox.activeMessageDialog.dismissDialog((byte) -104);
+          if (methodGuard >= -47) {
+            lastGeobloxOfLevelText = (String) null;
+            loginIdentifierAfterGuardClear = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
+            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterGuardClear, (String) null, true, false, false);
             ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
             ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
             ButtonWidget.accountContentDialog.finishTransition(true);
             return;
+          }
+          loginIdentifierAfterDismissal = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
+          SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierAfterDismissal, (String) null, true, false, false);
+          ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
+          ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
+          ButtonWidget.accountContentDialog.finishTransition(true);
+          return;
         }
         if (methodGuard < -47) {
-            loginIdentifierWithoutDismissal = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
-            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierWithoutDismissal, (String) null, true, false, false);
-            ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
-            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
-            ButtonWidget.accountContentDialog.finishTransition(true);
-            return;
+          loginIdentifierWithoutDismissal = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
+          SpriteButtonRenderer.activeLoginPanel = new LoginPanel(loginIdentifierWithoutDismissal, (String) null, true, false, false);
+          ClientFlowState.accountDialogLayer.showDialog(false, ButtonWidget.accountContentDialog);
+          ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -85);
+          ButtonWidget.accountContentDialog.finishTransition(true);
+          return;
         }
         lastGeobloxOfLevelText = (String) null;
         String loginIdentifierAfterLateClear = SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(7789);
@@ -74,9 +74,9 @@ final class LoginUiSupport {
 
     public static void clearLoginUiText(int methodGuard) {
         if (methodGuard < 1) {
-            lastGeobloxOfLevelText = (String) null;
-            lastGeobloxOfLevelText = null;
-            return;
+          lastGeobloxOfLevelText = (String) null;
+          lastGeobloxOfLevelText = null;
+          return;
         }
         lastGeobloxOfLevelText = null;
     }

@@ -15,22 +15,22 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
         ClientFlowState.accountCreationFlowState = DiskCacheWorker.idleClientFlowToken;
         if (methodGuard != -6011) {
-            introFaceFrameStartTick = 36;
+          introFaceFrameStartTick = 36;
         }
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 1) {
-            UnderlinedButtonRenderer.releaseStaticReferences(51);
-            frameBottomSprites = null;
-            return;
+          UnderlinedButtonRenderer.releaseStaticReferences(51);
+          frameBottomSprites = null;
+          return;
         }
         frameBottomSprites = null;
     }
 
     final static boolean isGuestSessionMode(int methodGuard) {
         if (methodGuard > -78) {
-            return false;
+          return false;
         }
         return ProgressBarWidget.guestSessionMode;
     }
@@ -45,34 +45,34 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         StringBuilder unusedAppendResult = null;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (encodedNameThenRemainingDigits <= 0L) {
-            return null;
+          return null;
         }
         if (encodedNameThenRemainingDigits >= 6582952005840035281L) {
-            return null;
+          return null;
         }
         if (0L != encodedNameThenRemainingDigits % 37L) {
-            digitCount = 0;
-            digitsForLengthCount = encodedNameThenRemainingDigits;
-            while (digitsForLengthCount != 0L) {
-                digitsForLengthCount = digitsForLengthCount / 37L;
-                digitCount++;
+          digitCount = 0;
+          digitsForLengthCount = encodedNameThenRemainingDigits;
+          while (digitsForLengthCount != 0L) {
+            digitsForLengthCount = digitsForLengthCount / 37L;
+            digitCount++;
+          }
+          reversedNameBuilder = new StringBuilder(digitCount);
+          while (encodedNameThenRemainingDigits != 0L) {
+            encodedValueBeforeDivision = encodedNameThenRemainingDigits;
+            encodedNameThenRemainingDigits = encodedNameThenRemainingDigits / 37L;
+            decodedCharacterCode = SessionSocketSupport.base37NameAlphabet[(int)(-(37L * encodedNameThenRemainingDigits) + encodedValueBeforeDivision)];
+            if (95 == decodedCharacterCode) {
+              precedingCharacterIndex = -1 + reversedNameBuilder.length();
+              decodedCharacterCode = 160;
+              reversedNameBuilder.setCharAt(precedingCharacterIndex, Character.toUpperCase(reversedNameBuilder.charAt(precedingCharacterIndex)));
             }
-            reversedNameBuilder = new StringBuilder(digitCount);
-            while (encodedNameThenRemainingDigits != 0L) {
-                encodedValueBeforeDivision = encodedNameThenRemainingDigits;
-                encodedNameThenRemainingDigits = encodedNameThenRemainingDigits / 37L;
-                decodedCharacterCode = SessionSocketSupport.base37NameAlphabet[(int)(-(37L * encodedNameThenRemainingDigits) + encodedValueBeforeDivision)];
-                if (95 == decodedCharacterCode) {
-                    precedingCharacterIndex = -1 + reversedNameBuilder.length();
-                    decodedCharacterCode = 160;
-                    reversedNameBuilder.setCharAt(precedingCharacterIndex, Character.toUpperCase(reversedNameBuilder.charAt(precedingCharacterIndex)));
-                }
-                unusedAppendResult = reversedNameBuilder.append((char) decodedCharacterCode);
-            }
-            reversedNameBuilder.reverse();
-            int guardRemainder = 49 % ((27 - methodGuard) / 36);
-            reversedNameBuilder.setCharAt(0, Character.toUpperCase(reversedNameBuilder.charAt(0)));
-            return reversedNameBuilder.toString();
+            unusedAppendResult = reversedNameBuilder.append((char) decodedCharacterCode);
+          }
+          reversedNameBuilder.reverse();
+          int guardRemainder = 49 % ((27 - methodGuard) / 36);
+          reversedNameBuilder.setCharAt(0, Character.toUpperCase(reversedNameBuilder.charAt(0)));
+          return reversedNameBuilder.toString();
         }
         return null;
     }
@@ -93,7 +93,7 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!widget.pointerInside &&
-              !widget.hasKeyboardFocus((byte) 54)) {
+            !widget.hasKeyboardFocus((byte) 54)) {
             selectedLabelColor = 2188450;
           } else {
             selectedLabelColor = 3249872;
@@ -148,11 +148,11 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
 
     UnderlinedButtonRenderer(BitmapFont labelFont, int horizontalAlignment, int verticalAlignment) {
         try {
-            this.verticalAlignment = verticalAlignment;
-            this.horizontalAlignment = horizontalAlignment;
-            this.labelFont = labelFont;
+          this.verticalAlignment = verticalAlignment;
+          this.horizontalAlignment = horizontalAlignment;
+          this.labelFont = labelFont;
         } catch (RuntimeException rendererInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "fh.<init>(" + (labelFont != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "fh.<init>(" + (labelFont != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
         }
     }
 

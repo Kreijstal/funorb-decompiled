@@ -16,17 +16,17 @@ final class IntrusiveNodeHashTable {
         IntrusiveNode bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
         this.lookupCursor = bucketSentinel.nextNode;
         while (bucketSentinel != this.lookupCursor) {
-            if (~this.lookupCursor.nodeKey == ~key) {
-                matchingNode = this.lookupCursor;
-                this.lookupCursor = this.lookupCursor.nextNode;
-                return matchingNode;
-            }
+          if (~this.lookupCursor.nodeKey == ~key) {
+            matchingNode = this.lookupCursor;
             this.lookupCursor = this.lookupCursor.nextNode;
+            return matchingNode;
+          }
+          this.lookupCursor = this.lookupCursor.nextNode;
         }
         if (methodGuard >= -73) {
-            this.firstForIteration((byte) -38);
-            this.lookupCursor = null;
-            return null;
+          this.firstForIteration((byte) -38);
+          this.lookupCursor = null;
+          return null;
         }
         this.lookupCursor = null;
         return null;
@@ -34,16 +34,16 @@ final class IntrusiveNodeHashTable {
 
     final static int cosineQ16(int angle8192, int methodGuard) {
         if (methodGuard != 2048) {
-            changeDisplayNameText = (String) null;
-            angle8192 = angle8192 & 8191;
-            if (angle8192 >= 4096) {
-                return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
-            }
-            return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
+          changeDisplayNameText = (String) null;
+          angle8192 = angle8192 & 8191;
+          if (angle8192 >= 4096) {
+            return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
+          }
+          return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
         }
         angle8192 = angle8192 & 8191;
         if (angle8192 >= 4096) {
-            return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
+          return angle8192 >= 6144 ? ScoreSubmission.quarterSineQ16[-6144 + angle8192] : -ScoreSubmission.quarterSineQ16[-angle8192 + 6144];
         }
         return 2048 <= angle8192 ? -ScoreSubmission.quarterSineQ16[angle8192 - 2048] : ScoreSubmission.quarterSineQ16[-angle8192 + 2048];
     }
@@ -51,20 +51,20 @@ final class IntrusiveNodeHashTable {
     final void put(byte methodGuard, IntrusiveNode node, long key) {
         IntrusiveNode bucketSentinel = null;
         try {
-            if (null != node.previousNode) {
-                node.unlinkNode(false);
-            }
-            bucketSentinel = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & key)];
-            node.nextNode = bucketSentinel;
-            node.previousNode = bucketSentinel.previousNode;
-            node.previousNode.nextNode = node;
-            node.nodeKey = key;
-            if (methodGuard != 102) {
-                smallFont = (MonochromeBitmapFont) null;
-            }
-            node.nextNode.previousNode = node;
+          if (null != node.previousNode) {
+            node.unlinkNode(false);
+          }
+          bucketSentinel = this.bucketSentinels[(int)((long)(this.bucketCount - 1) & key)];
+          node.nextNode = bucketSentinel;
+          node.previousNode = bucketSentinel.previousNode;
+          node.previousNode.nextNode = node;
+          node.nodeKey = key;
+          if (methodGuard != 102) {
+            smallFont = (MonochromeBitmapFont) null;
+          }
+          node.nextNode.previousNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "fi.F(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "fi.F(" + methodGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class IntrusiveNodeHashTable {
             changeDisplayNameText = (String) null;
           }
           if (track != null &&
-              track != GzipInflater.currentMusicTrack) {
+            track != GzipInflater.currentMusicTrack) {
             PasswordWidgetRenderer.gameMusicStream.stopMusicPlayback(-9268);
             CacheReference.gameMusicOutput.flushAndMarkDrainCheck();
             GzipInflater.currentMusicTrack = track;
@@ -103,9 +103,9 @@ final class IntrusiveNodeHashTable {
 
     final IntrusiveNode firstForIteration(byte methodGuard) {
         if (methodGuard != 125) {
-            IntrusiveNodeHashTable.releaseSharedResources(103);
-            this.nextIterationBucket = 0;
-            return this.nextForIteration(methodGuard - 195);
+          IntrusiveNodeHashTable.releaseSharedResources(103);
+          this.nextIterationBucket = 0;
+          return this.nextForIteration(methodGuard - 195);
         }
         this.nextIterationBucket = 0;
         return this.nextForIteration(methodGuard - 195);
@@ -114,7 +114,7 @@ final class IntrusiveNodeHashTable {
     public static void releaseSharedResources(int methodGuard) {
         changeDisplayNameText = null;
         if (methodGuard >= -113) {
-            return;
+          return;
         }
         pendingLoginBooleanReply = null;
         smallFont = null;

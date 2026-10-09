@@ -13,11 +13,11 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     private final boolean isDisplayNameAccepted(byte methodGuard) {
         if (!this.isValidationSourceAccepted(-115, (ValidationProviderSource) (this.displayNameInput))) {
-            return false;
+          return false;
         }
         if (methodGuard != -118) {
-            this.confirmButton = (ButtonWidget) null;
-            return true;
+          this.confirmButton = (ButtonWidget) null;
+          return true;
         }
         return true;
     }
@@ -165,7 +165,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         try {
           meshForPriorityDecision = mesh;
           if (null != meshForPriorityDecision.facePriorities &&
-              meshForPriorityDecision.facePriorityCount > 1) {
+            meshForPriorityDecision.facePriorityCount > 1) {
             facePriorities = meshForPriorityDecision.facePriorities;
             MeshPrioritySupport.groupQueuedMeshFacesByPriority(0, facePriorities, 0, PasswordWidgetRenderer.meshFacePriorityWriteOffsets, (byte) -85);
           } else {
@@ -233,10 +233,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             }
             faceNormalC = faceNormalCIndexOrMissing;
             if (DirectByteStorage.meshMaterials != null &&
-                mesh.faceMaterialIndices != null &&
-                mesh.faceMaterialIndices.length > faceIndex &&
-                mesh.faceMaterialIndices[faceIndex] != -1 &&
-                DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[faceIndex]) {
+              mesh.faceMaterialIndices != null &&
+              mesh.faceMaterialIndices.length > faceIndex &&
+              mesh.faceMaterialIndices[faceIndex] != -1 &&
+              DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[faceIndex]) {
               faceMaterialOrNull = DirectByteStorage.meshMaterials[mesh.faceMaterialIndices[faceIndex]];
             } else {
               faceMaterialOrNull = null;
@@ -249,7 +249,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             vertexCX = SingleChildWidget.projectedMeshVertexX[faceVertexC];
             vertexCY = TextInputWidget.projectedMeshVertexY[faceVertexC];
             if (faceNormalA == faceNormalB &&
-                faceNormalC == faceNormalB) {
+              faceNormalC == faceNormalB) {
               diffuseA = diffuseResponses[faceNormalA];
               flatSpecularOrDiffuseB = specularResponses[faceNormalA];
               if (faceMaterial != null) {
@@ -326,7 +326,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
               characterCode = text.charAt(characterStart + characterIndex);
               if ((0 >= characterCode ||
                 characterCode >= 128) && (characterCode < 160 ||
-                  characterCode > 255)) {
+                characterCode > 255)) {
                 switch (characterCode) {
                   case 8364:
                     destination[characterIndex + destinationOffset] = (byte)-128;
@@ -413,7 +413,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
                     destination[characterIndex + destinationOffset] = (byte)-97;
                     break encodedCharacterHandled;
                 }
-                  }
+              }
               destination[destinationOffset + characterIndex] = (byte)characterCode;
             }
           }
@@ -511,29 +511,29 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         ValidatedTextInputWidget displayNameInputSnapshot = null;
         String selectedSuggestionSnapshot = null;
         try {
-            if (methodGuard != 20) {
-                this.cancelButton = (ButtonWidget) null;
-            }
-            displayNameInputSnapshot = this.displayNameInput;
-            selectedSuggestionSnapshot = suggestion;
-            ((TextInputWidget) ((Object) displayNameInputSnapshot)).setInputText(methodGuard - 136, selectedSuggestionSnapshot, false);
+          if (methodGuard != 20) {
+            this.cancelButton = (ButtonWidget) null;
+          }
+          displayNameInputSnapshot = this.displayNameInput;
+          selectedSuggestionSnapshot = suggestion;
+          ((TextInputWidget) ((Object) displayNameInputSnapshot)).setInputText(methodGuard - 136, selectedSuggestionSnapshot, false);
         } catch (RuntimeException suggestionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionFailure), "hi.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionFailure), "hi.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            this.confirmButton.enabled = this.isDisplayNameAccepted((byte) -118);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          this.confirmButton.enabled = this.isDisplayNameAccepted((byte) -118);
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard > -45) {
-            return;
+          return;
         }
         createIneligibleText = null;
         bakingForegroundSprite = null;
@@ -581,7 +581,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     public final void onMoreSuggestionsRequested(byte methodGuard) {
         ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider((byte) -117))).invalidateCachedUsernameAvailability((byte) -80);
         if (methodGuard != 83) {
-            this.confirmButton = (ButtonWidget) null;
+          this.confirmButton = (ButtonWidget) null;
         }
     }
 
@@ -630,10 +630,10 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
 
     private final void submitValidatedDisplayName(int methodGuard) {
         if (!this.isDisplayNameAccepted((byte) -118)) {
-            return;
+          return;
         }
         if (methodGuard >= -42) {
-            return;
+          return;
         }
         EmailValidator.setOptionalLoginTextAndShowLoggingIn(12607, this.displayNameInput.widgetText);
     }

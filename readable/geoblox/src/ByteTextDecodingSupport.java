@@ -6,13 +6,13 @@ final class ByteTextDecodingSupport {
 
     final static void sleepMillis(int splitRemainder, long durationMillis) {
         if (durationMillis <= 0L) {
-            return;
+          return;
         }
         if (durationMillis % 10L == (long)splitRemainder) {
-            ArchiveNetworkClient.sleepIgnoringInterrupt(-1L + durationMillis, (byte) -33);
-            ArchiveNetworkClient.sleepIgnoringInterrupt(1L, (byte) -33);
+          ArchiveNetworkClient.sleepIgnoringInterrupt(-1L + durationMillis, (byte) -33);
+          ArchiveNetworkClient.sleepIgnoringInterrupt(1L, (byte) -33);
         } else {
-            ArchiveNetworkClient.sleepIgnoringInterrupt(durationMillis, (byte) -33);
+          ArchiveNetworkClient.sleepIgnoringInterrupt(durationMillis, (byte) -33);
         }
     }
 
@@ -45,7 +45,7 @@ final class ByteTextDecodingSupport {
             characterCode = textBytes[offset + byteIndex] & 255;
             if (characterCode != 0) {
               if (characterCode >= 128 &&
-                  characterCode < 160) {
+                characterCode < 160) {
                 mappedCharacterCode = LongAndTextLoginPayload.extendedTextCharacters[-128 + characterCode];
                 if (mappedCharacterCode == 0) {
                   mappedCharacterCode = 63;

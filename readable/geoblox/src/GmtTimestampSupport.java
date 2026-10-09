@@ -26,13 +26,13 @@ final class GmtTimestampSupport {
         MatchCandidateSupport.gmtCalendar.setTime(new Date(timestampMillis));
         int weekdayIndex = MatchCandidateSupport.gmtCalendar.get(7);
         if (methodGuard <= -43) {
-            requestedDayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
-            requestedMonthIndex = MatchCandidateSupport.gmtCalendar.get(2);
-            requestedYear = MatchCandidateSupport.gmtCalendar.get(1);
-            requestedHourOfDay = MatchCandidateSupport.gmtCalendar.get(11);
-            requestedMinute = MatchCandidateSupport.gmtCalendar.get(12);
-            requestedSecond = MatchCandidateSupport.gmtCalendar.get(13);
-            return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + requestedDayOfMonth / 10 + requestedDayOfMonth % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[requestedMonthIndex] + "-" + requestedYear + " " + requestedHourOfDay / 10 + requestedHourOfDay % 10 + ":" + requestedMinute / 10 + requestedMinute % 10 + ":" + requestedSecond / 10 + requestedSecond % 10 + " GMT";
+          requestedDayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
+          requestedMonthIndex = MatchCandidateSupport.gmtCalendar.get(2);
+          requestedYear = MatchCandidateSupport.gmtCalendar.get(1);
+          requestedHourOfDay = MatchCandidateSupport.gmtCalendar.get(11);
+          requestedMinute = MatchCandidateSupport.gmtCalendar.get(12);
+          requestedSecond = MatchCandidateSupport.gmtCalendar.get(13);
+          return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + requestedDayOfMonth / 10 + requestedDayOfMonth % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[requestedMonthIndex] + "-" + requestedYear + " " + requestedHourOfDay / 10 + requestedHourOfDay % 10 + ":" + requestedMinute / 10 + requestedMinute % 10 + ":" + requestedSecond / 10 + requestedSecond % 10 + " GMT";
         }
         GmtTimestampSupport.formatGmtTimestamp((byte) -70, -99L);
         fallbackCalendarDayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
@@ -49,7 +49,7 @@ final class GmtTimestampSupport {
         decodedSpriteYOffsets = null;
         activeScorePopups = null;
         if (methodGuard != 40) {
-            GmtTimestampSupport.clearTimestampAndPopupResources((byte) 23);
+          GmtTimestampSupport.clearTimestampAndPopupResources((byte) 23);
         }
     }
 

@@ -7,10 +7,10 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 0) {
-            meshFacePriorityWriteOffsets = (int[]) null;
-            gameMusicStream = null;
-            meshFacePriorityWriteOffsets = null;
-            return;
+          meshFacePriorityWriteOffsets = (int[]) null;
+          gameMusicStream = null;
+          meshFacePriorityWriteOffsets = null;
+          return;
         }
         gameMusicStream = null;
         meshFacePriorityWriteOffsets = null;
@@ -51,7 +51,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
 
     final static int getThemeForProgress(int methodGuard) {
         if (methodGuard == 16) {
-            return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
+          return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
         }
         meshFacePriorityWriteOffsets = (int[]) null;
         return WidgetContainer.themeCycleOrder[UiWidget.completedThemeCount % WidgetContainer.themeCycleOrder.length];
@@ -65,7 +65,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
         SpriteCheckboxRenderer.pushRasterTarget(-96);
         SoftwareRasterizer.intersectClip(leftX, topY, rightX, bottomY);
         if (methodGuard == -14045) {
-            return;
+          return;
         }
         PasswordWidgetRenderer.getThemeForProgress(-111);
     }

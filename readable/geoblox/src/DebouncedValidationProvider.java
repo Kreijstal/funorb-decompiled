@@ -14,40 +14,40 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         int halfRgbForWrite = 0;
         int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            while (true) {
-                pixelCount--;
-                if (pixelCount < 0) {
-                    break;
-                }
-                destinationForReadAndWrite = destinationPixels;
-                int[] destinationAlias = destinationForReadAndWrite;
-                destinationIndexForWrite = destinationIndex;
-                halfRgbForWrite = halfRgb;
-                destinationForReadAndWrite[destinationIndexForWrite] = halfRgbForWrite + ProxySocketConnector.andInt(destinationForReadAndWrite[destinationIndexForWrite] >> 1, 8355711);
-                destinationIndex++;
+          while (true) {
+            pixelCount--;
+            if (pixelCount < 0) {
+              break;
             }
-            int guardRemainder = -30 % ((-2 - guard) / 40);
+            destinationForReadAndWrite = destinationPixels;
+            int[] destinationAlias = destinationForReadAndWrite;
+            destinationIndexForWrite = destinationIndex;
+            halfRgbForWrite = halfRgb;
+            destinationForReadAndWrite[destinationIndexForWrite] = halfRgbForWrite + ProxySocketConnector.andInt(destinationForReadAndWrite[destinationIndexForWrite] >> 1, 8355711);
+            destinationIndex++;
+          }
+          int guardRemainder = -30 % ((-2 - guard) / 40);
         } catch (RuntimeException caughtSpanFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtSpanFailure), "ib.AA(" + guard + ',' + (destinationPixels != null ? "{...}" : "null") + ',' + destinationIndex + ',' + halfRgb + ',' + pixelCount + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) caughtSpanFailure), "ib.AA(" + guard + ',' + (destinationPixels != null ? "{...}" : "null") + ',' + destinationIndex + ',' + halfRgb + ',' + pixelCount + ')');
         }
     }
 
     public static void releaseStaticReferences(boolean methodGuard) {
         notAchievedText = null;
         if (!methodGuard) {
-            commonUiSpriteArchiveId = -26;
+          commonUiSpriteArchiveId = -26;
         }
     }
 
     public final String getDebouncedValidationMessage(int methodGuard) {
         if (this.isInputEmpty(-26556)) {
-            return null;
+          return null;
         }
         if (ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ 25670) < 350L + this.lastInputChangeMillis) {
-            return null;
+          return null;
         }
         if (methodGuard == -21666) {
-            return this.currentValidationMessage((byte) -103);
+          return this.currentValidationMessage((byte) -103);
         }
         return (String) null;
     }
@@ -57,41 +57,41 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
     public final void resetValidationDelay(int methodGuard) {
         this.lastInputChangeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ 23811);
         if (methodGuard != -28133) {
-            archiveLoadStatus = 55;
+          archiveLoadStatus = 55;
         }
     }
 
     final static void writeHighscoreRequest(int packetOpcode, int requestType, HighscoreQuery query) {
         PacketBuffer outgoingPacket = null;
         try {
-            outgoingPacket = CacheReference.outgoingSessionBuffer;
-            outgoingPacket.writeCipherByte(packetOpcode, (byte) -82);
-            outgoingPacket.writeByte((byte) 124, requestType);
-            outgoingPacket.writeByte((byte) -66, 0);
-            outgoingPacket.writeShortBE(query.queryId, 28695);
-            outgoingPacket.writeByte((byte) -84, query.entryLimit);
-            outgoingPacket.writeByte((byte) 125, query.valuesPerEntry);
+          outgoingPacket = CacheReference.outgoingSessionBuffer;
+          outgoingPacket.writeCipherByte(packetOpcode, (byte) -82);
+          outgoingPacket.writeByte((byte) 124, requestType);
+          outgoingPacket.writeByte((byte) -66, 0);
+          outgoingPacket.writeShortBE(query.queryId, 28695);
+          outgoingPacket.writeByte((byte) -84, query.entryLimit);
+          outgoingPacket.writeByte((byte) 125, query.valuesPerEntry);
         } catch (RuntimeException highscoreWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) highscoreWriteFailure), "ib.DA(" + packetOpcode + ',' + requestType + ',' + (query != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) highscoreWriteFailure), "ib.DA(" + packetOpcode + ',' + requestType + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 
     public final ValidationState getDebouncedValidationState(byte methodGuard) {
         if (methodGuard != -105) {
-            archiveLoadStatus = -117;
-            if (this.isInputEmpty(methodGuard ^ 26579)) {
-                return ByteStorage.emptyInputValidationState;
-            }
-            if ((350L + this.lastInputChangeMillis) <= ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
-                return this.currentValidationState(32);
-            }
-            return ImageProducerRasterBuffer.debouncingValidationState;
+          archiveLoadStatus = -117;
+          if (this.isInputEmpty(methodGuard ^ 26579)) {
+            return ByteStorage.emptyInputValidationState;
+          }
+          if ((350L + this.lastInputChangeMillis) <= ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
+            return this.currentValidationState(32);
+          }
+          return ImageProducerRasterBuffer.debouncingValidationState;
         }
         if (this.isInputEmpty(methodGuard ^ 26579)) {
-            return ByteStorage.emptyInputValidationState;
+          return ByteStorage.emptyInputValidationState;
         }
         if ((350L + this.lastInputChangeMillis) <= ClientClockSupport.correctedCurrentTimeMillis(-12520)) {
-            return this.currentValidationState(32);
+          return this.currentValidationState(32);
         }
         return ImageProducerRasterBuffer.debouncingValidationState;
     }
@@ -100,7 +100,7 @@ abstract class DebouncedValidationProvider implements ValidationProvider {
         String unusedLoginText = (String) null;
         MessageDialog.showLoginForm("", (String) null, 7697781);
         if (methodGuard != 24107) {
-            gameAssetsInitialized = false;
+          gameAssetsInitialized = false;
         }
     }
 

@@ -21,7 +21,7 @@ final class TextValidationSupport {
           }
           reversedNeedle = CachedArchiveSource.reverseTextCodeUnits(32, needle);
           if (text.indexOf(needle) == -1 &&
-              -1 == text.indexOf(reversedNeedle)) {
+            -1 == text.indexOf(reversedNeedle)) {
             edgeMatchBeforeReturn = (text.startsWith(needle)) || (text.startsWith(reversedNeedle)) || (text.endsWith(needle)) || (text.endsWith(reversedNeedle));
             return edgeMatchBeforeReturn;
           }
@@ -48,7 +48,7 @@ final class TextValidationSupport {
 
     public static void clearValidationArchive(int methodGuard) {
         if (methodGuard != -30635) {
-            bootstrapGameTextArchive = (ResourceArchive) null;
+          bootstrapGameTextArchive = (ResourceArchive) null;
         }
         bootstrapGameTextArchive = null;
     }
@@ -67,7 +67,7 @@ final class TextValidationSupport {
           for (characterIndex = 0; characterIndex < text.length(); characterIndex++) {
             characterCode = text.charAt(characterIndex);
             if (!ArchiveCatalog.isAsciiLetter((char) characterCode, 97) &&
-                !DualLinkNode.isAsciiDigit(-58, (char) characterCode)) {
+              !DualLinkNode.isAsciiDigit(-58, (char) characterCode)) {
               return true;
             }
           }
@@ -92,7 +92,7 @@ final class TextValidationSupport {
 
     final static LoginMethod[] listLoginMethods(boolean methodGuard) {
         if (methodGuard) {
-            TextValidationSupport.listLoginMethods(false);
+          TextValidationSupport.listLoginMethods(false);
         }
         return new LoginMethod[]{LoginTextValue.emailLoginMethod, ProgressDialog.usernameLoginMethod, ValidationIconWidget.emptyNameLoginMethod};
     }

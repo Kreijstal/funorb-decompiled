@@ -10,11 +10,11 @@ final class RatingPresentationResources {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard < -2) {
-            loginPayloadKindThree = null;
-            amorphousCrackFrames = null;
-            ratingModeNames = null;
-            jewelleryMusicTrack = null;
-            return;
+          loginPayloadKindThree = null;
+          amorphousCrackFrames = null;
+          ratingModeNames = null;
+          jewelleryMusicTrack = null;
+          return;
         }
         RatingPresentationResources.releaseStaticReferences(1);
         loginPayloadKindThree = null;

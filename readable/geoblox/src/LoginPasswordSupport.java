@@ -9,7 +9,7 @@ final class LoginPasswordSupport {
 
     final static void requestLoginUiActionFour(int methodGuard) {
         if (methodGuard != -23738) {
-            return;
+          return;
         }
         MidiNote.setPendingLoginUiAction(4, false);
     }
@@ -17,7 +17,7 @@ final class LoginPasswordSupport {
     public static void releaseLoginPasswordResources(int methodGuard) {
         thirdVertexTransformedZ = null;
         if (methodGuard != -17525) {
-            return;
+          return;
         }
         rankedEntryKeyTwo = null;
         blackOrbImplosionFrames = null;

@@ -46,7 +46,7 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
 
     final static void requestAvatarTintForRadius(float maxAttachedRadiusSquared, byte methodGuard) {
         if (!(MultiHandleSliderRenderer.avatarTintFadeTicks <= 0)) {
-            return;
+          return;
         }
         AccountCreationDialog.avatarTintStartColor = DisplayModeInfo.avatarTintColor;
         int sentinelDivisionGuard = -71 / ((-59 - methodGuard) / 47);

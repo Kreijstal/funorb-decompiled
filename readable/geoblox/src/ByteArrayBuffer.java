@@ -61,12 +61,12 @@ class ByteArrayBuffer extends IntrusiveNode {
     final boolean verifyTrailingCrc32(byte methodGuard) {
         this.position = this.position - 4;
         if (methodGuard != 20) {
-            this.readZeroPrefixedNullTerminatedText(-46);
+          this.readZeroPrefixedNullTerminatedText(-46);
         }
         int computedCrc32 = ResizableDialog.computeCrc32(this.position, this.bytes, methodGuard - 138, 0);
         int storedCrc32 = this.readIntBE((byte) -85);
         if (computedCrc32 == storedCrc32) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -96,13 +96,13 @@ class ByteArrayBuffer extends IntrusiveNode {
             if (textLength > characterIndex) {
               characterCode = text.charAt(characterIndex);
               if (characterCode >= 65 &&
-                  90 >= characterCode) {
+                90 >= characterCode) {
                 accumulatedChunk = accumulatedChunk + (long)(-63 + characterCode);
               } else if (characterCode >= 97 &&
-                  characterCode <= 122) {
+                characterCode <= 122) {
                 accumulatedChunk = accumulatedChunk + (long)(-97 + (2 + characterCode));
               } else if (characterCode >= 48 &&
-                  characterCode <= 57) {
+                characterCode <= 57) {
                 accumulatedChunk = accumulatedChunk + (long)(-48 + characterCode + 28);
               } else {
                 accumulatedChunk = accumulatedChunk + 1L;
@@ -138,7 +138,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final void backpatchLengthIntBE(int length, int methodGuard) {
         this.bytes[-4 + (this.position - length)] = (byte)(length >> 24);
         if (methodGuard != 0) {
-            this.appendCrc32(13, 61);
+          this.appendCrc32(13, 61);
         }
         this.bytes[-length + (this.position - 3)] = (byte)(length >> 16);
         this.bytes[this.position + (-length - 2)] = (byte)(length >> 8);
@@ -195,7 +195,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final void backpatchLengthShortBE(int length, boolean preserveHashTables) {
         if (!preserveHashTables) {
-            whirlpoolTables = (long[][]) null;
+          whirlpoolTables = (long[][]) null;
         }
         this.bytes[this.position + (-length - 2)] = (byte)(length >> 8);
         this.bytes[this.position + (-length - 1)] = (byte)length;
@@ -206,7 +206,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[highByteIndex] = (byte)(value >> 8);
         if (methodGuard != 28695) {
-            ByteArrayBuffer.resendByteShortQueries(true, 22);
+          ByteArrayBuffer.resendByteShortQueries(true, 22);
         }
         int lowByteIndex = this.position;
         this.position = this.position + 1;
@@ -215,7 +215,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final static void openAccountWelcomePanel(int methodGuard) {
         if (methodGuard != 0) {
-            return;
+          return;
         }
         ButtonWidget.accountContentDialog.replaceContent(new AccountWelcomePanel(), methodGuard - 110);
     }
@@ -225,52 +225,52 @@ class ByteArrayBuffer extends IntrusiveNode {
         CharSequence textForEncoding = null;
         int terminatorByteIndex = 0;
         try {
-            zeroCharacterIndex = text.indexOf(' ');
-            if (zeroCharacterIndex >= 0) {
-                throw new IllegalArgumentException("");
-            }
-            textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
-            terminatorByteIndex = this.position;
-            this.position = this.position + 1;
-            this.bytes[terminatorByteIndex] = (byte) 0;
+          zeroCharacterIndex = text.indexOf(' ');
+          if (zeroCharacterIndex >= 0) {
+            throw new IllegalArgumentException("");
+          }
+          textForEncoding = (CharSequence) ((Object) text);
+          this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, characterStart, text.length(), this.position, 98);
+          terminatorByteIndex = this.position;
+          this.position = this.position + 1;
+          this.bytes[terminatorByteIndex] = (byte) 0;
         } catch (RuntimeException textWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.HA(" + (text != null ? "{...}" : "null") + ',' + characterStart + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.HA(" + (text != null ? "{...}" : "null") + ',' + characterStart + ')');
         }
     }
 
     final String readNullableNullTerminatedText(byte methodGuard) {
         if (0 == this.bytes[this.position]) {
-            this.position = this.position + 1;
-            return null;
+          this.position = this.position + 1;
+          return null;
         }
         if (methodGuard != 53) {
-            this.writeLong40BE((byte) 4, 25L);
+          this.writeLong40BE((byte) 4, 25L);
         }
         return this.readNullTerminatedText((byte) 125);
     }
 
     final static void drawLoadingProgressDialog(float scaledProgress, String statusText, boolean sessionExitRequested, byte methodGuard) {
         try {
-            if (SecondaryNodeHashTable.accountProgressDialog == null) {
-                SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
-                ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
-            }
-            SecondaryNodeHashTable.accountProgressDialog.updateProgress(sessionExitRequested, statusText, methodGuard ^ -92, scaledProgress);
-            SoftwareRasterizer.clearFramebuffer();
-            if (methodGuard != -40) {
-                whirlpoolTables = (long[][]) null;
-            }
-            ValidationMessageWidget.renderAccountDialogLayer(true, false);
+          if (SecondaryNodeHashTable.accountProgressDialog == null) {
+            SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
+            ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
+          }
+          SecondaryNodeHashTable.accountProgressDialog.updateProgress(sessionExitRequested, statusText, methodGuard ^ -92, scaledProgress);
+          SoftwareRasterizer.clearFramebuffer();
+          if (methodGuard != -40) {
+            whirlpoolTables = (long[][]) null;
+          }
+          ValidationMessageWidget.renderAccountDialogLayer(true, false);
         } catch (RuntimeException progressDialogFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogFailure), "qc.L(" + scaledProgress + ',' + (statusText != null ? "{...}" : "null") + ',' + sessionExitRequested + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogFailure), "qc.L(" + scaledProgress + ',' + (statusText != null ? "{...}" : "null") + ',' + sessionExitRequested + ',' + methodGuard + ')');
         }
     }
 
     final long readLongBE(int methodGuard) {
         long highUnsignedWord = 4294967295L & (long)this.readIntBE((byte) -113);
         if (methodGuard != 2901) {
-            whirlpoolRoundConstants = (long[]) null;
+          whirlpoolRoundConstants = (long[]) null;
         }
         long lowUnsignedWord = (long)this.readIntBE((byte) -113) & 4294967295L;
         return lowUnsignedWord + (highUnsignedWord << 32);
@@ -293,7 +293,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[byte0Index] = (byte)(int)value;
         if (methodGuard > -125) {
-            this.bytes = (byte[]) null;
+          this.bytes = (byte[]) null;
         }
     }
 
@@ -356,7 +356,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final int appendCrc32(int methodGuard, int startPosition) {
         if (methodGuard <= 4) {
-            return -122;
+          return -122;
         }
         int computedCrc32 = ResizableDialog.computeCrc32(this.position, this.bytes, -37, startPosition);
         this.writeIntBE((byte) 95, computedCrc32);
@@ -367,9 +367,9 @@ class ByteArrayBuffer extends IntrusiveNode {
         int encodedByte;
         encodedTextCharacter: {
           if ((0 >= character ||
-                character >= 128) &&
-              (character < 160 ||
-                255 < character)) {
+            character >= 128) &&
+            (character < 160 ||
+            255 < character)) {
             if (character == 8364) {
               encodedByte = -128;
               break encodedTextCharacter;
@@ -528,7 +528,7 @@ class ByteArrayBuffer extends IntrusiveNode {
     final void backpatchLengthByte(int methodGuard, int length) {
         this.bytes[-length + (this.position - 1)] = (byte)length;
         if (methodGuard != 11700) {
-            ByteArrayBuffer.openAccountWelcomePanel(-24);
+          ByteArrayBuffer.openAccountWelcomePanel(-24);
         }
     }
 
@@ -597,17 +597,17 @@ class ByteArrayBuffer extends IntrusiveNode {
     final int readUnsignedShortBE(boolean readBytes) {
         this.position = this.position + 2;
         if (!readBytes) {
-            return 58;
+          return 58;
         }
         return (this.bytes[-2 + this.position] << 8 & 65280) + (255 & this.bytes[-1 + this.position]);
     }
 
     final int readUnsignedShortOrInt(byte methodGuard) {
         if (methodGuard != -27) {
-            return 95;
+          return 95;
         }
         if (this.bytes[this.position] >= 0) {
-            return this.readUnsignedShortBE(true);
+          return this.readUnsignedShortBE(true);
         }
         return 2147483647 & this.readIntBE((byte) -114);
     }
@@ -679,27 +679,27 @@ class ByteArrayBuffer extends IntrusiveNode {
         whirlpoolRoundConstants = null;
         whirlpoolTables = (long[][]) null;
         if (methodGuard != 0) {
-            LoginTextValue unusedNullTextInputSnapshot = (LoginTextValue) null;
-            ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, -47);
+          LoginTextValue unusedNullTextInputSnapshot = (LoginTextValue) null;
+          ByteArrayBuffer.advanceAccountLookupRequest((LoginTextValue) null, (LoginTextValue) null, -47);
         }
     }
 
     final void writeVariableIntBE(byte methodGuard, int value) {
         if ((value & -128) != 0) {
-            if ((-16384 & value) != 0) {
-                if (0 != (value & -2097152)) {
-                    if ((-268435456 & value) != 0) {
-                        this.writeByte((byte) 126, value >>> 28 | 128);
-                    }
-                    this.writeByte((byte) -96, 128 | value >>> 21);
-                }
-                this.writeByte((byte) 127, (value | 2097436) >>> 14);
+          if ((-16384 & value) != 0) {
+            if (0 != (value & -2097152)) {
+              if ((-268435456 & value) != 0) {
+                this.writeByte((byte) 126, value >>> 28 | 128);
+              }
+              this.writeByte((byte) -96, 128 | value >>> 21);
             }
-            this.writeByte((byte) -121, value >>> 7 | 128);
+            this.writeByte((byte) 127, (value | 2097436) >>> 14);
+          }
+          this.writeByte((byte) -121, value >>> 7 | 128);
         }
         this.writeByte((byte) 124, 127 & value);
         if (methodGuard >= -95) {
-            this.writeMediumBE(-109, -43);
+          this.writeMediumBE(-109, -43);
         }
     }
 
@@ -723,7 +723,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[byte8Index] = (byte)(int)(value >> 8);
         if (methodGuard >= -41) {
-            whirlpoolTables = (long[][]) null;
+          whirlpoolTables = (long[][]) null;
         }
         int byte0Index = this.position;
         this.position = this.position + 1;
@@ -750,8 +750,8 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[byte16Index] = (byte)(int)(value >> 16);
         if (methodGuard <= 57) {
-            java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
-            this.replaceWithModPowResult(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
+          java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
+          this.replaceWithModPowResult(91, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         int byte8Index = this.position;
         this.position = this.position + 1;
@@ -763,7 +763,7 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final int readUnsignedMediumBE(int methodGuard) {
         if (methodGuard <= 85) {
-            whirlpoolRoundConstants = (long[]) null;
+          whirlpoolRoundConstants = (long[]) null;
         }
         this.position = this.position + 3;
         return (this.bytes[-1 + this.position] & 255) + (((this.bytes[this.position - 2] & 255) << 8) + ((this.bytes[this.position - 3] & 255) << 16));
@@ -775,22 +775,22 @@ class ByteArrayBuffer extends IntrusiveNode {
         int terminatorByteIndex = 0;
         int zeroCharacterIndex = text.indexOf(' ');
         if (methodGuard != -126) {
-            return;
+          return;
         }
         try {
-            if (zeroCharacterIndex >= 0) {
-                throw new IllegalArgumentException("");
-            }
-            prefixByteIndex = this.position;
-            this.position = this.position + 1;
-            this.bytes[prefixByteIndex] = (byte) 0;
-            textForEncoding = (CharSequence) ((Object) text);
-            this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
-            terminatorByteIndex = this.position;
-            this.position = this.position + 1;
-            this.bytes[terminatorByteIndex] = (byte) 0;
+          if (zeroCharacterIndex >= 0) {
+            throw new IllegalArgumentException("");
+          }
+          prefixByteIndex = this.position;
+          this.position = this.position + 1;
+          this.bytes[prefixByteIndex] = (byte) 0;
+          textForEncoding = (CharSequence) ((Object) text);
+          this.position = this.position + DisplayNamePanel.encodeTextSlice(textForEncoding, this.bytes, 0, text.length(), this.position, 98);
+          terminatorByteIndex = this.position;
+          this.position = this.position + 1;
+          this.bytes[terminatorByteIndex] = (byte) 0;
         } catch (RuntimeException textWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.VA(" + (text != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textWriteFailure), "qc.VA(" + (text != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -808,23 +808,23 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final void writeSignedSmart(int value, int methodGuard) {
         if (value < 64 && value >= -64) {
-            this.writeByte((byte) 125, 64 + value);
-            return;
+          this.writeByte((byte) 125, 64 + value);
+          return;
         }
         if (value < 16384 &&
-            value >= -16384) {
-            this.writeShortBE(49152 + value, 28695);
-            return;
+          value >= -16384) {
+          this.writeShortBE(49152 + value, 28695);
+          return;
         }
         if (methodGuard != -5962) {
-            this.readUnsignedShortOrInt((byte) -105);
+          this.readUnsignedShortOrInt((byte) -105);
         }
         throw new IllegalArgumentException();
     }
 
     final byte readSignedByte(byte methodGuard) {
         if (methodGuard <= 71) {
-            this.backpatchLengthByte(105, -48);
+          this.backpatchLengthByte(105, -48);
         }
         int byteIndex = this.position;
         this.position = this.position + 1;
@@ -842,7 +842,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         this.position = this.position + 1;
         this.bytes[lowerMiddleByteIndex] = (byte)(value >> 8);
         if (methodGuard != 95) {
-            this.readSignedSmart(-7);
+          this.readSignedSmart(-7);
         }
         int lowestByteIndex = this.position;
         this.position = this.position + 1;
@@ -852,15 +852,15 @@ class ByteArrayBuffer extends IntrusiveNode {
     final int readIntBE(byte methodGuard) {
         this.position = this.position + 4;
         if (methodGuard >= -25) {
-            return 62;
+          return 62;
         }
         return (65280 & this.bytes[-2 + this.position] << 8) + (-16777216 & this.bytes[-4 + this.position] << 24) - (-((255 & this.bytes[-3 + this.position]) << 16) - (this.bytes[this.position - 1] & 255));
     }
 
     final int readUnsignedByte(byte methodGuard) {
         if (methodGuard != 34) {
-            java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
-            this.replaceWithModPowResult(31, (java.math.BigInteger) null, (java.math.BigInteger) null);
+          java.math.BigInteger unusedNullBigIntegerSnapshot = (java.math.BigInteger) null;
+          this.replaceWithModPowResult(31, (java.math.BigInteger) null, (java.math.BigInteger) null);
         }
         int byteIndex = this.position;
         this.position = this.position + 1;
@@ -890,7 +890,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         int sentinelRemainder = 57 % ((-26 - methodGuard) / 54);
         int nextUnsignedByte = 255 & this.bytes[this.position];
         if (nextUnsignedByte < 128) {
-            return this.readUnsignedByte((byte) 34) - 64;
+          return this.readUnsignedByte((byte) 34) - 64;
         }
         return -49152 + this.readUnsignedShortBE(true);
     }
@@ -933,11 +933,11 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     final int readUnsignedSmart(int methodGuard) {
         if (methodGuard != 1) {
-            return 3;
+          return 3;
         }
         int nextUnsignedByte = 255 & this.bytes[this.position];
         if (nextUnsignedByte < 128) {
-            return this.readUnsignedByte((byte) 34);
+          return this.readUnsignedByte((byte) 34);
         }
         return this.readUnsignedShortBE(true) - 32768;
     }
@@ -949,18 +949,18 @@ class ByteArrayBuffer extends IntrusiveNode {
         java.math.BigInteger transformedInteger = null;
         byte[] transformedBytes = null;
         try {
-            payloadLength = this.position;
-            this.position = 0;
-            payload = new byte[payloadLength];
-            this.readBytes(resultPositionGuard ^ 29915, payloadLength, payload, 0);
-            signedPayloadInteger = new java.math.BigInteger(payload);
-            transformedInteger = signedPayloadInteger.modPow(exponent, modulus);
-            transformedBytes = transformedInteger.toByteArray();
-            this.position = resultPositionGuard;
-            this.writeShortBE(transformedBytes.length, 28695);
-            this.writeBytes(transformedBytes.length, -97, transformedBytes, 0);
+          payloadLength = this.position;
+          this.position = 0;
+          payload = new byte[payloadLength];
+          this.readBytes(resultPositionGuard ^ 29915, payloadLength, payload, 0);
+          signedPayloadInteger = new java.math.BigInteger(payload);
+          transformedInteger = signedPayloadInteger.modPow(exponent, modulus);
+          transformedBytes = transformedInteger.toByteArray();
+          this.position = resultPositionGuard;
+          this.writeShortBE(transformedBytes.length, 28695);
+          this.writeBytes(transformedBytes.length, -97, transformedBytes, 0);
         } catch (RuntimeException modPowFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) modPowFailure), "qc.CB(" + resultPositionGuard + ',' + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) modPowFailure), "qc.CB(" + resultPositionGuard + ',' + (modulus != null ? "{...}" : "null") + ',' + (exponent != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -971,10 +971,10 @@ class ByteArrayBuffer extends IntrusiveNode {
 
     ByteArrayBuffer(byte[] bytes) {
         try {
-            this.bytes = bytes;
-            this.position = 0;
+          this.bytes = bytes;
+          this.position = 0;
         } catch (RuntimeException constructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "qc.<init>(" + (bytes != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "qc.<init>(" + (bytes != null ? "{...}" : "null") + ')');
         }
     }
 

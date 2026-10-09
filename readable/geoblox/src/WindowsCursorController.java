@@ -59,8 +59,8 @@ final class WindowsCursorController extends com.ms.dll.Callback {
     final void moveCursor(int methodGuard, int y, int x) {
         com.ms.win32.User32.SetCursorPos(x, y);
         if (methodGuard > -45) {
-            java.awt.Component nullComponentForInvalidGuard = (java.awt.Component) null;
-            this.setCursorVisible(74, true, (java.awt.Component) null);
+          java.awt.Component nullComponentForInvalidGuard = (java.awt.Component) null;
+          this.setCursorVisible(74, true, (java.awt.Component) null);
         }
     }
 

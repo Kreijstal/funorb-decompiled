@@ -41,11 +41,11 @@ final class FullscreenEntrySupport {
               }
               if (displayModes[modeIndex].height == height) {
                 if (refreshRate != 0 &&
-                    refreshRate != displayModes[modeIndex].refreshRate) {
+                  refreshRate != displayModes[modeIndex].refreshRate) {
                   continue;
                 }
                 if (matchingModeFoundInt != 0 &&
-                    bitDepth >= displayModes[modeIndex].bitDepth) {
+                  bitDepth >= displayModes[modeIndex].bitDepth) {
                   continue;
                 }
                 matchingModeFoundInt = 1;
@@ -87,7 +87,7 @@ final class FullscreenEntrySupport {
 
     public static void clearFullscreenEntryResources(int methodGuard) {
         if (methodGuard != -8616) {
-            FullscreenEntrySupport.clearFullscreenEntryResources(87);
+          FullscreenEntrySupport.clearFullscreenEntryResources(87);
         }
         thirdVertexTransformedX = null;
     }
@@ -99,7 +99,7 @@ final class FullscreenEntrySupport {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (ArchiveNetworkClient.difficultyStep != 0 &&
-              ArchiveNetworkClient.difficultyStep < 21) {
+            ArchiveNetworkClient.difficultyStep < 21) {
             MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + 10;
           }
           MessageDialogSupport.releasesPerTheme = MessageDialogSupport.releasesPerTheme + additionalReleases;
@@ -117,12 +117,12 @@ final class FullscreenEntrySupport {
 
     final static void guardArchiveInitializationPlaceholder(ResourceArchive unusedFirstArchive, ResourceArchive unusedSecondArchive, int methodGuard) {
         try {
-            if (methodGuard > -66) {
-                PlatformTaskDispatcher guardedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
-                FullscreenEntrySupport.enterFullscreenAndWait(91, -118, 58, -45, (PlatformTaskDispatcher) null, -79);
-            }
+          if (methodGuard > -66) {
+            PlatformTaskDispatcher guardedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
+            FullscreenEntrySupport.enterFullscreenAndWait(91, -118, 58, -45, (PlatformTaskDispatcher) null, -79);
+          }
         } catch (RuntimeException placeholderFailureForContext) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) placeholderFailureForContext), "qe.A(" + (unusedFirstArchive != null ? "{...}" : "null") + ',' + (unusedSecondArchive != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) placeholderFailureForContext), "qe.A(" + (unusedFirstArchive != null ? "{...}" : "null") + ',' + (unusedSecondArchive != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 

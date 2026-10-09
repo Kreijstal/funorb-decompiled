@@ -19,15 +19,15 @@ class TextInputRenderer extends TextWidgetRenderer {
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         try {
-            if (widgetEnabled) {
-                EntityLinkSupport.drawGradientWidgetBorder(parentX + widget.widgetX, widget.widgetHeight, widget.widgetY + parentY, widget.widgetWidth, -1540604944);
-            }
-            if (methodGuard > -5) {
-                sharedDefaultTextWidgetRenderer = (TextWidgetRenderer) null;
-            }
-            super.drawWidget(parentX, -11, parentY, widgetEnabled, widget);
+          if (widgetEnabled) {
+            EntityLinkSupport.drawGradientWidgetBorder(parentX + widget.widgetX, widget.widgetHeight, widget.widgetY + parentY, widget.widgetWidth, -1540604944);
+          }
+          if (methodGuard > -5) {
+            sharedDefaultTextWidgetRenderer = (TextWidgetRenderer) null;
+          }
+          super.drawWidget(parentX, -11, parentY, widgetEnabled, widget);
         } catch (RuntimeException widgetDrawFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ac.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ac.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,8 +131,8 @@ class TextInputRenderer extends TextWidgetRenderer {
           if (newAchievementsOnly) {
             for (achievementIndexOrTitleY = 16; achievementIndexOrTitleY >= 0; achievementIndexOrTitleY--) {
               if ((ClientOptionSupport.isClientOptionEnabled(0, -100) ||
-                    achievementIndexOrTitleY != 16) &&
-                  (1 << achievementIndexOrTitleY & achievementMask) == 0) {
+                achievementIndexOrTitleY != 16) &&
+                (1 << achievementIndexOrTitleY & achievementMask) == 0) {
                 hiddenAchievementCount++;
                 hiddenAchievementCenteringOffset += 20;
               }
@@ -143,16 +143,16 @@ class TextInputRenderer extends TextWidgetRenderer {
           }
           for (achievementGridIndex = 0; achievementGridIndex < GameplaySetupSupport.achievementTitles.length; achievementGridIndex++) {
             if (!ClientOptionSupport.isClientOptionEnabled(0, -119) &&
-                achievementGridIndex == 16 &&
-                !AchievementQuery.hasReceivedAchievementSixteen(105)) {
+              achievementGridIndex == 16 &&
+              !AchievementQuery.hasReceivedAchievementSixteen(105)) {
               continue;
             }
             if ((0 != (1 << achievementGridIndex & achievementMask) ||
-                  !newAchievementsOnly) &&
-                (PrefixCodeDecoder.pointerXSnapshot >= gridX &&
-                  32 + gridX >= PrefixCodeDecoder.pointerXSnapshot &&
-                  gridY <= PcmResampler.pointerYSnapshot &&
-                  32 + gridY >= PcmResampler.pointerYSnapshot)) {
+              !newAchievementsOnly) &&
+              (PrefixCodeDecoder.pointerXSnapshot >= gridX &&
+              32 + gridX >= PrefixCodeDecoder.pointerXSnapshot &&
+              gridY <= PcmResampler.pointerYSnapshot &&
+              32 + gridY >= PcmResampler.pointerYSnapshot)) {
               SoftwareRasterizer.fillRoundedRectangle(gridX, gridY, 32, 32, 2, 16689938);
               if (highlightedAchievementIndex < 0) {
                 highlightedAchievementIndex = achievementGridIndex;
@@ -241,7 +241,7 @@ class TextInputRenderer extends TextWidgetRenderer {
         secondVertexTransformedY = null;
         awaitingLoginFailureTextStage = null;
         if (methodGuard < 62) {
-            alternateSessionServerPort = -128;
+          alternateSessionServerPort = -128;
         }
     }
 

@@ -42,7 +42,7 @@ final class CoverageBitmapFont extends BitmapFont {
           destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width > 0 &&
-            height > 0) {
+          height > 0) {
           if (!shadowPass) {
             CoverageBitmapFont.blitCoverageGlyph(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip);
           } else {
@@ -118,7 +118,7 @@ final class CoverageBitmapFont extends BitmapFont {
           destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width > 0 &&
-            height > 0) {
+          height > 0) {
           if (!shadowPass) {
             CoverageBitmapFont.blitCoverageGlyphAlpha(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, sourceIndex, destinationIndex, width, height, destinationRowSkip, sourceRowSkip, alpha256);
           } else {

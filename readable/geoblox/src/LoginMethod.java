@@ -7,20 +7,20 @@ final class LoginMethod {
 
     final static boolean isAvatarCryHoldExpired(int methodGuard) {
         if (methodGuard != -3) {
-            gameNameText = (String) null;
-            if (NameCharacterSupport.avatarCryPhase != 2) {
-                return false;
-            }
-            if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {
-                return true;
-            }
+          gameNameText = (String) null;
+          if (NameCharacterSupport.avatarCryPhase != 2) {
             return false;
+          }
+          if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {
+            return true;
+          }
+          return false;
         }
         if (NameCharacterSupport.avatarCryPhase != 2) {
-            return false;
+          return false;
         }
         if (LimitedRandomAccessFile.avatarFeedbackHoldTicks < 0) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -55,19 +55,19 @@ final class LoginMethod {
     public static void releaseStaticReferences(byte methodGuard) {
         gameNameText = null;
         if (methodGuard >= -8) {
-            LoginMethod.releaseMarkedThemeMusicPreparation((byte) -78);
+          LoginMethod.releaseMarkedThemeMusicPreparation((byte) -78);
         }
     }
 
     final void rememberMethod(java.applet.Applet applet, int methodGuard) {
         try {
-            IntArrayQuery.writeCookieValue((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
-            if (methodGuard != 0) {
-                java.applet.Applet unusedNullAppletForInvalidGuard = (java.applet.Applet) null;
-                this.rememberMethod((java.applet.Applet) null, -71);
-            }
+          IntArrayQuery.writeCookieValue((byte) -25, 31536000L, applet, "jagex-last-login-method", this.methodName);
+          if (methodGuard != 0) {
+            java.applet.Applet unusedNullAppletForInvalidGuard = (java.applet.Applet) null;
+            this.rememberMethod((java.applet.Applet) null, -71);
+          }
         } catch (RuntimeException cookieWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieWriteFailure), "od.F(" + (applet != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieWriteFailure), "od.F(" + (applet != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -148,9 +148,9 @@ final class LoginMethod {
 
     LoginMethod(String methodName) {
         try {
-            this.methodName = methodName;
+          this.methodName = methodName;
         } catch (RuntimeException methodInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) methodInitializationFailure), "od.<init>(" + (methodName != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) methodInitializationFailure), "od.<init>(" + (methodName != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -24,51 +24,51 @@ final class BufferedSocket implements Runnable {
 
     final void close(int guard) {
         try {
-            InterruptedException ignoredJoinInterruption = null;
-            Throwable caughtThrowable = null;
-            Object closeMonitor = null;
-            if (guard >= -117) {
-              this.run();
-            }
-            if (this.closeRequested) {
-              return;
-            }
-            closeMonitor = this;
-            synchronized (closeMonitor) {
-              this.closeRequested = true;
-              this.notifyAll();
-            }
-            if (this.writerTask != null) {
-              while (0 == this.writerTask.status) {
-                ByteTextDecodingSupport.sleepMillis(0, 1L);
-              }
-              if (1 == this.writerTask.status) {
-                try {
-                  ((Thread) (this.writerTask.result)).join();
-                } catch (java.lang.InterruptedException joinInterruption) {
-                  caughtThrowable = joinInterruption;
-                  ignoredJoinInterruption = (InterruptedException) (Object) caughtThrowable;
-                }
-              }
-            }
-            this.writerTask = null;
+          InterruptedException ignoredJoinInterruption = null;
+          Throwable caughtThrowable = null;
+          Object closeMonitor = null;
+          if (guard >= -117) {
+            this.run();
+          }
+          if (this.closeRequested) {
             return;
+          }
+          closeMonitor = this;
+          synchronized (closeMonitor) {
+            this.closeRequested = true;
+            this.notifyAll();
+          }
+          if (this.writerTask != null) {
+            while (0 == this.writerTask.status) {
+              ByteTextDecodingSupport.sleepMillis(0, 1L);
+            }
+            if (1 == this.writerTask.status) {
+              try {
+                ((Thread) (this.writerTask.result)).join();
+              } catch (java.lang.InterruptedException joinInterruption) {
+                caughtThrowable = joinInterruption;
+                ignoredJoinInterruption = (InterruptedException) (Object) caughtThrowable;
+              }
+            }
+          }
+          this.writerTask = null;
+          return;
         } catch (RuntimeException | Error uncheckedFailure) {
-            throw uncheckedFailure;
+          throw uncheckedFailure;
         } catch (Throwable checkedFailure) {
-            throw new RuntimeException(checkedFailure);
+          throw new RuntimeException(checkedFailure);
         }
     }
 
     final void checkWriteFailure(int guard) throws IOException {
         if (this.closeRequested) {
-            return;
+          return;
         }
         if (guard >= -79) {
-            return;
+          return;
         }
         if (!this.writeFailurePending) {
-            return;
+          return;
         }
         this.writeFailurePending = false;
         throw new IOException();
@@ -76,22 +76,22 @@ final class BufferedSocket implements Runnable {
 
     final int available(byte guard) throws IOException {
         if (guard <= 71) {
-            this.inputStream = (InputStream) null;
-            if (!this.closeRequested) {
-                return this.inputStream.available();
-            }
-            return 0;
+          this.inputStream = (InputStream) null;
+          if (!this.closeRequested) {
+            return this.inputStream.available();
+          }
+          return 0;
         }
         if (!this.closeRequested) {
-            return this.inputStream.available();
+          return this.inputStream.available();
         }
         return 0;
     }
 
     final static FrameTimer createFrameClock(int guard) {
         if (guard != 5000) {
-            BufferedSocket.releaseTransformedVertexScratch(-113);
-            return (FrameTimer) ((Object) new NanoFrameTimer());
+          BufferedSocket.releaseTransformedVertexScratch(-113);
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
         return (FrameTimer) ((Object) new NanoFrameTimer());
     }
@@ -186,17 +186,17 @@ final class BufferedSocket implements Runnable {
 
     final int readByte(int guard) throws IOException {
         if (this.closeRequested) {
-            return 0;
+          return 0;
         }
         if (guard != -17422) {
-            return -104;
+          return -104;
         }
         return this.inputStream.read();
     }
 
     public static void releaseTransformedVertexScratch(int guard) {
         if (guard != 21888) {
-            return;
+          return;
         }
         thirdVertexTransformedY = null;
     }
@@ -207,104 +207,104 @@ final class BufferedSocket implements Runnable {
 
     public final void run() {
         try {
-            int contiguousWriteLength = 0;
-            Object writerMonitor = null;
-            int writerActionRoute = 0;
-            Throwable caughtWriterThrowable = null;
-            IOException ignoredCloseFailure = null;
-            Exception workerFailure = null;
-            int contiguousWriteOffset = 0;
-            IOException ignoredWriteOrFlushFailure = null;
-            InterruptedException ignoredWaitInterruption = null;
-            String unusedReportMessage = null;
-            try {
-              while (true) {
-                writerMonitor = this;
-                synchronized (writerMonitor) {
-                  writerChunkSelection: {
-                    if (this.writeReadIndex == this.writeInsertIndex) {
-                      if (this.closeRequested) {
-                        writerActionRoute = 0;
-                        break writerChunkSelection;
-                      }
-                      try {
-                        this.wait();
-                      } catch (java.lang.InterruptedException waitInterruption) {
-                        caughtWriterThrowable = waitInterruption;
-                        ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
-                      }
+          int contiguousWriteLength = 0;
+          Object writerMonitor = null;
+          int writerActionRoute = 0;
+          Throwable caughtWriterThrowable = null;
+          IOException ignoredCloseFailure = null;
+          Exception workerFailure = null;
+          int contiguousWriteOffset = 0;
+          IOException ignoredWriteOrFlushFailure = null;
+          InterruptedException ignoredWaitInterruption = null;
+          String unusedReportMessage = null;
+          try {
+            while (true) {
+              writerMonitor = this;
+              synchronized (writerMonitor) {
+                writerChunkSelection: {
+                  if (this.writeReadIndex == this.writeInsertIndex) {
+                    if (this.closeRequested) {
+                      writerActionRoute = 0;
+                      break writerChunkSelection;
                     }
-                    contiguousWriteOffset = this.writeReadIndex;
-                    if (this.writeInsertIndex < this.writeReadIndex) {
-                      contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
-                    } else {
-                      contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
+                    try {
+                      this.wait();
+                    } catch (java.lang.InterruptedException waitInterruption) {
+                      caughtWriterThrowable = waitInterruption;
+                      ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
                     }
-                    writerActionRoute = 1;
                   }
-                }
-                if (writerActionRoute == 0) {
-                  try {
-                    if (this.inputStream != null) {
-                      this.inputStream.close();
-                    }
-                    if (this.outputStream != null) {
-                      this.outputStream.close();
-                    }
-                    if (this.socket != null) {
-                      this.socket.close();
-                    }
-                  } catch (java.io.IOException closeFailure) {
-                    caughtWriterThrowable = closeFailure;
-                    ignoredCloseFailure = (IOException) (Object) caughtWriterThrowable;
+                  contiguousWriteOffset = this.writeReadIndex;
+                  if (this.writeInsertIndex < this.writeReadIndex) {
+                    contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
+                  } else {
+                    contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
                   }
-                  this.writeBuffer = null;
-                  break;
-                }
-                if (contiguousWriteLength <= 0) {
-                  continue;
-                }
-                try {
-                  this.outputStream.write(this.writeBuffer, contiguousWriteOffset, contiguousWriteLength);
-                } catch (java.io.IOException writeFailure) {
-                  caughtWriterThrowable = writeFailure;
-                  ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
-                  this.writeFailurePending = true;
-                }
-                this.writeReadIndex = (contiguousWriteLength + this.writeReadIndex) % this.bufferCapacity;
-                try {
-                  if (this.writeInsertIndex == this.writeReadIndex) {
-                    this.outputStream.flush();
-                  }
-                } catch (java.io.IOException flushFailure) {
-                  caughtWriterThrowable = flushFailure;
-                  ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
-                  this.writeFailurePending = true;
+                  writerActionRoute = 1;
                 }
               }
-            } catch (java.lang.Exception unexpectedWorkerFailure) {
-              caughtWriterThrowable = unexpectedWorkerFailure;
-              workerFailure = (Exception) (Object) caughtWriterThrowable;
-              unusedReportMessage = (String) null;
-              IterableNodeHashTable.reportClientError((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
+              if (writerActionRoute == 0) {
+                try {
+                  if (this.inputStream != null) {
+                    this.inputStream.close();
+                  }
+                  if (this.outputStream != null) {
+                    this.outputStream.close();
+                  }
+                  if (this.socket != null) {
+                    this.socket.close();
+                  }
+                } catch (java.io.IOException closeFailure) {
+                  caughtWriterThrowable = closeFailure;
+                  ignoredCloseFailure = (IOException) (Object) caughtWriterThrowable;
+                }
+                this.writeBuffer = null;
+                break;
+              }
+              if (contiguousWriteLength <= 0) {
+                continue;
+              }
+              try {
+                this.outputStream.write(this.writeBuffer, contiguousWriteOffset, contiguousWriteLength);
+              } catch (java.io.IOException writeFailure) {
+                caughtWriterThrowable = writeFailure;
+                ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
+                this.writeFailurePending = true;
+              }
+              this.writeReadIndex = (contiguousWriteLength + this.writeReadIndex) % this.bufferCapacity;
+              try {
+                if (this.writeInsertIndex == this.writeReadIndex) {
+                  this.outputStream.flush();
+                }
+              } catch (java.io.IOException flushFailure) {
+                caughtWriterThrowable = flushFailure;
+                ignoredWriteOrFlushFailure = (IOException) (Object) caughtWriterThrowable;
+                this.writeFailurePending = true;
+              }
             }
+          } catch (java.lang.Exception unexpectedWorkerFailure) {
+            caughtWriterThrowable = unexpectedWorkerFailure;
+            workerFailure = (Exception) (Object) caughtWriterThrowable;
+            unusedReportMessage = (String) null;
+            IterableNodeHashTable.reportClientError((Throwable) ((Object) workerFailure), (String) null, (byte) 125);
+          }
         } catch (RuntimeException | Error uncheckedFailure) {
-            throw uncheckedFailure;
+          throw uncheckedFailure;
         } catch (Throwable checkedFailure) {
-            throw new RuntimeException(checkedFailure);
+          throw new RuntimeException(checkedFailure);
         }
     }
 
     final static void clearSessionAndReload(byte guard, java.applet.Applet applet) {
         try {
-            if (guard != 116) {
-                java.applet.Applet unusedApplet = (java.applet.Applet) null;
-                BufferedSocket.clearSessionAndReload((byte) 45, (java.applet.Applet) null);
-            }
-            MeshPrioritySupport.updateSessionCookie("", applet, -1);
-            EmailAvailabilityQuery.navigateToReloadPage(applet, false);
+          if (guard != 116) {
+            java.applet.Applet unusedApplet = (java.applet.Applet) null;
+            BufferedSocket.clearSessionAndReload((byte) 45, (java.applet.Applet) null);
+          }
+          MeshPrioritySupport.updateSessionCookie("", applet, -1);
+          EmailAvailabilityQuery.navigateToReloadPage(applet, false);
         } catch (RuntimeException reloadFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) reloadFailure), "ba.C(" + guard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -314,15 +314,15 @@ final class BufferedSocket implements Runnable {
         this.writeReadIndex = 0;
         this.writeFailurePending = false;
         try {
-            this.taskDispatcher = taskDispatcher;
-            this.socket = socket;
-            this.socket.setSoTimeout(30000);
-            this.socket.setTcpNoDelay(true);
-            this.inputStream = this.socket.getInputStream();
-            this.outputStream = this.socket.getOutputStream();
-            this.bufferCapacity = bufferCapacity;
+          this.taskDispatcher = taskDispatcher;
+          this.socket = socket;
+          this.socket.setSoTimeout(30000);
+          this.socket.setTcpNoDelay(true);
+          this.inputStream = this.socket.getInputStream();
+          this.outputStream = this.socket.getOutputStream();
+          this.bufferCapacity = bufferCapacity;
         } catch (RuntimeException socketConfigurationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) socketConfigurationFailure), "ba.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) socketConfigurationFailure), "ba.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

@@ -17,8 +17,8 @@ final class ClientOptionSupport {
 
     final static boolean isClientOptionEnabled(int optionBitIndex, int methodGuard) {
         if (optionBitIndex != -1) {
-            int sentinelQuotient = 43 / ((24 - methodGuard) / 50);
-            return (clientOptionMask & 1 << optionBitIndex) != 0 ? true : false;
+          int sentinelQuotient = 43 / ((24 - methodGuard) / 50);
+          return (clientOptionMask & 1 << optionBitIndex) != 0 ? true : false;
         }
         return true;
     }
@@ -28,10 +28,10 @@ final class ClientOptionSupport {
         valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 1;
         valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 2;
         if (methodGuard > 88) {
-            valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 4;
-            valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 8;
-            valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 16;
-            return valueThenSpreadBits + 1;
+          valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 4;
+          valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 8;
+          valueThenSpreadBits = valueThenSpreadBits | valueThenSpreadBits >>> 16;
+          return valueThenSpreadBits + 1;
         }
         return -15;
     }
@@ -41,7 +41,7 @@ final class ClientOptionSupport {
         LoginProtocolSupport.waitingForBootstrapText = IntrusiveDeque.waitingForTextByLanguage[languageIndex];
         CachedTextLayout.loadingBootstrapText = PointerInputListener.loadingTextByLanguage[languageIndex];
         if (!methodGuard) {
-            sharedSavedClip = (int[]) null;
+          sharedSavedClip = (int[]) null;
         }
     }
 
@@ -49,10 +49,10 @@ final class ClientOptionSupport {
         validationIconScratchSprite = null;
         createEmailValidText = null;
         if (methodGuard == 50) {
-            sharedSavedClip = null;
-            awaitingLoginResultStage = null;
-            awaitingLoginDetailsStage = null;
-            return;
+          sharedSavedClip = null;
+          awaitingLoginResultStage = null;
+          awaitingLoginDetailsStage = null;
+          return;
         }
         sharedSavedClip = (int[]) null;
         sharedSavedClip = null;

@@ -14,7 +14,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final void invalidateCachedUsernameAvailability(byte methodGuard) {
         this.cachedUsernameCandidate = null;
         if (methodGuard > -78) {
-            avatarTintBlueDelta = -0.8683637976646423f;
+          avatarTintBlueDelta = -0.8683637976646423f;
         }
     }
 
@@ -61,40 +61,40 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         int tutorialStepSelection;
         if (methodGuard != 24146) {
-            orbCoinSprite = (Sprite) null;
-            stepIdForSelection = tutorialStepId;
-            if (stepIdForSelection == 0) {
-                return UsernameSuggestionsPanel.tutorialRotationMessage;
+          orbCoinSprite = (Sprite) null;
+          stepIdForSelection = tutorialStepId;
+          if (stepIdForSelection == 0) {
+            return UsernameSuggestionsPanel.tutorialRotationMessage;
+          }
+          if (stepIdForSelection == 1) {
+            return ByteArrayPoolSupport.tutorialColourMatchMessage;
+          }
+          if (stepIdForSelection != 2) {
+            if (stepIdForSelection == 3) {
+              return ArchiveHandshakeState.tutorialCompleteMessage;
             }
-            if (stepIdForSelection == 1) {
-                return ByteArrayPoolSupport.tutorialColourMatchMessage;
+            if (stepIdForSelection == 5) {
+              return AccountCreationForm.tutorialFailedMessage;
             }
-            if (stepIdForSelection != 2) {
-                if (stepIdForSelection == 3) {
-                    return ArchiveHandshakeState.tutorialCompleteMessage;
-                }
-                if (stepIdForSelection == 5) {
-                    return AccountCreationForm.tutorialFailedMessage;
-                }
-                return null;
-            }
-            return ReceivedTextRecord.tutorialShapeMatchMessage;
+            return null;
+          }
+          return ReceivedTextRecord.tutorialShapeMatchMessage;
         }
         tutorialStepSelection = tutorialStepId;
         if (tutorialStepSelection == 0) {
-            return UsernameSuggestionsPanel.tutorialRotationMessage;
+          return UsernameSuggestionsPanel.tutorialRotationMessage;
         }
         if (tutorialStepSelection == 1) {
-            return ByteArrayPoolSupport.tutorialColourMatchMessage;
+          return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
         if (tutorialStepSelection != 2) {
-            if (tutorialStepSelection == 3) {
-                return ArchiveHandshakeState.tutorialCompleteMessage;
-            }
-            if (tutorialStepSelection == 5) {
-                return AccountCreationForm.tutorialFailedMessage;
-            }
-            return null;
+          if (tutorialStepSelection == 3) {
+            return ArchiveHandshakeState.tutorialCompleteMessage;
+          }
+          if (tutorialStepSelection == 5) {
+            return AccountCreationForm.tutorialFailedMessage;
+          }
+          return null;
         }
         return ReceivedTextRecord.tutorialShapeMatchMessage;
     }
@@ -307,7 +307,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (!candidateText.equals(this.cachedUsernameCandidate)) {
             availabilityQuery = UsernameQuerySupport.requestOrReuseUsernameQuery((byte) 108, candidateText);
             if (availabilityQuery != null &&
-                availabilityQuery.candidateOrFailureText == null) {
+              availabilityQuery.candidateOrFailureText == null) {
               this.cachedUsernameAvailable = availabilityQuery.accepted;
               this.cachedUsernameCandidate = candidateText;
             } else {
@@ -337,42 +337,42 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
 
     final static boolean ensureAndCheckAchievementStateGate(int methodGuard) {
         if (methodGuard < 29) {
-            orbCoinSprite = (Sprite) null;
-            LoginPayloadKind.ensureAchievementStateRequested(9313);
-            if (!UnderlinedButtonRenderer.isGuestSessionMode(-117)) {
-                return SpriteConstructionSupport.achievementMaskReceived ? true : false;
-            }
-            return true;
+          orbCoinSprite = (Sprite) null;
+          LoginPayloadKind.ensureAchievementStateRequested(9313);
+          if (!UnderlinedButtonRenderer.isGuestSessionMode(-117)) {
+            return SpriteConstructionSupport.achievementMaskReceived ? true : false;
+          }
+          return true;
         }
         LoginPayloadKind.ensureAchievementStateRequested(9313);
         if (UnderlinedButtonRenderer.isGuestSessionMode(-117)) {
-            return true;
+          return true;
         }
         if (!SpriteConstructionSupport.achievementMaskReceived) {
-            return false;
+          return false;
         }
         return true;
     }
 
     final static void requestNavigationToSharedTarget(boolean cleanupGuard, String navigationTarget) {
         try {
-            if (cleanupGuard) {
-                UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 81);
-            }
-            CanvasResizeController.pendingNavigationTarget = navigationTarget;
-            MidiNote.setPendingLoginUiAction(12, cleanupGuard);
+          if (cleanupGuard) {
+            UsernameAvailabilityValidator.releaseUsernameValidatorSharedResources((byte) 81);
+          }
+          CanvasResizeController.pendingNavigationTarget = navigationTarget;
+          MidiNote.setPendingLoginUiAction(12, cleanupGuard);
         } catch (RuntimeException navigationRequestFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationRequestFailure), "uk.H(" + cleanupGuard + ',' + (navigationTarget != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationRequestFailure), "uk.H(" + cleanupGuard + ',' + (navigationTarget != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseUsernameValidatorSharedResources(byte methodGuard) {
         if (methodGuard >= 70) {
-            orbCoinSprite = null;
-            errorReportUserIdentityText = null;
-            cameraMeshVertexY = null;
-            monthNames = null;
-            return;
+          orbCoinSprite = null;
+          errorReportUserIdentityText = null;
+          cameraMeshVertexY = null;
+          monthNames = null;
+          return;
         }
         orbCoinSprite = (Sprite) null;
         orbCoinSprite = null;

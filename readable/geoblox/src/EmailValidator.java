@@ -203,10 +203,10 @@ final class EmailValidator extends TextInputValidator {
     public static void releaseEmailValidatorSharedResources(int methodGuard) {
         themeMusicPreparationFlags = null;
         if (methodGuard > -13) {
-            byte[] unusedNullDecodeBytes = (byte[]) null;
-            EmailValidator.decodeTextBytes(95, (byte[]) null);
-            unusedCrc64Table = null;
-            return;
+          byte[] unusedNullDecodeBytes = (byte[]) null;
+          EmailValidator.decodeTextBytes(95, (byte[]) null);
+          unusedCrc64Table = null;
+          return;
         }
         unusedCrc64Table = null;
     }
@@ -217,13 +217,13 @@ final class EmailValidator extends TextInputValidator {
 
     final static void setOptionalLoginTextAndShowLoggingIn(int methodGuard, String optionalLoginText) {
         try {
-            StatefulWidgetRenderer.setOptionalLoginText(-119, optionalLoginText);
-            if (methodGuard != 12607) {
-                archiveGameCrc = 32;
-            }
-            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
+          StatefulWidgetRenderer.setOptionalLoginText(-119, optionalLoginText);
+          if (methodGuard != 12607) {
+            archiveGameCrc = 32;
+          }
+          MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, false);
         } catch (RuntimeException optionalLoginTextFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) optionalLoginTextFailure), "ag.G(" + methodGuard + ',' + (optionalLoginText != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) optionalLoginTextFailure), "ag.G(" + methodGuard + ',' + (optionalLoginText != null ? "{...}" : "null") + ')');
         }
     }
 

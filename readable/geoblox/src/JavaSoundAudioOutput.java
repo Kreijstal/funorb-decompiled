@@ -15,8 +15,8 @@ final class JavaSoundAudioOutput extends AudioOutput {
 
     final void closeDevice() {
         if (this.line != null) {
-            this.line.close();
-            this.line = null;
+          this.line.close();
+          this.line = null;
         }
     }
 
@@ -25,15 +25,15 @@ final class JavaSoundAudioOutput extends AudioOutput {
         int sampleValue = 0;
         int sampleCount = 256;
         if (stereoEnabled) {
-            sampleCount = sampleCount << 1;
+          sampleCount = sampleCount << 1;
         }
         for (sampleIndex = 0; sampleIndex < sampleCount; sampleIndex++) {
-            sampleValue = this.mixBuffer[sampleIndex];
-            if ((sampleValue + 8388608 & -16777216) != 0) {
-                sampleValue = 8388607 ^ sampleValue >> 31;
-            }
-            this.pcm16Bytes[sampleIndex * 2] = (byte)(sampleValue >> 8);
-            this.pcm16Bytes[sampleIndex * 2 + 1] = (byte)(sampleValue >> 16);
+          sampleValue = this.mixBuffer[sampleIndex];
+          if ((sampleValue + 8388608 & -16777216) != 0) {
+            sampleValue = 8388607 ^ sampleValue >> 31;
+          }
+          this.pcm16Bytes[sampleIndex * 2] = (byte)(sampleValue >> 8);
+          this.pcm16Bytes[sampleIndex * 2 + 1] = (byte)(sampleValue >> 16);
         }
         this.line.write(this.pcm16Bytes, 0, sampleCount << 1);
     }
@@ -108,18 +108,18 @@ final class JavaSoundAudioOutput extends AudioOutput {
     final void openDevice(int capacityFrames) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info lineInfo = null;
         try {
-            lineInfo = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormat, capacityFrames << (stereoEnabled ? 2 : 1));
-            this.line = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) lineInfo)));
-            this.line.open();
-            this.line.start();
-            this.lineCapacityFrames = capacityFrames;
+          lineInfo = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormat, capacityFrames << (stereoEnabled ? 2 : 1));
+          this.line = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) lineInfo)));
+          this.line.open();
+          this.line.start();
+          this.lineCapacityFrames = capacityFrames;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableFailure) {
-            if (BootstrapUiSupport.countSetBits(capacityFrames, (byte) 70) != 1) {
-                this.openDevice(ClientOptionSupport.roundUpPowerOfTwo((byte) 90, capacityFrames));
-                return;
-            }
-            this.line = null;
-            throw lineUnavailableFailure;
+          if (BootstrapUiSupport.countSetBits(capacityFrames, (byte) 70) != 1) {
+            this.openDevice(ClientOptionSupport.roundUpPowerOfTwo((byte) 90, capacityFrames));
+            return;
+          }
+          this.line = null;
+          throw lineUnavailableFailure;
         }
     }
 
@@ -127,12 +127,12 @@ final class JavaSoundAudioOutput extends AudioOutput {
         javax.sound.sampled.DataLine.Info lineInfo = null;
         this.line.flush();
         if (this.reopenLineAfterFlush) {
-            this.line.close();
-            this.line = null;
-            lineInfo = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormat, this.lineCapacityFrames << (stereoEnabled ? 2 : 1));
-            this.line = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) lineInfo)));
-            this.line.open();
-            this.line.start();
+          this.line.close();
+          this.line = null;
+          lineInfo = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, this.audioFormat, this.lineCapacityFrames << (stereoEnabled ? 2 : 1));
+          this.line = (javax.sound.sampled.SourceDataLine) ((Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) ((Object) lineInfo)));
+          this.line.open();
+          this.line.start();
         }
     }
 

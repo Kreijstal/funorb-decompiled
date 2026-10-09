@@ -10,8 +10,8 @@ abstract class ArchiveSource {
 
     public static void releaseStaticReferences(boolean methodGuard) {
         if (!methodGuard) {
-            byte[] unusedNullSignatureSnapshot = (byte[]) null;
-            ArchiveSource.writeEncryptedPayload((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
+          byte[] unusedNullSignatureSnapshot = (byte[]) null;
+          ArchiveSource.writeEncryptedPayload((java.math.BigInteger) null, (java.math.BigInteger) null, 127, (ByteArrayBuffer) null, (byte[]) null, -60, false);
         }
         additionalNameCharacters = null;
         primarySocialEntriesByNameHash = null;
@@ -53,7 +53,7 @@ abstract class ArchiveSource {
             workingXteaKey[keyIndexThenUnusedZeroSnapshot] = UsernameQuerySupport.payloadKeyRandom.nextInt();
           }
           if (null == MessageDialogSupport.encryptedPayloadScratchBuffer ||
-                !(MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= paddedPayloadLength)) {
+            !(MessageDialogSupport.encryptedPayloadScratchBuffer.bytes.length >= paddedPayloadLength)) {
             MessageDialogSupport.encryptedPayloadScratchBuffer = new ByteArrayBuffer(paddedPayloadLength);
           }
           MessageDialogSupport.encryptedPayloadScratchBuffer.position = 0;
@@ -61,7 +61,7 @@ abstract class ArchiveSource {
           MessageDialogSupport.encryptedPayloadScratchBuffer.padZerosToPosition((byte) -84, paddedPayloadLength);
           MessageDialogSupport.encryptedPayloadScratchBuffer.encryptXteaBlocks(xteaKey, (byte) -33);
           if (HotspotTextWidget.encryptedPayloadKeyScratchBuffer == null ||
-              !(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100)) {
+            !(HotspotTextWidget.encryptedPayloadKeyScratchBuffer.bytes.length >= 100)) {
             HotspotTextWidget.encryptedPayloadKeyScratchBuffer = new ByteArrayBuffer(100);
           }
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position = 0;

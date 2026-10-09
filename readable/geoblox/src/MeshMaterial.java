@@ -42,12 +42,12 @@ final class MeshMaterial {
         DelayedPcmStream delayedStream = ProgressDialog.delayStreamByMillis(delayMillis, sampleStream, 1000);
         PrefixCodeDecoder.trackedSoundEffectStreams.addLast(-103, new TrackedPcmStream(sampleStream, delayedStream));
         if (skipMixerRegistration) {
-            return;
+          return;
         }
         try {
-            WhirlpoolHash.gameSoundMixer.addChildStream(delayedStream);
+          WhirlpoolHash.gameSoundMixer.addChildStream(delayedStream);
         } catch (RuntimeException playbackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailure), "fd.B(" + delayMillis + ',' + (sample != null ? "{...}" : "null") + ',' + skipMixerRegistration + ',' + volume + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) playbackFailure), "fd.B(" + delayMillis + ',' + (sample != null ? "{...}" : "null") + ',' + skipMixerRegistration + ',' + volume + ')');
         }
     }
 

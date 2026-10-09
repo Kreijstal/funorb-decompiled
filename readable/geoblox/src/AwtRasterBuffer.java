@@ -21,11 +21,11 @@ abstract class AwtRasterBuffer {
         byte[] paletteIndices = TextConcatenationSupport.decodedSpriteIndices[0];
         int[] rgbPixels = new int[pixelCount];
         if (methodGuard != -60) {
-            Random unusedNullRandomSnapshot = (Random) null;
-            AwtRasterBuffer.nextBoundedRandomInt((byte) 50, (Random) null, 37);
+          Random unusedNullRandomSnapshot = (Random) null;
+          AwtRasterBuffer.nextBoundedRandomInt((byte) 50, (Random) null, 37);
         }
         for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-            rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt(255, (int) paletteIndices[pixelIndex])];
+          rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt(255, (int) paletteIndices[pixelIndex])];
         }
         Sprite sprite = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[0], GmtTimestampSupport.decodedSpriteYOffsets[0], DualLinkNode.decodedSpriteWidths[0], ProgressBarWidget.decodedSpriteHeights[0], rgbPixels);
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
@@ -35,8 +35,8 @@ abstract class AwtRasterBuffer {
     public static void releaseStaticReferences(byte methodGuard) {
         archiveGzipInflater = null;
         if (methodGuard != 58) {
-            Random unusedNullRandomSnapshot = (Random) null;
-            AwtRasterBuffer.nextBoundedRandomInt((byte) 47, (Random) null, -73);
+          Random unusedNullRandomSnapshot = (Random) null;
+          AwtRasterBuffer.nextBoundedRandomInt((byte) 47, (Random) null, -73);
         }
     }
 
@@ -86,8 +86,8 @@ abstract class AwtRasterBuffer {
     final void setAsRasterTarget(int methodGuard) {
         SoftwareRasterizer.setRasterTarget(this.pixels, this.width, this.height);
         if (methodGuard != 255) {
-            Random nullRandomForInvalidGuard = (Random) null;
-            AwtRasterBuffer.nextBoundedRandomInt((byte) -94, (Random) null, 54);
+          Random nullRandomForInvalidGuard = (Random) null;
+          AwtRasterBuffer.nextBoundedRandomInt((byte) -94, (Random) null, 54);
         }
     }
 

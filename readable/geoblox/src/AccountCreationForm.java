@@ -182,14 +182,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     private final boolean submitAccountCreationIfReady(int methodGuard) {
         if (!this.passesRequiredInputCreationGates(methodGuard ^ -19038)) {
-            return false;
+          return false;
         }
         int parsedAgeOrFailureSentinel = -1;
         if (methodGuard != -21440) {
-            unusedRankedEntryBooleans = (boolean[]) null;
+          unusedRankedEntryBooleans = (boolean[]) null;
         }
         try {
-            parsedAgeOrFailureSentinel = Integer.parseInt(this.ageInput.widgetText);
+          parsedAgeOrFailureSentinel = Integer.parseInt(this.ageInput.widgetText);
         } catch (NumberFormatException ignoredAgeParseFailure) {
         }
         return AccountCreationSupport.startAccountCreation(this.displayNameInput.widgetText, this.emailInput.widgetText, parsedAgeOrFailureSentinel, this, 0, this.newsOptInCheckbox.active, this.passwordInput.widgetText);
@@ -198,14 +198,14 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     final static LoginTextValue createActiveLoginLookupValue(int methodGuard) {
         String unusedEmailFilteredLoginIdentifier = ClientFlowToken.getActiveLoginIdentifier(0);
         if (methodGuard == 25) {
-            if (unusedEmailFilteredLoginIdentifier != null && unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
-                unusedEmailFilteredLoginIdentifier = "";
-            }
-            return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
+          if (unusedEmailFilteredLoginIdentifier != null && unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
+            unusedEmailFilteredLoginIdentifier = "";
+          }
+          return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
         }
         archiveHandshakeStage = 84;
         if (unusedEmailFilteredLoginIdentifier != null && unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
-            unusedEmailFilteredLoginIdentifier = "";
+          unusedEmailFilteredLoginIdentifier = "";
         }
         return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
     }
@@ -301,8 +301,8 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     private final String getTermsLinkClosingMarkup(boolean methodGuard) {
         if (methodGuard) {
-            archiveHandshakeStage = 75;
-            return "</col></u>";
+          archiveHandshakeStage = 75;
+          return "</col></u>";
         }
         return "</col></u>";
     }
@@ -389,10 +389,10 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         createPasswordHintText = null;
         introGeometryFrames = null;
         if (methodGuard == 0) {
-            unusedRankedEntryBooleans = null;
-            tutorialFailedMessage = null;
-            awaitingLoginLookupPayloadStage = null;
-            return;
+          unusedRankedEntryBooleans = null;
+          tutorialFailedMessage = null;
+          awaitingLoginLookupPayloadStage = null;
+          return;
         }
         createPasswordHintText = (String) null;
         unusedRankedEntryBooleans = null;
@@ -402,25 +402,25 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
 
     private final boolean passesRequiredInputCreationGates(int methodGuard) {
         if (!this.passesInputCreationGate((byte) -104, (ValidationProviderSource) (this.displayNameInput))) {
-            return false;
+          return false;
         }
         if (!this.passesInputCreationGate((byte) -118, (ValidationProviderSource) (this.emailInput))) {
-            return false;
+          return false;
         }
         if (!this.passesInputCreationGate((byte) -108, (ValidationProviderSource) (this.confirmEmailInput))) {
-            return false;
+          return false;
         }
         if (!this.passesInputCreationGate((byte) -103, (ValidationProviderSource) (this.passwordInput))) {
-            return false;
+          return false;
         }
         if (!this.passesInputCreationGate((byte) -117, (ValidationProviderSource) (this.confirmPasswordInput))) {
-            return false;
+          return false;
         }
         if (!this.passesInputCreationGate((byte) -128, (ValidationProviderSource) (this.ageInput))) {
-            return false;
+          return false;
         }
         if (methodGuard == 6626) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -429,18 +429,18 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
         ValidatedTextInputWidget targetDisplayNameInput = this.displayNameInput;
         String selectedSuggestionText = suggestion;
         if (methodGuard != 20) {
-            return;
+          return;
         }
         try {
-            ((TextInputWidget) ((Object) targetDisplayNameInput)).setInputText(-121, selectedSuggestionText, false);
+          ((TextInputWidget) ((Object) targetDisplayNameInput)).setInputText(-121, selectedSuggestionText, false);
         } catch (RuntimeException suggestionWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionWriteFailure), "qh.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionWriteFailure), "qh.P(" + (suggestion != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     private final String getTermsLinkOpeningMarkup(boolean methodGuard) {
         if (methodGuard) {
-            return (String) null;
+          return (String) null;
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -531,16 +531,16 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     public final void onMoreSuggestionsRequested(byte methodGuard) {
         ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider((byte) -128))).invalidateCachedUsernameAvailability((byte) -89);
         if (methodGuard != 83) {
-            this.onMoreSuggestionsRequested((byte) -25);
+          this.onMoreSuggestionsRequested((byte) -25);
         }
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            this.createButton.enabled = this.passesRequiredInputCreationGates(6626);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          this.createButton.enabled = this.passesRequiredInputCreationGates(6626);
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "qh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "qh.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 

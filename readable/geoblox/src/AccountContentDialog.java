@@ -108,7 +108,7 @@ final class AccountContentDialog extends ContentTransitionDialog {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard > -59) {
-            return;
+          return;
         }
         fullscreenFocusLostFailureReason = null;
         fullscreenUnavailableTrySignedAppletText = null;
@@ -116,12 +116,12 @@ final class AccountContentDialog extends ContentTransitionDialog {
 
     final void replaceContent(UiWidget content, int methodGuard) {
         try {
-            if (methodGuard > -10) {
-                fullscreenUnavailableTrySignedAppletText = (String) null;
-            }
-            super.replaceContent(content, -22);
+          if (methodGuard > -10) {
+            fullscreenUnavailableTrySignedAppletText = (String) null;
+          }
+          super.replaceContent(content, -22);
         } catch (RuntimeException contentReplacementFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentReplacementFailure), "ei.PB(" + (content != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentReplacementFailure), "ei.PB(" + (content != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 

@@ -577,15 +577,15 @@ abstract class SpriteState extends DualLinkNode {
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
-              TriangleRasterState.clipHeight > topY) {
+            TriangleRasterState.clipHeight > topY) {
             if (topX < 0 &&
-                middleX < 0 &&
-                bottomX < 0) {
+              middleX < 0 &&
+              bottomX < 0) {
               return;
             }
             if (TriangleRasterState.clipWidth <= topX &&
-                TriangleRasterState.clipWidth <= middleX &&
-                bottomX >= TriangleRasterState.clipWidth) {
+              TriangleRasterState.clipWidth <= middleX &&
+              bottomX >= TriangleRasterState.clipWidth) {
               return;
             }
             if (guard != -1275583984) {
@@ -764,7 +764,7 @@ abstract class SpriteState extends DualLinkNode {
                             }
                           } else {
                             if (upperSpanLeft >= 0 &&
-                                upperSpanLeft < TriangleRasterState.clipWidth) {
+                              upperSpanLeft < TriangleRasterState.clipWidth) {
                               MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(upperSpanLeft + edgeSwapOrRowBaseOrLowerRowsThenLeftX, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, upperSpanWidth, leftBlueQ16, destinationPixels);
                             }
                           }
@@ -863,7 +863,7 @@ abstract class SpriteState extends DualLinkNode {
                   }
                 } else {
                   if (lowerSpanLeft >= 0 &&
-                      TriangleRasterState.clipWidth > lowerSpanLeft) {
+                    TriangleRasterState.clipWidth > lowerSpanLeft) {
                     MultiHandleSliderRenderer.drawHalfBlendRgbGradientSpan(lowerSegmentRowBase + lowerSpanLeft, 0, 33423689, leftRedQ16, 0, leftGreenQ16, 0, lowerSpanWidth, leftBlueQ16, destinationPixels);
                   }
                 }
@@ -901,94 +901,94 @@ abstract class SpriteState extends DualLinkNode {
 
     final static void writeCachedRandomSeedBytes(ByteArrayBuffer outputBuffer, boolean preserveTemplateTypeNine) {
         try {
-            RuntimeException seedFailureForContext = null;
-            byte[] seedBytes = null;
-            int clientControlSnapshot = 0;
-            int seedScanComparisonLeft = 0;
-            int seedScanComparisonRight = 0;
-            RuntimeException seedFailureBeforeDescription = null;
-            StringBuilder seedMessagePrefix = null;
-            String bufferDescription = null;
-            int seedReadContinuation = 0;
-            Throwable caughtSeedThrowable = null;
-            int seedByteIndex = 0;
-            Exception ignoredSeedReadFailure = null;
-            int fallbackByteIndex = 0;
-            clientControlSnapshot = Geoblox.clientControlFlowFlag;
-            try {
-              seedBytes = new byte[24];
-              if (null != CacheFileState.randomSeedFile) {
-                try {
-                  CacheFileState.randomSeedFile.seek(51, 0L);
-                  CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
-                  seedByteIndex = 0;
-                  seedByteComparisonOperands: while (true) {
-                    if (seedByteIndex < 24) {
-                      seedScanComparisonLeft = ~seedBytes[seedByteIndex];
-                      seedScanComparisonRight = -1;
-                      if (clientControlSnapshot != 0) {
-                        break seedByteComparisonOperands;
-                      }
-                      if (seedScanComparisonLeft == seedScanComparisonRight ||
-                          clientControlSnapshot != 0) {
-                        seedByteIndex++;
-                        continue;
-                      }
+          RuntimeException seedFailureForContext = null;
+          byte[] seedBytes = null;
+          int clientControlSnapshot = 0;
+          int seedScanComparisonLeft = 0;
+          int seedScanComparisonRight = 0;
+          RuntimeException seedFailureBeforeDescription = null;
+          StringBuilder seedMessagePrefix = null;
+          String bufferDescription = null;
+          int seedReadContinuation = 0;
+          Throwable caughtSeedThrowable = null;
+          int seedByteIndex = 0;
+          Exception ignoredSeedReadFailure = null;
+          int fallbackByteIndex = 0;
+          clientControlSnapshot = Geoblox.clientControlFlowFlag;
+          try {
+            seedBytes = new byte[24];
+            if (null != CacheFileState.randomSeedFile) {
+              try {
+                CacheFileState.randomSeedFile.seek(51, 0L);
+                CacheFileState.randomSeedFile.readAll((byte) -76, seedBytes);
+                seedByteIndex = 0;
+                seedByteComparisonOperands: while (true) {
+                  if (seedByteIndex < 24) {
+                    seedScanComparisonLeft = ~seedBytes[seedByteIndex];
+                    seedScanComparisonRight = -1;
+                    if (clientControlSnapshot != 0) {
+                      break seedByteComparisonOperands;
                     }
-                    seedScanComparisonLeft = 24;
-                    seedScanComparisonRight = seedByteIndex;
-                    break;
+                    if (seedScanComparisonLeft == seedScanComparisonRight ||
+                      clientControlSnapshot != 0) {
+                      seedByteIndex++;
+                      continue;
+                    }
                   }
-                  if (seedScanComparisonLeft <= seedScanComparisonRight) {
-                    throw new IOException();
+                  seedScanComparisonLeft = 24;
+                  seedScanComparisonRight = seedByteIndex;
+                  break;
+                }
+                if (seedScanComparisonLeft <= seedScanComparisonRight) {
+                  throw new IOException();
+                }
+                seedReadContinuation = 0;
+              } catch (java.lang.Exception seedReadFailure) {
+                caughtSeedThrowable = seedReadFailure;
+                {
+                  boolean seedReadFailureFallbackRemainderEnabled = true;
+                  ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
+                  fallbackByteIndex = 0;
+                  while (fallbackByteIndex < 24) {
+                    seedBytes[fallbackByteIndex] = (byte) -1;
+                    fallbackByteIndex++;
+                    if (clientControlSnapshot != 0) {
+                      seedReadContinuation = 1;
+                      seedReadFailureFallbackRemainderEnabled = false;
+                      break;
+                    }
                   }
-                  seedReadContinuation = 0;
-                } catch (java.lang.Exception seedReadFailure) {
-                  caughtSeedThrowable = seedReadFailure;
-                  {
-                    boolean seedReadFailureFallbackRemainderEnabled = true;
-                    ignoredSeedReadFailure = (Exception) (Object) caughtSeedThrowable;
-                    fallbackByteIndex = 0;
-                    while (fallbackByteIndex < 24) {
-                      seedBytes[fallbackByteIndex] = (byte) -1;
-                      fallbackByteIndex++;
-                      if (clientControlSnapshot != 0) {
-                        seedReadContinuation = 1;
-                        seedReadFailureFallbackRemainderEnabled = false;
-                        break;
-                      }
-                    }
-                    if (seedReadFailureFallbackRemainderEnabled) {
-                      seedReadContinuation = 0;
-                    }
+                  if (seedReadFailureFallbackRemainderEnabled) {
+                    seedReadContinuation = 0;
                   }
                 }
-                if (seedReadContinuation == 0) {
-                  outputBuffer.writeBytes(24, -97, seedBytes, 0);
-                }
-              } else {
+              }
+              if (seedReadContinuation == 0) {
                 outputBuffer.writeBytes(24, -97, seedBytes, 0);
               }
-              if (!preserveTemplateTypeNine) {
-                textTemplateArgumentTypeNine = (TextTemplateArgumentType) null;
-              }
-              return;
-            } catch (java.lang.RuntimeException seedFailure) {
-              caughtSeedThrowable = seedFailure;
-              seedFailureForContext = (RuntimeException) (Object) caughtSeedThrowable;
-              seedFailureBeforeDescription = seedFailureForContext;
-              seedMessagePrefix = new StringBuilder().append("wh.IA(");
-              if (outputBuffer == null) {
-                bufferDescription = "null";
-              } else {
-                bufferDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) seedFailureBeforeDescription), ((StringBuilder) (Object) seedMessagePrefix).append(bufferDescription).append(',').append(preserveTemplateTypeNine).append(')').toString());
+            } else {
+              outputBuffer.writeBytes(24, -97, seedBytes, 0);
             }
+            if (!preserveTemplateTypeNine) {
+              textTemplateArgumentTypeNine = (TextTemplateArgumentType) null;
+            }
+            return;
+          } catch (java.lang.RuntimeException seedFailure) {
+            caughtSeedThrowable = seedFailure;
+            seedFailureForContext = (RuntimeException) (Object) caughtSeedThrowable;
+            seedFailureBeforeDescription = seedFailureForContext;
+            seedMessagePrefix = new StringBuilder().append("wh.IA(");
+            if (outputBuffer == null) {
+              bufferDescription = "null";
+            } else {
+              bufferDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) seedFailureBeforeDescription), ((StringBuilder) (Object) seedMessagePrefix).append(bufferDescription).append(',').append(preserveTemplateTypeNine).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedBoundaryFailure) {
-            throw uncheckedBoundaryFailure;
+          throw uncheckedBoundaryFailure;
         } catch (Throwable checkedBoundaryFailure) {
-            throw new RuntimeException(checkedBoundaryFailure);
+          throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

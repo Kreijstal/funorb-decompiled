@@ -129,14 +129,14 @@ final class AchievementSubmission extends IntrusiveNode {
               }
             } else {
               if (null != mesh.firstVertexSourceX &&
-                  mesh.firstVertexSourceY != null &&
-                  mesh.firstVertexSourceZ != null &&
-                  mesh.secondVertexSourceX != null &&
-                  null != mesh.secondVertexSourceY &&
-                  mesh.secondVertexSourceZ != null &&
-                  mesh.thirdVertexSourceX != null &&
-                  null != mesh.thirdVertexSourceY &&
-                  mesh.thirdVertexSourceZ != null) {
+                mesh.firstVertexSourceY != null &&
+                mesh.firstVertexSourceZ != null &&
+                mesh.secondVertexSourceX != null &&
+                null != mesh.secondVertexSourceY &&
+                mesh.secondVertexSourceZ != null &&
+                mesh.thirdVertexSourceX != null &&
+                null != mesh.thirdVertexSourceY &&
+                mesh.thirdVertexSourceZ != null) {
                 vertexOrSourceFaceIndex = 0;
                 while (!(vertexOrSourceFaceIndex >= mesh.faceCount)) {
                   modelVertexX = mesh.firstVertexSourceX[vertexOrSourceFaceIndex];
@@ -244,14 +244,14 @@ final class AchievementSubmission extends IntrusiveNode {
 
     AchievementSubmission(int achievementId, int achievementCheckByte, int trackingBits, int trackingAccumulator, int primaryTrackingCounter, int secondaryTrackingCounter) {
         try {
-            this.trackingBitsSnapshot = trackingBits;
-            this.trackingAccumulatorSnapshot = trackingAccumulator;
-            this.secondaryTrackingCounterSnapshot = secondaryTrackingCounter;
-            this.primaryTrackingCounterSnapshot = primaryTrackingCounter;
-            this.achievementCheckByte = achievementCheckByte;
-            this.achievementId = achievementId;
+          this.trackingBitsSnapshot = trackingBits;
+          this.trackingAccumulatorSnapshot = trackingAccumulator;
+          this.secondaryTrackingCounterSnapshot = secondaryTrackingCounter;
+          this.primaryTrackingCounterSnapshot = primaryTrackingCounter;
+          this.achievementCheckByte = achievementCheckByte;
+          this.achievementId = achievementId;
         } catch (RuntimeException submissionConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionConstructionFailure), "p.<init>(" + achievementId + ',' + achievementCheckByte + ',' + trackingBits + ',' + trackingAccumulator + ',' + primaryTrackingCounter + ',' + secondaryTrackingCounter + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionConstructionFailure), "p.<init>(" + achievementId + ',' + achievementCheckByte + ',' + trackingBits + ',' + trackingAccumulator + ',' + primaryTrackingCounter + ',' + secondaryTrackingCounter + ')');
         }
     }
 

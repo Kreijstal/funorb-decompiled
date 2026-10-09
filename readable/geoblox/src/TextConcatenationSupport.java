@@ -128,7 +128,7 @@ final class TextConcatenationSupport {
         fullscreenAcceptCountdownSingularText = null;
         decodedSpriteIndices = (byte[][]) null;
         if (methodGuard < 66) {
-            accountDialogPointerOriginY = 91;
+          accountDialogPointerOriginY = 91;
         }
     }
 

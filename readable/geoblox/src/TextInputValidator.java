@@ -8,43 +8,43 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     final static void openAccountLoginPanel(byte methodGuard, boolean showCreateAccount) {
         if (methodGuard < 102) {
-            return;
+          return;
         }
         TextTemplateLookupSupport.openLoginPanel(false, showCreateAccount, false);
     }
 
     final ValidationState currentValidationState(int guard) {
         if (guard != 32) {
-            return (ValidationState) null;
+          return (ValidationState) null;
         }
         return this.validationStateForText(-257, this.validatedInput.widgetText);
     }
 
     public final boolean isInputEmpty(int methodGuard) {
         if (methodGuard != -26556) {
-            String unusedNullValidationText = (String) null;
-            this.validationMessageForText(-33, (String) null);
-            if (this.validatedInput.widgetText != null) {
-                return this.validatedInput.widgetText.length() == 0 ? true : false;
-            }
-            return true;
+          String unusedNullValidationText = (String) null;
+          this.validationMessageForText(-33, (String) null);
+          if (this.validatedInput.widgetText != null) {
+            return this.validatedInput.widgetText.length() == 0 ? true : false;
+          }
+          return true;
         }
         if (this.validatedInput.widgetText == null) {
-            return true;
+          return true;
         }
         if (this.validatedInput.widgetText.length() != 0) {
-            return false;
+          return false;
         }
         return true;
     }
 
     public final void onTextInputSubmitted(TextInputWidget input, int methodGuard) {
         try {
-            if (methodGuard != -18649) {
-                this.validatedInput = (TextInputWidget) null;
-            }
+          if (methodGuard != -18649) {
+            this.validatedInput = (TextInputWidget) null;
+          }
         } catch (RuntimeException submissionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailure), "q.S(" + (input != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionFailure), "q.S(" + (input != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -52,47 +52,47 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     final static boolean isAllowedAccountNameCharacter(char character, byte methodGuard) {
         if (Character.isISOControl(character)) {
-            return false;
+          return false;
         }
         if (LoginPanel.isAsciiLetterOrDigit(-123, character)) {
-            return true;
+          return true;
         }
         if (character == 45) {
-            return true;
+          return true;
         }
         if (character == 160) {
-            return true;
+          return true;
         }
         if (32 == character) {
-            return true;
+          return true;
         }
         if (character == 95) {
-            return true;
+          return true;
         }
         if (methodGuard > 88) {
-            return false;
+          return false;
         }
         return false;
     }
 
     final static void initializeArchiveServices(int clientId, int languageId, int primaryPort, int serverNumber, int methodGuard, PlatformTaskDispatcher taskDispatcher, String archiveHost, int gameCrc, int alternatePort) {
         try {
-            EmailValidator.archiveGameCrc = gameCrc;
-            ArchiveIndex.archiveServerNumber = serverNumber;
-            GameplaySession.archiveHost = archiveHost;
-            ValidatedTextInputWidget.archiveClientId = clientId;
-            MidiNote.archiveLanguageId = languageId;
-            SecondaryNodeHashTable.archivePort = primaryPort;
-            ByteShortQuery.archiveTaskDispatcher = taskDispatcher;
-            if (methodGuard != -23949) {
-                dialReferenceAngleRadians = -0.8279321027589008;
-            }
-            FullscreenErrorDialog.alternateArchivePort = alternatePort;
-            AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
-            UsernameQuerySupport.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
-            DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, UsernameQuerySupport.archiveDiskWorker);
+          EmailValidator.archiveGameCrc = gameCrc;
+          ArchiveIndex.archiveServerNumber = serverNumber;
+          GameplaySession.archiveHost = archiveHost;
+          ValidatedTextInputWidget.archiveClientId = clientId;
+          MidiNote.archiveLanguageId = languageId;
+          SecondaryNodeHashTable.archivePort = primaryPort;
+          ByteShortQuery.archiveTaskDispatcher = taskDispatcher;
+          if (methodGuard != -23949) {
+            dialReferenceAngleRadians = -0.8279321027589008;
+          }
+          FullscreenErrorDialog.alternateArchivePort = alternatePort;
+          AsyncResourceDownloader.archiveNetworkClient = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
+          UsernameQuerySupport.archiveDiskWorker = new DiskCacheWorker(taskDispatcher);
+          DequeCursor.archiveCatalog = new ArchiveCatalog(AsyncResourceDownloader.archiveNetworkClient, UsernameQuerySupport.archiveDiskWorker);
         } catch (RuntimeException initializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "q.N(" + clientId + ',' + languageId + ',' + primaryPort + ',' + serverNumber + ',' + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ',' + (archiveHost != null ? "{...}" : "null") + ',' + gameCrc + ',' + alternatePort + ')');
         }
     }
 
@@ -136,7 +136,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
           MeshPrioritySupport.messageDialogUiFlowActive = false;
           ArchiveLoadStep.connectionLostMessagePending = false;
           if (null != Geoblox.activeMessageDialog &&
-              Geoblox.activeMessageDialog.dialogVisible) {
+            Geoblox.activeMessageDialog.dialogVisible) {
             if (8 == responseCode) {
               responseCode = 2;
               if (!AgeValidator.reconnectingLoginMode) {
@@ -161,8 +161,8 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
               Geoblox.activeMessageDialog.installErrorContent(responseCode, methodGuard + 19686, responseText);
             }
             if (responseCode != 256 &&
-                responseCode != 10 &&
-                !AgeValidator.reconnectingLoginMode) {
+              responseCode != 10 &&
+              !AgeValidator.reconnectingLoginMode) {
               SpriteButtonRenderer.activeLoginPanel.clearLoginInputs(-119);
             }
           }
@@ -247,7 +247,7 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
 
     final String currentValidationMessage(byte guard) {
         if (guard == -103) {
-            return this.validationMessageForText(422, this.validatedInput.widgetText);
+          return this.validationMessageForText(422, this.validatedInput.widgetText);
         }
         this.validatedInput = (TextInputWidget) null;
         return this.validationMessageForText(422, this.validatedInput.widgetText);
@@ -256,15 +256,15 @@ abstract class TextInputValidator extends DebouncedValidationProvider implements
     public static void releaseStaticReferences(int methodGuard) {
         fullscreenUnavailableFailureReason = null;
         if (methodGuard != 1) {
-            fullscreenUnavailableFailureReason = (FullscreenFailureReason) null;
+          fullscreenUnavailableFailureReason = (FullscreenFailureReason) null;
         }
     }
 
     TextInputValidator(TextInputWidget validatedInput) {
         try {
-            this.validatedInput = validatedInput;
+          this.validatedInput = validatedInput;
         } catch (RuntimeException validatorConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "q.<init>(" + (validatedInput != null ? "{...}" : "null") + ')');
         }
     }
 

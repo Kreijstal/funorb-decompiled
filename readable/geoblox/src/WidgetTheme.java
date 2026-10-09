@@ -87,75 +87,75 @@ final class WidgetTheme {
         StatefulWidgetRenderer firstConfiguredArrowButton;
         StatefulWidgetRenderer secondConfiguredArrowButton;
         try {
-            baseTextRenderer = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, 2 + (font.maxAscent + font.maxDescent));
-            this.textRenderer = (WidgetRenderer) ((Object) baseTextRenderer);
-            baseTextRenderer.textColor = 16777215;
-            buttonSkinRenderer = new StatefulWidgetRenderer();
-            baseTextRenderer.copyStyleTo(buttonSkinRenderer, true);
-            this.wrappedTooltipBorderColor = 15658734;
-            buttonSkinRenderer.selectionArgb = 11711154;
-            buttonSkinRenderer.caretColor = 15658734;
-            this.tooltipBackgroundColor = 5592405;
-            this.tooltipPaddingRight = 3;
-            this.tooltipPaddingBottom = 3;
-            this.tooltipTextAndBorderColor = 15658734;
-            this.tooltipLineSpacing = -1;
-            this.tooltipPaddingLeft = 3;
-            this.tooltipPaddingTop = 3;
-            this.tooltipFont = font;
-            buttonSkinRenderer.replaceStateSkin(methodGuard - 126, 0).setTextColor(256, 15658734).setPanelSprites(WidgetTheme.createBeveledPanelSprites(10066329, 8947848, 7829367, 1), true);
-            buttonSkinRenderer.replaceStateSkin(-106, 1).setPanelSprites(WidgetTheme.createBeveledPanelSprites(10066329, 11184810, 13421772, 1), true);
-            buttonSkinRenderer.replaceStateSkin(methodGuard ^ -100, 3).setPanelSprites(WidgetTheme.createBeveledPanelSprites(7829367, 8947848, 10066329, methodGuard - 8), true).setOffsetX((byte) -53, 1).setOffsetY(methodGuard - 9, 1);
-            disabledOverlayPanels = new Sprite[9];
-            overlaySprite = new ArgbSprite(32, 32);
-            overlaySpriteAlias = overlaySprite;
-            for (overlayPixelIndex = 0; overlaySpriteAlias.pixels.length > overlayPixelIndex; overlayPixelIndex++) {
-                overlaySprite.pixels[overlayPixelIndex] = 1077952576;
-            }
-            disabledOverlayPanels[4] = (Sprite) ((Object) overlaySpriteAlias);
-            buttonSkinRenderer.replaceStateSkin(-127, 4).setFlushBeforeOverlay(true, (byte) 73).setPanelSprites(disabledOverlayPanels, true);
-            buttonSkinRenderer.replaceStateSkin(-101, 5).setPanelSprites(IntrusiveDeque.buildUnitBorderNineSliceSprites(0, 0, 116, 0, 65793), true).setFlushBeforeOverlay(true, (byte) 73).setTextColor(256, -1);
-            this.buttonRenderer = (WidgetRenderer) ((Object) buttonSkinRenderer);
-            unusedLeftAlignedButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedLeftAlignedButtonRenderer.horizontalAlignment = 0;
-            unusedSolidPanelButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedSolidPanelButtonRenderer.horizontalAlignment = 0;
-            unusedSolidPanelButtonRenderer.setPanelSpritesOnExistingStates((byte) 124, MeshPrioritySupport.createSolidCenterSlices(8947848, (byte) -112));
-            unusedSolidPanelButtonRenderer.replaceStateSkin(-116, 1).setPanelSprites(MeshPrioritySupport.createSolidCenterSlices(11184810, (byte) -112), true).setTextColor(256, 2236962);
-            this.checkboxRenderer = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-            unusedDialRenderer = new DialRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-            unusedSliderRenderer = new MultiHandleSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
-            inputSkinRenderer = new StatefulWidgetRenderer();
-            baseTextRenderer.copyStyleTo(inputSkinRenderer, true);
-            inputSkinRenderer.replaceStateSkin(-124, 0).setPanelSprites(WidgetTheme.createBeveledPanelSprites(7829367, 15658734, 10066329, 1), true).setTextColor(256, 1118481).setTextShadowColor((byte) 16, -1);
-            inputSkinRenderer.replaceStateSkin(-105, 4).setFlushBeforeOverlay(true, (byte) 73).setPanelSprites(disabledOverlayPanels, true);
-            this.textInputRenderer = (WidgetRenderer) ((Object) inputSkinRenderer);
-            twoColumnPanelSprites = new Sprite[methodGuard];
-            twoRowPanelSprites = new Sprite[9];
-            twoColumnPanelSprites[4] = new Sprite(2, 1);
-            twoRowPanelSprites[4] = new Sprite(1, 2);
-            columnSpriteForPixelStore = twoColumnPanelSprites[4];
-            columnSpriteForPixelStore.pixels = new int[]{6710886, 7829367};
-            twoRowPanelSprites[4].pixels = new int[]{6710886, 7829367};
-            unusedTwoColumnRenderer = new StatefulWidgetRenderer();
-            unusedTwoRowRenderer = new StatefulWidgetRenderer();
-            unusedTwoColumnRenderer.setStatePanelSprites(twoColumnPanelSprites, 0, (byte) 57);
-            unusedTwoRowRenderer.setStatePanelSprites(twoRowPanelSprites, 0, (byte) 108);
-            arrowSprite = new Sprite(7, 4);
-            arrowSprite.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-            unusedArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedArrowButtonRenderer.setIconOnExistingStates(0, arrowSprite.copy());
-            arrowSprite.rotateClockwise();
-            firstConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            firstConfiguredArrowButton.setIconOnExistingStates(methodGuard ^ 9, arrowSprite.copy());
-            arrowSprite.rotateClockwise();
-            secondConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            secondConfiguredArrowButton.setIconOnExistingStates(0, arrowSprite.copy());
-            arrowSprite.rotateClockwise();
-            unusedFinalArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
-            unusedFinalArrowButtonRenderer.setIconOnExistingStates(methodGuard ^ 9, arrowSprite);
+          baseTextRenderer = new TextWidgetRenderer(font, 2, 2, 2236962, 1, 1, 1, 2 + (font.maxAscent + font.maxDescent));
+          this.textRenderer = (WidgetRenderer) ((Object) baseTextRenderer);
+          baseTextRenderer.textColor = 16777215;
+          buttonSkinRenderer = new StatefulWidgetRenderer();
+          baseTextRenderer.copyStyleTo(buttonSkinRenderer, true);
+          this.wrappedTooltipBorderColor = 15658734;
+          buttonSkinRenderer.selectionArgb = 11711154;
+          buttonSkinRenderer.caretColor = 15658734;
+          this.tooltipBackgroundColor = 5592405;
+          this.tooltipPaddingRight = 3;
+          this.tooltipPaddingBottom = 3;
+          this.tooltipTextAndBorderColor = 15658734;
+          this.tooltipLineSpacing = -1;
+          this.tooltipPaddingLeft = 3;
+          this.tooltipPaddingTop = 3;
+          this.tooltipFont = font;
+          buttonSkinRenderer.replaceStateSkin(methodGuard - 126, 0).setTextColor(256, 15658734).setPanelSprites(WidgetTheme.createBeveledPanelSprites(10066329, 8947848, 7829367, 1), true);
+          buttonSkinRenderer.replaceStateSkin(-106, 1).setPanelSprites(WidgetTheme.createBeveledPanelSprites(10066329, 11184810, 13421772, 1), true);
+          buttonSkinRenderer.replaceStateSkin(methodGuard ^ -100, 3).setPanelSprites(WidgetTheme.createBeveledPanelSprites(7829367, 8947848, 10066329, methodGuard - 8), true).setOffsetX((byte) -53, 1).setOffsetY(methodGuard - 9, 1);
+          disabledOverlayPanels = new Sprite[9];
+          overlaySprite = new ArgbSprite(32, 32);
+          overlaySpriteAlias = overlaySprite;
+          for (overlayPixelIndex = 0; overlaySpriteAlias.pixels.length > overlayPixelIndex; overlayPixelIndex++) {
+            overlaySprite.pixels[overlayPixelIndex] = 1077952576;
+          }
+          disabledOverlayPanels[4] = (Sprite) ((Object) overlaySpriteAlias);
+          buttonSkinRenderer.replaceStateSkin(-127, 4).setFlushBeforeOverlay(true, (byte) 73).setPanelSprites(disabledOverlayPanels, true);
+          buttonSkinRenderer.replaceStateSkin(-101, 5).setPanelSprites(IntrusiveDeque.buildUnitBorderNineSliceSprites(0, 0, 116, 0, 65793), true).setFlushBeforeOverlay(true, (byte) 73).setTextColor(256, -1);
+          this.buttonRenderer = (WidgetRenderer) ((Object) buttonSkinRenderer);
+          unusedLeftAlignedButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          unusedLeftAlignedButtonRenderer.horizontalAlignment = 0;
+          unusedSolidPanelButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          unusedSolidPanelButtonRenderer.horizontalAlignment = 0;
+          unusedSolidPanelButtonRenderer.setPanelSpritesOnExistingStates((byte) 124, MeshPrioritySupport.createSolidCenterSlices(8947848, (byte) -112));
+          unusedSolidPanelButtonRenderer.replaceStateSkin(-116, 1).setPanelSprites(MeshPrioritySupport.createSolidCenterSlices(11184810, (byte) -112), true).setTextColor(256, 2236962);
+          this.checkboxRenderer = (WidgetRenderer) ((Object) new CheckboxRenderer(font, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          unusedDialRenderer = new DialRenderer(font, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          unusedSliderRenderer = new MultiHandleSliderRenderer(font, 16777215, -1, 125269879, 4473924, 3, 268435455);
+          inputSkinRenderer = new StatefulWidgetRenderer();
+          baseTextRenderer.copyStyleTo(inputSkinRenderer, true);
+          inputSkinRenderer.replaceStateSkin(-124, 0).setPanelSprites(WidgetTheme.createBeveledPanelSprites(7829367, 15658734, 10066329, 1), true).setTextColor(256, 1118481).setTextShadowColor((byte) 16, -1);
+          inputSkinRenderer.replaceStateSkin(-105, 4).setFlushBeforeOverlay(true, (byte) 73).setPanelSprites(disabledOverlayPanels, true);
+          this.textInputRenderer = (WidgetRenderer) ((Object) inputSkinRenderer);
+          twoColumnPanelSprites = new Sprite[methodGuard];
+          twoRowPanelSprites = new Sprite[9];
+          twoColumnPanelSprites[4] = new Sprite(2, 1);
+          twoRowPanelSprites[4] = new Sprite(1, 2);
+          columnSpriteForPixelStore = twoColumnPanelSprites[4];
+          columnSpriteForPixelStore.pixels = new int[]{6710886, 7829367};
+          twoRowPanelSprites[4].pixels = new int[]{6710886, 7829367};
+          unusedTwoColumnRenderer = new StatefulWidgetRenderer();
+          unusedTwoRowRenderer = new StatefulWidgetRenderer();
+          unusedTwoColumnRenderer.setStatePanelSprites(twoColumnPanelSprites, 0, (byte) 57);
+          unusedTwoRowRenderer.setStatePanelSprites(twoRowPanelSprites, 0, (byte) 108);
+          arrowSprite = new Sprite(7, 4);
+          arrowSprite.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          unusedArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          unusedArrowButtonRenderer.setIconOnExistingStates(0, arrowSprite.copy());
+          arrowSprite.rotateClockwise();
+          firstConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          firstConfiguredArrowButton.setIconOnExistingStates(methodGuard ^ 9, arrowSprite.copy());
+          arrowSprite.rotateClockwise();
+          secondConfiguredArrowButton = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          secondConfiguredArrowButton.setIconOnExistingStates(0, arrowSprite.copy());
+          arrowSprite.rotateClockwise();
+          unusedFinalArrowButtonRenderer = new StatefulWidgetRenderer(buttonSkinRenderer, true);
+          unusedFinalArrowButtonRenderer.setIconOnExistingStates(methodGuard ^ 9, arrowSprite);
         } catch (RuntimeException initializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "wa.B(" + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "wa.B(" + methodGuard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class WidgetTheme {
           textHeight = this.tooltipFont.maxDescent + this.tooltipFont.maxAscent;
           lineCount = 1;
           if (quarterRasterWidth < textWidth ||
-              -1 != text.indexOf("<br>")) {
+            -1 != text.indexOf("<br>")) {
             if (FadingDialog.wrappedTooltipLines == null) {
               FadingDialog.wrappedTooltipLines = new String[16];
             }
@@ -274,14 +274,14 @@ final class WidgetTheme {
 
     private final static Sprite[] createBeveledPanelSprites(int firstBorderColor, int centerColor, int secondBorderColor, int methodGuard) {
         if (methodGuard != 1) {
-            WidgetTheme.createBeveledPanelSprites(-34, 65, 52, 47);
+          WidgetTheme.createBeveledPanelSprites(-34, 65, 52, 47);
         }
         return TextInputWidget.createTwoTonePanelSprites(firstBorderColor, (byte) -70, secondBorderColor, centerColor, 1);
     }
 
     final void fillWidgetRectangleAlpha(int y, int height, int width, int alpha, int methodGuard, int color, int x) {
         if (methodGuard != 15658734) {
-            return;
+          return;
         }
         SoftwareRasterizer.fillRectangleAlpha(x, y, width, height, color, alpha);
     }
@@ -289,7 +289,7 @@ final class WidgetTheme {
     final void drawWidgetLine(int endY, int endX, int color, int startY, int startX, int methodGuard) {
         SoftwareRasterizer.drawLine(startX, startY, endX, endY, color);
         if (methodGuard != 8947848) {
-            this.tooltipPaddingBottom = 22;
+          this.tooltipPaddingBottom = 22;
         }
     }
 

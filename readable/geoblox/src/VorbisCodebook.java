@@ -12,7 +12,7 @@ final class VorbisCodebook {
     final int readScalar() {
         int treeNodeIndex = 0;
         while (this.huffmanTree[treeNodeIndex] >= 0) {
-            treeNodeIndex = MusicDecoder.readBit() != 0 ? this.huffmanTree[treeNodeIndex] : treeNodeIndex + 1;
+          treeNodeIndex = MusicDecoder.readBit() != 0 ? this.huffmanTree[treeNodeIndex] : treeNodeIndex + 1;
         }
         return ~this.huffmanTree[treeNodeIndex];
     }
@@ -189,7 +189,7 @@ final class VorbisCodebook {
           codewordLengthOrUnusedUnorderedCursorSnapshot = unorderedEntryIndex;
           while (unorderedEntryIndex < this.entryCount) {
             if (entryCursorOrSparseLengthsValueOrLookupType != 0 &&
-                MusicDecoder.readBit() == 0) {
+              MusicDecoder.readBit() == 0) {
               this.codewordLengths[unorderedEntryIndex] = 0;
               unorderedEntryIndex++;
               continue;

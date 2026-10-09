@@ -11,20 +11,20 @@ final class TextLayoutLine {
 
     final int getLineEndX(int methodGuard) {
         if (methodGuard != 0) {
-            meshModelTransform = (int[]) null;
-            if (this.caretX == null) {
-                return 0;
-            }
-            if (0 != this.caretX.length) {
-                return this.caretX[-1 + this.caretX.length];
-            }
+          meshModelTransform = (int[]) null;
+          if (this.caretX == null) {
             return 0;
+          }
+          if (0 != this.caretX.length) {
+            return this.caretX[-1 + this.caretX.length];
+          }
+          return 0;
         }
         if (this.caretX == null) {
-            return 0;
+          return 0;
         }
         if (0 != this.caretX.length) {
-            return this.caretX[-1 + this.caretX.length];
+          return this.caretX[-1 + this.caretX.length];
         }
         return 0;
     }
@@ -51,9 +51,9 @@ final class TextLayoutLine {
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard != 0) {
-            TextLayoutLine.releaseStaticReferences((byte) 43);
-            meshModelTransform = null;
-            return;
+          TextLayoutLine.releaseStaticReferences((byte) 43);
+          meshModelTransform = null;
+          return;
         }
         meshModelTransform = null;
     }

@@ -63,14 +63,14 @@ final class AlternateLongAndTextLoginPayload extends LongAndTextLoginPayload {
         sportsBackgroundSprite = null;
         defaultPlayerNameText = null;
         if (methodGuard != -109) {
-            sportsBackgroundSprite = (IndexedSprite) null;
+          sportsBackgroundSprite = (IndexedSprite) null;
         }
     }
 
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
-            this.payloadKind((byte) 104);
-            return UsernameSuggestionsPanel.alternateLongAndTextPayloadKind;
+          this.payloadKind((byte) 104);
+          return UsernameSuggestionsPanel.alternateLongAndTextPayloadKind;
         }
         return UsernameSuggestionsPanel.alternateLongAndTextPayloadKind;
     }

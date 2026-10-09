@@ -14,15 +14,15 @@ final class EntityCollisionSupport {
         PendingActionMarker pendingActionMarker = (PendingActionMarker) (ArchiveRequest.pendingActionMarkers.firstForIteration(0));
         pendingActionMarker = pendingActionMarker;
         if (pendingActionMarker == null) {
-            return;
+          return;
         }
         LogoCompositor.pendingActionPanelTop = 480;
         MidiPcmStream.pendingActionPanelPhase = 0;
         MultiHandleSliderRenderer.pendingActionPanelWidth = 72 + FadingDialog.uiPaletteFont.measureMaximumWrappedWidth(GameplaySetupSupport.achievementTitles[pendingActionMarker.actionId], 100);
         RasterTargetSnapshot.pendingActionPanelHeight = 30 * FadingDialog.uiPaletteFont.countWrappedLines(GameplaySetupSupport.achievementTitles[pendingActionMarker.actionId], 100) + 30;
         if (62 > RasterTargetSnapshot.pendingActionPanelHeight) {
-            RasterTargetSnapshot.pendingActionPanelHeight = 62;
-            return;
+          RasterTargetSnapshot.pendingActionPanelHeight = 62;
+          return;
         }
     }
 
@@ -30,9 +30,9 @@ final class EntityCollisionSupport {
         activeAccountCreationForm = null;
         cameraMeshVertexZ = null;
         if (skipArchiveProgressGuard) {
-            queuedKeyStateChanges = null;
-            createPasswordContainsNameAlertText = null;
-            return;
+          queuedKeyStateChanges = null;
+          createPasswordContainsNameAlertText = null;
+          return;
         }
         String unusedNullProgressLabelSnapshot = (String) null;
         EntityCollisionSupport.formatArchiveGroupProgress((String) null, (ResourceArchive) null, (String) null, (String) null, true);
@@ -44,62 +44,62 @@ final class EntityCollisionSupport {
         float boardCenterOffsetX = 0.0f;
         float boardCenterOffsetY = 0.0f;
         try {
-            boardCenterOffsetX = -320.0f + entity.positionX;
-            boardCenterOffsetY = entity.positionY - 240.0f;
-            DialogLayer.rotatedEntityScreenX = (int)(0.5 + (Math.cos((double)boardAngleRadians) * (double)boardCenterOffsetX - Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetY + 320.0));
-            if (methodGuard != -1232328029) {
-                java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
-                EntityCollisionSupport.openQuitPage((java.applet.Applet) null, 60);
-            }
-            ValidationIconWidget.rotatedEntityScreenY = (int)(240.0 + (Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetX + (double)boardCenterOffsetY * Math.cos((double)boardAngleRadians)) + 0.5);
-            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
-            SoftwareRasterizer.clearFramebuffer();
-            entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
-            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+          boardCenterOffsetX = -320.0f + entity.positionX;
+          boardCenterOffsetY = entity.positionY - 240.0f;
+          DialogLayer.rotatedEntityScreenX = (int)(0.5 + (Math.cos((double)boardAngleRadians) * (double)boardCenterOffsetX - Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetY + 320.0));
+          if (methodGuard != -1232328029) {
+            java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
+            EntityCollisionSupport.openQuitPage((java.applet.Applet) null, 60);
+          }
+          ValidationIconWidget.rotatedEntityScreenY = (int)(240.0 + (Math.sin((double)boardAngleRadians) * (double)boardCenterOffsetX + (double)boardCenterOffsetY * Math.cos((double)boardAngleRadians)) + 0.5);
+          HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
+          SoftwareRasterizer.clearFramebuffer();
+          entity.entitySprite.rotateNearest(entity.entitySprite.fullWidth << 3, entity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)(-boardAngleRadians + entity.spriteAngleRadians) / 6.283185307179586)), 4096);
+          SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
         } catch (RuntimeException collisionSpriteRenderFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) collisionSpriteRenderFailure), "gf.F(" + (entity != null ? "{...}" : "null") + ',' + methodGuard + ',' + boardAngleRadians + ')');
         }
     }
 
     final static void openQuitPage(java.applet.Applet applet, int methodGuard) {
         try {
-            java.net.URL quitPageUrl = null;
-            Exception navigationFailureForPrint = null;
-            RuntimeException navigationFailureForContext = null;
-            RuntimeException contextCause = null;
-            StringBuilder contextMessagePrefix = null;
-            String appletArgumentDescription = null;
-            Throwable caughtNavigationFailure = null;
-            try {
-              if (methodGuard != 62) {
-                matchChainLength = 11;
-              }
-              try {
-                quitPageUrl = new java.net.URL(applet.getCodeBase(), "quit.ws");
-                applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(quitPageUrl, 102, applet), "_top");
-                return;
-              } catch (java.lang.Exception printedNavigationFailure) {
-                caughtNavigationFailure = printedNavigationFailure;
-                navigationFailureForPrint = (Exception) (Object) caughtNavigationFailure;
-                navigationFailureForPrint.printStackTrace();
-                return;
-              }
-            } catch (java.lang.RuntimeException contextNavigationFailure) {
-              caughtNavigationFailure = contextNavigationFailure;
-              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationFailure;
-              contextCause = navigationFailureForContext;
-              contextMessagePrefix = new StringBuilder().append("gf.D(");
-              if (applet == null) {
-                appletArgumentDescription = "null";
-              } else {
-                appletArgumentDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextCause), ((StringBuilder) (Object) contextMessagePrefix).append(appletArgumentDescription).append(',').append(methodGuard).append(')').toString());
+          java.net.URL quitPageUrl = null;
+          Exception navigationFailureForPrint = null;
+          RuntimeException navigationFailureForContext = null;
+          RuntimeException contextCause = null;
+          StringBuilder contextMessagePrefix = null;
+          String appletArgumentDescription = null;
+          Throwable caughtNavigationFailure = null;
+          try {
+            if (methodGuard != 62) {
+              matchChainLength = 11;
             }
+            try {
+              quitPageUrl = new java.net.URL(applet.getCodeBase(), "quit.ws");
+              applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(quitPageUrl, 102, applet), "_top");
+              return;
+            } catch (java.lang.Exception printedNavigationFailure) {
+              caughtNavigationFailure = printedNavigationFailure;
+              navigationFailureForPrint = (Exception) (Object) caughtNavigationFailure;
+              navigationFailureForPrint.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException contextNavigationFailure) {
+            caughtNavigationFailure = contextNavigationFailure;
+            navigationFailureForContext = (RuntimeException) (Object) caughtNavigationFailure;
+            contextCause = navigationFailureForContext;
+            contextMessagePrefix = new StringBuilder().append("gf.D(");
+            if (applet == null) {
+              appletArgumentDescription = "null";
+            } else {
+              appletArgumentDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contextCause), ((StringBuilder) (Object) contextMessagePrefix).append(appletArgumentDescription).append(',').append(methodGuard).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedNavigationFailure) {
-            throw uncheckedNavigationFailure;
+          throw uncheckedNavigationFailure;
         } catch (Throwable checkedNavigationFailure) {
-            throw new RuntimeException(checkedNavigationFailure);
+          throw new RuntimeException(checkedNavigationFailure);
         }
     }
 
@@ -107,11 +107,11 @@ final class EntityCollisionSupport {
         PacketBuffer firstOutputPacketSnapshot = null;
         PacketBuffer secondOutputPacketSnapshot;
         if (methodGuard >= 28) {
-            firstOutputPacketSnapshot = CacheReference.outgoingSessionBuffer;
-            firstOutputPacketSnapshot.writeCipherByte(packetOpcode, (byte) -103);
-            firstOutputPacketSnapshot.writeByte((byte) 127, 1);
-            firstOutputPacketSnapshot.writeByte((byte) -20, 0);
-            return;
+          firstOutputPacketSnapshot = CacheReference.outgoingSessionBuffer;
+          firstOutputPacketSnapshot.writeCipherByte(packetOpcode, (byte) -103);
+          firstOutputPacketSnapshot.writeByte((byte) 127, 1);
+          firstOutputPacketSnapshot.writeByte((byte) -20, 0);
+          return;
         }
         createPasswordContainsNameAlertText = (String) null;
         secondOutputPacketSnapshot = CacheReference.outgoingSessionBuffer;
@@ -178,8 +178,8 @@ final class EntityCollisionSupport {
 
     final static String getSharedNavigationTarget(int methodGuard) {
         if (methodGuard != 240) {
-            cameraMeshVertexZ = (int[]) null;
-            return CanvasResizeController.pendingNavigationTarget;
+          cameraMeshVertexZ = (int[]) null;
+          return CanvasResizeController.pendingNavigationTarget;
         }
         return CanvasResizeController.pendingNavigationTarget;
     }

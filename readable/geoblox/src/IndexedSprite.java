@@ -55,36 +55,36 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            IndexedSprite.blitPalette(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          IndexedSprite.blitPalette(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -101,36 +101,36 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            IndexedSprite.blitPaletteAlpha(SoftwareRasterizer.framebuffer, this.indices, this.palette, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          if (drawHeight <= 0) {
             return;
+          }
+          IndexedSprite.blitPaletteAlpha(SoftwareRasterizer.framebuffer, this.indices, this.palette, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          return;
         }
     }
 
@@ -144,42 +144,42 @@ final class IndexedSprite extends IndexedSpriteState {
           }
           remainingColumnsScratch = drawWidth;
           if (sourceIndex > 0 &&
-              sourceIndices[sourceIndex - 1] == -1) {
+            sourceIndices[sourceIndex - 1] == -1) {
             remainingColumnsScratch--;
             sourceIndex++;
             destinationIndex++;
           }
           {
-          while (!(remainingColumnsScratch <= 0)) {
-            indexThenRunLength = sourceIndices[sourceIndex++];
-            remainingColumnsScratch--;
-            if (indexThenRunLength == 0) {
-              destinationIndex++;
-              continue;
+            while (!(remainingColumnsScratch <= 0)) {
+              indexThenRunLength = sourceIndices[sourceIndex++];
+              remainingColumnsScratch--;
+              if (indexThenRunLength == 0) {
+                destinationIndex++;
+                continue;
+              }
+              if (indexThenRunLength != -1) {
+                destinationWriteIndex = destinationIndex;
+                destinationIndex++;
+                destinationPixels[destinationWriteIndex] = palette[indexThenRunLength & 255];
+                continue;
+              }
+              sourceReadIndex2 = sourceIndex;
+              sourceIndex++;
+              indexThenRunLength = sourceIndices[sourceReadIndex2] & 255;
+              remainingColumnsScratch--;
+              indexThenRunLength = indexThenRunLength + indexThenRunLength;
+              if (indexThenRunLength > remainingColumnsScratch) {
+                indexThenRunLength = remainingColumnsScratch;
+              }
+              sourceIndex = sourceIndex + indexThenRunLength;
+              remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
+              destinationIndex = destinationIndex + (indexThenRunLength + 2);
             }
-            if (indexThenRunLength != -1) {
-              destinationWriteIndex = destinationIndex;
-              destinationIndex++;
-              destinationPixels[destinationWriteIndex] = palette[indexThenRunLength & 255];
-              continue;
-            }
-            sourceReadIndex2 = sourceIndex;
-            sourceIndex++;
-            indexThenRunLength = sourceIndices[sourceReadIndex2] & 255;
-            remainingColumnsScratch--;
-            indexThenRunLength = indexThenRunLength + indexThenRunLength;
-            if (indexThenRunLength > remainingColumnsScratch) {
-              indexThenRunLength = remainingColumnsScratch;
-            }
-            sourceIndex = sourceIndex + indexThenRunLength;
-            remainingColumnsScratch = remainingColumnsScratch - indexThenRunLength;
-            destinationIndex = destinationIndex + (indexThenRunLength + 2);
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -197,36 +197,36 @@ final class IndexedSprite extends IndexedSpriteState {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            IndexedSprite.blitPaletteRuns(0, this.indices, sourceIndex, destinationIndex, 0, SoftwareRasterizer.framebuffer, this.palette, drawWidth, destinationRowSkip, sourceRowSkip, 0, drawHeight);
+          if (drawHeight <= 0) {
             return;
+          }
+          IndexedSprite.blitPaletteRuns(0, this.indices, sourceIndex, destinationIndex, 0, SoftwareRasterizer.framebuffer, this.palette, drawWidth, destinationRowSkip, sourceRowSkip, 0, drawHeight);
+          return;
         }
     }
 

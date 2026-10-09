@@ -15,15 +15,15 @@ final class BufferedImageRasterBuffer extends AwtRasterBuffer {
         java.awt.image.WritableRaster fallbackImageRaster;
         this.width = width;
         if (methodGuard > 116) {
-            this.height = height;
-            this.pixels = new int[1 + width * height];
-            pixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
-            rgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            imageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) rgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) pixelDataBuffer), (java.awt.Point) null);
-            this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) rgbColorModel), imageRaster, false, new Hashtable()));
-            this.imageObserverComponent = component;
-            this.setAsRasterTarget(255);
-            return;
+          this.height = height;
+          this.pixels = new int[1 + width * height];
+          pixelDataBuffer = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
+          rgbColorModel = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+          imageRaster = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) rgbColorModel)).createCompatibleSampleModel(this.width, this.height), (java.awt.image.DataBuffer) ((Object) pixelDataBuffer), (java.awt.Point) null);
+          this.image = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) rgbColorModel), imageRaster, false, new Hashtable()));
+          this.imageObserverComponent = component;
+          this.setAsRasterTarget(255);
+          return;
         }
         this.imageObserverComponent = (java.awt.Component) null;
         this.height = height;
@@ -38,8 +38,8 @@ final class BufferedImageRasterBuffer extends AwtRasterBuffer {
 
     final void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard) {
         if (methodGuard == 0) {
-            graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) ((Object) this.imageObserverComponent));
-            return;
+          graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) ((Object) this.imageObserverComponent));
+          return;
         }
         this.imageObserverComponent = (java.awt.Component) null;
         graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) ((Object) this.imageObserverComponent));

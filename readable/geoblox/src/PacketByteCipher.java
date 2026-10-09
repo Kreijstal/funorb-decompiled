@@ -22,121 +22,121 @@ final class PacketByteCipher {
         int seedMixBlockOffset;
         int stateMixBlockOffset;
         if (!initializeState) {
-            return;
+          return;
         }
         int mixWord1 = -1640531527;
         int mixWord0 = -1640531527;
         int mixWord4 = -1640531527;
         int mixWord6 = -1640531527;
         for (mixRoundOrBlockOffset = 0; 4 > mixRoundOrBlockOffset; mixRoundOrBlockOffset++) {
-            mixWord0 = mixWord0 ^ mixWord1 << 11;
-            mixWord3 = mixWord3 + mixWord0;
-            mixWord1 = mixWord1 + mixWord2;
-            mixWord1 = mixWord1 ^ mixWord2 >>> 2;
-            mixWord2 = mixWord2 + mixWord3;
-            mixWord4 = mixWord4 + mixWord1;
-            mixWord2 = mixWord2 ^ mixWord3 << 8;
-            mixWord3 = mixWord3 + mixWord4;
-            mixWord5 = mixWord5 + mixWord2;
-            mixWord3 = mixWord3 ^ mixWord4 >>> 16;
-            mixWord6 = mixWord6 + mixWord3;
-            mixWord4 = mixWord4 + mixWord5;
-            mixWord4 = mixWord4 ^ mixWord5 << 10;
-            mixWord7 = mixWord7 + mixWord4;
-            mixWord5 = mixWord5 + mixWord6;
-            mixWord5 = mixWord5 ^ mixWord6 >>> 4;
-            mixWord0 = mixWord0 + mixWord5;
-            mixWord6 = mixWord6 + mixWord7;
-            mixWord6 = mixWord6 ^ mixWord7 << 8;
-            mixWord1 = mixWord1 + mixWord6;
-            mixWord7 = mixWord7 + mixWord0;
-            mixWord7 = mixWord7 ^ mixWord0 >>> 9;
-            mixWord0 = mixWord0 + mixWord1;
-            mixWord2 = mixWord2 + mixWord7;
+          mixWord0 = mixWord0 ^ mixWord1 << 11;
+          mixWord3 = mixWord3 + mixWord0;
+          mixWord1 = mixWord1 + mixWord2;
+          mixWord1 = mixWord1 ^ mixWord2 >>> 2;
+          mixWord2 = mixWord2 + mixWord3;
+          mixWord4 = mixWord4 + mixWord1;
+          mixWord2 = mixWord2 ^ mixWord3 << 8;
+          mixWord3 = mixWord3 + mixWord4;
+          mixWord5 = mixWord5 + mixWord2;
+          mixWord3 = mixWord3 ^ mixWord4 >>> 16;
+          mixWord6 = mixWord6 + mixWord3;
+          mixWord4 = mixWord4 + mixWord5;
+          mixWord4 = mixWord4 ^ mixWord5 << 10;
+          mixWord7 = mixWord7 + mixWord4;
+          mixWord5 = mixWord5 + mixWord6;
+          mixWord5 = mixWord5 ^ mixWord6 >>> 4;
+          mixWord0 = mixWord0 + mixWord5;
+          mixWord6 = mixWord6 + mixWord7;
+          mixWord6 = mixWord6 ^ mixWord7 << 8;
+          mixWord1 = mixWord1 + mixWord6;
+          mixWord7 = mixWord7 + mixWord0;
+          mixWord7 = mixWord7 ^ mixWord0 >>> 9;
+          mixWord0 = mixWord0 + mixWord1;
+          mixWord2 = mixWord2 + mixWord7;
         }
         for (seedMixBlockOffset = 0; seedMixBlockOffset < 256; seedMixBlockOffset += 8) {
-            mixWord5 = mixWord5 + this.results[seedMixBlockOffset + 5];
-            mixWord3 = mixWord3 + this.results[3 + seedMixBlockOffset];
-            mixWord7 = mixWord7 + this.results[7 + seedMixBlockOffset];
-            mixWord0 = mixWord0 + this.results[seedMixBlockOffset];
-            mixWord2 = mixWord2 + this.results[2 + seedMixBlockOffset];
-            mixWord4 = mixWord4 + this.results[4 + seedMixBlockOffset];
-            mixWord1 = mixWord1 + this.results[1 + seedMixBlockOffset];
-            mixWord6 = mixWord6 + this.results[seedMixBlockOffset + 6];
-            mixWord0 = mixWord0 ^ mixWord1 << 11;
-            mixWord1 = mixWord1 + mixWord2;
-            mixWord3 = mixWord3 + mixWord0;
-            mixWord1 = mixWord1 ^ mixWord2 >>> 2;
-            mixWord2 = mixWord2 + mixWord3;
-            mixWord4 = mixWord4 + mixWord1;
-            mixWord2 = mixWord2 ^ mixWord3 << 8;
-            mixWord5 = mixWord5 + mixWord2;
-            mixWord3 = mixWord3 + mixWord4;
-            mixWord3 = mixWord3 ^ mixWord4 >>> 16;
-            mixWord6 = mixWord6 + mixWord3;
-            mixWord4 = mixWord4 + mixWord5;
-            mixWord4 = mixWord4 ^ mixWord5 << 10;
-            mixWord7 = mixWord7 + mixWord4;
-            mixWord5 = mixWord5 + mixWord6;
-            mixWord5 = mixWord5 ^ mixWord6 >>> 4;
-            mixWord6 = mixWord6 + mixWord7;
-            mixWord0 = mixWord0 + mixWord5;
-            mixWord6 = mixWord6 ^ mixWord7 << 8;
-            mixWord7 = mixWord7 + mixWord0;
-            mixWord1 = mixWord1 + mixWord6;
-            mixWord7 = mixWord7 ^ mixWord0 >>> 9;
-            mixWord2 = mixWord2 + mixWord7;
-            mixWord0 = mixWord0 + mixWord1;
-            this.stateWords[seedMixBlockOffset] = mixWord0;
-            this.stateWords[1 + seedMixBlockOffset] = mixWord1;
-            this.stateWords[2 + seedMixBlockOffset] = mixWord2;
-            this.stateWords[3 + seedMixBlockOffset] = mixWord3;
-            this.stateWords[seedMixBlockOffset + 4] = mixWord4;
-            this.stateWords[seedMixBlockOffset + 5] = mixWord5;
-            this.stateWords[6 + seedMixBlockOffset] = mixWord6;
-            this.stateWords[7 + seedMixBlockOffset] = mixWord7;
+          mixWord5 = mixWord5 + this.results[seedMixBlockOffset + 5];
+          mixWord3 = mixWord3 + this.results[3 + seedMixBlockOffset];
+          mixWord7 = mixWord7 + this.results[7 + seedMixBlockOffset];
+          mixWord0 = mixWord0 + this.results[seedMixBlockOffset];
+          mixWord2 = mixWord2 + this.results[2 + seedMixBlockOffset];
+          mixWord4 = mixWord4 + this.results[4 + seedMixBlockOffset];
+          mixWord1 = mixWord1 + this.results[1 + seedMixBlockOffset];
+          mixWord6 = mixWord6 + this.results[seedMixBlockOffset + 6];
+          mixWord0 = mixWord0 ^ mixWord1 << 11;
+          mixWord1 = mixWord1 + mixWord2;
+          mixWord3 = mixWord3 + mixWord0;
+          mixWord1 = mixWord1 ^ mixWord2 >>> 2;
+          mixWord2 = mixWord2 + mixWord3;
+          mixWord4 = mixWord4 + mixWord1;
+          mixWord2 = mixWord2 ^ mixWord3 << 8;
+          mixWord5 = mixWord5 + mixWord2;
+          mixWord3 = mixWord3 + mixWord4;
+          mixWord3 = mixWord3 ^ mixWord4 >>> 16;
+          mixWord6 = mixWord6 + mixWord3;
+          mixWord4 = mixWord4 + mixWord5;
+          mixWord4 = mixWord4 ^ mixWord5 << 10;
+          mixWord7 = mixWord7 + mixWord4;
+          mixWord5 = mixWord5 + mixWord6;
+          mixWord5 = mixWord5 ^ mixWord6 >>> 4;
+          mixWord6 = mixWord6 + mixWord7;
+          mixWord0 = mixWord0 + mixWord5;
+          mixWord6 = mixWord6 ^ mixWord7 << 8;
+          mixWord7 = mixWord7 + mixWord0;
+          mixWord1 = mixWord1 + mixWord6;
+          mixWord7 = mixWord7 ^ mixWord0 >>> 9;
+          mixWord2 = mixWord2 + mixWord7;
+          mixWord0 = mixWord0 + mixWord1;
+          this.stateWords[seedMixBlockOffset] = mixWord0;
+          this.stateWords[1 + seedMixBlockOffset] = mixWord1;
+          this.stateWords[2 + seedMixBlockOffset] = mixWord2;
+          this.stateWords[3 + seedMixBlockOffset] = mixWord3;
+          this.stateWords[seedMixBlockOffset + 4] = mixWord4;
+          this.stateWords[seedMixBlockOffset + 5] = mixWord5;
+          this.stateWords[6 + seedMixBlockOffset] = mixWord6;
+          this.stateWords[7 + seedMixBlockOffset] = mixWord7;
         }
         for (stateMixBlockOffset = 0; 256 > stateMixBlockOffset; stateMixBlockOffset += 8) {
-            mixWord6 = mixWord6 + this.stateWords[stateMixBlockOffset + 6];
-            mixWord0 = mixWord0 + this.stateWords[stateMixBlockOffset];
-            mixWord7 = mixWord7 + this.stateWords[stateMixBlockOffset + 7];
-            mixWord3 = mixWord3 + this.stateWords[3 + stateMixBlockOffset];
-            mixWord1 = mixWord1 + this.stateWords[1 + stateMixBlockOffset];
-            mixWord5 = mixWord5 + this.stateWords[5 + stateMixBlockOffset];
-            mixWord2 = mixWord2 + this.stateWords[stateMixBlockOffset + 2];
-            mixWord4 = mixWord4 + this.stateWords[stateMixBlockOffset + 4];
-            mixWord0 = mixWord0 ^ mixWord1 << 11;
-            mixWord3 = mixWord3 + mixWord0;
-            mixWord1 = mixWord1 + mixWord2;
-            mixWord1 = mixWord1 ^ mixWord2 >>> 2;
-            mixWord4 = mixWord4 + mixWord1;
-            mixWord2 = mixWord2 + mixWord3;
-            mixWord2 = mixWord2 ^ mixWord3 << 8;
-            mixWord3 = mixWord3 + mixWord4;
-            mixWord5 = mixWord5 + mixWord2;
-            mixWord3 = mixWord3 ^ mixWord4 >>> 16;
-            mixWord4 = mixWord4 + mixWord5;
-            mixWord6 = mixWord6 + mixWord3;
-            mixWord4 = mixWord4 ^ mixWord5 << 10;
-            mixWord7 = mixWord7 + mixWord4;
-            mixWord5 = mixWord5 + mixWord6;
-            mixWord5 = mixWord5 ^ mixWord6 >>> 4;
-            mixWord0 = mixWord0 + mixWord5;
-            mixWord6 = mixWord6 + mixWord7;
-            mixWord6 = mixWord6 ^ mixWord7 << 8;
-            mixWord1 = mixWord1 + mixWord6;
-            mixWord7 = mixWord7 + mixWord0;
-            mixWord7 = mixWord7 ^ mixWord0 >>> 9;
-            mixWord0 = mixWord0 + mixWord1;
-            mixWord2 = mixWord2 + mixWord7;
-            this.stateWords[stateMixBlockOffset] = mixWord0;
-            this.stateWords[1 + stateMixBlockOffset] = mixWord1;
-            this.stateWords[stateMixBlockOffset + 2] = mixWord2;
-            this.stateWords[3 + stateMixBlockOffset] = mixWord3;
-            this.stateWords[4 + stateMixBlockOffset] = mixWord4;
-            this.stateWords[5 + stateMixBlockOffset] = mixWord5;
-            this.stateWords[6 + stateMixBlockOffset] = mixWord6;
-            this.stateWords[7 + stateMixBlockOffset] = mixWord7;
+          mixWord6 = mixWord6 + this.stateWords[stateMixBlockOffset + 6];
+          mixWord0 = mixWord0 + this.stateWords[stateMixBlockOffset];
+          mixWord7 = mixWord7 + this.stateWords[stateMixBlockOffset + 7];
+          mixWord3 = mixWord3 + this.stateWords[3 + stateMixBlockOffset];
+          mixWord1 = mixWord1 + this.stateWords[1 + stateMixBlockOffset];
+          mixWord5 = mixWord5 + this.stateWords[5 + stateMixBlockOffset];
+          mixWord2 = mixWord2 + this.stateWords[stateMixBlockOffset + 2];
+          mixWord4 = mixWord4 + this.stateWords[stateMixBlockOffset + 4];
+          mixWord0 = mixWord0 ^ mixWord1 << 11;
+          mixWord3 = mixWord3 + mixWord0;
+          mixWord1 = mixWord1 + mixWord2;
+          mixWord1 = mixWord1 ^ mixWord2 >>> 2;
+          mixWord4 = mixWord4 + mixWord1;
+          mixWord2 = mixWord2 + mixWord3;
+          mixWord2 = mixWord2 ^ mixWord3 << 8;
+          mixWord3 = mixWord3 + mixWord4;
+          mixWord5 = mixWord5 + mixWord2;
+          mixWord3 = mixWord3 ^ mixWord4 >>> 16;
+          mixWord4 = mixWord4 + mixWord5;
+          mixWord6 = mixWord6 + mixWord3;
+          mixWord4 = mixWord4 ^ mixWord5 << 10;
+          mixWord7 = mixWord7 + mixWord4;
+          mixWord5 = mixWord5 + mixWord6;
+          mixWord5 = mixWord5 ^ mixWord6 >>> 4;
+          mixWord0 = mixWord0 + mixWord5;
+          mixWord6 = mixWord6 + mixWord7;
+          mixWord6 = mixWord6 ^ mixWord7 << 8;
+          mixWord1 = mixWord1 + mixWord6;
+          mixWord7 = mixWord7 + mixWord0;
+          mixWord7 = mixWord7 ^ mixWord0 >>> 9;
+          mixWord0 = mixWord0 + mixWord1;
+          mixWord2 = mixWord2 + mixWord7;
+          this.stateWords[stateMixBlockOffset] = mixWord0;
+          this.stateWords[1 + stateMixBlockOffset] = mixWord1;
+          this.stateWords[stateMixBlockOffset + 2] = mixWord2;
+          this.stateWords[3 + stateMixBlockOffset] = mixWord3;
+          this.stateWords[4 + stateMixBlockOffset] = mixWord4;
+          this.stateWords[5 + stateMixBlockOffset] = mixWord5;
+          this.stateWords[6 + stateMixBlockOffset] = mixWord6;
+          this.stateWords[7 + stateMixBlockOffset] = mixWord7;
         }
         this.generateResults(-108);
         this.remainingResults = 256;
@@ -144,8 +144,8 @@ final class PacketByteCipher {
 
     final int nextInt(int regenerateAtRemaining) {
         if (this.remainingResults == regenerateAtRemaining) {
-            this.generateResults(-125);
-            this.remainingResults = 256;
+          this.generateResults(-125);
+          this.remainingResults = 256;
         }
         int resultIndex = this.remainingResults - 1;
         this.remainingResults = this.remainingResults - 1;
@@ -203,10 +203,10 @@ final class PacketByteCipher {
     public static void releaseStaticReferences(byte methodGuard) {
         sunForegroundSprite = null;
         if (methodGuard > -92) {
-            ticketingGoToWebsiteText = (String) null;
-            discardResultsText = null;
-            ticketingGoToWebsiteText = null;
-            return;
+          ticketingGoToWebsiteText = (String) null;
+          discardResultsText = null;
+          ticketingGoToWebsiteText = null;
+          return;
         }
         discardResultsText = null;
         ticketingGoToWebsiteText = null;
@@ -215,14 +215,14 @@ final class PacketByteCipher {
     PacketByteCipher(int[] seed) {
         int seedWordIndex = 0;
         try {
-            this.stateWords = new int[256];
-            this.results = new int[256];
-            for (seedWordIndex = 0; seed.length > seedWordIndex; seedWordIndex++) {
-                this.results[seedWordIndex] = seed[seedWordIndex];
-            }
-            this.initialize(true);
+          this.stateWords = new int[256];
+          this.results = new int[256];
+          for (seedWordIndex = 0; seed.length > seedWordIndex; seedWordIndex++) {
+            this.results[seedWordIndex] = seed[seedWordIndex];
+          }
+          this.initialize(true);
         } catch (RuntimeException cipherConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherConstructionFailure), "ne.<init>(" + (seed != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherConstructionFailure), "ne.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

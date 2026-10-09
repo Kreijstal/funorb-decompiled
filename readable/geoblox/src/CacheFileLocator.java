@@ -51,7 +51,7 @@ public class CacheFileLocator {
 
     public static File resolveGameCacheFile(String fileName, byte lookupGuard) {
         if (lookupGuard <= -67) {
-            return CacheFileLocator.resolveRedirectedCacheFile(gameCacheName, -27533, fileName, cacheVariant);
+          return CacheFileLocator.resolveRedirectedCacheFile(gameCacheName, -27533, fileName, cacheVariant);
         }
         String unusedCacheLookupValue = (String) null;
         CacheFileLocator.resolveGameCacheFile((String) null, (byte) -120);

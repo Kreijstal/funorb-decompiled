@@ -13,18 +13,18 @@ final class ProgressDialog extends ResizableDialog {
         super(dialogLayer, 300, 120);
         int introductionHeight = 0;
         try {
-            this.introductoryText = introductoryText;
-            if (this.introductoryText != null) {
-                introductionHeight = UiFontResources.commonUiBoldFont.measureWrappedHeight(this.introductoryText, 260, UiFontResources.commonUiBoldFont.maxAscent);
-                this.resizeAndCenter(introductionHeight + 150, 103, 300);
-            }
-            this.progressBar = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.normalAnimationStopped = false;
-            this.progressBar.animationEnabled = true;
-            this.redHighlightActive = false;
-            this.addChild((byte) -98, this.progressBar);
+          this.introductoryText = introductoryText;
+          if (this.introductoryText != null) {
+            introductionHeight = UiFontResources.commonUiBoldFont.measureWrappedHeight(this.introductoryText, 260, UiFontResources.commonUiBoldFont.maxAscent);
+            this.resizeAndCenter(introductionHeight + 150, 103, 300);
+          }
+          this.progressBar = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.normalAnimationStopped = false;
+          this.progressBar.animationEnabled = true;
+          this.redHighlightActive = false;
+          this.addChild((byte) -98, this.progressBar);
         } catch (RuntimeException progressDialogConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogConstructionFailure), "rl.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (introductoryText != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressDialogConstructionFailure), "rl.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (introductoryText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,7 +57,7 @@ final class ProgressDialog extends ResizableDialog {
 
     final static boolean isUsernameQueryFlowPending(int methodGuard) {
         if (methodGuard != -1071908447) {
-            return false;
+          return false;
         }
         return IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState ? true : false;
     }
@@ -66,8 +66,8 @@ final class ProgressDialog extends ResizableDialog {
         this.progressBar.animationEnabled = false;
         this.normalAnimationStopped = true;
         if (methodGuard != 23181) {
-            PcmStream guardedNullStream = (PcmStream) null;
-            ProgressDialog.delayStreamByMillis(9, (PcmStream) null, 122);
+          PcmStream guardedNullStream = (PcmStream) null;
+          ProgressDialog.delayStreamByMillis(9, (PcmStream) null, 122);
         }
     }
 
@@ -104,9 +104,9 @@ final class ProgressDialog extends ResizableDialog {
 
     public static void releaseProgressDialogLoginMethod(byte methodGuard) {
         if (methodGuard != 57) {
-            usernameLoginMethod = (LoginMethod) null;
-            usernameLoginMethod = null;
-            return;
+          usernameLoginMethod = (LoginMethod) null;
+          usernameLoginMethod = null;
+          return;
         }
         usernameLoginMethod = null;
     }
@@ -166,8 +166,8 @@ final class ProgressDialog extends ResizableDialog {
         super.drawDialogFrame(x, methodGuard, y);
         UiFontResources.commonUiBoldFont.drawCenteredText(this.statusText, (this.widgetWidth >> 1) + x, y + 103, 16777215, -1);
         if (this.introductoryText != null) {
-            SoftwareRasterizer.drawHorizontalLine(20 + x, -7 + y + 120, 260, 8421504);
-            UiFontResources.commonUiBoldFont.drawParagraph(this.introductoryText, x + 20, 8 + (120 + y), 260, 100, 16777215, -1, 1, 0, UiFontResources.commonUiBoldFont.maxAscent);
+          SoftwareRasterizer.drawHorizontalLine(20 + x, -7 + y + 120, 260, 8421504);
+          UiFontResources.commonUiBoldFont.drawParagraph(this.introductoryText, x + 20, 8 + (120 + y), 260, 100, 16777215, -1, 1, 0, UiFontResources.commonUiBoldFont.maxAscent);
         }
     }
 

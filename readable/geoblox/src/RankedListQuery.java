@@ -11,7 +11,7 @@ final class RankedListQuery extends IntrusiveNode {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 127) {
-            return;
+          return;
         }
         receivedRecordText = null;
         widgetSprite = null;
@@ -24,7 +24,7 @@ final class RankedListQuery extends IntrusiveNode {
         packet.writeByte((byte) 124, 1);
         packet.writeByte((byte) 127, 2);
         if (methodGuard >= -65) {
-            RankedListQuery.writeAchievementStateRequest(116, -127);
+          RankedListQuery.writeAchievementStateRequest(116, -127);
         }
     }
 

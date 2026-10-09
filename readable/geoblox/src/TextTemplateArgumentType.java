@@ -10,8 +10,8 @@ final class TextTemplateArgumentType {
 
     final static boolean returnTrueWithSoundThemeGuard(int methodGuard) {
         if (methodGuard != 0) {
-            gameSoundThemeIds = (int[]) null;
-            return true;
+          gameSoundThemeIds = (int[]) null;
+          return true;
         }
         return true;
     }
@@ -83,7 +83,7 @@ final class TextTemplateArgumentType {
           lightDirectionYQ8 = DelegatingCanvas.sineQ16((byte) 81, lightAngle16) >> 8;
           lightDirectionZQ8 = IntrusiveNodeHashTable.cosineQ16(lightAngle16, 2048) >> 8;
           if (PrefixCodeDecoder.pointerXSnapshot != -1 &&
-              PcmResampler.pointerYSnapshot != -1) {
+            PcmResampler.pointerYSnapshot != -1) {
             lightDirectionXQ8 = -320 + PrefixCodeDecoder.pointerXSnapshot;
             lightDirectionZQ8 = -128;
             lightDirectionYQ8 = -PcmResampler.pointerYSnapshot + 240;
@@ -143,7 +143,7 @@ final class TextTemplateArgumentType {
         try {
           if (!IntrusiveDeque.hasVisibleFullscreenDialog((byte) 124)) {
             if (InstrumentPatch.activeFullscreenCanvas != null &&
-                InstrumentPatch.activeFullscreenCanvas.focusLost) {
+              InstrumentPatch.activeFullscreenCanvas.focusLost) {
               FullscreenSupport.exitActiveFullscreen((byte) -87);
               ClientScreenExitSupport.fullscreenDialogLayer.showDialog(false, new FullscreenErrorDialog(ClientScreenExitSupport.fullscreenDialogLayer, AccountContentDialog.fullscreenFocusLostFailureReason));
             }
@@ -175,13 +175,13 @@ final class TextTemplateArgumentType {
         cancelText = "Cancel";
         gameSoundThemeIds = new int[33];
         for (soundThemeEntryIndex = 0; soundThemeEntryIndex < 3; soundThemeEntryIndex++) {
-            gameSoundThemeIds[soundThemeEntryIndex + 10] = 4;
-            gameSoundThemeIds[13 + soundThemeEntryIndex] = 3;
-            gameSoundThemeIds[7 + soundThemeEntryIndex] = 1;
-            gameSoundThemeIds[soundThemeEntryIndex + 1] = 0;
-            gameSoundThemeIds[soundThemeEntryIndex + 4] = 6;
-            gameSoundThemeIds[16 + soundThemeEntryIndex] = 5;
-            gameSoundThemeIds[19 + soundThemeEntryIndex] = 2;
+          gameSoundThemeIds[soundThemeEntryIndex + 10] = 4;
+          gameSoundThemeIds[13 + soundThemeEntryIndex] = 3;
+          gameSoundThemeIds[7 + soundThemeEntryIndex] = 1;
+          gameSoundThemeIds[soundThemeEntryIndex + 1] = 0;
+          gameSoundThemeIds[soundThemeEntryIndex + 4] = 6;
+          gameSoundThemeIds[16 + soundThemeEntryIndex] = 5;
+          gameSoundThemeIds[19 + soundThemeEntryIndex] = 2;
         }
     }
 }

@@ -18,7 +18,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         super.renderWidget(parentX, parentY, (byte) 105, renderPass);
         int renderGuardQuotient = -79 / ((methodGuard - 1) / 43);
         if (renderPass != 0) {
-            return;
+          return;
         }
         int labelOffsetX = !this.labelAfterChild ? 0 : -this.labelWidth + (this.widgetWidth - this.padding * 2);
         this.labelFont.drawParagraph(this.labelText, this.padding + (labelOffsetX + widgetScreenX), this.padding + widgetScreenY, -this.padding + this.labelWidth, -(this.padding * 2) + this.widgetHeight, this.labelColor, -1, !this.labelAfterChild ? 2 : 0, 1, this.labelFont.maxAscent);
@@ -27,7 +27,7 @@ final class LabeledChildWidget extends SingleChildWidget {
     public static void releaseStaticReferences(byte methodGuard) {
         sportsForegroundSprite = null;
         if (methodGuard != -52) {
-            return;
+          return;
         }
         extendedNameCharacters = null;
         nineSliceSavedClip = null;
@@ -40,7 +40,7 @@ final class LabeledChildWidget extends SingleChildWidget {
         TextTemplateDefinitionLoader.releasedInDifficultyStep = TextTemplateDefinitionLoader.releasedInDifficultyStep + 1;
         MatchCandidateSupport.releasedInCurrentTheme = MatchCandidateSupport.releasedInCurrentTheme + 1;
         if (ContextualRuntimeException.releasesPerDifficultyStep == TextTemplateDefinitionLoader.releasedInDifficultyStep &&
-            DequeCursor.difficultyAdvancesInCurrentTheme < 2) {
+          DequeCursor.difficultyAdvancesInCurrentTheme < 2) {
           TextTemplateDefinitionLoader.releasedInDifficultyStep = 0;
           PlayfieldRules.advanceDifficulty(false);
           DequeCursor.difficultyAdvancesInCurrentTheme = DequeCursor.difficultyAdvancesInCurrentTheme + 1;

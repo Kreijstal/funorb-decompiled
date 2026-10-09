@@ -12,11 +12,11 @@ final class DialogLayer extends SingleChildWidget {
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            dialog.dialogVisible = false;
-            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 125));
+          dialog.dialogVisible = false;
+          dialog = (FadingDialog) (dialogCursor.nextForward((byte) 125));
         }
         if (methodGuard != 10936) {
-            return;
+          return;
         }
         this.child = null;
     }
@@ -24,35 +24,35 @@ final class DialogLayer extends SingleChildWidget {
     final void showDialog(boolean dequeGuard, UiWidget widget) {
         FadingDialog dialog = null;
         try {
-            if (!(widget instanceof FadingDialog)) {
-                throw new IllegalArgumentException();
-            }
-            dialog = (FadingDialog) (widget);
-            this.dialogs.addFirst(dialog, dequeGuard);
-            dialog.dialogVisible = true;
-            dialog.requestKeyboardFocus((byte) -37, (UiWidget) (this));
+          if (!(widget instanceof FadingDialog)) {
+            throw new IllegalArgumentException();
+          }
+          dialog = (FadingDialog) (widget);
+          this.dialogs.addFirst(dialog, dequeGuard);
+          dialog.dialogVisible = true;
+          dialog.requestKeyboardFocus((byte) -37, (UiWidget) (this));
         } catch (RuntimeException dialogInsertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogInsertionFailure), "ng.N(" + dequeGuard + ',' + (widget != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogInsertionFailure), "ng.N(" + dequeGuard + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (null != this.renderer) {
-            this.renderer.drawWidget(parentX, -70, parentY, true, (UiWidget) (this));
+          this.renderer.drawWidget(parentX, -70, parentY, true, (UiWidget) (this));
         }
         int guardResidue = 75 / ((1 - methodGuard) / 43);
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         UiWidget dialogWidget = (UiWidget) (dialogCursor.beginReverse(1));
         while (dialogWidget != null) {
-            dialogWidget.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) -106, renderPass);
-            dialogWidget = (UiWidget) (dialogCursor.nextReverse(26));
+          dialogWidget.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) -106, renderPass);
+          dialogWidget = (UiWidget) (dialogCursor.nextReverse(26));
         }
     }
 
     final static void initializeReflectionCheckQueue(int methodGuard) {
         if (methodGuard != -13912) {
-            return;
+          return;
         }
         UsernameAvailabilityQuery.reflectionCheckRequests = new IntrusiveDeque();
     }
@@ -61,7 +61,7 @@ final class DialogLayer extends SingleChildWidget {
         CacheReference.gameMusicOutput.serviceOutput();
         ClientScreenExitSupport.gameSoundOutput.serviceOutput();
         if (methodGuard <= 9) {
-            rotatedEntityScreenX = -2;
+          rotatedEntityScreenX = -2;
         }
     }
 
@@ -69,14 +69,14 @@ final class DialogLayer extends SingleChildWidget {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         if (methodGuard != 0) {
-            return;
+          return;
         }
         FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            if (dialog.settleDialogAnimation(229)) {
-                dialog.unlinkNode(false);
-            }
-            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 112));
+          if (dialog.settleDialogAnimation(229)) {
+            dialog.unlinkNode(false);
+          }
+          dialog = (FadingDialog) (dialogCursor.nextForward((byte) 112));
         }
     }
 
@@ -90,13 +90,13 @@ final class DialogLayer extends SingleChildWidget {
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            if (dialog.dialogVisible) {
-                return dialog.findFocusTarget((byte) -79);
-            }
-            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 119));
+          if (dialog.dialogVisible) {
+            return dialog.findFocusTarget((byte) -79);
+          }
+          dialog = (FadingDialog) (dialogCursor.nextForward((byte) 119));
         }
         if (methodGuard == -4863) {
-            return null;
+          return null;
         }
         rotatedEntityScreenX = 111;
         return null;
@@ -107,14 +107,14 @@ final class DialogLayer extends SingleChildWidget {
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            if (dialog.advanceDialogAnimation(-1)) {
-                dialog.unlinkNode(false);
-            }
-            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 115));
+          if (dialog.advanceDialogAnimation(-1)) {
+            dialog.unlinkNode(false);
+          }
+          dialog = (FadingDialog) (dialogCursor.nextForward((byte) 115));
         }
         this.child = (UiWidget) ((Object) this.getTopVisibleDialog(100));
         if (methodGuard >= -14) {
-            sharedUiFont = (BitmapFont) null;
+          sharedUiFont = (BitmapFont) null;
         }
     }
 
@@ -122,7 +122,7 @@ final class DialogLayer extends SingleChildWidget {
         sharedUiFont = null;
         decodedSpriteHasNonOpaqueAlpha = null;
         if (methodGuard >= -53) {
-            decodedSpriteHasNonOpaqueAlpha = (boolean[]) null;
+          decodedSpriteHasNonOpaqueAlpha = (boolean[]) null;
         }
     }
 
@@ -131,13 +131,13 @@ final class DialogLayer extends SingleChildWidget {
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
         FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
-            if (dialog.dialogVisible) {
-                return dialog;
-            }
-            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 111));
+          if (dialog.dialogVisible) {
+            return dialog;
+          }
+          dialog = (FadingDialog) (dialogCursor.nextForward((byte) 111));
         }
         if (methodGuard >= 57) {
-            return null;
+          return null;
         }
         this.findFocusTarget(89);
         return null;

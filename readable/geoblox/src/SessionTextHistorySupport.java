@@ -80,8 +80,8 @@ final class SessionTextHistorySupport {
         fullscreenNonmemberText = null;
         basicUiGraphicsArchive = null;
         if (methodGuard != -64) {
-            ReceivedTextRecord unusedNullRecord = (ReceivedTextRecord) null;
-            SessionTextHistorySupport.retainTextRecord((ReceivedTextRecord) null, -13);
+          ReceivedTextRecord unusedNullRecord = (ReceivedTextRecord) null;
+          SessionTextHistorySupport.retainTextRecord((ReceivedTextRecord) null, -13);
         }
     }
 

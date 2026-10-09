@@ -12,10 +12,10 @@ final class PasswordValidator extends TextInputValidator {
     PasswordValidator(TextInputWidget passwordInput, TextInputWidget usernameInput, TextInputWidget emailInput) {
         super(passwordInput);
         try {
-            this.emailInput = emailInput;
-            this.usernameInput = usernameInput;
+          this.emailInput = emailInput;
+          this.usernameInput = usernameInput;
         } catch (RuntimeException validatorConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "g.<init>(" + (passwordInput != null ? "{...}" : "null") + ',' + (usernameInput != null ? "{...}" : "null") + ',' + (emailInput != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) validatorConstructionFailure), "g.<init>(" + (passwordInput != null ? "{...}" : "null") + ',' + (usernameInput != null ? "{...}" : "null") + ',' + (emailInput != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,10 +110,10 @@ final class PasswordValidator extends TextInputValidator {
           lowercaseEmail = this.emailInput.widgetText.toLowerCase();
           lowercasePassword = candidatePassword.toLowerCase();
           if (0 < lowercaseEmail.length() &&
-              lowercasePassword.length() > 0) {
+            lowercasePassword.length() > 0) {
             lastAtSignIndex = lowercaseEmail.lastIndexOf("@");
             if (0 <= lastAtSignIndex &&
-                lowercaseEmail.length() - 1 > lastAtSignIndex) {
+              lowercaseEmail.length() - 1 > lastAtSignIndex) {
               emailLocalPart = lowercaseEmail.substring(0, lastAtSignIndex);
               emailDomain = lowercaseEmail.substring(lastAtSignIndex + 1);
               if (lowercasePassword.indexOf(emailLocalPart) >= 0) {
@@ -191,7 +191,7 @@ final class PasswordValidator extends TextInputValidator {
 
     public static void releasePasswordValidatorSharedResources(int methodGuard) {
         if (methodGuard >= -90) {
-            return;
+          return;
         }
         countBoxSprite = null;
         createEmailUnavailableAlertText = null;

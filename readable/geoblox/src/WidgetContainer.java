@@ -98,22 +98,22 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         DequeCursor childCursor = new DequeCursor(this.children);
         UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         if (methodGuard < 82) {
-            toServerListText = (String) null;
+          toServerListText = (String) null;
         }
         while (child != null) {
-            childLastRenderPass = child.getLastRenderPass((byte) 91);
-            if (lastRenderPass < childLastRenderPass) {
-                lastRenderPass = childLastRenderPass;
-            }
-            child = (UiWidget) (childCursor.nextForward((byte) 110));
+          childLastRenderPass = child.getLastRenderPass((byte) 91);
+          if (lastRenderPass < childLastRenderPass) {
+            lastRenderPass = childLastRenderPass;
+          }
+          child = (UiWidget) (childCursor.nextForward((byte) 110));
         }
         return lastRenderPass;
     }
 
     final boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
-            StringBuilder guardedNullBuilderSnapshot = (StringBuilder) null;
-            this.appendChildrenDiagnostics((Hashtable) null, (StringBuilder) null, -120, -15);
+          StringBuilder guardedNullBuilderSnapshot = (StringBuilder) null;
+          this.appendChildrenDiagnostics((Hashtable) null, (StringBuilder) null, -120, -15);
         }
         return null != this.findFocusTarget((byte) -99) ? true : false;
     }
@@ -209,21 +209,21 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (renderPass == 0 &&
-            this.renderer != null) {
-            this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
+          this.renderer != null) {
+          this.renderer.drawWidget(parentX, -9, parentY, true, (UiWidget) (this));
         }
         int guardResidue = -58 % ((methodGuard - 1) / 43);
         DequeCursor childCursor = new DequeCursor(this.children);
         UiWidget child = (UiWidget) (childCursor.beginReverse(1));
         while (child != null) {
-            child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
-            child = (UiWidget) (childCursor.nextReverse(26));
+          child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
+          child = (UiWidget) (childCursor.nextReverse(26));
         }
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 14078) {
-            return;
+          return;
         }
         mustLogin2Texts = null;
         toServerListText = null;
@@ -254,8 +254,8 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         DequeCursor childCursor = new DequeCursor(this.children);
         UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
-            child.refreshLayout(116);
-            child = (UiWidget) (childCursor.nextForward((byte) 108));
+          child.refreshLayout(116);
+          child = (UiWidget) (childCursor.nextForward((byte) 108));
         }
         int guardResidue = 71 / ((methodGuard - 57) / 51);
     }
@@ -315,12 +315,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor childCursor = new DequeCursor(this.children);
         if (methodGuard > -122) {
-            themeCycleOrder = (int[]) null;
+          themeCycleOrder = (int[]) null;
         }
         UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
-            child.clearKeyboardFocus(-126);
-            child = (UiWidget) (childCursor.nextForward((byte) 121));
+          child.clearKeyboardFocus(-126);
+          child = (UiWidget) (childCursor.nextForward((byte) 121));
         }
     }
 
@@ -373,7 +373,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         super.setWidgetBounds(height, width, (byte) -21, y, x);
         if (methodGuard >= -6) {
-            this.getHoverText((byte) 85);
+          this.getHoverText((byte) 85);
         }
         this.refreshChildrenLayout((byte) 123);
     }
@@ -438,7 +438,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           while (child != null) {
             if (child.isLinked(120)) {
               if (child.hasKeyboardFocus((byte) 54) &&
-                  child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
+                child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
                 return true;
               }
               child = (UiWidget) (childCursor.nextForward((byte) 110));
@@ -543,12 +543,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
 
     final void addChild(byte methodGuard, UiWidget child) {
         try {
-            this.children.addLast(-113, child);
-            if (methodGuard >= -60) {
-                menuBackgroundSprite = (Sprite) null;
-            }
+          this.children.addLast(-113, child);
+          if (methodGuard >= -60) {
+            menuBackgroundSprite = (Sprite) null;
+          }
         } catch (RuntimeException childInsertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) childInsertionFailure), "ee.OA(" + methodGuard + ',' + (child != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) childInsertionFailure), "ee.OA(" + methodGuard + ',' + (child != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -571,7 +571,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           while (child != null) {
             if (child.isLinked(127)) {
               if (child.hasKeyboardFocus((byte) 54) &&
-                  child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY)) {
+                child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY)) {
                 return true;
               }
               child = (UiWidget) (childCursor.nextForward((byte) 124));

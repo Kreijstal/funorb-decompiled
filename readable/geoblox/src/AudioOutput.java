@@ -29,81 +29,81 @@ class AudioOutput {
 
     final static AudioOutput createOutput(PlatformTaskDispatcher taskDispatcher, java.awt.Component component, int outputSlot, int requestedBufferFrames) {
         try {
-            JavaSoundAudioOutput output = null;
-            Throwable ignoredOutputFailure = null;
-            JavaSoundAudioOutput allocatedOutput = null;
-            JavaSoundAudioOutput outputBeforeBufferAllocation = null;
-            int mixBlockFrames = 0;
-            int channelCount = 0;
-            JavaSoundAudioOutput outputBeforeReturn = null;
-            Throwable caughtOutputFailure = null;
-            if (sampleRateHz == 0) {
-              throw new IllegalStateException();
+          JavaSoundAudioOutput output = null;
+          Throwable ignoredOutputFailure = null;
+          JavaSoundAudioOutput allocatedOutput = null;
+          JavaSoundAudioOutput outputBeforeBufferAllocation = null;
+          int mixBlockFrames = 0;
+          int channelCount = 0;
+          JavaSoundAudioOutput outputBeforeReturn = null;
+          Throwable caughtOutputFailure = null;
+          if (sampleRateHz == 0) {
+            throw new IllegalStateException();
+          }
+          if (outputSlot >= 0 &&
+            outputSlot < 2) {
+            if (requestedBufferFrames < 256) {
+              requestedBufferFrames = 256;
             }
-            if (outputSlot >= 0 &&
-                outputSlot < 2) {
-              if (requestedBufferFrames < 256) {
-                requestedBufferFrames = 256;
+            try {
+              allocatedOutput = new JavaSoundAudioOutput();
+              output = allocatedOutput;
+              outputBeforeBufferAllocation = output;
+              mixBlockFrames = 256;
+              if (!stereoEnabled) {
+                channelCount = 1;
+              } else {
+                channelCount = 2;
               }
-              try {
-                allocatedOutput = new JavaSoundAudioOutput();
-                output = allocatedOutput;
-                outputBeforeBufferAllocation = output;
-                mixBlockFrames = 256;
-                if (!stereoEnabled) {
-                  channelCount = 1;
-                } else {
-                  channelCount = 2;
-                }
-                ((AudioOutput) ((Object) outputBeforeBufferAllocation)).mixBuffer = new int[mixBlockFrames * channelCount];
-                ((AudioOutput) ((Object) output)).requestedBufferFrames = requestedBufferFrames;
-                ((AudioOutput) ((Object) output)).initializeDevice(component);
-                ((AudioOutput) ((Object) output)).bufferCapacityFrames = (requestedBufferFrames & -1024) + 1024;
-                if (((AudioOutput) ((Object) output)).bufferCapacityFrames > 16384) {
-                  ((AudioOutput) ((Object) output)).bufferCapacityFrames = 16384;
-                }
-                ((AudioOutput) ((Object) output)).openDevice(((AudioOutput) ((Object) output)).bufferCapacityFrames);
-                if (serviceThreadPriority > 0 &&
-                    sharedAudioService == null) {
-                  sharedAudioService = new AudioService();
-                  sharedAudioService.taskDispatcher = taskDispatcher;
-                  taskDispatcher.startThread((Runnable) ((Object) sharedAudioService), 0, serviceThreadPriority);
-                }
-                if (sharedAudioService != null) {
-                  if (sharedAudioService.outputs[outputSlot] != null) {
-                    throw new IllegalArgumentException();
-                  }
-                  sharedAudioService.outputs[outputSlot] = (AudioOutput) ((Object) allocatedOutput);
-                }
-                outputBeforeReturn = output;
-                return (AudioOutput) ((Object) outputBeforeReturn);
-              } catch (java.lang.Throwable outputCreationFailure) {
-                caughtOutputFailure = outputCreationFailure;
-                ignoredOutputFailure = caughtOutputFailure;
-                return new AudioOutput();
+              ((AudioOutput) ((Object) outputBeforeBufferAllocation)).mixBuffer = new int[mixBlockFrames * channelCount];
+              ((AudioOutput) ((Object) output)).requestedBufferFrames = requestedBufferFrames;
+              ((AudioOutput) ((Object) output)).initializeDevice(component);
+              ((AudioOutput) ((Object) output)).bufferCapacityFrames = (requestedBufferFrames & -1024) + 1024;
+              if (((AudioOutput) ((Object) output)).bufferCapacityFrames > 16384) {
+                ((AudioOutput) ((Object) output)).bufferCapacityFrames = 16384;
               }
+              ((AudioOutput) ((Object) output)).openDevice(((AudioOutput) ((Object) output)).bufferCapacityFrames);
+              if (serviceThreadPriority > 0 &&
+                sharedAudioService == null) {
+                sharedAudioService = new AudioService();
+                sharedAudioService.taskDispatcher = taskDispatcher;
+                taskDispatcher.startThread((Runnable) ((Object) sharedAudioService), 0, serviceThreadPriority);
+              }
+              if (sharedAudioService != null) {
+                if (sharedAudioService.outputs[outputSlot] != null) {
+                  throw new IllegalArgumentException();
+                }
+                sharedAudioService.outputs[outputSlot] = (AudioOutput) ((Object) allocatedOutput);
+              }
+              outputBeforeReturn = output;
+              return (AudioOutput) ((Object) outputBeforeReturn);
+            } catch (java.lang.Throwable outputCreationFailure) {
+              caughtOutputFailure = outputCreationFailure;
+              ignoredOutputFailure = caughtOutputFailure;
+              return new AudioOutput();
             }
-            throw new IllegalArgumentException();
+          }
+          throw new IllegalArgumentException();
         } catch (RuntimeException | Error uncheckedOutputFailure) {
-            throw uncheckedOutputFailure;
+          throw uncheckedOutputFailure;
         } catch (Throwable checkedOutputFailure) {
-            throw new RuntimeException(checkedOutputFailure);
+          throw new RuntimeException(checkedOutputFailure);
         }
     }
 
     final synchronized void flushAndMarkDrainCheck() {
         try {
-            this.skipNextDrainCheck = true;
-            try {
-                this.flushDevice();
-            } catch (Exception flushFailure) {
-                this.closeDevice();
-                this.reopenAtMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 2000L;
-            }
+          this.skipNextDrainCheck = true;
+          try {
+            this.flushDevice();
+          } catch (Exception flushFailure) {
+            this.closeDevice();
+            this.reopenAtMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520) + 2000L;
+          }
         } catch (RuntimeException | Error uncheckedFlushFailure) {
-            throw uncheckedFlushFailure;
+          throw uncheckedFlushFailure;
         } catch (Throwable checkedFlushFailure) {
-            throw new RuntimeException(checkedFlushFailure);
+          throw new RuntimeException(checkedFlushFailure);
         }
     }
 
@@ -147,12 +147,12 @@ class AudioOutput {
     private final static void resetStreamScheduling(PcmStream stream) {
         stream.activeForMixing = false;
         if (stream.sample != null) {
-            stream.sample.scheduledWork = 0;
+          stream.sample.scheduledWork = 0;
         }
         PcmStream childStream = stream.firstChildStream();
         while (childStream != null) {
-            AudioOutput.resetStreamScheduling(childStream);
-            childStream = stream.nextChildStream();
+          AudioOutput.resetStreamScheduling(childStream);
+          childStream = stream.nextChildStream();
         }
     }
 
@@ -162,7 +162,7 @@ class AudioOutput {
 
     final static void configureAudio(int sampleRate, boolean stereo, int threadPriority) {
         if (sampleRate < 8000 || sampleRate > 48000) {
-            throw new IllegalArgumentException();
+          throw new IllegalArgumentException();
         }
         sampleRateHz = sampleRate;
         stereoEnabled = stereo ? true : false;
@@ -171,96 +171,96 @@ class AudioOutput {
 
     final synchronized void serviceOutput() {
         try {
-            Throwable caughtServiceFailure = null;
-            long nowMillis = 0L;
-            Exception serviceFailure = null;
-            int queuedFrames = 0;
-            int targetFrames = 0;
-            if (this.disposed) {
-              return;
+          Throwable caughtServiceFailure = null;
+          long nowMillis = 0L;
+          Exception serviceFailure = null;
+          int queuedFrames = 0;
+          int targetFrames = 0;
+          if (this.disposed) {
+            return;
+          }
+          nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+          try {
+            if (nowMillis > this.streamTimeMillis + 6000L) {
+              this.streamTimeMillis = nowMillis - 6000L;
             }
-            nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-            try {
-              if (nowMillis > this.streamTimeMillis + 6000L) {
-                this.streamTimeMillis = nowMillis - 6000L;
+            while (nowMillis > this.streamTimeMillis + 5000L) {
+              this.skipFrames(256);
+              this.streamTimeMillis = this.streamTimeMillis + (long)(256000 / sampleRateHz);
+              nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+            }
+          } catch (java.lang.Exception catchUpFailure) {
+            caughtServiceFailure = catchUpFailure;
+            serviceFailure = (Exception) (Object) caughtServiceFailure;
+            this.streamTimeMillis = nowMillis;
+          }
+          if (this.mixBuffer == null) {
+            return;
+          }
+          try {
+            if (this.reopenAtMillis != 0L) {
+              if (nowMillis < this.reopenAtMillis) {
+                return;
               }
-              while (nowMillis > this.streamTimeMillis + 5000L) {
-                this.skipFrames(256);
-                this.streamTimeMillis = this.streamTimeMillis + (long)(256000 / sampleRateHz);
-                nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+              this.openDevice(this.bufferCapacityFrames);
+              this.reopenAtMillis = 0L;
+              this.skipNextDrainCheck = true;
+            }
+            queuedFrames = this.getQueuedFrames();
+            if (this.lastBufferedFrames - queuedFrames > this.maxDrainedFrames) {
+              this.maxDrainedFrames = this.lastBufferedFrames - queuedFrames;
+            }
+            targetFrames = this.requestedBufferFrames + this.adaptiveBufferFrames;
+            if (targetFrames + 256 > 16384) {
+              targetFrames = 16128;
+            }
+            if (targetFrames + 256 > this.bufferCapacityFrames) {
+              this.bufferCapacityFrames = this.bufferCapacityFrames + 1024;
+              if (this.bufferCapacityFrames > 16384) {
+                this.bufferCapacityFrames = 16384;
               }
-            } catch (java.lang.Exception catchUpFailure) {
-              caughtServiceFailure = catchUpFailure;
-              serviceFailure = (Exception) (Object) caughtServiceFailure;
-              this.streamTimeMillis = nowMillis;
+              this.closeDevice();
+              this.openDevice(this.bufferCapacityFrames);
+              queuedFrames = 0;
+              this.skipNextDrainCheck = true;
+              if (targetFrames + 256 > this.bufferCapacityFrames) {
+                targetFrames = this.bufferCapacityFrames - 256;
+                this.adaptiveBufferFrames = targetFrames - this.requestedBufferFrames;
+              }
             }
-            if (this.mixBuffer == null) {
-              return;
+            while (queuedFrames < targetFrames) {
+              this.mixBlock(this.mixBuffer, 256);
+              this.writeMixBlock();
+              queuedFrames += 256;
             }
-            try {
-              if (this.reopenAtMillis != 0L) {
-                if (nowMillis < this.reopenAtMillis) {
+            if (nowMillis > this.nextDrainCheckMillis) {
+              if (this.skipNextDrainCheck) {
+                this.skipNextDrainCheck = false;
+              } else {
+                if (this.maxDrainedFrames == 0 &&
+                  this.previousMaxDrainedFrames == 0) {
+                  this.closeDevice();
+                  this.reopenAtMillis = nowMillis + 2000L;
                   return;
                 }
-                this.openDevice(this.bufferCapacityFrames);
-                this.reopenAtMillis = 0L;
-                this.skipNextDrainCheck = true;
+                this.adaptiveBufferFrames = Math.min(this.previousMaxDrainedFrames, this.maxDrainedFrames);
+                this.previousMaxDrainedFrames = this.maxDrainedFrames;
               }
-              queuedFrames = this.getQueuedFrames();
-              if (this.lastBufferedFrames - queuedFrames > this.maxDrainedFrames) {
-                this.maxDrainedFrames = this.lastBufferedFrames - queuedFrames;
-              }
-              targetFrames = this.requestedBufferFrames + this.adaptiveBufferFrames;
-              if (targetFrames + 256 > 16384) {
-                targetFrames = 16128;
-              }
-              if (targetFrames + 256 > this.bufferCapacityFrames) {
-                this.bufferCapacityFrames = this.bufferCapacityFrames + 1024;
-                if (this.bufferCapacityFrames > 16384) {
-                  this.bufferCapacityFrames = 16384;
-                }
-                this.closeDevice();
-                this.openDevice(this.bufferCapacityFrames);
-                queuedFrames = 0;
-                this.skipNextDrainCheck = true;
-                if (targetFrames + 256 > this.bufferCapacityFrames) {
-                  targetFrames = this.bufferCapacityFrames - 256;
-                  this.adaptiveBufferFrames = targetFrames - this.requestedBufferFrames;
-                }
-              }
-              while (queuedFrames < targetFrames) {
-                this.mixBlock(this.mixBuffer, 256);
-                this.writeMixBlock();
-                queuedFrames += 256;
-              }
-              if (nowMillis > this.nextDrainCheckMillis) {
-                if (this.skipNextDrainCheck) {
-                  this.skipNextDrainCheck = false;
-                } else {
-                  if (this.maxDrainedFrames == 0 &&
-                      this.previousMaxDrainedFrames == 0) {
-                    this.closeDevice();
-                    this.reopenAtMillis = nowMillis + 2000L;
-                    return;
-                  }
-                  this.adaptiveBufferFrames = Math.min(this.previousMaxDrainedFrames, this.maxDrainedFrames);
-                  this.previousMaxDrainedFrames = this.maxDrainedFrames;
-                }
-                this.maxDrainedFrames = 0;
-                this.nextDrainCheckMillis = nowMillis + 2000L;
-              }
-              this.lastBufferedFrames = queuedFrames;
-            } catch (java.lang.Exception deviceServiceFailure) {
-              caughtServiceFailure = deviceServiceFailure;
-              serviceFailure = (Exception) (Object) caughtServiceFailure;
-              this.closeDevice();
-              this.reopenAtMillis = nowMillis + 2000L;
+              this.maxDrainedFrames = 0;
+              this.nextDrainCheckMillis = nowMillis + 2000L;
             }
-            return;
+            this.lastBufferedFrames = queuedFrames;
+          } catch (java.lang.Exception deviceServiceFailure) {
+            caughtServiceFailure = deviceServiceFailure;
+            serviceFailure = (Exception) (Object) caughtServiceFailure;
+            this.closeDevice();
+            this.reopenAtMillis = nowMillis + 2000L;
+          }
+          return;
         } catch (RuntimeException | Error uncheckedServiceFailure) {
-            throw uncheckedServiceFailure;
+          throw uncheckedServiceFailure;
         } catch (Throwable checkedServiceFailure) {
-            throw new RuntimeException(checkedServiceFailure);
+          throw new RuntimeException(checkedServiceFailure);
         }
     }
 
@@ -268,9 +268,9 @@ class AudioOutput {
         int priorityBucket = priority >> 5;
         PcmStream previousTail = this.priorityQueueTails[priorityBucket];
         if (previousTail == null) {
-            this.priorityQueueHeads[priorityBucket] = stream;
+          this.priorityQueueHeads[priorityBucket] = stream;
         } else {
-            previousTail.scheduledNextStream = stream;
+          previousTail.scheduledNextStream = stream;
         }
         this.priorityQueueTails[priorityBucket] = stream;
         stream.scheduledPriority = priority;
@@ -305,7 +305,7 @@ class AudioOutput {
         ArrayOperations.clearInts(destination, 0, sampleCount);
         this.framesUntilReschedule = this.framesUntilReschedule - frameCount;
         if (this.rootStream != null &&
-            this.framesUntilReschedule <= 0) {
+          this.framesUntilReschedule <= 0) {
           this.framesUntilReschedule = this.framesUntilReschedule + (sampleRateHz >> 4);
           AudioOutput.resetStreamScheduling(this.rootStream);
           this.enqueueByPriority(this.rootStream, this.rootStream.getSchedulingPriority());
@@ -332,7 +332,7 @@ class AudioOutput {
                   while (stream != null) {
                     sample = stream.sample;
                     if (sample != null &&
-                        sample.scheduledWork > sampleWorkThreshold) {
+                      sample.scheduledWork > sampleWorkThreshold) {
                       pendingBuckets = pendingBuckets | 1 << priorityBucket;
                       previousScheduledStream = stream;
                       stream = stream.scheduledNextStream;
@@ -402,11 +402,11 @@ class AudioOutput {
     private final void skipFrames(int frameCount) {
         this.framesUntilReschedule = this.framesUntilReschedule - frameCount;
         if (this.framesUntilReschedule < 0) {
-            this.framesUntilReschedule = 0;
+          this.framesUntilReschedule = 0;
         }
         if (this.rootStream != null) {
-            this.rootStream.skipFrames(frameCount);
-            return;
+          this.rootStream.skipFrames(frameCount);
+          return;
         }
     }
 

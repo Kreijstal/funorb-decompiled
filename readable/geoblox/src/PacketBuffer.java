@@ -48,7 +48,7 @@ final class PacketBuffer extends ByteArrayBuffer {
     final static int divideFloorWithPositiveDivisor(int divisor, byte methodGuard, int numerator) {
         int numeratorSign = numerator >>> 31;
         if (methodGuard != -6) {
-            PacketBuffer.resetClientOptionMask((byte) 101);
+          PacketBuffer.resetClientOptionMask((byte) 101);
         }
         return -numeratorSign + (numerator + numeratorSign) / divisor;
     }
@@ -56,18 +56,18 @@ final class PacketBuffer extends ByteArrayBuffer {
     final static void resetClientOptionMask(byte methodGuard) {
         ClientOptionSupport.clientOptionMask = 0;
         if (methodGuard != -13) {
-            PacketBuffer.divideFloorWithPositiveDivisor(106, (byte) 22, 96);
+          PacketBuffer.divideFloorWithPositiveDivisor(106, (byte) 22, 96);
         }
     }
 
     final void initializeCipher(int[] seed, boolean finishBitAccess) {
         try {
-            this.cipher = new PacketByteCipher(seed);
-            if (finishBitAccess) {
-                this.endBitAccess(-68);
-            }
+          this.cipher = new PacketByteCipher(seed);
+          if (finishBitAccess) {
+            this.endBitAccess(-68);
+          }
         } catch (RuntimeException cipherInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherInitializationFailure), "pk.JB(" + (seed != null ? "{...}" : "null") + ',' + finishBitAccess + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cipherInitializationFailure), "pk.JB(" + (seed != null ? "{...}" : "null") + ',' + finishBitAccess + ')');
         }
     }
 
@@ -98,7 +98,7 @@ final class PacketBuffer extends ByteArrayBuffer {
             }
             if (!SecondaryNodeHashTable.gameSoundPreparationFlags[soundIndexThenFlagReset]) {
               if (10 <= soundIndexThenFlagReset &&
-                  26 >= soundIndexThenFlagReset) {
+                26 >= soundIndexThenFlagReset) {
                 sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getVorbisSampleByName(-1879044097, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);
               } else {
                 sampleBeforeResampling = GameAudioState.gameSoundSampleCache.getSynthesizedSampleByName(1, SessionSocketSupport.gameSoundResourceNames[soundIndexThenFlagReset]);
@@ -129,7 +129,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         connectivityVisitedByEntityId = null;
         resultBubbleSprite = null;
         if (methodGuard != 0) {
-            debugCommandCharacterWindow = (String) null;
+          debugCommandCharacterWindow = (String) null;
         }
         debugCommandCharacterWindow = null;
         domainLabelAlphanumericCharacters = null;
@@ -141,22 +141,22 @@ final class PacketBuffer extends ByteArrayBuffer {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int byteIndex = this.bitPosition >> 3;
         if (methodGuard != -17) {
-            return -69;
+          return -69;
         }
         int bitsAvailableInByte = 8 - (7 & this.bitPosition);
         int readValue = 0;
         this.bitPosition = this.bitPosition + remainingBitCount;
         while (bitsAvailableInByte < remainingBitCount) {
-            consumedByteIndex = byteIndex;
-            byteIndex++;
-            readValue = readValue + ((this.bytes[consumedByteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]) << -bitsAvailableInByte + remainingBitCount);
-            remainingBitCount = remainingBitCount - bitsAvailableInByte;
-            bitsAvailableInByte = 8;
+          consumedByteIndex = byteIndex;
+          byteIndex++;
+          readValue = readValue + ((this.bytes[consumedByteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]) << -bitsAvailableInByte + remainingBitCount);
+          remainingBitCount = remainingBitCount - bitsAvailableInByte;
+          bitsAvailableInByte = 8;
         }
         if (remainingBitCount == bitsAvailableInByte) {
-            readValue = readValue + (this.bytes[byteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]);
+          readValue = readValue + (this.bytes[byteIndex] & MidiPcmStream.lowBitMasks[bitsAvailableInByte]);
         } else {
-            readValue = readValue + (this.bytes[byteIndex] >> bitsAvailableInByte - remainingBitCount & MidiPcmStream.lowBitMasks[remainingBitCount]);
+          readValue = readValue + (this.bytes[byteIndex] >> bitsAvailableInByte - remainingBitCount & MidiPcmStream.lowBitMasks[remainingBitCount]);
         }
         return readValue;
     }
@@ -166,20 +166,20 @@ final class PacketBuffer extends ByteArrayBuffer {
         this.position = this.position + 1;
         this.bytes[packetByteIndex] = (byte)(value + this.cipher.nextInt(0));
         if (methodGuard >= -12) {
-            PacketBuffer.prepareThemeSoundSamples(-6, -80);
+          PacketBuffer.prepareThemeSoundSamples(-6, -80);
         }
     }
 
     final void endBitAccess(int methodGuard) {
         this.position = (7 + this.bitPosition) / 8;
         if (methodGuard != -16989) {
-            this.cipher = (PacketByteCipher) null;
+          this.cipher = (PacketByteCipher) null;
         }
     }
 
     final int readCipherByte(byte methodGuard) {
         if (methodGuard != 122) {
-            this.beginBitAccess(-51);
+          this.beginBitAccess(-51);
         }
         int packetByteIndex = this.position;
         this.position = this.position + 1;

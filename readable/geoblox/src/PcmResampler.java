@@ -19,32 +19,32 @@ final class PcmResampler {
 
     final int scaleSamplePosition(int samplePosition, int methodGuard) {
         if (methodGuard != 6) {
-            createAgeText = (String) null;
+          createAgeText = (String) null;
         }
         if (this.filterCoefficients != null) {
-            samplePosition = (int)((long)samplePosition * (long)this.outputRateRatio / (long)this.inputRateRatio) + 6;
+          samplePosition = (int)((long)samplePosition * (long)this.outputRateRatio / (long)this.inputRateRatio) + 6;
         }
         return samplePosition;
     }
 
     final static void renderAccountUiBackgroundAndDialogs(boolean unusedRenderOption, boolean dimExistingFramebuffer, byte methodGuard) {
         if (dimExistingFramebuffer) {
-            SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
         } else {
-            SoftwareRasterizer.clearFramebuffer();
+          SoftwareRasterizer.clearFramebuffer();
         }
         if (methodGuard != -102) {
-            return;
+          return;
         }
         ValidationMessageWidget.renderAccountDialogLayer(dimExistingFramebuffer, false);
     }
 
     final int scaleSampleRate(int methodGuard, int sampleRateHz) {
         if (methodGuard != -128) {
-            this.scaleSamplePosition(23, -122);
+          this.scaleSamplePosition(23, -122);
         }
         if (null != this.filterCoefficients) {
-            sampleRateHz = (int)((long)sampleRateHz * (long)this.outputRateRatio / (long)this.inputRateRatio);
+          sampleRateHz = (int)((long)sampleRateHz * (long)this.outputRateRatio / (long)this.inputRateRatio);
         }
         return sampleRateHz;
     }
@@ -54,7 +54,7 @@ final class PcmResampler {
         highscoreFriendTipText = null;
         fullscreenBeforeAcceptText = null;
         if (!methodGuard) {
-            PcmResampler.releaseStaticReferences(false);
+          PcmResampler.releaseStaticReferences(false);
         }
         createAgeText = null;
         createNewsOptInText = null;
@@ -95,7 +95,7 @@ final class PcmResampler {
             sincAngle = ((double)tapIndex - filterCenter) * 3.141592653589793;
             weightedCoefficient = rateScale;
             if (sincAngle < -0.0001 ||
-                0.0001 < sincAngle) {
+              0.0001 < sincAngle) {
               weightedCoefficient = weightedCoefficient * (Math.sin(sincAngle) / sincAngle);
             }
             weightedCoefficient = weightedCoefficient * (Math.cos(0.2243994752564138 * (-filterCenter + (double)tapIndex)) * 0.46 + 0.54);
@@ -190,7 +190,7 @@ final class PcmResampler {
         pointerYSnapshot = 0;
         availableScorePopups = new IntrusiveDeque();
         for (popupPoolIndex = 0; popupPoolIndex < 20; popupPoolIndex++) {
-            availableScorePopups.addLast(-83, new ScorePopup());
+          availableScorePopups.addLast(-83, new ScorePopup());
         }
         tooltipShowDurationTicks = 250;
     }

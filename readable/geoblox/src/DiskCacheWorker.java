@@ -17,12 +17,12 @@ final class DiskCacheWorker implements Runnable {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard < -35) {
-            sharedPcmMixerReference = null;
-            avatarTintPalette = null;
-            sharedUiTheme = null;
-            createPasswordContainsEmailAlertText = null;
-            idleClientFlowToken = null;
-            return;
+          sharedPcmMixerReference = null;
+          avatarTintPalette = null;
+          sharedUiTheme = null;
+          createPasswordContainsEmailAlertText = null;
+          idleClientFlowToken = null;
+          return;
         }
         sharedPcmMixerReference = (PcmStreamMixer) null;
         sharedPcmMixerReference = null;
@@ -101,8 +101,8 @@ final class DiskCacheWorker implements Runnable {
             queuedRequest = (DiskArchiveRequest) (this.requestQueue.firstForIteration((byte) 121));
             while (queuedRequest != null) {
               if ((long)groupId == queuedRequest.secondaryKey &&
-                  queuedRequest.diskCache == diskCache &&
-                  2 == queuedRequest.operationType) {
+                queuedRequest.diskCache == diskCache &&
+                2 == queuedRequest.operationType) {
                 request.bytes = queuedRequest.bytes;
                 request.pending = false;
                 reusedWriteRequestBeforeReturn = request;
@@ -211,29 +211,29 @@ final class DiskCacheWorker implements Runnable {
 
     final static void applyAccountCreationGuard(int methodGuard, int unusedArgument) {
         if (methodGuard < 87) {
-            String unusedNullTextSnapshot = (String) null;
-            DiskCacheWorker.advanceAccountCreationRequest((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
+          String unusedNullTextSnapshot = (String) null;
+          DiskCacheWorker.advanceAccountCreationRequest((byte) -87, (String) null, -112, 119, (String) null, (String) null, false);
         }
     }
 
     final void shutdown(byte methodGuard) {
         try {
-            this.stopRequested = true;
-            synchronized (this.requestQueue) {
-                this.requestQueue.notifyAll();
-            }
-            if (methodGuard != 51) {
-                return;
-            }
-            try {
-                this.workerThread.join();
-            } catch (InterruptedException joinInterruptedException) {
-            }
-            this.workerThread = null;
+          this.stopRequested = true;
+          synchronized (this.requestQueue) {
+            this.requestQueue.notifyAll();
+          }
+          if (methodGuard != 51) {
+            return;
+          }
+          try {
+            this.workerThread.join();
+          } catch (InterruptedException joinInterruptedException) {
+          }
+          this.workerThread = null;
         } catch (RuntimeException | Error uncheckedShutdownFailure) {
-            throw uncheckedShutdownFailure;
+          throw uncheckedShutdownFailure;
         } catch (Throwable checkedShutdownFailure) {
-            throw new RuntimeException(checkedShutdownFailure);
+          throw new RuntimeException(checkedShutdownFailure);
         }
     }
 
@@ -273,67 +273,67 @@ final class DiskCacheWorker implements Runnable {
 
     public final void run() {
         try {
-            InterruptedException waitInterruptedException = null;
-            Object queueMonitor = null;
-            int unusedClientGuardSnapshot = 0;
-            DiskArchiveRequest request = null;
-            int requestSelected = 0;
-            int completeRequestAfterOperation = 0;
-            Throwable caughtWorkerFailure = null;
-            Exception operationFailure = null;
-            String unusedFailureMessageSnapshot = null;
-            unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-            while (!this.stopRequested) {
-              queueMonitor = this.requestQueue;
-              synchronized (queueMonitor) {
-                request = (DiskArchiveRequest) (this.requestQueue.removeFirst(true));
-                if (request == null) {
-                  try {
-                    this.requestQueue.wait();
-                  } catch (java.lang.InterruptedException waitInterruption) {
-                    caughtWorkerFailure = waitInterruption;
-                    waitInterruptedException = (InterruptedException) (Object) caughtWorkerFailure;
-                  }
-                  requestSelected = 0;
-                } else {
-                  this.queuedRequestCount = this.queuedRequestCount - 1;
-                  requestSelected = 1;
+          InterruptedException waitInterruptedException = null;
+          Object queueMonitor = null;
+          int unusedClientGuardSnapshot = 0;
+          DiskArchiveRequest request = null;
+          int requestSelected = 0;
+          int completeRequestAfterOperation = 0;
+          Throwable caughtWorkerFailure = null;
+          Exception operationFailure = null;
+          String unusedFailureMessageSnapshot = null;
+          unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
+          while (!this.stopRequested) {
+            queueMonitor = this.requestQueue;
+            synchronized (queueMonitor) {
+              request = (DiskArchiveRequest) (this.requestQueue.removeFirst(true));
+              if (request == null) {
+                try {
+                  this.requestQueue.wait();
+                } catch (java.lang.InterruptedException waitInterruption) {
+                  caughtWorkerFailure = waitInterruption;
+                  waitInterruptedException = (InterruptedException) (Object) caughtWorkerFailure;
                 }
+                requestSelected = 0;
+              } else {
+                this.queuedRequestCount = this.queuedRequestCount - 1;
+                requestSelected = 1;
               }
-              if (requestSelected == 0) {
-                continue;
-              }
-              try {
-                diskRequestOperationDispatch: {
-                  if (request.operationType != 2) {
-                    if (3 == request.operationType) {
-                      request.bytes = request.diskCache.read((int)request.secondaryKey, (byte) -76);
-                      completeRequestAfterOperation = 1;
-                      break diskRequestOperationDispatch;
-                    }
-                    request.pending = false;
-                  } else {
-                    request.diskCache.write(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
-                    request.pending = false;
-                  }
-                  completeRequestAfterOperation = 0;
-                }
-              } catch (java.lang.Exception requestOperationFailure) {
-                caughtWorkerFailure = requestOperationFailure;
-                operationFailure = (Exception) (Object) caughtWorkerFailure;
-                unusedFailureMessageSnapshot = (String) null;
-                IterableNodeHashTable.reportClientError((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
-                completeRequestAfterOperation = 1;
-              }
-              if (completeRequestAfterOperation == 0) {
-                continue;
-              }
-              request.pending = false;
             }
+            if (requestSelected == 0) {
+              continue;
+            }
+            try {
+              diskRequestOperationDispatch: {
+                if (request.operationType != 2) {
+                  if (3 == request.operationType) {
+                    request.bytes = request.diskCache.read((int)request.secondaryKey, (byte) -76);
+                    completeRequestAfterOperation = 1;
+                    break diskRequestOperationDispatch;
+                  }
+                  request.pending = false;
+                } else {
+                  request.diskCache.write(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
+                  request.pending = false;
+                }
+                completeRequestAfterOperation = 0;
+              }
+            } catch (java.lang.Exception requestOperationFailure) {
+              caughtWorkerFailure = requestOperationFailure;
+              operationFailure = (Exception) (Object) caughtWorkerFailure;
+              unusedFailureMessageSnapshot = (String) null;
+              IterableNodeHashTable.reportClientError((Throwable) ((Object) operationFailure), (String) null, (byte) 125);
+              completeRequestAfterOperation = 1;
+            }
+            if (completeRequestAfterOperation == 0) {
+              continue;
+            }
+            request.pending = false;
+          }
         } catch (RuntimeException | Error uncheckedWorkerFailure) {
-            throw uncheckedWorkerFailure;
+          throw uncheckedWorkerFailure;
         } catch (Throwable checkedWorkerFailure) {
-            throw new RuntimeException(checkedWorkerFailure);
+          throw new RuntimeException(checkedWorkerFailure);
         }
     }
 
@@ -343,16 +343,16 @@ final class DiskCacheWorker implements Runnable {
         this.queuedRequestCount = 0;
         this.stopRequested = false;
         try {
-            threadTask = taskDispatcher.startThread((Runnable) (this), 0, 5);
-            while (threadTask.status == 0) {
-                ByteTextDecodingSupport.sleepMillis(0, 10L);
-            }
-            if (2 == threadTask.status) {
-                throw new RuntimeException();
-            }
-            this.workerThread = (Thread) (threadTask.result);
+          threadTask = taskDispatcher.startThread((Runnable) (this), 0, 5);
+          while (threadTask.status == 0) {
+            ByteTextDecodingSupport.sleepMillis(0, 10L);
+          }
+          if (2 == threadTask.status) {
+            throw new RuntimeException();
+          }
+          this.workerThread = (Thread) (threadTask.result);
         } catch (RuntimeException constructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "uf.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "uf.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ')');
         }
     }
 

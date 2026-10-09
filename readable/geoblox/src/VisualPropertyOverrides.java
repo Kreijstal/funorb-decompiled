@@ -191,7 +191,7 @@ class VisualPropertyOverrides extends VisualPropertyNode {
     public static void releaseVisualOverrideSharedResources(boolean preserveLoginContinueAndSparkleResources) {
         connectionLostWithReasonText = null;
         if (preserveLoginContinueAndSparkleResources) {
-            return;
+          return;
         }
         invalidUserOrPasswordText = null;
         continueText = null;

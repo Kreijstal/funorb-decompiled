@@ -17,9 +17,9 @@ final class SettingsCookieSupport {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if ((0 >= character ||
-                128 <= character) &&
-              (character < 160 ||
-                255 < character)) {
+            128 <= character) &&
+            (character < 160 ||
+            255 < character)) {
             if (methodGuard != -112) {
               quitText = (String) null;
             }
@@ -48,51 +48,51 @@ final class SettingsCookieSupport {
         quitText = null;
         currentTooltipText = null;
         if (!methodGuard) {
-            SettingsCookieSupport.clearSettingsCookieTexts(false);
+          SettingsCookieSupport.clearSettingsCookieTexts(false);
         }
     }
 
     final static void storeSettingsCookie(int methodGuard, String settings, java.applet.Applet applet) {
         try {
-            String cookiePrefix = null;
-            String unusedCookiePrefixSnapshot = null;
-            String cookieHost = null;
-            String cookieWithoutExpiry = null;
-            String unusedCookiePrefixCopy;
-            String unusedCookieDomainSnapshot;
-            String unusedCookieDomainCopy;
-            String unusedSettingsHeaderSnapshot;
-            String unusedSettingsHeaderCopy;
-            String settingsCookieAssignmentValue;
+          String cookiePrefix = null;
+          String unusedCookiePrefixSnapshot = null;
+          String cookieHost = null;
+          String cookieWithoutExpiry = null;
+          String unusedCookiePrefixCopy;
+          String unusedCookieDomainSnapshot;
+          String unusedCookieDomainCopy;
+          String unusedSettingsHeaderSnapshot;
+          String unusedSettingsHeaderCopy;
+          String settingsCookieAssignmentValue;
+          try {
+            NetworkArchiveRequest.settingsCookieValue = settings;
             try {
-                NetworkArchiveRequest.settingsCookieValue = settings;
-                try {
-                    cookiePrefix = applet.getParameter("cookieprefix");
-                    unusedCookiePrefixSnapshot = cookiePrefix;
-                    unusedCookiePrefixCopy = cookiePrefix;
-                    cookieHost = applet.getParameter("cookiehost");
-                    unusedCookieDomainSnapshot = cookieHost;
-                    unusedCookieDomainCopy = cookieHost;
-                    cookieWithoutExpiry = cookiePrefix + "settings=" + settings + "; version=1; path=/; domain=" + cookieHost;
-                    unusedSettingsHeaderSnapshot = cookieWithoutExpiry;
-                    unusedSettingsHeaderCopy = cookieWithoutExpiry;
-                    if (settings.length() != 0) {
-                        settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -58, ClientClockSupport.correctedCurrentTimeMillis(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
-                    } else {
-                        settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    int guardResidue = -93 % ((-64 - methodGuard) / 61);
-                    AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + settingsCookieAssignmentValue + "\"", (byte) -92);
-                } catch (Throwable ignoredCookieWriteFailure) {
-                }
-                ByteStorage.updatePageNavigationLinks(applet, 20000000);
-            } catch (RuntimeException settingsFailureForContext) {
-                throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) settingsFailureForContext), "tc.C(" + methodGuard + ',' + (settings != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ')');
+              cookiePrefix = applet.getParameter("cookieprefix");
+              unusedCookiePrefixSnapshot = cookiePrefix;
+              unusedCookiePrefixCopy = cookiePrefix;
+              cookieHost = applet.getParameter("cookiehost");
+              unusedCookieDomainSnapshot = cookieHost;
+              unusedCookieDomainCopy = cookieHost;
+              cookieWithoutExpiry = cookiePrefix + "settings=" + settings + "; version=1; path=/; domain=" + cookieHost;
+              unusedSettingsHeaderSnapshot = cookieWithoutExpiry;
+              unusedSettingsHeaderCopy = cookieWithoutExpiry;
+              if (settings.length() != 0) {
+                settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=" + GmtTimestampSupport.formatGmtTimestamp((byte) -58, ClientClockSupport.correctedCurrentTimeMillis(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
+              } else {
+                settingsCookieAssignmentValue = cookieWithoutExpiry + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              int guardResidue = -93 % ((-64 - methodGuard) / 61);
+              AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + settingsCookieAssignmentValue + "\"", (byte) -92);
+            } catch (Throwable ignoredCookieWriteFailure) {
             }
+            ByteStorage.updatePageNavigationLinks(applet, 20000000);
+          } catch (RuntimeException settingsFailureForContext) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) settingsFailureForContext), "tc.C(" + methodGuard + ',' + (settings != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ')');
+          }
         } catch (RuntimeException | Error uncheckedSettingsFailure) {
-            throw uncheckedSettingsFailure;
+          throw uncheckedSettingsFailure;
         } catch (Throwable checkedSettingsFailure) {
-            throw new RuntimeException(checkedSettingsFailure);
+          throw new RuntimeException(checkedSettingsFailure);
         }
     }
 

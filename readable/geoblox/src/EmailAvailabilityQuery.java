@@ -11,7 +11,7 @@ final class EmailAvailabilityQuery {
 
     final void complete(byte methodGuard, boolean available) {
         if (methodGuard > -47) {
-            return;
+          return;
         }
         this.available = available ? true : false;
         this.completed = true;
@@ -23,59 +23,59 @@ final class EmailAvailabilityQuery {
 
     final static void navigateToReloadPage(java.applet.Applet applet, boolean skipNavigation) {
         try {
-            String documentFile = null;
-            Exception printedNavigationFailure = null;
-            RuntimeException navigationFailureForContext = null;
-            int queryStartIndex = 0;
-            String reloadRelativeUrl = null;
-            java.net.URL reloadUrl = null;
-            RuntimeException navigationFailureBeforeDescription = null;
-            StringBuilder navigationMessagePrefix = null;
-            String appletDescription = null;
-            Throwable caughtNavigationThrowable = null;
+          String documentFile = null;
+          Exception printedNavigationFailure = null;
+          RuntimeException navigationFailureForContext = null;
+          int queryStartIndex = 0;
+          String reloadRelativeUrl = null;
+          java.net.URL reloadUrl = null;
+          RuntimeException navigationFailureBeforeDescription = null;
+          StringBuilder navigationMessagePrefix = null;
+          String appletDescription = null;
+          Throwable caughtNavigationThrowable = null;
+          try {
             try {
-              try {
-                if (skipNavigation) {
-                  return;
-                }
-                documentFile = applet.getDocumentBase().getFile();
-                queryStartIndex = documentFile.indexOf('?');
-                reloadRelativeUrl = "reload.ws";
-                if (queryStartIndex >= 0) {
-                  reloadRelativeUrl = reloadRelativeUrl + documentFile.substring(queryStartIndex);
-                }
-                reloadUrl = new java.net.URL(applet.getCodeBase(), reloadRelativeUrl);
-                applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(reloadUrl, 58, applet), "_self");
-                return;
-              } catch (java.lang.Exception navigationException) {
-                caughtNavigationThrowable = navigationException;
-                printedNavigationFailure = (Exception) (Object) caughtNavigationThrowable;
-                printedNavigationFailure.printStackTrace();
+              if (skipNavigation) {
                 return;
               }
-            } catch (java.lang.RuntimeException navigationFailure) {
-              caughtNavigationThrowable = navigationFailure;
-              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationThrowable;
-              navigationFailureBeforeDescription = navigationFailureForContext;
-              navigationMessagePrefix = new StringBuilder().append("h.A(");
-              if (applet == null) {
-                appletDescription = "null";
-              } else {
-                appletDescription = "{...}";
+              documentFile = applet.getDocumentBase().getFile();
+              queryStartIndex = documentFile.indexOf('?');
+              reloadRelativeUrl = "reload.ws";
+              if (queryStartIndex >= 0) {
+                reloadRelativeUrl = reloadRelativeUrl + documentFile.substring(queryStartIndex);
               }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeDescription), ((StringBuilder) (Object) navigationMessagePrefix).append(appletDescription).append(',').append(skipNavigation).append(')').toString());
+              reloadUrl = new java.net.URL(applet.getCodeBase(), reloadRelativeUrl);
+              applet.getAppletContext().showDocument(SessionGameApplet.applySessionOverridesToUrl(reloadUrl, 58, applet), "_self");
+              return;
+            } catch (java.lang.Exception navigationException) {
+              caughtNavigationThrowable = navigationException;
+              printedNavigationFailure = (Exception) (Object) caughtNavigationThrowable;
+              printedNavigationFailure.printStackTrace();
+              return;
             }
+          } catch (java.lang.RuntimeException navigationFailure) {
+            caughtNavigationThrowable = navigationFailure;
+            navigationFailureForContext = (RuntimeException) (Object) caughtNavigationThrowable;
+            navigationFailureBeforeDescription = navigationFailureForContext;
+            navigationMessagePrefix = new StringBuilder().append("h.A(");
+            if (applet == null) {
+              appletDescription = "null";
+            } else {
+              appletDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeDescription), ((StringBuilder) (Object) navigationMessagePrefix).append(appletDescription).append(',').append(skipNavigation).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedBoundaryFailure) {
-            throw uncheckedBoundaryFailure;
+          throw uncheckedBoundaryFailure;
         } catch (Throwable checkedBoundaryFailure) {
-            throw new RuntimeException(checkedBoundaryFailure);
+          throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 
     final boolean isCompleted(int methodGuard) {
         if (methodGuard > -74) {
-            this.isCompleted(19);
-            return this.completed;
+          this.isCompleted(19);
+          return this.completed;
         }
         return this.completed;
     }
@@ -106,17 +106,17 @@ final class EmailAvailabilityQuery {
 
     final boolean isAvailable(byte methodGuard) {
         if (methodGuard >= -45) {
-            java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
-            EmailAvailabilityQuery.navigateToReloadPage((java.applet.Applet) null, true);
-            return this.available;
+          java.applet.Applet nullAppletForInvalidGuard = (java.applet.Applet) null;
+          EmailAvailabilityQuery.navigateToReloadPage((java.applet.Applet) null, true);
+          return this.available;
         }
         return this.available;
     }
 
     final String candidateEmail(int methodGuard) {
         if (methodGuard != 19491) {
-            this.isAvailable((byte) -82);
-            return this.candidateEmail;
+          this.isAvailable((byte) -82);
+          return this.candidateEmail;
         }
         return this.candidateEmail;
     }
@@ -125,9 +125,9 @@ final class EmailAvailabilityQuery {
         this.completed = false;
         this.available = false;
         try {
-            this.candidateEmail = candidateEmail;
+          this.candidateEmail = candidateEmail;
         } catch (RuntimeException queryInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryInitializationFailure), "h.<init>(" + (candidateEmail != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) queryInitializationFailure), "h.<init>(" + (candidateEmail != null ? "{...}" : "null") + ')');
         }
     }
 

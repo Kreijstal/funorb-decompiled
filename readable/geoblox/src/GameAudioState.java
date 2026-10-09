@@ -10,9 +10,9 @@ final class GameAudioState {
     public static void releaseGameAudioResources(int methodGuard) {
         gameSoundSampleCache = null;
         if (methodGuard != -8297) {
-            gameSoundSampleCache = (SoundSampleCache) null;
-            germsMusicTrack = null;
-            return;
+          gameSoundSampleCache = (SoundSampleCache) null;
+          germsMusicTrack = null;
+          return;
         }
         germsMusicTrack = null;
     }

@@ -35,24 +35,24 @@ final class SoundEnvelope {
         this.segmentFractionsQ16 = new int[this.segmentCount];
         this.segmentLevels = new int[this.segmentCount];
         for (segmentIndex = 0; segmentIndex < this.segmentCount; segmentIndex++) {
-            this.segmentFractionsQ16[segmentIndex] = buffer.readUnsignedShortBE(true);
-            this.segmentLevels[segmentIndex] = buffer.readUnsignedShortBE(true);
+          this.segmentFractionsQ16[segmentIndex] = buffer.readUnsignedShortBE(true);
+          this.segmentLevels[segmentIndex] = buffer.readUnsignedShortBE(true);
         }
     }
 
     final int advance(int totalSamples) {
         int previousSegmentIndex = 0;
         if (this.elapsedSamples >= this.segmentEndSample) {
-            previousSegmentIndex = this.segmentIndex;
-            this.segmentIndex = this.segmentIndex + 1;
-            this.amplitudeQ15 = this.segmentLevels[previousSegmentIndex] << 15;
-            if (this.segmentIndex >= this.segmentCount) {
-                this.segmentIndex = this.segmentCount - 1;
-            }
-            this.segmentEndSample = (int)((double)this.segmentFractionsQ16[this.segmentIndex] / 65536.0 * (double)totalSamples);
-            if (this.segmentEndSample > this.elapsedSamples) {
-                this.amplitudeStepQ15 = ((this.segmentLevels[this.segmentIndex] << 15) - this.amplitudeQ15) / (this.segmentEndSample - this.elapsedSamples);
-            }
+          previousSegmentIndex = this.segmentIndex;
+          this.segmentIndex = this.segmentIndex + 1;
+          this.amplitudeQ15 = this.segmentLevels[previousSegmentIndex] << 15;
+          if (this.segmentIndex >= this.segmentCount) {
+            this.segmentIndex = this.segmentCount - 1;
+          }
+          this.segmentEndSample = (int)((double)this.segmentFractionsQ16[this.segmentIndex] / 65536.0 * (double)totalSamples);
+          if (this.segmentEndSample > this.elapsedSamples) {
+            this.amplitudeStepQ15 = ((this.segmentLevels[this.segmentIndex] << 15) - this.amplitudeQ15) / (this.segmentEndSample - this.elapsedSamples);
+          }
         }
         this.amplitudeQ15 = this.amplitudeQ15 + this.amplitudeStepQ15;
         this.elapsedSamples = this.elapsedSamples + 1;

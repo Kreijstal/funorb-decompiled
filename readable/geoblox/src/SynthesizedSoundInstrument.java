@@ -43,19 +43,19 @@ final class SynthesizedSoundInstrument {
 
     private final int evaluateWaveform(int phase, int amplitude, int waveform) {
         if (waveform == 1) {
-            if ((phase & 32767) < 16384) {
-                return amplitude;
-            }
-            return -amplitude;
+          if ((phase & 32767) < 16384) {
+            return amplitude;
+          }
+          return -amplitude;
         }
         if (waveform == 2) {
-            return sineTable[phase & 32767] * amplitude >> 14;
+          return sineTable[phase & 32767] * amplitude >> 14;
         }
         if (waveform == 3) {
-            return ((phase & 32767) * amplitude >> 14) - amplitude;
+          return ((phase & 32767) * amplitude >> 14) - amplitude;
         }
         if (waveform == 4) {
-            return noiseTable[phase / 2607 & 32767] * amplitude;
+          return noiseTable[phase / 2607 & 32767] * amplitude;
         }
         return 0;
     }
@@ -69,36 +69,36 @@ final class SynthesizedSoundInstrument {
         this.volumeEnvelope.decode(buffer);
         int optionalEnvelopeTag = buffer.readUnsignedByte((byte) 34);
         if (optionalEnvelopeTag != 0) {
-            buffer.position = buffer.position - 1;
-            this.pitchModulationEnvelope = new SoundEnvelope();
-            this.pitchModulationEnvelope.decode(buffer);
-            this.pitchModulationAmplitudeEnvelope = new SoundEnvelope();
-            this.pitchModulationAmplitudeEnvelope.decode(buffer);
+          buffer.position = buffer.position - 1;
+          this.pitchModulationEnvelope = new SoundEnvelope();
+          this.pitchModulationEnvelope.decode(buffer);
+          this.pitchModulationAmplitudeEnvelope = new SoundEnvelope();
+          this.pitchModulationAmplitudeEnvelope.decode(buffer);
         }
         optionalEnvelopeTag = buffer.readUnsignedByte((byte) 34);
         if (optionalEnvelopeTag != 0) {
-            buffer.position = buffer.position - 1;
-            this.volumeModulationEnvelope = new SoundEnvelope();
-            this.volumeModulationEnvelope.decode(buffer);
-            this.volumeModulationAmplitudeEnvelope = new SoundEnvelope();
-            this.volumeModulationAmplitudeEnvelope.decode(buffer);
+          buffer.position = buffer.position - 1;
+          this.volumeModulationEnvelope = new SoundEnvelope();
+          this.volumeModulationEnvelope.decode(buffer);
+          this.volumeModulationAmplitudeEnvelope = new SoundEnvelope();
+          this.volumeModulationAmplitudeEnvelope.decode(buffer);
         }
         optionalEnvelopeTag = buffer.readUnsignedByte((byte) 34);
         if (optionalEnvelopeTag != 0) {
-            buffer.position = buffer.position - 1;
-            this.muteTimingEnvelope = new SoundEnvelope();
-            this.muteTimingEnvelope.decode(buffer);
-            this.unmuteTimingEnvelope = new SoundEnvelope();
-            this.unmuteTimingEnvelope.decode(buffer);
+          buffer.position = buffer.position - 1;
+          this.muteTimingEnvelope = new SoundEnvelope();
+          this.muteTimingEnvelope.decode(buffer);
+          this.unmuteTimingEnvelope = new SoundEnvelope();
+          this.unmuteTimingEnvelope.decode(buffer);
         }
         for (oscillatorIndex = 0; oscillatorIndex < 10; oscillatorIndex++) {
-            oscillatorVolumePercent = buffer.readUnsignedSmart(1);
-            if (oscillatorVolumePercent == 0) {
-                break;
-            }
-            this.oscillatorVolumePercent[oscillatorIndex] = oscillatorVolumePercent;
-            this.oscillatorPitchOffsets[oscillatorIndex] = buffer.readSignedSmart(-125);
-            this.oscillatorDelaysMillis[oscillatorIndex] = buffer.readUnsignedSmart(1);
+          oscillatorVolumePercent = buffer.readUnsignedSmart(1);
+          if (oscillatorVolumePercent == 0) {
+            break;
+          }
+          this.oscillatorVolumePercent[oscillatorIndex] = oscillatorVolumePercent;
+          this.oscillatorPitchOffsets[oscillatorIndex] = buffer.readSignedSmart(-125);
+          this.oscillatorDelaysMillis[oscillatorIndex] = buffer.readUnsignedSmart(1);
         }
         this.echoDelayMillis = buffer.readUnsignedSmart(1);
         this.echoDecayPercent = buffer.readUnsignedSmart(1);
@@ -242,14 +242,14 @@ final class SynthesizedSoundInstrument {
           }
         }
         if (this.echoDelayMillis > 0 &&
-            this.echoDecayPercent > 0) {
+          this.echoDecayPercent > 0) {
           echoDelaySamples = (int)((double)this.echoDelayMillis * samplesPerMillisecond);
           for (echoSampleIndex = echoDelaySamples; echoSampleIndex < sampleCount; echoSampleIndex++) {
             sampleBuffer[echoSampleIndex] = sampleBuffer[echoSampleIndex] + sampleBuffer[echoSampleIndex - echoDelaySamples] * this.echoDecayPercent / 100;
           }
         }
         if (!(this.filter.pairCounts[0] <= 0) ||
-            !(this.filter.pairCounts[1] <= 0)) {
+          !(this.filter.pairCounts[1] <= 0)) {
           this.filterEnvelope.reset();
           filterEnvelopeValue = this.filterEnvelope.advance(sampleCount + 1);
           forwardFilterOrder = this.filter.computeCoefficients(0, (float)filterEnvelopeValue / 65536.0f);
@@ -339,11 +339,11 @@ final class SynthesizedSoundInstrument {
         noiseTable = new int[32768];
         Random seededNoiseRandom = new Random(0L);
         for (noiseTableIndex = 0; noiseTableIndex < 32768; noiseTableIndex++) {
-            noiseTable[noiseTableIndex] = (seededNoiseRandom.nextInt() & 2) - 1;
+          noiseTable[noiseTableIndex] = (seededNoiseRandom.nextInt() & 2) - 1;
         }
         sineTable = new int[32768];
         for (sineTableIndex = 0; sineTableIndex < 32768; sineTableIndex++) {
-            sineTable[sineTableIndex] = (int)(Math.sin((double)sineTableIndex / 5215.1903) * 16384.0);
+          sineTable[sineTableIndex] = (int)(Math.sin((double)sineTableIndex / 5215.1903) * 16384.0);
         }
         sampleBuffer = new int[220500];
         oscillatorBasePitchSteps = new int[5];

@@ -23,10 +23,10 @@ class DualLinkNode extends IntrusiveNode {
 
     final static String getSessionTextOrEmpty(byte methodGuard) {
         if (methodGuard > -43) {
-            return (String) null;
+          return (String) null;
         }
         if (null == SecondaryDeque.receivedSessionName) {
-            return "";
+          return "";
         }
         return SecondaryDeque.receivedSessionName;
     }
@@ -36,20 +36,20 @@ class DualLinkNode extends IntrusiveNode {
         CharSequence nameToNormalize = (CharSequence) ((Object) SecondaryDeque.receivedSessionName);
         SecondaryNodeHashTable.normalizedSessionName = ResizableDialog.normalizeSessionName(nameToNormalize, 12);
         if (methodGuard != 1) {
-            DualLinkNode.readSessionNameAndNormalize(83);
+          DualLinkNode.readSessionNameAndNormalize(83);
         }
     }
 
     final void unlinkSecondaryNode(byte methodGuard) {
         if (this.previousSecondaryNode == null) {
-            return;
+          return;
         }
         this.previousSecondaryNode.nextSecondaryNode = this.nextSecondaryNode;
         if (methodGuard > 39) {
-            this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
-            this.previousSecondaryNode = null;
-            this.nextSecondaryNode = null;
-            return;
+          this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
+          this.previousSecondaryNode = null;
+          this.nextSecondaryNode = null;
+          return;
         }
         js5ConnectFullErrorText = (String) null;
         this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
@@ -59,21 +59,21 @@ class DualLinkNode extends IntrusiveNode {
 
     final static int getLoginBooleanReplyLength(int methodGuard) {
         if (methodGuard < 101) {
-            DualLinkNode.releaseDualLinkResources((byte) 20);
-            return 1;
+          DualLinkNode.releaseDualLinkResources((byte) 20);
+          return 1;
         }
         return 1;
     }
 
     final static boolean isAsciiDigit(int methodGuard, char character) {
         if (methodGuard != -58) {
-            return false;
+          return false;
         }
         if (48 > character) {
-            return false;
+          return false;
         }
         if (character > 57) {
-            return false;
+          return false;
         }
         return true;
     }

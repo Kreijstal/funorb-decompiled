@@ -18,7 +18,7 @@ final class NodeHashTableIterator implements Iterator {
 
     public final void remove() {
         if (null == this.lastReturnedNode) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         this.lastReturnedNode.unlinkNode(false);
         this.lastReturnedNode = null;
@@ -26,11 +26,11 @@ final class NodeHashTableIterator implements Iterator {
 
     final static java.applet.Applet getActiveApplet(int methodGuard) {
         if (VisualPropertyNode.loaderApplet != null) {
-            return VisualPropertyNode.loaderApplet;
+          return VisualPropertyNode.loaderApplet;
         }
         if (methodGuard <= 104) {
-            NodeHashTableIterator.markInsetZeroOutlinePixels(83, 4, -82, 86, 115);
-            return (java.applet.Applet) ((Object) PrefixCodeDecoder.activeGameApplet);
+          NodeHashTableIterator.markInsetZeroOutlinePixels(83, 4, -82, 86, 115);
+          return (java.applet.Applet) ((Object) PrefixCodeDecoder.activeGameApplet);
         }
         return (java.applet.Applet) ((Object) PrefixCodeDecoder.activeGameApplet);
     }
@@ -43,12 +43,12 @@ final class NodeHashTableIterator implements Iterator {
         topY += 2;
         leftX += 2;
         if (methodGuard == -27085) {
-            height -= 4;
-            width -= 4;
-            firstPixelOffset = leftX + topY * SoftwareRasterizer.stride;
-            rowSkip = SoftwareRasterizer.stride - width;
-            SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, firstPixelOffset, 0, 0, 0, 0, width, height, rowSkip);
-            return;
+          height -= 4;
+          width -= 4;
+          firstPixelOffset = leftX + topY * SoftwareRasterizer.stride;
+          rowSkip = SoftwareRasterizer.stride - width;
+          SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, firstPixelOffset, 0, 0, 0, 0, width, height, rowSkip);
+          return;
         }
         NodeHashTableIterator.releaseSharedResources(32);
         height -= 4;
@@ -87,7 +87,7 @@ final class NodeHashTableIterator implements Iterator {
         fullscreenFocusText = null;
         pendingAchievementQueries = null;
         if (methodGuard != 0) {
-            return;
+          return;
         }
         popSprite = null;
         sportMusicTrack = null;
@@ -98,10 +98,10 @@ final class NodeHashTableIterator implements Iterator {
     NodeHashTableIterator(IterableNodeHashTable table) {
         this.lastReturnedNode = null;
         try {
-            this.table = table;
-            this.resetIteration(-1);
+          this.table = table;
+          this.resetIteration(-1);
         } catch (RuntimeException iteratorInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) iteratorInitializationFailure), "k.<init>(" + (table != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) iteratorInitializationFailure), "k.<init>(" + (table != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,8 +129,8 @@ final class NodeHashTableIterator implements Iterator {
         this.nextBucketIndex = 1;
         this.nextNode = this.table.bucketSentinels[0].nextNode;
         if (methodGuard != -1) {
-            this.remove();
-            return;
+          this.remove();
+          return;
         }
     }
 

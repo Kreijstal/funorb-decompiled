@@ -12,17 +12,17 @@ final class EntityContactSupport {
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         int renderHistoryResetIndex;
         try {
-            ReflectionCheckRequest.frameTimer.resetForResume(111);
-            guardResidueThenRenderHistoryIndex = 10 / ((methodGuard - 68) / 57);
-            for (updateHistoryIndex = 0; updateHistoryIndex < 32; updateHistoryIndex++) {
-                ArchiveRequest.renderTimeHistoryMillis[updateHistoryIndex] = 0L;
-            }
-            for (renderHistoryResetIndex = 0; renderHistoryResetIndex < 32; renderHistoryResetIndex++) {
-                RasterTargetSnapshot.updateTimeHistoryMillis[renderHistoryResetIndex] = 0L;
-            }
-            TriangleMesh.pendingUpdateTicks = 0;
+          ReflectionCheckRequest.frameTimer.resetForResume(111);
+          guardResidueThenRenderHistoryIndex = 10 / ((methodGuard - 68) / 57);
+          for (updateHistoryIndex = 0; updateHistoryIndex < 32; updateHistoryIndex++) {
+            ArchiveRequest.renderTimeHistoryMillis[updateHistoryIndex] = 0L;
+          }
+          for (renderHistoryResetIndex = 0; renderHistoryResetIndex < 32; renderHistoryResetIndex++) {
+            RasterTargetSnapshot.updateTimeHistoryMillis[renderHistoryResetIndex] = 0L;
+          }
+          TriangleMesh.pendingUpdateTicks = 0;
         } catch (RuntimeException timingResetFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) timingResetFailure), "ih.C(" + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) timingResetFailure), "ih.C(" + methodGuard + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class EntityContactSupport {
 
     public static void releaseStaticReferences(byte methodGuard) {
         if (methodGuard <= 46) {
-            return;
+          return;
         }
         pendingLoginPayload = null;
         activeEmailAvailabilityQuery = null;
@@ -141,7 +141,7 @@ final class EntityContactSupport {
                       pooledConversionEntity = (GameplayEntity) (SecondaryNodeDeque.availableEntities.removeLast(1));
                       if (pooledConversionEntity != null) {
                         if (entity.entitySpriteKindId == 2 &&
-                            kindTwoMismatch != 0) {
+                          kindTwoMismatch != 0) {
                           pooledConversionEntity.initializeEntityMotion(negativeHorizontalClipGuard ^ -97, (float)contactX, 8, entity.velocityX, entity.spriteVariantIndex, 0, entity.spriteAngleRadians, (float)contactY, entity.velocityY, entity.entityCategoryKey, 0.0f);
                         } else {
                           pooledConversionEntity.initializeEntityMotion(-121, contactedEntity.positionX, 8, contactedEntity.velocityX, contactedEntity.spriteVariantIndex, 0, contactedEntity.spriteAngleRadians, contactedEntity.positionY, contactedEntity.velocityY, contactedEntity.entityCategoryKey, 0.0f);

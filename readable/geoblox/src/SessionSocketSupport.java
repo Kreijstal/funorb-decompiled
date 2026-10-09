@@ -73,7 +73,7 @@ final class SessionSocketSupport {
         countdownLabelText = null;
         mouseOverIconText = null;
         if (methodGuard < 51) {
-            gameSoundResourceNames = (String[]) null;
+          gameSoundResourceNames = (String[]) null;
         }
         textTemplateArgumentTypeOne = null;
         base37NameAlphabet = null;
@@ -137,45 +137,45 @@ final class SessionSocketSupport {
 
     final static boolean pollSessionSocketOpening(boolean useLongLoginPayload, int methodGuard) {
         try {
-            PacketBuffer incomingBufferSnapshot = null;
-            PacketBuffer incomingBufferAlias = null;
-            if (null == NetworkArchiveRequest.sessionSocketOpenTask) {
-                NetworkArchiveRequest.sessionSocketOpenTask = GameplayEntity.sessionTaskDispatcher.requestSocket(NetworkArchiveRequest.sessionServerPort, MultiHandleSliderWidget.sessionServerHost, false);
+          PacketBuffer incomingBufferSnapshot = null;
+          PacketBuffer incomingBufferAlias = null;
+          if (null == NetworkArchiveRequest.sessionSocketOpenTask) {
+            NetworkArchiveRequest.sessionSocketOpenTask = GameplayEntity.sessionTaskDispatcher.requestSocket(NetworkArchiveRequest.sessionServerPort, MultiHandleSliderWidget.sessionServerHost, false);
+          }
+          if (methodGuard != 52) {
+            textTemplateArgumentTypeOne = (TextTemplateArgumentType) null;
+          }
+          if (NetworkArchiveRequest.sessionSocketOpenTask.status == 0) {
+            return false;
+          }
+          long socketCompletionTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ -12500);
+          CanvasResizeController.lastSessionSocketWriteMillis = socketCompletionTimeMillis;
+          AudioService.sessionActivityStartMillis = socketCompletionTimeMillis;
+          if (1 != NetworkArchiveRequest.sessionSocketOpenTask.status) {
+            PacketBuffer.currentProtocolStage = AchievementQuery.socketOpenFailedStage;
+          } else {
+            try {
+              SpriteCheckboxRenderer.sessionSocket = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.sessionSocketOpenTask.result), GameplayEntity.sessionTaskDispatcher);
+              incomingBufferSnapshot = LogoCompositor.sessionPacketBuffer;
+              incomingBufferAlias = incomingBufferSnapshot;
+              CacheReference.outgoingSessionBuffer.position = 0;
+              incomingBufferAlias.position = 0;
+              MidiNoteMixer.thirdPreviousPacketOpcode = useLongLoginPayload ? -2 : -1;
+              AttachedEntityRenderer.secondPreviousPacketOpcode = useLongLoginPayload ? -2 : -1;
+              VisualPropertyNode.previousPacketOpcode = useLongLoginPayload ? -2 : -1;
+              PacketBuffer.currentProtocolStage = IterableNodeHashTable.requestReadyStage;
+              ConnectionHeaderSupport.writeConnectionHeader(FullscreenEntrySupport.sessionLanguageId, true, ClientRenderingState.sessionClientId, EmailAvailabilityValidator.sessionServerNumber, CacheReference.outgoingSessionBuffer);
+              NanoFrameTimer.flushSessionWrites(methodGuard ^ -53, -1);
+            } catch (IOException socketSetupFailure) {
+              PacketBuffer.currentProtocolStage = AchievementQuery.socketOpenFailedStage;
             }
-            if (methodGuard != 52) {
-                textTemplateArgumentTypeOne = (TextTemplateArgumentType) null;
-            }
-            if (NetworkArchiveRequest.sessionSocketOpenTask.status == 0) {
-                return false;
-            }
-            long socketCompletionTimeMillis = ClientClockSupport.correctedCurrentTimeMillis(methodGuard ^ -12500);
-            CanvasResizeController.lastSessionSocketWriteMillis = socketCompletionTimeMillis;
-            AudioService.sessionActivityStartMillis = socketCompletionTimeMillis;
-            if (1 != NetworkArchiveRequest.sessionSocketOpenTask.status) {
-                PacketBuffer.currentProtocolStage = AchievementQuery.socketOpenFailedStage;
-            } else {
-                try {
-                    SpriteCheckboxRenderer.sessionSocket = new BufferedSocket((java.net.Socket) (NetworkArchiveRequest.sessionSocketOpenTask.result), GameplayEntity.sessionTaskDispatcher);
-                    incomingBufferSnapshot = LogoCompositor.sessionPacketBuffer;
-                    incomingBufferAlias = incomingBufferSnapshot;
-                    CacheReference.outgoingSessionBuffer.position = 0;
-                    incomingBufferAlias.position = 0;
-                    MidiNoteMixer.thirdPreviousPacketOpcode = useLongLoginPayload ? -2 : -1;
-                    AttachedEntityRenderer.secondPreviousPacketOpcode = useLongLoginPayload ? -2 : -1;
-                    VisualPropertyNode.previousPacketOpcode = useLongLoginPayload ? -2 : -1;
-                    PacketBuffer.currentProtocolStage = IterableNodeHashTable.requestReadyStage;
-                    ConnectionHeaderSupport.writeConnectionHeader(FullscreenEntrySupport.sessionLanguageId, true, ClientRenderingState.sessionClientId, EmailAvailabilityValidator.sessionServerNumber, CacheReference.outgoingSessionBuffer);
-                    NanoFrameTimer.flushSessionWrites(methodGuard ^ -53, -1);
-                } catch (IOException socketSetupFailure) {
-                    PacketBuffer.currentProtocolStage = AchievementQuery.socketOpenFailedStage;
-                }
-            }
-            NetworkArchiveRequest.sessionSocketOpenTask = null;
-            return true;
+          }
+          NetworkArchiveRequest.sessionSocketOpenTask = null;
+          return true;
         } catch (RuntimeException | Error uncheckedSocketFailure) {
-            throw uncheckedSocketFailure;
+          throw uncheckedSocketFailure;
         } catch (Throwable checkedSocketFailure) {
-            throw new RuntimeException(checkedSocketFailure);
+          throw new RuntimeException(checkedSocketFailure);
         }
     }
 
@@ -238,32 +238,32 @@ final class SessionSocketSupport {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (destinationY < SoftwareRasterizer.clipTop) {
-            clippedPixelCount = SoftwareRasterizer.clipTop - destinationY;
-            drawHeight = drawHeight - clippedPixelCount;
-            destinationY = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + clippedPixelCount * drawWidth;
-            destinationIndex = destinationIndex + clippedPixelCount * SoftwareRasterizer.stride;
+          clippedPixelCount = SoftwareRasterizer.clipTop - destinationY;
+          drawHeight = drawHeight - clippedPixelCount;
+          destinationY = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + clippedPixelCount * drawWidth;
+          destinationIndex = destinationIndex + clippedPixelCount * SoftwareRasterizer.stride;
         }
         if (destinationY + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (destinationY + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (destinationY + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (destinationX < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - destinationX;
-            drawWidth = drawWidth - leftClipPixels;
-            destinationX = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - destinationX;
+          drawWidth = drawWidth - leftClipPixels;
+          destinationX = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (destinationX + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = destinationX + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = destinationX + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth <= 0 || drawHeight <= 0) {
-            return;
+          return;
         }
         SessionSocketSupport.copyPixelsIntoEmptyDestination(SoftwareRasterizer.framebuffer, sprite.pixels, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
     }

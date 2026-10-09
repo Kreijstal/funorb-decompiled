@@ -11,11 +11,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     final static int sineQ16(byte methodGuard, int angle8192) {
         if (methodGuard <= 7) {
-            return -8;
+          return -8;
         }
         angle8192 = angle8192 & 8191;
         if (angle8192 < 4096) {
-            return angle8192 < 2048 ? ScoreSubmission.quarterSineQ16[angle8192] : ScoreSubmission.quarterSineQ16[4096 - angle8192];
+          return angle8192 < 2048 ? ScoreSubmission.quarterSineQ16[angle8192] : ScoreSubmission.quarterSineQ16[4096 - angle8192];
         }
         return angle8192 >= 6144 ? -ScoreSubmission.quarterSineQ16[-angle8192 + 8192] : -ScoreSubmission.quarterSineQ16[angle8192 - 4096];
     }
@@ -29,9 +29,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics graphics) {
         try {
-            this.paintDelegate.update(graphics);
+          this.paintDelegate.update(graphics);
         } catch (RuntimeException updateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) updateFailure), "bh.update(" + (graphics != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) updateFailure), "bh.update(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex];
               temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex + 3] = FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex];
               if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndex], (byte) 12) &&
-                  FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex] + (TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex]) == 0) {
+                FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex] + (TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex]) == 0) {
                 temporaryNamesByOrdering[0][firstOrderingWriteIndex] = null;
                 firstOrderingWriteIndex--;
               }
@@ -123,7 +123,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[secondOrderingEntryIndex];
               temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[secondOrderingEntryIndex];
               if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[secondOrderingEntryIndex], (byte) 12) &&
-                  FrameTimer.rankedEntryRatioThirdComponents[secondOrderingEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[secondOrderingEntryIndex] + TextHotspotBounds.rankedEntryRatioNumerators[secondOrderingEntryIndex] == 0) {
+                FrameTimer.rankedEntryRatioThirdComponents[secondOrderingEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[secondOrderingEntryIndex] + TextHotspotBounds.rankedEntryRatioNumerators[secondOrderingEntryIndex] == 0) {
                 temporaryNamesByOrdering[1][secondOrderingWriteIndex] = null;
                 secondOrderingWriteIndex--;
               }
@@ -144,9 +144,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     public final void paint(java.awt.Graphics graphics) {
         try {
-            this.paintDelegate.paint(graphics);
+          this.paintDelegate.paint(graphics);
         } catch (RuntimeException paintingFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) paintingFailure), "bh.paint(" + (graphics != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) paintingFailure), "bh.paint(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -203,46 +203,46 @@ final class DelegatingCanvas extends java.awt.Canvas {
             }
             neighborIndex = 0;
             {
-            contactConversionNeighbors: while (!(neighborIndex >= currentEntity.relatedEntityCount)) {
-              if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1 ||
-                    !propagateVariant) {
-                if (2 != currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
+              contactConversionNeighbors: while (!(neighborIndex >= currentEntity.relatedEntityCount)) {
+                if (currentEntity.relatedEntities[neighborIndex].entitySpriteKindId != 1 ||
+                  !propagateVariant) {
+                  if (2 != currentEntity.relatedEntities[neighborIndex].entitySpriteKindId) {
+                    neighborIndex++;
+                    continue;
+                  }
+                  if (!propagateCategoryAndKind) {
+                    neighborIndex++;
+                    continue;
+                  }
+                }
+                processedEntityToCompare = (GameplayEntity) (processedEntities.firstForIteration((byte) 121));
+                while (processedEntityToCompare != null) {
+                  if (currentEntity != processedEntityToCompare) {
+                    processedEntityToCompare = (GameplayEntity) (processedEntities.nextForIteration(methodGuard - 60));
+                    continue;
+                  }
                   neighborIndex++;
-                  continue;
+                  continue contactConversionNeighbors;
                 }
-                if (!propagateCategoryAndKind) {
-                  neighborIndex++;
-                  continue;
+                if (propagateVariant) {
+                  currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
+                  neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
+                  neighborVariantWriteTarget = neighborForVariantIncrement;
+                  neighborVariantReadSource = neighborForVariantIncrement;
+                  neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
                 }
-              }
-              processedEntityToCompare = (GameplayEntity) (processedEntities.firstForIteration((byte) 121));
-              while (processedEntityToCompare != null) {
-                if (currentEntity != processedEntityToCompare) {
-                  processedEntityToCompare = (GameplayEntity) (processedEntities.nextForIteration(methodGuard - 60));
-                  continue;
+                if (propagateCategoryAndKind) {
+                  currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
+                  currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
+                  neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
+                  neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
                 }
+                pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
                 neighborIndex++;
-                continue contactConversionNeighbors;
               }
-              if (propagateVariant) {
-                currentEntity.sameVariantEntityCount = currentEntity.sameVariantEntityCount + 1;
-                neighborForVariantIncrement = currentEntity.relatedEntities[neighborIndex];
-                neighborVariantWriteTarget = neighborForVariantIncrement;
-                neighborVariantReadSource = neighborForVariantIncrement;
-                neighborVariantWriteTarget.sameVariantEntityCount = neighborVariantReadSource.sameVariantEntityCount + 1;
-              }
-              if (propagateCategoryAndKind) {
-                currentEntity.spriteAngleRadians = templateEntity.spriteAngleRadians;
-                currentEntity.sameCategoryEntityCount = currentEntity.sameCategoryEntityCount + 1;
-                neighborForCategoryIncrement = currentEntity.relatedEntities[neighborIndex];
-                neighborForCategoryIncrement.sameCategoryEntityCount = neighborForCategoryIncrement.sameCategoryEntityCount + 1;
-              }
-              pendingEntities.addFirst(currentEntity.relatedEntities[neighborIndex], false);
-              neighborIndex++;
-            }
-             {
+              {
                 processedEntities.addFirst(currentEntity, false);
-                }
+              }
             }
           }
         } catch (java.lang.RuntimeException caughtConversionFailure) {
@@ -267,9 +267,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
 
     DelegatingCanvas(java.awt.Component paintDelegate) {
         try {
-            this.paintDelegate = paintDelegate;
+          this.paintDelegate = paintDelegate;
         } catch (RuntimeException delegateInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delegateInitializationFailure), "bh.<init>(" + (paintDelegate != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delegateInitializationFailure), "bh.<init>(" + (paintDelegate != null ? "{...}" : "null") + ')');
         }
     }
 

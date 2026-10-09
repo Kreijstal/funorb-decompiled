@@ -14,21 +14,21 @@ final class TextTemplateDefinitionLoader {
         byte[] encodedDefinition = null;
         TextTemplateDefinition definition = (TextTemplateDefinition) (this.definitionsCache.getByKey((byte) 106, (long)templateId));
         if (definition == null) {
-            int guardResidue = 3 % ((methodGuard - 57) / 42);
-            if (templateId < 32768) {
-                encodedDefinition = this.primaryArchive.getFile(1, -28153, templateId);
-            } else {
-                encodedDefinition = this.alternateArchive.getFile(1, -28153, 32767 & templateId);
-            }
-            definition = new TextTemplateDefinition();
-            if (encodedDefinition != null) {
-                definition.decode(0, new ByteArrayBuffer(encodedDefinition));
-            }
-            if (templateId >= 32768) {
-                definition.markAlternateReferences((byte) 119);
-            }
-            this.definitionsCache.put(-126, (long)templateId, definition);
-            return definition;
+          int guardResidue = 3 % ((methodGuard - 57) / 42);
+          if (templateId < 32768) {
+            encodedDefinition = this.primaryArchive.getFile(1, -28153, templateId);
+          } else {
+            encodedDefinition = this.alternateArchive.getFile(1, -28153, 32767 & templateId);
+          }
+          definition = new TextTemplateDefinition();
+          if (encodedDefinition != null) {
+            definition.decode(0, new ByteArrayBuffer(encodedDefinition));
+          }
+          if (templateId >= 32768) {
+            definition.markAlternateReferences((byte) 119);
+          }
+          this.definitionsCache.put(-126, (long)templateId, definition);
+          return definition;
         }
         return definition;
     }

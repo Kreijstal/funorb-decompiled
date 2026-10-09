@@ -13,29 +13,29 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     final static void initializeMenuActionTexts(int musicActionIndex) {
         if (null == RasterTargetSnapshot.menuActionTexts) {
-            FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
-            TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
-            RasterTargetSnapshot.menuActionTexts = new String[19];
-            RasterTargetSnapshot.menuActionTexts[12] = ValidationState.nextText;
-            RasterTargetSnapshot.menuActionTexts[7] = SettingsCookieSupport.quitText;
-            RasterTargetSnapshot.menuActionTexts[6] = LoginPayload.endGameText;
-            RasterTargetSnapshot.menuActionTexts[8] = AttachmentPointerState.soundLabelText;
-            RasterTargetSnapshot.menuActionTexts[14] = PacketByteCipher.discardResultsText;
-            RasterTargetSnapshot.menuActionTexts[5] = FullscreenErrorDialog.menuText;
-            RasterTargetSnapshot.menuActionTexts[0] = TextPairLoginPayload.startGameText;
-            RasterTargetSnapshot.menuActionTexts[4] = SessionGameApplet.fullscreenText;
-            RasterTargetSnapshot.menuActionTexts[musicActionIndex] = EndingAnimationSupport.musicLabelText;
-            RasterTargetSnapshot.menuActionTexts[10] = BootstrapUiSupport.achievementsText;
-            RasterTargetSnapshot.menuActionTexts[11] = RasterTargetSnapshot.previousText;
-            RasterTargetSnapshot.menuActionTexts[15] = ArchiveCatalog.replayTutorialText;
-            RasterTargetSnapshot.menuActionTexts[1] = RasterTargetRestoreSupport.resumeGameText;
-            RasterTargetSnapshot.menuActionTexts[13] = StrongCacheReference.loginRegisterText;
-            RasterTargetSnapshot.menuActionTexts[3] = SecondaryNodeDequeIterator.instructionsText;
-            RasterTargetSnapshot.menuActionTexts[2] = ArchiveLoadStep.highscoresText;
-            RasterTargetSnapshot.menuActionTexts[18] = ReceivedTextRecord.highscoreModeNames[2];
-            RasterTargetSnapshot.menuActionTexts[16] = ReceivedTextRecord.highscoreModeNames[0];
-            RasterTargetSnapshot.menuActionTexts[17] = ReceivedTextRecord.highscoreModeNames[1];
-            return;
+          FullscreenSupport.fullscreenAcceptCountdownPluralText = OpacityWidget.replaceIndexedTextMarkers(FullscreenSupport.fullscreenAcceptCountdownPluralText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -123);
+          TextConcatenationSupport.fullscreenAcceptCountdownSingularText = OpacityWidget.replaceIndexedTextMarkers(TextConcatenationSupport.fullscreenAcceptCountdownSingularText, new String[]{"<br><shad=000001><%0></shad><br>"}, (byte) -55);
+          RasterTargetSnapshot.menuActionTexts = new String[19];
+          RasterTargetSnapshot.menuActionTexts[12] = ValidationState.nextText;
+          RasterTargetSnapshot.menuActionTexts[7] = SettingsCookieSupport.quitText;
+          RasterTargetSnapshot.menuActionTexts[6] = LoginPayload.endGameText;
+          RasterTargetSnapshot.menuActionTexts[8] = AttachmentPointerState.soundLabelText;
+          RasterTargetSnapshot.menuActionTexts[14] = PacketByteCipher.discardResultsText;
+          RasterTargetSnapshot.menuActionTexts[5] = FullscreenErrorDialog.menuText;
+          RasterTargetSnapshot.menuActionTexts[0] = TextPairLoginPayload.startGameText;
+          RasterTargetSnapshot.menuActionTexts[4] = SessionGameApplet.fullscreenText;
+          RasterTargetSnapshot.menuActionTexts[musicActionIndex] = EndingAnimationSupport.musicLabelText;
+          RasterTargetSnapshot.menuActionTexts[10] = BootstrapUiSupport.achievementsText;
+          RasterTargetSnapshot.menuActionTexts[11] = RasterTargetSnapshot.previousText;
+          RasterTargetSnapshot.menuActionTexts[15] = ArchiveCatalog.replayTutorialText;
+          RasterTargetSnapshot.menuActionTexts[1] = RasterTargetRestoreSupport.resumeGameText;
+          RasterTargetSnapshot.menuActionTexts[13] = StrongCacheReference.loginRegisterText;
+          RasterTargetSnapshot.menuActionTexts[3] = SecondaryNodeDequeIterator.instructionsText;
+          RasterTargetSnapshot.menuActionTexts[2] = ArchiveLoadStep.highscoresText;
+          RasterTargetSnapshot.menuActionTexts[18] = ReceivedTextRecord.highscoreModeNames[2];
+          RasterTargetSnapshot.menuActionTexts[16] = ReceivedTextRecord.highscoreModeNames[0];
+          RasterTargetSnapshot.menuActionTexts[17] = ReceivedTextRecord.highscoreModeNames[1];
+          return;
         }
     }
 
@@ -57,12 +57,12 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
             return;
           }
           if (record.recordIdHigh16 != 0 ||
-              0 != record.recordIdLow24) {
+            0 != record.recordIdLow24) {
             for (recordIndex = 0; ByteStorage.retainedTextRecordCount > recordIndex; recordIndex++) {
               existingRecord = MatchingTextValidator.retainedTextRecords[recordIndex];
               if (2 == existingRecord.recordKind &&
-                  record.recordIdHigh16 == existingRecord.recordIdHigh16 &&
-                  record.recordIdLow24 == existingRecord.recordIdLow24) {
+                record.recordIdHigh16 == existingRecord.recordIdHigh16 &&
+                record.recordIdLow24 == existingRecord.recordIdLow24) {
                 return;
               }
             }
@@ -93,29 +93,29 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
         int footerSpacing = 0;
         int continueButtonWidth = 0;
         try {
-            this.accountCreationDialog = accountCreationDialog;
-            this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
-            this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
-            expandedTermsText = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.openingTermsLinkMarkup(11501), this.closingTermsLinkMarkup(false)}, (byte) -114);
-            contentOffsetY = 20;
-            termsRenderer = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
-            this.termsText = new HotspotTextWidget(expandedTermsText, termsRenderer);
-            this.termsText.hoverText = "";
-            this.termsText.setHotspotHoverText(0, -47, LogoCompositor.openInPopupWindowText);
-            this.termsText.setHotspotHoverText(1, 118, LogoCompositor.openInPopupWindowText);
-            this.termsText.listener = (WidgetListener) (this);
-            this.termsText.widgetWidth = this.widgetWidth - 40;
-            this.termsText.fitTextBounds(26, 0, contentOffsetY, this.widgetWidth - 40);
-            contentOffsetY = contentOffsetY + (this.termsText.widgetHeight + 15);
-            this.addChild((byte) -108, this.termsText);
-            footerSpacing = 4;
-            continueButtonWidth = 200;
-            this.continueButton.setWidgetBounds(40, continueButtonWidth, (byte) -71, contentOffsetY, -continueButtonWidth + 300 >> 1);
-            this.continueButton.listener = (WidgetListener) (this);
-            this.addChild((byte) -63, this.continueButton);
-            this.setWidgetBounds(contentOffsetY + (55 + footerSpacing), 300, (byte) -104, 0, 0);
+          this.accountCreationDialog = accountCreationDialog;
+          this.continueButton = new ButtonWidget(UsernameQuerySupport.continueText, (WidgetListener) null);
+          this.continueButton.renderer = (WidgetRenderer) ((Object) new SpriteButtonRenderer());
+          expandedTermsText = OpacityWidget.replaceIndexedTextMarkers(TextPairLoginPayload.createUnder13TermsText, new String[]{this.openingTermsLinkMarkup(11501), this.closingTermsLinkMarkup(false)}, (byte) -114);
+          contentOffsetY = 20;
+          termsRenderer = new TextWidgetRenderer(DialogLayer.sharedUiFont, 0, 0, 0, 0, 16777215, -1, 3, 0, DialogLayer.sharedUiFont.maxAscent, -1, 2147483647, true);
+          this.termsText = new HotspotTextWidget(expandedTermsText, termsRenderer);
+          this.termsText.hoverText = "";
+          this.termsText.setHotspotHoverText(0, -47, LogoCompositor.openInPopupWindowText);
+          this.termsText.setHotspotHoverText(1, 118, LogoCompositor.openInPopupWindowText);
+          this.termsText.listener = (WidgetListener) (this);
+          this.termsText.widgetWidth = this.widgetWidth - 40;
+          this.termsText.fitTextBounds(26, 0, contentOffsetY, this.widgetWidth - 40);
+          contentOffsetY = contentOffsetY + (this.termsText.widgetHeight + 15);
+          this.addChild((byte) -108, this.termsText);
+          footerSpacing = 4;
+          continueButtonWidth = 200;
+          this.continueButton.setWidgetBounds(40, continueButtonWidth, (byte) -71, contentOffsetY, -continueButtonWidth + 300 >> 1);
+          this.continueButton.listener = (WidgetListener) (this);
+          this.addChild((byte) -63, this.continueButton);
+          this.setWidgetBounds(contentOffsetY + (55 + footerSpacing), 300, (byte) -104, 0, 0);
         } catch (RuntimeException panelInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "s.<init>(" + (accountCreationDialog != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) panelInitializationFailure), "s.<init>(" + (accountCreationDialog != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,8 +161,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
     private final String openingTermsLinkMarkup(int methodGuard) {
         String unusedClosingMarkupResult = null;
         if (methodGuard != 11501) {
-            unusedClosingMarkupResult = this.closingTermsLinkMarkup(true);
-            return "<u=2164A2><col=2164A2>";
+          unusedClosingMarkupResult = this.closingTermsLinkMarkup(true);
+          return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -204,10 +204,10 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     public static void releaseStaticReferences(boolean methodGuard) {
         if (!methodGuard) {
-            geometrySpritesByThemeAndCategory = (Sprite[][]) null;
-            textTemplateArgumentTypeSeven = null;
-            waitingForPumpkinText = null;
-            return;
+          geometrySpritesByThemeAndCategory = (Sprite[][]) null;
+          textTemplateArgumentTypeSeven = null;
+          waitingForPumpkinText = null;
+          return;
         }
         liveHeldPointerButton = 58;
         geometrySpritesByThemeAndCategory = (Sprite[][]) null;
@@ -217,8 +217,8 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     private final String closingTermsLinkMarkup(boolean clearTemplateTypeSeven) {
         if (clearTemplateTypeSeven) {
-            textTemplateArgumentTypeSeven = (TextTemplateArgumentType) null;
-            return "</col></u>";
+          textTemplateArgumentTypeSeven = (TextTemplateArgumentType) null;
+          return "</col></u>";
         }
         return "</col></u>";
     }
@@ -255,64 +255,64 @@ final class Under13TermsPanel extends WidgetContainer implements HotspotActivati
 
     final static String readSettingsCookieOrFallback(int methodGuard, java.applet.Applet applet) {
         try {
-            int cookieIndex = 0;
-            String settingsCookieName = null;
-            String cookieHeader = null;
-            String[] cookieEntries = null;
-            int equalsIndex = 0;
-            String cookiePrefix = null;
-            String cookieValueBeforeReturn = null;
-            String cachedSettingsBeforeReturn = null;
-            String parameterSettingsBeforeReturn = null;
-            RuntimeException lookupFailureBeforeDescription = null;
-            StringBuilder lookupMessagePrefix = null;
-            String appletDescription = null;
-            Throwable caughtLookupThrowable = null;
-            Throwable ignoredCookieLookupFailure = null;
-            RuntimeException lookupFailureForContext = null;
+          int cookieIndex = 0;
+          String settingsCookieName = null;
+          String cookieHeader = null;
+          String[] cookieEntries = null;
+          int equalsIndex = 0;
+          String cookiePrefix = null;
+          String cookieValueBeforeReturn = null;
+          String cachedSettingsBeforeReturn = null;
+          String parameterSettingsBeforeReturn = null;
+          RuntimeException lookupFailureBeforeDescription = null;
+          StringBuilder lookupMessagePrefix = null;
+          String appletDescription = null;
+          Throwable caughtLookupThrowable = null;
+          Throwable ignoredCookieLookupFailure = null;
+          RuntimeException lookupFailureForContext = null;
+          try {
             try {
-              try {
-                cookiePrefix = applet.getParameter("cookieprefix");
-                settingsCookieName = cookiePrefix + "settings";
-                cookieHeader = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
-                cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
-                for (cookieIndex = 0; cookieEntries.length > cookieIndex; cookieIndex++) {
-                  equalsIndex = cookieEntries[cookieIndex].indexOf('=');
-                  if (equalsIndex >= 0 &&
-                      cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName)) {
-                    cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(equalsIndex + 1).trim();
-                    return cookieValueBeforeReturn;
-                  }
+              cookiePrefix = applet.getParameter("cookieprefix");
+              settingsCookieName = cookiePrefix + "settings";
+              cookieHeader = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
+              cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieHeader);
+              for (cookieIndex = 0; cookieEntries.length > cookieIndex; cookieIndex++) {
+                equalsIndex = cookieEntries[cookieIndex].indexOf('=');
+                if (equalsIndex >= 0 &&
+                  cookieEntries[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName)) {
+                  cookieValueBeforeReturn = cookieEntries[cookieIndex].substring(equalsIndex + 1).trim();
+                  return cookieValueBeforeReturn;
                 }
-              } catch (java.lang.Throwable cookieLookupThrowable) {
-                caughtLookupThrowable = cookieLookupThrowable;
-                ignoredCookieLookupFailure = caughtLookupThrowable;
               }
-              if (methodGuard != -1) {
-                Under13TermsPanel.initializeMenuActionTexts(14);
-              }
-              if (null == NetworkArchiveRequest.settingsCookieValue) {
-                parameterSettingsBeforeReturn = applet.getParameter("settings");
-                return parameterSettingsBeforeReturn;
-              }
-              cachedSettingsBeforeReturn = NetworkArchiveRequest.settingsCookieValue;
-              return cachedSettingsBeforeReturn;
-            } catch (java.lang.RuntimeException lookupFailure) {
-              caughtLookupThrowable = lookupFailure;
-              lookupFailureForContext = (RuntimeException) (Object) caughtLookupThrowable;
-              lookupFailureBeforeDescription = lookupFailureForContext;
-              lookupMessagePrefix = new StringBuilder().append("s.B(").append(methodGuard).append(',');
-              if (applet == null) {
-                appletDescription = "null";
-              } else {
-                appletDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(appletDescription).append(')').toString());
+            } catch (java.lang.Throwable cookieLookupThrowable) {
+              caughtLookupThrowable = cookieLookupThrowable;
+              ignoredCookieLookupFailure = caughtLookupThrowable;
             }
+            if (methodGuard != -1) {
+              Under13TermsPanel.initializeMenuActionTexts(14);
+            }
+            if (null == NetworkArchiveRequest.settingsCookieValue) {
+              parameterSettingsBeforeReturn = applet.getParameter("settings");
+              return parameterSettingsBeforeReturn;
+            }
+            cachedSettingsBeforeReturn = NetworkArchiveRequest.settingsCookieValue;
+            return cachedSettingsBeforeReturn;
+          } catch (java.lang.RuntimeException lookupFailure) {
+            caughtLookupThrowable = lookupFailure;
+            lookupFailureForContext = (RuntimeException) (Object) caughtLookupThrowable;
+            lookupFailureBeforeDescription = lookupFailureForContext;
+            lookupMessagePrefix = new StringBuilder().append("s.B(").append(methodGuard).append(',');
+            if (applet == null) {
+              appletDescription = "null";
+            } else {
+              appletDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) lookupFailureBeforeDescription), ((StringBuilder) (Object) lookupMessagePrefix).append(appletDescription).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedBoundaryFailure) {
-            throw uncheckedBoundaryFailure;
+          throw uncheckedBoundaryFailure;
         } catch (Throwable checkedBoundaryFailure) {
-            throw new RuntimeException(checkedBoundaryFailure);
+          throw new RuntimeException(checkedBoundaryFailure);
         }
     }
 

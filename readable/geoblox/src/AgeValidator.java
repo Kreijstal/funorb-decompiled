@@ -9,7 +9,7 @@ final class AgeValidator extends TextInputValidator {
     final static void markAccountIneligibleAndMaybeRequestGameArchives(int methodGuard) {
         GrowableIntList.createClientCookieMarker(NodeHashTableIterator.getActiveApplet(108), (byte) 110);
         if (methodGuard >= -24) {
-            gameArchiveRequestPending = true;
+          gameArchiveRequestPending = true;
         }
     }
 
@@ -37,7 +37,7 @@ final class AgeValidator extends TextInputValidator {
           candidateForParsing = (CharSequence) ((Object) candidateText);
           parsedAge = MultiHandleSliderWidget.parseSignedDecimalInt(false, candidateForParsing);
           if (parsedAge > 0 &&
-              130 >= parsedAge) {
+            130 >= parsedAge) {
             validAgeState = SocketArchiveNetworkClient.validInputValidationState;
             return validAgeState;
           }
@@ -60,7 +60,7 @@ final class AgeValidator extends TextInputValidator {
     public static void releaseRestartTutorialText(int methodGuard) {
         restartTutorialText = null;
         if (methodGuard > -11) {
-            restartTutorialText = (String) null;
+          restartTutorialText = (String) null;
         }
     }
 
@@ -156,11 +156,11 @@ final class AgeValidator extends TextInputValidator {
           }
           for (operationIndex = 0; requestAlias.operationCount > operationIndex; operationIndex++) {
             if (null != requestFromQueue.fieldLookupTasks[operationIndex] &&
-                requestFromQueue.fieldLookupTasks[operationIndex].status == 0) {
+              requestFromQueue.fieldLookupTasks[operationIndex].status == 0) {
               return false;
             }
             if (requestFromQueue.methodLookupTasks[operationIndex] != null &&
-                requestFromQueue.methodLookupTasks[operationIndex].status == 0) {
+              requestFromQueue.methodLookupTasks[operationIndex].status == 0) {
               return false;
             }
           }

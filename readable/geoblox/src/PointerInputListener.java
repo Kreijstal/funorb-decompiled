@@ -25,7 +25,7 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
         LoginPanel.endingEntityScanClear = false;
         RankedListQuery.connectivityDirty = false;
         if (methodGuard != -39) {
-            PointerInputListener.resetEntityQueuesAndContactState((byte) 97);
+          PointerInputListener.resetEntityQueuesAndContactState((byte) 97);
         }
     }
 
@@ -57,31 +57,31 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         try {
-            if (GameplaySetupSupport.pointerListener != null) {
-                GameplaySession.pointerIdleTicks = 0;
-                PointerMenuState.livePointerX = event.getX();
-                ReflectionCheckRequest.livePointerY = event.getY();
-                EndingAnimationSupport.pointerActivityPending = true;
-            }
+          if (GameplaySetupSupport.pointerListener != null) {
+            GameplaySession.pointerIdleTicks = 0;
+            PointerMenuState.livePointerX = event.getX();
+            ReflectionCheckRequest.livePointerY = event.getY();
+            EndingAnimationSupport.pointerActivityPending = true;
+          }
         } catch (RuntimeException callbackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void insertNodeBefore(IntrusiveNode targetNode, int methodGuard, IntrusiveNode node) {
         try {
-            if (null != node.previousNode) {
-                node.unlinkNode(false);
-            }
-            if (methodGuard < 80) {
-                loadingTextByLanguage = (String[]) null;
-            }
-            node.previousNode = targetNode.previousNode;
-            node.nextNode = targetNode;
-            node.previousNode.nextNode = node;
-            node.nextNode.previousNode = node;
+          if (null != node.previousNode) {
+            node.unlinkNode(false);
+          }
+          if (methodGuard < 80) {
+            loadingTextByLanguage = (String[]) null;
+          }
+          node.previousNode = targetNode.previousNode;
+          node.nextNode = targetNode;
+          node.previousNode.nextNode = node;
+          node.nextNode.previousNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "le.A(" + (targetNode != null ? "{...}" : "null") + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "le.A(" + (targetNode != null ? "{...}" : "null") + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -129,21 +129,21 @@ final class PointerInputListener implements java.awt.event.MouseListener, java.a
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != -29313) {
-            return;
+          return;
         }
         loadingTextByLanguage = null;
     }
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent event) {
         try {
-            if (null != GameplaySetupSupport.pointerListener) {
-                GameplaySession.pointerIdleTicks = 0;
-                PointerMenuState.livePointerX = event.getX();
-                ReflectionCheckRequest.livePointerY = event.getY();
-                EndingAnimationSupport.pointerActivityPending = true;
-            }
+          if (null != GameplaySetupSupport.pointerListener) {
+            GameplaySession.pointerIdleTicks = 0;
+            PointerMenuState.livePointerX = event.getX();
+            ReflectionCheckRequest.livePointerY = event.getY();
+            EndingAnimationSupport.pointerActivityPending = true;
+          }
         } catch (RuntimeException callbackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseDragged(" + (event != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "le.mouseDragged(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -50,19 +50,19 @@ final class TriangleMesh {
         int vertexIndex = 0;
         int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         for (vertexIndex = 0; vertexIndex < this.vertexCount; vertexIndex++) {
-            this.vertexX[vertexIndex] = (short)(scaleX * this.vertexX[vertexIndex] / divisor);
-            this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] * scaleY / divisor);
-            this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] * scaleZ / divisor);
+          this.vertexX[vertexIndex] = (short)(scaleX * this.vertexX[vertexIndex] / divisor);
+          this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] * scaleY / divisor);
+          this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] * scaleZ / divisor);
         }
         if (guard <= 69) {
-            TriangleMesh.prepareRankedEntryArrays(-90, 1, 93);
+          TriangleMesh.prepareRankedEntryArrays(-90, 1, 93);
         }
         this.invalidateBounds(-7008);
     }
 
     final static int chooseSpawnSpriteVariant(byte methodGuard) {
         if (methodGuard >= -55) {
-            return 66;
+          return 66;
         }
         return AchievementQuery.nextSpriteVariantIndex(EmailValidator.availableSpriteVariantCount, 1);
     }
@@ -71,7 +71,7 @@ final class TriangleMesh {
         pendingScoreSubmissions = null;
         reloadGameText = null;
         if (methodGuard != 115) {
-            TriangleMesh.prepareRankedEntryArrays(124, -30, -53);
+          TriangleMesh.prepareRankedEntryArrays(124, -30, -53);
         }
     }
 
@@ -79,13 +79,13 @@ final class TriangleMesh {
         int vertexIndex = 0;
         int controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         for (vertexIndex = 0; this.vertexCount > vertexIndex; vertexIndex++) {
-            this.vertexX[vertexIndex] = (short)(this.vertexX[vertexIndex] + deltaX);
-            this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] + deltaY);
-            this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] + deltaZ);
+          this.vertexX[vertexIndex] = (short)(this.vertexX[vertexIndex] + deltaX);
+          this.vertexY[vertexIndex] = (short)(this.vertexY[vertexIndex] + deltaY);
+          this.vertexZ[vertexIndex] = (short)(this.vertexZ[vertexIndex] + deltaZ);
         }
         this.invalidateBounds(-7008);
         if (guard != -9121) {
-            this.optionalPackedShortStreamFive = (short[]) null;
+          this.optionalPackedShortStreamFive = (short[]) null;
         }
     }
 
@@ -149,35 +149,35 @@ final class TriangleMesh {
 
     final static void prepareRankedEntryArrays(int lowerBoundSeed, int entryLimit, int responseEntryCount) {
         if (DialRenderer.rankedEntryResponseIndices == null ||
-              !(DialRenderer.rankedEntryResponseIndices.length >= responseEntryCount)) {
+          !(DialRenderer.rankedEntryResponseIndices.length >= responseEntryCount)) {
           DialRenderer.rankedEntryResponseIndices = new int[responseEntryCount * 2];
         }
         if (null == LoginPasswordSupport.rankedEntryKeyTwo ||
-              !(responseEntryCount <= LoginPasswordSupport.rankedEntryKeyTwo.length)) {
+          !(responseEntryCount <= LoginPasswordSupport.rankedEntryKeyTwo.length)) {
           LoginPasswordSupport.rankedEntryKeyTwo = new int[responseEntryCount * 2];
         }
         if (null == TextHotspotBounds.rankedEntryRatioNumerators ||
-              !(TextHotspotBounds.rankedEntryRatioNumerators.length >= responseEntryCount)) {
+          !(TextHotspotBounds.rankedEntryRatioNumerators.length >= responseEntryCount)) {
           TextHotspotBounds.rankedEntryRatioNumerators = new int[responseEntryCount * 2];
         }
         if (null == NodeHashTableIterator.rankedEntryRatioSecondComponents ||
-              !(responseEntryCount <= NodeHashTableIterator.rankedEntryRatioSecondComponents.length)) {
+          !(responseEntryCount <= NodeHashTableIterator.rankedEntryRatioSecondComponents.length)) {
           NodeHashTableIterator.rankedEntryRatioSecondComponents = new int[responseEntryCount * 2];
         }
         if (null == FrameTimer.rankedEntryRatioThirdComponents ||
-              !(FrameTimer.rankedEntryRatioThirdComponents.length >= responseEntryCount)) {
+          !(FrameTimer.rankedEntryRatioThirdComponents.length >= responseEntryCount)) {
           FrameTimer.rankedEntryRatioThirdComponents = new int[2 * responseEntryCount];
         }
         if (null == ClientProtocolStage.rankedEntryKeyOne ||
-              !(ClientProtocolStage.rankedEntryKeyOne.length >= responseEntryCount)) {
+          !(ClientProtocolStage.rankedEntryKeyOne.length >= responseEntryCount)) {
           ClientProtocolStage.rankedEntryKeyOne = new int[responseEntryCount * 2];
         }
         if (null == AchievementQuery.rankedEntryIndices ||
-              !(AchievementQuery.rankedEntryIndices.length >= responseEntryCount + entryLimit)) {
+          !(AchievementQuery.rankedEntryIndices.length >= responseEntryCount + entryLimit)) {
           AchievementQuery.rankedEntryIndices = new int[(responseEntryCount + entryLimit) * 2];
         }
         if (null == AccountCreationForm.unusedRankedEntryBooleans ||
-              !(AccountCreationForm.unusedRankedEntryBooleans.length >= responseEntryCount)) {
+          !(AccountCreationForm.unusedRankedEntryBooleans.length >= responseEntryCount)) {
           AccountCreationForm.unusedRankedEntryBooleans = new boolean[2 * responseEntryCount];
         }
         GmtTimestampSupport.rankedEntryCount = 0;
@@ -195,16 +195,16 @@ final class TriangleMesh {
         int pixelIndex = 0;
         Sprite[] sprites = new Sprite[ClientTimingSupport.decodedSpriteCount];
         for (spriteIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            pixelCount = ProgressBarWidget.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
-            paletteIndices = TextConcatenationSupport.decodedSpriteIndices[spriteIndex];
-            rgbPixels = new int[pixelCount];
-            for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-                rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
-            }
-            sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
+          pixelCount = ProgressBarWidget.decodedSpriteHeights[spriteIndex] * DualLinkNode.decodedSpriteWidths[spriteIndex];
+          paletteIndices = TextConcatenationSupport.decodedSpriteIndices[spriteIndex];
+          rgbPixels = new int[pixelCount];
+          for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
+            rgbPixels[pixelIndex] = NanoFrameTimer.decodedSpritePalette[ProxySocketConnector.andInt((int) paletteIndices[pixelIndex], 255)];
+          }
+          sprites[spriteIndex] = new Sprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], rgbPixels);
         }
         if (methodGuard != 255) {
-            screenTransitionTick = 40;
+          screenTransitionTick = 40;
         }
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;
@@ -212,21 +212,21 @@ final class TriangleMesh {
 
     final static boolean readSessionPacketPayload(boolean methodGuard) {
         if (methodGuard) {
-            return false;
+          return false;
         }
         if (AchievementSubmission.sessionPacketPayloadLength == -1) {
-            if (!UiWidget.readSessionBytesIfAvailable(30000, 1)) {
-                return false;
-            }
-            AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
-            LogoCompositor.sessionPacketBuffer.position = 0;
+          if (!UiWidget.readSessionBytesIfAvailable(30000, 1)) {
+            return false;
+          }
+          AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+          LogoCompositor.sessionPacketBuffer.position = 0;
         }
         if (AchievementSubmission.sessionPacketPayloadLength == -2) {
-            if (!UiWidget.readSessionBytesIfAvailable(30000, 2)) {
-                return false;
-            }
-            AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
-            LogoCompositor.sessionPacketBuffer.position = 0;
+          if (!UiWidget.readSessionBytesIfAvailable(30000, 2)) {
+            return false;
+          }
+          AchievementSubmission.sessionPacketPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+          LogoCompositor.sessionPacketBuffer.position = 0;
         }
         return UiWidget.readSessionBytesIfAvailable(30000, AchievementSubmission.sessionPacketPayloadLength);
     }
@@ -234,7 +234,7 @@ final class TriangleMesh {
     private final void invalidateBounds(int guard) {
         this.boundsValid = false;
         if (guard != -7008) {
-            TriangleMesh.prepareRankedEntryArrays(-110, 99, 92);
+          TriangleMesh.prepareRankedEntryArrays(-110, 99, 92);
         }
     }
 

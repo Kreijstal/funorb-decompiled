@@ -8,63 +8,63 @@ class LongAndTextLoginPayload extends LoginPayload {
 
     LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
-            return (LoginPayloadKind) null;
+          return (LoginPayloadKind) null;
         }
         return Geoblox.longAndNameLoginType;
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 8221) {
-            LongAndTextLoginPayload.releaseStaticReferences(91);
-            extendedTextCharacters = null;
-            return;
+          LongAndTextLoginPayload.releaseStaticReferences(91);
+          extendedTextCharacters = null;
+          return;
         }
         extendedTextCharacters = null;
     }
 
     final void writePayload(int methodGuard, ByteArrayBuffer buffer) {
         try {
-            buffer.writeLongBE((byte) 59, this.longValue);
-            buffer.writeBase38Text(this.base38Text, false);
-            if (methodGuard < 107) {
-                extendedTextCharacters = (char[]) null;
-            }
+          buffer.writeLongBE((byte) 59, this.longValue);
+          buffer.writeBase38Text(this.base38Text, false);
+          if (methodGuard < 107) {
+            extendedTextCharacters = (char[]) null;
+          }
         } catch (RuntimeException payloadWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "lf.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "lf.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 
     LongAndTextLoginPayload(long longValue, String base38Text) {
         try {
-            this.longValue = longValue;
-            this.base38Text = base38Text;
+          this.longValue = longValue;
+          this.base38Text = base38Text;
         } catch (RuntimeException payloadInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "lf.<init>(" + longValue + ',' + (base38Text != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "lf.<init>(" + longValue + ',' + (base38Text != null ? "{...}" : "null") + ')');
         }
     }
 
     final static String getVisibleTooltipText(byte methodGuard) {
         if (methodGuard <= 14) {
-            extendedTextCharacters = (char[]) null;
-            if (InstrumentPatch.tooltipSuppressed) {
-                return null;
-            }
-            if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
-                return null;
-            }
-            if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
-                return SettingsCookieSupport.currentTooltipText;
-            }
+          extendedTextCharacters = (char[]) null;
+          if (InstrumentPatch.tooltipSuppressed) {
             return null;
+          }
+          if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
+            return null;
+          }
+          if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
+            return SettingsCookieSupport.currentTooltipText;
+          }
+          return null;
         }
         if (InstrumentPatch.tooltipSuppressed) {
-            return null;
+          return null;
         }
         if (AsyncResourceDownloader.tooltipShowDelayTicks > ResizableDialog.tooltipAgeTicks) {
-            return null;
+          return null;
         }
         if (!(PcmResampler.tooltipShowDurationTicks + AsyncResourceDownloader.tooltipShowDelayTicks <= ResizableDialog.tooltipAgeTicks)) {
-            return SettingsCookieSupport.currentTooltipText;
+          return SettingsCookieSupport.currentTooltipText;
         }
         return null;
     }

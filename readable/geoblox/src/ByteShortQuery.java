@@ -14,9 +14,9 @@ final class ByteShortQuery extends IntrusiveNode {
         createUnableText = null;
         archiveTaskDispatcher = null;
         if (methodGuard != 112) {
-            createUnableText = (String) null;
-            waitingForExtraDataText = null;
-            return;
+          createUnableText = (String) null;
+          waitingForExtraDataText = null;
+          return;
         }
         waitingForExtraDataText = null;
     }

@@ -55,7 +55,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     public static void releaseProxyConnectorSharedResources(int methodGuard) {
         if (methodGuard != 1353) {
-            return;
+          return;
         }
         instrumentPatchArchive = null;
         logoGlowRaster = null;
@@ -227,7 +227,7 @@ final class ProxySocketConnector extends SocketConnector {
           proxyCandidateBeforeCast = proxyCandidates[proxyIndex];
           proxyCandidate = (java.net.Proxy) (proxyCandidateBeforeCast);
           try {
-              if (false) throw (ProxyAuthenticationRequiredException) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             connectedSocket = this.connectThroughProxy(proxyCandidate, (byte) -18);
             if (connectedSocket != null) {
               connectedSocketBeforeReturn = connectedSocket;
@@ -289,9 +289,9 @@ final class ProxySocketConnector extends SocketConnector {
             statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
             if (statusLineOrChallengeHeaderOrScheme != null) {
               if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
-                  !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
+                !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
                 connectResponseAcceptanceFrameContinues = !(!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") &&
-                    !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
+                  !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
                 if (connectResponseAcceptanceFrameContinues) {
                   scannedHeaderCount = 0;
                   authenticateHeaderPrefix = "proxy-authenticate: ";

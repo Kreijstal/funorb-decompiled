@@ -21,7 +21,7 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtPointerPressException = null;
         try {
           if (this.enabled &&
-              this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
+            this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
             this.requestKeyboardFocus((byte) -116, eventContext);
             this.pressedPointerButton = pointerButton;
             if (null != this.listener) {
@@ -50,17 +50,17 @@ class ButtonWidget extends UiWidget {
 
     void activateButton(int buttonY, int methodGuard, int buttonX, int pointerButton) {
         if (null != this.listener) {
-            if (!(this.listener instanceof ButtonActivationListener)) {
-                if (methodGuard != -28922) {
-                    canvasOffsetY = -42;
-                    return;
-                }
-                return;
+          if (!(this.listener instanceof ButtonActivationListener)) {
+            if (methodGuard != -28922) {
+              canvasOffsetY = -42;
+              return;
             }
-            ((ButtonActivationListener) (this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, this);
+            return;
+          }
+          ((ButtonActivationListener) (this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, this);
         }
         if (methodGuard == -28922) {
-            return;
+          return;
         }
         canvasOffsetY = -42;
     }
@@ -77,19 +77,19 @@ class ButtonWidget extends UiWidget {
 
     void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
-            if (0 != this.pressedPointerButton) {
-                if (EntityCollisionSupport.heldPointerButtonSnapshot == this.pressedPointerButton) {
-                    return;
-                }
-                if (this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX) &&
-                    EntityCollisionSupport.heldPointerButtonSnapshot == 0) {
-                    this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
-                }
-                this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          if (0 != this.pressedPointerButton) {
+            if (EntityCollisionSupport.heldPointerButtonSnapshot == this.pressedPointerButton) {
+              return;
             }
+            if (this.containsPointer(PrefixCodeDecoder.pointerXSnapshot, -1, PcmResampler.pointerYSnapshot, parentY, parentX) &&
+              EntityCollisionSupport.heldPointerButtonSnapshot == 0) {
+              this.activateButton(PcmResampler.pointerYSnapshot - parentY, -28922, PrefixCodeDecoder.pointerXSnapshot - parentX, this.pressedPointerButton);
+            }
+            this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, !hoverGuard ? true : false, eventContext, parentY, PcmResampler.pointerYSnapshot);
+          }
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hk.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "hk.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -108,7 +108,7 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtKeyInputException = null;
         try {
           if (this.hasKeyboardFocus((byte) 54) && (keyCode == 84 ||
-              keyCode == 83)) {
+            keyCode == 83)) {
             this.activateButton(-1, -28922, -1, 1);
             return true;
           }
@@ -133,37 +133,37 @@ class ButtonWidget extends UiWidget {
 
     final boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
-            this.hasKeyboardFocus((byte) -35);
-            return this.focused;
+          this.hasKeyboardFocus((byte) -35);
+          return this.focused;
         }
         return this.focused;
     }
 
     final void clearKeyboardFocus(int methodGuard) {
         if (methodGuard >= -122) {
-            this.active = false;
-            if (!this.focused) {
-                return;
-            }
-            this.focused = false;
-            if (null == this.listener) {
-                return;
-            }
-            if (!(this.listener instanceof KeyboardFocusListener)) {
-                return;
-            }
-            ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
+          this.active = false;
+          if (!this.focused) {
             return;
+          }
+          this.focused = false;
+          if (null == this.listener) {
+            return;
+          }
+          if (!(this.listener instanceof KeyboardFocusListener)) {
+            return;
+          }
+          ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
+          return;
         }
         if (!this.focused) {
-            return;
+          return;
         }
         this.focused = false;
         if (null == this.listener) {
-            return;
+          return;
         }
         if (!(this.listener instanceof KeyboardFocusListener)) {
-            return;
+          return;
         }
         ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
     }
@@ -172,7 +172,7 @@ class ButtonWidget extends UiWidget {
         StatefulWidgetRenderer.showAccountProgressDialog(520);
         MidiNote.setPendingLoginUiAction(4, false);
         if (methodGuard != 83) {
-            ButtonWidget.releaseStaticReferences((byte) -65);
+          ButtonWidget.releaseStaticReferences((byte) -65);
         }
     }
 
@@ -184,11 +184,11 @@ class ButtonWidget extends UiWidget {
         RuntimeException caughtFocusFailure = null;
         try {
           if (this.enabled &&
-              this.focusable) {
+            this.focusable) {
             focusContext.clearKeyboardFocus(-128);
             this.focused = true;
             if (null != this.listener &&
-                this.listener instanceof KeyboardFocusListener) {
+              this.listener instanceof KeyboardFocusListener) {
               ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             }
             if (methodGuard <= -30) {
@@ -260,15 +260,15 @@ class ButtonWidget extends UiWidget {
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         if (null != this.listener && this.listener instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) (this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
+          ((ButtonPointerListener) (this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
         }
         if (!releaseGuard) {
-            return;
+          return;
         }
         try {
-            this.pressedPointerButton = 0;
+          this.pressedPointerButton = 0;
         } catch (RuntimeException pointerReleaseFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "hk.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "hk.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 

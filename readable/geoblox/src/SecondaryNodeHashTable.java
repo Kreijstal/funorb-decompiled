@@ -16,18 +16,18 @@ final class SecondaryNodeHashTable {
     final void put(long key, int methodGuard, DualLinkNode node) {
         DualLinkNode bucketSentinel = null;
         try {
-            if (null != node.previousSecondaryNode) {
-                node.unlinkSecondaryNode((byte) 65);
-            }
-            int guardResidue = -92 % ((methodGuard - 34) / 51);
-            bucketSentinel = this.buckets[(int)(key & (long)(-1 + this.bucketCount))];
-            node.nextSecondaryNode = bucketSentinel;
-            node.previousSecondaryNode = bucketSentinel.previousSecondaryNode;
-            node.previousSecondaryNode.nextSecondaryNode = node;
-            node.secondaryKey = key;
-            node.nextSecondaryNode.previousSecondaryNode = node;
+          if (null != node.previousSecondaryNode) {
+            node.unlinkSecondaryNode((byte) 65);
+          }
+          int guardResidue = -92 % ((methodGuard - 34) / 51);
+          bucketSentinel = this.buckets[(int)(key & (long)(-1 + this.bucketCount))];
+          node.nextSecondaryNode = bucketSentinel;
+          node.previousSecondaryNode = bucketSentinel.previousSecondaryNode;
+          node.previousSecondaryNode.nextSecondaryNode = node;
+          node.secondaryKey = key;
+          node.nextSecondaryNode.previousSecondaryNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "vg.B(" + key + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "vg.B(" + key + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -101,7 +101,7 @@ final class SecondaryNodeHashTable {
     public static void releaseSharedResources(boolean releaseRemainingResourcesGuard) {
         accountProgressDialog = null;
         if (!releaseRemainingResourcesGuard) {
-            return;
+          return;
         }
         silverStarShockFrames = null;
         pleaseWaitText = null;

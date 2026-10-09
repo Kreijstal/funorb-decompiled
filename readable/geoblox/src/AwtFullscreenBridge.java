@@ -11,21 +11,21 @@ final class AwtFullscreenBridge {
         java.awt.DisplayMode[] unusedModesAlias = displayModes;
         int[] packedModeTuples = new int[displayModes.length << 2];
         for (modeIndex = 0; modeIndex < displayModes.length; modeIndex++) {
-            packedModeTuples[modeIndex << 2] = displayModes[modeIndex].getWidth();
-            packedModeTuples[(modeIndex << 2) + 1] = displayModes[modeIndex].getHeight();
-            packedModeTuples[2 + (modeIndex << 2)] = displayModes[modeIndex].getBitDepth();
-            packedModeTuples[(modeIndex << 2) + 3] = displayModes[modeIndex].getRefreshRate();
+          packedModeTuples[modeIndex << 2] = displayModes[modeIndex].getWidth();
+          packedModeTuples[(modeIndex << 2) + 1] = displayModes[modeIndex].getHeight();
+          packedModeTuples[2 + (modeIndex << 2)] = displayModes[modeIndex].getBitDepth();
+          packedModeTuples[(modeIndex << 2) + 3] = displayModes[modeIndex].getRefreshRate();
         }
         return packedModeTuples;
     }
 
     public final void exit() {
         if (this.savedDisplayMode != null) {
-            this.graphicsDevice.setDisplayMode(this.savedDisplayMode);
-            if (!this.graphicsDevice.getDisplayMode().equals(this.savedDisplayMode)) {
-                throw new RuntimeException("");
-            }
-            this.savedDisplayMode = null;
+          this.graphicsDevice.setDisplayMode(this.savedDisplayMode);
+          if (!this.graphicsDevice.getDisplayMode().equals(this.savedDisplayMode)) {
+            throw new RuntimeException("");
+          }
+          this.savedDisplayMode = null;
         }
         this.setFullscreenWindow(-779675038, (java.awt.Frame) null);
     }
@@ -103,7 +103,7 @@ final class AwtFullscreenBridge {
             }
             candidateRefreshRate = supportedModes[modeIndex].getRefreshRate();
             if (matchingModeFoundInt != 0 &&
-                Math.abs(-savedRefreshRate + candidateRefreshRate) >= Math.abs(-savedRefreshRate + refreshRate)) {
+              Math.abs(-savedRefreshRate + candidateRefreshRate) >= Math.abs(-savedRefreshRate + refreshRate)) {
               modeIndex++;
               continue;
             }

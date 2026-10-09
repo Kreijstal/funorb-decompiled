@@ -16,7 +16,7 @@ final class OpacityWidget extends SingleChildWidget {
 
     final static boolean isLogoAnimationComplete(int methodGuard) {
         if (methodGuard != 7426) {
-            createDisplayNameText = (String) null;
+          createDisplayNameText = (String) null;
         }
         return 250 < DequeCursor.logoAnimationTick ? true : false;
     }
@@ -24,11 +24,11 @@ final class OpacityWidget extends SingleChildWidget {
     OpacityWidget(UiWidget content) {
         super(content.widgetX, content.widgetY, content.widgetWidth, content.widgetHeight, (WidgetRenderer) null, (WidgetListener) null);
         try {
-            content.setWidgetBounds(this.widgetHeight, this.widgetWidth, (byte) -113, 0, 0);
-            this.opacity = 256;
-            this.child = content;
+          content.setWidgetBounds(this.widgetHeight, this.widgetWidth, (byte) -113, 0, 0);
+          this.opacity = 256;
+          this.child = content;
         } catch (RuntimeException opacityWidgetConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) opacityWidgetConstructionFailure), "wj.<init>(" + (content != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) opacityWidgetConstructionFailure), "wj.<init>(" + (content != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,17 +146,17 @@ final class OpacityWidget extends SingleChildWidget {
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int guardResidue = 16 % ((methodGuard - 1) / 43);
         if (renderPass != 0) {
-            return;
+          return;
         }
         if (null == this.child) {
-            return;
+          return;
         }
         if (this.opacity == 0) {
-            return;
+          return;
         }
         if (this.opacity == 256) {
-            this.child.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) 83, renderPass);
-            return;
+          this.child.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) 83, renderPass);
+          return;
         }
         Sprite contentRaster = new Sprite(this.child.widgetWidth, this.child.widgetHeight);
         Geoblox.setRasterTarget(1, contentRaster);
@@ -170,7 +170,7 @@ final class OpacityWidget extends SingleChildWidget {
         createInvalidEmailAlertText = null;
         fullscreenAfterAcceptText = null;
         if (methodGuard != -60) {
-            return;
+          return;
         }
         synthesizedSoundArchive = null;
         createDisplayNameText = null;

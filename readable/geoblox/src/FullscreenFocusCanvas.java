@@ -9,9 +9,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     public final void focusLost(java.awt.event.FocusEvent focusEvent) {
         try {
-            this.focusLost = true;
+          this.focusLost = true;
         } catch (RuntimeException focusLossFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusLossFailure), "he.focusLost(" + (focusEvent != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) focusLossFailure), "he.focusLost(" + (focusEvent != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,20 +23,20 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void exitFullscreen(int methodGuard, PlatformTaskDispatcher taskDispatcher) {
         try {
-            FullscreenSupport.exitFullscreenAndDisposeFrame(this.fullscreenFrame, 10, taskDispatcher);
-            if (methodGuard != 0) {
-                standaloneFrameReference = (java.awt.Frame) null;
-            }
+          FullscreenSupport.exitFullscreenAndDisposeFrame(this.fullscreenFrame, 10, taskDispatcher);
+          if (methodGuard != 0) {
+            standaloneFrameReference = (java.awt.Frame) null;
+          }
         } catch (RuntimeException fullscreenExitFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fullscreenExitFailure), "he.B(" + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) fullscreenExitFailure), "he.B(" + methodGuard + ',' + (taskDispatcher != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 0) {
-            FullscreenFocusCanvas.releaseStaticReferences(-79);
-            standaloneFrameReference = null;
-            return;
+          FullscreenFocusCanvas.releaseStaticReferences(-79);
+          standaloneFrameReference = null;
+          return;
         }
         standaloneFrameReference = null;
     }

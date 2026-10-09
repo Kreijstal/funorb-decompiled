@@ -15,36 +15,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          return;
         }
     }
 
@@ -58,24 +58,24 @@ final class ArgbSprite extends Sprite {
         int inverseAlpha256 = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
-                storedAlpha = sourcePixel >>> 24;
-                if (storedAlpha != 0) {
-                    inverseAlpha256 = 256 - storedAlpha;
-                    destinationPixel = destinationPixels[destinationIndex];
-                    destinationWriteIndex = destinationIndex;
-                    destinationIndex++;
-                    destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                } else {
-                    destinationIndex++;
-                }
-                sourceX16 = sourceX16 + stepX16;
+          sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+            storedAlpha = sourcePixel >>> 24;
+            if (storedAlpha != 0) {
+              inverseAlpha256 = 256 - storedAlpha;
+              destinationPixel = destinationPixels[destinationIndex];
+              destinationWriteIndex = destinationIndex;
+              destinationIndex++;
+              destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+            } else {
+              destinationIndex++;
             }
-            sourceY16 = sourceY16 + stepY16;
-            sourceX16 = rowSourceX16;
-            destinationIndex = destinationIndex + destinationRowSkip;
+            sourceX16 = sourceX16 + stepX16;
+          }
+          sourceY16 = sourceY16 + stepY16;
+          sourceX16 = rowSourceX16;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -92,36 +92,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgbGrayModulated(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgbGrayModulated(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, 0, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, tintColor);
+          return;
         }
     }
 
@@ -138,36 +138,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgbAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgbAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, alpha256);
+          return;
         }
     }
 
@@ -217,7 +217,7 @@ final class ArgbSprite extends Sprite {
             sourceGreen = sourcePixel >> 8 & 255;
             sourceBlue = sourcePixel & 255;
             if (sourceRed == sourceGreen &&
-                sourceGreen == sourceBlue) {
+              sourceGreen == sourceBlue) {
               if (sourceRed > 128) {
                 tintedPixel = (tintRed * (256 - sourceRed) + 255 * (sourceRed - 128) >> 7 << 16) + (tintGreen * (256 - sourceGreen) + 255 * (sourceGreen - 128) >> 7 << 8) + (tintBlue * (256 - sourceBlue) + 255 * (sourceBlue - 128) >> 7);
               } else {
@@ -286,20 +286,20 @@ final class ArgbSprite extends Sprite {
         int destinationWriteIndex = 0;
         int rowSourceX16 = sourceX16;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
-                destinationPixel = destinationPixels[destinationIndex];
-                effectiveAlpha256 = (sourcePixel >>> 24) * alpha256 >> 8;
-                inverseAlpha256 = 256 - effectiveAlpha256;
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-                sourceX16 = sourceX16 + stepX16;
-            }
-            sourceY16 = sourceY16 + stepY16;
-            sourceX16 = rowSourceX16;
-            destinationIndex = destinationIndex + destinationRowSkip;
+          sourceRowOffset = (sourceY16 >> 16) * sourceWidth;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            sourcePixel = sourcePixels[(sourceX16 >> 16) + sourceRowOffset];
+            destinationPixel = destinationPixels[destinationIndex];
+            effectiveAlpha256 = (sourcePixel >>> 24) * alpha256 >> 8;
+            inverseAlpha256 = 256 - effectiveAlpha256;
+            destinationWriteIndex = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+            sourceX16 = sourceX16 + stepX16;
+          }
+          sourceY16 = sourceY16 + stepY16;
+          sourceX16 = rowSourceX16;
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -544,9 +544,9 @@ final class ArgbSprite extends Sprite {
               fixedXFixedYSourceYQ12 = rowSourceYQ12;
               fixedXFixedYNegativePixelCounter = rightThenNegativeWidth;
               if (fixedXFixedYSourceXQ12 >= 0 &&
-                  fixedXFixedYSourceYQ12 >= 0 &&
-                  fixedXFixedYSourceXQ12 - (this.width << 12) < 0 &&
-                  fixedXFixedYSourceYQ12 - (this.height << 12) < 0) {
+                fixedXFixedYSourceYQ12 >= 0 &&
+                fixedXFixedYSourceXQ12 - (this.width << 12) < 0 &&
+                fixedXFixedYSourceYQ12 - (this.height << 12) < 0) {
                 while (fixedXFixedYNegativePixelCounter < 0) {
                   fixedXFixedYSampledPixel = this.pixels[(fixedXFixedYSourceYQ12 >> 12) * this.width + (fixedXFixedYSourceXQ12 >> 12)];
                   fixedXFixedYDestinationPixel = SoftwareRasterizer.framebuffer[fixedXFixedYDestinationIndex];
@@ -571,7 +571,7 @@ final class ArgbSprite extends Sprite {
               fixedXForwardYSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
               fixedXForwardYNegativePixelCounter = rightThenNegativeWidth;
               if (fixedXForwardYSourceXQ12 >= 0 &&
-                  fixedXForwardYSourceXQ12 - (this.width << 12) < 0) {
+                fixedXForwardYSourceXQ12 - (this.width << 12) < 0) {
                 if (fixedXForwardYSourceYQ12 < 0) {
                   fixedXForwardYTopSkipPixels = (inverseSinStep - 1 - fixedXForwardYSourceYQ12) / inverseSinStep;
                   fixedXForwardYNegativePixelCounter = fixedXForwardYNegativePixelCounter + fixedXForwardYTopSkipPixels;
@@ -607,7 +607,7 @@ final class ArgbSprite extends Sprite {
             fixedXReverseYSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
             fixedXReverseYNegativePixelCounter = rightThenNegativeWidth;
             if (fixedXReverseYSourceXQ12 >= 0 &&
-                fixedXReverseYSourceXQ12 - (this.width << 12) < 0) {
+              fixedXReverseYSourceXQ12 - (this.width << 12) < 0) {
               fixedXReverseYBottomExcessThenSkipPixels = fixedXReverseYSourceYQ12 - (this.height << 12);
               if (fixedXReverseYSourceYQ12 - (this.height << 12) >= 0) {
                 fixedXReverseYBottomExcessThenSkipPixels = (inverseSinStep - fixedXReverseYBottomExcessThenSkipPixels) / inverseSinStep;
@@ -646,7 +646,7 @@ final class ArgbSprite extends Sprite {
               forwardXFixedYSourceYQ12 = rowSourceYQ12;
               forwardXFixedYNegativePixelCounter = rightThenNegativeWidth;
               if (forwardXFixedYSourceYQ12 >= 0 &&
-                  forwardXFixedYSourceYQ12 - (this.height << 12) < 0) {
+                forwardXFixedYSourceYQ12 - (this.height << 12) < 0) {
                 if (forwardXFixedYSourceXQ12 < 0) {
                   forwardXFixedYLeftSkipPixels = (inverseCosStep - 1 - forwardXFixedYSourceXQ12) / inverseCosStep;
                   forwardXFixedYNegativePixelCounter = forwardXFixedYNegativePixelCounter + forwardXFixedYLeftSkipPixels;
@@ -779,7 +779,7 @@ final class ArgbSprite extends Sprite {
             reverseXFixedYSourceYQ12 = rowSourceYQ12;
             reverseXFixedYNegativePixelCounter = rightThenNegativeWidth;
             if (reverseXFixedYSourceYQ12 >= 0 &&
-                reverseXFixedYSourceYQ12 - (this.height << 12) < 0) {
+              reverseXFixedYSourceYQ12 - (this.height << 12) < 0) {
               reverseXFixedYRightExcessThenSkipPixels = reverseXFixedYSourceXQ12 - (this.width << 12);
               if (reverseXFixedYSourceXQ12 - (this.width << 12) >= 0) {
                 reverseXFixedYRightExcessThenSkipPixels = (inverseCosStep - reverseXFixedYRightExcessThenSkipPixels) / inverseCosStep;
@@ -918,30 +918,30 @@ final class ArgbSprite extends Sprite {
           }
           negativeColumnScratch = -drawWidth;
           {
-          while (!(negativeColumnScratch >= 0)) {
-            sourceColorScratch = sourcePixels[sourceIndex++];
-            if (sourceColorScratch == 0) {
+            while (!(negativeColumnScratch >= 0)) {
+              sourceColorScratch = sourcePixels[sourceIndex++];
+              if (sourceColorScratch == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
+                continue;
+              }
+              effectiveAlpha256 = intensity256 * (sourceColorScratch >>> 24) >> 8 & 255;
+              blendScratch = (sourceColorScratch & 16711935) * effectiveAlpha256;
+              sourceColorScratch = (blendScratch & -16711936) + (sourceColorScratch * effectiveAlpha256 - blendScratch & 16711680) >>> 8;
+              blendScratch = destinationPixels[destinationIndex];
+              rgbSum = sourceColorScratch + blendScratch;
+              sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
+              blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
+              destinationWriteIndex = destinationIndex;
               destinationIndex++;
+              destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
               negativeColumnScratch++;
-              continue;
             }
-            effectiveAlpha256 = intensity256 * (sourceColorScratch >>> 24) >> 8 & 255;
-            blendScratch = (sourceColorScratch & 16711935) * effectiveAlpha256;
-            sourceColorScratch = (blendScratch & -16711936) + (sourceColorScratch * effectiveAlpha256 - blendScratch & 16711680) >>> 8;
-            blendScratch = destinationPixels[destinationIndex];
-            rgbSum = sourceColorScratch + blendScratch;
-            sourceColorScratch = (sourceColorScratch & 16711935) + (blendScratch & 16711935);
-            blendScratch = (sourceColorScratch & 16777472) + (rgbSum - sourceColorScratch & 65536);
-            destinationWriteIndex = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex] = rgbSum - blendScratch | blendScratch - (blendScratch >>> 8);
-            negativeColumnScratch++;
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -1191,34 +1191,34 @@ final class ArgbSprite extends Sprite {
           }
           negativeColumnScratch = -drawWidth;
           {
-          while (!(negativeColumnScratch >= 0)) {
-            sourcePixel = sourcePixels[sourceIndex++];
-            storedAlpha = sourcePixel >>> 24;
-            sourcePixel = sourcePixel & 16777215;
-            if (storedAlpha == 0) {
+            while (!(negativeColumnScratch >= 0)) {
+              sourcePixel = sourcePixels[sourceIndex++];
+              storedAlpha = sourcePixel >>> 24;
+              sourcePixel = sourcePixel & 16777215;
+              if (storedAlpha == 0) {
+                destinationIndex++;
+                negativeColumnScratch++;
+                continue;
+              }
+              modulatedPixel = 0;
+              if (sourcePixel >> 8 != (sourcePixel & 65535)) {
+                modulatedRgb = sourcePixel;
+              } else {
+                sourcePixel = sourcePixel & 255;
+                modulatedRgb = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
+              }
+              inverseAlpha256 = 256 - storedAlpha;
+              destinationPixel = destinationPixels[destinationIndex];
+              destinationWriteIndex = destinationIndex;
               destinationIndex++;
+              destinationPixels[destinationWriteIndex] = ((modulatedRgb & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedRgb & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
               negativeColumnScratch++;
-              continue;
             }
-            modulatedPixel = 0;
-            if (sourcePixel >> 8 != (sourcePixel & 65535)) {
-              modulatedRgb = sourcePixel;
-            } else {
-              sourcePixel = sourcePixel & 255;
-              modulatedRgb = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
-            }
-            inverseAlpha256 = 256 - storedAlpha;
-            destinationPixel = destinationPixels[destinationIndex];
-            destinationWriteIndex = destinationIndex;
-            destinationIndex++;
-            destinationPixels[destinationWriteIndex] = ((modulatedRgb & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedRgb & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-            negativeColumnScratch++;
-          }
-           {
+            {
               destinationIndex = destinationIndex + destinationRowSkip;
               sourceIndex = sourceIndex + sourceRowSkip;
               negativeRowScratch++;
-              }
+            }
           }
         }
     }
@@ -1236,36 +1236,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, sourceIndex, 0, destinationIndex, 0, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip, intensity256);
+          return;
         }
     }
 
@@ -1282,36 +1282,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 
@@ -1324,17 +1324,17 @@ final class ArgbSprite extends Sprite {
         int destinationPixel = 0;
         int destinationWriteIndex = 0;
         for (negativeRow = -drawHeight; negativeRow < 0; negativeRow++) {
-            for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
-                effectiveAlpha256 = (sourcePixels[sourceIndex] >>> 24) * alpha256 >> 8;
-                inverseAlpha256 = 256 - effectiveAlpha256;
-                sourcePixel = sourcePixels[sourceIndex++];
-                destinationPixel = destinationPixels[destinationIndex];
-                destinationWriteIndex = destinationIndex;
-                destinationIndex++;
-                destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
-            }
-            destinationIndex = destinationIndex + destinationRowSkip;
-            sourceIndex = sourceIndex + sourceRowSkip;
+          for (negativeColumn = -drawWidth; negativeColumn < 0; negativeColumn++) {
+            effectiveAlpha256 = (sourcePixels[sourceIndex] >>> 24) * alpha256 >> 8;
+            inverseAlpha256 = 256 - effectiveAlpha256;
+            sourcePixel = sourcePixels[sourceIndex++];
+            destinationPixel = destinationPixels[destinationIndex];
+            destinationWriteIndex = destinationIndex;
+            destinationIndex++;
+            destinationPixels[destinationWriteIndex] = ((sourcePixel & 16711935) * effectiveAlpha256 + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((sourcePixel & 65280) * effectiveAlpha256 + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+          }
+          destinationIndex = destinationIndex + destinationRowSkip;
+          sourceIndex = sourceIndex + sourceRowSkip;
         }
     }
 
@@ -1355,58 +1355,58 @@ final class ArgbSprite extends Sprite {
         int rightClipPixels;
         int leftClipPixels;
         if (destinationWidth > 0) {
-            if (destinationHeight <= 0) {
-                return;
-            }
-            sourceWidth = this.width;
-            sourceHeight = this.height;
-            sourceX16 = 0;
-            sourceY16 = 0;
-            canvasWidth = this.fullWidth;
-            canvasHeight = this.fullHeight;
-            stepX16 = (canvasWidth << 16) / destinationWidth;
-            stepY16 = (canvasHeight << 16) / destinationHeight;
-            if (this.trimX > 0) {
-                horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
-                x = x + horizontalTrimSteps;
-                sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
-            }
-            if (this.trimY > 0) {
-                verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + verticalTrimSteps;
-                sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
-            }
-            if (sourceWidth < canvasWidth) {
-                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
-            }
-            if (sourceHeight < canvasHeight) {
-                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
-            }
-            destinationIndex = x + y * SoftwareRasterizer.stride;
-            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
-            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
-                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
-            }
-            if (y < SoftwareRasterizer.clipTop) {
-                topClipPixels = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - topClipPixels;
-                destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
-                sourceY16 = sourceY16 + stepY16 * topClipPixels;
-            }
-            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - rightClipPixels;
-                destinationRowSkip = destinationRowSkip + rightClipPixels;
-            }
-            if (x < SoftwareRasterizer.clipLeft) {
-                leftClipPixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - leftClipPixels;
-                destinationIndex = destinationIndex + leftClipPixels;
-                sourceX16 = sourceX16 + stepX16 * leftClipPixels;
-                destinationRowSkip = destinationRowSkip + leftClipPixels;
-            }
-            ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
+          if (destinationHeight <= 0) {
             return;
+          }
+          sourceWidth = this.width;
+          sourceHeight = this.height;
+          sourceX16 = 0;
+          sourceY16 = 0;
+          canvasWidth = this.fullWidth;
+          canvasHeight = this.fullHeight;
+          stepX16 = (canvasWidth << 16) / destinationWidth;
+          stepY16 = (canvasHeight << 16) / destinationHeight;
+          if (this.trimX > 0) {
+            horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+            x = x + horizontalTrimSteps;
+            sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
+          }
+          if (this.trimY > 0) {
+            verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+            y = y + verticalTrimSteps;
+            sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
+          }
+          if (sourceWidth < canvasWidth) {
+            destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
+          }
+          if (sourceHeight < canvasHeight) {
+            destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
+          }
+          destinationIndex = x + y * SoftwareRasterizer.stride;
+          destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+          if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
+          }
+          if (y < SoftwareRasterizer.clipTop) {
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            destinationHeight = destinationHeight - topClipPixels;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+            sourceY16 = sourceY16 + stepY16 * topClipPixels;
+          }
+          if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+            rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+            destinationWidth = destinationWidth - rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          }
+          if (x < SoftwareRasterizer.clipLeft) {
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            destinationWidth = destinationWidth - leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceX16 = sourceX16 + stepX16 * leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          }
+          ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
+          return;
         }
     }
 
@@ -1427,58 +1427,58 @@ final class ArgbSprite extends Sprite {
         int rightClipPixels;
         int leftClipPixels;
         if (destinationWidth > 0) {
-            if (destinationHeight <= 0) {
-                return;
-            }
-            sourceWidth = this.width;
-            sourceHeight = this.height;
-            sourceX16 = 0;
-            sourceY16 = 0;
-            canvasWidth = this.fullWidth;
-            canvasHeight = this.fullHeight;
-            stepX16 = (canvasWidth << 16) / destinationWidth;
-            stepY16 = (canvasHeight << 16) / destinationHeight;
-            if (this.trimX > 0) {
-                horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
-                x = x + horizontalTrimSteps;
-                sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
-            }
-            if (this.trimY > 0) {
-                verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + verticalTrimSteps;
-                sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
-            }
-            if (sourceWidth < canvasWidth) {
-                destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
-            }
-            if (sourceHeight < canvasHeight) {
-                destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
-            }
-            destinationIndex = x + y * SoftwareRasterizer.stride;
-            destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
-            if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
-                destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
-            }
-            if (y < SoftwareRasterizer.clipTop) {
-                topClipPixels = SoftwareRasterizer.clipTop - y;
-                destinationHeight = destinationHeight - topClipPixels;
-                destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
-                sourceY16 = sourceY16 + stepY16 * topClipPixels;
-            }
-            if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - rightClipPixels;
-                destinationRowSkip = destinationRowSkip + rightClipPixels;
-            }
-            if (x < SoftwareRasterizer.clipLeft) {
-                leftClipPixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - leftClipPixels;
-                destinationIndex = destinationIndex + leftClipPixels;
-                sourceX16 = sourceX16 + stepX16 * leftClipPixels;
-                destinationRowSkip = destinationRowSkip + leftClipPixels;
-            }
-            ArgbSprite.blitArgbScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
+          if (destinationHeight <= 0) {
             return;
+          }
+          sourceWidth = this.width;
+          sourceHeight = this.height;
+          sourceX16 = 0;
+          sourceY16 = 0;
+          canvasWidth = this.fullWidth;
+          canvasHeight = this.fullHeight;
+          stepX16 = (canvasWidth << 16) / destinationWidth;
+          stepY16 = (canvasHeight << 16) / destinationHeight;
+          if (this.trimX > 0) {
+            horizontalTrimSteps = ((this.trimX << 16) + stepX16 - 1) / stepX16;
+            x = x + horizontalTrimSteps;
+            sourceX16 = sourceX16 + (horizontalTrimSteps * stepX16 - (this.trimX << 16));
+          }
+          if (this.trimY > 0) {
+            verticalTrimSteps = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+            y = y + verticalTrimSteps;
+            sourceY16 = sourceY16 + (verticalTrimSteps * stepY16 - (this.trimY << 16));
+          }
+          if (sourceWidth < canvasWidth) {
+            destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
+          }
+          if (sourceHeight < canvasHeight) {
+            destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
+          }
+          destinationIndex = x + y * SoftwareRasterizer.stride;
+          destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
+          if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
+            destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
+          }
+          if (y < SoftwareRasterizer.clipTop) {
+            topClipPixels = SoftwareRasterizer.clipTop - y;
+            destinationHeight = destinationHeight - topClipPixels;
+            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+            sourceY16 = sourceY16 + stepY16 * topClipPixels;
+          }
+          if (x + destinationWidth > SoftwareRasterizer.clipRight) {
+            rightClipPixels = x + destinationWidth - SoftwareRasterizer.clipRight;
+            destinationWidth = destinationWidth - rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          }
+          if (x < SoftwareRasterizer.clipLeft) {
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            destinationWidth = destinationWidth - leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceX16 = sourceX16 + stepX16 * leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          }
+          ArgbSprite.blitArgbScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, destinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
+          return;
         }
     }
 
@@ -1495,36 +1495,36 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = SoftwareRasterizer.stride - drawWidth;
         int sourceRowSkip = 0;
         if (y < SoftwareRasterizer.clipTop) {
-            topClipPixels = SoftwareRasterizer.clipTop - y;
-            drawHeight = drawHeight - topClipPixels;
-            y = SoftwareRasterizer.clipTop;
-            sourceIndex = sourceIndex + topClipPixels * drawWidth;
-            destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
+          topClipPixels = SoftwareRasterizer.clipTop - y;
+          drawHeight = drawHeight - topClipPixels;
+          y = SoftwareRasterizer.clipTop;
+          sourceIndex = sourceIndex + topClipPixels * drawWidth;
+          destinationIndex = destinationIndex + topClipPixels * SoftwareRasterizer.stride;
         }
         if (y + drawHeight > SoftwareRasterizer.clipBottom) {
-            drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
+          drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            leftClipPixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - leftClipPixels;
-            x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + leftClipPixels;
-            destinationIndex = destinationIndex + leftClipPixels;
-            sourceRowSkip = sourceRowSkip + leftClipPixels;
-            destinationRowSkip = destinationRowSkip + leftClipPixels;
+          leftClipPixels = SoftwareRasterizer.clipLeft - x;
+          drawWidth = drawWidth - leftClipPixels;
+          x = SoftwareRasterizer.clipLeft;
+          sourceIndex = sourceIndex + leftClipPixels;
+          destinationIndex = destinationIndex + leftClipPixels;
+          sourceRowSkip = sourceRowSkip + leftClipPixels;
+          destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - rightClipPixels;
-            sourceRowSkip = sourceRowSkip + rightClipPixels;
-            destinationRowSkip = destinationRowSkip + rightClipPixels;
+          rightClipPixels = x + drawWidth - SoftwareRasterizer.clipRight;
+          drawWidth = drawWidth - rightClipPixels;
+          sourceRowSkip = sourceRowSkip + rightClipPixels;
+          destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (drawWidth > 0) {
-            if (drawHeight <= 0) {
-                return;
-            }
-            ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          if (drawHeight <= 0) {
             return;
+          }
+          ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);
+          return;
         }
     }
 }

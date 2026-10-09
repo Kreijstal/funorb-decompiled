@@ -13,9 +13,9 @@ final class UsernameQuerySupport {
         payloadKeyRandom = null;
         archiveDiskWorker = null;
         if (methodGuard != -9474) {
-            UsernameQuerySupport.releaseStaticReferences(62);
-            logoFinalFrameBottom = null;
-            return;
+          UsernameQuerySupport.releaseStaticReferences(62);
+          logoFinalFrameBottom = null;
+          return;
         }
         logoFinalFrameBottom = null;
     }
@@ -36,7 +36,7 @@ final class UsernameQuerySupport {
             return null;
           }
           if (WidgetSkinState.usernameQueryFlowState == MeshPrioritySupport.completedClientFlowToken &&
-              candidateText.equals(DelayedPcmStream.usernameQueryCandidate)) {
+            candidateText.equals(DelayedPcmStream.usernameQueryCandidate)) {
             WidgetSkinState.usernameQueryFlowState = DiskCacheWorker.idleClientFlowToken;
             cachedQueryBeforeReturn = ScorePopup.pendingUsernameResult;
             return cachedQueryBeforeReturn;

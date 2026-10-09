@@ -12,7 +12,7 @@ abstract class FrameTimer {
     public static void releaseSharedResources(int methodGuard) {
         receivedRecordPrimaryName = null;
         if (methodGuard > -59) {
-            return;
+          return;
         }
         rankedEntryRatioThirdComponents = null;
     }
@@ -20,10 +20,10 @@ abstract class FrameTimer {
     final int awaitAndCountTicks(byte methodGuard, long tickPeriodNanos) {
         long sleepMillis = this.measureSleepMillis((byte) -49);
         if (0L < sleepMillis) {
-            ByteTextDecodingSupport.sleepMillis(0, sleepMillis);
+          ByteTextDecodingSupport.sleepMillis(0, sleepMillis);
         }
         if (methodGuard == -6) {
-            return this.advanceTicks(true, tickPeriodNanos);
+          return this.advanceTicks(true, tickPeriodNanos);
         }
         return -30;
     }

@@ -31,7 +31,7 @@ final class DequeCursor {
             return true;
           }
           if (0 == MatchingTextValidator.introAnimationTick % 40 &&
-              CachedTextLayout.introFaceFrameIndex < 11) {
+            CachedTextLayout.introFaceFrameIndex < 11) {
             UnderlinedButtonRenderer.introFaceFrameStartTick = MatchingTextValidator.introAnimationTick;
             CachedTextLayout.introFaceFrameIndex = CachedTextLayout.introFaceFrameIndex + 1;
             if (10 == CachedTextLayout.introFaceFrameIndex) {
@@ -45,12 +45,12 @@ final class DequeCursor {
           faceHalfWidth = RasterTargetSnapshot.introFaceFrames[CachedTextLayout.introFaceFrameIndex].fullWidth >> 1;
           geometryTravelDistance = MatchingTextValidator.introAnimationTick << 2;
           if (!SharedBufferPools.introFirstGeometrySoundPlayed &&
-              -geometryTravelDistance + 900 <= 320 + faceHalfWidth) {
+            -geometryTravelDistance + 900 <= 320 + faceHalfWidth) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[7]);
             SharedBufferPools.introFirstGeometrySoundPlayed = true;
           }
           if (!EntityMotionSupport.introSecondGeometrySoundPlayed &&
-              -faceHalfWidth + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + geometryTravelDistance) {
+            -faceHalfWidth + (320 - AccountCreationForm.introGeometryFrames[1].fullWidth) <= -1200 + geometryTravelDistance) {
             ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[8]);
             EntityMotionSupport.introSecondGeometrySoundPlayed = true;
           }
@@ -66,12 +66,12 @@ final class DequeCursor {
     final IntrusiveNode beginForward(byte methodGuard) {
         IntrusiveNode firstNode = this.deque.sentinel.nextNode;
         if (firstNode == this.deque.sentinel) {
-            this.pendingNode = null;
-            return null;
+          this.pendingNode = null;
+          return null;
         }
         if (methodGuard == 88) {
-            this.pendingNode = firstNode.nextNode;
-            return firstNode;
+          this.pendingNode = firstNode.nextNode;
+          return firstNode;
         }
         fourthScoreContextCounter = -4;
         this.pendingNode = firstNode.nextNode;
@@ -81,12 +81,12 @@ final class DequeCursor {
     final IntrusiveNode beginReverse(int methodGuard) {
         IntrusiveNode lastNode = this.deque.sentinel.previousNode;
         if (this.deque.sentinel == lastNode) {
-            this.pendingNode = null;
-            return null;
+          this.pendingNode = null;
+          return null;
         }
         if (methodGuard == 1) {
-            this.pendingNode = lastNode.previousNode;
-            return lastNode;
+          this.pendingNode = lastNode.previousNode;
+          return lastNode;
         }
         this.nextForward((byte) 55);
         this.pendingNode = lastNode.previousNode;
@@ -96,12 +96,12 @@ final class DequeCursor {
     final IntrusiveNode nextReverse(int methodGuard) {
         IntrusiveNode node = this.pendingNode;
         if (node == this.deque.sentinel) {
-            this.pendingNode = null;
-            return null;
+          this.pendingNode = null;
+          return null;
         }
         this.pendingNode = node.previousNode;
         if (methodGuard == 26) {
-            return node;
+          return node;
         }
         return (IntrusiveNode) null;
     }
@@ -206,20 +206,20 @@ final class DequeCursor {
 
     DequeCursor(IntrusiveDeque deque) {
         try {
-            this.deque = deque;
+          this.deque = deque;
         } catch (RuntimeException cursorConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cursorConstructionFailure), "gb.<init>(" + (deque != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cursorConstructionFailure), "gb.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 
     final IntrusiveNode nextForward(byte methodGuard) {
         IntrusiveNode node = this.pendingNode;
         if (methodGuard <= 105) {
-            return (IntrusiveNode) null;
+          return (IntrusiveNode) null;
         }
         if (node == this.deque.sentinel) {
-            this.pendingNode = null;
-            return null;
+          this.pendingNode = null;
+          return null;
         }
         this.pendingNode = node.nextNode;
         return node;

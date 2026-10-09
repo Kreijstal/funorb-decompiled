@@ -8,13 +8,13 @@ final class PendingActionMarker extends IntrusiveNode {
 
     final static void returnGuestSessionToLogin(byte methodGuard) {
         if (!ProgressBarWidget.guestSessionMode) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
         if (methodGuard > 115) {
-            TextInputValidator.openAccountLoginPanel((byte) 107, false);
-            SpriteConstructionSupport.clientScreenStage = 0;
-            return;
+          TextInputValidator.openAccountLoginPanel((byte) 107, false);
+          SpriteConstructionSupport.clientScreenStage = 0;
+          return;
         }
         pendingRankedListQueries = (IntrusiveDeque) null;
         TextInputValidator.openAccountLoginPanel((byte) 107, false);

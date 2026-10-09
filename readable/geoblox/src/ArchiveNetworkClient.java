@@ -61,18 +61,18 @@ abstract class ArchiveNetworkClient {
         request.priority = priority ? true : false;
         request.reservedTailBytes = reservedTailBytes;
         if (!priority) {
-            if (this.countBackgroundRequests(false) >= 20) {
-                throw new RuntimeException();
-            }
-            this.pendingBackgroundRequests.addLast(8, request);
+          if (this.countBackgroundRequests(false) >= 20) {
+            throw new RuntimeException();
+          }
+          this.pendingBackgroundRequests.addLast(8, request);
         } else {
-            if (this.countPriorityRequests(methodGuard ^ 108) >= 20) {
-                throw new RuntimeException();
-            }
-            this.pendingPriorityRequests.addLast(methodGuard ^ -123, request);
+          if (this.countPriorityRequests(methodGuard ^ 108) >= 20) {
+            throw new RuntimeException();
+          }
+          this.pendingPriorityRequests.addLast(methodGuard ^ -123, request);
         }
         if (methodGuard == -21) {
-            return request;
+          return request;
         }
         this.pendingPriorityRequests = (SecondaryDeque) null;
         return request;
@@ -80,7 +80,7 @@ abstract class ArchiveNetworkClient {
 
     final int countPriorityRequests(int methodGuard) {
         if (methodGuard < -39) {
-            return this.pendingPriorityRequests.countNodes((byte) 67) + this.sentPriorityRequests.countNodes((byte) 67);
+          return this.pendingPriorityRequests.countNodes((byte) 67) + this.sentPriorityRequests.countNodes((byte) 67);
         }
         ArchiveNetworkClient.sleepIgnoringInterrupt(49L, (byte) 33);
         return this.pendingPriorityRequests.countNodes((byte) 67) + this.sentPriorityRequests.countNodes((byte) 67);
@@ -88,28 +88,28 @@ abstract class ArchiveNetworkClient {
 
     final static void sleepIgnoringInterrupt(long durationMillis, byte methodGuard) {
         try {
-            Throwable caughtSleepFailure = null;
-            InterruptedException ignoredSleepInterruption = null;
-            try {
-              Thread.sleep(durationMillis);
-              if (methodGuard != -33) {
-                gmtWeekdayAbbreviations = (String[]) null;
-                return;
-              }
-            } catch (java.lang.InterruptedException sleepInterruption) {
-              caughtSleepFailure = sleepInterruption;
-              ignoredSleepInterruption = (InterruptedException) (Object) caughtSleepFailure;
+          Throwable caughtSleepFailure = null;
+          InterruptedException ignoredSleepInterruption = null;
+          try {
+            Thread.sleep(durationMillis);
+            if (methodGuard != -33) {
+              gmtWeekdayAbbreviations = (String[]) null;
+              return;
             }
+          } catch (java.lang.InterruptedException sleepInterruption) {
+            caughtSleepFailure = sleepInterruption;
+            ignoredSleepInterruption = (InterruptedException) (Object) caughtSleepFailure;
+          }
         } catch (RuntimeException | Error uncheckedSleepFailure) {
-            throw uncheckedSleepFailure;
+          throw uncheckedSleepFailure;
         } catch (Throwable checkedSleepFailure) {
-            throw new RuntimeException(checkedSleepFailure);
+          throw new RuntimeException(checkedSleepFailure);
         }
     }
 
     final boolean isPriorityQueueFull(int methodGuard) {
         if (methodGuard == 20) {
-            return this.countPriorityRequests(-104) >= 20 ? true : false;
+          return this.countPriorityRequests(-104) >= 20 ? true : false;
         }
         createWelcomeText = (String) null;
         return this.countPriorityRequests(-104) >= 20 ? true : false;
@@ -119,7 +119,7 @@ abstract class ArchiveNetworkClient {
 
     final int countBackgroundRequests(boolean methodGuard) {
         if (!methodGuard) {
-            return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
+          return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
         }
         this.responseIdleMillis = -38;
         return this.pendingBackgroundRequests.countNodes((byte) 67) + this.sentBackgroundRequests.countNodes((byte) 67);
@@ -146,7 +146,7 @@ abstract class ArchiveNetworkClient {
             return null;
           }
           if (destination == null ||
-                elementCount != destination.length) {
+            elementCount != destination.length) {
             destination = new short[elementCount];
           }
           deltaBitCount = packet.readBits((byte) -17, 4);
@@ -186,7 +186,7 @@ abstract class ArchiveNetworkClient {
 
     final boolean isBackgroundQueueFull(int methodGuard) {
         if (methodGuard == -21) {
-            return this.countBackgroundRequests(false) >= 20 ? true : false;
+          return this.countBackgroundRequests(false) >= 20 ? true : false;
         }
         this.pollResponses((byte) 74);
         return this.countBackgroundRequests(false) >= 20 ? true : false;
@@ -197,7 +197,7 @@ abstract class ArchiveNetworkClient {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         IndexedSprite[] sprites = new IndexedSprite[ClientTimingSupport.decodedSpriteCount];
         for (spriteIndex = firstSpriteIndex; ClientTimingSupport.decodedSpriteCount > spriteIndex; spriteIndex++) {
-            sprites[spriteIndex] = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], TextConcatenationSupport.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
+          sprites[spriteIndex] = new IndexedSprite(GameplaySetupSupport.decodedSpriteCanvasWidth, FadingDialog.decodedSpriteCanvasHeight, GameplaySession.decodedSpriteXOffsets[spriteIndex], GmtTimestampSupport.decodedSpriteYOffsets[spriteIndex], DualLinkNode.decodedSpriteWidths[spriteIndex], ProgressBarWidget.decodedSpriteHeights[spriteIndex], TextConcatenationSupport.decodedSpriteIndices[spriteIndex], NanoFrameTimer.decodedSpritePalette);
         }
         MidiPcmStream.clearDecodedSpriteWorkingArrays(true);
         return sprites;

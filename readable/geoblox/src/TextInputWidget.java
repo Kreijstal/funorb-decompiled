@@ -18,15 +18,15 @@ class TextInputWidget extends ButtonWidget {
         int selectionStart = 0;
         int selectionEnd = 0;
         if (methodGuard != 0) {
-            this.wordSelectionEndIndex = -7;
+          this.wordSelectionEndIndex = -7;
         }
         if (this.selectionAnchorIndex != this.caretIndex) {
-            selectionStart = this.selectionAnchorIndex >= this.caretIndex ? this.caretIndex : this.selectionAnchorIndex;
-            selectionEnd = this.caretIndex > this.selectionAnchorIndex ? this.caretIndex : this.selectionAnchorIndex;
-            this.caretIndex = selectionStart;
-            this.selectionAnchorIndex = selectionStart;
-            this.widgetText = this.widgetText.substring(0, selectionStart) + this.widgetText.substring(selectionEnd, this.widgetText.length());
-            this.notifyTextInputChanged((byte) -117);
+          selectionStart = this.selectionAnchorIndex >= this.caretIndex ? this.caretIndex : this.selectionAnchorIndex;
+          selectionEnd = this.caretIndex > this.selectionAnchorIndex ? this.caretIndex : this.selectionAnchorIndex;
+          this.caretIndex = selectionStart;
+          this.selectionAnchorIndex = selectionStart;
+          this.widgetText = this.widgetText.substring(0, selectionStart) + this.widgetText.substring(selectionEnd, this.widgetText.length());
+          this.notifyTextInputChanged((byte) -117);
         }
     }
 
@@ -47,8 +47,8 @@ class TextInputWidget extends ButtonWidget {
               hitTextIndex = textRenderer.hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
               if (-1 != hitTextIndex) {
                 if (this.wordSelectionDrag &&
-                    this.wordSelectionEndIndex > hitTextIndex &&
-                    this.selectionAnchorIndex < hitTextIndex) {
+                  this.wordSelectionEndIndex > hitTextIndex &&
+                  this.selectionAnchorIndex < hitTextIndex) {
                   hitTextIndex = this.wordSelectionEndIndex;
                 }
                 this.caretIndex = hitTextIndex;
@@ -107,7 +107,7 @@ class TextInputWidget extends ButtonWidget {
 
     final static Sprite[] createTwoTonePanelSprites(int firstBorderColor, byte methodGuard, int secondBorderColor, int centerColor, int borderSpriteSize) {
         if (methodGuard != -70) {
-            diskSectorBuffer = (byte[]) null;
+          diskSectorBuffer = (byte[]) null;
         }
         Sprite[] allocatedSprites = new Sprite[9];
         Sprite[] sprites = allocatedSprites;
@@ -122,7 +122,7 @@ class TextInputWidget extends ButtonWidget {
         sprites[7] = secondBorderSprite;
         sprites[5] = secondBorderSprite;
         if (centerColor != 0) {
-            allocatedSprites[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, centerColor, 64);
+          allocatedSprites[4] = SecondaryNodeDequeIterator.createPartiallyFilledSquareSprite(0, centerColor, 64);
         }
         return sprites;
     }
@@ -133,20 +133,20 @@ class TextInputWidget extends ButtonWidget {
         this.lastPointerPressMillis = 0L;
         this.wordSelectionEndIndex = -1;
         try {
-            this.maximumTextLength = maximumLength;
-            this.renderer = DialRenderer.accountUiTheme.textInputRenderer;
-            this.setInputText(-128, initialText, true);
-            this.caretScrollingEnabled = true;
-            this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+          this.maximumTextLength = maximumLength;
+          this.renderer = DialRenderer.accountUiTheme.textInputRenderer;
+          this.setInputText(-128, initialText, true);
+          this.caretScrollingEnabled = true;
+          this.caretBlinkStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
         } catch (RuntimeException textInputConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textInputConstructionFailure), "dj.<init>(" + (initialText != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + maximumLength + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) textInputConstructionFailure), "dj.<init>(" + (initialText != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 
     private final void cutSelectedText(int methodGuard) {
         this.copySelectedTextToClipboard(-23161);
         if (methodGuard <= 29) {
-            this.wordSelectionDrag = false;
+          this.wordSelectionDrag = false;
         }
         this.deleteSelectedText(0);
     }
@@ -194,17 +194,17 @@ class TextInputWidget extends ButtonWidget {
     private final void moveCaret(int newCaretIndex, byte methodGuard) {
         this.caretIndex = newCaretIndex;
         if (methodGuard >= -114) {
-            this.updateCaretScroll(-114);
+          this.updateCaretScroll(-114);
         }
         if (!MidiPcmStream.heldInternalKeys[81]) {
-            this.selectionAnchorIndex = this.caretIndex;
+          this.selectionAnchorIndex = this.caretIndex;
         }
     }
 
     public static void releaseStaticReferences(byte methodGuard) {
         diskSectorBuffer = null;
         if (methodGuard != -15) {
-            return;
+          return;
         }
         projectedMeshVertexY = null;
         byteArrayPool100 = (byte[][]) null;
@@ -223,7 +223,7 @@ class TextInputWidget extends ButtonWidget {
         int unusedPointerPressGuardQuotient;
         try {
           if (super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext) &&
-              this.renderer instanceof TextWidgetLayout) {
+            this.renderer instanceof TextWidgetLayout) {
             hitTextIndexOrGuardQuotient = ((TextWidgetLayout) ((Object) this.renderer)).hitTestCaretIndex((UiWidget) (this), PrefixCodeDecoder.pointerXSnapshot, -15539, parentY, PcmResampler.pointerYSnapshot, parentX);
             if (hitTextIndexOrGuardQuotient != -1) {
               hitCaretIndexSnapshot = hitTextIndexOrGuardQuotient;
@@ -238,7 +238,7 @@ class TextInputWidget extends ButtonWidget {
               this.selectionAnchorIndex = this.findPreviousWordBoundary((byte) 77);
               this.caretIndex = this.findNextWordBoundary((byte) -57);
               if (0 < this.caretIndex &&
-                  this.widgetText.charAt(this.caretIndex - 1) == 32) {
+                this.widgetText.charAt(this.caretIndex - 1) == 32) {
                 this.caretIndex = this.caretIndex - 1;
               }
               this.wordSelectionEndIndex = this.caretIndex;
@@ -264,21 +264,21 @@ class TextInputWidget extends ButtonWidget {
 
     private final void pasteClipboardText(int methodGuard) {
         try {
-            Throwable caughtClipboardFailure = null;
-            String clipboardText = null;
-            Exception clipboardFailure = null;
-            try {
-              clipboardText = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-              this.deleteSelectedText(methodGuard ^ methodGuard);
-              this.insertTextAtCaret(clipboardText, methodGuard ^ 43);
-            } catch (java.lang.Exception clipboardException) {
-              caughtClipboardFailure = clipboardException;
-              clipboardFailure = (Exception) (Object) caughtClipboardFailure;
-            }
+          Throwable caughtClipboardFailure = null;
+          String clipboardText = null;
+          Exception clipboardFailure = null;
+          try {
+            clipboardText = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
+            this.deleteSelectedText(methodGuard ^ methodGuard);
+            this.insertTextAtCaret(clipboardText, methodGuard ^ 43);
+          } catch (java.lang.Exception clipboardException) {
+            caughtClipboardFailure = clipboardException;
+            clipboardFailure = (Exception) (Object) caughtClipboardFailure;
+          }
         } catch (RuntimeException | Error uncheckedClipboardFailure) {
-            throw uncheckedClipboardFailure;
+          throw uncheckedClipboardFailure;
         } catch (Throwable checkedClipboardFailure) {
-            throw new RuntimeException(checkedClipboardFailure);
+          throw new RuntimeException(checkedClipboardFailure);
         }
     }
 
@@ -288,7 +288,7 @@ class TextInputWidget extends ButtonWidget {
         long nowMillis;
         guardResidue = -124 % ((methodGuard - 1) / 43);
         if (this.renderer != null &&
-            renderPass == 0) {
+          renderPass == 0) {
           this.renderer.drawWidget(parentX, -8, parentY, this.enabled, (UiWidget) (this));
           if (this.renderer instanceof TextWidgetLayout) {
             textRenderer = (TextWidgetLayout) ((Object) this.renderer);
@@ -305,10 +305,10 @@ class TextInputWidget extends ButtonWidget {
 
     private final void notifyTextInputSubmitted(byte methodGuard) {
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) (this.listener)).onTextInputSubmitted(this, -18649);
+          ((TextInputListener) (this.listener)).onTextInputSubmitted(this, -18649);
         }
         if (methodGuard < 107) {
-            this.wordSelectionDrag = true;
+          this.wordSelectionDrag = true;
         }
     }
 
@@ -333,11 +333,11 @@ class TextInputWidget extends ButtonWidget {
 
     private final void copySelectedTextToClipboard(int methodGuard) {
         if (methodGuard != -23161) {
-            return;
+          return;
         }
         String selectedText = this.getSelectedText((byte) -128);
         if (selectedText.length() > 0) {
-            java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -117))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
@@ -347,7 +347,7 @@ class TextInputWidget extends ButtonWidget {
         this.widgetText = "";
         this.notifyTextInputChanged((byte) -78);
         if (methodGuard <= 20) {
-            this.caretScrollingEnabled = true;
+          this.caretScrollingEnabled = true;
         }
     }
 
@@ -372,12 +372,12 @@ class TextInputWidget extends ButtonWidget {
             return false;
           }
           if (32 <= typedCharacter &&
-              typedCharacter <= 126) {
+            typedCharacter <= 126) {
             if (this.caretIndex != this.selectionAnchorIndex) {
               this.deleteSelectedText(0);
             }
             if (-1 == this.maximumTextLength ||
-                  !(this.widgetText.length() >= this.maximumTextLength)) {
+              !(this.widgetText.length() >= this.maximumTextLength)) {
               if (this.caretIndex >= this.widgetText.length()) {
                 this.widgetText = this.widgetText + typedCharacter;
                 textEndBeforeCaretAssignment = this.widgetText.length();
@@ -443,17 +443,17 @@ class TextInputWidget extends ButtonWidget {
                     return true;
                   }
                   if (MidiPcmStream.heldInternalKeys[82] &&
-                      keyCode == 65) {
+                    keyCode == 65) {
                     this.cutSelectedText(112);
                     return true;
                   }
                   if (MidiPcmStream.heldInternalKeys[82] &&
-                      keyCode == 66) {
+                    keyCode == 66) {
                     this.copySelectedTextToClipboard(-23161);
                     return true;
                   }
                   if (MidiPcmStream.heldInternalKeys[82] &&
-                      67 == keyCode) {
+                    67 == keyCode) {
                     this.pasteClipboardText(82);
                     return true;
                   }
@@ -550,7 +550,7 @@ class TextInputWidget extends ButtonWidget {
           this.widgetText = text;
           inputLength = text.length();
           if (this.maximumTextLength != -1 &&
-              this.maximumTextLength < inputLength) {
+            this.maximumTextLength < inputLength) {
             this.widgetText = this.widgetText.substring(0, this.maximumTextLength);
           }
           textEndBeforeCaretAssignment = this.widgetText.length();
@@ -576,10 +576,10 @@ class TextInputWidget extends ButtonWidget {
 
     void notifyTextInputChanged(byte methodGuard) {
         if (methodGuard >= -16) {
-            return;
+          return;
         }
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) (this.listener)).onTextInputChanged(this, (byte) 74);
+          ((TextInputListener) (this.listener)).onTextInputChanged(this, (byte) 74);
         }
     }
 

@@ -38,12 +38,12 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     private final synchronized void publishPixelsToConsumer(boolean methodGuard) {
         if (null == this.imageConsumer) {
-            return;
+          return;
         }
         this.imageConsumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
         if (methodGuard) {
-            this.imageConsumer.imageComplete(2);
-            return;
+          this.imageConsumer.imageComplete(2);
+          return;
         }
         activeTextArchive = (ResourceArchive) null;
         this.imageConsumer.imageComplete(2);
@@ -54,14 +54,14 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     final void drawImage(int drawY, java.awt.Graphics graphics, int drawX, int methodGuard) {
         try {
-            if (methodGuard != 0) {
-                java.awt.Image nullImageForInvalidGuard = (java.awt.Image) null;
-                this.imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
-            }
-            this.publishPixelsToConsumer(true);
-            graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) (this));
+          if (methodGuard != 0) {
+            java.awt.Image nullImageForInvalidGuard = (java.awt.Image) null;
+            this.imageUpdate((java.awt.Image) null, 94, -33, 114, 59, 88);
+          }
+          this.publishPixelsToConsumer(true);
+          graphics.drawImage(this.image, drawX, drawY, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException imageDrawFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) imageDrawFailure), "bf.D(" + drawY + ',' + (graphics != null ? "{...}" : "null") + ',' + drawX + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) imageDrawFailure), "bf.D(" + drawY + ',' + (graphics != null ? "{...}" : "null") + ',' + drawX + ',' + methodGuard + ')');
         }
     }
 
@@ -71,21 +71,21 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     public final void startProduction(java.awt.image.ImageConsumer consumer) {
         try {
-            this.addConsumer(consumer);
+          this.addConsumer(consumer);
         } catch (RuntimeException productionStartFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) productionStartFailure), "bf.startProduction(" + (consumer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) productionStartFailure), "bf.startProduction(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer consumer) {
         try {
-            this.imageConsumer = consumer;
-            consumer.setDimensions(this.width, this.height);
-            consumer.setProperties((Hashtable) null);
-            consumer.setColorModel(this.colorModel);
-            consumer.setHints(14);
+          this.imageConsumer = consumer;
+          consumer.setDimensions(this.width, this.height);
+          consumer.setProperties((Hashtable) null);
+          consumer.setColorModel(this.colorModel);
+          consumer.setHints(14);
         } catch (RuntimeException consumerRegistrationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRegistrationFailure), "bf.addConsumer(" + (consumer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRegistrationFailure), "bf.addConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -113,23 +113,23 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     final void initialize(int height, java.awt.Component component, int width, byte methodGuard) {
         try {
-            this.height = height;
-            this.width = width;
-            this.pixels = new int[height * width + 1];
-            this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-            this.image = component.createImage((java.awt.image.ImageProducer) (this));
-            this.publishPixelsToConsumer(true);
-            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
-            this.publishPixelsToConsumer(true);
-            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
-            this.publishPixelsToConsumer(true);
-            component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
-            this.setAsRasterTarget(255);
-            if (methodGuard <= 116) {
-                this.colorModel = (java.awt.image.ColorModel) null;
-            }
+          this.height = height;
+          this.width = width;
+          this.pixels = new int[height * width + 1];
+          this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.image = component.createImage((java.awt.image.ImageProducer) (this));
+          this.publishPixelsToConsumer(true);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.publishPixelsToConsumer(true);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.publishPixelsToConsumer(true);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.setAsRasterTarget(255);
+          if (methodGuard <= 116) {
+            this.colorModel = (java.awt.image.ColorModel) null;
+          }
         } catch (RuntimeException initializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "bf.C(" + height + ',' + (component != null ? "{...}" : "null") + ',' + width + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) initializationFailure), "bf.C(" + height + ',' + (component != null ? "{...}" : "null") + ',' + width + ',' + methodGuard + ')');
         }
     }
 
@@ -187,7 +187,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             return;
           }
           if (rectangleLeft >= SoftwareRasterizer.clipLeft &&
-              rectangleLeft < SoftwareRasterizer.clipRight) {
+            rectangleLeft < SoftwareRasterizer.clipRight) {
             leftEdgeFramebufferIndex = rectangleLeft + clippedTop * SoftwareRasterizer.stride;
             leftEdgeDotsRemaining = clippedBottom + 1 - clippedTop >> 1;
             while (true) {
@@ -200,7 +200,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             }
           }
           if (rectangleTop >= SoftwareRasterizer.clipTop &&
-              SoftwareRasterizer.clipBottom > rectangleBottom) {
+            SoftwareRasterizer.clipBottom > rectangleBottom) {
             topEdgeFramebufferIndex = clippedLeft + SoftwareRasterizer.stride * rectangleTop;
             topEdgeDotsRemaining = -clippedLeft + 1 + clippedRight >> 1;
             while (true) {
@@ -213,7 +213,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             }
           }
           if (rectangleRight >= SoftwareRasterizer.clipLeft &&
-              SoftwareRasterizer.clipRight > rectangleRight) {
+            SoftwareRasterizer.clipRight > rectangleRight) {
             rightEdgeFramebufferIndex = rectangleRight + ((1 & -rectangleLeft + rectangleRight) + clippedTop) * SoftwareRasterizer.stride;
             rightEdgeDotsRemaining = -clippedTop + 1 + clippedBottom >> 1;
             while (true) {
@@ -226,7 +226,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             }
           }
           if (SoftwareRasterizer.clipTop <= rectangleTop &&
-              SoftwareRasterizer.clipBottom > rectangleBottom) {
+            SoftwareRasterizer.clipBottom > rectangleBottom) {
             bottomEdgeFramebufferIndex = SoftwareRasterizer.stride * rectangleBottom + (clippedLeft + (1 & -rectangleTop + rectangleBottom));
             bottomEdgeDotsRemaining = 1 - (-clippedRight + clippedLeft) >> 1;
             while (true) {
@@ -248,11 +248,11 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer consumer) {
         try {
-            if (consumer == this.imageConsumer) {
-                this.imageConsumer = null;
-            }
+          if (consumer == this.imageConsumer) {
+            this.imageConsumer = null;
+          }
         } catch (RuntimeException consumerRemovalFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRemovalFailure), "bf.removeConsumer(" + (consumer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) consumerRemovalFailure), "bf.removeConsumer(" + (consumer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -263,7 +263,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         activeTextArchive = null;
         debouncingValidationState = null;
         if (methodGuard >= -101) {
-            debouncingValidationState = (ValidationState) null;
+          debouncingValidationState = (ValidationState) null;
         }
     }
 

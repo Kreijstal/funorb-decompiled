@@ -115,8 +115,8 @@ abstract class ArchiveRequest extends DualLinkNode {
         sessionPacketLengthByOpcode = null;
         fullscreenAcceptButtonText = null;
         if (methodGuard != 31735) {
-            String unusedNullTextSnapshot = (String) null;
-            ArchiveRequest.drawAwtLoadingProgress(68, (java.awt.Color) null, true, true, (String) null);
+          String unusedNullTextSnapshot = (String) null;
+          ArchiveRequest.drawAwtLoadingProgress(68, (java.awt.Color) null, true, true, (String) null);
         }
     }
 

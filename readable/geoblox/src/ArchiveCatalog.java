@@ -13,10 +13,10 @@ final class ArchiveCatalog {
 
     final static boolean exitFullscreenIfActive(int methodGuard) {
         if (methodGuard != 255) {
-            return false;
+          return false;
         }
         if (null == InstrumentPatch.activeFullscreenCanvas) {
-            return false;
+          return false;
         }
         EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.activeFullscreenCanvas);
         InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
@@ -30,15 +30,15 @@ final class ArchiveCatalog {
           replayTutorialText = (String) null;
         }
         asciiLetterBeforeReturn = !((65 > character ||
-              character > 90) &&
-            (97 > character ||
-              character > 122));
+          character > 90) &&
+          (97 > character ||
+          character > 122));
         return asciiLetterBeforeReturn;
     }
 
     public static void releaseReplayTutorialText(int methodGuard) {
         if (methodGuard < 8) {
-            return;
+          return;
         }
         replayTutorialText = null;
     }
@@ -66,7 +66,7 @@ final class ArchiveCatalog {
             throw new RuntimeException();
           }
           if (archiveId >= 0 &&
-              this.archiveSources.length > archiveId) {
+            this.archiveSources.length > archiveId) {
             if (null != this.archiveSources[archiveId]) {
               cachedSourceBeforeReturn = this.archiveSources[archiveId];
               return cachedSourceBeforeReturn;
@@ -169,7 +169,7 @@ final class ArchiveCatalog {
         rawVerificationBytes = verificationBytesAlias;
         catalogBuffer.readBytes(29915, encodedVerificationBytes.length, encodedVerificationBytes, 0);
         if (this.verificationExponent != null &&
-            this.verificationModulus != null) {
+          this.verificationModulus != null) {
           encodedVerificationInteger = new java.math.BigInteger(encodedVerificationBytes);
           verificationIntegerAfterModPow = encodedVerificationInteger.modPow(this.verificationExponent, this.verificationModulus);
           verificationBytes = verificationIntegerAfterModPow.toByteArray();
@@ -254,7 +254,7 @@ final class ArchiveCatalog {
             ArchiveCatalog.releaseReplayTutorialText(26);
           }
           if (password != null &&
-              password.length() >= AsyncResourceDownloader.minimumPasswordLength) {
+            password.length() >= AsyncResourceDownloader.minimumPasswordLength) {
             if (password.length() > ArchiveIndex.maximumPasswordLength) {
               return true;
             }

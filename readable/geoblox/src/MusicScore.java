@@ -8,7 +8,7 @@ final class MusicScore extends IntrusiveNode {
     final static MusicScore loadNamedScore(ResourceArchive archive, String groupName, String fileName) {
         byte[] packedScore = archive.getNamedFile(0, fileName, groupName);
         if (packedScore == null) {
-            return null;
+          return null;
         }
         return new MusicScore(new ByteArrayBuffer(packedScore));
     }
@@ -568,7 +568,7 @@ final class MusicScore extends IntrusiveNode {
             outputControllerNumber = outputControllerNumber + packedInput.bytes[controllerReadIndex] & 127;
             midiOutput.writeByte((byte) 126, outputControllerNumber);
             if (outputControllerNumber != 0 &&
-                outputControllerNumber != 32) {
+              outputControllerNumber != 32) {
               if (outputControllerNumber == 1) {
                 controller1ReadIndex = controller1Cursor;
                 controller1Cursor++;
@@ -610,10 +610,10 @@ final class MusicScore extends IntrusiveNode {
                 controller100Cursor++;
                 controllerValueOrDelta = packedInput.bytes[controller100ReadIndex];
               } else if (outputControllerNumber != 64 &&
-                  outputControllerNumber != 65 &&
-                  outputControllerNumber != 120 &&
-                  outputControllerNumber != 121 &&
-                  outputControllerNumber != 123) {
+                outputControllerNumber != 65 &&
+                outputControllerNumber != 120 &&
+                outputControllerNumber != 121 &&
+                outputControllerNumber != 123) {
                 otherControllerReadIndex = otherControllerCursor;
                 otherControllerCursor++;
                 controllerValueOrDelta = packedInput.bytes[otherControllerReadIndex];

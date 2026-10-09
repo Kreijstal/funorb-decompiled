@@ -22,36 +22,36 @@ final class AsyncResourceDownloader implements Runnable {
     final ByteArrayBuffer getDownloadedBuffer(byte methodGuard) {
         int unusedGuardQuotient = 62 / ((methodGuard - 9) / 53);
         if (this.downloadStage == 3) {
-            return this.downloadBuffer;
+          return this.downloadBuffer;
         }
         return null;
     }
 
     protected final void finalize() {
         if (null != this.urlStreamTask) {
-            if (this.urlStreamTask.result != null) {
-                try {
-                    ((DataInputStream) (this.urlStreamTask.result)).close();
-                } catch (Exception ignoredUrlStreamCloseFailure) {
-                }
+          if (this.urlStreamTask.result != null) {
+            try {
+              ((DataInputStream) (this.urlStreamTask.result)).close();
+            } catch (Exception ignoredUrlStreamCloseFailure) {
             }
-            this.urlStreamTask = null;
+          }
+          this.urlStreamTask = null;
         }
         if (this.jaggrabSocketTask != null) {
-            if (null != this.jaggrabSocketTask.result) {
-                try {
-                    ((java.net.Socket) (this.jaggrabSocketTask.result)).close();
-                } catch (Exception ignoredSocketCloseFailure) {
-                }
+          if (null != this.jaggrabSocketTask.result) {
+            try {
+              ((java.net.Socket) (this.jaggrabSocketTask.result)).close();
+            } catch (Exception ignoredSocketCloseFailure) {
             }
-            this.jaggrabSocketTask = null;
+          }
+          this.jaggrabSocketTask = null;
         }
         if (null != this.downloadStream) {
-            try {
-                this.downloadStream.close();
-            } catch (Exception ignoredDownloadStreamCloseFailure) {
-            }
-            this.downloadStream = null;
+          try {
+            this.downloadStream.close();
+          } catch (Exception ignoredDownloadStreamCloseFailure) {
+          }
+          this.downloadStream = null;
         }
         this.readerThreadTask = null;
     }
@@ -157,45 +157,45 @@ final class AsyncResourceDownloader implements Runnable {
 
     public final void run() {
         try {
-            int bytesRead = 0;
-            Object completionMonitorOrCaughtReadFailure = null;
-            Object failureMonitor = null;
-            Throwable unusedThrowableSnapshot = null;
-            int clientControlSnapshot = 0;
-            Throwable caughtReadFailure = null;
-            clientControlSnapshot = Geoblox.clientControlFlowFlag;
-            try {
-              while (this.downloadBuffer.position < this.downloadBuffer.bytes.length) {
-                bytesRead = this.downloadStream.read(this.downloadBuffer.bytes, this.downloadBuffer.position, -this.downloadBuffer.position + this.downloadBuffer.bytes.length);
-                if (0 <= bytesRead) {
-                  this.downloadBuffer.position = this.downloadBuffer.position + bytesRead;
-                  continue;
-                }
-                break;
+          int bytesRead = 0;
+          Object completionMonitorOrCaughtReadFailure = null;
+          Object failureMonitor = null;
+          Throwable unusedThrowableSnapshot = null;
+          int clientControlSnapshot = 0;
+          Throwable caughtReadFailure = null;
+          clientControlSnapshot = Geoblox.clientControlFlowFlag;
+          try {
+            while (this.downloadBuffer.position < this.downloadBuffer.bytes.length) {
+              bytesRead = this.downloadStream.read(this.downloadBuffer.bytes, this.downloadBuffer.position, -this.downloadBuffer.position + this.downloadBuffer.bytes.length);
+              if (0 <= bytesRead) {
+                this.downloadBuffer.position = this.downloadBuffer.position + bytesRead;
+                continue;
               }
-              if (this.downloadBuffer.bytes.length == this.downloadBuffer.position) {
-                throw AsyncResourceDownloader.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.downloadBuffer.bytes.length + " " + this.resourceUrl));
-              }
-              completionMonitorOrCaughtReadFailure = this;
-              synchronized (completionMonitorOrCaughtReadFailure) {
-                this.finalize();
-                this.downloadStage = 3;
-              }
-              return;
-            } catch (java.lang.Exception readFailure) {
-              caughtReadFailure = readFailure;
-              completionMonitorOrCaughtReadFailure = (Exception) (Object) caughtReadFailure;
-              failureMonitor = this;
-              synchronized (failureMonitor) {
-                this.finalize();
-                this.downloadStage = this.downloadStage + 1;
-              }
-              return;
+              break;
             }
+            if (this.downloadBuffer.bytes.length == this.downloadBuffer.position) {
+              throw AsyncResourceDownloader.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.downloadBuffer.bytes.length + " " + this.resourceUrl));
+            }
+            completionMonitorOrCaughtReadFailure = this;
+            synchronized (completionMonitorOrCaughtReadFailure) {
+              this.finalize();
+              this.downloadStage = 3;
+            }
+            return;
+          } catch (java.lang.Exception readFailure) {
+            caughtReadFailure = readFailure;
+            completionMonitorOrCaughtReadFailure = (Exception) (Object) caughtReadFailure;
+            failureMonitor = this;
+            synchronized (failureMonitor) {
+              this.finalize();
+              this.downloadStage = this.downloadStage + 1;
+            }
+            return;
+          }
         } catch (RuntimeException | Error uncheckedReaderFailure) {
-            throw uncheckedReaderFailure;
+          throw uncheckedReaderFailure;
         } catch (Throwable checkedReaderFailure) {
-            throw new RuntimeException(checkedReaderFailure);
+          throw new RuntimeException(checkedReaderFailure);
         }
     }
 
@@ -203,17 +203,17 @@ final class AsyncResourceDownloader implements Runnable {
         SpriteCheckboxRenderer.gameMusicVolumeLevel = volumeLevel;
         PasswordWidgetRenderer.gameMusicStream.setMasterVolume((int)((float)(64 * volumeLevel / 80) * 1.399999976158142f), (byte) 22);
         if (methodGuard != -15346) {
-            AsyncResourceDownloader.setGameMusicVolume(-15, 68);
+          AsyncResourceDownloader.setGameMusicVolume(-15, 68);
         }
     }
 
     AsyncResourceDownloader(PlatformTaskDispatcher taskDispatcher, java.net.URL resourceUrl, int bufferCapacity) {
         try {
-            this.taskDispatcher = taskDispatcher;
-            this.resourceUrl = resourceUrl;
-            this.downloadBuffer = new ByteArrayBuffer(bufferCapacity);
+          this.taskDispatcher = taskDispatcher;
+          this.resourceUrl = resourceUrl;
+          this.downloadBuffer = new ByteArrayBuffer(bufferCapacity);
         } catch (RuntimeException downloaderConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) downloaderConstructionFailure), "wg.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ',' + (resourceUrl != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) downloaderConstructionFailure), "wg.<init>(" + (taskDispatcher != null ? "{...}" : "null") + ',' + (resourceUrl != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

@@ -18,10 +18,10 @@ final class DialWidget extends ButtonWidget {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         HighscoreQuery existingOrCreatedQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
         while (existingOrCreatedQuery != null) {
-            if (~existingOrCreatedQuery.queryId == ~queryId) {
-                return existingOrCreatedQuery;
-            }
-            existingOrCreatedQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
+          if (~existingOrCreatedQuery.queryId == ~queryId) {
+            return existingOrCreatedQuery;
+          }
+          existingOrCreatedQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
         }
         existingOrCreatedQuery = new HighscoreQuery();
         existingOrCreatedQuery.entryLimit = entryLimit;
@@ -36,7 +36,7 @@ final class DialWidget extends ButtonWidget {
         js5IoErrorText = null;
         bakingMusicTrack = null;
         if (methodGuard != 0) {
-            bakingMusicTrack = (MusicScore) null;
+          bakingMusicTrack = (MusicScore) null;
         }
         contentFadeInPhase = null;
         fullscreenMembersButtonText = null;

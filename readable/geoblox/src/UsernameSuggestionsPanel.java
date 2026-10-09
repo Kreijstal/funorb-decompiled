@@ -55,16 +55,16 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
 
     final static String getActiveEmailOrLoginIdentifier(int methodGuard) {
         if (methodGuard != 100) {
-            UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(29);
+          UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(29);
         }
         if (ClientFlowState.accountCreationFlowState == IntrusiveDeque.pendingClientFlowToken) {
-            return ResourceArchive.accountCreationEmail;
+          return ResourceArchive.accountCreationEmail;
         }
         if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-113)) {
-            return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(methodGuard + 19391);
+          return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(methodGuard + 19391);
         }
         if (WidgetSkinState.usernameQueryFlowState == IntrusiveDeque.pendingClientFlowToken) {
-            return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491);
+          return EntityContactSupport.activeEmailAvailabilityQuery.candidateEmail(19491);
         }
         return TextTemplateLookupSupport.currentLoginIdentifier;
     }
@@ -73,7 +73,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
         avatarMouthFrames = null;
         alternateLongAndTextPayloadKind = null;
         if (!methodGuard) {
-            avatarMouthFrames = (Sprite[]) null;
+          avatarMouthFrames = (Sprite[]) null;
         }
         tutorialRotationMessage = null;
         largeBoxSprite = null;
@@ -82,21 +82,21 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         super.renderWidget(parentX, parentY, (byte) 88, renderPass);
         if (renderPass != 0) {
-            return;
+          return;
         }
         BitmapFont headingFont = DialogLayer.sharedUiFont;
         int guardResidue = -69 / ((1 - methodGuard) / 43);
         if (this.suggestions != null) {
-            headingFont.drawParagraph(EntityMotionSupport.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, headingFont.maxDescent + headingFont.maxAscent);
+          headingFont.drawParagraph(EntityMotionSupport.createSuggestionsText, this.widgetX + parentX, parentY + this.widgetY, this.widgetWidth, 20, 16777215, -1, 0, 0, headingFont.maxDescent + headingFont.maxAscent);
         }
     }
 
     UsernameSuggestionsPanel(UsernameSuggestionListener suggestionListener) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-            this.suggestionListener = suggestionListener;
+          this.suggestionListener = suggestionListener;
         } catch (RuntimeException suggestionPanelConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionPanelConstructionFailure), "vh.<init>(" + (suggestionListener != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) suggestionPanelConstructionFailure), "vh.<init>(" + (suggestionListener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class UsernameSuggestionsPanel extends WidgetContainer implements ButtonAc
             return;
           }
           if (suggestions != null &&
-              suggestions.length != 0) {
+            suggestions.length != 0) {
             suggestionCount = suggestions.length;
             this.suggestions = new String[suggestionCount];
             for (formattedSuggestionIndex = 0; suggestionCount > formattedSuggestionIndex; formattedSuggestionIndex++) {

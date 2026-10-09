@@ -92,10 +92,10 @@ final class ValidationState {
     public static void releaseStaticReferences(int methodGuard) {
         activeDragWidget = null;
         if (methodGuard != -481) {
-            ValidationState.updatePendingActionPanel(90);
-            nextText = null;
-            createAccountSuccessText = null;
-            return;
+          ValidationState.updatePendingActionPanel(90);
+          nextText = null;
+          createAccountSuccessText = null;
+          return;
         }
         nextText = null;
         createAccountSuccessText = null;

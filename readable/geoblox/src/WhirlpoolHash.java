@@ -127,7 +127,7 @@ final class WhirlpoolHash {
           while (8L < remainingBitCount) {
             shiftedSourceByte = 255 & source[sourceByteIndex] << sourceBitShift | (source[sourceByteIndex + 1] & 255) >>> -sourceBitShift + 8;
             if (shiftedSourceByte >= 0 &&
-                256 > shiftedSourceByte) {
+              256 > shiftedSourceByte) {
               this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByte >>> bufferPartialByteBits);
               this.bufferedBitCount = this.bufferedBitCount + (-bufferPartialByteBits + 8);
               this.bufferBytePosition = this.bufferBytePosition + 1;
@@ -275,85 +275,85 @@ final class WhirlpoolHash {
 
     final static int advanceArchiveHandshake(byte methodGuard) {
         try {
-            int connectFailureBeforeReturn = 0;
-            int timeoutStatusBeforeReturn = 0;
-            int replyFailureBeforeReturn = 0;
-            int successBeforeReturn = 0;
-            Throwable caughtHandshakeFailure = null;
-            int replyCode = 0;
-            IOException handshakeIoFailure = null;
-            String unusedGuardTextSnapshot = null;
-            ByteArrayBuffer handshakePacket = null;
-            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 4) {
-              if (AsyncResourceDownloader.archiveNetworkClient.failureCode == -1) {
-                return 3;
-              }
-              if (AsyncResourceDownloader.archiveNetworkClient.failureCode != -2) {
-                return 1;
-              }
-              return 4;
+          int connectFailureBeforeReturn = 0;
+          int timeoutStatusBeforeReturn = 0;
+          int replyFailureBeforeReturn = 0;
+          int successBeforeReturn = 0;
+          Throwable caughtHandshakeFailure = null;
+          int replyCode = 0;
+          IOException handshakeIoFailure = null;
+          String unusedGuardTextSnapshot = null;
+          ByteArrayBuffer handshakePacket = null;
+          if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 4) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCode == -1) {
+              return 3;
             }
-            try {
-              if (AccountCreationForm.archiveHandshakeStage == 0) {
-                StrongCacheReference.archiveConnectTask = ByteShortQuery.archiveTaskDispatcher.requestSocket(SecondaryNodeHashTable.archivePort, GameplaySession.archiveHost, false);
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCode != -2) {
+              return 1;
+            }
+            return 4;
+          }
+          try {
+            if (AccountCreationForm.archiveHandshakeStage == 0) {
+              StrongCacheReference.archiveConnectTask = ByteShortQuery.archiveTaskDispatcher.requestSocket(SecondaryNodeHashTable.archivePort, GameplaySession.archiveHost, false);
+              AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
+            }
+            if (AccountCreationForm.archiveHandshakeStage == 1) {
+              if (StrongCacheReference.archiveConnectTask.status == 2) {
+                connectFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-1, 28625);
+                return connectFailureBeforeReturn;
+              }
+              if (1 == StrongCacheReference.archiveConnectTask.status) {
                 AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
               }
-              if (AccountCreationForm.archiveHandshakeStage == 1) {
-                if (StrongCacheReference.archiveConnectTask.status == 2) {
-                  connectFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-1, 28625);
-                  return connectFailureBeforeReturn;
-                }
-                if (1 == StrongCacheReference.archiveConnectTask.status) {
-                  AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
-                }
-              }
-              if (methodGuard != -74) {
-                unusedGuardTextSnapshot = (String) null;
-                WhirlpoolHash.matchesNormalizedSessionName((String) null, (byte) -15);
-              }
-              if (2 == AccountCreationForm.archiveHandshakeStage) {
-                ArchiveHandshakeState.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
-                handshakePacket = new ByteArrayBuffer(13);
-                ConnectionHeaderSupport.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
-                handshakePacket.writeByte((byte) -54, 15);
-                handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
-                ArchiveHandshakeState.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
-                AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
-                ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12446);
-              }
-              if (AccountCreationForm.archiveHandshakeStage == 3) {
-                if (0 < ArchiveHandshakeState.archiveHandshakeSocket.available((byte) 78)) {
-                  replyCode = ArchiveHandshakeState.archiveHandshakeSocket.readByte(-17422);
-                  if (replyCode != 0) {
-                    replyFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(replyCode, 28625);
-                    return replyFailureBeforeReturn;
-                  }
-                  AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
-                } else {
-                  if (ClientClockSupport.correctedCurrentTimeMillis(-12520) > ArchiveLoadSequence.archiveHandshakeDeadlineMillis) {
-                    timeoutStatusBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
-                    return timeoutStatusBeforeReturn;
-                  }
-                }
-              }
-              if (4 != AccountCreationForm.archiveHandshakeStage) {
-                return -1;
-              }
-              AsyncResourceDownloader.archiveNetworkClient.attachSocket(ArchiveHandshakeState.archiveHandshakeSocket, false, WidgetSkinState.archiveUseControlOpcode2);
-              StrongCacheReference.archiveConnectTask = null;
-              AccountCreationForm.archiveHandshakeStage = 0;
-              ArchiveHandshakeState.archiveHandshakeSocket = null;
-              successBeforeReturn = 0;
-              return successBeforeReturn;
-            } catch (java.io.IOException handshakeIOException) {
-              caughtHandshakeFailure = handshakeIOException;
-              handshakeIoFailure = (IOException) (Object) caughtHandshakeFailure;
-              return ArchiveLoadSequence.handleArchiveHandshakeFailure(-3, 28625);
             }
+            if (methodGuard != -74) {
+              unusedGuardTextSnapshot = (String) null;
+              WhirlpoolHash.matchesNormalizedSessionName((String) null, (byte) -15);
+            }
+            if (2 == AccountCreationForm.archiveHandshakeStage) {
+              ArchiveHandshakeState.archiveHandshakeSocket = new BufferedSocket((java.net.Socket) (StrongCacheReference.archiveConnectTask.result), ByteShortQuery.archiveTaskDispatcher);
+              handshakePacket = new ByteArrayBuffer(13);
+              ConnectionHeaderSupport.writeConnectionHeader(MidiNote.archiveLanguageId, true, ValidatedTextInputWidget.archiveClientId, ArchiveIndex.archiveServerNumber, handshakePacket);
+              handshakePacket.writeByte((byte) -54, 15);
+              handshakePacket.writeIntBE((byte) 95, EmailValidator.archiveGameCrc);
+              ArchiveHandshakeState.archiveHandshakeSocket.enqueueWrite(100, 0, 13, handshakePacket.bytes);
+              AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
+              ArchiveLoadSequence.archiveHandshakeDeadlineMillis = 30000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12446);
+            }
+            if (AccountCreationForm.archiveHandshakeStage == 3) {
+              if (0 < ArchiveHandshakeState.archiveHandshakeSocket.available((byte) 78)) {
+                replyCode = ArchiveHandshakeState.archiveHandshakeSocket.readByte(-17422);
+                if (replyCode != 0) {
+                  replyFailureBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(replyCode, 28625);
+                  return replyFailureBeforeReturn;
+                }
+                AccountCreationForm.archiveHandshakeStage = AccountCreationForm.archiveHandshakeStage + 1;
+              } else {
+                if (ClientClockSupport.correctedCurrentTimeMillis(-12520) > ArchiveLoadSequence.archiveHandshakeDeadlineMillis) {
+                  timeoutStatusBeforeReturn = ArchiveLoadSequence.handleArchiveHandshakeFailure(-2, methodGuard ^ -28569);
+                  return timeoutStatusBeforeReturn;
+                }
+              }
+            }
+            if (4 != AccountCreationForm.archiveHandshakeStage) {
+              return -1;
+            }
+            AsyncResourceDownloader.archiveNetworkClient.attachSocket(ArchiveHandshakeState.archiveHandshakeSocket, false, WidgetSkinState.archiveUseControlOpcode2);
+            StrongCacheReference.archiveConnectTask = null;
+            AccountCreationForm.archiveHandshakeStage = 0;
+            ArchiveHandshakeState.archiveHandshakeSocket = null;
+            successBeforeReturn = 0;
+            return successBeforeReturn;
+          } catch (java.io.IOException handshakeIOException) {
+            caughtHandshakeFailure = handshakeIOException;
+            handshakeIoFailure = (IOException) (Object) caughtHandshakeFailure;
+            return ArchiveLoadSequence.handleArchiveHandshakeFailure(-3, 28625);
+          }
         } catch (RuntimeException | Error uncheckedHandshakeFailure) {
-            throw uncheckedHandshakeFailure;
+          throw uncheckedHandshakeFailure;
         } catch (Throwable checkedHandshakeFailure) {
-            throw new RuntimeException(checkedHandshakeFailure);
+          throw new RuntimeException(checkedHandshakeFailure);
         }
     }
 
@@ -362,16 +362,16 @@ final class WhirlpoolHash {
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         int hashWordResetIndex;
         for (lengthByteIndexOrHashWordIndex = 0; lengthByteIndexOrHashWordIndex < 32; lengthByteIndexOrHashWordIndex++) {
-            this.messageBitLength[lengthByteIndexOrHashWordIndex] = (byte) 0;
+          this.messageBitLength[lengthByteIndexOrHashWordIndex] = (byte) 0;
         }
         this.blockBuffer[0] = (byte) 0;
         this.bufferedBitCount = 0;
         this.bufferBytePosition = 0;
         for (hashWordResetIndex = 0; 8 > hashWordResetIndex; hashWordResetIndex++) {
-            this.hashWords[hashWordResetIndex] = 0L;
+          this.hashWords[hashWordResetIndex] = 0L;
         }
         if (methodGuard <= 51) {
-            this.bufferBytePosition = 101;
+          this.bufferBytePosition = 101;
         }
     }
 

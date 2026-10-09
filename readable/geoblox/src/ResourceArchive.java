@@ -15,10 +15,10 @@ final class ResourceArchive {
 
     final int getGroupSlotCount(boolean returnGuardConstant) {
         if (!this.ensureIndexLoaded(0)) {
-            return -1;
+          return -1;
         }
         if (returnGuardConstant) {
-            return 84;
+          return 84;
         }
         return this.index.fileSlotCounts.length;
     }
@@ -45,8 +45,8 @@ final class ResourceArchive {
             if (null == attachedEntity.entityQueue) {
               attachedEntity.advanceEntityAnimation(true);
               if (3 == attachedEntity.entitySpriteKindId &&
-                  attachedEntity.touchesAvatar &&
-                  0 >= attachedEntity.matchCooldownTicks) {
+                attachedEntity.touchesAvatar &&
+                0 >= attachedEntity.matchCooldownTicks) {
                 SessionSocketSupport.avatarShockPending = true;
               }
               if (maximumEntityRadiusSquared < (attachedEntity.positionX - 320.0f) * (-320.0f + attachedEntity.positionX) + (attachedEntity.positionY - 240.0f) * (attachedEntity.positionY - 240.0f)) {
@@ -76,10 +76,10 @@ final class ResourceArchive {
 
     final int getFileSlotCount(int methodGuard, int groupId) {
         if (!this.isValidGroupId(groupId, 3)) {
-            return 0;
+          return 0;
         }
         if (methodGuard != -9467) {
-            ResourceArchive.releaseStaticReferences(91);
+          ResourceArchive.releaseStaticReferences(91);
         }
         return this.index.fileSlotCounts[groupId];
     }
@@ -87,18 +87,18 @@ final class ResourceArchive {
     private final synchronized void loadPackedGroup(int groupId, int methodGuard) {
         boolean unusedWrongGuardGroupValidation = false;
         if (!this.discardPackedGroups) {
-            this.packedGroups[groupId] = IntrusiveNode.wrapByteStorage(-105, this.archiveSource.getPackedGroup(4, groupId), false);
+          this.packedGroups[groupId] = IntrusiveNode.wrapByteStorage(-105, this.archiveSource.getPackedGroup(4, groupId), false);
         } else {
-            this.packedGroups[groupId] = this.archiveSource.getPackedGroup(4, groupId);
+          this.packedGroups[groupId] = this.archiveSource.getPackedGroup(4, groupId);
         }
         if (methodGuard >= -103) {
-            unusedWrongGuardGroupValidation = this.isValidGroupId(((int[]) (this.packedGroups[5]))[9], 37);
+          unusedWrongGuardGroupValidation = this.isValidGroupId(((int[]) (this.packedGroups[5]))[9], 37);
         }
     }
 
     final byte[] getFile(int groupId, int methodGuard, int fileId) {
         if (methodGuard != -28153) {
-            this.isNamedFileAvailable((byte) -106, (String) null, (String) (this.packedGroups[14]));
+          this.isNamedFileAvailable((byte) -106, (String) null, (String) (this.packedGroups[14]));
         }
         return this.getFile(groupId, true, (int[]) null, fileId);
     }
@@ -165,16 +165,16 @@ final class ResourceArchive {
 
     private final synchronized boolean isValidFileId(int fileId, int methodGuard, int groupId) {
         if (methodGuard != -1) {
-            return ((boolean[]) (this.packedGroups[3]))[0];
+          return ((boolean[]) (this.packedGroups[3]))[0];
         }
         if (!this.ensureIndexLoaded(0)) {
-            return false;
+          return false;
         }
         if (0 > groupId || fileId < 0 || this.index.fileSlotCounts.length <= groupId || this.index.fileSlotCounts[groupId] <= fileId) {
-            if (!HotspotTextWidget.throwOnInvalidArchiveIds) {
-                return false;
-            }
-            throw new IllegalArgumentException(groupId + " " + fileId);
+          if (!HotspotTextWidget.throwOnInvalidArchiveIds) {
+            return false;
+          }
+          throw new IllegalArgumentException(groupId + " " + fileId);
         }
         return true;
     }
@@ -223,14 +223,14 @@ final class ResourceArchive {
 
     final synchronized boolean ensureIndexLoaded(int methodGuard) {
         if (methodGuard != 0) {
-            this.getFileSlotCount(70, -80);
+          this.getFileSlotCount(70, -80);
         }
         if (this.index != null) {
-            return true;
+          return true;
         }
         this.index = this.archiveSource.getIndex((byte) 113);
         if (this.index == null) {
-            return false;
+          return false;
         }
         this.packedGroups = new Object[this.index.groupSlotCount];
         this.decodedFiles = new Object[this.index.groupSlotCount][];
@@ -273,16 +273,16 @@ final class ResourceArchive {
 
     private final synchronized boolean isValidGroupId(int groupId, int methodGuard) {
         if (!this.ensureIndexLoaded(0)) {
-            return false;
+          return false;
         }
         if (methodGuard != 3) {
-            createUsernameUnavailableText = (String) null;
+          createUsernameUnavailableText = (String) null;
         }
         if (groupId >= 0 && groupId < this.index.fileSlotCounts.length && this.index.fileSlotCounts[groupId] != 0) {
-            return true;
+          return true;
         }
         if (HotspotTextWidget.throwOnInvalidArchiveIds) {
-            throw new IllegalArgumentException(Integer.toString(groupId));
+          throw new IllegalArgumentException(Integer.toString(groupId));
         }
         return false;
     }
@@ -292,43 +292,43 @@ final class ResourceArchive {
         pendingHighscoreQueries = null;
         createUsernameUnavailableText = null;
         if (methodGuard != 30261) {
-            unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
+          unacknowledgedAchievementSubmissions = (IntrusiveDeque) null;
         }
         accountCreationEmail = null;
     }
 
     final synchronized byte[] getSingleFile(int methodGuard, int id) {
         if (!this.ensureIndexLoaded(0)) {
-            return null;
+          return null;
         }
         if (this.index.fileSlotCounts.length == 1) {
-            return this.getFile(0, methodGuard - 56472, id);
+          return this.getFile(0, methodGuard - 56472, id);
         }
         if (methodGuard != 28319) {
-            return (byte[]) null;
+          return (byte[]) null;
         }
         if (!this.isValidGroupId(id, 3)) {
-            return null;
+          return null;
         }
         if (this.index.fileSlotCounts[id] == 1) {
-            return this.getFile(id, methodGuard ^ -872, 0);
+          return this.getFile(id, methodGuard ^ -872, 0);
         }
         throw new RuntimeException();
     }
 
     final synchronized boolean loadGroupIfNeeded(byte methodGuard, int groupId) {
         if (!this.isValidGroupId(groupId, 3)) {
-            return false;
+          return false;
         }
         if (this.packedGroups[groupId] != null) {
-            return true;
+          return true;
         }
         if (methodGuard != 102) {
-            this.getGroupProgress((byte) -65, 111);
+          this.getGroupProgress((byte) -65, 111);
         }
         this.loadPackedGroup(groupId, -108);
         if (this.packedGroups[groupId] == null) {
-            return false;
+          return false;
         }
         return true;
     }
@@ -429,9 +429,9 @@ final class ResourceArchive {
           }
           packedGroupDecryptionSelection: {
             if (decryptionKey != null && (decryptionKey[0] != 0 ||
-                decryptionKey[1] != 0 ||
-                decryptionKey[2] != 0 ||
-                0 != decryptionKey[3])) {
+              decryptionKey[1] != 0 ||
+              decryptionKey[2] != 0 ||
+              0 != decryptionKey[3])) {
               copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
               packedBytesForDecryption = copiedPackedBytes;
               packedBytes = packedBytesForDecryption;
@@ -587,21 +587,21 @@ final class ResourceArchive {
 
     final synchronized boolean isFileAvailable(byte methodGuard, int groupId, int fileId) {
         if (!this.isValidFileId(fileId, -1, groupId)) {
-            return false;
+          return false;
         }
         if (methodGuard != 37) {
-            return true;
+          return true;
         }
         if (null != this.decodedFiles[groupId] &&
-            this.decodedFiles[groupId][fileId] != null) {
-            return true;
+          this.decodedFiles[groupId][fileId] != null) {
+          return true;
         }
         if (this.packedGroups[groupId] != null) {
-            return true;
+          return true;
         }
         this.loadPackedGroup(groupId, -118);
         if (this.packedGroups[groupId] != null) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -833,14 +833,14 @@ final class ResourceArchive {
     ResourceArchive(ArchiveSource archiveSource, boolean discardPackedGroups, int fileRetentionPolicy) {
         this.index = null;
         try {
-            if (0 > fileRetentionPolicy || 2 < fileRetentionPolicy) {
-                throw new IllegalArgumentException("");
-            }
-            this.fileRetentionPolicy = fileRetentionPolicy;
-            this.archiveSource = archiveSource;
-            this.discardPackedGroups = discardPackedGroups ? true : false;
+          if (0 > fileRetentionPolicy || 2 < fileRetentionPolicy) {
+            throw new IllegalArgumentException("");
+          }
+          this.fileRetentionPolicy = fileRetentionPolicy;
+          this.archiveSource = archiveSource;
+          this.discardPackedGroups = discardPackedGroups ? true : false;
         } catch (RuntimeException constructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "rh.<init>(" + (archiveSource != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionPolicy + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "rh.<init>(" + (archiveSource != null ? "{...}" : "null") + ',' + discardPackedGroups + ',' + fileRetentionPolicy + ')');
         }
     }
 
@@ -897,13 +897,13 @@ final class ResourceArchive {
     final synchronized int getGroupProgress(byte methodGuard, int groupId) {
         boolean unusedWrongGuardGroupValidation = false;
         if (!this.isValidGroupId(groupId, 3)) {
-            return 0;
+          return 0;
         }
         if (null != this.packedGroups[groupId]) {
-            return 100;
+          return 100;
         }
         if (methodGuard <= 31) {
-            unusedWrongGuardGroupValidation = this.isValidGroupId(-88, ((int[]) (((Object[]) (this.packedGroups[0]))[2]))[7]);
+          unusedWrongGuardGroupValidation = this.isValidGroupId(-88, ((int[]) (((Object[]) (this.packedGroups[0]))[2]))[7]);
         }
         return this.archiveSource.getGroupProgress(126, groupId);
     }
@@ -933,14 +933,14 @@ final class ResourceArchive {
             encodedName = encodedName * 37L;
             characterCode = nameCharacters.charAt(characterIndex);
             if (characterCode >= 65 &&
-                characterCode <= 90) {
+              characterCode <= 90) {
               encodedName = encodedName + (long)(-65 + (1 + characterCode));
             } else if (characterCode >= 97 &&
-                characterCode <= 122) {
+              characterCode <= 122) {
               encodedName = encodedName + (long)(-96 + characterCode);
             } else {
               if (48 <= characterCode &&
-                  57 >= characterCode) {
+                57 >= characterCode) {
                 encodedName = encodedName + (long)(-48 + characterCode + 27);
               }
             }

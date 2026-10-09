@@ -13,8 +13,8 @@ final class LoginTextValue {
 
     final String getText(int methodGuard) {
         if (methodGuard != 16925) {
-            this.isIncludedInLookupRequest((byte) -83);
-            return this.text;
+          this.isIncludedInLookupRequest((byte) -83);
+          return this.text;
         }
         return this.text;
     }
@@ -54,7 +54,7 @@ final class LoginTextValue {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != -1) {
-            return;
+          return;
         }
         gmtMonthAbbreviations = null;
         emailLoginMethod = null;
@@ -62,7 +62,7 @@ final class LoginTextValue {
 
     final boolean isIncludedInLookupRequest(byte methodGuard) {
         if (methodGuard <= 74) {
-            return false;
+          return false;
         }
         return this.includeInLookupRequest;
     }

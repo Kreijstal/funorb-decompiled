@@ -29,9 +29,9 @@ final class MidiTrackReader {
         int trackIndex = 0;
         int trackCount = this.trackPositions.length;
         for (trackIndex = 0; trackIndex < trackCount; trackIndex++) {
-            if (this.trackPositions[trackIndex] >= 0) {
-                return false;
-            }
+          if (this.trackPositions[trackIndex] >= 0) {
+            return false;
+          }
         }
         return true;
     }
@@ -45,11 +45,11 @@ final class MidiTrackReader {
         this.tickTimeOffset = tickTimeOffset;
         int trackCount = this.trackPositions.length;
         for (trackIndex = 0; trackIndex < trackCount; trackIndex++) {
-            this.trackTicks[trackIndex] = 0;
-            this.trackRunningStatuses[trackIndex] = 0;
-            this.input.position = this.trackStarts[trackIndex];
-            this.readTrackDelta(trackIndex);
-            this.trackPositions[trackIndex] = this.input.position;
+          this.trackTicks[trackIndex] = 0;
+          this.trackRunningStatuses[trackIndex] = 0;
+          this.input.position = this.trackStarts[trackIndex];
+          this.readTrackDelta(trackIndex);
+          this.trackPositions[trackIndex] = this.input.position;
         }
     }
 
@@ -73,31 +73,31 @@ final class MidiTrackReader {
         int statusDataByteCount;
         int packedMidiEvent;
         if (status == 255) {
-            metaTypeOrDataByteCount = this.input.readUnsignedByte((byte) 34);
-            remainingMetaLengthOrPackedEvent = this.input.readVariableIntBE((byte) -110);
-            if (metaTypeOrDataByteCount == 47) {
-                this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
-                return 1;
-            }
-            if (metaTypeOrDataByteCount == 81) {
-                newTempo = this.input.readUnsignedMediumBE(110);
-                remainingMetaLengthOrPackedEvent -= 3;
-                tempoChangeTick = this.trackTicks[trackIndex];
-                this.tickTimeOffset = this.tickTimeOffset + (long)tempoChangeTick * (long)(this.tempoMicrosPerQuarter - newTempo);
-                this.tempoMicrosPerQuarter = newTempo;
-                this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
-                return 2;
-            }
+          metaTypeOrDataByteCount = this.input.readUnsignedByte((byte) 34);
+          remainingMetaLengthOrPackedEvent = this.input.readVariableIntBE((byte) -110);
+          if (metaTypeOrDataByteCount == 47) {
             this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
-            return 3;
+            return 1;
+          }
+          if (metaTypeOrDataByteCount == 81) {
+            newTempo = this.input.readUnsignedMediumBE(110);
+            remainingMetaLengthOrPackedEvent -= 3;
+            tempoChangeTick = this.trackTicks[trackIndex];
+            this.tickTimeOffset = this.tickTimeOffset + (long)tempoChangeTick * (long)(this.tempoMicrosPerQuarter - newTempo);
+            this.tempoMicrosPerQuarter = newTempo;
+            this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
+            return 2;
+          }
+          this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
+          return 3;
         }
         statusDataByteCount = statusDataByteCounts[status - 128];
         packedMidiEvent = status;
         if (statusDataByteCount >= 1) {
-            packedMidiEvent = packedMidiEvent | this.input.readUnsignedByte((byte) 34) << 8;
+          packedMidiEvent = packedMidiEvent | this.input.readUnsignedByte((byte) 34) << 8;
         }
         if (statusDataByteCount >= 2) {
-            packedMidiEvent = packedMidiEvent | this.input.readUnsignedByte((byte) 34) << 16;
+          packedMidiEvent = packedMidiEvent | this.input.readUnsignedByte((byte) 34) << 16;
         }
         return packedMidiEvent;
     }
@@ -152,21 +152,21 @@ final class MidiTrackReader {
         this.trackStarts = new int[trackCount];
         int trackIndex = 0;
         while (trackIndex < trackCount) {
-            chunkType = this.input.readIntBE((byte) -98);
-            chunkLength = this.input.readIntBE((byte) -87);
-            if (chunkType == 1297379947) {
-                this.trackStarts[trackIndex] = this.input.position;
-                trackIndex++;
-            }
-            this.input.position = this.input.position + chunkLength;
+          chunkType = this.input.readIntBE((byte) -98);
+          chunkLength = this.input.readIntBE((byte) -87);
+          if (chunkType == 1297379947) {
+            this.trackStarts[trackIndex] = this.input.position;
+            trackIndex++;
+          }
+          this.input.position = this.input.position + chunkLength;
         }
         this.tickTimeOffset = 0L;
         this.trackPositions = new int[trackCount];
         int positionInitializationIndex = 0;
         unusedInitialTrackPositionSnapshot = positionInitializationIndex;
         while (positionInitializationIndex < trackCount) {
-            this.trackPositions[positionInitializationIndex] = this.trackStarts[positionInitializationIndex];
-            positionInitializationIndex++;
+          this.trackPositions[positionInitializationIndex] = this.trackStarts[positionInitializationIndex];
+          positionInitializationIndex++;
         }
         this.trackTicks = new int[trackCount];
         this.trackRunningStatuses = new int[trackCount];
@@ -185,16 +185,16 @@ final class MidiTrackReader {
           this.input.position = this.input.position + 1;
         }
         if (status != 240 &&
-            status != 247) {
+          status != 247) {
           return this.readEventPayload(trackIndex, status);
         }
         systemExclusiveLength = this.input.readVariableIntBE((byte) -109);
         if (status == 247 &&
-            systemExclusiveLength > 0) {
+          systemExclusiveLength > 0) {
           escapedStatus = this.input.bytes[this.input.position] & 255;
           if (!(escapedStatus < 241) &&
-              !(escapedStatus > 243) || (escapedStatus == 246 ||
-          escapedStatus == 248) || !(escapedStatus < 250) &&
+            !(escapedStatus > 243) || (escapedStatus == 246 ||
+            escapedStatus == 248) || !(escapedStatus < 250) &&
             !(escapedStatus > 252) || escapedStatus == 254) {
             this.input.position = this.input.position + 1;
             this.trackRunningStatuses[trackIndex] = escapedStatus;

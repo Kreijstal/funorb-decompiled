@@ -18,12 +18,12 @@ final class ArchiveLoadStep {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard >= 121) {
-            invalidTextFormatFailure = null;
-            fontMetricsArchive = null;
-            createPasswordValidText = null;
-            firstVertexTransformedX = null;
-            highscoresText = null;
-            return;
+          invalidTextFormatFailure = null;
+          fontMetricsArchive = null;
+          createPasswordValidText = null;
+          firstVertexTransformedX = null;
+          highscoresText = null;
+          return;
         }
         highscoresText = (String) null;
         invalidTextFormatFailure = null;

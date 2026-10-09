@@ -13,10 +13,10 @@ final class LegacyDirectSoundBridge implements DirectSoundCompatibility {
         com.ms.directX.DirectSound unusedDirectSoundInstance = new com.ms.directX.DirectSound();
         com.ms.directX.WaveFormatEx unusedWaveFormatInstance = new com.ms.directX.WaveFormatEx();
         for (bufferIndex = 0; bufferIndex < 2; bufferIndex++) {
-            this.bufferDescriptors[bufferIndex] = new com.ms.directX.DSBufferDesc();
+          this.bufferDescriptors[bufferIndex] = new com.ms.directX.DSBufferDesc();
         }
         for (bufferCursorAllocationIndex = 0; bufferCursorAllocationIndex < 2; bufferCursorAllocationIndex++) {
-            this.bufferCursors[bufferCursorAllocationIndex] = new com.ms.directX.DSCursors();
+          this.bufferCursors[bufferCursorAllocationIndex] = new com.ms.directX.DSCursors();
         }
     }
 }

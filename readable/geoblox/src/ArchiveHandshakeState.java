@@ -9,10 +9,10 @@ final class ArchiveHandshakeState {
 
     public static void releaseArchiveHandshakeResources(boolean methodGuard) {
         if (methodGuard) {
-            tutorialCompleteMessage = (String) null;
-            archiveHandshakeSocket = null;
-            tutorialCompleteMessage = null;
-            return;
+          tutorialCompleteMessage = (String) null;
+          archiveHandshakeSocket = null;
+          tutorialCompleteMessage = null;
+          return;
         }
         archiveHandshakeSocket = null;
         tutorialCompleteMessage = null;

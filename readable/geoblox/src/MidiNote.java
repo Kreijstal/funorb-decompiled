@@ -32,25 +32,25 @@ final class MidiNote extends IntrusiveNode {
         int guardResidue = -125 / ((methodGuard - 56) / 54);
         FullscreenSupport.exitActiveFullscreen((byte) -90);
         if (null != MessageDialog.gameCanvas) {
-            EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
-            MidiPcmStream.detachKeyboardListener(-11099);
-            ValidatedTextInputWidget.releasePointerListener(true);
-            TextLayout.closeArchiveAndCacheServices((byte) -121);
-            if (UsernameSuggestionsPanel.isSessionSocketInPostRequestStage(-88)) {
-                CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
-                NanoFrameTimer.flushSessionWrites(-1, 0);
-                Bzip2DecoderState.closeSessionSocket((byte) -126);
-                return;
-            }
+          EntitySpawnSupport.detachCanvasInputListeners(-2, MessageDialog.gameCanvas);
+          MidiPcmStream.detachKeyboardListener(-11099);
+          ValidatedTextInputWidget.releasePointerListener(true);
+          TextLayout.closeArchiveAndCacheServices((byte) -121);
+          if (UsernameSuggestionsPanel.isSessionSocketInPostRequestStage(-88)) {
+            CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
+            NanoFrameTimer.flushSessionWrites(-1, 0);
             Bzip2DecoderState.closeSessionSocket((byte) -126);
             return;
+          }
+          Bzip2DecoderState.closeSessionSocket((byte) -126);
+          return;
         }
         MidiPcmStream.detachKeyboardListener(-11099);
         ValidatedTextInputWidget.releasePointerListener(true);
         TextLayout.closeArchiveAndCacheServices((byte) -121);
         if (!UsernameSuggestionsPanel.isSessionSocketInPostRequestStage(-88)) {
-            Bzip2DecoderState.closeSessionSocket((byte) -126);
-            return;
+          Bzip2DecoderState.closeSessionSocket((byte) -126);
+          return;
         }
         CacheReference.outgoingSessionBuffer.writeCipherByte(1, (byte) -27);
         NanoFrameTimer.flushSessionWrites(-1, 0);
@@ -59,9 +59,9 @@ final class MidiNote extends IntrusiveNode {
 
     final static void setPendingLoginUiAction(int action, boolean methodGuard) {
         if (methodGuard) {
-            archiveLanguageId = 99;
-            GzipInflater.pendingLoginUiAction = action;
-            return;
+          archiveLanguageId = 99;
+          GzipInflater.pendingLoginUiAction = action;
+          return;
         }
         GzipInflater.pendingLoginUiAction = action;
     }
@@ -70,9 +70,9 @@ final class MidiNote extends IntrusiveNode {
         this.sampleStream = null;
         this.envelope = null;
         if (methodGuard == -1) {
-            this.pcmSample = null;
-            this.instrumentPatch = null;
-            return;
+          this.pcmSample = null;
+          this.instrumentPatch = null;
+          return;
         }
         stagedIncomingPacketOpcode = 41;
         this.pcmSample = null;

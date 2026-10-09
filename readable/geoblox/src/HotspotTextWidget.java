@@ -17,7 +17,7 @@ class HotspotTextWidget extends ButtonWidget {
         int relativeButtonY = buttonY - this.widgetY;
         TextHotspotBounds hitRecord = this.findHotspot((byte) -114, relativeButtonY, relativeButtonX);
         if (hitRecord != null && null != this.listener) {
-            ((HotspotActivationListener) ((Object) this.listener)).onHotspotActivated(this, hitRecord.hotspotId, methodGuard + 28924, pointerButton);
+          ((HotspotActivationListener) ((Object) this.listener)).onHotspotActivated(this, hitRecord.hotspotId, methodGuard + 28924, pointerButton);
         }
     }
 
@@ -69,7 +69,7 @@ class HotspotTextWidget extends ButtonWidget {
 
     public static void releaseHotspotSharedResources(int methodGuard) {
         if (methodGuard != 0) {
-            throwOnInvalidArchiveIds = false;
+          throwOnInvalidArchiveIds = false;
         }
         spriteScratchRaster = null;
         encryptedPayloadKeyScratchBuffer = null;
@@ -81,24 +81,24 @@ class HotspotTextWidget extends ButtonWidget {
         super(text, (WidgetListener) null);
         this.hoveredHotspot = null;
         try {
-            this.renderer = renderer;
+          this.renderer = renderer;
         } catch (RuntimeException hotspotConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hotspotConstructionFailure), "vf.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) hotspotConstructionFailure), "vf.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ')');
         }
     }
 
     String getHoverText(byte methodGuard) {
         if (null == this.hoveredHotspot) {
-            return null;
+          return null;
         }
         if (this.hotspotHoverTexts == null) {
-            return null;
+          return null;
         }
         if (this.hotspotHoverTexts.length <= this.hoveredHotspot.hotspotId) {
-            return null;
+          return null;
         }
         if (methodGuard != 69) {
-            return (String) null;
+          return (String) null;
         }
         return this.hotspotHoverTexts[this.hoveredHotspot.hotspotId];
     }
@@ -143,18 +143,18 @@ class HotspotTextWidget extends ButtonWidget {
         int guardQuotient = 46 / ((1 - methodGuard) / 43);
         super.renderWidget(parentX, parentY, (byte) -42, renderPass);
         if (renderPass != 0) {
-            return;
+          return;
         }
         TextWidgetLayout textRenderer = (TextWidgetLayout) ((Object) this.renderer);
         TextHotspotBounds hoveredSegment = this.hoveredHotspot;
         if (hoveredSegment == null) {
         } else {
-            textOriginX = textRenderer.getTextOriginX(parentX, (UiWidget) (this), (byte) 46);
-            textOriginY = textRenderer.getTextOriginY(parentY, -2, (UiWidget) (this));
-            do {
-                ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(-2 + textOriginY + hoveredSegment.y, 2 + hoveredSegment.width, 14164, 2 + hoveredSegment.height, hoveredSegment.x + (textOriginX - 2));
-                hoveredSegment = hoveredSegment.nextSegment;
-            } while (hoveredSegment != null);
+          textOriginX = textRenderer.getTextOriginX(parentX, (UiWidget) (this), (byte) 46);
+          textOriginY = textRenderer.getTextOriginY(parentY, -2, (UiWidget) (this));
+          do {
+            ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(-2 + textOriginY + hoveredSegment.y, 2 + hoveredSegment.width, 14164, 2 + hoveredSegment.height, hoveredSegment.x + (textOriginX - 2));
+            hoveredSegment = hoveredSegment.nextSegment;
+          } while (hoveredSegment != null);
         }
     }
 
@@ -216,8 +216,8 @@ class HotspotTextWidget extends ButtonWidget {
 
     final static String readSessionPacketText(int methodGuard) {
         if (methodGuard != 1000) {
-            String unusedNullIdentifierSnapshot = (String) null;
-            HotspotTextWidget.createLoginPayloadForIdentifier(false, (String) null, (String) null, true);
+          String unusedNullIdentifierSnapshot = (String) null;
+          HotspotTextWidget.createLoginPayloadForIdentifier(false, (String) null, (String) null, true);
         }
         return LogoCompositor.sessionPacketBuffer.readNullTerminatedText((byte) 101);
     }
@@ -302,7 +302,7 @@ class HotspotTextWidget extends ButtonWidget {
         try {
           guardRemainder = 122 % ((41 - methodGuard) / 55);
           if (null == this.hotspotHoverTexts ||
-              hotspotId >= this.hotspotHoverTexts.length) {
+            hotspotId >= this.hotspotHoverTexts.length) {
             grownHoverTexts = new String[hotspotId + 1];
             if (null != this.hotspotHoverTexts) {
               for (hoverTextCopyIndex = 0; hoverTextCopyIndex < this.hotspotHoverTexts.length; hoverTextCopyIndex++) {
@@ -329,14 +329,14 @@ class HotspotTextWidget extends ButtonWidget {
 
     final void fitTextBounds(int x, int methodGuard, int y, int width) {
         if (methodGuard != 0) {
-            encryptedPayloadKeyScratchBuffer = (ByteArrayBuffer) null;
+          encryptedPayloadKeyScratchBuffer = (ByteArrayBuffer) null;
         }
         this.setWidgetBounds(((TextWidgetLayout) ((Object) this.renderer)).getLayoutHeightWithPadding(14, (UiWidget) (this)), width, (byte) -40, y, x);
     }
 
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
         if (methodGuard > -6) {
-            decodedSpriteAlpha = (byte[][]) null;
+          decodedSpriteAlpha = (byte[][]) null;
         }
         super.setWidgetBounds(height, width, (byte) -123, y, x);
         this.rebuildHotspotBounds(-96);
@@ -354,9 +354,9 @@ class HotspotTextWidget extends ButtonWidget {
           segment = hotspotHead;
           while (segment != null) {
             if (segment.x <= x &&
-                y >= segment.y &&
-                x < segment.width + segment.x &&
-                y <= segment.y + segment.height) {
+              y >= segment.y &&
+              x < segment.width + segment.x &&
+              y <= segment.y + segment.height) {
               return hotspotHead;
             }
             segment = segment.nextSegment;

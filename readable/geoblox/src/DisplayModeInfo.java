@@ -14,9 +14,9 @@ final class DisplayModeInfo {
 
     final static void setConfiguredUpdateRate(byte methodGuard, int ticksPerSecond) {
         if (methodGuard != 121) {
-            quitToWebsiteText = (String) null;
-            ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
-            return;
+          quitToWebsiteText = (String) null;
+          ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
+          return;
         }
         ByteStorage.updatePeriodNanoseconds = 1000000000L / (long)ticksPerSecond;
     }
@@ -29,7 +29,7 @@ final class DisplayModeInfo {
 
     final static ResourceArchive createBootstrapResourceArchive(int archiveId, byte methodGuard, boolean discardPackedGroups, boolean downloadAllGroups, int fileRetentionPolicy) {
         if (methodGuard >= -13) {
-            return (ResourceArchive) null;
+          return (ResourceArchive) null;
         }
         return IntKeyLookup.createResourceArchive(-90, archiveId, downloadAllGroups, fileRetentionPolicy, discardPackedGroups, false);
     }

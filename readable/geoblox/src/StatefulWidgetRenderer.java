@@ -12,7 +12,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
 
     final WidgetSkinState replaceStateSkin(int methodGuard, int stateIndex) {
         if (methodGuard >= -93) {
-            return (WidgetSkinState) null;
+          return (WidgetSkinState) null;
         }
         WidgetSkinState replacementSkin = new WidgetSkinState();
         this.stateSkins[stateIndex] = replacementSkin;
@@ -152,12 +152,12 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
 
     final static void showAccountProgressDialog(int methodGuard) {
         if (methodGuard != 520) {
-            String unusedNullLoginText = (String) null;
-            StatefulWidgetRenderer.setOptionalLoginText(38, (String) null);
+          String unusedNullLoginText = (String) null;
+          StatefulWidgetRenderer.setOptionalLoginText(38, (String) null);
         }
         ClientFlowState.accountDialogLayer.hideAllDialogs(10936);
         if (null == SecondaryNodeHashTable.accountProgressDialog) {
-            SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
+          SecondaryNodeHashTable.accountProgressDialog = new ProgressDialog(ClientFlowState.accountDialogLayer, TextWidgetRenderer.unreadTicketMessage);
         }
         ClientFlowState.accountDialogLayer.showDialog(false, SecondaryNodeHashTable.accountProgressDialog);
     }
@@ -265,7 +265,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             if (buttonWidget.pointerInside) {
               pressedSkin = this.stateSkins[3];
               if (buttonWidget.pressedPointerButton != 0 &&
-                  pressedSkin != null) {
+                pressedSkin != null) {
                 pressedSkin.mergeIntoWorkingSkin(parentX, parentY, this.workingSkin, this, -16566, widget);
               } else {
                 hoverSkin = this.stateSkins[2];
@@ -306,21 +306,21 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
 
     final static void setOptionalLoginText(int methodGuard, String text) {
         if (methodGuard > -116) {
-            return;
+          return;
         }
         try {
-            GameSoundResources.optionalLoginText = text;
+          GameSoundResources.optionalLoginText = text;
         } catch (RuntimeException loginTextFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginTextFailure), "rd.FA(" + methodGuard + ',' + (text != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginTextFailure), "rd.FA(" + methodGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
     StatefulWidgetRenderer(StatefulWidgetRenderer sourceRenderer, boolean copySkinProperties) {
         this();
         try {
-            sourceRenderer.copyStyleAndSkinsTo(true, this, copySkinProperties);
+          sourceRenderer.copyStyleAndSkinsTo(true, this, copySkinProperties);
         } catch (RuntimeException rendererConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "rd.<init>(" + (sourceRenderer != null ? "{...}" : "null") + ',' + copySkinProperties + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "rd.<init>(" + (sourceRenderer != null ? "{...}" : "null") + ',' + copySkinProperties + ')');
         }
     }
 

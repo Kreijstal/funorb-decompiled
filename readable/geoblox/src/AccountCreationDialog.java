@@ -15,12 +15,12 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
 
     final static void showLoggingInDialog(String loginIdentifier, byte methodGuard, boolean showLoginOnDismiss, String password) {
         try {
-            TextTemplateLookupSupport.currentLoginIdentifier = loginIdentifier;
-            LoginPasswordSupport.currentLoginPassword = password;
-            int guardRemainder = -62 % ((13 - methodGuard) / 62);
-            MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, showLoginOnDismiss);
+          TextTemplateLookupSupport.currentLoginIdentifier = loginIdentifier;
+          LoginPasswordSupport.currentLoginPassword = password;
+          int guardRemainder = -62 % ((13 - methodGuard) / 62);
+          MessageDialogSupport.showMessageDialog(DisplayModeInfo.loggingInText, 480, showLoginOnDismiss);
         } catch (RuntimeException dialogFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogFailure), "r.E(" + (loginIdentifier != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ',' + (password != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogFailure), "r.E(" + (loginIdentifier != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -103,9 +103,9 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     AccountCreationDialog(DialogLayer dialogLayer, AccountCreationForm accountForm) {
         super(dialogLayer, UiFontResources.commonUiBoldFont, KeyedIntRecordSubmission.creatingYourAccountText, false, false);
         try {
-            this.accountForm = accountForm;
+          this.accountForm = accountForm;
         } catch (RuntimeException dialogInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogInitializationFailure), "r.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (accountForm != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogInitializationFailure), "r.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (accountForm != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                 escapeOrPreviousDotState = toggledEscapeState;
               } else {
                 if (characterCode == 34 &&
-                    escapeOrPreviousDotState == 0) {
+                  escapeOrPreviousDotState == 0) {
                   unescapedQuoteFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
                   return unescapedQuoteFailureBeforeReturn;
                 }
@@ -170,8 +170,8 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
               unquotedCharacterCode = localPart.charAt(unquotedCharacterIndex);
               if (unquotedCharacterCode == 46) {
                 if (0 != unquotedCharacterIndex &&
-                    unquotedCharacterIndex != -1 + localPartLength &&
-                    previousCharacterWasDot == 0) {
+                  unquotedCharacterIndex != -1 + localPartLength &&
+                  previousCharacterWasDot == 0) {
                   previousCharacterWasDot = 1;
                   break unquotedLocalPartCharacter;
                 }
@@ -208,37 +208,37 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
     final void showIneligibleResult(int methodGuard) {
         this.showCreationResult(true, RankedComparisonSupport.createUsernameResponseQuery(DisplayNamePanel.createIneligibleText, 248, false), (byte) -57);
         if (methodGuard != 12086) {
-            this.resultHandled = false;
+          this.resultHandled = false;
         }
     }
 
     public final void onButtonActivated(int buttonX, byte methodGuard, int buttonY, int pointerButton, ButtonWidget button) {
         if (this.accountIneligible) {
-            TextTemplateLookupSupport.openLoginPanel(true, false, false);
-            return;
+          TextTemplateLookupSupport.openLoginPanel(true, false, false);
+          return;
         }
         if (methodGuard != -20) {
-            return;
+          return;
         }
         try {
-            SessionTextHistorySupport.prepareAccountCreationUi(-112);
-            this.dismissDialog((byte) -104);
+          SessionTextHistorySupport.prepareAccountCreationUi(-112);
+          this.dismissDialog((byte) -104);
         } catch (RuntimeException activationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailure), "r.Q(" + buttonX + ',' + methodGuard + ',' + buttonY + ',' + pointerButton + ',' + (button != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) activationFailure), "r.Q(" + buttonX + ',' + methodGuard + ',' + buttonY + ',' + pointerButton + ',' + (button != null ? "{...}" : "null") + ')');
         }
     }
 
     final boolean advanceDialogAnimation(int methodGuard) {
         UsernameAvailabilityQuery creationQueryResult = null;
         if (methodGuard != -1) {
-            notLoggedInText = (String) null;
+          notLoggedInText = (String) null;
         }
         if (this.dialogVisible &&
-            !this.resultHandled) {
-            creationQueryResult = MatchingTextValidator.pollAccountCreationUsernameResult((byte) 93);
-            if (creationQueryResult != null) {
-                this.showCreationResult(false, creationQueryResult, (byte) -69);
-            }
+          !this.resultHandled) {
+          creationQueryResult = MatchingTextValidator.pollAccountCreationUsernameResult((byte) 93);
+          if (creationQueryResult != null) {
+            this.showCreationResult(false, creationQueryResult, (byte) -69);
+          }
         }
         return super.advanceDialogAnimation(-1);
     }

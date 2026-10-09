@@ -80,7 +80,7 @@ final class SynthesizedSoundEffect {
     final static SynthesizedSoundEffect load(ResourceArchive archive, int groupId, int fileId) {
         byte[] encodedEffect = archive.getFile(groupId, -28153, fileId);
         if (encodedEffect == null) {
-            return null;
+          return null;
         }
         return new SynthesizedSoundEffect(new ByteArrayBuffer(encodedEffect));
     }

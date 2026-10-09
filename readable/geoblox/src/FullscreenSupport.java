@@ -9,33 +9,33 @@ final class FullscreenSupport {
 
     final static void exitActiveFullscreen(byte methodGuard) {
         if (InstrumentPatch.activeFullscreenCanvas == null) {
-            return;
+          return;
         }
         EntitySpawnSupport.detachCanvasInputListeners(-2, InstrumentPatch.activeFullscreenCanvas);
         InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
         if (methodGuard <= -14) {
-            InstrumentPatch.activeFullscreenCanvas = null;
-            if (null != FontLoadingSupport.canvasResizeController) {
-                FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
-            }
-            MessageDialog.gameCanvas.requestFocus();
-            return;
+          InstrumentPatch.activeFullscreenCanvas = null;
+          if (null != FontLoadingSupport.canvasResizeController) {
+            FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
+          }
+          MessageDialog.gameCanvas.requestFocus();
+          return;
         }
         PlatformTaskDispatcher unusedNullDispatcherSnapshot = (PlatformTaskDispatcher) null;
         FullscreenSupport.exitFullscreenAndDisposeFrame((java.awt.Frame) null, 17, (PlatformTaskDispatcher) null);
         InstrumentPatch.activeFullscreenCanvas = null;
         if (null != FontLoadingSupport.canvasResizeController) {
-            FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
+          FontLoadingSupport.canvasResizeController.restoreSize((byte) -101);
         }
         MessageDialog.gameCanvas.requestFocus();
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != -10848) {
-            returnToGameText = (String) null;
-            fullscreenAcceptCountdownPluralText = null;
-            returnToGameText = null;
-            return;
+          returnToGameText = (String) null;
+          fullscreenAcceptCountdownPluralText = null;
+          returnToGameText = null;
+          return;
         }
         fullscreenAcceptCountdownPluralText = null;
         returnToGameText = null;
@@ -76,8 +76,8 @@ final class FullscreenSupport {
 
     final static int getPointerIdleTicks(boolean releaseTextFirst) {
         if (releaseTextFirst) {
-            FullscreenSupport.releaseStaticReferences(-65);
-            return GameplaySession.pointerIdleTicks;
+          FullscreenSupport.releaseStaticReferences(-65);
+          return GameplaySession.pointerIdleTicks;
         }
         return GameplaySession.pointerIdleTicks;
     }
@@ -114,7 +114,7 @@ final class FullscreenSupport {
             characterCode = domainLabel.charAt(characterIndex);
             if (45 == characterCode) {
               if (characterIndex == 0 ||
-                  characterIndex == -1 + labelLength) {
+                characterIndex == -1 + labelLength) {
                 edgeHyphenFailure = ArchiveLoadStep.invalidTextFormatFailure;
                 return edgeHyphenFailure;
               }

@@ -15,7 +15,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
 
     final boolean settleDialogAnimation(int methodGuard) {
         if (methodGuard != 229) {
-            return false;
+          return false;
         }
         this.finishTransition(true);
         return super.settleDialogAnimation(229);
@@ -24,13 +24,13 @@ abstract class ContentTransitionDialog extends ResizableDialog {
     ContentTransitionDialog(DialogLayer dialogLayer, UiWidget initialContent, int contentVerticalInset, int fadeDurationTicks, int resizeDurationTicks) {
         super(dialogLayer, initialContent.widgetWidth + 12, 12 + contentVerticalInset + initialContent.widgetHeight);
         try {
-            this.contentResizeDurationTicks = resizeDurationTicks;
-            this.contentVerticalInset = contentVerticalInset;
-            this.fadeInDurationTicks = fadeDurationTicks;
-            this.fadeOutDurationTicks = fadeDurationTicks;
-            this.installContent(-21102, initialContent);
+          this.contentResizeDurationTicks = resizeDurationTicks;
+          this.contentVerticalInset = contentVerticalInset;
+          this.fadeInDurationTicks = fadeDurationTicks;
+          this.fadeOutDurationTicks = fadeDurationTicks;
+          this.installContent(-21102, initialContent);
         } catch (RuntimeException contentDialogConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentDialogConstructionFailure), "qf.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (initialContent != null ? "{...}" : "null") + ',' + contentVerticalInset + ',' + fadeDurationTicks + ',' + resizeDurationTicks + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) contentDialogConstructionFailure), "qf.<init>(" + (dialogLayer != null ? "{...}" : "null") + ',' + (initialContent != null ? "{...}" : "null") + ',' + contentVerticalInset + ',' + fadeDurationTicks + ',' + resizeDurationTicks + ')');
         }
     }
 
@@ -38,33 +38,33 @@ abstract class ContentTransitionDialog extends ResizableDialog {
         int nextFadeOutTick = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != -1) {
-            return true;
+          return true;
         }
         if (this.contentTransitionPhase == null) {
-            return super.advanceDialogAnimation(-1);
+          return super.advanceDialogAnimation(-1);
         }
         if (DraggableWidget.contentFadeOutPhase == this.contentTransitionPhase) {
-            nextFadeOutTick = this.contentFadeTick + 1;
-            this.contentFadeTick = this.contentFadeTick + 1;
-            if (nextFadeOutTick == this.fadeOutDurationTicks) {
-                this.contentTransitionPhase = DraggableWidget.contentResizePhase;
-                this.startResizeTransition(12 + this.contentVerticalInset + this.pendingContent.widgetHeight, this.pendingContent.widgetWidth + 12, methodGuard ^ 5268, this.contentResizeDurationTicks);
-                this.contentFadeTick = 0;
-                this.contentOpacityWidget.opacity = 0;
-                return super.advanceDialogAnimation(-1);
-            }
-            this.contentOpacityWidget.opacity = 256 - (this.contentFadeTick << 8) / this.fadeOutDurationTicks;
+          nextFadeOutTick = this.contentFadeTick + 1;
+          this.contentFadeTick = this.contentFadeTick + 1;
+          if (nextFadeOutTick == this.fadeOutDurationTicks) {
+            this.contentTransitionPhase = DraggableWidget.contentResizePhase;
+            this.startResizeTransition(12 + this.contentVerticalInset + this.pendingContent.widgetHeight, this.pendingContent.widgetWidth + 12, methodGuard ^ 5268, this.contentResizeDurationTicks);
+            this.contentFadeTick = 0;
+            this.contentOpacityWidget.opacity = 0;
             return super.advanceDialogAnimation(-1);
+          }
+          this.contentOpacityWidget.opacity = 256 - (this.contentFadeTick << 8) / this.fadeOutDurationTicks;
+          return super.advanceDialogAnimation(-1);
         }
         if (DialWidget.contentFadeInPhase != this.contentTransitionPhase) {
-            return super.advanceDialogAnimation(-1);
+          return super.advanceDialogAnimation(-1);
         }
         int nextFadeInTick = this.contentFadeTick + 1;
         this.contentFadeTick = this.contentFadeTick + 1;
         if (this.fadeInDurationTicks == nextFadeInTick) {
-            this.contentTransitionPhase = null;
-            this.contentOpacityWidget.opacity = 256;
-            return super.advanceDialogAnimation(-1);
+          this.contentTransitionPhase = null;
+          this.contentOpacityWidget.opacity = 256;
+          return super.advanceDialogAnimation(-1);
         }
         this.contentOpacityWidget.opacity = (this.contentFadeTick << 8) / this.fadeInDurationTicks;
         return super.advanceDialogAnimation(-1);
@@ -72,7 +72,7 @@ abstract class ContentTransitionDialog extends ResizableDialog {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != 256) {
-            return;
+          return;
         }
         resultMusicTrack = null;
         secondVertexTransformedX = null;
@@ -80,15 +80,15 @@ abstract class ContentTransitionDialog extends ResizableDialog {
 
     final void onResizeTransitionComplete(int methodGuard) {
         if (DraggableWidget.contentFadeOutPhase == this.contentTransitionPhase) {
-            return;
+          return;
         }
         if (methodGuard < -20) {
-            this.contentFadeTick = 0;
-            this.contentTransitionPhase = DialWidget.contentFadeInPhase;
-            this.installContent(-21102, this.pendingContent);
-            this.pendingContent = null;
-            this.contentOpacityWidget.opacity = 0;
-            return;
+          this.contentFadeTick = 0;
+          this.contentTransitionPhase = DialWidget.contentFadeInPhase;
+          this.installContent(-21102, this.pendingContent);
+          this.pendingContent = null;
+          this.contentOpacityWidget.opacity = 0;
+          return;
         }
         secondVertexTransformedX = (int[]) null;
         this.contentFadeTick = 0;
@@ -242,17 +242,17 @@ abstract class ContentTransitionDialog extends ResizableDialog {
 
     final void finishTransition(boolean finishResize) {
         if (null == this.contentTransitionPhase) {
-            super.finishTransition(finishResize);
-            return;
+          super.finishTransition(finishResize);
+          return;
         }
         if (this.contentTransitionPhase != DialWidget.contentFadeInPhase) {
-            this.resizeAndCenter(this.pendingContent.widgetHeight + (this.contentVerticalInset + 12), 106, this.pendingContent.widgetWidth + 12);
-            this.installContent(-21102, this.pendingContent);
+          this.resizeAndCenter(this.pendingContent.widgetHeight + (this.contentVerticalInset + 12), 106, this.pendingContent.widgetWidth + 12);
+          this.installContent(-21102, this.pendingContent);
         } else {
-            this.contentTransitionPhase = null;
-            this.contentOpacityWidget.opacity = 256;
-            super.finishTransition(finishResize);
-            return;
+          this.contentTransitionPhase = null;
+          this.contentOpacityWidget.opacity = 256;
+          super.finishTransition(finishResize);
+          return;
         }
         this.contentTransitionPhase = null;
         this.contentOpacityWidget.opacity = 256;

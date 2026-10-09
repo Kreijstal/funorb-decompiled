@@ -261,7 +261,7 @@ final class Bzip2Decoder {
               state.blockLength = blockLength;
               Bzip2Decoder.emitBlockRuns(state);
               if (state.blockBytesConsumed == state.blockLength + 1 &&
-                  state.pendingRunLength == 0) {
+                state.pendingRunLength == 0) {
                 continueDecodingBlocks = 1;
                 break;
               }
@@ -269,7 +269,7 @@ final class Bzip2Decoder {
               break;
             }
             if (symbol != 0 &&
-                symbol != 1) {
+              symbol != 1) {
               mtfRank = symbol - 1;
               if (mtfRank < 16) {
                 mtfPosition = state.moveToFrontBlockStarts[0];

@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "0f62e2e79ba73bfa2d15f81d1540cf14fc3811ef",
+      "commit": "43de5a2a1fce5ea26fc01bd05f606d6a3e3ec380",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "71641f8aa6702247b168ba4f3c086c171b7e6328c948520ac172d2ce6b947c4f",
-        "reproduce": "git archive --format=tar 0f62e2e79ba73bfa2d15f81d1540cf14fc3811ef | sha256sum",
+        "sha256": "ee67d76058d27a23dec52d4e93e2c11224b27a62343df06136915f7557fa3f15",
+        "reproduce": "git archive --format=tar 43de5a2a1fce5ea26fc01bd05f606d6a3e3ec380 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -31,7 +31,9 @@
         "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
         "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
         "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
-        "CFR_JS_GUARDED_FRAME_COMPLETION": "1"
+        "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+        "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+        "CFR_JS_REINDENT_STRUCTURED_BODIES": "1"
       }
     },
     "namingTool": {
@@ -120,7 +122,9 @@
       "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
       "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
       "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
-      "CFR_JS_GUARDED_FRAME_COMPLETION": "1"
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1"
     }
   },
   "freshVerification": {
@@ -145,9 +149,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
-  "previousSourceTreeSha256": "a364dc6cba360942a5ff3aff68f6aa339f855dab1f9bdbda3285dd0d32c49662",
-  "changedJavaFiles": 2,
+  "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+  "previousSourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
+  "changedJavaFiles": 275,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3315,11 +3319,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0e929ce8abf26ce37b1c752f603a5c40b12b319d",
+    "commit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "68dc77d25196fed3be440be250ed14f574f76ead6f4cb359ee940bc05cc6b77e"
+      "sha256": "b715a3684ec5e7a0a16652c20058fd94928e7790e9c8530fe639fe330ff8ff34"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3329,15 +3333,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "ef41654fefc2490757c30974e5499f721d713256b073ead05d717a8aa51a57ea",
+    "outputTreeSha256": "9b6c4231b1ad75a5d202b8b6586b409a428da8f3096df3e744f20c67f604001f",
     "files": 303,
     "rules": 20139,
-    "identifierEdits": 122128,
-    "bindingsCompared": 138063,
+    "identifierEdits": 122113,
+    "bindingsCompared": 138048,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122427,
+    "totalEdits": 122412,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 288,
@@ -3359,8 +3363,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 251,
-    "semanticPass": 251
+    "structuralPass": 252,
+    "semanticPass": 252
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36838,12 +36842,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "f4e9279a4d264c6256391509e5df9c4136b6ece0",
-    "sourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
+    "sourceCommit": "60c1b588fd0f6468a640b6e707cfb18b97732279",
+    "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "0e929ce8abf26ce37b1c752f603a5c40b12b319d"
+    "workflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -44732,5 +44736,3289 @@
     ],
     "sourceWorkflowCommit": "0e929ce8abf26ce37b1c752f603a5c40b12b319d",
     "sourceProofWorkflowCommit": "0e929ce8abf26ce37b1c752f603a5c40b12b319d"
+  },
+  "localBooleanGuardCompaction": {
+    "version": 252,
+    "changedJavaFiles": 275,
+    "guardsCompacted": 15,
+    "remainingCompoundGuards": 9,
+    "redundantLocalReadsRemoved": 15,
+    "linesReindented": 11148,
+    "formattedBodies": 1253,
+    "sourceProofTest": "readable/tests/test-geoblox-boolean-guards-source.mjs",
+    "sourceProofTestSha256": "1ae2770a29f185c0212f5cb1ea84116157cb8bbe797e45b85a90a3bf3dcad2c3",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "f4e9279a4d264c6256391509e5df9c4136b6ece0",
+    "sourceCommit": "60c1b588fd0f6468a640b6e707cfb18b97732279",
+    "previousSourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
+    "sourceTreeSha256": "2828f1115caaa569ad148a70930f82abefaec4fbcb26796d7fab6f00c15352a9",
+    "javaToolsCommit": "43de5a2a1fce5ea26fc01bd05f606d6a3e3ec380",
+    "sourceArchiveSha256": "ee67d76058d27a23dec52d4e93e2c11224b27a62343df06136915f7557fa3f15",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1"
+    },
+    "bindingsBefore": 138063,
+    "bindingsCompared": 138048,
+    "transfersCompared": 4835,
+    "conditionalWritesAndRhsEffectsPreserved": true,
+    "redundantPrimitiveLocalReadsIndependentlyCertified": true,
+    "indentationTokenBytesAndLineEndingsPreserved": true,
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 21,
+    "genericGuardCompactionTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 14040,
+    "priorFrameAndPrefixOraclesReverified": true,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 35,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "f4e9279a4d264c6256391509e5df9c4136b6ece0",
+      "sourceTreeSha256": "566b0d62f3c7bdaf9511a6c154add3eeaa6b4ab2ea72277bb27dca341fd89421",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "0e929ce8abf26ce37b1c752f603a5c40b12b319d"
+    },
+    "previousUnresolvedFieldPurposeInventory": [
+      {
+        "symbol": "F:ch.field_c:Z",
+        "name": "sourceUnreferencedFlag3",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:ch.field_e:Z",
+        "name": "sourceUnreferencedFlag1",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:ch.field_f:Z",
+        "name": "sourceUnreferencedFlag4",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:ch.field_g:I",
+        "name": "sourceUnreferencedInteger",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:ch.field_i:Z",
+        "name": "sourceUnreferencedFlag2",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:ch.field_j:Z",
+        "name": "sourceUnreferencedFlag5",
+        "file": "ch.java",
+        "sourceSha256": "4d73642ecbb39191e7e58a57e8284f3a75f33404744890c72f13b3c9f43e1b07",
+        "modifiers": [
+          "public",
+          "static"
+        ],
+        "observation": "no-ordinary-source-references",
+        "references": 0,
+        "owners": [],
+        "reads": 0,
+        "writes": 0
+      },
+      {
+        "symbol": "F:mi.field_A:I",
+        "name": "nonzeroIntegerOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_ab:I",
+        "name": "nonnegativeIntegerOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_bb:I",
+        "name": "nonnegativeIntegerOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_cb:I",
+        "name": "nonnegativeIntegerOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_D:[Ldm;",
+        "name": "nonNullSpriteArrayOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_db:I",
+        "name": "minIntUnsetIntegerOverride5",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_eb:[Ldm;",
+        "name": "nonNullSpriteArrayOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_F:Ldm;",
+        "name": "nonNullSpriteOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_fb:[Ldm;",
+        "name": "nonNullSpriteArrayOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_G:I",
+        "name": "nonnegativeIntegerOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_H:[Ldm;",
+        "name": "nonNullSpriteArrayOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_J:I",
+        "name": "minIntUnsetIntegerOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_K:I",
+        "name": "minIntUnsetIntegerOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_L:Z",
+        "name": "trueOnlyOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_M:Ldm;",
+        "name": "nonNullSpriteOverride5",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_N:Z",
+        "name": "trueOnlyOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_O:I",
+        "name": "nonzeroIntegerOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_p:Ldm;",
+        "name": "nonNullSpriteOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_P:Z",
+        "name": "trueOnlyOverride2",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_q:Z",
+        "name": "trueOnlyOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_r:I",
+        "name": "minIntUnsetIntegerOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_s:[Ldm;",
+        "name": "nonNullSpriteArrayOverride5",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_S:Z",
+        "name": "falseOnlyOverride",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_t:I",
+        "name": "not256IntegerOverride",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_T:I",
+        "name": "minIntUnsetIntegerOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_U:I",
+        "name": "nonzeroIntegerOverride7",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_u:Ldm;",
+        "name": "nonNullSpriteOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_v:I",
+        "name": "nonzeroIntegerOverride1",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_V:I",
+        "name": "nonzeroIntegerOverride4",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_w:I",
+        "name": "minIntUnsetIntegerOverride6",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 4,
+        "owners": [
+          "mi.<init>(JLmi;IIIILjava/lang/String;)V",
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 2
+      },
+      {
+        "symbol": "F:mi.field_W:Z",
+        "name": "trueOnlyOverride5",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_x:I",
+        "name": "nonzeroIntegerOverride5",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_Y:Ljava/lang/String;",
+        "name": "nonNullStringOverride",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_z:I",
+        "name": "nonzeroIntegerOverride6",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      },
+      {
+        "symbol": "F:mi.field_Z:Ldm;",
+        "name": "nonNullSpriteOverride3",
+        "file": "mi.java",
+        "sourceSha256": "9298e3c8afabacc64bef9960b1db577ccab0afa2bfc8c848e23b874b7f6c38f0",
+        "modifiers": [
+          "private"
+        ],
+        "observation": "constructor-and-merge-only",
+        "references": 3,
+        "owners": [
+          "mi.a(ILmi;)V"
+        ],
+        "reads": 2,
+        "writes": 1
+      }
+    ],
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass252 combines primitive local guards with their conditional assignments and immediate subsequent guards. Preserve every conditional write, RHS effect/failure, short-circuit order and assignment value; remove only the redundant local read immediately after its assignment. Independent javac trees attribute the bound boolean locals and conditional-store chains, and certify all other ordered operations/bindings/overrides and all protected transfer targets. Leading horizontal whitespace is normalized independently with token bytes and line endings preserved. Original snapshots, aliases, nonzero flags, arithmetic, callback/failure order and finally/monitor scopes remain. Original bytecode is unchanged; generated Java is never hand-edited. Whole-game equivalence is not claimed.",
+    "selections": [
+      {
+        "file": "c.java",
+        "methodStart": 94413,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 97045,
+          "end": 97385
+        },
+        "removedRead": {
+          "start": 97205,
+          "end": 97230
+        },
+        "assignment": {
+          "start": 97098,
+          "end": 97171
+        },
+        "body": {
+          "start": 97232,
+          "end": 97365
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.b(B)V#4",
+        "afterStart": 95555
+      },
+      {
+        "file": "c.java",
+        "methodStart": 94413,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 96671,
+          "end": 97425
+        },
+        "removedRead": {
+          "start": 96802,
+          "end": 96827
+        },
+        "assignment": {
+          "start": 96724,
+          "end": 96772
+        },
+        "body": {
+          "start": 96829,
+          "end": 97405
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.b(B)V#4",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 94413,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 96547,
+          "end": 97445
+        },
+        "removedRead": {
+          "start": 96675,
+          "end": 96700
+        },
+        "assignment": {
+          "start": 96600,
+          "end": 96647
+        },
+        "body": {
+          "start": 96829,
+          "end": 97405
+        },
+        "assignmentConditions": 2,
+        "symbol": "L:c.b(B)V#4",
+        "afterStart": 95169
+      },
+      {
+        "file": "c.java",
+        "methodStart": 94413,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 96166,
+          "end": 96506
+        },
+        "removedRead": {
+          "start": 96324,
+          "end": 96349
+        },
+        "assignment": {
+          "start": 96221,
+          "end": 96294
+        },
+        "body": {
+          "start": 96351,
+          "end": 96484
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.b(B)V#4",
+        "afterStart": 94857
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 34325,
+          "end": 34631
+        },
+        "removedRead": {
+          "start": 34462,
+          "end": 34487
+        },
+        "assignment": {
+          "start": 34380,
+          "end": 34424
+        },
+        "body": {
+          "start": 34489,
+          "end": 34609
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 33339
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 33830,
+          "end": 34675
+        },
+        "removedRead": {
+          "start": 33963,
+          "end": 33988
+        },
+        "assignment": {
+          "start": 33885,
+          "end": 33929
+        },
+        "body": {
+          "start": 33990,
+          "end": 34653
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 33703,
+          "end": 34697
+        },
+        "removedRead": {
+          "start": 33834,
+          "end": 33859
+        },
+        "assignment": {
+          "start": 33758,
+          "end": 33802
+        },
+        "body": {
+          "start": 33990,
+          "end": 34653
+        },
+        "assignmentConditions": 2,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 33574,
+          "end": 34719
+        },
+        "removedRead": {
+          "start": 33707,
+          "end": 33732
+        },
+        "assignment": {
+          "start": 33629,
+          "end": 33677
+        },
+        "body": {
+          "start": 33990,
+          "end": 34653
+        },
+        "assignmentConditions": 3,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 32781
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 33171,
+          "end": 33481
+        },
+        "removedRead": {
+          "start": 33308,
+          "end": 33333
+        },
+        "assignment": {
+          "start": 33228,
+          "end": 33272
+        },
+        "body": {
+          "start": 33335,
+          "end": 33457
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 32473
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 32686,
+          "end": 33529
+        },
+        "removedRead": {
+          "start": 32819,
+          "end": 32844
+        },
+        "assignment": {
+          "start": 32743,
+          "end": 32787
+        },
+        "body": {
+          "start": 32846,
+          "end": 33505
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 32051
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 32087,
+          "end": 32397
+        },
+        "removedRead": {
+          "start": 32224,
+          "end": 32249
+        },
+        "assignment": {
+          "start": 32144,
+          "end": 32188
+        },
+        "body": {
+          "start": 32251,
+          "end": 32373
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 31956,
+          "end": 32421
+        },
+        "removedRead": {
+          "start": 32091,
+          "end": 32116
+        },
+        "assignment": {
+          "start": 32013,
+          "end": 32057
+        },
+        "body": {
+          "start": 32251,
+          "end": 32373
+        },
+        "assignmentConditions": 2,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 31827,
+          "end": 32445
+        },
+        "removedRead": {
+          "start": 31960,
+          "end": 31985
+        },
+        "assignment": {
+          "start": 31884,
+          "end": 31928
+        },
+        "body": {
+          "start": 32251,
+          "end": 32373
+        },
+        "assignmentConditions": 3,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": -1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 31700,
+          "end": 32469
+        },
+        "removedRead": {
+          "start": 31831,
+          "end": 31856
+        },
+        "assignment": {
+          "start": 31757,
+          "end": 31801
+        },
+        "body": {
+          "start": 32251,
+          "end": 32373
+        },
+        "assignmentConditions": 4,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 31391
+      },
+      {
+        "file": "c.java",
+        "methodStart": 28564,
+        "name": "decompiledFrameRemainder0",
+        "region": {
+          "start": 31343,
+          "end": 31653
+        },
+        "removedRead": {
+          "start": 31478,
+          "end": 31503
+        },
+        "assignment": {
+          "start": 31402,
+          "end": 31446
+        },
+        "body": {
+          "start": 31505,
+          "end": 31627
+        },
+        "assignmentConditions": 1,
+        "symbol": "L:c.a(IIB)I#21",
+        "afterStart": 31115
+      }
+    ],
+    "previousTextResourceEvidence": {
+      "loaderSourceSha256": "67168f18f24324ce13bda339474cb44659e218bd63ec9c718e193c0ebd647c23",
+      "review": {
+        "allResourceReads": 744,
+        "storedResourceReads": 218,
+        "discardedReadsUnnamed": 526
+      },
+      "resourceAssignments": [
+        {
+          "symbol": "F:Geoblox.field_z:[Ljava/lang/String;",
+          "originalName": "field_z",
+          "resources": [
+            {
+              "key": "reconnect_lost_seq,0",
+              "index": 0,
+              "line": 2718
+            },
+            {
+              "key": "reconnect_lost_seq,1",
+              "index": 1,
+              "line": 2722
+            },
+            {
+              "key": "reconnect_lost_seq,2",
+              "index": 2,
+              "line": 2726
+            },
+            {
+              "key": "reconnect_lost_seq,3",
+              "index": 3,
+              "line": 2730
+            }
+          ],
+          "to": "reconnectMessages"
+        },
+        {
+          "symbol": "F:a.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "retry",
+              "index": null,
+              "line": 1261
+            }
+          ],
+          "to": "retryText"
+        },
+        {
+          "symbol": "F:ab.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "create_suggestions",
+              "index": null,
+              "line": 1581
+            }
+          ],
+          "to": "createSuggestionsText"
+        },
+        {
+          "symbol": "F:ac.field_r:[Ljava/lang/String;",
+          "originalName": "field_r",
+          "resources": [
+            {
+              "key": "mustlogin_alternate,1",
+              "index": 1,
+              "line": 3074
+            },
+            {
+              "key": "mustlogin_alternate,2",
+              "index": 2,
+              "line": 3078
+            },
+            {
+              "key": "mustlogin_alternate,3",
+              "index": 3,
+              "line": 3082
+            },
+            {
+              "key": "mustlogin_alternate,4",
+              "index": 4,
+              "line": 3086
+            },
+            {
+              "key": "mustlogin_alternate,5",
+              "index": 5,
+              "line": 3090
+            },
+            {
+              "key": "mustlogin_alternate,6",
+              "index": 6,
+              "line": 3094
+            },
+            {
+              "key": "mustlogin_alternate,7",
+              "index": 7,
+              "line": 3098
+            }
+          ],
+          "to": "mustLoginAlternateTexts"
+        },
+        {
+          "symbol": "F:ad.field_n:Ljava/lang/String;",
+          "originalName": "field_n",
+          "resources": [
+            {
+              "key": "fs_focus_or_resolution",
+              "index": null,
+              "line": 2834
+            }
+          ],
+          "to": "fullscreenFocusOrResolutionText"
+        },
+        {
+          "symbol": "F:ah.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "connectionlost_reconnecting",
+              "index": null,
+              "line": 1243
+            }
+          ],
+          "to": "connectionLostReconnectingText"
+        },
+        {
+          "symbol": "F:ai.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "create_alert_passchars",
+              "index": null,
+              "line": 1737
+            }
+          ],
+          "to": "createPasswordCharacterAlertText"
+        },
+        {
+          "symbol": "F:bi.field_c:[Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "mustlogin3,1",
+              "index": 1,
+              "line": 3010
+            },
+            {
+              "key": "mustlogin3,2",
+              "index": 2,
+              "line": 3014
+            },
+            {
+              "key": "mustlogin3,3",
+              "index": 3,
+              "line": 3018
+            },
+            {
+              "key": "mustlogin3,4",
+              "index": 4,
+              "line": 3022
+            },
+            {
+              "key": "mustlogin3,5",
+              "index": 5,
+              "line": 3026
+            },
+            {
+              "key": "mustlogin3,6",
+              "index": 6,
+              "line": 3030
+            },
+            {
+              "key": "mustlogin3,7",
+              "index": 7,
+              "line": 3034
+            }
+          ],
+          "to": "mustLogin3Texts"
+        },
+        {
+          "symbol": "F:bk.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "login_username",
+              "index": null,
+              "line": 1609
+            }
+          ],
+          "to": "loginUsernameText"
+        },
+        {
+          "symbol": "F:bl.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "achievements",
+              "index": null,
+              "line": 2052
+            }
+          ],
+          "to": "achievementsText"
+        },
+        {
+          "symbol": "F:bm.field_p:Ljava/lang/String;",
+          "originalName": "field_p",
+          "resources": [
+            {
+              "key": "create_agreeterms",
+              "index": null,
+              "line": 1597
+            }
+          ],
+          "to": "createAgreeTermsText"
+        },
+        {
+          "symbol": "F:c.field_Q:[Ljava/lang/String;",
+          "originalName": "field_Q",
+          "resources": [
+            {
+              "key": "quickchat_shortcut_help,0",
+              "index": 0,
+              "line": 2610
+            },
+            {
+              "key": "quickchat_shortcut_help,1",
+              "index": 1,
+              "line": 2614
+            },
+            {
+              "key": "quickchat_shortcut_help,2",
+              "index": 2,
+              "line": 2618
+            },
+            {
+              "key": "quickchat_shortcut_help,3",
+              "index": 3,
+              "line": 2622
+            },
+            {
+              "key": "quickchat_shortcut_help,4",
+              "index": 4,
+              "line": 2626
+            },
+            {
+              "key": "quickchat_shortcut_help,5",
+              "index": 5,
+              "line": 2630
+            }
+          ],
+          "to": "quickChatShortcutHelpTexts"
+        },
+        {
+          "symbol": "F:c.field_r:Ljava/lang/String;",
+          "originalName": "field_r",
+          "resources": [
+            {
+              "key": "create_alert_nameleadingspace",
+              "index": null,
+              "line": 1729
+            }
+          ],
+          "to": "createNameLeadingSpaceAlertText"
+        },
+        {
+          "symbol": "F:ca.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "unpacking_music",
+              "index": null,
+              "line": 1996
+            }
+          ],
+          "to": "unpackingMusicText"
+        },
+        {
+          "symbol": "F:ck.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "cancel",
+              "index": null,
+              "line": 1139
+            }
+          ],
+          "to": "cancelText"
+        },
+        {
+          "symbol": "F:cl.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "cont",
+              "index": null,
+              "line": 2228
+            }
+          ],
+          "to": "continueText"
+        },
+        {
+          "symbol": "F:cm.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "checking",
+              "index": null,
+              "line": 1369
+            }
+          ],
+          "to": "checkingText"
+        },
+        {
+          "symbol": "F:da.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "create_emailvalid",
+              "index": null,
+              "line": 1793
+            }
+          ],
+          "to": "createEmailValidText"
+        },
+        {
+          "symbol": "F:dd.field_F:Ljava/lang/String;",
+          "originalName": "field_F",
+          "resources": [
+            {
+              "key": "loading_music",
+              "index": null,
+              "line": 1953
+            }
+          ],
+          "to": "loadingMusicText"
+        },
+        {
+          "symbol": "F:df.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "endgame",
+              "index": null,
+              "line": 2152
+            }
+          ],
+          "to": "endGameText"
+        },
+        {
+          "symbol": "F:di.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create",
+              "index": null,
+              "line": 1425
+            }
+          ],
+          "to": "createText"
+        },
+        {
+          "symbol": "F:ec.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "ok",
+              "index": null,
+              "line": 2160
+            }
+          ],
+          "to": "okText"
+        },
+        {
+          "symbol": "F:ee.field_x:[Ljava/lang/String;",
+          "originalName": "field_x",
+          "resources": [
+            {
+              "key": "mustlogin2,1",
+              "index": 1,
+              "line": 2982
+            },
+            {
+              "key": "mustlogin2,2",
+              "index": 2,
+              "line": 2986
+            },
+            {
+              "key": "mustlogin2,3",
+              "index": 3,
+              "line": 2990
+            },
+            {
+              "key": "mustlogin2,4",
+              "index": 4,
+              "line": 2994
+            },
+            {
+              "key": "mustlogin2,5",
+              "index": 5,
+              "line": 2998
+            },
+            {
+              "key": "mustlogin2,6",
+              "index": 6,
+              "line": 3002
+            },
+            {
+              "key": "mustlogin2,7",
+              "index": 7,
+              "line": 3006
+            }
+          ],
+          "to": "mustLogin2Texts"
+        },
+        {
+          "symbol": "F:ee.field_y:Ljava/lang/String;",
+          "originalName": "field_y",
+          "resources": [
+            {
+              "key": "toserverlist",
+              "index": null,
+              "line": 1175
+            }
+          ],
+          "to": "toServerListText"
+        },
+        {
+          "symbol": "F:ef.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "instructions",
+              "index": null,
+              "line": 2016
+            }
+          ],
+          "to": "instructionsText"
+        },
+        {
+          "symbol": "F:eh.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "openinpopupwindow",
+              "index": null,
+              "line": 1421
+            }
+          ],
+          "to": "openInPopupWindowText"
+        },
+        {
+          "symbol": "F:ei.field_gb:Ljava/lang/String;",
+          "originalName": "field_gb",
+          "resources": [
+            {
+              "key": "fs_unavailable_try_signed_applet",
+              "index": null,
+              "line": 2826
+            }
+          ],
+          "to": "fullscreenUnavailableTrySignedAppletText"
+        },
+        {
+          "symbol": "F:ej.field_c:[Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "rating_mode_name,0",
+              "index": 0,
+              "line": 2906
+            },
+            {
+              "key": "rating_mode_name,1",
+              "index": 1,
+              "line": 2910
+            }
+          ],
+          "to": "ratingModeNames"
+        },
+        {
+          "symbol": "F:f.field_lb:[Ljava/lang/String;",
+          "originalName": "field_lb",
+          "resources": [
+            {
+              "key": "quickchat_shortcut_keys,0",
+              "index": 0,
+              "line": 2634
+            },
+            {
+              "key": "quickchat_shortcut_keys,1",
+              "index": 1,
+              "line": 2638
+            },
+            {
+              "key": "quickchat_shortcut_keys,2",
+              "index": 2,
+              "line": 2642
+            },
+            {
+              "key": "quickchat_shortcut_keys,3",
+              "index": 3,
+              "line": 2646
+            },
+            {
+              "key": "quickchat_shortcut_keys,4",
+              "index": 4,
+              "line": 2650
+            },
+            {
+              "key": "quickchat_shortcut_keys,5",
+              "index": 5,
+              "line": 2654
+            }
+          ],
+          "to": "quickChatShortcutKeys"
+        },
+        {
+          "symbol": "F:f.field_nb:Ljava/lang/String;",
+          "originalName": "field_nb",
+          "resources": [
+            {
+              "key": "fs_timeout",
+              "index": null,
+              "line": 2838
+            }
+          ],
+          "to": "fullscreenTimeoutText"
+        },
+        {
+          "symbol": "F:fa.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "idlemessage20min",
+              "index": null,
+              "line": 187
+            }
+          ],
+          "to": "idleMessage20MinText"
+        },
+        {
+          "symbol": "F:fa.field_g:[Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "members_expansion_benefits,0",
+              "index": 0,
+              "line": 2698
+            },
+            {
+              "key": "members_expansion_benefits,1",
+              "index": 1,
+              "line": 2702
+            },
+            {
+              "key": "members_expansion_benefits,2",
+              "index": 2,
+              "line": 2706
+            }
+          ],
+          "to": "membersExpansionBenefitTexts"
+        },
+        {
+          "symbol": "F:fa.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "create_alert_doublespace",
+              "index": null,
+              "line": 1733
+            }
+          ],
+          "to": "createDoubleSpaceAlertText"
+        },
+        {
+          "symbol": "F:fc.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "music_colon",
+              "index": null,
+              "line": 2032
+            }
+          ],
+          "to": "musicLabelText"
+        },
+        {
+          "symbol": "F:ff.field_l:Ljava/lang/String;",
+          "originalName": "field_l",
+          "resources": [
+            {
+              "key": "waitingfor_graphics",
+              "index": null,
+              "line": 1893
+            }
+          ],
+          "to": "waitingForGraphicsText"
+        },
+        {
+          "symbol": "F:fi.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "changedisplayname",
+              "index": null,
+              "line": 1183
+            }
+          ],
+          "to": "changeDisplayNameText"
+        },
+        {
+          "symbol": "F:g.field_l:Ljava/lang/String;",
+          "originalName": "field_l",
+          "resources": [
+            {
+              "key": "serviceunavailable",
+              "index": null,
+              "line": 2958
+            }
+          ],
+          "to": "serviceUnavailableText"
+        },
+        {
+          "symbol": "F:g.field_m:Ljava/lang/String;",
+          "originalName": "field_m",
+          "resources": [
+            {
+              "key": "create_alert_email_unavailable",
+              "index": null,
+              "line": 1769
+            }
+          ],
+          "to": "createEmailUnavailableAlertText"
+        },
+        {
+          "symbol": "F:gf.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "create_alert_passcontainsname",
+              "index": null,
+              "line": 1749
+            }
+          ],
+          "to": "createPasswordContainsNameAlertText"
+        },
+        {
+          "symbol": "F:gg.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "create_alert_passrepeated",
+              "index": null,
+              "line": 1741
+            }
+          ],
+          "to": "createRepeatedPasswordAlertText"
+        },
+        {
+          "symbol": "F:gg.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create_alert_passcontainsname_partial",
+              "index": null,
+              "line": 1757
+            }
+          ],
+          "to": "createPasswordContainsPartialNameAlertText"
+        },
+        {
+          "symbol": "F:gg.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "create_alert_namelength",
+              "index": null,
+              "line": 1721
+            }
+          ],
+          "to": "createNameLengthAlertText"
+        },
+        {
+          "symbol": "F:gk.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create_displayname_hint",
+              "index": null,
+              "line": 1657
+            }
+          ],
+          "to": "createDisplayNameHintText"
+        },
+        {
+          "symbol": "F:hb.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "playfreeversion",
+              "index": null,
+              "line": 1167
+            }
+          ],
+          "to": "playFreeVersionText"
+        },
+        {
+          "symbol": "F:hc.field_U:Ljava/lang/String;",
+          "originalName": "field_U",
+          "resources": [
+            {
+              "key": "goback",
+              "index": null,
+              "line": 1203
+            }
+          ],
+          "to": "goBackText"
+        },
+        {
+          "symbol": "F:hf.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "loginm3",
+              "index": null,
+              "line": 175
+            }
+          ],
+          "to": "loginMessage3Text"
+        },
+        {
+          "symbol": "F:hh.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "fs_button_close",
+              "index": null,
+              "line": 2814
+            }
+          ],
+          "to": "fullscreenCloseButtonText"
+        },
+        {
+          "symbol": "F:hi.field_I:Ljava/lang/String;",
+          "originalName": "field_I",
+          "resources": [
+            {
+              "key": "create_ineligible",
+              "index": null,
+              "line": 215
+            }
+          ],
+          "to": "createIneligibleText"
+        },
+        {
+          "symbol": "F:ic.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "login_create_tooltip",
+              "index": null,
+              "line": 1629
+            }
+          ],
+          "to": "loginCreateTooltipText"
+        },
+        {
+          "symbol": "F:id.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "resumegame",
+              "index": null,
+              "line": 2124
+            }
+          ],
+          "to": "resumeGameText"
+        },
+        {
+          "symbol": "F:ih.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "ticketing_oneunread",
+              "index": null,
+              "line": 239
+            }
+          ],
+          "to": "ticketingOneUnreadText"
+        },
+        {
+          "symbol": "F:ii.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "highscores",
+              "index": null,
+              "line": 2044
+            }
+          ],
+          "to": "highscoresText"
+        },
+        {
+          "symbol": "F:ii.field_j:Ljava/lang/String;",
+          "originalName": "field_j",
+          "resources": [
+            {
+              "key": "create_passwordvalid",
+              "index": null,
+              "line": 1789
+            }
+          ],
+          "to": "createPasswordValidText"
+        },
+        {
+          "symbol": "F:ij.field_Y:Ljava/lang/String;",
+          "originalName": "field_Y",
+          "resources": [
+            {
+              "key": "create_password_tooltip",
+              "index": null,
+              "line": 1661
+            }
+          ],
+          "to": "createPasswordTooltipText"
+        },
+        {
+          "symbol": "F:ij.field_Z:Ljava/lang/String;",
+          "originalName": "field_Z",
+          "resources": [
+            {
+              "key": "menu",
+              "index": null,
+              "line": 2104
+            }
+          ],
+          "to": "menuText"
+        },
+        {
+          "symbol": "F:ik.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "waitingfor_fonts",
+              "index": null,
+              "line": 1901
+            }
+          ],
+          "to": "waitingForFontsText"
+        },
+        {
+          "symbol": "F:j.field_jb:Ljava/lang/String;",
+          "originalName": "field_jb",
+          "resources": [
+            {
+              "key": "warning_ifyouquit",
+              "index": null,
+              "line": 1281
+            }
+          ],
+          "to": "quitWarningText"
+        },
+        {
+          "symbol": "F:jc.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "tocustomersupport",
+              "index": null,
+              "line": 1179
+            }
+          ],
+          "to": "toCustomerSupportText"
+        },
+        {
+          "symbol": "F:jg.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "login_gameupdated",
+              "index": null,
+              "line": 207
+            }
+          ],
+          "to": "loginGameUpdatedText"
+        },
+        {
+          "symbol": "F:ji.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "create_alert_passlength",
+              "index": null,
+              "line": 1745
+            }
+          ],
+          "to": "createPasswordLengthAlertText"
+        },
+        {
+          "symbol": "F:ji.field_l:Ljava/lang/String;",
+          "originalName": "field_l",
+          "resources": [
+            {
+              "key": "create_welcome",
+              "index": null,
+              "line": 1517
+            }
+          ],
+          "to": "createWelcomeText"
+        },
+        {
+          "symbol": "F:ji.field_n:Ljava/lang/String;",
+          "originalName": "field_n",
+          "resources": [
+            {
+              "key": "waitingfor_music",
+              "index": null,
+              "line": 1909
+            }
+          ],
+          "to": "waitingForMusicText"
+        },
+        {
+          "symbol": "F:jj.field_a:[Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "rating_mode_long_name,0",
+              "index": 0,
+              "line": 2914
+            },
+            {
+              "key": "rating_mode_long_name,1",
+              "index": 1,
+              "line": 2918
+            }
+          ],
+          "to": "ratingModeLongNames"
+        },
+        {
+          "symbol": "F:jj.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "login_username_email",
+              "index": null,
+              "line": 1605
+            }
+          ],
+          "to": "loginUsernameEmailText"
+        },
+        {
+          "symbol": "F:jk.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "fs_accept_countdown_pl",
+              "index": null,
+              "line": 2806
+            }
+          ],
+          "to": "fullscreenAcceptCountdownPluralText"
+        },
+        {
+          "symbol": "F:jk.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "returntogame",
+              "index": null,
+              "line": 2200
+            }
+          ],
+          "to": "returnToGameText"
+        },
+        {
+          "symbol": "F:k.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "fs_focus",
+              "index": null,
+              "line": 2830
+            }
+          ],
+          "to": "fullscreenFocusText"
+        },
+        {
+          "symbol": "F:k.field_k:Ljava/lang/String;",
+          "originalName": "field_k",
+          "resources": [
+            {
+              "key": "login",
+              "index": null,
+              "line": 1199
+            }
+          ],
+          "to": "loginText"
+        },
+        {
+          "symbol": "F:kc.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "create_alert_namechars",
+              "index": null,
+              "line": 1725
+            }
+          ],
+          "to": "createNameCharacterAlertText"
+        },
+        {
+          "symbol": "F:kd.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "achieved",
+              "index": null,
+              "line": 2402
+            }
+          ],
+          "to": "achievedText"
+        },
+        {
+          "symbol": "F:kf.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "pleasetryagain",
+              "index": null,
+              "line": 1159
+            }
+          ],
+          "to": "pleaseTryAgainText"
+        },
+        {
+          "symbol": "F:ki.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "fs_nonmember",
+              "index": null,
+              "line": 2810
+            }
+          ],
+          "to": "fullscreenNonmemberText"
+        },
+        {
+          "symbol": "F:ki.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "error_js5connect",
+              "index": null,
+              "line": 203
+            }
+          ],
+          "to": "js5ConnectErrorText"
+        },
+        {
+          "symbol": "F:kk.field_v:Ljava/lang/String;",
+          "originalName": "field_v",
+          "resources": [
+            {
+              "key": "login_username_tooltip",
+              "index": null,
+              "line": 1617
+            }
+          ],
+          "to": "loginUsernameTooltipText"
+        },
+        {
+          "symbol": "F:lh.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "next",
+              "index": null,
+              "line": 2180
+            }
+          ],
+          "to": "nextText"
+        },
+        {
+          "symbol": "F:lh.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create_account_success",
+              "index": null,
+              "line": 1797
+            }
+          ],
+          "to": "createAccountSuccessText"
+        },
+        {
+          "symbol": "F:ll.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "create_more_suggestions",
+              "index": null,
+              "line": 1585
+            }
+          ],
+          "to": "createMoreSuggestionsText"
+        },
+        {
+          "symbol": "F:ll.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "back",
+              "index": null,
+              "line": 1265
+            }
+          ],
+          "to": "backText"
+        },
+        {
+          "symbol": "F:ll.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create_email_tooltip",
+              "index": null,
+              "line": 1673
+            }
+          ],
+          "to": "createEmailTooltipText"
+        },
+        {
+          "symbol": "F:md.field_d:[Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "mustlogin4,1",
+              "index": 1,
+              "line": 3042
+            },
+            {
+              "key": "mustlogin4,2",
+              "index": 2,
+              "line": 3046
+            },
+            {
+              "key": "mustlogin4,3",
+              "index": 3,
+              "line": 3050
+            },
+            {
+              "key": "mustlogin4,4",
+              "index": 4,
+              "line": 3054
+            },
+            {
+              "key": "mustlogin4,5",
+              "index": 5,
+              "line": 3058
+            },
+            {
+              "key": "mustlogin4,6",
+              "index": 6,
+              "line": 3062
+            },
+            {
+              "key": "mustlogin4,7",
+              "index": 7,
+              "line": 3066
+            }
+          ],
+          "to": "mustLogin4Texts"
+        },
+        {
+          "symbol": "F:mi.field_E:Ljava/lang/String;",
+          "originalName": "field_E",
+          "resources": [
+            {
+              "key": "invaliduserorpass",
+              "index": null,
+              "line": 1155
+            }
+          ],
+          "to": "invalidUserOrPasswordText"
+        },
+        {
+          "symbol": "F:mi.field_R:Ljava/lang/String;",
+          "originalName": "field_R",
+          "resources": [
+            {
+              "key": "connectionlost_withreason",
+              "index": null,
+              "line": 1247
+            }
+          ],
+          "to": "connectionLostWithReasonText"
+        },
+        {
+          "symbol": "F:mj.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "fs_accept_countdown_sing",
+              "index": null,
+              "line": 2802
+            }
+          ],
+          "to": "fullscreenAcceptCountdownSingularText"
+        },
+        {
+          "symbol": "F:ml.field_u:Ljava/lang/String;",
+          "originalName": "field_u",
+          "resources": [
+            {
+              "key": "create_select_alternative",
+              "index": null,
+              "line": 1589
+            }
+          ],
+          "to": "createSelectAlternativeText"
+        },
+        {
+          "symbol": "F:nb.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "loading_fonts",
+              "index": null,
+              "line": 1945
+            }
+          ],
+          "to": "loadingFontsText"
+        },
+        {
+          "symbol": "F:ne.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "ticketing_gotowebsite",
+              "index": null,
+              "line": 247
+            }
+          ],
+          "to": "ticketingGoToWebsiteText"
+        },
+        {
+          "symbol": "F:nf.field_E:Ljava/lang/String;",
+          "originalName": "field_E",
+          "resources": [
+            {
+              "key": "reloadgame",
+              "index": null,
+              "line": 1171
+            }
+          ],
+          "to": "reloadGameText"
+        },
+        {
+          "symbol": "F:nh.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "loading",
+              "index": null,
+              "line": 803
+            }
+          ],
+          "to": "loadingText"
+        },
+        {
+          "symbol": "F:ni.field_C:Ljava/lang/String;",
+          "originalName": "field_C",
+          "resources": [
+            {
+              "key": "createtouse",
+              "index": null,
+              "line": 2962
+            }
+          ],
+          "to": "createToUseText"
+        },
+        {
+          "symbol": "F:nk.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "startgame",
+              "index": null,
+              "line": 2116
+            }
+          ],
+          "to": "startGameText"
+        },
+        {
+          "symbol": "F:nk.field_i:Ljava/lang/String;",
+          "originalName": "field_i",
+          "resources": [
+            {
+              "key": "create_u13terms",
+              "index": null,
+              "line": 1601
+            }
+          ],
+          "to": "createUnder13TermsText"
+        },
+        {
+          "symbol": "F:oa.field_d:[Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "subscription_cost_monthly,0",
+              "index": 0,
+              "line": 3102
+            },
+            {
+              "key": "subscription_cost_monthly,1",
+              "index": 1,
+              "line": 3106
+            },
+            {
+              "key": "subscription_cost_monthly,2",
+              "index": 2,
+              "line": 3110
+            },
+            {
+              "key": "subscription_cost_monthly,3",
+              "index": 3,
+              "line": 3114
+            },
+            {
+              "key": "subscription_cost_monthly,4",
+              "index": 4,
+              "line": 3118
+            },
+            {
+              "key": "subscription_cost_monthly,5",
+              "index": 5,
+              "line": 3122
+            },
+            {
+              "key": "subscription_cost_monthly,6",
+              "index": 6,
+              "line": 3126
+            },
+            {
+              "key": "subscription_cost_monthly,7",
+              "index": 7,
+              "line": 3130
+            },
+            {
+              "key": "subscription_cost_monthly,8",
+              "index": 8,
+              "line": 3134
+            },
+            {
+              "key": "subscription_cost_monthly,9",
+              "index": 9,
+              "line": 3138
+            },
+            {
+              "key": "subscription_cost_monthly,10",
+              "index": 10,
+              "line": 3142
+            },
+            {
+              "key": "subscription_cost_monthly,11",
+              "index": 11,
+              "line": 3146
+            },
+            {
+              "key": "subscription_cost_monthly,12",
+              "index": 12,
+              "line": 3150
+            }
+          ],
+          "to": "subscriptionMonthlyCostTexts"
+        },
+        {
+          "symbol": "F:oe.field_O:Ljava/lang/String;",
+          "originalName": "field_O",
+          "resources": [
+            {
+              "key": "connectionrestored",
+              "index": null,
+              "line": 1277
+            }
+          ],
+          "to": "connectionRestoredText"
+        },
+        {
+          "symbol": "F:oh.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "unpacking_graphics",
+              "index": null,
+              "line": 1984
+            }
+          ],
+          "to": "unpackingGraphicsText"
+        },
+        {
+          "symbol": "F:oi.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "create_password_confirm_tooltip",
+              "index": null,
+              "line": 1669
+            }
+          ],
+          "to": "createPasswordConfirmationTooltipText"
+        },
+        {
+          "symbol": "F:oj.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "loading_extradata",
+              "index": null,
+              "line": 1968
+            }
+          ],
+          "to": "loadingExtraDataText"
+        },
+        {
+          "symbol": "F:ok.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "justplay",
+              "index": null,
+              "line": 1191
+            }
+          ],
+          "to": "justPlayText"
+        },
+        {
+          "symbol": "F:ok.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "create_email_confirm",
+              "index": null,
+              "line": 1549
+            }
+          ],
+          "to": "createEmailConfirmationText"
+        },
+        {
+          "symbol": "F:ok.field_i:Ljava/lang/String;",
+          "originalName": "field_i",
+          "resources": [
+            {
+              "key": "create_email_confirm_tooltip",
+              "index": null,
+              "line": 1677
+            }
+          ],
+          "to": "createEmailConfirmationTooltipText"
+        },
+        {
+          "symbol": "F:pa.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "waitingfor_soundeffects",
+              "index": null,
+              "line": 1905
+            }
+          ],
+          "to": "waitingForSoundEffectsText"
+        },
+        {
+          "symbol": "F:pb.field_o:Ljava/lang/String;",
+          "originalName": "field_o",
+          "resources": [
+            {
+              "key": "create_age_tooltip",
+              "index": null,
+              "line": 1681
+            }
+          ],
+          "to": "createAgeTooltipText"
+        },
+        {
+          "symbol": "F:pb.field_v:Ljava/lang/String;",
+          "originalName": "field_v",
+          "resources": [
+            {
+              "key": "fs_button_accept",
+              "index": null,
+              "line": 2786
+            }
+          ],
+          "to": "fullscreenAcceptButtonText"
+        },
+        {
+          "symbol": "F:pf.field_H:Ljava/lang/String;",
+          "originalName": "field_H",
+          "resources": [
+            {
+              "key": "error_js5crc",
+              "index": null,
+              "line": 191
+            }
+          ],
+          "to": "js5CrcErrorText"
+        },
+        {
+          "symbol": "F:ph.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "waitingfor_extradata",
+              "index": null,
+              "line": 1921
+            }
+          ],
+          "to": "waitingForExtraDataText"
+        },
+        {
+          "symbol": "F:ph.field_j:Ljava/lang/String;",
+          "originalName": "field_j",
+          "resources": [
+            {
+              "key": "create_username_available",
+              "index": null,
+              "line": 1717
+            }
+          ],
+          "to": "createUsernameAvailableText"
+        },
+        {
+          "symbol": "F:ph.field_k:Ljava/lang/String;",
+          "originalName": "field_k",
+          "resources": [
+            {
+              "key": "create_unable",
+              "index": null,
+              "line": 211
+            }
+          ],
+          "to": "createUnableText"
+        },
+        {
+          "symbol": "F:qb.field_F:Ljava/lang/String;",
+          "originalName": "field_F",
+          "resources": [
+            {
+              "key": "error_js5io",
+              "index": null,
+              "line": 195
+            }
+          ],
+          "to": "js5IoErrorText"
+        },
+        {
+          "symbol": "F:qb.field_L:Ljava/lang/String;",
+          "originalName": "field_L",
+          "resources": [
+            {
+              "key": "fs_button_members",
+              "index": null,
+              "line": 2818
+            }
+          ],
+          "to": "fullscreenMembersButtonText"
+        },
+        {
+          "symbol": "F:qg.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "create_password",
+              "index": null,
+              "line": 1537
+            }
+          ],
+          "to": "createPasswordText"
+        },
+        {
+          "symbol": "F:qh.field_Q:Ljava/lang/String;",
+          "originalName": "field_Q",
+          "resources": [
+            {
+              "key": "create_password_hint",
+              "index": null,
+              "line": 1665
+            }
+          ],
+          "to": "createPasswordHintText"
+        },
+        {
+          "symbol": "F:ra.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "ticketing_xunread",
+              "index": null,
+              "line": 243
+            }
+          ],
+          "to": "ticketingUnreadCountText"
+        },
+        {
+          "symbol": "F:rb.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "fs_button_cancel",
+              "index": null,
+              "line": 2794
+            }
+          ],
+          "to": "fullscreenCancelButtonText"
+        },
+        {
+          "symbol": "F:rc.field_f:Ljava/lang/String;",
+          "originalName": "field_f",
+          "resources": [
+            {
+              "key": "invalidpass",
+              "index": null,
+              "line": 1257
+            }
+          ],
+          "to": "invalidPasswordText"
+        },
+        {
+          "symbol": "F:rc.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "error_js5connect_full",
+              "index": null,
+              "line": 199
+            }
+          ],
+          "to": "js5ConnectFullErrorText"
+        },
+        {
+          "symbol": "F:rh.field_j:Ljava/lang/String;",
+          "originalName": "field_j",
+          "resources": [
+            {
+              "key": "create_username_unavailable",
+              "index": null,
+              "line": 1713
+            }
+          ],
+          "to": "createUsernameUnavailableText"
+        },
+        {
+          "symbol": "F:rj.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "quittowebsite",
+              "index": null,
+              "line": 1273
+            }
+          ],
+          "to": "quitToWebsiteText"
+        },
+        {
+          "symbol": "F:rj.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "logging_in",
+              "index": null,
+              "line": 1223
+            }
+          ],
+          "to": "loggingInText"
+        },
+        {
+          "symbol": "F:sb.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "login_no_displayname",
+              "index": null,
+              "line": 1641
+            }
+          ],
+          "to": "loginNoDisplayNameText"
+        },
+        {
+          "symbol": "F:sb.field_f:Ljava/lang/String;",
+          "originalName": "field_f",
+          "resources": [
+            {
+              "key": "no_highscores",
+              "index": null,
+              "line": 2430
+            }
+          ],
+          "to": "noHighscoresText"
+        },
+        {
+          "symbol": "F:se.field_i:Ljava/lang/String;",
+          "originalName": "field_i",
+          "resources": [
+            {
+              "key": "creatingyouraccount",
+              "index": null,
+              "line": 1441
+            }
+          ],
+          "to": "creatingYourAccountText"
+        },
+        {
+          "symbol": "F:se.field_m:Ljava/lang/String;",
+          "originalName": "field_m",
+          "resources": [
+            {
+              "key": "create_createanaccount",
+              "index": null,
+              "line": 1525
+            }
+          ],
+          "to": "createAnAccountText"
+        },
+        {
+          "symbol": "F:sj.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "create_alert_mismatch",
+              "index": null,
+              "line": 1785
+            }
+          ],
+          "to": "createMismatchAlertText"
+        },
+        {
+          "symbol": "F:sj.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "fs_unavailable",
+              "index": null,
+              "line": 2822
+            }
+          ],
+          "to": "fullscreenUnavailableText"
+        },
+        {
+          "symbol": "F:sl.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "login_email",
+              "index": null,
+              "line": 1613
+            }
+          ],
+          "to": "loginEmailText"
+        },
+        {
+          "symbol": "F:sl.field_h:Ljava/lang/String;",
+          "originalName": "field_h",
+          "resources": [
+            {
+              "key": "orbpoints",
+              "index": null,
+              "line": 2406
+            }
+          ],
+          "to": "orbPointsText"
+        },
+        {
+          "symbol": "F:sl.field_i:Ljava/lang/String;",
+          "originalName": "field_i",
+          "resources": [
+            {
+              "key": "create_alert_invalidage",
+              "index": null,
+              "line": 1777
+            }
+          ],
+          "to": "createInvalidAgeAlertText"
+        },
+        {
+          "symbol": "F:tc.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "quit",
+              "index": null,
+              "line": 2068
+            }
+          ],
+          "to": "quitText"
+        },
+        {
+          "symbol": "F:th.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "DEFAULT_PLAYER_NAME",
+              "index": null,
+              "line": 2974
+            }
+          ],
+          "to": "defaultPlayerNameText"
+        },
+        {
+          "symbol": "F:tl.field_o:Ljava/lang/String;",
+          "originalName": "field_o",
+          "resources": [
+            {
+              "key": "prev",
+              "index": null,
+              "line": 2176
+            }
+          ],
+          "to": "previousText"
+        },
+        {
+          "symbol": "F:ud.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "create_displayname_tooltip",
+              "index": null,
+              "line": 1653
+            }
+          ],
+          "to": "createDisplayNameTooltipText"
+        },
+        {
+          "symbol": "F:ud.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "loading_soundeffects",
+              "index": null,
+              "line": 1949
+            }
+          ],
+          "to": "loadingSoundEffectsText"
+        },
+        {
+          "symbol": "F:ue.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "hs_friend_tip",
+              "index": null,
+              "line": 2886
+            }
+          ],
+          "to": "highscoreFriendTipText"
+        },
+        {
+          "symbol": "F:ue.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "fs_accept_beforeaccept",
+              "index": null,
+              "line": 2782
+            }
+          ],
+          "to": "fullscreenBeforeAcceptText"
+        },
+        {
+          "symbol": "F:ue.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "create_optin_news",
+              "index": null,
+              "line": 1593
+            }
+          ],
+          "to": "createNewsOptInText"
+        },
+        {
+          "symbol": "F:ue.field_g:Ljava/lang/String;",
+          "originalName": "field_g",
+          "resources": [
+            {
+              "key": "create_age",
+              "index": null,
+              "line": 1553
+            }
+          ],
+          "to": "createAgeText"
+        },
+        {
+          "symbol": "F:uf.field_i:Ljava/lang/String;",
+          "originalName": "field_i",
+          "resources": [
+            {
+              "key": "create_alert_passcontainsemail",
+              "index": null,
+              "line": 1753
+            }
+          ],
+          "to": "createPasswordContainsEmailAlertText"
+        },
+        {
+          "symbol": "F:ug.field_b:Ljava/lang/String;",
+          "originalName": "field_b",
+          "resources": [
+            {
+              "key": "create_email",
+              "index": null,
+              "line": 1545
+            }
+          ],
+          "to": "createEmailText"
+        },
+        {
+          "symbol": "F:uj.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "fs_accept_aftercancel",
+              "index": null,
+              "line": 2798
+            }
+          ],
+          "to": "fullscreenAfterCancelText"
+        },
+        {
+          "symbol": "F:uj.field_e:Ljava/lang/String;",
+          "originalName": "field_e",
+          "resources": [
+            {
+              "key": "loginm2",
+              "index": null,
+              "line": 179
+            }
+          ],
+          "to": "loginMessage2Text"
+        },
+        {
+          "symbol": "F:uk.field_l:[Ljava/lang/String;",
+          "originalName": "field_l",
+          "resources": [
+            {
+              "key": "monthnames,0",
+              "index": 0,
+              "line": 1469
+            },
+            {
+              "key": "monthnames,1",
+              "index": 1,
+              "line": 1473
+            },
+            {
+              "key": "monthnames,2",
+              "index": 2,
+              "line": 1477
+            },
+            {
+              "key": "monthnames,3",
+              "index": 3,
+              "line": 1481
+            },
+            {
+              "key": "monthnames,4",
+              "index": 4,
+              "line": 1485
+            },
+            {
+              "key": "monthnames,5",
+              "index": 5,
+              "line": 1489
+            },
+            {
+              "key": "monthnames,6",
+              "index": 6,
+              "line": 1493
+            },
+            {
+              "key": "monthnames,7",
+              "index": 7,
+              "line": 1497
+            },
+            {
+              "key": "monthnames,8",
+              "index": 8,
+              "line": 1501
+            },
+            {
+              "key": "monthnames,9",
+              "index": 9,
+              "line": 1505
+            },
+            {
+              "key": "monthnames,10",
+              "index": 10,
+              "line": 1509
+            },
+            {
+              "key": "monthnames,11",
+              "index": 11,
+              "line": 1513
+            }
+          ],
+          "to": "monthNames"
+        },
+        {
+          "symbol": "F:v.field_m:Ljava/lang/String;",
+          "originalName": "field_m",
+          "resources": [
+            {
+              "key": "create_password_confirm",
+              "index": null,
+              "line": 1541
+            }
+          ],
+          "to": "createPasswordConfirmationText"
+        },
+        {
+          "symbol": "F:vd.field_m:[Ljava/lang/String;",
+          "originalName": "field_m",
+          "resources": [
+            {
+              "key": "hs_mode_name,0",
+              "index": 0,
+              "line": 2894
+            },
+            {
+              "key": "hs_mode_name,1",
+              "index": 1,
+              "line": 2898
+            },
+            {
+              "key": "hs_mode_name,2",
+              "index": 2,
+              "line": 2902
+            }
+          ],
+          "to": "highscoreModeNames"
+        },
+        {
+          "symbol": "F:vg.field_d:Ljava/lang/String;",
+          "originalName": "field_d",
+          "resources": [
+            {
+              "key": "pleasewait_dotdotdot",
+              "index": null,
+              "line": 2954
+            }
+          ],
+          "to": "pleaseWaitText"
+        },
+        {
+          "symbol": "F:vi.field_F:Ljava/lang/String;",
+          "originalName": "field_F",
+          "resources": [
+            {
+              "key": "login_justplay_tooltip",
+              "index": null,
+              "line": 1633
+            }
+          ],
+          "to": "loginJustPlayTooltipText"
+        },
+        {
+          "symbol": "F:vi.field_G:Ljava/lang/String;",
+          "originalName": "field_G",
+          "resources": [
+            {
+              "key": "create_optin_news_tooltip",
+              "index": null,
+              "line": 1685
+            }
+          ],
+          "to": "createNewsOptInTooltipText"
+        },
+        {
+          "symbol": "F:w.field_a:Ljava/lang/String;",
+          "originalName": "field_a",
+          "resources": [
+            {
+              "key": "mouseoveranicon",
+              "index": null,
+              "line": 2394
+            }
+          ],
+          "to": "mouseOverIconText"
+        },
+        {
+          "symbol": "F:wb.field_c:Ljava/lang/String;",
+          "originalName": "field_c",
+          "resources": [
+            {
+              "key": "sound_colon",
+              "index": null,
+              "line": 2028
+            }
+          ],
+          "to": "soundLabelText"
+        },
+        {
+          "symbol": "F:wf.field_q:Ljava/lang/String;",
+          "originalName": "field_q",
+          "resources": [
+            {
+              "key": "fullscreen",
+              "index": null,
+              "line": 2036
+            }
+          ],
+          "to": "fullscreenText"
+        },
+        {
+          "symbol": "F:wi.field_F:Ljava/lang/String;",
+          "originalName": "field_F",
+          "resources": [
+            {
+              "key": "loading_graphics",
+              "index": null,
+              "line": 1937
+            }
+          ],
+          "to": "loadingGraphicsText"
+        },
+        {
+          "symbol": "F:wj.field_B:Ljava/lang/String;",
+          "originalName": "field_B",
+          "resources": [
+            {
+              "key": "create_alert_invalidemail",
+              "index": null,
+              "line": 1765
+            }
+          ],
+          "to": "createInvalidEmailAlertText"
+        },
+        {
+          "symbol": "F:wj.field_C:Ljava/lang/String;",
+          "originalName": "field_C",
+          "resources": [
+            {
+              "key": "fs_accept_afteraccept",
+              "index": null,
+              "line": 2790
+            }
+          ],
+          "to": "fullscreenAfterAcceptText"
+        },
+        {
+          "symbol": "F:wj.field_E:Ljava/lang/String;",
+          "originalName": "field_E",
+          "resources": [
+            {
+              "key": "create_displayname",
+              "index": null,
+              "line": 1533
+            }
+          ],
+          "to": "createDisplayNameText"
+        }
+      ]
+    },
+    "dictionaryIdentities": 20446,
+    "completeRuleObjectsPreserved": 20139,
+    "historicalSourceProofsPreserved": 97,
+    "historicalRecordsPreserved": 176,
+    "dictionaryReversalByteExact": true,
+    "readableIdentifierEdits": 122113,
+    "readableTotalEdits": 122412,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 27,
+    "gameplayNativeTraceGroups": 3,
+    "renderingNativeTraceGroups": 10,
+    "resultNativeTraceGroups": 14,
+    "nativeVariantsCompared": [
+      "native",
+      "original",
+      "renamed"
+    ],
+    "sourceWorkflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3",
+    "sourceProofWorkflowCommit": "3db79a3eb140b8063dbfa89e6787bdbffeaa0be3"
   }
 }

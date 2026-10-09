@@ -14,18 +14,18 @@ final class LimitedRandomAccessFile {
 
     final void write(byte[] source, int sourceOffset, int methodGuard, int length) throws IOException {
         try {
-            if (this.maximumLength < (long)length + this.position) {
-                this.file.seek(this.maximumLength);
-                this.file.write(1);
-                throw new EOFException();
-            }
-            if (methodGuard != 90) {
-                LimitedRandomAccessFile.releaseStaticReferences((byte) 102);
-            }
-            this.file.write(source, sourceOffset, length);
-            this.position = this.position + (long)length;
+          if (this.maximumLength < (long)length + this.position) {
+            this.file.seek(this.maximumLength);
+            this.file.write(1);
+            throw new EOFException();
+          }
+          if (methodGuard != 90) {
+            LimitedRandomAccessFile.releaseStaticReferences((byte) 102);
+          }
+          this.file.write(source, sourceOffset, length);
+          this.position = this.position + (long)length;
         } catch (RuntimeException writeFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailure), "pa.A(" + (source != null ? "{...}" : "null") + ',' + sourceOffset + ',' + methodGuard + ',' + length + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) writeFailure), "pa.A(" + (source != null ? "{...}" : "null") + ',' + sourceOffset + ',' + methodGuard + ',' + length + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class LimitedRandomAccessFile {
 
     final long length(int methodGuard) throws IOException {
         if (methodGuard != 1) {
-            return -83L;
+          return -83L;
         }
         return this.file.length();
     }
@@ -71,7 +71,7 @@ final class LimitedRandomAccessFile {
     public static void releaseStaticReferences(byte methodGuard) {
         waitingForSoundEffectsText = null;
         if (methodGuard <= 3) {
-            return;
+          return;
         }
         fullscreenTimeoutFailureReason = null;
         scoreTextTemplate = null;
@@ -93,7 +93,7 @@ final class LimitedRandomAccessFile {
         int nextAccumulatedValue = 0;
         try {
           if (2 <= radix &&
-              radix <= 36) {
+            radix <= 36) {
             negativeNumberFlag = 0;
             hasDigitFlag = 0;
             accumulatedValue = 0;
@@ -111,15 +111,15 @@ final class LimitedRandomAccessFile {
                   }
                 }
                 if (characterIndex != 0 || (characterCodeThenSignedDigit != 43 ||
-                      !allowLeadingPlus)) {
+                  !allowLeadingPlus)) {
                   if (characterCodeThenSignedDigit >= 48 &&
-                      characterCodeThenSignedDigit <= 57) {
+                    characterCodeThenSignedDigit <= 57) {
                     characterCodeThenSignedDigit -= 48;
                   } else if (characterCodeThenSignedDigit >= 65 &&
-                      characterCodeThenSignedDigit <= 90) {
+                    characterCodeThenSignedDigit <= 90) {
                     characterCodeThenSignedDigit -= 55;
                   } else if (characterCodeThenSignedDigit >= 97 &&
-                      characterCodeThenSignedDigit <= 122) {
+                    characterCodeThenSignedDigit <= 122) {
                     characterCodeThenSignedDigit -= 87;
                   } else {
                     return false;
@@ -159,81 +159,81 @@ final class LimitedRandomAccessFile {
 
     protected final void finalize() throws Throwable {
         if (null != this.file) {
-            System.out.println("");
-            this.close((byte) -5);
+          System.out.println("");
+          this.close((byte) -5);
         }
     }
 
     final static void openUrlInNewWindow(String urlText, byte methodGuard, boolean unusedNavigationFlag, java.applet.Applet applet) {
         try {
-            int guardResidue = 0;
-            RuntimeException navigationFailureBeforeContext = null;
-            StringBuilder navigationMessagePrefix = null;
-            String urlDescription = null;
-            StringBuilder messageBeforeAppletDescription = null;
-            String appletDescription = null;
-            Throwable caughtNavigationFailure = null;
-            java.net.MalformedURLException malformedUrlFailureForReport = null;
-            RuntimeException navigationFailureForContext = null;
-            try {
-              if (PlatformTaskDispatcher.osNameLowerCase.startsWith("win") &&
-                  GameplaySession.tryOpenUrlWithWindowsShell(urlText, false)) {
-                return;
-              }
-              try {
-                guardResidue = -83 / ((methodGuard + 55) / 62);
-                applet.getAppletContext().showDocument(new java.net.URL(urlText), "_blank");
-              } catch (java.net.MalformedURLException malformedUrlFailure) {
-                caughtNavigationFailure = malformedUrlFailure;
-                malformedUrlFailureForReport = (java.net.MalformedURLException) (Object) caughtNavigationFailure;
-                IterableNodeHashTable.reportClientError((Throwable) null, "MGR1: " + urlText, (byte) 125);
-              }
+          int guardResidue = 0;
+          RuntimeException navigationFailureBeforeContext = null;
+          StringBuilder navigationMessagePrefix = null;
+          String urlDescription = null;
+          StringBuilder messageBeforeAppletDescription = null;
+          String appletDescription = null;
+          Throwable caughtNavigationFailure = null;
+          java.net.MalformedURLException malformedUrlFailureForReport = null;
+          RuntimeException navigationFailureForContext = null;
+          try {
+            if (PlatformTaskDispatcher.osNameLowerCase.startsWith("win") &&
+              GameplaySession.tryOpenUrlWithWindowsShell(urlText, false)) {
               return;
-            } catch (java.lang.RuntimeException navigationContextFailure) {
-              caughtNavigationFailure = navigationContextFailure;
-              navigationFailureForContext = (RuntimeException) (Object) caughtNavigationFailure;
-              navigationFailureBeforeContext = navigationFailureForContext;
-              navigationMessagePrefix = new StringBuilder().append("pa.F(");
-              if (urlText == null) {
-                urlDescription = "null";
-              } else {
-                urlDescription = "{...}";
-              }
-              messageBeforeAppletDescription = ((StringBuilder) (Object) navigationMessagePrefix).append(urlDescription).append(',').append(methodGuard).append(',').append(unusedNavigationFlag).append(',');
-              if (applet == null) {
-                appletDescription = "null";
-              } else {
-                appletDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeContext), ((StringBuilder) (Object) messageBeforeAppletDescription).append(appletDescription).append(')').toString());
             }
+            try {
+              guardResidue = -83 / ((methodGuard + 55) / 62);
+              applet.getAppletContext().showDocument(new java.net.URL(urlText), "_blank");
+            } catch (java.net.MalformedURLException malformedUrlFailure) {
+              caughtNavigationFailure = malformedUrlFailure;
+              malformedUrlFailureForReport = (java.net.MalformedURLException) (Object) caughtNavigationFailure;
+              IterableNodeHashTable.reportClientError((Throwable) null, "MGR1: " + urlText, (byte) 125);
+            }
+            return;
+          } catch (java.lang.RuntimeException navigationContextFailure) {
+            caughtNavigationFailure = navigationContextFailure;
+            navigationFailureForContext = (RuntimeException) (Object) caughtNavigationFailure;
+            navigationFailureBeforeContext = navigationFailureForContext;
+            navigationMessagePrefix = new StringBuilder().append("pa.F(");
+            if (urlText == null) {
+              urlDescription = "null";
+            } else {
+              urlDescription = "{...}";
+            }
+            messageBeforeAppletDescription = ((StringBuilder) (Object) navigationMessagePrefix).append(urlDescription).append(',').append(methodGuard).append(',').append(unusedNavigationFlag).append(',');
+            if (applet == null) {
+              appletDescription = "null";
+            } else {
+              appletDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) navigationFailureBeforeContext), ((StringBuilder) (Object) messageBeforeAppletDescription).append(appletDescription).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedNavigationFailure) {
-            throw uncheckedNavigationFailure;
+          throw uncheckedNavigationFailure;
         } catch (Throwable checkedNavigationFailure) {
-            throw new RuntimeException(checkedNavigationFailure);
+          throw new RuntimeException(checkedNavigationFailure);
         }
     }
 
     LimitedRandomAccessFile(File path, String mode, long maximumLength) throws IOException {
         int firstByte = 0;
         try {
-            if (maximumLength == -1L) {
-                maximumLength = 9223372036854775807L;
-            }
-            if (maximumLength < path.length()) {
-                path.delete();
-            }
-            this.file = new RandomAccessFile(path, mode);
-            this.maximumLength = maximumLength;
-            this.position = 0L;
-            firstByte = this.file.read();
-            if (firstByte != -1 && !mode.equals("r")) {
-                this.file.seek(0L);
-                this.file.write(firstByte);
-            }
+          if (maximumLength == -1L) {
+            maximumLength = 9223372036854775807L;
+          }
+          if (maximumLength < path.length()) {
+            path.delete();
+          }
+          this.file = new RandomAccessFile(path, mode);
+          this.maximumLength = maximumLength;
+          this.position = 0L;
+          firstByte = this.file.read();
+          if (firstByte != -1 && !mode.equals("r")) {
             this.file.seek(0L);
+            this.file.write(firstByte);
+          }
+          this.file.seek(0L);
         } catch (RuntimeException constructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "pa.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) constructionFailure), "pa.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
     }
 
@@ -241,17 +241,17 @@ final class LimitedRandomAccessFile {
         this.file.seek(position);
         this.position = position;
         if (!methodGuard) {
-            waitingForSoundEffectsText = (String) null;
+          waitingForSoundEffectsText = (String) null;
         }
     }
 
     final void close(byte methodGuard) throws IOException {
         if (methodGuard != -5) {
-            return;
+          return;
         }
         if (null != this.file) {
-            this.file.close();
-            this.file = null;
+          this.file.close();
+          this.file = null;
         }
     }
 

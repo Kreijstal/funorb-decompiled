@@ -15,14 +15,14 @@ final class MessageDialogSupport {
     final static void showMessageDialog(String messageText, int methodGuard, boolean showLoginOnDismiss) {
         VisualPropertyOverrides.showLoginOnMessageDismiss = showLoginOnDismiss;
         if (methodGuard != 480) {
-            return;
+          return;
         }
         try {
-            MeshPrioritySupport.messageDialogUiFlowActive = true;
-            Geoblox.activeMessageDialog = new MessageDialog(ClientFlowState.accountDialogLayer, UiFontResources.commonUiBoldFont, messageText, AgeValidator.reconnectingLoginMode, VisualPropertyOverrides.showLoginOnMessageDismiss);
-            ClientFlowState.accountDialogLayer.showDialog(false, Geoblox.activeMessageDialog);
+          MeshPrioritySupport.messageDialogUiFlowActive = true;
+          Geoblox.activeMessageDialog = new MessageDialog(ClientFlowState.accountDialogLayer, UiFontResources.commonUiBoldFont, messageText, AgeValidator.reconnectingLoginMode, VisualPropertyOverrides.showLoginOnMessageDismiss);
+          ClientFlowState.accountDialogLayer.showDialog(false, Geoblox.activeMessageDialog);
         } catch (RuntimeException messageDialogFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageDialogFailure), "fa.B(" + (messageText != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageDialogFailure), "fa.B(" + (messageText != null ? "{...}" : "null") + ',' + methodGuard + ',' + showLoginOnDismiss + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class MessageDialogSupport {
         encryptedPayloadScratchBuffer = null;
         idleMessage20MinText = null;
         if (methodGuard != 30970) {
-            return;
+          return;
         }
         createDoubleSpaceAlertText = null;
         membersExpansionBenefitTexts = null;

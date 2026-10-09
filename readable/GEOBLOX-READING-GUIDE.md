@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0e929ce8abf26ce37b1c752f603a5c40b12b319d/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/3db79a3eb140b8063dbfa89e6787bdbffeaa0be3/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 251)
+## Current readability (pass 252)
 
-The export has 20,139 guarded names and 122,128 Java identifier edits, plus 11
+The export has 20,139 guarded names and 122,113 Java identifier edits, plus 11
 class-name literal edits and 288 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
-renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
+renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,063 bindings, reproduce and
+compile and compare 138,048 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current initialized frame prefixes (pass 251)
+## Current compound guards and indentation (pass 252)
+
+The non-main-menu hit-test continuation is now checked together with its next
+conditional assignment. Each assignment remains short-circuited, and its returned
+boolean supplies the next guard. No pointer boundary, successful result,
+callback, local write or failure order changes. The compact predicates are split
+across lines; indentation now follows the actual block and switch scopes.
+
+All existing names and dictionary identities remain. The workflow records the
+independent Java-tree/binding/transfer certificate and native oracle coverage.
+There are zero methods over 300 lines with plain block labels, but 35 smaller
+frames, other guard nesting and 41 finer field purposes remain. Exact reproduction
+and reversal pass; full-game and phone/FPS behavior remain unverified.
+
+## Previous initialized frame prefixes (pass 251)
 
 `GameScreen.renderScreen` no longer uses a plain frame for curtain rendering.
 Its curtain position is assigned before the forward/reverse decision. The

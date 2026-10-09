@@ -30,27 +30,27 @@ class UiWidget extends IntrusiveNode {
         int unhandledKeyGuardQuotient;
         int unhandledKeyCodeSnapshot;
         if (!this.hasKeyboardFocus((byte) 54)) {
-            unfocusedGuardQuotient = 71 / ((methodGuard + 40) / 63);
-            unfocusedKeyCodeSnapshot = keyCode;
-            if (unfocusedKeyCodeSnapshot != 80) {
-                return false;
-            }
-            return this.requestKeyboardFocus((byte) -75, this);
+          unfocusedGuardQuotient = 71 / ((methodGuard + 40) / 63);
+          unfocusedKeyCodeSnapshot = keyCode;
+          if (unfocusedKeyCodeSnapshot != 80) {
+            return false;
+          }
+          return this.requestKeyboardFocus((byte) -75, this);
         }
         if (this.handleKeyInput(keyCode, 13, typedCharacter, this)) {
-            return true;
+          return true;
         }
         unhandledKeyGuardQuotient = 71 / ((methodGuard + 40) / 63);
         unhandledKeyCodeSnapshot = keyCode;
         if (unhandledKeyCodeSnapshot != 80) {
-            return false;
+          return false;
         }
         return this.requestKeyboardFocus((byte) -75, this);
     }
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard != -5927) {
-            return;
+          return;
         }
         gameplaySession = null;
         pendingByteShortQueries = null;
@@ -61,21 +61,21 @@ class UiWidget extends IntrusiveNode {
         int rendererPresentGuardRemainder;
         int rendererAbsentGuardRemainder;
         if (renderPass != 0) {
-            nonzeroPassGuardRemainder = 35 % ((1 - methodGuard) / 43);
-            return;
+          nonzeroPassGuardRemainder = 35 % ((1 - methodGuard) / 43);
+          return;
         }
         if (null != this.renderer) {
-            this.renderer.drawWidget(parentX, -81, parentY, true, this);
-            rendererPresentGuardRemainder = 35 % ((1 - methodGuard) / 43);
-            return;
+          this.renderer.drawWidget(parentX, -81, parentY, true, this);
+          rendererPresentGuardRemainder = 35 % ((1 - methodGuard) / 43);
+          return;
         }
         rendererAbsentGuardRemainder = 35 % ((1 - methodGuard) / 43);
     }
 
     int getLastRenderPass(byte methodGuard) {
         if (methodGuard < 82) {
-            pendingByteShortQueries = (IntrusiveDeque) null;
-            return 0;
+          pendingByteShortQueries = (IntrusiveDeque) null;
+          return 0;
         }
         return 0;
     }
@@ -158,19 +158,19 @@ class UiWidget extends IntrusiveNode {
 
     final boolean containsPointer(int pointerX, int methodGuard, int pointerY, int parentY, int parentX) {
         if (methodGuard != -1) {
-            return true;
+          return true;
         }
         if (pointerX < this.widgetX + parentX) {
-            return false;
+          return false;
         }
         if (pointerY < this.widgetY + parentY) {
-            return false;
+          return false;
         }
         if (pointerX >= parentX + this.widgetX + this.widgetWidth) {
-            return false;
+          return false;
         }
         if (this.widgetHeight + (this.widgetY + parentY) > pointerY) {
-            return true;
+          return true;
         }
         return false;
     }
@@ -228,7 +228,7 @@ class UiWidget extends IntrusiveNode {
         focusFlag = this.hasKeyboardFocus((byte) 54) ? 1 : 0;
         if (!pointerEventsAvailable) {
           if (focusFlag != 0 &&
-              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+            CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -238,7 +238,7 @@ class UiWidget extends IntrusiveNode {
         if (0 == CachedTextLayout.wheelRotationSnapshot) {
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
             if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
-                0 != FullscreenErrorDialog.previousUiPointerButton) {
+              0 != FullscreenErrorDialog.previousUiPointerButton) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithoutPressOrWheel = ValidationState.activeDragWidget;
               if (releasedDragWithoutPressOrWheel != null) {
@@ -248,8 +248,8 @@ class UiWidget extends IntrusiveNode {
                 ValidationState.activeDragWidget = null;
               }
               if (clientControlFlowSnapshot != 0 &&
-                  focusFlag != 0 &&
-                  CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+                focusFlag != 0 &&
+                CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -260,7 +260,7 @@ class UiWidget extends IntrusiveNode {
           if (!this.handlePointerPress(parentY, -109, parentX, CheckboxRenderer.pointerPressButtonSnapshot, AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, this)) {
             if (focusFlag == 0) {
               if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
-                  0 != FullscreenErrorDialog.previousUiPointerButton) {
+                0 != FullscreenErrorDialog.previousUiPointerButton) {
                 this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
                 releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
                 if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
@@ -270,8 +270,8 @@ class UiWidget extends IntrusiveNode {
                   ValidationState.activeDragWidget = null;
                 }
                 if (clientControlFlowSnapshot != 0 &&
-                    focusFlag != 0 &&
-                    CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+                  focusFlag != 0 &&
+                  CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                   this.clearKeyboardFocus(-126);
                 }
               }
@@ -305,8 +305,8 @@ class UiWidget extends IntrusiveNode {
             ValidationState.activeDragWidget = null;
           }
           if (clientControlFlowSnapshot != 0 &&
-              focusFlag != 0 &&
-              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+            focusFlag != 0 &&
+            CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -317,7 +317,7 @@ class UiWidget extends IntrusiveNode {
           this.handlePointerWheel(parentY, CachedTextLayout.wheelRotationSnapshot, parentX, -1, PrefixCodeDecoder.pointerXSnapshot, this, PcmResampler.pointerYSnapshot);
           if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
             if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
-                0 != FullscreenErrorDialog.previousUiPointerButton) {
+              0 != FullscreenErrorDialog.previousUiPointerButton) {
               this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
               releasedDragWithWheelAndNoPress = ValidationState.activeDragWidget;
               releasedDragWithWheelAndNoPressAlias = releasedDragWithWheelAndNoPress;
@@ -328,7 +328,7 @@ class UiWidget extends IntrusiveNode {
                 ValidationState.activeDragWidget = null;
               }
               if (clientControlFlowSnapshot != 0 &&
-                  CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+                CheckboxRenderer.pointerPressButtonSnapshot != 0) {
                 this.clearKeyboardFocus(-126);
               }
             }
@@ -364,7 +364,7 @@ class UiWidget extends IntrusiveNode {
             ValidationState.activeDragWidget = null;
           }
           if (clientControlFlowSnapshot != 0 &&
-              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+            CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             this.clearKeyboardFocus(-126);
           }
           FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (0 == CheckboxRenderer.pointerPressButtonSnapshot) {
           if (EntityCollisionSupport.heldPointerButtonSnapshot == 0 &&
-              0 != FullscreenErrorDialog.previousUiPointerButton) {
+            0 != FullscreenErrorDialog.previousUiPointerButton) {
             this.handlePointerRelease(parentX, PrefixCodeDecoder.pointerXSnapshot, true, this, parentY, PcmResampler.pointerYSnapshot);
             releasedDragWithoutFocusOrPress = ValidationState.activeDragWidget;
             if (releasedDragWithoutFocusOrPress != null) {
@@ -383,8 +383,8 @@ class UiWidget extends IntrusiveNode {
               ValidationState.activeDragWidget = null;
             }
             if (clientControlFlowSnapshot != 0 &&
-                focusFlag != 0 &&
-                CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+              focusFlag != 0 &&
+              CheckboxRenderer.pointerPressButtonSnapshot != 0) {
               this.clearKeyboardFocus(-126);
             }
           }
@@ -441,8 +441,8 @@ class UiWidget extends IntrusiveNode {
           ValidationState.activeDragWidget = null;
         }
         if (clientControlFlowSnapshot != 0 &&
-            focusFlag != 0 &&
-            CheckboxRenderer.pointerPressButtonSnapshot != 0) {
+          focusFlag != 0 &&
+          CheckboxRenderer.pointerPressButtonSnapshot != 0) {
           this.clearKeyboardFocus(-126);
         }
         FullscreenErrorDialog.previousUiPointerButton = EntityCollisionSupport.heldPointerButtonSnapshot;
@@ -516,9 +516,9 @@ class UiWidget extends IntrusiveNode {
         this.widgetHeight = height;
         this.widgetX = x;
         if (methodGuard < -6) {
-            this.widgetWidth = width;
-            this.widgetY = y;
-            return;
+          this.widgetWidth = width;
+          this.widgetY = y;
+          return;
         }
         this.textOffsetX = 112;
         this.widgetWidth = width;
@@ -580,7 +580,7 @@ class UiWidget extends IntrusiveNode {
 
     String getHoverText(byte methodGuard) {
         if (methodGuard == 69) {
-            return !this.pointerInside ? null : this.hoverText;
+          return !this.pointerInside ? null : this.hoverText;
         }
         this.requestKeyboardFocus((byte) -36, (UiWidget) null);
         return !this.pointerInside ? null : this.hoverText;
@@ -663,75 +663,75 @@ class UiWidget extends IntrusiveNode {
 
     void clearKeyboardFocus(int methodGuard) {
         if (methodGuard >= -122) {
-            this.renderWidgetPassesAndTooltip(76, -76, 91);
+          this.renderWidgetPassesAndTooltip(76, -76, 91);
         }
     }
 
     final static boolean readSessionBytesIfAvailable(int methodGuard, int requiredByteCount) {
         try {
-            int availableOrReadByteCount = 0;
-            Throwable caughtReadFailure = null;
-            IOException socketReadFailure = null;
-            if (LogoCompositor.sessionPacketBuffer.position >= requiredByteCount) {
+          int availableOrReadByteCount = 0;
+          Throwable caughtReadFailure = null;
+          IOException socketReadFailure = null;
+          if (LogoCompositor.sessionPacketBuffer.position >= requiredByteCount) {
+            return true;
+          }
+          if (SpriteCheckboxRenderer.sessionSocket == null) {
+            return false;
+          }
+          try {
+            if (methodGuard != 30000) {
+              UiWidget.readSessionBytesIfAvailable(-45, -75);
+            }
+            availableOrReadByteCount = SpriteCheckboxRenderer.sessionSocket.available((byte) 110);
+            if (availableOrReadByteCount > 0) {
+              if (-LogoCompositor.sessionPacketBuffer.position + requiredByteCount < availableOrReadByteCount) {
+                availableOrReadByteCount = requiredByteCount - LogoCompositor.sessionPacketBuffer.position;
+              }
+              SpriteCheckboxRenderer.sessionSocket.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, availableOrReadByteCount);
+              AudioService.sessionActivityStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+              LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + availableOrReadByteCount;
+              if (requiredByteCount > LogoCompositor.sessionPacketBuffer.position) {
+                return false;
+              }
+              LogoCompositor.sessionPacketBuffer.position = 0;
               return true;
             }
-            if (SpriteCheckboxRenderer.sessionSocket == null) {
-              return false;
+            if (availableOrReadByteCount < 0) {
+              Bzip2DecoderState.closeSessionSocket((byte) -127);
+            } else {
+              if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
+                return false;
+              }
+              Bzip2DecoderState.closeSessionSocket((byte) -127);
             }
-            try {
-              if (methodGuard != 30000) {
-                UiWidget.readSessionBytesIfAvailable(-45, -75);
-              }
-              availableOrReadByteCount = SpriteCheckboxRenderer.sessionSocket.available((byte) 110);
-              if (availableOrReadByteCount > 0) {
-                if (-LogoCompositor.sessionPacketBuffer.position + requiredByteCount < availableOrReadByteCount) {
-                  availableOrReadByteCount = requiredByteCount - LogoCompositor.sessionPacketBuffer.position;
-                }
-                SpriteCheckboxRenderer.sessionSocket.readFully(LogoCompositor.sessionPacketBuffer.bytes, (byte) -97, LogoCompositor.sessionPacketBuffer.position, availableOrReadByteCount);
-                AudioService.sessionActivityStartMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                LogoCompositor.sessionPacketBuffer.position = LogoCompositor.sessionPacketBuffer.position + availableOrReadByteCount;
-                if (requiredByteCount > LogoCompositor.sessionPacketBuffer.position) {
-                  return false;
-                }
-                LogoCompositor.sessionPacketBuffer.position = 0;
-                return true;
-              }
-              if (availableOrReadByteCount < 0) {
-                Bzip2DecoderState.closeSessionSocket((byte) -127);
-              } else {
-                if (GameGraphicsResources.elapsedSinceSessionActivity((byte) 12) <= 30000L) {
-                  return false;
-                }
-                Bzip2DecoderState.closeSessionSocket((byte) -127);
-              }
-            } catch (java.io.IOException readFailure) {
-              caughtReadFailure = readFailure;
-              socketReadFailure = (IOException) (Object) caughtReadFailure;
-              Bzip2DecoderState.closeSessionSocket((byte) -120);
-            }
-            return false;
+          } catch (java.io.IOException readFailure) {
+            caughtReadFailure = readFailure;
+            socketReadFailure = (IOException) (Object) caughtReadFailure;
+            Bzip2DecoderState.closeSessionSocket((byte) -120);
+          }
+          return false;
         } catch (RuntimeException | Error uncheckedReadFailure) {
-            throw uncheckedReadFailure;
+          throw uncheckedReadFailure;
         } catch (Throwable checkedReadFailure) {
-            throw new RuntimeException(checkedReadFailure);
+          throw new RuntimeException(checkedReadFailure);
         }
     }
 
     final static void appendRsaXteaEncryptedBuffer(boolean methodGuard, ByteArrayBuffer source, ByteArrayBuffer destination, java.math.BigInteger rsaExponent, java.math.BigInteger rsaModulus) {
         try {
-            if (methodGuard) {
-                pendingByteShortQueries = (IntrusiveDeque) null;
-            }
-            ArchiveSource.writeEncryptedPayload(rsaModulus, rsaExponent, 0, destination, source.bytes, source.position, true);
+          if (methodGuard) {
+            pendingByteShortQueries = (IntrusiveDeque) null;
+          }
+          ArchiveSource.writeEncryptedPayload(rsaModulus, rsaExponent, 0, destination, source.bytes, source.position, true);
         } catch (RuntimeException encryptedBufferFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encryptedBufferFailure), "el.WB(" + methodGuard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) encryptedBufferFailure), "el.WB(" + methodGuard + ',' + (source != null ? "{...}" : "null") + ',' + (destination != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
         }
     }
 
     boolean hasKeyboardFocus(byte methodGuard) {
         if (methodGuard != 54) {
-            this.handleKeyInput(65, 5, '￦', (UiWidget) null);
-            return false;
+          this.handleKeyInput(65, 5, '￦', (UiWidget) null);
+          return false;
         }
         return false;
     }
@@ -782,12 +782,12 @@ class UiWidget extends IntrusiveNode {
 
     void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         try {
-            this.pressedPointerButton = 0;
-            if (!releaseGuard) {
-                this.toString();
-            }
+          this.pressedPointerButton = 0;
+          if (!releaseGuard) {
+            this.toString();
+          }
         } catch (RuntimeException pointerReleaseFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "el.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerReleaseFailure), "el.TA(" + parentX + ',' + pointerX + ',' + releaseGuard + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentY + ',' + pointerY + ')');
         }
     }
 
@@ -801,16 +801,16 @@ class UiWidget extends IntrusiveNode {
         this.textOffsetX = 0;
         this.textOffsetY = 0;
         try {
-            this.renderer = renderer;
-            this.listener = listener;
-            this.widgetText = text;
-            if (this.renderer instanceof TextWidgetLayout) {
-                measuringRenderer = (TextWidgetLayout) ((Object) this.renderer);
-                this.widgetWidth = measuringRenderer.getMaximumLineEndXWithPadding(this, (byte) -33);
-                this.widgetHeight = measuringRenderer.getLayoutHeightWithPadding(-122, this);
-            }
+          this.renderer = renderer;
+          this.listener = listener;
+          this.widgetText = text;
+          if (this.renderer instanceof TextWidgetLayout) {
+            measuringRenderer = (TextWidgetLayout) ((Object) this.renderer);
+            this.widgetWidth = measuringRenderer.getMaximumLineEndXWithPadding(this, (byte) -33);
+            this.widgetHeight = measuringRenderer.getLayoutHeightWithPadding(-122, this);
+          }
         } catch (RuntimeException widgetConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetConstructionFailure), "el.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetConstructionFailure), "el.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -818,14 +818,14 @@ class UiWidget extends IntrusiveNode {
         this.textOffsetX = 0;
         this.textOffsetY = 0;
         try {
-            this.widgetWidth = width;
-            this.widgetX = x;
-            this.widgetHeight = height;
-            this.widgetY = y;
-            this.listener = listener;
-            this.renderer = renderer;
+          this.widgetWidth = width;
+          this.widgetX = x;
+          this.widgetHeight = height;
+          this.widgetY = y;
+          this.listener = listener;
+          this.renderer = renderer;
         } catch (RuntimeException widgetConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetConstructionFailure), "el.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetConstructionFailure), "el.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 

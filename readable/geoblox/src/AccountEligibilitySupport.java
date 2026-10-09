@@ -12,7 +12,7 @@ final class AccountEligibilitySupport {
         pleaseTryAgainText = null;
         firstVertexTransformedZ = null;
         if (methodGuard != -15647) {
-            return;
+          return;
         }
         musicScoreArchive = null;
     }

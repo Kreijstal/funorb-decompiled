@@ -21,7 +21,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           TextPairLoginPayload.keyboardIdleTicks = 0;
           internalKeyCode = event.getKeyCode();
           if (internalKeyCode >= 0 &&
-              ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
+            ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
             internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode];
             if ((internalKeyCode & 128) != 0) {
               internalKeyCode = -1;
@@ -30,7 +30,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             internalKeyCode = -1;
           }
           if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0 &&
-              internalKeyCode >= 0) {
+            internalKeyCode >= 0) {
             EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = internalKeyCode;
             ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 127 & 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel;
             if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
@@ -47,8 +47,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
           }
           eventModifiers = event.getModifiers();
           if ((eventModifiers & 10) == 0 &&
-              85 != internalKeyCode &&
-              internalKeyCode != 10) {
+            85 != internalKeyCode &&
+            internalKeyCode != 10) {
             return;
           }
           event.consume();
@@ -73,7 +73,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
     public static void releaseStaticReferences(int methodGuard) {
         entityAndTutorialScratchRaster = null;
         if (methodGuard != 31997) {
-            return;
+          return;
         }
         clearBonusText = null;
     }
@@ -82,20 +82,20 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         int typedCharacterCode = 0;
         int nextEventWriteIndex = 0;
         try {
-            if (TrackedPcmStream.keyboardListener != null) {
-                typedCharacterCode = event.getKeyChar();
-                if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
-                    nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
-                    if (nextEventWriteIndex != ReceivedTextRecord.keyboardEventReadIndex) {
-                        MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = -1;
-                        ScoreSubmission.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)typedCharacterCode;
-                        BufferedSocket.keyEventWriteIndex = nextEventWriteIndex;
-                    }
-                }
+          if (TrackedPcmStream.keyboardListener != null) {
+            typedCharacterCode = event.getKeyChar();
+            if (typedCharacterCode != 0 && typedCharacterCode != 65535 && SettingsCookieSupport.isRepresentableTextCharacter((byte) -112, (char) typedCharacterCode)) {
+              nextEventWriteIndex = 1 + BufferedSocket.keyEventWriteIndex & 127;
+              if (nextEventWriteIndex != ReceivedTextRecord.keyboardEventReadIndex) {
+                MidiPcmStream.queuedKeyboardEventCodes[BufferedSocket.keyEventWriteIndex] = -1;
+                ScoreSubmission.queuedKeyboardEventCharacters[BufferedSocket.keyEventWriteIndex] = (char)typedCharacterCode;
+                BufferedSocket.keyEventWriteIndex = nextEventWriteIndex;
+              }
             }
-            event.consume();
+          }
+          event.consume();
         } catch (RuntimeException callbackFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "wl.keyTyped(" + (event != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) callbackFailure), "wl.keyTyped(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,13 +111,13 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             TextPairLoginPayload.keyboardIdleTicks = 0;
             internalKeyCode = event.getKeyCode();
             if (internalKeyCode >= 0 &&
-                ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
+              ResizableDialog.awtKeyCodeToInternalCode.length > internalKeyCode) {
               internalKeyCode = ResizableDialog.awtKeyCodeToInternalCode[internalKeyCode] & -129;
             } else {
               internalKeyCode = -1;
             }
             if (ArchiveLoadStep.keyStateWriteIndexOrResetSentinel >= 0 &&
-                0 <= internalKeyCode) {
+              0 <= internalKeyCode) {
               EntityCollisionSupport.queuedKeyStateChanges[ArchiveLoadStep.keyStateWriteIndexOrResetSentinel] = ~internalKeyCode;
               ArchiveLoadStep.keyStateWriteIndexOrResetSentinel = 1 + ArchiveLoadStep.keyStateWriteIndexOrResetSentinel & 127;
               if (ClientProtocolStage.keyStateReadIndex == ArchiveLoadStep.keyStateWriteIndexOrResetSentinel) {
@@ -145,7 +145,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         String unusedNullPasswordSnapshot = (String) null;
         MessageDialog.showLoginForm(ResourceArchive.accountCreationEmail, (String) null, 7697781);
         if (methodGuard != -1) {
-            entityAndTutorialScratchRaster = (Sprite) null;
+          entityAndTutorialScratchRaster = (Sprite) null;
         }
     }
 

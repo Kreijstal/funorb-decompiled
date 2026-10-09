@@ -11,7 +11,7 @@ final class LoginPayloadKind {
     public static void releaseStaticReferences(int methodGuard) {
         createPasswordText = null;
         if (methodGuard <= 55) {
-            return;
+          return;
         }
         levelTextTemplate = null;
     }
@@ -26,22 +26,22 @@ final class LoginPayloadKind {
 
     final static void ensureAchievementStateRequested(int methodGuard) {
         if (methodGuard != 9313) {
-            LoginPayloadKind.releaseStaticReferences(116);
-            if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
-                return;
-            }
-            if (MouseWheelInput.achievementStateQuery == null) {
-                MouseWheelInput.achievementStateQuery = AgeValidator.requestAchievementState(4, 94);
-                return;
-            }
+          LoginPayloadKind.releaseStaticReferences(116);
+          if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
             return;
-        }
-        if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
-            return;
-        }
-        if (MouseWheelInput.achievementStateQuery == null) {
+          }
+          if (MouseWheelInput.achievementStateQuery == null) {
             MouseWheelInput.achievementStateQuery = AgeValidator.requestAchievementState(4, 94);
             return;
+          }
+          return;
+        }
+        if (UnderlinedButtonRenderer.isGuestSessionMode(-114)) {
+          return;
+        }
+        if (MouseWheelInput.achievementStateQuery == null) {
+          MouseWheelInput.achievementStateQuery = AgeValidator.requestAchievementState(4, 94);
+          return;
         }
     }
 

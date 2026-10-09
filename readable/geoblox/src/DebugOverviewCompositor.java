@@ -6,7 +6,7 @@ final class DebugOverviewCompositor {
 
     public static void releaseStaticReferences(int methodGuard) {
         if (methodGuard >= -127) {
-            return;
+          return;
         }
         screenOptionOneStateSprites = null;
     }

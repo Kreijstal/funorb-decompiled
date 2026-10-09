@@ -14,9 +14,9 @@ final class BoardEntityState {
         cameraMeshVertexX = null;
         attachedEntities = null;
         if (methodGuard > -63) {
-            BoardEntityState.releaseStaticReferences((byte) 92);
-            instructionPageTitles = null;
-            return;
+          BoardEntityState.releaseStaticReferences((byte) 92);
+          instructionPageTitles = null;
+          return;
         }
         instructionPageTitles = null;
     }

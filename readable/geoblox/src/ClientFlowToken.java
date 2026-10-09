@@ -110,60 +110,60 @@ final class ClientFlowToken {
 
     final static boolean hasAccountIneligibilityMarker(byte methodGuard, java.applet.Applet applet) {
         try {
-            int cookieIndex = 0;
-            RuntimeException markerFailureForContext = null;
-            String cookieText = null;
-            String[] cookieEntries = null;
-            int equalsOffset = 0;
-            int clientControlFlowGuard = 0;
-            String markerName = null;
-            boolean appletMarkerBeforeReturn = false;
-            RuntimeException markerFailureBeforeContext = null;
-            StringBuilder markerMessagePrefix = null;
-            String appletDescription = null;
-            Throwable caughtMarkerOrCookieFailure = null;
-            Throwable ignoredCookieLookupFailure = null;
-            clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-            try {
-              if (ValidationIconWidget.clientCookieMarkerCreated) {
-                return true;
-              }
-              try {
-                markerName = "tuhstatbut";
-                cookieText = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
-                cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieText);
-                for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
-                  equalsOffset = cookieEntries[cookieIndex].indexOf('=');
-                  if (equalsOffset >= 0 &&
-                      cookieEntries[cookieIndex].substring(0, equalsOffset).trim().equals(markerName)) {
-                    return true;
-                  }
-                }
-                if (methodGuard != -109) {
-                  ClientFlowToken.playThemeEntitySound(114, -32);
-                }
-              } catch (java.lang.Throwable cookieLookupFailure) {
-                caughtMarkerOrCookieFailure = cookieLookupFailure;
-                ignoredCookieLookupFailure = caughtMarkerOrCookieFailure;
-              }
-              appletMarkerBeforeReturn = !(null == applet.getParameter("tuhstatbut"));
-              return appletMarkerBeforeReturn;
-            } catch (java.lang.RuntimeException markerFailure) {
-              caughtMarkerOrCookieFailure = markerFailure;
-              markerFailureForContext = (RuntimeException) (Object) caughtMarkerOrCookieFailure;
-              markerFailureBeforeContext = markerFailureForContext;
-              markerMessagePrefix = new StringBuilder().append("al.A(").append(methodGuard).append(',');
-              if (applet == null) {
-                appletDescription = "null";
-              } else {
-                appletDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) markerFailureBeforeContext), ((StringBuilder) (Object) markerMessagePrefix).append(appletDescription).append(')').toString());
+          int cookieIndex = 0;
+          RuntimeException markerFailureForContext = null;
+          String cookieText = null;
+          String[] cookieEntries = null;
+          int equalsOffset = 0;
+          int clientControlFlowGuard = 0;
+          String markerName = null;
+          boolean appletMarkerBeforeReturn = false;
+          RuntimeException markerFailureBeforeContext = null;
+          StringBuilder markerMessagePrefix = null;
+          String appletDescription = null;
+          Throwable caughtMarkerOrCookieFailure = null;
+          Throwable ignoredCookieLookupFailure = null;
+          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+          try {
+            if (ValidationIconWidget.clientCookieMarkerCreated) {
+              return true;
             }
+            try {
+              markerName = "tuhstatbut";
+              cookieText = (String) (AppletJavaScriptBridge.callWithoutArguments((byte) -6, applet, "getcookies"));
+              cookieEntries = FullscreenFailureReason.splitAtCharacter(';', true, cookieText);
+              for (cookieIndex = 0; cookieIndex < cookieEntries.length; cookieIndex++) {
+                equalsOffset = cookieEntries[cookieIndex].indexOf('=');
+                if (equalsOffset >= 0 &&
+                  cookieEntries[cookieIndex].substring(0, equalsOffset).trim().equals(markerName)) {
+                  return true;
+                }
+              }
+              if (methodGuard != -109) {
+                ClientFlowToken.playThemeEntitySound(114, -32);
+              }
+            } catch (java.lang.Throwable cookieLookupFailure) {
+              caughtMarkerOrCookieFailure = cookieLookupFailure;
+              ignoredCookieLookupFailure = caughtMarkerOrCookieFailure;
+            }
+            appletMarkerBeforeReturn = !(null == applet.getParameter("tuhstatbut"));
+            return appletMarkerBeforeReturn;
+          } catch (java.lang.RuntimeException markerFailure) {
+            caughtMarkerOrCookieFailure = markerFailure;
+            markerFailureForContext = (RuntimeException) (Object) caughtMarkerOrCookieFailure;
+            markerFailureBeforeContext = markerFailureForContext;
+            markerMessagePrefix = new StringBuilder().append("al.A(").append(methodGuard).append(',');
+            if (applet == null) {
+              appletDescription = "null";
+            } else {
+              appletDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) markerFailureBeforeContext), ((StringBuilder) (Object) markerMessagePrefix).append(appletDescription).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedMarkerFailure) {
-            throw uncheckedMarkerFailure;
+          throw uncheckedMarkerFailure;
         } catch (Throwable checkedMarkerFailure) {
-            throw new RuntimeException(checkedMarkerFailure);
+          throw new RuntimeException(checkedMarkerFailure);
         }
     }
 
@@ -173,16 +173,16 @@ final class ClientFlowToken {
 
     final static String getActiveLoginIdentifier(int methodGuard) {
         if (IntrusiveDeque.pendingClientFlowToken == ClientFlowState.accountCreationFlowState) {
-            return SpriteCheckboxRenderer.accountCreationDisplayName;
+          return SpriteCheckboxRenderer.accountCreationDisplayName;
         }
         if (IntrusiveDeque.pendingClientFlowToken == WidgetSkinState.usernameQueryFlowState) {
-            return DelayedPcmStream.usernameQueryCandidate;
+          return DelayedPcmStream.usernameQueryCandidate;
         }
         if (methodGuard != 0) {
-            ClientFlowToken.getActiveLoginIdentifier(66);
+          ClientFlowToken.getActiveLoginIdentifier(66);
         }
         if (!EntityContactSupport.activeEmailAvailabilityQuery.isCompleted(-91)) {
-            return DelayedPcmStream.usernameQueryCandidate;
+          return DelayedPcmStream.usernameQueryCandidate;
         }
         return TextTemplateLookupSupport.currentLoginIdentifier;
     }

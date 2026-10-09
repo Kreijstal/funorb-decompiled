@@ -14,9 +14,9 @@ final class KeyedIntRecordSubmission extends IntrusiveNode {
     public static void releaseStaticReferences(int methodGuard) {
         createAnAccountText = null;
         if (methodGuard < 120) {
-            creatingYourAccountText = (String) null;
-            creatingYourAccountText = null;
-            return;
+          creatingYourAccountText = (String) null;
+          creatingYourAccountText = null;
+          return;
         }
         creatingYourAccountText = null;
     }

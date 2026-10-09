@@ -10,7 +10,7 @@ final class AvatarFeedbackSupport {
         int unusedClientControlSnapshot;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         if (7 == feedbackRequestId &&
-            MenuScreen.avatarFeedbackFrameBase != 36) {
+          MenuScreen.avatarFeedbackFrameBase != 36) {
           MenuScreen.avatarFeedbackFrameBase = 36;
           LimitedRandomAccessFile.avatarFeedbackHoldTicks = 110;
           TextValidationFailure.avatarFeedbackModeId = 6;
@@ -51,9 +51,9 @@ final class AvatarFeedbackSupport {
                   }
                 } else {
                   if (12 != MenuScreen.avatarFeedbackFrameBase &&
-                      MenuScreen.avatarFeedbackFrameBase != 24 &&
-                      30 != MenuScreen.avatarFeedbackFrameBase &&
-                      36 != MenuScreen.avatarFeedbackFrameBase) {
+                    MenuScreen.avatarFeedbackFrameBase != 24 &&
+                    30 != MenuScreen.avatarFeedbackFrameBase &&
+                    36 != MenuScreen.avatarFeedbackFrameBase) {
                     ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
                   }
                   TextValidationFailure.avatarFeedbackModeId = 2;
@@ -62,9 +62,9 @@ final class AvatarFeedbackSupport {
               }
             } else {
               if (MenuScreen.avatarFeedbackFrameBase != 0 &&
-                  24 != MenuScreen.avatarFeedbackFrameBase &&
-                  MenuScreen.avatarFeedbackFrameBase != 30 &&
-                  MenuScreen.avatarFeedbackFrameBase != 36) {
+                24 != MenuScreen.avatarFeedbackFrameBase &&
+                MenuScreen.avatarFeedbackFrameBase != 30 &&
+                MenuScreen.avatarFeedbackFrameBase != 36) {
                 ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
@@ -74,9 +74,9 @@ final class AvatarFeedbackSupport {
             grayJagexLogoSprite = (Sprite) null;
             if (feedbackRequestId == 0) {
               if (MenuScreen.avatarFeedbackFrameBase != 0 &&
-                  24 != MenuScreen.avatarFeedbackFrameBase &&
-                  MenuScreen.avatarFeedbackFrameBase != 30 &&
-                  MenuScreen.avatarFeedbackFrameBase != 36) {
+                24 != MenuScreen.avatarFeedbackFrameBase &&
+                MenuScreen.avatarFeedbackFrameBase != 30 &&
+                MenuScreen.avatarFeedbackFrameBase != 36) {
                 ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[25]);
               }
               MenuScreen.avatarFeedbackFrameBase = 0;
@@ -109,9 +109,9 @@ final class AvatarFeedbackSupport {
                   }
                 } else {
                   if (12 != MenuScreen.avatarFeedbackFrameBase &&
-                      MenuScreen.avatarFeedbackFrameBase != 24 &&
-                      30 != MenuScreen.avatarFeedbackFrameBase &&
-                      36 != MenuScreen.avatarFeedbackFrameBase) {
+                    MenuScreen.avatarFeedbackFrameBase != 24 &&
+                    30 != MenuScreen.avatarFeedbackFrameBase &&
+                    36 != MenuScreen.avatarFeedbackFrameBase) {
                     ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[26]);
                   }
                   TextValidationFailure.avatarFeedbackModeId = 2;
@@ -189,9 +189,9 @@ final class AvatarFeedbackSupport {
         receivedRecordDisplayName = null;
         grayJagexLogoSprite = null;
         if (methodGuard > -13) {
-            grayJagexLogoSprite = (Sprite) null;
-            toCustomerSupportText = null;
-            return;
+          grayJagexLogoSprite = (Sprite) null;
+          toCustomerSupportText = null;
+          return;
         }
         toCustomerSupportText = null;
     }
@@ -199,8 +199,8 @@ final class AvatarFeedbackSupport {
     final static int computeAdjustedRemainder(int dividend, int divisor, int methodGuard) {
         int negativeDividendAdjustment = 0;
         if (methodGuard <= -33) {
-            negativeDividendAdjustment = dividend >> 31 & divisor - 1;
-            return negativeDividendAdjustment + ((dividend >>> 31) + dividend) % divisor;
+          negativeDividendAdjustment = dividend >> 31 & divisor - 1;
+          return negativeDividendAdjustment + ((dividend >>> 31) + dividend) % divisor;
         }
         return 80;
     }

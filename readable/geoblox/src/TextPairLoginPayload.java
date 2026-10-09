@@ -12,14 +12,14 @@ final class TextPairLoginPayload extends LoginPayload {
 
     final void writePayload(int methodGuard, ByteArrayBuffer buffer) {
         try {
-            if (methodGuard <= 107) {
-                byte[] unusedNullBytesForInvalidGuard = (byte[]) null;
-                TextPairLoginPayload.copyBytesWithDestinationOffset((byte[]) null, -72);
-            }
-            buffer.writeZeroPrefixedNullTerminatedText(this.loginText, (byte) -126);
-            buffer.writeBase38Text(this.base38Text, false);
+          if (methodGuard <= 107) {
+            byte[] unusedNullBytesForInvalidGuard = (byte[]) null;
+            TextPairLoginPayload.copyBytesWithDestinationOffset((byte[]) null, -72);
+          }
+          buffer.writeZeroPrefixedNullTerminatedText(this.loginText, (byte) -126);
+          buffer.writeBase38Text(this.base38Text, false);
         } catch (RuntimeException payloadWriteFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "nk.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadWriteFailure), "nk.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,24 +58,24 @@ final class TextPairLoginPayload extends LoginPayload {
         startGameText = null;
         additionalByteArrayPoolLengths = null;
         if (methodGuard != -17226) {
-            startGameText = (String) null;
+          startGameText = (String) null;
         }
     }
 
     final LoginPayloadKind payloadKind(byte methodGuard) {
         if (methodGuard != -32) {
-            additionalByteArrayPoolLengths = (int[]) null;
-            return RatingPresentationResources.loginPayloadKindThree;
+          additionalByteArrayPoolLengths = (int[]) null;
+          return RatingPresentationResources.loginPayloadKindThree;
         }
         return RatingPresentationResources.loginPayloadKindThree;
     }
 
     TextPairLoginPayload(String loginText, String base38Text) {
         try {
-            this.base38Text = base38Text;
-            this.loginText = loginText;
+          this.base38Text = base38Text;
+          this.loginText = loginText;
         } catch (RuntimeException payloadInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "nk.<init>(" + (loginText != null ? "{...}" : "null") + ',' + (base38Text != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) payloadInitializationFailure), "nk.<init>(" + (loginText != null ? "{...}" : "null") + ',' + (base38Text != null ? "{...}" : "null") + ')');
         }
     }
 

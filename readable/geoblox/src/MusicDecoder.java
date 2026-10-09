@@ -50,33 +50,33 @@ final class MusicDecoder extends IntrusiveNode {
         int signBit = packedValue & -2147483648;
         int exponent = (packedValue & 2145386496) >> 21;
         if (signBit != 0) {
-            mantissa = -mantissa;
+          mantissa = -mantissa;
         }
         return (float)((double)mantissa * Math.pow(2.0, (double)(exponent - 788)));
     }
 
     final static MusicDecoder loadById(ResourceArchive archive, int groupId, int fileId) {
         try {
-            MusicDecoder decoderBeforeReturn = null;
-            if (!MusicDecoder.ensureSetupLoaded(archive)) {
-                archive.isFileAvailable((byte) 37, groupId, fileId);
-                return null;
-            }
-            byte[] containerBytes = archive.getFile(groupId, -28153, fileId);
-            if (containerBytes == null) {
-                return null;
-            }
-            Object unusedNullDecoderSnapshot = null;
-            try {
-                decoderBeforeReturn = new MusicDecoder(containerBytes);
-            } catch (IOException containerReadFailure) {
-                containerReadFailure.printStackTrace();
-            }
-            return decoderBeforeReturn;
+          MusicDecoder decoderBeforeReturn = null;
+          if (!MusicDecoder.ensureSetupLoaded(archive)) {
+            archive.isFileAvailable((byte) 37, groupId, fileId);
+            return null;
+          }
+          byte[] containerBytes = archive.getFile(groupId, -28153, fileId);
+          if (containerBytes == null) {
+            return null;
+          }
+          Object unusedNullDecoderSnapshot = null;
+          try {
+            decoderBeforeReturn = new MusicDecoder(containerBytes);
+          } catch (IOException containerReadFailure) {
+            containerReadFailure.printStackTrace();
+          }
+          return decoderBeforeReturn;
         } catch (RuntimeException | Error uncheckedLoadFailure) {
-            throw uncheckedLoadFailure;
+          throw uncheckedLoadFailure;
         } catch (Throwable checkedLoadFailure) {
-            throw new RuntimeException(checkedLoadFailure);
+          throw new RuntimeException(checkedLoadFailure);
         }
     }
 
@@ -89,7 +89,7 @@ final class MusicDecoder extends IntrusiveNode {
         float[] decodedSamples;
         byte[] completedPcm;
         if (sampleBudget != null &&
-            sampleBudget[0] <= 0) {
+          sampleBudget[0] <= 0) {
           return null;
         }
         if (this.pcmBytes == null) {
@@ -101,7 +101,7 @@ final class MusicDecoder extends IntrusiveNode {
         }
         while (this.packetCursor < this.packets.length) {
           if (sampleBudget != null &&
-              sampleBudget[0] <= 0) {
+            sampleBudget[0] <= 0) {
             return null;
           }
           decodedSamples = this.decodePacket(this.packetCursor);
@@ -148,44 +148,44 @@ final class MusicDecoder extends IntrusiveNode {
         int outputShift = 0;
         int remainingBitMask;
         while (bitCount >= 8 - bitCursor) {
-            chunkBitsThenMask = 8 - bitCursor;
-            chunkMask = (1 << chunkBitsThenMask) - 1;
-            value = value + ((bitstreamBytes[byteCursor] >> bitCursor & chunkMask) << outputShift);
-            bitCursor = 0;
-            byteCursor = byteCursor + 1;
-            outputShift = outputShift + chunkBitsThenMask;
-            bitCount = bitCount - chunkBitsThenMask;
+          chunkBitsThenMask = 8 - bitCursor;
+          chunkMask = (1 << chunkBitsThenMask) - 1;
+          value = value + ((bitstreamBytes[byteCursor] >> bitCursor & chunkMask) << outputShift);
+          bitCursor = 0;
+          byteCursor = byteCursor + 1;
+          outputShift = outputShift + chunkBitsThenMask;
+          bitCount = bitCount - chunkBitsThenMask;
         }
         if (bitCount > 0) {
-            remainingBitMask = (1 << bitCount) - 1;
-            value = value + ((bitstreamBytes[byteCursor] >> bitCursor & remainingBitMask) << outputShift);
-            bitCursor = bitCursor + bitCount;
+          remainingBitMask = (1 << bitCount) - 1;
+          value = value + ((bitstreamBytes[byteCursor] >> bitCursor & remainingBitMask) << outputShift);
+          bitCursor = bitCursor + bitCount;
         }
         return value;
     }
 
     final static MusicDecoder loadByName(ResourceArchive archive, String groupName, String fileName) {
         try {
-            MusicDecoder decoderBeforeReturn = null;
-            if (!MusicDecoder.ensureSetupLoaded(archive)) {
-                archive.isNamedFileAvailable((byte) 113, fileName, groupName);
-                return null;
-            }
-            byte[] containerBytes = archive.getNamedFile(0, fileName, groupName);
-            if (containerBytes == null) {
-                return null;
-            }
-            Object unusedNullDecoderSnapshot = null;
-            try {
-                decoderBeforeReturn = new MusicDecoder(containerBytes);
-            } catch (IOException containerReadFailure) {
-                containerReadFailure.printStackTrace();
-            }
-            return decoderBeforeReturn;
+          MusicDecoder decoderBeforeReturn = null;
+          if (!MusicDecoder.ensureSetupLoaded(archive)) {
+            archive.isNamedFileAvailable((byte) 113, fileName, groupName);
+            return null;
+          }
+          byte[] containerBytes = archive.getNamedFile(0, fileName, groupName);
+          if (containerBytes == null) {
+            return null;
+          }
+          Object unusedNullDecoderSnapshot = null;
+          try {
+            decoderBeforeReturn = new MusicDecoder(containerBytes);
+          } catch (IOException containerReadFailure) {
+            containerReadFailure.printStackTrace();
+          }
+          return decoderBeforeReturn;
         } catch (RuntimeException | Error uncheckedLoadFailure) {
-            throw uncheckedLoadFailure;
+          throw uncheckedLoadFailure;
         } catch (Throwable checkedLoadFailure) {
-            throw new RuntimeException(checkedLoadFailure);
+          throw new RuntimeException(checkedLoadFailure);
         }
     }
 
@@ -200,23 +200,23 @@ final class MusicDecoder extends IntrusiveNode {
         this.loopStart = containerBuffer.readIntBE((byte) -128);
         this.loopEnd = containerBuffer.readIntBE((byte) -89);
         if (this.loopEnd < 0) {
-            this.loopEnd = ~this.loopEnd;
-            this.pingPongLoop = true;
+          this.loopEnd = ~this.loopEnd;
+          this.pingPongLoop = true;
         }
         int packetCount = containerBuffer.readIntBE((byte) -108);
         if (packetCount < 0) {
-            throw new IOException();
+          throw new IOException();
         }
         this.packets = new byte[packetCount][];
         for (packetIndex = 0; packetIndex < packetCount; packetIndex++) {
-            packetLength = 0;
-            do {
-                lengthChunk = containerBuffer.readUnsignedByte((byte) 34);
-                packetLength = packetLength + lengthChunk;
-            } while (lengthChunk >= 255);
-            packetBytes = new byte[packetLength];
-            containerBuffer.readBytes(29915, packetLength, packetBytes, 0);
-            this.packets[packetIndex] = packetBytes;
+          packetLength = 0;
+          do {
+            lengthChunk = containerBuffer.readUnsignedByte((byte) 34);
+            packetLength = packetLength + lengthChunk;
+          } while (lengthChunk >= 255);
+          packetBytes = new byte[packetLength];
+          containerBuffer.readBytes(29915, packetLength, packetBytes, 0);
+          this.packets[packetIndex] = packetBytes;
         }
     }
 
@@ -528,7 +528,7 @@ final class MusicDecoder extends IntrusiveNode {
         }
         halfBlockSizeForWindow = blockSize >> 1;
         if (longBlockValue != 0 &&
-            previousWindowLongValue == 0) {
+          previousWindowLongValue == 0) {
           leftWindowStart = (blockSize >> 2) - (shortBlockSize >> 2);
           leftWindowEnd = (blockSize >> 2) + (shortBlockSize >> 2);
           leftWindowLength = shortBlockSize >> 1;
@@ -538,7 +538,7 @@ final class MusicDecoder extends IntrusiveNode {
           leftWindowLength = blockSize >> 1;
         }
         if (longBlockValue != 0 &&
-            nextWindowLongValue == 0) {
+          nextWindowLongValue == 0) {
           rightWindowStart = blockSize - (blockSize >> 2) - (shortBlockSize >> 2);
           rightWindowEnd = blockSize - (blockSize >> 2) + (shortBlockSize >> 2);
           rightWindowLength = shortBlockSize >> 1;
@@ -759,11 +759,11 @@ final class MusicDecoder extends IntrusiveNode {
     private final static boolean ensureSetupLoaded(ResourceArchive archive) {
         byte[] setupBytes = null;
         if (!setupLoaded) {
-            setupBytes = archive.getFile(0, -28153, 0);
-            if (setupBytes == null) {
-                return false;
-            }
-            MusicDecoder.decodeSetup(setupBytes);
+          setupBytes = archive.getFile(0, -28153, 0);
+          if (setupBytes == null) {
+            return false;
+          }
+          MusicDecoder.decodeSetup(setupBytes);
         }
         return true;
     }

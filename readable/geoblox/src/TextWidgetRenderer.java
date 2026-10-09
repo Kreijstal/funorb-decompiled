@@ -73,7 +73,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               if (verticalAlignmentMode != 0) {
                 if (verticalAlignmentMode != 2) {
                   if (verticalAlignmentMode != 3 &&
-                      verticalAlignmentMode != 1) {
+                    verticalAlignmentMode != 1) {
                   }
                   baselineOffset = (-this.font.maxAscent + (availableHeight - this.font.maxDescent) >> 1) + this.font.maxAscent;
                 } else {
@@ -84,7 +84,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               }
               horizontalAlignmentMode = this.horizontalAlignment;
               if (horizontalAlignmentMode != 0 &&
-                  horizontalAlignmentMode != 3) {
+                horizontalAlignmentMode != 3) {
                 if (horizontalAlignmentMode == 1) {
                   this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
                   break textDrawingCompletion;
@@ -121,13 +121,13 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
 
     private final void drawDefaultWidgetText(int parentX, int parentY, UiWidget widget, boolean methodGuard) {
         try {
-            this.drawTextWithinWidget(parentY, this.textShadowColor, widget, 0, 0, this.textColor, 0, parentX);
-            if (!methodGuard) {
-                UiWidget unusedWidget = (UiWidget) null;
-                this.updateSingleLineLayout((byte) -108, (UiWidget) null);
-            }
+          this.drawTextWithinWidget(parentY, this.textShadowColor, widget, 0, 0, this.textColor, 0, parentX);
+          if (!methodGuard) {
+            UiWidget unusedWidget = (UiWidget) null;
+            this.updateSingleLineLayout((byte) -108, (UiWidget) null);
+          }
         } catch (RuntimeException defaultDrawFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) defaultDrawFailure), "ff.P(" + parentX + ',' + parentY + ',' + (widget != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) defaultDrawFailure), "ff.P(" + parentX + ',' + parentY + ',' + (widget != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -157,7 +157,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           if (verticalAlignmentMode != 0) {
             if (verticalAlignmentMode != 2) {
               if (verticalAlignmentMode != 3 &&
-                  verticalAlignmentMode == 1) {
+                verticalAlignmentMode == 1) {
               }
               baselineOffset = (availableHeight - (this.font.maxAscent + this.font.maxDescent) >> 1) + this.font.maxAscent;
             } else {
@@ -168,7 +168,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           }
           horizontalAlignmentMode = this.horizontalAlignment;
           if (horizontalAlignmentMode != 0 &&
-              horizontalAlignmentMode != 3) {
+            horizontalAlignmentMode != 3) {
             if (horizontalAlignmentMode == 1) {
               if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
@@ -334,30 +334,30 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         unreadTicketMessage = null;
         loadingProgressImage = null;
         if (!methodGuard) {
-            loadingProgressImage = (java.awt.Image) null;
+          loadingProgressImage = (java.awt.Image) null;
         }
     }
 
     final void copyStyleTo(TextWidgetRenderer destination, boolean methodGuard) {
         try {
-            destination.verticalAlignment = this.verticalAlignment;
-            destination.caretColor = this.caretColor;
-            destination.paddingTop = this.paddingTop;
-            destination.paddingLeft = this.paddingLeft;
-            destination.lineSpacing = this.lineSpacing;
-            destination.font = this.font;
-            if (!methodGuard) {
-                this.paddingTop = 34;
-            }
-            destination.paddingRight = this.paddingRight;
-            destination.paddingBottom = this.paddingBottom;
-            destination.multiline = this.multiline;
-            destination.textColor = this.textColor;
-            destination.selectionArgb = this.selectionArgb;
-            destination.textShadowColor = this.textShadowColor;
-            destination.horizontalAlignment = this.horizontalAlignment;
+          destination.verticalAlignment = this.verticalAlignment;
+          destination.caretColor = this.caretColor;
+          destination.paddingTop = this.paddingTop;
+          destination.paddingLeft = this.paddingLeft;
+          destination.lineSpacing = this.lineSpacing;
+          destination.font = this.font;
+          if (!methodGuard) {
+            this.paddingTop = 34;
+          }
+          destination.paddingRight = this.paddingRight;
+          destination.paddingBottom = this.paddingBottom;
+          destination.multiline = this.multiline;
+          destination.textColor = this.textColor;
+          destination.selectionArgb = this.selectionArgb;
+          destination.textShadowColor = this.textShadowColor;
+          destination.horizontalAlignment = this.horizontalAlignment;
         } catch (RuntimeException styleCopyFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) styleCopyFailure), "ff.O(" + (destination != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) styleCopyFailure), "ff.O(" + (destination != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -475,22 +475,22 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
 
     public void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
         if (null == this.font) {
-            return;
+          return;
         }
         try {
-            this.drawDefaultWidgetText(parentX, parentY, widget, true);
-            if (methodGuard >= -5) {
-                this.caretColor = -8;
-            }
+          this.drawDefaultWidgetText(parentX, parentY, widget, true);
+          if (methodGuard >= -5) {
+            this.caretColor = -8;
+          }
         } catch (RuntimeException widgetDrawFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ff.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) widgetDrawFailure), "ff.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
     public final int getFontHeight(int methodGuard) {
         if (methodGuard != 1) {
-            UiWidget unusedWidget = (UiWidget) null;
-            this.drawTextWithinWidget(79, -83, (UiWidget) null, -31, 118, 54, 3, -68);
+          UiWidget unusedWidget = (UiWidget) null;
+          this.drawTextWithinWidget(79, -83, (UiWidget) null, -31, 118, 54, 3, -68);
         }
         return this.font.maxAscent + this.font.maxDescent;
     }
@@ -698,21 +698,21 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
 
     TextWidgetRenderer(BitmapFont font, int paddingLeft, int paddingRight, int paddingTop, int paddingBottom, int textColor, int textShadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing, int caretColor, int selectionArgb, boolean multiline) {
         try {
-            this.verticalAlignment = verticalAlignment;
-            this.multiline = multiline ? true : false;
-            this.paddingRight = paddingRight;
-            this.font = font;
-            this.selectionArgb = selectionArgb;
-            this.textShadowColor = textShadowColor;
-            this.lineSpacing = lineSpacing;
-            this.textColor = textColor;
-            this.paddingLeft = paddingLeft;
-            this.paddingBottom = paddingBottom;
-            this.paddingTop = paddingTop;
-            this.caretColor = caretColor;
-            this.horizontalAlignment = horizontalAlignment;
+          this.verticalAlignment = verticalAlignment;
+          this.multiline = multiline ? true : false;
+          this.paddingRight = paddingRight;
+          this.font = font;
+          this.selectionArgb = selectionArgb;
+          this.textShadowColor = textShadowColor;
+          this.lineSpacing = lineSpacing;
+          this.textColor = textColor;
+          this.paddingLeft = paddingLeft;
+          this.paddingBottom = paddingBottom;
+          this.paddingTop = paddingTop;
+          this.caretColor = caretColor;
+          this.horizontalAlignment = horizontalAlignment;
         } catch (RuntimeException rendererConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "ff.<init>(" + (font != null ? "{...}" : "null") + ',' + paddingLeft + ',' + paddingRight + ',' + paddingTop + ',' + paddingBottom + ',' + textColor + ',' + textShadowColor + ',' + horizontalAlignment + ',' + verticalAlignment + ',' + lineSpacing + ',' + caretColor + ',' + selectionArgb + ',' + multiline + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererConstructionFailure), "ff.<init>(" + (font != null ? "{...}" : "null") + ',' + paddingLeft + ',' + paddingRight + ',' + paddingTop + ',' + paddingBottom + ',' + textColor + ',' + textShadowColor + ',' + horizontalAlignment + ',' + verticalAlignment + ',' + lineSpacing + ',' + caretColor + ',' + selectionArgb + ',' + multiline + ')');
         }
     }
 

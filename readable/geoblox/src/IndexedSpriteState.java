@@ -80,61 +80,61 @@ abstract class IndexedSpriteState {
         int recoloredPaletteIndex;
         int buttonCapHeight;
         try {
-            RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", spriteArchive, 0);
-            UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", spriteArchive, 0);
-            AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", spriteArchive, (byte) -78, "commonui");
-            MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", spriteArchive, 0);
-            ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", spriteArchive);
-            UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo12", "commonui", spriteArchive));
-            DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14", "commonui", spriteArchive));
-            UiFontResources.commonUiBoldFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14bold", "commonui", spriteArchive));
-            buttonImage = new Sprite(buttonImageArchive.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
-            SocketConnector.loadIndexedSprite(spriteArchive, 1, "commonui", "dropdown");
-            screenOptionFrames = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, spriteArchive);
-            DebugOverviewCompositor.screenOptionOneStateSprites = new IndexedSprite[4];
-            ClientTimingSupport.screenOptionTwoStateSprites = new IndexedSprite[4];
-            PointerMenuState.screenOptionThreeStateSprites = new IndexedSprite[4];
-            screenOptionStateSets = new IndexedSprite[][]{DebugOverviewCompositor.screenOptionOneStateSprites, ClientTimingSupport.screenOptionTwoStateSprites, PointerMenuState.screenOptionThreeStateSprites};
-            statePalettes = new int[4][];
-            palettesBeforeWorkingAlias = statePalettes;
-            workingPalettes = palettesBeforeWorkingAlias;
-            workingPalettes[0] = screenOptionFrames[0].palette;
-            for (paletteCloneIndexThenRecoloredIndex = 1; statePalettes.length > paletteCloneIndexThenRecoloredIndex; paletteCloneIndexThenRecoloredIndex++) {
-                workingPalettes[paletteCloneIndexThenRecoloredIndex] = (int[]) ((Object) statePalettes[0].clone());
+          RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", spriteArchive, 0);
+          UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", spriteArchive, 0);
+          AvatarFeedbackSupport.grayJagexLogoSprite = ScorePopupSupport.loadSprite("jagex_logo_grey", spriteArchive, (byte) -78, "commonui");
+          MouseWheelInput.commonButtonSprites = OpacityWidget.loadSpriteFrames("button", "commonui", spriteArchive, 0);
+          ClientClockSupport.validationStateSprites = ByteArrayPoolSupport.loadSpritesByName((byte) -39, "validation", "commonui", spriteArchive);
+          UiFontResources.commonUiSmallFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo12", "commonui", spriteArchive));
+          DialogLayer.sharedUiFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14", "commonui", spriteArchive));
+          UiFontResources.commonUiBoldFont = (BitmapFont) ((Object) TextInputValidator.loadCoverageFont(fontArchive, 1, "arezzo14bold", "commonui", spriteArchive));
+          buttonImage = new Sprite(buttonImageArchive.getNamedFile(0, "", "button.gif"), (java.awt.Component) ((Object) MessageDialog.gameCanvas));
+          SocketConnector.loadIndexedSprite(spriteArchive, 1, "commonui", "dropdown");
+          screenOptionFrames = MenuScreen.loadIndexedSpriteFrames("commonui", "screen_options", true, spriteArchive);
+          DebugOverviewCompositor.screenOptionOneStateSprites = new IndexedSprite[4];
+          ClientTimingSupport.screenOptionTwoStateSprites = new IndexedSprite[4];
+          PointerMenuState.screenOptionThreeStateSprites = new IndexedSprite[4];
+          screenOptionStateSets = new IndexedSprite[][]{DebugOverviewCompositor.screenOptionOneStateSprites, ClientTimingSupport.screenOptionTwoStateSprites, PointerMenuState.screenOptionThreeStateSprites};
+          statePalettes = new int[4][];
+          palettesBeforeWorkingAlias = statePalettes;
+          workingPalettes = palettesBeforeWorkingAlias;
+          workingPalettes[0] = screenOptionFrames[0].palette;
+          for (paletteCloneIndexThenRecoloredIndex = 1; statePalettes.length > paletteCloneIndexThenRecoloredIndex; paletteCloneIndexThenRecoloredIndex++) {
+            workingPalettes[paletteCloneIndexThenRecoloredIndex] = (int[]) ((Object) statePalettes[0].clone());
+          }
+          recoloredPaletteIndex = screenOptionFrames[0].indices[0];
+          statePalettes[2][recoloredPaletteIndex] = 16777215;
+          statePalettes[1][recoloredPaletteIndex] = 2394342;
+          statePalettes[3][recoloredPaletteIndex] = 4767999;
+          for (spriteFrameIndexThenButtonHeight = 0; spriteFrameIndexThenButtonHeight < 3; spriteFrameIndexThenButtonHeight++) {
+            currentFrameStates = screenOptionStateSets[spriteFrameIndexThenButtonHeight];
+            IndexedSprite[] unusedFrameStatesAlias = currentFrameStates;
+            for (paletteStateIndex = 0; paletteStateIndex < currentFrameStates.length; paletteStateIndex++) {
+              currentFrameStates[paletteStateIndex] = IndexedSpriteState.copyIndexedSpriteWithPalette(-84, statePalettes[paletteStateIndex], screenOptionFrames[spriteFrameIndexThenButtonHeight]);
             }
-            recoloredPaletteIndex = screenOptionFrames[0].indices[0];
-            statePalettes[2][recoloredPaletteIndex] = 16777215;
-            statePalettes[1][recoloredPaletteIndex] = 2394342;
-            statePalettes[3][recoloredPaletteIndex] = 4767999;
-            for (spriteFrameIndexThenButtonHeight = 0; spriteFrameIndexThenButtonHeight < 3; spriteFrameIndexThenButtonHeight++) {
-                currentFrameStates = screenOptionStateSets[spriteFrameIndexThenButtonHeight];
-                IndexedSprite[] unusedFrameStatesAlias = currentFrameStates;
-                for (paletteStateIndex = 0; paletteStateIndex < currentFrameStates.length; paletteStateIndex++) {
-                    currentFrameStates[paletteStateIndex] = IndexedSpriteState.copyIndexedSpriteWithPalette(-84, statePalettes[paletteStateIndex], screenOptionFrames[spriteFrameIndexThenButtonHeight]);
-                }
-            }
-            buttonCapHeight = buttonImage.height;
-            SpriteCheckboxRenderer.pushRasterTarget(-105);
-            if (methodGuard <= 98) {
-                IndexedSprite unusedNullSpriteSnapshot = (IndexedSprite) null;
-                IndexedSpriteState.copyIndexedSpriteWithPalette(72, (int[]) null, (IndexedSprite) null);
-            }
-            buttonImage.setAsRasterTarget();
-            SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-            leftButtonCap = new Sprite(buttonCapHeight, buttonCapHeight);
-            leftButtonCapRasterAlias = leftButtonCap;
-            leftButtonCapRasterAlias.setAsRasterTarget();
-            buttonImage.drawUnmasked(0, 0);
-            rightButtonCap = new Sprite(buttonCapHeight, buttonCapHeight);
-            rightButtonCap.setAsRasterTarget();
-            buttonImage.drawUnmasked(buttonCapHeight - buttonImage.width, 0);
-            buttonCenter = new Sprite(buttonImage.width - 2 * buttonCapHeight, buttonCapHeight);
-            buttonCenter.setAsRasterTarget();
-            buttonImage.drawUnmasked(-buttonCapHeight, 0);
-            RasterTargetRestoreSupport.restoreRasterTarget(true);
-            MouseWheelInput.commonButtonSprites = new Sprite[]{leftButtonCap, buttonCenter, rightButtonCap};
+          }
+          buttonCapHeight = buttonImage.height;
+          SpriteCheckboxRenderer.pushRasterTarget(-105);
+          if (methodGuard <= 98) {
+            IndexedSprite unusedNullSpriteSnapshot = (IndexedSprite) null;
+            IndexedSpriteState.copyIndexedSpriteWithPalette(72, (int[]) null, (IndexedSprite) null);
+          }
+          buttonImage.setAsRasterTarget();
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
+          leftButtonCap = new Sprite(buttonCapHeight, buttonCapHeight);
+          leftButtonCapRasterAlias = leftButtonCap;
+          leftButtonCapRasterAlias.setAsRasterTarget();
+          buttonImage.drawUnmasked(0, 0);
+          rightButtonCap = new Sprite(buttonCapHeight, buttonCapHeight);
+          rightButtonCap.setAsRasterTarget();
+          buttonImage.drawUnmasked(buttonCapHeight - buttonImage.width, 0);
+          buttonCenter = new Sprite(buttonImage.width - 2 * buttonCapHeight, buttonCapHeight);
+          buttonCenter.setAsRasterTarget();
+          buttonImage.drawUnmasked(-buttonCapHeight, 0);
+          RasterTargetRestoreSupport.restoreRasterTarget(true);
+          MouseWheelInput.commonButtonSprites = new Sprite[]{leftButtonCap, buttonCenter, rightButtonCap};
         } catch (RuntimeException loadFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailure), "ha.G(" + methodGuard + ',' + (buttonImageArchive != null ? "{...}" : "null") + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loadFailure), "ha.G(" + methodGuard + ',' + (buttonImageArchive != null ? "{...}" : "null") + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontArchive != null ? "{...}" : "null") + ')');
         }
     }
 

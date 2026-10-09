@@ -26,71 +26,71 @@ final class GzipInflater {
 
     final void inflateInto(int methodGuard, ByteArrayBuffer buffer, byte[] destination) {
         try {
-            Exception inflateException = null;
-            RuntimeException inflateFailureForContext = null;
-            RuntimeException inflateFailureBeforeContext = null;
-            StringBuilder inflateMessagePrefix = null;
-            String bufferDescription = null;
-            StringBuilder inflateMessageBeforeDestination = null;
-            String destinationDescription = null;
-            Throwable caughtInflateFailure = null;
-            try {
-              if (buffer.bytes[buffer.position] == 31 &&
-                  -117 == buffer.bytes[1 + buffer.position]) {
-                if (this.inflater == null) {
-                  this.inflater = new java.util.zip.Inflater(true);
+          Exception inflateException = null;
+          RuntimeException inflateFailureForContext = null;
+          RuntimeException inflateFailureBeforeContext = null;
+          StringBuilder inflateMessagePrefix = null;
+          String bufferDescription = null;
+          StringBuilder inflateMessageBeforeDestination = null;
+          String destinationDescription = null;
+          Throwable caughtInflateFailure = null;
+          try {
+            if (buffer.bytes[buffer.position] == 31 &&
+              -117 == buffer.bytes[1 + buffer.position]) {
+              if (this.inflater == null) {
+                this.inflater = new java.util.zip.Inflater(true);
+              }
+              try {
+                this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
+                if (methodGuard != -1) {
+                  GzipInflater.textTemplateArgumentTypes(76);
                 }
-                try {
-                  this.inflater.setInput(buffer.bytes, buffer.position + 10, buffer.bytes.length - 8 - (buffer.position + 10));
-                  if (methodGuard != -1) {
-                    GzipInflater.textTemplateArgumentTypes(76);
-                  }
-                  this.inflater.inflate(destination);
-                } catch (java.lang.Exception inflateOperationException) {
-                  caughtInflateFailure = inflateOperationException;
-                  inflateException = (Exception) (Object) caughtInflateFailure;
-                  this.inflater.reset();
-                  throw new RuntimeException("");
-                }
+                this.inflater.inflate(destination);
+              } catch (java.lang.Exception inflateOperationException) {
+                caughtInflateFailure = inflateOperationException;
+                inflateException = (Exception) (Object) caughtInflateFailure;
                 this.inflater.reset();
-                return;
+                throw new RuntimeException("");
               }
-              throw new RuntimeException("");
-            } catch (java.lang.RuntimeException inflateFailure) {
-              caughtInflateFailure = inflateFailure;
-              inflateFailureForContext = (RuntimeException) (Object) caughtInflateFailure;
-              inflateFailureBeforeContext = inflateFailureForContext;
-              inflateMessagePrefix = new StringBuilder().append("fe.D(").append(methodGuard).append(',');
-              if (buffer == null) {
-                bufferDescription = "null";
-              } else {
-                bufferDescription = "{...}";
-              }
-              inflateMessageBeforeDestination = ((StringBuilder) (Object) inflateMessagePrefix).append(bufferDescription).append(',');
-              if (destination == null) {
-                destinationDescription = "null";
-              } else {
-                destinationDescription = "{...}";
-              }
-              throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) inflateFailureBeforeContext), ((StringBuilder) (Object) inflateMessageBeforeDestination).append(destinationDescription).append(')').toString());
+              this.inflater.reset();
+              return;
             }
+            throw new RuntimeException("");
+          } catch (java.lang.RuntimeException inflateFailure) {
+            caughtInflateFailure = inflateFailure;
+            inflateFailureForContext = (RuntimeException) (Object) caughtInflateFailure;
+            inflateFailureBeforeContext = inflateFailureForContext;
+            inflateMessagePrefix = new StringBuilder().append("fe.D(").append(methodGuard).append(',');
+            if (buffer == null) {
+              bufferDescription = "null";
+            } else {
+              bufferDescription = "{...}";
+            }
+            inflateMessageBeforeDestination = ((StringBuilder) (Object) inflateMessagePrefix).append(bufferDescription).append(',');
+            if (destination == null) {
+              destinationDescription = "null";
+            } else {
+              destinationDescription = "{...}";
+            }
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) inflateFailureBeforeContext), ((StringBuilder) (Object) inflateMessageBeforeDestination).append(destinationDescription).append(')').toString());
+          }
         } catch (RuntimeException | Error uncheckedInflateFailure) {
-            throw uncheckedInflateFailure;
+          throw uncheckedInflateFailure;
         } catch (Throwable checkedInflateFailure) {
-            throw new RuntimeException(checkedInflateFailure);
+          throw new RuntimeException(checkedInflateFailure);
         }
     }
 
     final static int getLogoStartDelayMillis(int methodGuard) {
         if (methodGuard <= 103) {
-            return 4;
+          return 4;
         }
         return FullscreenEntrySupport.configuredLogoStartDelayMillis;
     }
 
     final static TextTemplateArgumentType[] textTemplateArgumentTypes(int methodGuard) {
         if (methodGuard == -1) {
-            return new TextTemplateArgumentType[]{InstrumentNoteMask.textTemplateArgumentTypeZero, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.textTemplateArgumentTypeTwo, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.textTemplateArgumentTypeSeven, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.textTemplateArgumentTypeNine, CharacterReplacementSupport.textTemplateArgumentTypeTen, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.textTemplateArgumentTypeTwelve, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, textTemplateArgumentTypeFifteen};
+          return new TextTemplateArgumentType[]{InstrumentNoteMask.textTemplateArgumentTypeZero, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.textTemplateArgumentTypeTwo, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.textTemplateArgumentTypeSeven, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.textTemplateArgumentTypeNine, CharacterReplacementSupport.textTemplateArgumentTypeTen, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.textTemplateArgumentTypeTwelve, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, textTemplateArgumentTypeFifteen};
         }
         avatarTintGreenDelta = -1.1302366256713867f;
         return new TextTemplateArgumentType[]{InstrumentNoteMask.textTemplateArgumentTypeZero, SessionSocketSupport.textTemplateArgumentTypeOne, EntityMotionSupport.textTemplateArgumentTypeTwo, AsyncResourceDownloader.textTemplateArgumentTypeFour, PointerMenuState.textTemplateArgumentTypeSix, Under13TermsPanel.textTemplateArgumentTypeSeven, ProxySocketConnector.textTemplateArgumentTypeEight, SpriteState.textTemplateArgumentTypeNine, CharacterReplacementSupport.textTemplateArgumentTypeTen, DropTargetWidget.textTemplateArgumentTypeEleven, IntKeyLookup.textTemplateArgumentTypeTwelve, ProxyAuthenticationRequiredException.textTemplateArgumentTypeThirteen, MeshPrioritySupport.textTemplateArgumentTypeFourteen, textTemplateArgumentTypeFifteen};

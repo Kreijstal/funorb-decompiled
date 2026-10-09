@@ -8,10 +8,10 @@ final class ClientScreenExitSupport {
 
     final static void handleSessionExitServiceResult(int unusedCenterX, int unusedCenterY, BitmapFont unusedFont, int unusedLineSpacing, int methodGuard, int unusedLineHeight) {
         try {
-            ClientFlowState.requestSessionExit((byte) 107);
-            int guardResidue = 72 % ((methodGuard + 78) / 44);
+          ClientFlowState.requestSessionExit((byte) 107);
+          int guardResidue = 72 % ((methodGuard + 78) / 44);
         } catch (RuntimeException exitFailureForContext) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) exitFailureForContext), "oh.B(" + unusedCenterX + ',' + unusedCenterY + ',' + (unusedFont != null ? "{...}" : "null") + ',' + unusedLineSpacing + ',' + methodGuard + ',' + unusedLineHeight + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) exitFailureForContext), "oh.B(" + unusedCenterX + ',' + unusedCenterY + ',' + (unusedFont != null ? "{...}" : "null") + ',' + unusedLineSpacing + ',' + methodGuard + ',' + unusedLineHeight + ')');
         }
     }
 
@@ -20,7 +20,7 @@ final class ClientScreenExitSupport {
         fullscreenDialogLayer = null;
         gameSoundOutput = null;
         if (methodGuard > -73) {
-            fullscreenDialogLayer = (DialogLayer) null;
+          fullscreenDialogLayer = (DialogLayer) null;
         }
     }
 

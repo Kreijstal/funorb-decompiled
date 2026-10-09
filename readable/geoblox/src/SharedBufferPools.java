@@ -13,11 +13,11 @@ final class SharedBufferPools {
     public static void clearSharedBufferResources(int methodGuard) {
         germsBackgroundSprite = null;
         if (methodGuard == -13575) {
-            bubbleBonusText = null;
-            fullscreenFrame = null;
-            rasterSnapshotPool = null;
-            additionalByteArrayPools = (byte[][][]) null;
-            return;
+          bubbleBonusText = null;
+          fullscreenFrame = null;
+          rasterSnapshotPool = null;
+          additionalByteArrayPools = (byte[][][]) null;
+          return;
         }
         SharedBufferPools.clearSharedBufferResources(-7);
         bubbleBonusText = null;

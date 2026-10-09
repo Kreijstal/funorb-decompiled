@@ -12,7 +12,7 @@ final class DirectByteStorage extends ByteStorage {
         meshMaterials = null;
         initialCommonUiSpriteArchive = null;
         if (methodGuard > -1) {
-            meshMaterials = (MeshMaterial[]) null;
+          meshMaterials = (MeshMaterial[]) null;
         }
     }
 
@@ -32,12 +32,12 @@ final class DirectByteStorage extends ByteStorage {
         this.directBuffer = java.nio.ByteBuffer.allocateDirect(sourceBytes.length);
         this.directBuffer.position(0);
         if (!populateBuffer) {
-            return;
+          return;
         }
         try {
-            this.directBuffer.put(sourceBytes);
+          this.directBuffer.put(sourceBytes);
         } catch (RuntimeException bufferPopulationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) bufferPopulationFailure), "l.A(" + (sourceBytes != null ? "{...}" : "null") + ',' + populateBuffer + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) bufferPopulationFailure), "l.A(" + (sourceBytes != null ? "{...}" : "null") + ',' + populateBuffer + ')');
         }
     }
 

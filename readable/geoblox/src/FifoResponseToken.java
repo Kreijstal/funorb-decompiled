@@ -23,7 +23,7 @@ final class FifoResponseToken extends IntrusiveNode {
         RuntimeException caughtValidationFailure = null;
         try {
           if (candidateEmail != null &&
-              0 != candidateEmail.length()) {
+            0 != candidateEmail.length()) {
             atSignIndex = candidateEmail.indexOf('@');
             if (atSignIndex == -1) {
               missingAtSignFailureBeforeReturn = InstrumentNoteMask.missingTextComponentFailure;
@@ -60,7 +60,7 @@ final class FifoResponseToken extends IntrusiveNode {
         activeHighscoreQuery = null;
         bakingBackgroundSprite = null;
         if (methodGuard) {
-            bakingBackgroundSprite = (IndexedSprite) null;
+          bakingBackgroundSprite = (IndexedSprite) null;
         }
     }
 

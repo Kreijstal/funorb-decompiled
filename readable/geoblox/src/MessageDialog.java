@@ -54,78 +54,78 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
 
     final static void showLoginForm(String prefilledUsername, String prefilledPassword, int methodGuard) {
         if (Geoblox.activeMessageDialog != null) {
-            Geoblox.activeMessageDialog.dismissDialog((byte) -104);
+          Geoblox.activeMessageDialog.dismissDialog((byte) -104);
         }
         if (methodGuard != 7697781) {
-            return;
+          return;
         }
         try {
-            SpriteButtonRenderer.activeLoginPanel = new LoginPanel(prefilledUsername, prefilledPassword, false, true, true);
-            ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -81);
+          SpriteButtonRenderer.activeLoginPanel = new LoginPanel(prefilledUsername, prefilledPassword, false, true, true);
+          ButtonWidget.accountContentDialog.replaceContent(SpriteButtonRenderer.activeLoginPanel, -81);
         } catch (RuntimeException loginFormFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) loginFormFailure), "f.HA(" + (prefilledUsername != null ? "{...}" : "null") + ',' + (prefilledPassword != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
     MessageDialog(DialogLayer uiRoot, BitmapFont messageFont, String messageText, boolean showRetryLoginOnDismiss, boolean showLoginOnDismiss) {
         super(uiRoot, new MessageDialogContent((MessageDialog) null, messageFont, messageText), 77, 10, 10);
         try {
-            this.showLoginOnDismiss = showLoginOnDismiss ? true : false;
-            this.retryButtonAction = false;
-            this.errorContentInstallationStarted = false;
-            this.messageFont = messageFont;
-            this.showRetryLoginOnDismiss = showRetryLoginOnDismiss ? true : false;
-            this.dialogStatusPanel = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
-            this.dialogStatusPanel.animationEnabled = true;
-            this.addChild((byte) -61, (UiWidget) (this.dialogStatusPanel));
+          this.showLoginOnDismiss = showLoginOnDismiss ? true : false;
+          this.retryButtonAction = false;
+          this.errorContentInstallationStarted = false;
+          this.messageFont = messageFont;
+          this.showRetryLoginOnDismiss = showRetryLoginOnDismiss ? true : false;
+          this.dialogStatusPanel = new ProgressBarWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.dialogStatusPanel.animationEnabled = true;
+          this.addChild((byte) -61, (UiWidget) (this.dialogStatusPanel));
         } catch (RuntimeException dialogConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogConstructionFailure), "f.<init>(" + (uiRoot != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ',' + showRetryLoginOnDismiss + ',' + showLoginOnDismiss + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) dialogConstructionFailure), "f.<init>(" + (uiRoot != null ? "{...}" : "null") + ',' + (messageFont != null ? "{...}" : "null") + ',' + (messageText != null ? "{...}" : "null") + ',' + showRetryLoginOnDismiss + ',' + showLoginOnDismiss + ')');
         }
     }
 
     final static void requestFullscreen(byte methodGuard) {
         if (InstrumentPatch.activeFullscreenCanvas != null) {
-            return;
+          return;
         }
         if (methodGuard >= -48) {
-            availableEntityCategoryCount = -112;
-            InstrumentPatch.activeFullscreenCanvas = LoginMethod.createFullscreenFocusCanvas(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
-            if (null != InstrumentPatch.activeFullscreenCanvas) {
-                UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
-                return;
-            }
+          availableEntityCategoryCount = -112;
+          InstrumentPatch.activeFullscreenCanvas = LoginMethod.createFullscreenFocusCanvas(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
+          if (null != InstrumentPatch.activeFullscreenCanvas) {
+            UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
             return;
+          }
+          return;
         }
         InstrumentPatch.activeFullscreenCanvas = LoginMethod.createFullscreenFocusCanvas(480, 0, 0, -3, MenuScreen.platformTaskDispatcher, 640);
         if (null == InstrumentPatch.activeFullscreenCanvas) {
-            return;
+          return;
         }
         UsernameAvailabilityQuery.attachCanvasInputListeners(InstrumentPatch.activeFullscreenCanvas, 57);
     }
 
     final void dismissDialog(byte methodGuard) {
         if (!this.dialogVisible) {
-            return;
+          return;
         }
         this.dialogVisible = false;
         if (methodGuard != -104) {
-            this.retryButtonAction = true;
-            if (this.showRetryLoginOnDismiss) {
-                LoginUiSupport.showLoginPanel((byte) -65);
-                return;
-            }
-            if (this.showLoginOnDismiss) {
-                KeyboardInputListener.showLoginForCreatedAccountEmail(-1);
-                return;
-            }
-            return;
-        }
-        if (this.showRetryLoginOnDismiss) {
+          this.retryButtonAction = true;
+          if (this.showRetryLoginOnDismiss) {
             LoginUiSupport.showLoginPanel((byte) -65);
             return;
+          }
+          if (this.showLoginOnDismiss) {
+            KeyboardInputListener.showLoginForCreatedAccountEmail(-1);
+            return;
+          }
+          return;
+        }
+        if (this.showRetryLoginOnDismiss) {
+          LoginUiSupport.showLoginPanel((byte) -65);
+          return;
         }
         if (!this.showLoginOnDismiss) {
-            return;
+          return;
         }
         KeyboardInputListener.showLoginForCreatedAccountEmail(-1);
     }
@@ -233,7 +233,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
           }
           if (UiWidget.gameplaySession.sessionEnding &&
-              IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
+            IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
             if (NameCharacterSupport.avatarCryPhase == 0) {
               if (!LoginPanel.endingEntityScanClear) {
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
@@ -333,7 +333,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           avatarFrameOffsetInSegment = -MenuScreen.avatarFeedbackFrameBase + DiskCacheWorker.avatarFeedbackFrameIndex;
           if (1 != FullscreenSupport.avatarSteeringDirectionId) {
             if (2 == FullscreenSupport.avatarSteeringDirectionId &&
-                5 > avatarFrameOffsetInSegment) {
+              5 > avatarFrameOffsetInSegment) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
               if (0 == FullscreenSupport.avatarSteeringDirectionId) {
@@ -341,13 +341,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
                   if (0 == FullscreenSupport.avatarSteeringDirectionId &&
-                      3 < avatarFrameOffsetInSegment) {
+                    3 < avatarFrameOffsetInSegment) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
                 if (0 == FullscreenSupport.avatarSteeringDirectionId &&
-                    3 < avatarFrameOffsetInSegment) {
+                  3 < avatarFrameOffsetInSegment) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
               }
@@ -358,7 +358,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               DiskCacheWorker.avatarFeedbackFrameIndex = 0 + MenuScreen.avatarFeedbackFrameBase;
             }
             if (UiWidget.gameplaySession.sessionEnding &&
-                IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
+              IterableNodeHashTable.avatarBlinkClockTicks % 18 == 0) {
               if (NameCharacterSupport.avatarCryPhase == 0) {
                 if (!LoginPanel.endingEntityScanClear) {
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;
@@ -453,7 +453,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           }
           if (avatarFrameOffsetInSegment <= 1) {
             if (2 == FullscreenSupport.avatarSteeringDirectionId &&
-                5 > avatarFrameOffsetInSegment) {
+              5 > avatarFrameOffsetInSegment) {
               DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
             } else {
               if (0 == FullscreenSupport.avatarSteeringDirectionId) {
@@ -461,13 +461,13 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex + 1;
                 } else {
                   if (0 == FullscreenSupport.avatarSteeringDirectionId &&
-                      3 < avatarFrameOffsetInSegment) {
+                    3 < avatarFrameOffsetInSegment) {
                     DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                   }
                 }
               } else {
                 if (0 == FullscreenSupport.avatarSteeringDirectionId &&
-                    3 < avatarFrameOffsetInSegment) {
+                  3 < avatarFrameOffsetInSegment) {
                   DiskCacheWorker.avatarFeedbackFrameIndex = DiskCacheWorker.avatarFeedbackFrameIndex - 1;
                 }
               }
@@ -616,23 +616,23 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
 
     final static WidgetTheme getSharedUiStyle(int methodGuard) {
         if (null == DiskCacheWorker.sharedUiTheme) {
-            DiskCacheWorker.sharedUiTheme = new WidgetTheme();
-            DiskCacheWorker.sharedUiTheme.initializeRenderers(9, DialogLayer.sharedUiFont);
-            DiskCacheWorker.sharedUiTheme.tooltipLineSpacing = 14;
-            DiskCacheWorker.sharedUiTheme.tooltipBackgroundColor = 2763306;
-            DiskCacheWorker.sharedUiTheme.tooltipPaddingLeft = 6;
-            DiskCacheWorker.sharedUiTheme.wrappedTooltipBorderColor = 7697781;
-            DiskCacheWorker.sharedUiTheme.tooltipPaddingRight = 5;
-            DiskCacheWorker.sharedUiTheme.tooltipPaddingTop = 0;
-            DiskCacheWorker.sharedUiTheme.tooltipPaddingBottom = 4;
-            DiskCacheWorker.sharedUiTheme.tooltipFont = UiFontResources.commonUiSmallFont;
-            if (methodGuard >= 71) {
-                return DiskCacheWorker.sharedUiTheme;
-            }
-            return (WidgetTheme) null;
+          DiskCacheWorker.sharedUiTheme = new WidgetTheme();
+          DiskCacheWorker.sharedUiTheme.initializeRenderers(9, DialogLayer.sharedUiFont);
+          DiskCacheWorker.sharedUiTheme.tooltipLineSpacing = 14;
+          DiskCacheWorker.sharedUiTheme.tooltipBackgroundColor = 2763306;
+          DiskCacheWorker.sharedUiTheme.tooltipPaddingLeft = 6;
+          DiskCacheWorker.sharedUiTheme.wrappedTooltipBorderColor = 7697781;
+          DiskCacheWorker.sharedUiTheme.tooltipPaddingRight = 5;
+          DiskCacheWorker.sharedUiTheme.tooltipPaddingTop = 0;
+          DiskCacheWorker.sharedUiTheme.tooltipPaddingBottom = 4;
+          DiskCacheWorker.sharedUiTheme.tooltipFont = UiFontResources.commonUiSmallFont;
+          if (methodGuard >= 71) {
+            return DiskCacheWorker.sharedUiTheme;
+          }
+          return (WidgetTheme) null;
         }
         if (methodGuard >= 71) {
-            return DiskCacheWorker.sharedUiTheme;
+          return DiskCacheWorker.sharedUiTheme;
         }
         return (WidgetTheme) null;
     }
@@ -742,10 +742,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         MessageDialogContent replacementRestoredTextContent;
         this.dialogStatusPanel.setStripeColors(4210752, 2121792, (byte) -103);
         if (!clearCanvasGuard) {
-            initialRestoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
-            initialRestoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
-            this.replaceContent(initialRestoredTextContent, -23);
-            return;
+          initialRestoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);
+          initialRestoredTextContent.appendActionButton(FullscreenSupport.returnToGameText, 1, 15);
+          this.replaceContent(initialRestoredTextContent, -23);
+          return;
         }
         gameCanvas = (java.awt.Canvas) null;
         replacementRestoredTextContent = new MessageDialogContent(this, this.messageFont, ResizableDialog.connectionRestoredText);

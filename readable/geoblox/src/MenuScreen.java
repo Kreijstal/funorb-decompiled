@@ -78,7 +78,7 @@ abstract class MenuScreen {
             this.increaseMenuValue((byte) 90, itemIndex);
           } else {
             if (SessionTextHistorySupport.currentKeyboardEventCode == 84 ||
-                SessionTextHistorySupport.currentKeyboardEventCode == 83) {
+              SessionTextHistorySupport.currentKeyboardEventCode == 83) {
               this.activateMenuItem(itemIndex, (byte) -2);
             }
           }
@@ -90,25 +90,25 @@ abstract class MenuScreen {
     void handleMenuPointer(int itemIndex, int pointerX, boolean initialClick, int rowOffsetY, boolean heldRepeat, int pointerButton) {
         int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         if (!heldRepeat) {
-            if (1 != pointerButton) {
-                this.decreaseMenuValue(itemIndex, (byte) -121);
-            } else {
-                this.activateMenuItem(itemIndex, (byte) -2);
-            }
-            Under13TermsPanel.menuPointerRepeatCountdown = PointerMenuState.menuPointerInitialRepeatDelay;
+          if (1 != pointerButton) {
+            this.decreaseMenuValue(itemIndex, (byte) -121);
+          } else {
+            this.activateMenuItem(itemIndex, (byte) -2);
+          }
+          Under13TermsPanel.menuPointerRepeatCountdown = PointerMenuState.menuPointerInitialRepeatDelay;
         } else {
-            Under13TermsPanel.menuPointerRepeatCountdown = Under13TermsPanel.menuPointerRepeatCountdown - 1;
-            if (Under13TermsPanel.menuPointerRepeatCountdown <= 0) {
-                if (pointerButton == 1) {
-                    this.activateMenuItem(itemIndex, (byte) -2);
-                } else {
-                    this.decreaseMenuValue(itemIndex, (byte) 6);
-                }
-                Under13TermsPanel.menuPointerRepeatCountdown = CacheReference.menuPointerRepeatInterval;
+          Under13TermsPanel.menuPointerRepeatCountdown = Under13TermsPanel.menuPointerRepeatCountdown - 1;
+          if (Under13TermsPanel.menuPointerRepeatCountdown <= 0) {
+            if (pointerButton == 1) {
+              this.activateMenuItem(itemIndex, (byte) -2);
+            } else {
+              this.decreaseMenuValue(itemIndex, (byte) 6);
             }
+            Under13TermsPanel.menuPointerRepeatCountdown = CacheReference.menuPointerRepeatInterval;
+          }
         }
         if (initialClick) {
-            this.keyboardSelectionActive = false;
+          this.keyboardSelectionActive = false;
         }
     }
 
@@ -123,8 +123,8 @@ abstract class MenuScreen {
     int hitTestMenuItem(int pointerX, int pointerY, byte methodGuard) {
         int hitRowIndex;
         if (this.hitLeftX <= pointerX &&
-            pointerX < this.hitRightX &&
-            this.firstItemY <= pointerY) {
+          pointerX < this.hitRightX &&
+          this.firstItemY <= pointerY) {
           if (methodGuard < 20) {
             return 81;
           }
@@ -168,7 +168,7 @@ abstract class MenuScreen {
             }
           } else {
             if (EntityCollisionSupport.heldPointerButtonSnapshot != 0 &&
-                this.pointerInteractionActive) {
+              this.pointerInteractionActive) {
               hitItemIndex = this.selectedItemIndex;
               if (hitItemIndex == -1) {
                 break menuPointerInteraction;
@@ -212,13 +212,13 @@ abstract class MenuScreen {
         int clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         int itemIndex = 0;
         if (methodGuard != -28750) {
-            this.updatePointer(false);
+          this.updatePointer(false);
         }
         int rowY = this.firstItemY;
         while (itemIndex < this.itemCount) {
-            this.renderMenuItem(this.selectedItemIndex == itemIndex ? true : false, (byte) -112, itemIndex, rowY);
-            rowY = rowY + this.itemSpacing;
-            itemIndex++;
+          this.renderMenuItem(this.selectedItemIndex == itemIndex ? true : false, (byte) -112, itemIndex, rowY);
+          rowY = rowY + this.itemSpacing;
+          itemIndex++;
         }
     }
 

@@ -7,7 +7,7 @@ final class AwtMouseWheelListener extends MouseWheelInput implements java.awt.ev
     final void attachWheelListener(int methodGuard, java.awt.Component component) {
         component.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (methodGuard < 121) {
-            this.accumulatedRotation = -83;
+          this.accumulatedRotation = -83;
         }
     }
 
@@ -15,9 +15,9 @@ final class AwtMouseWheelListener extends MouseWheelInput implements java.awt.ev
         int rotationSnapshot = 0;
         int guardFalseRotationSnapshot;
         if (drainGuard) {
-            rotationSnapshot = this.accumulatedRotation;
-            this.accumulatedRotation = 0;
-            return rotationSnapshot;
+          rotationSnapshot = this.accumulatedRotation;
+          this.accumulatedRotation = 0;
+          return rotationSnapshot;
         }
         java.awt.event.MouseWheelEvent guardedNullWheelEventSnapshot = (java.awt.event.MouseWheelEvent) null;
         this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);

@@ -12,7 +12,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
 
     final String getHoverText(byte methodGuard) {
         if (methodGuard == 69) {
-            return null;
+          return null;
         }
         return (String) null;
     }
@@ -59,33 +59,33 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     final static void decodeSocialSettingBits(int packedSettings, int methodGuard) {
         AsyncResourceDownloader.receivedSocialSettingHigh = packedSettings >> 4 & 3;
         if (!(AsyncResourceDownloader.receivedSocialSettingHigh <= 2)) {
-            AsyncResourceDownloader.receivedSocialSettingHigh = 2;
+          AsyncResourceDownloader.receivedSocialSettingHigh = 2;
         }
         ByteArrayBuffer.receivedSocialSettingMiddle = packedSettings >> 2 & 3;
         MidiNoteMixer.receivedSocialSettingLow = 3 & packedSettings;
         if (!(ByteArrayBuffer.receivedSocialSettingMiddle <= 2)) {
-            ByteArrayBuffer.receivedSocialSettingMiddle = 2;
+          ByteArrayBuffer.receivedSocialSettingMiddle = 2;
         }
         if (methodGuard != -12718) {
-            ValidationMessageWidget.releaseStaticReferences(-27);
-            if (MidiNoteMixer.receivedSocialSettingLow > 2) {
-                MidiNoteMixer.receivedSocialSettingLow = 2;
-                return;
-            }
+          ValidationMessageWidget.releaseStaticReferences(-27);
+          if (MidiNoteMixer.receivedSocialSettingLow > 2) {
+            MidiNoteMixer.receivedSocialSettingLow = 2;
             return;
+          }
+          return;
         }
         if (MidiNoteMixer.receivedSocialSettingLow <= 2) {
-            return;
+          return;
         }
         MidiNoteMixer.receivedSocialSettingLow = 2;
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
         try {
-            this.animationTicks = this.animationTicks + 1;
-            super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
+          this.animationTicks = this.animationTicks + 1;
+          super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
         } catch (RuntimeException pointerUpdateFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "pi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailure), "pi.H(" + hoverGuard + ',' + parentY + ',' + (eventContext != null ? "{...}" : "null") + ',' + parentX + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         initialValidationState = this.validationProvider.getDebouncedValidationState((byte) -105);
         if (initialValidationState != ImageProducerRasterBuffer.debouncingValidationState &&
-            initialValidationState != WidgetSkinState.pendingQueryValidationState) {
+          initialValidationState != WidgetSkinState.pendingQueryValidationState) {
           displayMessage = this.validationProvider.getDebouncedValidationMessage(-21666);
           if (displayMessage == null) {
             displayMessage = this.fallbackMessage;
@@ -224,16 +224,16 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         logoMeshCenters = (int[][]) null;
         gameOverMusicTrack = null;
         if (methodGuard != 24033) {
-            logoMeshCenters = (int[][]) null;
-            sweetsBackgroundSprite = null;
-            return;
+          logoMeshCenters = (int[][]) null;
+          sweetsBackgroundSprite = null;
+          return;
         }
         sweetsBackgroundSprite = null;
     }
 
     final static void renderAccountDialogLayer(boolean unusedRenderOption, boolean skipRendering) {
         if (skipRendering) {
-            return;
+          return;
         }
         ClientFlowState.accountDialogLayer.renderWidgetPassesAndTooltip(0, 0, 0);
     }
@@ -241,11 +241,11 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     ValidationMessageWidget(ValidationProvider validationProvider, String fallbackMessage, int x, int y, int width, int height) {
         super(fallbackMessage, TextWidgetSupport.getDefaultTextWidgetRenderer((byte) -66));
         try {
-            this.validationProvider = validationProvider;
-            this.fallbackMessage = fallbackMessage;
-            this.setWidgetBounds(height, width, (byte) -77, y, x);
+          this.validationProvider = validationProvider;
+          this.fallbackMessage = fallbackMessage;
+          this.setWidgetBounds(height, width, (byte) -77, y, x);
         } catch (RuntimeException messageInitializationFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageInitializationFailure), "pi.<init>(" + (validationProvider != null ? "{...}" : "null") + ',' + (fallbackMessage != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) messageInitializationFailure), "pi.<init>(" + (validationProvider != null ? "{...}" : "null") + ',' + (fallbackMessage != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 

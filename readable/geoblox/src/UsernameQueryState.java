@@ -8,18 +8,18 @@ final class UsernameQueryState {
 
     public static void clearAccountUsernameResult(boolean methodGuard) {
         if (!methodGuard) {
-            UsernameQueryState.clearAccountUsernameResult(false);
-            pendingAccountUsernameResult = null;
-            return;
+          UsernameQueryState.clearAccountUsernameResult(false);
+          pendingAccountUsernameResult = null;
+          return;
         }
         pendingAccountUsernameResult = null;
     }
 
     final static void handleSessionFlagReset(int methodGuard) {
         if (methodGuard == 11560) {
-            TextHotspotBounds.loginResponseFlagEightSet = false;
-            LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
-            return;
+          TextHotspotBounds.loginResponseFlagEightSet = false;
+          LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+          return;
         }
         introAnimationRunning = false;
         TextHotspotBounds.loginResponseFlagEightSet = false;

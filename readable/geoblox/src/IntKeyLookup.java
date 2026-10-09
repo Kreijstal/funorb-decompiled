@@ -13,7 +13,7 @@ final class IntKeyLookup {
         unachievedSprite = null;
         textTemplateArgumentTypeTwelve = null;
         if (methodGuard != 49) {
-            IntKeyLookup.releaseStaticReferences((byte) 72);
+          IntKeyLookup.releaseStaticReferences((byte) 72);
         }
         meshCameraTransform = null;
     }
@@ -41,49 +41,49 @@ final class IntKeyLookup {
 
     final static ResourceArchive createResourceArchive(int methodGuard, int archiveId, boolean downloadAllGroups, int fileRetentionPolicy, boolean discardPackedGroups, boolean sweepCompletedRequests) {
         try {
-            Object indexDiskCacheOrIoFailure = null;
-            Object groupDiskCache = null;
-            CachedArchiveSource archiveSource = null;
-            ResourceArchive guardResultBeforeReturn = null;
-            ResourceArchive archiveBeforeReturn = null;
-            Throwable caughtFactoryFailure = null;
-            try {
-              if (methodGuard > -49) {
-                guardResultBeforeReturn = (ResourceArchive) null;
-                return guardResultBeforeReturn;
-              }
-              indexDiskCacheOrIoFailure = null;
-              if (ByteShortQuery.archiveTaskDispatcher.cacheDataFile != null) {
-                CacheFileState.cacheDataFile = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheDataFile, 5200, 0);
-                ByteShortQuery.archiveTaskDispatcher.cacheDataFile = null;
-                indexDiskCacheOrIoFailure = new DiskArchiveCache(255, CacheFileState.cacheDataFile, new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
-              }
-              groupDiskCache = null;
-              if (CacheFileState.cacheDataFile != null) {
-                if (TrackedPcmStream.openedCacheIndexFiles == null) {
-                  TrackedPcmStream.openedCacheIndexFiles = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
-                }
-                if (TrackedPcmStream.openedCacheIndexFiles[archiveId] == null) {
-                  TrackedPcmStream.openedCacheIndexFiles[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
-                  ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
-                }
-                groupDiskCache = new DiskArchiveCache(archiveId, CacheFileState.cacheDataFile, TrackedPcmStream.openedCacheIndexFiles[archiveId], 2097152);
-              }
-              archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
-              if (downloadAllGroups) {
-                archiveSource.requestAllGroups(92);
-              }
-              archiveBeforeReturn = new ResourceArchive(archiveSource, discardPackedGroups, fileRetentionPolicy);
-              return archiveBeforeReturn;
-            } catch (java.io.IOException factoryIOException) {
-              caughtFactoryFailure = factoryIOException;
-              indexDiskCacheOrIoFailure = (IOException) (Object) caughtFactoryFailure;
-              throw new RuntimeException(((IOException) (indexDiskCacheOrIoFailure)).toString());
+          Object indexDiskCacheOrIoFailure = null;
+          Object groupDiskCache = null;
+          CachedArchiveSource archiveSource = null;
+          ResourceArchive guardResultBeforeReturn = null;
+          ResourceArchive archiveBeforeReturn = null;
+          Throwable caughtFactoryFailure = null;
+          try {
+            if (methodGuard > -49) {
+              guardResultBeforeReturn = (ResourceArchive) null;
+              return guardResultBeforeReturn;
             }
+            indexDiskCacheOrIoFailure = null;
+            if (ByteShortQuery.archiveTaskDispatcher.cacheDataFile != null) {
+              CacheFileState.cacheDataFile = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheDataFile, 5200, 0);
+              ByteShortQuery.archiveTaskDispatcher.cacheDataFile = null;
+              indexDiskCacheOrIoFailure = new DiskArchiveCache(255, CacheFileState.cacheDataFile, new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.masterCacheIndexFile, 12000, 0), 2097152);
+            }
+            groupDiskCache = null;
+            if (CacheFileState.cacheDataFile != null) {
+              if (TrackedPcmStream.openedCacheIndexFiles == null) {
+                TrackedPcmStream.openedCacheIndexFiles = new BufferedRandomAccessFile[ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles.length];
+              }
+              if (TrackedPcmStream.openedCacheIndexFiles[archiveId] == null) {
+                TrackedPcmStream.openedCacheIndexFiles[archiveId] = new BufferedRandomAccessFile(ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId], 12000, 0);
+                ByteShortQuery.archiveTaskDispatcher.cacheIndexFiles[archiveId] = null;
+              }
+              groupDiskCache = new DiskArchiveCache(archiveId, CacheFileState.cacheDataFile, TrackedPcmStream.openedCacheIndexFiles[archiveId], 2097152);
+            }
+            archiveSource = DequeCursor.archiveCatalog.getArchiveSource(archiveId, (byte) -9, sweepCompletedRequests, (DiskArchiveCache) (indexDiskCacheOrIoFailure), (DiskArchiveCache) (groupDiskCache));
+            if (downloadAllGroups) {
+              archiveSource.requestAllGroups(92);
+            }
+            archiveBeforeReturn = new ResourceArchive(archiveSource, discardPackedGroups, fileRetentionPolicy);
+            return archiveBeforeReturn;
+          } catch (java.io.IOException factoryIOException) {
+            caughtFactoryFailure = factoryIOException;
+            indexDiskCacheOrIoFailure = (IOException) (Object) caughtFactoryFailure;
+            throw new RuntimeException(((IOException) (indexDiskCacheOrIoFailure)).toString());
+          }
         } catch (RuntimeException | Error uncheckedFactoryFailure) {
-            throw uncheckedFactoryFailure;
+          throw uncheckedFactoryFailure;
         } catch (Throwable checkedFactoryFailure) {
-            throw new RuntimeException(checkedFactoryFailure);
+          throw new RuntimeException(checkedFactoryFailure);
         }
     }
 

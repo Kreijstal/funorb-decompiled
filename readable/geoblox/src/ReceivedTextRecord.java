@@ -78,20 +78,20 @@ final class ReceivedTextRecord {
 
     final static int chooseSpawnSpriteKind(int methodGuard) {
         if (methodGuard != 741924304) {
-            return 104;
+          return 104;
         }
         if (!(Math.random() < ContextualRuntimeException.specialSpriteKindProbability)) {
-            return 0;
+          return 0;
         }
         double specialKindRoll = Math.random();
         if (0.13 > specialKindRoll) {
-            return 3;
+          return 3;
         }
         if (specialKindRoll < 0.25) {
-            return 4;
+          return 4;
         }
         if (!(specialKindRoll < 0.65)) {
-            return 2;
+          return 2;
         }
         return 1;
     }
@@ -101,14 +101,14 @@ final class ReceivedTextRecord {
           return 2;
         }
         if (this.recordKind == 2 &&
-            this.recordMetadataByte > 0) {
+          this.recordMetadataByte > 0) {
           return 2;
         }
         if (SpriteState.retentionCategoryOneSourceId == this.sourceLongId) {
           return 1;
         }
         if (MouseWheelInput.primarySocialListState == 2 &&
-            CanvasResizeController.hasPrimarySocialEntry(this.sourceDisplayName, (byte) 89)) {
+          CanvasResizeController.hasPrimarySocialEntry(this.sourceDisplayName, (byte) 89)) {
           return 1;
         }
         if (methodGuard > 113) {
@@ -126,9 +126,9 @@ final class ReceivedTextRecord {
         this.text = RankedListQuery.receivedRecordText;
         this.headerFlagSet = receivedRecordHeaderFlagSet;
         if (retainTemplateReferences) {
-            this.referencedTemplateIds = SessionTextState.receivedTextTemplateReferences;
+          this.referencedTemplateIds = SessionTextState.receivedTextTemplateReferences;
         } else {
-            this.referencedTemplateIds = null;
+          this.referencedTemplateIds = null;
         }
         this.recordIdHigh16 = LoginUiSupport.receivedRecordIdHigh16;
         this.recordMetadataByte = ArchiveIndex.receivedRecordMetadataByte;

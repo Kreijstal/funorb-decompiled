@@ -39,7 +39,7 @@ final class InstrumentPatch extends IntrusiveNode {
           resolvedSample = null;
           for (keyIndex = 0; keyIndex < 128; keyIndex++) {
             if (noteSelectionMask == null ||
-                  noteSelectionMask[keyIndex] != 0) {
+              noteSelectionMask[keyIndex] != 0) {
               encodedSampleId = this.encodedSampleIds[keyIndex];
               if (encodedSampleId != 0) {
                 if (encodedSampleId != previousEncodedSampleId) {
@@ -94,7 +94,7 @@ final class InstrumentPatch extends IntrusiveNode {
 
     public static void releaseStaticReferences(boolean methodGuard) {
         if (!methodGuard) {
-            loginModPowModulus = (java.math.BigInteger) null;
+          loginModPowModulus = (java.math.BigInteger) null;
         }
         activeFullscreenCanvas = null;
         loginModPowModulus = null;
@@ -138,7 +138,7 @@ final class InstrumentPatch extends IntrusiveNode {
 
     final void clearEncodedSampleIds(byte methodGuard) {
         if (methodGuard > -94) {
-            this.pitchOffsetsAndLoopFlag = (short[]) null;
+          this.pitchOffsetsAndLoopFlag = (short[]) null;
         }
         this.encodedSampleIds = null;
     }
@@ -158,7 +158,7 @@ final class InstrumentPatch extends IntrusiveNode {
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (sprites != null &&
-              stripWidth > 0) {
+            stripWidth > 0) {
             leftWidth = sprites[0].fullWidth;
             rightWidth = sprites[2].fullWidth;
             tileWidth = sprites[1].fullWidth;

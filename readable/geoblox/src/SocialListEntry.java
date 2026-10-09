@@ -14,7 +14,7 @@ final class SocialListEntry extends VisualPropertyOverrides {
         AsyncResourceDownloader.archiveNetworkClient.failureCount = 0;
         AsyncResourceDownloader.archiveNetworkClient.failureCode = 0;
         if (methodGuard != -21754) {
-            connectingToUpdateServerText = (String) null;
+          connectingToUpdateServerText = (String) null;
         }
     }
 
@@ -26,9 +26,9 @@ final class SocialListEntry extends VisualPropertyOverrides {
         connectingToUpdateServerText = null;
         quitWarningText = null;
         if (methodGuard != -128) {
-            SocialListEntry.releaseSocialEntryResources((byte) 1);
-            sweetsMusicTrack = null;
-            return;
+          SocialListEntry.releaseSocialEntryResources((byte) 1);
+          sweetsMusicTrack = null;
+          return;
         }
         sweetsMusicTrack = null;
     }

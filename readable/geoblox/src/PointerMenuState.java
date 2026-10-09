@@ -11,10 +11,10 @@ final class PointerMenuState {
 
     public static void releasePointerMenuResources(int methodGuard) {
         if (methodGuard == -1) {
-            smallBoxSprite = null;
-            textTemplateArgumentTypeSix = null;
-            screenOptionThreeStateSprites = null;
-            return;
+          smallBoxSprite = null;
+          textTemplateArgumentTypeSix = null;
+          screenOptionThreeStateSprites = null;
+          return;
         }
         livePointerX = -112;
         smallBoxSprite = null;

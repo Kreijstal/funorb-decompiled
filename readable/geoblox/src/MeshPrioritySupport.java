@@ -12,7 +12,7 @@ final class MeshPrioritySupport {
     public static void releaseStaticReferences(int methodGuard) {
         textTemplateArgumentTypeFourteen = null;
         if (methodGuard != 0) {
-            return;
+          return;
         }
         completedClientFlowToken = null;
         delayedIncomingPackets = null;
@@ -20,35 +20,35 @@ final class MeshPrioritySupport {
 
     final static void updateSessionCookie(String sessionValue, java.applet.Applet applet, int expiryLengthComplement) {
         try {
-            String cookiePrefix = null;
-            String cookieHost = null;
-            String cookieText = null;
+          String cookiePrefix = null;
+          String cookieHost = null;
+          String cookieText = null;
+          try {
+            ScorePopup.sessionCookieOverride = sessionValue;
             try {
-                ScorePopup.sessionCookieOverride = sessionValue;
-                try {
-                    cookiePrefix = applet.getParameter("cookieprefix");
-                    cookieHost = applet.getParameter("cookiehost");
-                    cookieText = cookiePrefix + "session=" + sessionValue + "; version=1; path=/; domain=" + cookieHost;
-                    if (~sessionValue.length() == expiryLengthComplement) {
-                        cookieText = cookieText + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    }
-                    AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieText + "\"", (byte) -92);
-                } catch (Throwable ignoredCookieScriptFailure) {
-                }
-                ByteStorage.updatePageNavigationLinks(applet, 20000000);
-            } catch (RuntimeException cookieUpdateFailure) {
-                throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieUpdateFailure), "va.C(" + (sessionValue != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ',' + expiryLengthComplement + ')');
+              cookiePrefix = applet.getParameter("cookieprefix");
+              cookieHost = applet.getParameter("cookiehost");
+              cookieText = cookiePrefix + "session=" + sessionValue + "; version=1; path=/; domain=" + cookieHost;
+              if (~sessionValue.length() == expiryLengthComplement) {
+                cookieText = cookieText + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              }
+              AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieText + "\"", (byte) -92);
+            } catch (Throwable ignoredCookieScriptFailure) {
             }
+            ByteStorage.updatePageNavigationLinks(applet, 20000000);
+          } catch (RuntimeException cookieUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) cookieUpdateFailure), "va.C(" + (sessionValue != null ? "{...}" : "null") + ',' + (applet != null ? "{...}" : "null") + ',' + expiryLengthComplement + ')');
+          }
         } catch (RuntimeException | Error uncheckedCookieUpdateFailure) {
-            throw uncheckedCookieUpdateFailure;
+          throw uncheckedCookieUpdateFailure;
         } catch (Throwable checkedCookieUpdateFailure) {
-            throw new RuntimeException(checkedCookieUpdateFailure);
+          throw new RuntimeException(checkedCookieUpdateFailure);
         }
     }
 
     final static Sprite[] createSolidCenterSlices(int color, byte methodGuard) {
         if (methodGuard != -112) {
-            completedClientFlowToken = (ClientFlowToken) null;
+          completedClientFlowToken = (ClientFlowToken) null;
         }
         Sprite[] allocatedSlices = new Sprite[9];
         Sprite[] slicesResultAlias = allocatedSlices;

@@ -61,16 +61,16 @@ final class SoftwareRasterizer {
 
     final static void intersectClip(int left, int top, int right, int bottom) {
         if (clipLeft < left) {
-            clipLeft = left;
+          clipLeft = left;
         }
         if (clipTop < top) {
-            clipTop = top;
+          clipTop = top;
         }
         if (clipRight > right) {
-            clipRight = right;
+          clipRight = right;
         }
         if (clipBottom > bottom) {
-            clipBottom = bottom;
+          clipBottom = bottom;
         }
         SoftwareRasterizer.clearScanlineMasks();
     }
@@ -79,9 +79,9 @@ final class SoftwareRasterizer {
         int shadowOffset = 0;
         int shadowAlpha256 = 0;
         for (shadowOffset = 0; shadowOffset < 4; shadowOffset++) {
-            shadowAlpha256 = 128 - (shadowOffset << 5);
-            SoftwareRasterizer.drawHorizontalLineAlpha(x + shadowOffset, y + height + shadowOffset, width, color, shadowAlpha256);
-            SoftwareRasterizer.drawVerticalLineAlpha(x + width + shadowOffset, y + shadowOffset, height + 1, color, shadowAlpha256);
+          shadowAlpha256 = 128 - (shadowOffset << 5);
+          SoftwareRasterizer.drawHorizontalLineAlpha(x + shadowOffset, y + height + shadowOffset, width, color, shadowAlpha256);
+          SoftwareRasterizer.drawVerticalLineAlpha(x + width + shadowOffset, y + shadowOffset, height + 1, color, shadowAlpha256);
         }
     }
 
@@ -102,38 +102,38 @@ final class SoftwareRasterizer {
         int grayLevel = 0;
         int destinationIndexBeforeIncrement = 0;
         if (x < clipLeft) {
-            width = width - (clipLeft - x);
-            x = clipLeft;
+          width = width - (clipLeft - x);
+          x = clipLeft;
         }
         if (x + width > clipRight) {
-            width = clipRight - x;
+          width = clipRight - x;
         }
         if (y < clipTop) {
-            height = height - (clipTop - y);
-            y = clipTop;
+          height = height - (clipTop - y);
+          y = clipTop;
         }
         if (y + height > clipBottom) {
-            height = clipBottom - y;
+          height = clipBottom - y;
         }
         int destinationIndex = x + y * stride;
         if (width > 0) {
-            if (height <= 0) {
-                return;
-            }
-            for (rowIndex = 0; rowIndex < height; rowIndex++) {
-                for (columnIndex = 0; columnIndex < width; columnIndex++) {
-                    destinationColor = framebuffer[destinationIndex];
-                    twiceRed = destinationColor >> 15 & 510;
-                    green = destinationColor >> 8 & 255;
-                    blue = destinationColor & 255;
-                    grayLevel = (blue + twiceRed) / 3 + green >> 1;
-                    destinationIndexBeforeIncrement = destinationIndex;
-                    destinationIndex++;
-                    framebuffer[destinationIndexBeforeIncrement] = (grayLevel << 16) + (grayLevel << 8) + grayLevel;
-                }
-                destinationIndex = destinationIndex + (stride - width);
-            }
+          if (height <= 0) {
             return;
+          }
+          for (rowIndex = 0; rowIndex < height; rowIndex++) {
+            for (columnIndex = 0; columnIndex < width; columnIndex++) {
+              destinationColor = framebuffer[destinationIndex];
+              twiceRed = destinationColor >> 15 & 510;
+              green = destinationColor >> 8 & 255;
+              blue = destinationColor & 255;
+              grayLevel = (blue + twiceRed) / 3 + green >> 1;
+              destinationIndexBeforeIncrement = destinationIndex;
+              destinationIndex++;
+              framebuffer[destinationIndexBeforeIncrement] = (grayLevel << 16) + (grayLevel << 8) + grayLevel;
+            }
+            destinationIndex = destinationIndex + (stride - width);
+          }
+          return;
         }
     }
 
@@ -177,8 +177,8 @@ final class SoftwareRasterizer {
           }
           if (x + width > clipLeft) {
             if (x < clipRight &&
-                y + height >= clipTop &&
-                y < clipBottom) {
+              y + height >= clipTop &&
+              y < clipBottom) {
               upperLeftOuterRowCenterIndex = leftCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
               upperRightOuterRowCenterIndex = rightCornerCenterX + (topCornerCenterY - cornerRadius) * stride;
               upperLeftInnerRowCenterIndex = leftCornerCenterX + topCornerCenterY * stride;
@@ -192,9 +192,9 @@ final class SoftwareRasterizer {
               radiusSquared = cornerRadius * cornerRadius;
               xAdjustedSquaredDistance = radiusSquared - arcMajorOffset;
               if (x >= clipLeft &&
-                  x + width < clipRight &&
-                  y >= clipTop &&
-                  y + height < clipBottom) {
+                x + width < clipRight &&
+                y >= clipTop &&
+                y + height < clipBottom) {
                 for (edgePixelIndex = upperLeftInnerRowCenterIndex; edgePixelIndex <= lowerLeftInnerRowCenterIndex; edgePixelIndex = edgePixelIndex + stride) {
                   framebuffer[edgePixelIndex - arcMajorOffset] = color;
                 }
@@ -260,35 +260,35 @@ final class SoftwareRasterizer {
                   return;
                 }
                 if (topCornerCenterY - arcMajorOffset >= clipTop &&
-                    topCornerCenterY - arcMajorOffset < clipBottom) {
+                  topCornerCenterY - arcMajorOffset < clipBottom) {
                   if (leftCornerCenterX - arcMinorOffset >= clipLeft &&
-                      leftCornerCenterX - arcMinorOffset < clipRight) {
+                    leftCornerCenterX - arcMinorOffset < clipRight) {
                     framebuffer[upperLeftOuterRowCenterIndex - arcMinorOffset] = color;
                   }
                   if (rightCornerCenterX + arcMinorOffset >= clipLeft &&
-                      rightCornerCenterX + arcMinorOffset < clipRight) {
+                    rightCornerCenterX + arcMinorOffset < clipRight) {
                     framebuffer[upperRightOuterRowCenterIndex + arcMinorOffset] = color;
                   }
                 }
                 if (topCornerCenterY - arcMinorOffset >= clipTop &&
-                    topCornerCenterY - arcMinorOffset < clipBottom) {
+                  topCornerCenterY - arcMinorOffset < clipBottom) {
                   if (leftCornerCenterX - arcMajorOffset >= clipLeft &&
-                      leftCornerCenterX - arcMajorOffset < clipRight) {
+                    leftCornerCenterX - arcMajorOffset < clipRight) {
                     framebuffer[upperLeftInnerRowCenterIndex - arcMajorOffset] = color;
                   }
                   if (rightCornerCenterX + arcMajorOffset >= clipLeft &&
-                      rightCornerCenterX + arcMajorOffset < clipRight) {
+                    rightCornerCenterX + arcMajorOffset < clipRight) {
                     framebuffer[upperRightInnerRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
                 if (bottomCornerCenterY + arcMinorOffset >= clipTop &&
-                    bottomCornerCenterY + arcMinorOffset < clipBottom) {
+                  bottomCornerCenterY + arcMinorOffset < clipBottom) {
                   if (leftCornerCenterX - arcMajorOffset >= clipLeft &&
-                      leftCornerCenterX - arcMajorOffset < clipRight) {
+                    leftCornerCenterX - arcMajorOffset < clipRight) {
                     framebuffer[lowerLeftInnerRowCenterIndex - arcMajorOffset] = color;
                   }
                   if (rightCornerCenterX + arcMajorOffset >= clipLeft &&
-                      rightCornerCenterX + arcMajorOffset < clipRight) {
+                    rightCornerCenterX + arcMajorOffset < clipRight) {
                     framebuffer[lowerRightInnerRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
@@ -299,7 +299,7 @@ final class SoftwareRasterizer {
                   continue;
                 }
                 if (leftCornerCenterX - arcMinorOffset >= clipLeft &&
-                    leftCornerCenterX - arcMinorOffset < clipRight) {
+                  leftCornerCenterX - arcMinorOffset < clipRight) {
                   framebuffer[lowerLeftOuterRowCenterIndex - arcMinorOffset] = color;
                 }
                 if (rightCornerCenterX + arcMinorOffset < clipLeft) {
@@ -491,31 +491,31 @@ final class SoftwareRasterizer {
         int blendedColor = 0;
         int destinationIndexBeforeIncrement = 0;
         if (y >= clipTop) {
-            if (y >= clipBottom) {
-                return;
-            }
-            if (x < clipLeft) {
-                length = length - (clipLeft - x);
-                x = clipLeft;
-            }
-            if (x + length > clipRight) {
-                length = clipRight - x;
-            }
-            destinationWeight256 = 256 - alpha256;
-            sourceRedWeighted = (color >> 16 & 255) * alpha256;
-            sourceGreenWeighted = (color >> 8 & 255) * alpha256;
-            sourceBlueWeighted = (color & 255) * alpha256;
-            destinationIndex = x + y * stride;
-            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
-                destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
-                destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
-                destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
-                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                framebuffer[destinationIndexBeforeIncrement] = blendedColor;
-            }
+          if (y >= clipBottom) {
             return;
+          }
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
+          }
+          if (x + length > clipRight) {
+            length = clipRight - x;
+          }
+          destinationWeight256 = 256 - alpha256;
+          sourceRedWeighted = (color >> 16 & 255) * alpha256;
+          sourceGreenWeighted = (color >> 8 & 255) * alpha256;
+          sourceBlueWeighted = (color & 255) * alpha256;
+          destinationIndex = x + y * stride;
+          for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+            destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+            destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+            destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+            blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[destinationIndexBeforeIncrement] = blendedColor;
+          }
+          return;
         }
     }
 
@@ -531,30 +531,30 @@ final class SoftwareRasterizer {
         int destinationBlueWeighted = 0;
         int blendedColor = 0;
         if (x >= clipLeft) {
-            if (x >= clipRight) {
-                return;
-            }
-            if (y < clipTop) {
-                length = length - (clipTop - y);
-                y = clipTop;
-            }
-            if (y + length > clipBottom) {
-                length = clipBottom - y;
-            }
-            destinationWeight256 = 256 - alpha256;
-            sourceRedWeighted = (color >> 16 & 255) * alpha256;
-            sourceGreenWeighted = (color >> 8 & 255) * alpha256;
-            sourceBlueWeighted = (color & 255) * alpha256;
-            destinationIndex = x + y * stride;
-            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
-                destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
-                destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
-                destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
-                blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
-                framebuffer[destinationIndex] = blendedColor;
-                destinationIndex = destinationIndex + stride;
-            }
+          if (x >= clipRight) {
             return;
+          }
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
+          }
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
+          }
+          destinationWeight256 = 256 - alpha256;
+          sourceRedWeighted = (color >> 16 & 255) * alpha256;
+          sourceGreenWeighted = (color >> 8 & 255) * alpha256;
+          sourceBlueWeighted = (color & 255) * alpha256;
+          destinationIndex = x + y * stride;
+          for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+            destinationRedWeighted = (framebuffer[destinationIndex] >> 16 & 255) * destinationWeight256;
+            destinationGreenWeighted = (framebuffer[destinationIndex] >> 8 & 255) * destinationWeight256;
+            destinationBlueWeighted = (framebuffer[destinationIndex] & 255) * destinationWeight256;
+            blendedColor = (sourceRedWeighted + destinationRedWeighted >> 8 << 16) + (sourceGreenWeighted + destinationGreenWeighted >> 8 << 8) + (sourceBlueWeighted + destinationBlueWeighted >> 8);
+            framebuffer[destinationIndex] = blendedColor;
+            destinationIndex = destinationIndex + stride;
+          }
+          return;
         }
     }
 
@@ -569,11 +569,11 @@ final class SoftwareRasterizer {
 
     final static void setPixel(int x, int y, int color) {
         if (x >= clipLeft) {
-            if (y < clipTop || x >= clipRight || y >= clipBottom) {
-                return;
-            }
-            framebuffer[x + y * stride] = color;
+          if (y < clipTop || x >= clipRight || y >= clipBottom) {
             return;
+          }
+          framebuffer[x + y * stride] = color;
+          return;
         }
     }
 
@@ -660,7 +660,7 @@ final class SoftwareRasterizer {
         while (rowY < centerY) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
-                xAdjustedSquaredDistance > radiusSquared) {
+              xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = centerX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -741,28 +741,28 @@ final class SoftwareRasterizer {
         int negativeColumnCounter = 0;
         int destinationIndexBeforeIncrement = 0;
         if (x < clipLeft) {
-            width = width - (clipLeft - x);
-            x = clipLeft;
+          width = width - (clipLeft - x);
+          x = clipLeft;
         }
         if (y < clipTop) {
-            height = height - (clipTop - y);
-            y = clipTop;
+          height = height - (clipTop - y);
+          y = clipTop;
         }
         if (x + width > clipRight) {
-            width = clipRight - x;
+          width = clipRight - x;
         }
         if (y + height > clipBottom) {
-            height = clipBottom - y;
+          height = clipBottom - y;
         }
         int destinationRowSkip = stride - width;
         int destinationIndex = x + y * stride;
         for (negativeRowCounter = -height; negativeRowCounter < 0; negativeRowCounter++) {
-            for (negativeColumnCounter = -width; negativeColumnCounter < 0; negativeColumnCounter++) {
-                destinationIndexBeforeIncrement = destinationIndex;
-                destinationIndex++;
-                framebuffer[destinationIndexBeforeIncrement] = color;
-            }
-            destinationIndex = destinationIndex + destinationRowSkip;
+          for (negativeColumnCounter = -width; negativeColumnCounter < 0; negativeColumnCounter++) {
+            destinationIndexBeforeIncrement = destinationIndex;
+            destinationIndex++;
+            framebuffer[destinationIndexBeforeIncrement] = color;
+          }
+          destinationIndex = destinationIndex + destinationRowSkip;
         }
     }
 
@@ -770,21 +770,21 @@ final class SoftwareRasterizer {
         int rowStartIndex = 0;
         int pixelOffset = 0;
         if (y >= clipTop) {
-            if (y >= clipBottom) {
-                return;
-            }
-            if (x < clipLeft) {
-                length = length - (clipLeft - x);
-                x = clipLeft;
-            }
-            if (x + length > clipRight) {
-                length = clipRight - x;
-            }
-            rowStartIndex = x + y * stride;
-            for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
-                framebuffer[rowStartIndex + pixelOffset] = color;
-            }
+          if (y >= clipBottom) {
             return;
+          }
+          if (x < clipLeft) {
+            length = length - (clipLeft - x);
+            x = clipLeft;
+          }
+          if (x + length > clipRight) {
+            length = clipRight - x;
+          }
+          rowStartIndex = x + y * stride;
+          for (pixelOffset = 0; pixelOffset < length; pixelOffset++) {
+            framebuffer[rowStartIndex + pixelOffset] = color;
+          }
+          return;
         }
     }
 
@@ -842,7 +842,7 @@ final class SoftwareRasterizer {
         while (rowY < centerY) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
-                xAdjustedSquaredDistance > radiusSquared) {
+              xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = centerX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -954,7 +954,7 @@ final class SoftwareRasterizer {
           while (startY <= endY) {
             minorAxisPixel = startX >> 16;
             if (minorAxisPixel >= clipLeft &&
-                minorAxisPixel < clipRight) {
+              minorAxisPixel < clipRight) {
               framebuffer[minorAxisPixel + startY * stride] = color;
             }
             startX = startX + minorAxisStepQ16;
@@ -977,7 +977,7 @@ final class SoftwareRasterizer {
         while (startX <= endX) {
           yPixelForXMajorLine = startY >> 16;
           if (yPixelForXMajorLine >= clipTop &&
-              yPixelForXMajorLine < clipBottom) {
+            yPixelForXMajorLine < clipBottom) {
             framebuffer[startX + yPixelForXMajorLine * stride] = color;
           }
           startY = startY + yStepPerXQ16;
@@ -1008,8 +1008,8 @@ final class SoftwareRasterizer {
           }
           if (centerX + radius >= clipLeft) {
             if (centerX - radius < clipRight &&
-                centerY + radius >= clipTop &&
-                centerY - radius < clipBottom) {
+              centerY + radius >= clipTop &&
+              centerY - radius < clipBottom) {
               upperMinorRowCenterIndex = centerX + centerY * stride;
               lowerMinorRowCenterIndex = upperMinorRowCenterIndex;
               upperMajorRowCenterIndex = upperMinorRowCenterIndex - radius * stride;
@@ -1019,9 +1019,9 @@ final class SoftwareRasterizer {
               radius = radius * radius;
               xAdjustedSquaredDistance = radius - arcMajorOffset;
               if (centerX - arcMajorOffset >= clipLeft &&
-                  centerX + arcMajorOffset < clipRight &&
-                  centerY - arcMajorOffset >= clipTop &&
-                  centerY + arcMajorOffset < clipBottom) {
+                centerX + arcMajorOffset < clipRight &&
+                centerY - arcMajorOffset >= clipTop &&
+                centerY + arcMajorOffset < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                 framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                 framebuffer[upperMajorRowCenterIndex] = color;
@@ -1052,13 +1052,13 @@ final class SoftwareRasterizer {
                 }
               }
               if (centerX - arcMajorOffset >= clipLeft &&
-                  centerY >= clipTop &&
-                  centerY < clipBottom) {
+                centerY >= clipTop &&
+                centerY < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
               }
               if (centerX + arcMajorOffset < clipRight &&
-                  centerY >= clipTop &&
-                  centerY < clipBottom) {
+                centerY >= clipTop &&
+                centerY < clipBottom) {
                 framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
               }
               if (centerY - arcMajorOffset >= clipTop) {
@@ -1066,28 +1066,28 @@ final class SoftwareRasterizer {
                   if (centerX < clipRight) {
                     framebuffer[upperMajorRowCenterIndex] = color;
                     if (centerY + arcMajorOffset < clipBottom &&
-                        centerX >= clipLeft &&
-                        centerX < clipRight) {
+                      centerX >= clipLeft &&
+                      centerX < clipRight) {
                       framebuffer[lowerMajorRowCenterIndex] = color;
                     }
                   } else {
                     if (centerY + arcMajorOffset < clipBottom &&
-                        centerX >= clipLeft &&
-                        centerX < clipRight) {
+                      centerX >= clipLeft &&
+                      centerX < clipRight) {
                       framebuffer[lowerMajorRowCenterIndex] = color;
                     }
                   }
                 } else {
                   if (centerY + arcMajorOffset < clipBottom &&
-                      centerX >= clipLeft &&
-                      centerX < clipRight) {
+                    centerX >= clipLeft &&
+                    centerX < clipRight) {
                     framebuffer[lowerMajorRowCenterIndex] = color;
                   }
                 }
               } else {
                 if (centerY + arcMajorOffset < clipBottom &&
-                    centerX >= clipLeft &&
-                    centerX < clipRight) {
+                  centerX >= clipLeft &&
+                  centerX < clipRight) {
                   framebuffer[lowerMajorRowCenterIndex] = color;
                 }
               }
@@ -1107,35 +1107,35 @@ final class SoftwareRasterizer {
                   return;
                 }
                 if (centerY - arcMajorOffset >= clipTop &&
-                    centerY - arcMajorOffset < clipBottom) {
+                  centerY - arcMajorOffset < clipBottom) {
                   if (centerX - arcMinorOffset >= clipLeft &&
-                      centerX - arcMinorOffset < clipRight) {
+                    centerX - arcMinorOffset < clipRight) {
                     framebuffer[upperMajorRowCenterIndex - arcMinorOffset] = color;
                   }
                   if (centerX + arcMinorOffset >= clipLeft &&
-                      centerX + arcMinorOffset < clipRight) {
+                    centerX + arcMinorOffset < clipRight) {
                     framebuffer[upperMajorRowCenterIndex + arcMinorOffset] = color;
                   }
                 }
                 if (centerY - arcMinorOffset >= clipTop &&
-                    centerY - arcMinorOffset < clipBottom) {
+                  centerY - arcMinorOffset < clipBottom) {
                   if (centerX - arcMajorOffset >= clipLeft &&
-                      centerX - arcMajorOffset < clipRight) {
+                    centerX - arcMajorOffset < clipRight) {
                     framebuffer[upperMinorRowCenterIndex - arcMajorOffset] = color;
                   }
                   if (centerX + arcMajorOffset >= clipLeft &&
-                      centerX + arcMajorOffset < clipRight) {
+                    centerX + arcMajorOffset < clipRight) {
                     framebuffer[upperMinorRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
                 if (centerY + arcMinorOffset >= clipTop &&
-                    centerY + arcMinorOffset < clipBottom) {
+                  centerY + arcMinorOffset < clipBottom) {
                   if (centerX - arcMajorOffset >= clipLeft &&
-                      centerX - arcMajorOffset < clipRight) {
+                    centerX - arcMajorOffset < clipRight) {
                     framebuffer[lowerMinorRowCenterIndex - arcMajorOffset] = color;
                   }
                   if (centerX + arcMajorOffset >= clipLeft &&
-                      centerX + arcMajorOffset < clipRight) {
+                    centerX + arcMajorOffset < clipRight) {
                     framebuffer[lowerMinorRowCenterIndex + arcMajorOffset] = color;
                   }
                 }
@@ -1146,7 +1146,7 @@ final class SoftwareRasterizer {
                   continue;
                 }
                 if (centerX - arcMinorOffset >= clipLeft &&
-                    centerX - arcMinorOffset < clipRight) {
+                  centerX - arcMinorOffset < clipRight) {
                   framebuffer[lowerMajorRowCenterIndex - arcMinorOffset] = color;
                 }
                 if (centerX + arcMinorOffset < clipLeft) {
@@ -1176,36 +1176,36 @@ final class SoftwareRasterizer {
         int destinationIndex = 0;
         int unrolledThresholdOrPixelCount = stride * framebufferHeight - 7;
         while (destinationIndex < unrolledThresholdOrPixelCount) {
-            firstUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[firstUnrolledIndexBeforeIncrement] = 0;
-            secondUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[secondUnrolledIndexBeforeIncrement] = 0;
-            thirdUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[thirdUnrolledIndexBeforeIncrement] = 0;
-            fourthUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[fourthUnrolledIndexBeforeIncrement] = 0;
-            fifthUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[fifthUnrolledIndexBeforeIncrement] = 0;
-            sixthUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[sixthUnrolledIndexBeforeIncrement] = 0;
-            seventhUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[seventhUnrolledIndexBeforeIncrement] = 0;
-            eighthUnrolledIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[eighthUnrolledIndexBeforeIncrement] = 0;
+          firstUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[firstUnrolledIndexBeforeIncrement] = 0;
+          secondUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[secondUnrolledIndexBeforeIncrement] = 0;
+          thirdUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[thirdUnrolledIndexBeforeIncrement] = 0;
+          fourthUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[fourthUnrolledIndexBeforeIncrement] = 0;
+          fifthUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[fifthUnrolledIndexBeforeIncrement] = 0;
+          sixthUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[sixthUnrolledIndexBeforeIncrement] = 0;
+          seventhUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[seventhUnrolledIndexBeforeIncrement] = 0;
+          eighthUnrolledIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[eighthUnrolledIndexBeforeIncrement] = 0;
         }
         unrolledThresholdOrPixelCount += 7;
         while (destinationIndex < unrolledThresholdOrPixelCount) {
-            tailIndexBeforeIncrement = destinationIndex;
-            destinationIndex++;
-            framebuffer[tailIndexBeforeIncrement] = 0;
+          tailIndexBeforeIncrement = destinationIndex;
+          destinationIndex++;
+          framebuffer[tailIndexBeforeIncrement] = 0;
         }
     }
 
@@ -1322,7 +1322,7 @@ final class SoftwareRasterizer {
         while (rowY < topCornerCenterYOrUpperHalfEnd) {
           while (true) {
             if (yAdjustedSquaredDistance > radiusSquared &&
-                xAdjustedSquaredDistance > radiusSquared) {
+              xAdjustedSquaredDistance > radiusSquared) {
               spanLeft = leftCornerCenterX - xExtent + 1;
               if (spanLeft < clipLeft) {
                 spanLeft = clipLeft;
@@ -1415,16 +1415,16 @@ final class SoftwareRasterizer {
 
     final static void setClip(int left, int top, int right, int bottom) {
         if (left < 0) {
-            left = 0;
+          left = 0;
         }
         if (top < 0) {
-            top = 0;
+          top = 0;
         }
         if (right > stride) {
-            right = stride;
+          right = stride;
         }
         if (bottom > framebufferHeight) {
-            bottom = framebufferHeight;
+          bottom = framebufferHeight;
         }
         clipLeft = left;
         clipTop = top;
@@ -1488,7 +1488,7 @@ final class SoftwareRasterizer {
         int greenSumAfterRemoval;
         int blueSumAfterRemoval;
         if (blurColumnRedSums == null ||
-              !(blurColumnRedSums.length >= regionWidth)) {
+          !(blurColumnRedSums.length >= regionWidth)) {
           blurColumnRedSums = new int[regionWidth];
           blurColumnGreenSums = new int[regionWidth];
           blurColumnBlueSums = new int[regionWidth];
@@ -1686,24 +1686,24 @@ final class SoftwareRasterizer {
         int destinationIndex = 0;
         int pixelOffset = 0;
         if (x >= clipLeft) {
-            if (x >= clipRight) {
-                return;
-            }
-            if (y < clipTop) {
-                length = length - (clipTop - y);
-                y = clipTop;
-            }
-            if (y + length > clipBottom) {
-                length = clipBottom - y;
-            }
-            destinationIndex = x + y * stride;
-            pixelOffset = 0;
-            while (pixelOffset < length) {
-                framebuffer[destinationIndex] = color;
-                pixelOffset++;
-                destinationIndex = destinationIndex + stride;
-            }
+          if (x >= clipRight) {
             return;
+          }
+          if (y < clipTop) {
+            length = length - (clipTop - y);
+            y = clipTop;
+          }
+          if (y + length > clipBottom) {
+            length = clipBottom - y;
+          }
+          destinationIndex = x + y * stride;
+          pixelOffset = 0;
+          while (pixelOffset < length) {
+            framebuffer[destinationIndex] = color;
+            pixelOffset++;
+            destinationIndex = destinationIndex + stride;
+          }
+          return;
         }
     }
 

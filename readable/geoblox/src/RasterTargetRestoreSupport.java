@@ -11,20 +11,20 @@ final class RasterTargetRestoreSupport {
         highscoreNameTable = null;
         resumeGameText = null;
         if (!methodGuard) {
-            resumeGameText = (String) null;
+          resumeGameText = (String) null;
         }
     }
 
     final static void restoreRasterTarget(boolean returnToPool) {
         RasterTargetSnapshot rasterSnapshot = (RasterTargetSnapshot) (MatchingTextValidator.rasterTargetStack.removeLast(1));
         if (rasterSnapshot == null) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         SoftwareRasterizer.setRasterTarget(rasterSnapshot.pixels, rasterSnapshot.stride, rasterSnapshot.framebufferHeight);
         SoftwareRasterizer.setClip(rasterSnapshot.clipLeft, rasterSnapshot.clipTop, rasterSnapshot.clipRight, rasterSnapshot.clipBottom);
         rasterSnapshot.pixels = null;
         if (!returnToPool) {
-            return;
+          return;
         }
         SharedBufferPools.rasterSnapshotPool.addLast(-110, rasterSnapshot);
     }
@@ -34,7 +34,7 @@ final class RasterTargetRestoreSupport {
         resumeGameText = "Resume Game";
         highscoreNameTable = new HighscoreNameEntry[255];
         for (highscoreNameIndex = 0; highscoreNameIndex < highscoreNameTable.length; highscoreNameIndex++) {
-            highscoreNameTable[highscoreNameIndex] = new HighscoreNameEntry();
+          highscoreNameTable[highscoreNameIndex] = new HighscoreNameEntry();
         }
     }
 }

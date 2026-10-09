@@ -110,20 +110,20 @@ final class VorbisResidue {
         this.classbookIndex = MusicDecoder.readBits(8);
         int[] cascadeMasks = new int[this.classificationCount];
         for (classificationIndexOrUnusedPassCursorSnapshot = 0; classificationIndexOrUnusedPassCursorSnapshot < this.classificationCount; classificationIndexOrUnusedPassCursorSnapshot++) {
-            highCascadeBits = 0;
-            lowCascadeBits = MusicDecoder.readBits(3);
-            highCascadePresentValue = MusicDecoder.readBit() != 0 ? 1 : 0;
-            if (highCascadePresentValue != 0) {
-                highCascadeBits = MusicDecoder.readBits(5);
-            }
-            cascadeMasks[classificationIndexOrUnusedPassCursorSnapshot] = highCascadeBits << 3 | lowCascadeBits;
+          highCascadeBits = 0;
+          lowCascadeBits = MusicDecoder.readBits(3);
+          highCascadePresentValue = MusicDecoder.readBit() != 0 ? 1 : 0;
+          if (highCascadePresentValue != 0) {
+            highCascadeBits = MusicDecoder.readBits(5);
+          }
+          cascadeMasks[classificationIndexOrUnusedPassCursorSnapshot] = highCascadeBits << 3 | lowCascadeBits;
         }
         this.passBookIndices = new int[this.classificationCount * 8];
         int passBookTableIndex = 0;
         unusedInitialPassBookTableIndexSnapshot = passBookTableIndex;
         while (passBookTableIndex < this.classificationCount * 8) {
-            this.passBookIndices[passBookTableIndex] = (cascadeMasks[passBookTableIndex >> 3] & 1 << (passBookTableIndex & 7)) != 0 ? MusicDecoder.readBits(8) : -1;
-            passBookTableIndex++;
+          this.passBookIndices[passBookTableIndex] = (cascadeMasks[passBookTableIndex >> 3] & 1 << (passBookTableIndex & 7)) != 0 ? MusicDecoder.readBits(8) : -1;
+          passBookTableIndex++;
         }
     }
 }

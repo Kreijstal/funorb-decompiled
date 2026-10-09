@@ -21,9 +21,9 @@ abstract class PcmStream extends IntrusiveNode {
 
     final void mixOrSkip(int[] destination, int destinationOffset, int frameCount) {
         if (this.activeForMixing) {
-            this.mixInto(destination, destinationOffset, frameCount);
+          this.mixInto(destination, destinationOffset, frameCount);
         } else {
-            this.skipFrames(frameCount);
+          this.skipFrames(frameCount);
         }
     }
 

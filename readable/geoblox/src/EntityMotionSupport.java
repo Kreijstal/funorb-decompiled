@@ -64,15 +64,15 @@ final class EntityMotionSupport {
           }
           candidateLength = candidateName.length();
           if (candidateLength >= 1 &&
-              candidateLength <= 12) {
+            candidateLength <= 12) {
             normalizedName = ResizableDialog.normalizeSessionName(candidateName, 12);
             if (methodGuard != 2) {
               EntityMotionSupport.releaseStaticReferences((byte) 112);
             }
             if (normalizedName != null &&
-                normalizedName.length() >= 1) {
+              normalizedName.length() >= 1) {
               if (!NameCharacterSupport.isNameSeparator((byte) -32, normalizedName.charAt(0)) &&
-                  !NameCharacterSupport.isNameSeparator((byte) -75, normalizedName.charAt(-1 + normalizedName.length()))) {
+                !NameCharacterSupport.isNameSeparator((byte) -75, normalizedName.charAt(-1 + normalizedName.length()))) {
                 consecutiveSeparators = 0;
                 for (characterIndex = 0; characterIndex < candidateName.length(); characterIndex++) {
                   characterCode = candidateName.charAt(characterIndex);
@@ -82,7 +82,7 @@ final class EntityMotionSupport {
                     consecutiveSeparators = 0;
                   }
                   if (2 <= consecutiveSeparators &&
-                      !allowRepeatedSeparators) {
+                    !allowRepeatedSeparators) {
                     repeatedSeparatorMessageBeforeReturn = MessageDialogSupport.createDoubleSpaceAlertText;
                     return repeatedSeparatorMessageBeforeReturn;
                   }
@@ -221,7 +221,7 @@ final class EntityMotionSupport {
                   neighborIndexOrKind2Snapshot = wasKind2IntSnapshot;
                   EntityContactSupport.linkEntityAtMaskContacts(-1, ValidationIconWidget.rotatedEntityScreenY, movingEntity, DialogLayer.rotatedEntityScreenX);
                   if (neighborIndexOrKind2Snapshot == 0 ||
-                      movingEntity.entitySpriteKindId == 2) {
+                    movingEntity.entitySpriteKindId == 2) {
                     if (movingEntity.entitySpriteKindId != 2) {
                       movingEntity.spriteAngleRadians = movingEntity.spriteAngleRadians - boardAngleRadians;
                     }
@@ -265,7 +265,7 @@ final class EntityMotionSupport {
                   movingEntityMovesOutwardIntSnapshot = (!(movingCenterOffsetY * movingCenterOffsetY + movingCenterOffsetX * movingCenterOffsetX < movingNextCenterOffsetYThenSquared + movingNextCenterOffsetXThenSquared)) ? 0 : 1;
                   movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
                   if (contactedEntityMovesOutwardInt != 0 &&
-                      movingEntityMovesOutwardInt != 0) {
+                    movingEntityMovesOutwardInt != 0) {
                     midpointCenterOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
                     midpointCenterOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
                     midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(midpointCenterOffsetX * midpointCenterOffsetX + midpointCenterOffsetY * midpointCenterOffsetY));
@@ -284,7 +284,7 @@ final class EntityMotionSupport {
                   inwardOffsetY = 240.0f - movingEntity.positionY;
                   sharedVelocityXOrCrossProduct = -(inwardOffsetY * movingEntity.positionX) + movingEntity.positionY * inwardOffsetX;
                   if (movingEntity.relatedEntityCount == 0 &&
-                      sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
+                    sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
                     movingEntity.velocityX = inwardOffsetX;
                     movingEntity.velocityY = inwardOffsetY;
                     sharedVelocityYOrDirectionScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));

@@ -94,7 +94,7 @@ final class AchievementProtocolSupport {
         createDisplayNameTooltipText = null;
         loadingSoundEffectsText = null;
         if (methodGuard != 0) {
-            createDisplayNameTooltipText = (String) null;
+          createDisplayNameTooltipText = (String) null;
         }
     }
 

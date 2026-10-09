@@ -45,20 +45,20 @@ final class IterableNodeHashTable implements Iterable {
     final void put(long key, int methodGuard, IntrusiveNode node) {
         IntrusiveNode bucketSentinel = null;
         try {
-            if (node.previousNode != null) {
-                node.unlinkNode(false);
-            }
-            bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
-            node.previousNode = bucketSentinel.previousNode;
-            if (methodGuard > -48) {
-                transformedMeshNormalZ = (int[]) null;
-            }
-            node.nextNode = bucketSentinel;
-            node.previousNode.nextNode = node;
-            node.nodeKey = key;
-            node.nextNode.previousNode = node;
+          if (node.previousNode != null) {
+            node.unlinkNode(false);
+          }
+          bucketSentinel = this.bucketSentinels[(int)((long)(-1 + this.bucketCount) & key)];
+          node.previousNode = bucketSentinel.previousNode;
+          if (methodGuard > -48) {
+            transformedMeshNormalZ = (int[]) null;
+          }
+          node.nextNode = bucketSentinel;
+          node.previousNode.nextNode = node;
+          node.nodeKey = key;
+          node.nextNode.previousNode = node;
         } catch (RuntimeException insertionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "gi.H(" + key + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) insertionFailure), "gi.H(" + key + ',' + methodGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -149,79 +149,79 @@ final class IterableNodeHashTable implements Iterable {
 
     final static void reportClientError(Throwable failure, String context, byte methodGuard) {
         try {
-            PlatformTaskDispatcher dispatcherSnapshot;
-            int urlRequestGuard;
-            java.net.URL unusedUrlReceiverBeforeIdentity;
-            java.net.URL unusedUrlConstructorReceiverBeforeIdentity;
-            java.net.URL appletCodeBase;
-            StringBuilder errorUrlPrefix;
-            java.net.URL unusedUrlReceiverAfterIdentity;
-            java.net.URL unusedUrlConstructorReceiverAfterIdentity;
-            String reportUserIdentity;
-            Throwable caughtReportFailure = null;
-            String errorDescription = null;
-            Exception ignoredReportFailure = null;
-            PlatformTask urlStreamTask = null;
-            DataInputStream responseStream = null;
-            String colonEscapedDescription = null;
-            String atSignEscapedDescription = null;
-            String ampersandEscapedDescription = null;
-            String hashEscapedDescription = null;
-            try {
-              errorDescription = "";
-              if (failure != null) {
-                errorDescription = GameApplet.compactExceptionTrace(failure, methodGuard - 124);
-              }
-              if (context != null) {
-                if (failure != null) {
-                  errorDescription = errorDescription + " | ";
-                }
-                errorDescription = errorDescription + context;
-              }
-              DequeCursor.printClientErrorMessage(errorDescription, (byte) -75);
-              colonEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(errorDescription, "%3a", true, ":");
-              atSignEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(colonEscapedDescription, "%40", true, "@");
-              ampersandEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(atSignEscapedDescription, "%26", true, "&");
-              hashEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(ampersandEscapedDescription, "%23", true, "#");
-              if (null == GameScreen.errorReportApplet) {
-                return;
-              }
-              dispatcherSnapshot = SpriteButtonRenderer.appletTaskDispatcher;
-              urlRequestGuard = -14;
-              unusedUrlReceiverBeforeIdentity = null;
-              unusedUrlConstructorReceiverBeforeIdentity = null;
-              appletCodeBase = GameScreen.errorReportApplet.getCodeBase();
-              errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.errorReportGameCrc).append("&u=");
-              if (null == UsernameAvailabilityValidator.errorReportUserIdentityText) {
-                unusedUrlReceiverAfterIdentity = null;
-                unusedUrlConstructorReceiverAfterIdentity = null;
-                reportUserIdentity = "" + CheckboxWidget.errorReportLoginLongValue;
-              } else {
-                unusedUrlReceiverAfterIdentity = null;
-                unusedUrlConstructorReceiverAfterIdentity = null;
-                reportUserIdentity = UsernameAvailabilityValidator.errorReportUserIdentityText;
-              }
-              urlStreamTask = ((PlatformTaskDispatcher) (Object) dispatcherSnapshot).requestUrlStream(urlRequestGuard, new java.net.URL(appletCodeBase, ((StringBuilder) (Object) errorUrlPrefix).append(reportUserIdentity).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(hashEscapedDescription).toString()));
-              while (urlStreamTask.status == 0) {
-                ByteTextDecodingSupport.sleepMillis(methodGuard - 125, 1L);
-              }
-              if (urlStreamTask.status == 1) {
-                responseStream = (DataInputStream) (urlStreamTask.result);
-                responseStream.read();
-                responseStream.close();
-              }
-            } catch (java.lang.Exception reportFailureAtCatch) {
-              caughtReportFailure = reportFailureAtCatch;
-              ignoredReportFailure = (Exception) (Object) caughtReportFailure;
+          PlatformTaskDispatcher dispatcherSnapshot;
+          int urlRequestGuard;
+          java.net.URL unusedUrlReceiverBeforeIdentity;
+          java.net.URL unusedUrlConstructorReceiverBeforeIdentity;
+          java.net.URL appletCodeBase;
+          StringBuilder errorUrlPrefix;
+          java.net.URL unusedUrlReceiverAfterIdentity;
+          java.net.URL unusedUrlConstructorReceiverAfterIdentity;
+          String reportUserIdentity;
+          Throwable caughtReportFailure = null;
+          String errorDescription = null;
+          Exception ignoredReportFailure = null;
+          PlatformTask urlStreamTask = null;
+          DataInputStream responseStream = null;
+          String colonEscapedDescription = null;
+          String atSignEscapedDescription = null;
+          String ampersandEscapedDescription = null;
+          String hashEscapedDescription = null;
+          try {
+            errorDescription = "";
+            if (failure != null) {
+              errorDescription = GameApplet.compactExceptionTrace(failure, methodGuard - 124);
             }
-            if (methodGuard == 125) {
+            if (context != null) {
+              if (failure != null) {
+                errorDescription = errorDescription + " | ";
+              }
+              errorDescription = errorDescription + context;
+            }
+            DequeCursor.printClientErrorMessage(errorDescription, (byte) -75);
+            colonEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(errorDescription, "%3a", true, ":");
+            atSignEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(colonEscapedDescription, "%40", true, "@");
+            ampersandEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(atSignEscapedDescription, "%26", true, "&");
+            hashEscapedDescription = TextTemplateDefinition.replaceLiteralOccurrences(ampersandEscapedDescription, "%23", true, "#");
+            if (null == GameScreen.errorReportApplet) {
               return;
             }
-            IterableNodeHashTable.releaseSharedResources(-109);
+            dispatcherSnapshot = SpriteButtonRenderer.appletTaskDispatcher;
+            urlRequestGuard = -14;
+            unusedUrlReceiverBeforeIdentity = null;
+            unusedUrlConstructorReceiverBeforeIdentity = null;
+            appletCodeBase = GameScreen.errorReportApplet.getCodeBase();
+            errorUrlPrefix = new StringBuilder().append("clienterror.ws?c=").append(SocketArchiveNetworkClient.errorReportGameCrc).append("&u=");
+            if (null == UsernameAvailabilityValidator.errorReportUserIdentityText) {
+              unusedUrlReceiverAfterIdentity = null;
+              unusedUrlConstructorReceiverAfterIdentity = null;
+              reportUserIdentity = "" + CheckboxWidget.errorReportLoginLongValue;
+            } else {
+              unusedUrlReceiverAfterIdentity = null;
+              unusedUrlConstructorReceiverAfterIdentity = null;
+              reportUserIdentity = UsernameAvailabilityValidator.errorReportUserIdentityText;
+            }
+            urlStreamTask = ((PlatformTaskDispatcher) (Object) dispatcherSnapshot).requestUrlStream(urlRequestGuard, new java.net.URL(appletCodeBase, ((StringBuilder) (Object) errorUrlPrefix).append(reportUserIdentity).append("&v1=").append(PlatformTaskDispatcher.javaVendor).append("&v2=").append(PlatformTaskDispatcher.javaVersion).append("&e=").append(hashEscapedDescription).toString()));
+            while (urlStreamTask.status == 0) {
+              ByteTextDecodingSupport.sleepMillis(methodGuard - 125, 1L);
+            }
+            if (urlStreamTask.status == 1) {
+              responseStream = (DataInputStream) (urlStreamTask.result);
+              responseStream.read();
+              responseStream.close();
+            }
+          } catch (java.lang.Exception reportFailureAtCatch) {
+            caughtReportFailure = reportFailureAtCatch;
+            ignoredReportFailure = (Exception) (Object) caughtReportFailure;
+          }
+          if (methodGuard == 125) {
+            return;
+          }
+          IterableNodeHashTable.releaseSharedResources(-109);
         } catch (RuntimeException | Error uncheckedReportFailure) {
-            throw uncheckedReportFailure;
+          throw uncheckedReportFailure;
         } catch (Throwable checkedReportFailure) {
-            throw new RuntimeException(checkedReportFailure);
+          throw new RuntimeException(checkedReportFailure);
         }
     }
 
@@ -257,7 +257,7 @@ final class IterableNodeHashTable implements Iterable {
 
     public static void releaseSharedResources(int methodGuard) {
         if (methodGuard != -1) {
-            return;
+          return;
         }
         requestReadyStage = null;
         transformedMeshNormalZ = null;

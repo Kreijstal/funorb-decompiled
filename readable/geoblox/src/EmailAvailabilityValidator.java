@@ -14,17 +14,17 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         this.cachedEmailCandidate = "";
         this.cachedEmailAvailable = false;
         try {
-            this.emailMatchValidator = new MatchingTextValidator(confirmationInput, primaryEmailInput);
+          this.emailMatchValidator = new MatchingTextValidator(confirmationInput, primaryEmailInput);
         } catch (RuntimeException emailAvailabilityConstructionFailure) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) emailAvailabilityConstructionFailure), "mk.<init>(" + (confirmationInput != null ? "{...}" : "null") + ',' + (primaryEmailInput != null ? "{...}" : "null") + ')');
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) emailAvailabilityConstructionFailure), "mk.<init>(" + (confirmationInput != null ? "{...}" : "null") + ',' + (primaryEmailInput != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void completeActiveEmailAvailabilityQuery(int methodGuard, boolean available) {
         if (methodGuard >= 0) {
-            EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(83, true);
-            EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -110, available);
-            return;
+          EmailAvailabilityValidator.completeActiveEmailAvailabilityQuery(83, true);
+          EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -110, available);
+          return;
         }
         EntityContactSupport.activeEmailAvailabilityQuery.complete((byte) -110, available);
     }
@@ -112,7 +112,7 @@ final class EmailAvailabilityValidator extends TextInputValidator {
         remainingThemeReleaseTextColors = null;
         countryListDownloader = null;
         if (methodGuard != -9) {
-            remainingThemeReleaseTextColors = (int[]) null;
+          remainingThemeReleaseTextColors = (int[]) null;
         }
     }
 

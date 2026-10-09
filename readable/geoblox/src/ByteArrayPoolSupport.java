@@ -20,7 +20,7 @@ final class ByteArrayPoolSupport {
         byte[] mediumPoolArrayBeforeReturn;
         byte[] largePoolArrayBeforeReturn;
         if (length == 100 &&
-            DialRenderer.byteArrayPool100Count > 0) {
+          DialRenderer.byteArrayPool100Count > 0) {
           pool100PopIndex = DialRenderer.byteArrayPool100Count - 1;
           DialRenderer.byteArrayPool100Count = DialRenderer.byteArrayPool100Count - 1;
           smallPoolArrayBeforeReturn = TextInputWidget.byteArrayPool100[pool100PopIndex];
@@ -28,7 +28,7 @@ final class ByteArrayPoolSupport {
           return smallPoolArrayBeforeReturn;
         }
         if (length == 5000 &&
-            0 < TextWidgetSupport.byteArrayPool5000Count) {
+          0 < TextWidgetSupport.byteArrayPool5000Count) {
           pool5000PopIndex = TextWidgetSupport.byteArrayPool5000Count - 1;
           TextWidgetSupport.byteArrayPool5000Count = TextWidgetSupport.byteArrayPool5000Count - 1;
           mediumPoolArrayBeforeReturn = StatefulWidgetRenderer.byteArrayPool5000[pool5000PopIndex];
@@ -39,7 +39,7 @@ final class ByteArrayPoolSupport {
           return (byte[]) null;
         }
         if (length == 30000 &&
-            EmailValidator.byteArrayPool30000Count > 0) {
+          EmailValidator.byteArrayPool30000Count > 0) {
           pool30000PopIndex = EmailValidator.byteArrayPool30000Count - 1;
           EmailValidator.byteArrayPool30000Count = EmailValidator.byteArrayPool30000Count - 1;
           largePoolArrayBeforeReturn = NetworkArchiveRequest.byteArrayPool30000[pool30000PopIndex];

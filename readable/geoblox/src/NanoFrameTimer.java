@@ -121,7 +121,7 @@ final class NanoFrameTimer extends FrameTimer {
                     allViewCount++;
                   }
                   if (primaryName != null &&
-                      WhirlpoolHash.matchesNormalizedSessionName(primaryName, (byte) 12)) {
+                    WhirlpoolHash.matchesNormalizedSessionName(primaryName, (byte) 12)) {
                     namesByView[1][selfViewCount] = SecondaryDeque.receivedSessionName;
                     alternateNamesByView[1][selfViewCount] = null;
                     recordLongsByView[1][selfViewCount] = recordLongValue;
@@ -134,7 +134,7 @@ final class NanoFrameTimer extends FrameTimer {
                     }
                   }
                   if (uniqueViewCount < entryLimit &&
-                      !RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView) {
+                    !RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView) {
                     RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].usedInUniqueView = true;
                     namesByView[2][uniqueViewCount] = primaryName;
                     alternateNamesByView[2][uniqueViewCount] = RasterTargetRestoreSupport.highscoreNameTable[nameTableIndex].alternateName;
@@ -185,48 +185,48 @@ final class NanoFrameTimer extends FrameTimer {
     public static void releaseSharedResources(boolean clearAgain) {
         decodedSpritePalette = null;
         if (clearAgain) {
-            NanoFrameTimer.releaseSharedResources(false);
+          NanoFrameTimer.releaseSharedResources(false);
         }
         checkingText = null;
     }
 
     final static void flushSessionWrites(int flushGuard, int keepaliveOpcode) {
         try {
-            IOException writeFailure = null;
-            Throwable caughtWriteFailure = null;
-            if (null != SpriteCheckboxRenderer.sessionSocket && (keepaliveOpcode < 0 ||
-                PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage)) {
-              if (0 == CacheReference.outgoingSessionBuffer.position &&
-                  ClientClockSupport.correctedCurrentTimeMillis(-12520) > (10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
-                CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
-              }
-              if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
-                try {
-                  SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
-                  CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
-                } catch (java.io.IOException writeException) {
-                  caughtWriteFailure = writeException;
-                  writeFailure = (IOException) (Object) caughtWriteFailure;
-                  Bzip2DecoderState.closeSessionSocket((byte) -117);
-                }
-                CacheReference.outgoingSessionBuffer.position = 0;
-              }
-              return;
+          IOException writeFailure = null;
+          Throwable caughtWriteFailure = null;
+          if (null != SpriteCheckboxRenderer.sessionSocket && (keepaliveOpcode < 0 ||
+            PacketBuffer.currentProtocolStage == LogoCompositor.connectedSessionStage)) {
+            if (0 == CacheReference.outgoingSessionBuffer.position &&
+              ClientClockSupport.correctedCurrentTimeMillis(-12520) > (10000L + CanvasResizeController.lastSessionSocketWriteMillis)) {
+              CacheReference.outgoingSessionBuffer.writeCipherByte(keepaliveOpcode, (byte) -76);
             }
-            CacheReference.outgoingSessionBuffer.position = 0;
+            if (flushGuard > ~CacheReference.outgoingSessionBuffer.position) {
+              try {
+                SpriteCheckboxRenderer.sessionSocket.enqueueWrite(100, 0, CacheReference.outgoingSessionBuffer.position, CacheReference.outgoingSessionBuffer.bytes);
+                CanvasResizeController.lastSessionSocketWriteMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
+              } catch (java.io.IOException writeException) {
+                caughtWriteFailure = writeException;
+                writeFailure = (IOException) (Object) caughtWriteFailure;
+                Bzip2DecoderState.closeSessionSocket((byte) -117);
+              }
+              CacheReference.outgoingSessionBuffer.position = 0;
+            }
+            return;
+          }
+          CacheReference.outgoingSessionBuffer.position = 0;
         } catch (RuntimeException | Error uncheckedFlushFailure) {
-            throw uncheckedFlushFailure;
+          throw uncheckedFlushFailure;
         } catch (Throwable checkedFlushFailure) {
-            throw new RuntimeException(checkedFlushFailure);
+          throw new RuntimeException(checkedFlushFailure);
         }
     }
 
     final void resetForResume(int methodGuard) {
         if (this.accumulatedTimeNanos < this.scheduledTickNanos) {
-            this.accumulatedTimeNanos = this.accumulatedTimeNanos + (this.scheduledTickNanos - this.accumulatedTimeNanos);
+          this.accumulatedTimeNanos = this.accumulatedTimeNanos + (this.scheduledTickNanos - this.accumulatedTimeNanos);
         }
         if (methodGuard < 60) {
-            return;
+          return;
         }
         this.lastSampleTimeNanos = 0L;
     }
@@ -249,7 +249,7 @@ final class NanoFrameTimer extends FrameTimer {
           tickCount++;
           this.scheduledTickNanos = this.scheduledTickNanos + tickPeriodNanos;
         } while (tickCount < 10 &&
-              this.scheduledTickNanos < this.accumulatedTimeNanos);
+          this.scheduledTickNanos < this.accumulatedTimeNanos);
         if (this.accumulatedTimeNanos > this.scheduledTickNanos) {
           this.scheduledTickNanos = this.accumulatedTimeNanos;
         }
@@ -263,16 +263,16 @@ final class NanoFrameTimer extends FrameTimer {
         long elapsedNanos = -this.lastSampleTimeNanos + sampleTimeNanos;
         this.lastSampleTimeNanos = sampleTimeNanos;
         if (-5000000000L < elapsedNanos &&
-            5000000000L > elapsedNanos) {
-            this.intervalSamplesNanos[this.nextSampleIndex] = elapsedNanos;
-            if (this.intervalSampleCount < 1) {
-                this.intervalSampleCount = this.intervalSampleCount + 1;
-            }
-            this.nextSampleIndex = (this.nextSampleIndex + 1) % 10;
+          5000000000L > elapsedNanos) {
+          this.intervalSamplesNanos[this.nextSampleIndex] = elapsedNanos;
+          if (this.intervalSampleCount < 1) {
+            this.intervalSampleCount = this.intervalSampleCount + 1;
+          }
+          this.nextSampleIndex = (this.nextSampleIndex + 1) % 10;
         }
         long intervalSumNanos = (long)initialSumNanos;
         for (sampleOffset = 1; sampleOffset <= this.intervalSampleCount; sampleOffset++) {
-            intervalSumNanos = intervalSumNanos + this.intervalSamplesNanos[(-sampleOffset + (this.nextSampleIndex + 10)) % 10];
+          intervalSumNanos = intervalSumNanos + this.intervalSamplesNanos[(-sampleOffset + (this.nextSampleIndex + 10)) % 10];
         }
         return intervalSumNanos / (long)this.intervalSampleCount;
     }
@@ -280,10 +280,10 @@ final class NanoFrameTimer extends FrameTimer {
     final long measureSleepMillis(byte methodGuard) {
         this.accumulatedTimeNanos = this.accumulatedTimeNanos + this.sampleAverageIntervalNanos(0);
         if (methodGuard != -49) {
-            this.advanceTicks(false, 97L);
+          this.advanceTicks(false, 97L);
         }
         if (this.scheduledTickNanos > this.accumulatedTimeNanos) {
-            return (this.scheduledTickNanos - this.accumulatedTimeNanos) / 1000000L;
+          return (this.scheduledTickNanos - this.accumulatedTimeNanos) / 1000000L;
         }
         return 0L;
     }

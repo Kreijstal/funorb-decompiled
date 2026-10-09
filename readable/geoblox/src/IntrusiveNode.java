@@ -97,10 +97,10 @@ class IntrusiveNode {
 
     final void unlinkNode(boolean methodGuard) {
         if (methodGuard) {
-            return;
+          return;
         }
         if (null == this.previousNode) {
-            return;
+          return;
         }
         this.previousNode.nextNode = this.nextNode;
         this.nextNode.previousNode = this.previousNode;
@@ -260,10 +260,10 @@ class IntrusiveNode {
 
     final boolean isLinked(int methodGuard) {
         if (null == this.previousNode) {
-            return false;
+          return false;
         }
         if (methodGuard < 112) {
-            IntrusiveNode.releaseNodeResources((byte) 110);
+          IntrusiveNode.releaseNodeResources((byte) 110);
         }
         return true;
     }

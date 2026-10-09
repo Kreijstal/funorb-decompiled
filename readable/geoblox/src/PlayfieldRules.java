@@ -9,10 +9,10 @@ final class PlayfieldRules {
     public static void releaseStaticReferences(boolean clearFramesBeforeTextGuard) {
         loginModPowExponent = null;
         if (!clearFramesBeforeTextGuard) {
-            avatarCryEndFrames = (Sprite[]) null;
-            twoThousandBonusText = null;
-            avatarCryEndFrames = null;
-            return;
+          avatarCryEndFrames = (Sprite[]) null;
+          twoThousandBonusText = null;
+          avatarCryEndFrames = null;
+          return;
         }
         twoThousandBonusText = null;
         avatarCryEndFrames = null;
@@ -112,14 +112,14 @@ final class PlayfieldRules {
             ContextualRuntimeException.recomputeSpawnReleaseInterval(!recursiveAdvanceGuard);
           }
           if ((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 1) != 0 &&
-              EmailValidator.availableSpriteVariantCount < 7) {
+            EmailValidator.availableSpriteVariantCount < 7) {
             EmailValidator.availableSpriteVariantCount = EmailValidator.availableSpriteVariantCount + 1;
           }
           if (recursiveAdvanceGuard) {
             PlayfieldRules.advanceDifficulty(true);
           }
           if ((ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 2) != 0 &&
-              MessageDialog.availableEntityCategoryCount < 7) {
+            MessageDialog.availableEntityCategoryCount < 7) {
             MessageDialog.availableEntityCategoryCount = MessageDialog.availableEntityCategoryCount + 1;
           }
           if (0 != (ClientFlowState.difficultyStepFlags[ArchiveNetworkClient.difficultyStep] & 16)) {
@@ -140,7 +140,7 @@ final class PlayfieldRules {
     final static void spawnPointsPopup(int originY, int originX, int methodGuard, int points) {
         ScorePopupSupport.spawnScorePopup(points, true, originY, 1, originX);
         if (methodGuard > 39) {
-            return;
+          return;
         }
         PlayfieldRules.hasPixelsAtPlayfieldBoundary(118);
     }

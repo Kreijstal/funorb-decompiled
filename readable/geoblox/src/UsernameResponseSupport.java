@@ -68,20 +68,20 @@ final class UsernameResponseSupport {
 
     final static void returnToLoginStage(int methodGuard) {
         if (!ProgressBarWidget.guestSessionMode) {
-            throw new IllegalStateException();
+          throw new IllegalStateException();
         }
         AccountEligibilitySupport.loginReturnAllowed = true;
         TextInputValidator.openAccountLoginPanel((byte) 123, true);
         SpriteConstructionSupport.clientScreenStage = 0;
         if (methodGuard < -90) {
-            return;
+          return;
         }
         UsernameResponseSupport.clearUsernameAndCompressionResources(-89);
     }
 
     final static void renderDimmedAccountUi(boolean unusedRenderOption, boolean methodGuard) {
         if (methodGuard) {
-            return;
+          return;
         }
         PcmResampler.renderAccountUiBackgroundAndDialogs(unusedRenderOption, true, (byte) -102);
     }
@@ -92,21 +92,21 @@ final class UsernameResponseSupport {
         int stoppedProgressDialogGuardRemainder;
         int missingLayerProgressGuardRemainder;
         if (null != ClientFlowState.accountDialogLayer) {
-            ClientFlowState.accountDialogLayer.settleDialogAnimations(0);
-            if (SecondaryNodeHashTable.accountProgressDialog != null) {
-                SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
-                LogoCompositor.resetUiInteractionState((byte) -2);
-                stoppedLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
-                return;
-            }
+          ClientFlowState.accountDialogLayer.settleDialogAnimations(0);
+          if (SecondaryNodeHashTable.accountProgressDialog != null) {
+            SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
             LogoCompositor.resetUiInteractionState((byte) -2);
-            missingLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
+            stoppedLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
             return;
+          }
+          LogoCompositor.resetUiInteractionState((byte) -2);
+          missingLayerProgressGuardRemainder = -121 % ((-38 - methodGuard) / 59);
+          return;
         }
         if (SecondaryNodeHashTable.accountProgressDialog == null) {
-            LogoCompositor.resetUiInteractionState((byte) -2);
-            missingProgressDialogGuardRemainder = -121 % ((-38 - methodGuard) / 59);
-            return;
+          LogoCompositor.resetUiInteractionState((byte) -2);
+          missingProgressDialogGuardRemainder = -121 % ((-38 - methodGuard) / 59);
+          return;
         }
         SecondaryNodeHashTable.accountProgressDialog.stopNormalAnimation(23181);
         LogoCompositor.resetUiInteractionState((byte) -2);
@@ -115,9 +115,9 @@ final class UsernameResponseSupport {
 
     public static void clearUsernameAndCompressionResources(int methodGuard) {
         if (methodGuard != 105) {
-            spawnReleaseIntervalTicks = 71;
-            bzip2TransformTable = null;
-            return;
+          spawnReleaseIntervalTicks = 71;
+          bzip2TransformTable = null;
+          return;
         }
         bzip2TransformTable = null;
     }
