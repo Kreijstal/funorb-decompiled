@@ -146,7 +146,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                   clipboardForWrite.setContents(clipboardContents, (java.awt.datatransfer.ClipboardOwner) null);
                                 } else {
                                   if (!this.privilegedServicesEnabled) {
-                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                                    throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
                                   }
                                   if (taskType == 3) {
                                     if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
@@ -216,21 +216,21 @@ final class PlatformTaskDispatcher implements Runnable {
                                                   Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
                                                 } else {
                                                   if (taskType != 16) {
-                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                                                    throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
                                                   }
                                                   try {
                                                     if (!osNameLowerCase.startsWith("win")) {
-                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                                                     }
                                                     urlToLaunch = (String) (task.input);
                                                     if (!urlToLaunch.startsWith("http://") &&
                                                         !urlToLaunch.startsWith("https://")) {
-                                                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                      throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                                                     }
                                                     allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                                                     for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
                                                       if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
-                                                        throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                                        throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                                                       }
                                                     }
                                                     Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
@@ -239,7 +239,7 @@ final class PlatformTaskDispatcher implements Runnable {
                                                     caughtTaskThrowable = caughtUrlLaunchFailure;
                                                     urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
                                                     task.result = urlLaunchFailure;
-                                                    throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(urlLaunchFailure);
+                                                    throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(urlLaunchFailure);
                                                   }
                                                 }
                                               }
@@ -640,7 +640,7 @@ final class PlatformTaskDispatcher implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

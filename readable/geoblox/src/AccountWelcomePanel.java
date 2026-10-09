@@ -146,7 +146,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
     }
 
     final static void loadInterfaceText(byte loadGuard, ResourceArchive textArchive) {
-        class $CfrPartitionedBody {
+        class InterfaceTextLoadSteps {
             RuntimeException contextFailure;
             StringBuilder failureContextBuilder;
             String archiveContextToken;
@@ -158,7 +158,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
             byte loadGuard;
             ResourceArchive textArchive;
             boolean finished;
-            $CfrPartitionedBody(byte initialLoadGuard, ResourceArchive initialTextArchive) {
+            InterfaceTextLoadSteps(byte initialLoadGuard, ResourceArchive initialTextArchive) {
                 this.loadGuard = initialLoadGuard;
                 this.textArchive = initialTextArchive;
                 this.contextFailure = null;
@@ -3184,7 +3184,7 @@ final class AccountWelcomePanel extends WidgetContainer implements ButtonActivat
                 }
             }
         }
-        $CfrPartitionedBody textLoader = new $CfrPartitionedBody(loadGuard, textArchive);
+        InterfaceTextLoadSteps textLoader = new InterfaceTextLoadSteps(loadGuard, textArchive);
         textLoader.run();
     }
 

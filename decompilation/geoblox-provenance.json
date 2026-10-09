@@ -3283,11 +3283,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "d7957395c3e870397ac0a830974d140e5b6b7be3",
+    "commit": "69baedad5b06accf13171fa7fa4866decdbeacef",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "ddeaf02127fd35c56559980942fe92277ad52217cb8cb9c7b3035ee3b279ef1a"
+      "sha256": "3888bf507a2abb4d1c10c3c8f3dc2c5457c6231f8ebc5ee1e36d51029e49b97d"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3297,15 +3297,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "764802b111511f1d0cad5fbf16c9627f76edab62f3bd80efbffb064f2ed496d9",
+    "outputTreeSha256": "e587e7ce860ce1a6aff464b1d55f74d64fd9c62b48485b5c394ac48ddfb0fd8f",
     "files": 303,
-    "rules": 19012,
-    "identifierEdits": 120592,
+    "rules": 19059,
+    "identifierEdits": 120770,
     "bindingsCompared": 136992,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 121045,
+    "totalEdits": 121223,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3324,10 +3324,11 @@
       "wholeGameEquivalenceVerified": false,
       "remainingOpaqueLabels": 0,
       "remainingOpaquePlainBlockLabels": 0,
-      "remainingOpaqueFields": 41
+      "remainingOpaqueFields": 0,
+      "remainingUnresolvedFieldPurposes": 41
     },
     "structuralPass": 218,
-    "semanticPass": 222
+    "semanticPass": 223
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -21406,5 +21407,296 @@
     "remainingCompilerRegionSelectorNames": 0,
     "remainingOpaqueLocalOrParameterPatternNames": 0,
     "namingWorkflowCommit": "d7957395c3e870397ac0a830974d140e5b6b7be3"
+  },
+  "helperAndPropertyMechanismNames": {
+    "version": 223,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 47,
+    "namedFieldDeclarationsAdded": 41,
+    "namedHelperClassDeclarationsAdded": 1,
+    "namedHelperMethodDeclarationsAdded": 5,
+    "helperConstructorFollowsClassName": true,
+    "changedReadableJavaFiles": 7,
+    "previousCompleteRules": 19012,
+    "unaffectedCompleteRulesPreserved": 19012,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+    "sourceCommit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
+    "javaToolsCommit": "433ff77e11140811703f28a56e22efa35fc64e07",
+    "sourceArchiveSha256": "f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1"
+    },
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFieldSpellings": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "propertyMechanisms": {
+      "nonzero": 7,
+      "not256": 1,
+      "nonnegative": 4,
+      "trueOnly": 5,
+      "nonnullSpriteArray": 5,
+      "nonnullSprite": 5,
+      "minInt": 6,
+      "falseOnly": 1,
+      "nonnullString": 1
+    },
+    "rawCompilerLocalsAfter": 0,
+    "identifierEditsAdded": 178,
+    "readableIdentifierEdits": 120770,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 121223,
+    "stableDictionaryIdentities": 19366,
+    "bindingsCompared": 136992,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name six applet fields by verified absence of bound ordinary source uses, and thirty-five property fields by their exact merge predicates and constructor/default sentinels. Rendering/external/reflection purposes remain unresolved; no field is removed or assigned a guessed opacity/color/geometry role. Name the generated interface-text class and five private unchecked-throw/long-comparison helpers while retaining all original declaration identities, member ownership, constructor/class binding, calls and source/error behavior. The helper constructor name follows the class rename, and derived renamed symbols reflect the new class/field/method spelling; all complete prior authored rules remain exact. Raw/compiler/environment/native identities remain fixed. Remaining structural frames and mixed live ranges are not declared readable by this naming pass.",
+    "symbols": [
+      {
+        "symbol": "C:wi$1$CfrPartitionedBody",
+        "originalName": "$CfrPartitionedBody",
+        "to": "InterfaceTextLoadSteps"
+      },
+      {
+        "symbol": "F:ch.field_c:Z",
+        "originalName": "field_c",
+        "to": "sourceUnreferencedFlag3"
+      },
+      {
+        "symbol": "F:ch.field_e:Z",
+        "originalName": "field_e",
+        "to": "sourceUnreferencedFlag1"
+      },
+      {
+        "symbol": "F:ch.field_f:Z",
+        "originalName": "field_f",
+        "to": "sourceUnreferencedFlag4"
+      },
+      {
+        "symbol": "F:ch.field_g:I",
+        "originalName": "field_g",
+        "to": "sourceUnreferencedInteger"
+      },
+      {
+        "symbol": "F:ch.field_i:Z",
+        "originalName": "field_i",
+        "to": "sourceUnreferencedFlag2"
+      },
+      {
+        "symbol": "F:ch.field_j:Z",
+        "originalName": "field_j",
+        "to": "sourceUnreferencedFlag5"
+      },
+      {
+        "symbol": "F:mi.field_A:I",
+        "originalName": "field_A",
+        "to": "nonzeroIntegerOverride2"
+      },
+      {
+        "symbol": "F:mi.field_D:[Ldm;",
+        "originalName": "field_D",
+        "to": "nonNullSpriteArrayOverride4"
+      },
+      {
+        "symbol": "F:mi.field_F:Ldm;",
+        "originalName": "field_F",
+        "to": "nonNullSpriteOverride2"
+      },
+      {
+        "symbol": "F:mi.field_G:I",
+        "originalName": "field_G",
+        "to": "nonnegativeIntegerOverride4"
+      },
+      {
+        "symbol": "F:mi.field_H:[Ldm;",
+        "originalName": "field_H",
+        "to": "nonNullSpriteArrayOverride2"
+      },
+      {
+        "symbol": "F:mi.field_J:I",
+        "originalName": "field_J",
+        "to": "minIntUnsetIntegerOverride2"
+      },
+      {
+        "symbol": "F:mi.field_K:I",
+        "originalName": "field_K",
+        "to": "minIntUnsetIntegerOverride3"
+      },
+      {
+        "symbol": "F:mi.field_L:Z",
+        "originalName": "field_L",
+        "to": "trueOnlyOverride3"
+      },
+      {
+        "symbol": "F:mi.field_M:Ldm;",
+        "originalName": "field_M",
+        "to": "nonNullSpriteOverride5"
+      },
+      {
+        "symbol": "F:mi.field_N:Z",
+        "originalName": "field_N",
+        "to": "trueOnlyOverride4"
+      },
+      {
+        "symbol": "F:mi.field_O:I",
+        "originalName": "field_O",
+        "to": "nonzeroIntegerOverride3"
+      },
+      {
+        "symbol": "F:mi.field_P:Z",
+        "originalName": "field_P",
+        "to": "trueOnlyOverride2"
+      },
+      {
+        "symbol": "F:mi.field_S:Z",
+        "originalName": "field_S",
+        "to": "falseOnlyOverride"
+      },
+      {
+        "symbol": "F:mi.field_T:I",
+        "originalName": "field_T",
+        "to": "minIntUnsetIntegerOverride1"
+      },
+      {
+        "symbol": "F:mi.field_U:I",
+        "originalName": "field_U",
+        "to": "nonzeroIntegerOverride7"
+      },
+      {
+        "symbol": "F:mi.field_V:I",
+        "originalName": "field_V",
+        "to": "nonzeroIntegerOverride4"
+      },
+      {
+        "symbol": "F:mi.field_W:Z",
+        "originalName": "field_W",
+        "to": "trueOnlyOverride5"
+      },
+      {
+        "symbol": "F:mi.field_Y:Ljava/lang/String;",
+        "originalName": "field_Y",
+        "to": "nonNullStringOverride"
+      },
+      {
+        "symbol": "F:mi.field_Z:Ldm;",
+        "originalName": "field_Z",
+        "to": "nonNullSpriteOverride3"
+      },
+      {
+        "symbol": "F:mi.field_ab:I",
+        "originalName": "field_ab",
+        "to": "nonnegativeIntegerOverride3"
+      },
+      {
+        "symbol": "F:mi.field_bb:I",
+        "originalName": "field_bb",
+        "to": "nonnegativeIntegerOverride1"
+      },
+      {
+        "symbol": "F:mi.field_cb:I",
+        "originalName": "field_cb",
+        "to": "nonnegativeIntegerOverride2"
+      },
+      {
+        "symbol": "F:mi.field_db:I",
+        "originalName": "field_db",
+        "to": "minIntUnsetIntegerOverride5"
+      },
+      {
+        "symbol": "F:mi.field_eb:[Ldm;",
+        "originalName": "field_eb",
+        "to": "nonNullSpriteArrayOverride3"
+      },
+      {
+        "symbol": "F:mi.field_fb:[Ldm;",
+        "originalName": "field_fb",
+        "to": "nonNullSpriteArrayOverride1"
+      },
+      {
+        "symbol": "F:mi.field_p:Ldm;",
+        "originalName": "field_p",
+        "to": "nonNullSpriteOverride1"
+      },
+      {
+        "symbol": "F:mi.field_q:Z",
+        "originalName": "field_q",
+        "to": "trueOnlyOverride1"
+      },
+      {
+        "symbol": "F:mi.field_r:I",
+        "originalName": "field_r",
+        "to": "minIntUnsetIntegerOverride4"
+      },
+      {
+        "symbol": "F:mi.field_s:[Ldm;",
+        "originalName": "field_s",
+        "to": "nonNullSpriteArrayOverride5"
+      },
+      {
+        "symbol": "F:mi.field_t:I",
+        "originalName": "field_t",
+        "to": "not256IntegerOverride"
+      },
+      {
+        "symbol": "F:mi.field_u:Ldm;",
+        "originalName": "field_u",
+        "to": "nonNullSpriteOverride4"
+      },
+      {
+        "symbol": "F:mi.field_v:I",
+        "originalName": "field_v",
+        "to": "nonzeroIntegerOverride1"
+      },
+      {
+        "symbol": "F:mi.field_w:I",
+        "originalName": "field_w",
+        "to": "minIntUnsetIntegerOverride6"
+      },
+      {
+        "symbol": "F:mi.field_x:I",
+        "originalName": "field_x",
+        "to": "nonzeroIntegerOverride5"
+      },
+      {
+        "symbol": "F:mi.field_z:I",
+        "originalName": "field_z",
+        "to": "nonzeroIntegerOverride6"
+      },
+      {
+        "symbol": "M:cd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+        "originalName": "$cfr$sneakyThrow",
+        "to": "throwUnchecked"
+      },
+      {
+        "symbol": "M:ch.$cfr$lcmp(JJ)I",
+        "originalName": "$cfr$lcmp",
+        "to": "compareSignedLongs"
+      },
+      {
+        "symbol": "M:d.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+        "originalName": "$cfr$sneakyThrow",
+        "to": "throwUnchecked"
+      },
+      {
+        "symbol": "M:pd.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+        "originalName": "$cfr$sneakyThrow",
+        "to": "throwUnchecked"
+      },
+      {
+        "symbol": "M:wg.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
+        "originalName": "$cfr$sneakyThrow",
+        "to": "throwUnchecked"
+      }
+    ],
+    "namingToolChanged": true,
+    "namingToolCommit": "59c17f5bbf3f10aec41fbe64df8d656d64b7884a",
+    "namingToolSourceArchiveSha256": "f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9",
+    "namingToolTestGroupsPassed": 21,
+    "namingWorkflowCommit": "69baedad5b06accf13171fa7fa4866decdbeacef"
   }
 }

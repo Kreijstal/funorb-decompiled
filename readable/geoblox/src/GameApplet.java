@@ -8,12 +8,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     boolean errorPageShown;
     static int[] meshFaceCountsByDepthBucket;
     public static boolean textLoadControlIncrementEnabled;
-    public static boolean field_e;
-    public static boolean field_i;
-    public static boolean field_c;
-    public static boolean field_f;
-    public static int field_g;
-    public static boolean field_j;
+    public static boolean sourceUnreferencedFlag1;
+    public static boolean sourceUnreferencedFlag2;
+    public static boolean sourceUnreferencedFlag3;
+    public static boolean sourceUnreferencedFlag4;
+    public static int sourceUnreferencedInteger;
+    public static boolean sourceUnreferencedFlag5;
 
     public final java.net.URL getDocumentBase() {
         RuntimeException documentBaseFailureForContext = null;
@@ -381,7 +381,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     stopDeadlineOrTickDecision: {
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
-                        stopDeadlineComparisonOrTickIndex = $cfr$lcmp(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
+                        stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
                         if (clientControlSnapshot != 0) {
                           break stopDeadlineOrTickDecision;
                         }
@@ -929,7 +929,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         meshFaceCountsByDepthBucket = new int[1024];
     }
 
-    private static int $cfr$lcmp(long left, long right) {
+    private static int compareSignedLongs(long left, long right) {
         return left < right ? -1 : (left == right ? 0 : 1);
     }
 }

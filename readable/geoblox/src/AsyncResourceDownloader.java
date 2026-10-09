@@ -174,7 +174,7 @@ final class AsyncResourceDownloader implements Runnable {
                 break;
               }
               if (this.downloadBuffer.bytes.length == this.downloadBuffer.position) {
-                throw AsyncResourceDownloader.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.downloadBuffer.bytes.length + " " + this.resourceUrl));
+                throw AsyncResourceDownloader.<RuntimeException>throwUnchecked(new Exception("HG1: " + this.downloadBuffer.bytes.length + " " + this.resourceUrl));
               }
               completionMonitorOrCaughtReadFailure = this;
               synchronized (completionMonitorOrCaughtReadFailure) {
@@ -225,7 +225,7 @@ final class AsyncResourceDownloader implements Runnable {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

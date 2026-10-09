@@ -2,49 +2,49 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class VisualPropertyOverrides extends VisualPropertyNode {
-    private int field_v;
-    private int field_t;
-    private int field_bb;
-    private boolean field_q;
-    private int field_A;
+    private int nonzeroIntegerOverride1;
+    private int not256IntegerOverride;
+    private int nonnegativeIntegerOverride1;
+    private boolean trueOnlyOverride1;
+    private int nonzeroIntegerOverride2;
     private String textOverride;
-    private Sprite[] field_fb;
-    private Sprite[] field_H;
-    private boolean field_P;
+    private Sprite[] nonNullSpriteArrayOverride1;
+    private Sprite[] nonNullSpriteArrayOverride2;
+    private boolean trueOnlyOverride2;
     static String invalidUserOrPasswordText;
-    private Sprite field_p;
-    private int field_T;
-    private boolean field_S;
-    private int field_cb;
+    private Sprite nonNullSpriteOverride1;
+    private int minIntUnsetIntegerOverride1;
+    private boolean falseOnlyOverride;
+    private int nonnegativeIntegerOverride2;
     static int clientBootstrapStage;
-    private Sprite[] field_eb;
-    private boolean field_L;
+    private Sprite[] nonNullSpriteArrayOverride3;
+    private boolean trueOnlyOverride3;
     static Sprite[] sparkleFrames;
-    private int field_J;
-    private Sprite[] field_D;
-    private String field_Y;
-    private int field_K;
-    private int field_r;
-    private int field_O;
-    private int field_V;
-    private Sprite field_F;
+    private int minIntUnsetIntegerOverride2;
+    private Sprite[] nonNullSpriteArrayOverride4;
+    private String nonNullStringOverride;
+    private int minIntUnsetIntegerOverride3;
+    private int minIntUnsetIntegerOverride4;
+    private int nonzeroIntegerOverride3;
+    private int nonzeroIntegerOverride4;
+    private Sprite nonNullSpriteOverride2;
     private BitmapFont fontOverride;
-    private Sprite[] field_s;
-    private int field_db;
-    private int field_x;
-    private Sprite field_Z;
-    private int field_z;
-    private boolean field_N;
+    private Sprite[] nonNullSpriteArrayOverride5;
+    private int minIntUnsetIntegerOverride5;
+    private int nonzeroIntegerOverride5;
+    private Sprite nonNullSpriteOverride3;
+    private int nonzeroIntegerOverride6;
+    private boolean trueOnlyOverride4;
     static boolean showLoginOnMessageDismiss;
-    private int field_ab;
+    private int nonnegativeIntegerOverride3;
     static String connectionLostWithReasonText;
     static String continueText;
-    private Sprite field_u;
-    private int field_G;
-    private int field_U;
-    private Sprite field_M;
-    private boolean field_W;
-    private int field_w;
+    private Sprite nonNullSpriteOverride4;
+    private int nonnegativeIntegerOverride4;
+    private int nonzeroIntegerOverride7;
+    private Sprite nonNullSpriteOverride5;
+    private boolean trueOnlyOverride5;
+    private int minIntUnsetIntegerOverride6;
 
     private final void mergeDefinedProperties(int methodGuard, VisualPropertyOverrides overrides) {
         RuntimeException mergeFailureBeforeDescription = null;
@@ -54,116 +54,116 @@ class VisualPropertyOverrides extends VisualPropertyNode {
         RuntimeException mergeFailureForContext = null;
         try {
           if (overrides != null) {
-            if (overrides.field_K != -2147483648) {
-              this.field_K = overrides.field_K;
+            if (overrides.minIntUnsetIntegerOverride3 != -2147483648) {
+              this.minIntUnsetIntegerOverride3 = overrides.minIntUnsetIntegerOverride3;
             }
-            if (overrides.field_x != 0) {
-              this.field_x = overrides.field_x;
+            if (overrides.nonzeroIntegerOverride5 != 0) {
+              this.nonzeroIntegerOverride5 = overrides.nonzeroIntegerOverride5;
             }
-            if (null != overrides.field_F) {
-              this.field_F = overrides.field_F;
+            if (null != overrides.nonNullSpriteOverride2) {
+              this.nonNullSpriteOverride2 = overrides.nonNullSpriteOverride2;
             }
-            if (overrides.field_A != 0) {
-              this.field_A = overrides.field_A;
+            if (overrides.nonzeroIntegerOverride2 != 0) {
+              this.nonzeroIntegerOverride2 = overrides.nonzeroIntegerOverride2;
             }
-            if (-2147483648 != overrides.field_J) {
-              this.field_J = overrides.field_J;
+            if (-2147483648 != overrides.minIntUnsetIntegerOverride2) {
+              this.minIntUnsetIntegerOverride2 = overrides.minIntUnsetIntegerOverride2;
             }
-            if (overrides.field_M != null) {
-              this.field_M = overrides.field_M;
+            if (overrides.nonNullSpriteOverride5 != null) {
+              this.nonNullSpriteOverride5 = overrides.nonNullSpriteOverride5;
             }
-            if (0 != overrides.field_z) {
-              this.field_z = overrides.field_z;
+            if (0 != overrides.nonzeroIntegerOverride6) {
+              this.nonzeroIntegerOverride6 = overrides.nonzeroIntegerOverride6;
             }
-            if (overrides.field_Z != null) {
-              this.field_Z = overrides.field_Z;
+            if (overrides.nonNullSpriteOverride3 != null) {
+              this.nonNullSpriteOverride3 = overrides.nonNullSpriteOverride3;
             }
-            if (null != overrides.field_Y) {
-              this.field_Y = overrides.field_Y;
+            if (null != overrides.nonNullStringOverride) {
+              this.nonNullStringOverride = overrides.nonNullStringOverride;
             }
-            if (overrides.field_r != -2147483648) {
-              this.field_r = overrides.field_r;
+            if (overrides.minIntUnsetIntegerOverride4 != -2147483648) {
+              this.minIntUnsetIntegerOverride4 = overrides.minIntUnsetIntegerOverride4;
             }
-            if (overrides.field_H != null) {
-              this.field_H = overrides.field_H;
+            if (overrides.nonNullSpriteArrayOverride2 != null) {
+              this.nonNullSpriteArrayOverride2 = overrides.nonNullSpriteArrayOverride2;
             }
-            if (-2147483648 != overrides.field_T) {
-              this.field_T = overrides.field_T;
+            if (-2147483648 != overrides.minIntUnsetIntegerOverride1) {
+              this.minIntUnsetIntegerOverride1 = overrides.minIntUnsetIntegerOverride1;
             }
-            if (overrides.field_w != -2147483648) {
-              this.field_w = overrides.field_w;
+            if (overrides.minIntUnsetIntegerOverride6 != -2147483648) {
+              this.minIntUnsetIntegerOverride6 = overrides.minIntUnsetIntegerOverride6;
             }
-            if (overrides.field_N) {
-              this.field_N = overrides.field_N;
+            if (overrides.trueOnlyOverride4) {
+              this.trueOnlyOverride4 = overrides.trueOnlyOverride4;
             }
-            if (overrides.field_p != null) {
-              this.field_p = overrides.field_p;
+            if (overrides.nonNullSpriteOverride1 != null) {
+              this.nonNullSpriteOverride1 = overrides.nonNullSpriteOverride1;
             }
-            if (overrides.field_t != 256) {
-              this.field_t = overrides.field_t;
+            if (overrides.not256IntegerOverride != 256) {
+              this.not256IntegerOverride = overrides.not256IntegerOverride;
             }
-            if (overrides.field_cb >= 0) {
-              this.field_cb = overrides.field_cb;
+            if (overrides.nonnegativeIntegerOverride2 >= 0) {
+              this.nonnegativeIntegerOverride2 = overrides.nonnegativeIntegerOverride2;
             }
-            if (!overrides.field_S) {
-              this.field_S = overrides.field_S;
+            if (!overrides.falseOnlyOverride) {
+              this.falseOnlyOverride = overrides.falseOnlyOverride;
             }
-            if (0 != overrides.field_V) {
-              this.field_V = overrides.field_V;
+            if (0 != overrides.nonzeroIntegerOverride4) {
+              this.nonzeroIntegerOverride4 = overrides.nonzeroIntegerOverride4;
             }
-            if (null != overrides.field_s) {
-              this.field_s = overrides.field_s;
+            if (null != overrides.nonNullSpriteArrayOverride5) {
+              this.nonNullSpriteArrayOverride5 = overrides.nonNullSpriteArrayOverride5;
             }
             if (null != overrides.textOverride) {
               this.textOverride = overrides.textOverride;
             }
-            if (overrides.field_U != 0) {
-              this.field_U = overrides.field_U;
+            if (overrides.nonzeroIntegerOverride7 != 0) {
+              this.nonzeroIntegerOverride7 = overrides.nonzeroIntegerOverride7;
             }
-            if (overrides.field_fb != null) {
-              this.field_fb = overrides.field_fb;
+            if (overrides.nonNullSpriteArrayOverride1 != null) {
+              this.nonNullSpriteArrayOverride1 = overrides.nonNullSpriteArrayOverride1;
             }
-            if (0 <= overrides.field_bb) {
-              this.field_bb = overrides.field_bb;
+            if (0 <= overrides.nonnegativeIntegerOverride1) {
+              this.nonnegativeIntegerOverride1 = overrides.nonnegativeIntegerOverride1;
             }
-            if (0 != overrides.field_v) {
-              this.field_v = overrides.field_v;
+            if (0 != overrides.nonzeroIntegerOverride1) {
+              this.nonzeroIntegerOverride1 = overrides.nonzeroIntegerOverride1;
             }
-            if (null != overrides.field_u) {
-              this.field_u = overrides.field_u;
+            if (null != overrides.nonNullSpriteOverride4) {
+              this.nonNullSpriteOverride4 = overrides.nonNullSpriteOverride4;
             }
-            if (overrides.field_eb != null) {
-              this.field_eb = overrides.field_eb;
+            if (overrides.nonNullSpriteArrayOverride3 != null) {
+              this.nonNullSpriteArrayOverride3 = overrides.nonNullSpriteArrayOverride3;
             }
-            if (overrides.field_G >= 0) {
-              this.field_G = overrides.field_G;
+            if (overrides.nonnegativeIntegerOverride4 >= 0) {
+              this.nonnegativeIntegerOverride4 = overrides.nonnegativeIntegerOverride4;
             }
-            if (overrides.field_L) {
-              this.field_L = overrides.field_L;
+            if (overrides.trueOnlyOverride3) {
+              this.trueOnlyOverride3 = overrides.trueOnlyOverride3;
             }
-            if (overrides.field_db != -2147483648) {
-              this.field_db = overrides.field_db;
+            if (overrides.minIntUnsetIntegerOverride5 != -2147483648) {
+              this.minIntUnsetIntegerOverride5 = overrides.minIntUnsetIntegerOverride5;
             }
-            if (overrides.field_P) {
-              this.field_P = overrides.field_P;
+            if (overrides.trueOnlyOverride2) {
+              this.trueOnlyOverride2 = overrides.trueOnlyOverride2;
             }
-            if (null != overrides.field_D) {
-              this.field_D = overrides.field_D;
+            if (null != overrides.nonNullSpriteArrayOverride4) {
+              this.nonNullSpriteArrayOverride4 = overrides.nonNullSpriteArrayOverride4;
             }
             if (overrides.fontOverride != null) {
               this.fontOverride = overrides.fontOverride;
             }
-            if (0 != overrides.field_O) {
-              this.field_O = overrides.field_O;
+            if (0 != overrides.nonzeroIntegerOverride3) {
+              this.nonzeroIntegerOverride3 = overrides.nonzeroIntegerOverride3;
             }
-            if (overrides.field_q) {
-              this.field_q = overrides.field_q;
+            if (overrides.trueOnlyOverride1) {
+              this.trueOnlyOverride1 = overrides.trueOnlyOverride1;
             }
-            if (0 <= overrides.field_ab) {
-              this.field_ab = overrides.field_ab;
+            if (0 <= overrides.nonnegativeIntegerOverride3) {
+              this.nonnegativeIntegerOverride3 = overrides.nonnegativeIntegerOverride3;
             }
-            if (overrides.field_W) {
-              this.field_W = overrides.field_W;
+            if (overrides.trueOnlyOverride5) {
+              this.trueOnlyOverride5 = overrides.trueOnlyOverride5;
             }
           }
           if (methodGuard != -2147483648) {
@@ -206,19 +206,19 @@ class VisualPropertyOverrides extends VisualPropertyNode {
         StringBuilder overrideConstructionMessageBeforeText = null;
         String textOverrideDescription = null;
         RuntimeException caughtOverrideConstructionFailure = null;
-        this.field_bb = -1;
-        this.field_t = 256;
-        this.field_T = -2147483648;
-        this.field_S = true;
-        this.field_K = -2147483648;
-        this.field_J = -2147483648;
-        this.field_ab = -1;
-        this.field_cb = -1;
-        this.field_G = -1;
-        this.field_db = -2147483648;
-        this.field_q = false;
-        this.field_r = -2147483648;
-        this.field_w = -2147483648;
+        this.nonnegativeIntegerOverride1 = -1;
+        this.not256IntegerOverride = 256;
+        this.minIntUnsetIntegerOverride1 = -2147483648;
+        this.falseOnlyOverride = true;
+        this.minIntUnsetIntegerOverride3 = -2147483648;
+        this.minIntUnsetIntegerOverride2 = -2147483648;
+        this.nonnegativeIntegerOverride3 = -1;
+        this.nonnegativeIntegerOverride2 = -1;
+        this.nonnegativeIntegerOverride4 = -1;
+        this.minIntUnsetIntegerOverride5 = -2147483648;
+        this.trueOnlyOverride1 = false;
+        this.minIntUnsetIntegerOverride4 = -2147483648;
+        this.minIntUnsetIntegerOverride6 = -2147483648;
         try {
           this.nodeKey = nodeKey;
           this.mergeDefinedProperties(-2147483648, inheritedProperties);

@@ -246,7 +246,7 @@ final class ProxySocketConnector extends SocketConnector {
           }
         }
         if (lastAuthenticationFailure != null) {
-          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) lastAuthenticationFailure);
+          throw ProxySocketConnector.<RuntimeException>throwUnchecked((Throwable) lastAuthenticationFailure);
         }
         return this.connectDirect(1);
     }
@@ -363,7 +363,7 @@ final class ProxySocketConnector extends SocketConnector {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException throwUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }
