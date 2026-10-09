@@ -82,6 +82,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int spanStartOrBottomXQ16 = 0;
         int spanWidth = 0;
         int controlFlagSnapshot = 0;
+        int edgeSegmentRowsThenRowBaseLiteralPhase1;
+        int edgeSwapOrRowBaseOrLowerRowsOrGuardRemainderLiteralPhase1;
+        int spanStartOrBottomXQ16LiteralPhase1;
+        int spanWidthLiteralPhase1;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
@@ -203,25 +207,25 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               leftXQ16 = leftXQ16 + topY * leftXStepQ16;
               topY = 0;
             }
-            edgeSwapOrRowBaseOrLowerRowsOrGuardRemainder = -91 % ((guard - 74) / 33);
-            edgeSegmentRowsThenRowBase = TriangleRasterState.rowBaseOffsets[topY];
+            edgeSwapOrRowBaseOrLowerRowsOrGuardRemainderLiteralPhase1 = -91 % ((guard - 74) / 33);
+            edgeSegmentRowsThenRowBaseLiteralPhase1 = TriangleRasterState.rowBaseOffsets[topY];
             while (bottomY > topY) {
-              spanStartOrBottomXQ16 = leftXQ16 >> 16;
-              if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
-                spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
-                if (spanWidth == 0) {
-                  if (spanStartOrBottomXQ16 >= 0 &&
-                      TriangleRasterState.clipWidth > spanStartOrBottomXQ16) {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
+              spanStartOrBottomXQ16LiteralPhase1 = leftXQ16 >> 16;
+              if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16LiteralPhase1) {
+                spanWidthLiteralPhase1 = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                if (spanWidthLiteralPhase1 == 0) {
+                  if (spanStartOrBottomXQ16LiteralPhase1 >= 0 &&
+                      TriangleRasterState.clipWidth > spanStartOrBottomXQ16LiteralPhase1) {
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16LiteralPhase1 + edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanWidthLiteralPhase1);
                   }
                 } else {
-                  if (TriangleRasterState.clipWidth <= spanWidth + spanStartOrBottomXQ16) {
-                    spanWidth = -spanStartOrBottomXQ16 + TriangleRasterState.clipWidth - 1;
+                  if (TriangleRasterState.clipWidth <= spanWidthLiteralPhase1 + spanStartOrBottomXQ16LiteralPhase1) {
+                    spanWidthLiteralPhase1 = -spanStartOrBottomXQ16LiteralPhase1 + TriangleRasterState.clipWidth - 1;
                   }
-                  if (0 > spanStartOrBottomXQ16) {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBase, halfRgb, spanStartOrBottomXQ16 + spanWidth);
+                  if (0 > spanStartOrBottomXQ16LiteralPhase1) {
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanStartOrBottomXQ16LiteralPhase1 + spanWidthLiteralPhase1);
                   } else {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16 + edgeSegmentRowsThenRowBase, halfRgb, spanWidth);
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16LiteralPhase1 + edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanWidthLiteralPhase1);
                   }
                 }
               }
@@ -231,7 +235,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               }
               leftXQ16 = leftXQ16 + leftXStepQ16;
               rightXQ16 = rightXQ16 + rightXStepQ16;
-              edgeSegmentRowsThenRowBase = edgeSegmentRowsThenRowBase + SoftwareRasterizer.stride;
+              edgeSegmentRowsThenRowBaseLiteralPhase1 = edgeSegmentRowsThenRowBaseLiteralPhase1 + SoftwareRasterizer.stride;
             }
             return;
           }

@@ -61,6 +61,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         int baselineOffset = 0;
         int alignmentMode = 0;
         int clientControlFlowSnapshot = 0;
+        int alignmentModeLiteralPhase1;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           textDrawingCompletion: {
@@ -81,14 +82,14 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               } else {
                 baselineOffset = this.font.maxAscent;
               }
-              alignmentMode = this.horizontalAlignment;
-              if (alignmentMode != 0 &&
-                  alignmentMode != 3) {
-                if (alignmentMode == 1) {
+              alignmentModeLiteralPhase1 = this.horizontalAlignment;
+              if (alignmentModeLiteralPhase1 != 0 &&
+                  alignmentModeLiteralPhase1 != 3) {
+                if (alignmentModeLiteralPhase1 == 1) {
                   this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
                   break textDrawingCompletion;
                 }
-                if (alignmentMode != 2) {
+                if (alignmentModeLiteralPhase1 != 2) {
                   break textDrawingCompletion;
                 }
                 this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);
@@ -141,6 +142,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         int baselineOffset = 0;
         int alignmentMode = 0;
         int clientControlFlowSnapshot = 0;
+        int alignmentModeLiteralPhase1;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (null == widget.textLayout) {
@@ -164,17 +166,17 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           } else {
             baselineOffset = this.font.maxAscent;
           }
-          alignmentMode = this.horizontalAlignment;
-          if (alignmentMode != 0 &&
-              alignmentMode != 3) {
-            if (alignmentMode == 1) {
+          alignmentModeLiteralPhase1 = this.horizontalAlignment;
+          if (alignmentModeLiteralPhase1 != 0 &&
+              alignmentModeLiteralPhase1 != 3) {
+            if (alignmentModeLiteralPhase1 == 1) {
               if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
               }
               ((CachedTextLayout) ((Object) widget.textLayout)).layoutCenteredLine(this.getDisplayText(122, widget), baselineOffset, availableWidth >> 1, (byte) 58, this.font);
               return;
             }
-            if (alignmentMode != 2) {
+            if (alignmentModeLiteralPhase1 != 2) {
               return;
             }
             if (!(widget.textLayout instanceof CachedTextLayout)) {

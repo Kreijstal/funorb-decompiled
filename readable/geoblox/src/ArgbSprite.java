@@ -4,6 +4,8 @@
 final class ArgbSprite extends Sprite {
     final void drawGrayTinted(int x, int y, int tintColor) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -23,19 +25,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -79,6 +81,8 @@ final class ArgbSprite extends Sprite {
 
     final void drawGrayModulated(int x, int y, int tintColor) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -98,19 +102,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -123,6 +127,8 @@ final class ArgbSprite extends Sprite {
 
     final void drawAlpha(int x, int y, int alpha256) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -142,19 +148,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -426,6 +432,15 @@ final class ArgbSprite extends Sprite {
         int storedAlphaPhase2NestedPhase3;
         int inverseAlpha256Phase2NestedPhase2;
         int inverseAlpha256Phase2NestedPhase3;
+        int clipPixelCountLiteralPhase1;
+        int clipPixelCountPhase2LiteralPhase1;
+        int clipPixelCountNestedPhase2LiteralPhase1;
+        int clipPixelCountPhase2NestedPhase2LiteralPhase1;
+        int clipPixelCountPhase2NestedPhase2LiteralPhase2;
+        int clipPixelCountPhase2NestedPhase2LiteralPhase3;
+        int clipPixelCountPhase2NestedPhase3LiteralPhase1;
+        int clipPixelCountPhase2NestedPhase3LiteralPhase2;
+        int clipPixelCountPhase2NestedPhase3LiteralPhase3;
         if (scale == 0) {
           return;
         }
@@ -563,9 +578,9 @@ final class ArgbSprite extends Sprite {
                   sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep * clipPixelCount;
                   destinationIndexNestedPhase2 = destinationIndexNestedPhase2 + clipPixelCount;
                 }
-                clipPixelCount = (1 + sourceYQ12NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+                clipPixelCountLiteralPhase1 = (1 + sourceYQ12NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
                 if ((1 + sourceYQ12NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterNestedPhase2) {
-                  negativePixelCounterNestedPhase2 = clipPixelCount;
+                  negativePixelCounterNestedPhase2 = clipPixelCountLiteralPhase1;
                 }
                 while (negativePixelCounterNestedPhase2 < 0) {
                   sampledPixelNestedPhase2 = this.pixels[(sourceYQ12NestedPhase2 >> 12) * this.width + (sourceXQ12NestedPhase2 >> 12)];
@@ -600,9 +615,9 @@ final class ArgbSprite extends Sprite {
                 sourceYQ12NestedPhase3 = sourceYQ12NestedPhase3 + inverseSinStep * clipPixelCountNestedPhase2;
                 destinationIndexNestedPhase3 = destinationIndexNestedPhase3 + clipPixelCountNestedPhase2;
               }
-              clipPixelCountNestedPhase2 = (sourceYQ12NestedPhase3 - inverseSinStep) / inverseSinStep;
+              clipPixelCountNestedPhase2LiteralPhase1 = (sourceYQ12NestedPhase3 - inverseSinStep) / inverseSinStep;
               if ((sourceYQ12NestedPhase3 - inverseSinStep) / inverseSinStep > negativePixelCounterNestedPhase3) {
-                negativePixelCounterNestedPhase3 = clipPixelCountNestedPhase2;
+                negativePixelCounterNestedPhase3 = clipPixelCountNestedPhase2LiteralPhase1;
               }
               while (negativePixelCounterNestedPhase3 < 0) {
                 sampledPixelNestedPhase3 = this.pixels[(sourceYQ12NestedPhase3 >> 12) * this.width + (sourceXQ12NestedPhase3 >> 12)];
@@ -638,9 +653,9 @@ final class ArgbSprite extends Sprite {
                   sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipPixelCountPhase2;
                   destinationIndexPhase2 = destinationIndexPhase2 + clipPixelCountPhase2;
                 }
-                clipPixelCountPhase2 = (1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+                clipPixelCountPhase2LiteralPhase1 = (1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
                 if ((1 + sourceXQ12Phase2 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2) {
-                  negativePixelCounterPhase2 = clipPixelCountPhase2;
+                  negativePixelCounterPhase2 = clipPixelCountPhase2LiteralPhase1;
                 }
                 while (negativePixelCounterPhase2 < 0) {
                   sampledPixelPhase2 = this.pixels[(sourceYQ12Phase2 >> 12) * this.width + (sourceXQ12Phase2 >> 12)];
@@ -674,20 +689,20 @@ final class ArgbSprite extends Sprite {
                 sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep * clipPixelCountPhase2NestedPhase2;
                 destinationIndexPhase2NestedPhase2 = destinationIndexPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
               }
-              clipPixelCountPhase2NestedPhase2 = (1 + sourceXQ12Phase2NestedPhase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+              clipPixelCountPhase2NestedPhase2LiteralPhase1 = (1 + sourceXQ12Phase2NestedPhase2 - (this.width << 12) - inverseCosStep) / inverseCosStep;
               if ((1 + sourceXQ12Phase2NestedPhase2 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2NestedPhase2) {
-                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2;
+                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2LiteralPhase1;
               }
               if (sourceYQ12Phase2NestedPhase2 < 0) {
-                clipPixelCountPhase2NestedPhase2 = (inverseSinStep - 1 - sourceYQ12Phase2NestedPhase2) / inverseSinStep;
-                negativePixelCounterPhase2NestedPhase2 = negativePixelCounterPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
-                sourceXQ12Phase2NestedPhase2 = sourceXQ12Phase2NestedPhase2 + inverseCosStep * clipPixelCountPhase2NestedPhase2;
-                sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep * clipPixelCountPhase2NestedPhase2;
-                destinationIndexPhase2NestedPhase2 = destinationIndexPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2;
+                clipPixelCountPhase2NestedPhase2LiteralPhase2 = (inverseSinStep - 1 - sourceYQ12Phase2NestedPhase2) / inverseSinStep;
+                negativePixelCounterPhase2NestedPhase2 = negativePixelCounterPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2LiteralPhase2;
+                sourceXQ12Phase2NestedPhase2 = sourceXQ12Phase2NestedPhase2 + inverseCosStep * clipPixelCountPhase2NestedPhase2LiteralPhase2;
+                sourceYQ12Phase2NestedPhase2 = sourceYQ12Phase2NestedPhase2 + inverseSinStep * clipPixelCountPhase2NestedPhase2LiteralPhase2;
+                destinationIndexPhase2NestedPhase2 = destinationIndexPhase2NestedPhase2 + clipPixelCountPhase2NestedPhase2LiteralPhase2;
               }
-              clipPixelCountPhase2NestedPhase2 = (1 + sourceYQ12Phase2NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
+              clipPixelCountPhase2NestedPhase2LiteralPhase3 = (1 + sourceYQ12Phase2NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep;
               if ((1 + sourceYQ12Phase2NestedPhase2 - (this.height << 12) - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2NestedPhase2) {
-                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2;
+                negativePixelCounterPhase2NestedPhase2 = clipPixelCountPhase2NestedPhase2LiteralPhase3;
               }
               while (negativePixelCounterPhase2NestedPhase2 < 0) {
                 sampledPixelPhase2NestedPhase2 = this.pixels[(sourceYQ12Phase2NestedPhase2 >> 12) * this.width + (sourceXQ12Phase2NestedPhase2 >> 12)];
@@ -721,21 +736,21 @@ final class ArgbSprite extends Sprite {
               sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep * clipPixelCountPhase2NestedPhase3;
               destinationIndexPhase2NestedPhase3 = destinationIndexPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
             }
-            clipPixelCountPhase2NestedPhase3 = (1 + sourceXQ12Phase2NestedPhase3 - (this.width << 12) - inverseCosStep) / inverseCosStep;
+            clipPixelCountPhase2NestedPhase3LiteralPhase1 = (1 + sourceXQ12Phase2NestedPhase3 - (this.width << 12) - inverseCosStep) / inverseCosStep;
             if ((1 + sourceXQ12Phase2NestedPhase3 - (this.width << 12) - inverseCosStep) / inverseCosStep > negativePixelCounterPhase2NestedPhase3) {
-              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3;
+              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3LiteralPhase1;
             }
-            clipPixelCountPhase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 - (this.height << 12);
+            clipPixelCountPhase2NestedPhase3LiteralPhase2 = sourceYQ12Phase2NestedPhase3 - (this.height << 12);
             if (sourceYQ12Phase2NestedPhase3 - (this.height << 12) >= 0) {
-              clipPixelCountPhase2NestedPhase3 = (inverseSinStep - clipPixelCountPhase2NestedPhase3) / inverseSinStep;
-              negativePixelCounterPhase2NestedPhase3 = negativePixelCounterPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
-              sourceXQ12Phase2NestedPhase3 = sourceXQ12Phase2NestedPhase3 + inverseCosStep * clipPixelCountPhase2NestedPhase3;
-              sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep * clipPixelCountPhase2NestedPhase3;
-              destinationIndexPhase2NestedPhase3 = destinationIndexPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3;
+              clipPixelCountPhase2NestedPhase3LiteralPhase2 = (inverseSinStep - clipPixelCountPhase2NestedPhase3LiteralPhase2) / inverseSinStep;
+              negativePixelCounterPhase2NestedPhase3 = negativePixelCounterPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3LiteralPhase2;
+              sourceXQ12Phase2NestedPhase3 = sourceXQ12Phase2NestedPhase3 + inverseCosStep * clipPixelCountPhase2NestedPhase3LiteralPhase2;
+              sourceYQ12Phase2NestedPhase3 = sourceYQ12Phase2NestedPhase3 + inverseSinStep * clipPixelCountPhase2NestedPhase3LiteralPhase2;
+              destinationIndexPhase2NestedPhase3 = destinationIndexPhase2NestedPhase3 + clipPixelCountPhase2NestedPhase3LiteralPhase2;
             }
-            clipPixelCountPhase2NestedPhase3 = (sourceYQ12Phase2NestedPhase3 - inverseSinStep) / inverseSinStep;
+            clipPixelCountPhase2NestedPhase3LiteralPhase3 = (sourceYQ12Phase2NestedPhase3 - inverseSinStep) / inverseSinStep;
             if ((sourceYQ12Phase2NestedPhase3 - inverseSinStep) / inverseSinStep > negativePixelCounterPhase2NestedPhase3) {
-              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3;
+              negativePixelCounterPhase2NestedPhase3 = clipPixelCountPhase2NestedPhase3LiteralPhase3;
             }
             while (negativePixelCounterPhase2NestedPhase3 < 0) {
               sampledPixelPhase2NestedPhase3 = this.pixels[(sourceYQ12Phase2NestedPhase3 >> 12) * this.width + (sourceXQ12Phase2NestedPhase3 >> 12)];
@@ -1208,6 +1223,8 @@ final class ArgbSprite extends Sprite {
 
     final void drawAdditive(int x, int y, int intensity256) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -1227,19 +1244,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -1252,6 +1269,8 @@ final class ArgbSprite extends Sprite {
 
     final void draw(int x, int y) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -1271,19 +1290,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {
@@ -1329,6 +1348,10 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = 0;
         int trimStepsThenDestinationIndex = 0;
         int clippedEdgePixels = 0;
+        int trimStepsThenDestinationIndexLiteralPhase1;
+        int trimStepsThenDestinationIndexLiteralPhase2;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         if (destinationWidth > 0) {
             if (destinationHeight <= 0) {
                 return;
@@ -1347,9 +1370,9 @@ final class ArgbSprite extends Sprite {
                 sourceX16 = sourceX16 + (trimStepsThenDestinationIndex * stepX16 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
-                trimStepsThenDestinationIndex = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + trimStepsThenDestinationIndex;
-                sourceY16 = sourceY16 + (trimStepsThenDestinationIndex * stepY16 - (this.trimY << 16));
+                trimStepsThenDestinationIndexLiteralPhase1 = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+                y = y + trimStepsThenDestinationIndexLiteralPhase1;
+                sourceY16 = sourceY16 + (trimStepsThenDestinationIndexLiteralPhase1 * stepY16 - (this.trimY << 16));
             }
             if (sourceWidth < canvasWidth) {
                 destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
@@ -1357,7 +1380,7 @@ final class ArgbSprite extends Sprite {
             if (sourceHeight < canvasHeight) {
                 destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
             }
-            trimStepsThenDestinationIndex = x + y * SoftwareRasterizer.stride;
+            trimStepsThenDestinationIndexLiteralPhase2 = x + y * SoftwareRasterizer.stride;
             destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
             if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
                 destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
@@ -1365,22 +1388,22 @@ final class ArgbSprite extends Sprite {
             if (y < SoftwareRasterizer.clipTop) {
                 clippedEdgePixels = SoftwareRasterizer.clipTop - y;
                 destinationHeight = destinationHeight - clippedEdgePixels;
-                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+                trimStepsThenDestinationIndexLiteralPhase2 = trimStepsThenDestinationIndexLiteralPhase2 + clippedEdgePixels * SoftwareRasterizer.stride;
                 sourceY16 = sourceY16 + stepY16 * clippedEdgePixels;
             }
             if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                clippedEdgePixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - clippedEdgePixels;
-                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+                clippedEdgePixelsLiteralPhase1 = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - clippedEdgePixelsLiteralPhase1;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
             }
             if (x < SoftwareRasterizer.clipLeft) {
-                clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - clippedEdgePixels;
-                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels;
-                sourceX16 = sourceX16 + stepX16 * clippedEdgePixels;
-                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+                clippedEdgePixelsLiteralPhase2 = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - clippedEdgePixelsLiteralPhase2;
+                trimStepsThenDestinationIndexLiteralPhase2 = trimStepsThenDestinationIndexLiteralPhase2 + clippedEdgePixelsLiteralPhase2;
+                sourceX16 = sourceX16 + stepX16 * clippedEdgePixelsLiteralPhase2;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
             }
-            ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
+            ArgbSprite.blitArgbScaledAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndexLiteralPhase2, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth, alpha256);
             return;
         }
     }
@@ -1397,6 +1420,10 @@ final class ArgbSprite extends Sprite {
         int destinationRowSkip = 0;
         int trimStepsThenDestinationIndex = 0;
         int clippedEdgePixels = 0;
+        int trimStepsThenDestinationIndexLiteralPhase1;
+        int trimStepsThenDestinationIndexLiteralPhase2;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         if (destinationWidth > 0) {
             if (destinationHeight <= 0) {
                 return;
@@ -1415,9 +1442,9 @@ final class ArgbSprite extends Sprite {
                 sourceX16 = sourceX16 + (trimStepsThenDestinationIndex * stepX16 - (this.trimX << 16));
             }
             if (this.trimY > 0) {
-                trimStepsThenDestinationIndex = ((this.trimY << 16) + stepY16 - 1) / stepY16;
-                y = y + trimStepsThenDestinationIndex;
-                sourceY16 = sourceY16 + (trimStepsThenDestinationIndex * stepY16 - (this.trimY << 16));
+                trimStepsThenDestinationIndexLiteralPhase1 = ((this.trimY << 16) + stepY16 - 1) / stepY16;
+                y = y + trimStepsThenDestinationIndexLiteralPhase1;
+                sourceY16 = sourceY16 + (trimStepsThenDestinationIndexLiteralPhase1 * stepY16 - (this.trimY << 16));
             }
             if (sourceWidth < canvasWidth) {
                 destinationWidth = ((sourceWidth << 16) - sourceX16 + stepX16 - 1) / stepX16;
@@ -1425,7 +1452,7 @@ final class ArgbSprite extends Sprite {
             if (sourceHeight < canvasHeight) {
                 destinationHeight = ((sourceHeight << 16) - sourceY16 + stepY16 - 1) / stepY16;
             }
-            trimStepsThenDestinationIndex = x + y * SoftwareRasterizer.stride;
+            trimStepsThenDestinationIndexLiteralPhase2 = x + y * SoftwareRasterizer.stride;
             destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
             if (y + destinationHeight > SoftwareRasterizer.clipBottom) {
                 destinationHeight = destinationHeight - (y + destinationHeight - SoftwareRasterizer.clipBottom);
@@ -1433,28 +1460,30 @@ final class ArgbSprite extends Sprite {
             if (y < SoftwareRasterizer.clipTop) {
                 clippedEdgePixels = SoftwareRasterizer.clipTop - y;
                 destinationHeight = destinationHeight - clippedEdgePixels;
-                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels * SoftwareRasterizer.stride;
+                trimStepsThenDestinationIndexLiteralPhase2 = trimStepsThenDestinationIndexLiteralPhase2 + clippedEdgePixels * SoftwareRasterizer.stride;
                 sourceY16 = sourceY16 + stepY16 * clippedEdgePixels;
             }
             if (x + destinationWidth > SoftwareRasterizer.clipRight) {
-                clippedEdgePixels = x + destinationWidth - SoftwareRasterizer.clipRight;
-                destinationWidth = destinationWidth - clippedEdgePixels;
-                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+                clippedEdgePixelsLiteralPhase1 = x + destinationWidth - SoftwareRasterizer.clipRight;
+                destinationWidth = destinationWidth - clippedEdgePixelsLiteralPhase1;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
             }
             if (x < SoftwareRasterizer.clipLeft) {
-                clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-                destinationWidth = destinationWidth - clippedEdgePixels;
-                trimStepsThenDestinationIndex = trimStepsThenDestinationIndex + clippedEdgePixels;
-                sourceX16 = sourceX16 + stepX16 * clippedEdgePixels;
-                destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+                clippedEdgePixelsLiteralPhase2 = SoftwareRasterizer.clipLeft - x;
+                destinationWidth = destinationWidth - clippedEdgePixelsLiteralPhase2;
+                trimStepsThenDestinationIndexLiteralPhase2 = trimStepsThenDestinationIndexLiteralPhase2 + clippedEdgePixelsLiteralPhase2;
+                sourceX16 = sourceX16 + stepX16 * clippedEdgePixelsLiteralPhase2;
+                destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
             }
-            ArgbSprite.blitArgbScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndex, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
+            ArgbSprite.blitArgbScaled(SoftwareRasterizer.framebuffer, this.pixels, 0, sourceX16, sourceY16, trimStepsThenDestinationIndexLiteralPhase2, destinationRowSkip, destinationWidth, destinationHeight, stepX16, stepY16, sourceWidth);
             return;
         }
     }
 
     final void drawUnmasked(int x, int y) {
         int clippedEdgePixels = 0;
+        int clippedEdgePixelsLiteralPhase1;
+        int clippedEdgePixelsLiteralPhase2;
         x = x + this.trimX;
         y = y + this.trimY;
         int destinationIndex = x + y * SoftwareRasterizer.stride;
@@ -1474,19 +1503,19 @@ final class ArgbSprite extends Sprite {
             drawHeight = drawHeight - (y + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedEdgePixels = SoftwareRasterizer.clipLeft - x;
-            drawWidth = drawWidth - clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedEdgePixels;
-            destinationIndex = destinationIndex + clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            sourceIndex = sourceIndex + clippedEdgePixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedEdgePixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase1;
         }
         if (x + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedEdgePixels = x + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedEdgePixels;
-            sourceRowSkip = sourceRowSkip + clippedEdgePixels;
-            destinationRowSkip = destinationRowSkip + clippedEdgePixels;
+            clippedEdgePixelsLiteralPhase2 = x + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedEdgePixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedEdgePixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedEdgePixelsLiteralPhase2;
         }
         if (drawWidth > 0) {
             if (drawHeight <= 0) {

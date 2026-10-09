@@ -29,6 +29,9 @@ final class ProgressBarWidget extends UiWidget {
         int shadedStripeColor = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         Sprite stripeSprite = new Sprite(this.stripeWidth * 2, this.widgetHeight);
+        int packedRedBlueChannelsLiteralPhase1;
+        int packedGreenChannelLiteralPhase1;
+        int shadedStripeColorLiteralPhase1;
         Geoblox.setRasterTarget(1, stripeSprite);
         int halfHeight = this.widgetHeight >> 1;
         for (stripeRow = 0; this.widgetHeight > stripeRow; stripeRow++) {
@@ -40,11 +43,11 @@ final class ProgressBarWidget extends UiWidget {
             shadedStripeColor = brightnessQ8 >= 256 ? packedGreenChannel | packedRedBlueChannels : (-16711936 & brightnessQ8 * packedRedBlueChannels | 16711680 & brightnessQ8 * packedGreenChannel) >>> 8;
             SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
             SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
-            packedGreenChannel = alternateColor & 65280;
-            packedRedBlueChannels = alternateColor & 16711935;
-            shadedStripeColor = 256 > brightnessQ8 ? (16711680 & packedGreenChannel * brightnessQ8 | -16711936 & brightnessQ8 * packedRedBlueChannels) >>> 8 : packedGreenChannel | packedRedBlueChannels;
-            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
-            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
+            packedGreenChannelLiteralPhase1 = alternateColor & 65280;
+            packedRedBlueChannelsLiteralPhase1 = alternateColor & 16711935;
+            shadedStripeColorLiteralPhase1 = 256 > brightnessQ8 ? (16711680 & packedGreenChannelLiteralPhase1 * brightnessQ8 | -16711936 & brightnessQ8 * packedRedBlueChannelsLiteralPhase1) >>> 8 : packedGreenChannelLiteralPhase1 | packedRedBlueChannelsLiteralPhase1;
+            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColorLiteralPhase1);
+            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColorLiteralPhase1);
         }
         RasterTargetRestoreSupport.restoreRasterTarget(restoreGuard);
         return stripeSprite;

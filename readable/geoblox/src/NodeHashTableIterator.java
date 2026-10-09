@@ -38,6 +38,8 @@ final class NodeHashTableIterator implements Iterator {
     final static void markInsetZeroOutlinePixels(int topY, int leftX, int width, int methodGuard, int height) {
         int firstPixelOffset = 0;
         int rowSkip = 0;
+        int firstPixelOffsetLiteralPhase1;
+        int rowSkipLiteralPhase1;
         topY += 2;
         leftX += 2;
         if (methodGuard == -27085) {
@@ -51,9 +53,9 @@ final class NodeHashTableIterator implements Iterator {
         NodeHashTableIterator.releaseSharedResources(32);
         height -= 4;
         width -= 4;
-        firstPixelOffset = leftX + topY * SoftwareRasterizer.stride;
-        rowSkip = SoftwareRasterizer.stride - width;
-        SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, firstPixelOffset, 0, 0, 0, 0, width, height, rowSkip);
+        firstPixelOffsetLiteralPhase1 = leftX + topY * SoftwareRasterizer.stride;
+        rowSkipLiteralPhase1 = SoftwareRasterizer.stride - width;
+        SessionSocketSupport.markZeroOutlinePixels(SoftwareRasterizer.framebuffer, firstPixelOffsetLiteralPhase1, 0, 0, 0, 0, width, height, rowSkipLiteralPhase1);
     }
 
     public final Object next() {

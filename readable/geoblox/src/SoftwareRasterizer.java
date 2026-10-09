@@ -1485,6 +1485,8 @@ final class SoftwareRasterizer {
         int columnIndexPhase2NestedPhase3;
         int columnIndexPhase3NestedPhase2;
         int channelSumAfterRemovalOrOutputRedPhase2NestedPhase2;
+        int channelSumAfterRemovalOrOutputRedPhase2LiteralPhase1;
+        int channelSumAfterRemovalOrOutputRedPhase2LiteralPhase2;
         if (blurColumnRedSums == null ||
               !(blurColumnRedSums.length >= regionWidth)) {
           blurColumnRedSums = new int[regionWidth];
@@ -1582,20 +1584,20 @@ final class SoftwareRasterizer {
               nonnegativeRedSum = 0;
             }
             redSumsForClampedStore[redColumnForClampedStore] = nonnegativeRedSum;
-            channelSumAfterRemovalOrOutputRedPhase2 = greenSumsSnapshot[columnIndexPhase2] - (scratchPixel >> 8 & 255);
+            channelSumAfterRemovalOrOutputRedPhase2LiteralPhase1 = greenSumsSnapshot[columnIndexPhase2] - (scratchPixel >> 8 & 255);
             greenSumsForClampedStore = greenSumsForUpdates;
             greenColumnForClampedStore = columnIndexPhase2;
-            if (channelSumAfterRemovalOrOutputRedPhase2 >= 0) {
-              nonnegativeGreenSum = channelSumAfterRemovalOrOutputRedPhase2;
+            if (channelSumAfterRemovalOrOutputRedPhase2LiteralPhase1 >= 0) {
+              nonnegativeGreenSum = channelSumAfterRemovalOrOutputRedPhase2LiteralPhase1;
             } else {
               nonnegativeGreenSum = 0;
             }
             greenSumsForClampedStore[greenColumnForClampedStore] = nonnegativeGreenSum;
-            channelSumAfterRemovalOrOutputRedPhase2 = blueSumsSnapshot[columnIndexPhase2] - (scratchPixel & 255);
+            channelSumAfterRemovalOrOutputRedPhase2LiteralPhase2 = blueSumsSnapshot[columnIndexPhase2] - (scratchPixel & 255);
             blueSumsForClampedStore = blueSumsForUpdates;
             blueColumnForClampedStore = columnIndexPhase2;
-            if (channelSumAfterRemovalOrOutputRedPhase2 >= 0) {
-              nonnegativeBlueSum = channelSumAfterRemovalOrOutputRedPhase2;
+            if (channelSumAfterRemovalOrOutputRedPhase2LiteralPhase2 >= 0) {
+              nonnegativeBlueSum = channelSumAfterRemovalOrOutputRedPhase2LiteralPhase2;
             } else {
               nonnegativeBlueSum = 0;
             }

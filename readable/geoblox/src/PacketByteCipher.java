@@ -19,6 +19,8 @@ final class PacketByteCipher {
         int mixWord2 = -1640531527;
         int mixWord3 = -1640531527;
         int mixWord7 = -1640531527;
+        int mixRoundOrBlockOffsetLiteralPhase1;
+        int mixRoundOrBlockOffsetLiteralPhase2;
         if (!initializeState) {
             return;
         }
@@ -52,15 +54,15 @@ final class PacketByteCipher {
             mixWord0 = mixWord0 + mixWord1;
             mixWord2 = mixWord2 + mixWord7;
         }
-        for (mixRoundOrBlockOffset = 0; mixRoundOrBlockOffset < 256; mixRoundOrBlockOffset += 8) {
-            mixWord5 = mixWord5 + this.results[mixRoundOrBlockOffset + 5];
-            mixWord3 = mixWord3 + this.results[3 + mixRoundOrBlockOffset];
-            mixWord7 = mixWord7 + this.results[7 + mixRoundOrBlockOffset];
-            mixWord0 = mixWord0 + this.results[mixRoundOrBlockOffset];
-            mixWord2 = mixWord2 + this.results[2 + mixRoundOrBlockOffset];
-            mixWord4 = mixWord4 + this.results[4 + mixRoundOrBlockOffset];
-            mixWord1 = mixWord1 + this.results[1 + mixRoundOrBlockOffset];
-            mixWord6 = mixWord6 + this.results[mixRoundOrBlockOffset + 6];
+        for (mixRoundOrBlockOffsetLiteralPhase1 = 0; mixRoundOrBlockOffsetLiteralPhase1 < 256; mixRoundOrBlockOffsetLiteralPhase1 += 8) {
+            mixWord5 = mixWord5 + this.results[mixRoundOrBlockOffsetLiteralPhase1 + 5];
+            mixWord3 = mixWord3 + this.results[3 + mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord7 = mixWord7 + this.results[7 + mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord0 = mixWord0 + this.results[mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord2 = mixWord2 + this.results[2 + mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord4 = mixWord4 + this.results[4 + mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord1 = mixWord1 + this.results[1 + mixRoundOrBlockOffsetLiteralPhase1];
+            mixWord6 = mixWord6 + this.results[mixRoundOrBlockOffsetLiteralPhase1 + 6];
             mixWord0 = mixWord0 ^ mixWord1 << 11;
             mixWord1 = mixWord1 + mixWord2;
             mixWord3 = mixWord3 + mixWord0;
@@ -85,24 +87,24 @@ final class PacketByteCipher {
             mixWord7 = mixWord7 ^ mixWord0 >>> 9;
             mixWord2 = mixWord2 + mixWord7;
             mixWord0 = mixWord0 + mixWord1;
-            this.stateWords[mixRoundOrBlockOffset] = mixWord0;
-            this.stateWords[1 + mixRoundOrBlockOffset] = mixWord1;
-            this.stateWords[2 + mixRoundOrBlockOffset] = mixWord2;
-            this.stateWords[3 + mixRoundOrBlockOffset] = mixWord3;
-            this.stateWords[mixRoundOrBlockOffset + 4] = mixWord4;
-            this.stateWords[mixRoundOrBlockOffset + 5] = mixWord5;
-            this.stateWords[6 + mixRoundOrBlockOffset] = mixWord6;
-            this.stateWords[7 + mixRoundOrBlockOffset] = mixWord7;
+            this.stateWords[mixRoundOrBlockOffsetLiteralPhase1] = mixWord0;
+            this.stateWords[1 + mixRoundOrBlockOffsetLiteralPhase1] = mixWord1;
+            this.stateWords[2 + mixRoundOrBlockOffsetLiteralPhase1] = mixWord2;
+            this.stateWords[3 + mixRoundOrBlockOffsetLiteralPhase1] = mixWord3;
+            this.stateWords[mixRoundOrBlockOffsetLiteralPhase1 + 4] = mixWord4;
+            this.stateWords[mixRoundOrBlockOffsetLiteralPhase1 + 5] = mixWord5;
+            this.stateWords[6 + mixRoundOrBlockOffsetLiteralPhase1] = mixWord6;
+            this.stateWords[7 + mixRoundOrBlockOffsetLiteralPhase1] = mixWord7;
         }
-        for (mixRoundOrBlockOffset = 0; 256 > mixRoundOrBlockOffset; mixRoundOrBlockOffset += 8) {
-            mixWord6 = mixWord6 + this.stateWords[mixRoundOrBlockOffset + 6];
-            mixWord0 = mixWord0 + this.stateWords[mixRoundOrBlockOffset];
-            mixWord7 = mixWord7 + this.stateWords[mixRoundOrBlockOffset + 7];
-            mixWord3 = mixWord3 + this.stateWords[3 + mixRoundOrBlockOffset];
-            mixWord1 = mixWord1 + this.stateWords[1 + mixRoundOrBlockOffset];
-            mixWord5 = mixWord5 + this.stateWords[5 + mixRoundOrBlockOffset];
-            mixWord2 = mixWord2 + this.stateWords[mixRoundOrBlockOffset + 2];
-            mixWord4 = mixWord4 + this.stateWords[mixRoundOrBlockOffset + 4];
+        for (mixRoundOrBlockOffsetLiteralPhase2 = 0; 256 > mixRoundOrBlockOffsetLiteralPhase2; mixRoundOrBlockOffsetLiteralPhase2 += 8) {
+            mixWord6 = mixWord6 + this.stateWords[mixRoundOrBlockOffsetLiteralPhase2 + 6];
+            mixWord0 = mixWord0 + this.stateWords[mixRoundOrBlockOffsetLiteralPhase2];
+            mixWord7 = mixWord7 + this.stateWords[mixRoundOrBlockOffsetLiteralPhase2 + 7];
+            mixWord3 = mixWord3 + this.stateWords[3 + mixRoundOrBlockOffsetLiteralPhase2];
+            mixWord1 = mixWord1 + this.stateWords[1 + mixRoundOrBlockOffsetLiteralPhase2];
+            mixWord5 = mixWord5 + this.stateWords[5 + mixRoundOrBlockOffsetLiteralPhase2];
+            mixWord2 = mixWord2 + this.stateWords[mixRoundOrBlockOffsetLiteralPhase2 + 2];
+            mixWord4 = mixWord4 + this.stateWords[mixRoundOrBlockOffsetLiteralPhase2 + 4];
             mixWord0 = mixWord0 ^ mixWord1 << 11;
             mixWord3 = mixWord3 + mixWord0;
             mixWord1 = mixWord1 + mixWord2;
@@ -127,14 +129,14 @@ final class PacketByteCipher {
             mixWord7 = mixWord7 ^ mixWord0 >>> 9;
             mixWord0 = mixWord0 + mixWord1;
             mixWord2 = mixWord2 + mixWord7;
-            this.stateWords[mixRoundOrBlockOffset] = mixWord0;
-            this.stateWords[1 + mixRoundOrBlockOffset] = mixWord1;
-            this.stateWords[mixRoundOrBlockOffset + 2] = mixWord2;
-            this.stateWords[3 + mixRoundOrBlockOffset] = mixWord3;
-            this.stateWords[4 + mixRoundOrBlockOffset] = mixWord4;
-            this.stateWords[5 + mixRoundOrBlockOffset] = mixWord5;
-            this.stateWords[6 + mixRoundOrBlockOffset] = mixWord6;
-            this.stateWords[7 + mixRoundOrBlockOffset] = mixWord7;
+            this.stateWords[mixRoundOrBlockOffsetLiteralPhase2] = mixWord0;
+            this.stateWords[1 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord1;
+            this.stateWords[mixRoundOrBlockOffsetLiteralPhase2 + 2] = mixWord2;
+            this.stateWords[3 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord3;
+            this.stateWords[4 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord4;
+            this.stateWords[5 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord5;
+            this.stateWords[6 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord6;
+            this.stateWords[7 + mixRoundOrBlockOffsetLiteralPhase2] = mixWord7;
         }
         this.generateResults(-108);
         this.remainingResults = 256;

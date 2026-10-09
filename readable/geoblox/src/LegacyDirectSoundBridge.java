@@ -7,6 +7,7 @@ final class LegacyDirectSoundBridge implements DirectSoundCompatibility {
 
     public LegacyDirectSoundBridge() throws Exception {
         int bufferIndex = 0;
+        int bufferIndexLiteralPhase1;
         this.bufferDescriptors = new com.ms.directX.DSBufferDesc[2];
         this.bufferCursors = new com.ms.directX.DSCursors[2];
         com.ms.directX.DirectSound unusedDirectSoundInstance = new com.ms.directX.DirectSound();
@@ -14,8 +15,8 @@ final class LegacyDirectSoundBridge implements DirectSoundCompatibility {
         for (bufferIndex = 0; bufferIndex < 2; bufferIndex++) {
             this.bufferDescriptors[bufferIndex] = new com.ms.directX.DSBufferDesc();
         }
-        for (bufferIndex = 0; bufferIndex < 2; bufferIndex++) {
-            this.bufferCursors[bufferIndex] = new com.ms.directX.DSCursors();
+        for (bufferIndexLiteralPhase1 = 0; bufferIndexLiteralPhase1 < 2; bufferIndexLiteralPhase1++) {
+            this.bufferCursors[bufferIndexLiteralPhase1] = new com.ms.directX.DSCursors();
         }
     }
 }

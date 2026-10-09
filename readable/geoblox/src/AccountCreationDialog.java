@@ -128,6 +128,9 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
         int characterIndex = 0;
         int characterCode = 0;
         int unusedClientControlSnapshot = 0;
+        int escapeOrPreviousDotStateLiteralPhase1;
+        int characterIndexLiteralPhase1;
+        int characterCodeLiteralPhase1;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           localPartLength = localPart.length();
@@ -161,25 +164,25 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
             }
             return null;
           }
-          escapeOrPreviousDotState = 0;
-          for (characterIndex = 0; characterIndex < localPartLength; characterIndex++) {
+          escapeOrPreviousDotStateLiteralPhase1 = 0;
+          for (characterIndexLiteralPhase1 = 0; characterIndexLiteralPhase1 < localPartLength; characterIndexLiteralPhase1++) {
             unquotedLocalPartCharacter: {
-              characterCode = localPart.charAt(characterIndex);
-              if (characterCode == 46) {
-                if (0 != characterIndex &&
-                    characterIndex != -1 + localPartLength &&
-                    escapeOrPreviousDotState == 0) {
-                  escapeOrPreviousDotState = 1;
+              characterCodeLiteralPhase1 = localPart.charAt(characterIndexLiteralPhase1);
+              if (characterCodeLiteralPhase1 == 46) {
+                if (0 != characterIndexLiteralPhase1 &&
+                    characterIndexLiteralPhase1 != -1 + localPartLength &&
+                    escapeOrPreviousDotStateLiteralPhase1 == 0) {
+                  escapeOrPreviousDotStateLiteralPhase1 = 1;
                   break unquotedLocalPartCharacter;
                 }
                 invalidDotFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
                 return invalidDotFailureBeforeReturn;
               }
-              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(characterCode) == -1) {
+              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(characterCodeLiteralPhase1) == -1) {
                 invalidCharacterFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
                 return invalidCharacterFailureBeforeReturn;
               }
-              escapeOrPreviousDotState = 0;
+              escapeOrPreviousDotStateLiteralPhase1 = 0;
             }
           }
           if (preserveNotLoggedInText) {

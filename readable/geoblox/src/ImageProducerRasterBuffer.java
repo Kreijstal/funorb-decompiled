@@ -149,6 +149,12 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         int framebufferIndex = 0;
         int remainingDots = 0;
         int unusedClientControlSnapshot = 0;
+        int framebufferIndexLiteralPhase1;
+        int framebufferIndexLiteralPhase2;
+        int framebufferIndexLiteralPhase3;
+        int remainingDotsLiteralPhase1;
+        int remainingDotsLiteralPhase2;
+        int remainingDotsLiteralPhase3;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           rectangleRight = rectangleWidth + rectangleLeft;
@@ -195,41 +201,41 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           }
           if (rectangleTop >= SoftwareRasterizer.clipTop &&
               SoftwareRasterizer.clipBottom > rectangleBottom) {
-            framebufferIndex = clippedLeft + SoftwareRasterizer.stride * rectangleTop;
-            remainingDots = -clippedLeft + 1 + clippedRight >> 1;
+            framebufferIndexLiteralPhase1 = clippedLeft + SoftwareRasterizer.stride * rectangleTop;
+            remainingDotsLiteralPhase1 = -clippedLeft + 1 + clippedRight >> 1;
             while (true) {
-              remainingDots--;
-              if (remainingDots < 0) {
+              remainingDotsLiteralPhase1--;
+              if (remainingDotsLiteralPhase1 < 0) {
                 break;
               }
-              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
-              framebufferIndex += 2;
+              SoftwareRasterizer.framebuffer[framebufferIndexLiteralPhase1] = 16777215;
+              framebufferIndexLiteralPhase1 += 2;
             }
           }
           if (rectangleRight >= SoftwareRasterizer.clipLeft &&
               SoftwareRasterizer.clipRight > rectangleRight) {
-            framebufferIndex = rectangleRight + ((1 & -rectangleLeft + rectangleRight) + clippedTop) * SoftwareRasterizer.stride;
-            remainingDots = -clippedTop + 1 + clippedBottom >> 1;
+            framebufferIndexLiteralPhase2 = rectangleRight + ((1 & -rectangleLeft + rectangleRight) + clippedTop) * SoftwareRasterizer.stride;
+            remainingDotsLiteralPhase2 = -clippedTop + 1 + clippedBottom >> 1;
             while (true) {
-              remainingDots--;
-              if (0 > remainingDots) {
+              remainingDotsLiteralPhase2--;
+              if (0 > remainingDotsLiteralPhase2) {
                 break;
               }
-              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
-              framebufferIndex = framebufferIndex + 2 * SoftwareRasterizer.stride;
+              SoftwareRasterizer.framebuffer[framebufferIndexLiteralPhase2] = 16777215;
+              framebufferIndexLiteralPhase2 = framebufferIndexLiteralPhase2 + 2 * SoftwareRasterizer.stride;
             }
           }
           if (SoftwareRasterizer.clipTop <= rectangleTop &&
               SoftwareRasterizer.clipBottom > rectangleBottom) {
-            framebufferIndex = SoftwareRasterizer.stride * rectangleBottom + (clippedLeft + (1 & -rectangleTop + rectangleBottom));
-            remainingDots = 1 - (-clippedRight + clippedLeft) >> 1;
+            framebufferIndexLiteralPhase3 = SoftwareRasterizer.stride * rectangleBottom + (clippedLeft + (1 & -rectangleTop + rectangleBottom));
+            remainingDotsLiteralPhase3 = 1 - (-clippedRight + clippedLeft) >> 1;
             while (true) {
-              remainingDots--;
-              if (remainingDots < 0) {
+              remainingDotsLiteralPhase3--;
+              if (remainingDotsLiteralPhase3 < 0) {
                 return;
               }
-              SoftwareRasterizer.framebuffer[framebufferIndex] = 16777215;
-              framebufferIndex += 2;
+              SoftwareRasterizer.framebuffer[framebufferIndexLiteralPhase3] = 16777215;
+              framebufferIndexLiteralPhase3 += 2;
             }
           }
           return;

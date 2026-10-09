@@ -48,6 +48,9 @@ final class NanoFrameTimer extends FrameTimer {
         int clientControlFlowSnapshot = 0;
         PacketBuffer packet = null;
         long[][] recordLongsByView = null;
+        int queryOrSubmissionIdLiteralPhase1;
+        int valueIndexLiteralPhase1;
+        int valueIndexLiteralPhase2;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != -24839) {
@@ -124,7 +127,7 @@ final class NanoFrameTimer extends FrameTimer {
                     recordLongsByView[1][selfViewCount] = recordLongValue;
                     selfViewCount++;
                     packet.position = valuesStartPosition;
-                    for (valueIndex = 0; valueIndex < valuesPerEntry; valueIndex++) {
+                    for (valueIndexLiteralPhase1 = 0; valueIndexLiteralPhase1 < valuesPerEntry; valueIndexLiteralPhase1++) {
                       selfValueIndexBeforeIncrement = selfValueWriteIndex;
                       selfValueWriteIndex++;
                       valuesByView[1][selfValueIndexBeforeIncrement] = packet.readIntBE((byte) -122);
@@ -138,7 +141,7 @@ final class NanoFrameTimer extends FrameTimer {
                     recordLongsByView[2][uniqueViewCount] = recordLongValue;
                     uniqueViewCount++;
                     packet.position = valuesStartPosition;
-                    for (valueIndex = 0; valuesPerEntry > valueIndex; valueIndex++) {
+                    for (valueIndexLiteralPhase2 = 0; valuesPerEntry > valueIndexLiteralPhase2; valueIndexLiteralPhase2++) {
                       uniqueValueIndexBeforeIncrement = uniqueValueWriteIndex;
                       uniqueValueWriteIndex++;
                       valuesByView[2][uniqueValueIndexBeforeIncrement] = packet.readIntBE((byte) -101);
@@ -152,11 +155,11 @@ final class NanoFrameTimer extends FrameTimer {
             return;
           }
           if (1 == responseKind) {
-            queryOrSubmissionId = packet.readUnsignedShortBE(true);
+            queryOrSubmissionIdLiteralPhase1 = packet.readUnsignedShortBE(true);
             packet.readLongBE(methodGuard + 27740);
             submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
             while (submission != null) {
-              if (queryOrSubmissionId != submission.submissionId) {
+              if (queryOrSubmissionIdLiteralPhase1 != submission.submissionId) {
                 submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
                 continue;
               }

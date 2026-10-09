@@ -45,22 +45,24 @@ final class ScorePopup extends IntrusiveNode {
 
     final static void decodePackedRankedEntry(int methodGuard, ByteArrayBuffer buffer) {
         int packedComponentByte = 0;
+        int packedComponentByteLiteralPhase1;
+        int packedComponentByteLiteralPhase2;
         try {
             StatefulWidgetRenderer.decodedRankedRatioNumerator = buffer.readUnsignedShortBE(true) << 5;
             packedComponentByte = buffer.readUnsignedByte((byte) 34);
             StatefulWidgetRenderer.decodedRankedRatioNumerator = StatefulWidgetRenderer.decodedRankedRatioNumerator + (packedComponentByte >> 3);
             EmailAvailabilityQuery.decodedRankedRatioSecondComponent = packedComponentByte << 18 & 1835008;
             EmailAvailabilityQuery.decodedRankedRatioSecondComponent = EmailAvailabilityQuery.decodedRankedRatioSecondComponent + (buffer.readUnsignedShortBE(true) << 2);
-            packedComponentByte = buffer.readUnsignedByte((byte) 34);
+            packedComponentByteLiteralPhase1 = buffer.readUnsignedByte((byte) 34);
             if (methodGuard <= 105) {
                 ScorePopup.setAvatarNegativeRotationSteering((byte) 114);
             }
-            GzipInflater.decodedRankedRatioThirdComponent = packedComponentByte << 15 & 2064384;
-            EmailAvailabilityQuery.decodedRankedRatioSecondComponent = EmailAvailabilityQuery.decodedRankedRatioSecondComponent + (packedComponentByte >> 6);
+            GzipInflater.decodedRankedRatioThirdComponent = packedComponentByteLiteralPhase1 << 15 & 2064384;
+            EmailAvailabilityQuery.decodedRankedRatioSecondComponent = EmailAvailabilityQuery.decodedRankedRatioSecondComponent + (packedComponentByteLiteralPhase1 >> 6);
             GzipInflater.decodedRankedRatioThirdComponent = GzipInflater.decodedRankedRatioThirdComponent + (buffer.readUnsignedByte((byte) 34) << 7);
-            packedComponentByte = buffer.readUnsignedByte((byte) 34);
-            GzipInflater.decodedRankedRatioThirdComponent = GzipInflater.decodedRankedRatioThirdComponent + (packedComponentByte >> 1);
-            HighscoreNameEntry.decodedRankedKeyTwo = (packedComponentByte & 1) << 16;
+            packedComponentByteLiteralPhase2 = buffer.readUnsignedByte((byte) 34);
+            GzipInflater.decodedRankedRatioThirdComponent = GzipInflater.decodedRankedRatioThirdComponent + (packedComponentByteLiteralPhase2 >> 1);
+            HighscoreNameEntry.decodedRankedKeyTwo = (packedComponentByteLiteralPhase2 & 1) << 16;
             HighscoreNameEntry.decodedRankedKeyTwo = HighscoreNameEntry.decodedRankedKeyTwo + buffer.readUnsignedShortBE(true);
         } catch (RuntimeException decodeFailure) {
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailure), "me.B(" + methodGuard + ',' + (buffer != null ? "{...}" : "null") + ')');

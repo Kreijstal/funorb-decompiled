@@ -60,7 +60,7 @@ final class BoardReconciliationSupport {
         boolean alreadyVisited = false;
         GameplayEntity poppedConnectivityEntity = null;
         boolean poppedEntityTouchesAvatar = false;
-        int avatarContactThenDetachDecision = 0;
+        int avatarContactBitSnapshot = 0;
         GameplayEntity comparisonEntity = null;
         GameplayEntity neighborForConnectivityComparison = null;
         int visitedFlagThenResetIndex = 0;
@@ -86,7 +86,7 @@ final class BoardReconciliationSupport {
         GameplayEntity entityForTransientVariantReset = null;
         GameplayEntity connectivityEntityAlias = null;
         double radialVelocityScale = 0.0;
-        int componentNeighborIndex = 0;
+        int connectivityNeighborIndex = 0;
         GameplayEntity entityForComponentCategoryReset = null;
         GameplayEntity connectivityNeighbor = null;
         int relatedEntityIndex = 0;
@@ -104,6 +104,8 @@ final class BoardReconciliationSupport {
         GameplayEntity routedEntityForCategoryReset;
         GameplayEntity routedEntityForVariantReset;
         GameplayEntity detachingEntityForVariantReset;
+        int componentDetachDecision;
+        int relationRemovalNeighborIndex;
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           MessageDialogSupport.entitiesDetachedThisTick = false;
@@ -160,15 +162,15 @@ final class BoardReconciliationSupport {
                       if (currentConnectivityEntityAlias != null) {
                         PacketBuffer.connectivityVisitedByEntityId[currentConnectivityEntity.entityId] = true;
                         directAvatarContactValue = currentConnectivityEntityAlias.touchesAvatar;
-                        avatarContactThenDetachDecision = directAvatarContactValue ? 1 : 0;
+                        avatarContactBitSnapshot = directAvatarContactValue ? 1 : 0;
                         poppedEntityTouchesAvatar = directAvatarContactValue;
                         if (poppedEntityTouchesAvatar) {
                           componentCanDetach = 0;
                         } else {
                           visitedNonAvatarEntities.addFirst(currentConnectivityEntityAlias, false);
-                          componentNeighborIndex = 0;
-                          while (componentNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
-                            connectivityNeighbor = currentConnectivityEntity.relatedEntities[componentNeighborIndex];
+                          connectivityNeighborIndex = 0;
+                          while (connectivityNeighborIndex < currentConnectivityEntityAlias.relatedEntityCount) {
+                            connectivityNeighbor = currentConnectivityEntity.relatedEntities[connectivityNeighborIndex];
                             visitedNeighborSearchStart = (GameplayEntity) ((Object) visitedNonAvatarEntities.firstForIteration((byte) 121));
                             componentSearchEntity = visitedNeighborSearchStart;
                             enqueueUnseenNeighbor: while (true) {
@@ -193,13 +195,13 @@ final class BoardReconciliationSupport {
                               }
                               break;
                             }
-                            componentNeighborIndex++;
+                            connectivityNeighborIndex++;
                           }
                           continue;
                         }
                       }
-                      avatarContactThenDetachDecision = componentCanDetach;
-                      if (avatarContactThenDetachDecision == 0) {
+                      componentDetachDecision = componentCanDetach;
+                      if (componentDetachDecision == 0) {
                         break;
                       }
                       detachingComponentEntity = (GameplayEntity) ((Object) visitedNonAvatarEntities.removeFirst(true));
@@ -209,12 +211,12 @@ final class BoardReconciliationSupport {
                         detachingComponentEntity.detachedFromBoard = true;
                         MessageDialogSupport.entitiesDetachedThisTick = true;
                         visitedFlagThenResetIndex = 0;
-                        componentNeighborIndex = visitedFlagThenResetIndex;
-                        while (componentNeighborIndex < detachingComponentEntity.relatedEntityCount) {
-                          neighborForRelationRemoval = detachingComponentEntity.relatedEntities[componentNeighborIndex];
+                        relationRemovalNeighborIndex = visitedFlagThenResetIndex;
+                        while (relationRemovalNeighborIndex < detachingComponentEntity.relatedEntityCount) {
+                          neighborForRelationRemoval = detachingComponentEntity.relatedEntities[relationRemovalNeighborIndex];
                           detachingEntityForRelationRemoval = detachingComponentEntity;
                           ((GameplayEntity) (Object) neighborForRelationRemoval).removeRelatedEntity(detachingEntityForRelationRemoval, 0);
-                          componentNeighborIndex++;
+                          relationRemovalNeighborIndex++;
                         }
                         entityForComponentCategoryReset = detachingComponentEntity;
                         detachingEntityForVariantReset = detachingComponentEntity;

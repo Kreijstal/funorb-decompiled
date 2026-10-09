@@ -27,6 +27,8 @@ class UiWidget extends IntrusiveNode {
     final boolean dispatchKeyInputOrRequestFocus(byte methodGuard, char typedCharacter, int keyCode) {
         int guardQuotient = 0;
         int keyCodeSnapshot = 0;
+        int guardQuotientLiteralPhase1;
+        int keyCodeSnapshotLiteralPhase1;
         if (!this.hasKeyboardFocus((byte) 54)) {
             guardQuotient = 71 / ((methodGuard + 40) / 63);
             keyCodeSnapshot = keyCode;
@@ -38,9 +40,9 @@ class UiWidget extends IntrusiveNode {
         if (this.handleKeyInput(keyCode, 13, typedCharacter, this)) {
             return true;
         }
-        guardQuotient = 71 / ((methodGuard + 40) / 63);
-        keyCodeSnapshot = keyCode;
-        if (keyCodeSnapshot != 80) {
+        guardQuotientLiteralPhase1 = 71 / ((methodGuard + 40) / 63);
+        keyCodeSnapshotLiteralPhase1 = keyCode;
+        if (keyCodeSnapshotLiteralPhase1 != 80) {
             return false;
         }
         return this.requestKeyboardFocus((byte) -75, this);
@@ -56,16 +58,18 @@ class UiWidget extends IntrusiveNode {
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
         int guardResidue = 0;
+        int guardResidueLiteralPhase1;
+        int guardResidueLiteralPhase2;
         if (renderPass != 0) {
             guardResidue = 35 % ((1 - methodGuard) / 43);
             return;
         }
         if (null != this.renderer) {
             this.renderer.drawWidget(parentX, -81, parentY, true, this);
-            guardResidue = 35 % ((1 - methodGuard) / 43);
+            guardResidueLiteralPhase1 = 35 % ((1 - methodGuard) / 43);
             return;
         }
-        guardResidue = 35 % ((1 - methodGuard) / 43);
+        guardResidueLiteralPhase2 = 35 % ((1 - methodGuard) / 43);
     }
 
     int getLastRenderPass(byte methodGuard) {

@@ -110,6 +110,10 @@ final class MidiPcmStream extends PcmStream {
         StringBuilder failureContextBuilder = null;
         String noteDescription = null;
         RuntimeException caughtVolumeFailure = null;
+        int envelopeTimeLiteralPhase1;
+        int envelopeValueLiteralPhase1;
+        int segmentStartTimeLiteralPhase1;
+        int segmentEndTimeLiteralPhase1;
         try {
           if (this.channelVolumeScale[note.channelIndex] == 0) {
             zeroVolumeAtReturn = 0;
@@ -138,14 +142,14 @@ final class MidiPcmStream extends PcmStream {
           }
           if (note.releaseEnvelopeTime > 0 &&
               envelope.releaseEnvelope != null) {
-            envelopeTime = note.releaseEnvelopeTime;
-            envelopeValue = envelope.releaseEnvelope[1 + note.releaseEnvelopeIndex];
+            envelopeTimeLiteralPhase1 = note.releaseEnvelopeTime;
+            envelopeValueLiteralPhase1 = envelope.releaseEnvelope[1 + note.releaseEnvelopeIndex];
             if (-2 + envelope.releaseEnvelope.length > note.releaseEnvelopeIndex) {
-              segmentStartTime = noteEnvelope.releaseEnvelope[note.releaseEnvelopeIndex] << 8 & 65280;
-              segmentEndTime = envelope.releaseEnvelope[note.releaseEnvelopeIndex + 2] << 8 & 65280;
-              envelopeValue = envelopeValue + (envelope.releaseEnvelope[note.releaseEnvelopeIndex + 3] - envelopeValue) * (-segmentStartTime + envelopeTime) / (-segmentStartTime + segmentEndTime);
+              segmentStartTimeLiteralPhase1 = noteEnvelope.releaseEnvelope[note.releaseEnvelopeIndex] << 8 & 65280;
+              segmentEndTimeLiteralPhase1 = envelope.releaseEnvelope[note.releaseEnvelopeIndex + 2] << 8 & 65280;
+              envelopeValueLiteralPhase1 = envelopeValueLiteralPhase1 + (envelope.releaseEnvelope[note.releaseEnvelopeIndex + 3] - envelopeValueLiteralPhase1) * (-segmentStartTimeLiteralPhase1 + envelopeTimeLiteralPhase1) / (-segmentStartTimeLiteralPhase1 + segmentEndTimeLiteralPhase1);
             }
-            volume = envelopeValue * volume + 32 >> 6;
+            volume = envelopeValueLiteralPhase1 * volume + 32 >> 6;
           }
           volumeAtReturn = volume;
           return volumeAtReturn;
@@ -176,6 +180,7 @@ final class MidiPcmStream extends PcmStream {
         int vibratoDepthOrSampleStep = 0;
         int vibratoRampUpdates = 0;
         double vibratoWave = 0.0;
+        int vibratoDepthOrSampleStepLiteralPhase1;
         try {
           pitchFixed = (note.portamentoPitchDelta * note.portamentoScale >> 12) + note.basePitchFixed;
           pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
@@ -195,8 +200,8 @@ final class MidiPcmStream extends PcmStream {
             badGuardStepAtReturn = -116;
             return badGuardStepAtReturn;
           }
-          vibratoDepthOrSampleStep = (int)((double)(256 * note.pcmSample.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)pitchFixed) / (double)AudioOutput.sampleRateHz + 0.5);
-          sampleStepAtReturn = (vibratoDepthOrSampleStep < 1) ? 1 : vibratoDepthOrSampleStep;
+          vibratoDepthOrSampleStepLiteralPhase1 = (int)((double)(256 * note.pcmSample.sampleRateHz) * Math.pow(2.0, 0.0003255208333333333 * (double)pitchFixed) / (double)AudioOutput.sampleRateHz + 0.5);
+          sampleStepAtReturn = (vibratoDepthOrSampleStepLiteralPhase1 < 1) ? 1 : vibratoDepthOrSampleStepLiteralPhase1;
           return sampleStepAtReturn;
         } catch (java.lang.RuntimeException stepParameterFailure) {
           caughtStepFailure = stepParameterFailure;
@@ -972,6 +977,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void resetSynthesisState(boolean fadeOutNotes, int methodGuard) {
         int channelIndex = 0;
+        int channelIndexLiteralPhase1;
         if (!fadeOutNotes) {
             this.releaseChannelNotes(-1, 15387);
         } else {
@@ -985,7 +991,7 @@ final class MidiPcmStream extends PcmStream {
             this.channelInstrumentIds[channelIndex] = this.defaultChannelInstrumentIds[channelIndex];
         }
         int bankChannelIndex = 0;
-        channelIndex = bankChannelIndex;
+        channelIndexLiteralPhase1 = bankChannelIndex;
         while (bankChannelIndex < 16) {
             this.channelBankOffsets[bankChannelIndex] = ProxySocketConnector.andInt(this.defaultChannelInstrumentIds[bankChannelIndex], -128);
             bankChannelIndex++;

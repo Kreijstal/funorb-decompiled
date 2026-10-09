@@ -88,6 +88,9 @@ final class EntityLinkSupport {
         int unusedClientControlSnapshot = 0;
         GameplayEntity secondEntityForNeighborCountReset;
         GameplayEntity secondEntityForVariantCountReset;
+        int neighborIndexThenDetachSecondLiteralPhase1;
+        int variantPropagationThenNeighborIndexLiteralPhase1;
+        int variantPropagationThenNeighborIndexLiteralPhase2;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           for (neighborIndexThenDetachSecond = 0; neighborIndexThenDetachSecond < secondEntity.relatedEntityCount; neighborIndexThenDetachSecond++) {
@@ -95,7 +98,7 @@ final class EntityLinkSupport {
               return false;
             }
           }
-          neighborIndexThenDetachSecond = forceDetachSecond ? 1 : 0;
+          neighborIndexThenDetachSecondLiteralPhase1 = forceDetachSecond ? 1 : 0;
           detachFirst = 0;
           secondNeighborInsertionIndex = secondEntity.relatedEntityCount;
           secondEntity.relatedEntityCount = secondEntity.relatedEntityCount + 1;
@@ -124,7 +127,7 @@ final class EntityLinkSupport {
                 } else {
                   if (firstEntity.entitySpriteKindId == 2 &&
                       secondEntity.entitySpriteKindId == 1) {
-                    neighborIndexThenDetachSecond = 1;
+                    neighborIndexThenDetachSecondLiteralPhase1 = 1;
                     detachFirst = 1;
                     propagateCategory = 1;
                     secondEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, 0);
@@ -133,7 +136,7 @@ final class EntityLinkSupport {
                         secondEntity.entitySpriteKindId == 2) {
                       secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, 0);
                       variantPropagationThenNeighborIndex = 1;
-                      neighborIndexThenDetachSecond = 1;
+                      neighborIndexThenDetachSecondLiteralPhase1 = 1;
                     }
                   }
                 }
@@ -144,13 +147,13 @@ final class EntityLinkSupport {
                 if (secondEntity.entitySpriteKindId == 2 &&
                     2 != firstEntity.entitySpriteKindId) {
                   secondEntity.configureEntitySprite(320, firstEntity.entityCategoryKey, secondEntity.spriteVariantIndex, firstEntity.entitySpriteKindId);
-                  neighborIndexThenDetachSecond = 1;
+                  neighborIndexThenDetachSecondLiteralPhase1 = 1;
                 } else {
                   if (firstEntity.entitySpriteKindId == 2 &&
                       2 != secondEntity.entitySpriteKindId) {
                     detachFirst = 1;
                     propagateCategory = 1;
-                    neighborIndexThenDetachSecond = 1;
+                    neighborIndexThenDetachSecondLiteralPhase1 = 1;
                     firstEntity.configureEntitySprite(320, secondEntity.entityCategoryKey, firstEntity.spriteVariantIndex, secondEntity.entitySpriteKindId);
                   }
                 }
@@ -185,9 +188,9 @@ final class EntityLinkSupport {
               firstEntity.sameVariantEntityCount = firstEntity.sameVariantEntityCount + 1;
             }
           }
-          if (neighborIndexThenDetachSecond != 0) {
-            for (variantPropagationThenNeighborIndex = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-              secondEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(secondEntity, 0);
+          if (neighborIndexThenDetachSecondLiteralPhase1 != 0) {
+            for (variantPropagationThenNeighborIndexLiteralPhase1 = 0; secondEntity.relatedEntityCount > variantPropagationThenNeighborIndexLiteralPhase1; variantPropagationThenNeighborIndexLiteralPhase1++) {
+              secondEntity.relatedEntities[variantPropagationThenNeighborIndexLiteralPhase1].removeRelatedEntity(secondEntity, 0);
             }
             firstEntityForNeighborCountReset = secondEntity;
             secondEntity.sameCategoryEntityCount = 0;
@@ -198,8 +201,8 @@ final class EntityLinkSupport {
             secondEntity.detachedFromBoard = true;
           }
           if (detachFirst != 0) {
-            for (variantPropagationThenNeighborIndex = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndex; variantPropagationThenNeighborIndex++) {
-              firstEntity.relatedEntities[variantPropagationThenNeighborIndex].removeRelatedEntity(firstEntity, 0);
+            for (variantPropagationThenNeighborIndexLiteralPhase2 = 0; firstEntity.relatedEntityCount > variantPropagationThenNeighborIndexLiteralPhase2; variantPropagationThenNeighborIndexLiteralPhase2++) {
+              firstEntity.relatedEntities[variantPropagationThenNeighborIndexLiteralPhase2].removeRelatedEntity(firstEntity, 0);
             }
             secondEntityForNeighborCountReset = firstEntity;
             firstEntity.sameCategoryEntityCount = 0;
@@ -210,7 +213,7 @@ final class EntityLinkSupport {
             firstEntity.entityQueue = ArchiveNetworkClient.movingEntities;
             secondEntityForVariantCountReset.sameVariantEntityCount = 0;
           }
-          secondDetachmentReturnValue = neighborIndexThenDetachSecond;
+          secondDetachmentReturnValue = neighborIndexThenDetachSecondLiteralPhase1;
           return secondDetachmentReturnValue != 0;
         } catch (java.lang.RuntimeException linkFailure) {
           caughtLinkFailure = linkFailure;

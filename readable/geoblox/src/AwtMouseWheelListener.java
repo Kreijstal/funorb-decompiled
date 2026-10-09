@@ -13,6 +13,7 @@ final class AwtMouseWheelListener extends MouseWheelInput implements java.awt.ev
 
     final synchronized int drainWheelRotation(boolean drainGuard) {
         int rotationSnapshot = 0;
+        int rotationSnapshotLiteralPhase1;
         if (drainGuard) {
             rotationSnapshot = this.accumulatedRotation;
             this.accumulatedRotation = 0;
@@ -20,9 +21,9 @@ final class AwtMouseWheelListener extends MouseWheelInput implements java.awt.ev
         }
         java.awt.event.MouseWheelEvent guardedNullWheelEventSnapshot = (java.awt.event.MouseWheelEvent) null;
         this.mouseWheelMoved((java.awt.event.MouseWheelEvent) null);
-        rotationSnapshot = this.accumulatedRotation;
+        rotationSnapshotLiteralPhase1 = this.accumulatedRotation;
         this.accumulatedRotation = 0;
-        return rotationSnapshot;
+        return rotationSnapshotLiteralPhase1;
     }
 
     AwtMouseWheelListener() {

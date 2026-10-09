@@ -227,6 +227,8 @@ final class SessionSocketSupport {
 
     final static void drawSpriteIntoEmptyDestination(Sprite sprite, int destinationX, int destinationY) {
         int clippedPixelCount = 0;
+        int clippedPixelCountLiteralPhase1;
+        int clippedPixelCountLiteralPhase2;
         destinationX = destinationX + sprite.trimX;
         destinationY = destinationY + sprite.trimY;
         int destinationIndex = destinationX + destinationY * SoftwareRasterizer.stride;
@@ -246,19 +248,19 @@ final class SessionSocketSupport {
             drawHeight = drawHeight - (destinationY + drawHeight - SoftwareRasterizer.clipBottom);
         }
         if (destinationX < SoftwareRasterizer.clipLeft) {
-            clippedPixelCount = SoftwareRasterizer.clipLeft - destinationX;
-            drawWidth = drawWidth - clippedPixelCount;
+            clippedPixelCountLiteralPhase1 = SoftwareRasterizer.clipLeft - destinationX;
+            drawWidth = drawWidth - clippedPixelCountLiteralPhase1;
             destinationX = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedPixelCount;
-            destinationIndex = destinationIndex + clippedPixelCount;
-            sourceRowSkip = sourceRowSkip + clippedPixelCount;
-            destinationRowSkip = destinationRowSkip + clippedPixelCount;
+            sourceIndex = sourceIndex + clippedPixelCountLiteralPhase1;
+            destinationIndex = destinationIndex + clippedPixelCountLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedPixelCountLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedPixelCountLiteralPhase1;
         }
         if (destinationX + drawWidth > SoftwareRasterizer.clipRight) {
-            clippedPixelCount = destinationX + drawWidth - SoftwareRasterizer.clipRight;
-            drawWidth = drawWidth - clippedPixelCount;
-            sourceRowSkip = sourceRowSkip + clippedPixelCount;
-            destinationRowSkip = destinationRowSkip + clippedPixelCount;
+            clippedPixelCountLiteralPhase2 = destinationX + drawWidth - SoftwareRasterizer.clipRight;
+            drawWidth = drawWidth - clippedPixelCountLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedPixelCountLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedPixelCountLiteralPhase2;
         }
         if (drawWidth <= 0 || drawHeight <= 0) {
             return;

@@ -170,6 +170,8 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
     final static void drawAvatarFaceOrCryFrame(byte methodGuard) {
         int avatarEyeMouthOffsetX = 0;
         int avatarEyeMouthOffsetY = 0;
+        int avatarEyeMouthOffsetXLiteralPhase1;
+        int avatarEyeMouthOffsetYLiteralPhase1;
         if (!UiWidget.gameplaySession.sessionEnding) {
             avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
             avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
@@ -185,13 +187,13 @@ final class FullscreenErrorDialog extends ResizableDialog implements ButtonActiv
             return;
         }
         if (null == MatchCandidateSupport.currentAvatarCryFrame) {
-            avatarEyeMouthOffsetX = UiWidget.gameplaySession.boardMaskOffsetX - 2;
-            avatarEyeMouthOffsetY = UiWidget.gameplaySession.boardMaskOffsetY - 2;
+            avatarEyeMouthOffsetXLiteralPhase1 = UiWidget.gameplaySession.boardMaskOffsetX - 2;
+            avatarEyeMouthOffsetYLiteralPhase1 = UiWidget.gameplaySession.boardMaskOffsetY - 2;
             if (!(WidgetTheme.avatarShockEffectTicks <= 0)) {
                 SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].draw(320 - (SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullWidth >> 1), -(SecondaryNodeHashTable.silverStarShockFrames[IndexedSpriteState.avatarShockFrameIndex].fullHeight >> 1) + 240);
             }
-            EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetX + 320, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
-            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetX, 240 + avatarEyeMouthOffsetY, DisplayModeInfo.avatarTintColor);
+            EndingAnimationSupport.avatarEyeFrames[DiskCacheWorker.avatarFeedbackFrameIndex].drawGrayModulated(avatarEyeMouthOffsetXLiteralPhase1 + 320, 240 + avatarEyeMouthOffsetYLiteralPhase1, DisplayModeInfo.avatarTintColor);
+            UsernameSuggestionsPanel.avatarMouthFrames[TextValidationFailure.avatarFeedbackModeId].drawGrayModulated(320 + avatarEyeMouthOffsetXLiteralPhase1, 240 + avatarEyeMouthOffsetYLiteralPhase1, DisplayModeInfo.avatarTintColor);
             if (methodGuard >= 3) {
                 return;
             }

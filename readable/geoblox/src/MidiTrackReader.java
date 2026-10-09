@@ -70,6 +70,8 @@ final class MidiTrackReader {
         int tempoChangeTick = 0;
         int metaTypeOrDataByteCount = 0;
         int remainingMetaLengthOrPackedEvent = 0;
+        int metaTypeOrDataByteCountLiteralPhase1;
+        int remainingMetaLengthOrPackedEventLiteralPhase1;
         if (status == 255) {
             metaTypeOrDataByteCount = this.input.readUnsignedByte((byte) 34);
             remainingMetaLengthOrPackedEvent = this.input.readVariableIntBE((byte) -110);
@@ -89,15 +91,15 @@ final class MidiTrackReader {
             this.input.position = this.input.position + remainingMetaLengthOrPackedEvent;
             return 3;
         }
-        metaTypeOrDataByteCount = statusDataByteCounts[status - 128];
-        remainingMetaLengthOrPackedEvent = status;
-        if (metaTypeOrDataByteCount >= 1) {
-            remainingMetaLengthOrPackedEvent = remainingMetaLengthOrPackedEvent | this.input.readUnsignedByte((byte) 34) << 8;
+        metaTypeOrDataByteCountLiteralPhase1 = statusDataByteCounts[status - 128];
+        remainingMetaLengthOrPackedEventLiteralPhase1 = status;
+        if (metaTypeOrDataByteCountLiteralPhase1 >= 1) {
+            remainingMetaLengthOrPackedEventLiteralPhase1 = remainingMetaLengthOrPackedEventLiteralPhase1 | this.input.readUnsignedByte((byte) 34) << 8;
         }
-        if (metaTypeOrDataByteCount >= 2) {
-            remainingMetaLengthOrPackedEvent = remainingMetaLengthOrPackedEvent | this.input.readUnsignedByte((byte) 34) << 16;
+        if (metaTypeOrDataByteCountLiteralPhase1 >= 2) {
+            remainingMetaLengthOrPackedEventLiteralPhase1 = remainingMetaLengthOrPackedEventLiteralPhase1 | this.input.readUnsignedByte((byte) 34) << 16;
         }
-        return remainingMetaLengthOrPackedEvent;
+        return remainingMetaLengthOrPackedEventLiteralPhase1;
     }
 
     final boolean isLoaded() {
@@ -141,6 +143,7 @@ final class MidiTrackReader {
     final void load(byte[] midiBytes) {
         int chunkType = 0;
         int chunkLength = 0;
+        int trackIndexLiteralPhase1;
         this.input.bytes = midiBytes;
         this.input.position = 10;
         int trackCount = this.input.readUnsignedShortBE(true);
@@ -160,7 +163,7 @@ final class MidiTrackReader {
         this.tickTimeOffset = 0L;
         this.trackPositions = new int[trackCount];
         int positionInitializationIndex = 0;
-        trackIndex = positionInitializationIndex;
+        trackIndexLiteralPhase1 = positionInitializationIndex;
         while (positionInitializationIndex < trackCount) {
             this.trackPositions[positionInitializationIndex] = this.trackStarts[positionInitializationIndex];
             positionInitializationIndex++;

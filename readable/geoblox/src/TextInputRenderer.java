@@ -109,6 +109,8 @@ class TextInputRenderer extends TextWidgetRenderer {
         int descriptionLineStep = 0;
         int descriptionY = 0;
         int unusedClientControlSnapshot = 0;
+        int achievementIndexOrTitleYLiteralPhase1;
+        int achievementIndexOrTitleYLiteralPhase2;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           gridX = 160;
@@ -139,13 +141,13 @@ class TextInputRenderer extends TextWidgetRenderer {
           if (8 <= hiddenAchievementCount) {
             gridX = gridX + (-160 + hiddenAchievementCenteringOffset);
           }
-          for (achievementIndexOrTitleY = 0; achievementIndexOrTitleY < GameplaySetupSupport.achievementTitles.length; achievementIndexOrTitleY++) {
+          for (achievementIndexOrTitleYLiteralPhase1 = 0; achievementIndexOrTitleYLiteralPhase1 < GameplaySetupSupport.achievementTitles.length; achievementIndexOrTitleYLiteralPhase1++) {
             if (!ClientOptionSupport.isClientOptionEnabled(0, -119) &&
-                achievementIndexOrTitleY == 16 &&
+                achievementIndexOrTitleYLiteralPhase1 == 16 &&
                 !AchievementQuery.hasReceivedAchievementSixteen(105)) {
               continue;
             }
-            if ((0 != (1 << achievementIndexOrTitleY & achievementMask) ||
+            if ((0 != (1 << achievementIndexOrTitleYLiteralPhase1 & achievementMask) ||
                   !newAchievementsOnly) &&
                 (PrefixCodeDecoder.pointerXSnapshot >= gridX &&
                   32 + gridX >= PrefixCodeDecoder.pointerXSnapshot &&
@@ -153,21 +155,21 @@ class TextInputRenderer extends TextWidgetRenderer {
                   32 + gridY >= PcmResampler.pointerYSnapshot)) {
               SoftwareRasterizer.fillRoundedRectangle(gridX, gridY, 32, 32, 2, 16689938);
               if (highlightedAchievementIndex < 0) {
-                highlightedAchievementIndex = achievementIndexOrTitleY;
+                highlightedAchievementIndex = achievementIndexOrTitleYLiteralPhase1;
               }
               SoftwareRasterizer.drawRoundedRectangle(2 + gridX, gridY + 2, 28, 28, 2, 16777215);
             }
-            if (achievementIndexOrTitleY == BoardEntityState.selectedAchievementIndex) {
+            if (achievementIndexOrTitleYLiteralPhase1 == BoardEntityState.selectedAchievementIndex) {
               SoftwareRasterizer.fillRoundedRectangle(gridX, gridY, 32, 32, 2, 15488514);
               SoftwareRasterizer.drawRoundedRectangle(gridX + 2, gridY + 2, 28, 28, 2, 16777215);
             }
-            if ((achievementMask & 1 << achievementIndexOrTitleY) == 0) {
+            if ((achievementMask & 1 << achievementIndexOrTitleYLiteralPhase1) == 0) {
               if (newAchievementsOnly) {
                 continue;
               }
               IntKeyLookup.unachievedSprite.drawQuarterSize(gridX, gridY);
             } else {
-              UsernameAvailabilityQuery.achievementSprites[achievementIndexOrTitleY].drawQuarterSize(gridX, gridY);
+              UsernameAvailabilityQuery.achievementSprites[achievementIndexOrTitleYLiteralPhase1].drawQuarterSize(gridX, gridY);
             }
             displayedIconCountBeforeIncrement = displayedIconCount;
             displayedIconCount++;
@@ -193,9 +195,9 @@ class TextInputRenderer extends TextWidgetRenderer {
           } else {
             titleYOffset = -2;
           }
-          achievementIndexOrTitleY = titleYBase + titleYOffset;
+          achievementIndexOrTitleYLiteralPhase2 = titleYBase + titleYOffset;
           if (highlightedAchievementIndex != -1) {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(GameplaySetupSupport.achievementTitles[highlightedAchievementIndex], 315, achievementIndexOrTitleY, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(GameplaySetupSupport.achievementTitles[highlightedAchievementIndex], 315, achievementIndexOrTitleYLiteralPhase2, 0, -1);
             descriptionLineStep = -IntrusiveNodeHashTable.smallFont.maxDescent + IntrusiveNodeHashTable.smallFont.maxAscent;
             descriptionY = 280;
             if (0 != (1 << highlightedAchievementIndex & achievementMask)) {
@@ -217,7 +219,7 @@ class TextInputRenderer extends TextWidgetRenderer {
             }
             descriptionY = descriptionY + descriptionLineStep;
           } else {
-            IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, achievementIndexOrTitleY, 0, -1);
+            IntrusiveNodeHashTable.smallFont.drawCenteredText(SessionSocketSupport.mouseOverIconText, 315, achievementIndexOrTitleYLiteralPhase2, 0, -1);
             if (UnderlinedButtonRenderer.isGuestSessionMode(-94)) {
               FadingDialog.uiPaletteFont.drawParagraph(MessageDialogContent.createToUseText, 125, 350, 395, 100, 0, -1, 1, 0, 26);
             }

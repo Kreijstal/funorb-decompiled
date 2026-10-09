@@ -179,6 +179,7 @@ final class CachedTextLayout extends TextLayout {
         int clientControlFlowSnapshot = 0;
         String[] wrappedLines = null;
         String[] wrappedLinesAlias = null;
+        int lineIndexOrExtraSpacingLiteralPhase1;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (lineSpacing == 0) {
@@ -233,8 +234,8 @@ final class CachedTextLayout extends TextLayout {
           } else {
             baselineY = font.maxAscent;
           }
-          for (lineIndexOrExtraSpacing = 0; lineIndexOrExtraSpacing < lineCount; lineIndexOrExtraSpacing++) {
-            lineText = wrappedLines[lineIndexOrExtraSpacing];
+          for (lineIndexOrExtraSpacingLiteralPhase1 = 0; lineIndexOrExtraSpacingLiteralPhase1 < lineCount; lineIndexOrExtraSpacingLiteralPhase1++) {
+            lineText = wrappedLines[lineIndexOrExtraSpacingLiteralPhase1];
             unusedLineReceiverA = null;
             unusedLineReceiverB = null;
             lineTopY = -font.maxAscent + baselineY;
@@ -259,7 +260,7 @@ final class CachedTextLayout extends TextLayout {
               }
               DialWidget.populateCaretPositions(spaceJustification256, line, lineText, 60, font);
             }
-            this.lines[lineIndexOrExtraSpacing] = line;
+            this.lines[lineIndexOrExtraSpacingLiteralPhase1] = line;
             baselineY = baselineY + lineSpacing;
           }
           return;

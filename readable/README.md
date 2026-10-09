@@ -1,11 +1,65 @@
 # Readable GeoBlox
 
-The current export has 19,658 guarded naming rules: 302 classes, 2,064 fields,
+The current export has 20,044 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 145 labels. Both 303-file corpora
-compile, comparing 137,654 bindings and preserving 388 override relationships. Unknown
+compile, comparing 138,040 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current nested reference roles and loop carries (pass 231)
+## Current literal-initialized primitive phases (pass 232)
+
+258 reused primitive locals now have 386 independently assigned later phases in
+118 methods across 81 classes. Original literal initializers, widths, overflow,
+floating-point bits, every assignment/call and partial effect remain intact.
+Board reconciliation separates avatarContactBitSnapshot from
+componentDetachDecision, and connectivityNeighborIndex from
+relationRemovalNeighborIndex. Other phases retain their reviewed role families
+with deterministic LiteralPhase ordinals; narrower purpose names remain review
+work. No name ends in its original opaque spelling.
+
+The generic opt-in `CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES=1` accepts
+literal numeric/boolean/character initializers and uninitialized primitive
+locals. It selects one block containing every use, including a protected body.
+Later phases define every read independently; loop-body phases cannot borrow a
+root initializer or previous iteration's value. Reaching values across handlers,
+finally/monitor boundaries, conditional resets and loop carries remain together.
+Original declarations stay unchanged and added declarations have no initializer.
+The option defaults off; earlier primitive/reference modes remain unchanged.
+
+Independent javac certificates verify exact new declarations and bound local
+identifier replacements, original/copy types, definite assignment, every
+original binding occurrence under explicit ordinal/phase maps, and all 4,941
+transfers/protected scopes. Complete source bytes match the tracked compiler.
+The export has 20,044 rules, 20,351 dictionary identities, 138,040 binding checks
+and 388 override pairs. Naming records 121,801 identifier, 11 literal and 423
+label edits (122,235 total). Block labels remain at 77.
+
+Validation:
+
+- java-tools: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test --experimental-test-isolation=none test/initializedPrimitiveLifetimeRecovery.test.js test/referenceLocalLifetimeRecovery.test.js test/primitiveLocalLifetimeRecovery.test.js test/nestedPrimitiveLocalLifetimeRecovery.test.js` — 22 groups, including four new groups and 16,128 new native oracle cases covering literal snapshots, overflows, NaN/signed-zero bits, primitive widths, effect failures, cleanup overrides and monitors.
+- Deko: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-initialized-primitives-source.mjs ../java-tools` — exact declarations/identifier changes, resolved types, every original binding and all protected transfers.
+- `node readable/build-geoblox-rules.mjs --check` and
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` /
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass
+  for all 303 files. Dictionary reversal is byte exact. All 27 publication groups
+  and 17 scoped gameplay/result trace groups pass. Fresh sibling checkouts
+  reproduce the complete committed export.
+- A clean tracked compiler-source tar reproduces all raw files and unchanged
+  diagnostics. Fixed bytecode, stubs, naming dependency, native probes and four
+  workflow files remain unchanged. Every unaffected complete naming/dictionary
+  identity survives explicit ordinal migrations and the two first-role refinements.
+
+Five large framed methods, mixed roles within phases, phase-family names that
+need further purpose review and 41 unknown functional field purposes remain.
+Whole-game/browser/phone behavior and heap/presented-FPS acceptance are not
+established. Real nonlocal skips and protected/outer-loop boundaries still need
+further reconstruction. GameScreen.renderScreen crosses the 300-line threshold
+through added declarations; no new control frame or block label is introduced.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`6fa9e00942517d37f35330c93ebbbd3ed421ef9815ee54550cfdaea28734b424` at java-tools `976bcb994f3124a0964b69f4525746f3c116bbd7`.
+It identifies compiler source, not a game JAR.
+
+## Previous nested reference roles and loop carries (pass 231)
 
 An initial reference split exposes two further roles inside nested blocks.
 Board reconciliation now uses connectivityNeighbor for neighbor searches and
@@ -4916,41 +4970,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/66fdb40ec656ef51db6baf4f4ab82eeb510559c4/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/6254b929cf0b2ea47a7278ccb10965cbd86e95d0/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/66fdb40ec656ef51db6baf4f4ab82eeb510559c4/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/6254b929cf0b2ea47a7278ccb10965cbd86e95d0/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `66fdb40ec656ef51db6baf4f4ab82eeb510559c4`; the
-manifest SHA-256 is `5803ac54b009f527c21107cc68225223e35403a82790434c3ce4bff7cfaf4cc1`.
+The current Deko workflow/manifest commit is `6254b929cf0b2ea47a7278ccb10965cbd86e95d0`; the
+manifest SHA-256 is `0532dd43a9438e6ad10e9cbd00a794df11d29276ca1c4758287b99a6f61831e3`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`23b0cc0a940826d81f8f79ce2c7037cfbecbe3a1`. It comes from java-tools
-`94697aa4c0c1e51ac75120577c633dfdb22e4df7` and Deko
+`67693a19d4be4ae0175f635756fc722bd99e66f8`. It comes from java-tools
+`976bcb994f3124a0964b69f4525746f3c116bbd7` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `59c17f5bbf3f10aec41fbe64df8d656d64b7884a` in Deko; its selected generic-source
 archive SHA-256 is `f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`f7c04f521e715d39807639045c40858287f87139340cc38d7f145746e174088e`:
+`6fa9e00942517d37f35330c93ebbbd3ed421ef9815ee54550cfdaea28734b424`:
 
 ```sh
-git archive --format=tar 94697aa4c0c1e51ac75120577c633dfdb22e4df7 | sha256sum
+git archive --format=tar 976bcb994f3124a0964b69f4525746f3c116bbd7 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`b51738b5d7d03f8f5b642b220eaaed2fe47f760116fe791f53d61763289f63c8`.
+`b467cb4f627136ce81d07bb0bd92e3afa8c4e59924598497097b341842f0de1f`.
 Current readable tree SHA-256:
-`c78c1fa76c71e77eabd786f491867d5c37f3827c6aa851df598e88d788b2007a`.
+`d9215b65249351df15ab2ae00d50455a76027c98dfc239db21709f1bfb80d782`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
@@ -8004,7 +8058,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `b51738b5d7d03f8f5b642b220eaaed2fe47f760116fe791f53d61763289f63c8` |
-| Readable | `c78c1fa76c71e77eabd786f491867d5c37f3827c6aa851df598e88d788b2007a` |
+| Raw | `b467cb4f627136ce81d07bb0bd92e3afa8c4e59924598497097b341842f0de1f` |
+| Readable | `d9215b65249351df15ab2ae00d50455a76027c98dfc239db21709f1bfb80d782` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

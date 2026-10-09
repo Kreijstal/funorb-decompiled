@@ -127,6 +127,8 @@ final class MonochromeBitmapFont extends BitmapFont {
         int destinationRowSkip = SoftwareRasterizer.stride - width;
         int sourceRowSkip = 0;
         int sourceIndex = 0;
+        int clippedPixelsLiteralPhase1;
+        int clippedPixelsLiteralPhase2;
         if (y < SoftwareRasterizer.clipTop) {
             clippedPixels = SoftwareRasterizer.clipTop - y;
             height = height - clippedPixels;
@@ -138,19 +140,19 @@ final class MonochromeBitmapFont extends BitmapFont {
             height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedPixels = SoftwareRasterizer.clipLeft - x;
-            width = width - clippedPixels;
+            clippedPixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
+            width = width - clippedPixelsLiteralPhase1;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedPixels;
-            destinationIndex = destinationIndex + clippedPixels;
-            sourceRowSkip = sourceRowSkip + clippedPixels;
-            destinationRowSkip = destinationRowSkip + clippedPixels;
+            sourceIndex = sourceIndex + clippedPixelsLiteralPhase1;
+            destinationIndex = destinationIndex + clippedPixelsLiteralPhase1;
+            sourceRowSkip = sourceRowSkip + clippedPixelsLiteralPhase1;
+            destinationRowSkip = destinationRowSkip + clippedPixelsLiteralPhase1;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-            clippedPixels = x + width - SoftwareRasterizer.clipRight;
-            width = width - clippedPixels;
-            sourceRowSkip = sourceRowSkip + clippedPixels;
-            destinationRowSkip = destinationRowSkip + clippedPixels;
+            clippedPixelsLiteralPhase2 = x + width - SoftwareRasterizer.clipRight;
+            width = width - clippedPixelsLiteralPhase2;
+            sourceRowSkip = sourceRowSkip + clippedPixelsLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedPixelsLiteralPhase2;
         }
         if (width <= 0 || height <= 0) {
             return;

@@ -220,6 +220,7 @@ class TextInputWidget extends ButtonWidget {
         int hitTextIndexOrGuardQuotient = 0;
         long nowMillis = 0L;
         RuntimeException pointerPressFailure = null;
+        int hitTextIndexOrGuardQuotientLiteralPhase1;
         try {
           if (super.handlePointerPress(parentY, 104, parentX, pointerButton, pointerX, pointerY, eventContext) &&
               this.renderer instanceof TextWidgetLayout) {
@@ -245,7 +246,7 @@ class TextInputWidget extends ButtonWidget {
             this.lastPointerPressMillis = nowMillis;
             return true;
           }
-          hitTextIndexOrGuardQuotient = 70 / ((methodGuard + 3) / 38);
+          hitTextIndexOrGuardQuotientLiteralPhase1 = 70 / ((methodGuard + 3) / 38);
           return false;
         } catch (java.lang.RuntimeException pressFailure) {
           caughtPressFailure = pressFailure;

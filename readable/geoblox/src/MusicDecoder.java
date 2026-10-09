@@ -146,6 +146,7 @@ final class MusicDecoder extends IntrusiveNode {
         int chunkBitsThenMask = 0;
         int value = 0;
         int outputShift = 0;
+        int chunkBitsThenMaskLiteralPhase1;
         while (bitCount >= 8 - bitCursor) {
             chunkBitsThenMask = 8 - bitCursor;
             chunkMask = (1 << chunkBitsThenMask) - 1;
@@ -156,8 +157,8 @@ final class MusicDecoder extends IntrusiveNode {
             bitCount = bitCount - chunkBitsThenMask;
         }
         if (bitCount > 0) {
-            chunkBitsThenMask = (1 << bitCount) - 1;
-            value = value + ((bitstreamBytes[byteCursor] >> bitCursor & chunkBitsThenMask) << outputShift);
+            chunkBitsThenMaskLiteralPhase1 = (1 << bitCount) - 1;
+            value = value + ((bitstreamBytes[byteCursor] >> bitCursor & chunkBitsThenMaskLiteralPhase1) << outputShift);
             bitCursor = bitCursor + bitCount;
         }
         return value;
@@ -491,6 +492,9 @@ final class MusicDecoder extends IntrusiveNode {
         float butterflyNegativeSineOrPostRotationLowerANestedPhase2;
         float postRotationMixNestedPhase2;
         int eighthBlockSizeOrOverlapIndexPhase2NestedPhase2;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase1;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase2;
+        float butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase3;
         MusicDecoder.setBitInput(this.packets[packetIndex], 0);
         MusicDecoder.readBit();
         modeIndex = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, modeMappingIndices.length - 1));
@@ -647,15 +651,15 @@ final class MusicDecoder extends IntrusiveNode {
               butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 1];
               transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 1] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 1];
               transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 1] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
-              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 3];
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase1 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 3];
               transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 3] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 3];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 3] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
-              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 5];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 3] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase1;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 5];
               transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 5] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 5];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 5] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
-              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 7];
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 5] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase2;
+              butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase3 = transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 7];
               transformBlockAlias[trigStrideOrSwapBaseNestedPhase2 + 7] = transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 7];
-              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 7] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2;
+              transformBlockAlias[butterflyGroupOrSwapPartnerBaseNestedPhase2 + 7] = butterflyCosineOrSwapSampleOrPostRotationUpperBNestedPhase2LiteralPhase3;
               butterflyStageOrReorderOrWindowIndexNestedPhase2++;
               continue;
             }

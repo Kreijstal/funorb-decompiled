@@ -77,6 +77,8 @@ abstract class IndexedSpriteState {
         int paletteCloneIndexThenRecoloredIndex = 0;
         int spriteFrameIndexThenButtonHeight = 0;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
+        int paletteCloneIndexThenRecoloredIndexLiteralPhase1;
+        int spriteFrameIndexThenButtonHeightLiteralPhase1;
         try {
             RasterTargetRestoreSupport.dialogTopFrameSprites = OpacityWidget.loadSpriteFrames("frame_top", "commonui", spriteArchive, 0);
             UnderlinedButtonRenderer.frameBottomSprites = OpacityWidget.loadSpriteFrames("frame_bottom", "commonui", spriteArchive, 0);
@@ -100,10 +102,10 @@ abstract class IndexedSpriteState {
             for (paletteCloneIndexThenRecoloredIndex = 1; statePalettes.length > paletteCloneIndexThenRecoloredIndex; paletteCloneIndexThenRecoloredIndex++) {
                 workingPalettes[paletteCloneIndexThenRecoloredIndex] = (int[]) ((Object) statePalettes[0].clone());
             }
-            paletteCloneIndexThenRecoloredIndex = screenOptionFrames[0].indices[0];
-            statePalettes[2][paletteCloneIndexThenRecoloredIndex] = 16777215;
-            statePalettes[1][paletteCloneIndexThenRecoloredIndex] = 2394342;
-            statePalettes[3][paletteCloneIndexThenRecoloredIndex] = 4767999;
+            paletteCloneIndexThenRecoloredIndexLiteralPhase1 = screenOptionFrames[0].indices[0];
+            statePalettes[2][paletteCloneIndexThenRecoloredIndexLiteralPhase1] = 16777215;
+            statePalettes[1][paletteCloneIndexThenRecoloredIndexLiteralPhase1] = 2394342;
+            statePalettes[3][paletteCloneIndexThenRecoloredIndexLiteralPhase1] = 4767999;
             for (spriteFrameIndexThenButtonHeight = 0; spriteFrameIndexThenButtonHeight < 3; spriteFrameIndexThenButtonHeight++) {
                 currentFrameStates = screenOptionStateSets[spriteFrameIndexThenButtonHeight];
                 IndexedSprite[] unusedFrameStatesAlias = currentFrameStates;
@@ -111,7 +113,7 @@ abstract class IndexedSpriteState {
                     currentFrameStates[paletteStateIndex] = IndexedSpriteState.copyIndexedSpriteWithPalette(-84, statePalettes[paletteStateIndex], screenOptionFrames[spriteFrameIndexThenButtonHeight]);
                 }
             }
-            spriteFrameIndexThenButtonHeight = buttonImage.height;
+            spriteFrameIndexThenButtonHeightLiteralPhase1 = buttonImage.height;
             SpriteCheckboxRenderer.pushRasterTarget(-105);
             if (methodGuard <= 98) {
                 IndexedSprite unusedNullSpriteSnapshot = (IndexedSprite) null;
@@ -119,16 +121,16 @@ abstract class IndexedSpriteState {
             }
             buttonImage.setAsRasterTarget();
             SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-            leftButtonCap = new Sprite(spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            leftButtonCap = new Sprite(spriteFrameIndexThenButtonHeightLiteralPhase1, spriteFrameIndexThenButtonHeightLiteralPhase1);
             leftButtonCapRasterAlias = leftButtonCap;
             leftButtonCapRasterAlias.setAsRasterTarget();
             buttonImage.drawUnmasked(0, 0);
-            rightButtonCap = new Sprite(spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            rightButtonCap = new Sprite(spriteFrameIndexThenButtonHeightLiteralPhase1, spriteFrameIndexThenButtonHeightLiteralPhase1);
             rightButtonCap.setAsRasterTarget();
-            buttonImage.drawUnmasked(spriteFrameIndexThenButtonHeight - buttonImage.width, 0);
-            buttonCenter = new Sprite(buttonImage.width - 2 * spriteFrameIndexThenButtonHeight, spriteFrameIndexThenButtonHeight);
+            buttonImage.drawUnmasked(spriteFrameIndexThenButtonHeightLiteralPhase1 - buttonImage.width, 0);
+            buttonCenter = new Sprite(buttonImage.width - 2 * spriteFrameIndexThenButtonHeightLiteralPhase1, spriteFrameIndexThenButtonHeightLiteralPhase1);
             buttonCenter.setAsRasterTarget();
-            buttonImage.drawUnmasked(-spriteFrameIndexThenButtonHeight, 0);
+            buttonImage.drawUnmasked(-spriteFrameIndexThenButtonHeightLiteralPhase1, 0);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             MouseWheelInput.commonButtonSprites = new Sprite[]{leftButtonCap, buttonCenter, rightButtonCap};
         } catch (RuntimeException loadFailure) {

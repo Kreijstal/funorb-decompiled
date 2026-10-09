@@ -156,6 +156,9 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
         int[] transformedNormalsX = null;
         int[] transformedNormalsZ = null;
         int[] specularResponses = null;
+        int normalOrFaceQueueIndexLiteralPhase1;
+        int diffuseResponseOrFaceIndexLiteralPhase1;
+        int specularResponseOrVertexALiteralPhase1;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           meshForPriorityDecision = mesh;
@@ -204,41 +207,41 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
             diffuseResponses[normalOrFaceQueueIndex] = diffuseResponseOrFaceIndex;
             specularResponses[normalOrFaceQueueIndex] = specularResponseOrVertexA;
           }
-          for (normalOrFaceQueueIndex = 0; normalOrFaceQueueIndex < GameApplet.queuedMeshFaceCount; normalOrFaceQueueIndex++) {
-            diffuseResponseOrFaceIndex = InstrumentNoteMask.meshFaceOrder[normalOrFaceQueueIndex];
-            specularResponseOrVertexA = mesh.faceVertexA[diffuseResponseOrFaceIndex];
-            faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndex];
-            faceVertexC = mesh.faceVertexC[diffuseResponseOrFaceIndex];
-            if (mesh.faceNormalA[diffuseResponseOrFaceIndex] >= ClientRenderingState.transformedMeshNormalX.length) {
+          for (normalOrFaceQueueIndexLiteralPhase1 = 0; normalOrFaceQueueIndexLiteralPhase1 < GameApplet.queuedMeshFaceCount; normalOrFaceQueueIndexLiteralPhase1++) {
+            diffuseResponseOrFaceIndexLiteralPhase1 = InstrumentNoteMask.meshFaceOrder[normalOrFaceQueueIndexLiteralPhase1];
+            specularResponseOrVertexALiteralPhase1 = mesh.faceVertexA[diffuseResponseOrFaceIndexLiteralPhase1];
+            faceVertexB = mesh.faceVertexB[diffuseResponseOrFaceIndexLiteralPhase1];
+            faceVertexC = mesh.faceVertexC[diffuseResponseOrFaceIndexLiteralPhase1];
+            if (mesh.faceNormalA[diffuseResponseOrFaceIndexLiteralPhase1] >= ClientRenderingState.transformedMeshNormalX.length) {
               faceNormalAIndexOrMissing = -1;
             } else {
-              faceNormalAIndexOrMissing = mesh.faceNormalA[diffuseResponseOrFaceIndex];
+              faceNormalAIndexOrMissing = mesh.faceNormalA[diffuseResponseOrFaceIndexLiteralPhase1];
             }
             faceNormalA = faceNormalAIndexOrMissing;
-            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalB[diffuseResponseOrFaceIndex]) {
-              faceNormalBIndexOrMissing = mesh.faceNormalB[diffuseResponseOrFaceIndex];
+            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalB[diffuseResponseOrFaceIndexLiteralPhase1]) {
+              faceNormalBIndexOrMissing = mesh.faceNormalB[diffuseResponseOrFaceIndexLiteralPhase1];
             } else {
               faceNormalBIndexOrMissing = -1;
             }
             faceNormalB = faceNormalBIndexOrMissing;
-            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalC[diffuseResponseOrFaceIndex]) {
-              faceNormalCIndexOrMissing = mesh.faceNormalC[diffuseResponseOrFaceIndex];
+            if (ClientRenderingState.transformedMeshNormalX.length > mesh.faceNormalC[diffuseResponseOrFaceIndexLiteralPhase1]) {
+              faceNormalCIndexOrMissing = mesh.faceNormalC[diffuseResponseOrFaceIndexLiteralPhase1];
             } else {
               faceNormalCIndexOrMissing = -1;
             }
             faceNormalC = faceNormalCIndexOrMissing;
             if (DirectByteStorage.meshMaterials != null &&
                 mesh.faceMaterialIndices != null &&
-                mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndex &&
-                mesh.faceMaterialIndices[diffuseResponseOrFaceIndex] != -1 &&
-                DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]) {
-              faceMaterialOrNull = DirectByteStorage.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndex]];
+                mesh.faceMaterialIndices.length > diffuseResponseOrFaceIndexLiteralPhase1 &&
+                mesh.faceMaterialIndices[diffuseResponseOrFaceIndexLiteralPhase1] != -1 &&
+                DirectByteStorage.meshMaterials.length > mesh.faceMaterialIndices[diffuseResponseOrFaceIndexLiteralPhase1]) {
+              faceMaterialOrNull = DirectByteStorage.meshMaterials[mesh.faceMaterialIndices[diffuseResponseOrFaceIndexLiteralPhase1]];
             } else {
               faceMaterialOrNull = null;
             }
             faceMaterial = faceMaterialOrNull;
-            vertexAX = SingleChildWidget.projectedMeshVertexX[specularResponseOrVertexA];
-            vertexAY = TextInputWidget.projectedMeshVertexY[specularResponseOrVertexA];
+            vertexAX = SingleChildWidget.projectedMeshVertexX[specularResponseOrVertexALiteralPhase1];
+            vertexAY = TextInputWidget.projectedMeshVertexY[specularResponseOrVertexALiteralPhase1];
             vertexBX = SingleChildWidget.projectedMeshVertexX[faceVertexB];
             vertexBY = TextInputWidget.projectedMeshVertexY[faceVertexB];
             vertexCX = SingleChildWidget.projectedMeshVertexX[faceVertexC];

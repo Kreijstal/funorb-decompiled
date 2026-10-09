@@ -96,6 +96,7 @@ final class IntKeyLookup {
         String keysDescription = null;
         RuntimeException caughtConstructionFailure = null;
         RuntimeException constructionFailureForContext = null;
+        int arraySlotThenKeyIndexLiteralPhase1;
         try {
           bucketCount = 1;
           while (keys.length + (keys.length >> 1) >= bucketCount) {
@@ -105,11 +106,11 @@ final class IntKeyLookup {
           for (arraySlotThenKeyIndex = 0; arraySlotThenKeyIndex < bucketCount + bucketCount; arraySlotThenKeyIndex++) {
             this.keyIndexPairs[arraySlotThenKeyIndex] = -1;
           }
-          for (arraySlotThenKeyIndex = 0; arraySlotThenKeyIndex < keys.length; arraySlotThenKeyIndex++) {
-            for (bucket = keys[arraySlotThenKeyIndex] & bucketCount - 1; this.keyIndexPairs[bucket + bucket + 1] != -1; bucket = bucket + 1 & -1 + bucketCount) {
+          for (arraySlotThenKeyIndexLiteralPhase1 = 0; arraySlotThenKeyIndexLiteralPhase1 < keys.length; arraySlotThenKeyIndexLiteralPhase1++) {
+            for (bucket = keys[arraySlotThenKeyIndexLiteralPhase1] & bucketCount - 1; this.keyIndexPairs[bucket + bucket + 1] != -1; bucket = bucket + 1 & -1 + bucketCount) {
             }
-            this.keyIndexPairs[bucket + bucket] = keys[arraySlotThenKeyIndex];
-            this.keyIndexPairs[1 + bucket + bucket] = arraySlotThenKeyIndex;
+            this.keyIndexPairs[bucket + bucket] = keys[arraySlotThenKeyIndexLiteralPhase1];
+            this.keyIndexPairs[1 + bucket + bucket] = arraySlotThenKeyIndexLiteralPhase1;
           }
           return;
         } catch (java.lang.RuntimeException constructionFailure) {

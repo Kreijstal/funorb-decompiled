@@ -55,6 +55,8 @@ final class OpacityWidget extends SingleChildWidget {
         int capacityReplacementIndexOrBuildMarkerStart = 0;
         String buildMarkerIdText = null;
         int buildReplacementIndex = 0;
+        int scanCursorLiteralPhase1;
+        int capacityReplacementIndexOrBuildMarkerStartLiteralPhase1;
         try {
           templateLength = templateText.length();
           resultCapacity = templateLength;
@@ -87,38 +89,38 @@ final class OpacityWidget extends SingleChildWidget {
           }
           resultBuilder = new StringBuilder(resultCapacity);
           unchangedTextStart = 0;
-          scanCursor = 0;
+          scanCursorLiteralPhase1 = 0;
           if (methodGuard >= -12) {
             nullTemplateResult = (String) null;
             return nullTemplateResult;
           }
           while (true) {
-            capacityReplacementIndexOrBuildMarkerStart = templateText.indexOf("<%", scanCursor);
-            if (0 > capacityReplacementIndexOrBuildMarkerStart) {
+            capacityReplacementIndexOrBuildMarkerStartLiteralPhase1 = templateText.indexOf("<%", scanCursorLiteralPhase1);
+            if (0 > capacityReplacementIndexOrBuildMarkerStartLiteralPhase1) {
               discardedTailAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart));
               completedTemplateResult = resultBuilder.toString();
               return completedTemplateResult;
             }
-            for (scanCursor = capacityReplacementIndexOrBuildMarkerStart + 2; scanCursor < templateLength; scanCursor++) {
-              if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(scanCursor))) {
+            for (scanCursorLiteralPhase1 = capacityReplacementIndexOrBuildMarkerStartLiteralPhase1 + 2; scanCursorLiteralPhase1 < templateLength; scanCursorLiteralPhase1++) {
+              if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(scanCursorLiteralPhase1))) {
                 continue;
               }
               break;
             }
-            buildMarkerIdText = templateText.substring(2 + capacityReplacementIndexOrBuildMarkerStart, scanCursor);
+            buildMarkerIdText = templateText.substring(2 + capacityReplacementIndexOrBuildMarkerStartLiteralPhase1, scanCursorLiteralPhase1);
             if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) buildMarkerIdText))) {
               continue;
             }
-            if (templateLength <= scanCursor) {
+            if (templateLength <= scanCursorLiteralPhase1) {
               continue;
             }
-            if (templateText.charAt(scanCursor) != 62) {
+            if (templateText.charAt(scanCursorLiteralPhase1) != 62) {
               continue;
             }
-            scanCursor++;
+            scanCursorLiteralPhase1++;
             buildReplacementIndex = MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) buildMarkerIdText));
-            discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStart));
-            unchangedTextStart = scanCursor;
+            discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStartLiteralPhase1));
+            unchangedTextStart = scanCursorLiteralPhase1;
             discardedReplacementAppendResult = resultBuilder.append(replacementTexts[buildReplacementIndex]);
           }
         } catch (java.lang.RuntimeException templateFailure) {

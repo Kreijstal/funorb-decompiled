@@ -101,6 +101,7 @@ final class VorbisResidue {
         int lowCascadeBits = 0;
         int highCascadePresentValue = 0;
         int classificationIndexOrUnusedPassCursorSnapshot = 0;
+        int classificationIndexOrUnusedPassCursorSnapshotLiteralPhase1;
         this.residueType = MusicDecoder.readBits(16);
         this.begin = MusicDecoder.readBits(24);
         this.end = MusicDecoder.readBits(24);
@@ -119,7 +120,7 @@ final class VorbisResidue {
         }
         this.passBookIndices = new int[this.classificationCount * 8];
         int passBookTableIndex = 0;
-        classificationIndexOrUnusedPassCursorSnapshot = passBookTableIndex;
+        classificationIndexOrUnusedPassCursorSnapshotLiteralPhase1 = passBookTableIndex;
         while (passBookTableIndex < this.classificationCount * 8) {
             this.passBookIndices[passBookTableIndex] = (cascadeMasks[passBookTableIndex >> 3] & 1 << (passBookTableIndex & 7)) != 0 ? MusicDecoder.readBits(8) : -1;
             passBookTableIndex++;

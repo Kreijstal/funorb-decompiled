@@ -505,6 +505,8 @@ abstract class SessionGameApplet extends GameApplet {
             String unusedNullCountryListAfterFailure = null;
             Boolean emailAvailabilityResult = null;
             ByteArrayBuffer countryListBytes = null;
+            int queryOrHandshakeResultLiteralPhase1;
+            int queryOrHandshakeResultLiteralPhase2;
             clientControlFlowGuard = Geoblox.clientControlFlowFlag;
             uiAction = ClientProtocolStage.pollAccountUiAction(MeshPrioritySupport.bootstrapLanguageId, CachedTextLayout.wheelRotationSnapshot, fullscreenActive, (byte) -117);
             if (actionGuard == ~uiAction) {
@@ -523,9 +525,9 @@ abstract class SessionGameApplet extends GameApplet {
               }
             }
             if (uiAction == 2) {
-              queryOrHandshakeResult = DiskCacheWorker.advanceAccountCreationRequest((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
-              if (queryOrHandshakeResult != -1) {
-                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResult, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
+              queryOrHandshakeResultLiteralPhase1 = DiskCacheWorker.advanceAccountCreationRequest((byte) -94, ContextualRuntimeException.getActiveLoginPassword(true), CharacterReplacementSupport.getAccountAgeYears((byte) 81), this.affiliateId, UsernameSuggestionsPanel.getActiveEmailOrLoginIdentifier(100), ClientFlowToken.getActiveLoginIdentifier(0), DelayedPcmStream.getAccountNewsOptIn((byte) 27));
+              if (queryOrHandshakeResultLiteralPhase1 != -1) {
+                StrongCacheReference.publishAccountUsernameResult(AudioService.sessionResponseText, queryOrHandshakeResultLiteralPhase1, (byte) 30, WidgetSkinState.pendingUsernameSuggestions);
                 AudioService.sessionResponseText = null;
                 WidgetSkinState.pendingUsernameSuggestions = null;
               }
@@ -537,15 +539,15 @@ abstract class SessionGameApplet extends GameApplet {
                 SocialListEntry.resetArchiveConnectionFailures(-21754);
               }
               if (!suppressLoginHandshake) {
-                queryOrHandshakeResult = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
-                if (queryOrHandshakeResult != -1) {
-                  if (queryOrHandshakeResult == 0) {
+                queryOrHandshakeResultLiteralPhase2 = LoginProtocolSupport.advanceLoginHandshake(false, ContextualRuntimeException.getActiveLoginPassword(true), this.affiliateId, this.isJagexCodeBase, ClientFlowToken.getActiveLoginIdentifier(~actionGuard), ~actionGuard);
+                if (queryOrHandshakeResultLiteralPhase2 != -1) {
+                  if (queryOrHandshakeResultLiteralPhase2 == 0) {
                     CheckboxWidget.errorReportLoginLongValue = ClientClockSupport.loginResponseLongValue;
                     IterableNodeHashTable.refreshLoginTicketMessage(-12618);
                     ProgressBarWidget.guestSessionMode = false;
                     SpriteConstructionSupport.clientScreenStage = 10;
                   } else {
-                    TextInputValidator.handleLoginUiResponse((byte) 124, queryOrHandshakeResult, AudioService.sessionResponseText);
+                    TextInputValidator.handleLoginUiResponse((byte) 124, queryOrHandshakeResultLiteralPhase2, AudioService.sessionResponseText);
                     AudioService.sessionResponseText = null;
                   }
                 }

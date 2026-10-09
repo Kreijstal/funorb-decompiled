@@ -119,6 +119,13 @@ final class PrefixCodeDecoder {
         int signedSourceByte = 0;
         int nodeValue = 0;
         int unusedClientGuardSnapshot = 0;
+        int nodeValueLiteralPhase1;
+        int nodeValueLiteralPhase2;
+        int nodeValueLiteralPhase3;
+        int nodeValueLiteralPhase4;
+        int nodeValueLiteralPhase5;
+        int nodeValueLiteralPhase6;
+        int nodeValueLiteralPhase7;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (0 == outputLengthThenEnd) {
@@ -153,11 +160,11 @@ final class PrefixCodeDecoder {
               treeIndex = this.decodeTree[treeIndex];
             }
             nodeAfterBit6 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit6;
+            nodeValueLiteralPhase1 = nodeAfterBit6;
             if (nodeAfterBit6 < 0) {
               writeIndexAfterBit6 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit6] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit6] = (byte)(~nodeValueLiteralPhase1);
               if (destinationPosition >= outputLengthThenEnd) {
                 break prefixByteBitDecode;
               }
@@ -169,11 +176,11 @@ final class PrefixCodeDecoder {
               treeIndex++;
             }
             nodeAfterBit5 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit5;
+            nodeValueLiteralPhase2 = nodeAfterBit5;
             if (nodeAfterBit5 < 0) {
               writeIndexAfterBit5 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit5] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit5] = (byte)(~nodeValueLiteralPhase2);
               if (outputLengthThenEnd <= destinationPosition) {
                 break prefixByteBitDecode;
               }
@@ -185,11 +192,11 @@ final class PrefixCodeDecoder {
               treeIndex = this.decodeTree[treeIndex];
             }
             nodeAfterBit4 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit4;
+            nodeValueLiteralPhase3 = nodeAfterBit4;
             if (nodeAfterBit4 < 0) {
               writeIndexAfterBit4 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit4] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit4] = (byte)(~nodeValueLiteralPhase3);
               if (outputLengthThenEnd <= destinationPosition) {
                 break prefixByteBitDecode;
               }
@@ -201,11 +208,11 @@ final class PrefixCodeDecoder {
               treeIndex = this.decodeTree[treeIndex];
             }
             nodeAfterBit3 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit3;
+            nodeValueLiteralPhase4 = nodeAfterBit3;
             if (nodeAfterBit3 < 0) {
               writeIndexAfterBit3 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit3] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit3] = (byte)(~nodeValueLiteralPhase4);
               if (outputLengthThenEnd <= destinationPosition) {
                 break prefixByteBitDecode;
               }
@@ -217,11 +224,11 @@ final class PrefixCodeDecoder {
               treeIndex++;
             }
             nodeAfterBit2 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit2;
+            nodeValueLiteralPhase5 = nodeAfterBit2;
             if (nodeAfterBit2 < 0) {
               writeIndexAfterBit2 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit2] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit2] = (byte)(~nodeValueLiteralPhase5);
               if (outputLengthThenEnd <= destinationPosition) {
                 return sourceIndex + 1 - sourceOffset;
               }
@@ -233,11 +240,11 @@ final class PrefixCodeDecoder {
               treeIndex++;
             }
             nodeAfterBit1 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit1;
+            nodeValueLiteralPhase6 = nodeAfterBit1;
             if (nodeAfterBit1 < 0) {
               writeIndexAfterBit1 = destinationPosition;
               destinationPosition++;
-              destination[writeIndexAfterBit1] = (byte)(~nodeValue);
+              destination[writeIndexAfterBit1] = (byte)(~nodeValueLiteralPhase6);
               if (destinationPosition >= outputLengthThenEnd) {
                 break prefixByteBitDecode;
               }
@@ -249,14 +256,14 @@ final class PrefixCodeDecoder {
               treeIndex = this.decodeTree[treeIndex];
             }
             nodeAfterBit0 = this.decodeTree[treeIndex];
-            nodeValue = nodeAfterBit0;
+            nodeValueLiteralPhase7 = nodeAfterBit0;
             if (nodeAfterBit0 >= 0) {
               sourceIndex++;
               continue;
             }
             writeIndexAfterBit0 = destinationPosition;
             destinationPosition++;
-            destination[writeIndexAfterBit0] = (byte)(~nodeValue);
+            destination[writeIndexAfterBit0] = (byte)(~nodeValueLiteralPhase7);
             if (destinationPosition < outputLengthThenEnd) {
               treeIndex = 0;
               sourceIndex++;

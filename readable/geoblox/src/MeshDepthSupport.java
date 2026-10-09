@@ -115,6 +115,12 @@ final class MeshDepthSupport {
         int edgeCYOrBucketOccupancy = 0;
         int faceOrderWriteIndex = 0;
         int controlFlagSnapshot = 0;
+        int bucketIndexOrFaceOrderIndexLiteralPhase1;
+        int faceIndexOrPriorityPrefixLiteralPhase1;
+        int vertexAOrPriorityIndexLiteralPhase1;
+        int vertexBOrPriorityCountLiteralPhase1;
+        int projectedAXOrVertexADepthLiteralPhase1;
+        int projectedAYOrVertexBDepthLiteralPhase1;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthRangeBitLength = SpriteConstructionSupport.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
@@ -148,13 +154,13 @@ final class MeshDepthSupport {
                 edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
               }
               if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
-                projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if (-2147483648 != projectedAXOrVertexADepth) {
-                  projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                  if (-2147483648 != projectedAYOrVertexBDepth) {
+                projectedAXOrVertexADepthLiteralPhase1 = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
+                if (-2147483648 != projectedAXOrVertexADepthLiteralPhase1) {
+                  projectedAYOrVertexBDepthLiteralPhase1 = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
+                  if (-2147483648 != projectedAYOrVertexBDepthLiteralPhase1) {
                     edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
                     if (edgeBXOrVertexCDepth != -2147483648) {
-                      edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                      edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepthLiteralPhase1 + (projectedAXOrVertexADepthLiteralPhase1 + edgeBXOrVertexCDepth - minimumDepthTimesThree);
                       if (depthBucketShift < 0) {
                         scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
                       } else {
@@ -173,8 +179,8 @@ final class MeshDepthSupport {
                           edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
                           continue;
                         }
-                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
-                        faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
+                        bucketIndexOrFaceOrderIndexLiteralPhase1 = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        faceOrderWriteIndex = bucketIndexOrFaceOrderIndexLiteralPhase1;
                         InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                         GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
                         if (0 < mesh.facePriorityCount &&
@@ -196,13 +202,13 @@ final class MeshDepthSupport {
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
               null != mesh.facePriorities) {
-            faceIndexOrPriorityPrefix = 0;
-            vertexAOrPriorityIndex = 0;
-            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
-              vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-              faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-              vertexAOrPriorityIndex++;
+            faceIndexOrPriorityPrefixLiteralPhase1 = 0;
+            vertexAOrPriorityIndexLiteralPhase1 = 0;
+            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndexLiteralPhase1)) {
+              vertexBOrPriorityCountLiteralPhase1 = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndexLiteralPhase1];
+              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndexLiteralPhase1] = faceIndexOrPriorityPrefixLiteralPhase1;
+              faceIndexOrPriorityPrefixLiteralPhase1 = faceIndexOrPriorityPrefixLiteralPhase1 + vertexBOrPriorityCountLiteralPhase1;
+              vertexAOrPriorityIndexLiteralPhase1++;
               if (controlFlagSnapshot != 0) {
                 return;
               }
@@ -257,6 +263,12 @@ final class MeshDepthSupport {
         int edgeCYOrBucketOccupancy = 0;
         int faceOrderWriteIndex = 0;
         int controlFlagSnapshot = 0;
+        int bucketIndexOrFaceOrderIndexLiteralPhase1;
+        int faceIndexOrPriorityPrefixLiteralPhase1;
+        int vertexAOrPriorityIndexLiteralPhase1;
+        int vertexBOrPriorityCountLiteralPhase1;
+        int projectedAXOrVertexADepthLiteralPhase1;
+        int projectedAYOrVertexBDepthLiteralPhase1;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           depthRangeBitLength = SpriteConstructionSupport.unsignedBitLength((byte) 58, (maximumVisibleDepth - minimumVisibleDepth) * 3);
@@ -290,13 +302,13 @@ final class MeshDepthSupport {
                 edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
               }
               if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
-                projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
-                if (-2147483648 != projectedAXOrVertexADepth) {
-                  projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
-                  if (-2147483648 != projectedAYOrVertexBDepth) {
+                projectedAXOrVertexADepthLiteralPhase1 = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
+                if (-2147483648 != projectedAXOrVertexADepthLiteralPhase1) {
+                  projectedAYOrVertexBDepthLiteralPhase1 = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
+                  if (-2147483648 != projectedAYOrVertexBDepthLiteralPhase1) {
                     edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
                     if (edgeBXOrVertexCDepth != -2147483648) {
-                      edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepth + (projectedAXOrVertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                      edgeCXOrRelativeDepthSum = projectedAYOrVertexBDepthLiteralPhase1 + (projectedAXOrVertexADepthLiteralPhase1 + edgeBXOrVertexCDepth - minimumDepthTimesThree);
                       if (depthBucketShift < 0) {
                         scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
                       } else {
@@ -315,8 +327,8 @@ final class MeshDepthSupport {
                           edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
                           continue;
                         }
-                        bucketIndexOrFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
-                        faceOrderWriteIndex = bucketIndexOrFaceOrderIndex;
+                        bucketIndexOrFaceOrderIndexLiteralPhase1 = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        faceOrderWriteIndex = bucketIndexOrFaceOrderIndexLiteralPhase1;
                         InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndexOrPriorityPrefix;
                         GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
                         if (0 < mesh.facePriorityCount &&
@@ -338,13 +350,13 @@ final class MeshDepthSupport {
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
               null != mesh.facePriorities) {
-            faceIndexOrPriorityPrefix = 0;
-            vertexAOrPriorityIndex = 0;
-            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndex)) {
-              vertexBOrPriorityCount = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex];
-              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndex] = faceIndexOrPriorityPrefix;
-              faceIndexOrPriorityPrefix = faceIndexOrPriorityPrefix + vertexBOrPriorityCount;
-              vertexAOrPriorityIndex++;
+            faceIndexOrPriorityPrefixLiteralPhase1 = 0;
+            vertexAOrPriorityIndexLiteralPhase1 = 0;
+            while (!(PasswordWidgetRenderer.meshFacePriorityWriteOffsets.length <= vertexAOrPriorityIndexLiteralPhase1)) {
+              vertexBOrPriorityCountLiteralPhase1 = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndexLiteralPhase1];
+              PasswordWidgetRenderer.meshFacePriorityWriteOffsets[vertexAOrPriorityIndexLiteralPhase1] = faceIndexOrPriorityPrefixLiteralPhase1;
+              faceIndexOrPriorityPrefixLiteralPhase1 = faceIndexOrPriorityPrefixLiteralPhase1 + vertexBOrPriorityCountLiteralPhase1;
+              vertexAOrPriorityIndexLiteralPhase1++;
               if (controlFlagSnapshot != 0) {
                 return;
               }

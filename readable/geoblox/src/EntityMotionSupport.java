@@ -183,6 +183,13 @@ final class EntityMotionSupport {
         int clientControlFlowGuard = 0;
         Object unusedMotionScratch = null;
         GameplayEntity trailEntity = null;
+        int neighborIndexOrKindFlagOrContactIdOrDivisionGuardLiteralPhase1;
+        float centerOffsetXLiteralPhase1;
+        float centerOffsetXLiteralPhase2;
+        float centerOffsetYLiteralPhase1;
+        float centerOffsetYLiteralPhase2;
+        float nextCenterOffsetXThenSquaredLiteralPhase1;
+        float nextCenterOffsetYThenSquaredLiteralPhase1;
         unusedMotionScratch = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
@@ -248,21 +255,21 @@ final class EntityMotionSupport {
                   nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
                   contactedEntityMovesOutwardIntSnapshot = (!(nextCenterOffsetXThenSquared + nextCenterOffsetYThenSquared > centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX)) ? 0 : 1;
                   contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
-                  centerOffsetX = 320.0f - movingEntity.positionX;
-                  nextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
-                  nextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
-                  centerOffsetY = -movingEntity.positionY + 240.0f;
-                  nextCenterOffsetXThenSquared = nextCenterOffsetXThenSquared * nextCenterOffsetXThenSquared;
-                  nextCenterOffsetYThenSquared = nextCenterOffsetYThenSquared * nextCenterOffsetYThenSquared;
-                  movingEntityMovesOutwardIntSnapshot = (!(centerOffsetY * centerOffsetY + centerOffsetX * centerOffsetX < nextCenterOffsetYThenSquared + nextCenterOffsetXThenSquared)) ? 0 : 1;
+                  centerOffsetXLiteralPhase1 = 320.0f - movingEntity.positionX;
+                  nextCenterOffsetYThenSquaredLiteralPhase1 = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
+                  nextCenterOffsetXThenSquaredLiteralPhase1 = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
+                  centerOffsetYLiteralPhase1 = -movingEntity.positionY + 240.0f;
+                  nextCenterOffsetXThenSquaredLiteralPhase1 = nextCenterOffsetXThenSquaredLiteralPhase1 * nextCenterOffsetXThenSquaredLiteralPhase1;
+                  nextCenterOffsetYThenSquaredLiteralPhase1 = nextCenterOffsetYThenSquaredLiteralPhase1 * nextCenterOffsetYThenSquaredLiteralPhase1;
+                  movingEntityMovesOutwardIntSnapshot = (!(centerOffsetYLiteralPhase1 * centerOffsetYLiteralPhase1 + centerOffsetXLiteralPhase1 * centerOffsetXLiteralPhase1 < nextCenterOffsetYThenSquaredLiteralPhase1 + nextCenterOffsetXThenSquaredLiteralPhase1)) ? 0 : 1;
                   movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
                   if (contactedEntityMovesOutwardInt != 0 &&
                       movingEntityMovesOutwardInt != 0) {
-                    centerOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
-                    centerOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetX * centerOffsetX + centerOffsetY * centerOffsetY));
-                    sharedVelocityXOrCrossProduct = centerOffsetX * midpointInwardSpeedScale;
-                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetY;
+                    centerOffsetXLiteralPhase2 = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                    centerOffsetYLiteralPhase2 = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(centerOffsetXLiteralPhase2 * centerOffsetXLiteralPhase2 + centerOffsetYLiteralPhase2 * centerOffsetYLiteralPhase2));
+                    sharedVelocityXOrCrossProduct = centerOffsetXLiteralPhase2 * midpointInwardSpeedScale;
+                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * centerOffsetYLiteralPhase2;
                   }
                   movingEntity.velocityY = movingEntity.velocityY * -1.0f;
                   movingEntity.velocityX = movingEntity.velocityX * -1.0f;
@@ -289,7 +296,7 @@ final class EntityMotionSupport {
             }
             movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
-          neighborIndexOrKindFlagOrContactIdOrDivisionGuard = -125 % ((methodGuard - 35) / 49);
+          neighborIndexOrKindFlagOrContactIdOrDivisionGuardLiteralPhase1 = -125 % ((methodGuard - 35) / 49);
           trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (trailEntity != null) {
             trailEntity.eraseEntityTrail(30383);

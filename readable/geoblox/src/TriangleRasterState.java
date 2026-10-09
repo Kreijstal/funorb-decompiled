@@ -46,6 +46,8 @@ final class TriangleRasterState {
 
     static {
         int lookupIndex = 0;
+        int lookupIndexLiteralPhase1;
+        int lookupIndexLiteralPhase2;
         sineQ16 = new int[2048];
         reciprocalQ15 = new int[512];
         rowBaseOffsets = new int[1024];
@@ -54,12 +56,12 @@ final class TriangleRasterState {
         for (lookupIndex = 1; lookupIndex < 512; lookupIndex++) {
             reciprocalQ15[lookupIndex] = 32768 / lookupIndex;
         }
-        for (lookupIndex = 1; lookupIndex < 2048; lookupIndex++) {
-            reciprocalQ16[lookupIndex] = 65536 / lookupIndex;
+        for (lookupIndexLiteralPhase1 = 1; lookupIndexLiteralPhase1 < 2048; lookupIndexLiteralPhase1++) {
+            reciprocalQ16[lookupIndexLiteralPhase1] = 65536 / lookupIndexLiteralPhase1;
         }
-        for (lookupIndex = 0; lookupIndex < 2048; lookupIndex++) {
-            sineQ16[lookupIndex] = (int)(65536.0 * Math.sin((double)lookupIndex * 0.0030679615));
-            cosineQ16[lookupIndex] = (int)(65536.0 * Math.cos((double)lookupIndex * 0.0030679615));
+        for (lookupIndexLiteralPhase2 = 0; lookupIndexLiteralPhase2 < 2048; lookupIndexLiteralPhase2++) {
+            sineQ16[lookupIndexLiteralPhase2] = (int)(65536.0 * Math.sin((double)lookupIndexLiteralPhase2 * 0.0030679615));
+            cosineQ16[lookupIndexLiteralPhase2] = (int)(65536.0 * Math.cos((double)lookupIndexLiteralPhase2 * 0.0030679615));
         }
     }
 }

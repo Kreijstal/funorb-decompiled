@@ -258,6 +258,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         int suggestionCount = 0;
         String loginIdentifierText = null;
         CharSequence passwordCharacters = null;
+        int creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1;
         try {
           loginIdentifierText = loginIdentifierValue.getText(16925);
           emailText = emailValue.getText(16925);
@@ -352,9 +353,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           if (PacketBuffer.currentProtocolStage == CanvasResizeController.awaitingUsernameSuggestionsStage) {
             requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort = 2;
             if (UiWidget.readSessionBytesIfAvailable(30000, requestFlagsOrPayloadStartOrReplyOpcodeOrReadLengthOrOldPort)) {
-              creationPayloadStartOrSuggestionPayloadLength = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
+              creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1 = LogoCompositor.sessionPacketBuffer.readUnsignedShortBE(true);
               LogoCompositor.sessionPacketBuffer.position = 0;
-              if (UiWidget.readSessionBytesIfAvailable(30000, creationPayloadStartOrSuggestionPayloadLength)) {
+              if (UiWidget.readSessionBytesIfAvailable(30000, creationPayloadStartOrSuggestionPayloadLengthLiteralPhase1)) {
                 suggestionCount = WidgetSkinState.pendingUsernameSuggestions.length;
                 for (suggestionIndex = 0; suggestionIndex < suggestionCount; suggestionIndex++) {
                   WidgetSkinState.pendingUsernameSuggestions[suggestionIndex] = LogoCompositor.sessionPacketBuffer.readZeroPrefixedNullTerminatedText(27425);
@@ -515,6 +516,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             java.lang.reflect.Field fieldForModifiers = null;
             java.lang.reflect.Method methodForModifiers = null;
             java.lang.reflect.Method methodToInvoke = null;
+            int fieldValueOrMemberModifiersLiteralPhase1;
             unusedNullReferenceA = null;
             unusedNullReferenceB = null;
             unusedNullReferenceC = null;
@@ -598,9 +600,9 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                     } else {
                       if (operationType == 4) {
                         methodForModifiers = (java.lang.reflect.Method) (requestFromQueue.methodLookupTasks[operationIndex].result);
-                        fieldValueOrMemberModifiers = methodForModifiers.getModifiers();
+                        fieldValueOrMemberModifiersLiteralPhase1 = methodForModifiers.getModifiers();
                         buffer.writeByte((byte) 123, 0);
-                        buffer.writeIntBE((byte) 95, fieldValueOrMemberModifiers);
+                        buffer.writeIntBE((byte) 95, fieldValueOrMemberModifiersLiteralPhase1);
                       }
                     }
                   } catch (java.lang.ClassNotFoundException caughtClassNotFoundFailure) {

@@ -28,6 +28,10 @@ final class DebugOverviewCompositor {
         int trimSkipOrDestinationIndex = 0;
         int destinationRowSkip = 0;
         int clippedPixelCount = 0;
+        int trimSkipOrDestinationIndexLiteralPhase1;
+        int trimSkipOrDestinationIndexLiteralPhase2;
+        int clippedPixelCountLiteralPhase1;
+        int clippedPixelCountLiteralPhase2;
         try {
           sourceCropWidth = overviewSprite.width;
           sourceCropHeight = overviewSprite.height;
@@ -49,14 +53,14 @@ final class DebugOverviewCompositor {
             destinationWidth = (sampleXStepQ16 + ((sourceCropWidth << 16) + (-sampleXQ16 - 1))) / sampleXStepQ16;
           }
           if (overviewSprite.trimY > 0) {
-            trimSkipOrDestinationIndex = ((overviewSprite.trimY << 16) + sampleYStepQ16 - 1) / sampleYStepQ16;
-            sampleYQ16 = sampleYQ16 + (trimSkipOrDestinationIndex * sampleYStepQ16 - (overviewSprite.trimY << 16));
-            destinationTop = destinationTop + trimSkipOrDestinationIndex;
+            trimSkipOrDestinationIndexLiteralPhase1 = ((overviewSprite.trimY << 16) + sampleYStepQ16 - 1) / sampleYStepQ16;
+            sampleYQ16 = sampleYQ16 + (trimSkipOrDestinationIndexLiteralPhase1 * sampleYStepQ16 - (overviewSprite.trimY << 16));
+            destinationTop = destinationTop + trimSkipOrDestinationIndexLiteralPhase1;
           }
           if (sourceCanvasHeight > sourceCropHeight) {
             destinationHeight = (sampleYStepQ16 + (-sampleYQ16 + (sourceCropHeight << 16)) - 1) / sampleYStepQ16;
           }
-          trimSkipOrDestinationIndex = destinationLeft + SoftwareRasterizer.stride * destinationTop;
+          trimSkipOrDestinationIndexLiteralPhase2 = destinationLeft + SoftwareRasterizer.stride * destinationTop;
           destinationRowSkip = SoftwareRasterizer.stride - destinationWidth;
           if (SoftwareRasterizer.clipBottom < destinationTop + destinationHeight) {
             destinationHeight = destinationHeight - (-SoftwareRasterizer.clipBottom + destinationTop + destinationHeight);
@@ -65,21 +69,21 @@ final class DebugOverviewCompositor {
             clippedPixelCount = SoftwareRasterizer.clipTop - destinationTop;
             sampleYQ16 = sampleYQ16 + sampleYStepQ16 * clippedPixelCount;
             destinationHeight = destinationHeight - clippedPixelCount;
-            trimSkipOrDestinationIndex = trimSkipOrDestinationIndex + SoftwareRasterizer.stride * clippedPixelCount;
+            trimSkipOrDestinationIndexLiteralPhase2 = trimSkipOrDestinationIndexLiteralPhase2 + SoftwareRasterizer.stride * clippedPixelCount;
           }
           if (destinationWidth + destinationLeft > SoftwareRasterizer.clipRight) {
-            clippedPixelCount = destinationLeft + (destinationWidth - SoftwareRasterizer.clipRight);
-            destinationRowSkip = destinationRowSkip + clippedPixelCount;
-            destinationWidth = destinationWidth - clippedPixelCount;
+            clippedPixelCountLiteralPhase1 = destinationLeft + (destinationWidth - SoftwareRasterizer.clipRight);
+            destinationRowSkip = destinationRowSkip + clippedPixelCountLiteralPhase1;
+            destinationWidth = destinationWidth - clippedPixelCountLiteralPhase1;
           }
           if (destinationLeft < SoftwareRasterizer.clipLeft) {
-            clippedPixelCount = SoftwareRasterizer.clipLeft - destinationLeft;
-            trimSkipOrDestinationIndex = trimSkipOrDestinationIndex + clippedPixelCount;
-            destinationRowSkip = destinationRowSkip + clippedPixelCount;
-            sampleXQ16 = sampleXQ16 + clippedPixelCount * sampleXStepQ16;
-            destinationWidth = destinationWidth - clippedPixelCount;
+            clippedPixelCountLiteralPhase2 = SoftwareRasterizer.clipLeft - destinationLeft;
+            trimSkipOrDestinationIndexLiteralPhase2 = trimSkipOrDestinationIndexLiteralPhase2 + clippedPixelCountLiteralPhase2;
+            destinationRowSkip = destinationRowSkip + clippedPixelCountLiteralPhase2;
+            sampleXQ16 = sampleXQ16 + clippedPixelCountLiteralPhase2 * sampleXStepQ16;
+            destinationWidth = destinationWidth - clippedPixelCountLiteralPhase2;
           }
-          HighscoreNameEntry.blendScaledDebugOverviewPixels(sampleXQ16, destinationHeight, SoftwareRasterizer.framebuffer, sampleXStepQ16, sampleYStepQ16, sourceCropWidth, sampleYQ16, destinationRowSkip, trimSkipOrDestinationIndex, destinationWidth, (byte) -104, overviewSprite.pixels, 0);
+          HighscoreNameEntry.blendScaledDebugOverviewPixels(sampleXQ16, destinationHeight, SoftwareRasterizer.framebuffer, sampleXStepQ16, sampleYStepQ16, sourceCropWidth, sampleYQ16, destinationRowSkip, trimSkipOrDestinationIndexLiteralPhase2, destinationWidth, (byte) -104, overviewSprite.pixels, 0);
           return;
         } catch (java.lang.RuntimeException scaledOverviewFailure) {
           caughtCompositeFailure = scaledOverviewFailure;

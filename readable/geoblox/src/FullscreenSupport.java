@@ -49,6 +49,7 @@ final class FullscreenSupport {
         int tailResponseIndex = 0;
         RuntimeException caughtPreparationFailure = null;
         RuntimeException preparationFailureForContext = null;
+        int sentinelDivisionThenResponseIndexSnapshotLiteralPhase1;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           TriangleRasterState.prepareTriangleClipFromRasterizer();
@@ -60,7 +61,7 @@ final class FullscreenSupport {
             MultiHandleSliderRenderer.meshSpecularResponseByAbsDot[responseIndex] = (int)(255.0 * Math.pow((double)((float)responseIndex / 256.0f), specularExponent));
           }
           tailResponseIndex = 256;
-          sentinelDivisionThenResponseIndexSnapshot = tailResponseIndex;
+          sentinelDivisionThenResponseIndexSnapshotLiteralPhase1 = tailResponseIndex;
           while (MultiHandleSliderRenderer.meshSpecularResponseByAbsDot.length > tailResponseIndex) {
             MultiHandleSliderRenderer.meshSpecularResponseByAbsDot[tailResponseIndex] = 255;
             tailResponseIndex++;

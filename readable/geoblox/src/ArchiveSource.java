@@ -40,6 +40,7 @@ abstract class ArchiveSource {
         int writtenKeyIndex = 0;
         int[] keyBeforeWorkingAlias = null;
         int[] xteaKey = null;
+        int keyIndexThenUnusedZeroSnapshotLiteralPhase1;
         try {
           paddedPayloadLength = GameplayEntity.roundUpToMultipleOfEight(1221916132, payloadLength);
           if (UsernameQuerySupport.payloadKeyRandom == null) {
@@ -66,7 +67,7 @@ abstract class ArchiveSource {
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.position = 0;
           HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeByte((byte) -69, 10);
           writtenKeyIndex = 0;
-          keyIndexThenUnusedZeroSnapshot = writtenKeyIndex;
+          keyIndexThenUnusedZeroSnapshotLiteralPhase1 = writtenKeyIndex;
           while (writtenKeyIndex < 4) {
             HotspotTextWidget.encryptedPayloadKeyScratchBuffer.writeIntBE((byte) 95, xteaKey[writtenKeyIndex]);
             writtenKeyIndex++;

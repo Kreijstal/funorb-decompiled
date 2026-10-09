@@ -125,6 +125,9 @@ final class PcmResampler {
         int[] accumulatorAlias = null;
         int[] allocatedAccumulator = null;
         int[] phaseCoefficients = null;
+        int inputIndexThenZeroOutputIndexLiteralPhase1;
+        int sampleValueThenRoundedOutputLiteralPhase1;
+        int tapIndexThenOutputAdvanceLiteralPhase1;
         try {
           guardDivisionResult = -6 / ((methodGuard + 18) / 49);
           if (this.filterCoefficients != null) {
@@ -141,20 +144,20 @@ final class PcmResampler {
                 accumulatorForUpdates[outputPosition + tapIndexThenOutputAdvance] = accumulatorForUpdates[outputPosition + tapIndexThenOutputAdvance] + sampleValueThenRoundedOutput * phaseCoefficients[tapIndexThenOutputAdvance];
               }
               filterPhase = filterPhase + this.outputRateRatio;
-              tapIndexThenOutputAdvance = filterPhase / this.inputRateRatio;
-              outputPosition = outputPosition + tapIndexThenOutputAdvance;
-              filterPhase = filterPhase - this.inputRateRatio * tapIndexThenOutputAdvance;
+              tapIndexThenOutputAdvanceLiteralPhase1 = filterPhase / this.inputRateRatio;
+              outputPosition = outputPosition + tapIndexThenOutputAdvanceLiteralPhase1;
+              filterPhase = filterPhase - this.inputRateRatio * tapIndexThenOutputAdvanceLiteralPhase1;
             }
             samples = new byte[outputLength];
             outputIndex = 0;
-            inputIndexThenZeroOutputIndex = outputIndex;
+            inputIndexThenZeroOutputIndexLiteralPhase1 = outputIndex;
             while (outputIndex < outputLength) {
-              sampleValueThenRoundedOutput = allocatedAccumulator[outputIndex] + 32768 >> 16;
-              if (-128 > sampleValueThenRoundedOutput) {
+              sampleValueThenRoundedOutputLiteralPhase1 = allocatedAccumulator[outputIndex] + 32768 >> 16;
+              if (-128 > sampleValueThenRoundedOutputLiteralPhase1) {
                 samples[outputIndex] = (byte)-128;
               } else {
-                if (sampleValueThenRoundedOutput <= 127) {
-                  samples[outputIndex] = (byte)sampleValueThenRoundedOutput;
+                if (sampleValueThenRoundedOutputLiteralPhase1 <= 127) {
+                  samples[outputIndex] = (byte)sampleValueThenRoundedOutputLiteralPhase1;
                 } else {
                   samples[outputIndex] = (byte)127;
                 }

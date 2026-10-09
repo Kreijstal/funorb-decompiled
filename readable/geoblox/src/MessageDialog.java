@@ -215,6 +215,10 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
         float avatarTintFadeFactorNestedPhase2;
         float avatarTintFadeFactorPhase2NestedPhase2;
         float avatarTintFadeFactorPhase4NestedPhase2;
+        float avatarTintFadeFactorLiteralPhase1;
+        float avatarTintFadeFactorPhase2LiteralPhase1;
+        float avatarTintFadeFactorPhase4LiteralPhase1;
+        float avatarTintFadeFactorPhase4NestedPhase2LiteralPhase1;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         int frameStepTicksBeforeDecrement = CacheFileState.avatarFrameStepTicks;
         CacheFileState.avatarFrameStepTicks = CacheFileState.avatarFrameStepTicks - 1;
@@ -265,7 +269,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               if (ClientRenderingState.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                 MatchCandidateSupport.currentAvatarCryFrame = ClientRenderingState.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactorLiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 heldCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
                 WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
                 if (heldCryMiddleShockTicksSnapshot > 0) {
@@ -274,14 +278,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 heldCryMiddleTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
                 MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (heldCryMiddleTintTicksSnapshot > 0) {
-                  DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
+                  DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorLiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorLiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorLiteralPhase1));
                 }
                 return;
               }
               NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
               LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
               PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-              avatarTintFadeFactor = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+              avatarTintFadeFactorLiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
               heldCryHoldShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
               WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
               if (heldCryHoldShockTicksSnapshot > 0) {
@@ -290,7 +294,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               heldCryHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
               MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
               if (heldCryHoldTintTicksSnapshot > 0) {
-                DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactor) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactor * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactor));
+                DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorLiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorLiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorLiteralPhase1));
               }
               return;
             }
@@ -390,7 +394,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 if (ClientRenderingState.avatarCryMiddleFrames.length > PasswordValidator.avatarCryFrameCursor) {
                   MatchCandidateSupport.currentAvatarCryFrame = ClientRenderingState.avatarCryMiddleFrames[PasswordValidator.avatarCryFrameCursor];
                   PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                  avatarTintFadeFactorPhase2 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+                  avatarTintFadeFactorPhase2LiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                   steeredCryMiddleShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
                   WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
                   if (steeredCryMiddleShockTicksSnapshot > 0) {
@@ -399,14 +403,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                   steeredCryMiddleTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
                   MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                   if (steeredCryMiddleTintTicksSnapshot > 0) {
-                    DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase2) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase2 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase2));
+                    DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase2LiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase2LiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase2LiteralPhase1));
                   }
                   return;
                 }
                 NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
                 LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
                 PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-                avatarTintFadeFactorPhase2 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+                avatarTintFadeFactorPhase2LiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
                 steeredCryHoldShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
                 WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
                 if (steeredCryHoldShockTicksSnapshot > 0) {
@@ -415,7 +419,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
                 steeredCryHoldTintTicksSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
                 MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
                 if (steeredCryHoldTintTicksSnapshot > 0) {
-                  DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase2) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase2 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase2));
+                  DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase2LiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase2LiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase2LiteralPhase1));
                 }
                 return;
               }
@@ -526,7 +530,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             PasswordValidator.avatarCryFrameCursor = 0;
             MeshMaterial.playDelayedSoundSample(300, GameSoundResources.gameSoundSamples[22], false, SocialListEntry.soundEffectVolume);
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-            avatarTintFadeFactorPhase4 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactorPhase4LiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryStartShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
             WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
             if (steppedCryStartShockTicksSnapshot <= 0) {
@@ -535,14 +539,14 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
               if (steppedCryStartTintWithoutShockSnapshot <= 0) {
                 return;
               }
-              DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4));
+              DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4LiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4LiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4LiteralPhase1));
               return;
             }
             IndexedSpriteState.avatarShockFrameIndex = WidgetTheme.avatarShockEffectTicks % 15 % 2;
             steppedCryStartTintAfterShockSnapshot = MultiHandleSliderRenderer.avatarTintFadeTicks;
             MultiHandleSliderRenderer.avatarTintFadeTicks = MultiHandleSliderRenderer.avatarTintFadeTicks - 1;
             if (steppedCryStartTintAfterShockSnapshot > 0) {
-              DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4));
+              DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4LiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4LiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4LiteralPhase1));
             }
             return;
           }
@@ -566,7 +570,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             NameCharacterSupport.avatarCryPhase = NameCharacterSupport.avatarCryPhase + 1;
             LimitedRandomAccessFile.avatarFeedbackHoldTicks = 200;
             PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor + 1;
-            avatarTintFadeFactorPhase4NestedPhase2 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
+            avatarTintFadeFactorPhase4NestedPhase2LiteralPhase1 = (float)(50 - MultiHandleSliderRenderer.avatarTintFadeTicks) * 0.0066999997943639755f;
             steppedCryHoldShockTicksSnapshot = WidgetTheme.avatarShockEffectTicks;
             WidgetTheme.avatarShockEffectTicks = WidgetTheme.avatarShockEffectTicks - 1;
             if (steppedCryHoldShockTicksSnapshot > 0) {
@@ -577,7 +581,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
             if (steppedCryHoldTintTicksSnapshot <= 0) {
               return;
             }
-            DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4NestedPhase2) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4NestedPhase2 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4NestedPhase2));
+            DisplayModeInfo.avatarTintColor = ((int)(GmtTimestampSupport.avatarTintRedDelta * avatarTintFadeFactorPhase4NestedPhase2LiteralPhase1) << 16) + (AccountCreationDialog.avatarTintStartColor + ((int)(avatarTintFadeFactorPhase4NestedPhase2LiteralPhase1 * GzipInflater.avatarTintGreenDelta) << 8) + (int)(UsernameAvailabilityValidator.avatarTintBlueDelta * avatarTintFadeFactorPhase4NestedPhase2LiteralPhase1));
             return;
           }
           PasswordValidator.avatarCryFrameCursor = PasswordValidator.avatarCryFrameCursor % 4;

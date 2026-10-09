@@ -53,6 +53,11 @@ final class MatchScoringSupport {
         int popupY = 0;
         int controlFlowGuard = 0;
         int candidateIndex = 0;
+        int sortInsertionIndexLiteralPhase1;
+        int sortCursorThenFirstEntityIdLiteralPhase1;
+        int packedCandidateThenSecondEntityIdLiteralPhase1;
+        int popupXLiteralPhase1;
+        int popupYLiteralPhase1;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (0 == EmailAvailabilityQuery.matchCandidateCount &&
@@ -96,17 +101,17 @@ final class MatchScoringSupport {
             MatchScoringSupport.processMatchCandidates(-33);
           }
           candidateIndex = 0;
-          sortInsertionIndex = candidateIndex;
+          sortInsertionIndexLiteralPhase1 = candidateIndex;
           while (candidateIndex < EmailAvailabilityQuery.matchCandidateCount) {
             if (-1 + EmailAvailabilityQuery.matchCandidateCount > candidateIndex &&
                 TextPairLoginPayload.packedMatchCandidates[candidateIndex] == TextPairLoginPayload.packedMatchCandidates[candidateIndex + 1]) {
               TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
             } else {
-              sortCursorThenFirstEntityId = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
-              packedCandidateThenSecondEntityId = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
+              sortCursorThenFirstEntityIdLiteralPhase1 = (TextPairLoginPayload.packedMatchCandidates[candidateIndex] & 1072693248) >> 20;
+              packedCandidateThenSecondEntityIdLiteralPhase1 = TextPairLoginPayload.packedMatchCandidates[candidateIndex] >> 10 & 1023;
               thirdEntityId = 1023 & TextPairLoginPayload.packedMatchCandidates[candidateIndex];
-              firstMatchedEntity = RasterTargetSnapshot.entitiesById[sortCursorThenFirstEntityId];
-              secondMatchedEntity = RasterTargetSnapshot.entitiesById[packedCandidateThenSecondEntityId];
+              firstMatchedEntity = RasterTargetSnapshot.entitiesById[sortCursorThenFirstEntityIdLiteralPhase1];
+              secondMatchedEntity = RasterTargetSnapshot.entitiesById[packedCandidateThenSecondEntityIdLiteralPhase1];
               thirdMatchedEntity = RasterTargetSnapshot.entitiesById[thirdEntityId];
               if (firstMatchedEntity.matchCooldownTicks <= 0 &&
                   secondMatchedEntity.matchCooldownTicks <= 0 &&
@@ -123,10 +128,10 @@ final class MatchScoringSupport {
                   awardedPoints = 30 * EntityCollisionSupport.matchChainLength;
                 }
                 popupX = 0;
-                popupX = (int)firstMatchedEntity.positionX;
+                popupXLiteralPhase1 = (int)firstMatchedEntity.positionX;
                 popupY = 0;
-                popupY = (int)firstMatchedEntity.positionY;
-                ScorePopupSupport.spawnScorePopup(awardedPoints, true, popupY, EntityCollisionSupport.matchChainLength, popupX);
+                popupYLiteralPhase1 = (int)firstMatchedEntity.positionY;
+                ScorePopupSupport.spawnScorePopup(awardedPoints, true, popupYLiteralPhase1, EntityCollisionSupport.matchChainLength, popupXLiteralPhase1);
                 TextPairLoginPayload.packedMatchCandidates[candidateIndex] = 0;
               } else {
                 firstBlockedEntity = firstMatchedEntity;

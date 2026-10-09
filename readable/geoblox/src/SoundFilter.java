@@ -26,6 +26,10 @@ final class SoundFilter {
         float[] forwardCoefficients = null;
         float interpolatedValue = 0.0f;
         int pairOrCoefficientIndex = 0;
+        float interpolatedValueLiteralPhase1;
+        float interpolatedValueLiteralPhase2;
+        int pairOrCoefficientIndexLiteralPhase1;
+        int pairOrCoefficientIndexLiteralPhase2;
         if (channel == 0) {
             interpolatedValue = (float)this.gainEndpoints[0] + (float)(this.gainEndpoints[1] - this.gainEndpoints[0]) * fraction;
             interpolatedValue = interpolatedValue * 0.0030517578125f;
@@ -35,13 +39,13 @@ final class SoundFilter {
         if (this.pairCounts[channel] == 0) {
             return 0;
         }
-        interpolatedValue = this.interpolateRadius(channel, 0, fraction);
-        coefficientWorkspace[channel][0] = -2.0f * interpolatedValue * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
-        coefficientWorkspace[channel][1] = interpolatedValue * interpolatedValue;
+        interpolatedValueLiteralPhase1 = this.interpolateRadius(channel, 0, fraction);
+        coefficientWorkspace[channel][0] = -2.0f * interpolatedValueLiteralPhase1 * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
+        coefficientWorkspace[channel][1] = interpolatedValueLiteralPhase1 * interpolatedValueLiteralPhase1;
         for (pairOrCoefficientIndex = 1; pairOrCoefficientIndex < this.pairCounts[channel]; pairOrCoefficientIndex++) {
-            interpolatedValue = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
-            firstOrderTerm = -2.0f * interpolatedValue * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
-            secondOrderTerm = interpolatedValue * interpolatedValue;
+            interpolatedValueLiteralPhase2 = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
+            firstOrderTerm = -2.0f * interpolatedValueLiteralPhase2 * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
+            secondOrderTerm = interpolatedValueLiteralPhase2 * interpolatedValueLiteralPhase2;
             coefficientWorkspace[channel][pairOrCoefficientIndex * 2 + 1] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * secondOrderTerm;
             coefficientWorkspace[channel][pairOrCoefficientIndex * 2] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * firstOrderTerm + coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 2] * secondOrderTerm;
             for (coefficientIndex = pairOrCoefficientIndex * 2 - 1; coefficientIndex >= 2; coefficientIndex--) {
@@ -54,13 +58,13 @@ final class SoundFilter {
             leadingCoefficients[0] = leadingCoefficients[0] + firstOrderTerm;
         }
         if (channel == 0) {
-            for (pairOrCoefficientIndex = 0; pairOrCoefficientIndex < this.pairCounts[0] * 2; pairOrCoefficientIndex++) {
+            for (pairOrCoefficientIndexLiteralPhase1 = 0; pairOrCoefficientIndexLiteralPhase1 < this.pairCounts[0] * 2; pairOrCoefficientIndexLiteralPhase1++) {
                 forwardCoefficients = coefficientWorkspace[0];
-                forwardCoefficients[pairOrCoefficientIndex] = forwardCoefficients[pairOrCoefficientIndex] * forwardGain;
+                forwardCoefficients[pairOrCoefficientIndexLiteralPhase1] = forwardCoefficients[pairOrCoefficientIndexLiteralPhase1] * forwardGain;
             }
         }
-        for (pairOrCoefficientIndex = 0; pairOrCoefficientIndex < this.pairCounts[channel] * 2; pairOrCoefficientIndex++) {
-            coefficientsQ16[channel][pairOrCoefficientIndex] = (int)(coefficientWorkspace[channel][pairOrCoefficientIndex] * 65536.0f);
+        for (pairOrCoefficientIndexLiteralPhase2 = 0; pairOrCoefficientIndexLiteralPhase2 < this.pairCounts[channel] * 2; pairOrCoefficientIndexLiteralPhase2++) {
+            coefficientsQ16[channel][pairOrCoefficientIndexLiteralPhase2] = (int)(coefficientWorkspace[channel][pairOrCoefficientIndexLiteralPhase2] * 65536.0f);
         }
         return this.pairCounts[channel] * 2;
     }
