@@ -110,8 +110,8 @@ final class LimitedRandomAccessFile {
                     break signedNumberCharacter;
                   }
                 }
-                if (characterIndex != 0 || !(characterCodeThenSignedDigit == 43 &&
-                      allowLeadingPlus)) {
+                if (characterIndex != 0 || (characterCodeThenSignedDigit != 43 ||
+                      !allowLeadingPlus)) {
                   if (characterCodeThenSignedDigit >= 48 &&
                       characterCodeThenSignedDigit <= 57) {
                     characterCodeThenSignedDigit -= 48;

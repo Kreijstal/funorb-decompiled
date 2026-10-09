@@ -180,7 +180,7 @@ final class MidiPcmStream extends PcmStream {
           pitchFixed = (note.portamentoPitchDelta * note.portamentoScale >> 12) + note.basePitchFixed;
           pitchFixed = pitchFixed + ((-8192 + this.channelPitchBend[note.channelIndex]) * this.channelPitchBendSensitivity[note.channelIndex] >> 12);
           envelope = note.envelope;
-          if ((0 < envelope.vibratoPhaseStep) && (!(envelope.vibratoDepth <= 0) ||
+          if (0 < envelope.vibratoPhaseStep && (!(envelope.vibratoDepth <= 0) ||
               this.channelModulation[note.channelIndex] > 0)) {
             vibratoDepthOrSampleStep = envelope.vibratoDepth << 2;
             vibratoRampUpdates = envelope.vibratoRampTicks << 1;
@@ -254,7 +254,7 @@ final class MidiPcmStream extends PcmStream {
         double keyScalingExponent = 0.0;
         try {
           note.framesUntilUpdate = AudioOutput.sampleRateHz / 100;
-          if ((note.releaseEnvelopeTime >= 0) && (null == note.sampleStream ||
+          if (note.releaseEnvelopeTime >= 0 && (null == note.sampleStream ||
               note.sampleStream.isSamplePositionOutOfRange())) {
             note.clearAudioReferences(-1);
             note.unlinkNode(completionOrUnlinkFlag);
@@ -307,9 +307,9 @@ final class MidiPcmStream extends PcmStream {
               finishNoteInt = 1;
             }
           }
-          if ((note.releaseEnvelopeTime >= 0 &&
+          if (note.releaseEnvelopeTime >= 0 &&
             envelope.releaseEnvelope != null &&
-            (this.channelFlags[note.channelIndex] & 1) == 0) && (!(0 <= note.keyGroup) ||
+            (this.channelFlags[note.channelIndex] & 1) == 0 && (!(0 <= note.keyGroup) ||
               note != this.notesByKeyGroup[note.channelIndex][note.keyGroup])) {
             if (0 < envelope.releaseEnvelopeKeyScaling) {
               note.releaseEnvelopeTime = note.releaseEnvelopeTime + (int)(0.5 + Math.pow(2.0, keyScalingExponent * (double)envelope.releaseEnvelopeKeyScaling) * 128.0);

@@ -147,7 +147,7 @@ final class MeshDepthSupport {
                 edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
                 edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
               }
-              if (!(cullBackfacesSnapshot) || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
+              if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
                 if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];
@@ -289,7 +289,7 @@ final class MeshDepthSupport {
                 edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexBOrPriorityCount] - projectedAYOrVertexBDepth;
                 edgeCYOrBucketOccupancy = -projectedAYOrVertexBDepth + TextInputWidget.projectedMeshVertexY[vertexC];
               }
-              if (!(cullBackfacesSnapshot) || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
+              if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
                 projectedAXOrVertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexAOrPriorityIndex];
                 if (-2147483648 != projectedAXOrVertexADepth) {
                   projectedAYOrVertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexBOrPriorityCount];

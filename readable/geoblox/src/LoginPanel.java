@@ -717,7 +717,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           this.retryMode = retryModeValue;
           allowJustPlayValue = !(!allowJustPlay);
           this.allowJustPlay = allowJustPlayValue;
-          if ((this.retryMode) && (this.showCreateAccount ||
+          if (this.retryMode && (this.showCreateAccount ||
               this.allowJustPlay)) {
             throw new IllegalStateException();
           }

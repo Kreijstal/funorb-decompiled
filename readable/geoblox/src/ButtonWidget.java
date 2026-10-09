@@ -107,7 +107,7 @@ class ButtonWidget extends UiWidget {
         String eventContextDescription = null;
         RuntimeException caughtKeyInputException = null;
         try {
-          if ((this.hasKeyboardFocus((byte) 54)) && (keyCode == 84 ||
+          if (this.hasKeyboardFocus((byte) 54) && (keyCode == 84 ||
               keyCode == 83)) {
             this.activateButton(-1, -28922, -1, 1);
             return true;

@@ -418,7 +418,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         bootstrapTextArchiveGate: {
           if (VisualPropertyOverrides.clientBootstrapStage == 11) {
-            if ((null != TextValidationSupport.bootstrapGameTextArchive) && (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
+            if (null != TextValidationSupport.bootstrapGameTextArchive && (!TextValidationSupport.bootstrapGameTextArchive.ensureIndexLoaded(0) ||
                 !TextValidationSupport.bootstrapGameTextArchive.loadAllGroups(true))) {
               HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
               break bootstrapTextArchiveGate;

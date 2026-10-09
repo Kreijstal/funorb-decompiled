@@ -413,7 +413,7 @@ final class ResourceArchive {
             return true;
           }
           packedGroupDecryptionSelection: {
-            if ((decryptionKey != null) && (decryptionKey[0] != 0 ||
+            if (decryptionKey != null && (decryptionKey[0] != 0 ||
                 decryptionKey[1] != 0 ||
                 decryptionKey[2] != 0 ||
                 0 != decryptionKey[3])) {
@@ -611,7 +611,7 @@ final class ResourceArchive {
           }
           fileBytesOrFailureForContext = null;
           if ((this.decodedFiles[groupId] == null ||
-            null == this.decodedFiles[groupId][fileId]) && (!this.unpackGroup(fileId, 4, decryptionKey, groupId))) {
+            null == this.decodedFiles[groupId][fileId]) && !this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
             this.loadPackedGroup(groupId, -118);
             if (!this.unpackGroup(fileId, 4, decryptionKey, groupId)) {
               unavailableFileBeforeReturn = null;

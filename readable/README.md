@@ -5,7 +5,55 @@ The current export has 19,521 guarded naming rules: 302 classes, 2,064 fields,
 compile, comparing 137,491 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current explicit loop completion (pass 226)
+## Current final Boolean conditions (pass 227)
+
+The final cleanup simplifies 80 control conditions and removes 107 redundant
+parenthesis pairs in 42 methods across 18 classes. Menu/tutorial/fullscreen
+handling, gameplay updates/results, board reconciliation, applet loading,
+text validation and codec/archive helpers become easier to follow. For example,
+`if (!(clientControlFlowGuard == 0))` becomes
+`if (clientControlFlowGuard != 0)`, preserving nonzero control-flag behavior.
+
+Earlier condition cleanup ran before late continuation/lifetime reconstruction.
+The opt-in `CFR_JS_FINAL_BOOLEAN_PREDICATES=1` runs the existing proven Boolean
+and grouping passes at the end. It complements equality, applies ordered
+short-circuit Boolean algebra and removes one double negation. No relational
+operator changes; floating/unknown relations retain their original NaN behavior.
+Ordinary operands, boxed identity, unboxing failures, effects and partial writes
+retain their order. The generic option defaults off and has no game identifiers.
+
+Independent attributed JDK tree fingerprints compare all 303 complete classes,
+normalizing Boolean algebra only in primitive control conditions. Every ordinary
+operand remains structurally exact. All 137,491 value bindings, label/class-name
+bindings, 388 override pairs and 4,941 transfer targets/protected scopes remain.
+All 19,521 complete naming rules and 19,828 dictionary identities are preserved;
+there are no new declarations, names or ordinal migrations. Labels remain at 77.
+The export still records 121,269 identifier, 11 literal and 423 label edits.
+
+Validation:
+
+- java-tools: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test --experimental-test-isolation=none test/predicateNegationRecovery.test.js test/predicateGroupingRecovery.test.js` — 22 groups pass, including 708,750 Boolean and 466,560 grouping cases against independent native oracles.
+- Deko: `NODE_PATH=/path/to/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-final-boolean-source.mjs ../java-tools` — complete attributed AST, binding, transfer and byte-exact compiler-source certificates.
+- `node readable/build-geoblox-rules.mjs --check` and
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` /
+  `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` pass
+  for all 303 files. Dictionary reversal is byte exact. All 27 publication groups
+  and 17 scoped gameplay/result trace groups pass. Fresh sibling checkouts
+  reproduce the complete committed export.
+- A clean tracked compiler-source tar reproduces the certified raw files and
+  unchanged diagnostics. Fixed bytecode, stubs, naming dependency, native probes,
+  four workflow files and historical proof objects remain unchanged.
+
+Four large framed methods and 41 unknown functional field purposes remain.
+This cleanup does not establish whole-game/browser/phone behavior or
+heap/presented-FPS acceptance. The next structural work must address real skips
+and protected/outer-loop corridors without assuming a zero control flag.
+
+The tracked **decompiler-source** Git tar SHA-256 is
+`ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12` at java-tools `956de36de517ce4fbbf8bddd55224ccaec140367`.
+It identifies compiler source, not a game JAR.
+
+## Previous explicit loop completion (pass 226)
 
 Eleven loop-to-frame exits in ten methods and seven classes now use explicit
 completion locals and guarded remainders. Eight block labels retire, leaving
@@ -4656,41 +4704,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/bee16215cc6e3f8ee67f1e039befe61de46bddd1/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ef94abfd1771d9a66f7d4887c6a2ea0a00a03def/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/bee16215cc6e3f8ee67f1e039befe61de46bddd1/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ef94abfd1771d9a66f7d4887c6a2ea0a00a03def/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `bee16215cc6e3f8ee67f1e039befe61de46bddd1`; the
-manifest SHA-256 is `df2982a678bf28011fa8ae757457288ad1300234c757a663e54affae4635ddc4`.
+The current Deko workflow/manifest commit is `ef94abfd1771d9a66f7d4887c6a2ea0a00a03def`; the
+manifest SHA-256 is `1ae86053580bd3f35eb33f39a1c42f81ed9a52f834bb024c98aea8c9b73a6c01`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`4cacd4fd0e7847ff3e34d8d67cec26f31f735564`. It comes from java-tools
-`c7d22893f95bfe07da508185eb1f7c3d4a49743d` and Deko
+`c324269be5006101482e81f928af1d747bd043ce`. It comes from java-tools
+`956de36de517ce4fbbf8bddd55224ccaec140367` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `59c17f5bbf3f10aec41fbe64df8d656d64b7884a` in Deko; its selected generic-source
 archive SHA-256 is `f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`0819866e4f81c570cf69f43578055cd68bceb5857929b00d44234f4c4653ca90`:
+`ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12`:
 
 ```sh
-git archive --format=tar c7d22893f95bfe07da508185eb1f7c3d4a49743d | sha256sum
+git archive --format=tar 956de36de517ce4fbbf8bddd55224ccaec140367 | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527`.
+`0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182`.
 Current readable tree SHA-256:
-`284d8e31e4331c117ceb63738cbc0401dfd6ce87b8450577d345e55c3c446765`.
+`3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
@@ -7719,7 +7767,7 @@ exits. Pass105 recorded exact local-reference cast cleanup. Pass106 recorded sca
 dispatch switches. Pass107 recorded path-implied local guards in `sourceChange`,
 with an empty `ruleChanges` list preserving all 8,439 complete naming objects.
 Pass108 retained that raw input and generator identity, added 64 guarded
-achievement-path names and pinned the seventh native probe. Current pass109
+achievement-path names and pinned the seventh native probe. Pass109
 retains that input, adds 53 query/response/retry names through `ruleChanges`, and
 updates the existing achievement probe with a separately pinned response trace.
 All native probe sources and their traces are pinned in
@@ -7744,7 +7792,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `1319ca918da2e00088a4b45dd86201248e104901e1b48c6c847a4ff66af0e272` |
-| Readable | `d77ac935dc675856f1b882282093dfbf2b987d8246d33e88cc1c5667a6c2df45` |
+| Raw | `0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182` |
+| Readable | `3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

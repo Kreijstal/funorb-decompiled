@@ -270,7 +270,7 @@ public final class Geoblox extends SessionGameApplet {
                         GameGraphicsResources.gameGraphicsArchive.loadGroupByName("", (byte) -127)) {
                       if (GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) &&
                           GameGraphicsResources.gameGraphicsArchive.loadGroupByName("sun", (byte) -127)) {
-                        if ((ClientOptionSupport.isClientOptionEnabled(0, -112)) && (!GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) ||
+                        if (ClientOptionSupport.isClientOptionEnabled(0, -112) && (!GameGraphicsResources.gameGraphicsArchive.ensureIndexLoaded(0) ||
                             !GameGraphicsResources.gameGraphicsArchive.loadGroupByName("halloween", (byte) -127))) {
                           HighscoreNameEntry.setLoadingProgress(EntityCollisionSupport.formatArchiveGroupProgress(Under13TermsPanel.waitingForPumpkinText, GameGraphicsResources.gameGraphicsArchive, "halloween", FullscreenFailureReason.loadingPumpkinText, true), -2, 45.0f);
                           return false;

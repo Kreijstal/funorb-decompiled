@@ -319,7 +319,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                             }
                             if (digitOrLegacyVersionDecisionRemainderEnabled) {
                               javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                              if ((MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix))) && (!(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10))) {
+                              if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
                                 this.showGameError((byte) 79, "wrongjava");
                                 if (clientControlSnapshot == 0) {
                                   break appletExecutionBoundary;
@@ -477,27 +477,27 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (null == SharedBufferPools.fullscreenFrame) {
               if (VisualPropertyNode.loaderApplet != null) {
                 selectedContainerOrFailure = VisualPropertyNode.loaderApplet;
-                if (!(clientControlSnapshot == 0)) {
+                if (clientControlSnapshot != 0) {
                   selectedContainerOrFailure = PrefixCodeDecoder.activeGameApplet;
-                  if (!(clientControlSnapshot == 0)) {
+                  if (clientControlSnapshot != 0) {
                     selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
-                    if (!(clientControlSnapshot == 0)) {
+                    if (clientControlSnapshot != 0) {
                       selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
                     }
                   }
                 }
               } else {
                 selectedContainerOrFailure = PrefixCodeDecoder.activeGameApplet;
-                if (!(clientControlSnapshot == 0)) {
+                if (clientControlSnapshot != 0) {
                   selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
-                  if (!(clientControlSnapshot == 0)) {
+                  if (clientControlSnapshot != 0) {
                     selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
                   }
                 }
               }
             } else {
               selectedContainerOrFailure = SharedBufferPools.fullscreenFrame;
-              if (!(clientControlSnapshot == 0)) {
+              if (clientControlSnapshot != 0) {
                 selectedContainerOrFailure = FullscreenFocusCanvas.standaloneFrameReference;
               }
             }
@@ -511,7 +511,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           MessageDialog.gameCanvas.setVisible(visible);
           if (SharedBufferPools.fullscreenFrame != selectedContainerOrFailure) {
             MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
-            if (!(clientControlSnapshot == 0)) {
+            if (clientControlSnapshot != 0) {
               fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
               MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, fullscreenInsets.top + ButtonWidget.canvasOffsetY);
             }
@@ -887,7 +887,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (SharedBufferPools.fullscreenFrame == null ||
                 FullscreenFocusCanvas.standaloneFrameReference != null) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
-              if (!(Geoblox.clientControlFlowFlag == 0)) {
+              if (Geoblox.clientControlFlowFlag != 0) {
                 fullscreenInsets = SharedBufferPools.fullscreenFrame.getInsets();
                 MessageDialog.gameCanvas.setLocation(fullscreenInsets.left + PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY + fullscreenInsets.top);
               }

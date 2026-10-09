@@ -7,18 +7,19 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "c7d22893f95bfe07da508185eb1f7c3d4a49743d",
+      "commit": "956de36de517ce4fbbf8bddd55224ccaec140367",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "0819866e4f81c570cf69f43578055cd68bceb5857929b00d44234f4c4653ca90",
-        "reproduce": "git archive --format=tar c7d22893f95bfe07da508185eb1f7c3d4a49743d | sha256sum",
+        "sha256": "ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12",
+        "reproduce": "git archive --format=tar 956de36de517ce4fbbf8bddd55224ccaec140367 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
         "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
         "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
         "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
-        "CFR_JS_LOOP_FRAME_COMPLETION": "1"
+        "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+        "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1"
       }
     },
     "namingTool": {
@@ -94,7 +95,8 @@
       "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
       "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
       "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
-      "CFR_JS_LOOP_FRAME_COMPLETION": "1"
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1"
     }
   },
   "freshVerification": {
@@ -119,9 +121,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
-  "previousSourceTreeSha256": "09cf19ff07115be47e6b5d7be614780f944c2885df48a90fbf9150a693a19163",
-  "changedJavaFiles": 7,
+  "sourceTreeSha256": "0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182",
+  "previousSourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
+  "changedJavaFiles": 18,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3289,11 +3291,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1",
+    "commit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "df2982a678bf28011fa8ae757457288ad1300234c757a663e54affae4635ddc4"
+      "sha256": "1ae86053580bd3f35eb33f39a1c42f81ed9a52f834bb024c98aea8c9b73a6c01"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3303,7 +3305,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "284d8e31e4331c117ceb63738cbc0401dfd6ce87b8450577d345e55c3c446765",
+    "outputTreeSha256": "3cddf609bd19c6dc6fe32e2baee23919996cc25a33a2282dea17e95013c08a4b",
     "files": 303,
     "rules": 19521,
     "identifierEdits": 121269,
@@ -3333,8 +3335,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 226,
-    "semanticPass": 226
+    "structuralPass": 227,
+    "semanticPass": 227
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -26276,5 +26278,358 @@
     ],
     "sourceWorkflowCommit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1",
     "sourceProofWorkflowCommit": "bee16215cc6e3f8ee67f1e039befe61de46bddd1"
+  },
+  "finalBooleanPredicateCleanup": {
+    "version": 227,
+    "finalBooleanPredicates": true,
+    "changedJavaFiles": 18,
+    "changedMethodBodies": 42,
+    "counts": {
+      "predicatesSimplified": 80,
+      "doubleNegations": 1,
+      "equalityComplements": 81,
+      "deMorganOperators": 9,
+      "booleanLiterals": 0,
+      "relationalComplements": 0,
+      "parenthesisPairsRemoved": 107
+    },
+    "sourceProofTest": "readable/tests/test-geoblox-final-boolean-source.mjs",
+    "sourceProofTestSha256": "a522bf24c98712d44bba00f9e7016513dc3cfd0cba24c8f623c73291bc644fae",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "4cacd4fd0e7847ff3e34d8d67cec26f31f735564",
+    "sourceCommit": "c324269be5006101482e81f928af1d747bd043ce",
+    "previousSourceTreeSha256": "904c2789830ea892aa774c8303477e2f82b9f1d2c2b3fb513d1c6e71fc40d527",
+    "sourceTreeSha256": "0f71b6ba71aa79485b4b2f7d8102ab6b39ba2c014432b664247c766f7e027182",
+    "javaToolsCommit": "956de36de517ce4fbbf8bddd55224ccaec140367",
+    "sourceArchiveSha256": "ea7284d4cc58f21048c3eb42f6bc122fdbeb6195d27431e704b09466e265ae12",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1"
+    },
+    "independentlyComparedAstFiles": 303,
+    "bindingsCompared": 137491,
+    "transfersCompared": 4941,
+    "completeRulesPreserved": 19521,
+    "allPreviousCompleteNamingRulesPreserved": true,
+    "allOriginalBindingsAndTransfersPreserved": true,
+    "allProtectedScopesPreserved": true,
+    "independentAttributedJdkControlAlgebra": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 22,
+    "booleanNativeOracleCases": 708750,
+    "groupingNativeOracleCases": 466560,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "remainingLargeFramedMethods": 4,
+    "plainBlockLabelsAfter": 77,
+    "remainingUnresolvedFieldPurposes": 41,
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Reapply the existing Boolean-negation and control-condition grouping proofs after late continuation/lifetime reconstruction. Complement equality and apply ordered Boolean algebra only in primitive control contexts; keep all relational operators and ordinary operands, including boxed identity comparisons, exact. Independent complete attributed JDK AST fingerprints, all original binding identities, every transfer target and protected scope remain equal. No values, actions, declarations or names are added, removed, copied or reordered.",
+    "changedMethods": [
+      {
+        "file": "Geoblox.java",
+        "methodStart": 11034,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:Geoblox.g(Z)Z"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 89166,
+        "predicates": 7,
+        "pairs": 7,
+        "symbol": "M:c.b(B)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 81442,
+        "predicates": 4,
+        "pairs": 5,
+        "symbol": "M:c.a(ZBII)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 80033,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:c.a(BI)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 70361,
+        "predicates": 6,
+        "pairs": 7,
+        "symbol": "M:c.b(IB)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 65703,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:c.f(B)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 64459,
+        "predicates": 2,
+        "pairs": 2,
+        "symbol": "M:c.e(B)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 60537,
+        "predicates": 3,
+        "pairs": 3,
+        "symbol": "M:c.a(IIZIZI)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 38650,
+        "predicates": 11,
+        "pairs": 11,
+        "symbol": "M:c.h(B)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 32888,
+        "predicates": 7,
+        "pairs": 7,
+        "symbol": "M:c.b(I)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 11254,
+        "predicates": 2,
+        "pairs": 2,
+        "symbol": "M:c.a(I)V"
+      },
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:c.a(II)V"
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 33239,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:ch.d(I)V"
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 18996,
+        "predicates": 7,
+        "pairs": 7,
+        "symbol": "M:ch.b(Z)V"
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10474,
+        "predicates": 0,
+        "pairs": 2,
+        "symbol": "M:ch.run()V"
+      },
+      {
+        "file": "cm.java",
+        "methodStart": 6254,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:cm.a(II)V"
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 597,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:eg.a(Ljava/lang/CharSequence;BIZ)I"
+      },
+      {
+        "file": "el.java",
+        "methodStart": 19369,
+        "predicates": 2,
+        "pairs": 2,
+        "symbol": "M:el.a(ILjava/util/Hashtable;ILjava/lang/StringBuilder;)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 56638,
+        "predicates": 3,
+        "pairs": 3,
+        "symbol": "M:gh.d(I)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 54952,
+        "predicates": 3,
+        "pairs": 3,
+        "symbol": "M:gh.e(I)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 54217,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:gh.a(II)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 48365,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:gh.f(I)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 46288,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:gh.a(Z)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 40215,
+        "predicates": 0,
+        "pairs": 2,
+        "symbol": "M:gh.b(I)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 37572,
+        "predicates": 4,
+        "pairs": 4,
+        "symbol": "M:gh.a(BI)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19022,
+        "predicates": 3,
+        "pairs": 5,
+        "symbol": "M:gh.a(I)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 6565,
+        "predicates": 3,
+        "pairs": 5,
+        "symbol": "M:gh.a(B)V"
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 1605,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:gh.g(I)V"
+      },
+      {
+        "file": "hk.java",
+        "methodStart": 3614,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:hk.a(IICLel;)Z"
+      },
+      {
+        "file": "i.java",
+        "methodStart": 8440,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:i.$cfr$intArgs$a$77236d03e70d(IILnf;IZ)V"
+      },
+      {
+        "file": "i.java",
+        "methodStart": 3251,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:i.a(IBLnf;IZ)V"
+      },
+      {
+        "file": "jb.java",
+        "methodStart": 4497,
+        "predicates": 1,
+        "pairs": 4,
+        "symbol": "M:jb.c(I)I"
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1828,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:kc.b(I)V"
+      },
+      {
+        "file": "kj.java",
+        "methodStart": 8913,
+        "predicates": 0,
+        "pairs": 2,
+        "symbol": "M:kj.a(II[ILpc;Z)Z"
+      },
+      {
+        "file": "kj.java",
+        "methodStart": 5942,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:kj.a(ILpc;)I"
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2654,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:pa.a(Ljava/lang/CharSequence;ZII)Z"
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 27401,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:pf.<init>(Ljava/lang/String;Ljava/lang/String;ZZZ)V"
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 19887,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:rh.a(IZ[II)[B"
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 10738,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:rh.a(II[II)Z"
+      },
+      {
+        "file": "v.java",
+        "methodStart": 1225,
+        "predicates": 0,
+        "pairs": 2,
+        "symbol": "M:v.a([BI)[B"
+      },
+      {
+        "file": "wf.java",
+        "methodStart": 6930,
+        "predicates": 0,
+        "pairs": 1,
+        "symbol": "M:wf.b(ZI)V"
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 12519,
+        "predicates": 1,
+        "pairs": 1,
+        "symbol": "M:wh.a(II[BI)[B"
+      }
+    ],
+    "sourceWorkflowCommit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def",
+    "sourceProofWorkflowCommit": "ef94abfd1771d9a66f7d4887c6a2ea0a00a03def"
   }
 }

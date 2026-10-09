@@ -62,8 +62,8 @@ final class ReflectionCheckRequest extends IntrusiveNode {
                     break signedIntegerCharacter;
                   }
                 }
-                if (characterIndex != 0 || !(characterCodeOrSignedDigit == 43 &&
-                      allowLeadingPlus)) {
+                if (characterIndex != 0 || (characterCodeOrSignedDigit != 43 ||
+                      !allowLeadingPlus)) {
                   if (48 <= characterCodeOrSignedDigit &&
                       characterCodeOrSignedDigit <= 57) {
                     characterCodeOrSignedDigit -= 48;

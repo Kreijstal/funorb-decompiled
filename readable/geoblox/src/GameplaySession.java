@@ -121,7 +121,7 @@ final class GameplaySession {
           }
           FadingDialog.uiPaletteFont.drawCenteredText(TextPairLoginPayload.startGameText, promptWidthThenButtonX, 468, 0, -1);
           FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-          if (!(clientControlFlowGuard == 0)) {
+          if (clientControlFlowGuard != 0) {
             DelayedIncomingPacket.drawNineSlicePanel(440, 240, 36, (byte) -92, 160, ArchiveLoadSequence.mouseBoxFrames);
             if (250 < PrefixCodeDecoder.pointerXSnapshot &&
                 PrefixCodeDecoder.pointerXSnapshot < 389 &&
@@ -292,9 +292,9 @@ final class GameplaySession {
         if (sceneTransitionFlag == 0) {
           if (!this.boardRasterDirty) {
             SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
-            if (!(this.debugReducedRendering)) {
+            if (!this.debugReducedRendering) {
               StrongCacheReference.drawSpecialAttachedEntities((byte) -63);
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 SpriteCheckboxRenderer.boardSceneRaster.setAsRasterTarget();
                 SoftwareRasterizer.clearFramebuffer();
                 if (!this.debugReducedRendering) {
@@ -348,7 +348,7 @@ final class GameplaySession {
           DelayedIncomingPacket.drawNineSlicePanel(tutorialTopOrDebugColorOrTransitionClipTop, -(tutorialPanelWidth / 2) + 320, 20 + tutorialTextHeightOrDebugPanelTop, (byte) -92, tutorialPanelWidth, GameGraphicsResources.frameNineSliceSprites);
           IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 320, tutorialTopOrDebugColorOrTransitionClipTop + 28, 1, -1);
           IntrusiveNodeHashTable.smallFont.drawCenteredText(CanvasResizeController.tutorialSkipMessage, 319, 28 + tutorialTopOrDebugColorOrTransitionClipTop, 1, -1);
-          if (!(clientControlFlowGuard == 0)) {
+          if (clientControlFlowGuard != 0) {
             PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
             if (0 != this.sessionPhase ||
                 EntityContactSupport.areEntityQueuesSettled(0)) {
@@ -372,7 +372,7 @@ final class GameplaySession {
             PasswordValidator.countBoxSprite.draw(468, 410);
           }
         }
-        if ((!this.tutorialMode) && (!EntityContactSupport.areEntityQueuesSettled(0) ||
+        if (!this.tutorialMode && (!EntityContactSupport.areEntityQueuesSettled(0) ||
             sceneTransitionFlag != 0 &&
               (0 == this.sessionPhase ||
               this.sessionPhase == 1))) {
@@ -512,7 +512,7 @@ final class GameplaySession {
             PointerMenuState.smallBoxSprite.draw(selectedThemeIdOrScoreBoxX, loadingPanelWidthOrScoreBoxY);
             if (this.sceneAnimationTick < 266) {
               AudioService.screenTitleSprites[6].draw(0, (this.sceneAnimationTick >> 1) - 113);
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 AudioService.screenTitleSprites[6].draw(0, 20);
                 AudioService.screenTitleSprites[6].drawAdditive(0, 20, (int)(Math.cos((double)(-266 + this.sceneAnimationTick) / 40.0) * -64.0 + 64.0));
               }
@@ -588,7 +588,7 @@ final class GameplaySession {
                 463 >= this.pointsPanelX) {
             if (this.pointsPanelSlideDirection != 1 ||
                   this.pointsPanelX >= 640) {
-              if ((this.pointsPanelX == 463) && (EntityCollisionSupport.matchChainLength == 0)) {
+              if (this.pointsPanelX == 463 && EntityCollisionSupport.matchChainLength == 0) {
                 this.pointsPanelSlideDirection = 1;
                 UiWidget.gameplaySession.emitPointsPopup(false);
                 if (clientControlFlowGuard != 0) {
@@ -852,7 +852,7 @@ final class GameplaySession {
             if (this.tutorialMode) {
               this.advanceTutorialStep(109);
             }
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               if (this.sceneAnimationTick == 0) {
                 IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
               }
@@ -923,9 +923,9 @@ final class GameplaySession {
             this.tutorialPromptActive = false;
             if (this.tutorialStepId != 0) {
               if (this.tutorialStepId != 1) {
-                if (!(this.tutorialStepId != 2)) {
+                if (this.tutorialStepId == 2) {
                   this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                  if (!(clientControlFlowGuard == 0)) {
+                  if (clientControlFlowGuard != 0) {
                     this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
                     if (clientControlFlowGuard != 0) {
                       this.tutorialProgressMetric = 0;
@@ -1136,7 +1136,7 @@ final class GameplaySession {
         if (this.score > 9999999) {
           cappedScoreText = (CharSequence) ((Object) Integer.toString(9999999));
           ValidationIconWidget.writeTextAtOffset(cappedScoreText, this.scoreText, 0, 47);
-          if (!(controlFlowGuard == 0)) {
+          if (controlFlowGuard != 0) {
             scoreValueText = (CharSequence) ((Object) Integer.toString(this.score));
             ValidationIconWidget.writeTextAtOffset(scoreValueText, this.scoreText, 0, 69);
           }
@@ -1152,11 +1152,11 @@ final class GameplaySession {
         if (counterSplitMode != 0) {
           if (counterSplitMode == 1) {
             SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - pointsForCounters;
-            if (!(controlFlowGuard == 0)) {
+            if (controlFlowGuard != 0) {
               oneThirdPoints = pointsForCounters / 3;
               ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + oneThirdPoints;
               SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - (pointsForCounters - oneThirdPoints);
-              if (!(controlFlowGuard == 0)) {
+              if (controlFlowGuard != 0) {
                 ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + pointsForCounters;
               }
             }
@@ -1164,7 +1164,7 @@ final class GameplaySession {
             oneThirdPoints = pointsForCounters / 3;
             ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + oneThirdPoints;
             SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - (pointsForCounters - oneThirdPoints);
-            if (!(controlFlowGuard == 0)) {
+            if (controlFlowGuard != 0) {
               ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + pointsForCounters;
             }
           }
@@ -1247,7 +1247,7 @@ final class GameplaySession {
             }
             if (this.tutorialStepId != 1 ||
                   !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-              if ((this.tutorialStepId == 2) && (!(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0))) {
+              if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
                 this.tutorialStepPhase = 2;
                 if (clientControlFlowGuard != 0) {
                   this.tutorialStepPhase = 2;
@@ -1435,7 +1435,7 @@ final class GameplaySession {
             if (this.boardEmptyAtResultStart) {
               FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
             }
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
               PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 300 - (PointerMenuState.smallBoxSprite.fullHeight >> 1));
               countdownBonusText = Integer.toString(this.resultBonusPoints);
@@ -1589,7 +1589,7 @@ final class GameplaySession {
             }
             if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
               this.resultPanelX = this.resultPanelX - 1;
-              if (!(controlFlowGuard == 0)) {
+              if (controlFlowGuard != 0) {
                 this.sceneTransitionRequested = true;
                 this.sceneAnimationTick = 0;
                 this.sessionPhase = 5;
@@ -1642,7 +1642,7 @@ final class GameplaySession {
         if (this.pendingPopupPoints > 99999) {
           cappedPopupPointsText = (CharSequence) ((Object) Integer.toString(99999));
           ValidationIconWidget.writeTextAtOffset(cappedPopupPointsText, this.popupPointsText, 0, 26);
-          if (!(Geoblox.clientControlFlowFlag == 0)) {
+          if (Geoblox.clientControlFlowFlag != 0) {
             popupPointsValueText = (CharSequence) ((Object) Integer.toString(this.pendingPopupPoints));
             ValidationIconWidget.writeTextAtOffset(popupPointsValueText, this.popupPointsText, 0, 73);
           }
@@ -1676,10 +1676,10 @@ final class GameplaySession {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.remainingThemeReleaseTextColors[remainingThemeReleases % 5];
             FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               if (remainingThemeReleases <= 99999) {
                 FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-                if (!(clientControlFlowGuard == 0)) {
+                if (clientControlFlowGuard != 0) {
                   FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
                 }
               } else {
@@ -1689,7 +1689,7 @@ final class GameplaySession {
           } else {
             if (remainingThemeReleases <= 99999) {
               FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
               }
             } else {
@@ -1723,11 +1723,11 @@ final class GameplaySession {
               }
             }
             ScoreSubmission.requestedScreenId = 6;
-            if (!(clientControlFlowGuard == 0)) {
+            if (clientControlFlowGuard != 0) {
               if (this.score > 0 ||
                     this.newActionCount > 0) {
                 ScoreSubmission.requestedScreenId = 4;
-                if (!(clientControlFlowGuard == 0)) {
+                if (clientControlFlowGuard != 0) {
                   ScoreSubmission.requestedScreenId = 0;
                 }
               } else {
@@ -1738,7 +1738,7 @@ final class GameplaySession {
             if (this.score > 0 ||
                   this.newActionCount > 0) {
               ScoreSubmission.requestedScreenId = 4;
-              if (!(clientControlFlowGuard == 0)) {
+              if (clientControlFlowGuard != 0) {
                 ScoreSubmission.requestedScreenId = 0;
               }
             } else {

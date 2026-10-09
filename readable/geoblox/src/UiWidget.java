@@ -616,7 +616,7 @@ class UiWidget extends IntrusiveNode {
             discardedRendererPrefixAppend = output.append(" renderer=");
             if (this.renderer instanceof UiWidget) {
               output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
-              if (!(clientControlFlowSnapshot == 0)) {
+              if (clientControlFlowSnapshot != 0) {
                 discardedRendererAppend = output.append(this.renderer);
               }
             } else {
@@ -627,7 +627,7 @@ class UiWidget extends IntrusiveNode {
             discardedListenerPrefixAppend = output.append(" listener=");
             if (!(this.listener instanceof UiWidget)) {
               discardedListenerAppend = output.append(this.listener);
-              if (!(clientControlFlowSnapshot == 0)) {
+              if (clientControlFlowSnapshot != 0) {
                 output = this.appendWidgetDiagnostics(0, output, visitedWidgets, 1 + depth);
               }
             } else {
