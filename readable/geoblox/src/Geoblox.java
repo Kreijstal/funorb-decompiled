@@ -43,7 +43,7 @@ public final class Geoblox extends SessionGameApplet {
         int[] alternateUiPalette = null;
         Sprite[] geometrySourceFrames = null;
         Sprite[] geometryFramesAlias = null;
-        int themeIndex = 0;
+        int geometryThemeIndex = 0;
         int geometryCanvasHeight = 0;
         Sprite[] avatarEyeSourceFrames = null;
         Sprite[] avatarMouthSourceFrames = null;
@@ -52,19 +52,19 @@ public final class Geoblox extends SessionGameApplet {
         int[] keyboardWidthAlias = null;
         int[] keyboardWidthsForFill = null;
         int keyboardIconIndex = 0;
-        int geometryFrameThenVariantIndex = 0;
-        int categoryThenAnimationFrameIndex = 0;
-        int geometryCanvasWidthThenFrameIndex = 0;
-        int paletteVariantThenKeyboardIndex = 0;
+        int geometryFrameIndex = 0;
+        int geometryCategoryIndex = 0;
+        int geometryCanvasWidth = 0;
+        int geometryPaletteVariant = 0;
         int clientFlagSnapshot = clientControlFlowFlag;
         Sprite[] amorphousSpriteFrames;
-        int themeIndexLiteralPhase1;
-        int geometryFrameThenVariantIndexLiteralPhase1;
-        int categoryThenAnimationFrameIndexLiteralPhase1;
-        int categoryThenAnimationFrameIndexLiteralPhase2;
-        int geometryCanvasWidthThenFrameIndexLiteralPhase1;
-        int geometryCanvasWidthThenFrameIndexLiteralPhase2;
-        int paletteVariantThenKeyboardIndexLiteralPhase1;
+        int amorphousThemeIndex;
+        int amorphousVariantIndex;
+        int amorphousFrameIndex;
+        int avatarEyeFrameIndex;
+        int avatarMouthFrameIndex;
+        int sparkleFrameIndex;
+        int unusedInitialKeyboardIconIndexSnapshot;
         ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
         if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.initialMusicScoreArchive && TextWidgetSupport.initialVorbisArchive != null && null != ProxySocketConnector.instrumentPatchArchive) {
             HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
@@ -91,32 +91,32 @@ public final class Geoblox extends SessionGameApplet {
             FadingDialog.uiPaletteFont.colorPalettes[1][SessionGameApplet.uiAccentPaletteIndex] = 16777215;
             geometrySourceFrames = OpacityWidget.loadSpriteFrames("geoms", "", GameGraphicsResources.gameGraphicsArchive, 0);
             geometryFramesAlias = geometrySourceFrames;
-            themeIndex = -1;
-            for (geometryFrameThenVariantIndex = 0; geometrySourceFrames.length > geometryFrameThenVariantIndex; geometryFrameThenVariantIndex++) {
-                categoryThenAnimationFrameIndex = geometryFrameThenVariantIndex % 7;
-                if (categoryThenAnimationFrameIndex == 0) {
-                    themeIndex++;
-                    if (themeIndex >= 7) {
+            geometryThemeIndex = -1;
+            for (geometryFrameIndex = 0; geometrySourceFrames.length > geometryFrameIndex; geometryFrameIndex++) {
+                geometryCategoryIndex = geometryFrameIndex % 7;
+                if (geometryCategoryIndex == 0) {
+                    geometryThemeIndex++;
+                    if (geometryThemeIndex >= 7) {
                         break;
                     }
                 }
-                geometryCanvasWidthThenFrameIndex = geometrySourceFrames[geometryFrameThenVariantIndex].fullWidth;
-                geometryCanvasHeight = geometrySourceFrames[geometryFrameThenVariantIndex].fullHeight;
-                Under13TermsPanel.geometrySpritesByThemeAndCategory[themeIndex][categoryThenAnimationFrameIndex] = geometrySourceFrames[geometryFrameThenVariantIndex];
-                for (paletteVariantThenKeyboardIndex = 0; paletteVariantThenKeyboardIndex < 7; paletteVariantThenKeyboardIndex++) {
-                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex] = new Sprite(geometryCanvasWidthThenFrameIndex, geometryCanvasHeight);
-                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[themeIndex][categoryThenAnimationFrameIndex][paletteVariantThenKeyboardIndex].setAsRasterTarget();
-                    geometrySourceFrames[geometryFrameThenVariantIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[themeIndex][paletteVariantThenKeyboardIndex]);
+                geometryCanvasWidth = geometrySourceFrames[geometryFrameIndex].fullWidth;
+                geometryCanvasHeight = geometrySourceFrames[geometryFrameIndex].fullHeight;
+                Under13TermsPanel.geometrySpritesByThemeAndCategory[geometryThemeIndex][geometryCategoryIndex] = geometrySourceFrames[geometryFrameIndex];
+                for (geometryPaletteVariant = 0; geometryPaletteVariant < 7; geometryPaletteVariant++) {
+                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant] = new Sprite(geometryCanvasWidth, geometryCanvasHeight);
+                    ConnectionHeaderSupport.entitySpritesByThemeCategoryAndVariant[geometryThemeIndex][geometryCategoryIndex][geometryPaletteVariant].setAsRasterTarget();
+                    geometrySourceFrames[geometryFrameIndex].drawGrayModulated(0, 0, SocketConnector.themeSpriteColors[geometryThemeIndex][geometryPaletteVariant]);
                 }
             }
             amorphousSpriteFrames = OpacityWidget.loadSpriteFrames("amorphic", "", GameGraphicsResources.gameGraphicsArchive, methodGuard ^ 25869);
-            for (themeIndexLiteralPhase1 = 0; themeIndexLiteralPhase1 < 7; themeIndexLiteralPhase1++) {
-                for (geometryFrameThenVariantIndexLiteralPhase1 = 0; geometryFrameThenVariantIndexLiteralPhase1 < 7; geometryFrameThenVariantIndexLiteralPhase1++) {
-                    for (categoryThenAnimationFrameIndexLiteralPhase1 = 0; categoryThenAnimationFrameIndexLiteralPhase1 < amorphousSpriteFrames.length; categoryThenAnimationFrameIndexLiteralPhase1++) {
-                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndexLiteralPhase1][geometryFrameThenVariantIndexLiteralPhase1][categoryThenAnimationFrameIndexLiteralPhase1] = new Sprite(4 + amorphousSpriteFrames[categoryThenAnimationFrameIndexLiteralPhase1].fullWidth, 4 + amorphousSpriteFrames[categoryThenAnimationFrameIndexLiteralPhase1].fullHeight);
-                        MenuScreen.amorphousFramesByThemeAndVariant[themeIndexLiteralPhase1][geometryFrameThenVariantIndexLiteralPhase1][categoryThenAnimationFrameIndexLiteralPhase1].setAsRasterTarget();
-                        amorphousSpriteFrames[categoryThenAnimationFrameIndexLiteralPhase1].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[themeIndexLiteralPhase1][geometryFrameThenVariantIndexLiteralPhase1]);
-                        NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[themeIndexLiteralPhase1][geometryFrameThenVariantIndexLiteralPhase1][categoryThenAnimationFrameIndexLiteralPhase1].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[themeIndexLiteralPhase1][geometryFrameThenVariantIndexLiteralPhase1][categoryThenAnimationFrameIndexLiteralPhase1].fullHeight);
+            for (amorphousThemeIndex = 0; amorphousThemeIndex < 7; amorphousThemeIndex++) {
+                for (amorphousVariantIndex = 0; amorphousVariantIndex < 7; amorphousVariantIndex++) {
+                    for (amorphousFrameIndex = 0; amorphousFrameIndex < amorphousSpriteFrames.length; amorphousFrameIndex++) {
+                        MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex] = new Sprite(4 + amorphousSpriteFrames[amorphousFrameIndex].fullWidth, 4 + amorphousSpriteFrames[amorphousFrameIndex].fullHeight);
+                        MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].setAsRasterTarget();
+                        amorphousSpriteFrames[amorphousFrameIndex].drawGrayModulated(2, 2, SocketConnector.themeSpriteColors[amorphousThemeIndex][amorphousVariantIndex]);
+                        NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullWidth, methodGuard ^ -3266, MenuScreen.amorphousFramesByThemeAndVariant[amorphousThemeIndex][amorphousVariantIndex][amorphousFrameIndex].fullHeight);
                     }
                 }
             }
@@ -132,24 +132,24 @@ public final class Geoblox extends SessionGameApplet {
                 avatarEyeSourceFrames = OpacityWidget.loadSpriteFrames("player_eyes", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
             }
             EndingAnimationSupport.avatarEyeFrames = new Sprite[avatarEyeSourceFrames.length];
-            for (categoryThenAnimationFrameIndexLiteralPhase2 = 0; avatarEyeSourceFrames.length > categoryThenAnimationFrameIndexLiteralPhase2; categoryThenAnimationFrameIndexLiteralPhase2++) {
-                EndingAnimationSupport.avatarEyeFrames[categoryThenAnimationFrameIndexLiteralPhase2] = new Sprite(4 + avatarEyeSourceFrames[categoryThenAnimationFrameIndexLiteralPhase2].fullWidth, avatarEyeSourceFrames[categoryThenAnimationFrameIndexLiteralPhase2].fullHeight + 4);
-                EndingAnimationSupport.avatarEyeFrames[categoryThenAnimationFrameIndexLiteralPhase2].setAsRasterTarget();
-                avatarEyeSourceFrames[categoryThenAnimationFrameIndexLiteralPhase2].drawUnmasked(2, 2);
-                NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, EndingAnimationSupport.avatarEyeFrames[categoryThenAnimationFrameIndexLiteralPhase2].fullWidth, -27085, EndingAnimationSupport.avatarEyeFrames[categoryThenAnimationFrameIndexLiteralPhase2].height);
-                EndingAnimationSupport.avatarEyeFrames[categoryThenAnimationFrameIndexLiteralPhase2].trimTransparentBorders();
+            for (avatarEyeFrameIndex = 0; avatarEyeSourceFrames.length > avatarEyeFrameIndex; avatarEyeFrameIndex++) {
+                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex] = new Sprite(4 + avatarEyeSourceFrames[avatarEyeFrameIndex].fullWidth, avatarEyeSourceFrames[avatarEyeFrameIndex].fullHeight + 4);
+                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].setAsRasterTarget();
+                avatarEyeSourceFrames[avatarEyeFrameIndex].drawUnmasked(2, 2);
+                NodeHashTableIterator.markInsetZeroOutlinePixels(0, 0, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].fullWidth, -27085, EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].height);
+                EndingAnimationSupport.avatarEyeFrames[avatarEyeFrameIndex].trimTransparentBorders();
             }
             avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "", GameGraphicsResources.gameGraphicsArchive, 0);
             if (ClientOptionSupport.isClientOptionEnabled(0, methodGuard - 25774)) {
                 avatarMouthSourceFrames = OpacityWidget.loadSpriteFrames("player_mouth", "halloween", GameGraphicsResources.gameGraphicsArchive, 0);
             }
             UsernameSuggestionsPanel.avatarMouthFrames = new Sprite[avatarMouthSourceFrames.length];
-            for (geometryCanvasWidthThenFrameIndexLiteralPhase1 = 0; avatarMouthSourceFrames.length > geometryCanvasWidthThenFrameIndexLiteralPhase1; geometryCanvasWidthThenFrameIndexLiteralPhase1++) {
-                UsernameSuggestionsPanel.avatarMouthFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1] = new Sprite(avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].fullWidth + 4, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].fullHeight + 4);
-                UsernameSuggestionsPanel.avatarMouthFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].setAsRasterTarget();
-                avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].drawUnmasked(2, 2);
-                NodeHashTableIterator.markInsetZeroOutlinePixels(2 + avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].trimY, 0, UsernameSuggestionsPanel.avatarMouthFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].fullWidth, -27085, avatarMouthSourceFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].height);
-                UsernameSuggestionsPanel.avatarMouthFrames[geometryCanvasWidthThenFrameIndexLiteralPhase1].trimTransparentBorders();
+            for (avatarMouthFrameIndex = 0; avatarMouthSourceFrames.length > avatarMouthFrameIndex; avatarMouthFrameIndex++) {
+                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex] = new Sprite(avatarMouthSourceFrames[avatarMouthFrameIndex].fullWidth + 4, avatarMouthSourceFrames[avatarMouthFrameIndex].fullHeight + 4);
+                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].setAsRasterTarget();
+                avatarMouthSourceFrames[avatarMouthFrameIndex].drawUnmasked(2, 2);
+                NodeHashTableIterator.markInsetZeroOutlinePixels(2 + avatarMouthSourceFrames[avatarMouthFrameIndex].trimY, 0, UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].fullWidth, -27085, avatarMouthSourceFrames[avatarMouthFrameIndex].height);
+                UsernameSuggestionsPanel.avatarMouthFrames[avatarMouthFrameIndex].trimTransparentBorders();
             }
             SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
             GzipInflater.sunBackgroundSprite = SocketConnector.loadIndexedSprite(GameGraphicsResources.gameGraphicsArchive, 1, "sun", "sky_background");
@@ -160,8 +160,8 @@ public final class Geoblox extends SessionGameApplet {
             CharacterReplacementSupport.transitionCurtain = ScorePopupSupport.loadSprite("transition", GameGraphicsResources.gameGraphicsArchive, (byte) -78, "");
             SecondaryNodeHashTable.silverStarShockFrames = OpacityWidget.loadSpriteFrames("silver_shock", "", GameGraphicsResources.gameGraphicsArchive, 0);
             VisualPropertyOverrides.sparkleFrames = OpacityWidget.loadSpriteFrames("sparkle", "", GameGraphicsResources.gameGraphicsArchive, 0);
-            for (geometryCanvasWidthThenFrameIndexLiteralPhase2 = 0; VisualPropertyOverrides.sparkleFrames.length > geometryCanvasWidthThenFrameIndexLiteralPhase2; geometryCanvasWidthThenFrameIndexLiteralPhase2++) {
-                VisualPropertyOverrides.sparkleFrames[geometryCanvasWidthThenFrameIndexLiteralPhase2].addOutline(1);
+            for (sparkleFrameIndex = 0; VisualPropertyOverrides.sparkleFrames.length > sparkleFrameIndex; sparkleFrameIndex++) {
+                VisualPropertyOverrides.sparkleFrames[sparkleFrameIndex].addOutline(1);
             }
             SessionTextState.bangFrames = OpacityWidget.loadSpriteFrames("bang", "", GameGraphicsResources.gameGraphicsArchive, 0);
             ReflectionCheckRequest.pointsPanelGlowFrames = OpacityWidget.loadSpriteFrames("bonus_glow", "", GameGraphicsResources.gameGraphicsArchive, 0);
@@ -189,7 +189,7 @@ public final class Geoblox extends SessionGameApplet {
             keyboardWidthAlias = keyboardIconAdvanceWidths;
             keyboardWidthsForFill = keyboardWidthAlias;
             keyboardIconIndex = 0;
-            paletteVariantThenKeyboardIndexLiteralPhase1 = keyboardIconIndex;
+            unusedInitialKeyboardIconIndexSnapshot = keyboardIconIndex;
             while (keyboardIconIndex < keyboardIconAdvanceWidths.length) {
                 keyboardWidthsForFill[keyboardIconIndex] = keyboardIconSprites[keyboardIconIndex].fullHeight - 3;
                 keyboardIconIndex++;

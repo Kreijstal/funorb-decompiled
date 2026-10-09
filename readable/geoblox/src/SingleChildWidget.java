@@ -48,10 +48,10 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
         int entry = 0;
         int entryKey = 0;
         int clientControlFlowSnapshot = 0;
-        int midpointOrBubbleEndLiteralPhase1;
-        int partitionOrBubbleIndexLiteralPhase1;
-        int leastUpperKeyOrLeftEntryLiteralPhase1;
-        int greatestLowerKeyOrRightEntryLiteralPhase1;
+        int bubbleEndIndex;
+        int bubbleCompareIndex;
+        int leftRankedEntry;
+        int rightRankedEntry;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (prefixLimitIndex <= startIndex) {
@@ -96,13 +96,13 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
             SingleChildWidget.sortRankedEntryRange(partitionOrBubbleIndex, prefixLimitIndex, lowerKeyBound, greatestLowerKeyOrRightEntry, (byte) 107, endIndexExclusive, useSecondKey);
             return;
           }
-          for (midpointOrBubbleEndLiteralPhase1 = -1 + endIndexExclusive; midpointOrBubbleEndLiteralPhase1 > startIndex; midpointOrBubbleEndLiteralPhase1--) {
-            for (partitionOrBubbleIndexLiteralPhase1 = startIndex; partitionOrBubbleIndexLiteralPhase1 < midpointOrBubbleEndLiteralPhase1; partitionOrBubbleIndexLiteralPhase1++) {
-              leastUpperKeyOrLeftEntryLiteralPhase1 = AchievementQuery.rankedEntryIndices[partitionOrBubbleIndexLiteralPhase1];
-              greatestLowerKeyOrRightEntryLiteralPhase1 = AchievementQuery.rankedEntryIndices[1 + partitionOrBubbleIndexLiteralPhase1];
-              if (RankedComparisonSupport.isRightRankedEntryBeforeLeft(useSecondKey, greatestLowerKeyOrRightEntryLiteralPhase1, (byte) -125, leastUpperKeyOrLeftEntryLiteralPhase1)) {
-                AchievementQuery.rankedEntryIndices[partitionOrBubbleIndexLiteralPhase1] = greatestLowerKeyOrRightEntryLiteralPhase1;
-                AchievementQuery.rankedEntryIndices[partitionOrBubbleIndexLiteralPhase1 + 1] = leastUpperKeyOrLeftEntryLiteralPhase1;
+          for (bubbleEndIndex = -1 + endIndexExclusive; bubbleEndIndex > startIndex; bubbleEndIndex--) {
+            for (bubbleCompareIndex = startIndex; bubbleCompareIndex < bubbleEndIndex; bubbleCompareIndex++) {
+              leftRankedEntry = AchievementQuery.rankedEntryIndices[bubbleCompareIndex];
+              rightRankedEntry = AchievementQuery.rankedEntryIndices[1 + bubbleCompareIndex];
+              if (RankedComparisonSupport.isRightRankedEntryBeforeLeft(useSecondKey, rightRankedEntry, (byte) -125, leftRankedEntry)) {
+                AchievementQuery.rankedEntryIndices[bubbleCompareIndex] = rightRankedEntry;
+                AchievementQuery.rankedEntryIndices[bubbleCompareIndex + 1] = leftRankedEntry;
               }
             }
           }

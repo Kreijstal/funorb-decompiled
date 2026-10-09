@@ -23,7 +23,7 @@ final class DialRenderer implements WidgetRenderer {
         int markerOffsetX = 0;
         int markerOffsetY = 0;
         DialWidget dialWidgetOrNull = widget instanceof DialWidget ? (DialWidget) ((Object) widget) : null;
-        double markerAngleRadiansLiteralPhase1;
+        double selectedMarkerAngleRadians;
         SoftwareRasterizer.fillRectangle(parentX + widget.widgetX, widget.widgetY + parentY, widget.widgetWidth, widget.widgetHeight, this.backgroundColor);
         if (dialWidgetOrNull != null) {
         }
@@ -37,9 +37,9 @@ final class DialRenderer implements WidgetRenderer {
             SoftwareRasterizer.fillCircle(dialCenterX + markerOffsetX, dialCenterY + markerOffsetY, 1, this.secondaryMarkerColor);
         }
         SoftwareRasterizer.fillCircle(dialCenterX, dialCenterY, 2, 1);
-        markerAngleRadiansLiteralPhase1 = 2.0 * (3.141592653589793 * (double)dialWidgetOrNull.selectedStep) / (double)dialWidgetOrNull.stepCount;
-        markerOffsetX = (int)(-Math.sin(markerAngleRadiansLiteralPhase1) * (double)dialWidgetOrNull.radius);
-        markerOffsetY = (int)(Math.cos(markerAngleRadiansLiteralPhase1) * (double)dialWidgetOrNull.radius);
+        selectedMarkerAngleRadians = 2.0 * (3.141592653589793 * (double)dialWidgetOrNull.selectedStep) / (double)dialWidgetOrNull.stepCount;
+        markerOffsetX = (int)(-Math.sin(selectedMarkerAngleRadians) * (double)dialWidgetOrNull.radius);
+        markerOffsetY = (int)(Math.cos(selectedMarkerAngleRadians) * (double)dialWidgetOrNull.radius);
         if (methodGuard > -5) {
             return;
         }

@@ -22,32 +22,32 @@ final class ProgressBarWidget extends UiWidget {
     private final Sprite buildStripeSprite(int alternateColor, boolean restoreGuard, int stripeColor) {
         int stripeRow = 0;
         int stripeStartX = 0;
-        int packedRedBlueChannels = 0;
-        int packedGreenChannel = 0;
+        int primaryRedBlueChannels = 0;
+        int primaryGreenChannel = 0;
         int rowOffsetFromMidpoint = 0;
         int brightnessQ8 = 0;
-        int shadedStripeColor = 0;
+        int shadedPrimaryStripeColor = 0;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         Sprite stripeSprite = new Sprite(this.stripeWidth * 2, this.widgetHeight);
-        int packedRedBlueChannelsLiteralPhase1;
-        int packedGreenChannelLiteralPhase1;
-        int shadedStripeColorLiteralPhase1;
+        int alternateRedBlueChannels;
+        int alternateGreenChannel;
+        int shadedAlternateStripeColor;
         Geoblox.setRasterTarget(1, stripeSprite);
         int halfHeight = this.widgetHeight >> 1;
         for (stripeRow = 0; this.widgetHeight > stripeRow; stripeRow++) {
             stripeStartX = (stripeRow >> 1) * (-1 + this.stripeWidth * 2) % (this.stripeWidth * 2);
-            packedRedBlueChannels = 16711935 & stripeColor;
-            packedGreenChannel = 65280 & stripeColor;
+            primaryRedBlueChannels = 16711935 & stripeColor;
+            primaryGreenChannel = 65280 & stripeColor;
             rowOffsetFromMidpoint = -halfHeight + stripeRow;
             brightnessQ8 = (int)(128.0 * (Math.sqrt((double)(-(rowOffsetFromMidpoint * rowOffsetFromMidpoint) + halfHeight * halfHeight)) / (double)halfHeight)) + 128;
-            shadedStripeColor = brightnessQ8 >= 256 ? packedGreenChannel | packedRedBlueChannels : (-16711936 & brightnessQ8 * packedRedBlueChannels | 16711680 & brightnessQ8 * packedGreenChannel) >>> 8;
-            SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
-            SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
-            packedGreenChannelLiteralPhase1 = alternateColor & 65280;
-            packedRedBlueChannelsLiteralPhase1 = alternateColor & 16711935;
-            shadedStripeColorLiteralPhase1 = 256 > brightnessQ8 ? (16711680 & packedGreenChannelLiteralPhase1 * brightnessQ8 | -16711936 & brightnessQ8 * packedRedBlueChannelsLiteralPhase1) >>> 8 : packedGreenChannelLiteralPhase1 | packedRedBlueChannelsLiteralPhase1;
-            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColorLiteralPhase1);
-            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColorLiteralPhase1);
+            shadedPrimaryStripeColor = brightnessQ8 >= 256 ? primaryGreenChannel | primaryRedBlueChannels : (-16711936 & brightnessQ8 * primaryRedBlueChannels | 16711680 & brightnessQ8 * primaryGreenChannel) >>> 8;
+            SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
+            SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedPrimaryStripeColor);
+            alternateGreenChannel = alternateColor & 65280;
+            alternateRedBlueChannels = alternateColor & 16711935;
+            shadedAlternateStripeColor = 256 > brightnessQ8 ? (16711680 & alternateGreenChannel * brightnessQ8 | -16711936 & brightnessQ8 * alternateRedBlueChannels) >>> 8 : alternateGreenChannel | alternateRedBlueChannels;
+            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
+            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedAlternateStripeColor);
         }
         RasterTargetRestoreSupport.restoreRasterTarget(restoreGuard);
         return stripeSprite;

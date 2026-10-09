@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b831f8b9d506252cf0c8b4fcbc070dadef962d20/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/4f2f3969b04b1904d144322963d1c99211f617ab/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 237)
+## Current readability (pass 238)
 
 The export has 20,078 guarded names and 121,835 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,26 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current archive, prefix and mesh names (pass 237)
+## Current startup, widget and timestamp names (pass 238)
+
+Startup names distinguish geometry theme/category/palette indexes from amorphous,
+eye, mouth and sparkle frames. Widget names distinguish focus paths, alignment,
+render guards, text hit testing and tooltip layout. Raster helpers identify four
+focus-rectangle edges, five nine-slice tile directions, clipping, stripes and
+lower triangle spans. Ranking names distinguish query/submission IDs and view
+value indexes; the final adjacent-entry sort identifies its left/right entries.
+
+Timestamp names distinguish requested calendar values from bad-guard fallback
+values. The recursive -99-millisecond calendar reset and saved requested weekday
+remain unchanged. Sentinel arithmetic and unused snapshots still execute; no
+apparent bad-guard behavior or callback sequence is repaired by these names.
+
+97 names replace 496 bound occurrences in 26 files. 73 LiteralPhase names are
+retired; 83 remain. All-file compilation/reproduction/reversal and existing
+native result/rendering/reflection traces pass. Five large framed methods and
+41 unknown field purposes remain; see the workflow for commands and scope.
+
+## Previous archive, prefix and mesh names (pass 237)
 
 Archive metadata names distinguish reconstructed group/file IDs from name-hash
 slots, CRC/digest/revision ordinals and file-table group ordinals. Unpacking

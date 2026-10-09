@@ -82,10 +82,10 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int spanStartOrBottomXQ16 = 0;
         int spanWidth = 0;
         int controlFlagSnapshot = 0;
-        int edgeSegmentRowsThenRowBaseLiteralPhase1;
-        int edgeSwapOrRowBaseOrLowerRowsOrGuardRemainderLiteralPhase1;
-        int spanStartOrBottomXQ16LiteralPhase1;
-        int spanWidthLiteralPhase1;
+        int lowerSegmentRowBase;
+        int unusedLowerSegmentGuardRemainder;
+        int lowerSpanLeft;
+        int lowerSpanWidth;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (bottomY >= 0 &&
@@ -207,25 +207,25 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               leftXQ16 = leftXQ16 + topY * leftXStepQ16;
               topY = 0;
             }
-            edgeSwapOrRowBaseOrLowerRowsOrGuardRemainderLiteralPhase1 = -91 % ((guard - 74) / 33);
-            edgeSegmentRowsThenRowBaseLiteralPhase1 = TriangleRasterState.rowBaseOffsets[topY];
+            unusedLowerSegmentGuardRemainder = -91 % ((guard - 74) / 33);
+            lowerSegmentRowBase = TriangleRasterState.rowBaseOffsets[topY];
             while (bottomY > topY) {
-              spanStartOrBottomXQ16LiteralPhase1 = leftXQ16 >> 16;
-              if (TriangleRasterState.clipWidth > spanStartOrBottomXQ16LiteralPhase1) {
-                spanWidthLiteralPhase1 = (rightXQ16 >> 16) - (leftXQ16 >> 16);
-                if (spanWidthLiteralPhase1 == 0) {
-                  if (spanStartOrBottomXQ16LiteralPhase1 >= 0 &&
-                      TriangleRasterState.clipWidth > spanStartOrBottomXQ16LiteralPhase1) {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, spanStartOrBottomXQ16LiteralPhase1 + edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanWidthLiteralPhase1);
+              lowerSpanLeft = leftXQ16 >> 16;
+              if (TriangleRasterState.clipWidth > lowerSpanLeft) {
+                lowerSpanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                if (lowerSpanWidth == 0) {
+                  if (lowerSpanLeft >= 0 &&
+                      TriangleRasterState.clipWidth > lowerSpanLeft) {
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(-67, destinationPixels, lowerSpanLeft + lowerSegmentRowBase, halfRgb, lowerSpanWidth);
                   }
                 } else {
-                  if (TriangleRasterState.clipWidth <= spanWidthLiteralPhase1 + spanStartOrBottomXQ16LiteralPhase1) {
-                    spanWidthLiteralPhase1 = -spanStartOrBottomXQ16LiteralPhase1 + TriangleRasterState.clipWidth - 1;
+                  if (TriangleRasterState.clipWidth <= lowerSpanWidth + lowerSpanLeft) {
+                    lowerSpanWidth = -lowerSpanLeft + TriangleRasterState.clipWidth - 1;
                   }
-                  if (0 > spanStartOrBottomXQ16LiteralPhase1) {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(127, destinationPixels, edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanStartOrBottomXQ16LiteralPhase1 + spanWidthLiteralPhase1);
+                  if (0 > lowerSpanLeft) {
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(127, destinationPixels, lowerSegmentRowBase, halfRgb, lowerSpanLeft + lowerSpanWidth);
                   } else {
-                    DebouncedValidationProvider.drawHalfBlendSolidSpan(115, destinationPixels, spanStartOrBottomXQ16LiteralPhase1 + edgeSegmentRowsThenRowBaseLiteralPhase1, halfRgb, spanWidthLiteralPhase1);
+                    DebouncedValidationProvider.drawHalfBlendSolidSpan(115, destinationPixels, lowerSpanLeft + lowerSegmentRowBase, halfRgb, lowerSpanWidth);
                   }
                 }
               }
@@ -235,7 +235,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               }
               leftXQ16 = leftXQ16 + leftXStepQ16;
               rightXQ16 = rightXQ16 + rightXStepQ16;
-              edgeSegmentRowsThenRowBaseLiteralPhase1 = edgeSegmentRowsThenRowBaseLiteralPhase1 + SoftwareRasterizer.stride;
+              lowerSegmentRowBase = lowerSegmentRowBase + SoftwareRasterizer.stride;
             }
             return;
           }

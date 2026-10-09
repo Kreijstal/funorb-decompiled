@@ -13,7 +13,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         StringBuilder callbackMessagePrefix = null;
         String eventArgumentDescription = null;
         RuntimeException caughtCallbackFailure = null;
-        int nextEventWriteIndexOrModifiersLiteralPhase1;
+        int eventModifiers;
         try {
           if (TrackedPcmStream.keyboardListener == null) {
             return;
@@ -45,8 +45,8 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
               BufferedSocket.keyEventWriteIndex = nextEventWriteIndexOrModifiers;
             }
           }
-          nextEventWriteIndexOrModifiersLiteralPhase1 = event.getModifiers();
-          if ((nextEventWriteIndexOrModifiersLiteralPhase1 & 10) == 0 &&
+          eventModifiers = event.getModifiers();
+          if ((eventModifiers & 10) == 0 &&
               85 != internalKeyCode &&
               internalKeyCode != 10) {
             return;

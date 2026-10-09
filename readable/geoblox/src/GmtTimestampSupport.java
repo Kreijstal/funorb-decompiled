@@ -11,37 +11,37 @@ final class GmtTimestampSupport {
     static int rankedEntryCount;
 
     final static String formatGmtTimestamp(byte methodGuard, long timestampMillis) {
-        int dayOfMonth = 0;
-        int monthIndex = 0;
-        int year = 0;
-        int hourOfDay = 0;
-        int minute = 0;
-        int second = 0;
-        int dayOfMonthLiteralPhase1;
-        int monthIndexLiteralPhase1;
-        int yearLiteralPhase1;
-        int hourOfDayLiteralPhase1;
-        int minuteLiteralPhase1;
-        int secondLiteralPhase1;
+        int requestedDayOfMonth = 0;
+        int requestedMonthIndex = 0;
+        int requestedYear = 0;
+        int requestedHourOfDay = 0;
+        int requestedMinute = 0;
+        int requestedSecond = 0;
+        int fallbackCalendarDayOfMonth;
+        int fallbackCalendarMonthIndex;
+        int fallbackCalendarYear;
+        int fallbackCalendarHourOfDay;
+        int fallbackCalendarMinute;
+        int fallbackCalendarSecond;
         MatchCandidateSupport.gmtCalendar.setTime(new Date(timestampMillis));
         int weekdayIndex = MatchCandidateSupport.gmtCalendar.get(7);
         if (methodGuard <= -43) {
-            dayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
-            monthIndex = MatchCandidateSupport.gmtCalendar.get(2);
-            year = MatchCandidateSupport.gmtCalendar.get(1);
-            hourOfDay = MatchCandidateSupport.gmtCalendar.get(11);
-            minute = MatchCandidateSupport.gmtCalendar.get(12);
-            second = MatchCandidateSupport.gmtCalendar.get(13);
-            return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + dayOfMonth / 10 + dayOfMonth % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[monthIndex] + "-" + year + " " + hourOfDay / 10 + hourOfDay % 10 + ":" + minute / 10 + minute % 10 + ":" + second / 10 + second % 10 + " GMT";
+            requestedDayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
+            requestedMonthIndex = MatchCandidateSupport.gmtCalendar.get(2);
+            requestedYear = MatchCandidateSupport.gmtCalendar.get(1);
+            requestedHourOfDay = MatchCandidateSupport.gmtCalendar.get(11);
+            requestedMinute = MatchCandidateSupport.gmtCalendar.get(12);
+            requestedSecond = MatchCandidateSupport.gmtCalendar.get(13);
+            return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + requestedDayOfMonth / 10 + requestedDayOfMonth % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[requestedMonthIndex] + "-" + requestedYear + " " + requestedHourOfDay / 10 + requestedHourOfDay % 10 + ":" + requestedMinute / 10 + requestedMinute % 10 + ":" + requestedSecond / 10 + requestedSecond % 10 + " GMT";
         }
         GmtTimestampSupport.formatGmtTimestamp((byte) -70, -99L);
-        dayOfMonthLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(5);
-        monthIndexLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(2);
-        yearLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(1);
-        hourOfDayLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(11);
-        minuteLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(12);
-        secondLiteralPhase1 = MatchCandidateSupport.gmtCalendar.get(13);
-        return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + dayOfMonthLiteralPhase1 / 10 + dayOfMonthLiteralPhase1 % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[monthIndexLiteralPhase1] + "-" + yearLiteralPhase1 + " " + hourOfDayLiteralPhase1 / 10 + hourOfDayLiteralPhase1 % 10 + ":" + minuteLiteralPhase1 / 10 + minuteLiteralPhase1 % 10 + ":" + secondLiteralPhase1 / 10 + secondLiteralPhase1 % 10 + " GMT";
+        fallbackCalendarDayOfMonth = MatchCandidateSupport.gmtCalendar.get(5);
+        fallbackCalendarMonthIndex = MatchCandidateSupport.gmtCalendar.get(2);
+        fallbackCalendarYear = MatchCandidateSupport.gmtCalendar.get(1);
+        fallbackCalendarHourOfDay = MatchCandidateSupport.gmtCalendar.get(11);
+        fallbackCalendarMinute = MatchCandidateSupport.gmtCalendar.get(12);
+        fallbackCalendarSecond = MatchCandidateSupport.gmtCalendar.get(13);
+        return ArchiveNetworkClient.gmtWeekdayAbbreviations[-1 + weekdayIndex] + ", " + fallbackCalendarDayOfMonth / 10 + fallbackCalendarDayOfMonth % 10 + "-" + LoginTextValue.gmtMonthAbbreviations[fallbackCalendarMonthIndex] + "-" + fallbackCalendarYear + " " + fallbackCalendarHourOfDay / 10 + fallbackCalendarHourOfDay % 10 + ":" + fallbackCalendarMinute / 10 + fallbackCalendarMinute % 10 + ":" + fallbackCalendarSecond / 10 + fallbackCalendarSecond % 10 + " GMT";
     }
 
     public static void clearTimestampAndPopupResources(byte methodGuard) {

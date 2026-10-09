@@ -24,7 +24,7 @@ final class NanoFrameTimer extends FrameTimer {
         RuntimeException caughtRankingFailure = null;
         RuntimeException rankingFailure = null;
         int responseKind = 0;
-        int queryOrSubmissionId = 0;
+        int rankingQueryId = 0;
         HighscoreQuery query = null;
         ScoreSubmission submission = null;
         int nameCount = 0;
@@ -48,9 +48,9 @@ final class NanoFrameTimer extends FrameTimer {
         int clientControlFlowSnapshot = 0;
         PacketBuffer packet = null;
         long[][] recordLongsByView = null;
-        int queryOrSubmissionIdLiteralPhase1;
-        int valueIndexLiteralPhase1;
-        int valueIndexLiteralPhase2;
+        int acknowledgedSubmissionId;
+        int selfViewValueIndex;
+        int uniqueViewValueIndex;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != -24839) {
@@ -59,10 +59,10 @@ final class NanoFrameTimer extends FrameTimer {
           packet = LogoCompositor.sessionPacketBuffer;
           responseKind = packet.readUnsignedByte((byte) 34);
           if (responseKind == 0) {
-            queryOrSubmissionId = packet.readUnsignedShortBE(true);
+            rankingQueryId = packet.readUnsignedShortBE(true);
             query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
             while (query != null) {
-              if (query.queryId != queryOrSubmissionId) {
+              if (query.queryId != rankingQueryId) {
                 query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
                 continue;
               }
@@ -127,7 +127,7 @@ final class NanoFrameTimer extends FrameTimer {
                     recordLongsByView[1][selfViewCount] = recordLongValue;
                     selfViewCount++;
                     packet.position = valuesStartPosition;
-                    for (valueIndexLiteralPhase1 = 0; valueIndexLiteralPhase1 < valuesPerEntry; valueIndexLiteralPhase1++) {
+                    for (selfViewValueIndex = 0; selfViewValueIndex < valuesPerEntry; selfViewValueIndex++) {
                       selfValueIndexBeforeIncrement = selfValueWriteIndex;
                       selfValueWriteIndex++;
                       valuesByView[1][selfValueIndexBeforeIncrement] = packet.readIntBE((byte) -122);
@@ -141,7 +141,7 @@ final class NanoFrameTimer extends FrameTimer {
                     recordLongsByView[2][uniqueViewCount] = recordLongValue;
                     uniqueViewCount++;
                     packet.position = valuesStartPosition;
-                    for (valueIndexLiteralPhase2 = 0; valuesPerEntry > valueIndexLiteralPhase2; valueIndexLiteralPhase2++) {
+                    for (uniqueViewValueIndex = 0; valuesPerEntry > uniqueViewValueIndex; uniqueViewValueIndex++) {
                       uniqueValueIndexBeforeIncrement = uniqueValueWriteIndex;
                       uniqueValueWriteIndex++;
                       valuesByView[2][uniqueValueIndexBeforeIncrement] = packet.readIntBE((byte) -101);
@@ -155,11 +155,11 @@ final class NanoFrameTimer extends FrameTimer {
             return;
           }
           if (1 == responseKind) {
-            queryOrSubmissionIdLiteralPhase1 = packet.readUnsignedShortBE(true);
+            acknowledgedSubmissionId = packet.readUnsignedShortBE(true);
             packet.readLongBE(methodGuard + 27740);
             submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
             while (submission != null) {
-              if (queryOrSubmissionIdLiteralPhase1 != submission.submissionId) {
+              if (acknowledgedSubmissionId != submission.submissionId) {
                 submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
                 continue;
               }

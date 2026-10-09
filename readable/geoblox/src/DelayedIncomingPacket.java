@@ -109,12 +109,12 @@ final class DelayedIncomingPacket extends IntrusiveNode {
         int centerClipRight = 0;
         int centerClipTop = 0;
         int centerClipBottom = 0;
-        int edgeTileCoordinateOrCenterY = 0;
+        int topEdgeTileX = 0;
         int clientControlFlowGuardSnapshot = 0;
-        int edgeTileCoordinateOrCenterYLiteralPhase1;
-        int edgeTileCoordinateOrCenterYLiteralPhase2;
-        int edgeTileCoordinateOrCenterYLiteralPhase3;
-        int edgeTileCoordinateOrCenterYLiteralPhase4;
+        int bottomEdgeTileX;
+        int leftEdgeTileY;
+        int rightEdgeTileY;
+        int centerTileY;
         clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (nineSliceSprites == null) {
@@ -191,32 +191,32 @@ final class DelayedIncomingPacket extends IntrusiveNode {
             if (null != nineSliceSprites[1] &&
                 nineSliceSprites[1].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(centerClipLeft, panelTop, centerClipRight, centerClipTop);
-              for (edgeTileCoordinateOrCenterY = centerTileLeft; centerTileRight > edgeTileCoordinateOrCenterY; edgeTileCoordinateOrCenterY = edgeTileCoordinateOrCenterY + nineSliceSprites[1].fullWidth) {
-                nineSliceSprites[1].draw(edgeTileCoordinateOrCenterY, panelTop);
+              for (topEdgeTileX = centerTileLeft; centerTileRight > topEdgeTileX; topEdgeTileX = topEdgeTileX + nineSliceSprites[1].fullWidth) {
+                nineSliceSprites[1].draw(topEdgeTileX, panelTop);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[7] != null &&
                 0 != nineSliceSprites[7].fullWidth) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipBottom, centerClipRight, panelBottom);
-              for (edgeTileCoordinateOrCenterYLiteralPhase1 = centerTileLeft; edgeTileCoordinateOrCenterYLiteralPhase1 < centerTileRight; edgeTileCoordinateOrCenterYLiteralPhase1 = edgeTileCoordinateOrCenterYLiteralPhase1 + nineSliceSprites[7].fullWidth) {
-                nineSliceSprites[7].draw(edgeTileCoordinateOrCenterYLiteralPhase1, centerTileBottom);
+              for (bottomEdgeTileX = centerTileLeft; bottomEdgeTileX < centerTileRight; bottomEdgeTileX = bottomEdgeTileX + nineSliceSprites[7].fullWidth) {
+                nineSliceSprites[7].draw(bottomEdgeTileX, centerTileBottom);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[3] != null &&
                 0 != nineSliceSprites[3].fullHeight) {
               SoftwareRasterizer.intersectClip(panelLeft, centerClipTop, centerClipLeft, centerClipBottom);
-              for (edgeTileCoordinateOrCenterYLiteralPhase2 = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterYLiteralPhase2; edgeTileCoordinateOrCenterYLiteralPhase2 = edgeTileCoordinateOrCenterYLiteralPhase2 + nineSliceSprites[3].fullHeight) {
-                nineSliceSprites[3].draw(panelLeft, edgeTileCoordinateOrCenterYLiteralPhase2);
+              for (leftEdgeTileY = centerTileTop; centerTileBottom > leftEdgeTileY; leftEdgeTileY = leftEdgeTileY + nineSliceSprites[3].fullHeight) {
+                nineSliceSprites[3].draw(panelLeft, leftEdgeTileY);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
             if (nineSliceSprites[5] != null &&
                 nineSliceSprites[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(centerClipRight, centerClipTop, panelRight, centerClipBottom);
-              for (edgeTileCoordinateOrCenterYLiteralPhase3 = centerTileTop; edgeTileCoordinateOrCenterYLiteralPhase3 < centerTileBottom; edgeTileCoordinateOrCenterYLiteralPhase3 = edgeTileCoordinateOrCenterYLiteralPhase3 + nineSliceSprites[5].fullHeight) {
-                nineSliceSprites[5].draw(centerTileRight, edgeTileCoordinateOrCenterYLiteralPhase3);
+              for (rightEdgeTileY = centerTileTop; rightEdgeTileY < centerTileBottom; rightEdgeTileY = rightEdgeTileY + nineSliceSprites[5].fullHeight) {
+                nineSliceSprites[5].draw(centerTileRight, rightEdgeTileY);
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);
             }
@@ -224,9 +224,9 @@ final class DelayedIncomingPacket extends IntrusiveNode {
                 nineSliceSprites[4].fullWidth != 0 &&
                 0 != nineSliceSprites[4].fullHeight) {
               SoftwareRasterizer.intersectClip(centerClipLeft, centerClipTop, centerClipRight, centerClipBottom);
-              for (edgeTileCoordinateOrCenterYLiteralPhase4 = centerTileTop; centerTileBottom > edgeTileCoordinateOrCenterYLiteralPhase4; edgeTileCoordinateOrCenterYLiteralPhase4 = edgeTileCoordinateOrCenterYLiteralPhase4 + nineSliceSprites[4].fullHeight) {
+              for (centerTileY = centerTileTop; centerTileBottom > centerTileY; centerTileY = centerTileY + nineSliceSprites[4].fullHeight) {
                 for (centerTileX = centerTileLeft; centerTileX < centerTileRight; centerTileX = centerTileX + nineSliceSprites[4].fullWidth) {
-                  nineSliceSprites[4].draw(centerTileX, edgeTileCoordinateOrCenterYLiteralPhase4);
+                  nineSliceSprites[4].draw(centerTileX, centerTileY);
                 }
               }
               SoftwareRasterizer.restoreClip(LabeledChildWidget.nineSliceSavedClip);

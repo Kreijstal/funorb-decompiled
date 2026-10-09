@@ -176,8 +176,8 @@ final class WidgetTheme {
         int widthChunkCountOrLineIndexOrBoxY = 0;
         int measuredLineWidth = 0;
         int clientControlFlowSnapshot = 0;
-        int lineCountLiteralPhase1;
-        int widthChunkCountOrLineIndexOrBoxYLiteralPhase1;
+        int wrappedLineCount;
+        int tooltipBoxTop;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           horizontalPadding = this.tooltipPaddingRight + this.tooltipPaddingLeft;
@@ -204,10 +204,10 @@ final class WidgetTheme {
               widthChunkCountOrLineIndexOrBoxY = textWidth / quarterRasterWidth;
               wrapWidthOrBoxX = (textWidth % quarterRasterWidth + widthChunkCountOrLineIndexOrBoxY - 1) / widthChunkCountOrLineIndexOrBoxY * 2 + quarterRasterWidth;
             }
-            lineCountLiteralPhase1 = this.tooltipFont.wrapText(text, new int[]{wrapWidthOrBoxX}, FadingDialog.wrappedTooltipLines);
+            wrappedLineCount = this.tooltipFont.wrapText(text, new int[]{wrapWidthOrBoxX}, FadingDialog.wrappedTooltipLines);
             textWidth = 0;
-            textHeight = textHeight + (lineCountLiteralPhase1 - 1) * lineSpacing;
-            for (widthChunkCountOrLineIndexOrBoxY = 0; widthChunkCountOrLineIndexOrBoxY < lineCountLiteralPhase1; widthChunkCountOrLineIndexOrBoxY++) {
+            textHeight = textHeight + (wrappedLineCount - 1) * lineSpacing;
+            for (widthChunkCountOrLineIndexOrBoxY = 0; widthChunkCountOrLineIndexOrBoxY < wrappedLineCount; widthChunkCountOrLineIndexOrBoxY++) {
               measuredLineWidth = this.tooltipFont.measureTextWidth(FadingDialog.wrappedTooltipLines[widthChunkCountOrLineIndexOrBoxY]);
               if (measuredLineWidth <= textWidth) {
                 continue;
@@ -219,13 +219,13 @@ final class WidgetTheme {
           if (horizontalPadding + textWidth + wrapWidthOrBoxX > SoftwareRasterizer.stride) {
             wrapWidthOrBoxX = -horizontalPadding + (SoftwareRasterizer.stride - textWidth);
           }
-          widthChunkCountOrLineIndexOrBoxYLiteralPhase1 = 32 + (-this.tooltipFont.capitalXAscent + pointerY);
-          if (SoftwareRasterizer.framebufferHeight < textHeight + (widthChunkCountOrLineIndexOrBoxYLiteralPhase1 + verticalPadding)) {
-            widthChunkCountOrLineIndexOrBoxYLiteralPhase1 = pointerY - textHeight - verticalPadding;
+          tooltipBoxTop = 32 + (-this.tooltipFont.capitalXAscent + pointerY);
+          if (SoftwareRasterizer.framebufferHeight < textHeight + (tooltipBoxTop + verticalPadding)) {
+            tooltipBoxTop = pointerY - textHeight - verticalPadding;
           }
-          SoftwareRasterizer.drawRectangle(wrapWidthOrBoxX, widthChunkCountOrLineIndexOrBoxYLiteralPhase1, horizontalPadding + textWidth, textHeight + verticalPadding, this.wrappedTooltipBorderColor);
-          SoftwareRasterizer.fillRectangle(1 + wrapWidthOrBoxX, 1 + widthChunkCountOrLineIndexOrBoxYLiteralPhase1, textWidth + (horizontalPadding - 2), -2 + (textHeight + verticalPadding), this.tooltipBackgroundColor);
-          this.tooltipFont.drawParagraph(text, this.tooltipPaddingLeft + wrapWidthOrBoxX, this.tooltipPaddingTop + widthChunkCountOrLineIndexOrBoxYLiteralPhase1, textWidth, textHeight, this.tooltipTextAndBorderColor, -1, 0, 0, lineSpacing);
+          SoftwareRasterizer.drawRectangle(wrapWidthOrBoxX, tooltipBoxTop, horizontalPadding + textWidth, textHeight + verticalPadding, this.wrappedTooltipBorderColor);
+          SoftwareRasterizer.fillRectangle(1 + wrapWidthOrBoxX, 1 + tooltipBoxTop, textWidth + (horizontalPadding - 2), -2 + (textHeight + verticalPadding), this.tooltipBackgroundColor);
+          this.tooltipFont.drawParagraph(text, this.tooltipPaddingLeft + wrapWidthOrBoxX, this.tooltipPaddingTop + tooltipBoxTop, textWidth, textHeight, this.tooltipTextAndBorderColor, -1, 0, 0, lineSpacing);
           return;
         } catch (java.lang.RuntimeException tooltipException) {
           caughtTooltipFailure = tooltipException;

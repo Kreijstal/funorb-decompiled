@@ -25,14 +25,14 @@ class UiWidget extends IntrusiveNode {
     static int achievementTrackingAccumulator;
 
     final boolean dispatchKeyInputOrRequestFocus(byte methodGuard, char typedCharacter, int keyCode) {
-        int guardQuotient = 0;
-        int keyCodeSnapshot = 0;
-        int guardQuotientLiteralPhase1;
-        int keyCodeSnapshotLiteralPhase1;
+        int unfocusedGuardQuotient = 0;
+        int unfocusedKeyCodeSnapshot = 0;
+        int unhandledKeyGuardQuotient;
+        int unhandledKeyCodeSnapshot;
         if (!this.hasKeyboardFocus((byte) 54)) {
-            guardQuotient = 71 / ((methodGuard + 40) / 63);
-            keyCodeSnapshot = keyCode;
-            if (keyCodeSnapshot != 80) {
+            unfocusedGuardQuotient = 71 / ((methodGuard + 40) / 63);
+            unfocusedKeyCodeSnapshot = keyCode;
+            if (unfocusedKeyCodeSnapshot != 80) {
                 return false;
             }
             return this.requestKeyboardFocus((byte) -75, this);
@@ -40,9 +40,9 @@ class UiWidget extends IntrusiveNode {
         if (this.handleKeyInput(keyCode, 13, typedCharacter, this)) {
             return true;
         }
-        guardQuotientLiteralPhase1 = 71 / ((methodGuard + 40) / 63);
-        keyCodeSnapshotLiteralPhase1 = keyCode;
-        if (keyCodeSnapshotLiteralPhase1 != 80) {
+        unhandledKeyGuardQuotient = 71 / ((methodGuard + 40) / 63);
+        unhandledKeyCodeSnapshot = keyCode;
+        if (unhandledKeyCodeSnapshot != 80) {
             return false;
         }
         return this.requestKeyboardFocus((byte) -75, this);
@@ -57,19 +57,19 @@ class UiWidget extends IntrusiveNode {
     }
 
     void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int guardResidue = 0;
-        int guardResidueLiteralPhase1;
-        int guardResidueLiteralPhase2;
+        int nonzeroPassGuardRemainder = 0;
+        int rendererPresentGuardRemainder;
+        int rendererAbsentGuardRemainder;
         if (renderPass != 0) {
-            guardResidue = 35 % ((1 - methodGuard) / 43);
+            nonzeroPassGuardRemainder = 35 % ((1 - methodGuard) / 43);
             return;
         }
         if (null != this.renderer) {
             this.renderer.drawWidget(parentX, -81, parentY, true, this);
-            guardResidueLiteralPhase1 = 35 % ((1 - methodGuard) / 43);
+            rendererPresentGuardRemainder = 35 % ((1 - methodGuard) / 43);
             return;
         }
-        guardResidueLiteralPhase2 = 35 % ((1 - methodGuard) / 43);
+        rendererAbsentGuardRemainder = 35 % ((1 - methodGuard) / 43);
     }
 
     int getLastRenderPass(byte methodGuard) {

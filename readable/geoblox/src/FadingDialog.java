@@ -171,10 +171,10 @@ abstract class FadingDialog extends WidgetContainer {
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int guardResidue = 0;
-        int guardResidueLiteralPhase1;
-        int guardResidueLiteralPhase2;
-        int guardResidueLiteralPhase3;
+        int newScratchGuardQuotient = 0;
+        int widerScratchGuardQuotient;
+        int tallerScratchGuardQuotient;
+        int reusedScratchGuardQuotient;
         if (this.dialogOpacity == 0) {
             return;
         }
@@ -188,7 +188,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (ByteArrayPoolSupport.fadingDialogScratchSprite == null) {
             ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
-            guardResidue = 111 / ((1 - methodGuard) / 43);
+            newScratchGuardQuotient = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.drawDialogFrame(0, 20, 0);
@@ -199,7 +199,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (ByteArrayPoolSupport.fadingDialogScratchSprite.width < this.widgetWidth) {
             ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
-            guardResidueLiteralPhase1 = 111 / ((1 - methodGuard) / 43);
+            widerScratchGuardQuotient = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.drawDialogFrame(0, 20, 0);
@@ -210,7 +210,7 @@ abstract class FadingDialog extends WidgetContainer {
         }
         if (ByteArrayPoolSupport.fadingDialogScratchSprite.height < this.widgetHeight) {
             ByteArrayPoolSupport.fadingDialogScratchSprite = new Sprite(this.widgetWidth, this.widgetHeight);
-            guardResidueLiteralPhase2 = 111 / ((1 - methodGuard) / 43);
+            tallerScratchGuardQuotient = 111 / ((1 - methodGuard) / 43);
             Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
             SoftwareRasterizer.clearFramebuffer();
             this.drawDialogFrame(0, 20, 0);
@@ -219,7 +219,7 @@ abstract class FadingDialog extends WidgetContainer {
             ByteArrayPoolSupport.fadingDialogScratchSprite.drawAlpha(parentX + this.widgetX, this.widgetY + parentY, this.dialogOpacity);
             return;
         }
-        guardResidueLiteralPhase3 = 111 / ((1 - methodGuard) / 43);
+        reusedScratchGuardQuotient = 111 / ((1 - methodGuard) / 43);
         Geoblox.setRasterTarget(1, ByteArrayPoolSupport.fadingDialogScratchSprite);
         SoftwareRasterizer.clearFramebuffer();
         this.drawDialogFrame(0, 20, 0);

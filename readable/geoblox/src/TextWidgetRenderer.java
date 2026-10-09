@@ -59,9 +59,9 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         RuntimeException textDrawFailure = null;
         int availableHeight = 0;
         int baselineOffset = 0;
-        int alignmentMode = 0;
+        int verticalAlignmentMode = 0;
         int clientControlFlowSnapshot = 0;
-        int alignmentModeLiteralPhase1;
+        int horizontalAlignmentMode;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           textDrawingCompletion: {
@@ -69,11 +69,11 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             availableWidth = this.getAvailableTextWidth(widget, methodGuard - 1);
             availableHeight = this.getAvailableTextHeight(289769985, widget);
             if (!this.multiline) {
-              alignmentMode = this.verticalAlignment;
-              if (alignmentMode != 0) {
-                if (alignmentMode != 2) {
-                  if (alignmentMode != 3 &&
-                      alignmentMode != 1) {
+              verticalAlignmentMode = this.verticalAlignment;
+              if (verticalAlignmentMode != 0) {
+                if (verticalAlignmentMode != 2) {
+                  if (verticalAlignmentMode != 3 &&
+                      verticalAlignmentMode != 1) {
                   }
                   baselineOffset = (-this.font.maxAscent + (availableHeight - this.font.maxDescent) >> 1) + this.font.maxAscent;
                 } else {
@@ -82,14 +82,14 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               } else {
                 baselineOffset = this.font.maxAscent;
               }
-              alignmentModeLiteralPhase1 = this.horizontalAlignment;
-              if (alignmentModeLiteralPhase1 != 0 &&
-                  alignmentModeLiteralPhase1 != 3) {
-                if (alignmentModeLiteralPhase1 == 1) {
+              horizontalAlignmentMode = this.horizontalAlignment;
+              if (horizontalAlignmentMode != 0 &&
+                  horizontalAlignmentMode != 3) {
+                if (horizontalAlignmentMode == 1) {
                   this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
                   break textDrawingCompletion;
                 }
-                if (alignmentModeLiteralPhase1 != 2) {
+                if (horizontalAlignmentMode != 2) {
                   break textDrawingCompletion;
                 }
                 this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);
@@ -140,9 +140,9 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         RuntimeException singleLineLayoutFailure = null;
         int availableHeight = 0;
         int baselineOffset = 0;
-        int alignmentMode = 0;
+        int verticalAlignmentMode = 0;
         int clientControlFlowSnapshot = 0;
-        int alignmentModeLiteralPhase1;
+        int horizontalAlignmentMode;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (null == widget.textLayout) {
@@ -153,11 +153,11 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           if (methodGuard != 109) {
             return;
           }
-          alignmentMode = this.verticalAlignment;
-          if (alignmentMode != 0) {
-            if (alignmentMode != 2) {
-              if (alignmentMode != 3 &&
-                  alignmentMode == 1) {
+          verticalAlignmentMode = this.verticalAlignment;
+          if (verticalAlignmentMode != 0) {
+            if (verticalAlignmentMode != 2) {
+              if (verticalAlignmentMode != 3 &&
+                  verticalAlignmentMode == 1) {
               }
               baselineOffset = (availableHeight - (this.font.maxAscent + this.font.maxDescent) >> 1) + this.font.maxAscent;
             } else {
@@ -166,17 +166,17 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
           } else {
             baselineOffset = this.font.maxAscent;
           }
-          alignmentModeLiteralPhase1 = this.horizontalAlignment;
-          if (alignmentModeLiteralPhase1 != 0 &&
-              alignmentModeLiteralPhase1 != 3) {
-            if (alignmentModeLiteralPhase1 == 1) {
+          horizontalAlignmentMode = this.horizontalAlignment;
+          if (horizontalAlignmentMode != 0 &&
+              horizontalAlignmentMode != 3) {
+            if (horizontalAlignmentMode == 1) {
               if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
               }
               ((CachedTextLayout) ((Object) widget.textLayout)).layoutCenteredLine(this.getDisplayText(122, widget), baselineOffset, availableWidth >> 1, (byte) 58, this.font);
               return;
             }
-            if (alignmentModeLiteralPhase1 != 2) {
+            if (horizontalAlignmentMode != 2) {
               return;
             }
             if (!(widget.textLayout instanceof CachedTextLayout)) {

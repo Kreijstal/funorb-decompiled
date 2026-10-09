@@ -127,8 +127,8 @@ final class MonochromeBitmapFont extends BitmapFont {
         int destinationRowSkip = SoftwareRasterizer.stride - width;
         int sourceRowSkip = 0;
         int sourceIndex = 0;
-        int clippedPixelsLiteralPhase1;
-        int clippedPixelsLiteralPhase2;
+        int leftClipPixels;
+        int rightClipPixels;
         if (y < SoftwareRasterizer.clipTop) {
             clippedPixels = SoftwareRasterizer.clipTop - y;
             height = height - clippedPixels;
@@ -140,19 +140,19 @@ final class MonochromeBitmapFont extends BitmapFont {
             height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-            clippedPixelsLiteralPhase1 = SoftwareRasterizer.clipLeft - x;
-            width = width - clippedPixelsLiteralPhase1;
+            leftClipPixels = SoftwareRasterizer.clipLeft - x;
+            width = width - leftClipPixels;
             x = SoftwareRasterizer.clipLeft;
-            sourceIndex = sourceIndex + clippedPixelsLiteralPhase1;
-            destinationIndex = destinationIndex + clippedPixelsLiteralPhase1;
-            sourceRowSkip = sourceRowSkip + clippedPixelsLiteralPhase1;
-            destinationRowSkip = destinationRowSkip + clippedPixelsLiteralPhase1;
+            sourceIndex = sourceIndex + leftClipPixels;
+            destinationIndex = destinationIndex + leftClipPixels;
+            sourceRowSkip = sourceRowSkip + leftClipPixels;
+            destinationRowSkip = destinationRowSkip + leftClipPixels;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-            clippedPixelsLiteralPhase2 = x + width - SoftwareRasterizer.clipRight;
-            width = width - clippedPixelsLiteralPhase2;
-            sourceRowSkip = sourceRowSkip + clippedPixelsLiteralPhase2;
-            destinationRowSkip = destinationRowSkip + clippedPixelsLiteralPhase2;
+            rightClipPixels = x + width - SoftwareRasterizer.clipRight;
+            width = width - rightClipPixels;
+            sourceRowSkip = sourceRowSkip + rightClipPixels;
+            destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
         if (width <= 0 || height <= 0) {
             return;

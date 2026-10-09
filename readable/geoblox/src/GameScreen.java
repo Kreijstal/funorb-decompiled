@@ -358,7 +358,7 @@ final class GameScreen extends MenuScreen {
         int cancelButtonTextCenter = 0;
         int clientControlFlowGuard = 0;
         int screenPanelHeight;
-        int panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1;
+        int loginTextYOrOverlayAlphaOrCurtainX;
         int fullscreenPromptTextYOrButtonTop;
         int nonmemberMessageTop;
         int nonmemberCloseButtonTop;
@@ -419,10 +419,10 @@ final class GameScreen extends MenuScreen {
               if (this.screenId == 4) {
                 AudioService.screenTitleSprites[8].draw(0, 20);
                 DelayedIncomingPacket.drawNineSlicePanel(panelTop + 10, 120, 100, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
-                panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = 184;
-                FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 0, -1);
-                panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = 185;
-                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.notLoggedInText, 130, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 380, 300, 0, -1, 1, 0, 14);
+                loginTextYOrOverlayAlphaOrCurtainX = 184;
+                FadingDialog.uiPaletteFont.drawCenteredText(Geoblox.loginMessage, 320, loginTextYOrOverlayAlphaOrCurtainX, 0, -1);
+                loginTextYOrOverlayAlphaOrCurtainX = 185;
+                IntrusiveNodeHashTable.smallFont.drawParagraph(AccountCreationDialog.notLoggedInText, 130, loginTextYOrOverlayAlphaOrCurtainX, 380, 300, 0, -1, 1, 0, 14);
                 DelayedIncomingPacket.drawNineSlicePanel(320, 120, 60, (byte) -92, panelWidth, GameGraphicsResources.frameNineSliceSprites);
                 IntrusiveNodeHashTable.smallFont.drawParagraph(ProxyAuthenticationRequiredException.discardResultsWarningText, 130, 330, 380, 300, 0, -1, 1, 0, 14);
                 if (clientControlFlowGuard == 0) {
@@ -444,8 +444,8 @@ final class GameScreen extends MenuScreen {
                   } else {
                     membershipOverlayAlpha = 200;
                   }
-                  panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = membershipOverlayAlpha;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1);
+                  loginTextYOrOverlayAlphaOrCurtainX = membershipOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
                   DelayedIncomingPacket.drawNineSlicePanel(160, 150, 80, (byte) -92, 340, GameGraphicsResources.frameNineSliceSprites);
                   membershipDialogTextYOrButtonTop = 170;
                   IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 160, membershipDialogTextYOrButtonTop, 320, 300, 0, -1, 1, 0, 16);
@@ -489,8 +489,8 @@ final class GameScreen extends MenuScreen {
                     } else {
                       unavailableOverlayAlpha = this.activeTicks;
                     }
-                    panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = unavailableOverlayAlpha;
-                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1);
+                    loginTextYOrOverlayAlphaOrCurtainX = unavailableOverlayAlpha;
+                    SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
                     DelayedIncomingPacket.drawNineSlicePanel(160, 160, 95, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                     fullscreenPromptTextYOrButtonTop = 170;
                     fullscreenPromptTextYOrButtonTop = fullscreenPromptTextYOrButtonTop + 16 * IntrusiveNodeHashTable.smallFont.drawParagraph(GrowableIntList.fullscreenUnavailableText, 170, fullscreenPromptTextYOrButtonTop, 300, 300, 0, -1, 1, 0, 16);
@@ -517,8 +517,8 @@ final class GameScreen extends MenuScreen {
                   } else {
                     acceptanceOverlayAlpha = 200;
                   }
-                  panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = acceptanceOverlayAlpha;
-                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1);
+                  loginTextYOrOverlayAlphaOrCurtainX = acceptanceOverlayAlpha;
+                  SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
                   DelayedIncomingPacket.drawNineSlicePanel(160, 160, 140, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                   fullscreenPromptTextYOrButtonTop = 170;
                   acceptancePromptText = PcmResampler.fullscreenBeforeAcceptText + " " + ArchiveRequest.fullscreenAcceptButtonText + " " + OpacityWidget.fullscreenAfterAcceptText + " " + FontLoadingSupport.fullscreenCancelButtonText + " " + FullscreenFailureReason.fullscreenAfterCancelText;
@@ -570,8 +570,8 @@ final class GameScreen extends MenuScreen {
                 } else {
                   fallbackOverlayAlpha = this.activeTicks;
                 }
-                panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = fallbackOverlayAlpha;
-                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1);
+                loginTextYOrOverlayAlphaOrCurtainX = fallbackOverlayAlpha;
+                SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, loginTextYOrOverlayAlphaOrCurtainX);
                 DelayedIncomingPacket.drawNineSlicePanel(170, 160, 80, (byte) -92, 320, GameGraphicsResources.frameNineSliceSprites);
                 nonmemberMessageTop = 180;
                 IntrusiveNodeHashTable.smallFont.drawParagraph(SessionTextHistorySupport.fullscreenNonmemberText, 170, nonmemberMessageTop, 300, 300, 0, -1, 1, 0, 16);
@@ -601,33 +601,33 @@ final class GameScreen extends MenuScreen {
                 }
               }
               tutorialSlideRendering: {
-                panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = this.tutorialSlideOffset;
+                loginTextYOrOverlayAlphaOrCurtainX = this.tutorialSlideOffset;
                 if (!this.tutorialSlideForward) {
-                  panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1 = 640 - panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1;
-                  SoftwareRasterizer.setClip(0, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 480);
+                  loginTextYOrOverlayAlphaOrCurtainX = 640 - loginTextYOrOverlayAlphaOrCurtainX;
+                  SoftwareRasterizer.setClip(0, 0, loginTextYOrOverlayAlphaOrCurtainX, 480);
                   this.renderTutorialPage(-85, this.previousTutorialPageIndex);
                   this.renderingPreviousTutorialPage = true;
                   super.renderScreen(-28750);
                   this.renderingPreviousTutorialPage = false;
-                  SoftwareRasterizer.setClip(panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 0, 640, 480);
+                  SoftwareRasterizer.setClip(loginTextYOrOverlayAlphaOrCurtainX, 0, 640, 480);
                   this.renderTutorialPage(methodGuard ^ 28757, this.tutorialPageIndex);
                   super.renderScreen(-28750);
                   SoftwareRasterizer.setClip(0, 0, 640, 480);
-                  CharacterReplacementSupport.transitionCurtain.drawRotatedCentered((CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 240, -49150, 4096);
+                  CharacterReplacementSupport.transitionCurtain.drawRotatedCentered((CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + loginTextYOrOverlayAlphaOrCurtainX, 240, -49150, 4096);
                   if (clientControlFlowGuard == 0) {
                     break tutorialSlideRendering;
                   }
                 }
-                SoftwareRasterizer.setClip(panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 0, 640, 480);
+                SoftwareRasterizer.setClip(loginTextYOrOverlayAlphaOrCurtainX, 0, 640, 480);
                 this.renderTutorialPage(-17, this.previousTutorialPageIndex);
                 this.renderingPreviousTutorialPage = true;
                 super.renderScreen(-28750);
                 this.renderingPreviousTutorialPage = false;
-                SoftwareRasterizer.setClip(0, 0, panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 480);
+                SoftwareRasterizer.setClip(0, 0, loginTextYOrOverlayAlphaOrCurtainX, 480);
                 this.renderTutorialPage(-48, this.tutorialPageIndex);
                 super.renderScreen(-28750);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
-                CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + panelLeftOrTextYOrOverlayAlphaOrCurtainXLiteralPhase1, 240, -16383, 4096);
+                CharacterReplacementSupport.transitionCurtain.drawRotatedCentered(-(CharacterReplacementSupport.transitionCurtain.fullHeight >> 1) + loginTextYOrOverlayAlphaOrCurtainX, 240, -16383, 4096);
               }
               if (clientControlFlowGuard == 0) {
                 return;
