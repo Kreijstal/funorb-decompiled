@@ -6,7 +6,56 @@ declarations and 60 labels. Both 303-file corpora compile, comparing 138,048
 bindings and preserving 388 override relationships. Some members retain unknown
 purposes; generated carriers, guards and shared joins remain.
 
-## Current ordered frame decisions (pass 254)
+## Current visible character literals (pass 255)
+
+Four raw controls in three files now use visible Java character escapes.
+NUL is written as `'\0'`; control 25 is `'\031'`. This makes the affected
+Java sources readable as ordinary text, including future Git diffs. No literal
+value, statement, declaration, predicate, read/store or scope changes.
+
+The generic compiler formatter also escapes lone UTF-16 surrogates before UTF-8
+serialization, which otherwise substitutes U+FFFD. Ordinary Java escapes cover
+NUL/backspace/tab/newline/form-feed/carriage-return; other C0/C1 controls and DEL
+use octal escapes. Printable characters retain their spelling. This is a general
+source-emission fix; no game rules or runtime policies are added to java-tools.
+Its tracked decompiler-source tar SHA-256 is
+`4d274378adf563e66dbc9c3c69967550b1f3b1e00d349e68bd93b70000769b7c`.
+
+Four focused compiler groups pass. All 65,536 emitted Java character literals
+compile and match their independent numeric values. Decompile/recompile fixtures
+also cover fields, annotations, returns, narrow calls and String character-search
+calls; integer-to-char narrowing retains its existing behavior. The game-specific
+javac certificate compares all literal values and ordered syntax in 303 files,
+138,048 bindings, 388 override pairs and 4,807 protected transfers. All 304
+compiled classes, including their debug metadata, are byte identical. The tracked
+compiler archive reproduces every file and unchanged diagnostics with zero hard
+failures or fallbacks.
+
+All 20,136 complete naming objects and 20,443 dictionary identities remain.
+All 178 historical object records and 97 directly recorded source certificates
+remain exact. Text resources and the 41-field purpose inventory are unchanged.
+All 27 publication groups pass. The export still has 122,113 identifier,
+11 literal and 201 label edits
+(122,325 total). All sources compile, reproduce and reverse byte exactly.
+There are still 32 smaller plain frames and 41 finer field purposes; whole-game
+and phone/FPS behavior remain unverified.
+
+From Deko:
+
+```sh
+NODE_PATH=/path/to/node_modules node readable/tests/test-geoblox-character-literals-source.mjs /path/to/java-tools
+node readable/tests/test-geoblox-unresolved-fields.mjs
+node readable/build-geoblox-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check
+```
+
+From java-tools:
+
+```sh
+NODE_PATH=/path/to/node_modules node --test --experimental-test-isolation=none test/cfrCharacterLiterals.test.js
+```
+
+## Previous ordered frame decisions (pass 254)
 
 The character encoder now expresses its 27 ordered predicates as an ordinary
 if/else-if/else chain with explicit inner and outer fallbacks. Each original
@@ -6109,41 +6158,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `e32c1f4e4ad207571e16f2bdf57dc7216112c28e`; the
-manifest SHA-256 is `5ce619145a764aa25214ab150dc6f2cef35b8d690cf82028879043eadc3555c2`.
+The current Deko workflow/manifest commit is `296338b0563d9d00cdedea50677bd0472e7f950d`; the
+manifest SHA-256 is `880baf8e994bb26c640a6d78ca04e3d90ea4420f0b7e9bc448ef6b35b8f65ca8`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`d162d7957976f1e65c33aed5d103372818605183`. It comes from java-tools
-`05f8660ddb5b105ef9066c086fa2e2c758fb2386` and Deko
+`ac39cdbbb180ee5af13fbe34106de30da5f5b4ec`. It comes from java-tools
+`89f618a5ef5a715aa9799939cc2469a09a1e163e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `59c17f5bbf3f10aec41fbe64df8d656d64b7884a` in Deko; its selected generic-source
 archive SHA-256 is `f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`60ca1558de777974d984970a9bbbd204f2335fb2c376acb4623896bf50c9a484`:
+`4d274378adf563e66dbc9c3c69967550b1f3b1e00d349e68bd93b70000769b7c`:
 
 ```sh
-git archive --format=tar 05f8660ddb5b105ef9066c086fa2e2c758fb2386 | sha256sum
+git archive --format=tar 89f618a5ef5a715aa9799939cc2469a09a1e163e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7`.
+`626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82`.
 Current readable tree SHA-256:
-`57fe0ef78a8ca9d7a10b1f0af55b31a9729025c8f514e61b3b050b73e75c11a1`.
+`5c54f87e6ff76eea51414497e2e54a1730bf9f1e8ad2f8f29740a40e01c2b2a3`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
@@ -9197,7 +9246,7 @@ the same manifest; no JSON snapshots are added.
 
 | Java source tree | SHA-256 |
 | --- | --- |
-| Raw | `5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7` |
-| Readable | `57fe0ef78a8ca9d7a10b1f0af55b31a9729025c8f514e61b3b050b73e75c11a1` |
+| Raw | `626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82` |
+| Readable | `5c54f87e6ff76eea51414497e2e54a1730bf9f1e8ad2f8f29740a40e01c2b2a3` |
 
 Tree digests use `sourceIdentity(sourceInventory(root))` from the bundled tool.

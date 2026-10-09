@@ -225,7 +225,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         CharSequence textForEncoding = null;
         int terminatorByteIndex = 0;
         try {
-          zeroCharacterIndex = text.indexOf(' ');
+          zeroCharacterIndex = text.indexOf('\0');
           if (zeroCharacterIndex >= 0) {
             throw new IllegalArgumentException("");
           }
@@ -721,7 +721,7 @@ class ByteArrayBuffer extends IntrusiveNode {
         int prefixByteIndex = 0;
         CharSequence textForEncoding = null;
         int terminatorByteIndex = 0;
-        int zeroCharacterIndex = text.indexOf(' ');
+        int zeroCharacterIndex = text.indexOf('\0');
         if (methodGuard != -126) {
           return;
         }

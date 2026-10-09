@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 254)
+## Current readability (pass 255)
 
 The export has 20,136 guarded names and 122,113 Java identifier edits, plus 11
 class-name literal edits and 201 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,20 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current ordered frame decisions (pass 254)
+## Current visible character literals (pass 255)
+
+`ArchiveCatalog`, `TextHotspotBounds` and `ByteArrayBuffer` display their four
+control-character constants as Java escapes. The byte-buffer's zero-character
+searches are now visible as `indexOf('\0')`. Literal values and all surrounding
+operations/guards remain. The compiler's general surrogate escaping additionally
+protects UTF-16 values during UTF-8 source serialization.
+
+All naming metadata, resource/field-purpose evidence and historical proofs remain.
+Independent source/AST/binding/transfer checks and complete generic char-value
+coverage pass. Reproduction and reversal are exact. Thirty-two smaller frames
+and 41 finer field purposes remain; full-game and phone/FPS behavior is unverified.
+
+## Previous ordered frame decisions (pass 254)
 
 `ByteArrayBuffer.encodeTextCharacter` uses an explicit ordered if/else-if chain
 with inner and outer fallbacks. Character reads and predicates remain at their

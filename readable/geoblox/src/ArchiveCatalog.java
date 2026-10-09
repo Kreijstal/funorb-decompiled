@@ -121,7 +121,7 @@ final class ArchiveCatalog {
           this.archiveSources[archiveId].processRequestedGroups(6924);
         }
         if (methodGuard != -65) {
-          ArchiveCatalog.isAsciiLetter('', 15);
+          ArchiveCatalog.isAsciiLetter('\031', 15);
         }
         for (backgroundArchiveIndex = 0; backgroundArchiveIndex < this.archiveSources.length; backgroundArchiveIndex++) {
           if (null == this.archiveSources[backgroundArchiveIndex]) {

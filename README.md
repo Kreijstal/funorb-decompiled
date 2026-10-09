@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/e32c1f4e4ad207571e16f2bdf57dc7216112c28e/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,048 bindings,
 preserving 388 override relationships.
 
-## Current ordered frame decisions (pass 254)
+## Current visible character literals (pass 255)
+
+Four raw controls in three Java files now use visible escapes. Values and
+all ordered syntax, bindings and protected targets remain unchanged. The generic
+formatter also prevents lone-surrogate loss during UTF-8 serialization; all
+65,536 character values and decompile/recompile contexts pass. All 303 sources
+compile, reproduce and reverse byte exactly. Every naming/dictionary object,
+historical proof, text resource and field-purpose record is preserved.
+Generic emission stays in java-tools; game proof fixtures stay in Deko.
+
+## Previous ordered frame decisions (pass 254)
 
 The character encoder uses 27 ordered if/else-if predicates and explicit
 fallbacks, retaining every read, store and original arm scope. One frame and
