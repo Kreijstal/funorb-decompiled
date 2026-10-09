@@ -3305,11 +3305,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0a29ad11d0b708079482d9ea4554d0e5dd8b5363",
+    "commit": "16ac502638fa95e80fa26a72cfe6c7a65cec3f04",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "eb32da7d458efb42396b98eaa1fa1e82e1a8bf42a3a2998c8ed8b5baa9b20096"
+      "sha256": "c35e961021c1e02fab164d54606e5b445bb8f6c95ef2e104c1189c6544642d10"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3319,7 +3319,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "0ddcfc48fd435d505b2688a957689ba0c320aa9aaafc87fc501f89c379a5a9c9",
+    "outputTreeSha256": "488fe93d2361622f38f22c650f85d116ea10052c73940cbedc367d848893f02f",
     "files": 303,
     "rules": 20125,
     "identifierEdits": 121882,
@@ -3350,7 +3350,7 @@
       "remainingUnresolvedFieldPurposes": 41
     },
     "structuralPass": 240,
-    "semanticPass": 242
+    "semanticPass": 243
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36363,5 +36363,37 @@
     "sourceWorkflowCommit": "0a29ad11d0b708079482d9ea4554d0e5dd8b5363",
     "manifestSha256": "eb32da7d458efb42396b98eaa1fa1e82e1a8bf42a3a2998c8ed8b5baa9b20096",
     "readableTreeSha256": "0ddcfc48fd435d505b2688a957689ba0c320aa9aaafc87fc501f89c379a5a9c9"
+  },
+  "vorbisDecodePurposeNaming": {
+    "version": 243,
+    "rulesRefined": 87,
+    "numberedPhaseFamilyNamesReplaced": 57,
+    "supersededCombinedNamesRefined": 30,
+    "boundIdentifierOccurrencesRenamed": 512,
+    "changedJavaFiles": 3,
+    "unaffectedCompleteRulesPreserved": 20038,
+    "dictionaryIdentitiesPreserved": 20432,
+    "remainingNumberedPhaseFamilyNames": 118,
+    "remainingLiteralPhaseNames": 0,
+    "remainingLargeFramedMethods": 5,
+    "remainingUnresolvedFieldPurposes": 41,
+    "sourceAndCompilerPinsUnchanged": true,
+    "sourceBodyEditedByHand": false,
+    "bytecodeChanged": false,
+    "nativeVorbisRuntimeCasesAdded": 0,
+    "wholeDecoderRuntimeEquivalenceVerified": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Source-reviewed names in MusicDecoder, VorbisCodebook and MusicDecodeStage only. Preserve every original operation and frozen raw/compiler/workflow/native/stub pin, dictionary identity, unresolved-field inventory and historical proof. Exact bound identifier edits, full javac compilation/binding checks and byte-exact reversal certify the naming transformation. Real Vorbis packets, devices and whole-decoder runtime equivalence are not verified by this pass.",
+    "ruleBuilderTestGroupsPassed": 13,
+    "unresolvedFieldSourceAuditReverified": true,
+    "independentlyReconstructedReadableFiles": 303,
+    "exactIdentifierOnlyOccurrencesCompared": 512,
+    "dictionaryReversalByteExact": true,
+    "sourceDeclarations": 20327,
+    "bindingsCompared": 138121,
+    "overrideRelationshipsPreserved": 388,
+    "sourceWorkflowCommit": "16ac502638fa95e80fa26a72cfe6c7a65cec3f04",
+    "manifestSha256": "c35e961021c1e02fab164d54606e5b445bb8f6c95ef2e104c1189c6544642d10",
+    "readableTreeSha256": "488fe93d2361622f38f22c650f85d116ea10052c73940cbedc367d848893f02f"
   }
 }

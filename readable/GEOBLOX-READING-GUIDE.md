@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/16ac502638fa95e80fa26a72cfe6c7a65cec3f04/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 242)
+## Current readability (pass 243)
 
 The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,24 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current sprite sampling roles (pass 242)
+## Current Vorbis setup and packet roles (pass 243)
+
+MusicDecoder names distinguish packet mux/floor/residue selection, pre-rotation
+and pre-butterfly samples, recursive butterfly stages, bit-reversal partners and
+swap samples, quarter rearrangements, post/final rotations, window sine factors
+and previous/current overlap indexes. VorbisCodebook distinguishes canonical
+codewords, shorter/longer lengths, tree nodes and branch bits, lookup type/bit
+counts and vector entries. MusicDecodeStage identifies floor class/range/point
+setup and neighbor prediction separately from line endpoints and tail samples.
+
+87 names change 512 bound occurrences. 118 numbered phase-family names remain.
+Shared units retain combined names; unused cursor snapshots retain their stores.
+All 303 sources compile, reproduce, reverse and match an independent character-
+exact identifier-only reconstruction. The 41 unresolved field purposes and five
+large framed methods remain. Existing native fixtures do not cover these Vorbis
+routines; the workflow states the source certificate and runtime coverage limits.
+
+## Previous sprite sampling roles (pass 242)
 
 Sprite rotation names distinguish source steps toward left/down, left/up and
 right/up, Q12 positions, sample gates and padding/excess values that become skip

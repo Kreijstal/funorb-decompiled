@@ -116,21 +116,21 @@ final class MusicDecodeStage {
         int multiplierRange;
         boolean[] initialStepFlagsAlias;
         int reconstructionIndexOrLineStartX;
-        int lowNeighborIndexOrLineStartY;
-        int highNeighborIndexOrUnusedActiveCursorSnapshot;
+        int lineStartY;
+        int unusedInitialActivePointIndexSnapshot;
         float tailGain;
-        int predictedYOrLineEndXOrTailIndex;
-        int encodedResidualOrLineEndY;
+        int tailSampleIndex;
+        int lineEndY;
         int highRoom;
         int lowRoom;
         int doubledRoom;
         boolean[] activatedStepFlagsAlias;
         int lowNeighborForActivation;
         int activePointIndex;
-        int lowNeighborIndexOrLineStartYNestedPhase2;
-        int highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2;
-        int predictedYOrLineEndXOrTailIndexNestedPhase2;
-        int encodedResidualOrLineEndYNestedPhase2;
+        int lowNeighborIndex;
+        int highNeighborIndex;
+        int predictedY;
+        int encodedResidual;
         int floorLineEndX;
         pointCount = this.configuredFloorX.length;
         multiplierRange = multiplierRanges[this.floorMultiplier - 1];
@@ -142,14 +142,14 @@ final class MusicDecodeStage {
           if (reconstructionIndexOrLineStartX >= pointCount) {
             this.sortFloorPoints(0, pointCount - 1);
             reconstructionIndexOrLineStartX = 0;
-            lowNeighborIndexOrLineStartY = sharedFloorY[0] * this.floorMultiplier;
+            lineStartY = sharedFloorY[0] * this.floorMultiplier;
             activePointIndex = 1;
-            highNeighborIndexOrUnusedActiveCursorSnapshot = activePointIndex;
+            unusedInitialActivePointIndexSnapshot = activePointIndex;
             while (true) {
               if (activePointIndex >= pointCount) {
-                tailGain = inverseDbGains[lowNeighborIndexOrLineStartY];
-                for (predictedYOrLineEndXOrTailIndex = reconstructionIndexOrLineStartX; predictedYOrLineEndXOrTailIndex < sampleLimit; predictedYOrLineEndXOrTailIndex++) {
-                  spectrum[predictedYOrLineEndXOrTailIndex] = spectrum[predictedYOrLineEndXOrTailIndex] * tailGain;
+                tailGain = inverseDbGains[lineStartY];
+                for (tailSampleIndex = reconstructionIndexOrLineStartX; tailSampleIndex < sampleLimit; tailSampleIndex++) {
+                  spectrum[tailSampleIndex] = spectrum[tailSampleIndex] * tailGain;
                 }
                 return;
               }
@@ -158,42 +158,42 @@ final class MusicDecodeStage {
                 continue;
               }
               floorLineEndX = sharedFloorX[activePointIndex];
-              encodedResidualOrLineEndY = sharedFloorY[activePointIndex] * this.floorMultiplier;
-              this.applyFloorLine(reconstructionIndexOrLineStartX, lowNeighborIndexOrLineStartY, floorLineEndX, encodedResidualOrLineEndY, spectrum, sampleLimit);
+              lineEndY = sharedFloorY[activePointIndex] * this.floorMultiplier;
+              this.applyFloorLine(reconstructionIndexOrLineStartX, lineStartY, floorLineEndX, lineEndY, spectrum, sampleLimit);
               if (floorLineEndX >= sampleLimit) {
                 return;
               }
               reconstructionIndexOrLineStartX = floorLineEndX;
-              lowNeighborIndexOrLineStartY = encodedResidualOrLineEndY;
+              lineStartY = lineEndY;
               activePointIndex++;
             }
           }
-          lowNeighborIndexOrLineStartYNestedPhase2 = MusicDecodeStage.findLowNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
-          highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2 = MusicDecodeStage.findHighNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
-          predictedYOrLineEndXOrTailIndexNestedPhase2 = this.predictFloorY(sharedFloorX[lowNeighborIndexOrLineStartYNestedPhase2], sharedFloorY[lowNeighborIndexOrLineStartYNestedPhase2], sharedFloorX[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2], sharedFloorY[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2], sharedFloorX[reconstructionIndexOrLineStartX]);
-          encodedResidualOrLineEndYNestedPhase2 = sharedFloorY[reconstructionIndexOrLineStartX];
-          highRoom = multiplierRange - predictedYOrLineEndXOrTailIndexNestedPhase2;
-          lowRoom = predictedYOrLineEndXOrTailIndexNestedPhase2;
+          lowNeighborIndex = MusicDecodeStage.findLowNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
+          highNeighborIndex = MusicDecodeStage.findHighNeighbor(sharedFloorX, reconstructionIndexOrLineStartX);
+          predictedY = this.predictFloorY(sharedFloorX[lowNeighborIndex], sharedFloorY[lowNeighborIndex], sharedFloorX[highNeighborIndex], sharedFloorY[highNeighborIndex], sharedFloorX[reconstructionIndexOrLineStartX]);
+          encodedResidual = sharedFloorY[reconstructionIndexOrLineStartX];
+          highRoom = multiplierRange - predictedY;
+          lowRoom = predictedY;
           minRoomBeforeDoubling = (highRoom >= lowRoom) ? lowRoom : highRoom;
           doubledRoom = minRoomBeforeDoubling << 1;
-          if (encodedResidualOrLineEndYNestedPhase2 == 0) {
+          if (encodedResidual == 0) {
             sharedStepFlags[reconstructionIndexOrLineStartX] = false;
-            sharedFloorY[reconstructionIndexOrLineStartX] = predictedYOrLineEndXOrTailIndexNestedPhase2;
+            sharedFloorY[reconstructionIndexOrLineStartX] = predictedY;
             reconstructionIndexOrLineStartX++;
             continue;
           }
           activatedStepFlagsAlias = sharedStepFlags;
-          lowNeighborForActivation = lowNeighborIndexOrLineStartYNestedPhase2;
-          sharedStepFlags[highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2] = true;
+          lowNeighborForActivation = lowNeighborIndex;
+          sharedStepFlags[highNeighborIndex] = true;
           activatedStepFlagsAlias[lowNeighborForActivation] = true;
           sharedStepFlags[reconstructionIndexOrLineStartX] = true;
-          if (encodedResidualOrLineEndYNestedPhase2 < doubledRoom) {
+          if (encodedResidual < doubledRoom) {
             smallResidualYArray = (int[]) (sharedFloorY);
             smallResidualYIndex = reconstructionIndexOrLineStartX;
-            if ((encodedResidualOrLineEndYNestedPhase2 & 1) == 0) {
-              smallResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 + encodedResidualOrLineEndYNestedPhase2 / 2;
+            if ((encodedResidual & 1) == 0) {
+              smallResidualYResult = predictedY + encodedResidual / 2;
             } else {
-              smallResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 - (encodedResidualOrLineEndYNestedPhase2 + 1) / 2;
+              smallResidualYResult = predictedY - (encodedResidual + 1) / 2;
             }
             smallResidualYArray[smallResidualYIndex] = smallResidualYResult;
             reconstructionIndexOrLineStartX++;
@@ -202,9 +202,9 @@ final class MusicDecodeStage {
           largeResidualYArray = (int[]) (sharedFloorY);
           largeResidualYIndex = reconstructionIndexOrLineStartX;
           if (highRoom <= lowRoom) {
-            largeResidualYResult = predictedYOrLineEndXOrTailIndexNestedPhase2 - encodedResidualOrLineEndYNestedPhase2 + highRoom - 1;
+            largeResidualYResult = predictedY - encodedResidual + highRoom - 1;
           } else {
-            largeResidualYResult = encodedResidualOrLineEndYNestedPhase2 - lowRoom + predictedYOrLineEndXOrTailIndexNestedPhase2;
+            largeResidualYResult = encodedResidual - lowRoom + predictedY;
           }
           largeResidualYArray[largeResidualYIndex] = largeResidualYResult;
           reconstructionIndexOrLineStartX++;
@@ -302,17 +302,17 @@ final class MusicDecodeStage {
         int floorType;
         int partitionCount;
         int classCount;
-        int partitionOrClassIndexOrRangeBits;
+        int partitionClassReadIndex;
         int partitionClassId;
         int partitionIndex;
         int[] subclassBooksAlias;
-        int subclassBookIndexOrPartitionClass;
+        int subclassBookIndex;
         int[] intermediateSubclassBooksAlias;
         int[] allocatedSubclassBooks;
-        int partitionOrClassIndexOrRangeBitsPhase2;
-        int partitionOrClassIndexOrRangeBitsPhase3;
-        int partitionIndexPhase2;
-        int subclassBookIndexOrPartitionClassPhase2;
+        int classIndex;
+        int floorRangeBitCount;
+        int floorPointPartitionIndex;
+        int floorPointPartitionClass;
         int subclassBitsThenBookCount;
         int configuredFloorPointCount;
         int floorPointCursor;
@@ -323,9 +323,9 @@ final class MusicDecodeStage {
         partitionCount = MusicDecoder.readBits(5);
         classCount = 0;
         this.partitionClasses = new int[partitionCount];
-        for (partitionOrClassIndexOrRangeBits = 0; partitionOrClassIndexOrRangeBits < partitionCount; partitionOrClassIndexOrRangeBits++) {
+        for (partitionClassReadIndex = 0; partitionClassReadIndex < partitionCount; partitionClassReadIndex++) {
           partitionClassId = MusicDecoder.readBits(4);
-          this.partitionClasses[partitionOrClassIndexOrRangeBits] = partitionClassId;
+          this.partitionClasses[partitionClassReadIndex] = partitionClassId;
           if (partitionClassId < classCount) {
             continue;
           }
@@ -335,39 +335,39 @@ final class MusicDecodeStage {
         this.classSubclassBits = new int[classCount];
         this.classMasterbooks = new int[classCount];
         this.classSubclassBooks = new int[classCount][];
-        for (partitionOrClassIndexOrRangeBitsPhase2 = 0; partitionOrClassIndexOrRangeBitsPhase2 < classCount; partitionOrClassIndexOrRangeBitsPhase2++) {
-          this.classDimensions[partitionOrClassIndexOrRangeBitsPhase2] = MusicDecoder.readBits(3) + 1;
+        for (classIndex = 0; classIndex < classCount; classIndex++) {
+          this.classDimensions[classIndex] = MusicDecoder.readBits(3) + 1;
           subclassBitsSnapshot = MusicDecoder.readBits(2);
-          this.classSubclassBits[partitionOrClassIndexOrRangeBitsPhase2] = subclassBitsSnapshot;
+          this.classSubclassBits[classIndex] = subclassBitsSnapshot;
           subclassBitsThenBookCount = subclassBitsSnapshot;
           if (subclassBitsThenBookCount != 0) {
-            this.classMasterbooks[partitionOrClassIndexOrRangeBitsPhase2] = MusicDecoder.readBits(8);
+            this.classMasterbooks[classIndex] = MusicDecoder.readBits(8);
           }
           subclassBitsThenBookCount = 1 << subclassBitsThenBookCount;
           allocatedSubclassBooks = new int[subclassBitsThenBookCount];
           intermediateSubclassBooksAlias = allocatedSubclassBooks;
           subclassBooksAlias = intermediateSubclassBooksAlias;
-          this.classSubclassBooks[partitionOrClassIndexOrRangeBitsPhase2] = allocatedSubclassBooks;
-          for (subclassBookIndexOrPartitionClass = 0; subclassBookIndexOrPartitionClass < subclassBitsThenBookCount; subclassBookIndexOrPartitionClass++) {
-            subclassBooksAlias[subclassBookIndexOrPartitionClass] = MusicDecoder.readBits(8) - 1;
+          this.classSubclassBooks[classIndex] = allocatedSubclassBooks;
+          for (subclassBookIndex = 0; subclassBookIndex < subclassBitsThenBookCount; subclassBookIndex++) {
+            subclassBooksAlias[subclassBookIndex] = MusicDecoder.readBits(8) - 1;
           }
         }
         this.floorMultiplier = MusicDecoder.readBits(2) + 1;
-        partitionOrClassIndexOrRangeBitsPhase3 = MusicDecoder.readBits(4);
+        floorRangeBitCount = MusicDecoder.readBits(4);
         configuredFloorPointCount = 2;
         for (partitionIndex = 0; partitionIndex < partitionCount; partitionIndex++) {
           configuredFloorPointCount = configuredFloorPointCount + this.classDimensions[this.partitionClasses[partitionIndex]];
         }
         this.configuredFloorX = new int[configuredFloorPointCount];
         this.configuredFloorX[0] = 0;
-        this.configuredFloorX[1] = 1 << partitionOrClassIndexOrRangeBitsPhase3;
+        this.configuredFloorX[1] = 1 << floorRangeBitCount;
         floorPointCursor = 2;
-        for (partitionIndexPhase2 = 0; partitionIndexPhase2 < partitionCount; partitionIndexPhase2++) {
-          subclassBookIndexOrPartitionClassPhase2 = this.partitionClasses[partitionIndexPhase2];
-          for (pointWithinPartition = 0; pointWithinPartition < this.classDimensions[subclassBookIndexOrPartitionClassPhase2]; pointWithinPartition++) {
+        for (floorPointPartitionIndex = 0; floorPointPartitionIndex < partitionCount; floorPointPartitionIndex++) {
+          floorPointPartitionClass = this.partitionClasses[floorPointPartitionIndex];
+          for (pointWithinPartition = 0; pointWithinPartition < this.classDimensions[floorPointPartitionClass]; pointWithinPartition++) {
             pointCursorBeforeIncrement = floorPointCursor;
             floorPointCursor++;
-            this.configuredFloorX[pointCursorBeforeIncrement] = MusicDecoder.readBits(partitionOrClassIndexOrRangeBitsPhase3);
+            this.configuredFloorX[pointCursorBeforeIncrement] = MusicDecoder.readBits(floorRangeBitCount);
           }
         }
         if (sharedFloorX != null &&

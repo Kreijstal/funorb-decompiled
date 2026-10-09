@@ -22,26 +22,26 @@ final class VorbisCodebook {
         int nextFreeTreeIndex;
         int entryIndex;
         int codewordLength;
-        int lengthBitMaskOrCodeword;
-        int currentCodewordOrTreeIndex;
-        int nextCodewordOrBitIndex;
-        int shorterOrLongerLengthOrBranchBitMask;
+        int codewordLengthBitMask;
+        int currentCodeword;
+        int nextCodeword;
+        int shorterCodewordLength;
         int[] grownTree;
         int candidateCodeword;
-        int carryBitMaskOrUnusedCopyCursorSnapshot;
+        int carryBitMask;
         int treeCopyIndex;
         int[] intermediateNextCodewordByLengthAlias;
         int[] nextCodewordByLength;
         int[] entryCodewords;
-        int entryIndexPhase2;
-        int codewordLengthPhase2;
-        int lengthBitMaskOrCodewordPhase2;
-        int currentCodewordOrTreeIndexPhase2;
-        int nextCodewordOrBitIndexPhase2;
-        int shorterOrLongerLengthOrBranchBitMaskPhase2;
-        int carryBitMaskOrUnusedCopyCursorSnapshotPhase2;
-        int shorterOrLongerLengthOrBranchBitMaskNestedPhase2;
-        int candidateCodewordNestedPhase2;
+        int treeEntryIndex;
+        int treeCodewordLength;
+        int treeCodeword;
+        int treeNodeIndex;
+        int codewordBitIndex;
+        int branchBitMask;
+        int unusedTreeCopyIndexSnapshot;
+        int longerCodewordLength;
+        int longerLengthCodewordCandidate;
         entryCodewords = new int[this.entryCount];
         nextCodewordByLength = new int[33];
         intermediateNextCodewordByLengthAlias = nextCodewordByLength;
@@ -52,79 +52,79 @@ final class VorbisCodebook {
             continue;
           }
           shorterLengthCarryResolution: {
-            lengthBitMaskOrCodeword = 1 << 32 - codewordLength;
-            currentCodewordOrTreeIndex = nextCodewordByLength[codewordLength];
-            entryCodewords[entryIndex] = currentCodewordOrTreeIndex;
-            if ((currentCodewordOrTreeIndex & lengthBitMaskOrCodeword) == 0) {
-              nextCodewordOrBitIndex = currentCodewordOrTreeIndex | lengthBitMaskOrCodeword;
-              for (shorterOrLongerLengthOrBranchBitMask = codewordLength - 1; shorterOrLongerLengthOrBranchBitMask >= 1; shorterOrLongerLengthOrBranchBitMask--) {
-                candidateCodeword = nextCodewordByLength[shorterOrLongerLengthOrBranchBitMask];
-                if (candidateCodeword != currentCodewordOrTreeIndex) {
+            codewordLengthBitMask = 1 << 32 - codewordLength;
+            currentCodeword = nextCodewordByLength[codewordLength];
+            entryCodewords[entryIndex] = currentCodeword;
+            if ((currentCodeword & codewordLengthBitMask) == 0) {
+              nextCodeword = currentCodeword | codewordLengthBitMask;
+              for (shorterCodewordLength = codewordLength - 1; shorterCodewordLength >= 1; shorterCodewordLength--) {
+                candidateCodeword = nextCodewordByLength[shorterCodewordLength];
+                if (candidateCodeword != currentCodeword) {
                   break shorterLengthCarryResolution;
                 }
-                carryBitMaskOrUnusedCopyCursorSnapshot = 1 << 32 - shorterOrLongerLengthOrBranchBitMask;
-                if ((candidateCodeword & carryBitMaskOrUnusedCopyCursorSnapshot) != 0) {
-                  nextCodewordByLengthAlias[shorterOrLongerLengthOrBranchBitMask] = nextCodewordByLengthAlias[shorterOrLongerLengthOrBranchBitMask - 1];
+                carryBitMask = 1 << 32 - shorterCodewordLength;
+                if ((candidateCodeword & carryBitMask) != 0) {
+                  nextCodewordByLengthAlias[shorterCodewordLength] = nextCodewordByLengthAlias[shorterCodewordLength - 1];
                   break shorterLengthCarryResolution;
                 }
-                nextCodewordByLengthAlias[shorterOrLongerLengthOrBranchBitMask] = candidateCodeword | carryBitMaskOrUnusedCopyCursorSnapshot;
+                nextCodewordByLengthAlias[shorterCodewordLength] = candidateCodeword | carryBitMask;
               }
               break shorterLengthCarryResolution;
             }
-            nextCodewordOrBitIndex = nextCodewordByLengthAlias[codewordLength - 1];
+            nextCodeword = nextCodewordByLengthAlias[codewordLength - 1];
           }
-          nextCodewordByLength[codewordLength] = nextCodewordOrBitIndex;
-          for (shorterOrLongerLengthOrBranchBitMaskNestedPhase2 = codewordLength + 1; shorterOrLongerLengthOrBranchBitMaskNestedPhase2 <= 32; shorterOrLongerLengthOrBranchBitMaskNestedPhase2++) {
-            candidateCodewordNestedPhase2 = nextCodewordByLength[shorterOrLongerLengthOrBranchBitMaskNestedPhase2];
-            if (candidateCodewordNestedPhase2 != currentCodewordOrTreeIndex) {
+          nextCodewordByLength[codewordLength] = nextCodeword;
+          for (longerCodewordLength = codewordLength + 1; longerCodewordLength <= 32; longerCodewordLength++) {
+            longerLengthCodewordCandidate = nextCodewordByLength[longerCodewordLength];
+            if (longerLengthCodewordCandidate != currentCodeword) {
               continue;
             }
-            nextCodewordByLength[shorterOrLongerLengthOrBranchBitMaskNestedPhase2] = nextCodewordOrBitIndex;
+            nextCodewordByLength[longerCodewordLength] = nextCodeword;
           }
         }
         this.huffmanTree = new int[8];
         nextFreeTreeIndex = 0;
-        entryIndexPhase2 = 0;
+        treeEntryIndex = 0;
         while (true) {
-          if (entryIndexPhase2 >= this.entryCount) {
+          if (treeEntryIndex >= this.entryCount) {
             return;
           }
-          codewordLengthPhase2 = this.codewordLengths[entryIndexPhase2];
-          if (codewordLengthPhase2 == 0) {
-            entryIndexPhase2++;
+          treeCodewordLength = this.codewordLengths[treeEntryIndex];
+          if (treeCodewordLength == 0) {
+            treeEntryIndex++;
             continue;
           }
-          lengthBitMaskOrCodewordPhase2 = entryCodewords[entryIndexPhase2];
-          currentCodewordOrTreeIndexPhase2 = 0;
-          for (nextCodewordOrBitIndexPhase2 = 0; nextCodewordOrBitIndexPhase2 < codewordLengthPhase2; nextCodewordOrBitIndexPhase2++) {
-            shorterOrLongerLengthOrBranchBitMaskPhase2 = -2147483648 >>> nextCodewordOrBitIndexPhase2;
-            if ((lengthBitMaskOrCodewordPhase2 & shorterOrLongerLengthOrBranchBitMaskPhase2) == 0) {
-              currentCodewordOrTreeIndexPhase2++;
+          treeCodeword = entryCodewords[treeEntryIndex];
+          treeNodeIndex = 0;
+          for (codewordBitIndex = 0; codewordBitIndex < treeCodewordLength; codewordBitIndex++) {
+            branchBitMask = -2147483648 >>> codewordBitIndex;
+            if ((treeCodeword & branchBitMask) == 0) {
+              treeNodeIndex++;
             } else {
-              if (this.huffmanTree[currentCodewordOrTreeIndexPhase2] == 0) {
-                this.huffmanTree[currentCodewordOrTreeIndexPhase2] = nextFreeTreeIndex;
+              if (this.huffmanTree[treeNodeIndex] == 0) {
+                this.huffmanTree[treeNodeIndex] = nextFreeTreeIndex;
               }
-              currentCodewordOrTreeIndexPhase2 = this.huffmanTree[currentCodewordOrTreeIndexPhase2];
+              treeNodeIndex = this.huffmanTree[treeNodeIndex];
             }
-            if (currentCodewordOrTreeIndexPhase2 >= this.huffmanTree.length) {
+            if (treeNodeIndex >= this.huffmanTree.length) {
               grownTree = new int[this.huffmanTree.length * 2];
               treeCopyIndex = 0;
-              carryBitMaskOrUnusedCopyCursorSnapshotPhase2 = treeCopyIndex;
+              unusedTreeCopyIndexSnapshot = treeCopyIndex;
               while (treeCopyIndex < this.huffmanTree.length) {
                 grownTree[treeCopyIndex] = this.huffmanTree[treeCopyIndex];
                 treeCopyIndex++;
               }
               this.huffmanTree = grownTree;
             }
-            shorterOrLongerLengthOrBranchBitMaskPhase2 = shorterOrLongerLengthOrBranchBitMaskPhase2 >>> 1;
+            branchBitMask = branchBitMask >>> 1;
           }
-          this.huffmanTree[currentCodewordOrTreeIndexPhase2] = ~entryIndexPhase2;
-          if (currentCodewordOrTreeIndexPhase2 < nextFreeTreeIndex) {
-            entryIndexPhase2++;
+          this.huffmanTree[treeNodeIndex] = ~treeEntryIndex;
+          if (treeNodeIndex < nextFreeTreeIndex) {
+            treeEntryIndex++;
             continue;
           }
-          nextFreeTreeIndex = currentCodewordOrTreeIndexPhase2 + 1;
-          entryIndexPhase2++;
+          nextFreeTreeIndex = treeNodeIndex + 1;
+          treeEntryIndex++;
         }
     }
 
@@ -150,10 +150,10 @@ final class VorbisCodebook {
         float lookupMinimumValue;
         int orderedRunEntryCount;
         float lookupDeltaValue;
-        int runEntryIndexOrLookupValueBits;
+        int orderedRunIndex;
         int sequenceFlagValue;
         int lookupValueCount;
-        int lookupValueIndexOrEntryIndex;
+        int quantizedLookupIndex;
         float sequenceLastValue;
         int latticeIndexDivisorOrDenseLookupIndex;
         int dimensionIndex;
@@ -161,9 +161,9 @@ final class VorbisCodebook {
         int latticeLookupIndex;
         float latticeLookupValue;
         int unorderedEntryIndex;
-        int entryCursorOrSparseLengthsValueOrLookupTypePhase2;
-        int runEntryIndexOrLookupValueBitsPhase2;
-        int lookupValueIndexOrEntryIndexNestedPhase2;
+        int lookupType;
+        int lookupValueBitCount;
+        int vectorEntryIndex;
         MusicDecoder.readBits(24);
         this.dimensions = MusicDecoder.readBits(16);
         this.entryCount = MusicDecoder.readBits(24);
@@ -175,7 +175,7 @@ final class VorbisCodebook {
           codewordLengthOrUnusedUnorderedCursorSnapshot = MusicDecoder.readBits(5) + 1;
           while (entryCursorOrSparseLengthsValueOrLookupType < this.entryCount) {
             orderedRunEntryCount = MusicDecoder.readBits(SpriteConstructionSupport.unsignedBitLength((byte) 58, this.entryCount - entryCursorOrSparseLengthsValueOrLookupType));
-            for (runEntryIndexOrLookupValueBits = 0; runEntryIndexOrLookupValueBits < orderedRunEntryCount; runEntryIndexOrLookupValueBits++) {
+            for (orderedRunIndex = 0; orderedRunIndex < orderedRunEntryCount; orderedRunIndex++) {
               entryCursorBeforeIncrement = entryCursorOrSparseLengthsValueOrLookupType;
               entryCursorOrSparseLengthsValueOrLookupType++;
               this.codewordLengths[entryCursorBeforeIncrement] = codewordLengthOrUnusedUnorderedCursorSnapshot;
@@ -199,31 +199,31 @@ final class VorbisCodebook {
           }
         }
         this.buildHuffmanTree();
-        entryCursorOrSparseLengthsValueOrLookupTypePhase2 = MusicDecoder.readBits(4);
-        if (entryCursorOrSparseLengthsValueOrLookupTypePhase2 > 0) {
+        lookupType = MusicDecoder.readBits(4);
+        if (lookupType > 0) {
           lookupMinimumValue = MusicDecoder.unpackVorbisFloat(MusicDecoder.readBits(32));
           lookupDeltaValue = MusicDecoder.unpackVorbisFloat(MusicDecoder.readBits(32));
-          runEntryIndexOrLookupValueBitsPhase2 = MusicDecoder.readBits(4) + 1;
+          lookupValueBitCount = MusicDecoder.readBits(4) + 1;
           sequenceFlagBeforeStore = (MusicDecoder.readBit() == 0) ? 0 : 1;
           sequenceFlagValue = sequenceFlagBeforeStore;
-          if (entryCursorOrSparseLengthsValueOrLookupTypePhase2 != 1) {
+          if (lookupType != 1) {
             lookupValueCount = this.entryCount * this.dimensions;
           } else {
             lookupValueCount = VorbisCodebook.computeLookupValueCount(this.entryCount, this.dimensions);
           }
           this.quantizedLookupValues = new int[lookupValueCount];
-          for (lookupValueIndexOrEntryIndex = 0; lookupValueIndexOrEntryIndex < lookupValueCount; lookupValueIndexOrEntryIndex++) {
-            this.quantizedLookupValues[lookupValueIndexOrEntryIndex] = MusicDecoder.readBits(runEntryIndexOrLookupValueBitsPhase2);
+          for (quantizedLookupIndex = 0; quantizedLookupIndex < lookupValueCount; quantizedLookupIndex++) {
+            this.quantizedLookupValues[quantizedLookupIndex] = MusicDecoder.readBits(lookupValueBitCount);
           }
           this.valueVectors = new float[this.entryCount][this.dimensions];
-          if (entryCursorOrSparseLengthsValueOrLookupTypePhase2 == 1) {
-            for (lookupValueIndexOrEntryIndexNestedPhase2 = 0; lookupValueIndexOrEntryIndexNestedPhase2 < this.entryCount; lookupValueIndexOrEntryIndexNestedPhase2++) {
+          if (lookupType == 1) {
+            for (vectorEntryIndex = 0; vectorEntryIndex < this.entryCount; vectorEntryIndex++) {
               sequenceLastValue = 0.0f;
               latticeIndexDivisorOrDenseLookupIndex = 1;
               for (dimensionIndex = 0; dimensionIndex < this.dimensions; dimensionIndex++) {
-                latticeLookupIndex = lookupValueIndexOrEntryIndexNestedPhase2 / latticeIndexDivisorOrDenseLookupIndex % lookupValueCount;
+                latticeLookupIndex = vectorEntryIndex / latticeIndexDivisorOrDenseLookupIndex % lookupValueCount;
                 latticeLookupValue = (float)this.quantizedLookupValues[latticeLookupIndex] * lookupDeltaValue + lookupMinimumValue + sequenceLastValue;
-                this.valueVectors[lookupValueIndexOrEntryIndexNestedPhase2][dimensionIndex] = latticeLookupValue;
+                this.valueVectors[vectorEntryIndex][dimensionIndex] = latticeLookupValue;
                 if (sequenceFlagValue != 0) {
                   sequenceLastValue = latticeLookupValue;
                 }
@@ -231,12 +231,12 @@ final class VorbisCodebook {
               }
             }
           } else {
-            for (lookupValueIndexOrEntryIndexNestedPhase2 = 0; lookupValueIndexOrEntryIndexNestedPhase2 < this.entryCount; lookupValueIndexOrEntryIndexNestedPhase2++) {
+            for (vectorEntryIndex = 0; vectorEntryIndex < this.entryCount; vectorEntryIndex++) {
               sequenceLastValue = 0.0f;
-              latticeIndexDivisorOrDenseLookupIndex = lookupValueIndexOrEntryIndexNestedPhase2 * this.dimensions;
+              latticeIndexDivisorOrDenseLookupIndex = vectorEntryIndex * this.dimensions;
               for (dimensionIndex = 0; dimensionIndex < this.dimensions; dimensionIndex++) {
                 denseLookupValue = (float)this.quantizedLookupValues[latticeIndexDivisorOrDenseLookupIndex] * lookupDeltaValue + lookupMinimumValue + sequenceLastValue;
-                this.valueVectors[lookupValueIndexOrEntryIndexNestedPhase2][dimensionIndex] = denseLookupValue;
+                this.valueVectors[vectorEntryIndex][dimensionIndex] = denseLookupValue;
                 if (sequenceFlagValue == 0) {
                   latticeIndexDivisorOrDenseLookupIndex++;
                   continue;

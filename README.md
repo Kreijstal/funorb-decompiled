@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/16ac502638fa95e80fa26a72cfe6c7a65cec3f04/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,121 bindings,
 preserving 388 override relationships.
 
-## Current sprite sampling and field inventory (pass 242)
+## Current Vorbis setup and packet roles (pass 243)
+
+87 local names now distinguish packet selection, Huffman codewords/tree nodes,
+floor setup/prediction, transform stages, windowing and overlap. 57 numbered names
+and 30 superseded combined names are replaced. An independent reconstruction
+proves exactly 512 selected identifier changes; all 303 sources compile,
+reproduce and reverse exactly. Source/compiler pins and historical records are
+preserved. Five large framed methods, 118 numbered phase-family names and 41
+unresolved field purposes remain. The workflow documents exact commands and the
+lack of native packet/playback coverage for these Vorbis routines.
+
+## Previous sprite sampling and field inventory (pass 242)
 
 43 local names now describe sprite rotation directions, sample quadrants, trim
 edges, background substitution and alpha weighting. The field-purpose count is
