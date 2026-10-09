@@ -22,7 +22,7 @@ final class DialRenderer implements WidgetRenderer {
         double markerAngleRadians = 0.0;
         int markerOffsetX = 0;
         int markerOffsetY = 0;
-        DialWidget dialWidgetOrNull = widget instanceof DialWidget ? (DialWidget) ((Object) widget) : null;
+        DialWidget dialWidgetOrNull = widget instanceof DialWidget ? (DialWidget) (widget) : null;
         double selectedMarkerAngleRadians;
         SoftwareRasterizer.fillRectangle(parentX + widget.widgetX, widget.widgetY + parentY, widget.widgetWidth, widget.widgetHeight, this.backgroundColor);
         if (dialWidgetOrNull != null) {

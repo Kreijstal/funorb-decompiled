@@ -138,7 +138,7 @@ class UiWidget extends IntrusiveNode {
               if (!(this.listener instanceof PointerHoverListener)) {
                 return;
               }
-              ((PointerHoverListener) ((Object) this.listener)).onPointerInsideChanged(53, this, pointerInsideFlag != 0);
+              ((PointerHoverListener) (this.listener)).onPointerInsideChanged(53, this, pointerInsideFlag != 0);
             }
           }
           return;
@@ -243,7 +243,7 @@ class UiWidget extends IntrusiveNode {
               releasedDragWithoutPressOrWheel = ValidationState.activeDragWidget;
               if (releasedDragWithoutPressOrWheel != null) {
                 if (releasedDragWithoutPressOrWheel.listener instanceof DropListener) {
-                  ((DropListener) ((Object) releasedDragWithoutPressOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutPressOrWheel, 22176);
+                  ((DropListener) (releasedDragWithoutPressOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutPressOrWheel, 22176);
                 }
                 ValidationState.activeDragWidget = null;
               }
@@ -265,7 +265,7 @@ class UiWidget extends IntrusiveNode {
                 releasedDragAfterRejectedPressWithoutFocusOrWheel = ValidationState.activeDragWidget;
                 if (releasedDragAfterRejectedPressWithoutFocusOrWheel != null) {
                   if (releasedDragAfterRejectedPressWithoutFocusOrWheel.listener instanceof DropListener) {
-                    ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocusOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocusOrWheel, 22176);
+                    ((DropListener) (releasedDragAfterRejectedPressWithoutFocusOrWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocusOrWheel, 22176);
                   }
                   ValidationState.activeDragWidget = null;
                 }
@@ -300,7 +300,7 @@ class UiWidget extends IntrusiveNode {
           releasedDragAfterPressWithoutWheel = ValidationState.activeDragWidget;
           if (releasedDragAfterPressWithoutWheel != null) {
             if (releasedDragAfterPressWithoutWheel.listener instanceof DropListener) {
-              ((DropListener) ((Object) releasedDragAfterPressWithoutWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutWheel, 22176);
+              ((DropListener) (releasedDragAfterPressWithoutWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutWheel, 22176);
             }
             ValidationState.activeDragWidget = null;
           }
@@ -323,7 +323,7 @@ class UiWidget extends IntrusiveNode {
               releasedDragWithWheelAndNoPressAlias = releasedDragWithWheelAndNoPress;
               if (releasedDragWithWheelAndNoPress != null) {
                 if (releasedDragWithWheelAndNoPress.listener instanceof DropListener) {
-                  ((DropListener) ((Object) releasedDragWithWheelAndNoPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithWheelAndNoPress, 22176);
+                  ((DropListener) (releasedDragWithWheelAndNoPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithWheelAndNoPress, 22176);
                 }
                 ValidationState.activeDragWidget = null;
               }
@@ -359,7 +359,7 @@ class UiWidget extends IntrusiveNode {
           releasedDragAfterPressWithWheelAlias = releasedDragAfterPressWithWheel;
           if (releasedDragAfterPressWithWheel != null) {
             if (releasedDragAfterPressWithWheel.listener instanceof DropListener) {
-              ((DropListener) ((Object) releasedDragAfterPressWithWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithWheel, 22176);
+              ((DropListener) (releasedDragAfterPressWithWheel.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithWheel, 22176);
             }
             ValidationState.activeDragWidget = null;
           }
@@ -378,7 +378,7 @@ class UiWidget extends IntrusiveNode {
             releasedDragWithoutFocusOrPress = ValidationState.activeDragWidget;
             if (releasedDragWithoutFocusOrPress != null) {
               if (releasedDragWithoutFocusOrPress.listener instanceof DropListener) {
-                ((DropListener) ((Object) releasedDragWithoutFocusOrPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutFocusOrPress, 22176);
+                ((DropListener) (releasedDragWithoutFocusOrPress.listener)).onDrop((DropTargetWidget) null, releasedDragWithoutFocusOrPress, 22176);
               }
               ValidationState.activeDragWidget = null;
             }
@@ -408,7 +408,7 @@ class UiWidget extends IntrusiveNode {
           dragReleaseTargetAlias = releasedDragAfterRejectedPressWithoutFocus;
           if (releasedDragAfterRejectedPressWithoutFocus != null) {
             if (releasedDragAfterRejectedPressWithoutFocus.listener instanceof DropListener) {
-              ((DropListener) ((Object) releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);
+              ((DropListener) (releasedDragAfterRejectedPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterRejectedPressWithoutFocus, 22176);
             }
             ValidationState.activeDragWidget = null;
           }
@@ -436,7 +436,7 @@ class UiWidget extends IntrusiveNode {
         releasedDragAfterPressWithoutFocus = ValidationState.activeDragWidget;
         if (releasedDragAfterPressWithoutFocus != null) {
           if (releasedDragAfterPressWithoutFocus.listener instanceof DropListener) {
-            ((DropListener) ((Object) releasedDragAfterPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutFocus, 22176);
+            ((DropListener) (releasedDragAfterPressWithoutFocus.listener)).onDrop((DropTargetWidget) null, releasedDragAfterPressWithoutFocus, 22176);
           }
           ValidationState.activeDragWidget = null;
         }

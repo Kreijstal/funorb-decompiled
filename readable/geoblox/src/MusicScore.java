@@ -98,7 +98,7 @@ final class MusicScore extends IntrusiveNode {
               noteOnVelocity = packedEvent >> 16 & 127;
               if (noteOnVelocity > 0) {
                 instrumentId = channelProgramsStorage[noteOnChannel];
-                noteMask = (InstrumentNoteMask) ((Object) this.instrumentNoteMasks.findByKey((long)instrumentId, (byte) -76));
+                noteMask = (InstrumentNoteMask) (this.instrumentNoteMasks.findByKey((long)instrumentId, (byte) -76));
                 if (noteMask == null) {
                   noteMask = new InstrumentNoteMask(new byte[128]);
                   this.instrumentNoteMasks.put((byte) 102, noteMask, (long)instrumentId);

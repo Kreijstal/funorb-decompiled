@@ -20,10 +20,10 @@ final class AttachedEntityRenderer {
         RuntimeException caughtDrawFailure = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
+          attachedEntity = (GameplayEntity) (BoardEntityState.attachedEntities.firstForIteration(0));
           while (attachedEntity != null) {
             attachedEntity.drawEntityAtPosition(1643839728);
-            attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
+            attachedEntity = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
           }
           if (methodGuard == 7838) {
             return;

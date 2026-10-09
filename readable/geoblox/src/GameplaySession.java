@@ -402,7 +402,7 @@ final class GameplaySession {
           SoftwareRasterizer.drawCircle(160, 120, 115, 16711680);
           tutorialLineHeightOrDebugEntityRadius = 20;
           debugSpawnQueueSnapshot = SecondaryDeque.spawnQueue;
-          renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.lastForIteration(false));
+          renderedEntity = (GameplayEntity) (debugSpawnQueueSnapshot.lastForIteration(false));
           while (true) {
             if (renderedEntity != null) {
               entityOffsetX = -320.0f + renderedEntity.positionX;
@@ -420,13 +420,13 @@ final class GameplaySession {
                   spawnEntityGrayLevel = 255;
                 }
                 SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, spawnEntityGrayLevel << 8 | spawnEntityGrayLevel << 16 | spawnEntityGrayLevel);
-                renderedEntity = (GameplayEntity) ((Object) debugSpawnQueueSnapshot.previousForIteration(0));
+                renderedEntity = (GameplayEntity) (debugSpawnQueueSnapshot.previousForIteration(0));
                 continue;
               }
             } else {
               debugMovingQueueSnapshot = ArchiveNetworkClient.movingEntities;
               debugEntityQueue = debugMovingQueueSnapshot;
-              renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.firstForIteration(0));
+              renderedEntity = (GameplayEntity) (debugMovingQueueSnapshot.firstForIteration(0));
               do {
                 if (null == renderedEntity) {
                   debugEntityQueue = BoardEntityState.attachedEntities;
@@ -437,22 +437,22 @@ final class GameplaySession {
                 debugEntityXOrTutorialTextHeight = (int)(Math.cos((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetX - Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) * (double)entityOffsetY + 320.0);
                 renderedEntityY = (int)(240.0 + ((double)entityOffsetX * Math.sin((double)UiWidget.gameplaySession.boardAngleRadians) + (double)entityOffsetY * Math.cos((double)UiWidget.gameplaySession.boardAngleRadians)));
                 SoftwareRasterizer.fillCircle(debugEntityXOrTutorialTextHeight / 2, renderedEntityY / 2, tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                renderedEntity = (GameplayEntity) ((Object) debugMovingQueueSnapshot.nextForIteration(1));
+                renderedEntity = (GameplayEntity) (debugMovingQueueSnapshot.nextForIteration(1));
               } while (clientControlFlowGuard == 0);
-              renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+              renderedEntity = (GameplayEntity) (debugEntityQueue.firstForIteration(0));
               do {
                 if (renderedEntity == null) {
                   debugEntityQueue = DelegatingCanvas.transientEntities;
                   break;
                 }
                 SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                renderedEntity = (GameplayEntity) (debugEntityQueue.nextForIteration(1));
               } while (clientControlFlowGuard == 0);
-              renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.firstForIteration(0));
+              renderedEntity = (GameplayEntity) (debugEntityQueue.firstForIteration(0));
               debugCounterPanelSelection: while (true) {
                 if (renderedEntity != null) {
                   SoftwareRasterizer.fillCircle((int)(renderedEntity.positionX / 2.0f), (int)(renderedEntity.positionY / 2.0f), tutorialLineHeightOrDebugEntityRadius, tutorialTopOrDebugColorOrTransitionClipTop);
-                  renderedEntity = (GameplayEntity) ((Object) debugEntityQueue.nextForIteration(1));
+                  renderedEntity = (GameplayEntity) (debugEntityQueue.nextForIteration(1));
                   if (clientControlFlowGuard == 0) {
                     continue;
                   }
@@ -792,7 +792,7 @@ final class GameplaySession {
               boolean rotationKeySnapshotEnabled = true;
               if (MidiPcmStream.heldInternalKeys[99] &&
                   !this.tutorialPromptActive) {
-                fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+                fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
                 while (null != fastForwardEntity) {
                   detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
                   if (clientControlFlowGuard != 0) {
@@ -804,7 +804,7 @@ final class GameplaySession {
                     fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
                     break;
                   }
-                  fastForwardEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                  fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
                 }
               }
               if (rotationKeySnapshotEnabled) {

@@ -529,7 +529,7 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     }
 
     public final void onMoreSuggestionsRequested(byte methodGuard) {
-        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -128))).invalidateCachedUsernameAvailability((byte) -89);
+        ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider((byte) -128))).invalidateCachedUsernameAvailability((byte) -89);
         if (methodGuard != 83) {
             this.onMoreSuggestionsRequested((byte) -25);
         }

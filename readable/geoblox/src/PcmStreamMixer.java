@@ -14,12 +14,12 @@ final class PcmStreamMixer extends PcmStream {
         if (firstListenerNode == this.scheduledListeners.sentinel) {
             this.nextListenerFrameOffset = -1;
         } else {
-            this.nextListenerFrameOffset = ((PcmMixerListener) ((Object) firstListenerNode)).scheduledFrameOffset;
+            this.nextListenerFrameOffset = ((PcmMixerListener) (firstListenerNode)).scheduledFrameOffset;
         }
     }
 
     final PcmStream nextChildStream() {
-        return (PcmStream) ((Object) this.childStreams.nextForIteration(1));
+        return (PcmStream) (this.childStreams.nextForIteration(1));
     }
 
     final synchronized void mixInto(int[] destination, int destinationOffset, int frameCount) {
@@ -44,7 +44,7 @@ final class PcmStreamMixer extends PcmStream {
           frameCount = frameCount - framesToDeadline;
           this.framesSinceListenerNormalization = this.framesSinceListenerNormalization + framesToDeadline;
           this.normalizeListenerFrameOffsets();
-          listener = (PcmMixerListener) ((Object) this.scheduledListeners.firstForIteration(0));
+          listener = (PcmMixerListener) (this.scheduledListeners.firstForIteration(0));
           listenerMonitor = listener;
           synchronized (listenerMonitor) {
             nextFrameOffset = listener.onMixerDeadline(this);
@@ -64,25 +64,25 @@ final class PcmStreamMixer extends PcmStream {
         while (true) {
           if (searchNode == this.scheduledListeners.sentinel) {
             PointerInputListener.insertNodeBefore(searchNode, 93, listener);
-            this.nextListenerFrameOffset = ((PcmMixerListener) ((Object) this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
+            this.nextListenerFrameOffset = ((PcmMixerListener) (this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
             return;
           }
-          if (((PcmMixerListener) ((Object) searchNode)).scheduledFrameOffset <= listener.scheduledFrameOffset) {
+          if (((PcmMixerListener) (searchNode)).scheduledFrameOffset <= listener.scheduledFrameOffset) {
             searchNode = searchNode.nextNode;
             continue;
           }
           break;
         }
         PointerInputListener.insertNodeBefore(searchNode, 93, listener);
-        this.nextListenerFrameOffset = ((PcmMixerListener) ((Object) this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
+        this.nextListenerFrameOffset = ((PcmMixerListener) (this.scheduledListeners.sentinel.nextNode)).scheduledFrameOffset;
         return;
     }
 
     private final void mixChildStreams(int[] destination, int destinationOffset, int frameCount) {
-        PcmStream childStream = (PcmStream) ((Object) this.childStreams.firstForIteration(0));
+        PcmStream childStream = (PcmStream) (this.childStreams.firstForIteration(0));
         while (childStream != null) {
             childStream.mixOrSkip(destination, destinationOffset, frameCount);
-            childStream = (PcmStream) ((Object) this.childStreams.nextForIteration(1));
+            childStream = (PcmStream) (this.childStreams.nextForIteration(1));
         }
     }
 
@@ -111,7 +111,7 @@ final class PcmStreamMixer extends PcmStream {
           frameCount = frameCount - framesToDeadline;
           this.framesSinceListenerNormalization = this.framesSinceListenerNormalization + framesToDeadline;
           this.normalizeListenerFrameOffsets();
-          listener = (PcmMixerListener) ((Object) this.scheduledListeners.firstForIteration(0));
+          listener = (PcmMixerListener) (this.scheduledListeners.firstForIteration(0));
           listenerMonitor = listener;
           synchronized (listenerMonitor) {
             nextFrameOffset = listener.onMixerDeadline(this);
@@ -130,10 +130,10 @@ final class PcmStreamMixer extends PcmStream {
     private final void normalizeListenerFrameOffsets() {
         PcmMixerListener listener = null;
         if (this.framesSinceListenerNormalization > 0) {
-            listener = (PcmMixerListener) ((Object) this.scheduledListeners.firstForIteration(0));
+            listener = (PcmMixerListener) (this.scheduledListeners.firstForIteration(0));
             while (listener != null) {
                 listener.scheduledFrameOffset = listener.scheduledFrameOffset - this.framesSinceListenerNormalization;
-                listener = (PcmMixerListener) ((Object) this.scheduledListeners.nextForIteration(1));
+                listener = (PcmMixerListener) (this.scheduledListeners.nextForIteration(1));
             }
             this.nextListenerFrameOffset = this.nextListenerFrameOffset - this.framesSinceListenerNormalization;
             this.framesSinceListenerNormalization = 0;
@@ -141,14 +141,14 @@ final class PcmStreamMixer extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        return (PcmStream) ((Object) this.childStreams.firstForIteration(0));
+        return (PcmStream) (this.childStreams.firstForIteration(0));
     }
 
     private final void skipChildStreams(int frameCount) {
-        PcmStream childStream = (PcmStream) ((Object) this.childStreams.firstForIteration(0));
+        PcmStream childStream = (PcmStream) (this.childStreams.firstForIteration(0));
         while (childStream != null) {
             childStream.skipFrames(frameCount);
-            childStream = (PcmStream) ((Object) this.childStreams.nextForIteration(1));
+            childStream = (PcmStream) (this.childStreams.nextForIteration(1));
         }
     }
 

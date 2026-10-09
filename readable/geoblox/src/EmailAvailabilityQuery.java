@@ -87,10 +87,10 @@ final class EmailAvailabilityQuery {
         RuntimeException caughtMovingDrawFailure = null;
         clientControlFlowGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+          movingEntityToDraw = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntityToDraw != null) {
             movingEntityToDraw.drawBoardRotatedEntity(-16096);
-            movingEntityToDraw = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+            movingEntityToDraw = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           if (methodGuard == -1) {
             return;

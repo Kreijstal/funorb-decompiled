@@ -77,7 +77,7 @@ final class CheckboxRenderer implements WidgetRenderer {
           } else {
             checkboxWidgetSnapshot = null;
           }
-          checkboxWidget = (CheckboxWidget) ((Object) checkboxWidgetSnapshot);
+          checkboxWidget = (CheckboxWidget) (checkboxWidgetSnapshot);
           if (checkboxWidget != null) {
             widgetEnabled = widgetEnabled & checkboxWidget.enabled;
           }

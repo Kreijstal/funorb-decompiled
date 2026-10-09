@@ -23,13 +23,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           childCursor = new DequeCursor(this.children);
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(118)) {
               if (child.handlePointerPress(parentY + this.widgetY, 60, this.widgetX + parentX, pointerButton, pointerX, pointerY, eventContext)) {
                 return true;
               }
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 109));
+              child = (UiWidget) (childCursor.nextForward((byte) 109));
               continue;
             }
             break;
@@ -96,7 +96,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         int lastRenderPass = 0;
         DequeCursor childCursor = new DequeCursor(this.children);
-        UiWidget child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         if (methodGuard < 82) {
             toServerListText = (String) null;
         }
@@ -105,7 +105,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             if (lastRenderPass < childLastRenderPass) {
                 lastRenderPass = childLastRenderPass;
             }
-            child = (UiWidget) ((Object) childCursor.nextForward((byte) 110));
+            child = (UiWidget) (childCursor.nextForward((byte) 110));
         }
         return lastRenderPass;
     }
@@ -135,7 +135,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             return false;
           }
           focusedChildCursor = new DequeCursor(this.children);
-          focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.beginReverse(1));
+          focusedChildCandidate = (UiWidget) (focusedChildCursor.beginReverse(1));
           if (methodGuard != 7305) {
             themeCycleOrder = (int[]) null;
           }
@@ -143,16 +143,16 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
             if (focusedChildCandidate.hasKeyboardFocus((byte) 54)) {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginReverseAt(focusedChildCandidate, (byte) 123);
-              focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
+              focusCandidate = (UiWidget) (candidateCursor.nextReverse(26));
               while (focusCandidate != null) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -39, focusContext)) {
-                  focusCandidate = (UiWidget) ((Object) candidateCursor.nextReverse(26));
+                  focusCandidate = (UiWidget) (candidateCursor.nextReverse(26));
                   continue;
                 }
                 return true;
               }
             }
-            focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.nextReverse(26));
+            focusedChildCandidate = (UiWidget) (focusedChildCursor.nextReverse(26));
           }
           return false;
         } catch (java.lang.RuntimeException focusFailure) {
@@ -182,11 +182,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         try {
           super.updatePointerState(hoverGuard, parentY, eventContext, parentX);
           childCursor = new DequeCursor(this.children);
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(122)) {
               child.updatePointerState(false, this.widgetY + parentY, eventContext, this.widgetX + parentX);
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 123));
+              child = (UiWidget) (childCursor.nextForward((byte) 123));
               continue;
             }
             break;
@@ -214,10 +214,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         }
         int guardResidue = -58 % ((methodGuard - 1) / 43);
         DequeCursor childCursor = new DequeCursor(this.children);
-        UiWidget child = (UiWidget) ((Object) childCursor.beginReverse(1));
+        UiWidget child = (UiWidget) (childCursor.beginReverse(1));
         while (child != null) {
             child.renderWidget(this.widgetX + parentX, parentY + this.widgetY, (byte) 93, renderPass);
-            child = (UiWidget) ((Object) childCursor.nextReverse(26));
+            child = (UiWidget) (childCursor.nextReverse(26));
         }
     }
 
@@ -239,23 +239,23 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         if (methodGuard != 69) {
           menuBackgroundSprite = (Sprite) null;
         }
-        child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
           childHoverText = child.getHoverText((byte) 69);
           if (childHoverText != null) {
             return childHoverText;
           }
-          child = (UiWidget) ((Object) childCursor.nextForward((byte) 111));
+          child = (UiWidget) (childCursor.nextForward((byte) 111));
         }
         return null;
     }
 
     private final void refreshChildrenLayout(byte methodGuard) {
         DequeCursor childCursor = new DequeCursor(this.children);
-        UiWidget child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
             child.refreshLayout(116);
-            child = (UiWidget) ((Object) childCursor.nextForward((byte) 108));
+            child = (UiWidget) (childCursor.nextForward((byte) 108));
         }
         int guardResidue = 71 / ((methodGuard - 57) / 51);
     }
@@ -280,21 +280,21 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (methodGuard > -75) {
             return true;
           }
-          focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.beginForward((byte) 88));
+          focusedChildCandidate = (UiWidget) (focusedChildCursor.beginForward((byte) 88));
           while (focusedChildCandidate != null) {
             if (focusedChildCandidate.hasKeyboardFocus((byte) 54)) {
               candidateCursor = new DequeCursor(this.children);
               candidateCursor.beginForwardAt((byte) 56, focusedChildCandidate);
-              focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
+              focusCandidate = (UiWidget) (candidateCursor.nextForward((byte) 114));
               while (focusCandidate != null) {
                 if (!focusCandidate.requestKeyboardFocus((byte) -56, focusContext)) {
-                  focusCandidate = (UiWidget) ((Object) candidateCursor.nextForward((byte) 114));
+                  focusCandidate = (UiWidget) (candidateCursor.nextForward((byte) 114));
                   continue;
                 }
                 return true;
               }
             }
-            focusedChildCandidate = (UiWidget) ((Object) focusedChildCursor.nextForward((byte) 109));
+            focusedChildCandidate = (UiWidget) (focusedChildCursor.nextForward((byte) 109));
           }
           return false;
         } catch (java.lang.RuntimeException focusFailure) {
@@ -317,10 +317,10 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         if (methodGuard > -122) {
             themeCycleOrder = (int[]) null;
         }
-        UiWidget child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        UiWidget child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
             child.clearKeyboardFocus(-126);
-            child = (UiWidget) ((Object) childCursor.nextForward((byte) 121));
+            child = (UiWidget) (childCursor.nextForward((byte) 121));
         }
     }
 
@@ -344,13 +344,13 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (methodGuard >= -30) {
             return false;
           }
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (true) {
             if (child == null) {
               return false;
             }
             if (!child.requestKeyboardFocus((byte) -123, focusContext)) {
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 125));
+              child = (UiWidget) (childCursor.nextForward((byte) 125));
               continue;
             }
             break;
@@ -390,11 +390,11 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           childCursor = new DequeCursor(this.children);
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(122)) {
               child.handlePointerRelease(parentX + this.widgetX, pointerX, true, eventContext, this.widgetY + parentY, pointerY);
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 109));
+              child = (UiWidget) (childCursor.nextForward((byte) 109));
               continue;
             }
             break;
@@ -434,14 +434,14 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (methodGuard != 13) {
             this.clearKeyboardFocus(-77);
           }
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(120)) {
               if (child.hasKeyboardFocus((byte) 54) &&
                   child.handleKeyInput(keyCode, 13, typedCharacter, eventContext)) {
                 return true;
               }
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 110));
+              child = (UiWidget) (childCursor.nextForward((byte) 110));
               continue;
             }
             break;
@@ -488,7 +488,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           childCursor = new DequeCursor(this.children);
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           if (methodGuard != -3188) {
             guardedNullChildSnapshot = (UiWidget) null;
             this.updatePointerState(true, 26, (UiWidget) null, 23);
@@ -499,7 +499,7 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
               discardedIndentAppend = output.append(' ');
             }
             child.appendWidgetDiagnostics(0, output, visitedWidgets, depth + 1);
-            child = (UiWidget) ((Object) childCursor.nextForward((byte) 125));
+            child = (UiWidget) (childCursor.nextForward((byte) 125));
           }
           return;
         } catch (java.lang.RuntimeException diagnosticFailure) {
@@ -531,12 +531,12 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           toServerListText = (String) null;
         }
         childCursor = new DequeCursor(this.children);
-        child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+        child = (UiWidget) (childCursor.beginForward((byte) 88));
         while (child != null) {
           if (child.hasKeyboardFocus((byte) 54)) {
             return child;
           }
-          child = (UiWidget) ((Object) childCursor.nextForward((byte) 121));
+          child = (UiWidget) (childCursor.nextForward((byte) 121));
         }
         return null;
     }
@@ -567,14 +567,14 @@ class WidgetContainer extends UiWidget implements ChildWidgetOwner {
           if (methodGuard != -1) {
             this.setWidgetBounds(-119, -117, (byte) 87, 105, 63);
           }
-          child = (UiWidget) ((Object) childCursor.beginForward((byte) 88));
+          child = (UiWidget) (childCursor.beginForward((byte) 88));
           while (child != null) {
             if (child.isLinked(127)) {
               if (child.hasKeyboardFocus((byte) 54) &&
                   child.handlePointerWheel(parentY, wheelRotation, parentX, methodGuard + 0, pointerX, eventContext, pointerY)) {
                 return true;
               }
-              child = (UiWidget) ((Object) childCursor.nextForward((byte) 124));
+              child = (UiWidget) (childCursor.nextForward((byte) 124));
               continue;
             }
             break;

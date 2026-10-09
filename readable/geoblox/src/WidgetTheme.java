@@ -310,10 +310,10 @@ final class WidgetTheme {
           if (methodGuard != -25866) {
             WidgetTheme.createBeveledPanelSprites(53, -56, 122, 126);
           }
-          popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.removeFirst((byte) -121));
+          popup = (ScorePopup) (GmtTimestampSupport.activeScorePopups.removeFirst((byte) -121));
           while (popup != null) {
             unfinishedPoints = unfinishedPoints + popup.points;
-            popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.removeFirst((byte) -99));
+            popup = (ScorePopup) (GmtTimestampSupport.activeScorePopups.removeFirst((byte) -99));
           }
           pointsBeforeReturn = unfinishedPoints;
           return pointsBeforeReturn;

@@ -24,7 +24,7 @@ final class TrackedPcmStream extends IntrusiveNode {
             }
             if (!UnderlinedButtonRenderer.isGuestSessionMode(-91)) {
                 while (true) {
-                    pendingSubmission = (AchievementSubmission) ((Object) GameplayEntity.pendingAchievementSubmissions.removeFirst((byte) -118));
+                    pendingSubmission = (AchievementSubmission) (GameplayEntity.pendingAchievementSubmissions.removeFirst((byte) -118));
                     if (pendingSubmission == null) {
                         break;
                     }

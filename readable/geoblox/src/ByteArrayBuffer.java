@@ -302,10 +302,10 @@ class ByteArrayBuffer extends IntrusiveNode {
         RuntimeException resendFailure = null;
         RuntimeException resendFailureForContext = null;
         try {
-          pendingQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(0));
+          pendingQuery = (ByteShortQuery) (UiWidget.pendingByteShortQueries.firstForIteration(0));
           while (pendingQuery != null) {
             ProgressDialog.writeByteShortQuery(packetOpcode, 534, pendingQuery);
-            pendingQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.nextForIteration(1));
+            pendingQuery = (ByteShortQuery) (UiWidget.pendingByteShortQueries.nextForIteration(1));
           }
           if (!methodGuard) {
             receivedSocialSettingMiddle = -54;

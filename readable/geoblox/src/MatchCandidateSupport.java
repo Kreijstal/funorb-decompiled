@@ -55,7 +55,7 @@ final class MatchCandidateSupport {
           EmailAvailabilityQuery.matchCandidateCount = 0;
           eligibleNeighborhoodVisited = 0;
           dualMatchFound = 0;
-          centralEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
+          centralEntity = (GameplayEntity) (BoardEntityState.attachedEntities.firstForIteration(0));
           if (methodGuard != -2) {
             currentAvatarCryFrame = (Sprite) null;
           }
@@ -156,7 +156,7 @@ final class MatchCandidateSupport {
                 }
               }
             }
-            centralEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
+            centralEntity = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
           }
           if (eligibleNeighborhoodVisited != 0) {
             if (dualMatchFound == 0) {

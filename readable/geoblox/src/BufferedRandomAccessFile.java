@@ -429,23 +429,23 @@ final class BufferedRandomAccessFile {
           }
           UiWidget.gameplaySession.startSessionEndSequence((byte) 116);
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-          seedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.lastForIteration(false));
+          seedEntity = (GameplayEntity) (BoardEntityState.attachedEntities.lastForIteration(false));
           farthestEntity = seedEntity;
           farthestRadiusSquared = (-320.0f + seedEntity.positionX) * (-320.0f + seedEntity.positionX) + (seedEntity.positionY - 240.0f) * (seedEntity.positionY - 240.0f);
-          candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.lastForIteration(false));
+          candidateEntity = (GameplayEntity) (BoardEntityState.attachedEntities.lastForIteration(false));
           while (candidateEntity != null) {
             if (farthestRadiusSquared < (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (-240.0f + candidateEntity.positionY) * (-240.0f + candidateEntity.positionY)) {
               farthestRadiusSquared = (-320.0f + candidateEntity.positionX) * (candidateEntity.positionX - 320.0f) + (candidateEntity.positionY - 240.0f) * (-240.0f + candidateEntity.positionY);
               farthestEntity = candidateEntity;
             }
-            candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.previousForIteration(0));
+            candidateEntity = (GameplayEntity) (BoardEntityState.attachedEntities.previousForIteration(0));
           }
           cascadeFrontier = new SecondaryDeque();
           visitedCascadeEntities = new SecondaryDeque();
           staggeredLifetime = 0;
           cascadeFrontier.addFirst(farthestEntity, false);
           while (true) {
-            cascadeEntity = (GameplayEntity) ((Object) cascadeFrontier.removeFirst(true));
+            cascadeEntity = (GameplayEntity) (cascadeFrontier.removeFirst(true));
             if (cascadeEntity == null) {
               return true;
             }
@@ -459,21 +459,21 @@ final class BufferedRandomAccessFile {
                 break;
               }
               neighborEntity = cascadeEntity.relatedEntities[neighborIndex];
-              searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.firstForIteration((byte) 121));
+              searchedEntity = (GameplayEntity) (visitedCascadeEntities.firstForIteration((byte) 121));
               unseenCascadeNeighborSelection: while (true) {
                 if (searchedEntity == null) {
-                  searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.firstForIteration((byte) 121));
+                  searchedEntity = (GameplayEntity) (cascadeFrontier.firstForIteration((byte) 121));
                   while (searchedEntity != null) {
                     if (searchedEntity == neighborEntity) {
                       break unseenCascadeNeighborSelection;
                     }
-                    searchedEntity = (GameplayEntity) ((Object) cascadeFrontier.nextForIteration(69));
+                    searchedEntity = (GameplayEntity) (cascadeFrontier.nextForIteration(69));
                   }
                   cascadeFrontier.addLast(-82, neighborEntity);
                   break unseenCascadeNeighborSelection;
                 }
                 if (searchedEntity != neighborEntity) {
-                  searchedEntity = (GameplayEntity) ((Object) visitedCascadeEntities.nextForIteration(methodGuard ^ 24));
+                  searchedEntity = (GameplayEntity) (visitedCascadeEntities.nextForIteration(methodGuard ^ 24));
                   continue;
                 }
                 break;

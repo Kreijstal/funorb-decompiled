@@ -20,7 +20,7 @@ final class HighscoreNameEntry {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          queuedEntityThenPooledEntity = (GameplayEntity) (SecondaryDeque.spawnQueue.firstForIteration(0));
           do {
             if (queuedEntityThenPooledEntity == null) {
               if (methodGuard != 255) {
@@ -29,7 +29,7 @@ final class HighscoreNameEntry {
               break;
             }
             queuedEntityThenPooledEntity.advanceEntityAnimation(true);
-            queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+            queuedEntityThenPooledEntity = (GameplayEntity) (SecondaryDeque.spawnQueue.nextForIteration(1));
           } while (clientControlFlowGuard == 0);
           if ((MidiPcmStream.heldInternalKeys[99] &&
               ArchiveNetworkClient.movingEntities.isEmpty(13519) ||
@@ -45,7 +45,7 @@ final class HighscoreNameEntry {
           if (SecondaryDeque.spawnQueue.countNodes(methodGuard ^ 143) < 3 &&
               DelayedIncomingPacket.canGenerateMoreEntitiesInTheme((byte) -53) &&
               !UiWidget.gameplaySession.canAdvanceSession(true)) {
-            queuedEntityThenPooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
+            queuedEntityThenPooledEntity = (GameplayEntity) (SecondaryNodeDeque.availableEntities.removeFirst((byte) -101));
             if (null != queuedEntityThenPooledEntity) {
               spawnAngleRadians = 2.0 * Math.random() * 3.141592653589793;
               spawnPositionX = 240.0f * (float)Math.cos(spawnAngleRadians) + 320.0f;
@@ -367,7 +367,7 @@ final class HighscoreNameEntry {
           primaryEntry.displayName = decodedDisplayName;
           primaryEntry.locationLabel = (String) (decodedLocationLabel);
           primaryEntry.unlinkNode(false);
-          insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.firstForIteration(0));
+          insertionTarget = (SocialListEntry) (ProgressBarWidget.primarySocialEntriesInOrder.firstForIteration(0));
           insertionTargetSelection: while (true) {
             if (null != insertionTarget) {
               entryOrInsertionTargetSnapshot = primaryEntry;
@@ -375,7 +375,7 @@ final class HighscoreNameEntry {
                 break insertionTargetSelection;
               }
               if (MatchCandidateSupport.socialEntrySortsAfter(entryOrInsertionTargetSnapshot, insertionTarget, (byte) 127)) {
-                insertionTarget = (SocialListEntry) ((Object) ProgressBarWidget.primarySocialEntriesInOrder.nextForIteration(1));
+                insertionTarget = (SocialListEntry) (ProgressBarWidget.primarySocialEntriesInOrder.nextForIteration(1));
                 continue;
               }
             }

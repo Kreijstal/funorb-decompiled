@@ -2,11 +2,80 @@
 
 The current export has 20,133 guarded naming rules: 303 class names (including
 original `Geoblox`), 2,105 fields, 1,859 methods, 5,014 parameters, 10,747 local
-declarations and 105 labels. Both 303-file corpora compile, comparing 138,066
+declarations and 105 labels. Both 303-file corpora compile, comparing 137,772
 bindings and preserving 388 override relationships. Some members retain unknown
 purposes; generated carriers, guards and shared joins remain.
 
-## Current shared dynamic continuations (pass 246)
+## Current reference-cast cleanup (pass 247)
+
+The generic decompiler can now omit an intermediate `(Object)` bridge when
+class/array hierarchy metadata proves a direct narrowing reference cast is
+legal. The original target cast remains. Unknown/unrelated types keep their
+bridges, and explicit bytecode widening casts retain their previous output.
+The selected profile adds `CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES=1`;
+the generic default is unchanged. This is a generic compiler change, with
+its game-specific profile and certificate maintained in Deko.
+
+294 bridge casts disappear across 66 raw/readable files, including 15 in board
+reconciliation and ten in GameplaySession. All other source characters remain;
+2,646 characters and 294 external `java.lang.Object` type references disappear.
+No source lines, declarations, naming rules, dictionary identities or labels
+are removed. The target casts and every operand evaluation remain explicit.
+
+The independent certificate compiles the old/new raw sources and the old/
+expected readable sources with javac. All 304 class files in each pair are
+**byte-identical**, including constant pools, instructions, stack maps,
+exception tables and debug metadata. It also compares the resolved instructions
+and exception tables of all 2,513 methods and character-projected source
+bindings. The actual export matches an independent reconstruction that deletes
+only those bridges from the previous readable dictionary. This establishes the
+selected cleanup relative to the previous source, not whole-game equivalence
+to the original gamepack or phone/FPS performance.
+
+All 20,133 complete naming objects and 20,440 dictionary identities are
+preserved. The export retains 121,837 identifier edits, 11 literal edits and
+423 label edits (122,271 total); 137,772 source bindings compare after the
+294 external type references disappear. All 303 sources compile, reproduce and
+reverse byte exactly. The previous current field-purpose audit is retained
+inside this pass record; the current selector is repinned to the new raw tree.
+The 41-field inventory is unchanged.
+
+Five large framed methods, 77 plain block labels and 41 finer field purposes
+still remain. Their current line counts remain 336, 314, 328, 555 and 368.
+A temporary generic prototype permitting terminal frame corridors through
+try/catch/finally and monitor bodies found **zero additional candidates** among
+the current top-level method bodies. It was not enabled or published. Further
+frame recovery needs stronger edge/scope/definite-assignment evidence; this pass
+cleans cast clutter without assuming any control flag is zero.
+
+From Deko, verify the pinned source pass and canonical export:
+
+```sh
+node readable/tests/test-geoblox-reference-bridges-source.mjs /path/to/java-tools
+node readable/tests/test-geoblox-unresolved-fields.mjs
+node readable/build-geoblox-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check
+```
+
+The certificate archives its two raw inputs and previous readable export from
+Git, verifies the tracked compiler-source tar and frozen binding auditor,
+attributes the removed reference casts independently, and reconstructs the
+expected readable sources with the previous dictionary. It creates no maintained
+preview. Earlier proofs and their compiler/source pins remain intact.
+
+The focused generic command (from java-tools) passes 17 groups, including six
+new groups and six independent native mutation/failure/monitor oracle cases:
+
+```sh
+NODE_PATH=/path/to/java-tools/node_modules JAVA_TOOL_OPTIONS=-XX:-UsePerfData node --test --experimental-test-isolation=none test/provenReferenceCastBridges.test.js test/javaAstEmitterIdentityCasts.test.js test/selfCastRecovery.test.js
+```
+
+The source certificate, field audit, manifest check, 13 rule-builder groups,
+dictionary reversal and canonical reproduction pass. Existing native coverage
+is retained through byte-identical independently compiled class files; no new
+whole-game runtime coverage is claimed.
+
+## Previous shared dynamic continuations (pass 246)
 
 A generic, opt-in decompiler pass now shares eight duplicated continuation
 bodies across GameScreen, GameApplet, GameplaySession and
@@ -5592,41 +5661,41 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `ac3504fe54c19da72263e9da4adf248716a6d92a`; the
-manifest SHA-256 is `2efda5badfe5994b3e8c349ebec15d790afd8fc766c98af5cef21f446e0e8158`.
+The current Deko workflow/manifest commit is `e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3`; the
+manifest SHA-256 is `16e3df0a5970d1843646ed770a042d697f526d97633e7d1faf6407dab105e655`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
 The raw input is `games/geoblox` at
-`d0dcf594ffb877434edece9d20f008d7458a382c`. It comes from java-tools
-`73cd732a36d6f6239d42514a638c35a82d802fcd` and Deko
+`8e912ce0da18d00604d3dde1d3ca341d68485ea3`. It comes from java-tools
+`128618a7ca99b7197a09064f72a4b5a7dfdab32e` and Deko
 `a572c4dd0f0174bfcd7777be53d7ceba2f970f18`. The adapted naming tool is
 `59c17f5bbf3f10aec41fbe64df8d656d64b7884a` in Deko; its selected generic-source
 archive SHA-256 is `f78aea10f71f1629ef799417f7b2025495b32a8ca1deaad656948a047c69b2b9`.
 The six-file archive command is recorded in Deko `readable/tools/PIN.json`.
 
 The **decompiler repository source** SHA-256 is
-`13323243f4efd6315fb37089324e1bbf35303069dc734764045b83d206988bf0`:
+`3a97880470c4f8461b43671ace6da1461d11e1bba6d89a4b1e318222c2222d58`:
 
 ```sh
-git archive --format=tar 73cd732a36d6f6239d42514a638c35a82d802fcd | sha256sum
+git archive --format=tar 128618a7ca99b7197a09064f72a4b5a7dfdab32e | sha256sum
 ```
 
 This identifies tracked decompiler source and its Git archive metadata. It is
 separate from a game JAR or Java source-tree hashes.
 
 Current raw tree SHA-256:
-`0654237dfe0081fd0135475f152847514f2930d28ba7433a419df7661b20253a`.
+`037efd68ac6bb81fa5126c1475d4c3117fa8e00cb646142b0298fe8bb52aaa49`.
 Current readable tree SHA-256:
-`7676f486fadc9bb323c3c260d15c09fadc4560a46c34a99279beb0f66898e67c`.
+`6ff253ecf2893f98ec21d3472bef0ec1875fa7e7f66d58dd0726b878fbb00212`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

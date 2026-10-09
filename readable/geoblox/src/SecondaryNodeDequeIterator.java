@@ -47,14 +47,14 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (methodGuard != -15) {
             SecondaryNodeDequeIterator.releaseSharedResources((byte) -11);
           }
-          transientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
+          transientEntity = (GameplayEntity) (DelegatingCanvas.transientEntities.firstForIteration(0));
           while (transientEntity != null) {
             transientEntity.advanceEntityAnimation(true);
             if (transientEntity.animationFrameIndex >= 3) {
               transientEntity.entityQueue = SecondaryNodeDeque.availableEntities;
               transientEntity.animationFrameIndex = 0;
             }
-            transientEntity = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
+            transientEntity = (GameplayEntity) (DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           if (UiWidget.gameplaySession.tutorialPromptActive) {
             return;

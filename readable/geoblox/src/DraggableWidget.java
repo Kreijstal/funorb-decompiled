@@ -36,7 +36,7 @@ final class DraggableWidget extends SingleChildWidget {
         int dragTargetY = 0;
         try {
           if ((!(this.child instanceof ButtonWidget) ||
-                ((ButtonWidget) ((Object) this.child)).enabled) &&
+                ((ButtonWidget) (this.child)).enabled) &&
               this.pressedPointerButton == 1) {
             dragTargetXOrLayoutDelta = PrefixCodeDecoder.pointerXSnapshot - this.grabOffsetX - parentX;
             dragTargetY = -this.grabOffsetY + (PcmResampler.pointerYSnapshot - parentY);
@@ -45,7 +45,7 @@ final class DraggableWidget extends SingleChildWidget {
               this.widgetY = dragTargetY;
               this.widgetX = dragTargetXOrLayoutDelta;
               if (this.listener instanceof DragMovementListener) {
-                ((DragMovementListener) ((Object) this.listener)).onDragMoved(parentX, -20951, this, parentY);
+                ((DragMovementListener) (this.listener)).onDragMoved(parentX, -20951, this, parentY);
               }
             }
           } else {

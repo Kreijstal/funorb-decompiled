@@ -128,7 +128,7 @@ final class CachedArchiveSource extends ArchiveSource {
         byte[] computedNetworkGroupDigest = null;
         byte[] expectedNetworkGroupDigest = null;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-        cachedRequest = (ArchiveRequest) ((Object) this.groupRequests.findByKey((long)groupId, (byte) -124));
+        cachedRequest = (ArchiveRequest) (this.groupRequests.findByKey((long)groupId, (byte) -124));
         request = cachedRequest;
         if (cachedRequest != null &&
             requestMode == 0 &&
@@ -341,7 +341,7 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     final int getGroupProgress(int methodGuard, int groupId) {
-        ArchiveRequest groupRequest = (ArchiveRequest) ((Object) this.groupRequests.findByKey((long)groupId, (byte) -102));
+        ArchiveRequest groupRequest = (ArchiveRequest) (this.groupRequests.findByKey((long)groupId, (byte) -102));
         if (methodGuard < 125) {
             return -119;
         }
@@ -533,7 +533,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
                       break requestSweepDueCheck;
                     }
-                    cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
+                    cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
                     while (cleanupRequest != null) {
                       if (!cleanupRequest.pending) {
                         if (cleanupRequest.seenByCleanup) {
@@ -545,7 +545,7 @@ final class CachedArchiveSource extends ArchiveSource {
                           cleanupRequest.seenByCleanup = true;
                         }
                       }
-                      cleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
+                      cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                     }
                     break completedRequestSweep;
                   }
@@ -561,7 +561,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis) {
                 break requestSweepDueCheck;
               }
-              completedCleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.firstForIteration((byte) 125));
+              completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
               while (completedCleanupRequest != null) {
                 if (!completedCleanupRequest.pending) {
                   if (completedCleanupRequest.seenByCleanup) {
@@ -573,7 +573,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     completedCleanupRequest.seenByCleanup = true;
                   }
                 }
-                completedCleanupRequest = (ArchiveRequest) ((Object) this.groupRequests.nextForIteration(74));
+                completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
               }
             }
             this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);

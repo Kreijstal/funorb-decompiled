@@ -63,10 +63,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
             return;
           }
           responseQueryId = responseBuffer.readUnsignedByte((byte) 34);
-          matchingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
+          matchingQuery = (RankedListQuery) (PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
           while (matchingQuery != null) {
             if (responseQueryId != matchingQuery.queryId) {
-              matchingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
+              matchingQuery = (RankedListQuery) (PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
               continue;
             }
             break;
@@ -183,7 +183,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           templateSpriteKindId = templateEntity.entitySpriteKindId;
           templateCategoryKey = templateEntity.entityCategoryKey;
           while (true) {
-            poppedEntity = (GameplayEntity) ((Object) pendingEntitiesForRemoval.removeFirst(true));
+            poppedEntity = (GameplayEntity) (pendingEntitiesForRemoval.removeFirst(true));
             currentEntity = poppedEntity;
             if (null == poppedEntity) {
               if (methodGuard != 1) {
@@ -218,10 +218,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   continue;
                 }
               }
-              processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.firstForIteration((byte) 121));
+              processedEntityToCompare = (GameplayEntity) (processedEntities.firstForIteration((byte) 121));
               while (processedEntityToCompare != null) {
                 if (currentEntity != processedEntityToCompare) {
-                  processedEntityToCompare = (GameplayEntity) ((Object) processedEntities.nextForIteration(methodGuard - 60));
+                  processedEntityToCompare = (GameplayEntity) (processedEntities.nextForIteration(methodGuard - 60));
                   continue;
                 }
                 neighborIndex++;

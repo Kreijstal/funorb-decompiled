@@ -244,7 +244,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
           } else {
             buttonWidgetBeforeCast = (UiWidget) (widget);
           }
-          buttonWidget = (ButtonWidget) ((Object) buttonWidgetBeforeCast);
+          buttonWidget = (ButtonWidget) (buttonWidgetBeforeCast);
           PasswordWidgetRenderer.pushWidgetClip(widget.widgetY + parentY, widget.widgetX + parentX, -14045, widget.widgetHeight + (parentY + widget.widgetY), widget.widgetWidth + (parentX + widget.widgetX));
           if (buttonWidget != null) {
             widgetEnabled = widgetEnabled & buttonWidget.enabled;

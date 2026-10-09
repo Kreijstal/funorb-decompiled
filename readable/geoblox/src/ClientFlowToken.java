@@ -22,7 +22,7 @@ final class ClientFlowToken {
           inputPacket = LogoCompositor.sessionPacketBuffer;
           acknowledgementKind = inputPacket.readUnsignedByte((byte) 34);
           if (acknowledgementKind == 0) {
-            pendingFifoToken = (FifoResponseToken) ((Object) PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0));
+            pendingFifoToken = (FifoResponseToken) (PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0));
             if (pendingFifoToken == null) {
               Bzip2DecoderState.closeSessionSocket((byte) -124);
               return;
@@ -43,10 +43,10 @@ final class ClientFlowToken {
           } else {
             if (1 == acknowledgementKind) {
               acknowledgementCrc = inputPacket.readIntBE((byte) -101);
-              pendingCrcPacket = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(0));
+              pendingCrcPacket = (CrcAcknowledgedPacket) (DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(0));
               while (pendingCrcPacket != null) {
                 if (acknowledgementCrc != pendingCrcPacket.acknowledgementCrc) {
-                  pendingCrcPacket = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
+                  pendingCrcPacket = (CrcAcknowledgedPacket) (DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
                   continue;
                 }
                 break;

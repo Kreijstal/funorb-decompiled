@@ -166,7 +166,7 @@ abstract class SingleChildWidget extends UiWidget implements ChildWidgetOwner {
           nowMillis = ClientClockSupport.correctedCurrentTimeMillis(-12520);
           if (EntityMotionSupport.incomingPacketBaseDelayMillis != 0 &&
               MidiNote.stagedIncomingPacketOpcode < 0) {
-            queuedPacket = (DelayedIncomingPacket) ((Object) MeshPrioritySupport.delayedIncomingPackets.firstForIteration(0));
+            queuedPacket = (DelayedIncomingPacket) (MeshPrioritySupport.delayedIncomingPackets.firstForIteration(0));
             if (queuedPacket != null &&
                 nowMillis > queuedPacket.deliveryTimeMillis) {
               queuedPacket.unlinkNode(false);

@@ -579,7 +579,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
     }
 
     public final void onMoreSuggestionsRequested(byte methodGuard) {
-        ((UsernameAvailabilityValidator) ((Object) this.displayNameInput.getValidationProvider((byte) -117))).invalidateCachedUsernameAvailability((byte) -80);
+        ((UsernameAvailabilityValidator) (this.displayNameInput.getValidationProvider((byte) -117))).invalidateCachedUsernameAvailability((byte) -80);
         if (methodGuard != 83) {
             this.confirmButton = (ButtonWidget) null;
         }

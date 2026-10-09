@@ -175,7 +175,7 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
           if (methodGuard != 4740) {
             return;
           }
-          spawnQueueHead = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          spawnQueueHead = (GameplayEntity) (SecondaryDeque.spawnQueue.firstForIteration(0));
           if (spawnQueueHead == null) {
             return;
           }
@@ -195,10 +195,10 @@ final class PasswordWidgetRenderer extends TextInputRenderer {
             highlightAngleStep = highlightAngleStep + highlightAngleStep * 0.25f;
             highlightRgb += 778;
           }
-          spawnEntityToDraw = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.firstForIteration(0));
+          spawnEntityToDraw = (GameplayEntity) (SecondaryDeque.spawnQueue.firstForIteration(0));
           while (spawnEntityToDraw != null) {
             spawnEntityToDraw.drawFadingEntity(methodGuard - 4830);
-            spawnEntityToDraw = (GameplayEntity) ((Object) SecondaryDeque.spawnQueue.nextForIteration(1));
+            spawnEntityToDraw = (GameplayEntity) (SecondaryDeque.spawnQueue.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException spawnQueueDrawFailure) {

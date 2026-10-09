@@ -98,7 +98,7 @@ final class DiskCacheWorker implements Runnable {
           request.operationType = 1;
           queueMonitor = this.requestQueue;
           synchronized (queueMonitor) {
-            queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.firstForIteration((byte) 121));
+            queuedRequest = (DiskArchiveRequest) (this.requestQueue.firstForIteration((byte) 121));
             while (queuedRequest != null) {
               if ((long)groupId == queuedRequest.secondaryKey &&
                   queuedRequest.diskCache == diskCache &&
@@ -108,7 +108,7 @@ final class DiskCacheWorker implements Runnable {
                 reusedWriteRequestBeforeReturn = request;
                 return reusedWriteRequestBeforeReturn;
               }
-              queuedRequest = (DiskArchiveRequest) ((Object) this.requestQueue.nextForIteration(-20));
+              queuedRequest = (DiskArchiveRequest) (this.requestQueue.nextForIteration(-20));
             }
           }
           request.bytes = diskCache.read(groupId, (byte) -78);
@@ -286,7 +286,7 @@ final class DiskCacheWorker implements Runnable {
             while (!this.stopRequested) {
               queueMonitor = this.requestQueue;
               synchronized (queueMonitor) {
-                request = (DiskArchiveRequest) ((Object) this.requestQueue.removeFirst(true));
+                request = (DiskArchiveRequest) (this.requestQueue.removeFirst(true));
                 if (request == null) {
                   try {
                     this.requestQueue.wait();

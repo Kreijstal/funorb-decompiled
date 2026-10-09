@@ -159,14 +159,14 @@ final class PcmSampleStream extends PcmStream {
             if (this.sampleStepFixed == -256 &&
                 (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
-                return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
+                return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
               }
-              return PcmSampleStream.mixReverseMonoAligned(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this);
+              return PcmSampleStream.mixReverseMonoAligned(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this);
             }
             if (AudioOutput.stereoEnabled) {
-              return PcmSampleStream.mixReverseStereoInterpolated(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              return PcmSampleStream.mixReverseStereoInterpolated(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             }
-            return PcmSampleStream.mixReverseMonoInterpolated(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+            return PcmSampleStream.mixReverseMonoInterpolated(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
           }
           rampDestinationEnd = destinationOffset + this.rampFramesRemaining;
           if (rampDestinationEnd > destinationEnd) {
@@ -176,15 +176,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.sampleStepFixed == -256 &&
               (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
-              destinationOffset = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
+              destinationOffset = PcmSampleStream.mixReverseMonoAlignedRamp(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             } else {
-              destinationOffset = PcmSampleStream.mixReverseStereoAlignedRamp(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
+              destinationOffset = PcmSampleStream.mixReverseStereoAlignedRamp(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             }
           } else {
             if (!AudioOutput.stereoEnabled) {
-              destinationOffset = PcmSampleStream.mixReverseMonoInterpolatedRamp(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              destinationOffset = PcmSampleStream.mixReverseMonoInterpolatedRamp(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             } else {
-              destinationOffset = PcmSampleStream.mixReverseStereoInterpolatedRamp(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              destinationOffset = PcmSampleStream.mixReverseStereoInterpolatedRamp(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             }
           }
           this.rampFramesRemaining = this.rampFramesRemaining - destinationOffset;
@@ -210,14 +210,14 @@ final class PcmSampleStream extends PcmStream {
             if (this.sampleStepFixed == 256 &&
                 (this.samplePositionFixed & 255) == 0) {
               if (AudioOutput.stereoEnabled) {
-                return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
+                return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this);
               }
-              return PcmSampleStream.mixForwardMonoAligned(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this);
+              return PcmSampleStream.mixForwardMonoAligned(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this);
             }
             if (AudioOutput.stereoEnabled) {
-              return PcmSampleStream.mixForwardStereoInterpolated(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              return PcmSampleStream.mixForwardStereoInterpolated(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             }
-            return PcmSampleStream.mixForwardMonoInterpolated(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+            return PcmSampleStream.mixForwardMonoInterpolated(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, 0, destinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
           }
           rampDestinationEnd = destinationOffset + this.rampFramesRemaining;
           if (rampDestinationEnd > destinationEnd) {
@@ -227,15 +227,15 @@ final class PcmSampleStream extends PcmStream {
           if (this.sampleStepFixed == 256 &&
               (this.samplePositionFixed & 255) == 0) {
             if (!AudioOutput.stereoEnabled) {
-              destinationOffset = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
+              destinationOffset = PcmSampleStream.mixForwardMonoAlignedRamp(((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             } else {
-              destinationOffset = PcmSampleStream.mixForwardStereoAlignedRamp(0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
+              destinationOffset = PcmSampleStream.mixForwardStereoAlignedRamp(0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this);
             }
           } else {
             if (!AudioOutput.stereoEnabled) {
-              destinationOffset = PcmSampleStream.mixForwardMonoInterpolatedRamp(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              destinationOffset = PcmSampleStream.mixForwardMonoInterpolatedRamp(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentVolume, this.volumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             } else {
-              destinationOffset = PcmSampleStream.mixForwardStereoInterpolatedRamp(0, 0, ((PcmSample) ((Object) this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
+              destinationOffset = PcmSampleStream.mixForwardStereoInterpolatedRamp(0, 0, ((PcmSample) (this.sample)).samples, destination, this.samplePositionFixed, destinationOffset, this.currentLeftVolume, this.currentRightVolume, this.leftVolumeStepPerFrame, this.rightVolumeStepPerFrame, 0, rampDestinationEnd, sampleBoundaryFixed, this, this.sampleStepFixed, boundarySample);
             }
           }
           this.rampFramesRemaining = this.rampFramesRemaining - destinationOffset;
@@ -250,10 +250,10 @@ final class PcmSampleStream extends PcmStream {
         int priority = this.currentVolume * 3 >> 6;
         priority = (priority ^ priority >> 31) + (priority >>> 31);
         if (this.loopsRemaining == 0) {
-            priority = priority - priority * this.samplePositionFixed / (((PcmSample) ((Object) this.sample)).samples.length << 8);
+            priority = priority - priority * this.samplePositionFixed / (((PcmSample) (this.sample)).samples.length << 8);
         } else {
             if (this.loopsRemaining >= 0) {
-                priority = priority - priority * this.loopStart / ((PcmSample) ((Object) this.sample)).samples.length;
+                priority = priority - priority * this.loopStart / ((PcmSample) (this.sample)).samples.length;
             }
         }
         return priority > 255 ? 255 : priority;
@@ -763,7 +763,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized void setSamplePositionFixed(int positionFixed) {
-        int sampleEndFixed = ((PcmSample) ((Object) this.sample)).samples.length << 8;
+        int sampleEndFixed = ((PcmSample) (this.sample)).samples.length << 8;
         if (positionFixed < -1) {
             positionFixed = -1;
         }
@@ -810,7 +810,7 @@ final class PcmSampleStream extends PcmStream {
             this.refreshCurrentVolumes();
           }
         }
-        sample = (PcmSample) ((Object) this.sample);
+        sample = (PcmSample) (this.sample);
         loopStartFixed = this.loopStart << 8;
         loopEndFixed = this.loopEnd << 8;
         sampleEndFixed = sample.samples.length << 8;
@@ -1085,7 +1085,7 @@ final class PcmSampleStream extends PcmStream {
           this.skipFrames(frameCount);
           return;
         }
-        sample = (PcmSample) ((Object) this.sample);
+        sample = (PcmSample) (this.sample);
         loopStartFixed = this.loopStart << 8;
         loopEndFixed = this.loopEnd << 8;
         sampleEndFixed = sample.samples.length << 8;
@@ -1573,7 +1573,7 @@ final class PcmSampleStream extends PcmStream {
     }
 
     final synchronized boolean isSamplePositionOutOfRange() {
-        return this.samplePositionFixed < 0 || this.samplePositionFixed >= ((PcmSample) ((Object) this.sample)).samples.length << 8;
+        return this.samplePositionFixed < 0 || this.samplePositionFixed >= ((PcmSample) (this.sample)).samples.length << 8;
     }
 
     final static PcmSampleStream createForPlaybackRate(PcmSample sample, int ratePercent, int volume) {

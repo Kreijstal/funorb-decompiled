@@ -56,7 +56,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             replyType = replyBuffer.readUnsignedByte((byte) 34);
             byteKey = replyBuffer.readUnsignedByte((byte) 34);
             if (0 == replyType) {
-              headIntArrayQuery = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
+              headIntArrayQuery = (IntArrayQuery) (IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
               if (headIntArrayQuery == null) {
                 Bzip2DecoderState.closeSessionSocket((byte) -116);
                 return;
@@ -75,11 +75,11 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             } else {
               if (replyType == 1) {
                 signedSmartKey = replyBuffer.readSignedSmart(76);
-                matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
+                matchingSubmission = (KeyedIntRecordSubmission) (GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
                 while (matchingSubmission != null) {
                   if (matchingSubmission.byteKey != byteKey ||
                       matchingSubmission.signedSmartKey != signedSmartKey) {
-                    matchingSubmission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
+                    matchingSubmission = (KeyedIntRecordSubmission) (GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
                     continue;
                   }
                   break;
@@ -524,7 +524,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
             unusedNullReferenceB = null;
             unusedNullReferenceC = null;
             try {
-              requestFromQueue = (ReflectionCheckRequest) ((Object) UsernameAvailabilityQuery.reflectionCheckRequests.firstForIteration(0));
+              requestFromQueue = (ReflectionCheckRequest) (UsernameAvailabilityQuery.reflectionCheckRequests.firstForIteration(0));
               requestAlias = requestFromQueue;
               if (requestAlias == null) {
                 return;

@@ -35,7 +35,7 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
           }
           highlightFlag = hoverOrFocusFlag;
           if (widget instanceof ButtonWidget) {
-            widgetEnabled = widgetEnabled & ((ButtonWidget) ((Object) widget)).enabled;
+            widgetEnabled = widgetEnabled & ((ButtonWidget) (widget)).enabled;
           }
           if (methodGuard >= -5) {
             SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(-17);

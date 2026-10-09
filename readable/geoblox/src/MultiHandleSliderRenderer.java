@@ -45,7 +45,7 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
           } else {
             sliderWidgetOrNull = null;
           }
-          sliderWidget = (MultiHandleSliderWidget) ((Object) sliderWidgetOrNull);
+          sliderWidget = (MultiHandleSliderWidget) (sliderWidgetOrNull);
           if (methodGuard >= -5) {
             return;
           }

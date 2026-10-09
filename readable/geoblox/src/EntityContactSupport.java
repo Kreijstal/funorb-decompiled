@@ -138,7 +138,7 @@ final class EntityContactSupport {
                     }
                     kindTwoMismatch = contactedEntityIsKindTwo ^ incomingEntityIsKindTwo;
                     if (kindTwoMismatch != 0) {
-                      pooledConversionEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeLast(1));
+                      pooledConversionEntity = (GameplayEntity) (SecondaryNodeDeque.availableEntities.removeLast(1));
                       if (pooledConversionEntity != null) {
                         if (entity.entitySpriteKindId == 2 &&
                             kindTwoMismatch != 0) {

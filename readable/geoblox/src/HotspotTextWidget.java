@@ -349,7 +349,7 @@ class HotspotTextWidget extends ButtonWidget {
         int unusedClientControlSnapshot;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         guardQuotient = 3 / ((methodGuard + 46) / 58);
-        hotspotHead = (TextHotspotBounds) ((Object) this.hotspotBounds.firstForIteration(0));
+        hotspotHead = (TextHotspotBounds) (this.hotspotBounds.firstForIteration(0));
         while (hotspotHead != null) {
           segment = hotspotHead;
           while (segment != null) {
@@ -361,7 +361,7 @@ class HotspotTextWidget extends ButtonWidget {
             }
             segment = segment.nextSegment;
           }
-          hotspotHead = (TextHotspotBounds) ((Object) this.hotspotBounds.nextForIteration(1));
+          hotspotHead = (TextHotspotBounds) (this.hotspotBounds.nextForIteration(1));
         }
         return null;
     }

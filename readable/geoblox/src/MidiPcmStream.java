@@ -235,12 +235,12 @@ final class MidiPcmStream extends PcmStream {
             this.resetChannelControllers((byte) -85, -70);
         }
         if ((this.channelFlags[channelIndex] & 2) != 0) {
-            note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
+            note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
                 if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
                     note.releaseEnvelopeTime = 0;
                 }
-                note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+                note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
             }
         }
     }
@@ -377,12 +377,12 @@ final class MidiPcmStream extends PcmStream {
     private final void resetChannelRetriggerPhases(int channelIndex, byte methodGuard) {
         MidiNote note = null;
         if ((this.channelFlags[channelIndex] & 4) != 0) {
-            note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(0));
+            note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
             while (note != null) {
                 if (note.channelIndex == channelIndex) {
                     note.retriggerPhaseFixed = 0;
                 }
-                note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+                note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
             }
         }
         if (methodGuard != 67) {
@@ -415,10 +415,10 @@ final class MidiPcmStream extends PcmStream {
           if (~sampleByteBudget < methodGuard) {
             remainingByteBudget = new int[]{sampleByteBudget};
           }
-          instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.firstForIteration((byte) 125));
+          instrumentNoteMask = (InstrumentNoteMask) (score.instrumentNoteMasks.firstForIteration((byte) 125));
           while (instrumentNoteMask != null) {
             instrumentId = (int)instrumentNoteMask.nodeKey;
-            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)instrumentId, (byte) -91));
+            instrumentPatch = (InstrumentPatch) (this.instrumentPatches.findByKey((long)instrumentId, (byte) -91));
             if (instrumentPatch == null) {
               instrumentPatch = InstrumentPatch.loadInstrumentPatch(instrumentId, (byte) 121, patchArchive);
               if (instrumentPatch != null) {
@@ -431,7 +431,7 @@ final class MidiPcmStream extends PcmStream {
                 !instrumentPatch.loadSelectedSamples((int[]) (remainingByteBudget), instrumentNoteMask.notesUsed, methodGuard + 36, sampleCache)) {
               allInstrumentsPreparedFlag = 0;
             }
-            instrumentNoteMask = (InstrumentNoteMask) ((Object) score.instrumentNoteMasks.nextForIteration(methodGuard - 100));
+            instrumentNoteMask = (InstrumentNoteMask) (score.instrumentNoteMasks.nextForIteration(methodGuard - 100));
           }
           if (allInstrumentsPreparedFlag != 0) {
             score.clearInstrumentNotes();
@@ -582,14 +582,14 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void releaseChannelNotes(int channelIndex, int methodGuard) {
-        MidiNote note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ methodGuard));
+        MidiNote note = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard ^ methodGuard));
         while (note != null) {
             if ((channelIndex < 0 || channelIndex == note.channelIndex) &&
                 !(note.releaseEnvelopeTime >= 0)) {
                 this.heldNotesByKey[note.channelIndex][note.keyNumber] = null;
                 note.releaseEnvelopeTime = 0;
             }
-            note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+            note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
         }
     }
 
@@ -891,7 +891,7 @@ final class MidiPcmStream extends PcmStream {
         }
         portamentoReleaseSelection: {
           if ((this.channelFlags[channelIndex] & 2) != 0) {
-            otherHeldNote = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
+            otherHeldNote = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
             while (otherHeldNote != null) {
               if (note.channelIndex == otherHeldNote.channelIndex &&
                   0 > otherHeldNote.releaseEnvelopeTime &&
@@ -899,7 +899,7 @@ final class MidiPcmStream extends PcmStream {
                 note.releaseEnvelopeTime = 0;
                 break portamentoReleaseSelection;
               }
-              otherHeldNote = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+              otherHeldNote = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
             }
             break portamentoReleaseSelection;
           }
@@ -909,7 +909,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void fadeOutChannelNotes(int methodGuard, int channelIndex) {
         MidiNote note;
-        note = (MidiNote) ((Object) this.noteMixer.notes.firstForIteration(methodGuard - 100));
+        note = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard - 100));
         while (note != null) {
           if (channelIndex < 0 ||
                 channelIndex == note.channelIndex) {
@@ -925,7 +925,7 @@ final class MidiPcmStream extends PcmStream {
             }
             note.unlinkNode(false);
           }
-          note = (MidiNote) ((Object) this.noteMixer.notes.nextForIteration(1));
+          note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
         }
         if (methodGuard != 100) {
           this.playbackTime = -48L;
@@ -937,10 +937,10 @@ final class MidiPcmStream extends PcmStream {
         if (methodGuard <= 65) {
             this.dispatchMidiEvent(-76, (byte) -34);
         }
-        InstrumentPatch instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.firstForIteration((byte) 125));
+        InstrumentPatch instrumentPatch = (InstrumentPatch) (this.instrumentPatches.firstForIteration((byte) 125));
         while (instrumentPatch != null) {
             instrumentPatch.clearEncodedSampleIds((byte) -121);
-            instrumentPatch = (InstrumentPatch) ((Object) this.instrumentPatches.nextForIteration(-52));
+            instrumentPatch = (InstrumentPatch) (this.instrumentPatches.nextForIteration(-52));
         }
     }
 
@@ -1083,7 +1083,7 @@ final class MidiPcmStream extends PcmStream {
         InstrumentPatch patchAlias;
         this.releaseNote(23327, keyNumber, 64, channelIndex);
         if (0 != (2 & this.channelFlags[channelIndex])) {
-          heldNote = (MidiNote) ((Object) this.noteMixer.notes.lastForIteration(false));
+          heldNote = (MidiNote) (this.noteMixer.notes.lastForIteration(false));
           while (heldNote != null) {
             if (channelIndex == heldNote.channelIndex &&
                 heldNote.releaseEnvelopeTime < 0) {
@@ -1096,10 +1096,10 @@ final class MidiPcmStream extends PcmStream {
               heldNote.portamentoScale = 4096;
               return;
             }
-            heldNote = (MidiNote) ((Object) this.noteMixer.notes.previousForIteration(~methodGuard));
+            heldNote = (MidiNote) (this.noteMixer.notes.previousForIteration(~methodGuard));
           }
         }
-        patch = (InstrumentPatch) ((Object) this.instrumentPatches.findByKey((long)this.channelInstrumentIds[channelIndex], (byte) -105));
+        patch = (InstrumentPatch) (this.instrumentPatches.findByKey((long)this.channelInstrumentIds[channelIndex], (byte) -105));
         patchAlias = patch;
         if (patchAlias == null) {
           return;

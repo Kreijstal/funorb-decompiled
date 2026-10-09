@@ -76,18 +76,18 @@ final class ByteArrayPoolSupport {
         RuntimeException resendFailureForContext = null;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          submission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
+          submission = (KeyedIntRecordSubmission) (GrowableIntList.pendingIntRecordSubmissions.firstForIteration(0));
           while (submission != null) {
             LoginUiSupport.writeIntRecordSubmission(packetOpcode, 86, submission);
-            submission = (KeyedIntRecordSubmission) ((Object) GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
+            submission = (KeyedIntRecordSubmission) (GrowableIntList.pendingIntRecordSubmissions.nextForIteration(1));
           }
           if (methodGuard < 115) {
             fadingDialogScratchSprite = (Sprite) null;
           }
-          query = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
+          query = (IntArrayQuery) (IntArrayQuery.pendingIntArrayQueries.firstForIteration(0));
           while (query != null) {
             StrongCacheReference.writeIntArrayQuery((byte) -88, packetOpcode, query);
-            query = (IntArrayQuery) ((Object) IntArrayQuery.pendingIntArrayQueries.nextForIteration(1));
+            query = (IntArrayQuery) (IntArrayQuery.pendingIntArrayQueries.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException resendFailure) {

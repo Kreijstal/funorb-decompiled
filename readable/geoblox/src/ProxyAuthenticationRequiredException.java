@@ -18,7 +18,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         clientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-          popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.firstForIteration(0));
+          popup = (ScorePopup) (GmtTimestampSupport.activeScorePopups.firstForIteration(0));
           if (methodGuard > -112) {
             return;
           }
@@ -32,7 +32,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             } else {
               FadingDialog.uiPaletteFont.drawCenteredText(popup.pointsText, (int)(popup.progress * (-popup.originX + 144.0f) + popup.originX), (int)((-popup.originY + 34.0f) * popup.progress + popup.originY), 0, -1);
             }
-            popup = (ScorePopup) ((Object) GmtTimestampSupport.activeScorePopups.nextForIteration(1));
+            popup = (ScorePopup) (GmtTimestampSupport.activeScorePopups.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException popupDrawFailure) {

@@ -20,7 +20,7 @@ final class EndingAnimationSupport {
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           LoginPanel.endingEntityScanClear = true;
-          attachedEntityToReset = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
+          attachedEntityToReset = (GameplayEntity) (BoardEntityState.attachedEntities.firstForIteration(0));
           while (attachedEntityToReset != null) {
             attachedEntityToReset.advanceEntityAnimation(true);
             if (6 == attachedEntityToReset.entitySpriteKindId) {
@@ -29,10 +29,10 @@ final class EndingAnimationSupport {
                 SecondaryNodeDeque.availableEntities.addLast(-67, attachedEntityToReset);
               }
             }
-            attachedEntityToReset = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
+            attachedEntityToReset = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
           }
           guardResidue = 12 % ((-69 - methodGuard) / 38);
-          transientEntityToReset = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
+          transientEntityToReset = (GameplayEntity) (DelegatingCanvas.transientEntities.firstForIteration(0));
           while (transientEntityToReset != null) {
             transientEntityToReset.advanceEntityAnimation(true);
             if (5 == transientEntityToReset.entitySpriteKindId ||
@@ -43,7 +43,7 @@ final class EndingAnimationSupport {
                 SecondaryNodeDeque.availableEntities.addLast(-115, transientEntityToReset);
               }
             }
-            transientEntityToReset = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
+            transientEntityToReset = (GameplayEntity) (DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException caughtEndingAnimationFailure) {

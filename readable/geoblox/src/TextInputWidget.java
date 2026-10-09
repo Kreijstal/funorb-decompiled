@@ -305,7 +305,7 @@ class TextInputWidget extends ButtonWidget {
 
     private final void notifyTextInputSubmitted(byte methodGuard) {
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) ((Object) this.listener)).onTextInputSubmitted(this, -18649);
+            ((TextInputListener) (this.listener)).onTextInputSubmitted(this, -18649);
         }
         if (methodGuard < 107) {
             this.wordSelectionDrag = true;
@@ -579,7 +579,7 @@ class TextInputWidget extends ButtonWidget {
             return;
         }
         if (this.listener instanceof TextInputListener) {
-            ((TextInputListener) ((Object) this.listener)).onTextInputChanged(this, (byte) 74);
+            ((TextInputListener) (this.listener)).onTextInputChanged(this, (byte) 74);
         }
     }
 

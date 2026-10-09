@@ -102,7 +102,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
           EntityLinkSupport.drawGradientWidgetBorder(widgetScreenX, widget.widgetHeight, widgetScreenY, widget.widgetWidth, -1540604944);
           validationStateSprite = ClientClockSupport.validationStateSprites[1];
           if (widget instanceof ButtonWidget &&
-              ((ButtonWidget) ((Object) widget)).active) {
+              ((ButtonWidget) (widget)).active) {
             validationStateSprite.drawAdditive(widgetScreenX - (-1 - (-validationStateSprite.fullWidth + widget.widgetWidth >> 1)), (-validationStateSprite.fullHeight + widget.widgetHeight >> 1) + 1 + widgetScreenY, 256);
           }
           if (widget.hasKeyboardFocus((byte) 54)) {
@@ -129,7 +129,7 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
 
     final static void pushRasterTarget(int methodGuard) {
         int rasterPushGuardQuotient = -117 / ((-46 - methodGuard) / 50);
-        RasterTargetSnapshot pooledOrAllocatedSnapshot = (RasterTargetSnapshot) ((Object) SharedBufferPools.rasterSnapshotPool.removeLast(1));
+        RasterTargetSnapshot pooledOrAllocatedSnapshot = (RasterTargetSnapshot) (SharedBufferPools.rasterSnapshotPool.removeLast(1));
         if (pooledOrAllocatedSnapshot == null) {
             pooledOrAllocatedSnapshot = new RasterTargetSnapshot();
         }

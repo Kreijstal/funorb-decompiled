@@ -289,7 +289,7 @@ final class CachedTextLayout extends TextLayout {
         if (methodGuard != -1) {
             introFaceFrameIndex = 119;
         }
-        PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) ((Object) ArchiveRequest.pendingActionMarkers.firstForIteration(0));
+        PendingActionMarker pendingActionMarkerForDrawing = (PendingActionMarker) (ArchiveRequest.pendingActionMarkers.firstForIteration(0));
         PendingActionMarker pendingActionMarkerBeforeNullCheck = pendingActionMarkerForDrawing;
         if (pendingActionMarkerBeforeNullCheck != null) {
             pendingActionDrawTop = LogoCompositor.pendingActionPanelTop;

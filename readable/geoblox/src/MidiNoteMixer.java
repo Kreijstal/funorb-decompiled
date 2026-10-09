@@ -32,7 +32,7 @@ final class MidiNoteMixer extends PcmStream {
         MidiNote note = null;
         try {
           this.fadingStreams.mixInto(destination, destinationOffset, frameCount);
-          note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+          note = (MidiNote) (this.notes.firstForIteration(0));
           while (note != null) {
             if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
               noteDestinationOffset = destinationOffset;
@@ -48,7 +48,7 @@ final class MidiNoteMixer extends PcmStream {
                 noteDestinationOffset = noteDestinationOffset + note.framesUntilUpdate;
               } while (!this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, noteDestinationOffset, destination, note, false));
             }
-            note = (MidiNote) ((Object) this.notes.nextForIteration(1));
+            note = (MidiNote) (this.notes.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException mixParameterFailure) {
@@ -151,7 +151,7 @@ final class MidiNoteMixer extends PcmStream {
         int remainingNoteFrames;
         MidiNote note;
         this.fadingStreams.skipFrames(frameCount);
-        note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+        note = (MidiNote) (this.notes.firstForIteration(0));
         while (note != null) {
           noteSkipCompletion: {
             if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
@@ -167,7 +167,7 @@ final class MidiNoteMixer extends PcmStream {
               note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
             }
           }
-          note = (MidiNote) ((Object) this.notes.nextForIteration(1));
+          note = (MidiNote) (this.notes.nextForIteration(1));
         }
     }
 
@@ -176,7 +176,7 @@ final class MidiNoteMixer extends PcmStream {
         int clientControlFlowGuard;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         while (true) {
-          note = (MidiNote) ((Object) this.notes.nextForIteration(1));
+          note = (MidiNote) (this.notes.nextForIteration(1));
           if (note == null) {
             return null;
           }
@@ -187,7 +187,7 @@ final class MidiNoteMixer extends PcmStream {
     }
 
     final PcmStream firstChildStream() {
-        MidiNote note = (MidiNote) ((Object) this.notes.firstForIteration(0));
+        MidiNote note = (MidiNote) (this.notes.firstForIteration(0));
         if (note == null) {
             return null;
         }

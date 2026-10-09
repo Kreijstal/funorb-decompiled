@@ -275,7 +275,7 @@ final class SoundSampleCache {
           packedCacheKey = fileId ^ (65533 & groupId << 4 | groupId >>> 12);
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey;
-          cachedRenderedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -74));
+          cachedRenderedSample = (PcmSample) (this.decodedSamples.findByKey(cacheKey, (byte) -74));
           if (methodGuard <= 19) {
             this.synthesizedSoundArchive = (ResourceArchive) null;
           }
@@ -334,7 +334,7 @@ final class SoundSampleCache {
           packedCacheKey = ((groupId & -1879044097) << 4 | groupId >>> 12) ^ fileId;
           packedCacheKey = packedCacheKey | groupId << 16;
           cacheKey = (long)packedCacheKey ^ 4294967296L;
-          cachedDecodedSample = (PcmSample) ((Object) this.decodedSamples.findByKey(cacheKey, (byte) -115));
+          cachedDecodedSample = (PcmSample) (this.decodedSamples.findByKey(cacheKey, (byte) -115));
           if (methodGuard != 14) {
             invalidGuardResult = (PcmSample) null;
             return invalidGuardResult;
@@ -348,7 +348,7 @@ final class SoundSampleCache {
             exhaustedBudgetResult = null;
             return (PcmSample) (exhaustedBudgetResult);
           }
-          decoder = (MusicDecoder) ((Object) this.pendingVorbisDecoders.findByKey(cacheKey, (byte) -96));
+          decoder = (MusicDecoder) (this.pendingVorbisDecoders.findByKey(cacheKey, (byte) -96));
           if (decoder == null) {
             decoder = MusicDecoder.loadById(this.vorbisArchive, groupId, fileId);
             if (decoder == null) {

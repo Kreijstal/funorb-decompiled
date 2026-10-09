@@ -28,7 +28,7 @@ final class MeshDepthSupport {
         try {
           maxDistanceSquared = 1.401298464324817e-45f;
           farthestEntity = null;
-          candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.lastForIteration(false));
+          candidateEntity = (GameplayEntity) (BoardEntityState.attachedEntities.lastForIteration(false));
           if (methodGuard >= -127) {
             MeshDepthSupport.releaseStaticReferences(false);
           }
@@ -38,7 +38,7 @@ final class MeshDepthSupport {
               maxDistanceSquared = candidateDistanceSquared;
               farthestEntity = candidateEntity;
             }
-            candidateEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.previousForIteration(0));
+            candidateEntity = (GameplayEntity) (BoardEntityState.attachedEntities.previousForIteration(0));
             if (controlFlowGuard == 0) {
               continue;
             }

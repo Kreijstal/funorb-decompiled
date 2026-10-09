@@ -197,7 +197,7 @@ final class EntityMotionSupport {
           boardContactStateDirty = false;
           AttachmentPointerState.newAttachmentCount = 0;
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-          movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+          movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
             movingEntityContactResolution: {
               if (BoardEntityState.attachedEntities != movingEntity.entityQueue) {
@@ -233,7 +233,7 @@ final class EntityMotionSupport {
                     AttachmentPointerState.newAttachmentCount = AttachmentPointerState.newAttachmentCount + 1;
                     break movingEntityContactResolution;
                   }
-                  movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                  movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
                   continue;
                 }
                 if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
@@ -295,13 +295,13 @@ final class EntityMotionSupport {
                 movingEntity.drawEntityIdOnPointerMask((byte) 51);
               }
             }
-            movingEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+            movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           unusedMotionGuardRemainder = -125 % ((methodGuard - 35) / 49);
-          trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.firstForIteration(0));
+          trailEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (trailEntity != null) {
             trailEntity.eraseEntityTrail(30383);
-            trailEntity = (GameplayEntity) ((Object) ArchiveNetworkClient.movingEntities.nextForIteration(1));
+            trailEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException motionFailure) {

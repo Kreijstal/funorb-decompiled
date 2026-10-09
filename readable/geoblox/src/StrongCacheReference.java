@@ -94,12 +94,12 @@ final class StrongCacheReference extends CacheReference {
         GameplayEntity attachedEntity = null;
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.firstForIteration(0));
+            attachedEntity = (GameplayEntity) (BoardEntityState.attachedEntities.firstForIteration(0));
             while (attachedEntity != null) {
                 if (attachedEntity.entitySpriteKindId != 0) {
                     attachedEntity.drawEntityAtPosition(1643839728);
                 }
-                attachedEntity = (GameplayEntity) ((Object) BoardEntityState.attachedEntities.nextForIteration(1));
+                attachedEntity = (GameplayEntity) (BoardEntityState.attachedEntities.nextForIteration(1));
             }
             if (methodGuard > -33) {
                 StrongCacheReference.drawSpecialAttachedEntities((byte) 90);

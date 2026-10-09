@@ -16,7 +16,7 @@ final class RasterTargetRestoreSupport {
     }
 
     final static void restoreRasterTarget(boolean returnToPool) {
-        RasterTargetSnapshot rasterSnapshot = (RasterTargetSnapshot) ((Object) MatchingTextValidator.rasterTargetStack.removeLast(1));
+        RasterTargetSnapshot rasterSnapshot = (RasterTargetSnapshot) (MatchingTextValidator.rasterTargetStack.removeLast(1));
         if (rasterSnapshot == null) {
             throw new IllegalStateException();
         }

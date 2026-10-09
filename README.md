@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,066 bindings,
+identities. Both 303-file Java corpora compile and compare 137,772 bindings,
 preserving 388 override relationships.
 
-## Current shared continuations (pass 246)
+## Current reference casts (pass 247)
+
+294 redundant `(Object)` bridges are removed from 66 files while retaining the
+original target casts. Independently compiled old/new raw and readable trees
+produce byte-identical class files: 304 classes and 2,513 methods. All naming
+objects and dictionary identities are preserved; all 303 files reproduce and
+reverse byte exactly. Five large frames and 41 unresolved finer field purposes
+remain. See the reading guide and current reproduction procedure for coverage
+and the compiler-source SHA-256.
+
+## Previous shared continuations (pass 246)
 
 Eight methods now use a captured decision and one shared continuation body,
 removing 350 duplicate tokens while preserving the original predicate order and

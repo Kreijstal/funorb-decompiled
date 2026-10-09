@@ -11,7 +11,7 @@ final class WeightedObjectCache {
     private int weightCapacity;
 
     private final void removeByKey(long key, int methodGuard) {
-        CacheReference entry = (CacheReference) ((Object) this.entriesByKey.findByKey(key, (byte) -72));
+        CacheReference entry = (CacheReference) (this.entriesByKey.findByKey(key, (byte) -72));
         this.removeEntry(methodGuard - 117, entry);
         if (methodGuard == 0) {
             return;
@@ -30,7 +30,7 @@ final class WeightedObjectCache {
             this.removeByKey(key, 0);
             this.remainingWeightCapacity = this.remainingWeightCapacity - entryWeight;
             while (0 > this.remainingWeightCapacity) {
-                entryToEvict = (CacheReference) ((Object) this.recencyQueue.removeFirst((byte) -41));
+                entryToEvict = (CacheReference) (this.recencyQueue.removeFirst((byte) -41));
                 this.removeEntry(114, entryToEvict);
             }
             strongEntry = new StrongCacheReference(value, entryWeight);
@@ -46,7 +46,7 @@ final class WeightedObjectCache {
     }
 
     final Object getByKey(byte methodGuard, long key) {
-        CacheReference cachedReference = (CacheReference) ((Object) this.entriesByKey.findByKey(key, (byte) 61));
+        CacheReference cachedReference = (CacheReference) (this.entriesByKey.findByKey(key, (byte) 61));
         if (cachedReference == null) {
             return null;
         }

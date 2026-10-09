@@ -47,10 +47,10 @@ final class TextTemplateDefinitionLoader {
         RuntimeException sendFailureForContext = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          crcAcknowledgement = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(methodGuard ^ methodGuard));
+          crcAcknowledgement = (CrcAcknowledgedPacket) (DirectByteStorage.pendingCrcAcknowledgements.firstForIteration(methodGuard ^ methodGuard));
           while (crcAcknowledgement != null) {
             DiskArchiveRequest.writeCrcAcknowledgementPacket(opcode, crcAcknowledgement, methodGuard - 21718);
-            crcAcknowledgement = (CrcAcknowledgedPacket) ((Object) DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
+            crcAcknowledgement = (CrcAcknowledgedPacket) (DirectByteStorage.pendingCrcAcknowledgements.nextForIteration(1));
           }
           fifoAcknowledgement = PrefixCodeDecoder.pendingFifoAcknowledgements.firstForIteration(0);
           while (fifoAcknowledgement != null) {

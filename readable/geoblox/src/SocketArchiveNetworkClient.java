@@ -75,16 +75,16 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
             }
             try {
               this.socket.checkWriteFailure(-108);
-              requestToSend = (NetworkArchiveRequest) ((Object) this.pendingPriorityRequests.firstForIteration((byte) 121));
+              requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.firstForIteration((byte) 121));
               while (requestToSend != null) {
                 this.outboundPacketBuffer.position = 0;
                 this.outboundPacketBuffer.writeByte((byte) -54, 1);
                 this.outboundPacketBuffer.writeLong40BE((byte) -127, requestToSend.secondaryKey);
                 this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
                 this.sentPriorityRequests.addLast(-93, requestToSend);
-                requestToSend = (NetworkArchiveRequest) ((Object) this.pendingPriorityRequests.nextForIteration(methodGuard ^ 41));
+                requestToSend = (NetworkArchiveRequest) (this.pendingPriorityRequests.nextForIteration(methodGuard ^ 41));
               }
-              nextRequestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.firstForIteration((byte) 121));
+              nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.firstForIteration((byte) 121));
               if (methodGuard != 95) {
                 this.resetAfterValidationFailure(-90);
               }
@@ -94,7 +94,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 this.outboundPacketBuffer.writeLong40BE((byte) -127, nextRequestToSend.secondaryKey);
                 this.socket.enqueueWrite(100, 0, this.outboundPacketBuffer.bytes.length, this.outboundPacketBuffer.bytes);
                 this.sentBackgroundRequests.addLast(112, nextRequestToSend);
-                nextRequestToSend = (NetworkArchiveRequest) ((Object) this.pendingBackgroundRequests.nextForIteration(54));
+                nextRequestToSend = (NetworkArchiveRequest) (this.pendingBackgroundRequests.nextForIteration(54));
               }
               for (receiveIteration = 0; receiveIteration < 100; receiveIteration++) {
                 availableBytes = this.socket.available((byte) 82);
@@ -169,25 +169,25 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                         responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
                         unusedResponseMatchSnapshot = null;
                         if (backgroundResponseFlag != 0) {
-                          matchedRequest = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.firstForIteration((byte) 121));
+                          matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.firstForIteration((byte) 121));
                           while (matchedRequest != null) {
                             if (responseKey == matchedRequest.secondaryKey) {
                               archiveResponseRequestLookupRemainderEnabled = false;
                               break;
                             }
-                            matchedRequest = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.nextForIteration(-30));
+                            matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
                           }
                           if (archiveResponseRequestLookupRemainderEnabled) {
                             break archiveResponseRequestLookup;
                           }
                         }
                         if (archiveResponseRequestLookupRemainderEnabled) {
-                          matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.firstForIteration((byte) 121));
+                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
                           while (matchedRequest != null) {
                             if (~responseKey == ~matchedRequest.secondaryKey) {
                               break;
                             }
-                            matchedRequest = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.nextForIteration(72));
+                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                           }
                         }
                       }
@@ -349,7 +349,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
               this.responseHeaderBuffer.position = 0;
               this.currentResponseRequest = null;
               while (true) {
-                requestToRequeue = (NetworkArchiveRequest) ((Object) this.sentPriorityRequests.removeFirst(true));
+                requestToRequeue = (NetworkArchiveRequest) (this.sentPriorityRequests.removeFirst(true));
                 if (requestToRequeue != null) {
                   this.pendingPriorityRequests.addLast(-74, requestToRequeue);
                   continue;
@@ -360,7 +360,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                 errorReportGameCrc = 110;
               }
               while (true) {
-                nextRequestToRequeue = (NetworkArchiveRequest) ((Object) this.sentBackgroundRequests.removeFirst(true));
+                nextRequestToRequeue = (NetworkArchiveRequest) (this.sentBackgroundRequests.removeFirst(true));
                 if (nextRequestToRequeue != null) {
                   this.pendingBackgroundRequests.addLast(116, nextRequestToRequeue);
                   continue;

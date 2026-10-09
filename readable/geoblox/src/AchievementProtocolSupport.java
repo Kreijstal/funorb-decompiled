@@ -13,10 +13,10 @@ final class AchievementProtocolSupport {
         RuntimeException retryFailure = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
+          unacknowledgedSubmission = (AchievementSubmission) (ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
           while (unacknowledgedSubmission != null) {
             MultiHandleSliderWidget.writeAchievementSubmissionPacket(packetOpcode, unacknowledgedSubmission, 30175);
-            unacknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
+            unacknowledgedSubmission = (AchievementSubmission) (ResourceArchive.unacknowledgedAchievementSubmissions.nextForIteration(1));
           }
           pendingQuery = NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0);
           if (methodGuard > -123) {
@@ -58,7 +58,7 @@ final class AchievementProtocolSupport {
           if (lookupName == null) {
             lookupName = displayName;
           }
-          candidateEntry = (SocialListEntry) ((Object) ScorePopupSupport.secondarySocialEntriesByNameHash.findFirst((long)lookupName.hashCode(), -1));
+          candidateEntry = (SocialListEntry) (ScorePopupSupport.secondarySocialEntriesByNameHash.findFirst((long)lookupName.hashCode(), -1));
           if (methodGuard != 0) {
             unusedNullNameSnapshot = (String) null;
             AchievementProtocolSupport.findSecondarySocialEntry(55, (String) null);
@@ -73,7 +73,7 @@ final class AchievementProtocolSupport {
               matchedEntryResult = candidateEntry;
               return matchedEntryResult;
             }
-            candidateEntry = (SocialListEntry) ((Object) ScorePopupSupport.secondarySocialEntriesByNameHash.findNext(methodGuard ^ -29925));
+            candidateEntry = (SocialListEntry) (ScorePopupSupport.secondarySocialEntriesByNameHash.findNext(methodGuard ^ -29925));
           }
           return null;
         } catch (java.lang.RuntimeException lookupFailure) {
@@ -132,7 +132,7 @@ final class AchievementProtocolSupport {
             for (responseValueIndex = 0; responseValueIndex < responseValueCount; responseValueIndex++) {
               mutableResultValues[responseValueIndex] = ((ByteArrayBuffer) ((Object) packetForValueReads)).readIntBE((byte) -97);
             }
-            queryReceivingValues = (AchievementQuery) ((Object) NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
+            queryReceivingValues = (AchievementQuery) (NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
             if (queryReceivingValues == null) {
               Bzip2DecoderState.closeSessionSocket((byte) -117);
               return;
@@ -143,7 +143,7 @@ final class AchievementProtocolSupport {
             queryReceivingValues.unlinkNode(false);
           } else {
             if (responseType == 1) {
-              acknowledgedSubmission = (AchievementSubmission) ((Object) ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
+              acknowledgedSubmission = (AchievementSubmission) (ResourceArchive.unacknowledgedAchievementSubmissions.firstForIteration(0));
               if (acknowledgedSubmission == null) {
                 Bzip2DecoderState.closeSessionSocket((byte) -120);
                 return;
@@ -151,7 +151,7 @@ final class AchievementProtocolSupport {
               acknowledgedSubmission.unlinkNode(false);
             } else {
               if (responseType == 2) {
-                queryReceivingZeroValues = (AchievementQuery) ((Object) NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
+                queryReceivingZeroValues = (AchievementQuery) (NodeHashTableIterator.pendingAchievementQueries.firstForIteration(0));
                 if (queryReceivingZeroValues == null) {
                   Bzip2DecoderState.closeSessionSocket((byte) -115);
                   return;

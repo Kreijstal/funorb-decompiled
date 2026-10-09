@@ -28,7 +28,7 @@ class ButtonWidget extends UiWidget {
               if (!(this.listener instanceof ButtonPointerListener)) {
                 return true;
               }
-              ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerPressed(parentY, -30896, parentX, pointerX, this, pointerButton, pointerY);
+              ((ButtonPointerListener) (this.listener)).onButtonPointerPressed(parentY, -30896, parentX, pointerX, this, pointerButton, pointerY);
             }
             return true;
           }
@@ -57,7 +57,7 @@ class ButtonWidget extends UiWidget {
                 }
                 return;
             }
-            ((ButtonActivationListener) ((Object) this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, this);
+            ((ButtonActivationListener) (this.listener)).onButtonActivated(buttonX, (byte) -20, buttonY, pointerButton, this);
         }
         if (methodGuard == -28922) {
             return;
@@ -152,7 +152,7 @@ class ButtonWidget extends UiWidget {
             if (!(this.listener instanceof KeyboardFocusListener)) {
                 return;
             }
-            ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
+            ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             return;
         }
         if (!this.focused) {
@@ -165,7 +165,7 @@ class ButtonWidget extends UiWidget {
         if (!(this.listener instanceof KeyboardFocusListener)) {
             return;
         }
-        ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
+        ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
     }
 
     final static void requestJustPlay(int methodGuard) {
@@ -189,7 +189,7 @@ class ButtonWidget extends UiWidget {
             this.focused = true;
             if (null != this.listener &&
                 this.listener instanceof KeyboardFocusListener) {
-              ((KeyboardFocusListener) ((Object) this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
+              ((KeyboardFocusListener) (this.listener)).onKeyboardFocusChanged(3520, (UiWidget) (this), this.focused);
             }
             if (methodGuard <= -30) {
               return true;
@@ -260,7 +260,7 @@ class ButtonWidget extends UiWidget {
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
         if (null != this.listener && this.listener instanceof ButtonPointerListener) {
-            ((ButtonPointerListener) ((Object) this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
+            ((ButtonPointerListener) (this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
         }
         if (!releaseGuard) {
             return;

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ac3504fe54c19da72263e9da4adf248716a6d92a/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e881f8dee0d750dcdfdad0c1be3a9688a6ae00f3/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 246)
+## Current readability (pass 247)
 
 The export has 20,133 guarded names and 121,837 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Unmapped members and large labeled bodies remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,066 bindings, reproduce and
+compile and compare 137,772 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,20 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current continuation cleanup (pass 246)
+## Current cast cleanup (pass 247)
+
+294 intermediate `(Object)` casts disappear from 66 files. Narrowing target
+casts remain, making entity/deque/widget code easier to follow without changing
+any source operation. All naming objects are unchanged. The independent source
+certificate compiles both raw and both readable trees: all 304 class files in
+each pair are byte-identical. The generated export matches the independently
+reconstructed readable tree and reverses exactly.
+
+The five large framed methods and their line counts below remain unchanged.
+A protected terminal-corridor prototype found no additional current candidates;
+exception-region and shared-join recovery remains further work.
+
+## Previous continuation cleanup (pass 246)
 
 `advanceEndingSequence` caches whether the ending continuation should run.
 The prefix remains guarded by the original entry decision, so changes to

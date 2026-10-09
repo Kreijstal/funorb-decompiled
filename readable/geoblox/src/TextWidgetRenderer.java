@@ -173,7 +173,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               if (!(widget.textLayout instanceof CachedTextLayout)) {
                 return;
               }
-              ((CachedTextLayout) ((Object) widget.textLayout)).layoutCenteredLine(this.getDisplayText(122, widget), baselineOffset, availableWidth >> 1, (byte) 58, this.font);
+              ((CachedTextLayout) (widget.textLayout)).layoutCenteredLine(this.getDisplayText(122, widget), baselineOffset, availableWidth >> 1, (byte) 58, this.font);
               return;
             }
             if (horizontalAlignmentMode != 2) {
@@ -182,11 +182,11 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             if (!(widget.textLayout instanceof CachedTextLayout)) {
               return;
             }
-            ((CachedTextLayout) ((Object) widget.textLayout)).layoutRightAlignedLine(availableWidth, baselineOffset, (byte) -21, this.font, this.getDisplayText(125, widget));
+            ((CachedTextLayout) (widget.textLayout)).layoutRightAlignedLine(availableWidth, baselineOffset, (byte) -21, this.font, this.getDisplayText(125, widget));
             return;
           }
           if (widget.textLayout instanceof CachedTextLayout) {
-            ((CachedTextLayout) ((Object) widget.textLayout)).layoutLeftAlignedLine(baselineOffset, 0, this.getDisplayText(methodGuard ^ 18, widget), -91, this.font);
+            ((CachedTextLayout) (widget.textLayout)).layoutLeftAlignedLine(baselineOffset, 0, this.getDisplayText(methodGuard ^ 18, widget), -91, this.font);
             return;
           }
           return;
@@ -217,7 +217,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
             widget.textLayout = (TextLayout) ((Object) new CachedTextLayout());
           }
           if (this.multiline) {
-            ((CachedTextLayout) ((Object) widget.textLayout)).layoutParagraph(this.verticalAlignment, 1, this.getDisplayText(116, widget), this.lineSpacing, this.font, this.getAvailableTextWidth(widget, -1), this.horizontalAlignment, this.getAvailableTextHeight(289769985, widget));
+            ((CachedTextLayout) (widget.textLayout)).layoutParagraph(this.verticalAlignment, 1, this.getDisplayText(116, widget), this.lineSpacing, this.font, this.getAvailableTextWidth(widget, -1), this.horizontalAlignment, this.getAvailableTextHeight(289769985, widget));
           } else {
             this.updateSingleLineLayout((byte) 109, widget);
           }

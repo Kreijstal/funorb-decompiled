@@ -18,15 +18,15 @@ final class MatchScoringSupport {
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
           guardResidue = 57 % ((methodGuard - 57) / 46);
-          pendingScoreSubmission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
+          pendingScoreSubmission = (ScoreSubmission) (TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
           while (pendingScoreSubmission != null) {
             ArchiveIndex.writeScoreSubmission(pendingScoreSubmission, packetOpcode, -127);
-            pendingScoreSubmission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
+            pendingScoreSubmission = (ScoreSubmission) (TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
           }
-          pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
+          pendingHighscoreQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
           while (pendingHighscoreQuery != null) {
             DebouncedValidationProvider.writeHighscoreRequest(packetOpcode, 5, pendingHighscoreQuery);
-            pendingHighscoreQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
+            pendingHighscoreQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException resendFailure) {
@@ -154,7 +154,7 @@ final class MatchScoringSupport {
     }
 
     final static void handleByteShortReply(int methodGuard) {
-        ByteShortQuery pendingByteShortQuery = (ByteShortQuery) ((Object) UiWidget.pendingByteShortQueries.firstForIteration(methodGuard ^ methodGuard));
+        ByteShortQuery pendingByteShortQuery = (ByteShortQuery) (UiWidget.pendingByteShortQueries.firstForIteration(methodGuard ^ methodGuard));
         if (pendingByteShortQuery == null) {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;

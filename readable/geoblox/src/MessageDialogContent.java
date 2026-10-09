@@ -151,10 +151,10 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           if (methodGuard != 484842465) {
             MessageDialogContent.drawTransientEntities(15);
           }
-          transientEntityToDraw = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.firstForIteration(0));
+          transientEntityToDraw = (GameplayEntity) (DelegatingCanvas.transientEntities.firstForIteration(0));
           while (transientEntityToDraw != null) {
             transientEntityToDraw.drawRotatedEntityOnCurrentRaster(1915952803);
-            transientEntityToDraw = (GameplayEntity) ((Object) DelegatingCanvas.transientEntities.nextForIteration(1));
+            transientEntityToDraw = (GameplayEntity) (DelegatingCanvas.transientEntities.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException transientDrawFailure) {

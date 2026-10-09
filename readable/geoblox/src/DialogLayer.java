@@ -10,10 +10,10 @@ final class DialogLayer extends SingleChildWidget {
     final void hideAllDialogs(int methodGuard) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
-        FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
+        FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
             dialog.dialogVisible = false;
-            dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 125));
+            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 125));
         }
         if (methodGuard != 10936) {
             return;
@@ -27,7 +27,7 @@ final class DialogLayer extends SingleChildWidget {
             if (!(widget instanceof FadingDialog)) {
                 throw new IllegalArgumentException();
             }
-            dialog = (FadingDialog) ((Object) widget);
+            dialog = (FadingDialog) (widget);
             this.dialogs.addFirst(dialog, dequeGuard);
             dialog.dialogVisible = true;
             dialog.requestKeyboardFocus((byte) -37, (UiWidget) (this));
@@ -43,10 +43,10 @@ final class DialogLayer extends SingleChildWidget {
         }
         int guardResidue = 75 / ((1 - methodGuard) / 43);
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
-        UiWidget dialogWidget = (UiWidget) ((Object) dialogCursor.beginReverse(1));
+        UiWidget dialogWidget = (UiWidget) (dialogCursor.beginReverse(1));
         while (dialogWidget != null) {
             dialogWidget.renderWidget(parentX + this.widgetX, parentY + this.widgetY, (byte) -106, renderPass);
-            dialogWidget = (UiWidget) ((Object) dialogCursor.nextReverse(26));
+            dialogWidget = (UiWidget) (dialogCursor.nextReverse(26));
         }
     }
 
@@ -71,12 +71,12 @@ final class DialogLayer extends SingleChildWidget {
         if (methodGuard != 0) {
             return;
         }
-        FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
+        FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
             if (dialog.settleDialogAnimation(229)) {
                 dialog.unlinkNode(false);
             }
-            dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 112));
+            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 112));
         }
     }
 
@@ -88,12 +88,12 @@ final class DialogLayer extends SingleChildWidget {
     final UiWidget findFocusTarget(int methodGuard) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
-        FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
+        FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
             if (dialog.dialogVisible) {
                 return dialog.findFocusTarget((byte) -79);
             }
-            dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 119));
+            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 119));
         }
         if (methodGuard == -4863) {
             return null;
@@ -105,12 +105,12 @@ final class DialogLayer extends SingleChildWidget {
     final void advanceDialogAnimations(int methodGuard) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
-        FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
+        FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
             if (dialog.advanceDialogAnimation(-1)) {
                 dialog.unlinkNode(false);
             }
-            dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 115));
+            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 115));
         }
         this.child = (UiWidget) ((Object) this.getTopVisibleDialog(100));
         if (methodGuard >= -14) {
@@ -129,12 +129,12 @@ final class DialogLayer extends SingleChildWidget {
     final FadingDialog getTopVisibleDialog(int methodGuard) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         DequeCursor dialogCursor = new DequeCursor(this.dialogs);
-        FadingDialog dialog = (FadingDialog) ((Object) dialogCursor.beginForward((byte) 88));
+        FadingDialog dialog = (FadingDialog) (dialogCursor.beginForward((byte) 88));
         while (dialog != null) {
             if (dialog.dialogVisible) {
                 return dialog;
             }
-            dialog = (FadingDialog) ((Object) dialogCursor.nextForward((byte) 111));
+            dialog = (FadingDialog) (dialogCursor.nextForward((byte) 111));
         }
         if (methodGuard >= 57) {
             return null;

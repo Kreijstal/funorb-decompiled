@@ -65,7 +65,7 @@ abstract class SocketConnector {
             nullEntryAfterInvalidName = null;
             return (SocialListEntry) (nullEntryAfterInvalidName);
           }
-          candidateEntry = (SocialListEntry) ((Object) ArchiveSource.primarySocialEntriesByNameHash.findFirst((long)lookupName.hashCode(), -1));
+          candidateEntry = (SocialListEntry) (ArchiveSource.primarySocialEntriesByNameHash.findFirst((long)lookupName.hashCode(), -1));
           while (candidateEntry != null) {
             candidateNameCharacters = (CharSequence) ((Object) candidateEntry.displayName);
             candidateName = ResizableDialog.normalizeSessionName(candidateNameCharacters, 12);
@@ -73,7 +73,7 @@ abstract class SocketConnector {
               matchedEntryBeforeReturn = candidateEntry;
               return matchedEntryBeforeReturn;
             }
-            candidateEntry = (SocialListEntry) ((Object) ArchiveSource.primarySocialEntriesByNameHash.findNext(-29925));
+            candidateEntry = (SocialListEntry) (ArchiveSource.primarySocialEntriesByNameHash.findNext(-29925));
           }
           return null;
         } catch (java.lang.RuntimeException lookupFailure) {

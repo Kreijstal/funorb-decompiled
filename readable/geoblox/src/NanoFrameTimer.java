@@ -60,10 +60,10 @@ final class NanoFrameTimer extends FrameTimer {
           responseKind = packet.readUnsignedByte((byte) 34);
           if (responseKind == 0) {
             rankingQueryId = packet.readUnsignedShortBE(true);
-            query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
+            query = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.firstForIteration(0));
             while (query != null) {
               if (query.queryId != rankingQueryId) {
-                query = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
+                query = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
                 continue;
               }
               break;
@@ -157,10 +157,10 @@ final class NanoFrameTimer extends FrameTimer {
           if (1 == responseKind) {
             acknowledgedSubmissionId = packet.readUnsignedShortBE(true);
             packet.readLongBE(methodGuard + 27740);
-            submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
+            submission = (ScoreSubmission) (TriangleMesh.pendingScoreSubmissions.firstForIteration(0));
             while (submission != null) {
               if (acknowledgedSubmissionId != submission.submissionId) {
-                submission = (ScoreSubmission) ((Object) TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
+                submission = (ScoreSubmission) (TriangleMesh.pendingScoreSubmissions.nextForIteration(1));
                 continue;
               }
               break;

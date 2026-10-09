@@ -125,10 +125,10 @@ final class SecondaryDeque {
         RuntimeException caughtQueryWriteFailure = null;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          pendingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
+          pendingQuery = (RankedListQuery) (PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
           while (pendingQuery != null) {
             EntityLinkSupport.writeRankedListQuery(pendingQuery, packetOpcode, (byte) 107);
-            pendingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
+            pendingQuery = (RankedListQuery) (PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
           }
           if (methodGuard) {
             return;

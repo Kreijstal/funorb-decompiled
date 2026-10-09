@@ -16,12 +16,12 @@ final class DialWidget extends ButtonWidget {
 
     final static HighscoreQuery getOrRequestHighscores(int queryId, int valuesPerEntry, int methodGuard, int entryLimit, int packetOpcode) {
         int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
-        HighscoreQuery existingOrCreatedQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
+        HighscoreQuery existingOrCreatedQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.firstForIteration(methodGuard ^ methodGuard));
         while (existingOrCreatedQuery != null) {
             if (~existingOrCreatedQuery.queryId == ~queryId) {
                 return existingOrCreatedQuery;
             }
-            existingOrCreatedQuery = (HighscoreQuery) ((Object) ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
+            existingOrCreatedQuery = (HighscoreQuery) (ResourceArchive.pendingHighscoreQueries.nextForIteration(1));
         }
         existingOrCreatedQuery = new HighscoreQuery();
         existingOrCreatedQuery.entryLimit = entryLimit;

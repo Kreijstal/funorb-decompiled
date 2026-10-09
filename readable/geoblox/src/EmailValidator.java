@@ -180,7 +180,7 @@ final class EmailValidator extends TextInputValidator {
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           SocialListEntry.soundEffectVolume = volume;
-          trackedStream = (TrackedPcmStream) ((Object) PrefixCodeDecoder.trackedSoundEffectStreams.firstForIteration(0));
+          trackedStream = (TrackedPcmStream) (PrefixCodeDecoder.trackedSoundEffectStreams.firstForIteration(0));
           if (methodGuard != -67) {
             return;
           }
@@ -190,7 +190,7 @@ final class EmailValidator extends TextInputValidator {
             } else {
               trackedStream.stream.setVolume((int)((float)(SocialListEntry.soundEffectVolume * trackedStream.initialVolume / 80) * 1.399999976158142f));
             }
-            trackedStream = (TrackedPcmStream) ((Object) PrefixCodeDecoder.trackedSoundEffectStreams.nextForIteration(1));
+            trackedStream = (TrackedPcmStream) (PrefixCodeDecoder.trackedSoundEffectStreams.nextForIteration(1));
           }
           return;
         } catch (java.lang.RuntimeException volumeFailure) {

@@ -55,7 +55,7 @@ final class EntitySpawnSupport {
         if (methodGuard != -28195) {
           return;
         }
-        pooledEntity = (GameplayEntity) ((Object) SecondaryNodeDeque.availableEntities.removeLast(1));
+        pooledEntity = (GameplayEntity) (SecondaryNodeDeque.availableEntities.removeLast(1));
         if (pooledEntity == null) {
           return;
         }
