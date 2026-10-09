@@ -415,7 +415,7 @@ abstract class wh extends rc {
                 }
               }
               if (decompiledFrameCompleted0) {
-                if (!(var7 == 0)) {
+                if (var7 != 0) {
                   var4 = param2;
                 }
               }

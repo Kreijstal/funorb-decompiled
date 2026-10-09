@@ -73,7 +73,7 @@ final class v {
           var9 = new qc(param0);
           var3 = var9.c((byte) 34);
           var4 = var9.a((byte) -97);
-          if ((var4 >= 0) && (uj.field_b == 0 ||
+          if (var4 >= 0 && (uj.field_b == 0 ||
               !(var4 > uj.field_b))) {
             if (param1 == ~var3) {
               var12 = new byte[var4];
@@ -84,7 +84,7 @@ final class v {
               return stackIn_7_0;
             }
             var5 = var9.a((byte) -49);
-            if ((var5 >= 0) && (uj.field_b == 0 ||
+            if (var5 >= 0 && (uj.field_b == 0 ||
                 !(uj.field_b < var5))) {
               var13 = new byte[var5];
               var11 = var13;

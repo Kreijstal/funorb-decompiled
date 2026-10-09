@@ -413,7 +413,7 @@ final class rh {
             return true;
           }
           L4: {
-            if ((param2 != null) && (param2[0] != 0 ||
+            if (param2 != null && (param2[0] != 0 ||
                 param2[1] != 0 ||
                 param2[2] != 0 ||
                 0 != param2[3])) {
@@ -611,7 +611,7 @@ final class rh {
           }
           var5 = null;
           if ((this.field_e[param0] == null ||
-            null == this.field_e[param0][param3]) && (!this.a(param3, 4, param2, param0))) {
+            null == this.field_e[param0][param3]) && !this.a(param3, 4, param2, param0)) {
             this.a(param0, -118);
             if (!this.a(param3, 4, param2, param0)) {
               stackIn_12_0 = null;

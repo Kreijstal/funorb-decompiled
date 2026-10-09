@@ -121,7 +121,7 @@ final class gh {
           }
           dd.field_G.b(nk.field_g, var4, 468, 0, -1);
           dd.field_G.field_K[0][wf.field_p] = 16689938;
-          if (!(var7 == 0)) {
+          if (var7 != 0) {
             ma.a(440, 240, 36, (byte) -92, 160, eb.field_g);
             if (250 < qa.field_a &&
                 qa.field_a < 389 &&
@@ -292,9 +292,9 @@ final class gh {
         if (var2 == 0) {
           if (!this.field_F) {
             oc.field_d.e();
-            if (!(this.field_V)) {
+            if (!this.field_V) {
               gj.f((byte) -63);
-              if (!(var14 == 0)) {
+              if (var14 != 0) {
                 oc.field_d.e();
                 vb.c();
                 if (!this.field_V) {
@@ -348,7 +348,7 @@ final class gh {
           ma.a(var5, -(var7_int / 2) + 320, 20 + var8, (byte) -92, var7_int, ll.field_h);
           fi.field_d.b(v.field_n, 320, var5 + 28, 1, -1);
           fi.field_d.b(v.field_n, 319, 28 + var5, 1, -1);
-          if (!(var14 == 0)) {
+          if (var14 != 0) {
             lj.field_d.b(var3, var4);
             if (0 != this.field_bb ||
                 ih.a(0)) {
@@ -372,7 +372,7 @@ final class gh {
             g.field_i.b(468, 410);
           }
         }
-        if ((!this.field_Y) && (!ih.a(0) ||
+        if (!this.field_Y && (!ih.a(0) ||
             var2 != 0 &&
               (0 == this.field_bb ||
               this.field_bb == 1))) {
@@ -512,7 +512,7 @@ final class gh {
             lj.field_d.b(var3, var4);
             if (this.field_D < 266) {
               kh.field_h[6].b(0, (this.field_D >> 1) - 113);
-              if (!(var14 == 0)) {
+              if (var14 != 0) {
                 kh.field_h[6].b(0, 20);
                 kh.field_h[6].c(0, 20, (int)(Math.cos((double)(-266 + this.field_D) / 40.0) * -64.0 + 64.0));
               }
@@ -588,7 +588,7 @@ final class gh {
                 463 >= this.field_T) {
             if (this.field_y != 1 ||
                   this.field_T >= 640) {
-              if ((this.field_T == 463) && (gf.field_f == 0)) {
+              if (this.field_T == 463 && gf.field_f == 0) {
                 this.field_y = 1;
                 el.field_o.c(false);
                 if (var5 != 0) {
@@ -852,7 +852,7 @@ final class gh {
             if (this.field_Y) {
               this.b(109);
             }
-            if (!(var5 == 0)) {
+            if (var5 != 0) {
               if (this.field_D == 0) {
                 fi.a(param0 ^ -1578896191, pi.field_S);
               }
@@ -923,9 +923,9 @@ final class gh {
             this.field_C = false;
             if (this.field_p != 0) {
               if (this.field_p != 1) {
-                if (!(this.field_p != 2)) {
+                if (this.field_p == 2) {
                   this.field_U = dk.field_b;
-                  if (!(var5 == 0)) {
+                  if (var5 != 0) {
                     this.field_U = dd.field_D;
                     if (var5 != 0) {
                       this.field_U = 0;
@@ -1136,7 +1136,7 @@ final class gh {
         if (this.field_o > 9999999) {
           var7 = (CharSequence) ((Object) Integer.toString(9999999));
           td.a(var7, this.field_X, 0, 47);
-          if (!(var6 == 0)) {
+          if (var6 != 0) {
             var8 = (CharSequence) ((Object) Integer.toString(this.field_o));
             td.a(var8, this.field_X, 0, 69);
           }
@@ -1152,11 +1152,11 @@ final class gh {
         if (var4 != 0) {
           if (var4 == 1) {
             ml.field_r = ml.field_r - var3;
-            if (!(var6 == 0)) {
+            if (var6 != 0) {
               var5 = var3 / 3;
               oa.field_a = oa.field_a + var5;
               ml.field_r = ml.field_r - (var3 - var5);
-              if (!(var6 == 0)) {
+              if (var6 != 0) {
                 oa.field_a = oa.field_a + var3;
               }
             }
@@ -1164,7 +1164,7 @@ final class gh {
             var5 = var3 / 3;
             oa.field_a = oa.field_a + var5;
             ml.field_r = ml.field_r - (var3 - var5);
-            if (!(var6 == 0)) {
+            if (var6 != 0) {
               oa.field_a = oa.field_a + var3;
             }
           }
@@ -1247,7 +1247,7 @@ final class gh {
             }
             if (this.field_p != 1 ||
                   !(0 < dd.field_D - this.field_U)) {
-              if ((this.field_p == 2) && (!(dk.field_b - this.field_U <= 0))) {
+              if (this.field_p == 2 && !(dk.field_b - this.field_U <= 0)) {
                 this.field_t = 2;
                 if (var3 != 0) {
                   this.field_t = 2;
@@ -1435,7 +1435,7 @@ final class gh {
             if (this.field_R) {
               dd.field_G.b(ld.field_a, 320, 352, 0, -1);
             }
-            if (!(var4 == 0)) {
+            if (var4 != 0) {
               k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.field_S - 150 + 150);
               lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 - (lj.field_d.field_o >> 1));
               var6 = Integer.toString(this.field_q);
@@ -1589,7 +1589,7 @@ final class gh {
             }
             if (!(this.field_ab <= 320 - (lj.field_d.field_s >> 1))) {
               this.field_ab = this.field_ab - 1;
-              if (!(var11 == 0)) {
+              if (var11 != 0) {
                 this.field_H = true;
                 this.field_D = 0;
                 this.field_bb = 5;
@@ -1642,7 +1642,7 @@ final class gh {
         if (this.field_A > 99999) {
           var4 = (CharSequence) ((Object) Integer.toString(99999));
           td.a(var4, this.field_g, 0, 26);
-          if (!(Geoblox.field_C == 0)) {
+          if (Geoblox.field_C != 0) {
             var5 = (CharSequence) ((Object) Integer.toString(this.field_A));
             td.a(var5, this.field_g, 0, 73);
           }
@@ -1676,10 +1676,10 @@ final class gh {
             dd.field_G.field_K[0][wf.field_p] = mk.field_k[var2 % 5];
             dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
             dd.field_G.field_K[0][wf.field_p] = 16689938;
-            if (!(var3 == 0)) {
+            if (var3 != 0) {
               if (var2 <= 99999) {
                 dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                if (!(var3 == 0)) {
+                if (var3 != 0) {
                   dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
                 }
               } else {
@@ -1689,7 +1689,7 @@ final class gh {
           } else {
             if (var2 <= 99999) {
               dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
               }
             } else {
@@ -1723,11 +1723,11 @@ final class gh {
               }
             }
             ai.field_p = 6;
-            if (!(var3 == 0)) {
+            if (var3 != 0) {
               if (this.field_o > 0 ||
                     this.field_e > 0) {
                 ai.field_p = 4;
-                if (!(var3 == 0)) {
+                if (var3 != 0) {
                   ai.field_p = 0;
                 }
               } else {
@@ -1738,7 +1738,7 @@ final class gh {
             if (this.field_o > 0 ||
                   this.field_e > 0) {
               ai.field_p = 4;
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 ai.field_p = 0;
               }
             } else {

@@ -62,8 +62,8 @@ final class eg extends hf {
                     break L3;
                   }
                 }
-                if (var8 != 0 || !(var9 == 43 &&
-                      param3)) {
+                if (var8 != 0 || (var9 != 43 ||
+                      !param3)) {
                   if (48 <= var9 &&
                       var9 <= 57) {
                     var9 -= 48;

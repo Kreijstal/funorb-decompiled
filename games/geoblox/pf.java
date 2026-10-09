@@ -717,7 +717,7 @@ final class pf extends ee implements ga, pl {
           this.field_N = stackIn_7_1;
           stackIn_10_1 = !(!param4);
           this.field_I = stackIn_10_1;
-          if ((this.field_N) && (this.field_C ||
+          if (this.field_N && (this.field_C ||
               this.field_I)) {
             throw new IllegalStateException();
           }

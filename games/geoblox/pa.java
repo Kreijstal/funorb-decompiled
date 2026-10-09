@@ -110,8 +110,8 @@ final class pa {
                     break L3;
                   }
                 }
-                if (var8 != 0 || !(var9 == 43 &&
-                      param1)) {
+                if (var8 != 0 || (var9 != 43 ||
+                      !param1)) {
                   if (var9 >= 48 &&
                       var9 <= 57) {
                     var9 -= 48;

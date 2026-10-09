@@ -180,7 +180,7 @@ final class kj extends ia {
           var3_int = (param1.field_n * param1.field_s >> 12) + param1.field_E;
           var3_int = var3_int + ((-8192 + this.field_y[param1.field_t]) * this.field_v[param1.field_t] >> 12);
           var4 = param1.field_x;
-          if ((0 < var4.field_d) && (!(var4.field_b <= 0) ||
+          if (0 < var4.field_d && (!(var4.field_b <= 0) ||
               this.field_s[param1.field_t] > 0)) {
             var5 = var4.field_b << 2;
             var6 = var4.field_j << 1;
@@ -254,7 +254,7 @@ final class kj extends ia {
         double var9 = 0.0;
         try {
           param3.field_g = qk.field_j / 100;
-          if ((param3.field_y >= 0) && (null == param3.field_u ||
+          if (param3.field_y >= 0 && (null == param3.field_u ||
               param3.field_u.l())) {
             param3.b(-1);
             param3.a(param4);
@@ -307,9 +307,9 @@ final class kj extends ia {
               var8 = 1;
             }
           }
-          if ((param3.field_y >= 0 &&
+          if (param3.field_y >= 0 &&
             var7.field_e != null &&
-            (this.field_m[param3.field_t] & 1) == 0) && (!(0 <= param3.field_r) ||
+            (this.field_m[param3.field_t] & 1) == 0 && (!(0 <= param3.field_r) ||
               param3 != this.field_D[param3.field_t][param3.field_r])) {
             if (0 < var7.field_a) {
               param3.field_y = param3.field_y + (int)(0.5 + Math.pow(2.0, var9 * (double)var7.field_a) * 128.0);

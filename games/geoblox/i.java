@@ -147,7 +147,7 @@ final class i {
                 var16 = dj.field_N[var10] - var13;
                 var17 = -var13 + dj.field_N[var11];
               }
-              if (!(stackIn_11_0) || !(-(var16 * var15) + var14 * var17 >= 0)) {
+              if (!stackIn_11_0 || !(-(var16 * var15) + var14 * var17 >= 0)) {
                 var12 = bj.field_j[var9];
                 if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];
@@ -289,7 +289,7 @@ final class i {
                 var16 = dj.field_N[var10] - var13;
                 var17 = -var13 + dj.field_N[var11];
               }
-              if (!(stackIn_11_0) || !(-(var16 * var15) + var14 * var17 >= 0)) {
+              if (!stackIn_11_0 || !(-(var16 * var15) + var14 * var17 >= 0)) {
                 var12 = bj.field_j[var9];
                 if (-2147483648 != var12) {
                   var13 = bj.field_j[var10];

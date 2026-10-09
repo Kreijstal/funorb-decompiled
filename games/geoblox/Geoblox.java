@@ -270,7 +270,7 @@ public final class Geoblox extends wf {
                         ll.field_f.a("", (byte) -127)) {
                       if (ll.field_f.a(0) &&
                           ll.field_f.a("sun", (byte) -127)) {
-                        if ((da.a(0, -112)) && (!ll.field_f.a(0) ||
+                        if (da.a(0, -112) && (!ll.field_f.a(0) ||
                             !ll.field_f.a("halloween", (byte) -127))) {
                           lc.a(gf.a(s.field_F, ll.field_f, "halloween", uj.field_c, true), -2, 45.0f);
                           return false;

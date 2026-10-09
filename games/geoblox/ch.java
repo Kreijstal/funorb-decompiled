@@ -319,7 +319,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                             }
                             if (decompiledFrameCompleted0) {
                               var4 = var2.substring(6, var3);
-                              if ((f.b((byte) -115, (CharSequence) ((Object) var4))) && (!(ol.a(false, (CharSequence) ((Object) var4)) >= 10))) {
+                              if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
                                 this.a((byte) 79, "wrongjava");
                                 if (var5 == 0) {
                                   break L1;
@@ -477,27 +477,27 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             if (null == sg.field_a) {
               if (kg.field_m != null) {
                 var2 = kg.field_m;
-                if (!(var4 == 0)) {
+                if (var4 != 0) {
                   var2 = qa.field_d;
-                  if (!(var4 == 0)) {
+                  if (var4 != 0) {
                     var2 = sg.field_a;
-                    if (!(var4 == 0)) {
+                    if (var4 != 0) {
                       var2 = he.field_a;
                     }
                   }
                 }
               } else {
                 var2 = qa.field_d;
-                if (!(var4 == 0)) {
+                if (var4 != 0) {
                   var2 = sg.field_a;
-                  if (!(var4 == 0)) {
+                  if (var4 != 0) {
                     var2 = he.field_a;
                   }
                 }
               }
             } else {
               var2 = sg.field_a;
-              if (!(var4 == 0)) {
+              if (var4 != 0) {
                 var2 = he.field_a;
               }
             }
@@ -511,7 +511,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           f.field_kb.setVisible(param0);
           if (sg.field_a != var2) {
             f.field_kb.setLocation(qa.field_b, hk.field_B);
-            if (!(var4 == 0)) {
+            if (var4 != 0) {
               var3 = sg.field_a.getInsets();
               f.field_kb.setLocation(var3.left + qa.field_b, var3.top + hk.field_B);
             }
@@ -887,7 +887,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             if (sg.field_a == null ||
                 he.field_a != null) {
               f.field_kb.setLocation(qa.field_b, hk.field_B);
-              if (!(Geoblox.field_C == 0)) {
+              if (Geoblox.field_C != 0) {
                 var6 = sg.field_a.getInsets();
                 f.field_kb.setLocation(var6.left + qa.field_b, hk.field_B + var6.top);
               }

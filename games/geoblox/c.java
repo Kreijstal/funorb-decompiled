@@ -92,7 +92,7 @@ final class c extends ka {
                 !this.field_C) {
               if (this.field_K == 1) {
                 ai.field_p = -1;
-                if (!(var4 == 0)) {
+                if (var4 != 0) {
                   ai.field_p = oc.field_b;
                 }
               } else {
@@ -375,7 +375,7 @@ final class c extends ka {
             var5 = 120;
             if (this.field_K == 3) {
               var5 += 10;
-              if (!(var12 == 0)) {
+              if (var12 != 0) {
                 if (this.field_K == 8 ||
                     this.field_K == 7) {
                   var4 += 20;
@@ -516,7 +516,7 @@ final class c extends ka {
                   var8_ref_String = Integer.toString((1500 - this.field_y) / 150 + 1);
                   if ((1500 - this.field_y) / 150 <= 0) {
                     var6 = var6 + fi.field_d.a(wj.a(mj.field_c, new String[]{var8_ref_String}, (byte) -51), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
-                    if (!(var12 == 0)) {
+                    if (var12 != 0) {
                       var6 = var6 + fi.field_d.a(wj.a(jk.field_b, new String[]{var8_ref_String}, (byte) -45), 170, var6, 300, 300, 0, -1, 1, 0, 16) * 16;
                     }
                   } else {
@@ -946,18 +946,18 @@ final class c extends ka {
           }
           if (0 != da.field_c) {
             if (da.field_c != 2) {
-              if (!(da.field_c != 1)) {
+              if (da.field_c == 1) {
                 kh.field_h[3].b(0, 20);
-                if (!(var10 == 0)) {
+                if (var10 != 0) {
                   kh.field_h[2].b(0, 20);
-                  if (!(var10 == 0)) {
+                  if (var10 != 0) {
                     kh.field_h[1].b(0, 20);
                   }
                 }
               }
             } else {
               kh.field_h[2].b(0, 20);
-              if (!(var10 == 0)) {
+              if (var10 != 0) {
                 kh.field_h[1].b(0, 20);
               }
             }
@@ -1037,10 +1037,10 @@ final class c extends ka {
                 var6 = 76 + dd.field_G.field_o + 150;
                 dd.field_G.b(var5_ref, 322, var6, 0, -1);
               }
-              if (!(var10 == 0)) {
+              if (var10 != 0) {
                 if (!fh.c(-89)) {
                   var2 = g.field_l;
-                  if (!(var10 == 0)) {
+                  if (var10 != 0) {
                     var2 = sb.field_f;
                   }
                 } else {
@@ -1055,7 +1055,7 @@ final class c extends ka {
             } else {
               if (!fh.c(-89)) {
                 var2 = g.field_l;
-                if (!(var10 == 0)) {
+                if (var10 != 0) {
                   var2 = sb.field_f;
                 }
               } else {
@@ -1132,7 +1132,7 @@ final class c extends ka {
               this.field_Z = -(this.field_z >> 1) + 60;
               if (this.field_Z < 15) {
                 this.field_Z = 15;
-                if (!(var3 == 0)) {
+                if (var3 != 0) {
                   this.field_A = this.field_A + 0.1;
                 }
               } else {
@@ -1153,7 +1153,7 @@ final class c extends ka {
             }
             L11: {
               if (this.field_q != 3) {
-                if (!(4 != this.field_q)) {
+                if (4 == this.field_q) {
                   if (49 > (this.field_D & 255)) {
                     if ((15 & this.field_D) != 0) {
                       break L11;
@@ -1173,7 +1173,7 @@ final class c extends ka {
                   }
                   this.field_B = 0;
                   this.field_w = 0;
-                  if (!(var3 == 0)) {
+                  if (var3 != 0) {
                     var2_float = 0.019999999552965164f * (float)(this.field_D % 50);
                     this.field_N = ((int)(var2_float * (float)this.field_t) << 8) + (jg.field_h[field_ab][this.field_B] + ((int)(var2_float * (float)this.field_V) << 16) + (int)((float)this.field_M * var2_float));
                     if (this.field_D % 50 == 49) {
@@ -1202,9 +1202,9 @@ final class c extends ka {
           fieldTemp$1 = di.field_a;
           di.field_a = di.field_a - 1;
           if (0 > fieldTemp$1) {
-            if (!(bi.field_g == 0)) {
+            if (bi.field_g != 0) {
               di.field_a = 50;
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 bi.field_g = 0;
               }
             }
@@ -1280,13 +1280,13 @@ final class c extends ka {
                     }
                     this.field_C = false;
                     this.field_g = true;
-                    if (!(var3 == 0)) {
+                    if (var3 != 0) {
                       this.field_C = false;
                       em.b(255);
                       this.field_g = true;
-                      if (!(var3 == 0)) {
+                      if (var3 != 0) {
                         this.field_g = false;
-                        if (!(var3 == 0)) {
+                        if (var3 != 0) {
                           this.field_g = true;
                           this.field_C = false;
                         }
@@ -1296,9 +1296,9 @@ final class c extends ka {
                     this.field_C = false;
                     em.b(255);
                     this.field_g = true;
-                    if (!(var3 == 0)) {
+                    if (var3 != 0) {
                       this.field_g = false;
-                      if (!(var3 == 0)) {
+                      if (var3 != 0) {
                         this.field_g = true;
                         this.field_C = false;
                       }
@@ -1306,7 +1306,7 @@ final class c extends ka {
                   }
                 } else {
                   this.field_g = false;
-                  if (!(var3 == 0)) {
+                  if (var3 != 0) {
                     this.field_g = true;
                     this.field_C = false;
                   }
@@ -1623,15 +1623,15 @@ final class c extends ka {
               if (param1 > 0) {
                 if (param1 < sd.field_y.field_s) {
                   j.field_gb = 80 * param1 / sd.field_y.field_s;
-                  if (!(var9 == 0)) {
+                  if (var9 != 0) {
                     j.field_gb = 80;
-                    if (!(var9 == 0)) {
+                    if (var9 != 0) {
                       j.field_gb = 0;
                     }
                   }
                 } else {
                   j.field_gb = 80;
-                  if (!(var9 == 0)) {
+                  if (var9 != 0) {
                     j.field_gb = 0;
                   }
                 }
@@ -1734,9 +1734,9 @@ final class c extends ka {
               !this.field_H) {
             if (0 == this.field_F) {
               if (this.field_l) {
-                if (!(this.field_q != 4)) {
+                if (this.field_q == 4) {
                   this.field_b = 3;
-                  if (!(Geoblox.field_C == 0)) {
+                  if (Geoblox.field_C != 0) {
                     this.field_b = this.a(qa.field_a, ue.field_e, (byte) 54);
                   }
                 }
@@ -1771,7 +1771,7 @@ final class c extends ka {
             if (this.field_q != 4 &&
                 this.field_b == 3) {
               this.field_b = 2;
-              if (!(Geoblox.field_C == 0)) {
+              if (Geoblox.field_C != 0) {
                 if (this.field_q == 4) {
                   if (this.field_b == 2) {
                     this.field_b = 1;
@@ -1996,20 +1996,20 @@ final class c extends ka {
                   }
                   {
                     ai.field_p = -1;
-                    if ((this.field_K != 8) && (4 != this.field_K ||
+                    if (this.field_K != 8 && (4 != this.field_K ||
                         null == el.field_o ||
                         el.field_o.field_e != 0)) {
                       if (this.field_K != 7) {
                         el.field_i = 6;
-                        if (!(var7 == 0)) {
+                        if (var7 != 0) {
                           el.field_i = 5;
-                          if (!(var7 == 0)) {
+                          if (var7 != 0) {
                             el.field_i = 2;
                           }
                         }
                       } else {
                         el.field_i = 5;
-                        if (!(var7 == 0)) {
+                        if (var7 != 0) {
                           el.field_i = 2;
                         }
                       }
@@ -2053,11 +2053,11 @@ final class c extends ka {
                     if (el.field_o.field_o == 0 &&
                         ug.field_c == 0) {
                       ai.field_p = 0;
-                      if (!(var7 == 0)) {
+                      if (var7 != 0) {
                         el.field_o.e((byte) -70);
                         if (0 < el.field_o.field_e) {
                           ai.field_p = 6;
-                          if (!(var7 == 0)) {
+                          if (var7 != 0) {
                             ai.field_p = 2;
                           }
                         } else {
@@ -2068,7 +2068,7 @@ final class c extends ka {
                       el.field_o.e((byte) -70);
                       if (0 < el.field_o.field_e) {
                         ai.field_p = 6;
-                        if (!(var7 == 0)) {
+                        if (var7 != 0) {
                           ai.field_p = 2;
                         }
                       } else {
@@ -2210,7 +2210,7 @@ final class c extends ka {
             }
             if (oc.field_c >= 70) {
               wg.a(-15346, 80);
-              if (!(var4 == 0)) {
+              if (var4 != 0) {
                 wg.a(-15346, 10 + oc.field_c);
               }
             } else {
@@ -2269,7 +2269,7 @@ final class c extends ka {
           }
           var6 = t.field_i[this.field_K][param2];
           var7 = tl.field_f[var6];
-          if ((var6 == 15) && (var5_int != 4 ||
+          if (var6 == 15 && (var5_int != 4 ||
               oc.field_b == 1)) {
             return;
           }
@@ -2284,7 +2284,7 @@ final class c extends ka {
           if (this.field_K == 3 ||
                 this.field_K == 2) {
             param3 += 280;
-            if (!(var14 == 0)) {
+            if (var14 != 0) {
               if (this.field_K == 5 ||
                   this.field_K == 7 ||
                   this.field_K == 6 ||
@@ -2306,7 +2306,7 @@ final class c extends ka {
           if (0 == this.field_K ||
               this.field_K == 1) {
             var11 = 322;
-            if (!(var14 == 0)) {
+            if (var14 != 0) {
               var11 = var8.c(var7, 400);
             }
           } else {
@@ -2392,11 +2392,11 @@ final class c extends ka {
                 var9 = 9 + (320 + (15 + var11) * (var12 - 1));
                 param3 = 430;
                 var10 = var9 - (var11 >> 1);
-                if (!(15 != var6)) {
+                if (15 == var6) {
                   var10 -= 138;
                   var11 = 229;
                   var9 = (var11 >> 1) + var10;
-                  if (!(var14 == 0)) {
+                  if (var14 != 0) {
                     param3 = 380;
                     if (var6 == 5) {
                       var11 = 83;
@@ -2536,11 +2536,11 @@ final class c extends ka {
                   }
                 }
                 if (this.field_C) {
-                  if (!(this.field_o == 1)) {
-                    if (!(!fh.c(-122) &&
-                        og.field_n <= 0)) {
+                  if (this.field_o != 1) {
+                    if (fh.c(-122) ||
+                        !(og.field_n <= 0)) {
                       this.field_o = 1;
-                      if (!(var3 == 0)) {
+                      if (var3 != 0) {
                         this.field_b = this.field_b + 1;
                         this.field_l = true;
                         if (this.field_e <= this.field_b) {
@@ -2585,7 +2585,7 @@ final class c extends ka {
               }
               this.field_l = true;
               this.c((byte) -107);
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 if (0 <= this.field_b) {
                   this.a(this.field_b, -29);
                 }
@@ -2617,11 +2617,11 @@ final class c extends ka {
               4 != this.field_K) {
             if (this.field_K == 1) {
               ai.field_p = -1;
-              if (!(var3 == 0)) {
+              if (var3 != 0) {
                 if (this.field_K != 6 &&
                     this.field_K != 2) {
                   ai.field_p = oc.field_b;
-                  if (!(var3 == 0)) {
+                  if (var3 != 0) {
                     ai.field_p = 0;
                   }
                 } else {
@@ -2632,7 +2632,7 @@ final class c extends ka {
               if (this.field_K != 6 &&
                   this.field_K != 2) {
                 ai.field_p = oc.field_b;
-                if (!(var3 == 0)) {
+                if (var3 != 0) {
                   ai.field_p = 0;
                 }
               } else {
