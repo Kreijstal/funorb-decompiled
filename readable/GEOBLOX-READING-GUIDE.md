@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ee091b66068724723f6495de18caf6ddc32ac444/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 241)
+## Current readability (pass 242)
 
 The export has 20,125 guarded names and 121,882 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,25 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current renderer and avatar purposes (pass 241)
+## Current sprite sampling roles (pass 242)
+
+Sprite rotation names distinguish source steps toward left/down, left/up and
+right/up, Q12 positions, sample gates and padding/excess values that become skip
+counts. Nonnegative right/down branches retain their original zero-step handling.
+Trim scans name top rows and left/right columns. Half-size RGB samples identify
+three remaining quadrants; quarter-size samples expose background substitution.
+ArgbSprite names distinguish sample alpha, block sums, averaged alpha and
+modulated RGB. The unused alpha initialization remains explicit and executable.
+
+43 names change 305 bound occurrences. 175 numbered phase-family names and five
+large framed methods remain. The 41 unresolved field purposes comprise six
+public fields with no ordinary source references and 35 private slots referenced
+only by construction/merge. All have observational or merge-mechanism names;
+finer meanings are unsupported by the current source. The single manifest now
+records a javac-resolved inventory, verified by the Deko fixture. All 303 sources
+compile, reproduce and reverse exactly; source/compiler pins remain unchanged.
+
+## Previous renderer and avatar purposes (pass 241)
 
 SoftwareRasterizer names distinguish growing/full/shrinking blur outputs and
 column scans, lower versus middle circle/rounded spans, inclusive versus

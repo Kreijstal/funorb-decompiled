@@ -793,11 +793,11 @@ class Sprite extends SpriteState {
         int borderScanRow;
         int croppedHeight;
         int[] croppedPixels;
-        int rowOffsetThenTopEdgePhase2;
-        int scanThenRightEdgePhase2;
-        int scanThenRightEdgePhase3;
-        int scanThenLeftEdgePhase2;
-        int scanThenLeftEdgePhase3;
+        int topEdgeRow;
+        int topScanRowOffset;
+        int rightEdgeColumn;
+        int rightEdgeScanRow;
+        int leftEdgeColumn;
         int croppedWidth;
         bottomEdge = this.height - 1;
         bottomBorderScan: while (true) {
@@ -813,65 +813,65 @@ class Sprite extends SpriteState {
           }
           break;
         }
-        rowOffsetThenTopEdgePhase2 = 0;
+        topEdgeRow = 0;
         topBorderScan: while (true) {
-          if (rowOffsetThenTopEdgePhase2 < bottomEdge) {
-            scanThenRightEdgePhase2 = rowOffsetThenTopEdgePhase2 * this.width;
+          if (topEdgeRow < bottomEdge) {
+            topScanRowOffset = topEdgeRow * this.width;
             for (scanThenLeftEdge = 0; scanThenLeftEdge < this.width; scanThenLeftEdge++) {
-              if (this.pixels[scanThenRightEdgePhase2 + scanThenLeftEdge] != 0) {
+              if (this.pixels[topScanRowOffset + scanThenLeftEdge] != 0) {
                 break topBorderScan;
               }
             }
-            rowOffsetThenTopEdgePhase2++;
+            topEdgeRow++;
             continue;
           }
           break;
         }
-        scanThenRightEdgePhase3 = this.width - 1;
+        rightEdgeColumn = this.width - 1;
         rightBorderScan: while (true) {
-          if (scanThenRightEdgePhase3 >= 0) {
-            for (scanThenLeftEdgePhase2 = rowOffsetThenTopEdgePhase2; scanThenLeftEdgePhase2 <= bottomEdge; scanThenLeftEdgePhase2++) {
-              if (this.pixels[scanThenLeftEdgePhase2 * this.width + scanThenRightEdgePhase3] != 0) {
+          if (rightEdgeColumn >= 0) {
+            for (rightEdgeScanRow = topEdgeRow; rightEdgeScanRow <= bottomEdge; rightEdgeScanRow++) {
+              if (this.pixels[rightEdgeScanRow * this.width + rightEdgeColumn] != 0) {
                 break rightBorderScan;
               }
             }
-            scanThenRightEdgePhase3--;
+            rightEdgeColumn--;
             continue;
           }
           break;
         }
-        scanThenLeftEdgePhase3 = 0;
+        leftEdgeColumn = 0;
         leftBorderScan: while (true) {
-          if (scanThenLeftEdgePhase3 < scanThenRightEdgePhase3) {
-            for (borderScanRow = rowOffsetThenTopEdgePhase2; borderScanRow <= bottomEdge; borderScanRow++) {
-              if (this.pixels[borderScanRow * this.width + scanThenLeftEdgePhase3] != 0) {
+          if (leftEdgeColumn < rightEdgeColumn) {
+            for (borderScanRow = topEdgeRow; borderScanRow <= bottomEdge; borderScanRow++) {
+              if (this.pixels[borderScanRow * this.width + leftEdgeColumn] != 0) {
                 break leftBorderScan;
               }
             }
-            scanThenLeftEdgePhase3++;
+            leftEdgeColumn++;
             continue;
           }
           break;
         }
-        if (scanThenLeftEdgePhase3 == 0 &&
-            scanThenRightEdgePhase3 == this.width - 1 &&
-            rowOffsetThenTopEdgePhase2 == 0 &&
+        if (leftEdgeColumn == 0 &&
+            rightEdgeColumn == this.width - 1 &&
+            topEdgeRow == 0 &&
             bottomEdge == this.height - 1) {
           return;
         }
-        croppedWidth = scanThenRightEdgePhase3 + 1 - scanThenLeftEdgePhase3;
-        croppedHeight = bottomEdge + 1 - rowOffsetThenTopEdgePhase2;
+        croppedWidth = rightEdgeColumn + 1 - leftEdgeColumn;
+        croppedHeight = bottomEdge + 1 - topEdgeRow;
         croppedPixels = new int[croppedWidth * croppedHeight];
         for (copyRow = 0; copyRow < croppedHeight; copyRow++) {
           for (copyColumn = 0; copyColumn < croppedWidth; copyColumn++) {
-            croppedPixels[copyRow * croppedWidth + copyColumn] = this.pixels[(copyRow + rowOffsetThenTopEdgePhase2) * this.width + (copyColumn + scanThenLeftEdgePhase3)];
+            croppedPixels[copyRow * croppedWidth + copyColumn] = this.pixels[(copyRow + topEdgeRow) * this.width + (copyColumn + leftEdgeColumn)];
           }
         }
         this.pixels = croppedPixels;
         this.width = croppedWidth;
         this.height = croppedHeight;
-        this.trimX = this.trimX + scanThenLeftEdgePhase3;
-        this.trimY = this.trimY + rowOffsetThenTopEdgePhase2;
+        this.trimX = this.trimX + leftEdgeColumn;
+        this.trimY = this.trimY + topEdgeRow;
         return;
     }
 
@@ -1561,7 +1561,7 @@ class Sprite extends SpriteState {
         int sourcePixelOrDestination;
         int sumRedBlue;
         int sumGreen;
-        int sourcePixelOrDestinationNestedPhase2;
+        int sampleOrBackgroundPixel;
         reducedWidth = this.width >> 2;
         reducedHeight = this.height >> 2;
         x = x + this.trimX / 4;
@@ -1600,12 +1600,12 @@ class Sprite extends SpriteState {
             sumGreen = 0;
             for (sampleRow = 0; sampleRow < 4; sampleRow++) {
               for (sampleColumn = 0; sampleColumn < 4; sampleColumn++) {
-                sourcePixelOrDestinationNestedPhase2 = this.pixels[sourceIndex + sampleRow * this.width + sampleColumn];
-                if (sourcePixelOrDestinationNestedPhase2 == 0) {
-                  sourcePixelOrDestinationNestedPhase2 = SoftwareRasterizer.framebuffer[destinationIndex];
+                sampleOrBackgroundPixel = this.pixels[sourceIndex + sampleRow * this.width + sampleColumn];
+                if (sampleOrBackgroundPixel == 0) {
+                  sampleOrBackgroundPixel = SoftwareRasterizer.framebuffer[destinationIndex];
                 }
-                sumRedBlue = sumRedBlue + (sourcePixelOrDestinationNestedPhase2 & 16711935);
-                sumGreen = sumGreen + (sourcePixelOrDestinationNestedPhase2 & 65280);
+                sumRedBlue = sumRedBlue + (sampleOrBackgroundPixel & 16711935);
+                sumGreen = sumGreen + (sampleOrBackgroundPixel & 65280);
               }
             }
             SoftwareRasterizer.framebuffer[destinationIndex] = (sumRedBlue & 267390960 | sumGreen & 1044480) >> 4;
@@ -1629,9 +1629,9 @@ class Sprite extends SpriteState {
         int destinationGreen;
         int sumRedBlue;
         int sumGreen;
-        int samplePixelNestedPhase2;
-        int samplePixelNestedPhase3;
-        int samplePixelNestedPhase4;
+        int topRightSampleRgb;
+        int bottomLeftSampleRgb;
+        int bottomRightSampleRgb;
         row = 0;
         while (row < drawHeight) {
           column = 0;
@@ -1650,28 +1650,28 @@ class Sprite extends SpriteState {
               sumGreen = sumGreen + destinationGreen;
             }
             sampleTopRight = sourcePixels[sourceIndex + 1];
-            samplePixelNestedPhase2 = sampleTopRight;
+            topRightSampleRgb = sampleTopRight;
             if (sampleTopRight != 0) {
-              sumRedBlue = sumRedBlue + (samplePixelNestedPhase2 & 16711935);
-              sumGreen = sumGreen + (samplePixelNestedPhase2 & 65280);
+              sumRedBlue = sumRedBlue + (topRightSampleRgb & 16711935);
+              sumGreen = sumGreen + (topRightSampleRgb & 65280);
             } else {
               sumRedBlue = sumRedBlue + destinationRedBlue;
               sumGreen = sumGreen + destinationGreen;
             }
             sampleBottomLeft = sourcePixels[sourceIndex + sourceWidth];
-            samplePixelNestedPhase3 = sampleBottomLeft;
+            bottomLeftSampleRgb = sampleBottomLeft;
             if (sampleBottomLeft != 0) {
-              sumRedBlue = sumRedBlue + (samplePixelNestedPhase3 & 16711935);
-              sumGreen = sumGreen + (samplePixelNestedPhase3 & 65280);
+              sumRedBlue = sumRedBlue + (bottomLeftSampleRgb & 16711935);
+              sumGreen = sumGreen + (bottomLeftSampleRgb & 65280);
             } else {
               sumRedBlue = sumRedBlue + destinationRedBlue;
               sumGreen = sumGreen + destinationGreen;
             }
             sampleBottomRight = sourcePixels[sourceIndex + sourceWidth + 1];
-            samplePixelNestedPhase4 = sampleBottomRight;
+            bottomRightSampleRgb = sampleBottomRight;
             if (sampleBottomRight != 0) {
-              sumRedBlue = sumRedBlue + (samplePixelNestedPhase4 & 16711935);
-              sumGreen = sumGreen + (samplePixelNestedPhase4 & 65280);
+              sumRedBlue = sumRedBlue + (bottomRightSampleRgb & 16711935);
+              sumGreen = sumGreen + (bottomRightSampleRgb & 65280);
             } else {
               sumRedBlue = sumRedBlue + destinationRedBlue;
               sumGreen = sumGreen + destinationGreen;
@@ -1994,32 +1994,32 @@ class Sprite extends SpriteState {
         int sourceYQ12;
         int negativePixelCounter;
         int canSample;
-        int sourcePixelXPhase2;
-        int sourcePixelXPhase3;
-        int sourcePixelYPhase2;
-        int sourcePixelYPhase3;
-        int clipScratchPhase2;
-        int clipScratchPhase3;
-        int negativeRowCounterPhase2;
-        int negativeRowCounterPhase3;
-        int sourceXQ12Phase2;
-        int sourceXQ12Phase3;
-        int sourceYQ12Phase2;
-        int sourceYQ12Phase3;
-        int negativePixelCounterPhase2;
-        int negativePixelCounterPhase3;
-        int canSamplePhase2;
-        int canSamplePhase3;
-        int sourcePixelXNestedPhase2;
-        int sourcePixelYNestedPhase2;
-        int clipScratchNestedPhase2;
-        int negativeRowCounterNestedPhase2;
-        int sourceXQ12NestedPhase2;
-        int sourceYQ12NestedPhase2;
-        int negativePixelCounterNestedPhase2;
-        int canSampleNestedPhase2;
-        int clipScratchPhase2NestedPhase2;
-        int clipScratchPhase3NestedPhase2;
+        int leftDownPixelX;
+        int leftUpPixelX;
+        int leftDownPixelY;
+        int leftUpPixelY;
+        int leftDownRightExcessOrSkipCount;
+        int leftUpRightExcessOrSkipCount;
+        int leftDownNegativeRow;
+        int leftUpNegativeRow;
+        int leftDownSourceXQ12;
+        int leftUpSourceXQ12;
+        int leftDownSourceYQ12;
+        int leftUpSourceYQ12;
+        int leftDownNegativePixel;
+        int leftUpNegativePixel;
+        int leftDownSampleGate;
+        int leftUpSampleGate;
+        int rightUpPixelX;
+        int rightUpPixelY;
+        int rightUpLeftPaddingOrSkipCount;
+        int rightUpNegativeRow;
+        int rightUpSourceXQ12;
+        int rightUpSourceYQ12;
+        int rightUpNegativePixel;
+        int rightUpSampleGate;
+        int leftDownTopPaddingOrSkipCount;
+        int leftUpBottomExcessOrSkipCount;
         int topPaddingOffsetThenSkipPixels;
         int bottomExcessThenSkipPixels;
         if (scale == 0) {
@@ -2183,64 +2183,64 @@ class Sprite extends SpriteState {
             }
             return;
           }
-          negativeRowCounterNestedPhase2 = bottomThenNegativeHeight;
-          while (negativeRowCounterNestedPhase2 < 0) {
-            sourceXQ12NestedPhase2 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-            sourceYQ12NestedPhase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-            negativePixelCounterNestedPhase2 = rightThenNegativeWidth;
-            canSampleNestedPhase2 = 0;
-            clipScratchNestedPhase2 = sourceXQ12NestedPhase2 + 4096;
-            if (clipScratchNestedPhase2 < 0) {
+          rightUpNegativeRow = bottomThenNegativeHeight;
+          while (rightUpNegativeRow < 0) {
+            rightUpSourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+            rightUpSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+            rightUpNegativePixel = rightThenNegativeWidth;
+            rightUpSampleGate = 0;
+            rightUpLeftPaddingOrSkipCount = rightUpSourceXQ12 + 4096;
+            if (rightUpLeftPaddingOrSkipCount < 0) {
               if (inverseCosStep != 0) {
-                clipScratchNestedPhase2 = (inverseCosStep - 1 - clipScratchNestedPhase2) / inverseCosStep;
-                negativePixelCounterNestedPhase2 = negativePixelCounterNestedPhase2 + clipScratchNestedPhase2;
-                sourceXQ12NestedPhase2 = sourceXQ12NestedPhase2 + inverseCosStep * clipScratchNestedPhase2;
-                sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep * clipScratchNestedPhase2;
-                destinationIndex = destinationIndex + clipScratchNestedPhase2;
-                canSampleNestedPhase2 = 1;
+                rightUpLeftPaddingOrSkipCount = (inverseCosStep - 1 - rightUpLeftPaddingOrSkipCount) / inverseCosStep;
+                rightUpNegativePixel = rightUpNegativePixel + rightUpLeftPaddingOrSkipCount;
+                rightUpSourceXQ12 = rightUpSourceXQ12 + inverseCosStep * rightUpLeftPaddingOrSkipCount;
+                rightUpSourceYQ12 = rightUpSourceYQ12 + inverseSinStep * rightUpLeftPaddingOrSkipCount;
+                destinationIndex = destinationIndex + rightUpLeftPaddingOrSkipCount;
+                rightUpSampleGate = 1;
               } else {
-                destinationIndex = destinationIndex - negativePixelCounterNestedPhase2;
+                destinationIndex = destinationIndex - rightUpNegativePixel;
               }
             } else {
-              canSampleNestedPhase2 = 1;
+              rightUpSampleGate = 1;
             }
-            if (canSampleNestedPhase2 != 0) {
-              canSampleNestedPhase2 = 0;
-              bottomExcessThenSkipPixels = sourceYQ12NestedPhase2 - (this.height << 12);
+            if (rightUpSampleGate != 0) {
+              rightUpSampleGate = 0;
+              bottomExcessThenSkipPixels = rightUpSourceYQ12 - (this.height << 12);
               if (bottomExcessThenSkipPixels >= 0) {
                 if (inverseSinStep != 0) {
                   bottomExcessThenSkipPixels = (inverseSinStep - bottomExcessThenSkipPixels) / inverseSinStep;
-                  negativePixelCounterNestedPhase2 = negativePixelCounterNestedPhase2 + bottomExcessThenSkipPixels;
-                  sourceXQ12NestedPhase2 = sourceXQ12NestedPhase2 + inverseCosStep * bottomExcessThenSkipPixels;
-                  sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep * bottomExcessThenSkipPixels;
+                  rightUpNegativePixel = rightUpNegativePixel + bottomExcessThenSkipPixels;
+                  rightUpSourceXQ12 = rightUpSourceXQ12 + inverseCosStep * bottomExcessThenSkipPixels;
+                  rightUpSourceYQ12 = rightUpSourceYQ12 + inverseSinStep * bottomExcessThenSkipPixels;
                   destinationIndex = destinationIndex + bottomExcessThenSkipPixels;
-                  canSampleNestedPhase2 = 1;
+                  rightUpSampleGate = 1;
                 } else {
-                  destinationIndex = destinationIndex - negativePixelCounterNestedPhase2;
+                  destinationIndex = destinationIndex - rightUpNegativePixel;
                 }
               } else {
-                canSampleNestedPhase2 = 1;
+                rightUpSampleGate = 1;
               }
-              if (canSampleNestedPhase2 != 0) {
-                while (negativePixelCounterNestedPhase2 < 0) {
-                  if (sourceYQ12NestedPhase2 >= -4096) {
-                    sourcePixelXNestedPhase2 = sourceXQ12NestedPhase2 >> 12;
-                    if (sourceXQ12NestedPhase2 >> 12 < this.width) {
-                      sourcePixelYNestedPhase2 = sourceYQ12NestedPhase2 >> 12;
-                      this.sampleBilinear(destinationIndex, sourcePixelXNestedPhase2, sourcePixelYNestedPhase2, sourceXQ12NestedPhase2, sourceYQ12NestedPhase2);
-                      negativePixelCounterNestedPhase2++;
-                      sourceXQ12NestedPhase2 = sourceXQ12NestedPhase2 + inverseCosStep;
-                      sourceYQ12NestedPhase2 = sourceYQ12NestedPhase2 + inverseSinStep;
+              if (rightUpSampleGate != 0) {
+                while (rightUpNegativePixel < 0) {
+                  if (rightUpSourceYQ12 >= -4096) {
+                    rightUpPixelX = rightUpSourceXQ12 >> 12;
+                    if (rightUpSourceXQ12 >> 12 < this.width) {
+                      rightUpPixelY = rightUpSourceYQ12 >> 12;
+                      this.sampleBilinear(destinationIndex, rightUpPixelX, rightUpPixelY, rightUpSourceXQ12, rightUpSourceYQ12);
+                      rightUpNegativePixel++;
+                      rightUpSourceXQ12 = rightUpSourceXQ12 + inverseCosStep;
+                      rightUpSourceYQ12 = rightUpSourceYQ12 + inverseSinStep;
                       destinationIndex++;
                       continue;
                     }
                   }
                   break;
                 }
-                destinationIndex = destinationIndex - negativePixelCounterNestedPhase2;
+                destinationIndex = destinationIndex - rightUpNegativePixel;
               }
             }
-            negativeRowCounterNestedPhase2++;
+            rightUpNegativeRow++;
             rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
             rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
             destinationIndex = destinationIndex + rowSkip;
@@ -2248,127 +2248,127 @@ class Sprite extends SpriteState {
           return;
         }
         if (inverseSinStep >= 0) {
-          negativeRowCounterPhase2 = bottomThenNegativeHeight;
-          while (negativeRowCounterPhase2 < 0) {
-            sourceXQ12Phase2 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-            sourceYQ12Phase2 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-            negativePixelCounterPhase2 = rightThenNegativeWidth;
-            canSamplePhase2 = 0;
-            clipScratchPhase2 = sourceXQ12Phase2 - (this.width << 12);
-            if (clipScratchPhase2 >= 0) {
+          leftDownNegativeRow = bottomThenNegativeHeight;
+          while (leftDownNegativeRow < 0) {
+            leftDownSourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+            leftDownSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+            leftDownNegativePixel = rightThenNegativeWidth;
+            leftDownSampleGate = 0;
+            leftDownRightExcessOrSkipCount = leftDownSourceXQ12 - (this.width << 12);
+            if (leftDownRightExcessOrSkipCount >= 0) {
               if (inverseCosStep != 0) {
-                clipScratchPhase2 = (inverseCosStep - clipScratchPhase2) / inverseCosStep;
-                negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipScratchPhase2;
-                sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipScratchPhase2;
-                sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipScratchPhase2;
-                destinationIndex = destinationIndex + clipScratchPhase2;
-                canSamplePhase2 = 1;
+                leftDownRightExcessOrSkipCount = (inverseCosStep - leftDownRightExcessOrSkipCount) / inverseCosStep;
+                leftDownNegativePixel = leftDownNegativePixel + leftDownRightExcessOrSkipCount;
+                leftDownSourceXQ12 = leftDownSourceXQ12 + inverseCosStep * leftDownRightExcessOrSkipCount;
+                leftDownSourceYQ12 = leftDownSourceYQ12 + inverseSinStep * leftDownRightExcessOrSkipCount;
+                destinationIndex = destinationIndex + leftDownRightExcessOrSkipCount;
+                leftDownSampleGate = 1;
               } else {
-                destinationIndex = destinationIndex - negativePixelCounterPhase2;
+                destinationIndex = destinationIndex - leftDownNegativePixel;
               }
             } else {
-              canSamplePhase2 = 1;
+              leftDownSampleGate = 1;
             }
-            if (canSamplePhase2 != 0) {
-              canSamplePhase2 = 0;
-              clipScratchPhase2NestedPhase2 = sourceYQ12Phase2 + 4096;
-              if (clipScratchPhase2NestedPhase2 < 0) {
+            if (leftDownSampleGate != 0) {
+              leftDownSampleGate = 0;
+              leftDownTopPaddingOrSkipCount = leftDownSourceYQ12 + 4096;
+              if (leftDownTopPaddingOrSkipCount < 0) {
                 if (inverseSinStep != 0) {
-                  clipScratchPhase2NestedPhase2 = (inverseSinStep - 1 - clipScratchPhase2NestedPhase2) / inverseSinStep;
-                  negativePixelCounterPhase2 = negativePixelCounterPhase2 + clipScratchPhase2NestedPhase2;
-                  sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep * clipScratchPhase2NestedPhase2;
-                  sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep * clipScratchPhase2NestedPhase2;
-                  destinationIndex = destinationIndex + clipScratchPhase2NestedPhase2;
-                  canSamplePhase2 = 1;
+                  leftDownTopPaddingOrSkipCount = (inverseSinStep - 1 - leftDownTopPaddingOrSkipCount) / inverseSinStep;
+                  leftDownNegativePixel = leftDownNegativePixel + leftDownTopPaddingOrSkipCount;
+                  leftDownSourceXQ12 = leftDownSourceXQ12 + inverseCosStep * leftDownTopPaddingOrSkipCount;
+                  leftDownSourceYQ12 = leftDownSourceYQ12 + inverseSinStep * leftDownTopPaddingOrSkipCount;
+                  destinationIndex = destinationIndex + leftDownTopPaddingOrSkipCount;
+                  leftDownSampleGate = 1;
                 } else {
-                  destinationIndex = destinationIndex - negativePixelCounterPhase2;
+                  destinationIndex = destinationIndex - leftDownNegativePixel;
                 }
               } else {
-                canSamplePhase2 = 1;
+                leftDownSampleGate = 1;
               }
-              if (canSamplePhase2 != 0) {
-                while (negativePixelCounterPhase2 < 0) {
-                  if (sourceXQ12Phase2 >= -4096) {
-                    sourcePixelYPhase2 = sourceYQ12Phase2 >> 12;
-                    if (sourceYQ12Phase2 >> 12 < this.height) {
-                      sourcePixelXPhase2 = sourceXQ12Phase2 >> 12;
-                      this.sampleBilinear(destinationIndex, sourcePixelXPhase2, sourcePixelYPhase2, sourceXQ12Phase2, sourceYQ12Phase2);
-                      negativePixelCounterPhase2++;
-                      sourceXQ12Phase2 = sourceXQ12Phase2 + inverseCosStep;
-                      sourceYQ12Phase2 = sourceYQ12Phase2 + inverseSinStep;
+              if (leftDownSampleGate != 0) {
+                while (leftDownNegativePixel < 0) {
+                  if (leftDownSourceXQ12 >= -4096) {
+                    leftDownPixelY = leftDownSourceYQ12 >> 12;
+                    if (leftDownSourceYQ12 >> 12 < this.height) {
+                      leftDownPixelX = leftDownSourceXQ12 >> 12;
+                      this.sampleBilinear(destinationIndex, leftDownPixelX, leftDownPixelY, leftDownSourceXQ12, leftDownSourceYQ12);
+                      leftDownNegativePixel++;
+                      leftDownSourceXQ12 = leftDownSourceXQ12 + inverseCosStep;
+                      leftDownSourceYQ12 = leftDownSourceYQ12 + inverseSinStep;
                       destinationIndex++;
                       continue;
                     }
                   }
                   break;
                 }
-                destinationIndex = destinationIndex - negativePixelCounterPhase2;
+                destinationIndex = destinationIndex - leftDownNegativePixel;
               }
             }
-            negativeRowCounterPhase2++;
+            leftDownNegativeRow++;
             rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
             rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
             destinationIndex = destinationIndex + rowSkip;
           }
           return;
         }
-        negativeRowCounterPhase3 = bottomThenNegativeHeight;
-        while (negativeRowCounterPhase3 < 0) {
-          sourceXQ12Phase3 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
-          sourceYQ12Phase3 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
-          negativePixelCounterPhase3 = rightThenNegativeWidth;
-          canSamplePhase3 = 0;
-          clipScratchPhase3 = sourceXQ12Phase3 - (this.width << 12);
-          if (clipScratchPhase3 >= 0) {
+        leftUpNegativeRow = bottomThenNegativeHeight;
+        while (leftUpNegativeRow < 0) {
+          leftUpSourceXQ12 = rowSourceXQ12 + (destinationOffsetX * inverseCosStep >> 4);
+          leftUpSourceYQ12 = rowSourceYQ12 + (destinationOffsetX * inverseSinStep >> 4);
+          leftUpNegativePixel = rightThenNegativeWidth;
+          leftUpSampleGate = 0;
+          leftUpRightExcessOrSkipCount = leftUpSourceXQ12 - (this.width << 12);
+          if (leftUpRightExcessOrSkipCount >= 0) {
             if (inverseCosStep != 0) {
-              clipScratchPhase3 = (inverseCosStep - clipScratchPhase3) / inverseCosStep;
-              negativePixelCounterPhase3 = negativePixelCounterPhase3 + clipScratchPhase3;
-              sourceXQ12Phase3 = sourceXQ12Phase3 + inverseCosStep * clipScratchPhase3;
-              sourceYQ12Phase3 = sourceYQ12Phase3 + inverseSinStep * clipScratchPhase3;
-              destinationIndex = destinationIndex + clipScratchPhase3;
-              canSamplePhase3 = 1;
+              leftUpRightExcessOrSkipCount = (inverseCosStep - leftUpRightExcessOrSkipCount) / inverseCosStep;
+              leftUpNegativePixel = leftUpNegativePixel + leftUpRightExcessOrSkipCount;
+              leftUpSourceXQ12 = leftUpSourceXQ12 + inverseCosStep * leftUpRightExcessOrSkipCount;
+              leftUpSourceYQ12 = leftUpSourceYQ12 + inverseSinStep * leftUpRightExcessOrSkipCount;
+              destinationIndex = destinationIndex + leftUpRightExcessOrSkipCount;
+              leftUpSampleGate = 1;
             } else {
-              destinationIndex = destinationIndex - negativePixelCounterPhase3;
+              destinationIndex = destinationIndex - leftUpNegativePixel;
             }
           } else {
-            canSamplePhase3 = 1;
+            leftUpSampleGate = 1;
           }
-          if (canSamplePhase3 != 0) {
-            canSamplePhase3 = 0;
-            clipScratchPhase3NestedPhase2 = sourceYQ12Phase3 - (this.height << 12);
-            if (clipScratchPhase3NestedPhase2 >= 0) {
+          if (leftUpSampleGate != 0) {
+            leftUpSampleGate = 0;
+            leftUpBottomExcessOrSkipCount = leftUpSourceYQ12 - (this.height << 12);
+            if (leftUpBottomExcessOrSkipCount >= 0) {
               if (inverseSinStep != 0) {
-                clipScratchPhase3NestedPhase2 = (inverseSinStep - clipScratchPhase3NestedPhase2) / inverseSinStep;
-                negativePixelCounterPhase3 = negativePixelCounterPhase3 + clipScratchPhase3NestedPhase2;
-                sourceXQ12Phase3 = sourceXQ12Phase3 + inverseCosStep * clipScratchPhase3NestedPhase2;
-                sourceYQ12Phase3 = sourceYQ12Phase3 + inverseSinStep * clipScratchPhase3NestedPhase2;
-                destinationIndex = destinationIndex + clipScratchPhase3NestedPhase2;
-                canSamplePhase3 = 1;
+                leftUpBottomExcessOrSkipCount = (inverseSinStep - leftUpBottomExcessOrSkipCount) / inverseSinStep;
+                leftUpNegativePixel = leftUpNegativePixel + leftUpBottomExcessOrSkipCount;
+                leftUpSourceXQ12 = leftUpSourceXQ12 + inverseCosStep * leftUpBottomExcessOrSkipCount;
+                leftUpSourceYQ12 = leftUpSourceYQ12 + inverseSinStep * leftUpBottomExcessOrSkipCount;
+                destinationIndex = destinationIndex + leftUpBottomExcessOrSkipCount;
+                leftUpSampleGate = 1;
               } else {
-                destinationIndex = destinationIndex - negativePixelCounterPhase3;
+                destinationIndex = destinationIndex - leftUpNegativePixel;
               }
             } else {
-              canSamplePhase3 = 1;
+              leftUpSampleGate = 1;
             }
-            if (canSamplePhase3 != 0) {
-              while (negativePixelCounterPhase3 < 0) {
-                if (sourceXQ12Phase3 >= -4096 &&
-                    sourceYQ12Phase3 >= -4096) {
-                  sourcePixelXPhase3 = sourceXQ12Phase3 >> 12;
-                  sourcePixelYPhase3 = sourceYQ12Phase3 >> 12;
-                  this.sampleBilinear(destinationIndex, sourcePixelXPhase3, sourcePixelYPhase3, sourceXQ12Phase3, sourceYQ12Phase3);
-                  negativePixelCounterPhase3++;
-                  sourceXQ12Phase3 = sourceXQ12Phase3 + inverseCosStep;
-                  sourceYQ12Phase3 = sourceYQ12Phase3 + inverseSinStep;
+            if (leftUpSampleGate != 0) {
+              while (leftUpNegativePixel < 0) {
+                if (leftUpSourceXQ12 >= -4096 &&
+                    leftUpSourceYQ12 >= -4096) {
+                  leftUpPixelX = leftUpSourceXQ12 >> 12;
+                  leftUpPixelY = leftUpSourceYQ12 >> 12;
+                  this.sampleBilinear(destinationIndex, leftUpPixelX, leftUpPixelY, leftUpSourceXQ12, leftUpSourceYQ12);
+                  leftUpNegativePixel++;
+                  leftUpSourceXQ12 = leftUpSourceXQ12 + inverseCosStep;
+                  leftUpSourceYQ12 = leftUpSourceYQ12 + inverseSinStep;
                   destinationIndex++;
                   continue;
                 }
                 break;
               }
-              destinationIndex = destinationIndex - negativePixelCounterPhase3;
+              destinationIndex = destinationIndex - leftUpNegativePixel;
             }
           }
-          negativeRowCounterPhase3++;
+          leftUpNegativeRow++;
           rowSourceXQ12 = rowSourceXQ12 - inverseSinStep;
           rowSourceYQ12 = rowSourceYQ12 + inverseCosStep;
           destinationIndex = destinationIndex + rowSkip;

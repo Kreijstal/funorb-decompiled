@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ee091b66068724723f6495de18caf6ddc32ac444/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,121 bindings,
 preserving 388 override relationships.
 
-## Current renderer and avatar purposes (pass 241)
+## Current sprite sampling and field inventory (pass 242)
+
+43 local names now describe sprite rotation directions, sample quadrants, trim
+edges, background substitution and alpha weighting. The field-purpose count is
+backed by an independent javac inventory: six public source-unreferenced fields
+and 35 private constructor/merge-only slots. These have observational/mechanism
+names; source does not prove finer UI meanings. All 303 sources compile,
+reproduce and reverse exactly, with unchanged native rendering traces. Five large
+framed methods and 175 numbered phase-family names remain. See the workflow for
+the reproducible inventory, source hashes, commands and coverage limits.
+
+## Previous renderer and avatar purposes (pass 241)
 
 71 local names now identify blur windows, RGB outputs, clipped spans, line axes,
 outline edges and avatar tint branches. Four misleading begin/start/tail names

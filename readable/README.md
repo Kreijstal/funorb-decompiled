@@ -6,7 +6,52 @@ declarations and 105 labels. Both 303-file corpora compile, comparing 138,121
 bindings and preserving 388 override relationships. Some members retain unknown
 purposes; generated carriers, guards and shared joins remain.
 
-## Current renderer and avatar purposes (pass 241)
+## Current sprite sampling and field inventory (pass 242)
+
+43 remaining numbered names in Sprite and ArgbSprite now describe rotation
+sampling directions, padding/excess versus skip counts, source coordinates and
+sample gates; top/right/left trim scans; half-size sample quadrants; quarter-size
+background substitution; and ARGB sample alpha, block alpha sums, average alpha
+and modulated RGB. Unused alpha initialization still executes. Rotation direction
+names follow source-coordinate steps: left/up are negative cosine/sine, while
+right/down include zero in their original nonnegative branch. No positivity,
+valid geometry or zero client-control flag is assumed.
+
+43 rules rename 305 bound occurrences in two classes. All 20,082 unaffected
+complete rules and all 20,432 dictionary identities are preserved. Raw source,
+tracked compiler archive, frozen naming/workflow/stub/native evidence and all
+historical provenance records are unchanged. There are still 20,125 rules,
+121,882 identifier edits, 11 literal and 423 label edits (122,316 total), 138,121
+binding comparisons and 388 override pairs. Current-pass counters record naming
+refinements rather than structural source changes.
+
+The unresolved-field count is now backed by a current, independently resolved
+inventory in the single naming manifest. The new fixture compiles all 303 pinned
+raw sources and uses javac field identity and enclosing-method facts: six public
+static GameApplet fields have no ordinary source references, and 35 private
+VisualPropertyOverrides fields have 118 references confined to their constructor
+and merge method. The latter already have names describing their merge/sentinel
+mechanisms; source does not supply their specific UI meanings. The six public
+fields also have observational names. These are 41 unresolved purposes, not 41
+unrenamed identifiers. Reflection, native access and external artifacts remain
+outside this source certificate; no field is removed or given an invented role.
+
+Validation:
+
+- `JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-unresolved-fields.mjs` passes against the recorded 41-field inventory, including source-tree identity, visibility, declaration initializers, original JVM field bindings, owner methods and read/write counts.
+- `node readable/build-geoblox-rules.mjs --check`, `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and `env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` compile and reproduce all 303 files. Dictionary reversal is byte exact; fresh committed sibling checkouts reproduce the complete export.
+- `node --test readable/tests/test-geoblox-rule-builder.mjs` passes 13 groups. `JAVA_TOOL_OPTIONS=-XX:-UsePerfData node readable/tests/test-geoblox-nine-slice.mjs TRANSFORMED_CLASSES` retains all ten native/raw/readable trace groups, including the existing sprite pixel/transform probes with their independent-oracle versus trace-only distinctions.
+
+Five large framed methods, 77 plain block labels, 175 older numbered phase-family
+names and 41 unresolved field purposes remain. LiteralPhase names remain zero.
+The previous structural investigation still applies: the remaining frames have
+real skips and shared state. Whole-game equivalence, real assets/network/audio
+devices, browser/phone and heap/presented-FPS acceptance remain unverified.
+
+The tracked decompiler-source tar SHA-256 remains
+`d7a2128763a993e939f7809b9a33626cae6d4189f47ab0a30c0e7e3e4342c221`.
+
+## Previous renderer and avatar purposes (pass 241)
 
 71 local names in SoftwareRasterizer and MessageDialog now identify their
 source-reviewed purposes. 67 numbered phase-family names are replaced: horizontal/
@@ -5316,16 +5361,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/ee091b66068724723f6495de18caf6ddc32ac444/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/ee091b66068724723f6495de18caf6ddc32ac444/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/0a29ad11d0b708079482d9ea4554d0e5dd8b5363/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `ee091b66068724723f6495de18caf6ddc32ac444`; the
-manifest SHA-256 is `838fbc9f00410423db5db6c10cfeacdd6ba1049f67fe4b1fc13abd5e25ec5e64`.
+The current Deko workflow/manifest commit is `0a29ad11d0b708079482d9ea4554d0e5dd8b5363`; the
+manifest SHA-256 is `eb32da7d458efb42396b98eaa1fa1e82e1a8bf42a3a2998c8ed8b5baa9b20096`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -5350,7 +5395,7 @@ separate from a game JAR or Java source-tree hashes.
 Current raw tree SHA-256:
 `7bc14c890daa3207383089455bf539fdd73b7993aaa08d5e1c1c4e53827b2424`.
 Current readable tree SHA-256:
-`082ffbd788b07354d2cbf90c726d853d2e5d5ccda725f725c430e0fdac8200a1`.
+`0ddcfc48fd435d505b2688a957689ba0c320aa9aaafc87fc501f89c379a5a9c9`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,

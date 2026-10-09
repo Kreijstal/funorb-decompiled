@@ -972,9 +972,9 @@ final class ArgbSprite extends Sprite {
         int sampleIndexThenAverageAlpha;
         int inverseAlpha256;
         int destinationPixel;
-        int samplePixelNestedPhase2;
-        int sampleAlphaNestedPhase2;
-        int sampleIndexThenAverageAlphaNestedPhase2;
+        int sampleArgbPixel;
+        int sampleAlphaForWeighting;
+        int averageBlockAlpha;
         reducedWidth = this.width >> 1;
         reducedHeight = this.height >> 1;
         x = x + this.trimX / 2;
@@ -1030,12 +1030,12 @@ final class ArgbSprite extends Sprite {
               } else {
                 sampleRowOffset = this.width;
               }
-              samplePixelNestedPhase2 = samplePixelBuffer[sampleBaseIndex + sampleRowOffset];
-              sampleAlphaNestedPhase2 = samplePixelNestedPhase2 >>> 24;
-              alphaSum = alphaSum + sampleAlphaNestedPhase2;
-              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 >> 16 & 255);
-              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 >> 8 & 255);
-              weightedBlue = weightedBlue + sampleAlphaNestedPhase2 * (samplePixelNestedPhase2 & 255);
+              sampleArgbPixel = samplePixelBuffer[sampleBaseIndex + sampleRowOffset];
+              sampleAlphaForWeighting = sampleArgbPixel >>> 24;
+              alphaSum = alphaSum + sampleAlphaForWeighting;
+              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlphaForWeighting * (sampleArgbPixel >> 16 & 255);
+              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlphaForWeighting * (sampleArgbPixel >> 8 & 255);
+              weightedBlue = weightedBlue + sampleAlphaForWeighting * (sampleArgbPixel & 255);
             }
             if (alphaSum == 0) {
               sourceBlockX += 2;
@@ -1045,10 +1045,10 @@ final class ArgbSprite extends Sprite {
             }
             weightedRedThenRedBlue = (weightedRedThenRedBlue / alphaSum << 16) + weightedBlue / alphaSum;
             weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / alphaSum << 8;
-            sampleIndexThenAverageAlphaNestedPhase2 = alphaSum >> 2;
-            inverseAlpha256 = 256 - sampleIndexThenAverageAlphaNestedPhase2;
+            averageBlockAlpha = alphaSum >> 2;
+            inverseAlpha256 = 256 - averageBlockAlpha;
             destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlphaNestedPhase2 * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlphaNestedPhase2 * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+            SoftwareRasterizer.framebuffer[destinationIndex] = (averageBlockAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (averageBlockAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
             sourceBlockX += 2;
             destinationIndex++;
             sourceIndex += 2;
@@ -1086,10 +1086,10 @@ final class ArgbSprite extends Sprite {
         int destinationPixel;
         int[] sampleBlockStorage;
         int[] allocatedSampleBlock;
-        int sampleRowThenAlphaNestedPhase2;
-        int sampleRowThenAlphaNestedPhase3;
-        int sampleColumnThenAlphaSumNestedPhase2;
-        int sampleIndexThenAverageAlphaNestedPhase2;
+        int unusedSampleAlphaInitialization;
+        int sampleAlphaForWeighting;
+        int blockAlphaSum;
+        int averageBlockAlpha;
         int[] sampleBlockReadAlias;
         reducedWidth = this.width >> 2;
         reducedHeight = this.height >> 2;
@@ -1141,28 +1141,28 @@ final class ArgbSprite extends Sprite {
               }
             }
             sampleBlockReadAlias = sampleBlockStorage;
-            sampleRowThenAlphaNestedPhase2 = 0;
-            sampleColumnThenAlphaSumNestedPhase2 = 0;
+            unusedSampleAlphaInitialization = 0;
+            blockAlphaSum = 0;
             weightedRedThenRedBlue = 0;
             weightedGreenThenPackedGreen = 0;
             weightedBlue = 0;
             for (sampleIndexThenAverageAlpha = 0; sampleIndexThenAverageAlpha < 16; sampleIndexThenAverageAlpha++) {
-              sampleRowThenAlphaNestedPhase3 = sampleBlockReadAlias[sampleIndexThenAverageAlpha] >>> 24;
-              sampleColumnThenAlphaSumNestedPhase2 = sampleColumnThenAlphaSumNestedPhase2 + sampleRowThenAlphaNestedPhase3;
-              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
-              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
-              weightedBlue = weightedBlue + sampleRowThenAlphaNestedPhase3 * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] & 255);
+              sampleAlphaForWeighting = sampleBlockReadAlias[sampleIndexThenAverageAlpha] >>> 24;
+              blockAlphaSum = blockAlphaSum + sampleAlphaForWeighting;
+              weightedRedThenRedBlue = weightedRedThenRedBlue + sampleAlphaForWeighting * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 16 & 255);
+              weightedGreenThenPackedGreen = weightedGreenThenPackedGreen + sampleAlphaForWeighting * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] >> 8 & 255);
+              weightedBlue = weightedBlue + sampleAlphaForWeighting * (sampleBlockReadAlias[sampleIndexThenAverageAlpha] & 255);
             }
-            if (sampleColumnThenAlphaSumNestedPhase2 == 0) {
+            if (blockAlphaSum == 0) {
               sourceBlockX += 4;
               continue;
             }
-            weightedRedThenRedBlue = (weightedRedThenRedBlue / sampleColumnThenAlphaSumNestedPhase2 << 16) + weightedBlue / sampleColumnThenAlphaSumNestedPhase2;
-            weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / sampleColumnThenAlphaSumNestedPhase2 << 8;
-            sampleIndexThenAverageAlphaNestedPhase2 = sampleColumnThenAlphaSumNestedPhase2 >> 4;
-            inverseAlpha256 = 256 - sampleIndexThenAverageAlphaNestedPhase2;
+            weightedRedThenRedBlue = (weightedRedThenRedBlue / blockAlphaSum << 16) + weightedBlue / blockAlphaSum;
+            weightedGreenThenPackedGreen = weightedGreenThenPackedGreen / blockAlphaSum << 8;
+            averageBlockAlpha = blockAlphaSum >> 4;
+            inverseAlpha256 = 256 - averageBlockAlpha;
             destinationPixel = SoftwareRasterizer.framebuffer[destinationIndex];
-            SoftwareRasterizer.framebuffer[destinationIndex] = (sampleIndexThenAverageAlphaNestedPhase2 * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (sampleIndexThenAverageAlphaNestedPhase2 * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
+            SoftwareRasterizer.framebuffer[destinationIndex] = (averageBlockAlpha * weightedRedThenRedBlue + inverseAlpha256 * (destinationPixel & 16711935) & -16711936) + (averageBlockAlpha * weightedGreenThenPackedGreen + inverseAlpha256 * (destinationPixel & 65280) & 16711680) >>> 8;
             sourceBlockX += 4;
           }
         }
@@ -1180,7 +1180,7 @@ final class ArgbSprite extends Sprite {
         int modulatedPixel;
         int inverseAlpha256;
         int destinationPixel;
-        int modulatedPixelNestedPhase2;
+        int modulatedRgb;
         tintRedBlue = tintColor & 16711935;
         tintGreen = tintColor >> 8 & 255;
         negativeRowScratch = -drawHeight;
@@ -1206,16 +1206,16 @@ final class ArgbSprite extends Sprite {
             }
             modulatedPixel = 0;
             if (sourcePixel >> 8 != (sourcePixel & 65535)) {
-              modulatedPixelNestedPhase2 = sourcePixel;
+              modulatedRgb = sourcePixel;
             } else {
               sourcePixel = sourcePixel & 255;
-              modulatedPixelNestedPhase2 = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
+              modulatedRgb = (sourcePixel * tintRedBlue >> 8 & 16711934) + (sourcePixel * tintGreen & 65280) + 1;
             }
             inverseAlpha256 = 256 - storedAlpha;
             destinationPixel = destinationPixels[destinationIndex];
             destinationWriteIndex = destinationIndex;
             destinationIndex++;
-            destinationPixels[destinationWriteIndex] = ((modulatedPixelNestedPhase2 & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedPixelNestedPhase2 & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
+            destinationPixels[destinationWriteIndex] = ((modulatedRgb & 16711935) * storedAlpha + (destinationPixel & 16711935) * inverseAlpha256 & -16711936) + ((modulatedRgb & 65280) * storedAlpha + (destinationPixel & 65280) * inverseAlpha256 & 16711680) >>> 8;
             negativeColumnScratch++;
           }
         }
