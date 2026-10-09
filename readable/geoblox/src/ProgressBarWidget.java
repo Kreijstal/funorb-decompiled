@@ -20,34 +20,34 @@ final class ProgressBarWidget extends UiWidget {
     static IntrusiveDeque primarySocialEntriesInOrder;
 
     private final Sprite buildStripeSprite(int alternateColor, boolean restoreGuard, int stripeColor) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = Geoblox.clientControlFlowFlag;
-        Sprite var14 = new Sprite(this.stripeWidth * 2, this.widgetHeight);
-        Geoblox.setRasterTarget(1, var14);
-        int var5 = this.widgetHeight >> 1;
-        for (var6 = 0; this.widgetHeight > var6; var6++) {
-            var7 = (var6 >> 1) * (-1 + this.stripeWidth * 2) % (this.stripeWidth * 2);
-            var8 = 16711935 & stripeColor;
-            var9 = 65280 & stripeColor;
-            var10 = -var5 + var6;
-            var11 = (int)(128.0 * (Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5)) + 128;
-            var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var11 * var9) >>> 8;
-            SoftwareRasterizer.drawHorizontalLine(var7, var6, this.stripeWidth, var12);
-            SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + var7, var6, this.stripeWidth, var12);
-            var9 = alternateColor & 65280;
-            var8 = alternateColor & 16711935;
-            var12 = 256 > var11 ? (16711680 & var9 * var11 | -16711936 & var11 * var8) >>> 8 : var9 | var8;
-            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + var7, var6, this.stripeWidth, var12);
-            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12);
+        int stripeRow = 0;
+        int stripeStartX = 0;
+        int packedRedBlueChannels = 0;
+        int packedGreenChannel = 0;
+        int rowOffsetFromMidpoint = 0;
+        int brightnessQ8 = 0;
+        int shadedStripeColor = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        Sprite stripeSprite = new Sprite(this.stripeWidth * 2, this.widgetHeight);
+        Geoblox.setRasterTarget(1, stripeSprite);
+        int halfHeight = this.widgetHeight >> 1;
+        for (stripeRow = 0; this.widgetHeight > stripeRow; stripeRow++) {
+            stripeStartX = (stripeRow >> 1) * (-1 + this.stripeWidth * 2) % (this.stripeWidth * 2);
+            packedRedBlueChannels = 16711935 & stripeColor;
+            packedGreenChannel = 65280 & stripeColor;
+            rowOffsetFromMidpoint = -halfHeight + stripeRow;
+            brightnessQ8 = (int)(128.0 * (Math.sqrt((double)(-(rowOffsetFromMidpoint * rowOffsetFromMidpoint) + halfHeight * halfHeight)) / (double)halfHeight)) + 128;
+            shadedStripeColor = brightnessQ8 >= 256 ? packedGreenChannel | packedRedBlueChannels : (-16711936 & brightnessQ8 * packedRedBlueChannels | 16711680 & brightnessQ8 * packedGreenChannel) >>> 8;
+            SoftwareRasterizer.drawHorizontalLine(stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
+            SoftwareRasterizer.drawHorizontalLine(-(2 * this.stripeWidth) + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
+            packedGreenChannel = alternateColor & 65280;
+            packedRedBlueChannels = alternateColor & 16711935;
+            shadedStripeColor = 256 > brightnessQ8 ? (16711680 & packedGreenChannel * brightnessQ8 | -16711936 & brightnessQ8 * packedRedBlueChannels) >>> 8 : packedGreenChannel | packedRedBlueChannels;
+            SoftwareRasterizer.drawHorizontalLine(this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
+            SoftwareRasterizer.drawHorizontalLine(-this.stripeWidth + stripeStartX, stripeRow, this.stripeWidth, shadedStripeColor);
         }
         RasterTargetRestoreSupport.restoreRasterTarget(restoreGuard);
-        return var14;
+        return stripeSprite;
     }
 
     final void setStripeColors(int alternateStripeColor, int stripeColor, byte methodGuard) {
@@ -62,52 +62,52 @@ final class ProgressBarWidget extends UiWidget {
     }
 
     private final Sprite buildRightEndMask(int methodGuard) {
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = Geoblox.clientControlFlowFlag;
-        int var2 = this.widgetHeight >> 1;
-        Sprite var3 = new Sprite(var2, this.widgetHeight);
+        int maskRow = 0;
+        int maskColumn = 0;
+        double coverageRatioThenRoot = 0.0;
+        int maskIntensity = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        int halfHeight = this.widgetHeight >> 1;
+        Sprite endMaskSprite = new Sprite(halfHeight, this.widgetHeight);
         if (methodGuard != 255) {
             return (Sprite) null;
         }
-        Geoblox.setRasterTarget(1, var3);
-        for (var4 = 0; var4 < this.widgetHeight; var4++) {
-            for (var5 = 0; var5 < var2; var5++) {
-                var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.widgetHeight));
-                var8 = 1;
-                if (var6 < 1.0) {
-                    var6 = Math.sqrt(1.0 - var6);
-                    var8 = var6 >= 1.0 ? 255 : (int)(var6 * 255.0);
+        Geoblox.setRasterTarget(1, endMaskSprite);
+        for (maskRow = 0; maskRow < this.widgetHeight; maskRow++) {
+            for (maskColumn = 0; maskColumn < halfHeight; maskColumn++) {
+                coverageRatioThenRoot = (double)maskColumn * (double)maskColumn / (double)(maskRow * (-maskRow + this.widgetHeight));
+                maskIntensity = 1;
+                if (coverageRatioThenRoot < 1.0) {
+                    coverageRatioThenRoot = Math.sqrt(1.0 - coverageRatioThenRoot);
+                    maskIntensity = coverageRatioThenRoot >= 1.0 ? 255 : (int)(coverageRatioThenRoot * 255.0);
                 }
-                SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
+                SoftwareRasterizer.setPixel(maskColumn, maskRow, maskIntensity << 16 | (maskIntensity | maskIntensity << 8));
             }
         }
         RasterTargetRestoreSupport.restoreRasterTarget(true);
-        return var3;
+        return endMaskSprite;
     }
 
     private final void drawRoundedStripes(Sprite stripeSprite, int y, int x, int methodGuard) {
-        int var6 = 0;
-        Sprite discarded$0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = Geoblox.clientControlFlowFlag;
+        int stripeDrawX = 0;
+        Sprite ignoredGuardMaskResult = null;
+        RuntimeException stripeDrawingFailureBeforeDescription = null;
+        StringBuilder stripeDrawingMessagePrefix = null;
+        String stripeSpriteDescription = null;
+        RuntimeException stripeDrawingFailure = null;
+        int widgetRightX = 0;
+        RuntimeException stripeDrawingFailureForContext = null;
+        int rightEndStripeOffset = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var5_int = x + this.widgetWidth;
-          PasswordWidgetRenderer.pushWidgetClip(y, this.rightEndMask.width + x, methodGuard ^ 6447, this.widgetHeight + y, var5_int - this.rightEndMask.width);
-          for (var6 = x - this.stripeOffset; var6 < var5_int; var6 = var6 + stripeSprite.width) {
-            stripeSprite.draw(var6, y);
+          widgetRightX = x + this.widgetWidth;
+          PasswordWidgetRenderer.pushWidgetClip(y, this.rightEndMask.width + x, methodGuard ^ 6447, this.widgetHeight + y, widgetRightX - this.rightEndMask.width);
+          for (stripeDrawX = x - this.stripeOffset; stripeDrawX < widgetRightX; stripeDrawX = stripeDrawX + stripeSprite.width) {
+            stripeSprite.draw(stripeDrawX, y);
           }
           if (methodGuard != -12276) {
-            discarded$0 = this.buildRightEndMask(1);
+            ignoredGuardMaskResult = this.buildRightEndMask(1);
           }
           RasterTargetRestoreSupport.restoreRasterTarget(true);
           if (this.rightEndMask.width + x >= SoftwareRasterizer.clipLeft) {
@@ -118,53 +118,53 @@ final class ProgressBarWidget extends UiWidget {
             RasterTargetRestoreSupport.restoreRasterTarget(true);
             this.endScratchSprite.draw(x, y);
           }
-          if (SoftwareRasterizer.clipRight >= var5_int - this.rightEndMask.width) {
+          if (SoftwareRasterizer.clipRight >= widgetRightX - this.rightEndMask.width) {
             Geoblox.setRasterTarget(methodGuard ^ -12275, this.endScratchSprite);
-            for (var7 = this.stripeOffset + (this.widgetWidth - this.rightEndMask.width); var7 > 2 * this.stripeWidth; var7 = var7 - 2 * this.stripeWidth) {
+            for (rightEndStripeOffset = this.stripeOffset + (this.widgetWidth - this.rightEndMask.width); rightEndStripeOffset > 2 * this.stripeWidth; rightEndStripeOffset = rightEndStripeOffset - 2 * this.stripeWidth) {
             }
-            stripeSprite.draw(-var7, 0);
-            stripeSprite.draw(-var7 + this.stripeWidth * 2, 0);
+            stripeSprite.draw(-rightEndStripeOffset, 0);
+            stripeSprite.draw(-rightEndStripeOffset + this.stripeWidth * 2, 0);
             this.rightEndMask.drawMultiply(0, 0);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
-            this.endScratchSprite.draw(-this.rightEndMask.width + var5_int, y);
+            this.endScratchSprite.draw(-this.rightEndMask.width + widgetRightX, y);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("hl.G(");
+        } catch (java.lang.RuntimeException caughtStripeDrawingFailure) {
+          stripeDrawingFailure = caughtStripeDrawingFailure;
+          stripeDrawingFailureForContext = stripeDrawingFailure;
+          stripeDrawingFailureBeforeDescription = stripeDrawingFailureForContext;
+          stripeDrawingMessagePrefix = new StringBuilder().append("hl.G(");
           if (stripeSprite == null) {
-            stackIn_18_2 = "null";
+            stripeSpriteDescription = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            stripeSpriteDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(y).append(',').append(x).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stripeDrawingFailureBeforeDescription), ((StringBuilder) (Object) stripeDrawingMessagePrefix).append(stripeSpriteDescription).append(',').append(y).append(',').append(x).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     final void renderWidget(int parentX, int parentY, byte methodGuard, int renderPass) {
-        int var5 = -76 % ((methodGuard - 1) / 43);
+        int renderGuardRemainder = -76 % ((methodGuard - 1) / 43);
         if (renderPass != 0) {
             return;
         }
-        int var6 = parentX + this.widgetX;
-        int var7 = parentY + this.widgetY;
-        this.drawRoundedStripes(this.stripeSprites[0], var7, var6, -12276);
+        int widgetScreenX = parentX + this.widgetX;
+        int widgetScreenY = parentY + this.widgetY;
+        this.drawRoundedStripes(this.stripeSprites[0], widgetScreenY, widgetScreenX, -12276);
         if (this.fillFractionQ16 < 65536) {
-            PasswordWidgetRenderer.pushWidgetClip(var7, var6 + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, var7 + this.widgetHeight, this.widgetWidth + var6);
-            this.drawRoundedStripes(this.stripeSprites[1], var7, var6, -12276);
+            PasswordWidgetRenderer.pushWidgetClip(widgetScreenY, widgetScreenX + (this.widgetWidth * this.fillFractionQ16 >> 16), -14045, widgetScreenY + this.widgetHeight, this.widgetWidth + widgetScreenX);
+            this.drawRoundedStripes(this.stripeSprites[1], widgetScreenY, widgetScreenX, -12276);
             RasterTargetRestoreSupport.restoreRasterTarget(true);
         }
     }
 
     final void setWidgetBounds(int height, int width, byte methodGuard, int y, int x) {
-        Sprite discarded$0 = null;
+        Sprite ignoredBoundsGuardMaskResult = null;
         super.setWidgetBounds(height, width, (byte) -74, y, x);
         this.rebuildSprites(-1326628703);
         if (methodGuard > -6) {
-            discarded$0 = this.buildRightEndMask(109);
+            ignoredBoundsGuardMaskResult = this.buildRightEndMask(109);
         }
     }
 
@@ -201,11 +201,11 @@ final class ProgressBarWidget extends UiWidget {
     }
 
     final void updatePointerState(boolean hoverGuard, int parentY, UiWidget eventContext, int parentX) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+        RuntimeException pointerUpdateFailureBeforeDescription = null;
+        StringBuilder pointerUpdateMessagePrefix = null;
+        String eventContextDescription = null;
+        RuntimeException pointerUpdateFailure = null;
+        RuntimeException pointerUpdateFailureForContext = null;
         try {
           if (this.animationEnabled) {
             this.stripeOffset = this.stripeOffset + 1;
@@ -217,17 +217,17 @@ final class ProgressBarWidget extends UiWidget {
             guestSessionMode = false;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("hl.H(").append(hoverGuard).append(',').append(parentY).append(',');
+        } catch (java.lang.RuntimeException caughtPointerUpdateFailure) {
+          pointerUpdateFailure = caughtPointerUpdateFailure;
+          pointerUpdateFailureForContext = pointerUpdateFailure;
+          pointerUpdateFailureBeforeDescription = pointerUpdateFailureForContext;
+          pointerUpdateMessagePrefix = new StringBuilder().append("hl.H(").append(hoverGuard).append(',').append(parentY).append(',');
           if (eventContext == null) {
-            stackIn_9_2 = "null";
+            eventContextDescription = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            eventContextDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(parentX).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) pointerUpdateFailureBeforeDescription), ((StringBuilder) (Object) pointerUpdateMessagePrefix).append(eventContextDescription).append(',').append(parentX).append(')').toString());
         }
     }
 

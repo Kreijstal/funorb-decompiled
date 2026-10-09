@@ -27,122 +27,122 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int guardRemainder = -120 % ((-5 - methodGuard) / 51);
     }
 
-    public final void update(java.awt.Graphics param0) {
+    public final void update(java.awt.Graphics graphics) {
         try {
-            this.paintDelegate.update(param0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.update(" + (param0 != null ? "{...}" : "null") + ')');
+            this.paintDelegate.update(graphics);
+        } catch (RuntimeException updateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) updateFailure), "bh.update(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void handleRankedListResponse(int methodGuard) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        RankedListQuery var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        String[][] var6 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        PacketBuffer var14 = null;
-        int[][] var18 = null;
-        var12 = Geoblox.clientControlFlowFlag;
+        RuntimeException rankedResponseFailure = null;
+        RuntimeException rankedResponseFailureForContext = null;
+        int responseQueryId = 0;
+        RankedListQuery matchingQuery = null;
+        int responseEntryCount = 0;
+        int queryEntryLimit = 0;
+        int responseEntryIndex = 0;
+        String[][] temporaryNamesByOrdering = null;
+        int rankedEntryCountSnapshot = 0;
+        int orderingScanIndex = 0;
+        int firstOrderingWriteIndex = 0;
+        int rankedEntryIndex = 0;
+        int clientControlFlowSnapshot = 0;
+        int secondOrderingWriteIndex = 0;
+        PacketBuffer responseBuffer = null;
+        int[][] temporaryPackedEntriesByOrdering = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          var14 = LogoCompositor.sessionPacketBuffer;
+          responseBuffer = LogoCompositor.sessionPacketBuffer;
           if (methodGuard != 2) {
             return;
           }
-          var2 = var14.readUnsignedByte((byte) 34);
-          var3 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
-          while (var3 != null) {
-            if (var2 != var3.queryId) {
-              var3 = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
+          responseQueryId = responseBuffer.readUnsignedByte((byte) 34);
+          matchingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.firstForIteration(0));
+          while (matchingQuery != null) {
+            if (responseQueryId != matchingQuery.queryId) {
+              matchingQuery = (RankedListQuery) ((Object) PendingActionMarker.pendingRankedListQueries.nextForIteration(1));
               continue;
             }
             break;
           }
-          if (var3 == null) {
+          if (matchingQuery == null) {
             Bzip2DecoderState.closeSessionSocket((byte) -122);
             return;
           }
-          var4 = var14.readUnsignedByte((byte) 34);
-          if (var4 != 0) {
+          responseEntryCount = responseBuffer.readUnsignedByte((byte) 34);
+          if (responseEntryCount != 0) {
             ByteArrayPoolSupport.rankedListResponseNames[0] = SecondaryDeque.receivedSessionName;
-            var5 = var3.entryLimit;
-            for (var6_int = 1; var4 > var6_int; var6_int++) {
-              ByteArrayPoolSupport.rankedListResponseNames[var6_int] = var14.readNullTerminatedText((byte) 120);
+            queryEntryLimit = matchingQuery.entryLimit;
+            for (responseEntryIndex = 1; responseEntryCount > responseEntryIndex; responseEntryIndex++) {
+              ByteArrayPoolSupport.rankedListResponseNames[responseEntryIndex] = responseBuffer.readNullTerminatedText((byte) 120);
             }
-            TriangleMesh.prepareRankedEntryArrays(2147483647, var5, var4);
-            for (var6_int = 0; var4 > var6_int; var6_int++) {
-              ScorePopup.decodePackedRankedEntry(116, var14);
-              if (var6_int != 0) {
-                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, var6_int, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
+            TriangleMesh.prepareRankedEntryArrays(2147483647, queryEntryLimit, responseEntryCount);
+            for (responseEntryIndex = 0; responseEntryCount > responseEntryIndex; responseEntryIndex++) {
+              ScorePopup.decodePackedRankedEntry(116, responseBuffer);
+              if (responseEntryIndex != 0) {
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, responseEntryIndex, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               } else {
-                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, var6_int, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, responseEntryIndex, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               }
             }
-            BoardReconciliationSupport.sortRankedListIndices(var5, (byte) -98);
-            var6 = new String[2][var5];
-            var18 = new int[2][4 * var5];
-            var8 = GmtTimestampSupport.rankedEntryCount;
-            var9 = 0;
-            var10 = 0;
-            while (var9 < var8) {
-              var11 = AchievementQuery.rankedEntryIndices[var9];
-              var6[0][var10] = ByteArrayPoolSupport.rankedListResponseNames[var11];
-              var18[0][4 * var10] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
-              var18[0][4 * var10 + 1] = TextHotspotBounds.rankedEntryRatioNumerators[var11];
-              var18[0][4 * var10 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[var11];
-              var18[0][4 * var10 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
-              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12) &&
-                  FrameTimer.rankedEntryRatioThirdComponents[var11] + (TextHotspotBounds.rankedEntryRatioNumerators[var11] + NodeHashTableIterator.rankedEntryRatioSecondComponents[var11]) == 0) {
-                var6[0][var10] = null;
-                var10--;
+            BoardReconciliationSupport.sortRankedListIndices(queryEntryLimit, (byte) -98);
+            temporaryNamesByOrdering = new String[2][queryEntryLimit];
+            temporaryPackedEntriesByOrdering = new int[2][4 * queryEntryLimit];
+            rankedEntryCountSnapshot = GmtTimestampSupport.rankedEntryCount;
+            orderingScanIndex = 0;
+            firstOrderingWriteIndex = 0;
+            while (orderingScanIndex < rankedEntryCountSnapshot) {
+              rankedEntryIndex = AchievementQuery.rankedEntryIndices[orderingScanIndex];
+              temporaryNamesByOrdering[0][firstOrderingWriteIndex] = ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex] = LoginPasswordSupport.rankedEntryKeyTwo[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex + 1] = TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[0][4 * firstOrderingWriteIndex + 3] = FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex];
+              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndex], (byte) 12) &&
+                  FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex] + (TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex]) == 0) {
+                temporaryNamesByOrdering[0][firstOrderingWriteIndex] = null;
+                firstOrderingWriteIndex--;
               }
-              var9++;
-              var10++;
+              orderingScanIndex++;
+              firstOrderingWriteIndex++;
             }
-            var9 = 0;
-            var13 = 0;
-            var10 = var13;
-            while (var9 < var8) {
-              var11 = AchievementQuery.rankedEntryIndices[var9 + var5];
-              var6[1][var13] = ByteArrayPoolSupport.rankedListResponseNames[var11];
-              var18[1][4 * var13] = LoginPasswordSupport.rankedEntryKeyTwo[var11];
-              var18[1][1 + 4 * var13] = TextHotspotBounds.rankedEntryRatioNumerators[var11];
-              var18[1][var13 * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[var11];
-              var18[1][var13 * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[var11];
-              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[var11], (byte) 12) &&
-                  FrameTimer.rankedEntryRatioThirdComponents[var11] + NodeHashTableIterator.rankedEntryRatioSecondComponents[var11] + TextHotspotBounds.rankedEntryRatioNumerators[var11] == 0) {
-                var6[1][var13] = null;
-                var13--;
+            orderingScanIndex = 0;
+            secondOrderingWriteIndex = 0;
+            firstOrderingWriteIndex = secondOrderingWriteIndex;
+            while (orderingScanIndex < rankedEntryCountSnapshot) {
+              rankedEntryIndex = AchievementQuery.rankedEntryIndices[orderingScanIndex + queryEntryLimit];
+              temporaryNamesByOrdering[1][secondOrderingWriteIndex] = ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[1][4 * secondOrderingWriteIndex] = LoginPasswordSupport.rankedEntryKeyTwo[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[1][1 + 4 * secondOrderingWriteIndex] = TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex];
+              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex];
+              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndex], (byte) 12) &&
+                  FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndex] + TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndex] == 0) {
+                temporaryNamesByOrdering[1][secondOrderingWriteIndex] = null;
+                secondOrderingWriteIndex--;
               }
-              var13++;
-              var9++;
+              secondOrderingWriteIndex++;
+              orderingScanIndex++;
             }
-            var3.unlinkNode(false);
+            matchingQuery.unlinkNode(false);
             return;
           }
-          var3.unlinkNode(false);
+          matchingQuery.unlinkNode(false);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) var1), "bh.B(" + methodGuard + ')');
+        } catch (java.lang.RuntimeException caughtRankedResponseFailure) {
+          rankedResponseFailure = caughtRankedResponseFailure;
+          rankedResponseFailureForContext = rankedResponseFailure;
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rankedResponseFailureForContext), "bh.B(" + methodGuard + ')');
         }
     }
 
-    public final void paint(java.awt.Graphics param0) {
+    public final void paint(java.awt.Graphics graphics) {
         try {
-            this.paintDelegate.paint(param0);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.paint(" + (param0 != null ? "{...}" : "null") + ')');
+            this.paintDelegate.paint(graphics);
+        } catch (RuntimeException paintingFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) paintingFailure), "bh.paint(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -152,13 +152,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
         GameplayEntity neighborForCategoryIncrement = null;
         GameplayEntity neighborVariantWriteTarget = null;
         GameplayEntity neighborVariantReadSource = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_42_2 = null;
-        StringBuilder stackIn_44_1 = null;
-        String stackIn_45_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+        RuntimeException conversionFailureBeforeDescription = null;
+        StringBuilder conversionMessageBeforeTemplate = null;
+        String templateEntityDescription = null;
+        StringBuilder conversionMessageBeforeStartingEntity = null;
+        String startingEntityDescription = null;
+        RuntimeException conversionFailure = null;
+        RuntimeException conversionFailureForContext = null;
         SecondaryDeque processedEntities = null;
         int templateVariantIndex = 0;
         int templateSpriteKindId = 0;
@@ -166,10 +166,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         GameplayEntity currentEntity = null;
         int neighborIndex = 0;
         GameplayEntity processedEntityToCompare = null;
-        int var13 = 0;
+        int clientControlFlowSnapshot = 0;
         SecondaryDeque pendingEntities = null;
         SecondaryDeque pendingEntitiesForRemoval = null;
-        var13 = Geoblox.clientControlFlowFlag;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           pendingEntities = new SecondaryDeque();
           pendingEntitiesForRemoval = pendingEntities;
@@ -240,31 +240,31 @@ final class DelegatingCanvas extends java.awt.Canvas {
               neighborIndex++;
             }
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_41_0 = var5;
-          stackIn_41_1 = new StringBuilder().append("bh.D(").append(propagateCategoryAndKind).append(',');
+        } catch (java.lang.RuntimeException caughtConversionFailure) {
+          conversionFailure = caughtConversionFailure;
+          conversionFailureForContext = conversionFailure;
+          conversionFailureBeforeDescription = conversionFailureForContext;
+          conversionMessageBeforeTemplate = new StringBuilder().append("bh.D(").append(propagateCategoryAndKind).append(',');
           if (templateEntity == null) {
-            stackIn_42_2 = "null";
+            templateEntityDescription = "null";
           } else {
-            stackIn_42_2 = "{...}";
+            templateEntityDescription = "{...}";
           }
-          stackIn_44_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(methodGuard).append(',');
+          conversionMessageBeforeStartingEntity = ((StringBuilder) (Object) conversionMessageBeforeTemplate).append(templateEntityDescription).append(',').append(methodGuard).append(',');
           if (startingEntity == null) {
-            stackIn_45_2 = "null";
+            startingEntityDescription = "null";
           } else {
-            stackIn_45_2 = "{...}";
+            startingEntityDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(propagateVariant).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) conversionFailureBeforeDescription), ((StringBuilder) (Object) conversionMessageBeforeStartingEntity).append(startingEntityDescription).append(',').append(propagateVariant).append(')').toString());
         }
     }
 
-    DelegatingCanvas(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component paintDelegate) {
         try {
-            this.paintDelegate = param0;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+            this.paintDelegate = paintDelegate;
+        } catch (RuntimeException delegateInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) delegateInitializationFailure), "bh.<init>(" + (paintDelegate != null ? "{...}" : "null") + ')');
         }
     }
 

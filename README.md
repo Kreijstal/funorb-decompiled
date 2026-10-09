@@ -17,14 +17,51 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0ca055144d8584592b9add66a1713df2b7922812/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/90c321084b14a10c8e8f445a8d8fe87dc3576297/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 136,981 bindings,
 preserving 388 override relationships.
 
-## Current complemented integer comparisons (pass 216)
+## Current ranked-response and stripe local names (pass 217)
+
+Seventy previously unnamed declarations now describe their source roles in
+DelegatingCanvas and ProgressBarWidget. Contact conversion names its failure
+aliases and entity descriptions. Ranked-response decoding names the pending
+query search, entry counts, ordering indices and temporary name/four-int arrays.
+Those output arrays remain local and unpublished; naming does not infer a server
+contract or repair behavior. Canvas painting names the delegated Graphics and
+failure arguments. Progress-bar code names stripe coordinates, reused RGB channels,
+brightness, rounded-mask ratio/root and intensity, clipping coordinates and
+animation failure context. Unused control snapshots, ignored guard results,
+reused values, floating association, division failures and original diagnostics
+remain explicit and unchanged.
+
+All 18,364 previous complete naming rules and 19,370 complete dictionary
+identities remain intact. Every new rule guards the original JVM declaration,
+local/parameter ordinal and spelling. Only the selected renamedName fields
+change in the dictionary; source positions and all other metadata remain exact.
+The raw source, bytecode, compiler source and frozen naming dependency are unchanged.
+The export has 18,434 guarded rules, 118,391 identifier edits, 11 literal edits
+and 454 label edits (118,856 total). These names add 330 identifier edits in two
+Java files. Compiler-style declarations fall from 498 to 436; 41 unsupported
+fields and four large methods with plain block frames remain.
+
+From Deko, `node readable/build-geoblox-rules.mjs --check` validates all 70
+explicit additions against the previous Git manifest. Both
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` compile
+all 303 sources with 136,981 binding and 388 override checks. All 303 files
+reverse byte exactly; 27 publication tests, 17 scoped native trace groups and
+fresh sibling reproduction checks pass. All 72 historical source-proof pins
+remain intact. These checks do not establish whole-game/server/browser/phone
+or heap/presented-FPS acceptance.
+
+The unchanged tracked **decompiler-source** Git tar SHA-256 is
+`0d5006fd3d9321c254252d94f322f97c13ee4a6cca4549bcc03b48a597fbb6c6`.
+
+## Previous complemented integer comparisons (pass 216)
 
 The generic decompiler replaces 73 paired complemented relations across
 32 methods and 22 files with direct comparisons: \~a < \~b becomes a > b,

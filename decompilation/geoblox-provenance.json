@@ -3277,11 +3277,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0ca055144d8584592b9add66a1713df2b7922812",
+    "commit": "90c321084b14a10c8e8f445a8d8fe87dc3576297",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "a6869f797479dcb3e74b705039476a8d2f5197e007064987ebbb3308bbd72d32"
+      "sha256": "01fd75436b0807eb0289c57cbaafb4f2314cd145740e2e738caa6fff2a09af49"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3291,15 +3291,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "113ce535e9a2b19500716c08fff7e83da6e3f988ef000e0bc7ca83fc1b7de7ea",
+    "outputTreeSha256": "75a2fe5efadbd96d65fe9a4ab7d77a654c8e4f6e340722b336a778dc7d24d957",
     "files": 303,
-    "rules": 18364,
-    "identifierEdits": 118061,
+    "rules": 18434,
+    "identifierEdits": 118391,
     "bindingsCompared": 136981,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 118526,
+    "totalEdits": 118856,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 454,
@@ -3321,7 +3321,7 @@
       "remainingOpaqueFields": 41
     },
     "structuralPass": 216,
-    "semanticPass": 215
+    "semanticPass": 217
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -17772,5 +17772,389 @@
     ],
     "sourceWorkflowCommit": "0ca055144d8584592b9add66a1713df2b7922812",
     "sourceProofWorkflowCommit": "0ca055144d8584592b9add66a1713df2b7922812"
+  },
+  "rankedResponseStripeLocalNames": {
+    "version": 217,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 70,
+    "changedReadableJavaFiles": 2,
+    "previousCompleteRules": 18364,
+    "unaffectedCompleteRulesPreserved": 18364,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "bf6759d05dff386a545e66df9abdb0e40f5327dcfda55870b73433ef8622c219",
+    "sourceCommit": "16b62019ef79afa0cc5ca8693b72206bfe722e9f",
+    "javaToolsCommit": "03a5aa806452458c8d2f19718f16a0c37ff78abf",
+    "sourceArchiveSha256": "0d5006fd3d9321c254252d94f322f97c13ee4a6cca4549bcc03b48a597fbb6c6",
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 498,
+    "rawCompilerLocalsAfter": 436,
+    "identifierEditsAdded": 330,
+    "readableIdentifierEdits": 118391,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 454,
+    "readableTotalEdits": 118856,
+    "stableDictionaryIdentities": 19370,
+    "bindingsCompared": 136981,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name all remaining local and parameter roles in DelegatingCanvas and ProgressBarWidget, including ranked-response query/entry traversal, temporary ordered arrays, contact-conversion failure context, delegated painting and animated stripe/mask raster arithmetic. Preserve every complete prior rule and dictionary identity, all unused snapshots and ignored results, guards, exceptions, aliases and arithmetic. The ranked-response arrays remain temporary and unpublished; no server contract or new whole-game/device behavior is established. Source, compiler and native fixtures remain pinned.",
+    "symbols": [
+      {
+        "symbol": "L:bh.<init>(Ljava/awt/Component;)V#0",
+        "originalName": "runtimeException",
+        "to": "delegateInitializationFailure"
+      },
+      {
+        "symbol": "L:bh.a(I)V#0",
+        "originalName": "decompiledCaughtException",
+        "to": "rankedResponseFailure"
+      },
+      {
+        "symbol": "L:bh.a(I)V#1",
+        "originalName": "var1",
+        "to": "rankedResponseFailureForContext"
+      },
+      {
+        "symbol": "L:bh.a(I)V#10",
+        "originalName": "var10",
+        "to": "firstOrderingWriteIndex"
+      },
+      {
+        "symbol": "L:bh.a(I)V#11",
+        "originalName": "var11",
+        "to": "rankedEntryIndex"
+      },
+      {
+        "symbol": "L:bh.a(I)V#12",
+        "originalName": "var12",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:bh.a(I)V#13",
+        "originalName": "var13",
+        "to": "secondOrderingWriteIndex"
+      },
+      {
+        "symbol": "L:bh.a(I)V#14",
+        "originalName": "var14",
+        "to": "responseBuffer"
+      },
+      {
+        "symbol": "L:bh.a(I)V#15",
+        "originalName": "var18",
+        "to": "temporaryPackedEntriesByOrdering"
+      },
+      {
+        "symbol": "L:bh.a(I)V#16",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtRankedResponseFailure"
+      },
+      {
+        "symbol": "L:bh.a(I)V#2",
+        "originalName": "var2",
+        "to": "responseQueryId"
+      },
+      {
+        "symbol": "L:bh.a(I)V#3",
+        "originalName": "var3",
+        "to": "matchingQuery"
+      },
+      {
+        "symbol": "L:bh.a(I)V#4",
+        "originalName": "var4",
+        "to": "responseEntryCount"
+      },
+      {
+        "symbol": "L:bh.a(I)V#5",
+        "originalName": "var5",
+        "to": "queryEntryLimit"
+      },
+      {
+        "symbol": "L:bh.a(I)V#6",
+        "originalName": "var6_int",
+        "to": "responseEntryIndex"
+      },
+      {
+        "symbol": "L:bh.a(I)V#7",
+        "originalName": "var6",
+        "to": "temporaryNamesByOrdering"
+      },
+      {
+        "symbol": "L:bh.a(I)V#8",
+        "originalName": "var8",
+        "to": "rankedEntryCountSnapshot"
+      },
+      {
+        "symbol": "L:bh.a(I)V#9",
+        "originalName": "var9",
+        "to": "orderingScanIndex"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#10",
+        "originalName": "decompiledCaughtException",
+        "to": "conversionFailure"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#11",
+        "originalName": "var5",
+        "to": "conversionFailureForContext"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#19",
+        "originalName": "var13",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#22",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtConversionFailure"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#5",
+        "originalName": "stackIn_41_0",
+        "to": "conversionFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#6",
+        "originalName": "stackIn_41_1",
+        "to": "conversionMessageBeforeTemplate"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#7",
+        "originalName": "stackIn_42_2",
+        "to": "templateEntityDescription"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#8",
+        "originalName": "stackIn_44_1",
+        "to": "conversionMessageBeforeStartingEntity"
+      },
+      {
+        "symbol": "L:bh.a(ZLja;ILja;Z)V#9",
+        "originalName": "stackIn_45_2",
+        "to": "startingEntityDescription"
+      },
+      {
+        "symbol": "L:bh.paint(Ljava/awt/Graphics;)V#0",
+        "originalName": "runtimeException",
+        "to": "paintingFailure"
+      },
+      {
+        "symbol": "L:bh.update(Ljava/awt/Graphics;)V#0",
+        "originalName": "runtimeException",
+        "to": "updateFailure"
+      },
+      {
+        "symbol": "L:hl.a(IIBI)V#0",
+        "originalName": "var5",
+        "to": "renderGuardRemainder"
+      },
+      {
+        "symbol": "L:hl.a(IIBI)V#1",
+        "originalName": "var6",
+        "to": "widgetScreenX"
+      },
+      {
+        "symbol": "L:hl.a(IIBI)V#2",
+        "originalName": "var7",
+        "to": "widgetScreenY"
+      },
+      {
+        "symbol": "L:hl.a(IIBII)V#0",
+        "originalName": "discarded$0",
+        "to": "ignoredBoundsGuardMaskResult"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#0",
+        "originalName": "var6",
+        "to": "stripeRow"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#1",
+        "originalName": "var7",
+        "to": "stripeStartX"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#2",
+        "originalName": "var8",
+        "to": "packedRedBlueChannels"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#3",
+        "originalName": "var9",
+        "to": "packedGreenChannel"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#4",
+        "originalName": "var10",
+        "to": "rowOffsetFromMidpoint"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#5",
+        "originalName": "var11",
+        "to": "brightnessQ8"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#6",
+        "originalName": "var12",
+        "to": "shadedStripeColor"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#7",
+        "originalName": "var13",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#8",
+        "originalName": "var14",
+        "to": "stripeSprite"
+      },
+      {
+        "symbol": "L:hl.a(IZI)Ldm;#9",
+        "originalName": "var5",
+        "to": "halfHeight"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#0",
+        "originalName": "var6",
+        "to": "stripeDrawX"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#1",
+        "originalName": "discarded$0",
+        "to": "ignoredGuardMaskResult"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#10",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtStripeDrawingFailure"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#2",
+        "originalName": "stackIn_17_0",
+        "to": "stripeDrawingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#3",
+        "originalName": "stackIn_17_1",
+        "to": "stripeDrawingMessagePrefix"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#4",
+        "originalName": "stackIn_18_2",
+        "to": "stripeSpriteDescription"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#5",
+        "originalName": "decompiledCaughtException",
+        "to": "stripeDrawingFailure"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#6",
+        "originalName": "var5_int",
+        "to": "widgetRightX"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#7",
+        "originalName": "var5",
+        "to": "stripeDrawingFailureForContext"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#8",
+        "originalName": "var7",
+        "to": "rightEndStripeOffset"
+      },
+      {
+        "symbol": "L:hl.a(Ldm;III)V#9",
+        "originalName": "var8",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#0",
+        "originalName": "stackIn_8_0",
+        "to": "pointerUpdateFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#1",
+        "originalName": "stackIn_8_1",
+        "to": "pointerUpdateMessagePrefix"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#2",
+        "originalName": "stackIn_9_2",
+        "to": "eventContextDescription"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#3",
+        "originalName": "decompiledCaughtException",
+        "to": "pointerUpdateFailure"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#4",
+        "originalName": "var5",
+        "to": "pointerUpdateFailureForContext"
+      },
+      {
+        "symbol": "L:hl.a(ZILel;I)V#5",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtPointerUpdateFailure"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#0",
+        "originalName": "var4",
+        "to": "maskRow"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#1",
+        "originalName": "var5",
+        "to": "maskColumn"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#2",
+        "originalName": "var6",
+        "to": "coverageRatioThenRoot"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#3",
+        "originalName": "var8",
+        "to": "maskIntensity"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#4",
+        "originalName": "var9",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#5",
+        "originalName": "var2",
+        "to": "halfHeight"
+      },
+      {
+        "symbol": "L:hl.g(I)Ldm;#6",
+        "originalName": "var3",
+        "to": "endMaskSprite"
+      },
+      {
+        "symbol": "P:bh.<init>(Ljava/awt/Component;)V#0",
+        "originalName": "param0",
+        "to": "paintDelegate"
+      },
+      {
+        "symbol": "P:bh.paint(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "graphics"
+      },
+      {
+        "symbol": "P:bh.update(Ljava/awt/Graphics;)V#0",
+        "originalName": "param0",
+        "to": "graphics"
+      }
+    ],
+    "namingWorkflowCommit": "90c321084b14a10c8e8f445a8d8fe87dc3576297"
   }
 }
