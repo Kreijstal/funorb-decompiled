@@ -517,7 +517,7 @@ final class PcmSampleStream extends PcmStream {
 
     final synchronized void fadeOutAndUnlink(int fadeFrames) {
         int maxVolumeMagnitude = 0;
-        int maxVolumeMagnitudeLiteralPhase1;
+        int maximumFadeVolumeMagnitude;
         if (fadeFrames == 0) {
             this.setVolume(0);
             this.unlinkNode(false);
@@ -551,24 +551,24 @@ final class PcmSampleStream extends PcmStream {
             return;
         }
         if (this.currentRightVolume != 0) {
-            maxVolumeMagnitudeLiteralPhase1 = -this.currentVolume;
-            if (this.currentVolume > maxVolumeMagnitudeLiteralPhase1) {
-                maxVolumeMagnitudeLiteralPhase1 = this.currentVolume;
+            maximumFadeVolumeMagnitude = -this.currentVolume;
+            if (this.currentVolume > maximumFadeVolumeMagnitude) {
+                maximumFadeVolumeMagnitude = this.currentVolume;
             }
-            if (-this.currentLeftVolume > maxVolumeMagnitudeLiteralPhase1) {
-                maxVolumeMagnitudeLiteralPhase1 = -this.currentLeftVolume;
+            if (-this.currentLeftVolume > maximumFadeVolumeMagnitude) {
+                maximumFadeVolumeMagnitude = -this.currentLeftVolume;
             }
-            if (this.currentLeftVolume > maxVolumeMagnitudeLiteralPhase1) {
-                maxVolumeMagnitudeLiteralPhase1 = this.currentLeftVolume;
+            if (this.currentLeftVolume > maximumFadeVolumeMagnitude) {
+                maximumFadeVolumeMagnitude = this.currentLeftVolume;
             }
-            if (-this.currentRightVolume > maxVolumeMagnitudeLiteralPhase1) {
-                maxVolumeMagnitudeLiteralPhase1 = -this.currentRightVolume;
+            if (-this.currentRightVolume > maximumFadeVolumeMagnitude) {
+                maximumFadeVolumeMagnitude = -this.currentRightVolume;
             }
-            if (this.currentRightVolume > maxVolumeMagnitudeLiteralPhase1) {
-                maxVolumeMagnitudeLiteralPhase1 = this.currentRightVolume;
+            if (this.currentRightVolume > maximumFadeVolumeMagnitude) {
+                maximumFadeVolumeMagnitude = this.currentRightVolume;
             }
-            if (fadeFrames > maxVolumeMagnitudeLiteralPhase1) {
-                fadeFrames = maxVolumeMagnitudeLiteralPhase1;
+            if (fadeFrames > maximumFadeVolumeMagnitude) {
+                fadeFrames = maximumFadeVolumeMagnitude;
             }
             this.rampFramesRemaining = fadeFrames;
             this.targetVolume = -2147483648;
@@ -1296,7 +1296,7 @@ final class PcmSampleStream extends PcmStream {
 
     final synchronized void rampVolumeAndPan(int rampFrames, int targetVolume, int targetPan) {
         int maxVolumeDelta = 0;
-        int maxVolumeDeltaLiteralPhase1;
+        int maximumRampVolumeDelta;
         if (rampFrames == 0) {
             this.setVolumeAndPan(targetVolume, targetPan);
             return;
@@ -1332,24 +1332,24 @@ final class PcmSampleStream extends PcmStream {
             return;
         }
         if (this.currentRightVolume != targetRightVolume) {
-            maxVolumeDeltaLiteralPhase1 = targetVolume - this.currentVolume;
-            if (this.currentVolume - targetVolume > maxVolumeDeltaLiteralPhase1) {
-                maxVolumeDeltaLiteralPhase1 = this.currentVolume - targetVolume;
+            maximumRampVolumeDelta = targetVolume - this.currentVolume;
+            if (this.currentVolume - targetVolume > maximumRampVolumeDelta) {
+                maximumRampVolumeDelta = this.currentVolume - targetVolume;
             }
-            if (targetLeftVolume - this.currentLeftVolume > maxVolumeDeltaLiteralPhase1) {
-                maxVolumeDeltaLiteralPhase1 = targetLeftVolume - this.currentLeftVolume;
+            if (targetLeftVolume - this.currentLeftVolume > maximumRampVolumeDelta) {
+                maximumRampVolumeDelta = targetLeftVolume - this.currentLeftVolume;
             }
-            if (this.currentLeftVolume - targetLeftVolume > maxVolumeDeltaLiteralPhase1) {
-                maxVolumeDeltaLiteralPhase1 = this.currentLeftVolume - targetLeftVolume;
+            if (this.currentLeftVolume - targetLeftVolume > maximumRampVolumeDelta) {
+                maximumRampVolumeDelta = this.currentLeftVolume - targetLeftVolume;
             }
-            if (targetRightVolume - this.currentRightVolume > maxVolumeDeltaLiteralPhase1) {
-                maxVolumeDeltaLiteralPhase1 = targetRightVolume - this.currentRightVolume;
+            if (targetRightVolume - this.currentRightVolume > maximumRampVolumeDelta) {
+                maximumRampVolumeDelta = targetRightVolume - this.currentRightVolume;
             }
-            if (this.currentRightVolume - targetRightVolume > maxVolumeDeltaLiteralPhase1) {
-                maxVolumeDeltaLiteralPhase1 = this.currentRightVolume - targetRightVolume;
+            if (this.currentRightVolume - targetRightVolume > maximumRampVolumeDelta) {
+                maximumRampVolumeDelta = this.currentRightVolume - targetRightVolume;
             }
-            if (rampFrames > maxVolumeDeltaLiteralPhase1) {
-                rampFrames = maxVolumeDeltaLiteralPhase1;
+            if (rampFrames > maximumRampVolumeDelta) {
+                rampFrames = maximumRampVolumeDelta;
             }
             this.rampFramesRemaining = rampFrames;
             this.targetVolume = targetVolume;

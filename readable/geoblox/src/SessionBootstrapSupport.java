@@ -13,7 +13,7 @@ final class SessionBootstrapSupport {
         int clientControlFlowGuard = 0;
         int gcdBeforeReturn = 0;
         RuntimeException caughtGcdFailure = null;
-        int swapOrRemainderLiteralPhase1;
+        int euclideanRemainder;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (right > left) {
@@ -22,9 +22,9 @@ final class SessionBootstrapSupport {
             right = swapOrRemainder;
           }
           while (right != 0) {
-            swapOrRemainderLiteralPhase1 = left % right;
+            euclideanRemainder = left % right;
             left = right;
-            right = swapOrRemainderLiteralPhase1;
+            right = euclideanRemainder;
           }
           if (methodGuard > -120) {
             SessionBootstrapSupport.clearSessionBootstrapTexts(6);

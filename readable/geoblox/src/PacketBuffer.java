@@ -85,7 +85,7 @@ final class PacketBuffer extends ByteArrayBuffer {
         RuntimeException samplePreparationFailureForContext = null;
         PcmSample sampleBeforeResampling = null;
         int preparedFlagIndex = 0;
-        int soundIndexThenFlagResetLiteralPhase1;
+        int unusedInitialPreparedFlagIndexSnapshot;
         try {
           soundIndexThenFlagReset = 0;
           if (methodGuard >= -117) {
@@ -109,7 +109,7 @@ final class PacketBuffer extends ByteArrayBuffer {
             soundIndexThenFlagReset++;
           }
           preparedFlagIndex = 0;
-          soundIndexThenFlagResetLiteralPhase1 = preparedFlagIndex;
+          unusedInitialPreparedFlagIndexSnapshot = preparedFlagIndex;
           while (preparedFlagIndex < 33) {
             if (!SecondaryNodeHashTable.gameSoundPreparationFlags[preparedFlagIndex]) {
               return;

@@ -52,10 +52,10 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int secondOrderingWriteIndex = 0;
         PacketBuffer responseBuffer = null;
         int[][] temporaryPackedEntriesByOrdering = null;
-        int responseEntryIndexLiteralPhase1;
-        int orderingScanIndexLiteralPhase1;
-        int firstOrderingWriteIndexLiteralPhase1;
-        int rankedEntryIndexLiteralPhase1;
+        int packedResponseEntryIndex;
+        int secondOrderingScanIndex;
+        int unusedInitialSecondOrderingWriteSnapshot;
+        int secondOrderingEntryIndex;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           responseBuffer = LogoCompositor.sessionPacketBuffer;
@@ -83,12 +83,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
               ByteArrayPoolSupport.rankedListResponseNames[responseEntryIndex] = responseBuffer.readNullTerminatedText((byte) 120);
             }
             TriangleMesh.prepareRankedEntryArrays(2147483647, queryEntryLimit, responseEntryCount);
-            for (responseEntryIndexLiteralPhase1 = 0; responseEntryCount > responseEntryIndexLiteralPhase1; responseEntryIndexLiteralPhase1++) {
+            for (packedResponseEntryIndex = 0; responseEntryCount > packedResponseEntryIndex; packedResponseEntryIndex++) {
               ScorePopup.decodePackedRankedEntry(116, responseBuffer);
-              if (responseEntryIndexLiteralPhase1 != 0) {
-                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, responseEntryIndexLiteralPhase1, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
+              if (packedResponseEntryIndex != 0) {
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, packedResponseEntryIndex, (byte) 123, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               } else {
-                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, responseEntryIndexLiteralPhase1, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
+                TextValidationFailure.appendRankedEntry(GzipInflater.decodedRankedRatioThirdComponent, packedResponseEntryIndex, (byte) -97, StatefulWidgetRenderer.decodedRankedRatioNumerator, EmailAvailabilityQuery.decodedRankedRatioSecondComponent, HighscoreNameEntry.decodedRankedKeyTwo);
               }
             }
             BoardReconciliationSupport.sortRankedListIndices(queryEntryLimit, (byte) -98);
@@ -112,23 +112,23 @@ final class DelegatingCanvas extends java.awt.Canvas {
               orderingScanIndex++;
               firstOrderingWriteIndex++;
             }
-            orderingScanIndexLiteralPhase1 = 0;
+            secondOrderingScanIndex = 0;
             secondOrderingWriteIndex = 0;
-            firstOrderingWriteIndexLiteralPhase1 = secondOrderingWriteIndex;
-            while (orderingScanIndexLiteralPhase1 < rankedEntryCountSnapshot) {
-              rankedEntryIndexLiteralPhase1 = AchievementQuery.rankedEntryIndices[orderingScanIndexLiteralPhase1 + queryEntryLimit];
-              temporaryNamesByOrdering[1][secondOrderingWriteIndex] = ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndexLiteralPhase1];
-              temporaryPackedEntriesByOrdering[1][4 * secondOrderingWriteIndex] = LoginPasswordSupport.rankedEntryKeyTwo[rankedEntryIndexLiteralPhase1];
-              temporaryPackedEntriesByOrdering[1][1 + 4 * secondOrderingWriteIndex] = TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndexLiteralPhase1];
-              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndexLiteralPhase1];
-              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndexLiteralPhase1];
-              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[rankedEntryIndexLiteralPhase1], (byte) 12) &&
-                  FrameTimer.rankedEntryRatioThirdComponents[rankedEntryIndexLiteralPhase1] + NodeHashTableIterator.rankedEntryRatioSecondComponents[rankedEntryIndexLiteralPhase1] + TextHotspotBounds.rankedEntryRatioNumerators[rankedEntryIndexLiteralPhase1] == 0) {
+            unusedInitialSecondOrderingWriteSnapshot = secondOrderingWriteIndex;
+            while (secondOrderingScanIndex < rankedEntryCountSnapshot) {
+              secondOrderingEntryIndex = AchievementQuery.rankedEntryIndices[secondOrderingScanIndex + queryEntryLimit];
+              temporaryNamesByOrdering[1][secondOrderingWriteIndex] = ByteArrayPoolSupport.rankedListResponseNames[secondOrderingEntryIndex];
+              temporaryPackedEntriesByOrdering[1][4 * secondOrderingWriteIndex] = LoginPasswordSupport.rankedEntryKeyTwo[secondOrderingEntryIndex];
+              temporaryPackedEntriesByOrdering[1][1 + 4 * secondOrderingWriteIndex] = TextHotspotBounds.rankedEntryRatioNumerators[secondOrderingEntryIndex];
+              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 2] = NodeHashTableIterator.rankedEntryRatioSecondComponents[secondOrderingEntryIndex];
+              temporaryPackedEntriesByOrdering[1][secondOrderingWriteIndex * 4 + 3] = FrameTimer.rankedEntryRatioThirdComponents[secondOrderingEntryIndex];
+              if (WhirlpoolHash.matchesNormalizedSessionName(ByteArrayPoolSupport.rankedListResponseNames[secondOrderingEntryIndex], (byte) 12) &&
+                  FrameTimer.rankedEntryRatioThirdComponents[secondOrderingEntryIndex] + NodeHashTableIterator.rankedEntryRatioSecondComponents[secondOrderingEntryIndex] + TextHotspotBounds.rankedEntryRatioNumerators[secondOrderingEntryIndex] == 0) {
                 temporaryNamesByOrdering[1][secondOrderingWriteIndex] = null;
                 secondOrderingWriteIndex--;
               }
               secondOrderingWriteIndex++;
-              orderingScanIndexLiteralPhase1++;
+              secondOrderingScanIndex++;
             }
             matchingQuery.unlinkNode(false);
             return;

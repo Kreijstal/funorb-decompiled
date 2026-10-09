@@ -130,8 +130,8 @@ final class HighscoreNameEntry {
         int modulatedBlueThenWeighted = 0;
         int sourceGrayWeight = 0;
         int clientControlFlowGuard = 0;
-        int sampleColorOrRowStartXQ16LiteralPhase1;
-        int weightedDestinationGrayOrTintedRgbLiteralPhase1;
+        int rowSampleStartXQ16;
+        int tintedOutputRgb;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard > -74) {
@@ -168,10 +168,10 @@ final class HighscoreNameEntry {
                   tintedRed = debugTintRed * (weightedDestinationGrayOrTintedRgb << 16 >>> 16) >>> 8;
                   tintedGreen = (weightedDestinationGrayOrTintedRgb << 8) * debugTintGreenPacked >>> 24;
                   tintedBlue = debugTintBlue * weightedDestinationGrayOrTintedRgb >>> 8;
-                  weightedDestinationGrayOrTintedRgbLiteralPhase1 = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
-                  weightedTintRed = inverseSourceGrayWeight * ((16711680 & weightedDestinationGrayOrTintedRgbLiteralPhase1) >> 16);
-                  weightedTintGreen = (255 & weightedDestinationGrayOrTintedRgbLiteralPhase1 >> 8) * inverseSourceGrayWeight;
-                  weightedTintBlue = (weightedDestinationGrayOrTintedRgbLiteralPhase1 & 255) * inverseSourceGrayWeight;
+                  tintedOutputRgb = (tintedGreen << 8) + (tintedRed << 16) + tintedBlue;
+                  weightedTintRed = inverseSourceGrayWeight * ((16711680 & tintedOutputRgb) >> 16);
+                  weightedTintGreen = (255 & tintedOutputRgb >> 8) * inverseSourceGrayWeight;
+                  weightedTintBlue = (tintedOutputRgb & 255) * inverseSourceGrayWeight;
                   modulatedRedThenWeighted = ((16711680 & destinationRgb) >>> 16) * ((sampleColor & 16711680) >>> 16) >>> 8;
                   modulatedGreenThenWeighted = (destinationRgb & 65280) * (sampleColor & 65280) >>> 24;
                   modulatedBlueThenWeighted = (255 & destinationRgb) * (255 & sampleColor) >>> 8;
@@ -188,8 +188,8 @@ final class HighscoreNameEntry {
             }
             sampleYQ16 = sampleYQ16 + sampleYStepQ16;
             destinationIndex = destinationIndex + destinationRowSkip;
-            sampleColorOrRowStartXQ16LiteralPhase1 = rowStartXQ16;
-            sampleXQ16 = sampleColorOrRowStartXQ16LiteralPhase1;
+            rowSampleStartXQ16 = rowStartXQ16;
+            sampleXQ16 = rowSampleStartXQ16;
             negativeRowCounter++;
           }
           return;

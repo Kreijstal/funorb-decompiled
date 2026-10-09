@@ -59,7 +59,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
     final static String tutorialMessageForStep(int tutorialStepId, int methodGuard) {
         int stepIdForSelection = 0;
         int unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
-        int stepIdForSelectionLiteralPhase1;
+        int tutorialStepSelection;
         if (methodGuard != 24146) {
             orbCoinSprite = (Sprite) null;
             stepIdForSelection = tutorialStepId;
@@ -80,18 +80,18 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
             }
             return ReceivedTextRecord.tutorialShapeMatchMessage;
         }
-        stepIdForSelectionLiteralPhase1 = tutorialStepId;
-        if (stepIdForSelectionLiteralPhase1 == 0) {
+        tutorialStepSelection = tutorialStepId;
+        if (tutorialStepSelection == 0) {
             return UsernameSuggestionsPanel.tutorialRotationMessage;
         }
-        if (stepIdForSelectionLiteralPhase1 == 1) {
+        if (tutorialStepSelection == 1) {
             return ByteArrayPoolSupport.tutorialColourMatchMessage;
         }
-        if (stepIdForSelectionLiteralPhase1 != 2) {
-            if (stepIdForSelectionLiteralPhase1 == 3) {
+        if (tutorialStepSelection != 2) {
+            if (tutorialStepSelection == 3) {
                 return ArchiveHandshakeState.tutorialCompleteMessage;
             }
-            if (stepIdForSelectionLiteralPhase1 == 5) {
+            if (tutorialStepSelection == 5) {
                 return AccountCreationForm.tutorialFailedMessage;
             }
             return null;

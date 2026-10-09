@@ -108,7 +108,7 @@ final class WhirlpoolHash {
         int lengthByteIndex = 0;
         int lengthCarry = 0;
         int unusedClientGuardSnapshot = 0;
-        int shiftedSourceByteLiteralPhase1;
+        int tailShiftedSourceByte;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           sourceByteIndex = 0;
@@ -145,10 +145,10 @@ final class WhirlpoolHash {
             throw new RuntimeException("LOGIC ERROR");
           }
           if (remainingBitCount <= 0L) {
-            shiftedSourceByteLiteralPhase1 = 0;
+            tailShiftedSourceByte = 0;
           } else {
-            shiftedSourceByteLiteralPhase1 = source[sourceByteIndex] << sourceBitShift & 255;
-            this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], shiftedSourceByteLiteralPhase1 >>> bufferPartialByteBits);
+            tailShiftedSourceByte = source[sourceByteIndex] << sourceBitShift & 255;
+            this.blockBuffer[this.bufferBytePosition] = (byte)SessionInstanceState.orInt((int) this.blockBuffer[this.bufferBytePosition], tailShiftedSourceByte >>> bufferPartialByteBits);
           }
           if (8L > remainingBitCount + (long)bufferPartialByteBits) {
             this.bufferedBitCount = (int)((long)this.bufferedBitCount + remainingBitCount);
@@ -161,7 +161,7 @@ final class WhirlpoolHash {
               this.bufferedBitCount = 0;
               this.bufferBytePosition = 0;
             }
-            this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(shiftedSourceByteLiteralPhase1 << -bufferPartialByteBits + 8, 255);
+            this.blockBuffer[this.bufferBytePosition] = (byte)ProxySocketConnector.andInt(tailShiftedSourceByte << -bufferPartialByteBits + 8, 255);
             this.bufferedBitCount = this.bufferedBitCount + (int)remainingBitCount;
           }
           return;
@@ -360,15 +360,15 @@ final class WhirlpoolHash {
     final void reset(int methodGuard) {
         int lengthByteIndexOrHashWordIndex = 0;
         int unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-        int lengthByteIndexOrHashWordIndexLiteralPhase1;
+        int hashWordResetIndex;
         for (lengthByteIndexOrHashWordIndex = 0; lengthByteIndexOrHashWordIndex < 32; lengthByteIndexOrHashWordIndex++) {
             this.messageBitLength[lengthByteIndexOrHashWordIndex] = (byte) 0;
         }
         this.blockBuffer[0] = (byte) 0;
         this.bufferedBitCount = 0;
         this.bufferBytePosition = 0;
-        for (lengthByteIndexOrHashWordIndexLiteralPhase1 = 0; 8 > lengthByteIndexOrHashWordIndexLiteralPhase1; lengthByteIndexOrHashWordIndexLiteralPhase1++) {
-            this.hashWords[lengthByteIndexOrHashWordIndexLiteralPhase1] = 0L;
+        for (hashWordResetIndex = 0; 8 > hashWordResetIndex; hashWordResetIndex++) {
+            this.hashWords[hashWordResetIndex] = 0L;
         }
         if (methodGuard <= 51) {
             this.bufferBytePosition = 101;

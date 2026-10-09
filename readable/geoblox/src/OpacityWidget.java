@@ -55,8 +55,8 @@ final class OpacityWidget extends SingleChildWidget {
         int capacityReplacementIndexOrBuildMarkerStart = 0;
         String buildMarkerIdText = null;
         int buildReplacementIndex = 0;
-        int scanCursorLiteralPhase1;
-        int capacityReplacementIndexOrBuildMarkerStartLiteralPhase1;
+        int replacementBuildScanCursor;
+        int replacementBuildMarkerStart;
         try {
           templateLength = templateText.length();
           resultCapacity = templateLength;
@@ -89,38 +89,38 @@ final class OpacityWidget extends SingleChildWidget {
           }
           resultBuilder = new StringBuilder(resultCapacity);
           unchangedTextStart = 0;
-          scanCursorLiteralPhase1 = 0;
+          replacementBuildScanCursor = 0;
           if (methodGuard >= -12) {
             nullTemplateResult = (String) null;
             return nullTemplateResult;
           }
           while (true) {
-            capacityReplacementIndexOrBuildMarkerStartLiteralPhase1 = templateText.indexOf("<%", scanCursorLiteralPhase1);
-            if (0 > capacityReplacementIndexOrBuildMarkerStartLiteralPhase1) {
+            replacementBuildMarkerStart = templateText.indexOf("<%", replacementBuildScanCursor);
+            if (0 > replacementBuildMarkerStart) {
               discardedTailAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart));
               completedTemplateResult = resultBuilder.toString();
               return completedTemplateResult;
             }
-            for (scanCursorLiteralPhase1 = capacityReplacementIndexOrBuildMarkerStartLiteralPhase1 + 2; scanCursorLiteralPhase1 < templateLength; scanCursorLiteralPhase1++) {
-              if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(scanCursorLiteralPhase1))) {
+            for (replacementBuildScanCursor = replacementBuildMarkerStart + 2; replacementBuildScanCursor < templateLength; replacementBuildScanCursor++) {
+              if (DualLinkNode.isAsciiDigit(-58, templateText.charAt(replacementBuildScanCursor))) {
                 continue;
               }
               break;
             }
-            buildMarkerIdText = templateText.substring(2 + capacityReplacementIndexOrBuildMarkerStartLiteralPhase1, scanCursorLiteralPhase1);
+            buildMarkerIdText = templateText.substring(2 + replacementBuildMarkerStart, replacementBuildScanCursor);
             if (!MessageDialog.isSignedDecimalInt((byte) -125, (CharSequence) ((Object) buildMarkerIdText))) {
               continue;
             }
-            if (templateLength <= scanCursorLiteralPhase1) {
+            if (templateLength <= replacementBuildScanCursor) {
               continue;
             }
-            if (templateText.charAt(scanCursorLiteralPhase1) != 62) {
+            if (templateText.charAt(replacementBuildScanCursor) != 62) {
               continue;
             }
-            scanCursorLiteralPhase1++;
+            replacementBuildScanCursor++;
             buildReplacementIndex = MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) buildMarkerIdText));
-            discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, capacityReplacementIndexOrBuildMarkerStartLiteralPhase1));
-            unchangedTextStart = scanCursorLiteralPhase1;
+            discardedPrefixAppendResult = resultBuilder.append(templateText.substring(unchangedTextStart, replacementBuildMarkerStart));
+            unchangedTextStart = replacementBuildScanCursor;
             discardedReplacementAppendResult = resultBuilder.append(replacementTexts[buildReplacementIndex]);
           }
         } catch (java.lang.RuntimeException templateFailure) {

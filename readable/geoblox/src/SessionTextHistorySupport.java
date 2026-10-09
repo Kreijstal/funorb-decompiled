@@ -22,16 +22,16 @@ final class SessionTextHistorySupport {
         RuntimeException retentionFailureForContext = null;
         int recordCategoryIndex = 0;
         int clientControlFlowGuard = 0;
-        int clearIndexThenWriteIndexLiteralPhase1;
-        int clearIndexThenWriteIndexLiteralPhase2;
+        int retentionCountScanIndex;
+        int retainedRecordWriteIndex;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           for (clearIndexThenWriteIndex = 0; clearIndexThenWriteIndex < 3; clearIndexThenWriteIndex++) {
             AchievementSubmission.retentionCategoryCounts[clearIndexThenWriteIndex] = 0;
           }
-          for (clearIndexThenWriteIndexLiteralPhase1 = 0; clearIndexThenWriteIndexLiteralPhase1 < ByteStorage.retainedTextRecordCount; clearIndexThenWriteIndexLiteralPhase1++) {
-            if (MatchingTextValidator.retainedTextRecords[clearIndexThenWriteIndexLiteralPhase1].recordKind == record.recordKind) {
-              existingCategoryIndexSnapshot = MatchingTextValidator.retainedTextRecords[clearIndexThenWriteIndexLiteralPhase1].getRetentionCategory(124);
+          for (retentionCountScanIndex = 0; retentionCountScanIndex < ByteStorage.retainedTextRecordCount; retentionCountScanIndex++) {
+            if (MatchingTextValidator.retainedTextRecords[retentionCountScanIndex].recordKind == record.recordKind) {
+              existingCategoryIndexSnapshot = MatchingTextValidator.retainedTextRecords[retentionCountScanIndex].getRetentionCategory(124);
               AchievementSubmission.retentionCategoryCounts[existingCategoryIndexSnapshot] = AchievementSubmission.retentionCategoryCounts[existingCategoryIndexSnapshot] + 1;
             }
           }
@@ -40,7 +40,7 @@ final class SessionTextHistorySupport {
           }
           newCategoryIndexSnapshot = record.getRetentionCategory(125);
           AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] = AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] + 1;
-          clearIndexThenWriteIndexLiteralPhase2 = 0;
+          retainedRecordWriteIndex = 0;
           for (readIndex = 0; ByteStorage.retainedTextRecordCount > readIndex; readIndex++) {
             retainedRecordSelection: {
               if (record.recordKind == MatchingTextValidator.retainedTextRecords[readIndex].recordKind) {
@@ -50,12 +50,12 @@ final class SessionTextHistorySupport {
                   break retainedRecordSelection;
                 }
               }
-              writeIndexBeforeIncrement = clearIndexThenWriteIndexLiteralPhase2;
-              clearIndexThenWriteIndexLiteralPhase2++;
+              writeIndexBeforeIncrement = retainedRecordWriteIndex;
+              retainedRecordWriteIndex++;
               MatchingTextValidator.retainedTextRecords[writeIndexBeforeIncrement] = MatchingTextValidator.retainedTextRecords[readIndex];
             }
           }
-          ByteStorage.retainedTextRecordCount = clearIndexThenWriteIndexLiteralPhase2;
+          ByteStorage.retainedTextRecordCount = retainedRecordWriteIndex;
           appendIndexBeforeCountIncrement = ByteStorage.retainedTextRecordCount;
           ByteStorage.retainedTextRecordCount = ByteStorage.retainedTextRecordCount + 1;
           MatchingTextValidator.retainedTextRecords[appendIndexBeforeCountIncrement] = record;

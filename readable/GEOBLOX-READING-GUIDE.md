@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/4f2f3969b04b1904d144322963d1c99211f617ab/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/b83a64f05a4b829858b07b716e847ea41dd25507/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 238)
+## Current readability (pass 239)
 
 The export has 20,078 guarded names and 121,835 Java identifier edits, plus 11
 class-name literal edits and 423 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,22 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current startup, widget and timestamp names (pass 238)
+## Current reviewed lifetime roles (pass 239)
+
+The last LiteralPhase names now describe detach decisions and neighbor scans,
+held/steered/stepped avatar tint paths, sprite-sheet metadata and palettes,
+ranked-response components, MIDI event packing, filter radii/coefficients,
+resampling, file-read/zero-fill lengths, crypto/marker parsing and unused snapshots.
+Combined corner/edge/accent cursors remain explicit rather than guessing one role.
+Every original read, assignment, guard, callback and failure path remains intact.
+
+83 names replace 520 bound occurrences in 39 files. The current source and rules
+have no LiteralPhase suffixes. There are still 286 older numbered phase-family
+names, mixed roles, five large framed methods and 41 unknown field purposes.
+All-file compilation/reproduction/reversal and existing native gameplay/result/
+rendering traces pass. The workflow documents scope, commands and unchanged pins.
+
+## Previous startup, widget and timestamp names (pass 238)
 
 Startup names distinguish geometry theme/category/palette indexes from amorphous,
 eye, mouth and sparkle frames. Widget names distinguish focus paths, alignment,

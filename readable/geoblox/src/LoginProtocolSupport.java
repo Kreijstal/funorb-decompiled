@@ -33,9 +33,9 @@ final class LoginProtocolSupport {
             String unusedNullPrimaryTextSnapshot = null;
             String unusedNullLongPayloadTextSnapshot = null;
             CharSequence receivedNameCharacters = null;
-            int responseByteThenPortSwapValueLiteralPhase1;
-            int responseByteThenPortSwapValueLiteralPhase2;
-            int extensionByteIndexThenCipherSeedIndexLiteralPhase1;
+            int loginResultResponseByte;
+            int previousLoginServerPort;
+            int loginCipherSeedIndex;
             unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
             try {
               if (null == SpriteCheckboxRenderer.sessionSocket &&
@@ -82,20 +82,20 @@ final class LoginProtocolSupport {
               loginResultDispatch: {
                 if (ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage &&
                     UiWidget.readSessionBytesIfAvailable(30000, 1)) {
-                  responseByteThenPortSwapValueLiteralPhase1 = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+                  loginResultResponseByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
                   LogoCompositor.sessionPacketBuffer.position = 0;
                   GameSoundResources.optionalLoginText = null;
-                  ScorePopup.currentPacketOpcode = responseByteThenPortSwapValueLiteralPhase1;
-                  if (responseByteThenPortSwapValueLiteralPhase1 != 0 &&
-                      responseByteThenPortSwapValueLiteralPhase1 != 1) {
-                    if (responseByteThenPortSwapValueLiteralPhase1 != 8) {
+                  ScorePopup.currentPacketOpcode = loginResultResponseByte;
+                  if (loginResultResponseByte != 0 &&
+                      loginResultResponseByte != 1) {
+                    if (loginResultResponseByte != 8) {
                       PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                       AchievementSubmission.sessionPacketPayloadLength = -1;
                       break loginResultDispatch;
                     }
                     Bzip2DecoderState.closeSessionSocket((byte) -116);
                     TextTemplateArgumentType.loginRetryAttempted = false;
-                    closedResponseResult = responseByteThenPortSwapValueLiteralPhase1;
+                    closedResponseResult = loginResultResponseByte;
                     return closedResponseResult;
                   }
                   AchievementSubmission.sessionPacketPayloadLength = -1;
@@ -167,8 +167,8 @@ final class LoginProtocolSupport {
                   FontLoadingSupport.memberAccountMode = true;
                 }
                 CacheReference.outgoingSessionBuffer.initializeCipher(ProgressBarWidget.loginCipherSeedWords, false);
-                for (extensionByteIndexThenCipherSeedIndexLiteralPhase1 = 0; extensionByteIndexThenCipherSeedIndexLiteralPhase1 < 4; extensionByteIndexThenCipherSeedIndexLiteralPhase1++) {
-                  ProgressBarWidget.loginCipherSeedWords[extensionByteIndexThenCipherSeedIndexLiteralPhase1] = ProgressBarWidget.loginCipherSeedWords[extensionByteIndexThenCipherSeedIndexLiteralPhase1] + 50;
+                for (loginCipherSeedIndex = 0; loginCipherSeedIndex < 4; loginCipherSeedIndex++) {
+                  ProgressBarWidget.loginCipherSeedWords[loginCipherSeedIndex] = ProgressBarWidget.loginCipherSeedWords[loginCipherSeedIndex] + 50;
                 }
                 LogoCompositor.sessionPacketBuffer.initializeCipher(ProgressBarWidget.loginCipherSeedWords, false);
                 connectedResponseResult = ScorePopup.currentPacketOpcode;
@@ -202,9 +202,9 @@ final class LoginProtocolSupport {
                   retryFailureResult = 3;
                   return retryFailureResult;
                 }
-                responseByteThenPortSwapValueLiteralPhase2 = NetworkArchiveRequest.sessionServerPort;
+                previousLoginServerPort = NetworkArchiveRequest.sessionServerPort;
                 NetworkArchiveRequest.sessionServerPort = TextInputRenderer.alternateSessionServerPort;
-                TextInputRenderer.alternateSessionServerPort = responseByteThenPortSwapValueLiteralPhase2;
+                TextInputRenderer.alternateSessionServerPort = previousLoginServerPort;
                 TextTemplateArgumentType.loginRetryAttempted = true;
               }
               pendingHandshakeResult = -1;

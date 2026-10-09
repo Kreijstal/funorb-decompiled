@@ -138,11 +138,11 @@ class IntrusiveNode {
         byte[] alphaPlaneForwarded = null;
         byte[] allocatedPaletteIndices = null;
         byte[] allocatedAlphaPlane = null;
-        int spriteIndexLiteralPhase1;
-        int spriteIndexLiteralPhase2;
-        int spriteIndexLiteralPhase3;
-        int spriteIndexLiteralPhase4;
-        int spriteIndexLiteralPhase5;
+        int spriteYOffsetIndex;
+        int spriteWidthIndex;
+        int spriteHeightIndex;
+        int paletteColorIndex;
+        int spritePixelIndex;
         try {
           spriteDataBuffer = new ByteArrayBuffer(spriteBytes);
           spriteDataBufferAlias = spriteDataBuffer;
@@ -162,36 +162,36 @@ class IntrusiveNode {
           for (spriteIndex = 0; spriteIndex < ClientTimingSupport.decodedSpriteCount; spriteIndex++) {
             GameplaySession.decodedSpriteXOffsets[spriteIndex] = spriteDataBuffer.readUnsignedShortBE(readGuard);
           }
-          for (spriteIndexLiteralPhase1 = 0; spriteIndexLiteralPhase1 < ClientTimingSupport.decodedSpriteCount; spriteIndexLiteralPhase1++) {
-            GmtTimestampSupport.decodedSpriteYOffsets[spriteIndexLiteralPhase1] = spriteDataBuffer.readUnsignedShortBE(true);
+          for (spriteYOffsetIndex = 0; spriteYOffsetIndex < ClientTimingSupport.decodedSpriteCount; spriteYOffsetIndex++) {
+            GmtTimestampSupport.decodedSpriteYOffsets[spriteYOffsetIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          for (spriteIndexLiteralPhase2 = 0; ClientTimingSupport.decodedSpriteCount > spriteIndexLiteralPhase2; spriteIndexLiteralPhase2++) {
-            DualLinkNode.decodedSpriteWidths[spriteIndexLiteralPhase2] = spriteDataBuffer.readUnsignedShortBE(true);
+          for (spriteWidthIndex = 0; ClientTimingSupport.decodedSpriteCount > spriteWidthIndex; spriteWidthIndex++) {
+            DualLinkNode.decodedSpriteWidths[spriteWidthIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
-          for (spriteIndexLiteralPhase3 = 0; spriteIndexLiteralPhase3 < ClientTimingSupport.decodedSpriteCount; spriteIndexLiteralPhase3++) {
-            ProgressBarWidget.decodedSpriteHeights[spriteIndexLiteralPhase3] = spriteDataBuffer.readUnsignedShortBE(true);
+          for (spriteHeightIndex = 0; spriteHeightIndex < ClientTimingSupport.decodedSpriteCount; spriteHeightIndex++) {
+            ProgressBarWidget.decodedSpriteHeights[spriteHeightIndex] = spriteDataBuffer.readUnsignedShortBE(true);
           }
           spriteDataBufferAlias.position = -(paletteSize * 3) + 3 - 8 * ClientTimingSupport.decodedSpriteCount - 7 + spriteBytes.length;
           NanoFrameTimer.decodedSpritePalette = new int[paletteSize];
-          for (spriteIndexLiteralPhase4 = 1; spriteIndexLiteralPhase4 < paletteSize; spriteIndexLiteralPhase4++) {
-            NanoFrameTimer.decodedSpritePalette[spriteIndexLiteralPhase4] = spriteDataBuffer.readUnsignedMediumBE(108);
-            if (NanoFrameTimer.decodedSpritePalette[spriteIndexLiteralPhase4] == 0) {
-              NanoFrameTimer.decodedSpritePalette[spriteIndexLiteralPhase4] = 1;
+          for (paletteColorIndex = 1; paletteColorIndex < paletteSize; paletteColorIndex++) {
+            NanoFrameTimer.decodedSpritePalette[paletteColorIndex] = spriteDataBuffer.readUnsignedMediumBE(108);
+            if (NanoFrameTimer.decodedSpritePalette[paletteColorIndex] == 0) {
+              NanoFrameTimer.decodedSpritePalette[paletteColorIndex] = 1;
             }
           }
           spriteDataBufferAlias.position = 0;
-          for (spriteIndexLiteralPhase5 = 0; spriteIndexLiteralPhase5 < ClientTimingSupport.decodedSpriteCount; spriteIndexLiteralPhase5++) {
-            spriteWidth = DualLinkNode.decodedSpriteWidths[spriteIndexLiteralPhase5];
-            spriteHeight = ProgressBarWidget.decodedSpriteHeights[spriteIndexLiteralPhase5];
+          for (spritePixelIndex = 0; spritePixelIndex < ClientTimingSupport.decodedSpriteCount; spritePixelIndex++) {
+            spriteWidth = DualLinkNode.decodedSpriteWidths[spritePixelIndex];
+            spriteHeight = ProgressBarWidget.decodedSpriteHeights[spritePixelIndex];
             pixelCount = spriteWidth * spriteHeight;
             allocatedPaletteIndices = new byte[pixelCount];
             paletteIndicesForwarded = allocatedPaletteIndices;
             paletteIndicesForUpdates = paletteIndicesForwarded;
-            TextConcatenationSupport.decodedSpriteIndices[spriteIndexLiteralPhase5] = allocatedPaletteIndices;
+            TextConcatenationSupport.decodedSpriteIndices[spritePixelIndex] = allocatedPaletteIndices;
             allocatedAlphaPlane = new byte[pixelCount];
             alphaPlaneForwarded = allocatedAlphaPlane;
             alphaPlaneForUpdates = alphaPlaneForwarded;
-            HotspotTextWidget.decodedSpriteAlpha[spriteIndexLiteralPhase5] = allocatedAlphaPlane;
+            HotspotTextWidget.decodedSpriteAlpha[spritePixelIndex] = allocatedAlphaPlane;
             hasNonOpaqueAlphaFlag = 0;
             storageFlags = spriteDataBufferAlias.readUnsignedByte((byte) 34);
             if ((storageFlags & 1) == 0) {
@@ -235,7 +235,7 @@ class IntrusiveNode {
                 }
               }
             }
-            DialogLayer.decodedSpriteHasNonOpaqueAlpha[spriteIndexLiteralPhase5] = hasNonOpaqueAlphaFlag != 0;
+            DialogLayer.decodedSpriteHasNonOpaqueAlpha[spritePixelIndex] = hasNonOpaqueAlphaFlag != 0;
           }
           return;
         } catch (java.lang.RuntimeException decodeFailure) {

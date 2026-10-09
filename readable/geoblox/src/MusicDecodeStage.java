@@ -131,7 +131,7 @@ final class MusicDecodeStage {
         int highNeighborIndexOrUnusedActiveCursorSnapshotNestedPhase2;
         int predictedYOrLineEndXOrTailIndexNestedPhase2;
         int encodedResidualOrLineEndYNestedPhase2;
-        int predictedYOrLineEndXOrTailIndexLiteralPhase1;
+        int floorLineEndX;
         pointCount = this.configuredFloorX.length;
         multiplierRange = multiplierRanges[this.floorMultiplier - 1];
         initialStepFlagsAlias = sharedStepFlags;
@@ -157,13 +157,13 @@ final class MusicDecodeStage {
                 activePointIndex++;
                 continue;
               }
-              predictedYOrLineEndXOrTailIndexLiteralPhase1 = sharedFloorX[activePointIndex];
+              floorLineEndX = sharedFloorX[activePointIndex];
               encodedResidualOrLineEndY = sharedFloorY[activePointIndex] * this.floorMultiplier;
-              this.applyFloorLine(reconstructionIndexOrLineStartX, lowNeighborIndexOrLineStartY, predictedYOrLineEndXOrTailIndexLiteralPhase1, encodedResidualOrLineEndY, spectrum, sampleLimit);
-              if (predictedYOrLineEndXOrTailIndexLiteralPhase1 >= sampleLimit) {
+              this.applyFloorLine(reconstructionIndexOrLineStartX, lowNeighborIndexOrLineStartY, floorLineEndX, encodedResidualOrLineEndY, spectrum, sampleLimit);
+              if (floorLineEndX >= sampleLimit) {
                 return;
               }
-              reconstructionIndexOrLineStartX = predictedYOrLineEndXOrTailIndexLiteralPhase1;
+              reconstructionIndexOrLineStartX = floorLineEndX;
               lowNeighborIndexOrLineStartY = encodedResidualOrLineEndY;
               activePointIndex++;
             }

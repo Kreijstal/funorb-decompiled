@@ -46,7 +46,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
         String archiveContextDescription = null;
         RuntimeException caughtFailure = null;
         RuntimeException contextFailure = null;
-        int meshIndexOrInitialCursorLiteralPhase1;
+        int unusedInitialCenterMeshIndexSnapshot;
         controlFlagSnapshot = Geoblox.clientControlFlowFlag;
         try {
           logoInput = new PacketBuffer(archive.getNamedFile(methodGuard + methodGuard, "", "logo.fo3d"));
@@ -61,7 +61,7 @@ final class MessageDialogContent extends WidgetContainer implements ButtonActiva
           }
           logoInputAlias.endBitAccess(-16989);
           centerMeshIndex = 0;
-          meshIndexOrInitialCursorLiteralPhase1 = centerMeshIndex;
+          unusedInitialCenterMeshIndexSnapshot = centerMeshIndex;
           while (meshCount > centerMeshIndex) {
             mesh = ArchiveIndex.logoMeshes[centerMeshIndex];
             mesh.scaleVertices(6, 1, (byte) 89, 6, 6);

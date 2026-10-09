@@ -98,8 +98,8 @@ final class BufferedRandomAccessFile {
         long overlayEnd = 0L;
         int overlayLength = 0;
         int unusedClientGuardSnapshot = 0;
-        int readCountOrZeroFillEndLiteralPhase1;
-        int readCountOrZeroFillEndLiteralPhase2;
+        int underlyingOrRefillReadCount;
+        int zeroFillEndOffset;
         unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
         try {
           try {
@@ -136,15 +136,15 @@ final class BufferedRandomAccessFile {
                 this.file.seek(this.position, true);
                 this.underlyingPosition = this.position;
                 while (remainingLength > 0) {
-                  readCountOrZeroFillEndLiteralPhase1 = this.file.read(remainingLength, destination, destinationOffset, false);
-                  if (-1 == readCountOrZeroFillEndLiteralPhase1) {
+                  underlyingOrRefillReadCount = this.file.read(remainingLength, destination, destinationOffset, false);
+                  if (-1 == underlyingOrRefillReadCount) {
                     underlyingReadSelectionRemainderEnabled = false;
                     break;
                   }
-                  this.position = this.position + (long)readCountOrZeroFillEndLiteralPhase1;
-                  this.underlyingPosition = this.underlyingPosition + (long)readCountOrZeroFillEndLiteralPhase1;
-                  remainingLength = remainingLength - readCountOrZeroFillEndLiteralPhase1;
-                  destinationOffset = destinationOffset + readCountOrZeroFillEndLiteralPhase1;
+                  this.position = this.position + (long)underlyingOrRefillReadCount;
+                  this.underlyingPosition = this.underlyingPosition + (long)underlyingOrRefillReadCount;
+                  remainingLength = remainingLength - underlyingOrRefillReadCount;
+                  destinationOffset = destinationOffset + underlyingOrRefillReadCount;
                 }
                 if (underlyingReadSelectionRemainderEnabled) {
                   break underlyingReadSelection;
@@ -153,14 +153,14 @@ final class BufferedRandomAccessFile {
               if (underlyingReadSelectionRemainderEnabled) {
                 if (remainingLength > 0) {
                   this.refillReadBuffer(true);
-                  readCountOrZeroFillEndLiteralPhase1 = remainingLength;
-                  if (this.readBufferLength < readCountOrZeroFillEndLiteralPhase1) {
-                    readCountOrZeroFillEndLiteralPhase1 = this.readBufferLength;
+                  underlyingOrRefillReadCount = remainingLength;
+                  if (this.readBufferLength < underlyingOrRefillReadCount) {
+                    underlyingOrRefillReadCount = this.readBufferLength;
                   }
-                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, readCountOrZeroFillEndLiteralPhase1);
-                  remainingLength = remainingLength - readCountOrZeroFillEndLiteralPhase1;
-                  destinationOffset = destinationOffset + readCountOrZeroFillEndLiteralPhase1;
-                  this.position = this.position + (long)readCountOrZeroFillEndLiteralPhase1;
+                  ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, underlyingOrRefillReadCount);
+                  remainingLength = remainingLength - underlyingOrRefillReadCount;
+                  destinationOffset = destinationOffset + underlyingOrRefillReadCount;
+                  this.position = this.position + (long)underlyingOrRefillReadCount;
                 }
               }
             }
@@ -169,11 +169,11 @@ final class BufferedRandomAccessFile {
                 zeroFillComparisonMinusOne = -1;
                 complementedRemainingLength = ~remainingLength;
                 if (zeroFillComparisonMinusOne > complementedRemainingLength) {
-                  readCountOrZeroFillEndLiteralPhase2 = destinationOffset + (int)(-this.position + this.writeBufferStart);
-                  if (destinationOffset + remainingLength < readCountOrZeroFillEndLiteralPhase2) {
-                    readCountOrZeroFillEndLiteralPhase2 = destinationOffset + remainingLength;
+                  zeroFillEndOffset = destinationOffset + (int)(-this.position + this.writeBufferStart);
+                  if (destinationOffset + remainingLength < zeroFillEndOffset) {
+                    zeroFillEndOffset = destinationOffset + remainingLength;
                   }
-                  while (readCountOrZeroFillEndLiteralPhase2 > destinationOffset) {
+                  while (zeroFillEndOffset > destinationOffset) {
                     remainingLength--;
                     zeroFillDestinationIndex = destinationOffset;
                     destinationOffset++;

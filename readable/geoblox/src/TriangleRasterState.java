@@ -46,8 +46,8 @@ final class TriangleRasterState {
 
     static {
         int lookupIndex = 0;
-        int lookupIndexLiteralPhase1;
-        int lookupIndexLiteralPhase2;
+        int reciprocalQ16Index;
+        int trigonometricTableIndex;
         sineQ16 = new int[2048];
         reciprocalQ15 = new int[512];
         rowBaseOffsets = new int[1024];
@@ -56,12 +56,12 @@ final class TriangleRasterState {
         for (lookupIndex = 1; lookupIndex < 512; lookupIndex++) {
             reciprocalQ15[lookupIndex] = 32768 / lookupIndex;
         }
-        for (lookupIndexLiteralPhase1 = 1; lookupIndexLiteralPhase1 < 2048; lookupIndexLiteralPhase1++) {
-            reciprocalQ16[lookupIndexLiteralPhase1] = 65536 / lookupIndexLiteralPhase1;
+        for (reciprocalQ16Index = 1; reciprocalQ16Index < 2048; reciprocalQ16Index++) {
+            reciprocalQ16[reciprocalQ16Index] = 65536 / reciprocalQ16Index;
         }
-        for (lookupIndexLiteralPhase2 = 0; lookupIndexLiteralPhase2 < 2048; lookupIndexLiteralPhase2++) {
-            sineQ16[lookupIndexLiteralPhase2] = (int)(65536.0 * Math.sin((double)lookupIndexLiteralPhase2 * 0.0030679615));
-            cosineQ16[lookupIndexLiteralPhase2] = (int)(65536.0 * Math.cos((double)lookupIndexLiteralPhase2 * 0.0030679615));
+        for (trigonometricTableIndex = 0; trigonometricTableIndex < 2048; trigonometricTableIndex++) {
+            sineQ16[trigonometricTableIndex] = (int)(65536.0 * Math.sin((double)trigonometricTableIndex * 0.0030679615));
+            cosineQ16[trigonometricTableIndex] = (int)(65536.0 * Math.cos((double)trigonometricTableIndex * 0.0030679615));
         }
     }
 }

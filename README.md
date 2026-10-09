@@ -17,14 +17,22 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/4f2f3969b04b1904d144322963d1c99211f617ab/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/b83a64f05a4b829858b07b716e847ea41dd25507/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,040 bindings,
 preserving 388 override relationships.
 
-## Current startup and widget names (pass 238)
+## Current lifetime naming milestone (pass 239)
+
+All LiteralPhase suffixes are replaced with source-reviewed names. This pass
+refines 83 gameplay/codec/audio/request roles while preserving the original
+bodies and proof identities. The export compiles, reproduces and reverses
+exactly; existing native probes pass. Older numbered phase families, large
+framed methods and unknown field purposes remain, as documented in the guide.
+
+## Previous startup and widget names (pass 238)
 
 97 startup/widget/timing/raster locals now describe their decoded roles.
 73 LiteralPhase names are replaced. Original callbacks, guard arithmetic and

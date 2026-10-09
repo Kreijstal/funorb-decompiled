@@ -49,7 +49,7 @@ final class MatchCandidateSupport {
         int smallestPackedEntityId = 0;
         int swappedEntityId = 0;
         int controlFlowGuard = 0;
-        int swappedEntityIdLiteralPhase1;
+        int packedMatchOrderingSwapId;
         controlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
           EmailAvailabilityQuery.matchCandidateCount = 0;
@@ -119,15 +119,15 @@ final class MatchCandidateSupport {
                       }
                       if (largestPackedEntityId >= smallestPackedEntityId) {
                         if (middlePackedEntityId > largestPackedEntityId) {
-                          swappedEntityIdLiteralPhase1 = largestPackedEntityId;
+                          packedMatchOrderingSwapId = largestPackedEntityId;
                           largestPackedEntityId = middlePackedEntityId;
-                          middlePackedEntityId = swappedEntityIdLiteralPhase1;
+                          middlePackedEntityId = packedMatchOrderingSwapId;
                         }
                       } else {
-                        swappedEntityIdLiteralPhase1 = middlePackedEntityId;
+                        packedMatchOrderingSwapId = middlePackedEntityId;
                         middlePackedEntityId = smallestPackedEntityId;
                         smallestPackedEntityId = largestPackedEntityId;
-                        largestPackedEntityId = swappedEntityIdLiteralPhase1;
+                        largestPackedEntityId = packedMatchOrderingSwapId;
                       }
                       candidateArrayBeforePack = TextPairLoginPayload.packedMatchCandidates;
                       candidateWriteIndexBeforePack = EmailAvailabilityQuery.matchCandidateCount;

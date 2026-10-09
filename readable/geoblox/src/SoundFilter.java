@@ -26,10 +26,10 @@ final class SoundFilter {
         float[] forwardCoefficients = null;
         float interpolatedValue = 0.0f;
         int pairOrCoefficientIndex = 0;
-        float interpolatedValueLiteralPhase1;
-        float interpolatedValueLiteralPhase2;
-        int pairOrCoefficientIndexLiteralPhase1;
-        int pairOrCoefficientIndexLiteralPhase2;
+        float firstPairRadius;
+        float currentPairRadius;
+        int forwardGainCoefficientIndex;
+        int quantizedCoefficientIndex;
         if (channel == 0) {
             interpolatedValue = (float)this.gainEndpoints[0] + (float)(this.gainEndpoints[1] - this.gainEndpoints[0]) * fraction;
             interpolatedValue = interpolatedValue * 0.0030517578125f;
@@ -39,13 +39,13 @@ final class SoundFilter {
         if (this.pairCounts[channel] == 0) {
             return 0;
         }
-        interpolatedValueLiteralPhase1 = this.interpolateRadius(channel, 0, fraction);
-        coefficientWorkspace[channel][0] = -2.0f * interpolatedValueLiteralPhase1 * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
-        coefficientWorkspace[channel][1] = interpolatedValueLiteralPhase1 * interpolatedValueLiteralPhase1;
+        firstPairRadius = this.interpolateRadius(channel, 0, fraction);
+        coefficientWorkspace[channel][0] = -2.0f * firstPairRadius * (float)Math.cos((double)this.interpolateAngularFrequency(channel, 0, fraction));
+        coefficientWorkspace[channel][1] = firstPairRadius * firstPairRadius;
         for (pairOrCoefficientIndex = 1; pairOrCoefficientIndex < this.pairCounts[channel]; pairOrCoefficientIndex++) {
-            interpolatedValueLiteralPhase2 = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
-            firstOrderTerm = -2.0f * interpolatedValueLiteralPhase2 * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
-            secondOrderTerm = interpolatedValueLiteralPhase2 * interpolatedValueLiteralPhase2;
+            currentPairRadius = this.interpolateRadius(channel, pairOrCoefficientIndex, fraction);
+            firstOrderTerm = -2.0f * currentPairRadius * (float)Math.cos((double)this.interpolateAngularFrequency(channel, pairOrCoefficientIndex, fraction));
+            secondOrderTerm = currentPairRadius * currentPairRadius;
             coefficientWorkspace[channel][pairOrCoefficientIndex * 2 + 1] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * secondOrderTerm;
             coefficientWorkspace[channel][pairOrCoefficientIndex * 2] = coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 1] * firstOrderTerm + coefficientWorkspace[channel][pairOrCoefficientIndex * 2 - 2] * secondOrderTerm;
             for (coefficientIndex = pairOrCoefficientIndex * 2 - 1; coefficientIndex >= 2; coefficientIndex--) {
@@ -58,13 +58,13 @@ final class SoundFilter {
             leadingCoefficients[0] = leadingCoefficients[0] + firstOrderTerm;
         }
         if (channel == 0) {
-            for (pairOrCoefficientIndexLiteralPhase1 = 0; pairOrCoefficientIndexLiteralPhase1 < this.pairCounts[0] * 2; pairOrCoefficientIndexLiteralPhase1++) {
+            for (forwardGainCoefficientIndex = 0; forwardGainCoefficientIndex < this.pairCounts[0] * 2; forwardGainCoefficientIndex++) {
                 forwardCoefficients = coefficientWorkspace[0];
-                forwardCoefficients[pairOrCoefficientIndexLiteralPhase1] = forwardCoefficients[pairOrCoefficientIndexLiteralPhase1] * forwardGain;
+                forwardCoefficients[forwardGainCoefficientIndex] = forwardCoefficients[forwardGainCoefficientIndex] * forwardGain;
             }
         }
-        for (pairOrCoefficientIndexLiteralPhase2 = 0; pairOrCoefficientIndexLiteralPhase2 < this.pairCounts[channel] * 2; pairOrCoefficientIndexLiteralPhase2++) {
-            coefficientsQ16[channel][pairOrCoefficientIndexLiteralPhase2] = (int)(coefficientWorkspace[channel][pairOrCoefficientIndexLiteralPhase2] * 65536.0f);
+        for (quantizedCoefficientIndex = 0; quantizedCoefficientIndex < this.pairCounts[channel] * 2; quantizedCoefficientIndex++) {
+            coefficientsQ16[channel][quantizedCoefficientIndex] = (int)(coefficientWorkspace[channel][quantizedCoefficientIndex] * 65536.0f);
         }
         return this.pairCounts[channel] * 2;
     }

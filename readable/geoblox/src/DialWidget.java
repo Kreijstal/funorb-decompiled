@@ -52,17 +52,17 @@ final class DialWidget extends ButtonWidget {
         int pointerOffsetY = 0;
         double adjustedPointerAngleRadians = 0.0;
         int clientControlFlowSnapshot = 0;
-        int guardRemainderOrPointerOffsetXLiteralPhase1;
+        int pointerOffsetXFromDialCenter;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!super.handlePointerPress(parentY, -52, parentX, pointerButton, pointerX, pointerY, eventContext)) {
             guardRemainderOrPointerOffsetX = 35 % ((-3 - methodGuard) / 38);
             return false;
           }
-          guardRemainderOrPointerOffsetXLiteralPhase1 = -this.centerOffsetX - (this.widgetX + (parentX - pointerX));
+          pointerOffsetXFromDialCenter = -this.centerOffsetX - (this.widgetX + (parentX - pointerX));
           pointerOffsetY = pointerY - (this.widgetY + parentY + this.centerOffsetY);
-          if (guardRemainderOrPointerOffsetXLiteralPhase1 * guardRemainderOrPointerOffsetXLiteralPhase1 + pointerOffsetY * pointerOffsetY < this.radius * this.radius) {
-            adjustedPointerAngleRadians = Math.atan2((double)pointerOffsetY, (double)guardRemainderOrPointerOffsetXLiteralPhase1) - TextInputValidator.dialReferenceAngleRadians;
+          if (pointerOffsetXFromDialCenter * pointerOffsetXFromDialCenter + pointerOffsetY * pointerOffsetY < this.radius * this.radius) {
+            adjustedPointerAngleRadians = Math.atan2((double)pointerOffsetY, (double)pointerOffsetXFromDialCenter) - TextInputValidator.dialReferenceAngleRadians;
             if (!(adjustedPointerAngleRadians < 0.0)) {
               if (0.0 < adjustedPointerAngleRadians) {
                 adjustedPointerAngleRadians = adjustedPointerAngleRadians + 3.141592653589793 / (double)this.stepCount;
