@@ -9,6 +9,8 @@ final class ie implements com.ms.directX.IEnumModesCallback {
     final int[] a(int param0) {
         int[] var3 = null;
         int[] var2 = null;
+        int[] var3Lifetime1;
+        int[] var2Lifetime1;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
         if (param0 == 8) {
             field_a = new int[field_b];
@@ -24,11 +26,11 @@ final class ie implements com.ms.directX.IEnumModesCallback {
         field_a = new int[field_b];
         field_b = 0;
         this.field_c.enumDisplayModes(0, (com.ms.directX.DDSurfaceDesc) null, (com.ms.com.IUnknown) null, (com.ms.directX.IEnumModesCallback) (this));
-        var3 = field_a;
-        var2 = var3;
+        var3Lifetime1 = field_a;
+        var2Lifetime1 = var3Lifetime1;
         field_b = 0;
         field_a = null;
-        return var3;
+        return var3Lifetime1;
     }
 
     final void a(int param0, int param1, java.awt.Frame param2, int param3, int param4, int param5) {

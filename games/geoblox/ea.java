@@ -33,21 +33,25 @@ final class ea extends hf {
             int var8 = 0;
             String var9 = null;
             String var10 = null;
+            String var7Lifetime1;
+            String var7Lifetime2;
+            String var7Lifetime3;
+            String var7Lifetime4;
             try {
               try {
                 var9 = param2.getParameter("cookiehost");
                 var7 = var9;
-                var7 = var9;
+                var7Lifetime1 = var9;
                 var8 = -108 / ((48 - param0) / 59);
                 var10 = param3 + "=" + param4 + "; version=1; path=/; domain=" + var9;
-                var7 = var10;
-                var7 = var10;
+                var7Lifetime2 = var10;
+                var7Lifetime3 = var10;
                 if (param1 < 0L) {
-                  var7 = var10 + "; Discard;";
+                  var7Lifetime4 = var10 + "; Discard;";
                 } else {
-                  var7 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
+                  var7Lifetime4 = var10 + "; Expires=" + md.a((byte) -79, 1000L * param1 + oa.a(-12520)) + "; Max-Age=" + param1;
                 }
-                wk.a(param2, "document.cookie=\"" + var7 + "\"", (byte) -10);
+                wk.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -10);
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

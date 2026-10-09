@@ -78,6 +78,7 @@ final class wd {
         rc var3 = null;
         int var4 = Geoblox.field_C;
         int var2 = 0;
+        rc var3Lifetime1;
         if (param0 == 67) {
             var3 = this.field_g.field_k;
             while (this.field_g != var3) {
@@ -87,9 +88,9 @@ final class wd {
             return var2;
         }
         field_b = (dm) null;
-        var3 = this.field_g.field_k;
-        while (this.field_g != var3) {
-            var3 = var3.field_k;
+        var3Lifetime1 = this.field_g.field_k;
+        while (this.field_g != var3Lifetime1) {
+            var3Lifetime1 = var3Lifetime1.field_k;
             var2++;
         }
         return var2;

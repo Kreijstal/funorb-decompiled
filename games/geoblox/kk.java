@@ -46,6 +46,7 @@ final class kk extends ji {
             int var15 = 0;
             int var16 = 0;
             int var17 = 0;
+            sd var2Lifetime1;
             var16 = Geoblox.field_C;
             if (this.field_u != null) {
               var2_long = oa.a(-12520);
@@ -83,17 +84,17 @@ final class kk extends ji {
                 this.field_e.a(-93, var2);
                 var2 = (sd) ((Object) this.field_g.a(param0 ^ 41));
               }
-              var2 = (sd) ((Object) this.field_p.c((byte) 121));
+              var2Lifetime1 = (sd) ((Object) this.field_p.c((byte) 121));
               if (param0 != 95) {
                 this.e(-90);
               }
-              while (var2 != null) {
+              while (var2Lifetime1 != null) {
                 this.field_m.field_f = 0;
                 this.field_m.d((byte) 8, 0);
-                this.field_m.a((byte) -127, var2.field_i);
+                this.field_m.a((byte) -127, var2Lifetime1.field_i);
                 this.field_u.a(100, 0, this.field_m.field_j.length, this.field_m.field_j);
-                this.field_c.a(112, var2);
-                var2 = (sd) ((Object) this.field_p.a(54));
+                this.field_c.a(112, var2Lifetime1);
+                var2Lifetime1 = (sd) ((Object) this.field_p.a(54));
               }
               for (var2_int = 0; var2_int < 100; var2_int++) {
                 var3_int = this.field_u.a((byte) 82);
@@ -330,6 +331,7 @@ final class kk extends ji {
             RuntimeException var4_ref3 = null;
             Exception var5 = null;
             int var6 = 0;
+            sd var4_refLifetime1;
             var6 = Geoblox.field_C;
             try {
               if (null != this.field_u) {
@@ -358,9 +360,9 @@ final class kk extends ji {
                 field_t = 110;
               }
               while (true) {
-                var4_ref = (sd) ((Object) this.field_c.a(true));
-                if (var4_ref != null) {
-                  this.field_p.a(116, var4_ref);
+                var4_refLifetime1 = (sd) ((Object) this.field_c.a(true));
+                if (var4_refLifetime1 != null) {
+                  this.field_p.a(116, var4_refLifetime1);
                   continue;
                 }
                 break;

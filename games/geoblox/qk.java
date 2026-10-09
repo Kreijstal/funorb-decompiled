@@ -295,6 +295,9 @@ class qk {
         ia var15;
         int var6Lifetime1;
         int var9Lifetime1;
+        Object var10Lifetime1;
+        ia var14Lifetime1;
+        ia var14Lifetime2;
         var3 = param1;
         if (field_q) {
           var3 = var3 << 1;
@@ -325,7 +328,7 @@ class qk {
                   var10 = null;
                   var11 = this.field_a[var7_int];
                   var14 = var11;
-                  var14 = var11;
+                  var14Lifetime1 = var11;
                   while (var11 != null) {
                     var12 = var11.field_g;
                     if (var12 != null &&
@@ -344,12 +347,12 @@ class qk {
                     if (var4 >= this.field_l) {
                       break L3;
                     }
-                    var14 = var11.b();
-                    if (var14 != null) {
+                    var14Lifetime2 = var11.b();
+                    if (var14Lifetime2 != null) {
                       var15_int = var11.field_i;
-                      while (var14 != null) {
-                        this.a(var14, var15_int * var14.a() >> 8);
-                        var14 = var11.c();
+                      while (var14Lifetime2 != null) {
+                        this.a(var14Lifetime2, var15_int * var14Lifetime2.a() >> 8);
+                        var14Lifetime2 = var11.c();
                       }
                     }
                     var15 = var11.field_h;
@@ -381,9 +384,9 @@ class qk {
             this.field_b[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10 = ((ia) (var7)).field_h;
+              var10Lifetime1 = ((ia) (var7)).field_h;
               ((ia) (var7)).field_h = null;
-              var7 = var10;
+              var7 = var10Lifetime1;
             }
           }
         }

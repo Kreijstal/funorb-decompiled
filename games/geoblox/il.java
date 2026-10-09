@@ -1075,6 +1075,7 @@ final class il extends dm {
         int var14Lifetime2;
         int var15Lifetime1;
         int var19Lifetime1;
+        int[] var23Lifetime1;
         var3 = this.field_r >> 2;
         var4 = this.field_m >> 2;
         param0 = param0 + this.field_u / 4;
@@ -1124,18 +1125,18 @@ final class il extends dm {
                 var9[(var14 << 2) + var15] = this.field_v[var12 + var14 * this.field_r + var15];
               }
             }
-            var23 = var22;
+            var23Lifetime1 = var22;
             var14Lifetime1 = 0;
             var15Lifetime1 = 0;
             var16 = 0;
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 16; var19++) {
-              var14Lifetime2 = var23[var19] >>> 24;
+              var14Lifetime2 = var23Lifetime1[var19] >>> 24;
               var15Lifetime1 = var15Lifetime1 + var14Lifetime2;
-              var16 = var16 + var14Lifetime2 * (var23[var19] >> 16 & 255);
-              var17 = var17 + var14Lifetime2 * (var23[var19] >> 8 & 255);
-              var18 = var18 + var14Lifetime2 * (var23[var19] & 255);
+              var16 = var16 + var14Lifetime2 * (var23Lifetime1[var19] >> 16 & 255);
+              var17 = var17 + var14Lifetime2 * (var23Lifetime1[var19] >> 8 & 255);
+              var18 = var18 + var14Lifetime2 * (var23Lifetime1[var19] & 255);
             }
             if (var15Lifetime1 == 0) {
               var11 += 4;

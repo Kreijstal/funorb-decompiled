@@ -214,6 +214,7 @@ class el extends hf {
         la var15;
         la var16;
         la var17;
+        la var6Lifetime1;
         var7 = Geoblox.field_C;
         if (param1 <= 126) {
           return true;
@@ -399,7 +400,7 @@ class el extends hf {
           }
           this.a(param2, qa.field_a, true, this, param3, ue.field_e);
           var12 = lh.field_b;
-          var6 = var12;
+          var6Lifetime1 = var12;
           if (var12 != null) {
             if (var12.field_u instanceof rg) {
               ((rg) ((Object) var12.field_u)).a((fk) null, var12, 22176);

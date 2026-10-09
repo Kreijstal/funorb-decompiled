@@ -132,6 +132,7 @@ final class pi extends vf {
         dm var19;
         int var12Lifetime1;
         int var13Lifetime1;
+        lh var6Lifetime1;
         var14 = Geoblox.field_C;
         var6 = this.field_M.a((byte) -105);
         if (var6 != bf.field_g &&
@@ -148,12 +149,12 @@ final class pi extends vf {
           this.g(-55);
         }
         super.a(param0, param1, (byte) 106, param3);
-        var6 = this.field_M.a((byte) -105);
+        var6Lifetime1 = this.field_M.a((byte) -105);
         var8 = (cc) ((Object) this.field_q);
         var9 = this.field_v + param0;
         var10 = var8.a(param1, -2, (el) (this)) + (var8.a((byte) 125, (el) (this)).b(-3111) >> 1);
         var11 = 7 % ((param2 - 1) / 43);
-        if (bf.field_g == var6) {
+        if (bf.field_g == var6Lifetime1) {
           var19 = oa.field_e[0];
           var12 = var19.field_s << 1;
           var13 = var19.field_o << 1;
@@ -179,13 +180,13 @@ final class pi extends vf {
           this.field_Q.c(-(var19.field_s >> 1) + var9, var10 - var19.field_o, 256);
           return;
         }
-        if (var6 != si.field_n) {
-          if (si.field_m == var6) {
+        if (var6Lifetime1 != si.field_n) {
+          if (si.field_m == var6Lifetime1) {
             var17 = oa.field_e[2];
             var17.c(var9, var10 - (var17.field_m >> 1), 256);
             return;
           }
-          if (kk.field_w != var6) {
+          if (kk.field_w != var6Lifetime1) {
             return;
           }
           var16 = oa.field_e[1];

@@ -86,6 +86,8 @@ final class ik {
         int var6_int = 0;
         ja var6 = null;
         int var7 = 0;
+        ja var5Lifetime1;
+        ja var6Lifetime1;
         var7 = Geoblox.field_C;
         try {
           for (var3_int = 0; var3_int < param1.field_L; var3_int++) {
@@ -199,14 +201,14 @@ final class ik {
             for (var5_int = 0; param0.field_L > var5_int; var5_int++) {
               param0.field_n[var5_int].a(param0, 0);
             }
-            var5 = param0;
+            var5Lifetime1 = param0;
             param0.field_N = 0;
-            var6 = param0;
-            var5.field_L = 0;
+            var6Lifetime1 = param0;
+            var5Lifetime1.field_L = 0;
             param0.field_t = false;
             param0.field_B = true;
             param0.field_K = ji.field_r;
-            var6.field_m = 0;
+            var6Lifetime1.field_m = 0;
           }
           stackIn_77_0 = var3_int;
           return stackIn_77_0 != 0;

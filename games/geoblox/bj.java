@@ -428,6 +428,8 @@ final class bj extends nh {
         hf var7;
         int var2_intLifetime1;
         int var4Lifetime1;
+        pb var2Lifetime1;
+        hf var3Lifetime1;
         L0: {
           L1: {
             L2: {
@@ -482,18 +484,18 @@ final class bj extends nh {
                   }
                   if (this.field_v) {
                     var2_intLifetime1 = 1;
-                    var3 = this.field_d.g(0);
-                    while (var3 != null) {
-                      var4Lifetime1 = (int)var3.field_a;
+                    var3Lifetime1 = this.field_d.g(0);
+                    while (var3Lifetime1 != null) {
+                      var4Lifetime1 = (int)var3Lifetime1.field_a;
                       if (this.field_k[var4Lifetime1] != 1) {
                         discarded$3 = this.a((byte) -71, 2, var4Lifetime1);
                       }
                       if (this.field_k[var4Lifetime1] != 1) {
                         var2_intLifetime1 = 0;
                       } else {
-                        var3.a(false);
+                        var3Lifetime1.a(false);
                       }
-                      var3 = this.field_d.d(1);
+                      var3Lifetime1 = this.field_d.d(1);
                     }
                     L13: while (true) {
                       if (this.field_o < this.field_u.field_a.length) {
@@ -559,19 +561,19 @@ final class bj extends nh {
               if (oa.a(-12520) < this.field_n) {
                 break L1;
               }
-              var2 = (pb) ((Object) this.field_g.a((byte) 125));
-              while (var2 != null) {
-                if (!var2.field_u) {
-                  if (var2.field_n) {
-                    if (!var2.field_q) {
+              var2Lifetime1 = (pb) ((Object) this.field_g.a((byte) 125));
+              while (var2Lifetime1 != null) {
+                if (!var2Lifetime1.field_u) {
+                  if (var2Lifetime1.field_n) {
+                    if (!var2Lifetime1.field_q) {
                       throw new RuntimeException();
                     }
-                    var2.a(false);
+                    var2Lifetime1.a(false);
                   } else {
-                    var2.field_n = true;
+                    var2Lifetime1.field_n = true;
                   }
                 }
-                var2 = (pb) ((Object) this.field_g.b(74));
+                var2Lifetime1 = (pb) ((Object) this.field_g.b(74));
               }
             }
             this.field_n = 1000L + oa.a(param0 - 12482);

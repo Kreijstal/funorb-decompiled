@@ -35,6 +35,7 @@ final class vg {
         rc var2;
         rc var3;
         int var4;
+        rc var3Lifetime1;
         var4 = Geoblox.field_C;
         if (null == this.field_c) {
           return null;
@@ -68,9 +69,9 @@ final class vg {
           }
           break;
         }
-        var3 = this.field_c;
+        var3Lifetime1 = this.field_c;
         this.field_c = this.field_c.field_k;
-        return var3;
+        return var3Lifetime1;
     }
 
     final rc a(long param0, int param1) {

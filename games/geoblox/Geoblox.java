@@ -57,6 +57,7 @@ public final class Geoblox extends wf {
         int var7_int = 0;
         int var9 = 0;
         int var10 = field_C;
+        dm[] var3Lifetime1;
         oj.a(vc.field_i, (byte) -104);
         if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
             lc.a(ca.field_h, -2, 60.0f);
@@ -101,13 +102,13 @@ public final class Geoblox extends wf {
                     var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
                 }
             }
-            var3 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
+            var3Lifetime1 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
             for (var4 = 0; var4 < 7; var4++) {
                 for (var5_int = 0; var5_int < 7; var5_int++) {
-                    for (var6_int = 0; var6_int < var3.length; var6_int++) {
-                        ka.field_m[var4][var5_int][var6_int] = new dm(4 + var3[var6_int].field_s, 4 + var3[var6_int].field_o);
+                    for (var6_int = 0; var6_int < var3Lifetime1.length; var6_int++) {
+                        ka.field_m[var4][var5_int][var6_int] = new dm(4 + var3Lifetime1[var6_int].field_s, 4 + var3Lifetime1[var6_int].field_o);
                         ka.field_m[var4][var5_int][var6_int].e();
-                        var3[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
+                        var3Lifetime1[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
                         k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, ka.field_m[var4][var5_int][var6_int].field_o);
                     }
                 }

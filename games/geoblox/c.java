@@ -934,6 +934,7 @@ final class c extends ka {
         String var8 = null;
         String var9 = null;
         int var10 = 0;
+        String var2Lifetime1;
         var10 = Geoblox.field_C;
         try {
           if (ca.field_f == null &&
@@ -1061,8 +1062,8 @@ final class c extends ka {
             }
           }
           if (!fh.c(param0 ^ -109)) {
-            var2 = ue.field_b;
-            fi.field_d.a(var2, 140, 325, 360, 300, 0, -1, 1, 0, 16);
+            var2Lifetime1 = ue.field_b;
+            fi.field_d.a(var2Lifetime1, 140, 325, 360, 300, 0, -1, 1, 0, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

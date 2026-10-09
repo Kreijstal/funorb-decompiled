@@ -22,6 +22,90 @@ abstract class wh extends rc {
         byte[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
+        byte[] var2Lifetime1;
+        byte[] var2Lifetime2;
+        byte[] var2Lifetime3;
+        byte[] var2Lifetime4;
+        byte[] var2Lifetime5;
+        byte[] var2Lifetime6;
+        byte[] var2Lifetime7;
+        byte[] var2Lifetime8;
+        byte[] var2Lifetime9;
+        byte[] var2Lifetime10;
+        byte[] var2Lifetime11;
+        byte[] var2Lifetime12;
+        byte[] var2Lifetime13;
+        byte[] var2Lifetime14;
+        byte[] var2Lifetime15;
+        byte[] var2Lifetime16;
+        byte[] var2Lifetime17;
+        byte[] var2Lifetime18;
+        byte[] var2Lifetime19;
+        byte[] var2Lifetime20;
+        byte[] var2Lifetime21;
+        byte[] var2Lifetime22;
+        byte[] var2Lifetime23;
+        byte[] var2Lifetime24;
+        byte[] var2Lifetime25;
+        byte[] var2Lifetime26;
+        byte[] var2Lifetime27;
+        byte[] var2Lifetime28;
+        byte[] var2Lifetime29;
+        byte[] var2Lifetime30;
+        byte[] var2Lifetime31;
+        byte[] var2Lifetime32;
+        byte[] var2Lifetime33;
+        byte[] var2Lifetime34;
+        byte[] var2Lifetime35;
+        byte[] var2Lifetime36;
+        byte[] var2Lifetime37;
+        byte[] var2Lifetime38;
+        byte[] var2Lifetime39;
+        byte[] var2Lifetime40;
+        byte[] var2Lifetime41;
+        byte[] var2Lifetime42;
+        byte[] var2Lifetime43;
+        byte[] var2Lifetime44;
+        byte[] var2Lifetime45;
+        byte[] var2Lifetime46;
+        byte[] var2Lifetime47;
+        byte[] var2Lifetime48;
+        byte[] var2Lifetime49;
+        byte[] var2Lifetime50;
+        byte[] var2Lifetime51;
+        byte[] var2Lifetime52;
+        byte[] var2Lifetime53;
+        byte[] var2Lifetime54;
+        byte[] var2Lifetime55;
+        byte[] var2Lifetime56;
+        byte[] var2Lifetime57;
+        byte[] var2Lifetime58;
+        byte[] var2Lifetime59;
+        byte[] var2Lifetime60;
+        byte[] var2Lifetime61;
+        byte[] var2Lifetime62;
+        byte[] var2Lifetime63;
+        byte[] var2Lifetime64;
+        byte[] var2Lifetime65;
+        byte[] var2Lifetime66;
+        byte[] var2Lifetime67;
+        byte[] var2Lifetime68;
+        byte[] var2Lifetime69;
+        byte[] var2Lifetime70;
+        byte[] var2Lifetime71;
+        byte[] var2Lifetime72;
+        byte[] var2Lifetime73;
+        byte[] var2Lifetime74;
+        byte[] var2Lifetime75;
+        byte[] var2Lifetime76;
+        byte[] var2Lifetime77;
+        byte[] var2Lifetime78;
+        byte[] var2Lifetime79;
+        byte[] var2Lifetime80;
+        byte[] var2Lifetime81;
+        byte[] var2Lifetime82;
+        byte[] var2Lifetime83;
+        byte[] var2Lifetime84;
         var3 = Geoblox.field_C;
         try {
           pf.field_O = param1;
@@ -29,344 +113,344 @@ abstract class wh extends rc {
           if (null != var2) {
             pg.field_a[0] = ag.a(1, var2);
           }
-          var2 = ih.a(122, "achievement_names,1");
-          if (var2 != null) {
-            pg.field_a[1] = ag.a(1, var2);
+          var2Lifetime1 = ih.a(122, "achievement_names,1");
+          if (var2Lifetime1 != null) {
+            pg.field_a[1] = ag.a(1, var2Lifetime1);
           }
-          var2 = ih.a(126, "achievement_names,2");
-          if (var2 != null) {
-            pg.field_a[2] = ag.a(1, var2);
+          var2Lifetime2 = ih.a(126, "achievement_names,2");
+          if (var2Lifetime2 != null) {
+            pg.field_a[2] = ag.a(1, var2Lifetime2);
           }
-          var2 = ih.a(125, "achievement_names,3");
-          if (null != var2) {
-            pg.field_a[3] = ag.a(1, var2);
+          var2Lifetime3 = ih.a(125, "achievement_names,3");
+          if (null != var2Lifetime3) {
+            pg.field_a[3] = ag.a(1, var2Lifetime3);
           }
-          var2 = ih.a(121, "achievement_names,4");
-          if (null != var2) {
-            pg.field_a[4] = ag.a(1, var2);
+          var2Lifetime4 = ih.a(121, "achievement_names,4");
+          if (null != var2Lifetime4) {
+            pg.field_a[4] = ag.a(1, var2Lifetime4);
           }
-          var2 = ih.a(126, "achievement_names,5");
-          if (var2 != null) {
-            pg.field_a[5] = ag.a(1, var2);
+          var2Lifetime5 = ih.a(126, "achievement_names,5");
+          if (var2Lifetime5 != null) {
+            pg.field_a[5] = ag.a(1, var2Lifetime5);
           }
-          var2 = ih.a(125, "achievement_names,6");
-          if (var2 != null) {
-            pg.field_a[6] = ag.a(1, var2);
+          var2Lifetime6 = ih.a(125, "achievement_names,6");
+          if (var2Lifetime6 != null) {
+            pg.field_a[6] = ag.a(1, var2Lifetime6);
           }
-          var2 = ih.a(125, "achievement_names,7");
-          if (null != var2) {
-            pg.field_a[7] = ag.a(1, var2);
+          var2Lifetime7 = ih.a(125, "achievement_names,7");
+          if (null != var2Lifetime7) {
+            pg.field_a[7] = ag.a(1, var2Lifetime7);
           }
-          var2 = ih.a(127, "achievement_names,8");
-          if (null != var2) {
-            pg.field_a[8] = ag.a(1, var2);
+          var2Lifetime8 = ih.a(127, "achievement_names,8");
+          if (null != var2Lifetime8) {
+            pg.field_a[8] = ag.a(1, var2Lifetime8);
           }
-          var2 = ih.a(122, "achievement_names,9");
-          if (var2 != null) {
-            pg.field_a[9] = ag.a(1, var2);
+          var2Lifetime9 = ih.a(122, "achievement_names,9");
+          if (var2Lifetime9 != null) {
+            pg.field_a[9] = ag.a(1, var2Lifetime9);
           }
-          var2 = ih.a(122, "achievement_names,10");
-          if (null != var2) {
-            pg.field_a[10] = ag.a(1, var2);
+          var2Lifetime10 = ih.a(122, "achievement_names,10");
+          if (null != var2Lifetime10) {
+            pg.field_a[10] = ag.a(1, var2Lifetime10);
           }
-          var2 = ih.a(126, "achievement_names,11");
-          if (null != var2) {
-            pg.field_a[11] = ag.a(1, var2);
+          var2Lifetime11 = ih.a(126, "achievement_names,11");
+          if (null != var2Lifetime11) {
+            pg.field_a[11] = ag.a(1, var2Lifetime11);
           }
-          var2 = ih.a(122, "achievement_names,12");
-          if (var2 != null) {
-            pg.field_a[12] = ag.a(1, var2);
+          var2Lifetime12 = ih.a(122, "achievement_names,12");
+          if (var2Lifetime12 != null) {
+            pg.field_a[12] = ag.a(1, var2Lifetime12);
           }
-          var2 = ih.a(125, "achievement_names,13");
-          if (null != var2) {
-            pg.field_a[13] = ag.a(1, var2);
+          var2Lifetime13 = ih.a(125, "achievement_names,13");
+          if (null != var2Lifetime13) {
+            pg.field_a[13] = ag.a(1, var2Lifetime13);
           }
-          var2 = ih.a(120, "achievement_names,14");
-          if (var2 != null) {
-            pg.field_a[14] = ag.a(1, var2);
+          var2Lifetime14 = ih.a(120, "achievement_names,14");
+          if (var2Lifetime14 != null) {
+            pg.field_a[14] = ag.a(1, var2Lifetime14);
           }
-          var2 = ih.a(123, "achievement_names,15");
-          if (null != var2) {
-            pg.field_a[15] = ag.a(1, var2);
+          var2Lifetime15 = ih.a(123, "achievement_names,15");
+          if (null != var2Lifetime15) {
+            pg.field_a[15] = ag.a(1, var2Lifetime15);
           }
-          var2 = ih.a(121, "achievement_names,16");
-          if (var2 != null) {
-            pg.field_a[16] = ag.a(1, var2);
+          var2Lifetime16 = ih.a(121, "achievement_names,16");
+          if (var2Lifetime16 != null) {
+            pg.field_a[16] = ag.a(1, var2Lifetime16);
           }
-          var2 = ih.a(122, "achievement_criteria,0");
-          if (null != var2) {
-            ri.field_b[0] = ag.a(1, var2);
+          var2Lifetime17 = ih.a(122, "achievement_criteria,0");
+          if (null != var2Lifetime17) {
+            ri.field_b[0] = ag.a(1, var2Lifetime17);
           }
-          var2 = ih.a(121, "achievement_criteria,1");
-          if (null != var2) {
-            ri.field_b[1] = ag.a(1, var2);
+          var2Lifetime18 = ih.a(121, "achievement_criteria,1");
+          if (null != var2Lifetime18) {
+            ri.field_b[1] = ag.a(1, var2Lifetime18);
           }
-          var2 = ih.a(125, "achievement_criteria,2");
-          if (null != var2) {
-            ri.field_b[2] = ag.a(1, var2);
+          var2Lifetime19 = ih.a(125, "achievement_criteria,2");
+          if (null != var2Lifetime19) {
+            ri.field_b[2] = ag.a(1, var2Lifetime19);
           }
-          var2 = ih.a(126, "achievement_criteria,3");
-          if (var2 != null) {
-            ri.field_b[3] = ag.a(1, var2);
+          var2Lifetime20 = ih.a(126, "achievement_criteria,3");
+          if (var2Lifetime20 != null) {
+            ri.field_b[3] = ag.a(1, var2Lifetime20);
           }
-          var2 = ih.a(121, "achievement_criteria,4");
-          if (null != var2) {
-            ri.field_b[4] = ag.a(1, var2);
+          var2Lifetime21 = ih.a(121, "achievement_criteria,4");
+          if (null != var2Lifetime21) {
+            ri.field_b[4] = ag.a(1, var2Lifetime21);
           }
-          var2 = ih.a(120, "achievement_criteria,5");
-          if (null != var2) {
-            ri.field_b[5] = ag.a(1, var2);
+          var2Lifetime22 = ih.a(120, "achievement_criteria,5");
+          if (null != var2Lifetime22) {
+            ri.field_b[5] = ag.a(1, var2Lifetime22);
           }
-          var2 = ih.a(126, "achievement_criteria,6");
-          if (var2 != null) {
-            ri.field_b[6] = ag.a(1, var2);
+          var2Lifetime23 = ih.a(126, "achievement_criteria,6");
+          if (var2Lifetime23 != null) {
+            ri.field_b[6] = ag.a(1, var2Lifetime23);
           }
-          var2 = ih.a(121, "achievement_criteria,7");
-          if (var2 != null) {
-            ri.field_b[7] = ag.a(1, var2);
+          var2Lifetime24 = ih.a(121, "achievement_criteria,7");
+          if (var2Lifetime24 != null) {
+            ri.field_b[7] = ag.a(1, var2Lifetime24);
           }
-          var2 = ih.a(125, "achievement_criteria,8");
-          if (null != var2) {
-            ri.field_b[8] = ag.a(1, var2);
+          var2Lifetime25 = ih.a(125, "achievement_criteria,8");
+          if (null != var2Lifetime25) {
+            ri.field_b[8] = ag.a(1, var2Lifetime25);
           }
-          var2 = ih.a(125, "achievement_criteria,9");
-          if (null != var2) {
-            ri.field_b[9] = ag.a(1, var2);
+          var2Lifetime26 = ih.a(125, "achievement_criteria,9");
+          if (null != var2Lifetime26) {
+            ri.field_b[9] = ag.a(1, var2Lifetime26);
           }
-          var2 = ih.a(122, "achievement_criteria,10");
-          if (null != var2) {
-            ri.field_b[10] = ag.a(1, var2);
+          var2Lifetime27 = ih.a(122, "achievement_criteria,10");
+          if (null != var2Lifetime27) {
+            ri.field_b[10] = ag.a(1, var2Lifetime27);
           }
-          var2 = ih.a(126, "achievement_criteria,11");
-          if (var2 != null) {
-            ri.field_b[11] = ag.a(1, var2);
+          var2Lifetime28 = ih.a(126, "achievement_criteria,11");
+          if (var2Lifetime28 != null) {
+            ri.field_b[11] = ag.a(1, var2Lifetime28);
           }
-          var2 = ih.a(126, "achievement_criteria,12");
-          if (var2 != null) {
-            ri.field_b[12] = ag.a(1, var2);
+          var2Lifetime29 = ih.a(126, "achievement_criteria,12");
+          if (var2Lifetime29 != null) {
+            ri.field_b[12] = ag.a(1, var2Lifetime29);
           }
-          var2 = ih.a(127, "achievement_criteria,13");
-          if (null != var2) {
-            ri.field_b[13] = ag.a(1, var2);
+          var2Lifetime30 = ih.a(127, "achievement_criteria,13");
+          if (null != var2Lifetime30) {
+            ri.field_b[13] = ag.a(1, var2Lifetime30);
           }
-          var2 = ih.a(120, "achievement_criteria,14");
-          if (null != var2) {
-            ri.field_b[14] = ag.a(1, var2);
+          var2Lifetime31 = ih.a(120, "achievement_criteria,14");
+          if (null != var2Lifetime31) {
+            ri.field_b[14] = ag.a(1, var2Lifetime31);
           }
-          var2 = ih.a(127, "achievement_criteria,15");
-          if (null != var2) {
-            ri.field_b[15] = ag.a(1, var2);
+          var2Lifetime32 = ih.a(127, "achievement_criteria,15");
+          if (null != var2Lifetime32) {
+            ri.field_b[15] = ag.a(1, var2Lifetime32);
           }
-          var2 = ih.a(120, "achievement_criteria,16");
-          if (null != var2) {
-            ri.field_b[16] = ag.a(1, var2);
+          var2Lifetime33 = ih.a(120, "achievement_criteria,16");
+          if (null != var2Lifetime33) {
+            ri.field_b[16] = ag.a(1, var2Lifetime33);
           }
-          var2 = ih.a(127, "starting");
-          if (null != var2) {
-            uj.field_a = ag.a(1, var2);
+          var2Lifetime34 = ih.a(127, "starting");
+          if (null != var2Lifetime34) {
+            uj.field_a = ag.a(1, var2Lifetime34);
           }
-          var2 = ih.a(120, "gameName");
-          if (var2 != null) {
-            od.field_b = ag.a(1, var2);
+          var2Lifetime35 = ih.a(120, "gameName");
+          if (var2Lifetime35 != null) {
+            od.field_b = ag.a(1, var2Lifetime35);
           }
-          var2 = ih.a(125, "caption1");
-          if (var2 != null) {
-            ag.a(1, var2);
+          var2Lifetime36 = ih.a(125, "caption1");
+          if (var2Lifetime36 != null) {
+            ag.a(1, var2Lifetime36);
           }
-          var2 = ih.a(124, "caption2");
-          if (null != var2) {
-            ag.a(1, var2);
+          var2Lifetime37 = ih.a(124, "caption2");
+          if (null != var2Lifetime37) {
+            ag.a(1, var2Lifetime37);
           }
-          var2 = ih.a(123, "caption3");
-          if (var2 != null) {
-            ag.a(1, var2);
+          var2Lifetime38 = ih.a(123, "caption3");
+          if (var2Lifetime38 != null) {
+            ag.a(1, var2Lifetime38);
           }
-          var2 = ih.a(125, "caption4");
-          if (null != var2) {
-            ag.a(1, var2);
+          var2Lifetime39 = ih.a(125, "caption4");
+          if (null != var2Lifetime39) {
+            ag.a(1, var2Lifetime39);
           }
-          var2 = ih.a(124, "caption5");
-          if (null != var2) {
-            ag.a(1, var2);
+          var2Lifetime40 = ih.a(124, "caption5");
+          if (null != var2Lifetime40) {
+            ag.a(1, var2Lifetime40);
           }
-          var2 = ih.a(126, "youreGreat");
-          if (null != var2) {
-            ld.field_a = ag.a(1, var2);
+          var2Lifetime41 = ih.a(126, "youreGreat");
+          if (null != var2Lifetime41) {
+            ld.field_a = ag.a(1, var2Lifetime41);
           }
-          var2 = ih.a(120, "bubbleBonus");
-          if (var2 != null) {
-            sg.field_f = ag.a(1, var2);
+          var2Lifetime42 = ih.a(120, "bubbleBonus");
+          if (var2Lifetime42 != null) {
+            sg.field_f = ag.a(1, var2Lifetime42);
           }
-          var2 = ih.a(126, "endOfFreeGame");
-          if (var2 != null) {
-            ag.a(1, var2);
+          var2Lifetime43 = ih.a(126, "endOfFreeGame");
+          if (var2Lifetime43 != null) {
+            ag.a(1, var2Lifetime43);
           }
-          var2 = ih.a(126, "itsTheBubbleBonus");
-          if (var2 != null) {
-            kd.field_d = ag.a(1, var2);
+          var2Lifetime44 = ih.a(126, "itsTheBubbleBonus");
+          if (var2Lifetime44 != null) {
+            kd.field_d = ag.a(1, var2Lifetime44);
           }
-          var2 = ih.a(120, "countdown");
-          if (null != var2) {
-            w.field_e = ag.a(1, var2);
+          var2Lifetime45 = ih.a(120, "countdown");
+          if (null != var2Lifetime45) {
+            w.field_e = ag.a(1, var2Lifetime45);
           }
-          var2 = ih.a(124, "levelsLastGeoblox");
-          if (null != var2) {
-            tj.field_a = ag.a(1, var2);
+          var2Lifetime46 = ih.a(124, "levelsLastGeoblox");
+          if (null != var2Lifetime46) {
+            tj.field_a = ag.a(1, var2Lifetime46);
           }
-          var2 = ih.a(120, "clearBonus");
-          if (null != var2) {
-            wl.field_b = ag.a(1, var2);
+          var2Lifetime47 = ih.a(120, "clearBonus");
+          if (null != var2Lifetime47) {
+            wl.field_b = ag.a(1, var2Lifetime47);
           }
-          var2 = ih.a(121, "cheat");
+          var2Lifetime48 = ih.a(121, "cheat");
           if (!param0) {
             field_t = (ck) null;
           }
-          if (var2 != null) {
-            ag.a(1, var2);
+          if (var2Lifetime48 != null) {
+            ag.a(1, var2Lifetime48);
           }
-          var2 = ih.a(125, "bonus");
-          if (var2 != null) {
-            ic.field_a = ag.a(1, var2);
+          var2Lifetime49 = ih.a(125, "bonus");
+          if (var2Lifetime49 != null) {
+            ic.field_a = ag.a(1, var2Lifetime49);
           }
-          var2 = ih.a(123, "fps");
-          if (null != var2) {
-            sh.field_z = ag.a(1, var2);
+          var2Lifetime50 = ih.a(123, "fps");
+          if (null != var2Lifetime50) {
+            sh.field_z = ag.a(1, var2Lifetime50);
           }
-          var2 = ih.a(127, "level");
-          if (var2 != null) {
-            qg.field_e = ag.a(1, var2);
+          var2Lifetime51 = ih.a(127, "level");
+          if (var2Lifetime51 != null) {
+            qg.field_e = ag.a(1, var2Lifetime51);
           }
-          var2 = ih.a(124, "score");
-          if (var2 != null) {
-            pa.field_a = ag.a(1, var2);
+          var2Lifetime52 = ih.a(124, "score");
+          if (var2Lifetime52 != null) {
+            pa.field_a = ag.a(1, var2Lifetime52);
           }
-          var2 = ih.a(121, "waitingForPumpkin");
-          if (var2 != null) {
-            s.field_F = ag.a(1, var2);
+          var2Lifetime53 = ih.a(121, "waitingForPumpkin");
+          if (var2Lifetime53 != null) {
+            s.field_F = ag.a(1, var2Lifetime53);
           }
-          var2 = ih.a(121, "loadingPumpkin");
-          if (var2 != null) {
-            uj.field_c = ag.a(1, var2);
+          var2Lifetime54 = ih.a(121, "loadingPumpkin");
+          if (var2Lifetime54 != null) {
+            uj.field_c = ag.a(1, var2Lifetime54);
           }
-          var2 = ih.a(125, "skipText");
-          if (var2 != null) {
-            v.field_n = ag.a(1, var2);
+          var2Lifetime55 = ih.a(125, "skipText");
+          if (var2Lifetime55 != null) {
+            v.field_n = ag.a(1, var2Lifetime55);
           }
-          var2 = ih.a(126, "tutorial1");
-          if (null != var2) {
-            vh.field_E = ag.a(1, var2);
+          var2Lifetime56 = ih.a(126, "tutorial1");
+          if (null != var2Lifetime56) {
+            vh.field_E = ag.a(1, var2Lifetime56);
           }
-          var2 = ih.a(127, "tutorial2");
-          if (var2 != null) {
-            oi.field_d = ag.a(1, var2);
+          var2Lifetime57 = ih.a(127, "tutorial2");
+          if (var2Lifetime57 != null) {
+            oi.field_d = ag.a(1, var2Lifetime57);
           }
-          var2 = ih.a(121, "tutorial3");
-          if (null != var2) {
-            vd.field_e = ag.a(1, var2);
+          var2Lifetime58 = ih.a(121, "tutorial3");
+          if (null != var2Lifetime58) {
+            vd.field_e = ag.a(1, var2Lifetime58);
           }
-          var2 = ih.a(122, "tutorial4");
-          if (var2 != null) {
-            li.field_b = ag.a(1, var2);
+          var2Lifetime59 = ih.a(122, "tutorial4");
+          if (var2Lifetime59 != null) {
+            li.field_b = ag.a(1, var2Lifetime59);
           }
-          var2 = ih.a(120, "tutorial5");
-          if (null != var2) {
-            qh.field_S = ag.a(1, var2);
+          var2Lifetime60 = ih.a(120, "tutorial5");
+          if (null != var2Lifetime60) {
+            qh.field_S = ag.a(1, var2Lifetime60);
           }
-          var2 = ih.a(123, "cont");
-          if (null != var2) {
-            mi.field_y = ag.a(1, var2);
+          var2Lifetime61 = ih.a(123, "cont");
+          if (null != var2Lifetime61) {
+            mi.field_y = ag.a(1, var2Lifetime61);
           }
-          var2 = ih.a(124, "restartTutorial");
-          if (var2 != null) {
-            cf.field_j = ag.a(1, var2);
+          var2Lifetime62 = ih.a(124, "restartTutorial");
+          if (var2Lifetime62 != null) {
+            cf.field_j = ag.a(1, var2Lifetime62);
           }
-          var2 = ih.a(125, "discardResults");
-          if (var2 != null) {
-            ne.field_c = ag.a(1, var2);
+          var2Lifetime63 = ih.a(125, "discardResults");
+          if (var2Lifetime63 != null) {
+            ne.field_c = ag.a(1, var2Lifetime63);
           }
-          var2 = ih.a(124, "replayTutorial");
-          if (null != var2) {
-            em.field_a = ag.a(1, var2);
+          var2Lifetime64 = ih.a(124, "replayTutorial");
+          if (null != var2Lifetime64) {
+            em.field_a = ag.a(1, var2Lifetime64);
           }
-          var2 = ih.a(122, "subscribe");
-          if (null != var2) {
-            ag.a(1, var2);
+          var2Lifetime65 = ih.a(122, "subscribe");
+          if (null != var2Lifetime65) {
+            ag.a(1, var2Lifetime65);
           }
-          var2 = ih.a(124, "createAnAccount");
-          if (null != var2) {
-            ag.a(1, var2);
+          var2Lifetime66 = ih.a(124, "createAnAccount");
+          if (null != var2Lifetime66) {
+            ag.a(1, var2Lifetime66);
           }
-          var2 = ih.a(122, "fetchingHS");
-          if (null != var2) {
-            eb.field_f = ag.a(1, var2);
+          var2Lifetime67 = ih.a(122, "fetchingHS");
+          if (null != var2Lifetime67) {
+            eb.field_f = ag.a(1, var2Lifetime67);
           }
-          var2 = ih.a(126, "instructionTitles,0");
-          if (var2 != null) {
-            a.field_a[0] = ag.a(1, var2);
+          var2Lifetime68 = ih.a(126, "instructionTitles,0");
+          if (var2Lifetime68 != null) {
+            a.field_a[0] = ag.a(1, var2Lifetime68);
           }
-          var2 = ih.a(127, "instructionTitles,1");
-          if (var2 != null) {
-            a.field_a[1] = ag.a(1, var2);
+          var2Lifetime69 = ih.a(127, "instructionTitles,1");
+          if (var2Lifetime69 != null) {
+            a.field_a[1] = ag.a(1, var2Lifetime69);
           }
-          var2 = ih.a(121, "instructionTitles,2");
-          if (null != var2) {
-            a.field_a[2] = ag.a(1, var2);
+          var2Lifetime70 = ih.a(121, "instructionTitles,2");
+          if (null != var2Lifetime70) {
+            a.field_a[2] = ag.a(1, var2Lifetime70);
           }
-          var2 = ih.a(125, "instructionTitles,3");
-          if (null != var2) {
-            a.field_a[3] = ag.a(1, var2);
+          var2Lifetime71 = ih.a(125, "instructionTitles,3");
+          if (null != var2Lifetime71) {
+            a.field_a[3] = ag.a(1, var2Lifetime71);
           }
-          var2 = ih.a(123, "instructionTitles,4");
-          if (var2 != null) {
-            a.field_a[4] = ag.a(1, var2);
+          var2Lifetime72 = ih.a(123, "instructionTitles,4");
+          if (var2Lifetime72 != null) {
+            a.field_a[4] = ag.a(1, var2Lifetime72);
           }
-          var2 = ih.a(120, "instructionTitles,5");
-          if (null != var2) {
-            a.field_a[5] = ag.a(1, var2);
+          var2Lifetime73 = ih.a(120, "instructionTitles,5");
+          if (null != var2Lifetime73) {
+            a.field_a[5] = ag.a(1, var2Lifetime73);
           }
-          var2 = ih.a(124, "instructionText,0");
-          if (null != var2) {
-            ec.field_e[0] = ag.a(1, var2);
+          var2Lifetime74 = ih.a(124, "instructionText,0");
+          if (null != var2Lifetime74) {
+            ec.field_e[0] = ag.a(1, var2Lifetime74);
           }
-          var2 = ih.a(126, "instructionText,1");
-          if (var2 != null) {
-            ec.field_e[1] = ag.a(1, var2);
+          var2Lifetime75 = ih.a(126, "instructionText,1");
+          if (var2Lifetime75 != null) {
+            ec.field_e[1] = ag.a(1, var2Lifetime75);
           }
-          var2 = ih.a(120, "instructionText,2");
-          if (var2 != null) {
-            ec.field_e[2] = ag.a(1, var2);
+          var2Lifetime76 = ih.a(120, "instructionText,2");
+          if (var2Lifetime76 != null) {
+            ec.field_e[2] = ag.a(1, var2Lifetime76);
           }
-          var2 = ih.a(121, "instructionText,3");
-          if (var2 != null) {
-            ec.field_e[3] = ag.a(1, var2);
+          var2Lifetime77 = ih.a(121, "instructionText,3");
+          if (var2Lifetime77 != null) {
+            ec.field_e[3] = ag.a(1, var2Lifetime77);
           }
-          var2 = ih.a(123, "instructionText,4");
-          if (null != var2) {
-            ec.field_e[4] = ag.a(1, var2);
+          var2Lifetime78 = ih.a(123, "instructionText,4");
+          if (null != var2Lifetime78) {
+            ec.field_e[4] = ag.a(1, var2Lifetime78);
           }
-          var2 = ih.a(126, "pleaseLogin");
-          if (var2 != null) {
-            Geoblox.field_A = ag.a(1, var2);
+          var2Lifetime79 = ih.a(126, "pleaseLogin");
+          if (var2Lifetime79 != null) {
+            Geoblox.field_A = ag.a(1, var2Lifetime79);
           }
-          var2 = ih.a(125, "youAreNotLoggedIn");
-          if (null != var2) {
-            r.field_sb = ag.a(1, var2);
+          var2Lifetime80 = ih.a(125, "youAreNotLoggedIn");
+          if (null != var2Lifetime80) {
+            r.field_sb = ag.a(1, var2Lifetime80);
           }
-          var2 = ih.a(120, "alternatively");
-          if (var2 != null) {
-            bd.field_b = ag.a(1, var2);
+          var2Lifetime81 = ih.a(120, "alternatively");
+          if (var2Lifetime81 != null) {
+            bd.field_b = ag.a(1, var2Lifetime81);
           }
-          var2 = ih.a(125, "login");
-          if (var2 != null) {
-            gj.field_t = ag.a(1, var2);
+          var2Lifetime82 = ih.a(125, "login");
+          if (var2Lifetime82 != null) {
+            gj.field_t = ag.a(1, var2Lifetime82);
           }
-          var2 = ih.a(122, "notAcheived");
-          if (null != var2) {
-            ib.field_d = ag.a(1, var2);
+          var2Lifetime83 = ih.a(122, "notAcheived");
+          if (null != var2Lifetime83) {
+            ib.field_d = ag.a(1, var2Lifetime83);
           }
-          var2 = ih.a(122, "keycode_reverseControls");
-          if (null != var2) {
-            jg.field_g = var2[0] & 255;
+          var2Lifetime84 = ih.a(122, "keycode_reverseControls");
+          if (null != var2Lifetime84) {
+            jg.field_g = var2Lifetime84[0] & 255;
           }
           pf.field_O = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

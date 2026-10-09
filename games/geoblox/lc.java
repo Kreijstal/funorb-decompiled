@@ -266,6 +266,8 @@ final class lc {
         String var7 = null;
         j var7_ref = null;
         int var8 = 0;
+        Object var3Lifetime1;
+        String var4_ref_StringLifetime1;
         var8 = Geoblox.field_C;
         try {
           if (param0 != 104) {
@@ -336,32 +338,32 @@ final class lc {
             nh.field_a = new vg(128);
             mg.field_g = 0;
           }
-          var3 = var1.e((byte) 108);
-          if (((String) (var3)).equals("")) {
-            var3 = null;
+          var3Lifetime1 = var1.e((byte) 108);
+          if (((String) (var3Lifetime1)).equals("")) {
+            var3Lifetime1 = null;
           }
-          var4_ref_String = var1.e((byte) 102);
+          var4_ref_StringLifetime1 = var1.e((byte) 102);
           var5_ref = var1.e((byte) 110);
-          var6_ref = jg.a((byte) -62, var4_ref_String);
+          var6_ref = jg.a((byte) -62, var4_ref_StringLifetime1);
           if (null == var6_ref) {
             var6_ref = jg.a((byte) -62, var5_ref);
             if (null != var6_ref) {
-              nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), 12).hashCode(), -63, var6_ref);
+              nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_StringLifetime1), 12).hashCode(), -63, var6_ref);
             }
           }
           if (null == var6_ref) {
             var6_ref = new j();
-            nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_String), param0 ^ 100).hashCode(), 110, var6_ref);
+            nh.field_a.a((long)oe.a((CharSequence) ((Object) var4_ref_StringLifetime1), param0 ^ 100).hashCode(), 110, var6_ref);
             fieldTemp$1 = mg.field_g;
             mg.field_g = mg.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;
             hl.field_B.a(-59, var6_ref);
           }
-          if (var3 != null) {
-            var3 = ((String) (var3)).intern();
+          if (var3Lifetime1 != null) {
+            var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
-          var6_ref.field_hb = var4_ref_String;
-          var6_ref.field_mb = (String) (var3);
+          var6_ref.field_hb = var4_ref_StringLifetime1;
+          var6_ref.field_mb = (String) (var3Lifetime1);
           var6_ref.a(false);
           var7_ref = (j) ((Object) hl.field_B.g(0));
           L15: while (true) {

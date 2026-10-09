@@ -84,6 +84,8 @@ final class wa {
         rd var14 = null;
         rd var19 = null;
         int var15 = Geoblox.field_C;
+        rd var14Lifetime1;
+        rd var14Lifetime2;
         try {
             var17 = new ff(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_o + param1.field_q));
             this.field_b = (dh) ((Object) var17);
@@ -144,11 +146,11 @@ final class wa {
             var14 = new rd(var4, true);
             var14.a(0, var13.b());
             var13.a();
-            var14 = new rd(var4, true);
-            var14.a(param0 ^ 9, var13.b());
+            var14Lifetime1 = new rd(var4, true);
+            var14Lifetime1.a(param0 ^ 9, var13.b());
             var13.a();
-            var14 = new rd(var4, true);
-            var14.a(0, var13.b());
+            var14Lifetime2 = new rd(var4, true);
+            var14Lifetime2.a(0, var13.b());
             var13.a();
             var19 = new rd(var4, true);
             var19.a(param0 ^ 9, var13);

@@ -504,6 +504,7 @@ final class tb {
         int var13;
         int[] var14;
         int[] var15;
+        int[] var15Lifetime1;
         var2 = param0.field_h;
         var3 = param0.field_k;
         var4 = param0.field_G;
@@ -541,16 +542,16 @@ final class tb {
             var10--;
           }
           while (var4 != var12) {
-            var15 = var14;
+            var15Lifetime1 = var14;
             var2 = (byte)var5;
-            var7 = var15[var7];
+            var7 = var15Lifetime1[var7];
             var1 = (byte)var7;
             var7 = var7 >> 8;
             var4++;
             if (var1 == var5) {
               if (var4 != var12) {
                 var3 = 2;
-                var7 = var15[var7];
+                var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
@@ -562,7 +563,7 @@ final class tb {
                   continue L0;
                 }
                 var3 = 3;
-                var7 = var15[var7];
+                var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
@@ -573,12 +574,12 @@ final class tb {
                   var5 = var1;
                   continue L0;
                 }
-                var7 = var15[var7];
+                var7 = var15Lifetime1[var7];
                 var1 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;
                 var3 = (var1 & 255) + 4;
-                var7 = var15[var7];
+                var7 = var15Lifetime1[var7];
                 var5 = (byte)var7;
                 var7 = var7 >> 8;
                 var4++;

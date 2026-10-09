@@ -16,6 +16,7 @@ final class fc {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        ja var1Lifetime1;
         var3 = Geoblox.field_C;
         try {
           pf.field_D = true;
@@ -31,18 +32,18 @@ final class fc {
             var1 = (ja) ((Object) a.field_d.d(1));
           }
           var2 = 12 % ((-69 - param0) / 38);
-          var1 = (ja) ((Object) bh.field_c.g(0));
-          while (var1 != null) {
-            var1.b(true);
-            if (5 == var1.field_z ||
-                var1.field_z == 7 ||
-                var1.field_z == 8) {
+          var1Lifetime1 = (ja) ((Object) bh.field_c.g(0));
+          while (var1Lifetime1 != null) {
+            var1Lifetime1.b(true);
+            if (5 == var1Lifetime1.field_z ||
+                var1Lifetime1.field_z == 7 ||
+                var1Lifetime1.field_z == 8) {
               pf.field_D = false;
-              if (var1.field_G >= 3) {
-                ra.field_a.a(-115, var1);
+              if (var1Lifetime1.field_G >= 3) {
+                ra.field_a.a(-115, var1Lifetime1);
               }
             }
-            var1 = (ja) ((Object) bh.field_c.d(1));
+            var1Lifetime1 = (ja) ((Object) bh.field_c.d(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

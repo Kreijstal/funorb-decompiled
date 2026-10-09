@@ -33,6 +33,7 @@ final class ui {
         int var4Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
+        int[] var22Lifetime1;
         for (var4 = 0; var4 < param1; var4++) {
           param0[var4] = 0.0f;
         }
@@ -57,10 +58,10 @@ final class ui {
                 var10 = var10 / this.field_e;
               }
             }
-            var22 = var19;
+            var22Lifetime1 = var19;
             var10Lifetime1 = 0;
             while (var10Lifetime1 < var4Lifetime1) {
-              var11Lifetime1 = var22[var9];
+              var11Lifetime1 = var22Lifetime1[var9];
               var12 = this.field_g[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_c + var9 * this.field_f;

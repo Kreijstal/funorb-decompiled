@@ -58,25 +58,31 @@ final class tc {
             String var5 = null;
             String var4 = null;
             String var8 = null;
+            String var5Lifetime1;
+            String var5Lifetime2;
+            String var5Lifetime3;
+            String var5Lifetime4;
+            String var5Lifetime5;
+            String var5Lifetime6;
             try {
                 sd.field_z = param1;
                 try {
                     var7 = param2.getParameter("cookieprefix");
                     var5 = var7;
-                    var5 = var7;
+                    var5Lifetime1 = var7;
                     var4 = param2.getParameter("cookiehost");
-                    var5 = var4;
-                    var5 = var4;
+                    var5Lifetime2 = var4;
+                    var5Lifetime3 = var4;
                     var8 = var7 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                    var5 = var8;
-                    var5 = var8;
+                    var5Lifetime4 = var8;
+                    var5Lifetime5 = var8;
                     if (param1.length() != 0) {
-                        var5 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
+                        var5Lifetime6 = var8 + "; Expires=" + md.a((byte) -58, oa.a(-12520) + 94608000000L) + "; Max-Age=" + 94608000L;
                     } else {
-                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                        var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
                     }
                     int var6 = -93 % ((-64 - param0) / 61);
-                    wk.a(param2, "document.cookie=\"" + var5 + "\"", (byte) -92);
+                    wk.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -92);
                 } catch (Throwable throwable) {
                 }
                 oj.a(param2, 20000000);

@@ -105,6 +105,7 @@ final class gf {
 
     final static void a(int param0, int param1) {
         pk var2 = null;
+        pk var2Lifetime1;
         if (param1 >= 28) {
             var2 = fj.field_q;
             var2.a(param0, (byte) -103);
@@ -113,10 +114,10 @@ final class gf {
             return;
         }
         field_e = (String) null;
-        var2 = fj.field_q;
-        var2.a(param0, (byte) -103);
-        var2.d((byte) 127, 1);
-        var2.d((byte) -20, 0);
+        var2Lifetime1 = fj.field_q;
+        var2Lifetime1.a(param0, (byte) -103);
+        var2Lifetime1.d((byte) 127, 1);
+        var2Lifetime1.d((byte) -20, 0);
     }
 
     final static String a(String param0, rh param1, String param2, String param3, boolean param4) {

@@ -270,6 +270,7 @@ final class ci {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
+        gd var8Lifetime1;
         try {
           var5_int = param3 ^ (65533 & param2 << 4 | param2 >>> 12);
           var5_int = var5_int | param2 << 16;
@@ -291,12 +292,12 @@ final class ci {
             return null;
           }
           var10 = var9.a();
-          var8 = var10;
-          this.field_b.a((byte) 102, var8, var6);
+          var8Lifetime1 = var10;
+          this.field_b.a((byte) 102, var8Lifetime1, var6);
           if (param0 != null) {
             param0[0] = param0[0] - var10.field_k.length;
           }
-          stackIn_16_0 = var8;
+          stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -328,6 +329,7 @@ final class ci {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
+        gd var8Lifetime1;
         try {
           var5_int = ((param1 & -1879044097) << 4 | param1 >>> 12) ^ param2;
           var5_int = var5_int | param1 << 16;
@@ -355,14 +357,14 @@ final class ci {
             }
             this.field_a.a((byte) 102, var9, var6);
           }
-          var8 = var9.a(param0);
-          if (var8 == null) {
+          var8Lifetime1 = var9.a(param0);
+          if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
             return (gd) (stackIn_18_0);
           }
           var9.a(false);
-          this.field_b.a((byte) 102, var8, var6);
-          stackIn_20_0 = var8;
+          this.field_b.a((byte) 102, var8Lifetime1, var6);
+          stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
