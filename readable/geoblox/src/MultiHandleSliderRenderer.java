@@ -26,55 +26,55 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        int var10 = 0;
-        UiWidget stackIn_4_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        MultiHandleSliderWidget var12 = null;
-        var11 = Geoblox.clientControlFlowFlag;
+        int handleIndex = 0;
+        UiWidget sliderWidgetOrNull = null;
+        RuntimeException drawingFailureBeforeDescription = null;
+        StringBuilder drawingMessagePrefix = null;
+        String widgetDescription = null;
+        RuntimeException drawingFailure = null;
+        RuntimeException drawingFailureForContext = null;
+        int usableRailWidth = 0;
+        int railScreenX = 0;
+        int railScreenY = 0;
+        int clientControlFlowSnapshot = 0;
+        MultiHandleSliderWidget sliderWidget = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (widget instanceof MultiHandleSliderWidget) {
-            stackIn_4_0 = (UiWidget) (widget);
+            sliderWidgetOrNull = (UiWidget) (widget);
           } else {
-            stackIn_4_0 = null;
+            sliderWidgetOrNull = null;
           }
-          var12 = (MultiHandleSliderWidget) ((Object) stackIn_4_0);
+          sliderWidget = (MultiHandleSliderWidget) ((Object) sliderWidgetOrNull);
           if (methodGuard >= -5) {
             return;
           }
-          if (var12 == null) {
+          if (sliderWidget == null) {
           }
           SoftwareRasterizer.fillRectangle(widget.widgetX + parentX, widget.widgetY + parentY, widget.widgetWidth, widget.widgetHeight, this.backgroundColor);
-          var7 = -(2 * var12.railInset) + widget.widgetWidth;
-          var8 = parentX - (-widget.widgetX - var12.railInset);
-          var9 = var12.railOffsetY + parentY + widget.widgetY;
-          SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.railColor);
-          for (var10 = var12.handleCount((byte) 86) - 1; var10 >= 0; var10--) {
-            SoftwareRasterizer.fillCircle(var7 * var12.handleValueAt(-113, var10) / var12.maximumValue(-128) + var8, var9, this.handleRadius, this.handleColor);
+          usableRailWidth = -(2 * sliderWidget.railInset) + widget.widgetWidth;
+          railScreenX = parentX - (-widget.widgetX - sliderWidget.railInset);
+          railScreenY = sliderWidget.railOffsetY + parentY + widget.widgetY;
+          SoftwareRasterizer.drawLine(railScreenX, railScreenY, usableRailWidth + railScreenX, railScreenY, this.railColor);
+          for (handleIndex = sliderWidget.handleCount((byte) 86) - 1; handleIndex >= 0; handleIndex--) {
+            SoftwareRasterizer.fillCircle(usableRailWidth * sliderWidget.handleValueAt(-113, handleIndex) / sliderWidget.maximumValue(-128) + railScreenX, railScreenY, this.handleRadius, this.handleColor);
           }
           if (null == this.font) {
             return;
           }
-          this.font.drawCenteredText(var12.widgetText, var8 + var7 / 2, this.font.lineAdvance + var9 + var12.railOffsetY, this.textColor, this.textShadowColor);
+          this.font.drawCenteredText(sliderWidget.widgetText, railScreenX + usableRailWidth / 2, this.font.lineAdvance + railScreenY + sliderWidget.railOffsetY, this.textColor, this.textShadowColor);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("jf.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          drawingFailure = caughtDrawingFailure;
+          drawingFailureForContext = drawingFailure;
+          drawingFailureBeforeDescription = drawingFailureForContext;
+          drawingMessagePrefix = new StringBuilder().append("jf.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_16_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawingFailureBeforeDescription), ((StringBuilder) (Object) drawingMessagePrefix).append(widgetDescription).append(')').toString());
         }
     }
 
@@ -332,17 +332,17 @@ final class MultiHandleSliderRenderer implements WidgetRenderer {
         }
     }
 
-    MultiHandleSliderRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    MultiHandleSliderRenderer(BitmapFont font, int textColor, int textShadowColor, int railColor, int backgroundColor, int handleRadius, int handleColor) {
         try {
-            this.railColor = param3;
-            this.backgroundColor = param4;
-            this.handleColor = param6;
-            this.font = param0;
-            this.handleRadius = param5;
-            this.textColor = param1;
-            this.textShadowColor = param2;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "jf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+            this.railColor = railColor;
+            this.backgroundColor = backgroundColor;
+            this.handleColor = handleColor;
+            this.font = font;
+            this.handleRadius = handleRadius;
+            this.textColor = textColor;
+            this.textShadowColor = textShadowColor;
+        } catch (RuntimeException rendererInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "jf.<init>(" + (font != null ? "{...}" : "null") + ',' + textColor + ',' + textShadowColor + ',' + railColor + ',' + backgroundColor + ',' + handleRadius + ',' + handleColor + ')');
         }
     }
 

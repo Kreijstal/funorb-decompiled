@@ -18,38 +18,38 @@ final class DialRenderer implements WidgetRenderer {
     static Sprite[] silverStarFrames;
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        int var13 = 0;
-        double var9 = 0.0;
-        int var11 = 0;
-        int var12 = 0;
-        DialWidget var14 = widget instanceof DialWidget ? (DialWidget) ((Object) widget) : null;
+        int textLeftInset = 0;
+        double markerAngleRadians = 0.0;
+        int markerOffsetX = 0;
+        int markerOffsetY = 0;
+        DialWidget dialWidgetOrNull = widget instanceof DialWidget ? (DialWidget) ((Object) widget) : null;
         SoftwareRasterizer.fillRectangle(parentX + widget.widgetX, widget.widgetY + parentY, widget.widgetWidth, widget.widgetHeight, this.backgroundColor);
-        if (var14 != null) {
+        if (dialWidgetOrNull != null) {
         }
-        int var7 = widget.widgetX + parentX + var14.centerOffsetX;
-        int var8 = widget.widgetY + parentY + var14.centerOffsetY;
-        SoftwareRasterizer.fillCircle(var7, var8, var14.radius, this.dialColor);
-        if (var14.secondaryMarkerStep != -1) {
-            var9 = (double)var14.secondaryMarkerStep * 3.141592653589793 * 2.0 / (double)var14.stepCount;
-            var11 = (int)(-Math.sin(var9) * (double)var14.radius);
-            var12 = (int)(Math.cos(var9) * (double)var14.radius);
-            SoftwareRasterizer.fillCircle(var7 + var11, var8 + var12, 1, this.secondaryMarkerColor);
+        int dialCenterX = widget.widgetX + parentX + dialWidgetOrNull.centerOffsetX;
+        int dialCenterY = widget.widgetY + parentY + dialWidgetOrNull.centerOffsetY;
+        SoftwareRasterizer.fillCircle(dialCenterX, dialCenterY, dialWidgetOrNull.radius, this.dialColor);
+        if (dialWidgetOrNull.secondaryMarkerStep != -1) {
+            markerAngleRadians = (double)dialWidgetOrNull.secondaryMarkerStep * 3.141592653589793 * 2.0 / (double)dialWidgetOrNull.stepCount;
+            markerOffsetX = (int)(-Math.sin(markerAngleRadians) * (double)dialWidgetOrNull.radius);
+            markerOffsetY = (int)(Math.cos(markerAngleRadians) * (double)dialWidgetOrNull.radius);
+            SoftwareRasterizer.fillCircle(dialCenterX + markerOffsetX, dialCenterY + markerOffsetY, 1, this.secondaryMarkerColor);
         }
-        SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
-        var9 = 2.0 * (3.141592653589793 * (double)var14.selectedStep) / (double)var14.stepCount;
-        var11 = (int)(-Math.sin(var9) * (double)var14.radius);
-        var12 = (int)(Math.cos(var9) * (double)var14.radius);
+        SoftwareRasterizer.fillCircle(dialCenterX, dialCenterY, 2, 1);
+        markerAngleRadians = 2.0 * (3.141592653589793 * (double)dialWidgetOrNull.selectedStep) / (double)dialWidgetOrNull.stepCount;
+        markerOffsetX = (int)(-Math.sin(markerAngleRadians) * (double)dialWidgetOrNull.radius);
+        markerOffsetY = (int)(Math.cos(markerAngleRadians) * (double)dialWidgetOrNull.radius);
         if (methodGuard > -5) {
             return;
         }
         try {
-            SoftwareRasterizer.drawLine(var7, var8, var11 + var7, var12 + var8, 1);
+            SoftwareRasterizer.drawLine(dialCenterX, dialCenterY, markerOffsetX + dialCenterX, markerOffsetY + dialCenterY, 1);
             if (this.font != null) {
-                var13 = this.padding + (var14.centerOffsetX + var14.radius);
-                this.font.drawParagraph(widget.widgetText, var13 + (parentX + widget.widgetX), parentY + widget.widgetY + this.textOffsetY, widget.widgetWidth - (this.padding + var13), -(this.padding << 1) + widget.widgetHeight, this.textColor, this.textShadowColor, 1, 1, 0);
+                textLeftInset = this.padding + (dialWidgetOrNull.centerOffsetX + dialWidgetOrNull.radius);
+                this.font.drawParagraph(widget.widgetText, textLeftInset + (parentX + widget.widgetX), parentY + widget.widgetY + this.textOffsetY, widget.widgetWidth - (this.padding + textLeftInset), -(this.padding << 1) + widget.widgetHeight, this.textColor, this.textShadowColor, 1, 1, 0);
             }
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException drawingFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawingFailure), "hb.E(" + parentX + ',' + methodGuard + ',' + parentY + ',' + widgetEnabled + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,18 +68,18 @@ final class DialRenderer implements WidgetRenderer {
         silverStarFrames = null;
     }
 
-    DialRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    DialRenderer(BitmapFont font, int padding, int textOffsetY, int textColor, int textShadowColor, int dialColor, int secondaryMarkerColor, int backgroundColor) {
         try {
-            this.dialColor = param5;
-            this.backgroundColor = param7;
-            this.textColor = param3;
-            this.font = param0;
-            this.padding = param1;
-            this.textShadowColor = param4;
-            this.secondaryMarkerColor = param6;
-            this.textOffsetY = param2;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+            this.dialColor = dialColor;
+            this.backgroundColor = backgroundColor;
+            this.textColor = textColor;
+            this.font = font;
+            this.padding = padding;
+            this.textShadowColor = textShadowColor;
+            this.secondaryMarkerColor = secondaryMarkerColor;
+            this.textOffsetY = textOffsetY;
+        } catch (RuntimeException rendererInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "hb.<init>(" + (font != null ? "{...}" : "null") + ',' + padding + ',' + textOffsetY + ',' + textColor + ',' + textShadowColor + ',' + dialColor + ',' + secondaryMarkerColor + ',' + backgroundColor + ')');
         }
     }
 

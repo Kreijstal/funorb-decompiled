@@ -14,11 +14,11 @@ final class ArchiveLoadSequence {
     private int currentStepIndex;
 
     private final void updateStepProgress(int percentage, ArchiveLoadStep step, int methodGuard) {
-        float var4_float = 0.0f;
+        float completedStepFraction = 0.0f;
         try {
-            var4_float = (float)(this.currentStepIndex + 1) + (float)percentage / 100.0f;
+            completedStepFraction = (float)(this.currentStepIndex + 1) + (float)percentage / 100.0f;
             if (methodGuard > -90) {
-                String var5 = (String) null;
+                String unusedNullUrlForInvalidGuard = (String) null;
                 ArchiveLoadSequence.openRelativeUrlInNewWindow((java.applet.Applet) null, (byte) 114, (String) null);
             }
             if (percentage == 0) {
@@ -26,9 +26,9 @@ final class ArchiveLoadSequence {
             } else {
                 this.statusText = step.loadingText + " - " + percentage + "%";
             }
-            this.scaledProgress = var4_float * (float)this.progressScale / (float)(1 + this.stepCount);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "eb.E(" + percentage + ',' + (step != null ? "{...}" : "null") + ',' + methodGuard + ')');
+            this.scaledProgress = completedStepFraction * (float)this.progressScale / (float)(1 + this.stepCount);
+        } catch (RuntimeException progressUpdateFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) progressUpdateFailure), "eb.E(" + percentage + ',' + (step != null ? "{...}" : "null") + ',' + methodGuard + ')');
         }
     }
 
@@ -42,35 +42,35 @@ final class ArchiveLoadSequence {
     }
 
     final boolean pollLoaded(boolean methodGuard) {
-        int var3;
-        String var4;
-        ArchiveLoadStep var5;
-        var3 = Geoblox.clientControlFlowFlag;
+        int clientControlFlowSnapshot;
+        String unusedNullUrlForInvalidGuard;
+        ArchiveLoadStep currentLoadStep;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (!methodGuard) {
-          var4 = (String) null;
+          unusedNullUrlForInvalidGuard = (String) null;
           ArchiveLoadSequence.openRelativeUrlInNewWindow((java.applet.Applet) null, (byte) -56, (String) null);
         }
         while (this.currentStepIndex < this.stepCount) {
-          var5 = this.steps[this.currentStepIndex];
-          if (!var5.archive.ensureIndexLoaded(0)) {
-            this.updateStepProgress(0, var5, -123);
+          currentLoadStep = this.steps[this.currentStepIndex];
+          if (!currentLoadStep.archive.ensureIndexLoaded(0)) {
+            this.updateStepProgress(0, currentLoadStep, -123);
             return false;
           }
-          if (var5.groupId >= 0 &&
-              !var5.archive.loadGroupIfNeeded((byte) 102, var5.groupId)) {
-            this.updateStepProgress(var5.archive.getGroupProgress((byte) 36, var5.groupId), var5, -119);
+          if (currentLoadStep.groupId >= 0 &&
+              !currentLoadStep.archive.loadGroupIfNeeded((byte) 102, currentLoadStep.groupId)) {
+            this.updateStepProgress(currentLoadStep.archive.getGroupProgress((byte) 36, currentLoadStep.groupId), currentLoadStep, -119);
             return false;
           }
-          if (null != var5.groupName &&
-              !var5.archive.loadGroupByName(var5.groupName, (byte) -126)) {
-            this.updateStepProgress(var5.archive.getGroupProgressByName(0, var5.groupName), var5, -123);
+          if (null != currentLoadStep.groupName &&
+              !currentLoadStep.archive.loadGroupByName(currentLoadStep.groupName, (byte) -126)) {
+            this.updateStepProgress(currentLoadStep.archive.getGroupProgressByName(0, currentLoadStep.groupName), currentLoadStep, -123);
             return false;
           }
-          if (var5.groupId < 0 &&
-              var5.groupName == null &&
-              null != var5.loadingText &&
-              !var5.archive.loadAllGroups(true)) {
-            this.updateStepProgress(var5.archive.getLoadProgress((byte) 106), var5, -108);
+          if (currentLoadStep.groupId < 0 &&
+              currentLoadStep.groupName == null &&
+              null != currentLoadStep.loadingText &&
+              !currentLoadStep.archive.loadAllGroups(true)) {
+            this.updateStepProgress(currentLoadStep.archive.getLoadProgress((byte) 106), currentLoadStep, -108);
             return false;
           }
           this.currentStepIndex = this.currentStepIndex + 1;

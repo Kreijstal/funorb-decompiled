@@ -84,53 +84,53 @@ final class SpriteCheckboxRenderer implements WidgetRenderer {
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        Sprite var8 = null;
+        RuntimeException drawingFailureBeforeDescription = null;
+        StringBuilder drawingMessagePrefix = null;
+        String widgetDescription = null;
+        RuntimeException drawingFailure = null;
+        int widgetScreenX = 0;
+        RuntimeException drawingFailureForContext = null;
+        int widgetScreenY = 0;
+        Sprite validationStateSprite = null;
         try {
-          var6_int = widget.widgetX + parentX;
-          var7 = widget.widgetY + parentY;
-          EntityLinkSupport.drawGradientWidgetBorder(var6_int, widget.widgetHeight, var7, widget.widgetWidth, -1540604944);
-          var8 = ClientClockSupport.validationStateSprites[1];
+          widgetScreenX = widget.widgetX + parentX;
+          widgetScreenY = widget.widgetY + parentY;
+          EntityLinkSupport.drawGradientWidgetBorder(widgetScreenX, widget.widgetHeight, widgetScreenY, widget.widgetWidth, -1540604944);
+          validationStateSprite = ClientClockSupport.validationStateSprites[1];
           if (widget instanceof ButtonWidget &&
               ((ButtonWidget) ((Object) widget)).active) {
-            var8.drawAdditive(var6_int - (-1 - (-var8.fullWidth + widget.widgetWidth >> 1)), (-var8.fullHeight + widget.widgetHeight >> 1) + 1 + var7, 256);
+            validationStateSprite.drawAdditive(widgetScreenX - (-1 - (-validationStateSprite.fullWidth + widget.widgetWidth >> 1)), (-validationStateSprite.fullHeight + widget.widgetHeight >> 1) + 1 + widgetScreenY, 256);
           }
           if (widget.hasKeyboardFocus((byte) 54)) {
-            ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(var7 + 2, -4 + widget.widgetWidth, 14164, -4 + widget.widgetHeight, var6_int + 2);
+            ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(widgetScreenY + 2, -4 + widget.widgetWidth, 14164, -4 + widget.widgetHeight, widgetScreenX + 2);
           }
           if (methodGuard < -5) {
             return;
           }
           gameMusicVolumeLevel = 68;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("oc.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          drawingFailure = caughtDrawingFailure;
+          drawingFailureForContext = drawingFailure;
+          drawingFailureBeforeDescription = drawingFailureForContext;
+          drawingMessagePrefix = new StringBuilder().append("oc.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_12_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawingFailureBeforeDescription), ((StringBuilder) (Object) drawingMessagePrefix).append(widgetDescription).append(')').toString());
         }
     }
 
     final static void pushRasterTarget(int methodGuard) {
-        int var2 = -117 / ((-46 - methodGuard) / 50);
-        RasterTargetSnapshot var1 = (RasterTargetSnapshot) ((Object) SharedBufferPools.rasterSnapshotPool.removeLast(1));
-        if (var1 == null) {
-            var1 = new RasterTargetSnapshot();
+        int rasterPushGuardQuotient = -117 / ((-46 - methodGuard) / 50);
+        RasterTargetSnapshot pooledOrAllocatedSnapshot = (RasterTargetSnapshot) ((Object) SharedBufferPools.rasterSnapshotPool.removeLast(1));
+        if (pooledOrAllocatedSnapshot == null) {
+            pooledOrAllocatedSnapshot = new RasterTargetSnapshot();
         }
-        var1.capture(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);
-        MatchingTextValidator.rasterTargetStack.addLast(-88, var1);
+        pooledOrAllocatedSnapshot.capture(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.framebuffer, true);
+        MatchingTextValidator.rasterTargetStack.addLast(-88, pooledOrAllocatedSnapshot);
     }
 
     final static void estimateHeapCapacityMiB(int methodGuard) {

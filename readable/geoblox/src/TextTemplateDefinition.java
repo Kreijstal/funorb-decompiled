@@ -51,44 +51,44 @@ final class TextTemplateDefinition extends DualLinkNode {
     }
 
     private final void decodeOpcode(int opcode, ByteArrayBuffer buffer, int methodGuard) {
-        int[] array$0 = null;
-        int var8 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        TextTemplateArgumentType var7 = null;
-        int var9 = 0;
-        ByteArrayBuffer var10 = null;
-        var9 = Geoblox.clientControlFlowFlag;
+        int[] allocatedArgumentValues = null;
+        int argumentValueIndex = 0;
+        RuntimeException opcodeFailureBeforeDescription = null;
+        StringBuilder opcodeMessagePrefix = null;
+        String bufferDescription = null;
+        RuntimeException opcodeFailure = null;
+        int entryCount = 0;
+        RuntimeException opcodeFailureForContext = null;
+        int entryIndex = 0;
+        int argumentTypeId = 0;
+        TextTemplateArgumentType argumentType = null;
+        int clientControlFlowSnapshot = 0;
+        ByteArrayBuffer unusedNullBufferForInvalidGuard = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (1 == opcode) {
             this.literalSegments = FullscreenFailureReason.splitAtCharacter('<', true, buffer.readNullTerminatedText((byte) 116));
           } else {
             if (2 == opcode) {
-              var4_int = buffer.readUnsignedByte((byte) 34);
-              this.referencedTemplateIds = new int[var4_int];
-              for (var5 = 0; var5 < var4_int; var5++) {
-                this.referencedTemplateIds[var5] = buffer.readUnsignedShortBE(true);
+              entryCount = buffer.readUnsignedByte((byte) 34);
+              this.referencedTemplateIds = new int[entryCount];
+              for (entryIndex = 0; entryIndex < entryCount; entryIndex++) {
+                this.referencedTemplateIds[entryIndex] = buffer.readUnsignedShortBE(true);
               }
             } else {
               if (3 == opcode) {
-                var4_int = buffer.readUnsignedByte((byte) 34);
-                this.argumentValues = new int[var4_int][];
-                this.argumentTypeIds = new int[var4_int];
-                for (var5 = 0; var4_int > var5; var5++) {
-                  var6 = buffer.readUnsignedShortBE(true);
-                  var7 = TextTemplateLookupSupport.findTextTemplateArgumentType(false, var6);
-                  if (var7 != null) {
-                    this.argumentTypeIds[var5] = var6;
-                    array$0 = new int[var7.valueCount];
-                    this.argumentValues[var5] = array$0;
-                    for (var8 = 0; var7.valueCount > var8; var8++) {
-                      this.argumentValues[var5][var8] = buffer.readUnsignedShortBE(true);
+                entryCount = buffer.readUnsignedByte((byte) 34);
+                this.argumentValues = new int[entryCount][];
+                this.argumentTypeIds = new int[entryCount];
+                for (entryIndex = 0; entryCount > entryIndex; entryIndex++) {
+                  argumentTypeId = buffer.readUnsignedShortBE(true);
+                  argumentType = TextTemplateLookupSupport.findTextTemplateArgumentType(false, argumentTypeId);
+                  if (argumentType != null) {
+                    this.argumentTypeIds[entryIndex] = argumentTypeId;
+                    allocatedArgumentValues = new int[argumentType.valueCount];
+                    this.argumentValues[entryIndex] = allocatedArgumentValues;
+                    for (argumentValueIndex = 0; argumentType.valueCount > argumentValueIndex; argumentValueIndex++) {
+                      this.argumentValues[entryIndex][argumentValueIndex] = buffer.readUnsignedShortBE(true);
                     }
                   }
                 }
@@ -99,33 +99,33 @@ final class TextTemplateDefinition extends DualLinkNode {
             }
           }
           if (methodGuard != -26093) {
-            var10 = (ByteArrayBuffer) null;
+            unusedNullBufferForInvalidGuard = (ByteArrayBuffer) null;
             this.decode(-112, (ByteArrayBuffer) null);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_23_0 = var4;
-          stackIn_23_1 = new StringBuilder().append("og.H(").append(opcode).append(',');
+        } catch (java.lang.RuntimeException caughtOpcodeFailure) {
+          opcodeFailure = caughtOpcodeFailure;
+          opcodeFailureForContext = opcodeFailure;
+          opcodeFailureBeforeDescription = opcodeFailureForContext;
+          opcodeMessagePrefix = new StringBuilder().append("og.H(").append(opcode).append(',');
           if (buffer == null) {
-            stackIn_24_2 = "null";
+            bufferDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            bufferDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(methodGuard).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) opcodeFailureBeforeDescription), ((StringBuilder) (Object) opcodeMessagePrefix).append(bufferDescription).append(',').append(methodGuard).append(')').toString());
         }
     }
 
     final void markAlternateReferences(byte methodGuard) {
-        int var2 = 0;
-        int var3 = Geoblox.clientControlFlowFlag;
+        int referencedTemplateIndex = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         if (methodGuard != 119) {
             entityMotionSpeed = 0.380857914686203f;
         }
         if (this.referencedTemplateIds != null) {
-            for (var2 = 0; this.referencedTemplateIds.length > var2; var2++) {
-                this.referencedTemplateIds[var2] = SessionInstanceState.orInt(this.referencedTemplateIds[var2], 32768);
+            for (referencedTemplateIndex = 0; this.referencedTemplateIds.length > referencedTemplateIndex; referencedTemplateIndex++) {
+                this.referencedTemplateIds[referencedTemplateIndex] = SessionInstanceState.orInt(this.referencedTemplateIds[referencedTemplateIndex], 32768);
             }
         }
     }
@@ -138,24 +138,24 @@ final class TextTemplateDefinition extends DualLinkNode {
     }
 
     final String summarizeLiteralSegments(byte methodGuard) {
-        int var3 = 0;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        int var4 = Geoblox.clientControlFlowFlag;
-        StringBuilder var5 = new StringBuilder(80);
-        StringBuilder var2 = var5;
+        int literalSegmentIndex = 0;
+        StringBuilder ignoredEllipsisAppendResult = null;
+        StringBuilder ignoredSegmentAppendResult = null;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
+        StringBuilder literalSummaryBuilder = new StringBuilder(80);
+        StringBuilder literalSummaryBuilderAlias = literalSummaryBuilder;
         if (methodGuard > -7) {
             TextTemplateDefinition.releaseStaticReferences(41);
         }
         if (null == this.literalSegments) {
             return "";
         }
-        StringBuilder discarded$0 = var5.append(this.literalSegments[0]);
-        for (var3 = 1; this.literalSegments.length > var3; var3++) {
-            discarded$1 = var2.append("...");
-            discarded$2 = var5.append(this.literalSegments[var3]);
+        StringBuilder ignoredInitialAppendResult = literalSummaryBuilder.append(this.literalSegments[0]);
+        for (literalSegmentIndex = 1; this.literalSegments.length > literalSegmentIndex; literalSegmentIndex++) {
+            ignoredEllipsisAppendResult = literalSummaryBuilderAlias.append("...");
+            ignoredSegmentAppendResult = literalSummaryBuilder.append(this.literalSegments[literalSegmentIndex]);
         }
-        return var2.toString();
+        return literalSummaryBuilderAlias.toString();
     }
 
     TextTemplateDefinition() {
@@ -177,36 +177,36 @@ final class TextTemplateDefinition extends DualLinkNode {
     }
 
     final void decode(int methodGuard, ByteArrayBuffer buffer) {
-        int var3_int = 0;
-        int var4 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var4 = Geoblox.clientControlFlowFlag;
+        int opcode = 0;
+        int clientControlFlowSnapshot = 0;
+        RuntimeException decodeFailureBeforeDescription = null;
+        StringBuilder decodeMessagePrefix = null;
+        String bufferDescription = null;
+        RuntimeException decodeFailure = null;
+        RuntimeException decodeFailureForContext = null;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (methodGuard != 0) {
             return;
           }
           while (true) {
-            var3_int = buffer.readUnsignedByte((byte) 34);
-            if (0 == var3_int) {
+            opcode = buffer.readUnsignedByte((byte) 34);
+            if (0 == opcode) {
               return;
             }
-            this.decodeOpcode(var3_int, buffer, -26093);
+            this.decodeOpcode(opcode, buffer, -26093);
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("og.B(").append(methodGuard).append(',');
+        } catch (java.lang.RuntimeException caughtDecodeFailure) {
+          decodeFailure = caughtDecodeFailure;
+          decodeFailureForContext = decodeFailure;
+          decodeFailureBeforeDescription = decodeFailureForContext;
+          decodeMessagePrefix = new StringBuilder().append("og.B(").append(methodGuard).append(',');
           if (buffer == null) {
-            stackIn_10_2 = "null";
+            bufferDescription = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            bufferDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decodeFailureBeforeDescription), ((StringBuilder) (Object) decodeMessagePrefix).append(bufferDescription).append(')').toString());
         }
     }
 

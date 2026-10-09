@@ -248,36 +248,36 @@ final class ArchiveIndex {
     }
 
     final static void writeScoreSubmission(ScoreSubmission submission, int packetOpcode, int methodGuard) {
-        PacketBuffer var7 = null;
-        PacketBuffer var8 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = Geoblox.clientControlFlowFlag;
+        PacketBuffer outgoingBufferForScores = null;
+        PacketBuffer outgoingBufferForHeader = null;
+        int payloadStart = 0;
+        int scoreIndex = 0;
+        int clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-            var7 = CacheReference.outgoingSessionBuffer;
-            var8 = var7;
-            var8.writeCipherByte(packetOpcode, (byte) -125);
-            var8.position = var8.position + 1;
-            var4 = var8.position;
-            var8.writeByte((byte) 122, 1);
-            var8.writeShortBE(submission.submissionId, 28695);
-            var8.writeShortBE(submission.firstShortValue, 28695);
-            var8.writeShortBE(submission.secondShortValue, 28695);
-            var8.writeIntBE((byte) 95, submission.firstContextValue);
-            var8.writeIntBE((byte) 95, submission.secondContextValue);
-            var8.writeIntBE((byte) 95, submission.thirdContextValue);
+            outgoingBufferForScores = CacheReference.outgoingSessionBuffer;
+            outgoingBufferForHeader = outgoingBufferForScores;
+            outgoingBufferForHeader.writeCipherByte(packetOpcode, (byte) -125);
+            outgoingBufferForHeader.position = outgoingBufferForHeader.position + 1;
+            payloadStart = outgoingBufferForHeader.position;
+            outgoingBufferForHeader.writeByte((byte) 122, 1);
+            outgoingBufferForHeader.writeShortBE(submission.submissionId, 28695);
+            outgoingBufferForHeader.writeShortBE(submission.firstShortValue, 28695);
+            outgoingBufferForHeader.writeShortBE(submission.secondShortValue, 28695);
+            outgoingBufferForHeader.writeIntBE((byte) 95, submission.firstContextValue);
+            outgoingBufferForHeader.writeIntBE((byte) 95, submission.secondContextValue);
+            outgoingBufferForHeader.writeIntBE((byte) 95, submission.thirdContextValue);
             if (methodGuard > -126) {
                 maximumPasswordLength = 61;
             }
-            var8.writeIntBE((byte) 95, submission.fourthContextValue);
-            var8.writeByte((byte) 126, submission.scores.length);
-            for (var5 = 0; var5 < submission.scores.length; var5++) {
-                var7.writeIntBE((byte) 95, submission.scores[var5]);
+            outgoingBufferForHeader.writeIntBE((byte) 95, submission.fourthContextValue);
+            outgoingBufferForHeader.writeByte((byte) 126, submission.scores.length);
+            for (scoreIndex = 0; scoreIndex < submission.scores.length; scoreIndex++) {
+                outgoingBufferForScores.writeIntBE((byte) 95, submission.scores[scoreIndex]);
             }
-            var8.appendCrc32(78, var4);
-            var8.backpatchLengthByte(11700, -var4 + var8.position);
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "bm.C(" + (submission != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
+            outgoingBufferForHeader.appendCrc32(78, payloadStart);
+            outgoingBufferForHeader.backpatchLengthByte(11700, -payloadStart + outgoingBufferForHeader.position);
+        } catch (RuntimeException submissionWriteFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) submissionWriteFailure), "bm.C(" + (submission != null ? "{...}" : "null") + ',' + packetOpcode + ',' + methodGuard + ')');
         }
     }
 

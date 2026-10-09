@@ -16,24 +16,24 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        int stackIn_6_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+        int hoverOrFocusFlag = 0;
+        int selectedButtonColor = 0;
+        int selectedTextColor = 0;
+        RuntimeException drawingFailureBeforeDescription = null;
+        StringBuilder drawingMessagePrefix = null;
+        String widgetDescription = null;
+        RuntimeException drawingFailure = null;
+        int highlightFlag = 0;
+        RuntimeException drawingFailureForContext = null;
+        int buttonColor = 0;
+        int textColor = 0;
         try {
           if (!widget.pointerInside) {
-            stackIn_6_0 = (widget.hasKeyboardFocus((byte) 54)) ? 1 : 0;
+            hoverOrFocusFlag = (widget.hasKeyboardFocus((byte) 54)) ? 1 : 0;
           } else {
-            stackIn_6_0 = 1;
+            hoverOrFocusFlag = 1;
           }
-          var6_int = stackIn_6_0;
+          highlightFlag = hoverOrFocusFlag;
           if (widget instanceof ButtonWidget) {
             widgetEnabled = widgetEnabled & ((ButtonWidget) ((Object) widget)).enabled;
           }
@@ -41,31 +41,31 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
             SpriteButtonRenderer.getLoginIdentifierWithSessionFallback(-17);
           }
           if (widgetEnabled) {
-            if (var6_int == 0) {
-              stackIn_16_0 = this.normalColor;
+            if (highlightFlag == 0) {
+              selectedButtonColor = this.normalColor;
             } else {
-              stackIn_16_0 = this.highlightColor;
+              selectedButtonColor = this.highlightColor;
             }
           } else {
-            stackIn_16_0 = this.disabledColor;
+            selectedButtonColor = this.disabledColor;
           }
-          var7 = stackIn_16_0;
-          MultiHandleSliderRenderer.drawGrayTintedHorizontalThreePartStrip(this.buttonSprites, var7, parentX + widget.widgetX, widget.widgetWidth, (-this.buttonSprites[0].fullHeight + widget.widgetHeight >> 1) + (parentY + widget.widgetY), -17154);
-          stackIn_19_0 = (widgetEnabled) ? 16777215 : 7105644;
-          var8 = stackIn_19_0;
-          this.font.drawParagraph(widget.widgetText, widget.widgetX + parentX, -2 + parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var8, -1, 1, 1, this.font.maxAscent);
+          buttonColor = selectedButtonColor;
+          MultiHandleSliderRenderer.drawGrayTintedHorizontalThreePartStrip(this.buttonSprites, buttonColor, parentX + widget.widgetX, widget.widgetWidth, (-this.buttonSprites[0].fullHeight + widget.widgetHeight >> 1) + (parentY + widget.widgetY), -17154);
+          selectedTextColor = (widgetEnabled) ? 16777215 : 7105644;
+          textColor = selectedTextColor;
+          this.font.drawParagraph(widget.widgetText, widget.widgetX + parentX, -2 + parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, textColor, -1, 1, 1, this.font.maxAscent);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_23_0 = var6;
-          stackIn_23_1 = new StringBuilder().append("ml.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          drawingFailure = caughtDrawingFailure;
+          drawingFailureForContext = drawingFailure;
+          drawingFailureBeforeDescription = drawingFailureForContext;
+          drawingMessagePrefix = new StringBuilder().append("ml.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_24_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawingFailureBeforeDescription), ((StringBuilder) (Object) drawingMessagePrefix).append(widgetDescription).append(')').toString());
         }
     }
 
@@ -82,11 +82,11 @@ final class SpriteButtonRenderer extends TextWidgetRenderer {
         appletTaskDispatcher = null;
     }
 
-    private SpriteButtonRenderer(int param0, int param1, int param2) {
+    private SpriteButtonRenderer(int normalColor, int highlightColor, int disabledColor) {
         this.font = UiFontResources.commonUiBoldFont;
-        this.normalColor = param0;
-        this.disabledColor = param2;
-        this.highlightColor = param1;
+        this.normalColor = normalColor;
+        this.disabledColor = disabledColor;
+        this.highlightColor = highlightColor;
         this.buttonSprites = MouseWheelInput.commonButtonSprites;
     }
 

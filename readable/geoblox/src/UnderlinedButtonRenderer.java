@@ -78,65 +78,65 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
     }
 
     public final void drawWidget(int parentX, int methodGuard, int parentY, boolean widgetEnabled, UiWidget widget) {
-        int stackIn_5_0 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = Geoblox.clientControlFlowFlag;
+        int selectedLabelColor = 0;
+        RuntimeException drawingFailureBeforeDescription = null;
+        StringBuilder drawingMessagePrefix = null;
+        String widgetDescription = null;
+        RuntimeException drawingFailure = null;
+        int labelColor = 0;
+        RuntimeException drawingFailureForContext = null;
+        int labelWidth = 0;
+        int labelHeight = 0;
+        int labelScreenX = 0;
+        int labelScreenY = 0;
+        int clientControlFlowSnapshot = 0;
+        clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
           if (!widget.pointerInside &&
               !widget.hasKeyboardFocus((byte) 54)) {
-            stackIn_5_0 = 2188450;
+            selectedLabelColor = 2188450;
           } else {
-            stackIn_5_0 = 3249872;
+            selectedLabelColor = 3249872;
           }
-          var6_int = stackIn_5_0;
-          this.labelFont.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.widgetText + "</u>", widget.widgetX + parentX, parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.labelFont.maxAscent + this.labelFont.maxDescent);
+          labelColor = selectedLabelColor;
+          this.labelFont.drawParagraph("<u=" + Integer.toString(labelColor, 16) + ">" + widget.widgetText + "</u>", widget.widgetX + parentX, parentY + widget.widgetY, widget.widgetWidth, widget.widgetHeight, labelColor, -1, this.horizontalAlignment, this.verticalAlignment, this.labelFont.maxAscent + this.labelFont.maxDescent);
           if (methodGuard > -5) {
             UnderlinedButtonRenderer.decodeBase37DisplayName(53L, -116);
           }
           if (!widget.hasKeyboardFocus((byte) 54)) {
             return;
           }
-          var7 = this.labelFont.measureTextWidth(widget.widgetText);
-          var8 = this.labelFont.maxDescent + this.labelFont.maxAscent;
-          var9 = widget.widgetX + parentX;
+          labelWidth = this.labelFont.measureTextWidth(widget.widgetText);
+          labelHeight = this.labelFont.maxDescent + this.labelFont.maxAscent;
+          labelScreenX = widget.widgetX + parentX;
           if (this.horizontalAlignment == 2) {
-            var9 = var9 + (-var7 + widget.widgetWidth);
+            labelScreenX = labelScreenX + (-labelWidth + widget.widgetWidth);
           } else {
             if (this.horizontalAlignment == 1) {
-              var9 = var9 + (-var7 + widget.widgetWidth >> 1);
+              labelScreenX = labelScreenX + (-labelWidth + widget.widgetWidth >> 1);
             }
           }
-          var10 = parentY + widget.widgetY;
+          labelScreenY = parentY + widget.widgetY;
           if (this.verticalAlignment == 2) {
-            var10 = var10 + (widget.widgetHeight - var8);
+            labelScreenY = labelScreenY + (widget.widgetHeight - labelHeight);
           } else {
             if (this.verticalAlignment == 1) {
-              var10 = var10 + (widget.widgetHeight - var8 >> 1);
+              labelScreenY = labelScreenY + (widget.widgetHeight - labelHeight >> 1);
             }
           }
-          ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(var10 + 2, 4 + var7, 14164, var8, -2 + var9);
+          ImageProducerRasterBuffer.drawDottedWhiteFocusRectangle(labelScreenY + 2, 4 + labelWidth, 14164, labelHeight, -2 + labelScreenX);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_22_0 = var6;
-          stackIn_22_1 = new StringBuilder().append("fh.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          drawingFailure = caughtDrawingFailure;
+          drawingFailureForContext = drawingFailure;
+          drawingFailureBeforeDescription = drawingFailureForContext;
+          drawingMessagePrefix = new StringBuilder().append("fh.E(").append(parentX).append(',').append(methodGuard).append(',').append(parentY).append(',').append(widgetEnabled).append(',');
           if (widget == null) {
-            stackIn_23_2 = "null";
+            widgetDescription = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            widgetDescription = "{...}";
           }
-          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) drawingFailureBeforeDescription), ((StringBuilder) (Object) drawingMessagePrefix).append(widgetDescription).append(')').toString());
         }
     }
 
@@ -151,8 +151,8 @@ final class UnderlinedButtonRenderer implements WidgetRenderer {
             this.verticalAlignment = verticalAlignment;
             this.horizontalAlignment = horizontalAlignment;
             this.labelFont = labelFont;
-        } catch (RuntimeException runtimeException) {
-            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) runtimeException), "fh.<init>(" + (labelFont != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
+        } catch (RuntimeException rendererInitializationFailure) {
+            throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) rendererInitializationFailure), "fh.<init>(" + (labelFont != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
         }
     }
 

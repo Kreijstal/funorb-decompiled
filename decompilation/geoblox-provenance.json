@@ -3283,11 +3283,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "6ead341e9de669319bccf2bb5b49b3da3a452420",
+    "commit": "759d063ee387a7e706853c76217fd8aac4e4b99c",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "a4a7c2fea964d133ad920ba5935907c489331eafdd4c940c849c586f999febcf"
+      "sha256": "4f2d1e1ee49453fad07b32ffddbdf94f43a2244fc3f0ad2551df71423aecdc89"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3297,15 +3297,15 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "e14cb37657601d5013df76bfafcb15f072606b04b07d9ac69b350285908a10ae",
+    "outputTreeSha256": "50b77b4d000f1afc59fbbc27f2684de440e5f54926421fdb304d01cc0b1ec872",
     "files": 303,
-    "rules": 18514,
-    "identifierEdits": 118625,
+    "rules": 18655,
+    "identifierEdits": 119361,
     "bindingsCompared": 136992,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 119078,
+    "totalEdits": 119814,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
     "labelEdits": 442,
@@ -3327,7 +3327,7 @@
       "remainingOpaqueFields": 41
     },
     "structuralPass": 218,
-    "semanticPass": 219
+    "semanticPass": 220
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -18796,5 +18796,749 @@
       }
     ],
     "namingWorkflowCommit": "6ead341e9de669319bccf2bb5b49b3da3a452420"
+  },
+  "assetTextAudioRendererLocalNames": {
+    "version": 220,
+    "namingOnly": true,
+    "namedDeclarationsAdded": 141,
+    "namedLocalDeclarationsAdded": 123,
+    "namedParameterDeclarationsAdded": 18,
+    "changedReadableJavaFiles": 9,
+    "previousCompleteRules": 18514,
+    "unaffectedCompleteRulesPreserved": 18514,
+    "allUnaffectedCompleteNamingRulesPreserved": true,
+    "sourceTreeSha256": "81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695",
+    "sourceCommit": "f5458b33a0efe7a55264de9382e3f8db1d5ff968",
+    "javaToolsCommit": "433ff77e11140811703f28a56e22efa35fc64e07",
+    "sourceArchiveSha256": "f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1"
+    },
+    "bytecodeChanged": false,
+    "sourceBodyEditedByHand": false,
+    "remainingOpaqueFields": 41,
+    "rawCompilerLocalsBefore": 378,
+    "rawCompilerLocalsAfter": 265,
+    "identifierEditsAdded": 736,
+    "readableIdentifierEdits": 119361,
+    "readableClassNameLiteralEdits": 11,
+    "readableLabelEdits": 442,
+    "readableTotalEdits": 119814,
+    "stableDictionaryIdentities": 19366,
+    "bindingsCompared": 136992,
+    "overrideRelationshipsPreserved": 388,
+    "publicationTestGroupsPassed": 27,
+    "matchingNativeTraceGroups": 17,
+    "dictionaryReversalByteExact": true,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Name every remaining local/parameter declaration in TextTemplateDefinition, ArchiveLoadSequence, ArchiveIndex, SynthesizedSoundInstrument, UnderlinedButtonRenderer, MultiHandleSliderRenderer, SpriteButtonRenderer, SpriteCheckboxRenderer and DialRenderer. Trace template decoding and buffer cursor/partial arrays, archive progress, submission CRC/length, modulation/filter/echo stage reuse, widget geometry/colors/cast snapshots, constructor fields and original diagnostic aliases. Expose multi-role synthesis slots without splitting their lifetimes or changing operations. Preserve all previous complete rules/dictionary identities and fixed raw/compiler/environment/native inputs. Existing null/invalid-guard/error behavior remains; no new actual audio/AWT/network/browser/device or FPS/memory equivalence is established.",
+    "symbols": [
+      {
+        "symbol": "L:bm.a(Lai;II)V#0",
+        "originalName": "var7",
+        "to": "outgoingBufferForScores"
+      },
+      {
+        "symbol": "L:bm.a(Lai;II)V#1",
+        "originalName": "var8",
+        "to": "outgoingBufferForHeader"
+      },
+      {
+        "symbol": "L:bm.a(Lai;II)V#2",
+        "originalName": "var4",
+        "to": "payloadStart"
+      },
+      {
+        "symbol": "L:bm.a(Lai;II)V#3",
+        "originalName": "var5",
+        "to": "scoreIndex"
+      },
+      {
+        "symbol": "L:bm.a(Lai;II)V#4",
+        "originalName": "var6",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:bm.a(Lai;II)V#5",
+        "originalName": "runtimeException",
+        "to": "submissionWriteFailure"
+      },
+      {
+        "symbol": "L:eb.a(ILii;I)V#0",
+        "originalName": "var4_float",
+        "to": "completedStepFraction"
+      },
+      {
+        "symbol": "L:eb.a(ILii;I)V#1",
+        "originalName": "var5",
+        "to": "unusedNullUrlForInvalidGuard"
+      },
+      {
+        "symbol": "L:eb.a(ILii;I)V#2",
+        "originalName": "runtimeException",
+        "to": "progressUpdateFailure"
+      },
+      {
+        "symbol": "L:eb.a(Z)Z#0",
+        "originalName": "var3",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:eb.a(Z)Z#1",
+        "originalName": "var4",
+        "to": "unusedNullUrlForInvalidGuard"
+      },
+      {
+        "symbol": "L:eb.a(Z)Z#2",
+        "originalName": "var5",
+        "to": "currentLoadStep"
+      },
+      {
+        "symbol": "L:ed.<initializer>()V#0",
+        "originalName": "var1",
+        "to": "waveTableIndex"
+      },
+      {
+        "symbol": "L:ed.<initializer>()V#1",
+        "originalName": "var0",
+        "to": "seededNoiseRandom"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#0",
+        "originalName": "stackIn_36_0",
+        "to": "nextMuteFlag"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#1",
+        "originalName": "var3",
+        "to": "samplesPerMillisecond"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#10",
+        "originalName": "var13",
+        "to": "volumeOrMuteFlagOrFeedbackOrder"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#11",
+        "originalName": "var14",
+        "to": "modulationValueOrOscillatorOrSampleIndex"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#12",
+        "originalName": "var15",
+        "to": "amplitudeOrGateValueOrSampleOffsetOrFilterChunkEnd"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#13",
+        "originalName": "var16",
+        "to": "unmuteEnvelopeValueOrFilteredSample"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#14",
+        "originalName": "var17",
+        "to": "filterCoefficientIndex"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#2",
+        "originalName": "var5",
+        "to": "pitchModulationScale"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#3",
+        "originalName": "var6",
+        "to": "basePitchModulationStep"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#4",
+        "originalName": "var7",
+        "to": "pitchModulationPhase"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#5",
+        "originalName": "var8",
+        "to": "volumeModulationScale"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#6",
+        "originalName": "var9",
+        "to": "baseVolumeModulationStep"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#7",
+        "originalName": "var10",
+        "to": "volumeModulationPhase"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#8",
+        "originalName": "var11",
+        "to": "indexOrGateCounterOrEchoDelayOrFilterEnvelopeValue"
+      },
+      {
+        "symbol": "L:ed.a(II)[I#9",
+        "originalName": "var12",
+        "to": "pitchOrGateThresholdOrEchoIndexOrForwardOrder"
+      },
+      {
+        "symbol": "L:ed.a(Lqc;)V#0",
+        "originalName": "var3",
+        "to": "oscillatorIndex"
+      },
+      {
+        "symbol": "L:ed.a(Lqc;)V#1",
+        "originalName": "var4",
+        "to": "oscillatorVolumePercent"
+      },
+      {
+        "symbol": "L:ed.a(Lqc;)V#2",
+        "originalName": "var2",
+        "to": "optionalEnvelopeTag"
+      },
+      {
+        "symbol": "L:fh.<init>(Lm;II)V#0",
+        "originalName": "runtimeException",
+        "to": "rendererInitializationFailure"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#0",
+        "originalName": "stackIn_5_0",
+        "to": "selectedLabelColor"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#1",
+        "originalName": "stackIn_22_0",
+        "to": "drawingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#10",
+        "originalName": "var10",
+        "to": "labelScreenY"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#11",
+        "originalName": "var11",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#12",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDrawingFailure"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#2",
+        "originalName": "stackIn_22_1",
+        "to": "drawingMessagePrefix"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#3",
+        "originalName": "stackIn_23_2",
+        "to": "widgetDescription"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#4",
+        "originalName": "decompiledCaughtException",
+        "to": "drawingFailure"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#5",
+        "originalName": "var6_int",
+        "to": "labelColor"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#6",
+        "originalName": "var6",
+        "to": "drawingFailureForContext"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#7",
+        "originalName": "var7",
+        "to": "labelWidth"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#8",
+        "originalName": "var8",
+        "to": "labelHeight"
+      },
+      {
+        "symbol": "L:fh.a(IIIZLel;)V#9",
+        "originalName": "var9",
+        "to": "labelScreenX"
+      },
+      {
+        "symbol": "L:hb.<init>(Lm;IIIIIII)V#0",
+        "originalName": "runtimeException",
+        "to": "rendererInitializationFailure"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#0",
+        "originalName": "var13",
+        "to": "textLeftInset"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#1",
+        "originalName": "var9",
+        "to": "markerAngleRadians"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#2",
+        "originalName": "var11",
+        "to": "markerOffsetX"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#3",
+        "originalName": "var12",
+        "to": "markerOffsetY"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#4",
+        "originalName": "var14",
+        "to": "dialWidgetOrNull"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#5",
+        "originalName": "var7",
+        "to": "dialCenterX"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#6",
+        "originalName": "var8",
+        "to": "dialCenterY"
+      },
+      {
+        "symbol": "L:hb.a(IIIZLel;)V#7",
+        "originalName": "runtimeException",
+        "to": "drawingFailure"
+      },
+      {
+        "symbol": "L:jf.<init>(Lm;IIIIII)V#0",
+        "originalName": "runtimeException",
+        "to": "rendererInitializationFailure"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#0",
+        "originalName": "var10",
+        "to": "handleIndex"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#1",
+        "originalName": "stackIn_4_0",
+        "to": "sliderWidgetOrNull"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#10",
+        "originalName": "var11",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#11",
+        "originalName": "var12",
+        "to": "sliderWidget"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#12",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDrawingFailure"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#2",
+        "originalName": "stackIn_15_0",
+        "to": "drawingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#3",
+        "originalName": "stackIn_15_1",
+        "to": "drawingMessagePrefix"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#4",
+        "originalName": "stackIn_16_2",
+        "to": "widgetDescription"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#5",
+        "originalName": "decompiledCaughtException",
+        "to": "drawingFailure"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#6",
+        "originalName": "var6",
+        "to": "drawingFailureForContext"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#7",
+        "originalName": "var7",
+        "to": "usableRailWidth"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#8",
+        "originalName": "var8",
+        "to": "railScreenX"
+      },
+      {
+        "symbol": "L:jf.a(IIIZLel;)V#9",
+        "originalName": "var9",
+        "to": "railScreenY"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#0",
+        "originalName": "stackIn_6_0",
+        "to": "hoverOrFocusFlag"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#1",
+        "originalName": "stackIn_16_0",
+        "to": "selectedButtonColor"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#10",
+        "originalName": "var8",
+        "to": "textColor"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#11",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDrawingFailure"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#2",
+        "originalName": "stackIn_19_0",
+        "to": "selectedTextColor"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#3",
+        "originalName": "stackIn_23_0",
+        "to": "drawingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#4",
+        "originalName": "stackIn_23_1",
+        "to": "drawingMessagePrefix"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#5",
+        "originalName": "stackIn_24_2",
+        "to": "widgetDescription"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#6",
+        "originalName": "decompiledCaughtException",
+        "to": "drawingFailure"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#7",
+        "originalName": "var6_int",
+        "to": "highlightFlag"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#8",
+        "originalName": "var6",
+        "to": "drawingFailureForContext"
+      },
+      {
+        "symbol": "L:ml.a(IIIZLel;)V#9",
+        "originalName": "var7",
+        "to": "buttonColor"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#0",
+        "originalName": "stackIn_11_0",
+        "to": "drawingFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#1",
+        "originalName": "stackIn_11_1",
+        "to": "drawingMessagePrefix"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#2",
+        "originalName": "stackIn_12_2",
+        "to": "widgetDescription"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#3",
+        "originalName": "decompiledCaughtException",
+        "to": "drawingFailure"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#4",
+        "originalName": "var6_int",
+        "to": "widgetScreenX"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#5",
+        "originalName": "var6",
+        "to": "drawingFailureForContext"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#6",
+        "originalName": "var7",
+        "to": "widgetScreenY"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#7",
+        "originalName": "var8",
+        "to": "validationStateSprite"
+      },
+      {
+        "symbol": "L:oc.a(IIIZLel;)V#8",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDrawingFailure"
+      },
+      {
+        "symbol": "L:oc.b(I)V#0",
+        "originalName": "var2",
+        "to": "rasterPushGuardQuotient"
+      },
+      {
+        "symbol": "L:oc.b(I)V#1",
+        "originalName": "var1",
+        "to": "pooledOrAllocatedSnapshot"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#0",
+        "originalName": "var3_int",
+        "to": "opcode"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#1",
+        "originalName": "var4",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#2",
+        "originalName": "stackIn_9_0",
+        "to": "decodeFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#3",
+        "originalName": "stackIn_9_1",
+        "to": "decodeMessagePrefix"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#4",
+        "originalName": "stackIn_10_2",
+        "to": "bufferDescription"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#5",
+        "originalName": "decompiledCaughtException",
+        "to": "decodeFailure"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#6",
+        "originalName": "var3",
+        "to": "decodeFailureForContext"
+      },
+      {
+        "symbol": "L:og.a(ILqc;)V#7",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtDecodeFailure"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#0",
+        "originalName": "array$0",
+        "to": "allocatedArgumentValues"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#1",
+        "originalName": "var8",
+        "to": "argumentValueIndex"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#10",
+        "originalName": "var7",
+        "to": "argumentType"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#11",
+        "originalName": "var9",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#12",
+        "originalName": "var10",
+        "to": "unusedNullBufferForInvalidGuard"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#13",
+        "originalName": "decompiledCaughtParameter0",
+        "to": "caughtOpcodeFailure"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#2",
+        "originalName": "stackIn_23_0",
+        "to": "opcodeFailureBeforeDescription"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#3",
+        "originalName": "stackIn_23_1",
+        "to": "opcodeMessagePrefix"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#4",
+        "originalName": "stackIn_24_2",
+        "to": "bufferDescription"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#5",
+        "originalName": "decompiledCaughtException",
+        "to": "opcodeFailure"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#6",
+        "originalName": "var4_int",
+        "to": "entryCount"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#7",
+        "originalName": "var4",
+        "to": "opcodeFailureForContext"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#8",
+        "originalName": "var5",
+        "to": "entryIndex"
+      },
+      {
+        "symbol": "L:og.a(ILqc;I)V#9",
+        "originalName": "var6",
+        "to": "argumentTypeId"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#0",
+        "originalName": "var3",
+        "to": "literalSegmentIndex"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#1",
+        "originalName": "discarded$1",
+        "to": "ignoredEllipsisAppendResult"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#2",
+        "originalName": "discarded$2",
+        "to": "ignoredSegmentAppendResult"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#3",
+        "originalName": "var4",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#4",
+        "originalName": "var5",
+        "to": "literalSummaryBuilder"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#5",
+        "originalName": "var2",
+        "to": "literalSummaryBuilderAlias"
+      },
+      {
+        "symbol": "L:og.e(B)Ljava/lang/String;#6",
+        "originalName": "discarded$0",
+        "to": "ignoredInitialAppendResult"
+      },
+      {
+        "symbol": "L:og.f(B)V#0",
+        "originalName": "var2",
+        "to": "referencedTemplateIndex"
+      },
+      {
+        "symbol": "L:og.f(B)V#1",
+        "originalName": "var3",
+        "to": "clientControlFlowSnapshot"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#0",
+        "originalName": "param0",
+        "to": "font"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#1",
+        "originalName": "param1",
+        "to": "padding"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#2",
+        "originalName": "param2",
+        "to": "textOffsetY"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#3",
+        "originalName": "param3",
+        "to": "textColor"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#4",
+        "originalName": "param4",
+        "to": "textShadowColor"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#5",
+        "originalName": "param5",
+        "to": "dialColor"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#6",
+        "originalName": "param6",
+        "to": "secondaryMarkerColor"
+      },
+      {
+        "symbol": "P:hb.<init>(Lm;IIIIIII)V#7",
+        "originalName": "param7",
+        "to": "backgroundColor"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#0",
+        "originalName": "param0",
+        "to": "font"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#1",
+        "originalName": "param1",
+        "to": "textColor"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#2",
+        "originalName": "param2",
+        "to": "textShadowColor"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#3",
+        "originalName": "param3",
+        "to": "railColor"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#4",
+        "originalName": "param4",
+        "to": "backgroundColor"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#5",
+        "originalName": "param5",
+        "to": "handleRadius"
+      },
+      {
+        "symbol": "P:jf.<init>(Lm;IIIIII)V#6",
+        "originalName": "param6",
+        "to": "handleColor"
+      },
+      {
+        "symbol": "P:ml.<init>(III)V#0",
+        "originalName": "param0",
+        "to": "normalColor"
+      },
+      {
+        "symbol": "P:ml.<init>(III)V#1",
+        "originalName": "param1",
+        "to": "highlightColor"
+      },
+      {
+        "symbol": "P:ml.<init>(III)V#2",
+        "originalName": "param2",
+        "to": "disabledColor"
+      }
+    ],
+    "namingWorkflowCommit": "759d063ee387a7e706853c76217fd8aac4e4b99c"
   }
 }

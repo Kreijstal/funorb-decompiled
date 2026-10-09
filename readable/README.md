@@ -1,11 +1,61 @@
 # Readable GeoBlox
 
-The current export has 18,514 guarded naming rules: 302 classes, 2,064 fields,
+The current export has 18,655 guarded naming rules: 302 classes, 2,064 fields,
 1,854 methods, 4,922 parameters, 9,065 local declarations and 145 labels. Both 303-file corpora
 compile, comparing 136,992 bindings and preserving 388 override relationships. Unknown
 names, generated carriers, guards and shared joins remain.
 
-## Current applet callback names (pass 219)
+## Current loading, text, audio and renderer names (pass 220)
+
+A single naming pass covers 141 declarations across nine classes: 123 locals
+and 18 constructor parameters. TextTemplateDefinition now names opcode/count/
+entry/value/type traversal, allocated argument arrays, literal-summary builder
+aliases and ignored append results. ArchiveLoadSequence names its current step,
+progress fraction and invalid-guard snapshots. ArchiveIndex's score packet
+writer names its two retained buffer aliases, payload start and score index.
+SynthesizedSoundInstrument names its deterministic wave-table initialization,
+optional envelope tags, rate/modulation state, mute/echo/filter stages and their
+reused slots. UnderlinedButtonRenderer, MultiHandleSliderRenderer,
+SpriteButtonRenderer, SpriteCheckboxRenderer and DialRenderer name widget/color/
+cast snapshots, screen/rail/marker geometry, raster snapshots, constructor fields
+and all remaining diagnostic aliases. Existing null dereferences, guard effects,
+partial buffer/array writes, signed overflow, FP association and original
+owner diagnostic strings stay intact; naming does not repair those paths.
+
+The synthesizer's combined names make compiler slot reuse explicit: one slot
+holds initialization/sample indices, gate counter, echo delay and filter-envelope
+value; others hold pitch/threshold/index/filter order or volume/mute/filter order.
+No lifetime is split in this pass. Making those phase bodies idiomatic needs a
+generic def-use/definite-assignment reconstruction with independent proofs at
+phase boundaries, including every exceptional and loop edge. Cosmetic variable
+splitting would risk reading a value from the wrong phase.
+
+Every new rule guards the original JVM declaration, ordinal and spelling.
+All 18,514 previous complete naming rules and 19,366 dictionary identities remain
+exact. Only 141 selected renamedName fields change in dictionary symbols; source
+positions and every other metadata field remain intact. Only nine readable Java
+files change, adding 736 identifier edits. The export now has 18,655 guarded rules,
+119,361 identifier edits, 11 literal and 442 label edits (119,814 total).
+Compiler-style declarations fall from 378 to 265; the nine classes have no
+remaining unnamed local/parameter declarations. The 41 opaque fields, 85 plain
+block labels and four large framed methods remain unchanged.
+
+From Deko, `node readable/build-geoblox-rules.mjs --check` validates all 141
+explicit additions against the previous Git manifest. Both
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --update` and
+`env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check` compile
+all 303 sources with 136,992 binding and 388 override checks. All 303 files
+reverse byte exactly; 27 publication tests, 17 scoped native trace groups and
+fresh sibling reproductions pass. All 73 historical source-proof pins remain
+intact. This pass does not newly establish actual audio/AWT/network/browser/phone,
+whole-game or heap/presented-FPS acceptance. Raw source, bytecode, compiler,
+environment, frozen naming dependency and native inputs are unchanged.
+
+The unchanged tracked **decompiler-source** Git tar SHA-256 is
+`f1e8f58da7530b79bdba98ee1292dcb2ef29b0ef2e9f2d0f95ff9c46393fff95`; the pinned compiler environment still records
+`CFR_JS_DISABLE_LOOP_TAIL_MERGE=1`.
+
+## Previous applet callback names (pass 219)
 
 Eighty-four remaining declarations in GameApplet now describe their source
 roles: 66 locals and 18 callback/abstract parameters. Canvas painting names the
@@ -4264,16 +4314,16 @@ Generated Java, [dictionary](geoblox/mapping.json), [symbol reference](geoblox/S
 [export provenance](geoblox/provenance.json), the frozen `funorb-stubs.jar`
 compilation artifact and reading documentation belong here in **funorb-decompiled**.
 The generator, rules, proof fixtures and frozen naming dependency are maintained
-only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/6ead341e9de669319bccf2bb5b49b3da3a452420/readable/README.md).
+only in **dekobloko-work**, following its [workflow](https://github.com/Kreijstal/dekobloko-work/blob/759d063ee387a7e706853c76217fd8aac4e4b99c/readable/README.md).
 **blank-github-cloner** owns loading/diagnostics and tracks no Java exports.
-The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/6ead341e9de669319bccf2bb5b49b3da3a452420/readable/geoblox-rules.json) pins all source and tool
+The [current manifest](https://github.com/Kreijstal/dekobloko-work/blob/759d063ee387a7e706853c76217fd8aac4e4b99c/readable/geoblox-rules.json) pins all source and tool
 identities, workflow source hashes and native trace evidence. It records the
 previous manifest's Git repository, commit and hash; pass133 refers to the
 Deko-owned pass132 manifest; pass135 refers to Deko-owned pass134; pass136 refers to Deko-owned pass135; pass137 refers to Deko-owned pass136; pass138 refers to Deko-owned pass137. Pass118 refers to this repository's pass117 history. The export records its exact
 manifest SHA-256. Old scripts and manifests remain accessible in Git history.
 
-The current Deko workflow/manifest commit is `6ead341e9de669319bccf2bb5b49b3da3a452420`; the
-manifest SHA-256 is `a4a7c2fea964d133ad920ba5935907c489331eafdd4c940c849c586f999febcf`.
+The current Deko workflow/manifest commit is `759d063ee387a7e706853c76217fd8aac4e4b99c`; the
+manifest SHA-256 is `4f2d1e1ee49453fad07b32ffddbdf94f43a2244fc3f0ad2551df71423aecdc89`.
 The existing decompilation provenance records these identities and all four
 executable workflow source hashes.
 
@@ -4298,7 +4348,7 @@ separate from a game JAR or Java source-tree hashes.
 Current raw tree SHA-256:
 `81d1d3e3084cf7b6d6b3060abf190d477dcc125080c733bde752a07683a23695`.
 Current readable tree SHA-256:
-`e14cb37657601d5013df76bfafcb15f072606b04b07d9ac69b350285908a10ae`.
+`50b77b4d000f1afc59fbbc27f2684de440e5f54926421fdb304d01cc0b1ec872`.
 
 An earlier sprite naming pass added 171 guarded identities: two image-constructor
 parameters and 169 locals. Every parameter and local declaration in `Sprite`,
