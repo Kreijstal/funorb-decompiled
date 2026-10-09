@@ -190,6 +190,7 @@ final class ab {
         float var9Lifetime2;
         float var10Lifetime1;
         float var11Lifetime1;
+        int var3Lifetime2;
         var16 = null;
         var15 = Geoblox.field_C;
         try {
@@ -236,8 +237,8 @@ final class ab {
                   continue;
                 }
                 if (ma.a(true, param1, var2)) {
-                  var3 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
-                  var4 = tl.field_g[var3];
+                  var3Lifetime2 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
+                  var4 = tl.field_g[var3Lifetime2];
                   if (a.field_d == var4.field_K) {
                     break L2;
                   }

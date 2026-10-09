@@ -392,6 +392,9 @@ final class rh {
         int var16Lifetime1;
         int var16Lifetime2;
         int var16Lifetime3;
+        int var17Lifetime4;
+        int var18Lifetime3;
+        int var19Lifetime2;
         try {
           if (!this.b(param3, 3)) {
             return false;
@@ -488,21 +491,21 @@ final class rh {
               var43 = new byte[var14];
               var31.field_f = var11;
               var14Lifetime1 = 0;
-              var17 = 0;
-              for (var18 = 0; var18 < var12; var18++) {
-                var19 = 0;
+              var17Lifetime4 = 0;
+              for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
+                var19Lifetime2 = 0;
                 for (var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var31.a((byte) -82);
+                  var19Lifetime2 = var19Lifetime2 + var31.a((byte) -82);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
                     var21 = var33[var20];
                   }
                   if (var21 == param0) {
-                    sf.a(var42, var17, var43, var14Lifetime1, var19);
-                    var14Lifetime1 = var14Lifetime1 + var19;
+                    sf.a(var42, var17Lifetime4, var43, var14Lifetime1, var19Lifetime2);
+                    var14Lifetime1 = var14Lifetime1 + var19Lifetime2;
                   }
-                  var17 = var17 + var19;
+                  var17Lifetime4 = var17Lifetime4 + var19Lifetime2;
                 }
               }
               var7[var15] = var43;

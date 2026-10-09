@@ -569,6 +569,11 @@ abstract class wh extends rc {
         int var38Lifetime1;
         int var39Lifetime1;
         int var40Lifetime1;
+        int var35Lifetime2;
+        int var37Lifetime2;
+        int var38Lifetime2;
+        int var39Lifetime2;
+        int var40Lifetime2;
         var42 = Geoblox.field_C;
         try {
           if (param4 >= 0 &&
@@ -671,9 +676,9 @@ abstract class wh extends rc {
               var25 = param12 << 16;
               var22 = param1 << 16;
               var21 = param1 << 16;
-              var35 = param15 - param8;
+              var35Lifetime2 = param15 - param8;
               var20 = (-param2 + param13 << 16) / var34;
-              var19 = (param9 - param2 << 16) / var35;
+              var19 = (param9 - param2 << 16) / var35Lifetime2;
               if (var20 <= var19) {
                 var23 = (-param1 + param6 << 16) / var34;
                 var27 = (-param12 + param0 << 16) / var34;
@@ -681,26 +686,26 @@ abstract class wh extends rc {
                 var36 = var19;
                 var19 = var20;
                 var20 = var36;
-                var28 = (-param12 + param3 << 16) / var35;
+                var28 = (-param12 + param3 << 16) / var35Lifetime2;
                 var33Lifetime1 = 1;
-                var32 = (-param14 + param7 << 16) / var35;
-                var24 = (-param1 + param10 << 16) / var35;
+                var32 = (-param14 + param7 << 16) / var35Lifetime2;
+                var24 = (-param1 + param10 << 16) / var35Lifetime2;
                 if (var42 != 0) {
                   var32 = (-param14 + param5 << 16) / var34;
                   var28 = (param0 - param12 << 16) / var34;
-                  var23 = (param10 - param1 << 16) / var35;
+                  var23 = (param10 - param1 << 16) / var35Lifetime2;
                   var24 = (-param1 + param6 << 16) / var34;
-                  var31 = (param7 - param14 << 16) / var35;
-                  var27 = (-param12 + param3 << 16) / var35;
+                  var31 = (param7 - param14 << 16) / var35Lifetime2;
+                  var27 = (-param12 + param3 << 16) / var35Lifetime2;
                   var33Lifetime1 = 0;
                 }
               } else {
                 var32 = (-param14 + param5 << 16) / var34;
                 var28 = (param0 - param12 << 16) / var34;
-                var23 = (param10 - param1 << 16) / var35;
+                var23 = (param10 - param1 << 16) / var35Lifetime2;
                 var24 = (-param1 + param6 << 16) / var34;
-                var31 = (param7 - param14 << 16) / var35;
-                var27 = (-param12 + param3 << 16) / var35;
+                var31 = (param7 - param14 << 16) / var35Lifetime2;
+                var27 = (-param12 + param3 << 16) / var35Lifetime2;
                 var33Lifetime1 = 0;
               }
               {
@@ -796,10 +801,10 @@ abstract class wh extends rc {
                 var32 = 0;
               }
               if (stackIn_73_0 != stackIn_73_1 || var42 != 0) {
-                var37 = param13 << 16;
-                var38 = param6 << 16;
-                var39 = param0 << 16;
-                var40 = param5 << 16;
+                var37Lifetime2 = param13 << 16;
+                var38Lifetime2 = param6 << 16;
+                var39Lifetime2 = param0 << 16;
+                var40Lifetime2 = param5 << 16;
                 if (var33Lifetime1 == 0) {
                   var17_int = param9 << 16;
                   var29 = param7 << 16;
@@ -812,14 +817,14 @@ abstract class wh extends rc {
                   var26 = param3 << 16;
                   var30 = param7 << 16;
                 }
-                var28 = (var39 - var26) / var36;
-                var31 = (-var29 + var40) / var36;
-                var19 = (var37 - var17_int) / var36;
-                var23 = (-var21 + var38) / var36;
-                var27 = (var39 - var25) / var36;
-                var24 = (var38 - var22) / var36;
-                var20 = (var37 - var18) / var36;
-                var32 = (-var30 + var40) / var36;
+                var28 = (var39Lifetime2 - var26) / var36;
+                var31 = (-var29 + var40Lifetime2) / var36;
+                var19 = (var37Lifetime2 - var17_int) / var36;
+                var23 = (-var21 + var38Lifetime2) / var36;
+                var27 = (var39Lifetime2 - var25) / var36;
+                var24 = (var38Lifetime2 - var22) / var36;
+                var20 = (var37Lifetime2 - var18) / var36;
+                var32 = (-var30 + var40Lifetime2) / var36;
               }
             }
             if (param8 < 0) {

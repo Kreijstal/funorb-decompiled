@@ -86,6 +86,9 @@ final class sd extends pb {
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
+        int var16Lifetime2;
+        int var16Lifetime3;
+        int var17Lifetime2;
         var19 = Geoblox.field_C;
         try {
           if (param5 >= 0 &&
@@ -156,7 +159,7 @@ final class sd extends pb {
                   var9_int = var9_int + var11 * param8;
                   param8 = 0;
                 }
-                var16 = mh.field_b[param8];
+                var16Lifetime2 = mh.field_b[param8];
                 while (param8 < param7) {
                   var17 = var9_int >> 16;
                   if (mh.field_c > var17) {
@@ -166,14 +169,14 @@ final class sd extends pb {
                         var18 = -1 + (-var17 + mh.field_c);
                       }
                       if (0 <= var17) {
-                        ib.a(47, param4, var16 + var17, param2, var18);
+                        ib.a(47, param4, var16Lifetime2 + var17, param2, var18);
                       } else {
-                        ib.a(57, param4, var16, param2, var17 + var18);
+                        ib.a(57, param4, var16Lifetime2, param2, var17 + var18);
                       }
                     } else {
                       if (var17 >= 0 &&
                           mh.field_c > var17) {
-                        ib.a(-61, param4, var17 + var16, param2, var18);
+                        ib.a(-61, param4, var17 + var16Lifetime2, param2, var18);
                       }
                     }
                   }
@@ -181,24 +184,24 @@ final class sd extends pb {
                   if (param8 >= mh.field_h) {
                     return;
                   }
-                  var16 = var16 + vb.field_f;
+                  var16Lifetime2 = var16Lifetime2 + vb.field_f;
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
                 }
               }
-              var16 = -param7 + param5;
-              if (var16 == 0) {
+              var16Lifetime3 = -param7 + param5;
+              if (var16Lifetime3 == 0) {
                 var12 = 0;
                 var11 = 0;
               } else {
-                var17 = param6 << 16;
+                var17Lifetime2 = param6 << 16;
                 if (var13 == 0) {
                   var9_int = param0 << 16;
                 } else {
                   var10 = param0 << 16;
                 }
-                var11 = (var17 - var9_int) / var16;
-                var12 = (var17 - var10) / var16;
+                var11 = (var17Lifetime2 - var9_int) / var16Lifetime3;
+                var12 = (var17Lifetime2 - var10) / var16Lifetime3;
               }
             }
             if (0 > param8) {

@@ -178,6 +178,7 @@ final class wa {
         int var15 = 0;
         int var11Lifetime1;
         int var13Lifetime1;
+        int var13Lifetime2;
         var15 = Geoblox.field_C;
         try {
           var5_int = this.field_e + this.field_d;
@@ -207,8 +208,8 @@ final class wa {
             var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, dd.field_E);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
-            for (var13 = 0; var13 < var11Lifetime1; var13++) {
-              var14 = this.field_m.a(dd.field_E[var13]);
+            for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
+              var14 = this.field_m.a(dd.field_E[var13Lifetime2]);
               if (var14 <= var9) {
                 continue;
               }

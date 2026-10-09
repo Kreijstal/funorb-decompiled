@@ -100,6 +100,7 @@ final class sk {
         int var14 = 0;
         int var9_intLifetime1;
         int var9_intLifetime2;
+        int var9_intLifetime1Lifetime1;
         var14 = Geoblox.field_C;
         try {
           try {
@@ -153,14 +154,14 @@ final class sk {
               if (decompiledFrameCompleted0) {
                 if (param1 > 0) {
                   this.a(true);
-                  var9_intLifetime1 = param1;
-                  if (this.field_i < var9_intLifetime1) {
-                    var9_intLifetime1 = this.field_i;
+                  var9_intLifetime1Lifetime1 = param1;
+                  if (this.field_i < var9_intLifetime1Lifetime1) {
+                    var9_intLifetime1Lifetime1 = this.field_i;
                   }
-                  sf.a(this.field_h, 0, param0, param2, var9_intLifetime1);
-                  param1 = param1 - var9_intLifetime1;
-                  param2 = param2 + var9_intLifetime1;
-                  this.field_f = this.field_f + (long)var9_intLifetime1;
+                  sf.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
+                  param1 = param1 - var9_intLifetime1Lifetime1;
+                  param2 = param2 + var9_intLifetime1Lifetime1;
+                  this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
                 }
               }
             }

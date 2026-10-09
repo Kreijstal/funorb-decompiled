@@ -159,6 +159,8 @@ final class hi extends ee implements ta, pl {
         int var13Lifetime1;
         int var14Lifetime1;
         int var15Lifetime1;
+        int var14Lifetime2;
+        int var15Lifetime2;
         var40 = Geoblox.field_C;
         try {
           var44 = param5;
@@ -194,7 +196,7 @@ final class hi extends ee implements ta, pl {
             } else {
               stackIn_18_0 = 128;
             }
-            var14 = stackIn_18_0;
+            var14Lifetime2 = stackIn_18_0;
             var15 = param0 * var63[var13] + (param2 * var62[var13] + param6 * var61[var13]) >> 8;
             stackIn_20_0 = jf.field_b;
             if (var15 < 0) {
@@ -202,10 +204,10 @@ final class hi extends ee implements ta, pl {
             } else {
               stackIn_21_1 = var15;
             }
-            var15 = stackIn_20_0[stackIn_21_1];
-            var14 = var14 * (256 - var15) >>> 8;
-            var54[var13] = var14;
-            var64[var13] = var15;
+            var15Lifetime2 = stackIn_20_0[stackIn_21_1];
+            var14Lifetime2 = var14Lifetime2 * (256 - var15Lifetime2) >>> 8;
+            var54[var13] = var14Lifetime2;
+            var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < ch.field_b; var13Lifetime1++) {
             var14Lifetime1 = pj.field_i[var13Lifetime1];

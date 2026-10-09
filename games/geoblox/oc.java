@@ -16,6 +16,7 @@ final class oc implements dh {
         int var2Lifetime1;
         int var3Lifetime1;
         int var3Lifetime2;
+        int var3Lifetime3;
         fe.field_j.b(0, 0);
         ne.field_b.b(320 - (ne.field_b.field_s >> 1), param0 - (ne.field_b.field_o >> 1));
         kh.field_h[0].b(0, 20);
@@ -30,14 +31,14 @@ final class oc implements dh {
                     qh.field_O[1].b(-var2 + 320 - qh.field_O[1].field_s, -(qh.field_O[1].field_o >> 1) + (240 + var3 + 22));
                     return;
                 }
-                var3 = n.field_j << 2;
-                if (var2 + 320 < 1000 - var3) {
-                    qh.field_O[0].b(1000 - var3, -34 + (240 - (qh.field_O[0].field_o >> 1)));
+                var3Lifetime3 = n.field_j << 2;
+                if (var2 + 320 < 1000 - var3Lifetime3) {
+                    qh.field_O[0].b(1000 - var3Lifetime3, -34 + (240 - (qh.field_O[0].field_o >> 1)));
                 } else {
                     qh.field_O[0].b(320 + var2, 206 - (qh.field_O[0].field_o >> 1));
                 }
-                if (-qh.field_O[1].field_s + (320 - var2) > var3 - 1200) {
-                    qh.field_O[1].b(var3 - 1200, 22 + (240 - (qh.field_O[1].field_o >> 1)));
+                if (-qh.field_O[1].field_s + (320 - var2) > var3Lifetime3 - 1200) {
+                    qh.field_O[1].b(var3Lifetime3 - 1200, 22 + (240 - (qh.field_O[1].field_o >> 1)));
                     tl.field_r[vc.field_h].b(320 - var2, 240 - (tl.field_r[vc.field_h].field_o >> 1), si.field_j);
                     return;
                 }

@@ -311,6 +311,15 @@ final class vl extends hf {
         int var14Lifetime2;
         int var14Lifetime3;
         int var16_intLifetime1;
+        int var29Lifetime5;
+        int var30Lifetime2;
+        int var27Lifetime6Lifetime1;
+        int var27Lifetime7Lifetime1;
+        int var29Lifetime3Lifetime1;
+        int var29Lifetime4Lifetime1;
+        int var30Lifetime1Lifetime1;
+        int var30Lifetime1Lifetime2;
+        int var31Lifetime1Lifetime1;
         try {
           this.field_m = new byte[128];
           this.field_f = new t[128];
@@ -527,8 +536,8 @@ final class vl extends hf {
               }
             }
             if (var45.field_e != null) {
-              for (var29 = 3; -2 + var45.field_e.length > var29; var29 += 2) {
-                var45.field_e[var29] = var38.f((byte) 102);
+              for (var29Lifetime5 = 3; -2 + var45.field_e.length > var29Lifetime5; var29Lifetime5 += 2) {
+                var45.field_e[var29Lifetime5] = var38.f((byte) 102);
               }
             }
           }
@@ -569,25 +578,25 @@ final class vl extends hf {
               var19Lifetime5 = var38.c((byte) 34) + 1 + var19Lifetime5;
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
-            var27Lifetime6 = var46[0];
+            var27Lifetime6Lifetime1 = var46[0];
             var28 = var46[1];
-            for (var29Lifetime3 = 0; var27Lifetime6 > var29Lifetime3; var29Lifetime3++) {
+            for (var29Lifetime3 = 0; var27Lifetime6Lifetime1 > var29Lifetime3; var29Lifetime3++) {
               this.field_o[var29Lifetime3] = (byte)(this.field_o[var29Lifetime3] * var28 + 32 >> 6);
             }
-            for (var29Lifetime3 = 2; var46.length > var29Lifetime3; var29Lifetime3 += 2) {
-              var30 = var46[var29Lifetime3];
-              var31 = var15[1 + var29Lifetime3];
-              var32 = var28 * (var30 - var27Lifetime6) + (-var27Lifetime6 + var30) / 2;
-              for (var33 = var27Lifetime6; var30 > var33; var33++) {
-                var34 = pk.a(var30 - var27Lifetime6, (byte) -6, var32);
+            for (var29Lifetime3Lifetime1 = 2; var46.length > var29Lifetime3Lifetime1; var29Lifetime3Lifetime1 += 2) {
+              var30 = var46[var29Lifetime3Lifetime1];
+              var31 = var15[1 + var29Lifetime3Lifetime1];
+              var32 = var28 * (var30 - var27Lifetime6Lifetime1) + (-var27Lifetime6Lifetime1 + var30) / 2;
+              for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
+                var34 = pk.a(var30 - var27Lifetime6Lifetime1, (byte) -6, var32);
                 this.field_o[var33] = (byte)(32 + this.field_o[var33] * var34 >> 6);
                 var32 = var32 + (var31 - var28);
               }
-              var27Lifetime6 = var30;
+              var27Lifetime6Lifetime1 = var30;
               var28 = var31;
             }
-            for (var30 = var27Lifetime6; var30 < 128; var30++) {
-              this.field_o[var30] = (byte)(32 + this.field_o[var30] * var28 >> 6);
+            for (var30Lifetime2 = var27Lifetime6Lifetime1; var30Lifetime2 < 128; var30Lifetime2++) {
+              this.field_o[var30Lifetime2] = (byte)(32 + this.field_o[var30Lifetime2] * var28 >> 6);
             }
             var15 = null;
           }
@@ -598,9 +607,9 @@ final class vl extends hf {
               var19Lifetime6 = var38.c((byte) 34) + 1 + var19Lifetime6;
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
-            var27Lifetime7 = var47[0];
+            var27Lifetime7Lifetime1 = var47[0];
             var28Lifetime1 = var47[1] << 1;
-            for (var29Lifetime4 = 0; var27Lifetime7 > var29Lifetime4; var29Lifetime4++) {
+            for (var29Lifetime4 = 0; var27Lifetime7Lifetime1 > var29Lifetime4; var29Lifetime4++) {
               var30Lifetime1 = (255 & this.field_m[var29Lifetime4]) + var28Lifetime1;
               if (var30Lifetime1 < 0) {
                 var30Lifetime1 = 0;
@@ -610,15 +619,15 @@ final class vl extends hf {
               }
               this.field_m[var29Lifetime4] = (byte)var30Lifetime1;
             }
-            var29Lifetime4 = 2;
-            while (var29Lifetime4 < var47.length) {
-              var30Lifetime1 = var47[var29Lifetime4];
-              var31Lifetime1 = var16[var29Lifetime4 + 1] << 1;
-              var32Lifetime1 = (var30Lifetime1 - var27Lifetime7) * var28Lifetime1 + (-var27Lifetime7 + var30Lifetime1) / 2;
-              var37 = var27Lifetime7;
+            var29Lifetime4Lifetime1 = 2;
+            while (var29Lifetime4Lifetime1 < var47.length) {
+              var30Lifetime1Lifetime1 = var47[var29Lifetime4Lifetime1];
+              var31Lifetime1 = var16[var29Lifetime4Lifetime1 + 1] << 1;
+              var32Lifetime1 = (var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1) * var28Lifetime1 + (-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1) / 2;
+              var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
-              while (var30Lifetime1 > var37) {
-                var34Lifetime1 = pk.a(var30Lifetime1 - var27Lifetime7, (byte) -6, var32Lifetime1);
+              while (var30Lifetime1Lifetime1 > var37) {
+                var34Lifetime1 = pk.a(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) -6, var32Lifetime1);
                 var35 = (this.field_m[var37] & 255) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;
@@ -630,19 +639,19 @@ final class vl extends hf {
                 var32Lifetime1 = var32Lifetime1 + (var31Lifetime1 - var28Lifetime1);
                 var37++;
               }
-              var29Lifetime4 += 2;
+              var29Lifetime4Lifetime1 += 2;
               var28Lifetime1 = var31Lifetime1;
-              var27Lifetime7 = var30Lifetime1;
+              var27Lifetime7Lifetime1 = var30Lifetime1Lifetime1;
             }
-            for (var30Lifetime1 = var27Lifetime7; var30Lifetime1 < 128; var30Lifetime1++) {
-              var31Lifetime1 = (this.field_m[var30Lifetime1] & 255) + var28Lifetime1;
-              if (var31Lifetime1 < 0) {
-                var31Lifetime1 = 0;
+            for (var30Lifetime1Lifetime2 = var27Lifetime7Lifetime1; var30Lifetime1Lifetime2 < 128; var30Lifetime1Lifetime2++) {
+              var31Lifetime1Lifetime1 = (this.field_m[var30Lifetime1Lifetime2] & 255) + var28Lifetime1;
+              if (var31Lifetime1Lifetime1 < 0) {
+                var31Lifetime1Lifetime1 = 0;
               }
-              if (var31Lifetime1 > 128) {
-                var31Lifetime1 = 128;
+              if (var31Lifetime1Lifetime1 > 128) {
+                var31Lifetime1Lifetime1 = 128;
               }
-              this.field_m[var30Lifetime1] = (byte)var31Lifetime1;
+              this.field_m[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
             var16 = null;
           }

@@ -83,6 +83,8 @@ final class bm {
         int var14Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
+        int var10Lifetime1Lifetime1;
+        int var13Lifetime1Lifetime1;
         var16 = Geoblox.field_C;
         try {
           var18 = new qc(v.a(param1, -1));
@@ -140,8 +142,8 @@ final class bm {
               for (var10Lifetime1 = 0; this.field_b > var10Lifetime1; var10Lifetime1++) {
                 this.field_d[var10Lifetime1] = -1;
               }
-              for (var10Lifetime1 = 0; var10Lifetime1 < this.field_h; var10Lifetime1++) {
-                this.field_d[this.field_i[var10Lifetime1]] = var18.a((byte) -76);
+              for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_h; var10Lifetime1Lifetime1++) {
+                this.field_d[this.field_i[var10Lifetime1Lifetime1]] = var18.a((byte) -76);
               }
               this.field_n = new am(this.field_d);
             }
@@ -229,11 +231,11 @@ final class bm {
                 for (var13Lifetime1 = 0; this.field_k[var11Lifetime1] > var13Lifetime1; var13Lifetime1++) {
                   this.field_e[var11Lifetime1][var13Lifetime1] = -1;
                 }
-                for (var13Lifetime1 = 0; var13Lifetime1 < var12Lifetime1; var13Lifetime1++) {
+                for (var13Lifetime1Lifetime1 = 0; var13Lifetime1Lifetime1 < var12Lifetime1; var13Lifetime1Lifetime1++) {
                   if (this.field_o[var11Lifetime1] != null) {
-                    var14Lifetime1 = this.field_o[var11Lifetime1][var13Lifetime1];
+                    var14Lifetime1 = this.field_o[var11Lifetime1][var13Lifetime1Lifetime1];
                   } else {
-                    var14Lifetime1 = var13Lifetime1;
+                    var14Lifetime1 = var13Lifetime1Lifetime1;
                   }
                   this.field_e[var11Lifetime1][var14Lifetime1] = var18.a((byte) -78);
                 }

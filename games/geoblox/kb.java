@@ -90,6 +90,7 @@ final class kb {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;
+        int var1Lifetime3;
         if (null != kd.field_e) {
             kd.field_e.l(0);
             if (vg.field_i != null) {
@@ -99,7 +100,7 @@ final class kb {
                 return;
             }
             eh.a((byte) -2);
-            var1 = -121 % ((-38 - param0) / 59);
+            var1Lifetime3 = -121 % ((-38 - param0) / 59);
             return;
         }
         if (vg.field_i == null) {
