@@ -115,163 +115,157 @@ final class d implements Runnable {
             try {
               L7: {
                 var2_int = var9.field_d;
-                if (1 != var2_int) {
-                  if (var2_int != 22) {
-                    if (var2_int != 2) {
-                      if (4 == var2_int) {
+                switch (var2_int) {
+                  case 4:
+                    if (oa.a(-12520) < field_m) {
+                      throw new IOException();
+                    }
+                    var9.field_b = new DataInputStream(((java.net.URL) (var9.field_f)).openStream());
+                    break;
+                  case 8:
+                    var18 = (Object[]) (var9.field_f);
+                    if (this.field_h &&
+                      ((Class) (var18[0])).getClassLoader() == null) {
+                      throw new SecurityException();
+                    }
+                    var9.field_b = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
+                    break;
+                  case 9:
+                    var17 = (Object[]) (var9.field_f);
+                    if (this.field_h &&
+                      null == ((Class) (var17[0])).getClassLoader()) {
+                      throw new SecurityException();
+                    }
+                    var9.field_b = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
+                    break;
+                  case 18:
+                    var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                    var9.field_b = var16.getContents((Object) null);
+                    break;
+                  case 19:
+                    var7 = (java.awt.datatransfer.Transferable) (var9.field_f);
+                    var15 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                    var15.setContents(var7, (java.awt.datatransfer.ClipboardOwner) null);
+                    break;
+                  case 16:
+                  default:
+                    if (!this.field_h) {
+                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                    }
+                    switch (var2_int) {
+                      case 3:
                         if (oa.a(-12520) < field_m) {
                           throw new IOException();
                         }
-                        var9.field_b = new DataInputStream(((java.net.URL) (var9.field_f)).openStream());
-                      } else {
-                        if (var2_int == 8) {
-                          var18 = (Object[]) (var9.field_f);
-                          if (this.field_h &&
-                            ((Class) (var18[0])).getClassLoader() == null) {
-                            throw new SecurityException();
-                          }
-                          var9.field_b = ((Class) (var18[0])).getDeclaredMethod((String) (var18[1]), (Class[]) (var18[2]));
+                        var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
+                        var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
+                        break;
+                      case 21:
+                        if (oa.a(-12520) < field_m) {
+                          throw new IOException();
+                        }
+                        var9.field_b = java.net.InetAddress.getByName((String) (var9.field_f)).getAddress();
+                        break;
+                      case 6:
+                        var13 = new java.awt.Frame("Jagex Full Screen");
+                        var9.field_b = var13;
+                        var13.setResizable(false);
+                        if (this.field_l) {
+                          this.field_w.a(8, var9.field_c >>> 16, var13, var9.field_g >> 16, var9.field_c & 65535, var9.field_g & 65535);
                         } else {
-                          if (var2_int == 9) {
-                            var17 = (Object[]) (var9.field_f);
-                            if (this.field_h &&
-                              null == ((Class) (var17[0])).getClassLoader()) {
-                              throw new SecurityException();
+                          Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.field_c >>> 16), new Integer(var9.field_c & 65535), new Integer(var9.field_g >> 16), new Integer(var9.field_g & 65535)});
+                        }
+                        break;
+                      case 7:
+                        if (this.field_l) {
+                          this.field_w.a(111, (java.awt.Frame) (var9.field_f));
+                        } else {
+                          Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
+                        }
+                        break;
+                      case 12:
+                        var3_ref = d.a((byte) -103, field_f, field_p, (String) (var9.field_f));
+                        var9.field_b = var3_ref;
+                        break;
+                      case 13:
+                        var3_ref = d.a((byte) 19, field_f, "", (String) (var9.field_f));
+                        var9.field_b = var3_ref;
+                        break;
+                      case 16:
+                      default:
+                        if (this.field_h &&
+                          var2_int == 14) {
+                          var3_int = var9.field_c;
+                          var4_int = var9.field_g;
+                          if (!this.field_l) {
+                            Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_u, new Object[]{new Integer(var3_int), new Integer(var4_int)});
+                            break L7;
+                          }
+                          this.field_a.a(-71, var4_int, var3_int);
+                          break L7;
+                        }
+                        if (this.field_h &&
+                          var2_int == 15) {
+                          stackIn_76_0 = (var9.field_c == 0) ? 0 : 1;
+                          var3_int = stackIn_76_0;
+                          var12 = (java.awt.Component) (var9.field_f);
+                          if (this.field_l) {
+                            this.field_a.a(12758, var3_int != 0, var12);
+                            break L7;
+                          }
+                          Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
+                          break L7;
+                        }
+                        if (!this.field_l &&
+                          var2_int == 17) {
+                          var11 = (Object[]) (var9.field_f);
+                          Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.field_c), new Integer(var9.field_g), var11[2]});
+                        } else {
+                          if (var2_int != 16) {
+                            throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                          }
+                          try {
+                            if (!field_b.startsWith("win")) {
+                              throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
-                            var9.field_b = ((Class) (var17[0])).getDeclaredField((String) (var17[1]));
-                          } else {
-                            if (18 == var2_int) {
-                              var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                              var9.field_b = var16.getContents((Object) null);
-                            } else {
-                              if (var2_int == 19) {
-                                var7 = (java.awt.datatransfer.Transferable) (var9.field_f);
-                                var15 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                                var15.setContents(var7, (java.awt.datatransfer.ClipboardOwner) null);
-                              } else {
-                                if (!this.field_h) {
-                                  throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
-                                }
-                                if (var2_int == 3) {
-                                  if (oa.a(-12520) < field_m) {
-                                    throw new IOException();
-                                  }
-                                  var14 = (255 & var9.field_c >> 24) + "." + ((var9.field_c & 16718053) >> 16) + "." + (var9.field_c >> 8 & 255) + "." + (255 & var9.field_c);
-                                  var9.field_b = java.net.InetAddress.getByName(var14).getHostName();
-                                } else {
-                                  if (var2_int == 21) {
-                                    if (oa.a(-12520) < field_m) {
-                                      throw new IOException();
-                                    }
-                                    var9.field_b = java.net.InetAddress.getByName((String) (var9.field_f)).getAddress();
-                                  } else {
-                                    if (var2_int != 5) {
-                                      if (6 == var2_int) {
-                                        var13 = new java.awt.Frame("Jagex Full Screen");
-                                        var9.field_b = var13;
-                                        var13.setResizable(false);
-                                        if (this.field_l) {
-                                          this.field_w.a(8, var9.field_c >>> 16, var13, var9.field_g >> 16, var9.field_c & 65535, var9.field_g & 65535);
-                                        } else {
-                                          Class.forName("pd").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_e, new Object[]{var13, new Integer(var9.field_c >>> 16), new Integer(var9.field_c & 65535), new Integer(var9.field_g >> 16), new Integer(var9.field_g & 65535)});
-                                        }
-                                      } else {
-                                        if (var2_int == 7) {
-                                          if (this.field_l) {
-                                            this.field_w.a(111, (java.awt.Frame) (var9.field_f));
-                                          } else {
-                                            Class.forName("pd").getMethod("exit", new Class[]{}).invoke(this.field_e, new Object[]{});
-                                          }
-                                        } else {
-                                          if (12 == var2_int) {
-                                            var3_ref = d.a((byte) -103, field_f, field_p, (String) (var9.field_f));
-                                            var9.field_b = var3_ref;
-                                          } else {
-                                            if (var2_int == 13) {
-                                              var3_ref = d.a((byte) 19, field_f, "", (String) (var9.field_f));
-                                              var9.field_b = var3_ref;
-                                            } else {
-                                              if (this.field_h &&
-                                                var2_int == 14) {
-                                                var3_int = var9.field_c;
-                                                var4_int = var9.field_g;
-                                                if (!this.field_l) {
-                                                  Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_u, new Object[]{new Integer(var3_int), new Integer(var4_int)});
-                                                  break L7;
-                                                }
-                                                this.field_a.a(-71, var4_int, var3_int);
-                                                break L7;
-                                              }
-                                              if (this.field_h &&
-                                                var2_int == 15) {
-                                                stackIn_76_0 = (var9.field_c == 0) ? 0 : 1;
-                                                var3_int = stackIn_76_0;
-                                                var12 = (java.awt.Component) (var9.field_f);
-                                                if (this.field_l) {
-                                                  this.field_a.a(12758, var3_int != 0, var12);
-                                                  break L7;
-                                                }
-                                                Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
-                                                break L7;
-                                              }
-                                              if (!this.field_l &&
-                                                var2_int == 17) {
-                                                var11 = (Object[]) (var9.field_f);
-                                                Class.forName("tk").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_u, new Object[]{var11[0], var11[1], new Integer(var9.field_c), new Integer(var9.field_g), var11[2]});
-                                              } else {
-                                                if (var2_int != 16) {
-                                                  throw d.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
-                                                }
-                                                try {
-                                                  if (!field_b.startsWith("win")) {
-                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                  }
-                                                  var8 = (String) (var9.field_f);
-                                                  if (!var8.startsWith("http://") &&
-                                                    !var8.startsWith("https://")) {
-                                                    throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                  }
-                                                  var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                  for (var5 = 0; var5 < var8.length(); var5++) {
-                                                    if (-1 == var4.indexOf((int) var8.charAt(var5))) {
-                                                      throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
-                                                    }
-                                                  }
-                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
-                                                  var9.field_b = null;
-                                                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                                                  decompiledCaughtException = decompiledCaughtParameter1;
-                                                  var3_ref2 = (Exception) (Object) decompiledCaughtException;
-                                                  var9.field_b = var3_ref2;
-                                                  throw d.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    } else {
-                                      if (!this.field_l) {
-                                        var9.field_b = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
-                                      } else {
-                                        var9.field_b = this.field_w.a(8);
-                                      }
-                                    }
-                                  }
-                                }
+                            var8 = (String) (var9.field_f);
+                            if (!var8.startsWith("http://") &&
+                              !var8.startsWith("https://")) {
+                              throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                            }
+                            var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                            for (var5 = 0; var5 < var8.length(); var5++) {
+                              if (-1 == var4.indexOf((int) var8.charAt(var5))) {
+                                throw d.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
+                            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var8 + "\"");
+                            var9.field_b = null;
+                          } catch (java.lang.Exception decompiledCaughtParameter1) {
+                            decompiledCaughtException = decompiledCaughtParameter1;
+                            var3_ref2 = (Exception) (Object) decompiledCaughtException;
+                            var9.field_b = var3_ref2;
+                            throw d.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
-                      }
-                    } else {
-                      var10 = new Thread((Runnable) (var9.field_f));
-                      var10.setDaemon(true);
-                      var10.start();
-                      var10.setPriority(var9.field_c);
-                      var9.field_b = var10;
+                        break;
+                      case 5:
+                        if (!this.field_l) {
+                          var9.field_b = Class.forName("pd").getMethod("listmodes", new Class[]{}).invoke(this.field_e, new Object[]{});
+                        } else {
+                          var9.field_b = this.field_w.a(8);
+                        }
+                        break;
                     }
-                  } else {
+                    break;
+                  case 2:
+                    var10 = new Thread((Runnable) (var9.field_f));
+                    var10.setDaemon(true);
+                    var10.start();
+                    var10.setPriority(var9.field_c);
+                    var9.field_b = var10;
+                    break;
+                  case 22:
                     if (oa.a(-12520) < field_m) {
                       throw new IOException();
                     }
@@ -284,12 +278,13 @@ final class d implements Runnable {
                       var9.field_b = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
-                  }
-                } else {
-                  if (oa.a(-12520) < field_m) {
-                    throw new IOException();
-                  }
-                  var9.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.field_f)), var9.field_c);
+                    break;
+                  case 1:
+                    if (oa.a(-12520) < field_m) {
+                      throw new IOException();
+                    }
+                    var9.field_b = new java.net.Socket(java.net.InetAddress.getByName((String) (var9.field_f)), var9.field_c);
+                    break;
                 }
               }
               var9.field_a = 1;
