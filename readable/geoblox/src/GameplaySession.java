@@ -1300,7 +1300,7 @@ final class GameplaySession {
                         }
                         tutorialPromptPlacementFrameContinues = false;
                       }
-                      if (tutorialPromptPlacementFrameContinues) {
+                      else {
                         themeIndexThenId++;
                         continue;
                       }

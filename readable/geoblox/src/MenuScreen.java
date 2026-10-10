@@ -176,7 +176,7 @@ abstract class MenuScreen {
               }
               menuPointerInteractionFrameContinues = false;
             }
-            if (menuPointerInteractionFrameContinues) {
+            else {
               this.pointerInteractionActive = false;
               if (AttachmentPointerState.pointerActivitySnapshot) {
                 hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 126);

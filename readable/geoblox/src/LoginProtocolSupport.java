@@ -94,7 +94,7 @@ final class LoginProtocolSupport {
                     AchievementSubmission.sessionPacketPayloadLength = -1;
                     loginResultDispatchContinues = false;
                   }
-                  if (loginResultDispatchContinues) {
+                  else {
                     Bzip2DecoderState.closeSessionSocket((byte) -116);
                     TextTemplateArgumentType.loginRetryAttempted = false;
                     closedResponseResult = loginResultResponseByte;

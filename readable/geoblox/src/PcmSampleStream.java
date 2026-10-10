@@ -882,7 +882,7 @@ final class PcmSampleStream extends PcmStream {
                   this.loopsRemaining = 0;
                   finiteLoopSkippingContinues = false;
                 }
-                if (finiteLoopSkippingContinues) {
+                else {
                   this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * loopsCrossed;
                   this.loopsRemaining = this.loopsRemaining - loopsCrossed;
                 }
@@ -896,7 +896,7 @@ final class PcmSampleStream extends PcmStream {
                   this.loopsRemaining = 0;
                   finiteLoopSkippingContinues = false;
                 }
-                if (finiteLoopSkippingContinues) {
+                else {
                   this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * loopsCrossed;
                   this.loopsRemaining = this.loopsRemaining - loopsCrossed;
                 }
@@ -1201,7 +1201,7 @@ final class PcmSampleStream extends PcmStream {
               }
               finiteLoopMixingContinues = false;
             }
-            if (finiteLoopMixingContinues) {
+            else {
               if (this.sampleStepFixed < 0) {
                 nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopStart]);
                 if (this.samplePositionFixed >= loopStartFixed) {

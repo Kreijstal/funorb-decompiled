@@ -312,7 +312,7 @@ final class DiskCacheWorker implements Runnable {
                     completeRequestAfterOperation = 1;
                     diskRequestOperationDispatchFrameContinues = false;
                   }
-                  if (diskRequestOperationDispatchFrameContinues) {
+                  else {
                     request.pending = false;
                   }
                 } else {

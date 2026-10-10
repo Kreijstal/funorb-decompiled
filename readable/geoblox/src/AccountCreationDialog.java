@@ -176,7 +176,7 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
                   previousCharacterWasDot = 1;
                   unquotedLocalPartCharacterFrameContinues = false;
                 }
-                if (unquotedLocalPartCharacterFrameContinues) {
+                else {
                   invalidDotFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
                   return invalidDotFailureBeforeReturn;
                 }

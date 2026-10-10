@@ -485,7 +485,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     }
                     backgroundGroupLoadingFrameContinues = false;
                   }
-                  if (backgroundGroupLoadingFrameContinues) {
+                  else {
                     if (this.downloadAllPending) {
                       backgroundDownloadPhaseComplete = 1;
                       verificationGroup = this.backgroundGroups.firstForIteration(0);
@@ -528,7 +528,7 @@ final class CachedArchiveSource extends ArchiveSource {
                         this.backgroundGroupIndex = 0;
                         backgroundGroupLoadingFrameContinues = false;
                       }
-                      if (backgroundGroupLoadingFrameContinues) {
+                      else {
                         if (methodGuard != -38) {
                           this.getPackedGroup(25, 41);
                         }

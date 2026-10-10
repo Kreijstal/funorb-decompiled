@@ -424,7 +424,7 @@ abstract class SessionGameApplet extends GameApplet {
               HighscoreNameEntry.setLoadingProgress(WidgetSkinState.formatArchiveLoadingProgress(LoginProtocolSupport.waitingForBootstrapText, 2147483647, CachedTextLayout.loadingBootstrapText, TextValidationSupport.bootstrapGameTextArchive), -2, 0.0f);
               bootstrapTextArchiveGateFrameContinues = false;
             }
-            if (bootstrapTextArchiveGateFrameContinues) {
+            else {
               AgeValidator.gameArchiveRequestPending = true;
               VisualPropertyOverrides.clientBootstrapStage = 12;
             }

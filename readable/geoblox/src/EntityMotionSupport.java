@@ -234,7 +234,7 @@ final class EntityMotionSupport {
                     AttachmentPointerState.newAttachmentCount = AttachmentPointerState.newAttachmentCount + 1;
                     movingEntityContactResolutionFrameContinues = false;
                   }
-                  if (movingEntityContactResolutionFrameContinues) {
+                  else {
                     movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
                     continue;
                   }

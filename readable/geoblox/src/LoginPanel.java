@@ -89,7 +89,7 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                   matchingSubmission.unlinkNode(false);
                   intRecordReplyDispatchFrameContinues = false;
                 }
-                if (intRecordReplyDispatchFrameContinues) {
+                else {
                   Bzip2DecoderState.closeSessionSocket((byte) -116);
                   return;
                 }

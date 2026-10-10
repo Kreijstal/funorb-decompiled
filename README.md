@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/76c16defb04ab66170a57de803980b7e8f0d5958/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/14b6517305cd72901b772dd61f68960074d9f32d/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,188 bindings,
+identities. Both 303-file Java corpora compile and compare 138,168 bindings,
 preserving 388 override relationships.
 
-## Current scoped login/audio continuations (pass 263)
+## Current direct Boolean alternatives (pass 264)
+
+Twenty proven-true remainder guards become direct `else` work in 17 methods
+across 16 files. Predicates, complete alternatives, declarations and stores stay
+in place; only twenty redundant primitive local reads disappear. Names and
+dictionary identities stay unchanged. There are no plain block labels or large
+framed methods. Independent source and native oracle checks pass; all 303 sources
+compile, reproduce and reverse exactly. Forty-one finer field purposes and long
+ordinary methods remain to review. Generic recovery/agent guidance stay in
+java-tools; game metadata and source proofs stay in Deko.
+
+## Previous scoped login/audio continuations (pass 263)
 
 The last four plain frames are reconstructed: MIDI note skipping captures scan
 completion; finite PCM skipping/mixing and login response dispatch use named

@@ -440,7 +440,7 @@ final class ResourceArchive {
               encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
               packedGroupDecryptionSelectionFrameContinues = false;
             }
-            if (packedGroupDecryptionSelectionFrameContinues) {
+            else {
               packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
             }
           }

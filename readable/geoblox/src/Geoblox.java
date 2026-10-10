@@ -648,7 +648,7 @@ public final class Geoblox extends SessionGameApplet {
                 this.initializeScreens(82);
                 assetSessionPreparationFrameContinues = false;
               }
-              if (assetSessionPreparationFrameContinues) {
+              else {
                 NanoFrameTimer.flushSessionWrites(-1, 0);
                 return;
               }
@@ -681,7 +681,7 @@ public final class Geoblox extends SessionGameApplet {
                   }
                   assetSessionPreparationFrameContinues = false;
                 }
-                if (assetSessionPreparationFrameContinues) {
+                else {
                   if (!VisualPropertyNode.highUpdateRateModeActive) {
                     DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 150);
                     VisualPropertyNode.highUpdateRateModeActive = true;

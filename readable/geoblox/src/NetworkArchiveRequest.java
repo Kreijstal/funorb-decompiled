@@ -155,7 +155,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                     topY = middleY;
                     upperTriangleSegmentClipAndScanFrameContinues = false;
                   }
-                  if (upperTriangleSegmentClipAndScanFrameContinues) {
+                  else {
                     topY = -topY;
                     rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
                     leftXQ16 = leftXQ16 + leftXStepQ16 * topY;

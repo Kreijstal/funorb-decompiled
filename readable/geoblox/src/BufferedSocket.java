@@ -228,7 +228,7 @@ final class BufferedSocket implements Runnable {
                       writerActionRoute = 0;
                       writerChunkSelectionFrameContinues = false;
                     }
-                    if (writerChunkSelectionFrameContinues) {
+                    else {
                       try {
                         this.wait();
                       } catch (java.lang.InterruptedException waitInterruption) {

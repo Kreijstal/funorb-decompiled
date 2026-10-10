@@ -92,7 +92,7 @@ final class GameplaySetupSupport {
                       operationIncrementAlreadyApplied = 1;
                       reflectionOperationDecodeFrameContinues = false;
                     }
-                    if (reflectionOperationDecodeFrameContinues) {
+                    else {
                       methodOwnerClassName = buffer.readNullTerminatedText((byte) 103);
                       memberName = buffer.readNullTerminatedText((byte) 98);
                       argumentCountOrIntegerWriteValue = buffer.readUnsignedByte((byte) 34);

@@ -95,7 +95,7 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
                 }
                 textDrawingFrameContinues = false;
               }
-              if (textDrawingFrameContinues) {
+              else {
                 this.font.drawText(this.getDisplayText(121, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
               }
             } else {
