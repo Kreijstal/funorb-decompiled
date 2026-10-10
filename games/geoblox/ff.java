@@ -95,7 +95,7 @@ class ff implements dh, cc {
                 }
                 decompiledFrameRemainder0 = false;
               }
-              if (decompiledFrameRemainder0) {
+              else {
                 this.field_n.a(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
               }
             } else {

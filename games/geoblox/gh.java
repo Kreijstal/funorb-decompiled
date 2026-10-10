@@ -1300,7 +1300,7 @@ final class gh {
                         }
                         decompiledFrameRemainder8 = false;
                       }
-                      if (decompiledFrameRemainder8) {
+                      else {
                         var3++;
                         continue;
                       }

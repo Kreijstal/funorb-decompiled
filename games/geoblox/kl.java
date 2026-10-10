@@ -882,7 +882,7 @@ final class kl extends ia {
                   this.field_v = 0;
                   decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
+                else {
                   this.field_x = this.field_x - var6 * var7;
                   this.field_v = this.field_v - var7;
                 }
@@ -896,7 +896,7 @@ final class kl extends ia {
                   this.field_v = 0;
                   decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
+                else {
                   this.field_x = this.field_x + var6 * var7;
                   this.field_v = this.field_v - var7;
                 }
@@ -1201,7 +1201,7 @@ final class kl extends ia {
               }
               decompiledFrameRemainder0 = false;
             }
-            if (decompiledFrameRemainder0) {
+            else {
               if (this.field_p < 0) {
                 var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
                 if (this.field_x >= var5) {

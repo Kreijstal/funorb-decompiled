@@ -485,7 +485,7 @@ final class bj extends nh {
                     }
                     decompiledFrameRemainder3 = false;
                   }
-                  if (decompiledFrameRemainder3) {
+                  else {
                     if (this.field_v) {
                       var2_intLifetime1 = 1;
                       var3Lifetime1 = this.field_d.g(0);
@@ -528,7 +528,7 @@ final class bj extends nh {
                         this.field_o = 0;
                         decompiledFrameRemainder3 = false;
                       }
-                      if (decompiledFrameRemainder3) {
+                      else {
                         if (param0 != -38) {
                           this.b(25, 41);
                         }

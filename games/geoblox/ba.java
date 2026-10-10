@@ -228,7 +228,7 @@ final class ba implements Runnable {
                       decompiledRegionSelector0 = 0;
                       decompiledFrameRemainder0 = false;
                     }
-                    if (decompiledFrameRemainder0) {
+                    else {
                       try {
                         this.wait();
                       } catch (java.lang.InterruptedException decompiledCaughtParameter0) {

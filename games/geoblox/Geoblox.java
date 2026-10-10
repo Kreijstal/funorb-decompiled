@@ -648,7 +648,7 @@ public final class Geoblox extends wf {
                 this.m(82);
                 decompiledFrameRemainder0 = false;
               }
-              if (decompiledFrameRemainder0) {
+              else {
                 cm.a(-1, 0);
                 return;
               }
@@ -681,7 +681,7 @@ public final class Geoblox extends wf {
                   }
                   decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
+                else {
                   if (!kg.field_o) {
                     rj.a((byte) 121, 150);
                     kg.field_o = true;

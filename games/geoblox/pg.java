@@ -92,7 +92,7 @@ final class pg {
                       decompiledRegionSelector0 = 1;
                       decompiledFrameRemainder0 = false;
                     }
-                    if (decompiledFrameRemainder0) {
+                    else {
                       var21 = param3.e((byte) 103);
                       var8 = param3.e((byte) 98);
                       var9 = param3.c((byte) 34);

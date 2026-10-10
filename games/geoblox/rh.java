@@ -440,7 +440,7 @@ final class rh {
               var25.a((byte) -125, param2, 5, var25.field_j.length);
               decompiledFrameRemainder0 = false;
             }
-            if (decompiledFrameRemainder0) {
+            else {
               var9 = uk.a(false, param1 - 90, this.field_f[param3]);
             }
           }

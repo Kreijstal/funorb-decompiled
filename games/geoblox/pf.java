@@ -89,7 +89,7 @@ final class pf extends ee implements ga, pl {
                   var5.a(false);
                   decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
+                else {
                   jl.a((byte) -116);
                   return;
                 }

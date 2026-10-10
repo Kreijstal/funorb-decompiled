@@ -176,7 +176,7 @@ abstract class ka {
               }
               decompiledFrameRemainder0 = false;
             }
-            if (decompiledFrameRemainder0) {
+            else {
               this.field_g = false;
               if (wb.field_a) {
                 var2 = this.a(qa.field_a, ue.field_e, (byte) 126);

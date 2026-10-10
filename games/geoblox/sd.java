@@ -155,7 +155,7 @@ final class sd extends pb {
                     param8 = param7;
                     decompiledFrameRemainder0 = false;
                   }
-                  if (decompiledFrameRemainder0) {
+                  else {
                     param8 = -param8;
                     var10 = var10 + var12 * param8;
                     var9_int = var9_int + var11 * param8;

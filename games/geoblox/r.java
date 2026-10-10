@@ -176,7 +176,7 @@ final class r extends f implements pl {
                   var3Lifetime1 = 1;
                   decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
+                else {
                   stackIn_41_0 = ii.field_h;
                   return stackIn_41_0;
                 }

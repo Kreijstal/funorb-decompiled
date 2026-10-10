@@ -94,7 +94,7 @@ final class ri {
                     p.field_k = -1;
                     decompiledFrameRemainder0 = false;
                   }
-                  if (decompiledFrameRemainder0) {
+                  else {
                     jl.a((byte) -116);
                     ck.field_e = false;
                     stackIn_33_0 = var6_intLifetime1;

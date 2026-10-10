@@ -234,7 +234,7 @@ final class ab {
                     wb.field_b = wb.field_b + 1;
                     decompiledFrameRemainder0 = false;
                   }
-                  if (decompiledFrameRemainder0) {
+                  else {
                     var2 = (ja) (ji.field_r.d(1));
                     continue;
                   }

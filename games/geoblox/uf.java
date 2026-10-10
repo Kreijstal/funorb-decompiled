@@ -312,7 +312,7 @@ final class uf implements Runnable {
                     decompiledRegionSelector1 = 1;
                     decompiledFrameRemainder0 = false;
                   }
-                  if (decompiledFrameRemainder0) {
+                  else {
                     var7.field_u = false;
                   }
                 } else {
