@@ -1156,7 +1156,8 @@ final class kl extends ia {
         L4: {
           if (this.field_v > 0) {
             if (!this.field_r) {
-              if (this.field_p < 0) {while (true) {
+              if (this.field_p < 0) {
+                while (true) {
                   var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_m - 1]);
                   if (this.field_x >= var5) {
                     return;

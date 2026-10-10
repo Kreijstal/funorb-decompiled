@@ -1292,7 +1292,8 @@ final class gh {
                     decompiledFrameRemainder7 = !(var4 != 0);
                     if (decompiledFrameRemainder7) {
                       if (stackIn_27_0 == stackIn_27_1) {
-                        if (0 < var3) {var2 = ee.field_B[var3 - 1];
+                        if (0 < var3) {
+                          var2 = ee.field_B[var3 - 1];
                         } else {
                           var2 = ee.field_B[6];
                         }
