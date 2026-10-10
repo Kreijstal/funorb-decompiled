@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2f8152653a61e14492f650e6f1a2dffda153b668/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/44b20d62e4d9daa35cfea248319bb1bb5d278864/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 257)
+## Current readability (pass 258)
 
-The export has 20,136 guarded names and 122,200 Java identifier edits, plus 11
+The export has 20,136 guarded names and 122,187 Java identifier edits, plus 11
 class-name literal edits and 133 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,135 bindings, reproduce and
+compile and compare 138,122 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current menu-key alternatives (pass 257)
+## Current platform task switches (pass 258)
+
+`PlatformTaskDispatcher.run` separates task classification from its platform
+operations using two switches. The shared permission check remains before the
+service switch. The cursor and backend conditions remain inside their original
+actions; the URL-character loop, protected failures and task result writes stay
+in order. Maximum body brace nesting falls from 23 to 10, making the worker's
+choices easier to follow. No naming object or dictionary identity changes.
+
+Eighteen smaller plain frames and 41 finer field purposes remain. The workflow
+records independent original-local, ordered-syntax, binding and target proofs,
+native direct-dispatch oracles and exact reproduction/reversal. Complete worker
+execution, platform I/O, whole-game and phone/FPS behavior remain unverified.
+
+## Previous menu-key alternatives (pass 257)
 
 `GameScreen.handleMenuKey` uses `menuKeyDispatchFrameContinues` to control
 its original remainder. Each conditional alternative and guarded effect remains

@@ -2,11 +2,70 @@
 
 The current export has 20,136 guarded naming rules: 303 class names (including
 original `Geoblox`), 2,105 fields, 1,859 methods, 5,014 parameters, 10,809 local
-declarations and 46 labels. Both 303-file corpora compile, comparing 138,135
+declarations and 46 labels. Both 303-file corpora compile, comparing 138,122
 bindings and preserving 388 override relationships. Some members retain unknown
 purposes; generated carriers, guards and shared joins remain.
 
-## Current menu-key alternatives (pass 257)
+## Current platform task switches (pass 258)
+
+`PlatformTaskDispatcher.run` classifies its captured task type with two switches.
+The shared permission check remains before the service switch. Cursor/backend
+conditions, reflection/network/platform operations, original loop headers and
+updates, exception snapshots, callbacks/failures and catch/finally/monitor scopes
+remain intact. No action is copied. The method's maximum body brace nesting falls
+from 23 levels to 10; 18 smaller plain frames and 41 finer field purposes remain.
+
+The generic opt-in policy is `CFR_JS_OPAQUE_CONTROL_DISPATCHES=1`. Missing parser
+ranges for protected local scopes are recovered from the nearest original brace
+pair, with an attributed block parent and primitive type. Original selectors stay
+write-free throughout the classified suffix. Opaque switches and protected loop
+actions retain their complete syntax; existing bare exits must target a frame
+inside that action. Unconditional loops, unknown constant completion, scope
+merges, classifier writes and external bare exits refuse. Do-while loops and
+conditional or protected exits to an opaque switch also refuse until their
+normal completion can be proved. Existing budgets and
+ordinary recovery defaults remain. Generic code, tests and agent guidance stay
+in java-tools; game metadata and source certificates stay in Deko.
+The tracked decompiler-source tar SHA-256 is
+`5b640a006820bf5fadbd39c0887461c46a78c513cb4feb4909c8261e7f7ce798`.
+
+Independent javac recipes attribute every removed equality to its original
+primitive local, prove write-free suffixes, and compare ordered syntax for every
+represented constant and the unmatched class. All other operations, bindings,
+388 override pairs and all 4,772 original protected transfers remain. Seventeen
+new bare exits target only generated switches; final transfers total 4,789.
+The 303-file clean compiler rebuild exactly matches the certificate and unchanged
+diagnostics. Twenty-one focused groups pass, including 27,324 new independent
+native direct-dispatch oracle cases covering opaque loops/switches, permission
+callbacks, nullable predicates, partial aliased stores, overflow, failures,
+finally overrides and monitor ownership.
+
+All 20,136 complete naming rules and 20,443 dictionary identities remain, without
+ordinal migrations. All 181 historical object records and 100 direct source
+certificates remain exact. Text resources and the 41-field purpose inventory
+remain. Thirteen pure classifier reads disappear, giving 122,187 identifier,
+11 literal and 133 label edits (122,331 total), comparing 138,122 bindings.
+All 27 publication groups and existing native/raw/readable 3/10/14 gameplay,
+rendering and result trace groups pass. All 303 sources compile, reproduce and
+reverse byte exactly. Complete worker/game execution, actual platform I/O and
+phone/FPS behavior remain unverified.
+
+From Deko:
+
+```sh
+NODE_PATH=/path/to/node_modules node readable/tests/test-geoblox-opaque-dispatch-source.mjs /path/to/java-tools
+node readable/tests/test-geoblox-unresolved-fields.mjs
+node readable/build-geoblox-rules.mjs --check
+env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check
+```
+
+From java-tools:
+
+```sh
+NODE_PATH=/path/to/node_modules node --test --experimental-test-isolation=none test/opaqueControlDispatchRecovery.test.js test/scalarIfDispatchRecovery.test.js
+```
+
+## Previous menu-key alternatives (pass 257)
 
 `GameScreen.handleMenuKey` now uses `menuKeyDispatchFrameContinues`
 instead of its 21 nonlocal frame exits. The original conditional alternatives

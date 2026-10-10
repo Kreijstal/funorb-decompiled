@@ -115,163 +115,157 @@ final class PlatformTaskDispatcher implements Runnable {
             try {
               platformTaskDispatch: {
                 taskType = task.taskType;
-                if (1 != taskType) {
-                  if (taskType != 22) {
-                    if (taskType != 2) {
-                      if (4 == taskType) {
+                switch (taskType) {
+                  case 4:
+                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
+                      throw new IOException();
+                    }
+                    task.result = new DataInputStream(((java.net.URL) (task.input)).openStream());
+                    break;
+                  case 8:
+                    methodLookupArguments = (Object[]) (task.input);
+                    if (this.privilegedServicesEnabled &&
+                      ((Class) (methodLookupArguments[0])).getClassLoader() == null) {
+                      throw new SecurityException();
+                    }
+                    task.result = ((Class) (methodLookupArguments[0])).getDeclaredMethod((String) (methodLookupArguments[1]), (Class[]) (methodLookupArguments[2]));
+                    break;
+                  case 9:
+                    fieldLookupArguments = (Object[]) (task.input);
+                    if (this.privilegedServicesEnabled &&
+                      null == ((Class) (fieldLookupArguments[0])).getClassLoader()) {
+                      throw new SecurityException();
+                    }
+                    task.result = ((Class) (fieldLookupArguments[0])).getDeclaredField((String) (fieldLookupArguments[1]));
+                    break;
+                  case 18:
+                    clipboardForRead = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                    task.result = clipboardForRead.getContents((Object) null);
+                    break;
+                  case 19:
+                    clipboardContents = (java.awt.datatransfer.Transferable) (task.input);
+                    clipboardForWrite = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
+                    clipboardForWrite.setContents(clipboardContents, (java.awt.datatransfer.ClipboardOwner) null);
+                    break;
+                  case 16:
+                  default:
+                    if (!this.privilegedServicesEnabled) {
+                      throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
+                    }
+                    switch (taskType) {
+                      case 3:
                         if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                           throw new IOException();
                         }
-                        task.result = new DataInputStream(((java.net.URL) (task.input)).openStream());
-                      } else {
-                        if (taskType == 8) {
-                          methodLookupArguments = (Object[]) (task.input);
-                          if (this.privilegedServicesEnabled &&
-                            ((Class) (methodLookupArguments[0])).getClassLoader() == null) {
-                            throw new SecurityException();
-                          }
-                          task.result = ((Class) (methodLookupArguments[0])).getDeclaredMethod((String) (methodLookupArguments[1]), (Class[]) (methodLookupArguments[2]));
+                        reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
+                        task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
+                        break;
+                      case 21:
+                        if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
+                          throw new IOException();
+                        }
+                        task.result = java.net.InetAddress.getByName((String) (task.input)).getAddress();
+                        break;
+                      case 6:
+                        fullscreenFrame = new java.awt.Frame("Jagex Full Screen");
+                        task.result = fullscreenFrame;
+                        fullscreenFrame.setResizable(false);
+                        if (this.useMicrosoftVmBackend) {
+                          this.microsoftFullscreenBackend.enterFullscreen(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
                         } else {
-                          if (taskType == 9) {
-                            fieldLookupArguments = (Object[]) (task.input);
-                            if (this.privilegedServicesEnabled &&
-                              null == ((Class) (fieldLookupArguments[0])).getClassLoader()) {
-                              throw new SecurityException();
+                          Class.forName("AwtFullscreenBridge").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
+                        }
+                        break;
+                      case 7:
+                        if (this.useMicrosoftVmBackend) {
+                          this.microsoftFullscreenBackend.exitFullscreen(111, (java.awt.Frame) (task.input));
+                        } else {
+                          Class.forName("AwtFullscreenBridge").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
+                        }
+                        break;
+                      case 12:
+                        openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) -103, cacheVariant, gameCacheName, (String) (task.input));
+                        task.result = openedPreferencesFile;
+                        break;
+                      case 13:
+                        openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (task.input));
+                        task.result = openedPreferencesFile;
+                        break;
+                      case 16:
+                      default:
+                        if (this.privilegedServicesEnabled &&
+                          taskType == 14) {
+                          cursorXOrVisibleFlag = task.firstIntArgument;
+                          cursorY = task.secondIntArgument;
+                          if (!this.useMicrosoftVmBackend) {
+                            Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
+                            break platformTaskDispatch;
+                          }
+                          this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
+                          break platformTaskDispatch;
+                        }
+                        if (this.privilegedServicesEnabled &&
+                          taskType == 15) {
+                          cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
+                          cursorXOrVisibleFlag = cursorVisibleInt;
+                          cursorComponent = (java.awt.Component) (task.input);
+                          if (this.useMicrosoftVmBackend) {
+                            this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
+                            break platformTaskDispatch;
+                          }
+                          Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
+                          break platformTaskDispatch;
+                        }
+                        if (!this.useMicrosoftVmBackend &&
+                          taskType == 17) {
+                          customCursorArguments = (Object[]) (task.input);
+                          Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
+                        } else {
+                          if (taskType != 16) {
+                            throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
+                          }
+                          try {
+                            if (!osNameLowerCase.startsWith("win")) {
+                              throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                             }
-                            task.result = ((Class) (fieldLookupArguments[0])).getDeclaredField((String) (fieldLookupArguments[1]));
-                          } else {
-                            if (18 == taskType) {
-                              clipboardForRead = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                              task.result = clipboardForRead.getContents((Object) null);
-                            } else {
-                              if (taskType == 19) {
-                                clipboardContents = (java.awt.datatransfer.Transferable) (task.input);
-                                clipboardForWrite = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
-                                clipboardForWrite.setContents(clipboardContents, (java.awt.datatransfer.ClipboardOwner) null);
-                              } else {
-                                if (!this.privilegedServicesEnabled) {
-                                  throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
-                                }
-                                if (taskType == 3) {
-                                  if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
-                                    throw new IOException();
-                                  }
-                                  reverseLookupAddress = (255 & task.firstIntArgument >> 24) + "." + ((task.firstIntArgument & 16718053) >> 16) + "." + (task.firstIntArgument >> 8 & 255) + "." + (255 & task.firstIntArgument);
-                                  task.result = java.net.InetAddress.getByName(reverseLookupAddress).getHostName();
-                                } else {
-                                  if (taskType == 21) {
-                                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
-                                      throw new IOException();
-                                    }
-                                    task.result = java.net.InetAddress.getByName((String) (task.input)).getAddress();
-                                  } else {
-                                    if (taskType != 5) {
-                                      if (6 == taskType) {
-                                        fullscreenFrame = new java.awt.Frame("Jagex Full Screen");
-                                        task.result = fullscreenFrame;
-                                        fullscreenFrame.setResizable(false);
-                                        if (this.useMicrosoftVmBackend) {
-                                          this.microsoftFullscreenBackend.enterFullscreen(8, task.firstIntArgument >>> 16, fullscreenFrame, task.secondIntArgument >> 16, task.firstIntArgument & 65535, task.secondIntArgument & 65535);
-                                        } else {
-                                          Class.forName("AwtFullscreenBridge").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveFullscreenBackend, new Object[]{fullscreenFrame, new Integer(task.firstIntArgument >>> 16), new Integer(task.firstIntArgument & 65535), new Integer(task.secondIntArgument >> 16), new Integer(task.secondIntArgument & 65535)});
-                                        }
-                                      } else {
-                                        if (taskType == 7) {
-                                          if (this.useMicrosoftVmBackend) {
-                                            this.microsoftFullscreenBackend.exitFullscreen(111, (java.awt.Frame) (task.input));
-                                          } else {
-                                            Class.forName("AwtFullscreenBridge").getMethod("exit", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
-                                          }
-                                        } else {
-                                          if (12 == taskType) {
-                                            openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) -103, cacheVariant, gameCacheName, (String) (task.input));
-                                            task.result = openedPreferencesFile;
-                                          } else {
-                                            if (taskType == 13) {
-                                              openedPreferencesFile = PlatformTaskDispatcher.openPreferencesFile((byte) 19, cacheVariant, "", (String) (task.input));
-                                              task.result = openedPreferencesFile;
-                                            } else {
-                                              if (this.privilegedServicesEnabled &&
-                                                taskType == 14) {
-                                                cursorXOrVisibleFlag = task.firstIntArgument;
-                                                cursorY = task.secondIntArgument;
-                                                if (!this.useMicrosoftVmBackend) {
-                                                  Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
-                                                  break platformTaskDispatch;
-                                                }
-                                                this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
-                                                break platformTaskDispatch;
-                                              }
-                                              if (this.privilegedServicesEnabled &&
-                                                taskType == 15) {
-                                                cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
-                                                cursorXOrVisibleFlag = cursorVisibleInt;
-                                                cursorComponent = (java.awt.Component) (task.input);
-                                                if (this.useMicrosoftVmBackend) {
-                                                  this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
-                                                  break platformTaskDispatch;
-                                                }
-                                                Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
-                                                break platformTaskDispatch;
-                                              }
-                                              if (!this.useMicrosoftVmBackend &&
-                                                taskType == 17) {
-                                                customCursorArguments = (Object[]) (task.input);
-                                                Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectiveCursorBackend, new Object[]{customCursorArguments[0], customCursorArguments[1], new Integer(task.firstIntArgument), new Integer(task.secondIntArgument), customCursorArguments[2]});
-                                              } else {
-                                                if (taskType != 16) {
-                                                  throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception(""));
-                                                }
-                                                try {
-                                                  if (!osNameLowerCase.startsWith("win")) {
-                                                    throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
-                                                  }
-                                                  urlToLaunch = (String) (task.input);
-                                                  if (!urlToLaunch.startsWith("http://") &&
-                                                    !urlToLaunch.startsWith("https://")) {
-                                                    throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
-                                                  }
-                                                  allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-                                                  for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
-                                                    if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
-                                                      throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
-                                                    }
-                                                  }
-                                                  Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
-                                                  task.result = null;
-                                                } catch (java.lang.Exception caughtUrlLaunchFailure) {
-                                                  caughtTaskThrowable = caughtUrlLaunchFailure;
-                                                  urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
-                                                  task.result = urlLaunchFailure;
-                                                  throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(urlLaunchFailure);
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    } else {
-                                      if (!this.useMicrosoftVmBackend) {
-                                        task.result = Class.forName("AwtFullscreenBridge").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
-                                      } else {
-                                        task.result = this.microsoftFullscreenBackend.listDisplayModes(8);
-                                      }
-                                    }
-                                  }
-                                }
+                            urlToLaunch = (String) (task.input);
+                            if (!urlToLaunch.startsWith("http://") &&
+                              !urlToLaunch.startsWith("https://")) {
+                              throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
+                            }
+                            allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+                            for (urlCharacterIndex = 0; urlCharacterIndex < urlToLaunch.length(); urlCharacterIndex++) {
+                              if (-1 == allowedUrlCharacters.indexOf((int) urlToLaunch.charAt(urlCharacterIndex))) {
+                                throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(new Exception());
                               }
                             }
+                            Runtime.getRuntime().exec("cmd /c start \"j\" \"" + urlToLaunch + "\"");
+                            task.result = null;
+                          } catch (java.lang.Exception caughtUrlLaunchFailure) {
+                            caughtTaskThrowable = caughtUrlLaunchFailure;
+                            urlLaunchFailure = (Exception) (Object) caughtTaskThrowable;
+                            task.result = urlLaunchFailure;
+                            throw PlatformTaskDispatcher.<RuntimeException>throwUnchecked(urlLaunchFailure);
                           }
                         }
-                      }
-                    } else {
-                      startedThread = new Thread((Runnable) (task.input));
-                      startedThread.setDaemon(true);
-                      startedThread.start();
-                      startedThread.setPriority(task.firstIntArgument);
-                      task.result = startedThread;
+                        break;
+                      case 5:
+                        if (!this.useMicrosoftVmBackend) {
+                          task.result = Class.forName("AwtFullscreenBridge").getMethod("listmodes", new Class[]{}).invoke(this.reflectiveFullscreenBackend, new Object[]{});
+                        } else {
+                          task.result = this.microsoftFullscreenBackend.listDisplayModes(8);
+                        }
+                        break;
                     }
-                  } else {
+                    break;
+                  case 2:
+                    startedThread = new Thread((Runnable) (task.input));
+                    startedThread.setDaemon(true);
+                    startedThread.start();
+                    startedThread.setPriority(task.firstIntArgument);
+                    task.result = startedThread;
+                    break;
+                  case 22:
                     if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
@@ -284,12 +278,13 @@ final class PlatformTaskDispatcher implements Runnable {
                       task.result = proxyConnectionFailure.getMessage();
                       throw proxyConnectionFailure;
                     }
-                  }
-                } else {
-                  if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
-                    throw new IOException();
-                  }
-                  task.result = new java.net.Socket(java.net.InetAddress.getByName((String) (task.input)), task.firstIntArgument);
+                    break;
+                  case 1:
+                    if (ClientClockSupport.correctedCurrentTimeMillis(-12520) < networkBlockedUntilMillis) {
+                      throw new IOException();
+                    }
+                    task.result = new java.net.Socket(java.net.InetAddress.getByName((String) (task.input)), task.firstIntArgument);
+                    break;
                 }
               }
               task.status = 1;

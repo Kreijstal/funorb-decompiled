@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2f8152653a61e14492f650e6f1a2dffda153b668/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/44b20d62e4d9daa35cfea248319bb1bb5d278864/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,135 bindings,
+identities. Both 303-file Java corpora compile and compare 138,122 bindings,
 preserving 388 override relationships.
 
-## Current menu-key alternatives (pass 257)
+## Current platform task switches (pass 258)
+
+The platform dispatcher uses two task-type switches while retaining shared
+permission checks and original opaque loops, backend conditions and protected
+actions. Maximum body brace nesting falls from 23 to 10. All original protected
+transfers remain; 13 pure classifier reads disappear. Source/binding/target
+certificates and native oracles pass. All 303 sources compile, reproduce and
+reverse exactly. Eighteen smaller frames and 41 finer field purposes remain.
+Generic recovery and agent guidance stay in java-tools; game proofs stay in Deko.
+
+## Previous menu-key alternatives (pass 257)
 
 Menu-key handling retains its complete conditional alternatives and original
 predicates while replacing 21 nonlocal exits with a named continuation. Ordered
