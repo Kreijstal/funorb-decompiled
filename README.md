@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/abc752a3eaf6f03fb05594bcabb9db2691fdec83/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/07f3f425b976426ed0783a1fb0372f6912fb57e5/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,150 bindings,
+identities. Both 303-file Java corpora compile and compare 138,167 bindings,
 preserving 388 override relationships.
 
-## Current shared loop exits and applet/audio continuations (pass 261)
+## Current prior assignments and gameplay continuations (pass 262)
+
+Tutorial, result rendering, HUD, exit-screen and retained-text frames use named
+continuation decisions. `GameplaySession` has no plain block labels left.
+Every prior assignment, snapshot, callback, nonzero flag path and protected
+action remains. Four smaller frames and 41 finer field purposes remain.
+Independent source/target and native oracle checks pass; all 303 sources compile,
+reproduce and reverse exactly. Existing names, dictionary objects and historical
+proofs remain. Generic recovery and agent guidance stay in java-tools; game
+metadata and source proofs stay in Deko.
+
+## Previous shared loop exits and applet/audio continuations (pass 261)
 
 Four loop exits use ordinary breaks with the same continuation. MIDI release and
 Huffman carry frames become explicit branches; the applet boundary uses a named

@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/abc752a3eaf6f03fb05594bcabb9db2691fdec83/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/07f3f425b976426ed0783a1fb0372f6912fb57e5/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 261)
+## Current readability (pass 262)
 
-The export has 20,133 guarded names and 122,215 Java identifier edits, plus 11
-class-name literal edits and 98 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,133 guarded names and 122,232 Java identifier edits, plus 11
+class-name literal edits and 87 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,150 bindings, reproduce and
+compile and compare 138,167 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current shared loop exits and applet/audio continuations (pass 261)
+## Current prior assignments and gameplay continuations (pass 262)
+
+`GameplaySession.renderTutorialPrompt`, `renderResultSequence`,
+`renderProgressHud` and `requestSessionExitScreen` keep their original client
+control snapshots and use named continuation decisions for their remainders.
+`SessionTextHistorySupport.retainTextRecord` preserves the earlier write index
+while guarding record retention after category-limit exits. No assignment or
+snapshot moves. `GameplaySession` has no plain block labels left.
+
+Four smaller frames and 41 finer field purposes remain. Independent Java trees
+derive the earlier bound assignments, complete original suffixes and protected
+targets; native direct models and exact reproduction/reversal pass. Whole-game
+and phone/FPS behavior remain unverified.
+
+## Previous shared loop exits and applet/audio continuations (pass 261)
 
 `MidiPcmStream.releaseNote` exits its held-note scan locally and uses an explicit
 else arm for the original non-portamento work. `VorbisCodebook.buildHuffmanTree`

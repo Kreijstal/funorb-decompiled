@@ -42,17 +42,20 @@ final class SessionTextHistorySupport {
           AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] = AchievementSubmission.retentionCategoryCounts[newCategoryIndexSnapshot] + 1;
           retainedRecordWriteIndex = 0;
           for (readIndex = 0; ByteStorage.retainedTextRecordCount > readIndex; readIndex++) {
-            retainedRecordSelection: {
+            {
+              boolean retainedTextRecordSelectionContinues = true;
               if (record.recordKind == MatchingTextValidator.retainedTextRecords[readIndex].recordKind) {
                 recordCategoryIndex = MatchingTextValidator.retainedTextRecords[readIndex].getRetentionCategory(124);
                 if (AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] > MidiNote.recordsPerKindAndCategoryLimit) {
                   AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] = AchievementSubmission.retentionCategoryCounts[recordCategoryIndex] - 1;
-                  break retainedRecordSelection;
+                  retainedTextRecordSelectionContinues = false;
                 }
               }
-              writeIndexBeforeIncrement = retainedRecordWriteIndex;
-              retainedRecordWriteIndex++;
-              MatchingTextValidator.retainedTextRecords[writeIndexBeforeIncrement] = MatchingTextValidator.retainedTextRecords[readIndex];
+              if (retainedTextRecordSelectionContinues) {
+                writeIndexBeforeIncrement = retainedRecordWriteIndex;
+                retainedRecordWriteIndex++;
+                MatchingTextValidator.retainedTextRecords[writeIndexBeforeIncrement] = MatchingTextValidator.retainedTextRecords[readIndex];
+              }
             }
           }
           ByteStorage.retainedTextRecordCount = retainedRecordWriteIndex;

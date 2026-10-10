@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "384352acc22564077a8023538cd47d870a749f51",
+      "commit": "3a1d555885334b7cdc94d8233c685555b7ee1cee",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "edf18cdbc116f6845878ac9730978a11ba8b9b8fd58aa2fee67b397a4157c339",
-        "reproduce": "git archive --format=tar 384352acc22564077a8023538cd47d870a749f51 | sha256sum",
+        "sha256": "69a95c10167e0a7492cdbc05a7f527da2b23bafd5f1bccfc7412f22be0273753",
+        "reproduce": "git archive --format=tar 3a1d555885334b7cdc94d8233c685555b7ee1cee | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -43,7 +43,8 @@
         "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
         "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
         "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
-        "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1"
+        "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+        "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1"
       }
     },
     "namingTool": {
@@ -144,7 +145,8 @@
       "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
       "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
       "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
-      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1"
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1"
     }
   },
   "freshVerification": {
@@ -3339,11 +3341,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83",
+    "commit": "07f3f425b976426ed0783a1fb0372f6912fb57e5",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "80e590a612a4d5532197a696bb59f3c0d5c816b0eee8725ea944eeb192ea9080"
+      "sha256": "9429624b01755e10454c1d53bb811ace734f1eb642a28d25ccad90c19ff38815"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3353,20 +3355,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "dbade00e39eda4b94caef18cc2ed5cf14e29789cc0d63d0317caf1ffeb764475",
+    "outputTreeSha256": "5ceb66ade8b8253cdaddbe5c30243589aa6f5885b2ad90bef66e0f606d634616",
     "files": 303,
     "rules": 20133,
-    "identifierEdits": 122215,
-    "bindingsCompared": 138150,
+    "identifierEdits": 122232,
+    "bindingsCompared": 138167,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122324,
+    "totalEdits": 122330,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 98,
-    "labelBindingsCompared": 98,
-    "labelDeclarationsCompared": 37,
+    "labelEdits": 87,
+    "labelBindingsCompared": 87,
+    "labelDeclarationsCompared": 32,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3383,8 +3385,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 261,
-    "semanticPass": 261,
+    "structuralPass": 262,
+    "semanticPass": 262,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36863,8 +36865,8 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
     "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
-    "sourceCommit": "d0918dfdcadc7779a4a26c7aac631efd9cca9f96",
-    "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+    "sourceCommit": "ea4d0762d7963a3f496571eecd90bf1f8e4973df",
+    "sourceTreeSha256": "c6407b211782c3aa26209a63cdf3ba3342954a880d21d56c9039b85a90f48917",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
@@ -36876,7 +36878,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83"
+    "workflowCommit": "07f3f425b976426ed0783a1fb0372f6912fb57e5"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -52244,5 +52246,378 @@
     "refreshedFieldSourceHashes": 6,
     "sourceWorkflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83",
     "sourceProofWorkflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83"
+  },
+  "dominatingGuardedFrameRecovery": {
+    "version": 262,
+    "files": 303,
+    "changedFiles": 2,
+    "changedMethods": 5,
+    "framesRecovered": 5,
+    "prefixAssignmentsCompared": 0,
+    "dominatingAssignmentsCompared": 5,
+    "newDecisionLocals": 5,
+    "newFlagOccurrences": 17,
+    "intermediateFlagOccurrences": 17,
+    "redundantFlagReadsRemoved": 0,
+    "removedLabelBindings": 6,
+    "bindingsBefore": 138150,
+    "bindingsAfter": 138167,
+    "transfersBefore": 4769,
+    "transfersAfter": 4763,
+    "frameExitsConsumed": 6,
+    "sourceTreeSha256": "c6407b211782c3aa26209a63cdf3ba3342954a880d21d56c9039b85a90f48917",
+    "symbolMigrations": [
+      {
+        "before": "L:ki.a(Lvd;I)V#15",
+        "after": "L:ki.a(Lvd;I)V#16"
+      }
+    ],
+    "selections": [
+      {
+        "file": "gh.java",
+        "methodStart": 61688,
+        "name": "decompiledFrameRemainder0",
+        "label": "L1",
+        "region": {
+          "start": 61853,
+          "end": 62770
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 62010,
+              "end": 62072
+            },
+            "condition": {
+              "start": 62013,
+              "end": 62024
+            },
+            "jump": {
+              "start": 62045,
+              "end": 62054
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 62133,
+              "end": 62191
+            },
+            "condition": {
+              "start": 62136,
+              "end": 62147
+            },
+            "jump": {
+              "start": 62166,
+              "end": 62175
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "dominatingAssignments": [
+          {
+            "name": "var3",
+            "declarationOffset": 61731,
+            "assignmentOffset": 61749
+          }
+        ],
+        "removedSymbol": "B:gh.d(I)V#0",
+        "method": "M:gh.d(I)V",
+        "symbol": "L:gh.d(I)V#1",
+        "afterStart": 62251
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 60064,
+        "name": "decompiledFrameRemainder0",
+        "label": "L0",
+        "region": {
+          "start": 60232,
+          "end": 61609
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 60361,
+              "end": 60415
+            },
+            "condition": {
+              "start": 60364,
+              "end": 60375
+            },
+            "jump": {
+              "start": 60392,
+              "end": 60401
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "dominatingAssignments": [
+          {
+            "name": "var3",
+            "declarationOffset": 60125,
+            "assignmentOffset": 60143
+          }
+        ],
+        "removedSymbol": "B:gh.e(I)V#0",
+        "method": "M:gh.e(I)V",
+        "symbol": "L:gh.e(I)V#2",
+        "afterStart": 60486
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 51078,
+        "name": "decompiledFrameRemainder0",
+        "label": "L1",
+        "region": {
+          "start": 51300,
+          "end": 53069
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 51617,
+              "end": 51671
+            },
+            "condition": {
+              "start": 51620,
+              "end": 51631
+            },
+            "jump": {
+              "start": 51648,
+              "end": 51657
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "dominatingAssignments": [
+          {
+            "name": "var4",
+            "declarationOffset": 51143,
+            "assignmentOffset": 51203
+          }
+        ],
+        "removedSymbol": "B:gh.a(Z)V#0",
+        "method": "M:gh.a(Z)V",
+        "symbol": "L:gh.a(Z)V#4",
+        "afterStart": 51410
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 1603,
+        "name": "decompiledFrameRemainder0",
+        "label": "L0",
+        "region": {
+          "start": 1850,
+          "end": 2455
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 2137,
+              "end": 2191
+            },
+            "condition": {
+              "start": 2140,
+              "end": 2151
+            },
+            "jump": {
+              "start": 2168,
+              "end": 2177
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "dominatingAssignments": [
+          {
+            "name": "var7",
+            "declarationOffset": 1718,
+            "assignmentOffset": 1757
+          }
+        ],
+        "removedSymbol": "B:gh.g(I)V#0",
+        "method": "M:gh.g(I)V",
+        "symbol": "L:gh.g(I)V#6",
+        "afterStart": 1850
+      },
+      {
+        "file": "ki.java",
+        "methodStart": 184,
+        "name": "decompiledFrameRemainder0",
+        "label": "L3",
+        "region": {
+          "start": 1453,
+          "end": 1901
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 1585,
+              "end": 1723
+            },
+            "condition": {
+              "start": 1588,
+              "end": 1618
+            },
+            "jump": {
+              "start": 1696,
+              "end": 1705
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 1639,
+              "end": 1677
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "dominatingAssignments": [
+          {
+            "name": "var2_intLifetime2",
+            "declarationOffset": 699,
+            "assignmentOffset": 1364
+          }
+        ],
+        "removedSymbol": "B:ki.a(Lvd;I)V#0",
+        "method": "M:ki.a(Lvd;I)V",
+        "symbol": "L:ki.a(Lvd;I)V#15",
+        "afterStart": 1453
+      }
+    ],
+    "changedJavaFiles": 2,
+    "changedMethodBodies": 5,
+    "framesRemoved": 5,
+    "sourceProofTest": "readable/tests/test-geoblox-dominating-frame-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "893a80fdad65d9aaee13b1bb994e875025d81b17d9c1ad56ef04fe8deec4ff13",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "booleanGuardFixtureSha256": "1ae2770a29f185c0212f5cb1ea84116157cb8bbe797e45b85a90a3bf3dcad2c3",
+    "previousSourceCommit": "d0918dfdcadc7779a4a26c7aac631efd9cca9f96",
+    "sourceCommit": "ea4d0762d7963a3f496571eecd90bf1f8e4973df",
+    "previousSourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+    "javaToolsCommit": "3a1d555885334b7cdc94d8233c685555b7ee1cee",
+    "sourceArchiveSha256": "69a95c10167e0a7492cdbc05a7f527da2b23bafd5f1bccfc7412f22be0273753",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1"
+    },
+    "genericFocusedTestGroupsPassed": 4,
+    "existingGuardedFrameTestGroupsPassed": 9,
+    "newIndependentNativeOracleCases": 35100,
+    "independentlyAttributedAstFiles": 303,
+    "priorBoundAssignmentsAndCompleteSuffixesIndependentlyDerived": true,
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "newFlagsIndependentlyTypedAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "dictionaryIdentities": 20440,
+    "survivingCompleteRulesPreserved": 20128,
+    "survivingDictionaryIdentitiesPreserved": 20435,
+    "historicalSourceProofsPreserved": 104,
+    "historicalRecordsPreserved": 185,
+    "readableIdentifierEdits": 122232,
+    "readableTotalEdits": 122330,
+    "plainBlockLabelsAfter": 4,
+    "remainingLargeFramedMethods": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "d0918dfdcadc7779a4a26c7aac631efd9cca9f96",
+      "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Five tutorial/result/HUD/exit-screen/text-record frames recognize direct prior assignments to uniquely bound locals. No assignment or snapshot moves. Earlier siblings in ancestor blocks are derived independently, with conditional/loop/label body relationships checked and case/protected entries refused. Original predicates, callbacks, aliases, unused snapshots, partial stores, arithmetic, nonzero flags and failure/protected order remain. Six old exits become scoped continuation decisions. All 303 source ASTs, old bindings, overrides and retained protected transfers compare; the new Booleans are independently typed. Generic native models use an early-return work oracle, with prior primitive/reference snapshots, nullable predicates, nonzero flags, overflow, failures, finally overrides and monitors. Whole-game/app/browser/phone and FPS behavior remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "fieldObservationsPreserved": true,
+    "sourceWorkflowCommit": "07f3f425b976426ed0783a1fb0372f6912fb57e5",
+    "sourceProofWorkflowCommit": "07f3f425b976426ed0783a1fb0372f6912fb57e5"
   }
 }
