@@ -77,7 +77,8 @@ final class gh {
         if (0 != this.field_t) {
           return;
         }
-        L0: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           var8 = uk.a(this.field_p, 24146);
           var3 = fi.field_d.field_o - fi.field_d.field_q + param0;
           var4 = 460;
@@ -85,19 +86,19 @@ final class gh {
           var6 = 300;
           if (this.field_p == 0) {
             var6 = 232;
-            if (var7 == 0) {
-              break L0;
-            }
+            decompiledFrameRemainder0 = !(var7 == 0);
           }
-          if (this.field_p != 3) {
-            if (1 == this.field_p) {
-              var6 = 280;
-              if (var7 != 0) {
-                var6 = 270;
+          if (decompiledFrameRemainder0) {
+            if (this.field_p != 3) {
+              if (1 == this.field_p) {
+                var6 = 280;
+                if (var7 != 0) {
+                  var6 = 270;
+                }
               }
+            } else {
+              var6 = 270;
             }
-          } else {
-            var6 = 270;
           }
         }
         ma.a(var6, 70, 10 + var5, (byte) -92, 500, ll.field_h);
@@ -1472,25 +1473,34 @@ final class gh {
         if (param0) {
           this.a((byte) 71, 49);
         }
-        L1: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (2 == this.field_bb) {
             pk.field_k.b(320 - (this.field_D >> 1), 240 - (this.field_D >> 1), this.field_D, this.field_D, 150);
             lj.field_d.b(this.field_ab, -(lj.field_d.field_o >> 1) + 240 + 60);
             dd.field_G.a(sg.field_f, 15 + this.field_ab, 312, 0, -1);
-            if (var4 == 0) {
-              break L1;
-            }
+            decompiledFrameRemainder0 = !(var4 == 0);
           }
-          var2 = -this.field_D + 460 + 460;
-          if (this.field_bb == 3) {
-            pk.field_k.b(-(var2 >> 1) + 320, 240 - (var2 >> 1), var2, var2, 150);
-            lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, -(lj.field_d.field_o >> 1) + 240 + 60);
-            var5 = Integer.toString(this.field_q);
-            dd.field_G.b(var5, 320, 312, 0, -1);
-            if (this.field_R) {
-              dd.field_G.b(ld.field_a, 320, 352, 0, -1);
-            }
-            if (var4 != 0) {
+          if (decompiledFrameRemainder0) {
+            var2 = -this.field_D + 460 + 460;
+            if (this.field_bb == 3) {
+              pk.field_k.b(-(var2 >> 1) + 320, 240 - (var2 >> 1), var2, var2, 150);
+              lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, -(lj.field_d.field_o >> 1) + 240 + 60);
+              var5 = Integer.toString(this.field_q);
+              dd.field_G.b(var5, 320, 312, 0, -1);
+              if (this.field_R) {
+                dd.field_G.b(ld.field_a, 320, 352, 0, -1);
+              }
+              if (var4 != 0) {
+                k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.field_S - 150 + 150);
+                lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 - (lj.field_d.field_o >> 1));
+                var6 = Integer.toString(this.field_q);
+                dd.field_G.b(var6, 320, 312, 0, -1);
+                if (this.field_R) {
+                  dd.field_G.b(ld.field_a, 320, 352, 0, -1);
+                }
+              }
+            } else {
               k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.field_S - 150 + 150);
               lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 - (lj.field_d.field_o >> 1));
               var6 = Integer.toString(this.field_q);
@@ -1498,14 +1508,6 @@ final class gh {
               if (this.field_R) {
                 dd.field_G.b(ld.field_a, 320, 352, 0, -1);
               }
-            }
-          } else {
-            k.field_a.d(-(k.field_a.field_s >> 1) + 320, 240 - (k.field_a.field_o >> 1), this.field_S - 150 + 150);
-            lj.field_d.b(-(lj.field_d.field_s >> 1) + 320, 300 - (lj.field_d.field_o >> 1));
-            var6 = Integer.toString(this.field_q);
-            dd.field_G.b(var6, 320, 312, 0, -1);
-            if (this.field_R) {
-              dd.field_G.b(ld.field_a, 320, 352, 0, -1);
             }
           }
         }
@@ -1715,38 +1717,39 @@ final class gh {
         if (!this.field_f) {
           return;
         }
-        L0: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (this.field_bb != 0) {
             dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-            if (var3 == 0) {
-              break L0;
-            }
+            decompiledFrameRemainder0 = !(var3 == 0);
           }
-          var2 = -ul.field_b + fa.field_b;
-          dd.field_G.field_K[0][wf.field_p] = 15488514;
-          dd.field_G.c(w.field_e, 621, 441, 0, -1);
-          dd.field_G.field_K[0][wf.field_p] = 16689938;
-          dd.field_G.c(od.field_b, 621, 468, 0, -1);
-          if (var2 <= 10) {
-            dd.field_G.field_K[0][wf.field_p] = mk.field_k[var2 % 5];
-            dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
+          if (decompiledFrameRemainder0) {
+            var2 = -ul.field_b + fa.field_b;
+            dd.field_G.field_K[0][wf.field_p] = 15488514;
+            dd.field_G.c(w.field_e, 621, 441, 0, -1);
             dd.field_G.field_K[0][wf.field_p] = 16689938;
-            if (var3 != 0) {
+            dd.field_G.c(od.field_b, 621, 468, 0, -1);
+            if (var2 <= 10) {
+              dd.field_G.field_K[0][wf.field_p] = mk.field_k[var2 % 5];
+              dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
+              dd.field_G.field_K[0][wf.field_p] = 16689938;
+              if (var3 != 0) {
+                if (var2 <= 99999) {
+                  dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
+                  dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
+                } else {
+                  dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
+                }
+              }
+            } else {
               if (var2 <= 99999) {
                 dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-                dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
+                if (var3 != 0) {
+                  dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
+                }
               } else {
                 dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
               }
-            }
-          } else {
-            if (var2 <= 99999) {
-              dd.field_G.c(Integer.toString(var2), 515, 468, 0, -1);
-              if (var3 != 0) {
-                dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
-              }
-            } else {
-              dd.field_G.c(Integer.toString(99999), 515, 468, 0, -1);
             }
           }
         }
@@ -1761,28 +1764,29 @@ final class gh {
         if (param0 != 28809) {
           this.field_j = true;
         }
-        L1: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (!fh.c(-93)) {
             if (this.field_e <= 0) {
               if (this.field_o > 0) {
                 ai.field_p = 2;
-                if (var3 == 0) {
-                  break L1;
-                }
+                decompiledFrameRemainder0 = !(var3 == 0);
               }
-              ai.field_p = 0;
-              if (var3 == 0) {
-                break L1;
+              if (decompiledFrameRemainder0) {
+                ai.field_p = 0;
+                decompiledFrameRemainder0 = !(var3 == 0);
               }
             }
-            ai.field_p = 6;
-            if (var3 != 0) {
-              if (this.field_o > 0 ||
-                this.field_e > 0) {
-                ai.field_p = 4;
-                ai.field_p = 0;
-              } else {
-                ai.field_p = 0;
+            if (decompiledFrameRemainder0) {
+              ai.field_p = 6;
+              if (var3 != 0) {
+                if (this.field_o > 0 ||
+                  this.field_e > 0) {
+                  ai.field_p = 4;
+                  ai.field_p = 0;
+                } else {
+                  ai.field_p = 0;
+                }
               }
             }
           } else {
