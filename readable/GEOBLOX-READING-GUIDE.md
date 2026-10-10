@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/44b20d62e4d9daa35cfea248319bb1bb5d278864/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ce5c7a012293a13a84819713bb72ca7c45a273b9/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 258)
+## Current readability (pass 259)
 
-The export has 20,136 guarded names and 122,187 Java identifier edits, plus 11
-class-name literal edits and 133 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,136 guarded names and 122,208 Java identifier edits, plus 11
+class-name literal edits and 112 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,122 bindings, reproduce and
+compile and compare 138,143 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current platform task switches (pass 258)
+## Current shared exits and continuation frames (pass 259)
+
+`Geoblox.updateGame` uses `assetSessionPreparationFrameContinues` to separate
+asset readiness and account actions from later preparation. The original update-
+rate predicate remains once, and its exact conditional work stays intact.
+`CachedArchiveSource`, `TextWidgetRenderer`, `GameplaySession` and `MenuScreen`
+similarly use named continuation decisions for background loading, text drawing,
+tutorial placement and pointer handling. Existing snapshots and failure order
+remain. Shared platform/PCM exits retain complete true/false arms.
+
+Thirteen smaller plain frames and 41 finer field purposes remain. Independent
+Java recipes, bindings/targets, native oracles and exact reproduction/reversal
+are recorded. Whole-game and phone/FPS behavior remain unverified.
+
+## Previous platform task switches (pass 258)
 
 `PlatformTaskDispatcher.run` separates task classification from its platform
 operations using two switches. The shared permission check remains before the

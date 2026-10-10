@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "a4f7ad5307978c33090f73549d89ca7112271940",
+      "commit": "8f162a04c4d373da886976006cebdbc75312c1e4",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "5b640a006820bf5fadbd39c0887461c46a78c513cb4feb4909c8261e7f7ce798",
-        "reproduce": "git archive --format=tar a4f7ad5307978c33090f73549d89ca7112271940 | sha256sum",
+        "sha256": "caeb0d73ac4e1c765837ab8bac8f9b78a83353e0b2a20962a8e9d55abd119f2f",
+        "reproduce": "git archive --format=tar 8f162a04c4d373da886976006cebdbc75312c1e4 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -39,7 +39,8 @@
         "CFR_JS_SWITCH_EXIT_TAILS": "1",
         "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
         "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
-        "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1"
+        "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+        "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1"
       }
     },
     "namingTool": {
@@ -136,7 +137,8 @@
       "CFR_JS_SWITCH_EXIT_TAILS": "1",
       "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
       "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
-      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1"
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1"
     }
   },
   "freshVerification": {
@@ -161,9 +163,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "34e7833bfb74b4db3b03080cf552d2a5ef5aa7ded813107586cc621df7849756",
-  "previousSourceTreeSha256": "5c0d2b999655fdd15812aad44e9e0570b275b5e24bdbd992ff58b22f0b15d79c",
-  "changedJavaFiles": 1,
+  "sourceTreeSha256": "a042f2919456d57e009b4ca778199aae2da93a64e4cc450958e0c82aa3814708",
+  "previousSourceTreeSha256": "34e7833bfb74b4db3b03080cf552d2a5ef5aa7ded813107586cc621df7849756",
+  "changedJavaFiles": 7,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3331,11 +3333,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "44b20d62e4d9daa35cfea248319bb1bb5d278864",
+    "commit": "ce5c7a012293a13a84819713bb72ca7c45a273b9",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "5a5e636618d3801514c324d41668cc13d5ea07209d3aa2b1ed61ece62f6177be"
+      "sha256": "1a11727c651f936dd4d9b1288fb2174ed907e17adca9e0fcd0681a52fb4fa412"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3345,20 +3347,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "76ff81393d782b365961cc143a1a3b3264affa8e190c37d0d75232adabca4e77",
+    "outputTreeSha256": "f4468b93a8eb183f004b7a67ee250434ea79bda529299409020a335d91e97047",
     "files": 303,
     "rules": 20136,
-    "identifierEdits": 122187,
-    "bindingsCompared": 138122,
+    "identifierEdits": 122208,
+    "bindingsCompared": 138143,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
     "totalEdits": 122331,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 133,
-    "labelBindingsCompared": 133,
-    "labelDeclarationsCompared": 46,
+    "labelEdits": 112,
+    "labelBindingsCompared": 112,
+    "labelDeclarationsCompared": 41,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3375,8 +3377,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 258,
-    "semanticPass": 258,
+    "structuralPass": 259,
+    "semanticPass": 259,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36855,12 +36857,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "390253ed2346a99a0731fb9ddc649d66957e66e3",
-    "sourceTreeSha256": "34e7833bfb74b4db3b03080cf552d2a5ef5aa7ded813107586cc621df7849756",
+    "sourceCommit": "23084e6bf04d5af26fcec29fc033a5b49c792799",
+    "sourceTreeSha256": "a042f2919456d57e009b4ca778199aae2da93a64e4cc450958e0c82aa3814708",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "44b20d62e4d9daa35cfea248319bb1bb5d278864"
+    "workflowCommit": "ce5c7a012293a13a84819713bb72ca7c45a273b9"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -50943,5 +50945,696 @@
     "unknownOpaqueSwitchCompletionAndDoWhileLoopsRefused": true,
     "sourceWorkflowCommit": "44b20d62e4d9daa35cfea248319bb1bb5d278864",
     "sourceProofWorkflowCommit": "44b20d62e4d9daa35cfea248319bb1bb5d278864"
+  },
+  "sharedFrameExitGuardRecovery": {
+    "version": 259,
+    "changedJavaFiles": 7,
+    "changedMethodBodies": 7,
+    "normalizedSharedGuards": 9,
+    "framesRecovered": 5,
+    "frameExitsConsumed": 7,
+    "originalFrameExitsConsumedTotal": 16,
+    "newDecisionLocals": 5,
+    "newFlagOccurrences": 21,
+    "removedLabelOccurrences": 21,
+    "sourceProofTest": "readable/tests/test-geoblox-shared-exit-source.mjs",
+    "sourceProofTestSha256": "0d035d4a7100e3b1998267c810b641bcd562ce25be5c363fbba5751c7f1cf8d5",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "frameFixtureSha256": "cc57885e640cc5416f65ec7c42af4888ad0d1ed0a5c78ff4a13aa2dc38576cc4",
+    "booleanGuardFixtureSha256": "1ae2770a29f185c0212f5cb1ea84116157cb8bbe797e45b85a90a3bf3dcad2c3",
+    "previousSourceCommit": "390253ed2346a99a0731fb9ddc649d66957e66e3",
+    "sourceCommit": "23084e6bf04d5af26fcec29fc033a5b49c792799",
+    "previousSourceTreeSha256": "34e7833bfb74b4db3b03080cf552d2a5ef5aa7ded813107586cc621df7849756",
+    "sourceTreeSha256": "a042f2919456d57e009b4ca778199aae2da93a64e4cc450958e0c82aa3814708",
+    "normalizedSourceTreeSha256": "ace68e6945d93dfa86fa3d384cb8c12f50dd8e8949e989c13e236002be1e115f",
+    "javaToolsCommit": "8f162a04c4d373da886976006cebdbc75312c1e4",
+    "sourceArchiveSha256": "caeb0d73ac4e1c765837ab8bac8f9b78a83353e0b2a20962a8e9d55abd119f2f",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1"
+    },
+    "bindingsBefore": 138122,
+    "bindingsCompared": 138143,
+    "transfersBefore": 4789,
+    "transfersCompared": 4773,
+    "normalizationSelections": [
+      {
+        "file": "Geoblox.java",
+        "methodStart": 21341,
+        "label": "L6",
+        "guard": {
+          "start": 23291,
+          "end": 23355
+        },
+        "condition": {
+          "start": 23294,
+          "end": 23307
+        },
+        "jump": {
+          "start": 23328,
+          "end": 23337
+        },
+        "terminalJump": {
+          "start": 23446,
+          "end": 23455
+        },
+        "workStatements": 2,
+        "prefixStatements": 0,
+        "afterStart": 23291,
+        "terminalAfterStart": 23425
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "label": "L3",
+        "guard": {
+          "start": 15944,
+          "end": 16018
+        },
+        "condition": {
+          "start": 15947,
+          "end": 15962
+        },
+        "jump": {
+          "start": 15987,
+          "end": 15996
+        },
+        "terminalJump": {
+          "start": 16119,
+          "end": 16128
+        },
+        "workStatements": 2,
+        "prefixStatements": 0,
+        "afterStart": 15944,
+        "terminalAfterStart": 16094
+      },
+      {
+        "file": "d.java",
+        "methodStart": 1473,
+        "label": "L7",
+        "guard": {
+          "start": 8762,
+          "end": 8920
+        },
+        "condition": {
+          "start": 8765,
+          "end": 8779
+        },
+        "jump": {
+          "start": 8883,
+          "end": 8892
+        },
+        "terminalJump": {
+          "start": 9149,
+          "end": 9158
+        },
+        "workStatements": 1,
+        "prefixStatements": 1,
+        "afterStart": 8732,
+        "terminalAfterStart": 9089
+      },
+      {
+        "file": "d.java",
+        "methodStart": 1473,
+        "label": "L7",
+        "guard": {
+          "start": 8038,
+          "end": 8326
+        },
+        "condition": {
+          "start": 8041,
+          "end": 8056
+        },
+        "jump": {
+          "start": 8289,
+          "end": 8298
+        },
+        "terminalJump": {
+          "start": 8420,
+          "end": 8429
+        },
+        "workStatements": 1,
+        "prefixStatements": 1,
+        "afterStart": 8038,
+        "terminalAfterStart": 8390
+      },
+      {
+        "file": "ff.java",
+        "methodStart": 1717,
+        "label": "L0",
+        "guard": {
+          "start": 3461,
+          "end": 3533
+        },
+        "condition": {
+          "start": 3464,
+          "end": 3485
+        },
+        "jump": {
+          "start": 3506,
+          "end": 3515
+        },
+        "terminalJump": {
+          "start": 3724,
+          "end": 3733
+        },
+        "workStatements": 1,
+        "prefixStatements": 0,
+        "afterStart": 3423,
+        "terminalAfterStart": 3685
+      },
+      {
+        "file": "ff.java",
+        "methodStart": 1717,
+        "label": "L0",
+        "guard": {
+          "start": 3198,
+          "end": 3444
+        },
+        "condition": {
+          "start": 3201,
+          "end": 3222
+        },
+        "jump": {
+          "start": 3417,
+          "end": 3426
+        },
+        "terminalJump": {
+          "start": 3724,
+          "end": 3733
+        },
+        "workStatements": 1,
+        "prefixStatements": 1,
+        "afterStart": 3198,
+        "terminalAfterStart": 3685
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42400,
+        "label": "L7",
+        "guard": {
+          "start": 43762,
+          "end": 43894
+        },
+        "condition": {
+          "start": 43765,
+          "end": 43775
+        },
+        "jump": {
+          "start": 43859,
+          "end": 43868
+        },
+        "terminalJump": {
+          "start": 43965,
+          "end": 43974
+        },
+        "workStatements": 1,
+        "prefixStatements": 1,
+        "afterStart": 43762,
+        "terminalAfterStart": 43937
+      },
+      {
+        "file": "ka.java",
+        "methodStart": 4217,
+        "label": "L0",
+        "guard": {
+          "start": 5275,
+          "end": 5334
+        },
+        "condition": {
+          "start": 5278,
+          "end": 5290
+        },
+        "jump": {
+          "start": 5309,
+          "end": 5318
+        },
+        "terminalJump": {
+          "start": 5468,
+          "end": 5477
+        },
+        "workStatements": 1,
+        "prefixStatements": 0,
+        "afterStart": 5275,
+        "terminalAfterStart": 5447
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 39110,
+        "label": "L4",
+        "guard": {
+          "start": 41969,
+          "end": 42679
+        },
+        "condition": {
+          "start": 41972,
+          "end": 41990
+        },
+        "jump": {
+          "start": 42654,
+          "end": 42663
+        },
+        "terminalJump": {
+          "start": 43336,
+          "end": 43345
+        },
+        "workStatements": 3,
+        "prefixStatements": 3,
+        "afterStart": 41969,
+        "terminalAfterStart": 43346
+      }
+    ],
+    "frameRecovery": {
+      "files": 303,
+      "changedFiles": 5,
+      "changedMethods": 5,
+      "framesRecovered": 5,
+      "prefixAssignmentsCompared": 0,
+      "newDecisionLocals": 5,
+      "newFlagOccurrences": 21,
+      "intermediateFlagOccurrences": 21,
+      "redundantFlagReadsRemoved": 0,
+      "removedLabelBindings": 7,
+      "bindingsBefore": 138122,
+      "bindingsAfter": 138143,
+      "transfersBefore": 4780,
+      "transfersAfter": 4773,
+      "frameExitsConsumed": 7,
+      "sourceTreeSha256": "a042f2919456d57e009b4ca778199aae2da93a64e4cc450958e0c82aa3814708",
+      "symbolMigrations": [
+        {
+          "before": "B:bj.b(B)V#1",
+          "after": "B:bj.b(B)V#0"
+        },
+        {
+          "before": "L:ff.a(IILel;IIIII)V#11",
+          "after": "L:ff.a(IILel;IIIII)V#12"
+        },
+        {
+          "before": "L:gh.b(B)V#7",
+          "after": "L:gh.b(B)V#8"
+        },
+        {
+          "before": "L:gh.b(B)V#8",
+          "after": "L:gh.b(B)V#9"
+        },
+        {
+          "before": "L:gh.b(B)V#9",
+          "after": "L:gh.b(B)V#10"
+        },
+        {
+          "before": "L:gh.b(B)V#10",
+          "after": "L:gh.b(B)V#11"
+        },
+        {
+          "before": "L:gh.b(B)V#11",
+          "after": "L:gh.b(B)V#12"
+        },
+        {
+          "before": "L:gh.b(B)V#12",
+          "after": "L:gh.b(B)V#13"
+        },
+        {
+          "before": "L:gh.b(B)V#13",
+          "after": "L:gh.b(B)V#14"
+        }
+      ],
+      "selections": [
+        {
+          "file": "Geoblox.java",
+          "methodStart": 21341,
+          "name": "decompiledFrameRemainder0",
+          "label": "L6",
+          "region": {
+            "start": 22220,
+            "end": 27153
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 22315,
+                "end": 22473
+              },
+              "condition": {
+                "start": 22318,
+                "end": 22366
+              },
+              "jump": {
+                "start": 22448,
+                "end": 22457
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 22385,
+                "end": 22431
+              }
+            },
+            {
+              "range": {
+                "start": 22645,
+                "end": 23450
+              },
+              "condition": {
+                "start": 22648,
+                "end": 22696
+              },
+              "jump": {
+                "start": 23425,
+                "end": 23434
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 22715,
+                "end": 23408
+              }
+            }
+          ],
+          "guardsAdded": 3,
+          "prefixAssignments": [],
+          "removedSymbol": "B:Geoblox.c(Z)V#0",
+          "method": "M:Geoblox.c(Z)V",
+          "symbol": "L:Geoblox.c(Z)V#9",
+          "afterStart": 22220
+        },
+        {
+          "file": "bj.java",
+          "methodStart": 13559,
+          "name": "decompiledFrameRemainder3",
+          "label": "L3",
+          "region": {
+            "start": 14159,
+            "end": 19459
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 14367,
+                "end": 16123
+              },
+              "condition": {
+                "start": 14370,
+                "end": 14384
+              },
+              "jump": {
+                "start": 16094,
+                "end": 16103
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 14407,
+                "end": 16073
+              }
+            },
+            {
+              "range": {
+                "start": 17876,
+                "end": 18043
+              },
+              "condition": {
+                "start": 17879,
+                "end": 17903
+              },
+              "jump": {
+                "start": 18012,
+                "end": 18021
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 17928,
+                "end": 17989
+              }
+            }
+          ],
+          "guardsAdded": 3,
+          "prefixAssignments": [],
+          "removedSymbol": "B:bj.b(B)V#0",
+          "method": "M:bj.b(B)V",
+          "symbol": "L:bj.b(B)V#18",
+          "afterStart": 14159
+        },
+        {
+          "file": "ff.java",
+          "methodStart": 1717,
+          "name": "decompiledFrameRemainder0",
+          "label": "L0",
+          "region": {
+            "start": 2260,
+            "end": 4112
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 3116,
+                "end": 3710
+              },
+              "condition": {
+                "start": 3119,
+                "end": 3179
+              },
+              "jump": {
+                "start": 3685,
+                "end": 3694
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 3198,
+                "end": 3668
+              }
+            }
+          ],
+          "guardsAdded": 1,
+          "prefixAssignments": [],
+          "removedSymbol": "B:ff.a(IILel;IIIII)V#0",
+          "method": "M:ff.a(IILel;IIIII)V",
+          "symbol": "L:ff.a(IILel;IIIII)V#11",
+          "afterStart": 2260
+        },
+        {
+          "file": "gh.java",
+          "methodStart": 42400,
+          "name": "decompiledFrameRemainder8",
+          "label": "L7",
+          "region": {
+            "start": 43423,
+            "end": 44092
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 43702,
+                "end": 43970
+              },
+              "condition": {
+                "start": 43705,
+                "end": 43735
+              },
+              "jump": {
+                "start": 43937,
+                "end": 43946
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 43762,
+                "end": 43912
+              }
+            }
+          ],
+          "guardsAdded": 1,
+          "prefixAssignments": [],
+          "removedSymbol": "B:gh.b(B)V#0",
+          "method": "M:gh.b(B)V",
+          "symbol": "L:gh.b(B)V#7",
+          "afterStart": 43423
+        },
+        {
+          "file": "ka.java",
+          "methodStart": 4217,
+          "name": "decompiledFrameRemainder0",
+          "label": "L0",
+          "region": {
+            "start": 4411,
+            "end": 5915
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 5173,
+                "end": 5470
+              },
+              "condition": {
+                "start": 5176,
+                "end": 5223
+              },
+              "jump": {
+                "start": 5447,
+                "end": 5456
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement"
+              ],
+              "effectful": true,
+              "prefix": {
+                "start": 5240,
+                "end": 5432
+              }
+            }
+          ],
+          "guardsAdded": 1,
+          "prefixAssignments": [],
+          "removedSymbol": "B:ka.a(Z)V#0",
+          "method": "M:ka.a(Z)V",
+          "symbol": "L:ka.a(Z)V#6",
+          "afterStart": 4411
+        }
+      ]
+    },
+    "originalIdentityMigrations": [
+      {
+        "before": "B:bj.b(B)V#1",
+        "after": "B:bj.b(B)V#0"
+      },
+      {
+        "before": "L:ff.a(IILel;IIIII)V#11",
+        "after": "L:ff.a(IILel;IIIII)V#12"
+      },
+      {
+        "before": "L:gh.b(B)V#7",
+        "after": "L:gh.b(B)V#8"
+      },
+      {
+        "before": "L:gh.b(B)V#8",
+        "after": "L:gh.b(B)V#9"
+      },
+      {
+        "before": "L:gh.b(B)V#9",
+        "after": "L:gh.b(B)V#10"
+      },
+      {
+        "before": "L:gh.b(B)V#10",
+        "after": "L:gh.b(B)V#11"
+      },
+      {
+        "before": "L:gh.b(B)V#11",
+        "after": "L:gh.b(B)V#12"
+      },
+      {
+        "before": "L:gh.b(B)V#12",
+        "after": "L:gh.b(B)V#13"
+      },
+      {
+        "before": "L:gh.b(B)V#13",
+        "after": "L:gh.b(B)V#14"
+      }
+    ],
+    "removedSymbols": [
+      "B:Geoblox.c(Z)V#0",
+      "B:bj.b(B)V#0",
+      "B:ff.a(IILel;IIIII)V#0",
+      "B:gh.b(B)V#0",
+      "B:ka.a(Z)V#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "originalSharedTargetsInversePredicatesAndCompleteArmsIndependentlyDerived": true,
+    "newFlagsIndependentlyTypedAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 15,
+    "genericSharedExitTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 58320,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 13,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "390253ed2346a99a0731fb9ddc649d66957e66e3",
+      "sourceTreeSha256": "34e7833bfb74b4db3b03080cf552d2a5ef5aa7ded813107586cc621df7849756",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "44b20d62e4d9daa35cfea248319bb1bb5d278864"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass259 keeps each terminal shared-frame exit and replaces the earlier exit with a complete inverse guard or original true-prefix/false-work conditional. Every original predicate/read occurs once. Complete effectful prefixes, false work, unused snapshots, aliases, nonzero flags, arithmetic, callbacks/failures and catch/finally/monitor scopes remain. Five exposed frames use fresh captured continuation eligibility; all other operations/bindings/overrides and protected targets retain their identities. Independent javac recipes compare all ordered syntax and derive common original destinations. The frozen frame/Boolean verifier is reused with an adapter that ignores empty marker lines and still compares all syntax when compaction makes no edits. Generic native models cover original, normalized, combined and independent direct forms. Game metadata/proofs stay in Deko; generic code remains in java-tools. Whole-game and phone/FPS behavior remain unverified.",
+    "dictionaryIdentities": 20443,
+    "survivingCompleteRulesPreserved": 20131,
+    "survivingDictionaryIdentitiesPreserved": 20438,
+    "historicalSourceProofsPreserved": 101,
+    "historicalRecordsPreserved": 182,
+    "readableIdentifierEdits": 122208,
+    "readableTotalEdits": 122331,
+    "publicationTestGroupsPassed": 27,
+    "existingGameplayTraceGroupsPassed": 3,
+    "existingRenderingTraceGroupsPassed": 10,
+    "existingResultTraceGroupsPassed": 14,
+    "allSourcesCompileReproduceAndReverseByteExactly": true,
+    "allSurvivingCompleteNamesDictionaryObjectsAndHistoricalCertificatesPreserved": true,
+    "sourceWorkflowCommit": "ce5c7a012293a13a84819713bb72ca7c45a273b9",
+    "sourceProofWorkflowCommit": "ce5c7a012293a13a84819713bb72ca7c45a273b9"
   }
 }

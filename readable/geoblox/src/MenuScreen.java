@@ -146,7 +146,8 @@ abstract class MenuScreen {
         int pressedPointerXSnapshot = 0;
         Object pointerTargetSnapshot;
         boolean initialClickSnapshot;
-        menuPointerInteraction: {
+        {
+          boolean menuPointerInteractionFrameContinues = true;
           clientControlFlowGuard = Geoblox.clientControlFlowFlag;
           if (CheckboxRenderer.pointerPressButtonSnapshot != 0) {
             hitItemIndex = this.hitTestMenuItem(AccountCreationSupport.pointerPressXSnapshot, FullscreenFocusCanvas.pointerPressYSnapshot, (byte) 28);
@@ -170,22 +171,23 @@ abstract class MenuScreen {
             if (EntityCollisionSupport.heldPointerButtonSnapshot != 0 &&
               this.pointerInteractionActive) {
               hitItemIndex = this.selectedItemIndex;
-              if (hitItemIndex == -1) {
-                break menuPointerInteraction;
+              if (!(hitItemIndex == -1)) {
+                this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, EntityCollisionSupport.heldPointerButtonSnapshot);
               }
-              this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, EntityCollisionSupport.heldPointerButtonSnapshot);
-              break menuPointerInteraction;
+              menuPointerInteractionFrameContinues = false;
             }
-            this.pointerInteractionActive = false;
-            if (AttachmentPointerState.pointerActivitySnapshot) {
-              hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 126);
-              if (hitItemIndex != -1) {
-                this.selectedItemIndex = hitItemIndex;
-                this.keyboardSelectionActive = false;
-              } else {
-                if (!this.keyboardSelectionActive) {
+            if (menuPointerInteractionFrameContinues) {
+              this.pointerInteractionActive = false;
+              if (AttachmentPointerState.pointerActivitySnapshot) {
+                hitItemIndex = this.hitTestMenuItem(PrefixCodeDecoder.pointerXSnapshot, PcmResampler.pointerYSnapshot, (byte) 126);
+                if (hitItemIndex != -1) {
                   this.selectedItemIndex = hitItemIndex;
                   this.keyboardSelectionActive = false;
+                } else {
+                  if (!this.keyboardSelectionActive) {
+                    this.selectedItemIndex = hitItemIndex;
+                    this.keyboardSelectionActive = false;
+                  }
                 }
               }
             }

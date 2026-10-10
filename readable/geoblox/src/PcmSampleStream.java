@@ -1156,8 +1156,7 @@ final class PcmSampleStream extends PcmStream {
         finiteLoopMixing: {
           if (this.loopsRemaining > 0) {
             if (!this.pingPongLoop) {
-              if (this.sampleStepFixed < 0) {
-                while (true) {
+              if (this.sampleStepFixed < 0) {while (true) {
                   nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
                   if (this.samplePositionFixed >= loopStartFixed) {
                     return;
@@ -1172,23 +1171,23 @@ final class PcmSampleStream extends PcmStream {
                 }
                 this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * this.loopsRemaining;
                 this.loopsRemaining = 0;
-                break finiteLoopMixing;
-              }
-              while (true) {
-                nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopStart]);
-                if (this.samplePositionFixed < loopEndFixed) {
-                  return;
+              } else {
+                while (true) {
+                  nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopStart]);
+                  if (this.samplePositionFixed < loopEndFixed) {
+                    return;
+                  }
+                  forwardLoopCrossingCount = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
+                  if (forwardLoopCrossingCount < this.loopsRemaining) {
+                    this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * forwardLoopCrossingCount;
+                    this.loopsRemaining = this.loopsRemaining - forwardLoopCrossingCount;
+                    continue;
+                  }
+                  break;
                 }
-                forwardLoopCrossingCount = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
-                if (forwardLoopCrossingCount < this.loopsRemaining) {
-                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * forwardLoopCrossingCount;
-                  this.loopsRemaining = this.loopsRemaining - forwardLoopCrossingCount;
-                  continue;
-                }
-                break;
+                this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
+                this.loopsRemaining = 0;
               }
-              this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
-              this.loopsRemaining = 0;
               break finiteLoopMixing;
             }
             if (this.sampleStepFixed < 0) {

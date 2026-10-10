@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/44b20d62e4d9daa35cfea248319bb1bb5d278864/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ce5c7a012293a13a84819713bb72ca7c45a273b9/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,122 bindings,
+identities. Both 303-file Java corpora compile and compare 138,143 bindings,
 preserving 388 override relationships.
 
-## Current platform task switches (pass 258)
+## Current shared exits and continuation frames (pass 259)
+
+Nine shared-exit guards retain complete true/false work and one original terminal
+destination. Five frames now use named continuation eligibility for asset/session
+preparation, background loading, text drawing, tutorial placement and menu pointer
+handling. Thirteen smaller frames and 41 finer field purposes remain. Source/
+binding/target and native oracle checks pass; all 303 sources compile, reproduce
+and reverse exactly. Surviving naming/dictionary objects and historical proofs
+remain. Generic recovery and agent guidance stay in java-tools; game proofs stay
+in Deko.
+
+## Previous platform task switches (pass 258)
 
 The platform dispatcher uses two task-type switches while retaining shared
 permission checks and original opaque loops, backend conditions and protected

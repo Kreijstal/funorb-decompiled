@@ -64,7 +64,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
         int horizontalAlignmentMode;
         clientControlFlowSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          textDrawingCompletion: {
+          {
+            boolean textDrawingFrameContinues = true;
             PasswordWidgetRenderer.pushWidgetClip(parentY + widget.widgetY, widget.widgetX + parentX, methodGuard - 14045, widget.widgetY + (parentY + widget.widgetHeight), widget.widgetWidth + (parentX + widget.widgetX));
             availableWidth = this.getAvailableTextWidth(widget, methodGuard - 1);
             availableHeight = this.getAvailableTextHeight(289769985, widget);
@@ -85,17 +86,17 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               horizontalAlignmentMode = this.horizontalAlignment;
               if (horizontalAlignmentMode != 0 &&
                 horizontalAlignmentMode != 3) {
-                if (horizontalAlignmentMode == 1) {
-                  this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
-                  break textDrawingCompletion;
+                if (horizontalAlignmentMode == 1) {this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
+                } else {
+                  if (!(horizontalAlignmentMode != 2)) {
+                    this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);
+                  }
                 }
-                if (horizontalAlignmentMode != 2) {
-                  break textDrawingCompletion;
-                }
-                this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);
-                break textDrawingCompletion;
+                textDrawingFrameContinues = false;
               }
-              this.font.drawText(this.getDisplayText(121, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
+              if (textDrawingFrameContinues) {
+                this.font.drawText(this.getDisplayText(121, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
+              }
             } else {
               this.font.drawParagraph(this.getDisplayText(113, widget), this.getTextX(widget, parentX, 11875, extraX), this.getTextY(widget, parentY, 1674, extraY), availableWidth, availableHeight, color, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
             }

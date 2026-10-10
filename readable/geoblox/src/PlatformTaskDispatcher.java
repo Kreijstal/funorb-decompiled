@@ -197,11 +197,10 @@ final class PlatformTaskDispatcher implements Runnable {
                           taskType == 14) {
                           cursorXOrVisibleFlag = task.firstIntArgument;
                           cursorY = task.secondIntArgument;
-                          if (!this.useMicrosoftVmBackend) {
-                            Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
-                            break platformTaskDispatch;
+                          if (!this.useMicrosoftVmBackend) {Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{new Integer(cursorXOrVisibleFlag), new Integer(cursorY)});
+                          } else {
+                            this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
                           }
-                          this.microsoftCursorBackend.moveCursor(-71, cursorY, cursorXOrVisibleFlag);
                           break platformTaskDispatch;
                         }
                         if (this.privilegedServicesEnabled &&
@@ -209,11 +208,10 @@ final class PlatformTaskDispatcher implements Runnable {
                           cursorVisibleInt = (task.firstIntArgument == 0) ? 0 : 1;
                           cursorXOrVisibleFlag = cursorVisibleInt;
                           cursorComponent = (java.awt.Component) (task.input);
-                          if (this.useMicrosoftVmBackend) {
-                            this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
-                            break platformTaskDispatch;
+                          if (this.useMicrosoftVmBackend) {this.microsoftCursorBackend.setCursorVisible(12758, cursorXOrVisibleFlag != 0, cursorComponent);
+                          } else {
+                            Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
                           }
-                          Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectiveCursorBackend, new Object[]{cursorComponent, new Boolean(cursorXOrVisibleFlag != 0)});
                           break platformTaskDispatch;
                         }
                         if (!this.useMicrosoftVmBackend &&

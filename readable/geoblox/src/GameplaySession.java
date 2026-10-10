@@ -1284,22 +1284,24 @@ final class GameplaySession {
             while (true) {
               {
                 boolean precedingThemeDispatchPreparationFrameContinues = true;
-                precedingThemeLookup: {
+                {
+                  boolean tutorialPromptPlacementFrameContinues = true;
                   if (7 > themeIndexThenId) {
                     selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
                     themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
                     precedingThemeDispatchPreparationFrameContinues = !(clientControlFlowGuard != 0);
                     if (precedingThemeDispatchPreparationFrameContinues) {
                       if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                        if (0 < themeIndexThenId) {
-                          precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
-                          break precedingThemeLookup;
+                        if (0 < themeIndexThenId) {precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
+                        } else {
+                          precedingThemeId = WidgetContainer.themeCycleOrder[6];
                         }
-                        precedingThemeId = WidgetContainer.themeCycleOrder[6];
-                        break precedingThemeLookup;
+                        tutorialPromptPlacementFrameContinues = false;
                       }
-                      themeIndexThenId++;
-                      continue;
+                      if (tutorialPromptPlacementFrameContinues) {
+                        themeIndexThenId++;
+                        continue;
+                      }
                     }
                   }
                 }
