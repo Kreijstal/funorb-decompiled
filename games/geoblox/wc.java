@@ -22,7 +22,7 @@ final class wc extends hf {
           if (param2 > -77) {
             field_g = true;
           }
-          stackIn_7_0 = !(param0.indexOf(param1) == -1) || !(param0.indexOf(var3) == -1);
+          stackIn_7_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

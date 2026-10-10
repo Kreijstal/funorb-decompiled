@@ -479,7 +479,7 @@ final class bj extends nh {
                       var2_int = 0;
                       break;
                     }
-                    if (!(var2_int == 0)) {
+                    if ((var2_int != 0)) {
                       this.field_o = 0;
                       this.field_q = false;
                     }

@@ -480,7 +480,7 @@ abstract class wf extends ch {
           }
         } else {
           stackIn_3_1 = false;
-          stackIn_4_2 = !(vl.field_n == null);
+          stackIn_4_2 = (vl.field_n != null);
           discarded$56 = this.a(stackIn_3_1, stackIn_4_2, -1);
         }
         if (param0 < 104) {
@@ -770,7 +770,7 @@ abstract class wf extends ch {
                               jl.a((byte) -122);
                               return;
                             }
-                            stackIn_30_0 = !(var2 != 12);
+                            stackIn_30_0 = (var2 == 12);
                             var3 = bk.a(stackIn_30_0, 128);
                             s.a(var3, 0);
                           }

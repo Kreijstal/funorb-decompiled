@@ -301,7 +301,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           var2.startsWith("1.5.") ||
                           var2.equals("1.6.0")) {
                           this.a((byte) 79, "wrongjava");
-                          decompiledFrameRemainder3 = !(var5 == 0);
+                          decompiledFrameRemainder3 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder3) {
                           if (var2.startsWith("1.6.0_")) {
@@ -322,7 +322,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               var4 = var2.substring(6, var3);
                               if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
                                 this.a((byte) 79, "wrongjava");
-                                decompiledFrameRemainder3 = !(var5 == 0);
+                                decompiledFrameRemainder3 = (var5 != 0);
                               }
                             }
                           }
@@ -331,7 +331,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     }
                     if (decompiledFrameRemainder3) {
                       if (decompiledFrameCompleted0) {
-                        decompiledFrameRemainder2 = !(d.field_t == null);
+                        decompiledFrameRemainder2 = (d.field_t != null);
                         if (decompiledFrameRemainder2) {
                           stackIn_66_0 = d.field_t.startsWith("1.");
                         }
@@ -350,7 +350,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                               var3 = d.field_t.charAt(var1_int);
                               stackIn_78_0 = var3;
                               stackIn_78_1 = 48;
-                              decompiledFrameRemainder1 = !(var5 != 0);
+                              decompiledFrameRemainder1 = (var5 == 0);
                               if (decompiledFrameRemainder1) {
                                 if (stackIn_78_0 >= stackIn_78_1 &&
                                   var3 <= 57) {
@@ -399,7 +399,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       boolean decompiledFrameRemainder0 = true;
                       if (0L != ka.field_a) {
                         stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
-                        decompiledFrameRemainder0 = !(var5 != 0);
+                        decompiledFrameRemainder0 = (var5 == 0);
                         if (decompiledFrameRemainder0) {
                           if (stackIn_99_0 >= 0) {
                             break;
@@ -517,7 +517,7 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) f.field_kb));
           f.field_kb.setSize(kh.field_d, ok.field_c);
           f.field_kb.setVisible(param0);
-          boolean decompiledSharedTail0 = !(sg.field_a != var2);
+          boolean decompiledSharedTail0 = (sg.field_a == var2);
           if (!decompiledSharedTail0) {
             f.field_kb.setLocation(qa.field_b, hk.field_B);
             decompiledSharedTail0 = (var4 != 0);

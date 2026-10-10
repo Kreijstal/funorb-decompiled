@@ -664,7 +664,7 @@ abstract class wh extends rc {
                   var29 = var29 + var31 * param8;
                   var26 = var26 + param8 * var28;
                   param8 = 0;
-                  decompiledFrameRemainder1 = !(var42 == 0);
+                  decompiledFrameRemainder1 = (var42 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
@@ -736,7 +736,7 @@ abstract class wh extends rc {
                         var22 = var22 + param8 * var24;
                         var29 = var29 + var31 * param8;
                         param8 = param15;
-                        decompiledFrameRemainder0 = !(var42 == 0);
+                        decompiledFrameRemainder0 = (var42 != 0);
                       }}
                     if (decompiledFrameRemainder0) {
                       var36 = mh.field_b[param8];

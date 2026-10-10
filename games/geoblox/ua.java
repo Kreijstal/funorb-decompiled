@@ -368,7 +368,7 @@ final class ua extends hf {
         for (var6 = 0; var6 < var5Lifetime2; var6++) {
           stackIn_39_0 = (boolean[]) (field_o);
           stackIn_39_1 = var6;
-          stackIn_40_2 = !(ua.b() == 0);
+          stackIn_40_2 = (ua.b() != 0);
           stackIn_39_0[stackIn_39_1] = stackIn_40_2;
           ua.b(16);
           ua.b(16);
@@ -751,7 +751,7 @@ final class ua extends hf {
         field_B = var18;
         this.field_M = var4;
         this.field_m = var12 - (var4 >> 1);
-        stackIn_111_1 = !(var15 == 0);
+        stackIn_111_1 = (var15 != 0);
         this.field_i = stackIn_111_1;
         return (float[]) (var17);
     }

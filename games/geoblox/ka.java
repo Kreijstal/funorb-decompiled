@@ -171,7 +171,7 @@ abstract class ka {
             if (gf.field_a != 0 &&
               this.field_g) {
               var2 = this.field_b;
-              if (!(var2 == -1)) {
+              if ((var2 != -1)) {
                 this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
               }
               decompiledFrameRemainder0 = false;

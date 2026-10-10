@@ -627,7 +627,7 @@ public final class Geoblox extends wf {
           vl.field_n.a(0, ka.field_i);
           vl.field_n = null;
         }
-        stackIn_9_1 = !(null == vl.field_n);
+        stackIn_9_1 = (null != vl.field_n);
         this.b(stackIn_9_1, 19660);
         if (cf.field_k) {
           stackIn_14_1 = !(param0);
@@ -659,7 +659,7 @@ public final class Geoblox extends wf {
               } else {
                 if (dd.a((byte) 47) &&
                   !jk.field_a) {
-                  stackIn_91_0 = !(vl.field_n == null);
+                  stackIn_91_0 = (vl.field_n != null);
                   var2 = sl.a(stackIn_91_0, (wf) (this), false);
                   if (var2 != 2364824) {
                     if (var2 == 1 ||

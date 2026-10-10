@@ -656,7 +656,7 @@ class f extends qf implements pl {
           if (param1 != 19810) {
             return;
           }
-          stackIn_9_1 = !(256 != param0);
+          stackIn_9_1 = (256 == param0);
           this.field_ob = stackIn_9_1;
           this.field_rb = true;
           this.field_pb.a(4210752, 8405024, (byte) -103);

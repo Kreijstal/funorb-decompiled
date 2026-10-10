@@ -86,7 +86,7 @@ final class gh {
           var6 = 300;
           if (this.field_p == 0) {
             var6 = 232;
-            decompiledFrameRemainder0 = !(var7 == 0);
+            decompiledFrameRemainder0 = (var7 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (this.field_p != 3) {
@@ -619,12 +619,12 @@ final class gh {
                 decompiledFrameRemainder1 = !(!this.field_H);
                 if (decompiledFrameRemainder1) {
                   this.b((byte) -80);
-                  decompiledFrameRemainder1 = !(var5 == 0);
+                  decompiledFrameRemainder1 = (var5 != 0);
                 }
               }
               if (decompiledFrameRemainder1) {
                 this.f(10);
-                decompiledFrameRemainder1 = !(var5 == 0);
+                decompiledFrameRemainder1 = (var5 != 0);
               }
             }
             if (decompiledFrameRemainder1) {
@@ -1069,19 +1069,19 @@ final class gh {
                 this.field_t = 1;
                 if (this.field_p == 0) {
                   this.field_U = 0;
-                  decompiledFrameRemainder0 = !(var5 == 0);
+                  decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   if (this.field_p == 1) {
                     this.field_U = dd.field_D;
-                    decompiledFrameRemainder0 = !(var5 == 0);
+                    decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.field_p != 2) {
                       return;
                     }
                     this.field_U = dk.field_b;
-                    decompiledFrameRemainder0 = !(var5 == 0);
+                    decompiledFrameRemainder0 = (var5 != 0);
                   }
                 }
               }
@@ -1201,7 +1201,7 @@ final class gh {
         if (!param0) {
           return true;
         }
-        stackIn_9_0 = (this.field_H) || !(0 == this.field_bb);
+        stackIn_9_0 = (this.field_H) || (0 != this.field_bb);
         return stackIn_9_0;
     }
 
@@ -1214,7 +1214,7 @@ final class gh {
             this.field_p = this.field_p + 1;
             this.field_C = true;
             this.field_t = 0;
-            decompiledFrameRemainder0 = !(var3 == 0);
+            decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (1 == this.field_t) {
@@ -1229,7 +1229,7 @@ final class gh {
               if (this.field_p == 0 &&
                 this.field_U > 450) {
                 this.field_t = 2;
-                decompiledFrameRemainder0 = !(var3 == 0);
+                decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_p != 1 ||
@@ -1290,7 +1290,7 @@ final class gh {
                   if (7 > var3) {
                     stackIn_27_0 = ~c.field_ab;
                     stackIn_27_1 = ~ee.field_B[var3];
-                    decompiledFrameRemainder7 = !(var4 != 0);
+                    decompiledFrameRemainder7 = (var4 == 0);
                     if (decompiledFrameRemainder7) {
                       if (stackIn_27_0 == stackIn_27_1) {
                         if (0 < var3) {
@@ -1338,14 +1338,14 @@ final class gh {
                                   decompiledFrameRemainder2 = !(var3 == 0 &&
                                     var4 == 0);
                                   if (decompiledFrameRemainder2) {
-                                    decompiledFrameRemainder3 = !(var3 == 6);
+                                    decompiledFrameRemainder3 = (var3 != 6);
                                     if (decompiledFrameRemainder3) {
                                       decompiledFrameRemainder4 = !(5 == var3 &&
                                         var4 == 0);
                                       if (decompiledFrameRemainder4) {
-                                        decompiledFrameRemainder6 = !(2 != var3);
+                                        decompiledFrameRemainder6 = (2 == var3);
                                         if (decompiledFrameRemainder6) {
-                                          decompiledFrameRemainder5 = !(var4 == 0);
+                                          decompiledFrameRemainder5 = (var4 != 0);
                                         }
                                       }
                                     }
@@ -1479,7 +1479,7 @@ final class gh {
             pk.field_k.b(320 - (this.field_D >> 1), 240 - (this.field_D >> 1), this.field_D, this.field_D, 150);
             lj.field_d.b(this.field_ab, -(lj.field_d.field_o >> 1) + 240 + 60);
             dd.field_G.a(sg.field_f, 15 + this.field_ab, 312, 0, -1);
-            decompiledFrameRemainder0 = !(var4 == 0);
+            decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
             var2 = -this.field_D + 460 + 460;
@@ -1547,7 +1547,7 @@ final class gh {
               var12 = i.a((byte) -128);
               if (null == var12) {
                 this.field_c = 29;
-                decompiledFrameRemainder1 = !(var11 == 0);
+                decompiledFrameRemainder1 = (var11 != 0);
               }
               if (decompiledFrameRemainder1) {
                 vf.field_L.e();
@@ -1625,7 +1625,7 @@ final class gh {
             }
             if (3 == this.field_bb) {
               this.field_q = this.field_q + 7;
-              decompiledFrameRemainder0 = !(var11 == 0);
+              decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (this.field_bb != 2) {
@@ -1633,7 +1633,7 @@ final class gh {
                   td.a(-348, fl.field_c[28]);
                 }
                 this.field_S = this.field_S - 1;
-                decompiledFrameRemainder0 = !(var11 == 0);
+                decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_M == null ||
@@ -1721,7 +1721,7 @@ final class gh {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_bb != 0) {
             dd.field_G.a(tj.field_a, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-            decompiledFrameRemainder0 = !(var3 == 0);
+            decompiledFrameRemainder0 = (var3 != 0);
           }
           if (decompiledFrameRemainder0) {
             var2 = -ul.field_b + fa.field_b;
@@ -1770,11 +1770,11 @@ final class gh {
             if (this.field_e <= 0) {
               if (this.field_o > 0) {
                 ai.field_p = 2;
-                decompiledFrameRemainder0 = !(var3 == 0);
+                decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 ai.field_p = 0;
-                decompiledFrameRemainder0 = !(var3 == 0);
+                decompiledFrameRemainder0 = (var3 != 0);
               }
             }
             if (decompiledFrameRemainder0) {

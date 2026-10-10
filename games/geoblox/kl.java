@@ -914,7 +914,7 @@ final class kl extends ia {
                 this.field_p = -this.field_p;
                 fieldTemp$0 = this.field_v - 1;
                 this.field_v = this.field_v - 1;
-                decompiledFrameRemainder0 = !(fieldTemp$0 == 0);
+                decompiledFrameRemainder0 = (fieldTemp$0 != 0);
               }
               if (decompiledFrameRemainder0) {
                 do {
@@ -1211,7 +1211,7 @@ final class kl extends ia {
                 this.field_p = -this.field_p;
                 fieldTemp$0 = this.field_v - 1;
                 this.field_v = this.field_v - 1;
-                decompiledFrameRemainder0 = !(fieldTemp$0 == 0);
+                decompiledFrameRemainder0 = (fieldTemp$0 != 0);
               }
               if (decompiledFrameRemainder0) {
                 do {

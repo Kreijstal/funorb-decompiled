@@ -29,7 +29,7 @@ final class sa extends RuntimeException {
             if (param0 != null) {
               decompiledFrameRemainder0 = !(param0.equals(tc.field_a));
             } else {
-              decompiledFrameRemainder0 = !(null != tc.field_a);
+              decompiledFrameRemainder0 = (null == tc.field_a);
             }
             if (decompiledFrameRemainder0) {
               if (!vl.field_q) {

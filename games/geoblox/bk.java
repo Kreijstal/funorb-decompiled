@@ -52,7 +52,7 @@ final class bk {
         var8 = eh.field_d;
         var3 = var8.c((byte) 34);
         gj.field_u = var3 & 127;
-        stackIn_3_0 = !((param1 & var3) == 0);
+        stackIn_3_0 = ((param1 & var3) != 0);
         vd.field_l = stackIn_3_0;
         bm.field_s = var8.c((byte) 34);
         uf.field_c = var8.b(2901);

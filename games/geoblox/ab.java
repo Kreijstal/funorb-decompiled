@@ -243,7 +243,7 @@ final class ab {
                   if (ma.a(true, param1, var2)) {
                     var3Lifetime2 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
                     var4 = tl.field_g[var3Lifetime2];
-                    decompiledFrameRemainder0 = !(a.field_d == var4.field_K);
+                    decompiledFrameRemainder0 = (a.field_d != var4.field_K);
                     if (decompiledFrameRemainder0) {
                       var5 = 0.5f * (var4.field_w + var2.field_w);
                       var6 = (var4.field_F + var2.field_F) * 0.5f;

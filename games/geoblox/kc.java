@@ -290,7 +290,7 @@ final class kc {
                       var7Lifetime1.field_N = 0;
                       var8Lifetime1.field_m = 0;
                       ji.field_r.a(-36, var2_ref_ja);
-                      decompiledFrameRemainder0 = !(var9 == 0);
+                      decompiledFrameRemainder0 = (var9 != 0);
                     }
                   }
                   if (decompiledFrameRemainder0) {
@@ -329,7 +329,7 @@ final class kc {
                             }
                             ld.a(stackIn_88_0, stackIn_88_1, stackIn_88_2, stackIn_90_3);
                           }
-                          boolean decompiledSharedTail0 = !(4 != var2_ref_ja.field_z);
+                          boolean decompiledSharedTail0 = (4 == var2_ref_ja.field_z);
                           if (!decompiledSharedTail0) {
                             var2_ref_ja.a(320, var2_ref_ja.field_C, var2_ref_ja.field_M, 5);
                             decompiledSharedTail0 = (var9 != 0);

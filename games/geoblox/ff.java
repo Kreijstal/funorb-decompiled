@@ -89,7 +89,7 @@ class ff implements dh, cc {
                 if (var12Lifetime1 == 1) {
                   this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
                 } else {
-                  if (!(var12Lifetime1 != 2)) {
+                  if ((var12Lifetime1 == 2)) {
                     this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
                   }
                 }
