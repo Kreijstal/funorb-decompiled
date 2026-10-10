@@ -868,75 +868,73 @@ final class PcmSampleStream extends PcmStream {
           }
           return;
         }
-        {
-          boolean finiteLoopSkippingContinues = true;
-          if (this.loopsRemaining > 0) {
-            if (!this.pingPongLoop) {
-              if (this.sampleStepFixed >= 0) {
-                if (this.samplePositionFixed < loopEndFixed) {
-                  return;
-                }
-                loopsCrossed = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
-                if (loopsCrossed >= this.loopsRemaining) {
-                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
-                  this.loopsRemaining = 0;
-                  finiteLoopSkippingContinues = false;
-                }
-                else {
-                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * loopsCrossed;
-                  this.loopsRemaining = this.loopsRemaining - loopsCrossed;
-                }
-              } else {
-                if (this.samplePositionFixed >= loopStartFixed) {
-                  return;
-                }
-                loopsCrossed = (loopEndFixed - 1 - this.samplePositionFixed) / loopSpanFixed;
-                if (loopsCrossed >= this.loopsRemaining) {
-                  this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * this.loopsRemaining;
-                  this.loopsRemaining = 0;
-                  finiteLoopSkippingContinues = false;
-                }
-                else {
-                  this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * loopsCrossed;
-                  this.loopsRemaining = this.loopsRemaining - loopsCrossed;
-                }
-              }
-              if (finiteLoopSkippingContinues) {
+        boolean finiteLoopSkippingContinues = true;
+        if (this.loopsRemaining > 0) {
+          if (!this.pingPongLoop) {
+            if (this.sampleStepFixed >= 0) {
+              if (this.samplePositionFixed < loopEndFixed) {
                 return;
+              }
+              loopsCrossed = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
+              if (loopsCrossed >= this.loopsRemaining) {
+                this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
+                this.loopsRemaining = 0;
+                finiteLoopSkippingContinues = false;
+              }
+              else {
+                this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * loopsCrossed;
+                this.loopsRemaining = this.loopsRemaining - loopsCrossed;
+              }
+            } else {
+              if (this.samplePositionFixed >= loopStartFixed) {
+                return;
+              }
+              loopsCrossed = (loopEndFixed - 1 - this.samplePositionFixed) / loopSpanFixed;
+              if (loopsCrossed >= this.loopsRemaining) {
+                this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * this.loopsRemaining;
+                this.loopsRemaining = 0;
+                finiteLoopSkippingContinues = false;
+              }
+              else {
+                this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * loopsCrossed;
+                this.loopsRemaining = this.loopsRemaining - loopsCrossed;
               }
             }
             if (finiteLoopSkippingContinues) {
-              if (this.sampleStepFixed < 0) {
+              return;
+            }
+          }
+          if (finiteLoopSkippingContinues) {
+            if (this.sampleStepFixed < 0) {
+              if (this.samplePositionFixed >= loopStartFixed) {
+                return;
+              }
+              this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              remainingAfterInitialBounce = this.loopsRemaining - 1;
+              this.loopsRemaining = this.loopsRemaining - 1;
+              finiteLoopSkippingContinues = (remainingAfterInitialBounce != 0);
+            }
+            if (finiteLoopSkippingContinues) {
+              do {
+                if (this.samplePositionFixed < loopEndFixed) {
+                  return;
+                }
+                this.samplePositionFixed = loopEndFixed + loopEndFixed - 1 - this.samplePositionFixed;
+                this.sampleStepFixed = -this.sampleStepFixed;
+                remainingAfterEndBounce = this.loopsRemaining - 1;
+                this.loopsRemaining = this.loopsRemaining - 1;
+                if (remainingAfterEndBounce == 0) {
+                  break;
+                }
                 if (this.samplePositionFixed >= loopStartFixed) {
                   return;
                 }
                 this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
                 this.sampleStepFixed = -this.sampleStepFixed;
-                remainingAfterInitialBounce = this.loopsRemaining - 1;
+                remainingAfterStartBounce = this.loopsRemaining - 1;
                 this.loopsRemaining = this.loopsRemaining - 1;
-                finiteLoopSkippingContinues = (remainingAfterInitialBounce != 0);
-              }
-              if (finiteLoopSkippingContinues) {
-                do {
-                  if (this.samplePositionFixed < loopEndFixed) {
-                    return;
-                  }
-                  this.samplePositionFixed = loopEndFixed + loopEndFixed - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  remainingAfterEndBounce = this.loopsRemaining - 1;
-                  this.loopsRemaining = this.loopsRemaining - 1;
-                  if (remainingAfterEndBounce == 0) {
-                    break;
-                  }
-                  if (this.samplePositionFixed >= loopStartFixed) {
-                    return;
-                  }
-                  this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  remainingAfterStartBounce = this.loopsRemaining - 1;
-                  this.loopsRemaining = this.loopsRemaining - 1;
-                } while (remainingAfterStartBounce != 0);
-              }
+              } while (remainingAfterStartBounce != 0);
             }
           }
         }
@@ -1162,80 +1160,78 @@ final class PcmSampleStream extends PcmStream {
             this.sampleStepFixed = -this.sampleStepFixed;
           }
         }
-        {
-          boolean finiteLoopMixingContinues = true;
-          if (this.loopsRemaining > 0) {
-            if (!this.pingPongLoop) {
-              if (this.sampleStepFixed < 0) {
-                while (true) {
-                  nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
-                  if (this.samplePositionFixed >= loopStartFixed) {
-                    return;
-                  }
-                  loopsCrossed = (loopEndFixed - 1 - this.samplePositionFixed) / loopSpanFixed;
-                  if (loopsCrossed < this.loopsRemaining) {
-                    this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * loopsCrossed;
-                    this.loopsRemaining = this.loopsRemaining - loopsCrossed;
-                    continue;
-                  }
-                  break;
+        boolean finiteLoopMixingContinues = true;
+        if (this.loopsRemaining > 0) {
+          if (!this.pingPongLoop) {
+            if (this.sampleStepFixed < 0) {
+              while (true) {
+                nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
+                if (this.samplePositionFixed >= loopStartFixed) {
+                  return;
                 }
-                this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * this.loopsRemaining;
-                this.loopsRemaining = 0;
-              } else {
-                while (true) {
-                  nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopStart]);
-                  if (this.samplePositionFixed < loopEndFixed) {
-                    return;
-                  }
-                  forwardLoopCrossingCount = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
-                  if (forwardLoopCrossingCount < this.loopsRemaining) {
-                    this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * forwardLoopCrossingCount;
-                    this.loopsRemaining = this.loopsRemaining - forwardLoopCrossingCount;
-                    continue;
-                  }
-                  break;
+                loopsCrossed = (loopEndFixed - 1 - this.samplePositionFixed) / loopSpanFixed;
+                if (loopsCrossed < this.loopsRemaining) {
+                  this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * loopsCrossed;
+                  this.loopsRemaining = this.loopsRemaining - loopsCrossed;
+                  continue;
                 }
-                this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
-                this.loopsRemaining = 0;
+                break;
               }
-              finiteLoopMixingContinues = false;
+              this.samplePositionFixed = this.samplePositionFixed + loopSpanFixed * this.loopsRemaining;
+              this.loopsRemaining = 0;
+            } else {
+              while (true) {
+                nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopStart]);
+                if (this.samplePositionFixed < loopEndFixed) {
+                  return;
+                }
+                forwardLoopCrossingCount = (this.samplePositionFixed - loopStartFixed) / loopSpanFixed;
+                if (forwardLoopCrossingCount < this.loopsRemaining) {
+                  this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * forwardLoopCrossingCount;
+                  this.loopsRemaining = this.loopsRemaining - forwardLoopCrossingCount;
+                  continue;
+                }
+                break;
+              }
+              this.samplePositionFixed = this.samplePositionFixed - loopSpanFixed * this.loopsRemaining;
+              this.loopsRemaining = 0;
             }
-            else {
-              if (this.sampleStepFixed < 0) {
+            finiteLoopMixingContinues = false;
+          }
+          else {
+            if (this.sampleStepFixed < 0) {
+              nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopStart]);
+              if (this.samplePositionFixed >= loopStartFixed) {
+                return;
+              }
+              this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
+              this.sampleStepFixed = -this.sampleStepFixed;
+              remainingAfterInitialBounce = this.loopsRemaining - 1;
+              this.loopsRemaining = this.loopsRemaining - 1;
+              finiteLoopMixingContinues = (remainingAfterInitialBounce != 0);
+            }
+            if (finiteLoopMixingContinues) {
+              do {
+                nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
+                if (this.samplePositionFixed < loopEndFixed) {
+                  return;
+                }
+                this.samplePositionFixed = loopEndFixed + loopEndFixed - 1 - this.samplePositionFixed;
+                this.sampleStepFixed = -this.sampleStepFixed;
+                remainingAfterEndBounce = this.loopsRemaining - 1;
+                this.loopsRemaining = this.loopsRemaining - 1;
+                if (remainingAfterEndBounce == 0) {
+                  break;
+                }
                 nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopStart]);
                 if (this.samplePositionFixed >= loopStartFixed) {
                   return;
                 }
                 this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
                 this.sampleStepFixed = -this.sampleStepFixed;
-                remainingAfterInitialBounce = this.loopsRemaining - 1;
+                remainingAfterStartBounce = this.loopsRemaining - 1;
                 this.loopsRemaining = this.loopsRemaining - 1;
-                finiteLoopMixingContinues = (remainingAfterInitialBounce != 0);
-              }
-              if (finiteLoopMixingContinues) {
-                do {
-                  nextDestinationOffset = this.mixForwardToBoundary(destination, nextDestinationOffset, loopEndFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
-                  if (this.samplePositionFixed < loopEndFixed) {
-                    return;
-                  }
-                  this.samplePositionFixed = loopEndFixed + loopEndFixed - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  remainingAfterEndBounce = this.loopsRemaining - 1;
-                  this.loopsRemaining = this.loopsRemaining - 1;
-                  if (remainingAfterEndBounce == 0) {
-                    break;
-                  }
-                  nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopStart]);
-                  if (this.samplePositionFixed >= loopStartFixed) {
-                    return;
-                  }
-                  this.samplePositionFixed = loopStartFixed + loopStartFixed - 1 - this.samplePositionFixed;
-                  this.sampleStepFixed = -this.sampleStepFixed;
-                  remainingAfterStartBounce = this.loopsRemaining - 1;
-                  this.loopsRemaining = this.loopsRemaining - 1;
-                } while (remainingAfterStartBounce != 0);
-              }
+              } while (remainingAfterStartBounce != 0);
             }
           }
         }

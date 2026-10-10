@@ -430,138 +430,101 @@ final class CachedArchiveSource extends ArchiveSource {
         int backgroundDownloadGroupId;
         ArchiveRequest completedCleanupRequest;
         IntrusiveNode verificationGroup;
-        {
-          boolean backgroundLoadingAndSweepFrameContinues = true;
-          {
-            boolean requestSweepDueCheckFrameContinues = true;
-            {
-              boolean completedRequestSweepFrameContinues = true;
-              {
-                boolean backgroundGroupLoadingFrameContinues = true;
-                unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
-                if (this.backgroundGroups != null) {
-                  if (null == this.getIndex((byte) 118)) {
-                    return;
-                  }
-                  if (this.verifyDiskCachePending) {
-                    phaseComplete = 1;
-                    backgroundGroup = this.backgroundGroups.firstForIteration(0);
-                    while (backgroundGroup != null) {
-                      groupId = (int)backgroundGroup.nodeKey;
-                      if (this.groupDiskStatus[groupId] == 0) {
-                        unusedQueuedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, groupId);
-                      }
-                      if (this.groupDiskStatus[groupId] != 0) {
-                        backgroundGroup.unlinkNode(false);
-                      } else {
-                        phaseComplete = 0;
-                      }
-                      backgroundGroup = this.backgroundGroups.nextForIteration(1);
-                    }
-                    while (this.backgroundGroupIndex < this.index.fileCounts.length) {
-                      if (0 == this.index.fileCounts[this.backgroundGroupIndex]) {
-                        this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                        continue;
-                      }
-                      if (this.diskWorker.queuedRequestCount < 250) {
-                        if (this.groupDiskStatus[this.backgroundGroupIndex] == 0) {
-                          unusedScannedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, this.backgroundGroupIndex);
-                        }
-                        if (0 == this.groupDiskStatus[this.backgroundGroupIndex]) {
-                          newVerificationGroup = new IntrusiveNode();
-                          newVerificationGroup.nodeKey = (long)this.backgroundGroupIndex;
-                          phaseComplete = 0;
-                          this.backgroundGroups.addLast(-45, newVerificationGroup);
-                        }
-                        this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                        continue;
-                      }
-                      phaseComplete = 0;
-                      break;
-                    }
-                    if ((phaseComplete != 0)) {
-                      this.backgroundGroupIndex = 0;
-                      this.verifyDiskCachePending = false;
-                    }
-                    backgroundGroupLoadingFrameContinues = false;
-                  }
-                  else {
-                    if (this.downloadAllPending) {
-                      backgroundDownloadPhaseComplete = 1;
-                      verificationGroup = this.backgroundGroups.firstForIteration(0);
-                      while (verificationGroup != null) {
-                        backgroundDownloadGroupId = (int)verificationGroup.nodeKey;
-                        if (this.groupDiskStatus[backgroundDownloadGroupId] != 1) {
-                          unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, backgroundDownloadGroupId);
-                        }
-                        if (this.groupDiskStatus[backgroundDownloadGroupId] != 1) {
-                          backgroundDownloadPhaseComplete = 0;
-                        } else {
-                          verificationGroup.unlinkNode(false);
-                        }
-                        verificationGroup = this.backgroundGroups.nextForIteration(1);
-                      }
-                      backgroundDownloadScanStep: while (true) {
-                        if (this.backgroundGroupIndex < this.index.fileCounts.length) {
-                          if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
-                            if (this.networkClient.isBackgroundQueueFull(-21)) {
-                              backgroundDownloadPhaseComplete = 0;
-                              break backgroundDownloadScanStep;
-                            }
-                            if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
-                              unusedScannedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, this.backgroundGroupIndex);
-                            }
-                            if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
-                              newDownloadGroup = new IntrusiveNode();
-                              newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
-                              backgroundDownloadPhaseComplete = 0;
-                              this.backgroundGroups.addLast(-97, newDownloadGroup);
-                            }
-                          }
-                          this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
-                          continue;
-                        }
-                        break;
-                      }
-                      if (backgroundDownloadPhaseComplete != 0) {
-                        this.downloadAllPending = false;
-                        this.backgroundGroupIndex = 0;
-                        backgroundGroupLoadingFrameContinues = false;
-                      }
-                      else {
-                        if (methodGuard != -38) {
-                          this.getPackedGroup(25, 41);
-                        }
-                        backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
-                        if (backgroundLoadingAndSweepFrameContinues) {
-                          requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
-                          if (requestSweepDueCheckFrameContinues) {
-                            cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                            while (cleanupRequest != null) {
-                              if (!cleanupRequest.pending) {
-                                if (cleanupRequest.seenByCleanup) {
-                                  if (!cleanupRequest.priority) {
-                                    throw new RuntimeException();
-                                  }
-                                  cleanupRequest.unlinkNode(false);
-                                } else {
-                                  cleanupRequest.seenByCleanup = true;
-                                }
-                              }
-                              cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
-                            }
-                            completedRequestSweepFrameContinues = false;
-                          }
-                        }
-                      }
-                    }
-                    if ((backgroundGroupLoadingFrameContinues) && (completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
-                      this.backgroundGroups = null;
-                    }
-                  }
-                }
+        boolean backgroundLoadingAndSweepFrameContinues = true;
+        boolean requestSweepDueCheckFrameContinues = true;
+        boolean completedRequestSweepFrameContinues = true;
+        boolean backgroundGroupLoadingFrameContinues = true;
+        unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
+        if (this.backgroundGroups != null) {
+          if (null == this.getIndex((byte) 118)) {
+            return;
+          }
+          if (this.verifyDiskCachePending) {
+            phaseComplete = 1;
+            backgroundGroup = this.backgroundGroups.firstForIteration(0);
+            while (backgroundGroup != null) {
+              groupId = (int)backgroundGroup.nodeKey;
+              if (this.groupDiskStatus[groupId] == 0) {
+                unusedQueuedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, groupId);
               }
-              if ((completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+              if (this.groupDiskStatus[groupId] != 0) {
+                backgroundGroup.unlinkNode(false);
+              } else {
+                phaseComplete = 0;
+              }
+              backgroundGroup = this.backgroundGroups.nextForIteration(1);
+            }
+            while (this.backgroundGroupIndex < this.index.fileCounts.length) {
+              if (0 == this.index.fileCounts[this.backgroundGroupIndex]) {
+                this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
+                continue;
+              }
+              if (this.diskWorker.queuedRequestCount < 250) {
+                if (this.groupDiskStatus[this.backgroundGroupIndex] == 0) {
+                  unusedScannedDiskVerificationRequest = this.getGroupRequest((byte) -71, 1, this.backgroundGroupIndex);
+                }
+                if (0 == this.groupDiskStatus[this.backgroundGroupIndex]) {
+                  newVerificationGroup = new IntrusiveNode();
+                  newVerificationGroup.nodeKey = (long)this.backgroundGroupIndex;
+                  phaseComplete = 0;
+                  this.backgroundGroups.addLast(-45, newVerificationGroup);
+                }
+                this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
+                continue;
+              }
+              phaseComplete = 0;
+              break;
+            }
+            if ((phaseComplete != 0)) {
+              this.backgroundGroupIndex = 0;
+              this.verifyDiskCachePending = false;
+            }
+            backgroundGroupLoadingFrameContinues = false;
+          }
+          else {
+            if (this.downloadAllPending) {
+              backgroundDownloadPhaseComplete = 1;
+              verificationGroup = this.backgroundGroups.firstForIteration(0);
+              while (verificationGroup != null) {
+                backgroundDownloadGroupId = (int)verificationGroup.nodeKey;
+                if (this.groupDiskStatus[backgroundDownloadGroupId] != 1) {
+                  unusedQueuedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, backgroundDownloadGroupId);
+                }
+                if (this.groupDiskStatus[backgroundDownloadGroupId] != 1) {
+                  backgroundDownloadPhaseComplete = 0;
+                } else {
+                  verificationGroup.unlinkNode(false);
+                }
+                verificationGroup = this.backgroundGroups.nextForIteration(1);
+              }
+              backgroundDownloadScanStep: while (true) {
+                if (this.backgroundGroupIndex < this.index.fileCounts.length) {
+                  if (this.index.fileCounts[this.backgroundGroupIndex] != 0) {
+                    if (this.networkClient.isBackgroundQueueFull(-21)) {
+                      backgroundDownloadPhaseComplete = 0;
+                      break backgroundDownloadScanStep;
+                    }
+                    if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
+                      unusedScannedBackgroundDownloadRequest = this.getGroupRequest((byte) -71, 2, this.backgroundGroupIndex);
+                    }
+                    if (this.groupDiskStatus[this.backgroundGroupIndex] != 1) {
+                      newDownloadGroup = new IntrusiveNode();
+                      newDownloadGroup.nodeKey = (long)this.backgroundGroupIndex;
+                      backgroundDownloadPhaseComplete = 0;
+                      this.backgroundGroups.addLast(-97, newDownloadGroup);
+                    }
+                  }
+                  this.backgroundGroupIndex = this.backgroundGroupIndex + 1;
+                  continue;
+                }
+                break;
+              }
+              if (backgroundDownloadPhaseComplete != 0) {
+                this.downloadAllPending = false;
+                this.backgroundGroupIndex = 0;
+                backgroundGroupLoadingFrameContinues = false;
+              }
+              else {
                 if (methodGuard != -38) {
                   this.getPackedGroup(25, 41);
                 }
@@ -569,29 +532,59 @@ final class CachedArchiveSource extends ArchiveSource {
                 if (backgroundLoadingAndSweepFrameContinues) {
                   requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
                   if (requestSweepDueCheckFrameContinues) {
-                    completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                    while (completedCleanupRequest != null) {
-                      if (!completedCleanupRequest.pending) {
-                        if (completedCleanupRequest.seenByCleanup) {
-                          if (!completedCleanupRequest.priority) {
+                    cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                    while (cleanupRequest != null) {
+                      if (!cleanupRequest.pending) {
+                        if (cleanupRequest.seenByCleanup) {
+                          if (!cleanupRequest.priority) {
                             throw new RuntimeException();
                           }
-                          completedCleanupRequest.unlinkNode(false);
+                          cleanupRequest.unlinkNode(false);
                         } else {
-                          completedCleanupRequest.seenByCleanup = true;
+                          cleanupRequest.seenByCleanup = true;
                         }
                       }
-                      completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
+                      cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                     }
+                    completedRequestSweepFrameContinues = false;
                   }
                 }
               }
             }
-            if ((backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
-              this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
+            if ((backgroundGroupLoadingFrameContinues) && (completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+              this.backgroundGroups = null;
             }
           }
         }
+        if ((completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+          if (methodGuard != -38) {
+            this.getPackedGroup(25, 41);
+          }
+          backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
+          if (backgroundLoadingAndSweepFrameContinues) {
+            requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
+            if (requestSweepDueCheckFrameContinues) {
+              completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+              while (completedCleanupRequest != null) {
+                if (!completedCleanupRequest.pending) {
+                  if (completedCleanupRequest.seenByCleanup) {
+                    if (!completedCleanupRequest.priority) {
+                      throw new RuntimeException();
+                    }
+                    completedCleanupRequest.unlinkNode(false);
+                  } else {
+                    completedCleanupRequest.seenByCleanup = true;
+                  }
+                }
+                completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
+              }
+            }
+          }
+        }
+        if ((backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+          this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
+        }
+
     }
 
     CachedArchiveSource(int archiveId, DiskArchiveCache groupDiskCache, DiskArchiveCache indexDiskCache, ArchiveNetworkClient networkClient, DiskCacheWorker diskWorker, int expectedIndexCrc32, byte[] expectedIndexWhirlpoolDigest, int expectedIndexRevision, boolean sweepCompletedRequests) {

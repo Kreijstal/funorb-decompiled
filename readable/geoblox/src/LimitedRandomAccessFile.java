@@ -102,40 +102,38 @@ final class LimitedRandomAccessFile {
               fullscreenTimeoutFailureReason = (FullscreenFailureReason) null;
             }
             for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
-              {
-                boolean signedNumberCharacterFrameContinues = true;
-                characterCodeThenSignedDigit = numberText.charAt(characterIndex);
-                if ((characterIndex == 0) && (45 == characterCodeThenSignedDigit)) {
-                  negativeNumberFlag = 1;
-                  signedNumberCharacterFrameContinues = false;
+              boolean signedNumberCharacterFrameContinues = true;
+              characterCodeThenSignedDigit = numberText.charAt(characterIndex);
+              if ((characterIndex == 0) && (45 == characterCodeThenSignedDigit)) {
+                negativeNumberFlag = 1;
+                signedNumberCharacterFrameContinues = false;
+              }
+              if ((signedNumberCharacterFrameContinues) && (characterIndex != 0 || (characterCodeThenSignedDigit != 43 ||
+                !allowLeadingPlus))) {
+                if (characterCodeThenSignedDigit >= 48 &&
+                  characterCodeThenSignedDigit <= 57) {
+                  characterCodeThenSignedDigit -= 48;
+                } else if (characterCodeThenSignedDigit >= 65 &&
+                  characterCodeThenSignedDigit <= 90) {
+                  characterCodeThenSignedDigit -= 55;
+                } else if (characterCodeThenSignedDigit >= 97 &&
+                  characterCodeThenSignedDigit <= 122) {
+                  characterCodeThenSignedDigit -= 87;
+                } else {
+                  return false;
                 }
-                if ((signedNumberCharacterFrameContinues) && (characterIndex != 0 || (characterCodeThenSignedDigit != 43 ||
-                  !allowLeadingPlus))) {
-                  if (characterCodeThenSignedDigit >= 48 &&
-                    characterCodeThenSignedDigit <= 57) {
-                    characterCodeThenSignedDigit -= 48;
-                  } else if (characterCodeThenSignedDigit >= 65 &&
-                    characterCodeThenSignedDigit <= 90) {
-                    characterCodeThenSignedDigit -= 55;
-                  } else if (characterCodeThenSignedDigit >= 97 &&
-                    characterCodeThenSignedDigit <= 122) {
-                    characterCodeThenSignedDigit -= 87;
-                  } else {
-                    return false;
-                  }
-                  if (characterCodeThenSignedDigit >= radix) {
-                    return false;
-                  }
-                  if (negativeNumberFlag != 0) {
-                    characterCodeThenSignedDigit = -characterCodeThenSignedDigit;
-                  }
-                  nextAccumulatedValue = accumulatedValue * radix + characterCodeThenSignedDigit;
-                  if (accumulatedValue != nextAccumulatedValue / radix) {
-                    return false;
-                  }
-                  accumulatedValue = nextAccumulatedValue;
-                  hasDigitFlag = 1;
+                if (characterCodeThenSignedDigit >= radix) {
+                  return false;
                 }
+                if (negativeNumberFlag != 0) {
+                  characterCodeThenSignedDigit = -characterCodeThenSignedDigit;
+                }
+                nextAccumulatedValue = accumulatedValue * radix + characterCodeThenSignedDigit;
+                if (accumulatedValue != nextAccumulatedValue / radix) {
+                  return false;
+                }
+                accumulatedValue = nextAccumulatedValue;
+                hasDigitFlag = 1;
               }
             }
             hasDigitsBeforeReturn = hasDigitFlag;

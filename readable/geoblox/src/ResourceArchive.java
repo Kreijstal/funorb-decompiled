@@ -427,22 +427,20 @@ final class ResourceArchive {
           if (allFilesPresent != 0) {
             return true;
           }
-          {
-            boolean packedGroupDecryptionSelectionFrameContinues = true;
-            if (decryptionKey != null && (decryptionKey[0] != 0 ||
-              decryptionKey[1] != 0 ||
-              decryptionKey[2] != 0 ||
-              0 != decryptionKey[3])) {
-              copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
-              packedBytesForDecryption = copiedPackedBytes;
-              packedBytes = packedBytesForDecryption;
-              encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
-              encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
-              packedGroupDecryptionSelectionFrameContinues = false;
-            }
-            else {
-              packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
-            }
+          boolean packedGroupDecryptionSelectionFrameContinues = true;
+          if (decryptionKey != null && (decryptionKey[0] != 0 ||
+            decryptionKey[1] != 0 ||
+            decryptionKey[2] != 0 ||
+            0 != decryptionKey[3])) {
+            copiedPackedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(true, methodGuard ^ -114, this.packedGroups[groupId]);
+            packedBytesForDecryption = copiedPackedBytes;
+            packedBytes = packedBytesForDecryption;
+            encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
+            encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
+            packedGroupDecryptionSelectionFrameContinues = false;
+          }
+          else {
+            packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
           }
           if (methodGuard != 4) {
             return false;

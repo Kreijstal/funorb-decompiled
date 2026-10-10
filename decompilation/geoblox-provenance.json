@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "29e0bfb12d4e9f0878695f8c35e9b95e615c585c",
+      "commit": "18405a936e16be4a0ea2b57de8a21f0fc80737a6",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "2663847c4a0ee70bbdfad4d01a02fa3d327bb6e1ed7f625fdb0ab22e876e7241",
-        "reproduce": "git archive --format=tar 29e0bfb12d4e9f0878695f8c35e9b95e615c585c | sha256sum",
+        "sha256": "a12d32c26f96b34d4812217177a6b3e75d1f49858054a622fd1c455da2b8fadf",
+        "reproduce": "git archive --format=tar 18405a936e16be4a0ea2b57de8a21f0fc80737a6 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -50,7 +50,8 @@
         "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
         "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
         "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
-        "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1"
+        "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
+        "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1"
       }
     },
     "namingTool": {
@@ -158,7 +159,8 @@
       "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
       "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
       "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
-      "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1"
+      "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
+      "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1"
     }
   },
   "freshVerification": {
@@ -3353,11 +3355,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "99922c01189267f00fcf0a9fa9cb583238749560",
+    "commit": "3365dc162dce4aa5b34f28d2853eec1fec980997",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "99d935113a56ebd4187c460e2c4ec78bbb7f2f53a26b15f06fecda78fe59f7e3"
+      "sha256": "b90c725c27cfd2e0de45ada7bcc890ccddea75e6a66f21f2f0af3f764328ebbc"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3367,7 +3369,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "6e3bca72ef23338faecfdeb2edacabb85b7050ef2a36fc9680e6765e7fcd8e99",
+    "outputTreeSha256": "833a88857692d67b0fee9751aa417a0b32a10f360df25f52ec9c08aa6010a84a",
     "files": 303,
     "rules": 20133,
     "identifierEdits": 122233,
@@ -3397,8 +3399,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 268,
-    "semanticPass": 268,
+    "structuralPass": 269,
+    "semanticPass": 269,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36877,8 +36879,8 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
     "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
-    "sourceCommit": "d32977ca279b28b1728acd520499982e1b905250",
-    "sourceTreeSha256": "3e278a1b90cd9d29dbd9336f4a2842c1f07d040e078388c3cdd5cbf96c2146fd",
+    "sourceCommit": "ca60d3cb76991b3d390a9947b78cef511e9c44ad",
+    "sourceTreeSha256": "31b75effd73b3f53b2878ebbc8cb4d658ce6399b88e714cb3ec497fe6d717b08",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
@@ -36890,7 +36892,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "99922c01189267f00fcf0a9fa9cb583238749560"
+    "workflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -56663,5 +56665,387 @@
     "fieldObservationsPreserved": true,
     "sourceWorkflowCommit": "99922c01189267f00fcf0a9fa9cb583238749560",
     "sourceProofWorkflowCommit": "99922c01189267f00fcf0a9fa9cb583238749560"
+  },
+  "uniqueDeclarationBlockRecovery": {
+    "version": 269,
+    "files": 303,
+    "changedFiles": 32,
+    "changedMethods": 54,
+    "blocksFlattened": 84,
+    "linesBefore": 76870,
+    "linesAfter": 76703,
+    "bindingsCompared": 138168,
+    "transfersCompared": 4757,
+    "independentlyComparedAstFiles": 303,
+    "allOriginalActionsValuesBindingsAndProtectedTransfersPreserved": true,
+    "sourceTreeSha256": "31b75effd73b3f53b2878ebbc8cb4d658ce6399b88e714cb3ec497fe6d717b08",
+    "selections": [
+      {
+        "file": "Geoblox.java",
+        "methodStart": 21341,
+        "blocks": 1
+      },
+      {
+        "file": "ab.java",
+        "methodStart": 5781,
+        "blocks": 1
+      },
+      {
+        "file": "ad.java",
+        "methodStart": 5376,
+        "blocks": 1
+      },
+      {
+        "file": "ai.java",
+        "methodStart": 1308,
+        "blocks": 1
+      },
+      {
+        "file": "ba.java",
+        "methodStart": 6526,
+        "blocks": 1
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "blocks": 4
+      },
+      {
+        "file": "c.java",
+        "methodStart": 93808,
+        "blocks": 2
+      },
+      {
+        "file": "c.java",
+        "methodStart": 85789,
+        "blocks": 2
+      },
+      {
+        "file": "c.java",
+        "methodStart": 84249,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 74462,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 64846,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 54622,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 41927,
+        "blocks": 2
+      },
+      {
+        "file": "c.java",
+        "methodStart": 35984,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 29288,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 12314,
+        "blocks": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "blocks": 2
+      },
+      {
+        "file": "cd.java",
+        "methodStart": 9696,
+        "blocks": 1
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "blocks": 5
+      },
+      {
+        "file": "d.java",
+        "methodStart": 1473,
+        "blocks": 1
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 589,
+        "blocks": 1
+      },
+      {
+        "file": "ff.java",
+        "methodStart": 1717,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 60404,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 58637,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 51728,
+        "blocks": 3
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 49511,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42367,
+        "blocks": 9
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 40991,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19033,
+        "blocks": 4
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 4303,
+        "blocks": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 1603,
+        "blocks": 1
+      },
+      {
+        "file": "i.java",
+        "methodStart": 8987,
+        "blocks": 1
+      },
+      {
+        "file": "i.java",
+        "methodStart": 3221,
+        "blocks": 1
+      },
+      {
+        "file": "jh.java",
+        "methodStart": 6889,
+        "blocks": 1
+      },
+      {
+        "file": "ka.java",
+        "methodStart": 4217,
+        "blocks": 1
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1820,
+        "blocks": 5
+      },
+      {
+        "file": "ki.java",
+        "methodStart": 184,
+        "blocks": 1
+      },
+      {
+        "file": "kk.java",
+        "methodStart": 414,
+        "blocks": 1
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 39563,
+        "blocks": 1
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 29354,
+        "blocks": 1
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2620,
+        "blocks": 1
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 886,
+        "blocks": 1
+      },
+      {
+        "file": "pg.java",
+        "methodStart": 688,
+        "blocks": 1
+      },
+      {
+        "file": "r.java",
+        "methodStart": 3804,
+        "blocks": 1
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 10652,
+        "blocks": 1
+      },
+      {
+        "file": "ri.java",
+        "methodStart": 144,
+        "blocks": 1
+      },
+      {
+        "file": "sa.java",
+        "methodStart": 179,
+        "blocks": 1
+      },
+      {
+        "file": "sd.java",
+        "methodStart": 2051,
+        "blocks": 1
+      },
+      {
+        "file": "sk.java",
+        "methodStart": 2483,
+        "blocks": 1
+      },
+      {
+        "file": "uf.java",
+        "methodStart": 9784,
+        "blocks": 1
+      },
+      {
+        "file": "wf.java",
+        "methodStart": 6878,
+        "blocks": 1
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 36260,
+        "blocks": 1
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 19635,
+        "blocks": 3
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 17607,
+        "blocks": 1
+      }
+    ],
+    "sourceProofTest": "readable/tests/test-geoblox-unique-blocks-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "35dafae6eee10cc45d005f67b014ea32294a1a4b25b9137063fa803baee2da79",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "d32977ca279b28b1728acd520499982e1b905250",
+    "sourceCommit": "ca60d3cb76991b3d390a9947b78cef511e9c44ad",
+    "previousSourceTreeSha256": "3e278a1b90cd9d29dbd9336f4a2842c1f07d040e078388c3cdd5cbf96c2146fd",
+    "javaToolsCommit": "18405a936e16be4a0ea2b57de8a21f0fc80737a6",
+    "sourceArchiveSha256": "a12d32c26f96b34d4812217177a6b3e75d1f49858054a622fd1c455da2b8fadf",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
+      "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
+      "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
+      "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
+      "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
+      "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
+      "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1"
+    },
+    "genericFocusedTestGroupsPassed": 4,
+    "existingStandaloneBlockTestGroupsPassed": 5,
+    "newIndependentNativeOracleCases": 116640,
+    "existingIndependentNativeOracleCases": 38880,
+    "allUniqueDeclarationsAndOutsideLookupIndependentlyAttributed": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "completeRulesPreserved": 20133,
+    "dictionaryIdentitiesPreserved": 20440,
+    "historicalSourceProofsPreserved": 111,
+    "historicalRecordsPreserved": 193,
+    "ordinalMigrations": 0,
+    "readableIdentifierEdits": 122233,
+    "readableTotalEdits": 122320,
+    "plainBlockLabelsAfter": 0,
+    "remainingLargeFramedMethods": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "d32977ca279b28b1728acd520499982e1b905250",
+      "sourceTreeSha256": "3e278a1b90cd9d29dbd9336f4a2842c1f07d040e078388c3cdd5cbf96c2146fd",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "99922c01189267f00fcf0a9fa9cb583238749560"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Remove 84 independent declaration wrappers in 54 methods/32 files, saving 167 lines. Promoted local names each have one declaration and no outside identifier use or formal collision. Independent javac verifies direct-block topology, unique declarations and outside lookup, compares all complete ordered syntax modulo only selected wrappers, and retains every binding, override and protected transfer. Declarations, initialization, snapshots, stores, complete work and branch/loop/label/protected boundaries remain. Seven achievement continuation scopes flatten to their enclosing work scope. All clean compiler differences equal independently verified source edits. No names or historical proofs change. Forty-one finer field purposes and long ordinary methods remain. Whole-game/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "fieldObservationsPreserved": true,
+    "sourceWorkflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997",
+    "sourceProofWorkflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997"
   }
 }

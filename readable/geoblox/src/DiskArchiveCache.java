@@ -236,56 +236,54 @@ final class DiskArchiveCache {
                 chunkNumber = 0;
                 cacheSectorWriteStep: while (true) {
                   if (length > bytesWritten) {
-                    {
-                      boolean existingSectorHeaderValidationFrameContinues = true;
-                      nextSectorNumber = 0;
-                      if (reuseExistingChain) {
-                        this.dataFile.seek(methodGuard - 191, (long)(520 * sectorNumber));
-                        if (65535 >= entryId) {
-                          try {
-                            this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 8, 0, 9868);
-                            smallHeaderEofState = 0;
-                          } catch (java.io.EOFException smallHeaderEofException) {
-                            caughtWriteFailure = smallHeaderEofException;
-                            headerEofFailure = (EOFException) (Object) caughtWriteFailure;
-                            smallHeaderEofState = 1;
-                          }
-                          if (smallHeaderEofState != 0) {
-                            break cacheSectorWriteStep;
-                          }
-                          headerEntryIdOrPayloadLength = ((255 & TextInputWidget.diskSectorBuffer[0]) << 8) + (255 & TextInputWidget.diskSectorBuffer[1]);
-                          headerChunkNumber = (TextInputWidget.diskSectorBuffer[3] & 255) + ((255 & TextInputWidget.diskSectorBuffer[2]) << 8);
-                          headerArchiveId = 255 & TextInputWidget.diskSectorBuffer[7];
-                          nextSectorNumber = (TextInputWidget.diskSectorBuffer[6] & 255) + ((65280 & TextInputWidget.diskSectorBuffer[5] << 8) + (16711680 & TextInputWidget.diskSectorBuffer[4] << 16));
-                        } else {
-                          try {
-                            this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 10, 0, 9868);
-                            largeHeaderEofState = 0;
-                          } catch (java.io.EOFException largeHeaderEofException) {
-                            caughtWriteFailure = largeHeaderEofException;
-                            headerEofFailure = (EOFException) (Object) caughtWriteFailure;
-                            largeHeaderEofState = 1;
-                          }
-                          if (largeHeaderEofState != 0) {
-                            break cacheSectorWriteStep;
-                          }
-                          headerEntryIdOrPayloadLength = (65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 24) + (((TextInputWidget.diskSectorBuffer[1] & 255) << 16) + (255 & TextInputWidget.diskSectorBuffer[3])));
-                          headerArchiveId = TextInputWidget.diskSectorBuffer[9] & 255;
-                          nextSectorNumber = (TextInputWidget.diskSectorBuffer[8] & 255) + ((255 & TextInputWidget.diskSectorBuffer[6]) << 16) + (65280 & TextInputWidget.diskSectorBuffer[7] << 8);
-                          headerChunkNumber = (TextInputWidget.diskSectorBuffer[4] << 8 & 65280) + (255 & TextInputWidget.diskSectorBuffer[5]);
+                    boolean existingSectorHeaderValidationFrameContinues = true;
+                    nextSectorNumber = 0;
+                    if (reuseExistingChain) {
+                      this.dataFile.seek(methodGuard - 191, (long)(520 * sectorNumber));
+                      if (65535 >= entryId) {
+                        try {
+                          this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 8, 0, 9868);
+                          smallHeaderEofState = 0;
+                        } catch (java.io.EOFException smallHeaderEofException) {
+                          caughtWriteFailure = smallHeaderEofException;
+                          headerEofFailure = (EOFException) (Object) caughtWriteFailure;
+                          smallHeaderEofState = 1;
                         }
-                        if (headerEntryIdOrPayloadLength == entryId &&
-                          chunkNumber == headerChunkNumber &&
-                          headerArchiveId == this.archiveId) {
-                          existingSectorHeaderValidationFrameContinues = (!(nextSectorNumber >= 0) ||
-                            !((this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber));
-                          if (existingSectorHeaderValidationFrameContinues) {
-                            return false;
-                          }
+                        if (smallHeaderEofState != 0) {
+                          break cacheSectorWriteStep;
                         }
+                        headerEntryIdOrPayloadLength = ((255 & TextInputWidget.diskSectorBuffer[0]) << 8) + (255 & TextInputWidget.diskSectorBuffer[1]);
+                        headerChunkNumber = (TextInputWidget.diskSectorBuffer[3] & 255) + ((255 & TextInputWidget.diskSectorBuffer[2]) << 8);
+                        headerArchiveId = 255 & TextInputWidget.diskSectorBuffer[7];
+                        nextSectorNumber = (TextInputWidget.diskSectorBuffer[6] & 255) + ((65280 & TextInputWidget.diskSectorBuffer[5] << 8) + (16711680 & TextInputWidget.diskSectorBuffer[4] << 16));
+                      } else {
+                        try {
+                          this.dataFile.readFully(TextInputWidget.diskSectorBuffer, 10, 0, 9868);
+                          largeHeaderEofState = 0;
+                        } catch (java.io.EOFException largeHeaderEofException) {
+                          caughtWriteFailure = largeHeaderEofException;
+                          headerEofFailure = (EOFException) (Object) caughtWriteFailure;
+                          largeHeaderEofState = 1;
+                        }
+                        if (largeHeaderEofState != 0) {
+                          break cacheSectorWriteStep;
+                        }
+                        headerEntryIdOrPayloadLength = (65280 & TextInputWidget.diskSectorBuffer[2] << 8) + (((255 & TextInputWidget.diskSectorBuffer[0]) << 24) + (((TextInputWidget.diskSectorBuffer[1] & 255) << 16) + (255 & TextInputWidget.diskSectorBuffer[3])));
+                        headerArchiveId = TextInputWidget.diskSectorBuffer[9] & 255;
+                        nextSectorNumber = (TextInputWidget.diskSectorBuffer[8] & 255) + ((255 & TextInputWidget.diskSectorBuffer[6]) << 16) + (65280 & TextInputWidget.diskSectorBuffer[7] << 8);
+                        headerChunkNumber = (TextInputWidget.diskSectorBuffer[4] << 8 & 65280) + (255 & TextInputWidget.diskSectorBuffer[5]);
+                      }
+                      if (headerEntryIdOrPayloadLength == entryId &&
+                        chunkNumber == headerChunkNumber &&
+                        headerArchiveId == this.archiveId) {
+                        existingSectorHeaderValidationFrameContinues = (!(nextSectorNumber >= 0) ||
+                          !((this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber));
                         if (existingSectorHeaderValidationFrameContinues) {
                           return false;
                         }
+                      }
+                      if (existingSectorHeaderValidationFrameContinues) {
+                        return false;
                       }
                     }
                     if (nextSectorNumber == 0) {

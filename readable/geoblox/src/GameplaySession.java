@@ -77,28 +77,26 @@ final class GameplaySession {
         if (0 != this.tutorialStepPhase) {
           return;
         }
-        {
-          boolean tutorialPromptPlacementContinues = true;
-          promptText = UsernameAvailabilityValidator.tutorialMessageForStep(this.tutorialStepId, 24146);
-          lineSpacing = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent + lineSpacingOffset;
-          promptWidthThenButtonX = 460;
-          promptHeight = 30 + IntrusiveNodeHashTable.smallFont.countWrappedLines(promptText, promptWidthThenButtonX) * lineSpacing;
-          promptTop = 300;
-          if (this.tutorialStepId == 0) {
-            promptTop = 232;
-            tutorialPromptPlacementContinues = (clientControlFlowGuard != 0);
-          }
-          if (tutorialPromptPlacementContinues) {
-            if (this.tutorialStepId != 3) {
-              if (1 == this.tutorialStepId) {
-                promptTop = 280;
-                if (clientControlFlowGuard != 0) {
-                  promptTop = 270;
-                }
+        boolean tutorialPromptPlacementContinues = true;
+        promptText = UsernameAvailabilityValidator.tutorialMessageForStep(this.tutorialStepId, 24146);
+        lineSpacing = IntrusiveNodeHashTable.smallFont.maxAscent - IntrusiveNodeHashTable.smallFont.maxDescent + lineSpacingOffset;
+        promptWidthThenButtonX = 460;
+        promptHeight = 30 + IntrusiveNodeHashTable.smallFont.countWrappedLines(promptText, promptWidthThenButtonX) * lineSpacing;
+        promptTop = 300;
+        if (this.tutorialStepId == 0) {
+          promptTop = 232;
+          tutorialPromptPlacementContinues = (clientControlFlowGuard != 0);
+        }
+        if (tutorialPromptPlacementContinues) {
+          if (this.tutorialStepId != 3) {
+            if (1 == this.tutorialStepId) {
+              promptTop = 280;
+              if (clientControlFlowGuard != 0) {
+                promptTop = 270;
               }
-            } else {
-              promptTop = 270;
             }
+          } else {
+            promptTop = 270;
           }
         }
         DelayedIncomingPacket.drawNineSlicePanel(promptTop, 70, 10 + promptHeight, (byte) -92, 500, GameGraphicsResources.frameNineSliceSprites);
@@ -172,23 +170,21 @@ final class GameplaySession {
             }
             allowedUrlCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
             urlCharacterIndex = 0;
-            {
-              boolean urlCharactersValidated = false;
-              while (!(urlCharactersValidated = (!(url.length() > urlCharacterIndex)))) {
-                allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
-                if (clientControlFlowGuard == 0) {
-                  if (allowedCharacterIndexOrSuccessFlag == -1) {
-                    return false;
-                  }
-                  urlCharacterIndex++;
-                  continue;
+            boolean urlCharactersValidated = false;
+            while (!(urlCharactersValidated = (!(url.length() > urlCharacterIndex)))) {
+              allowedCharacterIndexOrSuccessFlag = allowedUrlCharacters.indexOf((int) url.charAt(urlCharacterIndex));
+              if (clientControlFlowGuard == 0) {
+                if (allowedCharacterIndexOrSuccessFlag == -1) {
+                  return false;
                 }
-                break;
+                urlCharacterIndex++;
+                continue;
               }
-              if (urlCharactersValidated) {
-                Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
-                allowedCharacterIndexOrSuccessFlag = 1;
-              }
+              break;
+            }
+            if (urlCharactersValidated) {
+              Runtime.getRuntime().exec("cmd /c start \"j\" \"" + url + "\"");
+              allowedCharacterIndexOrSuccessFlag = 1;
             }
             return allowedCharacterIndexOrSuccessFlag != 0;
           } catch (java.lang.Exception caughtLaunchException) {
@@ -606,502 +602,494 @@ final class GameplaySession {
             this.pointsPanelX = this.pointsPanelX - 1;
           }
         }
-        {
-          boolean sessionProgressionAndEndingFrameContinues = true;
-          boolean advanceEndingSequence = (this.sessionEnding);
-          if (!advanceEndingSequence) {
-            if ((EntityContactSupport.areEntityQueuesSettled(0) &&
-              !this.matchBatchProcessedThisTick ||
-              !this.preserveScoreOnTransition) &&
-              this.canAdvanceSession(true)) {
-              if (0 == this.sessionPhase ||
-                this.sessionPhase == 5) {
-                sessionProgressionAndEndingFrameContinues = (this.sceneTransitionRequested);
-                if (sessionProgressionAndEndingFrameContinues) {
-                  this.updateSceneTransition((byte) -80);
-                  sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
-                }
-              }
+        boolean sessionProgressionAndEndingFrameContinues = true;
+        boolean advanceEndingSequence = (this.sessionEnding);
+        if (!advanceEndingSequence) {
+          if ((EntityContactSupport.areEntityQueuesSettled(0) &&
+            !this.matchBatchProcessedThisTick ||
+            !this.preserveScoreOnTransition) &&
+            this.canAdvanceSession(true)) {
+            if (0 == this.sessionPhase ||
+              this.sessionPhase == 5) {
+              sessionProgressionAndEndingFrameContinues = (this.sceneTransitionRequested);
               if (sessionProgressionAndEndingFrameContinues) {
-                this.updateResultSequence(10);
+                this.updateSceneTransition((byte) -80);
                 sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
               }
             }
             if (sessionProgressionAndEndingFrameContinues) {
-              if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
-                return;
-              }
-              if (!this.rotationControlsSwapped && clientControlFlowGuard == 0) {
-                negativeRotationKeyCode = 96;
-                positiveRotationKeyCode = 97;
-              } else {
-                positiveRotationKeyCode = 96;
-                negativeRotationKeyCode = 97;
-              }
-              if (MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
-                this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
-                ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
-                inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
-                switch (inputDerivedModuloIndex) {
-                  case 0:
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+              this.updateResultSequence(10);
+              sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
+            }
+          }
+          if (sessionProgressionAndEndingFrameContinues) {
+            if (!GameGraphicsResources.themesLoaded[GameScreen.selectedThemeId]) {
+              return;
+            }
+            if (!this.rotationControlsSwapped && clientControlFlowGuard == 0) {
+              negativeRotationKeyCode = 96;
+              positiveRotationKeyCode = 97;
+            } else {
+              positiveRotationKeyCode = 96;
+              negativeRotationKeyCode = 97;
+            }
+            if (MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
+              this.boardAngleRadians = this.boardAngleRadians - DualLinkNode.rotationStepRadians;
+              ScorePopup.setAvatarNegativeRotationSteering((byte) 38);
+              inputDerivedModuloIndex = (SessionTextHistorySupport.currentKeyboardEventCode + ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot) % 8;
+              switch (inputDerivedModuloIndex) {
+                case 0:
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                  break;
+                case 1:
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                  break;
+                case 3:
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                  break;
+                case 4:
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                  break;
+                case 5:
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                  break;
+                case 6:
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                default:
+                  break;
+                case 7:
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                  if (clientControlFlowGuard == 0) {
                     break;
-                  case 1:
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                    break;
-                  case 3:
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                    break;
-                  case 4:
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                    break;
-                  case 5:
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    break;
-                  case 6:
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  default:
-                    break;
-                  case 7:
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 2:
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                    break;
-                }
-                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-                switch (inputDerivedModuloIndex) {
-                  case 0:
-                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
-                    break;
-                  case 3:
-                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                  default:
-                    break;
-                  case 4:
-                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 2:
-                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 1:
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
-                    break;
-                }
-                if (this.tutorialStepId == 0) {
-                  this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-                }
-              }
-              if (MidiPcmStream.heldInternalKeys[positiveRotationKeyCode]) {
-                this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
-                SecondaryDeque.setAvatarPositiveRotationSteering((byte) 74);
-                if (this.tutorialStepId == 0) {
-                  this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
-                }
-                inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
-                switch (inputDerivedModuloIndex) {
-                  case 3:
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                    break;
-                  case 4:
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                    break;
-                  case 5:
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    break;
-                  case 6:
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                  default:
-                    break;
-                  case 7:
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                    SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 2:
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 1:
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
-                    UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 0:
-                    DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
-                    ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
-                    break;
-                }
-                inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
-                switch (inputDerivedModuloIndex) {
-                  case 3:
-                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  default:
-                    break;
-                  case 4:
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
-                    AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 2:
-                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 1:
-                    SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
-                    UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
-                    if (clientControlFlowGuard == 0) {
-                      break;
-                    }
-                  case 0:
-                    AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
-                    break;
-                }
-              }
-              {
-                boolean rotationKeySnapshotEnabled = true;
-                if (MidiPcmStream.heldInternalKeys[99] &&
-                  !this.tutorialPromptActive) {
-                  fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
-                  while (null != fastForwardEntity) {
-                    detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
-                    if (clientControlFlowGuard != 0) {
-                      rotationKeySnapshotEnabled = false;
-                      break;
-                    }
-                    if (!detachedEntityOrPositiveRotationKeySnapshot) {
-                      fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
-                      fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
-                      break;
-                    }
-                    fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
                   }
-                }
-                if (rotationKeySnapshotEnabled) {
-                  detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
-                }
+                case 2:
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                  break;
               }
-              if (!detachedEntityOrPositiveRotationKeySnapshot &&
-                !MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
-                WeightedObjectCache.clearAvatarSteering(-106);
+              inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + FullscreenFocusCanvas.pointerPressYSnapshot + PrefixCodeDecoder.pointerXSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+              switch (inputDerivedModuloIndex) {
+                case 0:
+                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | SessionInstanceState.secondaryAchievementTrackingCounter + UiWidget.achievementTrackingAccumulator << 17;
+                  break;
+                case 3:
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                default:
+                  break;
+                case 4:
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 2:
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 1:
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                  break;
               }
-              this.delayedActionCountdown = this.delayedActionCountdown - 1;
-              if (this.delayedActionCountdown == 0) {
-                PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
+              if (this.tutorialStepId == 0) {
+                this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
               }
-              nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
-              this.boardClearBonusEligible = nextBoardClearBonusEligible;
-              if (this.boardClearBonusEligible &&
-                this.connectivityRebuiltThisTick) {
-                this.connectivityRebuiltThisTick = false;
-                this.delayedActionCountdown = 300;
-                this.boardClearBonusEligible = false;
-                SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
+            }
+            if (MidiPcmStream.heldInternalKeys[positiveRotationKeyCode]) {
+              this.boardAngleRadians = this.boardAngleRadians + DualLinkNode.rotationStepRadians;
+              SecondaryDeque.setAvatarPositiveRotationSteering((byte) 74);
+              if (this.tutorialStepId == 0) {
+                this.tutorialProgressMetric = this.tutorialProgressMetric + 1;
+              }
+              inputDerivedModuloIndex = (FullscreenFocusCanvas.pointerPressYSnapshot + (PrefixCodeDecoder.pointerXSnapshot + ClientFlowState.inputAndScoreContextSelectorSeed) + SessionTextHistorySupport.currentKeyboardEventCode) % 8;
+              switch (inputDerivedModuloIndex) {
+                case 3:
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                  break;
+                case 4:
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                  break;
+                case 5:
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter + 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                  break;
+                case 6:
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                default:
+                  break;
+                case 7:
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                  SpriteButtonRenderer.secondScoreContextAccumulator = SpriteButtonRenderer.secondScoreContextAccumulator - DequeCursor.fourthScoreContextCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 2:
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter + 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator - UsernameResponseSupport.thirdScoreContextCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 1:
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + DequeCursor.fourthScoreContextCounter;
+                  UsernameResponseSupport.thirdScoreContextCounter = UsernameResponseSupport.thirdScoreContextCounter - 1;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 0:
+                  DequeCursor.fourthScoreContextCounter = DequeCursor.fourthScoreContextCounter - 1;
+                  ClientClockSupport.firstScoreContextAccumulator = ClientClockSupport.firstScoreContextAccumulator + UsernameResponseSupport.thirdScoreContextCounter;
+                  break;
+              }
+              inputDerivedModuloIndex = (ClientFlowState.inputAndScoreContextSelectorSeed + PrefixCodeDecoder.pointerXSnapshot + FullscreenFocusCanvas.pointerPressYSnapshot + SessionTextHistorySupport.currentKeyboardEventCode) % 5;
+              switch (inputDerivedModuloIndex) {
+                case 3:
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter + 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                default:
+                  break;
+                case 4:
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - SessionInstanceState.secondaryAchievementTrackingCounter;
+                  AwtRasterBuffer.primaryAchievementTrackingCounter = AwtRasterBuffer.primaryAchievementTrackingCounter - 1;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 2:
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter - 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator - AwtRasterBuffer.primaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 1:
+                  SessionInstanceState.secondaryAchievementTrackingCounter = SessionInstanceState.secondaryAchievementTrackingCounter + 1;
+                  UiWidget.achievementTrackingAccumulator = UiWidget.achievementTrackingAccumulator + AwtRasterBuffer.primaryAchievementTrackingCounter;
+                  if (clientControlFlowGuard == 0) {
+                    break;
+                  }
+                case 0:
+                  AttachedEntityRenderer.achievementTrackingBits = AttachedEntityRenderer.achievementTrackingBits | UiWidget.achievementTrackingAccumulator + SessionInstanceState.secondaryAchievementTrackingCounter << 17;
+                  break;
+              }
+            }
+            boolean rotationKeySnapshotEnabled = true;
+            if (MidiPcmStream.heldInternalKeys[99] &&
+              !this.tutorialPromptActive) {
+              fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
+              while (null != fastForwardEntity) {
+                detachedEntityOrPositiveRotationKeySnapshot = fastForwardEntity.detachedFromBoard;
                 if (clientControlFlowGuard != 0) {
-                  this.connectivityRebuiltThisTick = false;
+                  rotationKeySnapshotEnabled = false;
+                  break;
                 }
-              } else {
+                if (!detachedEntityOrPositiveRotationKeySnapshot) {
+                  fastForwardEntity.positionY = fastForwardEntity.positionY + 4.0f * fastForwardEntity.velocityY;
+                  fastForwardEntity.positionX = fastForwardEntity.positionX + 4.0f * fastForwardEntity.velocityX;
+                  break;
+                }
+                fastForwardEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
+              }
+            }
+            if (rotationKeySnapshotEnabled) {
+              detachedEntityOrPositiveRotationKeySnapshot = MidiPcmStream.heldInternalKeys[positiveRotationKeyCode];
+            }
+            if (!detachedEntityOrPositiveRotationKeySnapshot &&
+              !MidiPcmStream.heldInternalKeys[negativeRotationKeyCode]) {
+              WeightedObjectCache.clearAvatarSteering(-106);
+            }
+            this.delayedActionCountdown = this.delayedActionCountdown - 1;
+            if (this.delayedActionCountdown == 0) {
+              PlayfieldRules.spawnPointsPopup(310, 320, 123, 100 + 100 * ArchiveNetworkClient.difficultyStep);
+            }
+            nextBoardClearBonusEligible = (!MessageDialogSupport.entitiesDetachedThisTick) && (BoardEntityState.attachedEntities.isEmpty(13519)) && (0 < MatchCandidateSupport.releasedInCurrentTheme);
+            this.boardClearBonusEligible = nextBoardClearBonusEligible;
+            if (this.boardClearBonusEligible &&
+              this.connectivityRebuiltThisTick) {
+              this.connectivityRebuiltThisTick = false;
+              this.delayedActionCountdown = 300;
+              this.boardClearBonusEligible = false;
+              SecondaryNodeDeque.recordAchievement(PointerInputListener.boardClearAchievementId ^ 255, -88, PointerInputListener.boardClearAchievementId);
+              if (clientControlFlowGuard != 0) {
                 this.connectivityRebuiltThisTick = false;
               }
-              this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
-              SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
-              BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
-              if (EntityMotionSupport.boardContactStateDirty) {
-                MatchCandidateSupport.collectMatchCandidates(-2);
-              }
-              this.matchBatchProcessedThisTick = MatchScoringSupport.processMatchCandidates(-18913);
-              if (this.boundaryCheckRequested) {
-                BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
-              }
-              AgeValidator.advanceScorePopups((byte) 27);
-              MessageDialog.advanceGameplayAvatarAnimation(600);
-              if (this.tutorialMode) {
-                this.advanceTutorialStep(109);
-              }
-              advanceEndingSequence = (clientControlFlowGuard != 0);
+            } else {
+              this.connectivityRebuiltThisTick = false;
             }
-          }
-          if ((sessionProgressionAndEndingFrameContinues) && (advanceEndingSequence)) {
-            if (this.sceneAnimationTick == 0) {
-              IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
+            this.boundaryCheckRequested = EntityMotionSupport.boardContactStateDirty;
+            SecondaryNodeDequeIterator.advanceActiveEntityAnimations((byte) -15);
+            BoardReconciliationSupport.reconcileBoardEntities(methodGuard + 1578896101);
+            if (EntityMotionSupport.boardContactStateDirty) {
+              MatchCandidateSupport.collectMatchCandidates(-2);
             }
-            if (LoginPanel.endingEntityScanClear &&
-              LoginMethod.isAvatarCryHoldExpired(-3) &&
-              this.sceneAnimationTick > 1000) {
-              this.requestSessionExitScreen(28809);
+            this.matchBatchProcessedThisTick = MatchScoringSupport.processMatchCandidates(-18913);
+            if (this.boundaryCheckRequested) {
+              BufferedRandomAccessFile.checkBoundaryLossAndStartCascade(methodGuard ^ 1578896190);
             }
-            EndingAnimationSupport.advanceEndingEntityAnimations(19);
-            AgeValidator.advanceScorePopups((byte) 24);
+            AgeValidator.advanceScorePopups((byte) 27);
             MessageDialog.advanceGameplayAvatarAnimation(600);
-            this.sceneAnimationTick = this.sceneAnimationTick + 1;
-            this.boardRasterDirty = true;
+            if (this.tutorialMode) {
+              this.advanceTutorialStep(109);
+            }
+            advanceEndingSequence = (clientControlFlowGuard != 0);
           }
+        }
+        if ((sessionProgressionAndEndingFrameContinues) && (advanceEndingSequence)) {
+          if (this.sceneAnimationTick == 0) {
+            IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
+          }
+          if (LoginPanel.endingEntityScanClear &&
+            LoginMethod.isAvatarCryHoldExpired(-3) &&
+            this.sceneAnimationTick > 1000) {
+            this.requestSessionExitScreen(28809);
+          }
+          EndingAnimationSupport.advanceEndingEntityAnimations(19);
+          AgeValidator.advanceScorePopups((byte) 24);
+          MessageDialog.advanceGameplayAvatarAnimation(600);
+          this.sceneAnimationTick = this.sceneAnimationTick + 1;
+          this.boardRasterDirty = true;
         }
         if (methodGuard != -1578896191) {
           this.scoreText = (StringBuilder) null;
         }
-        {
-          boolean keyboardEventsExhausted = false;
-          while (!(keyboardEventsExhausted = (!UiFontResources.pollKeyboardEvent(111)))) {
-            if (GameAudioState.currentKeyboardEventCharacter > 0) {
-              PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
-              if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
-                toggledDebugOverview = !(this.showDebugOverview);
-                this.showDebugOverview = toggledDebugOverview;
-              }
-              if (SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2 &&
-                PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("brk")) {
-                this.gameApplet.requestIdleDisconnect((byte) 41);
+        boolean keyboardEventsExhausted = false;
+        while (!(keyboardEventsExhausted = (!UiFontResources.pollKeyboardEvent(111)))) {
+          if (GameAudioState.currentKeyboardEventCharacter > 0) {
+            PacketBuffer.debugCommandCharacterWindow = PacketBuffer.debugCommandCharacterWindow.substring(1) + GameAudioState.currentKeyboardEventCharacter;
+            if (PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("fog")) {
+              toggledDebugOverview = !(this.showDebugOverview);
+              this.showDebugOverview = toggledDebugOverview;
+            }
+            if (SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2 &&
+              PacketBuffer.debugCommandCharacterWindow.equalsIgnoreCase("brk")) {
+              this.gameApplet.requestIdleDisconnect((byte) 41);
+            }
+          }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 13) {
+            if (!this.sessionEnding) {
+              ScoreSubmission.requestedScreenId = 1;
+              if (clientControlFlowGuard == 0) {
+                return;
               }
             }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 13) {
-              if (!this.sessionEnding) {
-                ScoreSubmission.requestedScreenId = 1;
-                if (clientControlFlowGuard == 0) {
-                  return;
-                }
-              }
-              this.requestSessionExitScreen(28809);
-              return;
-            }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 83 &&
-              this.tutorialMode) {
-              this.leaveTutorial(7000);
-            }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 84 &&
-              this.tutorialStepPhase == 0) {
-              this.tutorialStepPhase = 1;
-              this.tutorialPromptActive = false;
-              if (this.tutorialStepId != 0) {
-                if (this.tutorialStepId != 1) {
-                  if (this.tutorialStepId == 2) {
-                    this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                    if (clientControlFlowGuard != 0) {
-                      this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                      this.tutorialProgressMetric = 0;
-                    }
-                  }
-                } else {
-                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+            this.requestSessionExitScreen(28809);
+            return;
+          }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 83 &&
+            this.tutorialMode) {
+            this.leaveTutorial(7000);
+          }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 84 &&
+            this.tutorialStepPhase == 0) {
+            this.tutorialStepPhase = 1;
+            this.tutorialPromptActive = false;
+            if (this.tutorialStepId != 0) {
+              if (this.tutorialStepId != 1) {
+                if (this.tutorialStepId == 2) {
+                  this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
                   if (clientControlFlowGuard != 0) {
+                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
                     this.tutorialProgressMetric = 0;
                   }
                 }
               } else {
-                this.tutorialProgressMetric = 0;
+                this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
+                if (clientControlFlowGuard != 0) {
+                  this.tutorialProgressMetric = 0;
+                }
+              }
+            } else {
+              this.tutorialProgressMetric = 0;
+            }
+          }
+          if (SessionTextHistorySupport.currentKeyboardEventCode == 85 &&
+            5 == this.tutorialStepId &&
+            this.tutorialStepPhase == 0) {
+            this.leaveTutorial(methodGuard ^ -1578897511);
+            this.tutorialMode = true;
+            this.tutorialStepId = 0;
+            this.tutorialPromptActive = true;
+          }
+          if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
+            toggledRotationControlsSwapped = !(this.rotationControlsSwapped);
+            this.rotationControlsSwapped = toggledRotationControlsSwapped;
+            AvatarFeedbackSupport.requestAvatarFeedback(7, false);
+          }
+          if (2 > SpriteCheckboxRenderer.loginDebugPermissionLevel) {
+            continue;
+          }
+          debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
+          debugKeySentinelOrPointerEventSentinel = 48;
+          if (clientControlFlowGuard == 0) {
+            if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
+              this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
+              if (this.debugSpawnVariantId < 0) {
+                this.debugSpawnVariantId = 6;
               }
             }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 85 &&
-              5 == this.tutorialStepId &&
-              this.tutorialStepPhase == 0) {
-              this.leaveTutorial(methodGuard ^ -1578897511);
-              this.tutorialMode = true;
-              this.tutorialStepId = 0;
-              this.tutorialPromptActive = true;
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 49) {
+              this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
+              if (this.debugSpawnVariantId == 7) {
+                this.debugSpawnVariantId = 0;
+              }
             }
-            if (SocketConnector.swapRotationControlsKeyCode == SessionTextHistorySupport.currentKeyboardEventCode) {
-              toggledRotationControlsSwapped = !(this.rotationControlsSwapped);
-              this.rotationControlsSwapped = toggledRotationControlsSwapped;
-              AvatarFeedbackSupport.requestAvatarFeedback(7, false);
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 64) {
+              this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
+              if (this.debugSpawnCategoryId < 0) {
+                this.debugSpawnCategoryId = 6;
+              }
             }
-            if (2 > SpriteCheckboxRenderer.loginDebugPermissionLevel) {
+            if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              toggledSpecialKindSpawn = !(this.debugSpawnSpecialKinds);
+              this.debugSpawnSpecialKinds = toggledSpecialKindSpawn;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
+              this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
+              if (this.debugSpawnCategoryId == 7) {
+                this.debugSpawnCategoryId = 0;
+              }
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 16) {
+              this.tutorialAdvanceRequested = true;
+            }
+            if (68 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              this.sessionPhase = 1;
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
+              this.submissionBlocked = true;
+              toggledDebugPointerSpawn = !(this.debugPointerSpawnEnabled);
+              this.debugPointerSpawnEnabled = toggledDebugPointerSpawn;
+            }
+            if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              toggledSpawnReleaseDisabled = !(this.spawnReleaseDisabled);
+              this.spawnReleaseDisabled = toggledSpawnReleaseDisabled;
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
+              EmailValidator.availableSpriteVariantCount = 7;
+              MessageDialog.availableEntityCategoryCount = 7;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 4) {
+              LabeledChildWidget.recordEntityRelease(2);
+              this.submissionBlocked = true;
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 5) {
+              GameScreen.selectedThemeId = 1;
+              IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 110);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 6) {
+              GameScreen.selectedThemeId = 0;
+              IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 126);
+            }
+            if (7 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = 6;
+              IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 113);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 8) {
+              GameScreen.selectedThemeId = 5;
+              IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 115);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 9) {
+              GameScreen.selectedThemeId = 3;
+              IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 122);
+            }
+            if (10 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = 4;
+              IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 101);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 11) {
+              GameScreen.selectedThemeId = 2;
+              IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
+              ProxySocketConnector.selectThemeRenderAssets((byte) 82);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
+              toggledReducedRendering = !(this.debugReducedRendering);
+              this.debugReducedRendering = toggledReducedRendering;
+            }
+            if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
+              GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
+              GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
+              ProxySocketConnector.selectThemeRenderAssets((byte) 108);
+            }
+            if (SessionTextHistorySupport.currentKeyboardEventCode != 39) {
               continue;
             }
-            debugKeyCodeOrPointerEventComplement = SessionTextHistorySupport.currentKeyboardEventCode;
-            debugKeySentinelOrPointerEventSentinel = 48;
-            if (clientControlFlowGuard == 0) {
-              if (debugKeyCodeOrPointerEventComplement == debugKeySentinelOrPointerEventSentinel) {
-                this.debugSpawnVariantId = this.debugSpawnVariantId - 1;
-                if (this.debugSpawnVariantId < 0) {
-                  this.debugSpawnVariantId = 6;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 49) {
-                this.debugSpawnVariantId = this.debugSpawnVariantId + 1;
-                if (this.debugSpawnVariantId == 7) {
-                  this.debugSpawnVariantId = 0;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 64) {
-                this.debugSpawnCategoryId = this.debugSpawnCategoryId - 1;
-                if (this.debugSpawnCategoryId < 0) {
-                  this.debugSpawnCategoryId = 6;
-                }
-              }
-              if (32 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                toggledSpecialKindSpawn = !(this.debugSpawnSpecialKinds);
-                this.debugSpawnSpecialKinds = toggledSpecialKindSpawn;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 65) {
-                this.debugSpawnCategoryId = this.debugSpawnCategoryId + 1;
-                if (this.debugSpawnCategoryId == 7) {
-                  this.debugSpawnCategoryId = 0;
-                }
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 16) {
-                this.tutorialAdvanceRequested = true;
-              }
-              if (68 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                this.sessionPhase = 1;
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 1) {
-                this.submissionBlocked = true;
-                toggledDebugPointerSpawn = !(this.debugPointerSpawnEnabled);
-                this.debugPointerSpawnEnabled = toggledDebugPointerSpawn;
-              }
-              if (2 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                toggledSpawnReleaseDisabled = !(this.spawnReleaseDisabled);
-                this.spawnReleaseDisabled = toggledSpawnReleaseDisabled;
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 3) {
-                EmailValidator.availableSpriteVariantCount = 7;
-                MessageDialog.availableEntityCategoryCount = 7;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 4) {
-                LabeledChildWidget.recordEntityRelease(2);
-                this.submissionBlocked = true;
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 5) {
-                GameScreen.selectedThemeId = 1;
-                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896207, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 110);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 6) {
-                GameScreen.selectedThemeId = 0;
-                IntrusiveNode.selectThemeAudio(-126, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 126);
-              }
-              if (7 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = 6;
-                IntrusiveNode.selectThemeAudio(-99, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 113);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 8) {
-                GameScreen.selectedThemeId = 5;
-                IntrusiveNode.selectThemeAudio(-124, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 115);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 9) {
-                GameScreen.selectedThemeId = 3;
-                IntrusiveNode.selectThemeAudio(-98, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 122);
-              }
-              if (10 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = 4;
-                IntrusiveNode.selectThemeAudio(methodGuard ^ 1578896198, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 101);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 11) {
-                GameScreen.selectedThemeId = 2;
-                IntrusiveNode.selectThemeAudio(-118, GameScreen.selectedThemeId);
-                ProxySocketConnector.selectThemeRenderAssets((byte) 82);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 12) {
-                toggledReducedRendering = !(this.debugReducedRendering);
-                this.debugReducedRendering = toggledReducedRendering;
-              }
-              if (36 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                GameScreen.selectedThemeId = GameScreen.selectedThemeId + 1;
-                GameScreen.selectedThemeId = GameScreen.selectedThemeId % 7;
-                ProxySocketConnector.selectThemeRenderAssets((byte) 108);
-              }
-              if (SessionTextHistorySupport.currentKeyboardEventCode != 39) {
-                continue;
-              }
-              this.showSessionCounters = true;
-              continue;
-            }
-            break;
+            this.showSessionCounters = true;
+            continue;
           }
-          if (keyboardEventsExhausted) {
-            debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
-            debugKeySentinelOrPointerEventSentinel = -1;
-          }
+          break;
+        }
+        if (keyboardEventsExhausted) {
+          debugKeyCodeOrPointerEventComplement = ~CheckboxRenderer.pointerPressButtonSnapshot;
+          debugKeySentinelOrPointerEventSentinel = -1;
         }
         if (debugKeyCodeOrPointerEventComplement != debugKeySentinelOrPointerEventSentinel) {
           if (this.debugPointerSpawnEnabled &&
             SpriteCheckboxRenderer.loginDebugPermissionLevel >= 2) {
             EntitySpawnSupport.spawnEntityAtPointer(-28195, AccountCreationSupport.pointerPressXSnapshot, this.debugSpawnCategoryId, FullscreenFocusCanvas.pointerPressYSnapshot, this.debugSpawnVariantId, this.debugSpawnSpecialKinds);
           }
-          {
-            boolean tutorialAutoAdvanceFrameContinues = true;
-            if (this.tutorialMode &&
-              this.tutorialStepPhase == 0) {
-              if (this.tutorialStepId != 5) {
-                this.tutorialPromptActive = false;
-                this.tutorialStepPhase = 1;
-                if (this.tutorialStepId == 0) {
-                  this.tutorialProgressMetric = 0;
+          boolean tutorialAutoAdvanceFrameContinues = true;
+          if (this.tutorialMode &&
+            this.tutorialStepPhase == 0) {
+            if (this.tutorialStepId != 5) {
+              this.tutorialPromptActive = false;
+              this.tutorialStepPhase = 1;
+              if (this.tutorialStepId == 0) {
+                this.tutorialProgressMetric = 0;
+                tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
+              }
+              if (tutorialAutoAdvanceFrameContinues) {
+                if (this.tutorialStepId == 1) {
+                  this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
                   tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
                 }
                 if (tutorialAutoAdvanceFrameContinues) {
-                  if (this.tutorialStepId == 1) {
-                    this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                    tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
-                  }
-                  if (tutorialAutoAdvanceFrameContinues) {
-                    if (this.tutorialStepId != 2) {
-                      return;
-                    }
-                    this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                    tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
-                  }
-                }
-              }
-              if (tutorialAutoAdvanceFrameContinues) {
-                if (AccountCreationSupport.pointerPressXSnapshot > 100 &&
-                  340 > AccountCreationSupport.pointerPressXSnapshot &&
-                  FullscreenFocusCanvas.pointerPressYSnapshot > 440 &&
-                  476 > FullscreenFocusCanvas.pointerPressYSnapshot) {
-                  this.leaveTutorial(methodGuard ^ -1578897511);
-                  this.tutorialStepId = 0;
-                  this.tutorialMode = true;
-                  this.tutorialPromptActive = true;
-                }
-                if (AccountCreationSupport.pointerPressXSnapshot > 380 &&
-                  540 > AccountCreationSupport.pointerPressXSnapshot &&
-                  FullscreenFocusCanvas.pointerPressYSnapshot > 440) {
-                  if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
+                  if (this.tutorialStepId != 2) {
                     return;
                   }
-                  this.tutorialPromptActive = false;
-                  this.tutorialStepPhase = 1;
+                  this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
+                  tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
                 }
+              }
+            }
+            if (tutorialAutoAdvanceFrameContinues) {
+              if (AccountCreationSupport.pointerPressXSnapshot > 100 &&
+                340 > AccountCreationSupport.pointerPressXSnapshot &&
+                FullscreenFocusCanvas.pointerPressYSnapshot > 440 &&
+                476 > FullscreenFocusCanvas.pointerPressYSnapshot) {
+                this.leaveTutorial(methodGuard ^ -1578897511);
+                this.tutorialStepId = 0;
+                this.tutorialMode = true;
+                this.tutorialPromptActive = true;
+              }
+              if (AccountCreationSupport.pointerPressXSnapshot > 380 &&
+                540 > AccountCreationSupport.pointerPressXSnapshot &&
+                FullscreenFocusCanvas.pointerPressYSnapshot > 440) {
+                if (FullscreenFocusCanvas.pointerPressYSnapshot >= 476) {
+                  return;
+                }
+                this.tutorialPromptActive = false;
+                this.tutorialStepPhase = 1;
               }
             }
           }
@@ -1205,41 +1193,39 @@ final class GameplaySession {
 
     private final void advanceTutorialStep(int methodGuard) {
         int clientControlFlowGuard;
-        {
-          boolean tutorialStepPhaseUpdateFrameContinues = true;
-          clientControlFlowGuard = Geoblox.clientControlFlowFlag;
-          if (this.tutorialStepPhase == 2) {
-            this.tutorialStepId = this.tutorialStepId + 1;
-            this.tutorialPromptActive = true;
-            this.tutorialStepPhase = 0;
+        boolean tutorialStepPhaseUpdateFrameContinues = true;
+        clientControlFlowGuard = Geoblox.clientControlFlowFlag;
+        if (this.tutorialStepPhase == 2) {
+          this.tutorialStepId = this.tutorialStepId + 1;
+          this.tutorialPromptActive = true;
+          this.tutorialStepPhase = 0;
+          tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
+        }
+        if ((tutorialStepPhaseUpdateFrameContinues) && (1 == this.tutorialStepPhase)) {
+          if (this.tutorialStepId == 3 ||
+            this.tutorialStepId == 5) {
+            this.leaveTutorial(7000);
+          }
+          if (this.tutorialAdvanceRequested) {
+            this.tutorialAdvanceRequested = false;
+            this.tutorialStepPhase = 2;
+          }
+          if (this.tutorialStepId == 0 &&
+            this.tutorialProgressMetric > 450) {
+            this.tutorialStepPhase = 2;
             tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
           }
-          if ((tutorialStepPhaseUpdateFrameContinues) && (1 == this.tutorialStepPhase)) {
-            if (this.tutorialStepId == 3 ||
-              this.tutorialStepId == 5) {
-              this.leaveTutorial(7000);
-            }
-            if (this.tutorialAdvanceRequested) {
-              this.tutorialAdvanceRequested = false;
-              this.tutorialStepPhase = 2;
-            }
-            if (this.tutorialStepId == 0 &&
-              this.tutorialProgressMetric > 450) {
-              this.tutorialStepPhase = 2;
-              tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
-            }
-            if (tutorialStepPhaseUpdateFrameContinues) {
-              if (this.tutorialStepId != 1 ||
-                !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-                if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
-                  this.tutorialStepPhase = 2;
-                  if (clientControlFlowGuard != 0) {
-                    this.tutorialStepPhase = 2;
-                  }
-                }
-              } else {
+          if (tutorialStepPhaseUpdateFrameContinues) {
+            if (this.tutorialStepId != 1 ||
+              !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
+              if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
                 this.tutorialStepPhase = 2;
+                if (clientControlFlowGuard != 0) {
+                  this.tutorialStepPhase = 2;
+                }
               }
+            } else {
+              this.tutorialStepPhase = 2;
             }
           }
         }
@@ -1279,123 +1265,105 @@ final class GameplaySession {
             precedingThemeId = 0;
             themeIndexThenId = 0;
             while (true) {
-              {
-                boolean precedingThemeDispatchPreparationFrameContinues = true;
-                {
-                  boolean tutorialPromptPlacementFrameContinues = true;
-                  if (7 > themeIndexThenId) {
-                    selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
-                    themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
-                    precedingThemeDispatchPreparationFrameContinues = (clientControlFlowGuard == 0);
-                    if (precedingThemeDispatchPreparationFrameContinues) {
-                      if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                        if (0 < themeIndexThenId) {
-                          precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
-                        } else {
-                          precedingThemeId = WidgetContainer.themeCycleOrder[6];
-                        }
-                        tutorialPromptPlacementFrameContinues = false;
-                      }
-                      else {
-                        themeIndexThenId++;
-                        continue;
-                      }
-                    }
-                  }
-                }
+              boolean precedingThemeDispatchPreparationFrameContinues = true;
+              boolean tutorialPromptPlacementFrameContinues = true;
+              if (7 > themeIndexThenId) {
+                selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
+                themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
+                precedingThemeDispatchPreparationFrameContinues = (clientControlFlowGuard == 0);
                 if (precedingThemeDispatchPreparationFrameContinues) {
-                  themeIndexThenId = precedingThemeId;
-                  selectedThemeComplementOrThemeSentinel = 4;
-                  themeEntryComplementOrThemeId = themeIndexThenId;
+                  if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
+                    if (0 < themeIndexThenId) {
+                      precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
+                    } else {
+                      precedingThemeId = WidgetContainer.themeCycleOrder[6];
+                    }
+                    tutorialPromptPlacementFrameContinues = false;
+                  }
+                  else {
+                    themeIndexThenId++;
+                    continue;
+                  }
                 }
               }
-              {
-                boolean fallbackSunAchievementEntryFrameContinues = true;
-                {
-                  boolean sweetsAchievementEntryFrameContinues = true;
-                  {
-                    boolean sportsAchievementEntryFrameContinues = true;
-                    {
-                      boolean spaceAchievementEntryFrameContinues = true;
-                      {
-                        boolean jewelsAchievementEntryFrameContinues = true;
-                        {
-                          boolean germsAchievementEntryFrameContinues = true;
-                          {
-                            boolean sunAchievementEntryFrameContinues = true;
-                            if (selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
-                              clientControlFlowGuard != 0) {
-                              sunAchievementEntryFrameContinues = (themeIndexThenId != 1 ||
-                                clientControlFlowGuard != 0);
-                              if (sunAchievementEntryFrameContinues) {
-                                germsAchievementEntryFrameContinues = (themeIndexThenId != 3 ||
-                                  clientControlFlowGuard != 0);
-                                if (germsAchievementEntryFrameContinues) {
-                                  jewelsAchievementEntryFrameContinues = (themeIndexThenId != 0 ||
-                                    clientControlFlowGuard != 0);
-                                  if (jewelsAchievementEntryFrameContinues) {
-                                    spaceAchievementEntryFrameContinues = (themeIndexThenId != 6);
-                                    if (spaceAchievementEntryFrameContinues) {
-                                      sportsAchievementEntryFrameContinues = (5 != themeIndexThenId ||
-                                        clientControlFlowGuard != 0);
-                                      if (sportsAchievementEntryFrameContinues) {
-                                        fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId);
-                                        if (fallbackSunAchievementEntryFrameContinues) {
-                                          sweetsAchievementEntryFrameContinues = (clientControlFlowGuard != 0);
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                            if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues) && (sunAchievementEntryFrameContinues)) {
-                              SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
-                              if (clientControlFlowGuard == 0) {
-                                break;
-                              }
-                            }
-                          }
-                          if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues)) {
-                            SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
-                            if (clientControlFlowGuard == 0) {
-                              break;
-                            }
-                          }
-                        }
-                        if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues)) {
-                          SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
-                          if (clientControlFlowGuard == 0) {
-                            break;
+              if (precedingThemeDispatchPreparationFrameContinues) {
+                themeIndexThenId = precedingThemeId;
+                selectedThemeComplementOrThemeSentinel = 4;
+                themeEntryComplementOrThemeId = themeIndexThenId;
+              }
+              boolean fallbackSunAchievementEntryFrameContinues = true;
+              boolean sweetsAchievementEntryFrameContinues = true;
+              boolean sportsAchievementEntryFrameContinues = true;
+              boolean spaceAchievementEntryFrameContinues = true;
+              boolean jewelsAchievementEntryFrameContinues = true;
+              boolean germsAchievementEntryFrameContinues = true;
+              boolean sunAchievementEntryFrameContinues = true;
+              if (selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
+                clientControlFlowGuard != 0) {
+                sunAchievementEntryFrameContinues = (themeIndexThenId != 1 ||
+                  clientControlFlowGuard != 0);
+                if (sunAchievementEntryFrameContinues) {
+                  germsAchievementEntryFrameContinues = (themeIndexThenId != 3 ||
+                    clientControlFlowGuard != 0);
+                  if (germsAchievementEntryFrameContinues) {
+                    jewelsAchievementEntryFrameContinues = (themeIndexThenId != 0 ||
+                      clientControlFlowGuard != 0);
+                    if (jewelsAchievementEntryFrameContinues) {
+                      spaceAchievementEntryFrameContinues = (themeIndexThenId != 6);
+                      if (spaceAchievementEntryFrameContinues) {
+                        sportsAchievementEntryFrameContinues = (5 != themeIndexThenId ||
+                          clientControlFlowGuard != 0);
+                        if (sportsAchievementEntryFrameContinues) {
+                          fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId);
+                          if (fallbackSunAchievementEntryFrameContinues) {
+                            sweetsAchievementEntryFrameContinues = (clientControlFlowGuard != 0);
                           }
                         }
                       }
-                      if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues)) {
-                        SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
-                        if (clientControlFlowGuard == 0) {
-                          break;
-                        }
-                      }
-                    }
-                    if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues)) {
-                      SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
-                      if (clientControlFlowGuard == 0) {
-                        break;
-                      }
-                    }
-                  }
-                  if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues)) {
-                    SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
-                    if (clientControlFlowGuard == 0) {
-                      break;
                     }
                   }
                 }
-                if (fallbackSunAchievementEntryFrameContinues) {
-                  SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.sweetsThemeCompletionAchievementId, -121, SocketConnector.sweetsThemeCompletionAchievementId);
-                  if (clientControlFlowGuard == 0) {
-                    break;
-                  }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues) && (sunAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues)) {
+                SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
+                }
+              }
+              if (fallbackSunAchievementEntryFrameContinues) {
+                SecondaryNodeDeque.recordAchievement(255 ^ SocketConnector.sweetsThemeCompletionAchievementId, -121, SocketConnector.sweetsThemeCompletionAchievementId);
+                if (clientControlFlowGuard == 0) {
+                  break;
                 }
               }
               SecondaryNodeDeque.recordAchievement(SpriteConstructionSupport.sunThemeCompletionAchievementId ^ 255, -95, SpriteConstructionSupport.sunThemeCompletionAchievementId);
@@ -1427,34 +1395,24 @@ final class GameplaySession {
         if (methodGuard) {
           this.addScore((byte) 71, 49);
         }
-        {
-          boolean resultSequenceRenderingContinues = true;
-          if (2 == this.sessionPhase) {
-            PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
-            PointerMenuState.smallBoxSprite.draw(this.resultPanelX, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
-            FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
-            resultSequenceRenderingContinues = (clientControlFlowGuard != 0);
-          }
-          if (resultSequenceRenderingContinues) {
-            shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
-            if (this.sessionPhase == 3) {
-              PacketBuffer.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
-              PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
-              shrinkingBonusText = Integer.toString(this.resultBonusPoints);
-              FadingDialog.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
-              if (this.boardEmptyAtResultStart) {
-                FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
-              }
-              if (clientControlFlowGuard != 0) {
-                NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
-                PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 300 - (PointerMenuState.smallBoxSprite.fullHeight >> 1));
-                countdownBonusText = Integer.toString(this.resultBonusPoints);
-                FadingDialog.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
-                if (this.boardEmptyAtResultStart) {
-                  FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
-                }
-              }
-            } else {
+        boolean resultSequenceRenderingContinues = true;
+        if (2 == this.sessionPhase) {
+          PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
+          PointerMenuState.smallBoxSprite.draw(this.resultPanelX, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
+          FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
+          resultSequenceRenderingContinues = (clientControlFlowGuard != 0);
+        }
+        if (resultSequenceRenderingContinues) {
+          shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
+          if (this.sessionPhase == 3) {
+            PacketBuffer.resultBubbleSprite.drawScaledAlpha(-(shrinkingDiameter >> 1) + 320, 240 - (shrinkingDiameter >> 1), shrinkingDiameter, shrinkingDiameter, 150);
+            PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
+            shrinkingBonusText = Integer.toString(this.resultBonusPoints);
+            FadingDialog.uiPaletteFont.drawCenteredText(shrinkingBonusText, 320, 312, 0, -1);
+            if (this.boardEmptyAtResultStart) {
+              FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
+            }
+            if (clientControlFlowGuard != 0) {
               NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
               PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 300 - (PointerMenuState.smallBoxSprite.fullHeight >> 1));
               countdownBonusText = Integer.toString(this.resultBonusPoints);
@@ -1462,6 +1420,14 @@ final class GameplaySession {
               if (this.boardEmptyAtResultStart) {
                 FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
               }
+            }
+          } else {
+            NodeHashTableIterator.popSprite.drawAlpha(-(NodeHashTableIterator.popSprite.fullWidth >> 1) + 320, 240 - (NodeHashTableIterator.popSprite.fullHeight >> 1), this.resultSequenceCountdown - 150 + 150);
+            PointerMenuState.smallBoxSprite.draw(-(PointerMenuState.smallBoxSprite.fullWidth >> 1) + 320, 300 - (PointerMenuState.smallBoxSprite.fullHeight >> 1));
+            countdownBonusText = Integer.toString(this.resultBonusPoints);
+            FadingDialog.uiPaletteFont.drawCenteredText(countdownBonusText, 320, 312, 0, -1);
+            if (this.boardEmptyAtResultStart) {
+              FadingDialog.uiPaletteFont.drawCenteredText(PlayfieldRules.twoThousandBonusText, 320, 352, 0, -1);
             }
           }
         }
@@ -1491,138 +1457,132 @@ final class GameplaySession {
             this.pointsPanelSlideDirection = 0;
             return;
           }
-          {
-            boolean resultMusicPreparationEnabled = true;
-            {
-              boolean endingEntityRadiusMeasurementFrameContinues = true;
-              this.resultBonusPoints = this.resultBonusPoints + 179;
-              this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
-              this.resultSequenceCountdown = 150;
-              endingEntity = MeshDepthSupport.findOutermostAttachedEntity((byte) -128);
-              if (null == endingEntity) {
-                this.endingEntityRadius = 29;
-                endingEntityRadiusMeasurementFrameContinues = (controlFlowGuard != 0);
-              }
-              if (endingEntityRadiusMeasurementFrameContinues) {
-                HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
-                SoftwareRasterizer.clearFramebuffer();
-                endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
-                SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
-                maxRadiusSquared = 0;
-                spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
-                spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
-                spriteColumn = 0;
-                while (true) {
-                  comparisonLeftColumnOrZero = spriteColumn;
-                  comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
-                  if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
-                    rowStartOrMusicGuard = 0;
-                    if (controlFlowGuard != 0) {
-                      resultMusicPreparationEnabled = false;
-                      break;
-                    }
-                    spriteRow = rowStartOrMusicGuard;
-                    while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
-                      comparisonLeftColumnOrZero = 0;
-                      comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
-                      if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
-                        pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
-                        pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
-                        pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
-                        if (pixelRadiusSquared > maxRadiusSquared) {
-                          maxRadiusSquared = pixelRadiusSquared;
-                        }
-                      }
-                      spriteRow++;
-                    }
-                    spriteColumn++;
-                    continue;
-                  }
+          boolean resultMusicPreparationEnabled = true;
+          boolean endingEntityRadiusMeasurementFrameContinues = true;
+          this.resultBonusPoints = this.resultBonusPoints + 179;
+          this.boardEmptyAtResultStart = BoardEntityState.attachedEntities.isEmpty(13519);
+          this.resultSequenceCountdown = 150;
+          endingEntity = MeshDepthSupport.findOutermostAttachedEntity((byte) -128);
+          if (null == endingEntity) {
+            this.endingEntityRadius = 29;
+            endingEntityRadiusMeasurementFrameContinues = (controlFlowGuard != 0);
+          }
+          if (endingEntityRadiusMeasurementFrameContinues) {
+            HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
+            SoftwareRasterizer.clearFramebuffer();
+            endingEntity.entitySprite.rotateSmooth(endingEntity.entitySprite.fullWidth << 3, endingEntity.entitySprite.fullHeight << 3, HotspotTextWidget.spriteScratchRaster.fullWidth << 3, HotspotTextWidget.spriteScratchRaster.fullHeight << 3, (int)(65535.0 * ((double)endingEntity.spriteAngleRadians / 6.283185307179586)), 4096);
+            SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
+            maxRadiusSquared = 0;
+            spriteOffsetFromCenterX = (int)(endingEntity.positionX + 0.5f) + (-(HotspotTextWidget.spriteScratchRaster.width >> 1) - 320);
+            spriteOffsetFromCenterY = -240 + ((int)(endingEntity.positionY + 0.5f) - (HotspotTextWidget.spriteScratchRaster.height >> 1));
+            spriteColumn = 0;
+            while (true) {
+              comparisonLeftColumnOrZero = spriteColumn;
+              comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.width;
+              if (comparisonLeftColumnOrZero < comparisonRightWidthOrPixel) {
+                rowStartOrMusicGuard = 0;
+                if (controlFlowGuard != 0) {
+                  resultMusicPreparationEnabled = false;
                   break;
                 }
-                if (resultMusicPreparationEnabled) {
-                  this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
+                spriteRow = rowStartOrMusicGuard;
+                while (HotspotTextWidget.spriteScratchRaster.height > spriteRow) {
+                  comparisonLeftColumnOrZero = 0;
+                  comparisonRightWidthOrPixel = HotspotTextWidget.spriteScratchRaster.pixels[HotspotTextWidget.spriteScratchRaster.width * spriteRow + spriteColumn];
+                  if (comparisonLeftColumnOrZero != comparisonRightWidthOrPixel) {
+                    pixelOffsetFromCenterX = spriteOffsetFromCenterX + spriteColumn;
+                    pixelOffsetFromCenterY = spriteRow + spriteOffsetFromCenterY;
+                    pixelRadiusSquared = pixelOffsetFromCenterX * pixelOffsetFromCenterX + pixelOffsetFromCenterY * pixelOffsetFromCenterY;
+                    if (pixelRadiusSquared > maxRadiusSquared) {
+                      maxRadiusSquared = pixelRadiusSquared;
+                    }
+                  }
+                  spriteRow++;
                 }
+                spriteColumn++;
+                continue;
               }
+              break;
             }
             if (resultMusicPreparationEnabled) {
-              this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
-              rowStartOrMusicGuard = methodGuard ^ 10;
+              this.endingEntityRadius = (int)(0.5 + Math.sqrt((double)maxRadiusSquared));
             }
+          }
+          if (resultMusicPreparationEnabled) {
+            this.resultCompletionTickOffset = 920 + (-(2 * this.endingEntityRadius) - 58 - 1);
+            rowStartOrMusicGuard = methodGuard ^ 10;
           }
           SecondaryNodeDeque.selectBackgroundMusic(rowStartOrMusicGuard, ContentTransitionDialog.resultMusicTrack);
         }
-        {
-          boolean resultSequenceTickAndCompletionFrameContinues = true;
-          nextSceneAnimationTick = this.sceneAnimationTick + 1;
-          this.sceneAnimationTick = this.sceneAnimationTick + 1;
-          if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
-            if (460 > this.sceneAnimationTick) {
-              this.sessionPhase = 2;
-              if (controlFlowGuard != 0) {
-                if ((460 - this.sceneAnimationTick + 460) < (this.endingEntityRadius * 2)) {
-                  this.sessionPhase = 4;
-                  this.sessionPhase = 3;
-                } else {
-                  this.sessionPhase = 3;
-                }
-              }
-            } else {
+        boolean resultSequenceTickAndCompletionFrameContinues = true;
+        nextSceneAnimationTick = this.sceneAnimationTick + 1;
+        this.sceneAnimationTick = this.sceneAnimationTick + 1;
+        if (nextSceneAnimationTick != 150 + this.resultCompletionTickOffset) {
+          if (460 > this.sceneAnimationTick) {
+            this.sessionPhase = 2;
+            if (controlFlowGuard != 0) {
               if ((460 - this.sceneAnimationTick + 460) < (this.endingEntityRadius * 2)) {
                 this.sessionPhase = 4;
-                if (controlFlowGuard != 0) {
-                  this.sessionPhase = 3;
-                }
+                this.sessionPhase = 3;
               } else {
                 this.sessionPhase = 3;
               }
             }
-            if (3 == this.sessionPhase) {
-              this.resultBonusPoints = this.resultBonusPoints + 7;
+          } else {
+            if ((460 - this.sceneAnimationTick + 460) < (this.endingEntityRadius * 2)) {
+              this.sessionPhase = 4;
+              if (controlFlowGuard != 0) {
+                this.sessionPhase = 3;
+              }
+            } else {
+              this.sessionPhase = 3;
+            }
+          }
+          if (3 == this.sessionPhase) {
+            this.resultBonusPoints = this.resultBonusPoints + 7;
+            resultSequenceTickAndCompletionFrameContinues = (controlFlowGuard != 0);
+          }
+          if (resultSequenceTickAndCompletionFrameContinues) {
+            if (this.sessionPhase != 2) {
+              if (this.resultSequenceCountdown == 150) {
+                ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
+              }
+              this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
               resultSequenceTickAndCompletionFrameContinues = (controlFlowGuard != 0);
             }
             if (resultSequenceTickAndCompletionFrameContinues) {
-              if (this.sessionPhase != 2) {
-                if (this.resultSequenceCountdown == 150) {
-                  ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
-                }
-                this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
-                resultSequenceTickAndCompletionFrameContinues = (controlFlowGuard != 0);
+              if (this.resultExpansionAudioStream == null ||
+                this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
+                resultProgressPercent = this.sceneAnimationTick * 100 / 460;
+                this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
+                GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
               }
-              if (resultSequenceTickAndCompletionFrameContinues) {
-                if (this.resultExpansionAudioStream == null ||
-                  this.resultExpansionAudioStream.isSamplePositionOutOfRange()) {
-                  resultProgressPercent = this.sceneAnimationTick * 100 / 460;
-                  this.resultExpansionAudioStream = PcmSampleStream.createForPlaybackRate(GameSoundResources.gameSoundSamples[28], 2 * resultProgressPercent + 200, 45);
-                  GameplayEntity.registerAudioStream(false, this.resultExpansionAudioStream);
-                }
-                if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
-                  this.resultPanelX = this.resultPanelX - 1;
-                  if (controlFlowGuard != 0) {
-                    this.sceneTransitionRequested = true;
-                    this.sceneAnimationTick = 0;
-                    this.sessionPhase = 5;
-                    if (this.boardEmptyAtResultStart) {
-                      PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
-                      SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
-                      this.connectivityRebuiltThisTick = false;
-                    }
-                    PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
+              if (!(this.resultPanelX <= 320 - (PointerMenuState.smallBoxSprite.fullWidth >> 1))) {
+                this.resultPanelX = this.resultPanelX - 1;
+                if (controlFlowGuard != 0) {
+                  this.sceneTransitionRequested = true;
+                  this.sceneAnimationTick = 0;
+                  this.sessionPhase = 5;
+                  if (this.boardEmptyAtResultStart) {
+                    PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
+                    SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
+                    this.connectivityRebuiltThisTick = false;
                   }
+                  PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
                 }
               }
             }
-          } else {
-            this.sceneTransitionRequested = true;
-            this.sceneAnimationTick = 0;
-            this.sessionPhase = 5;
-            if (this.boardEmptyAtResultStart) {
-              PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
-              SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
-              this.connectivityRebuiltThisTick = false;
-            }
-            PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
           }
+        } else {
+          this.sceneTransitionRequested = true;
+          this.sceneAnimationTick = 0;
+          this.sessionPhase = 5;
+          if (this.boardEmptyAtResultStart) {
+            PlayfieldRules.spawnPointsPopup(350, 320, 66, 2000);
+            SecondaryNodeDeque.recordAchievement(ArchiveLoadSequence.emptyBoardResultAchievementId ^ 255, methodGuard - 101, ArchiveLoadSequence.emptyBoardResultAchievementId);
+            this.connectivityRebuiltThisTick = false;
+          }
+          PlayfieldRules.spawnPointsPopup(310, 320, 90, this.resultBonusPoints);
         }
         AgeValidator.advanceScorePopups((byte) 33);
         MessageDialog.advanceGameplayAvatarAnimation(600);
@@ -1671,39 +1631,37 @@ final class GameplaySession {
         if (!this.preserveScoreOnTransition) {
           return;
         }
-        {
-          boolean themeProgressHudRenderingContinues = true;
-          if (this.sessionPhase != 0) {
-            FadingDialog.uiPaletteFont.drawParagraph(LoginUiSupport.lastGeobloxOfLevelText, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-            themeProgressHudRenderingContinues = (clientControlFlowGuard != 0);
-          }
-          if (themeProgressHudRenderingContinues) {
-            remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + MessageDialogSupport.releasesPerTheme;
-            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
-            FadingDialog.uiPaletteFont.drawRightAlignedText(SessionSocketSupport.countdownLabelText, 621, 441, 0, -1);
+        boolean themeProgressHudRenderingContinues = true;
+        if (this.sessionPhase != 0) {
+          FadingDialog.uiPaletteFont.drawParagraph(LoginUiSupport.lastGeobloxOfLevelText, 426, 404, 200, 100, 0, -1, 2, 0, 30);
+          themeProgressHudRenderingContinues = (clientControlFlowGuard != 0);
+        }
+        if (themeProgressHudRenderingContinues) {
+          remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + MessageDialogSupport.releasesPerTheme;
+          FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
+          FadingDialog.uiPaletteFont.drawRightAlignedText(SessionSocketSupport.countdownLabelText, 621, 441, 0, -1);
+          FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
+          FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.gameNameText, 621, 468, 0, -1);
+          if (remainingThemeReleases <= 10) {
+            FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.remainingThemeReleaseTextColors[remainingThemeReleases % 5];
+            FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-            FadingDialog.uiPaletteFont.drawRightAlignedText(LoginMethod.gameNameText, 621, 468, 0, -1);
-            if (remainingThemeReleases <= 10) {
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = EmailAvailabilityValidator.remainingThemeReleaseTextColors[remainingThemeReleases % 5];
-              FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-              FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 16689938;
-              if (clientControlFlowGuard != 0) {
-                if (remainingThemeReleases <= 99999) {
-                  FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-                  FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
-                } else {
-                  FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
-                }
-              }
-            } else {
+            if (clientControlFlowGuard != 0) {
               if (remainingThemeReleases <= 99999) {
                 FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
-                if (clientControlFlowGuard != 0) {
-                  FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
-                }
+                FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
               } else {
                 FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
               }
+            }
+          } else {
+            if (remainingThemeReleases <= 99999) {
+              FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(remainingThemeReleases), 515, 468, 0, -1);
+              if (clientControlFlowGuard != 0) {
+                FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
+              }
+            } else {
+              FadingDialog.uiPaletteFont.drawRightAlignedText(Integer.toString(99999), 515, 468, 0, -1);
             }
           }
         }
@@ -1718,41 +1676,39 @@ final class GameplaySession {
         if (methodGuard != 28809) {
           this.debugPointerSpawnEnabled = true;
         }
-        {
-          boolean sessionExitScreenSelectionContinues = true;
-          if (!UnderlinedButtonRenderer.isGuestSessionMode(-93)) {
-            if (this.newActionCount <= 0) {
-              if (this.score > 0) {
-                ScoreSubmission.requestedScreenId = 2;
-                sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
-              }
-              if (sessionExitScreenSelectionContinues) {
-                ScoreSubmission.requestedScreenId = 0;
-                sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
-              }
+        boolean sessionExitScreenSelectionContinues = true;
+        if (!UnderlinedButtonRenderer.isGuestSessionMode(-93)) {
+          if (this.newActionCount <= 0) {
+            if (this.score > 0) {
+              ScoreSubmission.requestedScreenId = 2;
+              sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
             }
             if (sessionExitScreenSelectionContinues) {
-              ScoreSubmission.requestedScreenId = 6;
-              if (clientControlFlowGuard != 0) {
-                if (this.score > 0 ||
-                  this.newActionCount > 0) {
-                  ScoreSubmission.requestedScreenId = 4;
-                  ScoreSubmission.requestedScreenId = 0;
-                } else {
-                  ScoreSubmission.requestedScreenId = 0;
-                }
-              }
+              ScoreSubmission.requestedScreenId = 0;
+              sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
             }
-          } else {
-            if (this.score > 0 ||
-              this.newActionCount > 0) {
-              ScoreSubmission.requestedScreenId = 4;
-              if (clientControlFlowGuard != 0) {
+          }
+          if (sessionExitScreenSelectionContinues) {
+            ScoreSubmission.requestedScreenId = 6;
+            if (clientControlFlowGuard != 0) {
+              if (this.score > 0 ||
+                this.newActionCount > 0) {
+                ScoreSubmission.requestedScreenId = 4;
+                ScoreSubmission.requestedScreenId = 0;
+              } else {
                 ScoreSubmission.requestedScreenId = 0;
               }
-            } else {
+            }
+          }
+        } else {
+          if (this.score > 0 ||
+            this.newActionCount > 0) {
+            ScoreSubmission.requestedScreenId = 4;
+            if (clientControlFlowGuard != 0) {
               ScoreSubmission.requestedScreenId = 0;
             }
+          } else {
+            ScoreSubmission.requestedScreenId = 0;
           }
         }
         IntrusiveNodeHashTable.selectLoopingBackgroundMusic(0, GameGraphicsResources.titleMusicTrack);

@@ -88,28 +88,26 @@ final class PlatformTaskDispatcher implements Runnable {
           while (true) {
             dispatcherOrTaskMonitor = this;
             synchronized (dispatcherOrTaskMonitor) {
-              {
-                boolean taskDequeueWaitRemainderEnabled = true;
-                while (!this.shutdownRequested) {
-                  if (this.taskQueueHead != null) {
-                    task = this.taskQueueHead;
-                    this.taskQueueHead = this.taskQueueHead.next;
-                    if (null == this.taskQueueHead) {
-                      this.taskQueueTail = null;
-                    }
-                    taskDequeueWaitRemainderEnabled = false;
-                    break;
+              boolean taskDequeueWaitRemainderEnabled = true;
+              while (!this.shutdownRequested) {
+                if (this.taskQueueHead != null) {
+                  task = this.taskQueueHead;
+                  this.taskQueueHead = this.taskQueueHead.next;
+                  if (null == this.taskQueueHead) {
+                    this.taskQueueTail = null;
                   }
-                  try {
-                    this.wait();
-                  } catch (java.lang.InterruptedException waitInterruption) {
-                    caughtTaskThrowable = waitInterruption;
-                    ignoredWaitInterruption = (InterruptedException) (Object) caughtTaskThrowable;
-                  }
+                  taskDequeueWaitRemainderEnabled = false;
+                  break;
                 }
-                if (taskDequeueWaitRemainderEnabled) {
-                  return;
+                try {
+                  this.wait();
+                } catch (java.lang.InterruptedException waitInterruption) {
+                  caughtTaskThrowable = waitInterruption;
+                  ignoredWaitInterruption = (InterruptedException) (Object) caughtTaskThrowable;
                 }
+              }
+              if (taskDequeueWaitRemainderEnabled) {
+                return;
               }
             }
             try {

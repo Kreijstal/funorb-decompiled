@@ -281,49 +281,47 @@ final class ProxySocketConnector extends SocketConnector {
           } else {
             proxyOutputStream.write(("CONNECT " + this.destinationHost + ":" + this.destinationPort + " HTTP/1.0\n" + authorizationHeader + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
-          {
-            boolean connectResponseAcceptanceFrameContinues = true;
-            proxyOutputStream.flush();
-            proxyResponseReader = new BufferedReader((Reader) ((Object) new InputStreamReader(proxySocket.getInputStream())));
-            unusedGuardRemainder = -22 % ((3 - methodGuard) / 53);
-            statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
-            if (statusLineOrChallengeHeaderOrScheme != null) {
-              if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
-                !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
-                connectResponseAcceptanceFrameContinues = (statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") ||
-                  statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
-                if (connectResponseAcceptanceFrameContinues) {
-                  scannedHeaderCount = 0;
-                  authenticateHeaderPrefix = "proxy-authenticate: ";
-                  statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
-                  statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
-                  statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
-                  while (statusLineOrChallengeHeaderOrScheme != null) {
-                    if (scannedHeaderCount < 50) {
-                      if (!statusLineOrChallengeHeaderOrScheme.toLowerCase().startsWith(authenticateHeaderPrefix)) {
-                        statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
-                        scannedHeaderCount++;
-                        continue;
-                      }
-                      trimmedAuthenticationChallenge = statusLineOrChallengeHeaderOrScheme.substring(authenticateHeaderPrefix.length()).trim();
-                      statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                      statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                      statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                      authenticationSchemeSeparator = trimmedAuthenticationChallenge.indexOf(' ');
-                      if (authenticationSchemeSeparator != -1) {
-                        statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge.substring(0, authenticationSchemeSeparator);
-                      }
-                      throw new ProxyAuthenticationRequiredException(statusLineOrChallengeHeaderOrScheme);
-                    }
-                    break;
-                  }
-                  throw new ProxyAuthenticationRequiredException("");
-                }
-              }
+          boolean connectResponseAcceptanceFrameContinues = true;
+          proxyOutputStream.flush();
+          proxyResponseReader = new BufferedReader((Reader) ((Object) new InputStreamReader(proxySocket.getInputStream())));
+          unusedGuardRemainder = -22 % ((3 - methodGuard) / 53);
+          statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
+          if (statusLineOrChallengeHeaderOrScheme != null) {
+            if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
+              !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
+              connectResponseAcceptanceFrameContinues = (statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") ||
+                statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
               if (connectResponseAcceptanceFrameContinues) {
-                acceptedSocketBeforeReturn = proxySocket;
-                return acceptedSocketBeforeReturn;
+                scannedHeaderCount = 0;
+                authenticateHeaderPrefix = "proxy-authenticate: ";
+                statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
+                statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
+                statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
+                while (statusLineOrChallengeHeaderOrScheme != null) {
+                  if (scannedHeaderCount < 50) {
+                    if (!statusLineOrChallengeHeaderOrScheme.toLowerCase().startsWith(authenticateHeaderPrefix)) {
+                      statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
+                      scannedHeaderCount++;
+                      continue;
+                    }
+                    trimmedAuthenticationChallenge = statusLineOrChallengeHeaderOrScheme.substring(authenticateHeaderPrefix.length()).trim();
+                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                    authenticationSchemeSeparator = trimmedAuthenticationChallenge.indexOf(' ');
+                    if (authenticationSchemeSeparator != -1) {
+                      statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge.substring(0, authenticationSchemeSeparator);
+                    }
+                    throw new ProxyAuthenticationRequiredException(statusLineOrChallengeHeaderOrScheme);
+                  }
+                  break;
+                }
+                throw new ProxyAuthenticationRequiredException("");
               }
+            }
+            if (connectResponseAcceptanceFrameContinues) {
+              acceptedSocketBeforeReturn = proxySocket;
+              return acceptedSocketBeforeReturn;
             }
           }
           proxyOutputStream.close();

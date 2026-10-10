@@ -638,155 +638,153 @@ public final class Geoblox extends SessionGameApplet {
           this.dispatchSessionPacket(121);
         }
         if (!BootstrapUiSupport.shouldShowBootstrapLoadingScreen(255)) {
-          {
-            boolean assetSessionPreparationFrameContinues = true;
-            if (!DebouncedValidationProvider.gameAssetsInitialized) {
-              ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
-              if (this.pollArchiveLoading(false) &&
-                this.prepareGameAssets(25869)) {
-                DebouncedValidationProvider.gameAssetsInitialized = true;
-                this.initializeScreens(82);
+          boolean assetSessionPreparationFrameContinues = true;
+          if (!DebouncedValidationProvider.gameAssetsInitialized) {
+            ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -98);
+            if (this.pollArchiveLoading(false) &&
+              this.prepareGameAssets(25869)) {
+              DebouncedValidationProvider.gameAssetsInitialized = true;
+              this.initializeScreens(82);
+              assetSessionPreparationFrameContinues = false;
+            }
+            else {
+              NanoFrameTimer.flushSessionWrites(-1, 0);
+              return;
+            }
+          }
+          if (assetSessionPreparationFrameContinues) {
+            if (!UsernameAvailabilityValidator.ensureAndCheckAchievementStateGate(79)) {
+              HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
+            } else {
+              if (FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47) &&
+                !FullscreenSupport.fullscreenDialogActiveSnapshot) {
+                fullscreenAvailableForUiSnapshot = (InstrumentPatch.activeFullscreenCanvas != null);
+                uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
+                if (uiServiceResultOrOverlayMode != 2364824) {
+                  if (uiServiceResultOrOverlayMode == 1 ||
+                    2 == uiServiceResultOrOverlayMode) {
+                    if (null != InstrumentPatch.activeFullscreenCanvas) {
+                      InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
+                      InstrumentPatch.activeFullscreenCanvas = null;
+                    }
+                    if (uiServiceResultOrOverlayMode == 2) {
+                      EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(109), 62);
+                    }
+                  }
+                } else {
+                  DualLinkNode.evaluateGuardResidue(-8);
+                }
+                if (!(!VisualPropertyNode.highUpdateRateModeActive)) {
+                  DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 50);
+                  VisualPropertyNode.highUpdateRateModeActive = false;
+                }
                 assetSessionPreparationFrameContinues = false;
               }
               else {
-                NanoFrameTimer.flushSessionWrites(-1, 0);
-                return;
-              }
-            }
-            if (assetSessionPreparationFrameContinues) {
-              if (!UsernameAvailabilityValidator.ensureAndCheckAchievementStateGate(79)) {
-                HighscoreNameEntry.setLoadingProgress(ByteShortQuery.waitingForExtraDataText, -2, 100.0f);
-              } else {
-                if (FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47) &&
-                  !FullscreenSupport.fullscreenDialogActiveSnapshot) {
-                  fullscreenAvailableForUiSnapshot = (InstrumentPatch.activeFullscreenCanvas != null);
-                  uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
-                  if (uiServiceResultOrOverlayMode != 2364824) {
-                    if (uiServiceResultOrOverlayMode == 1 ||
-                      2 == uiServiceResultOrOverlayMode) {
-                      if (null != InstrumentPatch.activeFullscreenCanvas) {
-                        InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
-                        InstrumentPatch.activeFullscreenCanvas = null;
-                      }
-                      if (uiServiceResultOrOverlayMode == 2) {
-                        EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(109), 62);
-                      }
-                    }
-                  } else {
-                    DualLinkNode.evaluateGuardResidue(-8);
-                  }
-                  if (!(!VisualPropertyNode.highUpdateRateModeActive)) {
-                    DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 50);
-                    VisualPropertyNode.highUpdateRateModeActive = false;
-                  }
-                  assetSessionPreparationFrameContinues = false;
+                if (!VisualPropertyNode.highUpdateRateModeActive) {
+                  DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 150);
+                  VisualPropertyNode.highUpdateRateModeActive = true;
                 }
-                else {
-                  if (!VisualPropertyNode.highUpdateRateModeActive) {
-                    DisplayModeInfo.setConfiguredUpdateRate((byte) 121, 150);
-                    VisualPropertyNode.highUpdateRateModeActive = true;
-                  }
-                  if (!GameGraphicsResources.themesLoaded[2]) {
-                    this.loadSweetsTheme(7);
-                  } else {
-                    if (GameGraphicsResources.themesLoaded[0]) {
-                      if (GameGraphicsResources.themesLoaded[3]) {
-                        if (GameGraphicsResources.themesLoaded[6]) {
-                          if (!GameGraphicsResources.themesLoaded[5]) {
-                            this.loadSportsTheme(75);
-                          } else {
-                            if (!GameGraphicsResources.themesLoaded[4]) {
-                              this.loadBakingTheme(2);
-                            }
+                if (!GameGraphicsResources.themesLoaded[2]) {
+                  this.loadSweetsTheme(7);
+                } else {
+                  if (GameGraphicsResources.themesLoaded[0]) {
+                    if (GameGraphicsResources.themesLoaded[3]) {
+                      if (GameGraphicsResources.themesLoaded[6]) {
+                        if (!GameGraphicsResources.themesLoaded[5]) {
+                          this.loadSportsTheme(75);
+                        } else {
+                          if (!GameGraphicsResources.themesLoaded[4]) {
+                            this.loadBakingTheme(2);
                           }
-                        } else {
-                          this.loadSpaceTheme(false);
                         }
                       } else {
-                        this.loadGermsTheme((byte) -117);
+                        this.loadSpaceTheme(false);
                       }
                     } else {
-                      this.loadJewelsTheme(false);
-                    }
-                  }
-                  if (GameplaySetupSupport.screenChangePending) {
-                    GameplaySetupSupport.screenChangePending = false;
-                    if (!UnderlinedButtonRenderer.isGuestSessionMode(-95)) {
-                      if (0 < TextTemplateDefinition.loginMembershipGateValue) {
-                        InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
-                        TextTemplateDefinition.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
-                        if (0 == UiWidget.gameplayReturnScreenId) {
-                          MessageDialog.requestFullscreen((byte) -112);
-                          TextTemplateDefinition.screens[0].activeTicks = 0;
-                        }
-                      }
-                      if (null != UiWidget.gameplaySession &&
-                        UiWidget.gameplaySession.score > 0) {
-                        UiWidget.gameplaySession.submitScore((byte) -70);
-                      }
-                      ScoreSubmission.requestedScreenId = UiWidget.gameplayReturnScreenId;
-                    } else {
-                      ScoreSubmission.requestedScreenId = ProxySocketConnector.gameplayOriginScreenId;
-                    }
-                    SettingsCookieSupport.currentScreenId = -1;
-                    UiWidget.gameplayReturnScreenId = -1;
-                    CharacterReplacementSupport.clearGameplayDuringTransition = true;
-                  }
-                  if (ScoreSubmission.requestedScreenId != SettingsCookieSupport.currentScreenId) {
-                    if (6 == ScoreSubmission.requestedScreenId &&
-                      ScorePopupSupport.newAchievementMask <= 0) {
-                      ScoreSubmission.requestedScreenId = 2;
-                    }
-                    if (-1 < SettingsCookieSupport.currentScreenId) {
-                      TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].updateTransition(16405);
-                    }
-                    if (ScoreSubmission.requestedScreenId != -1) {
-                      TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].updateTransition(16405);
-                      TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].tutorialPageIndex = 0;
-                      if (ScoreSubmission.requestedScreenId != 3) {
-                        TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].selectedItemIndex = 0;
-                      } else {
-                        TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].selectedItemIndex = 1;
-                      }
-                    }
-                    if (TriangleMesh.screenTransitionTick == 0) {
-                      ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[30]);
-                    }
-                    nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
-                    TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
-                    if (nextScreenTransitionTickSnapshot == 160) {
-                      if (UiWidget.gameplayReturnScreenId != -1 &&
-                        UnderlinedButtonRenderer.isGuestSessionMode(-109)) {
-                        if (ProxySocketConnector.gameplayOriginScreenId != 0) {
-                          UsernameResponseSupport.returnToLoginStage(-106);
-                        } else {
-                          PendingActionMarker.returnGuestSessionToLogin((byte) 118);
-                        }
-                        GameplaySetupSupport.screenChangePending = true;
-                      } else {
-                        if (SettingsCookieSupport.currentScreenId == 2) {
-                          FifoResponseToken.activeHighscoreQuery = null;
-                        }
-                      }
-                      TriangleMesh.screenTransitionTick = 0;
-                      SettingsCookieSupport.currentScreenId = ScoreSubmission.requestedScreenId;
-                      CharacterReplacementSupport.clearGameplayDuringTransition = false;
+                      this.loadGermsTheme((byte) -117);
                     }
                   } else {
-                    if (SettingsCookieSupport.currentScreenId == -1) {
-                      if (UsernameQueryState.introAnimationRunning) {
-                        introStillRunningSnapshot = !(DequeCursor.updateIntroAnimation(1));
-                        UsernameQueryState.introAnimationRunning = introStillRunningSnapshot;
-                        if (!introStillRunningSnapshot) {
-                          SettingsCookieSupport.currentScreenId = -2;
-                          ScoreSubmission.requestedScreenId = 0;
-                        }
+                    this.loadJewelsTheme(false);
+                  }
+                }
+                if (GameplaySetupSupport.screenChangePending) {
+                  GameplaySetupSupport.screenChangePending = false;
+                  if (!UnderlinedButtonRenderer.isGuestSessionMode(-95)) {
+                    if (0 < TextTemplateDefinition.loginMembershipGateValue) {
+                      InstrumentEnvelope.menuActionIds[1] = new int[]{1, 8, 9, 4, 3, 6};
+                      TextTemplateDefinition.screens[1].setItemCount(-12831, InstrumentEnvelope.menuActionIds[1].length);
+                      if (0 == UiWidget.gameplayReturnScreenId) {
+                        MessageDialog.requestFullscreen((byte) -112);
+                        TextTemplateDefinition.screens[0].activeTicks = 0;
+                      }
+                    }
+                    if (null != UiWidget.gameplaySession &&
+                      UiWidget.gameplaySession.score > 0) {
+                      UiWidget.gameplaySession.submitScore((byte) -70);
+                    }
+                    ScoreSubmission.requestedScreenId = UiWidget.gameplayReturnScreenId;
+                  } else {
+                    ScoreSubmission.requestedScreenId = ProxySocketConnector.gameplayOriginScreenId;
+                  }
+                  SettingsCookieSupport.currentScreenId = -1;
+                  UiWidget.gameplayReturnScreenId = -1;
+                  CharacterReplacementSupport.clearGameplayDuringTransition = true;
+                }
+                if (ScoreSubmission.requestedScreenId != SettingsCookieSupport.currentScreenId) {
+                  if (6 == ScoreSubmission.requestedScreenId &&
+                    ScorePopupSupport.newAchievementMask <= 0) {
+                    ScoreSubmission.requestedScreenId = 2;
+                  }
+                  if (-1 < SettingsCookieSupport.currentScreenId) {
+                    TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].updateTransition(16405);
+                  }
+                  if (ScoreSubmission.requestedScreenId != -1) {
+                    TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].updateTransition(16405);
+                    TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].tutorialPageIndex = 0;
+                    if (ScoreSubmission.requestedScreenId != 3) {
+                      TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].selectedItemIndex = 0;
+                    } else {
+                      TextTemplateDefinition.screens[ScoreSubmission.requestedScreenId].selectedItemIndex = 1;
+                    }
+                  }
+                  if (TriangleMesh.screenTransitionTick == 0) {
+                    ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[30]);
+                  }
+                  nextScreenTransitionTickSnapshot = TriangleMesh.screenTransitionTick + 1;
+                  TriangleMesh.screenTransitionTick = TriangleMesh.screenTransitionTick + 1;
+                  if (nextScreenTransitionTickSnapshot == 160) {
+                    if (UiWidget.gameplayReturnScreenId != -1 &&
+                      UnderlinedButtonRenderer.isGuestSessionMode(-109)) {
+                      if (ProxySocketConnector.gameplayOriginScreenId != 0) {
+                        UsernameResponseSupport.returnToLoginStage(-106);
                       } else {
-                        UiWidget.gameplaySession.updateSession(-1578896191);
+                        PendingActionMarker.returnGuestSessionToLogin((byte) 118);
+                      }
+                      GameplaySetupSupport.screenChangePending = true;
+                    } else {
+                      if (SettingsCookieSupport.currentScreenId == 2) {
+                        FifoResponseToken.activeHighscoreQuery = null;
+                      }
+                    }
+                    TriangleMesh.screenTransitionTick = 0;
+                    SettingsCookieSupport.currentScreenId = ScoreSubmission.requestedScreenId;
+                    CharacterReplacementSupport.clearGameplayDuringTransition = false;
+                  }
+                } else {
+                  if (SettingsCookieSupport.currentScreenId == -1) {
+                    if (UsernameQueryState.introAnimationRunning) {
+                      introStillRunningSnapshot = !(DequeCursor.updateIntroAnimation(1));
+                      UsernameQueryState.introAnimationRunning = introStillRunningSnapshot;
+                      if (!introStillRunningSnapshot) {
+                        SettingsCookieSupport.currentScreenId = -2;
+                        ScoreSubmission.requestedScreenId = 0;
                       }
                     } else {
-                      TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].updateScreen((byte) 29);
+                      UiWidget.gameplaySession.updateSession(-1578896191);
                     }
+                  } else {
+                    TextTemplateDefinition.screens[SettingsCookieSupport.currentScreenId].updateScreen((byte) 29);
                   }
                 }
               }

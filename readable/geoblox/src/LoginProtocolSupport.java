@@ -79,32 +79,30 @@ final class LoginProtocolSupport {
               unusedNullPrimaryTextSnapshot = (String) null;
               LoginProtocolSupport.advanceLoginHandshake(false, (String) null, 95, false, (String) null, 13);
             }
-            {
-              boolean loginResultDispatchContinues = true;
-              if (ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage &&
-                UiWidget.readSessionBytesIfAvailable(30000, 1)) {
-                loginResultResponseByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
-                LogoCompositor.sessionPacketBuffer.position = 0;
-                GameSoundResources.optionalLoginText = null;
-                ScorePopup.currentPacketOpcode = loginResultResponseByte;
-                if (loginResultResponseByte != 0 &&
-                  loginResultResponseByte != 1) {
-                  if (loginResultResponseByte != 8) {
-                    PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
-                    AchievementSubmission.sessionPacketPayloadLength = -1;
-                    loginResultDispatchContinues = false;
-                  }
-                  else {
-                    Bzip2DecoderState.closeSessionSocket((byte) -116);
-                    TextTemplateArgumentType.loginRetryAttempted = false;
-                    closedResponseResult = loginResultResponseByte;
-                    return closedResponseResult;
-                  }
-                }
-                if (loginResultDispatchContinues) {
+            boolean loginResultDispatchContinues = true;
+            if (ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage &&
+              UiWidget.readSessionBytesIfAvailable(30000, 1)) {
+              loginResultResponseByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
+              LogoCompositor.sessionPacketBuffer.position = 0;
+              GameSoundResources.optionalLoginText = null;
+              ScorePopup.currentPacketOpcode = loginResultResponseByte;
+              if (loginResultResponseByte != 0 &&
+                loginResultResponseByte != 1) {
+                if (loginResultResponseByte != 8) {
+                  PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                   AchievementSubmission.sessionPacketPayloadLength = -1;
-                  PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
+                  loginResultDispatchContinues = false;
                 }
+                else {
+                  Bzip2DecoderState.closeSessionSocket((byte) -116);
+                  TextTemplateArgumentType.loginRetryAttempted = false;
+                  closedResponseResult = loginResultResponseByte;
+                  return closedResponseResult;
+                }
+              }
+              if (loginResultDispatchContinues) {
+                AchievementSubmission.sessionPacketPayloadLength = -1;
+                PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
               }
             }
             if (ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage &&

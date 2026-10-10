@@ -131,36 +131,34 @@ final class BufferedRandomAccessFile {
               this.position = this.position + (long)readCountOrZeroFillEnd;
               destinationOffset = destinationOffset + readCountOrZeroFillEnd;
             }
-            {
-              boolean underlyingReadSelectionFrameContinues = true;
-              boolean underlyingReadSelectionRemainderEnabled = true;
-              if (this.readBuffer.length < remainingLength) {
-                this.file.seek(this.position, true);
-                this.underlyingPosition = this.position;
-                while (remainingLength > 0) {
-                  underlyingReadCount = this.file.read(remainingLength, destination, destinationOffset, false);
-                  if (-1 == underlyingReadCount) {
-                    underlyingReadSelectionRemainderEnabled = false;
-                    break;
-                  }
-                  this.position = this.position + (long)underlyingReadCount;
-                  this.underlyingPosition = this.underlyingPosition + (long)underlyingReadCount;
-                  remainingLength = remainingLength - underlyingReadCount;
-                  destinationOffset = destinationOffset + underlyingReadCount;
+            boolean underlyingReadSelectionFrameContinues = true;
+            boolean underlyingReadSelectionRemainderEnabled = true;
+            if (this.readBuffer.length < remainingLength) {
+              this.file.seek(this.position, true);
+              this.underlyingPosition = this.position;
+              while (remainingLength > 0) {
+                underlyingReadCount = this.file.read(remainingLength, destination, destinationOffset, false);
+                if (-1 == underlyingReadCount) {
+                  underlyingReadSelectionRemainderEnabled = false;
+                  break;
                 }
-                underlyingReadSelectionFrameContinues = !(underlyingReadSelectionRemainderEnabled);
+                this.position = this.position + (long)underlyingReadCount;
+                this.underlyingPosition = this.underlyingPosition + (long)underlyingReadCount;
+                remainingLength = remainingLength - underlyingReadCount;
+                destinationOffset = destinationOffset + underlyingReadCount;
               }
-              if ((underlyingReadSelectionFrameContinues) && (underlyingReadSelectionRemainderEnabled) && (remainingLength > 0)) {
-                this.refillReadBuffer(true);
-                refillCopyCount = remainingLength;
-                if (this.readBufferLength < refillCopyCount) {
-                  refillCopyCount = this.readBufferLength;
-                }
-                ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
-                remainingLength = remainingLength - refillCopyCount;
-                destinationOffset = destinationOffset + refillCopyCount;
-                this.position = this.position + (long)refillCopyCount;
+              underlyingReadSelectionFrameContinues = !(underlyingReadSelectionRemainderEnabled);
+            }
+            if ((underlyingReadSelectionFrameContinues) && (underlyingReadSelectionRemainderEnabled) && (remainingLength > 0)) {
+              this.refillReadBuffer(true);
+              refillCopyCount = remainingLength;
+              if (this.readBufferLength < refillCopyCount) {
+                refillCopyCount = this.readBufferLength;
               }
+              ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
+              remainingLength = remainingLength - refillCopyCount;
+              destinationOffset = destinationOffset + refillCopyCount;
+              this.position = this.position + (long)refillCopyCount;
             }
             if (-1L != this.writeBufferStart) {
               if (this.writeBufferStart > this.position) {

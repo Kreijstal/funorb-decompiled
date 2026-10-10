@@ -163,31 +163,29 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                     packedLength = this.responseHeaderBuffer.readIntBE((byte) -61);
                     compressionType = compressionAndQueueFlags & 127;
                     backgroundFlagBeforeMatch = ((128 & compressionAndQueueFlags) == 0) ? 0 : 1;
-                    {
-                      boolean archiveResponseRequestLookupFrameContinues = true;
-                      boolean archiveResponseRequestLookupRemainderEnabled = true;
-                      backgroundResponseFlag = backgroundFlagBeforeMatch;
-                      responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
-                      unusedResponseMatchSnapshot = null;
-                      if (backgroundResponseFlag != 0) {
-                        matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.firstForIteration((byte) 121));
-                        while (matchedRequest != null) {
-                          if (responseKey == matchedRequest.secondaryKey) {
-                            archiveResponseRequestLookupRemainderEnabled = false;
-                            break;
-                          }
-                          matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
+                    boolean archiveResponseRequestLookupFrameContinues = true;
+                    boolean archiveResponseRequestLookupRemainderEnabled = true;
+                    backgroundResponseFlag = backgroundFlagBeforeMatch;
+                    responseKey = (long)bodyXorStartSnapshotOrGroupId + ((long)bodyReadLengthOrHeaderXorIndexOrArchiveId << 32);
+                    unusedResponseMatchSnapshot = null;
+                    if (backgroundResponseFlag != 0) {
+                      matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.firstForIteration((byte) 121));
+                      while (matchedRequest != null) {
+                        if (responseKey == matchedRequest.secondaryKey) {
+                          archiveResponseRequestLookupRemainderEnabled = false;
+                          break;
                         }
-                        archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
+                        matchedRequest = (NetworkArchiveRequest) (this.sentBackgroundRequests.nextForIteration(-30));
                       }
-                      if ((archiveResponseRequestLookupFrameContinues) && (archiveResponseRequestLookupRemainderEnabled)) {
-                        matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
-                        while (matchedRequest != null) {
-                          if (~responseKey == ~matchedRequest.secondaryKey) {
-                            break;
-                          }
-                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
+                      archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
+                    }
+                    if ((archiveResponseRequestLookupFrameContinues) && (archiveResponseRequestLookupRemainderEnabled)) {
+                      matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
+                      while (matchedRequest != null) {
+                        if (~responseKey == ~matchedRequest.secondaryKey) {
+                          break;
                         }
+                        matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                       }
                     }
                     if (matchedRequest == null) {

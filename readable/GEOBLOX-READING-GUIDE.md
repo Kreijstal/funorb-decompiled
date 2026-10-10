@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/99922c01189267f00fcf0a9fa9cb583238749560/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/3365dc162dce4aa5b34f28d2853eec1fec980997/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 268)
+## Current readability (pass 269)
 
 The export has 20,133 guarded names and 122,233 Java identifier edits, plus 11
 class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,39 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current direct Boolean value alternatives (pass 268)
+## Current independent declaration scopes (pass 269)
+
+84 standalone declaration wrappers disappear from 54 methods across 32 files, saving
+167 lines. The achievement dispatch retains its seven continuation declarations
+and all decisions/actions in their original order while losing seven nested
+wrappers. Every promoted local has one declaration, no outside identifier use
+and no formal-name collision. Initializers, snapshots, stores, aliases and
+complete work remain. Branch, loop, label and protected bodies remain intact.
+
+The generic opt-in is `CFR_JS_UNIQUE_DECLARATION_BLOCKS=1`. It extends the
+existing standalone-block proof after continuation/predicate reconstruction.
+Duplicate names, qualified outside occurrences, uncertain lookup and captures
+refuse expansion. Defaults retain declaration scopes. Generic recovery and agent
+guidance stay in java-tools; game names and certificates stay in Deko. The
+tracked decompiler-source tar SHA-256 is `a12d32c26f96b34d4812217177a6b3e75d1f49858054a622fd1c455da2b8fadf`.
+
+Independent javac certifies every selected block and its declaration lookup,
+compares all 303 complete ordered ASTs modulo only those wrappers, and retains
+all 138,168 bindings, 388 overrides and 4,757 protected transfers. Four new and
+five existing groups pass, including 116,640 new and 38,880 existing native
+cases for snapshots, aliases, nullable callbacks, volatile state, overflow,
+index failures, loop continues, labeled breaks, finally overrides and monitors.
+The clean tracked compiler reproduces every source byte and unchanged
+diagnostics. All 27 publication groups pass; 27 native trace groups match the
+original classes, and all 303 sources reverse byte for byte. Fresh checkouts run
+the same pinned builder, exporter, source proof and field audit.
+
+All 20,133 rules and 20,440 dictionary identities remain unchanged. No plain
+block labels or large framed methods remain. Forty-one finer field purposes
+and long ordinary bodies remain to review. Whole-game equivalence, browser/phone
+behavior and heap/presented-FPS acceptance remain unverified.
+
+## Previous direct Boolean value alternatives (pass 268)
 
 Twelve negated short-circuit values in nine methods across seven files become
 direct Boolean alternatives. Achievement entry decisions such as

@@ -54,40 +54,38 @@ final class ReflectionCheckRequest extends IntrusiveNode {
               ReflectionCheckRequest.parseSignedInt((CharSequence) null, (byte) 58, 6, false);
             }
             for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
-              {
-                boolean signedIntegerCharacterFrameContinues = true;
-                characterCodeOrSignedDigit = text.charAt(characterIndex);
-                if ((characterIndex == 0) && (characterCodeOrSignedDigit == 45)) {
-                  negativeSignInt = 1;
-                  signedIntegerCharacterFrameContinues = false;
+              boolean signedIntegerCharacterFrameContinues = true;
+              characterCodeOrSignedDigit = text.charAt(characterIndex);
+              if ((characterIndex == 0) && (characterCodeOrSignedDigit == 45)) {
+                negativeSignInt = 1;
+                signedIntegerCharacterFrameContinues = false;
+              }
+              if ((signedIntegerCharacterFrameContinues) && (characterIndex != 0 || (characterCodeOrSignedDigit != 43 ||
+                !allowLeadingPlus))) {
+                if (48 <= characterCodeOrSignedDigit &&
+                  characterCodeOrSignedDigit <= 57) {
+                  characterCodeOrSignedDigit -= 48;
+                } else if (65 <= characterCodeOrSignedDigit &&
+                  90 >= characterCodeOrSignedDigit) {
+                  characterCodeOrSignedDigit -= 55;
+                } else if (characterCodeOrSignedDigit >= 97 &&
+                  122 >= characterCodeOrSignedDigit) {
+                  characterCodeOrSignedDigit -= 87;
+                } else {
+                  throw new NumberFormatException();
                 }
-                if ((signedIntegerCharacterFrameContinues) && (characterIndex != 0 || (characterCodeOrSignedDigit != 43 ||
-                  !allowLeadingPlus))) {
-                  if (48 <= characterCodeOrSignedDigit &&
-                    characterCodeOrSignedDigit <= 57) {
-                    characterCodeOrSignedDigit -= 48;
-                  } else if (65 <= characterCodeOrSignedDigit &&
-                    90 >= characterCodeOrSignedDigit) {
-                    characterCodeOrSignedDigit -= 55;
-                  } else if (characterCodeOrSignedDigit >= 97 &&
-                    122 >= characterCodeOrSignedDigit) {
-                    characterCodeOrSignedDigit -= 87;
-                  } else {
-                    throw new NumberFormatException();
-                  }
-                  if (characterCodeOrSignedDigit >= radix) {
-                    throw new NumberFormatException();
-                  }
-                  if (negativeSignInt != 0) {
-                    characterCodeOrSignedDigit = -characterCodeOrSignedDigit;
-                  }
-                  nextAccumulator = accumulator * radix + characterCodeOrSignedDigit;
-                  if (accumulator != nextAccumulator / radix) {
-                    throw new NumberFormatException();
-                  }
-                  digitSeenInt = 1;
-                  accumulator = nextAccumulator;
+                if (characterCodeOrSignedDigit >= radix) {
+                  throw new NumberFormatException();
                 }
+                if (negativeSignInt != 0) {
+                  characterCodeOrSignedDigit = -characterCodeOrSignedDigit;
+                }
+                nextAccumulator = accumulator * radix + characterCodeOrSignedDigit;
+                if (accumulator != nextAccumulator / radix) {
+                  throw new NumberFormatException();
+                }
+                digitSeenInt = 1;
+                accumulator = nextAccumulator;
               }
             }
             if (digitSeenInt == 0) {

@@ -221,31 +221,29 @@ final class BufferedSocket implements Runnable {
             while (true) {
               writerMonitor = this;
               synchronized (writerMonitor) {
-                {
-                  boolean writerChunkSelectionFrameContinues = true;
-                  if (this.writeReadIndex == this.writeInsertIndex) {
-                    if (this.closeRequested) {
-                      writerActionRoute = 0;
-                      writerChunkSelectionFrameContinues = false;
-                    }
-                    else {
-                      try {
-                        this.wait();
-                      } catch (java.lang.InterruptedException waitInterruption) {
-                        caughtWriterThrowable = waitInterruption;
-                        ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
-                      }
+                boolean writerChunkSelectionFrameContinues = true;
+                if (this.writeReadIndex == this.writeInsertIndex) {
+                  if (this.closeRequested) {
+                    writerActionRoute = 0;
+                    writerChunkSelectionFrameContinues = false;
+                  }
+                  else {
+                    try {
+                      this.wait();
+                    } catch (java.lang.InterruptedException waitInterruption) {
+                      caughtWriterThrowable = waitInterruption;
+                      ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
                     }
                   }
-                  if (writerChunkSelectionFrameContinues) {
-                    contiguousWriteOffset = this.writeReadIndex;
-                    if (this.writeInsertIndex < this.writeReadIndex) {
-                      contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
-                    } else {
-                      contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
-                    }
-                    writerActionRoute = 1;
+                }
+                if (writerChunkSelectionFrameContinues) {
+                  contiguousWriteOffset = this.writeReadIndex;
+                  if (this.writeInsertIndex < this.writeReadIndex) {
+                    contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
+                  } else {
+                    contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
                   }
+                  writerActionRoute = 1;
                 }
               }
               if (writerActionRoute == 0) {

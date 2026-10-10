@@ -153,22 +153,20 @@ final class MidiNoteMixer extends PcmStream {
         this.fadingStreams.skipFrames(frameCount);
         note = (MidiNote) (this.notes.firstForIteration(0));
         while (note != null) {
-          {
-            boolean noteSkipTailEnabled = true;
-            if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
-              remainingNoteFrames = frameCount;
-              while (remainingNoteFrames > note.framesUntilUpdate) {
-                this.skipNoteFrames(-1, note, note.framesUntilUpdate);
-                remainingNoteFrames = remainingNoteFrames - note.framesUntilUpdate;
-                if (this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, 0, (int[]) null, note, false)) {
-                  noteSkipTailEnabled = false;
-                  break;
-                }
+          boolean noteSkipTailEnabled = true;
+          if (!this.midiStream.isNoteStreamAbsent(note, -1)) {
+            remainingNoteFrames = frameCount;
+            while (remainingNoteFrames > note.framesUntilUpdate) {
+              this.skipNoteFrames(-1, note, note.framesUntilUpdate);
+              remainingNoteFrames = remainingNoteFrames - note.framesUntilUpdate;
+              if (this.midiStream.advanceNoteAndHandleCompletion(remainingNoteFrames, 0, (int[]) null, note, false)) {
+                noteSkipTailEnabled = false;
+                break;
               }
-              if (noteSkipTailEnabled) {
-                this.skipNoteFrames(-1, note, remainingNoteFrames);
-                note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
-              }
+            }
+            if (noteSkipTailEnabled) {
+              this.skipNoteFrames(-1, note, remainingNoteFrames);
+              note.framesUntilUpdate = note.framesUntilUpdate - remainingNoteFrames;
             }
           }
           note = (MidiNote) (this.notes.nextForIteration(1));

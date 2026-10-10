@@ -133,74 +133,72 @@ final class MeshDepthSupport {
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndex = 0;
-          {
-            boolean meshFacesScanned = false;
-            while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
-              vertexA = mesh.faceVertexA[faceIndex];
-              vertexB = mesh.faceVertexB[faceIndex];
-              vertexC = mesh.faceVertexC[faceIndex];
-              cullBackfacesCarrier = cullBackfaces;
-              cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
-              cullBackfacesSnapshot = cullBackfacesCarrier;
-              if (controlFlagSnapshot == 0) {
-                if (cullBackfacesSnapshot) {
-                  projectedAX = SingleChildWidget.projectedMeshVertexX[vertexA];
-                  projectedAY = TextInputWidget.projectedMeshVertexY[vertexA];
-                  edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexB] - projectedAX;
-                  edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAX;
-                  edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexB] - projectedAY;
-                  edgeCYOrBucketOccupancy = -projectedAY + TextInputWidget.projectedMeshVertexY[vertexC];
-                }
-                if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
-                  vertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexA];
-                  if (-2147483648 != vertexADepth) {
-                    vertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexB];
-                    if (-2147483648 != vertexBDepth) {
-                      edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
-                      if (edgeBXOrVertexCDepth != -2147483648) {
-                        edgeCXOrRelativeDepthSum = vertexBDepth + (vertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
-                        if (depthBucketShift < 0) {
-                          scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
-                        } else {
-                          scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
-                        }
-                        edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + GameApplet.meshFaceCountsByDepthBucket.length);
-                        edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                        while (true) {
-                          if (edgeCYOrBucketOccupancy >> 4 != 0) {
-                            edgeBYOrDepthBucketIndex--;
-                            candidateDepthBucketIndex = edgeBYOrDepthBucketIndex;
-                            if (candidateDepthBucketIndex < 0) {
-                              System.err.println("Out of range!");
-                              break;
-                            }
-                            edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                            continue;
+          boolean meshFacesScanned = false;
+          while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
+            vertexA = mesh.faceVertexA[faceIndex];
+            vertexB = mesh.faceVertexB[faceIndex];
+            vertexC = mesh.faceVertexC[faceIndex];
+            cullBackfacesCarrier = cullBackfaces;
+            cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+            cullBackfacesSnapshot = cullBackfacesCarrier;
+            if (controlFlagSnapshot == 0) {
+              if (cullBackfacesSnapshot) {
+                projectedAX = SingleChildWidget.projectedMeshVertexX[vertexA];
+                projectedAY = TextInputWidget.projectedMeshVertexY[vertexA];
+                edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexB] - projectedAX;
+                edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAX;
+                edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexB] - projectedAY;
+                edgeCYOrBucketOccupancy = -projectedAY + TextInputWidget.projectedMeshVertexY[vertexC];
+              }
+              if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
+                vertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexA];
+                if (-2147483648 != vertexADepth) {
+                  vertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexB];
+                  if (-2147483648 != vertexBDepth) {
+                    edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
+                    if (edgeBXOrVertexCDepth != -2147483648) {
+                      edgeCXOrRelativeDepthSum = vertexBDepth + (vertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                      if (depthBucketShift < 0) {
+                        scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
+                      } else {
+                        scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
+                      }
+                      edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + GameApplet.meshFaceCountsByDepthBucket.length);
+                      edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                      while (true) {
+                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                          edgeBYOrDepthBucketIndex--;
+                          candidateDepthBucketIndex = edgeBYOrDepthBucketIndex;
+                          if (candidateDepthBucketIndex < 0) {
+                            System.err.println("Out of range!");
+                            break;
                           }
-                          packedFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
-                          faceOrderWriteIndex = packedFaceOrderIndex;
-                          InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndex;
-                          GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
-                          if (0 < mesh.facePriorityCount &&
-                            null != mesh.facePriorities) {
-                            facePriority = mesh.facePriorities[faceIndex];
-                            PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
-                          }
-                          GameApplet.queuedMeshFaceCount = GameApplet.queuedMeshFaceCount + 1;
-                          break;
+                          edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                          continue;
                         }
+                        packedFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        faceOrderWriteIndex = packedFaceOrderIndex;
+                        InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndex;
+                        GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
+                        if (0 < mesh.facePriorityCount &&
+                          null != mesh.facePriorities) {
+                          facePriority = mesh.facePriorities[faceIndex];
+                          PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
+                        }
+                        GameApplet.queuedMeshFaceCount = GameApplet.queuedMeshFaceCount + 1;
+                        break;
                       }
                     }
                   }
                 }
-                faceIndex++;
-                continue;
               }
-              break;
+              faceIndex++;
+              continue;
             }
-            if (meshFacesScanned) {
-              cullFlagOrPriorityLoopSentinel = -1;
-            }
+            break;
+          }
+          if (meshFacesScanned) {
+            cullFlagOrPriorityLoopSentinel = -1;
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
             null != mesh.facePriorities) {
@@ -283,74 +281,72 @@ final class MeshDepthSupport {
           }
           GameApplet.queuedMeshFaceCount = 0;
           faceIndex = 0;
-          {
-            boolean meshFacesScanned = false;
-            while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
-              vertexA = mesh.faceVertexA[faceIndex];
-              vertexB = mesh.faceVertexB[faceIndex];
-              vertexC = mesh.faceVertexC[faceIndex];
-              cullBackfacesCarrier = cullBackfaces;
-              cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
-              cullBackfacesSnapshot = cullBackfacesCarrier;
-              if (controlFlagSnapshot == 0) {
-                if (cullBackfacesSnapshot) {
-                  projectedAX = SingleChildWidget.projectedMeshVertexX[vertexA];
-                  projectedAY = TextInputWidget.projectedMeshVertexY[vertexA];
-                  edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexB] - projectedAX;
-                  edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAX;
-                  edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexB] - projectedAY;
-                  edgeCYOrBucketOccupancy = -projectedAY + TextInputWidget.projectedMeshVertexY[vertexC];
-                }
-                if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
-                  vertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexA];
-                  if (-2147483648 != vertexADepth) {
-                    vertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexB];
-                    if (-2147483648 != vertexBDepth) {
-                      edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
-                      if (edgeBXOrVertexCDepth != -2147483648) {
-                        edgeCXOrRelativeDepthSum = vertexBDepth + (vertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
-                        if (depthBucketShift < 0) {
-                          scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
-                        } else {
-                          scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
-                        }
-                        edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + GameApplet.meshFaceCountsByDepthBucket.length);
-                        edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                        while (true) {
-                          if (edgeCYOrBucketOccupancy >> 4 != 0) {
-                            edgeBYOrDepthBucketIndex--;
-                            candidateDepthBucketIndex = edgeBYOrDepthBucketIndex;
-                            if (candidateDepthBucketIndex < 0) {
-                              System.err.println("Out of range!");
-                              break;
-                            }
-                            edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
-                            continue;
+          boolean meshFacesScanned = false;
+          while (!(meshFacesScanned = (!(faceIndex < mesh.faceCount)))) {
+            vertexA = mesh.faceVertexA[faceIndex];
+            vertexB = mesh.faceVertexB[faceIndex];
+            vertexC = mesh.faceVertexC[faceIndex];
+            cullBackfacesCarrier = cullBackfaces;
+            cullFlagOrPriorityLoopSentinel = cullBackfacesCarrier ? 1 : 0;
+            cullBackfacesSnapshot = cullBackfacesCarrier;
+            if (controlFlagSnapshot == 0) {
+              if (cullBackfacesSnapshot) {
+                projectedAX = SingleChildWidget.projectedMeshVertexX[vertexA];
+                projectedAY = TextInputWidget.projectedMeshVertexY[vertexA];
+                edgeBXOrVertexCDepth = SingleChildWidget.projectedMeshVertexX[vertexB] - projectedAX;
+                edgeCXOrRelativeDepthSum = SingleChildWidget.projectedMeshVertexX[vertexC] - projectedAX;
+                edgeBYOrDepthBucketIndex = TextInputWidget.projectedMeshVertexY[vertexB] - projectedAY;
+                edgeCYOrBucketOccupancy = -projectedAY + TextInputWidget.projectedMeshVertexY[vertexC];
+              }
+              if (!cullBackfacesSnapshot || !(-(edgeBYOrDepthBucketIndex * edgeCXOrRelativeDepthSum) + edgeBXOrVertexCDepth * edgeCYOrBucketOccupancy >= 0)) {
+                vertexADepth = CachedArchiveSource.projectedMeshVertexDepth[vertexA];
+                if (-2147483648 != vertexADepth) {
+                  vertexBDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexB];
+                  if (-2147483648 != vertexBDepth) {
+                    edgeBXOrVertexCDepth = CachedArchiveSource.projectedMeshVertexDepth[vertexC];
+                    if (edgeBXOrVertexCDepth != -2147483648) {
+                      edgeCXOrRelativeDepthSum = vertexBDepth + (vertexADepth + edgeBXOrVertexCDepth - minimumDepthTimesThree);
+                      if (depthBucketShift < 0) {
+                        scaledRelativeDepthSum = edgeCXOrRelativeDepthSum << -depthBucketShift;
+                      } else {
+                        scaledRelativeDepthSum = edgeCXOrRelativeDepthSum >> depthBucketShift;
+                      }
+                      edgeBYOrDepthBucketIndex = -scaledRelativeDepthSum + (-1 + GameApplet.meshFaceCountsByDepthBucket.length);
+                      edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                      while (true) {
+                        if (edgeCYOrBucketOccupancy >> 4 != 0) {
+                          edgeBYOrDepthBucketIndex--;
+                          candidateDepthBucketIndex = edgeBYOrDepthBucketIndex;
+                          if (candidateDepthBucketIndex < 0) {
+                            System.err.println("Out of range!");
+                            break;
                           }
-                          packedFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
-                          faceOrderWriteIndex = packedFaceOrderIndex;
-                          InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndex;
-                          GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
-                          if (0 < mesh.facePriorityCount &&
-                            null != mesh.facePriorities) {
-                            facePriority = mesh.facePriorities[faceIndex];
-                            PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
-                          }
-                          GameApplet.queuedMeshFaceCount = GameApplet.queuedMeshFaceCount + 1;
-                          break;
+                          edgeCYOrBucketOccupancy = GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex];
+                          continue;
                         }
+                        packedFaceOrderIndex = (edgeBYOrDepthBucketIndex << 4) + edgeCYOrBucketOccupancy;
+                        faceOrderWriteIndex = packedFaceOrderIndex;
+                        InstrumentNoteMask.meshFaceOrder[faceOrderWriteIndex] = faceIndex;
+                        GameApplet.meshFaceCountsByDepthBucket[edgeBYOrDepthBucketIndex] = 1 + edgeCYOrBucketOccupancy;
+                        if (0 < mesh.facePriorityCount &&
+                          null != mesh.facePriorities) {
+                          facePriority = mesh.facePriorities[faceIndex];
+                          PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] = PasswordWidgetRenderer.meshFacePriorityWriteOffsets[facePriority] + 1;
+                        }
+                        GameApplet.queuedMeshFaceCount = GameApplet.queuedMeshFaceCount + 1;
+                        break;
                       }
                     }
                   }
                 }
-                faceIndex++;
-                continue;
               }
-              break;
+              faceIndex++;
+              continue;
             }
-            if (meshFacesScanned) {
-              cullFlagOrPriorityLoopSentinel = -1;
-            }
+            break;
+          }
+          if (meshFacesScanned) {
+            cullFlagOrPriorityLoopSentinel = -1;
           }
           if (cullFlagOrPriorityLoopSentinel > ~mesh.facePriorityCount &&
             null != mesh.facePriorities) {
