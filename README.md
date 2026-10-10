@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ce5c7a012293a13a84819713bb72ca7c45a273b9/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/5fa8aee91d24371274fe6649b16e57deae9de2ee/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,143 bindings,
 preserving 388 override relationships.
 
-## Current shared exits and continuation frames (pass 259)
+## Current nested-switch continuations and block headers (pass 260)
+
+The platform dispatcher uses ordinary switch breaks for cursor services, retaining
+all selectors, checks, operations and protected scopes. Its unused frame label
+disappears; twelve smaller frames and 41 finer field purposes remain. Five
+multiline headers now put their first statement on a separate line without
+changing any token. Independent source/target and native oracle checks pass;
+all 303 sources compile, reproduce and reverse exactly. Generic recovery and
+agent guidance stay in java-tools; game proof metadata stays in Deko.
+
+## Previous shared exits and continuation frames (pass 259)
 
 Nine shared-exit guards retain complete true/false work and one original terminal
 destination. Five frames now use named continuation eligibility for asset/session

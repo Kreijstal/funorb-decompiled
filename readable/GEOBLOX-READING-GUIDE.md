@@ -7,13 +7,13 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ce5c7a012293a13a84819713bb72ca7c45a273b9/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/5fa8aee91d24371274fe6649b16e57deae9de2ee/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 259)
+## Current readability (pass 260)
 
-The export has 20,136 guarded names and 122,208 Java identifier edits, plus 11
-class-name literal edits and 112 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,135 guarded names and 122,208 Java identifier edits, plus 11
+class-name literal edits and 109 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
 compile and compare 138,143 bindings, reproduce and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current shared exits and continuation frames (pass 259)
+## Current nested-switch continuations and block headers (pass 260)
+
+`PlatformTaskDispatcher.run` uses ordinary switch breaks after cursor operations.
+The unchanged following outer-switch exit reaches the original continuation,
+so `platformTaskDispatch` is no longer needed. Every selector, permission/backend
+check, protected action and failure remains. Its original block scope stays.
+
+The first statements in five multiline headers now occupy separate lines in the
+platform dispatcher, text renderer, tutorial renderer and PCM mixer. Tokens and
+operations remain unchanged. Twelve smaller frames and 41 finer field purposes
+remain; the workflow records independent Java-tree/target proofs, native oracles,
+exact reproduction and reversal. Whole-game and phone/FPS behavior remain
+unverified.
+
+## Previous shared exits and continuation frames (pass 259)
 
 `Geoblox.updateGame` uses `assetSessionPreparationFrameContinues` to separate
 asset readiness and account actions from later preparation. The original update-

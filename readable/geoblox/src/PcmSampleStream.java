@@ -1156,7 +1156,8 @@ final class PcmSampleStream extends PcmStream {
         finiteLoopMixing: {
           if (this.loopsRemaining > 0) {
             if (!this.pingPongLoop) {
-              if (this.sampleStepFixed < 0) {while (true) {
+              if (this.sampleStepFixed < 0) {
+                while (true) {
                   nextDestinationOffset = this.mixReverseToBoundary(destination, nextDestinationOffset, loopStartFixed, frameCount, (int) sample.samples[this.loopEnd - 1]);
                   if (this.samplePositionFixed >= loopStartFixed) {
                     return;

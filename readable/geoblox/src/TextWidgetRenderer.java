@@ -86,7 +86,8 @@ class TextWidgetRenderer implements WidgetRenderer, TextWidgetLayout {
               horizontalAlignmentMode = this.horizontalAlignment;
               if (horizontalAlignmentMode != 0 &&
                 horizontalAlignmentMode != 3) {
-                if (horizontalAlignmentMode == 1) {this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
+                if (horizontalAlignmentMode == 1) {
+                  this.font.drawCenteredText(this.getDisplayText(125, widget), this.getTextX(widget, parentX, 11875, extraX) + (availableWidth >> 1), this.getTextY(widget, parentY, 1674, extraY) + baselineOffset, color, shadowColor);
                 } else {
                   if (!(horizontalAlignmentMode != 2)) {
                     this.font.drawRightAlignedText(this.getDisplayText(112, widget), availableWidth + this.getTextX(widget, parentX, methodGuard + 11875, extraX), baselineOffset + this.getTextY(widget, parentY, 1674, extraY), color, shadowColor);

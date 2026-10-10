@@ -1292,7 +1292,8 @@ final class GameplaySession {
                     precedingThemeDispatchPreparationFrameContinues = !(clientControlFlowGuard != 0);
                     if (precedingThemeDispatchPreparationFrameContinues) {
                       if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
-                        if (0 < themeIndexThenId) {precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
+                        if (0 < themeIndexThenId) {
+                          precedingThemeId = WidgetContainer.themeCycleOrder[themeIndexThenId - 1];
                         } else {
                           precedingThemeId = WidgetContainer.themeCycleOrder[6];
                         }
