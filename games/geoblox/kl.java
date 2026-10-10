@@ -868,7 +868,8 @@ final class kl extends ia {
           }
           return;
         }
-        L5: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (this.field_v > 0) {
             if (!this.field_r) {
               if (this.field_p >= 0) {
@@ -879,10 +880,12 @@ final class kl extends ia {
                 if (var7 >= this.field_v) {
                   this.field_x = this.field_x - var6 * this.field_v;
                   this.field_v = 0;
-                  break L5;
+                  decompiledFrameRemainder0 = false;
                 }
-                this.field_x = this.field_x - var6 * var7;
-                this.field_v = this.field_v - var7;
+                if (decompiledFrameRemainder0) {
+                  this.field_x = this.field_x - var6 * var7;
+                  this.field_v = this.field_v - var7;
+                }
               } else {
                 if (this.field_x >= var3) {
                   return;
@@ -891,44 +894,50 @@ final class kl extends ia {
                 if (var7 >= this.field_v) {
                   this.field_x = this.field_x + var6 * this.field_v;
                   this.field_v = 0;
-                  break L5;
+                  decompiledFrameRemainder0 = false;
                 }
-                this.field_x = this.field_x + var6 * var7;
-                this.field_v = this.field_v - var7;
+                if (decompiledFrameRemainder0) {
+                  this.field_x = this.field_x + var6 * var7;
+                  this.field_v = this.field_v - var7;
+                }
               }
-              return;
-            }
-            if (this.field_p < 0) {
-              if (this.field_x >= var3) {
+              if (decompiledFrameRemainder0) {
                 return;
-              }
-              this.field_x = var3 + var3 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$0 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-              if (fieldTemp$0 == 0) {
-                break L5;
               }
             }
-            do {
-              if (this.field_x < var4) {
-                return;
+            if (decompiledFrameRemainder0) {
+              if (this.field_p < 0) {
+                if (this.field_x >= var3) {
+                  return;
+                }
+                this.field_x = var3 + var3 - 1 - this.field_x;
+                this.field_p = -this.field_p;
+                fieldTemp$0 = this.field_v - 1;
+                this.field_v = this.field_v - 1;
+                decompiledFrameRemainder0 = !(fieldTemp$0 == 0);
               }
-              this.field_x = var4 + var4 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$1 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-              if (fieldTemp$1 == 0) {
-                break;
+              if (decompiledFrameRemainder0) {
+                do {
+                  if (this.field_x < var4) {
+                    return;
+                  }
+                  this.field_x = var4 + var4 - 1 - this.field_x;
+                  this.field_p = -this.field_p;
+                  fieldTemp$1 = this.field_v - 1;
+                  this.field_v = this.field_v - 1;
+                  if (fieldTemp$1 == 0) {
+                    break;
+                  }
+                  if (this.field_x >= var3) {
+                    return;
+                  }
+                  this.field_x = var3 + var3 - 1 - this.field_x;
+                  this.field_p = -this.field_p;
+                  fieldTemp$2 = this.field_v - 1;
+                  this.field_v = this.field_v - 1;
+                } while (fieldTemp$2 != 0);
               }
-              if (this.field_x >= var3) {
-                return;
-              }
-              this.field_x = var3 + var3 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$2 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-            } while (fieldTemp$2 != 0);
+            }
           }
         }
         if (this.field_p >= 0) {
@@ -1153,7 +1162,8 @@ final class kl extends ia {
             this.field_p = -this.field_p;
           }
         }
-        L4: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (this.field_v > 0) {
             if (!this.field_r) {
               if (this.field_p < 0) {
@@ -1189,42 +1199,44 @@ final class kl extends ia {
                 this.field_x = this.field_x - var8 * this.field_v;
                 this.field_v = 0;
               }
-              break L4;
+              decompiledFrameRemainder0 = false;
             }
-            if (this.field_p < 0) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
-              if (this.field_x >= var5) {
-                return;
+            if (decompiledFrameRemainder0) {
+              if (this.field_p < 0) {
+                var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
+                if (this.field_x >= var5) {
+                  return;
+                }
+                this.field_x = var5 + var5 - 1 - this.field_x;
+                this.field_p = -this.field_p;
+                fieldTemp$0 = this.field_v - 1;
+                this.field_v = this.field_v - 1;
+                decompiledFrameRemainder0 = !(fieldTemp$0 == 0);
               }
-              this.field_x = var5 + var5 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$0 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-              if (fieldTemp$0 == 0) {
-                break L4;
+              if (decompiledFrameRemainder0) {
+                do {
+                  var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_m - 1]);
+                  if (this.field_x < var6) {
+                    return;
+                  }
+                  this.field_x = var6 + var6 - 1 - this.field_x;
+                  this.field_p = -this.field_p;
+                  fieldTemp$1 = this.field_v - 1;
+                  this.field_v = this.field_v - 1;
+                  if (fieldTemp$1 == 0) {
+                    break;
+                  }
+                  var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
+                  if (this.field_x >= var5) {
+                    return;
+                  }
+                  this.field_x = var5 + var5 - 1 - this.field_x;
+                  this.field_p = -this.field_p;
+                  fieldTemp$2 = this.field_v - 1;
+                  this.field_v = this.field_v - 1;
+                } while (fieldTemp$2 != 0);
               }
             }
-            do {
-              var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_m - 1]);
-              if (this.field_x < var6) {
-                return;
-              }
-              this.field_x = var6 + var6 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$1 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-              if (fieldTemp$1 == 0) {
-                break;
-              }
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_q]);
-              if (this.field_x >= var5) {
-                return;
-              }
-              this.field_x = var5 + var5 - 1 - this.field_x;
-              this.field_p = -this.field_p;
-              fieldTemp$2 = this.field_v - 1;
-              this.field_v = this.field_v - 1;
-            } while (fieldTemp$2 != 0);
           }
         }
         if (this.field_p >= 0) {

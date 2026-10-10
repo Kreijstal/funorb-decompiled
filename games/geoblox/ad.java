@@ -153,18 +153,22 @@ final class ad extends ia {
         this.field_m.b(param0);
         var3 = (pc) (this.field_l.g(0));
         while (var3 != null) {
-          L1: {
+          {
+            boolean decompiledFrameCompleted0 = true;
             if (!this.field_k.b(var3, -1)) {
               var2 = param0;
               while (var2 > var3.field_g) {
                 this.a(-1, var3, var3.field_g);
                 var2 = var2 - var3.field_g;
                 if (this.field_k.a(var2, 0, (int[]) null, var3, false)) {
-                  break L1;
+                  decompiledFrameCompleted0 = false;
+                  break;
                 }
               }
-              this.a(-1, var3, var2);
-              var3.field_g = var3.field_g - var2;
+              if (decompiledFrameCompleted0) {
+                this.a(-1, var3, var2);
+                var3.field_g = var3.field_g - var2;
+              }
             }
           }
           var3 = (pc) (this.field_l.d(1));
