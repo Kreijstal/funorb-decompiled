@@ -17,14 +17,24 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0e95bc27a6ca939148be805dff2ad4c058b03c4e/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/2f8152653a61e14492f650e6f1a2dffda153b668/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,098 bindings,
+identities. Both 303-file Java corpora compile and compare 138,135 bindings,
 preserving 388 override relationships.
 
-## Current switch exits and effectful prefixes (pass 256)
+## Current menu-key alternatives (pass 257)
+
+Menu-key handling retains its complete conditional alternatives and original
+predicates while replacing 21 nonlocal exits with a named continuation. Ordered
+short-circuit guards remove six redundant new-local reads. Eighteen smaller
+frames and 41 finer field purposes remain. Independent reconstruction/compaction
+certificates, bindings/targets and native oracle tests pass. All 303 sources
+compile, reproduce and reverse exactly. Generic recovery and agent guidance stay
+in java-tools; game rules and proofs stay in Deko.
+
+## Previous switch exits and effectful prefixes (pass 256)
 
 Menu activation uses 19 ordinary switch exits and a named continuation decision
 for session startup. Its original sole-normal-exit update, every control-flag

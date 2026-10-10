@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0e95bc27a6ca939148be805dff2ad4c058b03c4e/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/2f8152653a61e14492f650e6f1a2dffda153b668/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 256)
+## Current readability (pass 257)
 
-The export has 20,136 guarded names and 122,163 Java identifier edits, plus 11
-class-name literal edits and 155 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,136 guarded names and 122,200 Java identifier edits, plus 11
+class-name literal edits and 133 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,098 bindings, reproduce and
+compile and compare 138,135 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,20 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current switch exits and effectful prefixes (pass 256)
+## Current menu-key alternatives (pass 257)
+
+`GameScreen.handleMenuKey` uses `menuKeyDispatchFrameContinues` to control
+its original remainder. Each conditional alternative and guarded effect remains
+in its original scope; predicates are never reevaluated. Twenty-one frame exits
+become captured continuation decisions. Six redundant local reads disappear
+through ordered short-circuit assignments, preserving every conditional write.
+
+Eighteen smaller plain frames and 41 finer field purposes remain. The workflow
+records separate independent Java certificates for reconstruction and compaction,
+native early-return oracles and exact reproduction/reversal. Whole-game and
+phone/FPS behavior remain unverified.
+
+## Previous switch exits and effectful prefixes (pass 256)
 
 `GameScreen.activateMenuItem` uses ordinary switch exits. The original normal
 highscore-view update runs only in its normal case; zero/nonzero control flags

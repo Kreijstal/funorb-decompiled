@@ -48,7 +48,8 @@ final class GameScreen extends MenuScreen {
         int clientControlFlowGuard = 0;
         clientControlFlowGuard = Geoblox.clientControlFlowFlag;
         try {
-          menuKeyDispatch: {
+          {
+            boolean menuKeyDispatchFrameContinues = true;
             {
               boolean volumeKeyHandlingFrameContinues = true;
               actionId = InstrumentEnvelope.menuActionIds[this.screenId][itemIndex];
@@ -64,172 +65,162 @@ final class GameScreen extends MenuScreen {
                   SocialListEntry.soundEffectVolume = 0;
                 }
                 this.previewMusicVolume(0);
-                break menuKeyDispatch;
+                menuKeyDispatchFrameContinues = false;
               } else {
                 volumeKeyHandlingFrameContinues = !(actionId != 9);
               }
-              if (volumeKeyHandlingFrameContinues) {
-                if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
-                  if (103 != SessionTextHistorySupport.currentKeyboardEventCode) {
-                    super.handleMenuKey(itemIndex, -70);
-                    if (clientControlFlowGuard == 0) {
-                      break menuKeyDispatch;
+              if (menuKeyDispatchFrameContinues) {
+                if (volumeKeyHandlingFrameContinues) {
+                  if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
+                    if (103 != SessionTextHistorySupport.currentKeyboardEventCode) {
+                      super.handleMenuKey(itemIndex, -70);
+                      menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
+                    }
+                    if (menuKeyDispatchFrameContinues) {
+                      AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
+                      menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
                     }
                   }
-                  AsyncResourceDownloader.setGameMusicVolume(-15346, 80);
-                  if (clientControlFlowGuard == 0) {
-                    break menuKeyDispatch;
+                  if (menuKeyDispatchFrameContinues) {
+                    AsyncResourceDownloader.setGameMusicVolume(-15346, 0);
+                    menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
                   }
-                }
-                AsyncResourceDownloader.setGameMusicVolume(-15346, 0);
-                if (clientControlFlowGuard == 0) {
-                  break menuKeyDispatch;
                 }
               }
             }
-            if (SessionTextHistorySupport.currentKeyboardEventCode == 13 &&
-              !this.fullscreenDialogActive) {
-              if (this.screenId == 1) {
-                ScoreSubmission.requestedScreenId = -1;
-                if (clientControlFlowGuard != 0) {
+            if (menuKeyDispatchFrameContinues) {
+              if (SessionTextHistorySupport.currentKeyboardEventCode == 13 &&
+                !this.fullscreenDialogActive) {
+                if (this.screenId == 1) {
+                  ScoreSubmission.requestedScreenId = -1;
+                  if (clientControlFlowGuard != 0) {
+                    ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
+                  }
+                } else {
                   ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
                 }
-              } else {
-                ScoreSubmission.requestedScreenId = SpriteCheckboxRenderer.previousMenuScreenId;
-              }
-              if (~ScoreSubmission.requestedScreenId == ~this.screenId) {
-                break menuKeyDispatch;
-              }
-              if (this.screenId != 1 &&
-                this.screenId != 0) {
-                break menuKeyDispatch;
-              }
-              SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
-              if (clientControlFlowGuard == 0) {
-                break menuKeyDispatch;
-              }
-            }
-            if (this.fullscreenDialogActive) {
-              if (SessionTextHistorySupport.currentKeyboardEventCode == 84 ||
-                83 == SessionTextHistorySupport.currentKeyboardEventCode) {
-                if (!UnderlinedButtonRenderer.isGuestSessionMode(-103)) {
-                  if (!(TextTemplateDefinition.loginMembershipGateValue <= 0) ||
-                    this.fullscreenDialogButtonIndex != 0 &&
-                    (!(PrefixCodeDecoder.pointerXSnapshot > 190) ||
-                    !(PrefixCodeDecoder.pointerXSnapshot < 449) ||
-                    !(265 < PcmResampler.pointerYSnapshot) ||
-                    !(PcmResampler.pointerYSnapshot < 299))) {
-                    if (InstrumentPatch.activeFullscreenCanvas == null) {
-                      if (0 != this.fullscreenDialogButtonIndex) {
-                        if (PrefixCodeDecoder.pointerXSnapshot <= 260) {
-                          break menuKeyDispatch;
-                        }
-                        if (PrefixCodeDecoder.pointerXSnapshot >= 380) {
-                          break menuKeyDispatch;
-                        }
-                        if (PcmResampler.pointerYSnapshot <= 274) {
-                          break menuKeyDispatch;
-                        }
-                        if (PcmResampler.pointerYSnapshot >= 309) {
-                          break menuKeyDispatch;
-                        }
-                      }
-                      this.pointerInteractionActive = true;
-                      this.fullscreenDialogActive = false;
-                      if (clientControlFlowGuard == 0) {
-                        break menuKeyDispatch;
-                      }
-                    }
-                    if (1 == this.fullscreenDialogButtonIndex ||
-                      this.fullscreenDialogButtonIndex < 0 &&
-                      !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
-                      !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
-                      !(PcmResampler.pointerYSnapshot <= 327) &&
-                      !(PcmResampler.pointerYSnapshot >= 362)) {
-                      this.fullscreenDialogActive = false;
-                      ArchiveCatalog.exitFullscreenIfActive(255);
-                      this.pointerInteractionActive = true;
-                      if (clientControlFlowGuard == 0) {
-                        break menuKeyDispatch;
-                      }
-                    }
-                    if (this.fullscreenDialogButtonIndex != 0) {
-                      if (this.fullscreenDialogButtonIndex >= 0) {
-                        break menuKeyDispatch;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot <= 170) {
-                        break menuKeyDispatch;
-                      }
-                      if (PrefixCodeDecoder.pointerXSnapshot >= 290) {
-                        break menuKeyDispatch;
-                      }
-                      if (PcmResampler.pointerYSnapshot <= 327) {
-                        break menuKeyDispatch;
-                      }
-                      if (PcmResampler.pointerYSnapshot >= 362) {
-                        break menuKeyDispatch;
-                      }
-                    }
-                    this.pointerInteractionActive = true;
-                    this.fullscreenDialogActive = false;
-                    if (clientControlFlowGuard == 0) {
-                      break menuKeyDispatch;
-                    }
-                  }
-                  this.pointerInteractionActive = true;
-                  this.fullscreenDialogActive = false;
-                  if (clientControlFlowGuard == 0) {
-                    break menuKeyDispatch;
-                  }
+                menuKeyDispatchFrameContinues = !(~ScoreSubmission.requestedScreenId == ~this.screenId);
+                if ((menuKeyDispatchFrameContinues) &&
+                  (menuKeyDispatchFrameContinues = !(this.screenId != 1 &&
+                  this.screenId != 0))) {
+                  SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
+                  menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
                 }
-                if (this.fullscreenDialogButtonIndex == 1 ||
-                  this.fullscreenDialogButtonIndex < 0 &&
-                  !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
-                  !(470 <= PrefixCodeDecoder.pointerXSnapshot) &&
-                  !(PcmResampler.pointerYSnapshot <= 265) &&
-                  !(PcmResampler.pointerYSnapshot >= 299)) {
-                  this.pointerInteractionActive = true;
-                  this.fullscreenDialogActive = false;
-                  if (clientControlFlowGuard == 0) {
-                    break menuKeyDispatch;
-                  }
-                }
-                if (this.fullscreenDialogButtonIndex != 0) {
-                  if (!(this.fullscreenDialogButtonIndex >= 0)) {
-                    if (!(PrefixCodeDecoder.pointerXSnapshot <= 170)) {
-                      if (!(PrefixCodeDecoder.pointerXSnapshot >= 290)) {
-                        if (!(PcmResampler.pointerYSnapshot <= 265)) {
-                          if (!(PcmResampler.pointerYSnapshot >= 299)) {
+              }
+              if (menuKeyDispatchFrameContinues) {
+                if (this.fullscreenDialogActive) {
+                  if (SessionTextHistorySupport.currentKeyboardEventCode == 84 ||
+                    83 == SessionTextHistorySupport.currentKeyboardEventCode) {
+                    if (!UnderlinedButtonRenderer.isGuestSessionMode(-103)) {
+                      if (!(TextTemplateDefinition.loginMembershipGateValue <= 0) ||
+                        this.fullscreenDialogButtonIndex != 0 &&
+                        (!(PrefixCodeDecoder.pointerXSnapshot > 190) ||
+                        !(PrefixCodeDecoder.pointerXSnapshot < 449) ||
+                        !(265 < PcmResampler.pointerYSnapshot) ||
+                        !(PcmResampler.pointerYSnapshot < 299))) {
+                        if (InstrumentPatch.activeFullscreenCanvas == null) {
+                          if (0 != this.fullscreenDialogButtonIndex) {
+                            menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 260);
+                            if ((menuKeyDispatchFrameContinues) &&
+                              (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 380)) &&
+                              (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 274))) {
+                              menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 309);
+                            }
+                          }
+                          if (menuKeyDispatchFrameContinues) {
                             this.pointerInteractionActive = true;
-                            if (null != UiWidget.gameplaySession) {
-                              UiWidget.gameplaySession.submitScore((byte) -70);
+                            this.fullscreenDialogActive = false;
+                            menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
+                          }
+                        }
+                        if (menuKeyDispatchFrameContinues) {
+                          if (1 == this.fullscreenDialogButtonIndex ||
+                            this.fullscreenDialogButtonIndex < 0 &&
+                            !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
+                            !(PrefixCodeDecoder.pointerXSnapshot >= 470) &&
+                            !(PcmResampler.pointerYSnapshot <= 327) &&
+                            !(PcmResampler.pointerYSnapshot >= 362)) {
+                            this.fullscreenDialogActive = false;
+                            ArchiveCatalog.exitFullscreenIfActive(255);
+                            this.pointerInteractionActive = true;
+                            menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
+                          }
+                          if (menuKeyDispatchFrameContinues) {
+                            if (this.fullscreenDialogButtonIndex != 0) {
+                              menuKeyDispatchFrameContinues = !(this.fullscreenDialogButtonIndex >= 0);
+                              if ((menuKeyDispatchFrameContinues) &&
+                                (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 170)) &&
+                                (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 290)) &&
+                                (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 327))) {
+                                menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 362);
+                              }
                             }
-                            UiWidget.gameplayReturnScreenId = 0;
-                            ScoreSubmission.requestedScreenId = -1;
-                            ProxySocketConnector.gameplayOriginScreenId = 0;
-                            if (clientControlFlowGuard != 0) {
-                              super.handleMenuKey(itemIndex, -100);
+                            if (menuKeyDispatchFrameContinues) {
+                              this.pointerInteractionActive = true;
+                              this.fullscreenDialogActive = false;
+                              menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
                             }
+                          }
+                        }
+                      }
+                      if (menuKeyDispatchFrameContinues) {
+                        this.pointerInteractionActive = true;
+                        this.fullscreenDialogActive = false;
+                        menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
+                      }
+                    }
+                    if (menuKeyDispatchFrameContinues) {
+                      if (this.fullscreenDialogButtonIndex == 1 ||
+                        this.fullscreenDialogButtonIndex < 0 &&
+                        !(PrefixCodeDecoder.pointerXSnapshot <= 350) &&
+                        !(470 <= PrefixCodeDecoder.pointerXSnapshot) &&
+                        !(PcmResampler.pointerYSnapshot <= 265) &&
+                        !(PcmResampler.pointerYSnapshot >= 299)) {
+                        this.pointerInteractionActive = true;
+                        this.fullscreenDialogActive = false;
+                        menuKeyDispatchFrameContinues = !(clientControlFlowGuard == 0);
+                      }
+                      if (menuKeyDispatchFrameContinues) {
+                        if (this.fullscreenDialogButtonIndex != 0) {
+                          if (!(this.fullscreenDialogButtonIndex >= 0)) {
+                            if (!(PrefixCodeDecoder.pointerXSnapshot <= 170)) {
+                              if (!(PrefixCodeDecoder.pointerXSnapshot >= 290)) {
+                                if (!(PcmResampler.pointerYSnapshot <= 265)) {
+                                  if (!(PcmResampler.pointerYSnapshot >= 299)) {
+                                    this.pointerInteractionActive = true;
+                                    if (null != UiWidget.gameplaySession) {
+                                      UiWidget.gameplaySession.submitScore((byte) -70);
+                                    }
+                                    UiWidget.gameplayReturnScreenId = 0;
+                                    ScoreSubmission.requestedScreenId = -1;
+                                    ProxySocketConnector.gameplayOriginScreenId = 0;
+                                    if (clientControlFlowGuard != 0) {
+                                      super.handleMenuKey(itemIndex, -100);
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        } else {
+                          this.pointerInteractionActive = true;
+                          if (null != UiWidget.gameplaySession) {
+                            UiWidget.gameplaySession.submitScore((byte) -70);
+                          }
+                          UiWidget.gameplayReturnScreenId = 0;
+                          ScoreSubmission.requestedScreenId = -1;
+                          ProxySocketConnector.gameplayOriginScreenId = 0;
+                          if (clientControlFlowGuard != 0) {
+                            super.handleMenuKey(itemIndex, -100);
                           }
                         }
                       }
                     }
                   }
                 } else {
-                  this.pointerInteractionActive = true;
-                  if (null != UiWidget.gameplaySession) {
-                    UiWidget.gameplaySession.submitScore((byte) -70);
-                  }
-                  UiWidget.gameplayReturnScreenId = 0;
-                  ScoreSubmission.requestedScreenId = -1;
-                  ProxySocketConnector.gameplayOriginScreenId = 0;
-                  if (clientControlFlowGuard != 0) {
-                    super.handleMenuKey(itemIndex, -100);
-                  }
+                  super.handleMenuKey(itemIndex, -100);
                 }
               }
-            } else {
-              super.handleMenuKey(itemIndex, -100);
             }
           }
           if (methodGuard > -26) {

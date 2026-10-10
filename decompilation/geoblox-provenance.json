@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "5cfac9209842c294b29b743ed01ff109e3ab5747",
+      "commit": "5722977b5e34919811b9644e99c4ed2b32212379",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "ffba3cd4c15e34d8c3770d485cec94ee1204ff25d687ab0c80094d3892ac302f",
-        "reproduce": "git archive --format=tar 5cfac9209842c294b29b743ed01ff109e3ab5747 | sha256sum",
+        "sha256": "f5b62fe511e7b1059acc3c83e8267a34f29833a0e803b348091e99f1cc2d288f",
+        "reproduce": "git archive --format=tar 5722977b5e34919811b9644e99c4ed2b32212379 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -37,7 +37,8 @@
         "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
         "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
         "CFR_JS_SWITCH_EXIT_TAILS": "1",
-        "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1"
+        "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+        "CFR_JS_GUARDED_FRAME_ALTERNATES": "1"
       }
     },
     "namingTool": {
@@ -132,7 +133,8 @@
       "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
       "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
       "CFR_JS_SWITCH_EXIT_TAILS": "1",
-      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1"
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1"
     }
   },
   "freshVerification": {
@@ -157,9 +159,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
-  "previousSourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
-  "changedJavaFiles": 13,
+  "sourceTreeSha256": "5c0d2b999655fdd15812aad44e9e0570b275b5e24bdbd992ff58b22f0b15d79c",
+  "previousSourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+  "changedJavaFiles": 1,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3327,11 +3329,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e",
+    "commit": "2f8152653a61e14492f650e6f1a2dffda153b668",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "1ec9f85e826a88c7f31b5427368388ca69740a4fa29d467f14d377b579722f9f"
+      "sha256": "1c4c57bb42ab6951bbcd217a831948d8dfdbb912dd1018c3594aadc77ea61f24"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3341,20 +3343,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "1edca55586975a074af3e550994d5d1dc9260b6678405bec8ed198081ae0b026",
+    "outputTreeSha256": "a5b66eec6183e2b48244b7c13c1dbc7f2a67199fb0a4c6944e65d49306b3ef04",
     "files": 303,
     "rules": 20136,
-    "identifierEdits": 122163,
-    "bindingsCompared": 138098,
+    "identifierEdits": 122200,
+    "bindingsCompared": 138135,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122329,
+    "totalEdits": 122344,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 155,
-    "labelBindingsCompared": 155,
-    "labelDeclarationsCompared": 47,
+    "labelEdits": 133,
+    "labelBindingsCompared": 133,
+    "labelDeclarationsCompared": 46,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3371,8 +3373,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 256,
-    "semanticPass": 256,
+    "structuralPass": 257,
+    "semanticPass": 257,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36851,12 +36853,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "6e364298f2479598a7aad7fb00b387a923a81f89",
-    "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+    "sourceCommit": "83031939921cb2a32467bf3b99b42e19d94873c1",
+    "sourceTreeSha256": "5c0d2b999655fdd15812aad44e9e0570b275b5e24bdbd992ff58b22f0b15d79c",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e"
+    "workflowCommit": "2f8152653a61e14492f650e6f1a2dffda153b668"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -50093,5 +50095,660 @@
     ],
     "sourceWorkflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e",
     "sourceProofWorkflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e"
+  },
+  "alternateGuardedFrameRecovery": {
+    "version": 257,
+    "changedJavaFiles": 1,
+    "changedMethodBodies": 1,
+    "framesRecovered": 1,
+    "frameExitsConsumed": 21,
+    "newDecisionLocals": 1,
+    "newFlagOccurrences": 37,
+    "intermediateFlagOccurrences": 43,
+    "redundantFlagReadsRemoved": 6,
+    "removedLabelOccurrences": 22,
+    "maximumExits": 64,
+    "sourceProofTest": "readable/tests/test-geoblox-alternate-frame-source.mjs",
+    "sourceProofTestSha256": "cc57885e640cc5416f65ec7c42af4888ad0d1ed0a5c78ff4a13aa2dc38576cc4",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "booleanGuardFixtureSha256": "1ae2770a29f185c0212f5cb1ea84116157cb8bbe797e45b85a90a3bf3dcad2c3",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "6e364298f2479598a7aad7fb00b387a923a81f89",
+    "sourceCommit": "83031939921cb2a32467bf3b99b42e19d94873c1",
+    "previousSourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+    "sourceTreeSha256": "5c0d2b999655fdd15812aad44e9e0570b275b5e24bdbd992ff58b22f0b15d79c",
+    "javaToolsCommit": "5722977b5e34919811b9644e99c4ed2b32212379",
+    "sourceArchiveSha256": "f5b62fe511e7b1059acc3c83e8267a34f29833a0e803b348091e99f1cc2d288f",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1"
+    },
+    "bindingsBefore": 138098,
+    "bindingsCompared": 138135,
+    "transfersBefore": 4793,
+    "transfersCompared": 4772,
+    "originalIdentityMigrations": [
+      {
+        "before": "L:c.a(II)V#4",
+        "after": "L:c.a(II)V#5"
+      },
+      {
+        "before": "L:c.a(II)V#5",
+        "after": "L:c.a(II)V#6"
+      }
+    ],
+    "removedSymbols": [
+      "B:c.a(II)V#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "originalConditionsAlternativesAndCompleteSuffixesIndependentlyDerived": true,
+    "newFlagsIndependentlyTypedAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 19,
+    "genericAlternateTestGroupsPassed": 4,
+    "newIndependentNativeOracleCases": 50544,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 18,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "6e364298f2479598a7aad7fb00b387a923a81f89",
+      "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass257 reconstructs the menu-key dispatch frame while retaining each conditional and complete alternative. A fresh Boolean becomes false at each original selected true-arm exit; prefixes and alternatives remain in their original scopes and every predicate/read stays at its original evaluation site. Complete suffixes use captured continuation eligibility. Twenty-one exits are consumed without copying effects, reevaluating predicates, dropping snapshots or specializing control flags. Independent javac recipes compare all other ordered syntax, bindings, overrides and protected targets; generic native early-return oracles cover alternatives and failures. The explicit 64-exit policy stays bounded; ordinary/effectful policies retain their names and defaults. Original bytecode is unchanged; generated source is never hand-edited. Whole-game and phone/FPS behavior remain unverified.",
+    "selections": [
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "name": "decompiledFrameRemainder1",
+        "label": "L0",
+        "region": {
+          "start": 1292,
+          "end": 7574
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 1440,
+              "end": 1845
+            },
+            "condition": {
+              "start": 1443,
+              "end": 1487
+            },
+            "jump": {
+              "start": 1820,
+              "end": 1829
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 1506,
+              "end": 1803
+            },
+            "alternate": true
+          },
+          {
+            "range": {
+              "start": 2124,
+              "end": 2194
+            },
+            "condition": {
+              "start": 2127,
+              "end": 2138
+            },
+            "jump": {
+              "start": 2163,
+              "end": 2172
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 2269,
+              "end": 2335
+            },
+            "condition": {
+              "start": 2272,
+              "end": 2283
+            },
+            "jump": {
+              "start": 2306,
+              "end": 2315
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 2403,
+              "end": 2465
+            },
+            "condition": {
+              "start": 2406,
+              "end": 2417
+            },
+            "jump": {
+              "start": 2438,
+              "end": 2447
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 2823,
+              "end": 2900
+            },
+            "condition": {
+              "start": 2826,
+              "end": 2856
+            },
+            "jump": {
+              "start": 2875,
+              "end": 2884
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 2915,
+              "end": 3018
+            },
+            "condition": {
+              "start": 2918,
+              "end": 2974
+            },
+            "jump": {
+              "start": 2993,
+              "end": 3002
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 3074,
+              "end": 3132
+            },
+            "condition": {
+              "start": 3077,
+              "end": 3088
+            },
+            "jump": {
+              "start": 3107,
+              "end": 3116
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 3664,
+              "end": 3750
+            },
+            "condition": {
+              "start": 3667,
+              "end": 3686
+            },
+            "jump": {
+              "start": 3715,
+              "end": 3724
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 3775,
+              "end": 3861
+            },
+            "condition": {
+              "start": 3778,
+              "end": 3797
+            },
+            "jump": {
+              "start": 3826,
+              "end": 3835
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 3886,
+              "end": 3972
+            },
+            "condition": {
+              "start": 3889,
+              "end": 3908
+            },
+            "jump": {
+              "start": 3937,
+              "end": 3946
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 3997,
+              "end": 4083
+            },
+            "condition": {
+              "start": 4000,
+              "end": 4019
+            },
+            "jump": {
+              "start": 4048,
+              "end": 4057
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 4217,
+              "end": 4291
+            },
+            "condition": {
+              "start": 4220,
+              "end": 4231
+            },
+            "jump": {
+              "start": 4258,
+              "end": 4267
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 4727,
+              "end": 4801
+            },
+            "condition": {
+              "start": 4730,
+              "end": 4741
+            },
+            "jump": {
+              "start": 4768,
+              "end": 4777
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 4891,
+              "end": 4973
+            },
+            "condition": {
+              "start": 4894,
+              "end": 4913
+            },
+            "jump": {
+              "start": 4940,
+              "end": 4949
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 4996,
+              "end": 5078
+            },
+            "condition": {
+              "start": 4999,
+              "end": 5018
+            },
+            "jump": {
+              "start": 5045,
+              "end": 5054
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 5101,
+              "end": 5183
+            },
+            "condition": {
+              "start": 5104,
+              "end": 5123
+            },
+            "jump": {
+              "start": 5150,
+              "end": 5159
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 5206,
+              "end": 5288
+            },
+            "condition": {
+              "start": 5209,
+              "end": 5228
+            },
+            "jump": {
+              "start": 5255,
+              "end": 5264
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 5311,
+              "end": 5393
+            },
+            "condition": {
+              "start": 5314,
+              "end": 5333
+            },
+            "jump": {
+              "start": 5360,
+              "end": 5369
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 5519,
+              "end": 5589
+            },
+            "condition": {
+              "start": 5522,
+              "end": 5533
+            },
+            "jump": {
+              "start": 5558,
+              "end": 5567
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 5707,
+              "end": 5773
+            },
+            "condition": {
+              "start": 5710,
+              "end": 5721
+            },
+            "jump": {
+              "start": 5744,
+              "end": 5753
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          },
+          {
+            "range": {
+              "start": 6136,
+              "end": 6202
+            },
+            "condition": {
+              "start": 6139,
+              "end": 6150
+            },
+            "jump": {
+              "start": 6173,
+              "end": 6182
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 21,
+        "prefixAssignments": [],
+        "removedSymbol": "B:c.a(II)V#0",
+        "method": "M:c.a(II)V",
+        "symbol": "L:c.a(II)V#4",
+        "afterStart": 1292
+      }
+    ],
+    "dictionaryIdentities": 20443,
+    "survivingCompleteRulesPreserved": 20135,
+    "survivingDictionaryIdentitiesPreserved": 20442,
+    "historicalSourceProofsPreserved": 99,
+    "historicalRecordsPreserved": 180,
+    "readableIdentifierEdits": 122200,
+    "readableTotalEdits": 122344,
+    "publicationTestGroupsPassed": 27,
+    "existingGameplayTraceGroupsPassed": 3,
+    "existingRenderingTraceGroupsPassed": 10,
+    "existingResultTraceGroupsPassed": 14,
+    "allSourcesCompileReproduceAndReverseByteExactly": true,
+    "allSurvivingCompleteNamesDictionaryObjectsAndHistoricalCertificatesPreserved": true,
+    "originalConditionalStoresIndependentlyVerifiedAfterCompaction": true,
+    "sourceWorkflowCommit": "2f8152653a61e14492f650e6f1a2dffda153b668",
+    "sourceProofWorkflowCommit": "2f8152653a61e14492f650e6f1a2dffda153b668"
   }
 }
