@@ -51,7 +51,7 @@ final class ae {
           if (var4 == 0) {
             continue;
           }
-          L7: {
+          {
             var5 = 1 << 32 - var4;
             var6 = var14[var4];
             var17[var3] = var6;
@@ -60,18 +60,18 @@ final class ae {
               for (var8 = var4 - 1; var8 >= 1; var8--) {
                 var9_int = var14[var8];
                 if (var9_int != var6) {
-                  break L7;
+                  break;
                 }
                 var10 = 1 << 32 - var8;
                 if ((var9_int & var10) != 0) {
                   var2_ref_int__[var8] = var2_ref_int__[var8 - 1];
-                  break L7;
+                  break;
                 }
                 var2_ref_int__[var8] = var9_int | var10;
               }
-              break L7;
+            } else {
+              var7 = var2_ref_int__[var4 - 1];
             }
-            var7 = var2_ref_int__[var4 - 1];
           }
           var14[var4] = var7;
           for (var8Lifetime2 = var4 + 1; var8Lifetime2 <= 32; var8Lifetime2++) {

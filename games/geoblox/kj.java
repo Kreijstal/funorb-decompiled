@@ -889,7 +889,7 @@ final class kj extends ia {
         if (param0 != 23327) {
           this.field_U = -124;
         }
-        L1: {
+        {
           if ((this.field_m[param3] & 2) != 0) {
             var6 = (pc) (this.field_I.field_l.g(param0 ^ 23327));
             while (var6 != null) {
@@ -897,13 +897,13 @@ final class kj extends ia {
                 0 > var6.field_y &&
                 var7 != var6) {
                 var7.field_y = 0;
-                break L1;
+                break;
               }
               var6 = (pc) (this.field_I.field_l.d(1));
             }
-            break L1;
+          } else {
+            var7.field_y = 0;
           }
-          var7.field_y = 0;
         }
     }
 
