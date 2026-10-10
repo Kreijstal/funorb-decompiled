@@ -197,11 +197,10 @@ final class d implements Runnable {
                           var2_int == 14) {
                           var3_int = var9.field_c;
                           var4_int = var9.field_g;
-                          if (!this.field_l) {
-                            Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_u, new Object[]{new Integer(var3_int), new Integer(var4_int)});
-                            break L7;
+                          if (!this.field_l) {Class.forName("tk").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_u, new Object[]{new Integer(var3_int), new Integer(var4_int)});
+                          } else {
+                            this.field_a.a(-71, var4_int, var3_int);
                           }
-                          this.field_a.a(-71, var4_int, var3_int);
                           break L7;
                         }
                         if (this.field_h &&
@@ -209,11 +208,10 @@ final class d implements Runnable {
                           stackIn_76_0 = (var9.field_c == 0) ? 0 : 1;
                           var3_int = stackIn_76_0;
                           var12 = (java.awt.Component) (var9.field_f);
-                          if (this.field_l) {
-                            this.field_a.a(12758, var3_int != 0, var12);
-                            break L7;
+                          if (this.field_l) {this.field_a.a(12758, var3_int != 0, var12);
+                          } else {
+                            Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
                           }
-                          Class.forName("tk").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_u, new Object[]{var12, new Boolean(var3_int != 0)});
                           break L7;
                         }
                         if (!this.field_l &&

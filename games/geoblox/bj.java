@@ -436,7 +436,8 @@ final class bj extends nh {
             boolean decompiledFrameRemainder0 = true;
             {
               boolean decompiledFrameRemainder2 = true;
-              L3: {
+              {
+                boolean decompiledFrameRemainder3 = true;
                 var5 = Geoblox.field_C;
                 if (this.field_d != null) {
                   if (null == this.a((byte) 118)) {
@@ -478,84 +479,89 @@ final class bj extends nh {
                       var2_int = 0;
                       break;
                     }
-                    if (var2_int == 0) {
-                      break L3;
-                    }
-                    this.field_o = 0;
-                    this.field_q = false;
-                    break L3;
-                  }
-                  if (this.field_v) {
-                    var2_intLifetime1 = 1;
-                    var3Lifetime1 = this.field_d.g(0);
-                    while (var3Lifetime1 != null) {
-                      var4Lifetime1 = (int)var3Lifetime1.field_a;
-                      if (this.field_k[var4Lifetime1] != 1) {
-                        discarded$3 = this.a((byte) -71, 2, var4Lifetime1);
-                      }
-                      if (this.field_k[var4Lifetime1] != 1) {
-                        var2_intLifetime1 = 0;
-                      } else {
-                        var3Lifetime1.a(false);
-                      }
-                      var3Lifetime1 = this.field_d.d(1);
-                    }
-                    L13: while (true) {
-                      if (this.field_o < this.field_u.field_a.length) {
-                        if (this.field_u.field_a[this.field_o] != 0) {
-                          if (this.field_f.b(-21)) {
-                            var2_intLifetime1 = 0;
-                            break L13;
-                          }
-                          if (this.field_k[this.field_o] != 1) {
-                            discarded$2 = this.a((byte) -71, 2, this.field_o);
-                          }
-                          if (this.field_k[this.field_o] != 1) {
-                            var6 = new hf();
-                            var6.field_a = (long)this.field_o;
-                            var2_intLifetime1 = 0;
-                            this.field_d.a(-97, var6);
-                          }
-                        }
-                        this.field_o = this.field_o + 1;
-                        continue;
-                      }
-                      break;
-                    }
-                    if (var2_intLifetime1 != 0) {
-                      this.field_v = false;
+                    if (!(var2_int == 0)) {
                       this.field_o = 0;
-                      break L3;
+                      this.field_q = false;
                     }
-                    if (param0 != -38) {
-                      this.b(25, 41);
-                    }
-                    decompiledFrameRemainder1 = !(!this.field_w);
-                    if (decompiledFrameRemainder1) {
-                      decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
-                      if (decompiledFrameRemainder0) {
-                        var2 = (pb) (this.field_g.a((byte) 125));
-                        while (var2 != null) {
-                          if (!var2.field_u) {
-                            if (var2.field_n) {
-                              if (!var2.field_q) {
-                                throw new RuntimeException();
-                              }
-                              var2.a(false);
-                            } else {
-                              var2.field_n = true;
+                    decompiledFrameRemainder3 = false;
+                  }
+                  if (decompiledFrameRemainder3) {
+                    if (this.field_v) {
+                      var2_intLifetime1 = 1;
+                      var3Lifetime1 = this.field_d.g(0);
+                      while (var3Lifetime1 != null) {
+                        var4Lifetime1 = (int)var3Lifetime1.field_a;
+                        if (this.field_k[var4Lifetime1] != 1) {
+                          discarded$3 = this.a((byte) -71, 2, var4Lifetime1);
+                        }
+                        if (this.field_k[var4Lifetime1] != 1) {
+                          var2_intLifetime1 = 0;
+                        } else {
+                          var3Lifetime1.a(false);
+                        }
+                        var3Lifetime1 = this.field_d.d(1);
+                      }
+                      L13: while (true) {
+                        if (this.field_o < this.field_u.field_a.length) {
+                          if (this.field_u.field_a[this.field_o] != 0) {
+                            if (this.field_f.b(-21)) {
+                              var2_intLifetime1 = 0;
+                              break L13;
+                            }
+                            if (this.field_k[this.field_o] != 1) {
+                              discarded$2 = this.a((byte) -71, 2, this.field_o);
+                            }
+                            if (this.field_k[this.field_o] != 1) {
+                              var6 = new hf();
+                              var6.field_a = (long)this.field_o;
+                              var2_intLifetime1 = 0;
+                              this.field_d.a(-97, var6);
                             }
                           }
-                          var2 = (pb) (this.field_g.b(74));
+                          this.field_o = this.field_o + 1;
+                          continue;
                         }
-                        decompiledFrameRemainder2 = false;
+                        break;
+                      }
+                      if (var2_intLifetime1 != 0) {
+                        this.field_v = false;
+                        this.field_o = 0;
+                        decompiledFrameRemainder3 = false;
+                      }
+                      if (decompiledFrameRemainder3) {
+                        if (param0 != -38) {
+                          this.b(25, 41);
+                        }
+                        decompiledFrameRemainder1 = !(!this.field_w);
+                        if (decompiledFrameRemainder1) {
+                          decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
+                          if (decompiledFrameRemainder0) {
+                            var2 = (pb) (this.field_g.a((byte) 125));
+                            while (var2 != null) {
+                              if (!var2.field_u) {
+                                if (var2.field_n) {
+                                  if (!var2.field_q) {
+                                    throw new RuntimeException();
+                                  }
+                                  var2.a(false);
+                                } else {
+                                  var2.field_n = true;
+                                }
+                              }
+                              var2 = (pb) (this.field_g.b(74));
+                            }
+                            decompiledFrameRemainder2 = false;
+                          }
+                        }
                       }
                     }
-                  }
-                  if (decompiledFrameRemainder2) {
-                    if (decompiledFrameRemainder1) {
-                      if (decompiledFrameRemainder0) {
-                        this.field_d = null;
+                    if (decompiledFrameRemainder3) {
+                      if (decompiledFrameRemainder2) {
+                        if (decompiledFrameRemainder1) {
+                          if (decompiledFrameRemainder0) {
+                            this.field_d = null;
+                          }
+                        }
                       }
                     }
                   }

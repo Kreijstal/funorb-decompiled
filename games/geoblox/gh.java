@@ -1284,22 +1284,24 @@ final class gh {
             while (true) {
               {
                 boolean decompiledFrameRemainder7 = true;
-                L7: {
+                {
+                  boolean decompiledFrameRemainder8 = true;
                   if (7 > var3) {
                     stackIn_27_0 = ~c.field_ab;
                     stackIn_27_1 = ~ee.field_B[var3];
                     decompiledFrameRemainder7 = !(var4 != 0);
                     if (decompiledFrameRemainder7) {
                       if (stackIn_27_0 == stackIn_27_1) {
-                        if (0 < var3) {
-                          var2 = ee.field_B[var3 - 1];
-                          break L7;
+                        if (0 < var3) {var2 = ee.field_B[var3 - 1];
+                        } else {
+                          var2 = ee.field_B[6];
                         }
-                        var2 = ee.field_B[6];
-                        break L7;
+                        decompiledFrameRemainder8 = false;
                       }
-                      var3++;
-                      continue;
+                      if (decompiledFrameRemainder8) {
+                        var3++;
+                        continue;
+                      }
                     }
                   }
                 }

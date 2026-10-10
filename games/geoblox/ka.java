@@ -146,7 +146,8 @@ abstract class ka {
         int stackIn_16_2 = 0;
         Object stackIn_17_0;
         boolean stackIn_17_3;
-        L0: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           var3 = Geoblox.field_C;
           if (bi.field_g != 0) {
             var2 = this.a(mc.field_a, he.field_d, (byte) 28);
@@ -170,22 +171,23 @@ abstract class ka {
             if (gf.field_a != 0 &&
               this.field_g) {
               var2 = this.field_b;
-              if (var2 == -1) {
-                break L0;
+              if (!(var2 == -1)) {
+                this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
               }
-              this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
-              break L0;
+              decompiledFrameRemainder0 = false;
             }
-            this.field_g = false;
-            if (wb.field_a) {
-              var2 = this.a(qa.field_a, ue.field_e, (byte) 126);
-              if (var2 != -1) {
-                this.field_b = var2;
-                this.field_l = false;
-              } else {
-                if (!this.field_l) {
+            if (decompiledFrameRemainder0) {
+              this.field_g = false;
+              if (wb.field_a) {
+                var2 = this.a(qa.field_a, ue.field_e, (byte) 126);
+                if (var2 != -1) {
                   this.field_b = var2;
                   this.field_l = false;
+                } else {
+                  if (!this.field_l) {
+                    this.field_b = var2;
+                    this.field_l = false;
+                  }
                 }
               }
             }

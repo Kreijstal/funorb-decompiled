@@ -1156,8 +1156,7 @@ final class kl extends ia {
         L4: {
           if (this.field_v > 0) {
             if (!this.field_r) {
-              if (this.field_p < 0) {
-                while (true) {
+              if (this.field_p < 0) {while (true) {
                   var9 = this.a(param0, var9, var5, param2, (int) var4.field_k[this.field_m - 1]);
                   if (this.field_x >= var5) {
                     return;
@@ -1172,23 +1171,23 @@ final class kl extends ia {
                 }
                 this.field_x = this.field_x + var8 * this.field_v;
                 this.field_v = 0;
-                break L4;
-              }
-              while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_q]);
-                if (this.field_x < var6) {
-                  return;
+              } else {
+                while (true) {
+                  var9 = this.b(param0, var9, var6, param2, (int) var4.field_k[this.field_q]);
+                  if (this.field_x < var6) {
+                    return;
+                  }
+                  var10Lifetime1 = (this.field_x - var5) / var8;
+                  if (var10Lifetime1 < this.field_v) {
+                    this.field_x = this.field_x - var8 * var10Lifetime1;
+                    this.field_v = this.field_v - var10Lifetime1;
+                    continue;
+                  }
+                  break;
                 }
-                var10Lifetime1 = (this.field_x - var5) / var8;
-                if (var10Lifetime1 < this.field_v) {
-                  this.field_x = this.field_x - var8 * var10Lifetime1;
-                  this.field_v = this.field_v - var10Lifetime1;
-                  continue;
-                }
-                break;
+                this.field_x = this.field_x - var8 * this.field_v;
+                this.field_v = 0;
               }
-              this.field_x = this.field_x - var8 * this.field_v;
-              this.field_v = 0;
               break L4;
             }
             if (this.field_p < 0) {
