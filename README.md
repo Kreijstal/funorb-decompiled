@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/5fa8aee91d24371274fe6649b16e57deae9de2ee/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/abc752a3eaf6f03fb05594bcabb9db2691fdec83/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,143 bindings,
+identities. Both 303-file Java corpora compile and compare 138,150 bindings,
 preserving 388 override relationships.
 
-## Current nested-switch continuations and block headers (pass 260)
+## Current shared loop exits and applet/audio continuations (pass 261)
+
+Four loop exits use ordinary breaks with the same continuation. MIDI release and
+Huffman carry frames become explicit branches; the applet boundary uses a named
+continuation decision. Every original snapshot, callback, flag path and protected
+action remains. Nine smaller frames and 41 finer field purposes remain.
+Independent source/target and native oracle checks pass; all 303 sources compile,
+reproduce and reverse exactly. Surviving names/dictionary objects and historical
+proofs remain. Generic recovery and agent guidance stay in java-tools; game
+metadata and source proofs stay in Deko.
+
+## Previous nested-switch continuations and block headers (pass 260)
 
 The platform dispatcher uses ordinary switch breaks for cursor services, retaining
 all selectors, checks, operations and protected scopes. Its unused frame label

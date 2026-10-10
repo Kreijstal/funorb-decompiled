@@ -51,7 +51,7 @@ final class VorbisCodebook {
           if (codewordLength == 0) {
             continue;
           }
-          shorterLengthCarryResolution: {
+          {
             codewordLengthBitMask = 1 << 32 - codewordLength;
             currentCodeword = nextCodewordByLength[codewordLength];
             entryCodewords[entryIndex] = currentCodeword;
@@ -60,18 +60,18 @@ final class VorbisCodebook {
               for (shorterCodewordLength = codewordLength - 1; shorterCodewordLength >= 1; shorterCodewordLength--) {
                 candidateCodeword = nextCodewordByLength[shorterCodewordLength];
                 if (candidateCodeword != currentCodeword) {
-                  break shorterLengthCarryResolution;
+                  break;
                 }
                 carryBitMask = 1 << 32 - shorterCodewordLength;
                 if ((candidateCodeword & carryBitMask) != 0) {
                   nextCodewordByLengthAlias[shorterCodewordLength] = nextCodewordByLengthAlias[shorterCodewordLength - 1];
-                  break shorterLengthCarryResolution;
+                  break;
                 }
                 nextCodewordByLengthAlias[shorterCodewordLength] = candidateCodeword | carryBitMask;
               }
-              break shorterLengthCarryResolution;
+            } else {
+              nextCodeword = nextCodewordByLengthAlias[codewordLength - 1];
             }
-            nextCodeword = nextCodewordByLengthAlias[codewordLength - 1];
           }
           nextCodewordByLength[codewordLength] = nextCodeword;
           for (longerCodewordLength = codewordLength + 1; longerCodewordLength <= 32; longerCodewordLength++) {

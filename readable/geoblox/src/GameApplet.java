@@ -278,7 +278,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           clientControlSnapshot = Geoblox.clientControlFlowFlag;
           try {
             try {
-              appletExecutionBoundary: {
+              {
+                boolean appletExecutionFrameContinues = true;
                 {
                   boolean legacyJavaVersionCheckFrameContinues = true;
                   {
@@ -300,124 +301,128 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           javaVersionText.startsWith("1.5.") ||
                           javaVersionText.equals("1.6.0")) {
                           this.showGameError((byte) 79, "wrongjava");
-                          if (clientControlSnapshot == 0) {
-                            break appletExecutionBoundary;
-                          }
+                          appletExecutionFrameContinues = !(clientControlSnapshot == 0);
                         }
-                        if (javaVersionText.startsWith("1.6.0_")) {
-                          updateSuffixIndexOrVersionDigitOrTickIndex = 6;
-                          while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
-                            digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
-                            if (clientControlSnapshot != 0) {
-                              digitOrLegacyVersionDecisionRemainderEnabled = false;
-                              break;
-                            }
-                            if (digitOrLegacyVersionPredicate) {
-                              updateSuffixIndexOrVersionDigitOrTickIndex++;
-                              continue;
-                            }
-                            break;
-                          }
-                          if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                            javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                            if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
-                              this.showGameError((byte) 79, "wrongjava");
-                              if (clientControlSnapshot == 0) {
-                                break appletExecutionBoundary;
+                        if (appletExecutionFrameContinues) {
+                          if (javaVersionText.startsWith("1.6.0_")) {
+                            updateSuffixIndexOrVersionDigitOrTickIndex = 6;
+                            while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
+                              digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
+                              if (clientControlSnapshot != 0) {
+                                digitOrLegacyVersionDecisionRemainderEnabled = false;
+                                break;
                               }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                      legacyJavaVersionCheckFrameContinues = !(PlatformTaskDispatcher.javaVersion == null);
-                      if (legacyJavaVersionCheckFrameContinues) {
-                        digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
-                      }
-                    }
-                  }
-                  if (legacyJavaVersionCheckFrameContinues) {
-                    if (digitOrLegacyVersionPredicate) {
-                      javaVersionDigitIndex = 2;
-                      parsedJavaMajorVersion = 0;
-                      while (true) {
-                        {
-                          boolean majorVersionComparisonFrameContinues = true;
-                          if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
-                            updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
-                            majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
-                            majorVersionComparisonRight = 48;
-                            majorVersionComparisonFrameContinues = !(clientControlSnapshot != 0);
-                            if (majorVersionComparisonFrameContinues) {
-                              if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
-                                updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
-                                parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
-                                javaVersionDigitIndex++;
+                              if (digitOrLegacyVersionPredicate) {
+                                updateSuffixIndexOrVersionDigitOrTickIndex++;
                                 continue;
                               }
+                              break;
+                            }
+                            if (digitOrLegacyVersionDecisionRemainderEnabled) {
+                              javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
+                              if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
+                                this.showGameError((byte) 79, "wrongjava");
+                                appletExecutionFrameContinues = !(clientControlSnapshot == 0);
+                              }
                             }
                           }
-                          if (majorVersionComparisonFrameContinues) {
-                            majorVersionComparisonLeft = ~parsedJavaMajorVersion;
-                            majorVersionComparisonRight = -6;
-                          }
                         }
-                        if (majorVersionComparisonLeft > majorVersionComparisonRight) {
+                      }
+                    }
+                    if (appletExecutionFrameContinues) {
+                      if (digitOrLegacyVersionDecisionRemainderEnabled) {
+                        legacyJavaVersionCheckFrameContinues = !(PlatformTaskDispatcher.javaVersion == null);
+                        if (legacyJavaVersionCheckFrameContinues) {
+                          digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
+                        }
+                      }
+                    }
+                  }
+                  if (appletExecutionFrameContinues) {
+                    if (legacyJavaVersionCheckFrameContinues) {
+                      if (digitOrLegacyVersionPredicate) {
+                        javaVersionDigitIndex = 2;
+                        parsedJavaMajorVersion = 0;
+                        while (true) {
+                          {
+                            boolean majorVersionComparisonFrameContinues = true;
+                            if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
+                              updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
+                              majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
+                              majorVersionComparisonRight = 48;
+                              majorVersionComparisonFrameContinues = !(clientControlSnapshot != 0);
+                              if (majorVersionComparisonFrameContinues) {
+                                if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
+                                  updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
+                                  parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
+                                  javaVersionDigitIndex++;
+                                  continue;
+                                }
+                              }
+                            }
+                            if (majorVersionComparisonFrameContinues) {
+                              majorVersionComparisonLeft = ~parsedJavaMajorVersion;
+                              majorVersionComparisonRight = -6;
+                            }
+                          }
+                          if (majorVersionComparisonLeft > majorVersionComparisonRight) {
+                            break;
+                          }
+                          ResizableDialog.legacyJavaCanvasRefreshRequired = true;
                           break;
                         }
-                        ResizableDialog.legacyJavaCanvasRefreshRequired = true;
-                        break;
                       }
                     }
                   }
                 }
-                lowercaseVendorOrFocusRootOrFailure = PrefixCodeDecoder.activeGameApplet;
-                if (null != VisualPropertyNode.loaderApplet) {
-                  lowercaseVendorOrFocusRootOrFailure = VisualPropertyNode.loaderApplet;
-                }
-                focusCycleRootMethod = PlatformTaskDispatcher.setFocusCycleRootMethod;
-                if (null != focusCycleRootMethod) {
-                  try {
-                    focusCycleRootMethod.invoke(lowercaseVendorOrFocusRootOrFailure, new Object[]{Boolean.TRUE});
-                  } catch (java.lang.Throwable focusRootSetupFailure) {
-                    caughtRunFailure = focusRootSetupFailure;
-                    ignoredFocusRootFailure = caughtRunFailure;
+                if (appletExecutionFrameContinues) {
+                  lowercaseVendorOrFocusRootOrFailure = PrefixCodeDecoder.activeGameApplet;
+                  if (null != VisualPropertyNode.loaderApplet) {
+                    lowercaseVendorOrFocusRootOrFailure = VisualPropertyNode.loaderApplet;
                   }
-                }
-                SpriteCheckboxRenderer.estimateHeapCapacityMiB(75);
-                this.rebuildGameCanvas(true);
-                SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
-                this.initializeGame(117);
-                ReflectionCheckRequest.frameTimer = BufferedSocket.createFrameClock(5000);
-                do {
-                  {
-                    boolean stopDeadlineOrTickDecisionFrameContinues = true;
-                    if (0L != MenuScreen.appletStopDeadlineMillis) {
-                      stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
-                      stopDeadlineOrTickDecisionFrameContinues = !(clientControlSnapshot != 0);
-                      if (stopDeadlineOrTickDecisionFrameContinues) {
-                        if (stopDeadlineComparisonOrTickIndex >= 0) {
-                          break appletExecutionBoundary;
+                  focusCycleRootMethod = PlatformTaskDispatcher.setFocusCycleRootMethod;
+                  if (null != focusCycleRootMethod) {
+                    try {
+                      focusCycleRootMethod.invoke(lowercaseVendorOrFocusRootOrFailure, new Object[]{Boolean.TRUE});
+                    } catch (java.lang.Throwable focusRootSetupFailure) {
+                      caughtRunFailure = focusRootSetupFailure;
+                      ignoredFocusRootFailure = caughtRunFailure;
+                    }
+                  }
+                  SpriteCheckboxRenderer.estimateHeapCapacityMiB(75);
+                  this.rebuildGameCanvas(true);
+                  SingleChildWidget.mainRasterBuffer = DropTargetWidget.createCanvasRasterBuffer(false, (java.awt.Component) ((Object) MessageDialog.gameCanvas), ClientRenderingState.canvasHeight, AudioService.canvasWidth);
+                  this.initializeGame(117);
+                  ReflectionCheckRequest.frameTimer = BufferedSocket.createFrameClock(5000);
+                  do {
+                    {
+                      boolean stopDeadlineOrTickDecisionFrameContinues = true;
+                      if (0L != MenuScreen.appletStopDeadlineMillis) {
+                        stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
+                        stopDeadlineOrTickDecisionFrameContinues = !(clientControlSnapshot != 0);
+                        if (stopDeadlineOrTickDecisionFrameContinues) {
+                          if (stopDeadlineComparisonOrTickIndex >= 0) {
+                            break;
+                          }
                         }
                       }
+                      if (stopDeadlineOrTickDecisionFrameContinues) {
+                        TriangleMesh.pendingUpdateTicks = ReflectionCheckRequest.frameTimer.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
+                        stopDeadlineComparisonOrTickIndex = 0;
+                      }
                     }
-                    if (stopDeadlineOrTickDecisionFrameContinues) {
-                      TriangleMesh.pendingUpdateTicks = ReflectionCheckRequest.frameTimer.awaitAndCountTicks((byte) -6, ByteStorage.updatePeriodNanoseconds);
-                      stopDeadlineComparisonOrTickIndex = 0;
-                    }
-                  }
-                  updateSuffixIndexOrVersionDigitOrTickIndex = stopDeadlineComparisonOrTickIndex;
-                  do {
-                    if (!(TriangleMesh.pendingUpdateTicks > updateSuffixIndexOrVersionDigitOrTickIndex)) {
-                      this.renderAppletFrame(32000);
-                      OpacityWidget.pollEventQueueAndPostDummyEvent(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
-                      break;
-                    }
-                    this.updateAppletTick((byte) -10);
-                    updateSuffixIndexOrVersionDigitOrTickIndex++;
+                    updateSuffixIndexOrVersionDigitOrTickIndex = stopDeadlineComparisonOrTickIndex;
+                    do {
+                      if (!(TriangleMesh.pendingUpdateTicks > updateSuffixIndexOrVersionDigitOrTickIndex)) {
+                        this.renderAppletFrame(32000);
+                        OpacityWidget.pollEventQueueAndPostDummyEvent(MenuScreen.platformTaskDispatcher, (byte) 83, MessageDialog.gameCanvas);
+                        break;
+                      }
+                      this.updateAppletTick((byte) -10);
+                      updateSuffixIndexOrVersionDigitOrTickIndex++;
+                    } while (clientControlSnapshot == 0);
                   } while (clientControlSnapshot == 0);
-                } while (clientControlSnapshot == 0);
+                }
               }
             } catch (java.lang.Throwable appletLoopFailure) {
               caughtRunFailure = appletLoopFailure;

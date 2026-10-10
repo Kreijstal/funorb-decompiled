@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/5fa8aee91d24371274fe6649b16e57deae9de2ee/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/abc752a3eaf6f03fb05594bcabb9db2691fdec83/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 260)
+## Current readability (pass 261)
 
-The export has 20,135 guarded names and 122,208 Java identifier edits, plus 11
-class-name literal edits and 109 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,133 guarded names and 122,215 Java identifier edits, plus 11
+class-name literal edits and 98 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,143 bindings, reproduce and
+compile and compare 138,150 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current nested-switch continuations and block headers (pass 260)
+## Current shared loop exits and applet/audio continuations (pass 261)
+
+`MidiPcmStream.releaseNote` exits its held-note scan locally and uses an explicit
+else arm for the original non-portamento work. `VorbisCodebook.buildHuffmanTree`
+uses ordinary loop breaks for shorter-length carry resolution, followed by the
+original common exit. `GameApplet.run` uses `appletExecutionFrameContinues` after
+its early version errors; the deadline exit now leaves its terminal loop locally.
+Original callbacks, snapshots, nonzero flags and failure scopes remain.
+
+Nine smaller plain frames and 41 finer field purposes remain. The workflow
+records independent loop/conditional/continuation certificates, native direct
+models and exact reproduction/reversal. Full applet/audio/game execution and
+phone/FPS behavior remain unverified.
+
+## Previous nested-switch continuations and block headers (pass 260)
 
 `PlatformTaskDispatcher.run` uses ordinary switch breaks after cursor operations.
 The unchanged following outer-switch exit reaches the original continuation,

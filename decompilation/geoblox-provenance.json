@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "5bd94a0d7d6c79b103aed92705e71b8ddd8a787c",
+      "commit": "384352acc22564077a8023538cd47d870a749f51",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "80654bd40f8b71232a497fb1e992a979f7700cb45d3693fb726a15f50b620776",
-        "reproduce": "git archive --format=tar 5bd94a0d7d6c79b103aed92705e71b8ddd8a787c | sha256sum",
+        "sha256": "edf18cdbc116f6845878ac9730978a11ba8b9b8fd58aa2fee67b397a4157c339",
+        "reproduce": "git archive --format=tar 384352acc22564077a8023538cd47d870a749f51 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -42,7 +42,8 @@
         "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
         "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
         "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
-        "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1"
+        "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+        "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1"
       }
     },
     "namingTool": {
@@ -142,7 +143,8 @@
       "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
       "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
       "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
-      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1"
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1"
     }
   },
   "freshVerification": {
@@ -167,9 +169,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "eaa3e4898e4584346692405b4f9544b263b5cf8979b1e3a5ce599d5f5ccd577b",
-  "previousSourceTreeSha256": "a042f2919456d57e009b4ca778199aae2da93a64e4cc450958e0c82aa3814708",
-  "changedJavaFiles": 4,
+  "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+  "previousSourceTreeSha256": "eaa3e4898e4584346692405b4f9544b263b5cf8979b1e3a5ce599d5f5ccd577b",
+  "changedJavaFiles": 3,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3337,11 +3339,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+    "commit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "25fd6151bc507cfd6817da7790c82d779cbc8072c62d7daf97f0fe10b39aa5e9"
+      "sha256": "80e590a612a4d5532197a696bb59f3c0d5c816b0eee8725ea944eeb192ea9080"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3351,20 +3353,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "4b5702f8d7f7f2d6f66a9b6ff1503aafc1119f3e094d0a4149344072734db695",
+    "outputTreeSha256": "dbade00e39eda4b94caef18cc2ed5cf14e29789cc0d63d0317caf1ffeb764475",
     "files": 303,
-    "rules": 20135,
-    "identifierEdits": 122208,
-    "bindingsCompared": 138143,
+    "rules": 20133,
+    "identifierEdits": 122215,
+    "bindingsCompared": 138150,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122328,
+    "totalEdits": 122324,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 109,
-    "labelBindingsCompared": 109,
-    "labelDeclarationsCompared": 40,
+    "labelEdits": 98,
+    "labelBindingsCompared": 98,
+    "labelDeclarationsCompared": 37,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3381,8 +3383,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 260,
-    "semanticPass": 260,
+    "structuralPass": 261,
+    "semanticPass": 261,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36859,14 +36861,22 @@
     "sourceProofWorkflowCommit": "ac3504fe54c19da72263e9da4adf248716a6d92a"
   },
   "currentUnresolvedFieldSourceAudit": {
-    "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
-    "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "471006e0c6bff910b0b3f4731475163e038c58d4",
-    "sourceTreeSha256": "eaa3e4898e4584346692405b4f9544b263b5cf8979b1e3a5ce599d5f5ccd577b",
+    "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+    "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+    "sourceCommit": "d0918dfdcadc7779a4a26c7aac631efd9cca9f96",
+    "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee"
+    "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+    "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+    "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+    "refreshedSourceHashes": 6,
+    "refreshedSourceFiles": [
+      "ch.java"
+    ],
+    "fieldObservationsPreserved": true,
+    "workflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -51834,5 +51844,405 @@
     "allCompleteSurvivingNamesDictionaryObjectsAndHistoricalCertificatesPreserved": true,
     "sourceWorkflowCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
     "sourceProofWorkflowCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee"
+  },
+  "sharedLoopExitRecovery": {
+    "version": 261,
+    "changedJavaFiles": 3,
+    "changedMethodBodies": 3,
+    "loopBreaksLocalized": 4,
+    "conditionalFramesRecovered": 2,
+    "guardedFramesRecovered": 1,
+    "framesRemoved": 3,
+    "newDecisionLocals": 1,
+    "newFlagOccurrences": 7,
+    "removedLabelOccurrences": 11,
+    "sourceProofTest": "readable/tests/test-geoblox-shared-loop-source.mjs",
+    "sourceProofTestSha256": "a1b4b8ead19655424f16b134adf8a6e826f8d1854cf36ab88c3fa8709d17f12e",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "frameFixtureSha256": "cc57885e640cc5416f65ec7c42af4888ad0d1ed0a5c78ff4a13aa2dc38576cc4",
+    "booleanGuardFixtureSha256": "1ae2770a29f185c0212f5cb1ea84116157cb8bbe797e45b85a90a3bf3dcad2c3",
+    "previousSourceCommit": "471006e0c6bff910b0b3f4731475163e038c58d4",
+    "sourceCommit": "d0918dfdcadc7779a4a26c7aac631efd9cca9f96",
+    "previousSourceTreeSha256": "eaa3e4898e4584346692405b4f9544b263b5cf8979b1e3a5ce599d5f5ccd577b",
+    "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+    "localizedSourceTreeSha256": "1ebdfd14b7f387efc3a02af1c3f41684316d9b9e4cbc3262607aead93c9d207c",
+    "conditionalSourceTreeSha256": "f6897c2e9495ab97d908cdde207fd6fb6545c831c1440ba90e9c2b02ce083dbf",
+    "javaToolsCommit": "384352acc22564077a8023538cd47d870a749f51",
+    "sourceArchiveSha256": "edf18cdbc116f6845878ac9730978a11ba8b9b8fd58aa2fee67b397a4157c339",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1"
+    },
+    "bindingsBefore": 138143,
+    "bindingsCompared": 138150,
+    "transfersBefore": 4773,
+    "transfersCompared": 4769,
+    "loopSelections": [
+      {
+        "file": "ae.java",
+        "methodStart": 413,
+        "jump": {
+          "start": 1602,
+          "end": 1611
+        },
+        "frame": {
+          "start": 1270,
+          "end": 1997
+        },
+        "loopStart": 1461,
+        "loopKind": "ForStatement",
+        "label": "L7",
+        "bridge": {
+          "start": 1917,
+          "end": 1926
+        }
+      },
+      {
+        "file": "ae.java",
+        "methodStart": 413,
+        "jump": {
+          "start": 1802,
+          "end": 1811
+        },
+        "frame": {
+          "start": 1270,
+          "end": 1997
+        },
+        "loopStart": 1461,
+        "loopKind": "ForStatement",
+        "label": "L7",
+        "bridge": {
+          "start": 1917,
+          "end": 1926
+        }
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "jump": {
+          "start": 16394,
+          "end": 16403
+        },
+        "frame": {
+          "start": 10985,
+          "end": 17103
+        },
+        "loopStart": 15993,
+        "loopKind": "DoWhileStatement",
+        "label": "L1",
+        "bridge": null
+      },
+      {
+        "file": "kj.java",
+        "methodStart": 32445,
+        "jump": {
+          "start": 33100,
+          "end": 33109
+        },
+        "frame": {
+          "start": 32776,
+          "end": 33266
+        },
+        "loopStart": 32909,
+        "loopKind": "WhileStatement",
+        "label": "L1",
+        "bridge": {
+          "start": 33207,
+          "end": 33216
+        }
+      }
+    ],
+    "branchSelections": [
+      {
+        "file": "ae.java",
+        "label": "L7",
+        "frame": {
+          "start": 1270,
+          "end": 1991
+        },
+        "body": {
+          "start": 1274,
+          "end": 1991
+        },
+        "jump": {
+          "start": 1911,
+          "end": 1920
+        },
+        "prefixStatements": 3,
+        "trueStatements": 2,
+        "falseStatements": 1,
+        "inverted": false,
+        "removedSymbol": "B:ae.c()V#0",
+        "afterStart": 1270
+      },
+      {
+        "file": "kj.java",
+        "label": "L1",
+        "frame": {
+          "start": 32776,
+          "end": 33263
+        },
+        "body": {
+          "start": 32780,
+          "end": 33263
+        },
+        "jump": {
+          "start": 33204,
+          "end": 33213
+        },
+        "prefixStatements": 0,
+        "trueStatements": 2,
+        "falseStatements": 1,
+        "inverted": false,
+        "removedSymbol": "B:kj.b(IIII)V#0",
+        "afterStart": 32776
+      }
+    ],
+    "frameRecovery": {
+      "files": 303,
+      "changedFiles": 1,
+      "changedMethods": 1,
+      "framesRecovered": 1,
+      "prefixAssignmentsCompared": 0,
+      "newDecisionLocals": 1,
+      "newFlagOccurrences": 7,
+      "intermediateFlagOccurrences": 7,
+      "redundantFlagReadsRemoved": 0,
+      "removedLabelBindings": 2,
+      "bindingsBefore": 138143,
+      "bindingsAfter": 138150,
+      "transfersBefore": 4771,
+      "transfersAfter": 4769,
+      "frameExitsConsumed": 2,
+      "sourceTreeSha256": "ce33825df92919e777409765730f6d635da8e4e467434e7e92ccc7fc72fd04f5",
+      "symbolMigrations": [
+        {
+          "before": "L:ch.run()V#14",
+          "after": "L:ch.run()V#15"
+        },
+        {
+          "before": "L:ch.run()V#15",
+          "after": "L:ch.run()V#16"
+        },
+        {
+          "before": "L:ch.run()V#16",
+          "after": "L:ch.run()V#17"
+        },
+        {
+          "before": "L:ch.run()V#17",
+          "after": "L:ch.run()V#18"
+        },
+        {
+          "before": "L:ch.run()V#18",
+          "after": "L:ch.run()V#19"
+        },
+        {
+          "before": "L:ch.run()V#19",
+          "after": "L:ch.run()V#20"
+        },
+        {
+          "before": "L:ch.run()V#20",
+          "after": "L:ch.run()V#21"
+        },
+        {
+          "before": "L:ch.run()V#21",
+          "after": "L:ch.run()V#22"
+        },
+        {
+          "before": "L:ch.run()V#22",
+          "after": "L:ch.run()V#23"
+        }
+      ],
+      "selections": [
+        {
+          "file": "ch.java",
+          "methodStart": 10380,
+          "name": "decompiledFrameRemainder3",
+          "label": "L1",
+          "region": {
+            "start": 10985,
+            "end": 17100
+          },
+          "guards": [
+            {
+              "range": {
+                "start": 12069,
+                "end": 12151
+              },
+              "condition": {
+                "start": 12072,
+                "end": 12083
+              },
+              "jump": {
+                "start": 12114,
+                "end": 12123
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "BlockStatement",
+                "BlockStatement"
+              ]
+            },
+            {
+              "range": {
+                "start": 13148,
+                "end": 13238
+              },
+              "condition": {
+                "start": 13151,
+                "end": 13162
+              },
+              "jump": {
+                "start": 13197,
+                "end": 13206
+              },
+              "corridorKinds": [
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "IfStatement",
+                "BlockStatement",
+                "BlockStatement",
+                "BlockStatement"
+              ]
+            }
+          ],
+          "guardsAdded": 4,
+          "prefixAssignments": [],
+          "removedSymbol": "B:ch.run()V#0",
+          "method": "M:ch.run()V",
+          "symbol": "L:ch.run()V#14",
+          "afterStart": 10985
+        }
+      ]
+    },
+    "originalIdentityMigrations": [
+      {
+        "before": "L:ch.run()V#14",
+        "after": "L:ch.run()V#15"
+      },
+      {
+        "before": "L:ch.run()V#15",
+        "after": "L:ch.run()V#16"
+      },
+      {
+        "before": "L:ch.run()V#16",
+        "after": "L:ch.run()V#17"
+      },
+      {
+        "before": "L:ch.run()V#17",
+        "after": "L:ch.run()V#18"
+      },
+      {
+        "before": "L:ch.run()V#18",
+        "after": "L:ch.run()V#19"
+      },
+      {
+        "before": "L:ch.run()V#19",
+        "after": "L:ch.run()V#20"
+      },
+      {
+        "before": "L:ch.run()V#20",
+        "after": "L:ch.run()V#21"
+      },
+      {
+        "before": "L:ch.run()V#21",
+        "after": "L:ch.run()V#22"
+      },
+      {
+        "before": "L:ch.run()V#22",
+        "after": "L:ch.run()V#23"
+      }
+    ],
+    "removedSymbols": [
+      "B:ae.c()V#0",
+      "B:kj.b(IIII)V#0",
+      "B:ch.run()V#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "sharedLoopContinuationsAndCompleteConditionalArmsIndependentlyDerived": true,
+    "newFlagIndependentlyTypedAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 10,
+    "existingConditionalTestGroupsPassed": 2,
+    "newIndependentNativeOracleCases": 74358,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 9,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "471006e0c6bff910b0b3f4731475163e038c58d4",
+      "sourceTreeSha256": "eaa3e4898e4584346692405b4f9544b263b5cf8979b1e3a5ce599d5f5ccd577b",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass261 derives same-continuation exits after while/for/do/enhanced-for loops. Local breaks skip the same update/test; only empty terminal corridors or a direct same-frame break are accepted. Original predicates, callbacks, aliases, snapshots, stores, arithmetic, nonzero flags and protected actions remain. Existing single-exit if/else reconstruction removes note-release and Huffman carry frames; guarded-frame recovery removes the applet execution boundary using captured continuation. Independent javac recipes derive both loop destinations and complete original true/false work. The frozen continuation/Boolean verifier is reused with the empty-marker adapter, retaining full syntax comparison when compaction makes no edits. Generic native models compare original/localized/conditional/direct forms; no source is hand-edited. Game metadata stays in Deko and generic recovery/agent guidance stays in java-tools. Whole-game and phone/FPS behavior remain unverified.",
+    "dictionaryIdentities": 20440,
+    "survivingCompleteRulesPreserved": 20132,
+    "survivingDictionaryIdentitiesPreserved": 20439,
+    "historicalSourceProofsPreserved": 103,
+    "historicalRecordsPreserved": 184,
+    "readableIdentifierEdits": 122215,
+    "readableTotalEdits": 122324,
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "currentFieldSourceAuditFixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+    "currentFieldSourceAuditFixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+    "currentFieldSourceAuditObserverSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+    "fieldObservationsPreserved": true,
+    "refreshedFieldSourceHashes": 6,
+    "sourceWorkflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83",
+    "sourceProofWorkflowCommit": "abc752a3eaf6f03fb05594bcabb9db2691fdec83"
   }
 }

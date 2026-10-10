@@ -889,7 +889,7 @@ final class MidiPcmStream extends PcmStream {
         if (methodGuard != 23327) {
           this.pendingScoreTick = -124;
         }
-        portamentoReleaseSelection: {
+        {
           if ((this.channelFlags[channelIndex] & 2) != 0) {
             otherHeldNote = (MidiNote) (this.noteMixer.notes.firstForIteration(methodGuard ^ 23327));
             while (otherHeldNote != null) {
@@ -897,13 +897,13 @@ final class MidiPcmStream extends PcmStream {
                 0 > otherHeldNote.releaseEnvelopeTime &&
                 note != otherHeldNote) {
                 note.releaseEnvelopeTime = 0;
-                break portamentoReleaseSelection;
+                break;
               }
               otherHeldNote = (MidiNote) (this.noteMixer.notes.nextForIteration(1));
             }
-            break portamentoReleaseSelection;
+          } else {
+            note.releaseEnvelopeTime = 0;
           }
-          note.releaseEnvelopeTime = 0;
         }
     }
 
