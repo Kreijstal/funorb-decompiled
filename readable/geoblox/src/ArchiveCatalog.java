@@ -29,10 +29,10 @@ final class ArchiveCatalog {
         if (methodGuard != 97) {
           replayTutorialText = (String) null;
         }
-        asciiLetterBeforeReturn = !((65 > character ||
-          character > 90) &&
-          (97 > character ||
-          character > 122));
+        asciiLetterBeforeReturn = ((!(65 > character) &&
+          !(character > 90)) ||
+          (!(97 > character) &&
+          !(character > 122)));
         return asciiLetterBeforeReturn;
     }
 

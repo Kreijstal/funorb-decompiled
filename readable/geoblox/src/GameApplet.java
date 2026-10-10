@@ -879,8 +879,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             UsernameQueryState.canvasRedrawRequested = true;
             MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
             MessageDialog.gameCanvas.setVisible(true);
-            boolean positionCanvasWithinFrame = !(SharedBufferPools.fullscreenFrame == null ||
-              FullscreenFocusCanvas.standaloneFrameReference != null);
+            boolean positionCanvasWithinFrame = (SharedBufferPools.fullscreenFrame != null &&
+              FullscreenFocusCanvas.standaloneFrameReference == null);
             if (!positionCanvasWithinFrame) {
               MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
               positionCanvasWithinFrame = (Geoblox.clientControlFlowFlag != 0);

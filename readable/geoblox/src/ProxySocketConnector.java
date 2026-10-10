@@ -290,8 +290,8 @@ final class ProxySocketConnector extends SocketConnector {
             if (statusLineOrChallengeHeaderOrScheme != null) {
               if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
                 !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
-                connectResponseAcceptanceFrameContinues = !(!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") &&
-                  !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
+                connectResponseAcceptanceFrameContinues = (statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") ||
+                  statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
                 if (connectResponseAcceptanceFrameContinues) {
                   scannedHeaderCount = 0;
                   authenticateHeaderPrefix = "proxy-authenticate: ";

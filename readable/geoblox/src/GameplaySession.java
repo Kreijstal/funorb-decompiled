@@ -1325,19 +1325,19 @@ final class GameplaySession {
                             boolean sunAchievementEntryFrameContinues = true;
                             if (selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
                               clientControlFlowGuard != 0) {
-                              sunAchievementEntryFrameContinues = !(themeIndexThenId == 1 &&
-                                clientControlFlowGuard == 0);
+                              sunAchievementEntryFrameContinues = (themeIndexThenId != 1 ||
+                                clientControlFlowGuard != 0);
                               if (sunAchievementEntryFrameContinues) {
-                                germsAchievementEntryFrameContinues = !(themeIndexThenId == 3 &&
-                                  clientControlFlowGuard == 0);
+                                germsAchievementEntryFrameContinues = (themeIndexThenId != 3 ||
+                                  clientControlFlowGuard != 0);
                                 if (germsAchievementEntryFrameContinues) {
-                                  jewelsAchievementEntryFrameContinues = !(themeIndexThenId == 0 &&
-                                    clientControlFlowGuard == 0);
+                                  jewelsAchievementEntryFrameContinues = (themeIndexThenId != 0 ||
+                                    clientControlFlowGuard != 0);
                                   if (jewelsAchievementEntryFrameContinues) {
                                     spaceAchievementEntryFrameContinues = (themeIndexThenId != 6);
                                     if (spaceAchievementEntryFrameContinues) {
-                                      sportsAchievementEntryFrameContinues = !(5 == themeIndexThenId &&
-                                        clientControlFlowGuard == 0);
+                                      sportsAchievementEntryFrameContinues = (5 != themeIndexThenId ||
+                                        clientControlFlowGuard != 0);
                                       if (sportsAchievementEntryFrameContinues) {
                                         fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId);
                                         if (fallbackSunAchievementEntryFrameContinues) {

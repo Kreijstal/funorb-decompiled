@@ -277,8 +277,8 @@ final class DiskArchiveCache {
                         if (headerEntryIdOrPayloadLength == entryId &&
                           chunkNumber == headerChunkNumber &&
                           headerArchiveId == this.archiveId) {
-                          existingSectorHeaderValidationFrameContinues = !(nextSectorNumber >= 0 &&
-                            (this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber);
+                          existingSectorHeaderValidationFrameContinues = (!(nextSectorNumber >= 0) ||
+                            !((this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber));
                           if (existingSectorHeaderValidationFrameContinues) {
                             return false;
                           }

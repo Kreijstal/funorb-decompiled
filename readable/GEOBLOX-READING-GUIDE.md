@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e9cb26308a0a636b73b6a1e031e574f30dac5f17/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/99922c01189267f00fcf0a9fa9cb583238749560/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 267)
+## Current readability (pass 268)
 
 The export has 20,133 guarded names and 122,233 Java identifier edits, plus 11
 class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,41 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current ordered continuation conditions (pass 267)
+## Current direct Boolean value alternatives (pass 268)
+
+Twelve negated short-circuit values in nine methods across seven files become
+direct Boolean alternatives. Achievement entry decisions such as
+`!(themeId == 1 && control == 0)` now read
+`(themeId != 1 || control != 0)`. Complete operands remain once, in order;
+nullable unboxing, primitive result type, boxing, overload choice, assignments,
+callbacks, failures and protected actions remain. All names and identities stay.
+
+The generic opt-in is `CFR_JS_BOOLEAN_LOGICAL_VALUES=1`. The shared recovery
+also repairs mixed precedence: `!(a || b && c)` requires
+`!a && (!b || !c)`, and `!(a && b || c)` requires
+`(!a || !b) && !c`. Bare mixed logical children gain explicit grouping.
+The clean compiler's complete source differences equal the independently
+verified value transformations. Generic recovery, tests and agent guidance stay
+in java-tools; game names and source certificates stay in Deko. The tracked
+decompiler-source tar SHA-256 is `2663847c4a0ee70bbdfad4d01a02fa3d327bb6e1ed7f625fdb0ab22e876e7241`.
+
+Independent javac compares all 303 complete ordered trees modulo Boolean
+negation in typed Boolean operand contexts. All 138,168 bindings, 388 overrides
+and 4,757 protected transfers remain. Four new and 19 existing groups pass;
+699,840 new native cases compare value and control recovery against independent
+branch oracles for mixed precedence, nullable callbacks, canonical boxing,
+primitive overload choice, NaNs, identity, assignments, partial failures,
+finally overrides, catch paths and monitor release. The clean tracked compiler
+reproduces every source byte and unchanged diagnostics. All 27 publication
+groups pass; 27 native trace groups match the original classes, and all 303
+sources reverse byte for byte. Fresh checkouts run the same pinned builder,
+exporter, source proof and field audit.
+
+No plain block labels or large framed methods remain. Forty-one finer field
+purposes and long ordinary bodies remain to review. Whole-game equivalence,
+browser/phone behavior and heap/presented-FPS acceptance remain unverified.
+
+## Previous ordered continuation conditions (pass 267)
 
 Thirty-five sole-child chains in 18 methods across ten files become ordered
 short-circuit conjunctions, removing 59 empty intermediate if wrappers. The

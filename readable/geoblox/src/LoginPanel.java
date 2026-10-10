@@ -25,12 +25,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
           unusedNullReplyBuffer = (PacketBuffer) null;
           LoginPanel.writeReflectionCheckReply(-108, (PacketBuffer) null);
         }
-        isAsciiLetterOrDigitResult = !((character < 48 ||
-          character > 57) &&
-          (character < 65 ||
-          character > 90) &&
-          (character < 97 ||
-          character > 122));
+        isAsciiLetterOrDigitResult = ((!(character < 48) &&
+          !(character > 57)) ||
+          (!(character < 65) &&
+          !(character > 90)) ||
+          (!(character < 97) &&
+          !(character > 122)));
         return isAsciiLetterOrDigitResult;
     }
 

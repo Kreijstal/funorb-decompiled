@@ -99,8 +99,8 @@ final class GameScreen extends MenuScreen {
                 }
                 menuKeyDispatchFrameContinues = (~ScoreSubmission.requestedScreenId != ~this.screenId);
                 if ((menuKeyDispatchFrameContinues) &&
-                  (menuKeyDispatchFrameContinues = !(this.screenId != 1 &&
-                  this.screenId != 0))) {
+                  (menuKeyDispatchFrameContinues = (this.screenId == 1 ||
+                  this.screenId == 0))) {
                   SpriteCheckboxRenderer.previousMenuScreenId = this.screenId;
                   menuKeyDispatchFrameContinues = (clientControlFlowGuard != 0);
                 }
@@ -1752,8 +1752,8 @@ final class GameScreen extends MenuScreen {
           }
           if (3 == this.screenId &&
             !this.tutorialSlideActive) {
-            boolean normalizeFinalTutorialSelection = !(this.tutorialPageIndex != 4 &&
-              this.selectedItemIndex == 3);
+            boolean normalizeFinalTutorialSelection = (this.tutorialPageIndex == 4 ||
+              this.selectedItemIndex != 3);
             if (!normalizeFinalTutorialSelection) {
               this.selectedItemIndex = 2;
               normalizeFinalTutorialSelection = (Geoblox.clientControlFlowFlag != 0);
@@ -2255,8 +2255,8 @@ final class GameScreen extends MenuScreen {
             this.selectedItemIndex == 3) {
             selected = true;
           }
-          boolean applyMenuScreenOffset = !(this.screenId == 3 ||
-            this.screenId == 2);
+          boolean applyMenuScreenOffset = (this.screenId != 3 &&
+            this.screenId != 2);
           if (!applyMenuScreenOffset) {
             rowY += 280;
             applyMenuScreenOffset = (clientControlFlowGuard != 0);
