@@ -115,13 +115,11 @@ final class c extends ka {
                       !(265 < ue.field_e) ||
                       !(ue.field_e < 299))) {
                       if (vl.field_n == null) {
-                        if (0 != this.field_o) {
-                          decompiledFrameRemainder1 = !(qa.field_a <= 260);
-                          if ((decompiledFrameRemainder1) &&
-                            (decompiledFrameRemainder1 = !(qa.field_a >= 380)) &&
-                            (decompiledFrameRemainder1 = !(ue.field_e <= 274))) {
-                            decompiledFrameRemainder1 = !(ue.field_e >= 309);
-                          }
+                        if ((0 != this.field_o) &&
+                          (decompiledFrameRemainder1 = !(qa.field_a <= 260)) &&
+                          (decompiledFrameRemainder1 = !(qa.field_a >= 380)) &&
+                          (decompiledFrameRemainder1 = !(ue.field_e <= 274))) {
+                          decompiledFrameRemainder1 = !(ue.field_e >= 309);
                         }
                         if (decompiledFrameRemainder1) {
                           this.field_g = true;
@@ -142,14 +140,12 @@ final class c extends ka {
                           decompiledFrameRemainder1 = (var4 != 0);
                         }
                         if (decompiledFrameRemainder1) {
-                          if (this.field_o != 0) {
-                            decompiledFrameRemainder1 = !(this.field_o >= 0);
-                            if ((decompiledFrameRemainder1) &&
-                              (decompiledFrameRemainder1 = !(qa.field_a <= 170)) &&
-                              (decompiledFrameRemainder1 = !(qa.field_a >= 290)) &&
-                              (decompiledFrameRemainder1 = !(ue.field_e <= 327))) {
-                              decompiledFrameRemainder1 = !(ue.field_e >= 362);
-                            }
+                          if ((this.field_o != 0) &&
+                            (decompiledFrameRemainder1 = !(this.field_o >= 0)) &&
+                            (decompiledFrameRemainder1 = !(qa.field_a <= 170)) &&
+                            (decompiledFrameRemainder1 = !(qa.field_a >= 290)) &&
+                            (decompiledFrameRemainder1 = !(ue.field_e <= 327))) {
+                            decompiledFrameRemainder1 = !(ue.field_e >= 362);
                           }
                           if (decompiledFrameRemainder1) {
                             this.field_g = true;
@@ -824,21 +820,19 @@ final class c extends ka {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    if (this.field_K == 4) {
-                      decompiledFrameRemainder0 = !(param0 <= 171);
+                    if ((this.field_K == 4) &&
+                      (decompiledFrameRemainder0 = !(param0 <= 171)) &&
+                      (decompiledFrameRemainder0 = !(param0 >= 469))) {
+                      if (265 < param1 &&
+                        param1 < 301) {
+                        stackIn_78_0 = 0;
+                        return stackIn_78_0;
+                      }
+                      decompiledFrameRemainder0 = !(param1 <= 395);
                       if ((decompiledFrameRemainder0) &&
-                        (decompiledFrameRemainder0 = !(param0 >= 469))) {
-                        if (265 < param1 &&
-                          param1 < 301) {
-                          stackIn_78_0 = 0;
-                          return stackIn_78_0;
-                        }
-                        decompiledFrameRemainder0 = !(param1 <= 395);
-                        if ((decompiledFrameRemainder0) &&
-                          (decompiledFrameRemainder0 = !(431 <= param1))) {
-                          stackIn_84_0 = 1;
-                          return stackIn_84_0;
-                        }
+                        (decompiledFrameRemainder0 = !(431 <= param1))) {
+                        stackIn_84_0 = 1;
+                        return stackIn_84_0;
                       }
                     }
                     if ((decompiledFrameRemainder0) &&
@@ -1129,19 +1123,17 @@ final class c extends ka {
             boolean decompiledFrameRemainder1 = true;
             if (this.field_q != 3) {
               if (4 == this.field_q) {
-                if (49 > (this.field_D & 255)) {
-                  decompiledFrameRemainder1 = ((15 & this.field_D) == 0);
+                if ((49 > (this.field_D & 255)) &&
+                  (decompiledFrameRemainder1 = ((15 & this.field_D) == 0))) {
+                  this.field_w = this.field_w + 1;
+                  if (this.field_w >= 4) {
+                    this.field_w = 0;
+                  }
+                  this.field_B = this.field_B + 1;
+                  decompiledFrameRemainder1 = !(4 > this.field_B);
                   if (decompiledFrameRemainder1) {
-                    this.field_w = this.field_w + 1;
-                    if (this.field_w >= 4) {
-                      this.field_w = 0;
-                    }
-                    this.field_B = this.field_B + 1;
-                    decompiledFrameRemainder1 = !(4 > this.field_B);
-                    if (decompiledFrameRemainder1) {
-                      this.field_B = 0;
-                      decompiledFrameRemainder1 = (var3 != 0);
-                    }
+                    this.field_B = 0;
+                    decompiledFrameRemainder1 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder1) {
@@ -2433,12 +2425,10 @@ final class c extends ka {
             this.field_K != 4) {
             boolean decompiledFrameRemainder0 = true;
             if (ki.field_d == 96) {
-              if (this.field_C) {
-                decompiledFrameRemainder0 = (this.field_o != 0);
-                if (decompiledFrameRemainder0) {
-                  this.field_o = 0;
-                  decompiledFrameRemainder0 = (var3 != 0);
-                }
+              if ((this.field_C) &&
+                (decompiledFrameRemainder0 = (this.field_o != 0))) {
+                this.field_o = 0;
+                decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (0 >= this.field_b) {

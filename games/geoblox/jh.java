@@ -273,14 +273,12 @@ final class jh {
                         var10 = (dj.field_F[8] & 255) + ((255 & dj.field_F[6]) << 16) + (65280 & dj.field_F[7] << 8);
                         var12 = (dj.field_F[4] << 8 & 65280) + (255 & dj.field_F[5]);
                       }
-                      if (var11 == param2 &&
+                      if ((var11 == param2 &&
                         var9 == var12 &&
-                        var13 == this.field_b) {
-                        decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                          !((this.field_d.a((byte) 46) / 520L) >= (long)var10));
-                        if (decompiledFrameRemainder0) {
-                          return false;
-                        }
+                        var13 == this.field_b) &&
+                        (decompiledFrameRemainder0 = (!(var10 >= 0) ||
+                        !((this.field_d.a((byte) 46) / 520L) >= (long)var10)))) {
+                        return false;
                       }
                       if (decompiledFrameRemainder0) {
                         return false;

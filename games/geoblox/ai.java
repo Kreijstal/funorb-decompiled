@@ -79,12 +79,10 @@ final class ai extends hf {
               boolean decompiledFrameRemainder0 = true;
               if (var5.regionMatches(var6, "/l=", 0, 3)) {
                 var7_int = var5.indexOf('/', var6 + 1);
-                if (var7_int >= 0) {
-                  decompiledFrameRemainder0 = !(param3 < 0);
-                  if (decompiledFrameRemainder0) {
-                    var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                    continue;
-                  }
+                if ((var7_int >= 0) &&
+                  (decompiledFrameRemainder0 = !(param3 < 0))) {
+                  var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                  continue;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -95,12 +93,10 @@ final class ai extends hf {
                 if (decompiledFrameRemainder0) {
                   if (var5.regionMatches(var6, "/p=", 0, 3)) {
                     var7_int = var5.indexOf('/', 1 + var6);
-                    if (var7_int >= 0) {
-                      decompiledFrameRemainder0 = (param1 != null);
-                      if (decompiledFrameRemainder0) {
-                        var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                        continue;
-                      }
+                    if ((var7_int >= 0) &&
+                      (decompiledFrameRemainder0 = (param1 != null))) {
+                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
+                      continue;
                     }
                   }
                   if (decompiledFrameRemainder0) {

@@ -529,25 +529,23 @@ final class bj extends nh {
                   this.b(25, 41);
                 }
                 decompiledFrameRemainder1 = (this.field_w);
-                if (decompiledFrameRemainder1) {
-                  decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
-                  if (decompiledFrameRemainder0) {
-                    var2 = (pb) (this.field_g.a((byte) 125));
-                    while (var2 != null) {
-                      if (!var2.field_u) {
-                        if (var2.field_n) {
-                          if (!var2.field_q) {
-                            throw new RuntimeException();
-                          }
-                          var2.a(false);
-                        } else {
-                          var2.field_n = true;
+                if ((decompiledFrameRemainder1) &&
+                  (decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n))) {
+                  var2 = (pb) (this.field_g.a((byte) 125));
+                  while (var2 != null) {
+                    if (!var2.field_u) {
+                      if (var2.field_n) {
+                        if (!var2.field_q) {
+                          throw new RuntimeException();
                         }
+                        var2.a(false);
+                      } else {
+                        var2.field_n = true;
                       }
-                      var2 = (pb) (this.field_g.b(74));
                     }
-                    decompiledFrameRemainder2 = false;
+                    var2 = (pb) (this.field_g.b(74));
                   }
+                  decompiledFrameRemainder2 = false;
                 }
               }
             }
@@ -566,23 +564,21 @@ final class bj extends nh {
             this.b(25, 41);
           }
           decompiledFrameRemainder1 = (this.field_w);
-          if (decompiledFrameRemainder1) {
-            decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
-            if (decompiledFrameRemainder0) {
-              var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
-              while (var2Lifetime1 != null) {
-                if (!var2Lifetime1.field_u) {
-                  if (var2Lifetime1.field_n) {
-                    if (!var2Lifetime1.field_q) {
-                      throw new RuntimeException();
-                    }
-                    var2Lifetime1.a(false);
-                  } else {
-                    var2Lifetime1.field_n = true;
+          if ((decompiledFrameRemainder1) &&
+            (decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n))) {
+            var2Lifetime1 = (pb) (this.field_g.a((byte) 125));
+            while (var2Lifetime1 != null) {
+              if (!var2Lifetime1.field_u) {
+                if (var2Lifetime1.field_n) {
+                  if (!var2Lifetime1.field_q) {
+                    throw new RuntimeException();
                   }
+                  var2Lifetime1.a(false);
+                } else {
+                  var2Lifetime1.field_n = true;
                 }
-                var2Lifetime1 = (pb) (this.field_g.b(74));
               }
+              var2Lifetime1 = (pb) (this.field_g.b(74));
             }
           }
         }

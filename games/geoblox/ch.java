@@ -326,12 +326,9 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                 }
               }
-              if ((decompiledFrameRemainder3) &&
-                (decompiledFrameCompleted0)) {
-                decompiledFrameRemainder2 = (d.field_t != null);
-                if (decompiledFrameRemainder2) {
-                  stackIn_66_0 = d.field_t.startsWith("1.");
-                }
+              if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
+                (decompiledFrameRemainder2 = (d.field_t != null))) {
+                stackIn_66_0 = d.field_t.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
