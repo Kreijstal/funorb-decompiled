@@ -48,7 +48,8 @@ final class c extends ka {
         int var4 = 0;
         var4 = Geoblox.field_C;
         try {
-          L0: {
+          {
+            boolean decompiledFrameRemainder1 = true;
             {
               boolean decompiledFrameRemainder0 = true;
               var3_int = t.field_i[this.field_K][param0];
@@ -64,172 +65,162 @@ final class c extends ka {
                   j.field_gb = 0;
                 }
                 this.d(0);
-                break L0;
+                decompiledFrameRemainder1 = false;
               } else {
                 decompiledFrameRemainder0 = !(var3_int != 9);
               }
-              if (decompiledFrameRemainder0) {
-                if (102 != ki.field_d) {
-                  if (103 != ki.field_d) {
-                    super.a(param0, -70);
-                    if (var4 == 0) {
-                      break L0;
+              if (decompiledFrameRemainder1) {
+                if (decompiledFrameRemainder0) {
+                  if (102 != ki.field_d) {
+                    if (103 != ki.field_d) {
+                      super.a(param0, -70);
+                      decompiledFrameRemainder1 = !(var4 == 0);
+                    }
+                    if (decompiledFrameRemainder1) {
+                      wg.a(-15346, 80);
+                      decompiledFrameRemainder1 = !(var4 == 0);
                     }
                   }
-                  wg.a(-15346, 80);
-                  if (var4 == 0) {
-                    break L0;
+                  if (decompiledFrameRemainder1) {
+                    wg.a(-15346, 0);
+                    decompiledFrameRemainder1 = !(var4 == 0);
                   }
-                }
-                wg.a(-15346, 0);
-                if (var4 == 0) {
-                  break L0;
                 }
               }
             }
-            if (ki.field_d == 13 &&
-              !this.field_C) {
-              if (this.field_K == 1) {
-                ai.field_p = -1;
-                if (var4 != 0) {
+            if (decompiledFrameRemainder1) {
+              if (ki.field_d == 13 &&
+                !this.field_C) {
+                if (this.field_K == 1) {
+                  ai.field_p = -1;
+                  if (var4 != 0) {
+                    ai.field_p = oc.field_b;
+                  }
+                } else {
                   ai.field_p = oc.field_b;
                 }
-              } else {
-                ai.field_p = oc.field_b;
-              }
-              if (~ai.field_p == ~this.field_K) {
-                break L0;
-              }
-              if (this.field_K != 1 &&
-                this.field_K != 0) {
-                break L0;
-              }
-              oc.field_b = this.field_K;
-              if (var4 == 0) {
-                break L0;
-              }
-            }
-            if (this.field_C) {
-              if (ki.field_d == 84 ||
-                83 == ki.field_d) {
-                if (!fh.c(-103)) {
-                  if (!(og.field_n <= 0) ||
-                    this.field_o != 0 &&
-                    (!(qa.field_a > 190) ||
-                    !(qa.field_a < 449) ||
-                    !(265 < ue.field_e) ||
-                    !(ue.field_e < 299))) {
-                    if (vl.field_n == null) {
-                      if (0 != this.field_o) {
-                        if (qa.field_a <= 260) {
-                          break L0;
-                        }
-                        if (qa.field_a >= 380) {
-                          break L0;
-                        }
-                        if (ue.field_e <= 274) {
-                          break L0;
-                        }
-                        if (ue.field_e >= 309) {
-                          break L0;
-                        }
-                      }
-                      this.field_g = true;
-                      this.field_C = false;
-                      if (var4 == 0) {
-                        break L0;
-                      }
-                    }
-                    if (1 == this.field_o ||
-                      this.field_o < 0 &&
-                      !(qa.field_a <= 350) &&
-                      !(qa.field_a >= 470) &&
-                      !(ue.field_e <= 327) &&
-                      !(ue.field_e >= 362)) {
-                      this.field_C = false;
-                      em.b(255);
-                      this.field_g = true;
-                      if (var4 == 0) {
-                        break L0;
-                      }
-                    }
-                    if (this.field_o != 0) {
-                      if (this.field_o >= 0) {
-                        break L0;
-                      }
-                      if (qa.field_a <= 170) {
-                        break L0;
-                      }
-                      if (qa.field_a >= 290) {
-                        break L0;
-                      }
-                      if (ue.field_e <= 327) {
-                        break L0;
-                      }
-                      if (ue.field_e >= 362) {
-                        break L0;
-                      }
-                    }
-                    this.field_g = true;
-                    this.field_C = false;
-                    if (var4 == 0) {
-                      break L0;
-                    }
-                  }
-                  this.field_g = true;
-                  this.field_C = false;
-                  if (var4 == 0) {
-                    break L0;
-                  }
+                decompiledFrameRemainder1 = !(~ai.field_p == ~this.field_K);
+                if ((decompiledFrameRemainder1) &&
+                  (decompiledFrameRemainder1 = !(this.field_K != 1 &&
+                  this.field_K != 0))) {
+                  oc.field_b = this.field_K;
+                  decompiledFrameRemainder1 = !(var4 == 0);
                 }
-                if (this.field_o == 1 ||
-                  this.field_o < 0 &&
-                  !(qa.field_a <= 350) &&
-                  !(470 <= qa.field_a) &&
-                  !(ue.field_e <= 265) &&
-                  !(ue.field_e >= 299)) {
-                  this.field_g = true;
-                  this.field_C = false;
-                  if (var4 == 0) {
-                    break L0;
-                  }
-                }
-                if (this.field_o != 0) {
-                  if (!(this.field_o >= 0)) {
-                    if (!(qa.field_a <= 170)) {
-                      if (!(qa.field_a >= 290)) {
-                        if (!(ue.field_e <= 265)) {
-                          if (!(ue.field_e >= 299)) {
+              }
+              if (decompiledFrameRemainder1) {
+                if (this.field_C) {
+                  if (ki.field_d == 84 ||
+                    83 == ki.field_d) {
+                    if (!fh.c(-103)) {
+                      if (!(og.field_n <= 0) ||
+                        this.field_o != 0 &&
+                        (!(qa.field_a > 190) ||
+                        !(qa.field_a < 449) ||
+                        !(265 < ue.field_e) ||
+                        !(ue.field_e < 299))) {
+                        if (vl.field_n == null) {
+                          if (0 != this.field_o) {
+                            decompiledFrameRemainder1 = !(qa.field_a <= 260);
+                            if ((decompiledFrameRemainder1) &&
+                              (decompiledFrameRemainder1 = !(qa.field_a >= 380)) &&
+                              (decompiledFrameRemainder1 = !(ue.field_e <= 274))) {
+                              decompiledFrameRemainder1 = !(ue.field_e >= 309);
+                            }
+                          }
+                          if (decompiledFrameRemainder1) {
                             this.field_g = true;
-                            if (null != el.field_o) {
-                              el.field_o.e((byte) -70);
+                            this.field_C = false;
+                            decompiledFrameRemainder1 = !(var4 == 0);
+                          }
+                        }
+                        if (decompiledFrameRemainder1) {
+                          if (1 == this.field_o ||
+                            this.field_o < 0 &&
+                            !(qa.field_a <= 350) &&
+                            !(qa.field_a >= 470) &&
+                            !(ue.field_e <= 327) &&
+                            !(ue.field_e >= 362)) {
+                            this.field_C = false;
+                            em.b(255);
+                            this.field_g = true;
+                            decompiledFrameRemainder1 = !(var4 == 0);
+                          }
+                          if (decompiledFrameRemainder1) {
+                            if (this.field_o != 0) {
+                              decompiledFrameRemainder1 = !(this.field_o >= 0);
+                              if ((decompiledFrameRemainder1) &&
+                                (decompiledFrameRemainder1 = !(qa.field_a <= 170)) &&
+                                (decompiledFrameRemainder1 = !(qa.field_a >= 290)) &&
+                                (decompiledFrameRemainder1 = !(ue.field_e <= 327))) {
+                                decompiledFrameRemainder1 = !(ue.field_e >= 362);
+                              }
                             }
-                            el.field_i = 0;
-                            ai.field_p = -1;
-                            cd.field_j = 0;
-                            if (var4 != 0) {
-                              super.a(param0, -100);
+                            if (decompiledFrameRemainder1) {
+                              this.field_g = true;
+                              this.field_C = false;
+                              decompiledFrameRemainder1 = !(var4 == 0);
                             }
+                          }
+                        }
+                      }
+                      if (decompiledFrameRemainder1) {
+                        this.field_g = true;
+                        this.field_C = false;
+                        decompiledFrameRemainder1 = !(var4 == 0);
+                      }
+                    }
+                    if (decompiledFrameRemainder1) {
+                      if (this.field_o == 1 ||
+                        this.field_o < 0 &&
+                        !(qa.field_a <= 350) &&
+                        !(470 <= qa.field_a) &&
+                        !(ue.field_e <= 265) &&
+                        !(ue.field_e >= 299)) {
+                        this.field_g = true;
+                        this.field_C = false;
+                        decompiledFrameRemainder1 = !(var4 == 0);
+                      }
+                      if (decompiledFrameRemainder1) {
+                        if (this.field_o != 0) {
+                          if (!(this.field_o >= 0)) {
+                            if (!(qa.field_a <= 170)) {
+                              if (!(qa.field_a >= 290)) {
+                                if (!(ue.field_e <= 265)) {
+                                  if (!(ue.field_e >= 299)) {
+                                    this.field_g = true;
+                                    if (null != el.field_o) {
+                                      el.field_o.e((byte) -70);
+                                    }
+                                    el.field_i = 0;
+                                    ai.field_p = -1;
+                                    cd.field_j = 0;
+                                    if (var4 != 0) {
+                                      super.a(param0, -100);
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        } else {
+                          this.field_g = true;
+                          if (null != el.field_o) {
+                            el.field_o.e((byte) -70);
+                          }
+                          el.field_i = 0;
+                          ai.field_p = -1;
+                          cd.field_j = 0;
+                          if (var4 != 0) {
+                            super.a(param0, -100);
                           }
                         }
                       }
                     }
                   }
                 } else {
-                  this.field_g = true;
-                  if (null != el.field_o) {
-                    el.field_o.e((byte) -70);
-                  }
-                  el.field_i = 0;
-                  ai.field_p = -1;
-                  cd.field_j = 0;
-                  if (var4 != 0) {
-                    super.a(param0, -100);
-                  }
+                  super.a(param0, -100);
                 }
               }
-            } else {
-              super.a(param0, -100);
             }
           }
           if (param1 > -26) {
