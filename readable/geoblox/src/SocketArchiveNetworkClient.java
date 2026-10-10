@@ -180,15 +180,13 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                         }
                         archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
                       }
-                      if (archiveResponseRequestLookupFrameContinues) {
-                        if (archiveResponseRequestLookupRemainderEnabled) {
-                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
-                          while (matchedRequest != null) {
-                            if (~responseKey == ~matchedRequest.secondaryKey) {
-                              break;
-                            }
-                            matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
+                      if ((archiveResponseRequestLookupFrameContinues) && (archiveResponseRequestLookupRemainderEnabled)) {
+                        matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
+                        while (matchedRequest != null) {
+                          if (~responseKey == ~matchedRequest.secondaryKey) {
+                            break;
                           }
+                          matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.nextForIteration(72));
                         }
                       }
                     }

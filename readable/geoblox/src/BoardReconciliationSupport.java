@@ -293,61 +293,55 @@ final class BoardReconciliationSupport {
                       routingDestinationSelectionFrameContinues = (clientControlSnapshot != 0);
                     }
                   }
-                  if (routingDestinationSelectionFrameContinues) {
-                    if (movingEntityRoutingRemainderEnabled) {
-                      if (routedAttachedEntity.entityQueue == DelegatingCanvas.transientEntities ||
+                  if ((routingDestinationSelectionFrameContinues) && (movingEntityRoutingRemainderEnabled) && (routedAttachedEntity.entityQueue == DelegatingCanvas.transientEntities ||
+                    SessionSocketSupport.avatarShockPending)) {
+                    transientNeighborIndex = 0;
+                    while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
+                      routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);
+                      routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
+                      transientNeighborIndex++;
+                      if (clientControlSnapshot != 0) {
+                        transientEntityRoutingRemainderEnabled = false;
+                        break;
+                      }
+                    }
+                    if (transientEntityRoutingRemainderEnabled) {
+                      entityForRoutingCategoryReset = routedAttachedEntity;
+                      routedAttachedEntity.relatedEntityCount = 0;
+                      entityForTransientVariantReset = routedAttachedEntity;
+                      entityForRoutingCategoryReset.sameCategoryEntityCount = 0;
+                      entityForTransientVariantReset.sameVariantEntityCount = 0;
+                      routedAttachedEntity.remainingLifetimeTicks = 50;
+                      DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
+                      routedAttachedEntity.animationFrameIndex = 0;
+                      if (routedAttachedEntity.touchesAvatar &&
                         SessionSocketSupport.avatarShockPending) {
-                        transientNeighborIndex = 0;
-                        while (transientNeighborIndex < routedAttachedEntity.relatedEntityCount) {
-                          routedAttachedEntity.relatedEntities[transientNeighborIndex].removeRelatedEntity(routedAttachedEntity, 0);
-                          routedAttachedEntity.relatedEntities[transientNeighborIndex].drawEntityIdOnBoardMask(2);
-                          transientNeighborIndex++;
-                          if (clientControlSnapshot != 0) {
-                            transientEntityRoutingRemainderEnabled = false;
-                            break;
-                          }
+                        popupOriginYInput = (int)routedAttachedEntity.positionY;
+                        popupOriginXInput = (int)routedAttachedEntity.positionX;
+                        popupGuardInput = 117;
+                        if (routedAttachedEntity.entitySpriteKindId != 4 &&
+                          routedAttachedEntity.entitySpriteKindId != 3) {
+                          popupPoints = 10;
+                        } else {
+                          popupPoints = 100;
                         }
-                        if (transientEntityRoutingRemainderEnabled) {
-                          entityForRoutingCategoryReset = routedAttachedEntity;
-                          routedAttachedEntity.relatedEntityCount = 0;
-                          entityForTransientVariantReset = routedAttachedEntity;
-                          entityForRoutingCategoryReset.sameCategoryEntityCount = 0;
-                          entityForTransientVariantReset.sameVariantEntityCount = 0;
-                          routedAttachedEntity.remainingLifetimeTicks = 50;
-                          DelegatingCanvas.transientEntities.addLast(-100, routedAttachedEntity);
-                          routedAttachedEntity.animationFrameIndex = 0;
-                          if (routedAttachedEntity.touchesAvatar &&
-                            SessionSocketSupport.avatarShockPending) {
-                            popupOriginYInput = (int)routedAttachedEntity.positionY;
-                            popupOriginXInput = (int)routedAttachedEntity.positionX;
-                            popupGuardInput = 117;
-                            if (routedAttachedEntity.entitySpriteKindId != 4 &&
-                              routedAttachedEntity.entitySpriteKindId != 3) {
-                              popupPoints = 10;
-                            } else {
-                              popupPoints = 100;
-                            }
-                            PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
-                          }
-                          boolean applyKindSevenConversionAndCounters = (4 == routedAttachedEntity.entitySpriteKindId);
-                          if (!applyKindSevenConversionAndCounters) {
-                            routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
-                            applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);
-                          }
-                          if (applyKindSevenConversionAndCounters) {
-                            routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
-                            visitedResetIndexThenKindFourCount++;
-                            FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
-                          }
-                        }
+                        PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
+                      }
+                      boolean applyKindSevenConversionAndCounters = (4 == routedAttachedEntity.entitySpriteKindId);
+                      if (!applyKindSevenConversionAndCounters) {
+                        routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
+                        applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);
+                      }
+                      if (applyKindSevenConversionAndCounters) {
+                        routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 7);
+                        visitedResetIndexThenKindFourCount++;
+                        FontLoadingSupport.kindFourRemovalCount = FontLoadingSupport.kindFourRemovalCount + 1;
                       }
                     }
                   }
                 }
-                if (movingEntityRoutingRemainderEnabled) {
-                  if (transientEntityRoutingRemainderEnabled) {
-                    routedAttachedEntity.entityQueue = null;
-                  }
+                if ((movingEntityRoutingRemainderEnabled) && (transientEntityRoutingRemainderEnabled)) {
+                  routedAttachedEntity.entityQueue = null;
                 }
               }
               UiWidget.gameplaySession.boardRasterDirty = true;
@@ -375,11 +369,9 @@ final class BoardReconciliationSupport {
               }
               break;
             }
-            if (transientQueueExhausted) {
-              if (SessionSocketSupport.avatarShockPending) {
-                AvatarFeedbackSupport.requestAvatarFeedback(3, false);
-                Bzip2DecoderState.avatarShockContactPending = false;
-              }
+            if ((transientQueueExhausted) && (SessionSocketSupport.avatarShockPending)) {
+              AvatarFeedbackSupport.requestAvatarFeedback(3, false);
+              Bzip2DecoderState.avatarShockContactPending = false;
             }
           }
           sessionForRasterRead = UiWidget.gameplaySession;

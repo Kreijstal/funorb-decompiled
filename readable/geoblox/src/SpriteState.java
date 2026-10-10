@@ -498,10 +498,8 @@ abstract class SpriteState extends DualLinkNode {
                   break;
                 }
               }
-              if (whirlpoolInputSelectionRemainderEnabled) {
-                if (clientControlFlowGuard != 0) {
-                  digestInput = source;
-                }
+              if ((whirlpoolInputSelectionRemainderEnabled) && (clientControlFlowGuard != 0)) {
+                digestInput = source;
               }
             } else {
               digestInput = source;

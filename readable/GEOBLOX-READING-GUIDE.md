@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7d71c5237e66286b2e100862f10406348a5b36f7/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/e9cb26308a0a636b73b6a1e031e574f30dac5f17/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 266)
+## Current readability (pass 267)
 
 The export has 20,133 guarded names and 122,233 Java identifier edits, plus 11
 class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,35 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current primitive Boolean value copies (pass 266)
+## Current ordered continuation conditions (pass 267)
+
+Thirty-five sole-child chains in 18 methods across ten files become ordered
+short-circuit conjunctions, removing 59 empty intermediate if wrappers. The
+achievement ladder in GameplaySession now checks seven named continuations in
+one condition. Every complete condition and deepest work body remains once,
+in order; snapshots, stores, callbacks, unboxing, failures and protected actions
+remain. All 20,133 rules and 20,440 dictionary identities remain unchanged.
+
+The generic opt-in is `CFR_JS_LATE_NESTED_IF_CONDITIONS=1`. It retries the
+existing sole-child chain proof after later frame and Boolean reconstruction.
+Generic recovery and agent guidance stay in java-tools; game names and source
+certificates stay in Deko. The tracked decompiler-source tar SHA-256 is
+`9d9abe1a44b7ff1e72e62c296ca62a0806995e3158e480a6738dc400c4af67c8`.
+
+Independent javac certifies every original chain and compares all 303 complete
+ordered trees modulo sole-child guards and associative short-circuit conjunctions.
+All 138,168 bindings, 388 overrides and 4,757 protected transfers remain. Seven
+generic groups pass, including 3,280,500 native oracle cases. The clean tracked
+compiler reproduces every source byte and unchanged diagnostics. Publication
+checks pass in 27 groups; 27 native gameplay/rendering/helper traces match the
+original classes, and all 303 sources reverse byte for byte. Fresh checkouts
+run the same builder, exporter, pinned source proof and field audit from Git inputs.
+
+No plain block labels or large framed methods remain. Forty-one finer field
+purposes and long ordinary bodies remain to review. Whole-game equivalence,
+browser/phone behavior and heap/presented-FPS acceptance remain unverified.
+
+## Previous primitive Boolean value copies (pass 266)
 
 Fourteen pairs such as `!(!visible)` and `!(!this.sessionEnding)` become direct
 primitive Boolean copies, keeping original parentheses and single evaluations.

@@ -555,52 +555,40 @@ final class CachedArchiveSource extends ArchiveSource {
                         }
                       }
                     }
-                    if (backgroundGroupLoadingFrameContinues) {
-                      if (completedRequestSweepFrameContinues) {
-                        if (backgroundLoadingAndSweepFrameContinues) {
-                          if (requestSweepDueCheckFrameContinues) {
-                            this.backgroundGroups = null;
-                          }
-                        }
-                      }
+                    if ((backgroundGroupLoadingFrameContinues) && (completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+                      this.backgroundGroups = null;
                     }
                   }
                 }
               }
-              if (completedRequestSweepFrameContinues) {
+              if ((completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+                if (methodGuard != -38) {
+                  this.getPackedGroup(25, 41);
+                }
+                backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
                 if (backgroundLoadingAndSweepFrameContinues) {
+                  requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
                   if (requestSweepDueCheckFrameContinues) {
-                    if (methodGuard != -38) {
-                      this.getPackedGroup(25, 41);
-                    }
-                    backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
-                    if (backgroundLoadingAndSweepFrameContinues) {
-                      requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
-                      if (requestSweepDueCheckFrameContinues) {
-                        completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                        while (completedCleanupRequest != null) {
-                          if (!completedCleanupRequest.pending) {
-                            if (completedCleanupRequest.seenByCleanup) {
-                              if (!completedCleanupRequest.priority) {
-                                throw new RuntimeException();
-                              }
-                              completedCleanupRequest.unlinkNode(false);
-                            } else {
-                              completedCleanupRequest.seenByCleanup = true;
-                            }
+                    completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                    while (completedCleanupRequest != null) {
+                      if (!completedCleanupRequest.pending) {
+                        if (completedCleanupRequest.seenByCleanup) {
+                          if (!completedCleanupRequest.priority) {
+                            throw new RuntimeException();
                           }
-                          completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
+                          completedCleanupRequest.unlinkNode(false);
+                        } else {
+                          completedCleanupRequest.seenByCleanup = true;
                         }
                       }
+                      completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                     }
                   }
                 }
               }
             }
-            if (backgroundLoadingAndSweepFrameContinues) {
-              if (requestSweepDueCheckFrameContinues) {
-                this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
-              }
+            if ((backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+              this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
             }
           }
         }

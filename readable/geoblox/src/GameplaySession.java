@@ -854,22 +854,20 @@ final class GameplaySession {
               advanceEndingSequence = (clientControlFlowGuard != 0);
             }
           }
-          if (sessionProgressionAndEndingFrameContinues) {
-            if (advanceEndingSequence) {
-              if (this.sceneAnimationTick == 0) {
-                IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
-              }
-              if (LoginPanel.endingEntityScanClear &&
-                LoginMethod.isAvatarCryHoldExpired(-3) &&
-                this.sceneAnimationTick > 1000) {
-                this.requestSessionExitScreen(28809);
-              }
-              EndingAnimationSupport.advanceEndingEntityAnimations(19);
-              AgeValidator.advanceScorePopups((byte) 24);
-              MessageDialog.advanceGameplayAvatarAnimation(600);
-              this.sceneAnimationTick = this.sceneAnimationTick + 1;
-              this.boardRasterDirty = true;
+          if ((sessionProgressionAndEndingFrameContinues) && (advanceEndingSequence)) {
+            if (this.sceneAnimationTick == 0) {
+              IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard ^ -1578896191, ValidationMessageWidget.gameOverMusicTrack);
             }
+            if (LoginPanel.endingEntityScanClear &&
+              LoginMethod.isAvatarCryHoldExpired(-3) &&
+              this.sceneAnimationTick > 1000) {
+              this.requestSessionExitScreen(28809);
+            }
+            EndingAnimationSupport.advanceEndingEntityAnimations(19);
+            AgeValidator.advanceScorePopups((byte) 24);
+            MessageDialog.advanceGameplayAvatarAnimation(600);
+            this.sceneAnimationTick = this.sceneAnimationTick + 1;
+            this.boardRasterDirty = true;
           }
         }
         if (methodGuard != -1578896191) {
@@ -1216,33 +1214,31 @@ final class GameplaySession {
             this.tutorialStepPhase = 0;
             tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
           }
-          if (tutorialStepPhaseUpdateFrameContinues) {
-            if (1 == this.tutorialStepPhase) {
-              if (this.tutorialStepId == 3 ||
-                this.tutorialStepId == 5) {
-                this.leaveTutorial(7000);
-              }
-              if (this.tutorialAdvanceRequested) {
-                this.tutorialAdvanceRequested = false;
-                this.tutorialStepPhase = 2;
-              }
-              if (this.tutorialStepId == 0 &&
-                this.tutorialProgressMetric > 450) {
-                this.tutorialStepPhase = 2;
-                tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
-              }
-              if (tutorialStepPhaseUpdateFrameContinues) {
-                if (this.tutorialStepId != 1 ||
-                  !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
-                  if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
-                    this.tutorialStepPhase = 2;
-                    if (clientControlFlowGuard != 0) {
-                      this.tutorialStepPhase = 2;
-                    }
-                  }
-                } else {
+          if ((tutorialStepPhaseUpdateFrameContinues) && (1 == this.tutorialStepPhase)) {
+            if (this.tutorialStepId == 3 ||
+              this.tutorialStepId == 5) {
+              this.leaveTutorial(7000);
+            }
+            if (this.tutorialAdvanceRequested) {
+              this.tutorialAdvanceRequested = false;
+              this.tutorialStepPhase = 2;
+            }
+            if (this.tutorialStepId == 0 &&
+              this.tutorialProgressMetric > 450) {
+              this.tutorialStepPhase = 2;
+              tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
+            }
+            if (tutorialStepPhaseUpdateFrameContinues) {
+              if (this.tutorialStepId != 1 ||
+                !(0 < FadingDialog.variantMatchCandidateCount - this.tutorialProgressMetric)) {
+                if (this.tutorialStepId == 2 && !(TextLayout.categoryMatchCandidateCount - this.tutorialProgressMetric <= 0)) {
                   this.tutorialStepPhase = 2;
+                  if (clientControlFlowGuard != 0) {
+                    this.tutorialStepPhase = 2;
+                  }
                 }
+              } else {
+                this.tutorialStepPhase = 2;
               }
             }
           }
@@ -1353,87 +1349,45 @@ final class GameplaySession {
                                 }
                               }
                             }
-                            if (fallbackSunAchievementEntryFrameContinues) {
-                              if (sweetsAchievementEntryFrameContinues) {
-                                if (sportsAchievementEntryFrameContinues) {
-                                  if (spaceAchievementEntryFrameContinues) {
-                                    if (jewelsAchievementEntryFrameContinues) {
-                                      if (germsAchievementEntryFrameContinues) {
-                                        if (sunAchievementEntryFrameContinues) {
-                                          SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
-                                          if (clientControlFlowGuard == 0) {
-                                            break;
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          if (fallbackSunAchievementEntryFrameContinues) {
-                            if (sweetsAchievementEntryFrameContinues) {
-                              if (sportsAchievementEntryFrameContinues) {
-                                if (spaceAchievementEntryFrameContinues) {
-                                  if (jewelsAchievementEntryFrameContinues) {
-                                    if (germsAchievementEntryFrameContinues) {
-                                      SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
-                                      if (clientControlFlowGuard == 0) {
-                                        break;
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                        if (fallbackSunAchievementEntryFrameContinues) {
-                          if (sweetsAchievementEntryFrameContinues) {
-                            if (sportsAchievementEntryFrameContinues) {
-                              if (spaceAchievementEntryFrameContinues) {
-                                if (jewelsAchievementEntryFrameContinues) {
-                                  SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
-                                  if (clientControlFlowGuard == 0) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      if (fallbackSunAchievementEntryFrameContinues) {
-                        if (sweetsAchievementEntryFrameContinues) {
-                          if (sportsAchievementEntryFrameContinues) {
-                            if (spaceAchievementEntryFrameContinues) {
-                              SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
+                            if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues) && (sunAchievementEntryFrameContinues)) {
+                              SecondaryNodeDeque.recordAchievement(MessageDialogSupport.bakingThemeCompletionAchievementId ^ 255, -61, MessageDialogSupport.bakingThemeCompletionAchievementId);
                               if (clientControlFlowGuard == 0) {
                                 break;
                               }
                             }
                           }
+                          if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues) && (germsAchievementEntryFrameContinues)) {
+                            SecondaryNodeDeque.recordAchievement(255 ^ SpriteConstructionSupport.sunThemeCompletionAchievementId, -84, SpriteConstructionSupport.sunThemeCompletionAchievementId);
+                            if (clientControlFlowGuard == 0) {
+                              break;
+                            }
+                          }
                         }
-                      }
-                    }
-                    if (fallbackSunAchievementEntryFrameContinues) {
-                      if (sweetsAchievementEntryFrameContinues) {
-                        if (sportsAchievementEntryFrameContinues) {
-                          SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
+                        if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues) && (jewelsAchievementEntryFrameContinues)) {
+                          SecondaryNodeDeque.recordAchievement(255 ^ TextInputRenderer.germsThemeCompletionAchievementId, -50, TextInputRenderer.germsThemeCompletionAchievementId);
                           if (clientControlFlowGuard == 0) {
                             break;
                           }
                         }
                       }
+                      if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues) && (spaceAchievementEntryFrameContinues)) {
+                        SecondaryNodeDeque.recordAchievement(255 ^ AccountEligibilitySupport.jewelsThemeCompletionAchievementId, -71, AccountEligibilitySupport.jewelsThemeCompletionAchievementId);
+                        if (clientControlFlowGuard == 0) {
+                          break;
+                        }
+                      }
                     }
-                  }
-                  if (fallbackSunAchievementEntryFrameContinues) {
-                    if (sweetsAchievementEntryFrameContinues) {
-                      SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
+                    if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues) && (sportsAchievementEntryFrameContinues)) {
+                      SecondaryNodeDeque.recordAchievement(255 ^ CheckboxWidget.spaceThemeCompletionAchievementId, -115, CheckboxWidget.spaceThemeCompletionAchievementId);
                       if (clientControlFlowGuard == 0) {
                         break;
                       }
+                    }
+                  }
+                  if ((fallbackSunAchievementEntryFrameContinues) && (sweetsAchievementEntryFrameContinues)) {
+                    SecondaryNodeDeque.recordAchievement(255 ^ WeightedObjectCache.sportsThemeCompletionAchievementId, -92, WeightedObjectCache.sportsThemeCompletionAchievementId);
+                    if (clientControlFlowGuard == 0) {
+                      break;
                     }
                   }
                 }

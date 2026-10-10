@@ -150,20 +150,16 @@ final class BufferedRandomAccessFile {
                 }
                 underlyingReadSelectionFrameContinues = !(underlyingReadSelectionRemainderEnabled);
               }
-              if (underlyingReadSelectionFrameContinues) {
-                if (underlyingReadSelectionRemainderEnabled) {
-                  if (remainingLength > 0) {
-                    this.refillReadBuffer(true);
-                    refillCopyCount = remainingLength;
-                    if (this.readBufferLength < refillCopyCount) {
-                      refillCopyCount = this.readBufferLength;
-                    }
-                    ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
-                    remainingLength = remainingLength - refillCopyCount;
-                    destinationOffset = destinationOffset + refillCopyCount;
-                    this.position = this.position + (long)refillCopyCount;
-                  }
+              if ((underlyingReadSelectionFrameContinues) && (underlyingReadSelectionRemainderEnabled) && (remainingLength > 0)) {
+                this.refillReadBuffer(true);
+                refillCopyCount = remainingLength;
+                if (this.readBufferLength < refillCopyCount) {
+                  refillCopyCount = this.readBufferLength;
                 }
+                ArrayOperations.copyBytes(this.readBuffer, 0, destination, destinationOffset, refillCopyCount);
+                remainingLength = remainingLength - refillCopyCount;
+                destinationOffset = destinationOffset + refillCopyCount;
+                this.position = this.position + (long)refillCopyCount;
               }
             }
             if (-1L != this.writeBufferStart) {

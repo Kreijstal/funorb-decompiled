@@ -303,75 +303,65 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           this.showGameError((byte) 79, "wrongjava");
                           appletExecutionFrameContinues = (clientControlSnapshot != 0);
                         }
-                        if (appletExecutionFrameContinues) {
-                          if (javaVersionText.startsWith("1.6.0_")) {
-                            updateSuffixIndexOrVersionDigitOrTickIndex = 6;
-                            while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
-                              digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
-                              if (clientControlSnapshot != 0) {
-                                digitOrLegacyVersionDecisionRemainderEnabled = false;
-                                break;
-                              }
-                              if (digitOrLegacyVersionPredicate) {
-                                updateSuffixIndexOrVersionDigitOrTickIndex++;
-                                continue;
-                              }
+                        if ((appletExecutionFrameContinues) && (javaVersionText.startsWith("1.6.0_"))) {
+                          updateSuffixIndexOrVersionDigitOrTickIndex = 6;
+                          while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
+                            digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
+                            if (clientControlSnapshot != 0) {
+                              digitOrLegacyVersionDecisionRemainderEnabled = false;
                               break;
                             }
-                            if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                              javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                              if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
-                                this.showGameError((byte) 79, "wrongjava");
-                                appletExecutionFrameContinues = (clientControlSnapshot != 0);
-                              }
+                            if (digitOrLegacyVersionPredicate) {
+                              updateSuffixIndexOrVersionDigitOrTickIndex++;
+                              continue;
+                            }
+                            break;
+                          }
+                          if (digitOrLegacyVersionDecisionRemainderEnabled) {
+                            javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
+                            if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
+                              this.showGameError((byte) 79, "wrongjava");
+                              appletExecutionFrameContinues = (clientControlSnapshot != 0);
                             }
                           }
                         }
                       }
                     }
-                    if (appletExecutionFrameContinues) {
-                      if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                        legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null);
-                        if (legacyJavaVersionCheckFrameContinues) {
-                          digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
-                        }
+                    if ((appletExecutionFrameContinues) && (digitOrLegacyVersionDecisionRemainderEnabled)) {
+                      legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null);
+                      if (legacyJavaVersionCheckFrameContinues) {
+                        digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                       }
                     }
                   }
-                  if (appletExecutionFrameContinues) {
-                    if (legacyJavaVersionCheckFrameContinues) {
-                      if (digitOrLegacyVersionPredicate) {
-                        javaVersionDigitIndex = 2;
-                        parsedJavaMajorVersion = 0;
-                        while (true) {
-                          {
-                            boolean majorVersionComparisonFrameContinues = true;
-                            if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
-                              updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
-                              majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
-                              majorVersionComparisonRight = 48;
-                              majorVersionComparisonFrameContinues = (clientControlSnapshot == 0);
-                              if (majorVersionComparisonFrameContinues) {
-                                if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
-                                  updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
-                                  parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
-                                  javaVersionDigitIndex++;
-                                  continue;
-                                }
-                              }
-                            }
-                            if (majorVersionComparisonFrameContinues) {
-                              majorVersionComparisonLeft = ~parsedJavaMajorVersion;
-                              majorVersionComparisonRight = -6;
-                            }
+                  if ((appletExecutionFrameContinues) && (legacyJavaVersionCheckFrameContinues) && (digitOrLegacyVersionPredicate)) {
+                    javaVersionDigitIndex = 2;
+                    parsedJavaMajorVersion = 0;
+                    while (true) {
+                      {
+                        boolean majorVersionComparisonFrameContinues = true;
+                        if (PlatformTaskDispatcher.javaVersion.length() > javaVersionDigitIndex) {
+                          updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
+                          majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
+                          majorVersionComparisonRight = 48;
+                          majorVersionComparisonFrameContinues = (clientControlSnapshot == 0);
+                          if ((majorVersionComparisonFrameContinues) && (majorVersionComparisonLeft >= majorVersionComparisonRight &&
+                            updateSuffixIndexOrVersionDigitOrTickIndex <= 57)) {
+                            parsedJavaMajorVersion = 10 * parsedJavaMajorVersion - 48 + updateSuffixIndexOrVersionDigitOrTickIndex;
+                            javaVersionDigitIndex++;
+                            continue;
                           }
-                          if (majorVersionComparisonLeft > majorVersionComparisonRight) {
-                            break;
-                          }
-                          ResizableDialog.legacyJavaCanvasRefreshRequired = true;
-                          break;
+                        }
+                        if (majorVersionComparisonFrameContinues) {
+                          majorVersionComparisonLeft = ~parsedJavaMajorVersion;
+                          majorVersionComparisonRight = -6;
                         }
                       }
+                      if (majorVersionComparisonLeft > majorVersionComparisonRight) {
+                        break;
+                      }
+                      ResizableDialog.legacyJavaCanvasRefreshRequired = true;
+                      break;
                     }
                   }
                 }
@@ -400,10 +390,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
                         stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
                         stopDeadlineOrTickDecisionFrameContinues = (clientControlSnapshot == 0);
-                        if (stopDeadlineOrTickDecisionFrameContinues) {
-                          if (stopDeadlineComparisonOrTickIndex >= 0) {
-                            break;
-                          }
+                        if ((stopDeadlineOrTickDecisionFrameContinues) && (stopDeadlineComparisonOrTickIndex >= 0)) {
+                          break;
                         }
                       }
                       if (stopDeadlineOrTickDecisionFrameContinues) {

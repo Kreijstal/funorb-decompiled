@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "8a2dc9c68457ecb4a8e5f8d0c4e829ac427131f4",
+      "commit": "56a50b7c8d5d8d7bc62d09cd1ae16acec05770e6",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "cb7ee81441f8fa9b787ebf97e9811eb7e3f774156d9e56b6fd7888539011b5fa",
-        "reproduce": "git archive --format=tar 8a2dc9c68457ecb4a8e5f8d0c4e829ac427131f4 | sha256sum",
+        "sha256": "9d9abe1a44b7ff1e72e62c296ca62a0806995e3158e480a6738dc400c4af67c8",
+        "reproduce": "git archive --format=tar 56a50b7c8d5d8d7bc62d09cd1ae16acec05770e6 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -48,7 +48,8 @@
         "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
         "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
         "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
-        "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1"
+        "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
+        "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1"
       }
     },
     "namingTool": {
@@ -154,7 +155,8 @@
       "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
       "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
       "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
-      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1"
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
+      "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1"
     }
   },
   "freshVerification": {
@@ -3349,11 +3351,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "7d71c5237e66286b2e100862f10406348a5b36f7",
+    "commit": "e9cb26308a0a636b73b6a1e031e574f30dac5f17",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "1175c488268bbaa11e2faa0eca5e66cbee466813317644ea87ff5e24d22736ee"
+      "sha256": "968630f0b2eed31f207caa56f0829bcb4cc72bda55d1c0b3a6d8370e5ca19439"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3363,7 +3365,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "7019f263c9dd7fcab1215b603fa7267d065e7735e2229b3f7dc1c76d2f82187d",
+    "outputTreeSha256": "3f09773feaf8db1a8ea05c1cd106e66b184e1dd809f6e21ddef5ecb9f5fd7bfe",
     "files": 303,
     "rules": 20133,
     "identifierEdits": 122233,
@@ -3393,8 +3395,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 266,
-    "semanticPass": 266,
+    "structuralPass": 267,
+    "semanticPass": 267,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36873,8 +36875,8 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
     "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
-    "sourceCommit": "fc616c1a9241e7ce47442c5b924f02906edadd23",
-    "sourceTreeSha256": "ec8b17753a9650d6295312d99c52c96385c71df54842a80b15dcdbb66915555d",
+    "sourceCommit": "c974beed29321e6fbd4bf51bc3606d033518639a",
+    "sourceTreeSha256": "584afa8360fba0721e78629dd292b7c815e95047d20a759b0c58d10fd1026f8f",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
@@ -36886,7 +36888,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7"
+    "workflowCommit": "e9cb26308a0a636b73b6a1e031e574f30dac5f17"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -54925,5 +54927,1110 @@
     "reverseByteExactFiles": 303,
     "sourceWorkflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7",
     "sourceProofWorkflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7"
+  },
+  "lateNestedIfConditionRecovery": {
+    "version": 267,
+    "files": 303,
+    "changedFiles": 10,
+    "changedMethods": 18,
+    "chainsJoined": 35,
+    "ifsMerged": 59,
+    "conditionsJoined": 94,
+    "bindingsBefore": 138168,
+    "bindingsAfter": 138168,
+    "transfersCompared": 4757,
+    "sourceTreeSha256": "584afa8360fba0721e78629dd292b7c815e95047d20a759b0c58d10fd1026f8f",
+    "selections": [
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "range": {
+          "start": 19537,
+          "end": 19889
+        },
+        "bodyRange": {
+          "start": 19739,
+          "end": 19817
+        },
+        "conditions": [
+          {
+            "start": 19540,
+            "end": 19567,
+            "type": "boolean"
+          },
+          {
+            "start": 19595,
+            "end": 19622,
+            "type": "boolean"
+          },
+          {
+            "start": 19652,
+            "end": 19679,
+            "type": "boolean"
+          },
+          {
+            "start": 19711,
+            "end": 19738,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 3
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "range": {
+          "start": 19958,
+          "end": 21247
+        },
+        "bodyRange": {
+          "start": 20089,
+          "end": 21213
+        },
+        "conditions": [
+          {
+            "start": 19961,
+            "end": 19988,
+            "type": "boolean"
+          },
+          {
+            "start": 20010,
+            "end": 20037,
+            "type": "boolean"
+          },
+          {
+            "start": 20061,
+            "end": 20088,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 2
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "range": {
+          "start": 21274,
+          "end": 21444
+        },
+        "bodyRange": {
+          "start": 21352,
+          "end": 21430
+        },
+        "conditions": [
+          {
+            "start": 21277,
+            "end": 21304,
+            "type": "boolean"
+          },
+          {
+            "start": 21324,
+            "end": 21351,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 94579,
+        "range": {
+          "start": 97432,
+          "end": 98012
+        },
+        "bodyRange": {
+          "start": 97545,
+          "end": 97988
+        },
+        "conditions": [
+          {
+            "start": 97435,
+            "end": 97454,
+            "type": "boolean"
+          },
+          {
+            "start": 97484,
+            "end": 97544,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 94579,
+        "range": {
+          "start": 99352,
+          "end": 99504
+        },
+        "bodyRange": {
+          "start": 99412,
+          "end": 99484
+        },
+        "conditions": [
+          {
+            "start": 99355,
+            "end": 99366,
+            "type": "boolean"
+          },
+          {
+            "start": 99392,
+            "end": 99411,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 86525,
+        "range": {
+          "start": 88262,
+          "end": 88487
+        },
+        "bodyRange": {
+          "start": 88431,
+          "end": 88475
+        },
+        "conditions": [
+          {
+            "start": 88265,
+            "end": 88288,
+            "type": "boolean"
+          },
+          {
+            "start": 88306,
+            "end": 88430,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 70748,
+        "range": {
+          "start": 71284,
+          "end": 71608
+        },
+        "bodyRange": {
+          "start": 71350,
+          "end": 71594
+        },
+        "conditions": [
+          {
+            "start": 71287,
+            "end": 71310,
+            "type": "boolean"
+          },
+          {
+            "start": 71330,
+            "end": 71349,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 42432,
+        "range": {
+          "start": 48651,
+          "end": 51958
+        },
+        "bodyRange": {
+          "start": 48719,
+          "end": 51944
+        },
+        "conditions": [
+          {
+            "start": 48654,
+            "end": 48681,
+            "type": "boolean"
+          },
+          {
+            "start": 48701,
+            "end": 48718,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 29729,
+        "range": {
+          "start": 35017,
+          "end": 35555
+        },
+        "bodyRange": {
+          "start": 35126,
+          "end": 35535
+        },
+        "conditions": [
+          {
+            "start": 35020,
+            "end": 35047,
+            "type": "boolean"
+          },
+          {
+            "start": 35073,
+            "end": 35125,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 12719,
+        "range": {
+          "start": 14531,
+          "end": 14721
+        },
+        "bodyRange": {
+          "start": 14634,
+          "end": 14707
+        },
+        "conditions": [
+          {
+            "start": 14534,
+            "end": 14557,
+            "type": "boolean"
+          },
+          {
+            "start": 14577,
+            "end": 14633,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "range": {
+          "start": 2019,
+          "end": 2718
+        },
+        "bodyRange": {
+          "start": 2099,
+          "end": 2702
+        },
+        "conditions": [
+          {
+            "start": 2022,
+            "end": 2049,
+            "type": "boolean"
+          },
+          {
+            "start": 2071,
+            "end": 2098,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "range": {
+          "start": 7307,
+          "end": 8260
+        },
+        "bodyRange": {
+          "start": 7569,
+          "end": 8136
+        },
+        "conditions": [
+          {
+            "start": 7310,
+            "end": 7332,
+            "type": "boolean"
+          },
+          {
+            "start": 7366,
+            "end": 7388,
+            "type": "boolean"
+          },
+          {
+            "start": 7424,
+            "end": 7446,
+            "type": "boolean"
+          },
+          {
+            "start": 7484,
+            "end": 7506,
+            "type": "boolean"
+          },
+          {
+            "start": 7546,
+            "end": 7568,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 4
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "range": {
+          "start": 12214,
+          "end": 13411
+        },
+        "bodyRange": {
+          "start": 12304,
+          "end": 13385
+        },
+        "conditions": [
+          {
+            "start": 12217,
+            "end": 12244,
+            "type": "boolean"
+          },
+          {
+            "start": 12276,
+            "end": 12303,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "range": {
+          "start": 13478,
+          "end": 13836
+        },
+        "bodyRange": {
+          "start": 13564,
+          "end": 13814
+        },
+        "conditions": [
+          {
+            "start": 13481,
+            "end": 13508,
+            "type": "boolean"
+          },
+          {
+            "start": 13536,
+            "end": 13563,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "range": {
+          "start": 13875,
+          "end": 15471
+        },
+        "bodyRange": {
+          "start": 14001,
+          "end": 15429
+        },
+        "conditions": [
+          {
+            "start": 13878,
+            "end": 13905,
+            "type": "boolean"
+          },
+          {
+            "start": 13931,
+            "end": 13958,
+            "type": "boolean"
+          },
+          {
+            "start": 13986,
+            "end": 14000,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 2
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "range": {
+          "start": 14547,
+          "end": 14923
+        },
+        "bodyRange": {
+          "start": 14694,
+          "end": 14891
+        },
+        "conditions": [
+          {
+            "start": 14550,
+            "end": 14577,
+            "type": "boolean"
+          },
+          {
+            "start": 14615,
+            "end": 14693,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "range": {
+          "start": 16697,
+          "end": 16869
+        },
+        "bodyRange": {
+          "start": 16779,
+          "end": 16843
+        },
+        "conditions": [
+          {
+            "start": 16700,
+            "end": 16727,
+            "type": "boolean"
+          },
+          {
+            "start": 16759,
+            "end": 16778,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 589,
+        "range": {
+          "start": 1629,
+          "end": 1808
+        },
+        "bodyRange": {
+          "start": 1680,
+          "end": 1790
+        },
+        "conditions": [
+          {
+            "start": 1632,
+            "end": 1643,
+            "type": "boolean"
+          },
+          {
+            "start": 1667,
+            "end": 1679,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 589,
+        "range": {
+          "start": 1825,
+          "end": 2887
+        },
+        "bodyRange": {
+          "start": 1938,
+          "end": 2869
+        },
+        "conditions": [
+          {
+            "start": 1828,
+            "end": 1855,
+            "type": "boolean"
+          },
+          {
+            "start": 1879,
+            "end": 1937,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 46677,
+          "end": 47606
+        },
+        "bodyRange": {
+          "start": 47116,
+          "end": 47396
+        },
+        "conditions": [
+          {
+            "start": 46680,
+            "end": 46707,
+            "type": "boolean"
+          },
+          {
+            "start": 46743,
+            "end": 46770,
+            "type": "boolean"
+          },
+          {
+            "start": 46808,
+            "end": 46835,
+            "type": "boolean"
+          },
+          {
+            "start": 46875,
+            "end": 46902,
+            "type": "boolean"
+          },
+          {
+            "start": 46944,
+            "end": 46971,
+            "type": "boolean"
+          },
+          {
+            "start": 47015,
+            "end": 47042,
+            "type": "boolean"
+          },
+          {
+            "start": 47088,
+            "end": 47115,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 6
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 47661,
+          "end": 48437
+        },
+        "bodyRange": {
+          "start": 48017,
+          "end": 48277
+        },
+        "conditions": [
+          {
+            "start": 47664,
+            "end": 47691,
+            "type": "boolean"
+          },
+          {
+            "start": 47725,
+            "end": 47752,
+            "type": "boolean"
+          },
+          {
+            "start": 47788,
+            "end": 47815,
+            "type": "boolean"
+          },
+          {
+            "start": 47853,
+            "end": 47880,
+            "type": "boolean"
+          },
+          {
+            "start": 47920,
+            "end": 47947,
+            "type": "boolean"
+          },
+          {
+            "start": 47989,
+            "end": 48016,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 5
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 48488,
+          "end": 49123
+        },
+        "bodyRange": {
+          "start": 48767,
+          "end": 49007
+        },
+        "conditions": [
+          {
+            "start": 48491,
+            "end": 48518,
+            "type": "boolean"
+          },
+          {
+            "start": 48550,
+            "end": 48577,
+            "type": "boolean"
+          },
+          {
+            "start": 48611,
+            "end": 48638,
+            "type": "boolean"
+          },
+          {
+            "start": 48674,
+            "end": 48701,
+            "type": "boolean"
+          },
+          {
+            "start": 48739,
+            "end": 48766,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 4
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 49170,
+          "end": 49676
+        },
+        "bodyRange": {
+          "start": 49378,
+          "end": 49598
+        },
+        "conditions": [
+          {
+            "start": 49173,
+            "end": 49200,
+            "type": "boolean"
+          },
+          {
+            "start": 49230,
+            "end": 49257,
+            "type": "boolean"
+          },
+          {
+            "start": 49289,
+            "end": 49316,
+            "type": "boolean"
+          },
+          {
+            "start": 49350,
+            "end": 49377,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 3
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 49719,
+          "end": 50109
+        },
+        "bodyRange": {
+          "start": 49862,
+          "end": 50063
+        },
+        "conditions": [
+          {
+            "start": 49722,
+            "end": 49749,
+            "type": "boolean"
+          },
+          {
+            "start": 49777,
+            "end": 49804,
+            "type": "boolean"
+          },
+          {
+            "start": 49834,
+            "end": 49861,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 2
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 42497,
+        "range": {
+          "start": 50148,
+          "end": 50432
+        },
+        "bodyRange": {
+          "start": 50232,
+          "end": 50412
+        },
+        "conditions": [
+          {
+            "start": 50151,
+            "end": 50178,
+            "type": "boolean"
+          },
+          {
+            "start": 50204,
+            "end": 50231,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 41043,
+        "range": {
+          "start": 41410,
+          "end": 42407
+        },
+        "bodyRange": {
+          "start": 41478,
+          "end": 42395
+        },
+        "conditions": [
+          {
+            "start": 41413,
+            "end": 41440,
+            "type": "boolean"
+          },
+          {
+            "start": 41458,
+            "end": 41477,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19033,
+        "range": {
+          "start": 30087,
+          "end": 30604
+        },
+        "bodyRange": {
+          "start": 30159,
+          "end": 30592
+        },
+        "conditions": [
+          {
+            "start": 30090,
+            "end": 30117,
+            "type": "boolean"
+          },
+          {
+            "start": 30135,
+            "end": 30158,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1820,
+        "range": {
+          "start": 11901,
+          "end": 14384
+        },
+        "bodyRange": {
+          "start": 12085,
+          "end": 14342
+        },
+        "conditions": [
+          {
+            "start": 11904,
+            "end": 11931,
+            "type": "boolean"
+          },
+          {
+            "start": 11957,
+            "end": 11984,
+            "type": "boolean"
+          },
+          {
+            "start": 12012,
+            "end": 12084,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 2
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1820,
+        "range": {
+          "start": 14419,
+          "end": 14588
+        },
+        "bodyRange": {
+          "start": 14501,
+          "end": 14570
+        },
+        "conditions": [
+          {
+            "start": 14422,
+            "end": 14449,
+            "type": "boolean"
+          },
+          {
+            "start": 14473,
+            "end": 14500,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1820,
+        "range": {
+          "start": 15489,
+          "end": 15651
+        },
+        "bodyRange": {
+          "start": 15552,
+          "end": 15637
+        },
+        "conditions": [
+          {
+            "start": 15492,
+            "end": 15520,
+            "type": "boolean"
+          },
+          {
+            "start": 15540,
+            "end": 15551,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "kk.java",
+        "methodStart": 414,
+        "range": {
+          "start": 7059,
+          "end": 7551
+        },
+        "bodyRange": {
+          "start": 7147,
+          "end": 7527
+        },
+        "conditions": [
+          {
+            "start": 7062,
+            "end": 7089,
+            "type": "boolean"
+          },
+          {
+            "start": 7119,
+            "end": 7146,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2620,
+        "range": {
+          "start": 3559,
+          "end": 3738
+        },
+        "bodyRange": {
+          "start": 3610,
+          "end": 3720
+        },
+        "conditions": [
+          {
+            "start": 3562,
+            "end": 3573,
+            "type": "boolean"
+          },
+          {
+            "start": 3597,
+            "end": 3609,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2620,
+        "range": {
+          "start": 3755,
+          "end": 4754
+        },
+        "bodyRange": {
+          "start": 3868,
+          "end": 4736
+        },
+        "conditions": [
+          {
+            "start": 3758,
+            "end": 3785,
+            "type": "boolean"
+          },
+          {
+            "start": 3809,
+            "end": 3867,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      },
+      {
+        "file": "sk.java",
+        "methodStart": 2483,
+        "range": {
+          "start": 5417,
+          "end": 6138
+        },
+        "bodyRange": {
+          "start": 5533,
+          "end": 6104
+        },
+        "conditions": [
+          {
+            "start": 5420,
+            "end": 5447,
+            "type": "boolean"
+          },
+          {
+            "start": 5469,
+            "end": 5496,
+            "type": "boolean"
+          },
+          {
+            "start": 5520,
+            "end": 5532,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 2
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 17607,
+        "range": {
+          "start": 18570,
+          "end": 18702
+        },
+        "bodyRange": {
+          "start": 18634,
+          "end": 18686
+        },
+        "conditions": [
+          {
+            "start": 18573,
+            "end": 18600,
+            "type": "boolean"
+          },
+          {
+            "start": 18622,
+            "end": 18633,
+            "type": "boolean"
+          }
+        ],
+        "ifsMerged": 1
+      }
+    ],
+    "sourceProofTest": "readable/tests/test-geoblox-late-nested-if-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "ea5e8b26dd1a10b7e1550b59fb05ec259e94a968b2aa894c6e024669b990ed5e",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "fc616c1a9241e7ce47442c5b924f02906edadd23",
+    "sourceCommit": "c974beed29321e6fbd4bf51bc3606d033518639a",
+    "previousSourceTreeSha256": "ec8b17753a9650d6295312d99c52c96385c71df54842a80b15dcdbb66915555d",
+    "javaToolsCommit": "56a50b7c8d5d8d7bc62d09cd1ae16acec05770e6",
+    "sourceArchiveSha256": "9d9abe1a44b7ff1e72e62c296ca62a0806995e3158e480a6738dc400c4af67c8",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
+      "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
+      "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
+      "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
+      "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1"
+    },
+    "genericFocusedTestGroupsPassed": 7,
+    "independentNativeOracleCases": 3280500,
+    "independentlyAttributedAstFiles": 303,
+    "independentlyCertifiedSoleChildChains": 35,
+    "allOperationsBindingsTargetsAndScopesPreserved": true,
+    "conditionOrderAndUnboxingPreserved": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "completeRulesPreserved": 20133,
+    "dictionaryIdentitiesPreserved": 20440,
+    "historicalSourceProofsPreserved": 109,
+    "historicalRecordsPreserved": 191,
+    "ordinalMigrations": 0,
+    "readableIdentifierEdits": 122233,
+    "readableTotalEdits": 122320,
+    "plainBlockLabelsAfter": 0,
+    "remainingLargeFramedMethods": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "fc616c1a9241e7ce47442c5b924f02906edadd23",
+      "sourceTreeSha256": "ec8b17753a9650d6295312d99c52c96385c71df54842a80b15dcdbb66915555d",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Retry the generic sole-child if-chain proof after optional reconstruction. Thirty-five chains join 94 complete conditions in their original short-circuit order, removing 59 empty intermediate if wrappers in 18 methods/ten files. Independent javac certifies every chain and complete deepest body, compares all ordered ASTs modulo this equivalence, and preserves every binding, override and transfer/protected scope. No names, declarations, snapshots, stores or historical proofs change. Forty-one finer field purposes and long ordinary methods remain. Whole-game/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "fieldObservationsPreserved": true,
+    "sourceWorkflowCommit": "e9cb26308a0a636b73b6a1e031e574f30dac5f17",
+    "sourceProofWorkflowCommit": "e9cb26308a0a636b73b6a1e031e574f30dac5f17"
   }
 }
