@@ -221,26 +221,31 @@ final class BufferedSocket implements Runnable {
             while (true) {
               writerMonitor = this;
               synchronized (writerMonitor) {
-                writerChunkSelection: {
+                {
+                  boolean writerChunkSelectionFrameContinues = true;
                   if (this.writeReadIndex == this.writeInsertIndex) {
                     if (this.closeRequested) {
                       writerActionRoute = 0;
-                      break writerChunkSelection;
+                      writerChunkSelectionFrameContinues = false;
                     }
-                    try {
-                      this.wait();
-                    } catch (java.lang.InterruptedException waitInterruption) {
-                      caughtWriterThrowable = waitInterruption;
-                      ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
+                    if (writerChunkSelectionFrameContinues) {
+                      try {
+                        this.wait();
+                      } catch (java.lang.InterruptedException waitInterruption) {
+                        caughtWriterThrowable = waitInterruption;
+                        ignoredWaitInterruption = (InterruptedException) (Object) caughtWriterThrowable;
+                      }
                     }
                   }
-                  contiguousWriteOffset = this.writeReadIndex;
-                  if (this.writeInsertIndex < this.writeReadIndex) {
-                    contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
-                  } else {
-                    contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
+                  if (writerChunkSelectionFrameContinues) {
+                    contiguousWriteOffset = this.writeReadIndex;
+                    if (this.writeInsertIndex < this.writeReadIndex) {
+                      contiguousWriteLength = this.bufferCapacity - this.writeReadIndex;
+                    } else {
+                      contiguousWriteLength = this.writeInsertIndex - this.writeReadIndex;
+                    }
+                    writerActionRoute = 1;
                   }
-                  writerActionRoute = 1;
                 }
               }
               if (writerActionRoute == 0) {

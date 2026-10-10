@@ -304,19 +304,24 @@ final class DiskCacheWorker implements Runnable {
               continue;
             }
             try {
-              diskRequestOperationDispatch: {
+              {
+                boolean diskRequestOperationDispatchFrameContinues = true;
                 if (request.operationType != 2) {
                   if (3 == request.operationType) {
                     request.bytes = request.diskCache.read((int)request.secondaryKey, (byte) -76);
                     completeRequestAfterOperation = 1;
-                    break diskRequestOperationDispatch;
+                    diskRequestOperationDispatchFrameContinues = false;
                   }
-                  request.pending = false;
+                  if (diskRequestOperationDispatchFrameContinues) {
+                    request.pending = false;
+                  }
                 } else {
                   request.diskCache.write(request.bytes, (byte) -53, (int)request.secondaryKey, request.bytes.length);
                   request.pending = false;
                 }
-                completeRequestAfterOperation = 0;
+                if (diskRequestOperationDispatchFrameContinues) {
+                  completeRequestAfterOperation = 0;
+                }
               }
             } catch (java.lang.Exception requestOperationFailure) {
               caughtWorkerFailure = requestOperationFailure;

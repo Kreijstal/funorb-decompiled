@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/0e95bc27a6ca939148be805dff2ad4c058b03c4e/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 255)
+## Current readability (pass 256)
 
-The export has 20,136 guarded names and 122,113 Java identifier edits, plus 11
-class-name literal edits and 201 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,136 guarded names and 122,163 Java identifier edits, plus 11
+class-name literal edits and 155 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,048 bindings, reproduce and
+compile and compare 138,098 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,21 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current visible character literals (pass 255)
+## Current switch exits and effectful prefixes (pass 256)
+
+`GameScreen.activateMenuItem` uses ordinary switch exits. The original normal
+highscore-view update runs only in its normal case; zero/nonzero control flags
+and fallthrough are retained. `menuSessionStartupFrameContinues` separates the
+original session-start remainder from the other menu actions.
+
+Twelve other frames similarly retain their original guarded effects and named
+continuation eligibility. Conditions and callbacks remain once in their old
+order; complete suffixes run only when the original frame continued. There are
+19 smaller frames and 41 finer field purposes left. Independent Java recipes,
+bindings/targets, native oracles and exact reproduction/reversal are recorded.
+Full-game and phone/FPS behavior remain unverified.
+
+## Previous visible character literals (pass 255)
 
 `ArchiveCatalog`, `TextHotspotBounds` and `ByteArrayBuffer` display their four
 control-character constants as Java escapes. The byte-buffer's zero-character

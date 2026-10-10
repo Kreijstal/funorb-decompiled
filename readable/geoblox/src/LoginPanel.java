@@ -51,7 +51,8 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         int[] queryResponseWords = null;
         unusedClientControlSnapshot = Geoblox.clientControlFlowFlag;
         try {
-          intRecordReplyDispatch: {
+          {
+            boolean intRecordReplyDispatchFrameContinues = true;
             replyBuffer = LogoCompositor.sessionPacketBuffer;
             replyType = replyBuffer.readUnsignedByte((byte) 34);
             byteKey = replyBuffer.readUnsignedByte((byte) 34);
@@ -86,13 +87,17 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
                 }
                 if (matchingSubmission != null) {
                   matchingSubmission.unlinkNode(false);
-                  break intRecordReplyDispatch;
+                  intRecordReplyDispatchFrameContinues = false;
                 }
-                Bzip2DecoderState.closeSessionSocket((byte) -116);
-                return;
+                if (intRecordReplyDispatchFrameContinues) {
+                  Bzip2DecoderState.closeSessionSocket((byte) -116);
+                  return;
+                }
               }
-              IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
-              Bzip2DecoderState.closeSessionSocket((byte) -123);
+              if (intRecordReplyDispatchFrameContinues) {
+                IterableNodeHashTable.reportClientError((Throwable) null, "LR1: " + TextTemplateDefinition.formatSessionPacketDiagnostic(55), (byte) 125);
+                Bzip2DecoderState.closeSessionSocket((byte) -123);
+              }
             }
           }
           if (methodGuard >= -95) {

@@ -427,7 +427,8 @@ final class ResourceArchive {
           if (allFilesPresent != 0) {
             return true;
           }
-          packedGroupDecryptionSelection: {
+          {
+            boolean packedGroupDecryptionSelectionFrameContinues = true;
             if (decryptionKey != null && (decryptionKey[0] != 0 ||
               decryptionKey[1] != 0 ||
               decryptionKey[2] != 0 ||
@@ -437,9 +438,11 @@ final class ResourceArchive {
               packedBytes = packedBytesForDecryption;
               encryptedGroupBuffer = new ByteArrayBuffer(copiedPackedBytes);
               encryptedGroupBuffer.decryptXteaRange((byte) -125, decryptionKey, 5, encryptedGroupBuffer.bytes.length);
-              break packedGroupDecryptionSelection;
+              packedGroupDecryptionSelectionFrameContinues = false;
             }
-            packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
+            if (packedGroupDecryptionSelectionFrameContinues) {
+              packedBytes = UsernameAvailabilityValidator.extractByteStorageBytes(false, methodGuard - 90, this.packedGroups[groupId]);
+            }
           }
           if (methodGuard != 4) {
             return false;

@@ -434,7 +434,8 @@ final class CachedArchiveSource extends ArchiveSource {
           boolean backgroundLoadingAndSweepFrameContinues = true;
           {
             boolean requestSweepDueCheckFrameContinues = true;
-            completedRequestSweep: {
+            {
+              boolean completedRequestSweepFrameContinues = true;
               backgroundGroupLoading: {
                 unusedClientGuardSnapshot = Geoblox.clientControlFlowFlag;
                 if (this.backgroundGroups != null) {
@@ -547,39 +548,43 @@ final class CachedArchiveSource extends ArchiveSource {
                           }
                           cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                         }
-                        break completedRequestSweep;
+                        completedRequestSweepFrameContinues = false;
                       }
                     }
                   }
-                  if (backgroundLoadingAndSweepFrameContinues) {
-                    if (requestSweepDueCheckFrameContinues) {
-                      this.backgroundGroups = null;
+                  if (completedRequestSweepFrameContinues) {
+                    if (backgroundLoadingAndSweepFrameContinues) {
+                      if (requestSweepDueCheckFrameContinues) {
+                        this.backgroundGroups = null;
+                      }
                     }
                   }
                 }
               }
-              if (backgroundLoadingAndSweepFrameContinues) {
-                if (requestSweepDueCheckFrameContinues) {
-                  if (methodGuard != -38) {
-                    this.getPackedGroup(25, 41);
-                  }
-                  backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
-                  if (backgroundLoadingAndSweepFrameContinues) {
-                    requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
-                    if (requestSweepDueCheckFrameContinues) {
-                      completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                      while (completedCleanupRequest != null) {
-                        if (!completedCleanupRequest.pending) {
-                          if (completedCleanupRequest.seenByCleanup) {
-                            if (!completedCleanupRequest.priority) {
-                              throw new RuntimeException();
+              if (completedRequestSweepFrameContinues) {
+                if (backgroundLoadingAndSweepFrameContinues) {
+                  if (requestSweepDueCheckFrameContinues) {
+                    if (methodGuard != -38) {
+                      this.getPackedGroup(25, 41);
+                    }
+                    backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
+                    if (backgroundLoadingAndSweepFrameContinues) {
+                      requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
+                      if (requestSweepDueCheckFrameContinues) {
+                        completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                        while (completedCleanupRequest != null) {
+                          if (!completedCleanupRequest.pending) {
+                            if (completedCleanupRequest.seenByCleanup) {
+                              if (!completedCleanupRequest.priority) {
+                                throw new RuntimeException();
+                              }
+                              completedCleanupRequest.unlinkNode(false);
+                            } else {
+                              completedCleanupRequest.seenByCleanup = true;
                             }
-                            completedCleanupRequest.unlinkNode(false);
-                          } else {
-                            completedCleanupRequest.seenByCleanup = true;
                           }
+                          completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                         }
-                        completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                       }
                     }
                   }

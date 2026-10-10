@@ -199,7 +199,8 @@ final class EntityMotionSupport {
           SingleChildWidget.mainRasterBuffer.setAsRasterTarget(255);
           movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.firstForIteration(0));
           while (movingEntity != null) {
-            movingEntityContactResolution: {
+            {
+              boolean movingEntityContactResolutionFrameContinues = true;
               if (BoardEntityState.attachedEntities != movingEntity.entityQueue) {
                 if (!UiWidget.gameplaySession.tutorialPromptActive) {
                   movingEntity.integrateEntityVelocity((byte) -59);
@@ -231,68 +232,74 @@ final class EntityMotionSupport {
                   }
                   if (!movingEntity.detachedFromBoard) {
                     AttachmentPointerState.newAttachmentCount = AttachmentPointerState.newAttachmentCount + 1;
-                    break movingEntityContactResolution;
+                    movingEntityContactResolutionFrameContinues = false;
                   }
-                  movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
-                  continue;
-                }
-                if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
-                  contactedEntityId = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
-                  contactedEntity = RasterTargetSnapshot.entitiesById[contactedEntityId];
-                  if (BoardEntityState.attachedEntities == contactedEntity.entityQueue) {
-                    break movingEntityContactResolution;
-                  }
-                  sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
-                  sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
-                  velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
-                  velocityMagnitudeSquaredThenSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
-                  sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
-                  sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
-                  contactedCenterOffsetX = -contactedEntity.positionX + 320.0f;
-                  contactedCenterOffsetY = 240.0f - contactedEntity.positionY;
-                  contactedNextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
-                  contactedNextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
-                  contactedNextCenterOffsetXThenSquared = contactedNextCenterOffsetXThenSquared * contactedNextCenterOffsetXThenSquared;
-                  contactedNextCenterOffsetYThenSquared = contactedNextCenterOffsetYThenSquared * contactedNextCenterOffsetYThenSquared;
-                  contactedEntityMovesOutwardIntSnapshot = (!(contactedNextCenterOffsetXThenSquared + contactedNextCenterOffsetYThenSquared > contactedCenterOffsetY * contactedCenterOffsetY + contactedCenterOffsetX * contactedCenterOffsetX)) ? 0 : 1;
-                  contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
-                  movingCenterOffsetX = 320.0f - movingEntity.positionX;
-                  movingNextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
-                  movingNextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
-                  movingCenterOffsetY = -movingEntity.positionY + 240.0f;
-                  movingNextCenterOffsetXThenSquared = movingNextCenterOffsetXThenSquared * movingNextCenterOffsetXThenSquared;
-                  movingNextCenterOffsetYThenSquared = movingNextCenterOffsetYThenSquared * movingNextCenterOffsetYThenSquared;
-                  movingEntityMovesOutwardIntSnapshot = (!(movingCenterOffsetY * movingCenterOffsetY + movingCenterOffsetX * movingCenterOffsetX < movingNextCenterOffsetYThenSquared + movingNextCenterOffsetXThenSquared)) ? 0 : 1;
-                  movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
-                  if (contactedEntityMovesOutwardInt != 0 &&
-                    movingEntityMovesOutwardInt != 0) {
-                    midpointCenterOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
-                    midpointCenterOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
-                    midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(midpointCenterOffsetX * midpointCenterOffsetX + midpointCenterOffsetY * midpointCenterOffsetY));
-                    sharedVelocityXOrCrossProduct = midpointCenterOffsetX * midpointInwardSpeedScale;
-                    sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * midpointCenterOffsetY;
-                  }
-                  movingEntity.velocityY = movingEntity.velocityY * -1.0f;
-                  movingEntity.velocityX = movingEntity.velocityX * -1.0f;
-                  movingEntity.integrateEntityVelocity((byte) -59);
-                  contactedEntity.velocityX = sharedVelocityXOrCrossProduct;
-                  movingEntity.velocityX = sharedVelocityXOrCrossProduct;
-                  contactedEntity.velocityY = sharedVelocityYOrDirectionScale;
-                  movingEntity.velocityY = sharedVelocityYOrDirectionScale;
-                } else {
-                  inwardOffsetX = 320.0f - movingEntity.positionX;
-                  inwardOffsetY = 240.0f - movingEntity.positionY;
-                  sharedVelocityXOrCrossProduct = -(inwardOffsetY * movingEntity.positionX) + movingEntity.positionY * inwardOffsetX;
-                  if (movingEntity.relatedEntityCount == 0 &&
-                    sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
-                    movingEntity.velocityX = inwardOffsetX;
-                    movingEntity.velocityY = inwardOffsetY;
-                    sharedVelocityYOrDirectionScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
-                    movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
-                    movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
+                  if (movingEntityContactResolutionFrameContinues) {
+                    movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));
+                    continue;
                   }
                 }
-                movingEntity.drawEntityIdOnPointerMask((byte) 51);
+                if (movingEntityContactResolutionFrameContinues) {
+                  if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
+                    contactedEntityId = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
+                    contactedEntity = RasterTargetSnapshot.entitiesById[contactedEntityId];
+                    movingEntityContactResolutionFrameContinues = !(BoardEntityState.attachedEntities == contactedEntity.entityQueue);
+                    if (movingEntityContactResolutionFrameContinues) {
+                      sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
+                      sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;
+                      velocityMagnitudeSquaredThenSpeedScale = sharedVelocityYOrDirectionScale * sharedVelocityYOrDirectionScale + sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct;
+                      velocityMagnitudeSquaredThenSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)velocityMagnitudeSquaredThenSpeedScale);
+                      sharedVelocityYOrDirectionScale = sharedVelocityYOrDirectionScale * velocityMagnitudeSquaredThenSpeedScale;
+                      sharedVelocityXOrCrossProduct = sharedVelocityXOrCrossProduct * velocityMagnitudeSquaredThenSpeedScale;
+                      contactedCenterOffsetX = -contactedEntity.positionX + 320.0f;
+                      contactedCenterOffsetY = 240.0f - contactedEntity.positionY;
+                      contactedNextCenterOffsetXThenSquared = -sharedVelocityXOrCrossProduct - contactedEntity.positionX + 320.0f;
+                      contactedNextCenterOffsetYThenSquared = 240.0f - (contactedEntity.positionY + sharedVelocityYOrDirectionScale);
+                      contactedNextCenterOffsetXThenSquared = contactedNextCenterOffsetXThenSquared * contactedNextCenterOffsetXThenSquared;
+                      contactedNextCenterOffsetYThenSquared = contactedNextCenterOffsetYThenSquared * contactedNextCenterOffsetYThenSquared;
+                      contactedEntityMovesOutwardIntSnapshot = (!(contactedNextCenterOffsetXThenSquared + contactedNextCenterOffsetYThenSquared > contactedCenterOffsetY * contactedCenterOffsetY + contactedCenterOffsetX * contactedCenterOffsetX)) ? 0 : 1;
+                      contactedEntityMovesOutwardInt = contactedEntityMovesOutwardIntSnapshot;
+                      movingCenterOffsetX = 320.0f - movingEntity.positionX;
+                      movingNextCenterOffsetYThenSquared = 240.0f - (sharedVelocityYOrDirectionScale + movingEntity.positionY);
+                      movingNextCenterOffsetXThenSquared = -movingEntity.positionX - sharedVelocityXOrCrossProduct + 320.0f;
+                      movingCenterOffsetY = -movingEntity.positionY + 240.0f;
+                      movingNextCenterOffsetXThenSquared = movingNextCenterOffsetXThenSquared * movingNextCenterOffsetXThenSquared;
+                      movingNextCenterOffsetYThenSquared = movingNextCenterOffsetYThenSquared * movingNextCenterOffsetYThenSquared;
+                      movingEntityMovesOutwardIntSnapshot = (!(movingCenterOffsetY * movingCenterOffsetY + movingCenterOffsetX * movingCenterOffsetX < movingNextCenterOffsetYThenSquared + movingNextCenterOffsetXThenSquared)) ? 0 : 1;
+                      movingEntityMovesOutwardInt = movingEntityMovesOutwardIntSnapshot;
+                      if (contactedEntityMovesOutwardInt != 0 &&
+                        movingEntityMovesOutwardInt != 0) {
+                        midpointCenterOffsetX = -((movingEntity.positionX + contactedEntity.positionX) * 0.5f) + 320.0f;
+                        midpointCenterOffsetY = 240.0f - 0.5f * (contactedEntity.positionY + movingEntity.positionY);
+                        midpointInwardSpeedScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(midpointCenterOffsetX * midpointCenterOffsetX + midpointCenterOffsetY * midpointCenterOffsetY));
+                        sharedVelocityXOrCrossProduct = midpointCenterOffsetX * midpointInwardSpeedScale;
+                        sharedVelocityYOrDirectionScale = midpointInwardSpeedScale * midpointCenterOffsetY;
+                      }
+                      movingEntity.velocityY = movingEntity.velocityY * -1.0f;
+                      movingEntity.velocityX = movingEntity.velocityX * -1.0f;
+                      movingEntity.integrateEntityVelocity((byte) -59);
+                      contactedEntity.velocityX = sharedVelocityXOrCrossProduct;
+                      movingEntity.velocityX = sharedVelocityXOrCrossProduct;
+                      contactedEntity.velocityY = sharedVelocityYOrDirectionScale;
+                      movingEntity.velocityY = sharedVelocityYOrDirectionScale;
+                    }
+                  } else {
+                    inwardOffsetX = 320.0f - movingEntity.positionX;
+                    inwardOffsetY = 240.0f - movingEntity.positionY;
+                    sharedVelocityXOrCrossProduct = -(inwardOffsetY * movingEntity.positionX) + movingEntity.positionY * inwardOffsetX;
+                    if (movingEntity.relatedEntityCount == 0 &&
+                      sharedVelocityXOrCrossProduct * sharedVelocityXOrCrossProduct > 0.30000001192092896f) {
+                      movingEntity.velocityX = inwardOffsetX;
+                      movingEntity.velocityY = inwardOffsetY;
+                      sharedVelocityYOrDirectionScale = TextTemplateDefinition.entityMotionSpeed / (float)Math.sqrt((double)(movingEntity.velocityX * movingEntity.velocityX + movingEntity.velocityY * movingEntity.velocityY));
+                      movingEntity.velocityX = movingEntity.velocityX * sharedVelocityYOrDirectionScale;
+                      movingEntity.velocityY = movingEntity.velocityY * sharedVelocityYOrDirectionScale;
+                    }
+                  }
+                  if (movingEntityContactResolutionFrameContinues) {
+                    movingEntity.drawEntityIdOnPointerMask((byte) 51);
+                  }
+                }
               }
             }
             movingEntity = (GameplayEntity) (ArchiveNetworkClient.movingEntities.nextForIteration(1));

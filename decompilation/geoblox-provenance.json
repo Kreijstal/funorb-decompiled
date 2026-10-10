@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "89f618a5ef5a715aa9799939cc2469a09a1e163e",
+      "commit": "5cfac9209842c294b29b743ed01ff109e3ab5747",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "4d274378adf563e66dbc9c3c69967550b1f3b1e00d349e68bd93b70000769b7c",
-        "reproduce": "git archive --format=tar 89f618a5ef5a715aa9799939cc2469a09a1e163e | sha256sum",
+        "sha256": "ffba3cd4c15e34d8c3770d485cec94ee1204ff25d687ab0c80094d3892ac302f",
+        "reproduce": "git archive --format=tar 5cfac9209842c294b29b743ed01ff109e3ab5747 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -35,7 +35,9 @@
         "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
         "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
         "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
-        "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1"
+        "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+        "CFR_JS_SWITCH_EXIT_TAILS": "1",
+        "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1"
       }
     },
     "namingTool": {
@@ -128,7 +130,9 @@
       "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
       "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
       "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
-      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1"
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1"
     }
   },
   "freshVerification": {
@@ -153,9 +157,9 @@
     ],
     "scope": "Previously fresh-verified transformed bytecode is unchanged in this pass; verification was not rerun."
   },
-  "sourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
-  "previousSourceTreeSha256": "5a2acb9393018fcaaee41a7c956dc3e9346c64e1c56c1db253d040d084a485b7",
-  "changedJavaFiles": 3,
+  "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+  "previousSourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
+  "changedJavaFiles": 13,
   "stubJar": {
     "name": "funorb-stubs.jar",
     "sha256": "8d919fd8540d49cc2e78f7d8277ad0150b48a455cedf3f105bda2c1f82855ae2"
@@ -3323,11 +3327,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "296338b0563d9d00cdedea50677bd0472e7f950d",
+    "commit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "880baf8e994bb26c640a6d78ca04e3d90ea4420f0b7e9bc448ef6b35b8f65ca8"
+      "sha256": "1ec9f85e826a88c7f31b5427368388ca69740a4fa29d467f14d377b579722f9f"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3337,20 +3341,20 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "5c54f87e6ff76eea51414497e2e54a1730bf9f1e8ad2f8f29740a40e01c2b2a3",
+    "outputTreeSha256": "1edca55586975a074af3e550994d5d1dc9260b6678405bec8ed198081ae0b026",
     "files": 303,
     "rules": 20136,
-    "identifierEdits": 122113,
-    "bindingsCompared": 138048,
+    "identifierEdits": 122163,
+    "bindingsCompared": 138098,
     "overrideRelationshipsPreserved": 388,
     "relocation": "Current scripts, manifest, proofs and frozen naming dependency moved from FunOrb to Deko; previous reviewed rules remain in FunOrb Git history. Source proof imports and repository paths change, native trace/oracle constants do not.",
     "runtimeEquivalenceVerified": false,
-    "totalEdits": 122325,
+    "totalEdits": 122329,
     "classNameLiteralEdits": 11,
     "classNameLiteralBindingsCompared": 11,
-    "labelEdits": 201,
-    "labelBindingsCompared": 201,
-    "labelDeclarationsCompared": 60,
+    "labelEdits": 155,
+    "labelBindingsCompared": 155,
+    "labelDeclarationsCompared": 47,
     "namingPass": {
       "version": 180,
       "rulesAdded": 16,
@@ -3367,8 +3371,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 254,
-    "semanticPass": 255,
+    "structuralPass": 256,
+    "semanticPass": 256,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36847,12 +36851,12 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
     "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
-    "sourceCommit": "ac39cdbbb180ee5af13fbe34106de30da5f5b4ec",
-    "sourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
+    "sourceCommit": "6e364298f2479598a7aad7fb00b387a923a81f89",
+    "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
-    "workflowCommit": "296338b0563d9d00cdedea50677bd0472e7f950d"
+    "workflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -49164,5 +49168,930 @@
     "unresolvedFieldInventoryRechecked": true,
     "sourceWorkflowCommit": "296338b0563d9d00cdedea50677bd0472e7f950d",
     "sourceProofWorkflowCommit": "296338b0563d9d00cdedea50677bd0472e7f950d"
+  },
+  "switchExitTailAndPrefixRecovery": {
+    "version": 256,
+    "changedJavaFiles": 13,
+    "changedMethodBodies": 13,
+    "switchesRecovered": 1,
+    "switchExitsLocalized": 19,
+    "framesRecovered": 13,
+    "frameExitsConsumed": 14,
+    "newDecisionLocals": 13,
+    "newFlagOccurrences": 50,
+    "prefixAssignmentsCompared": 1,
+    "removedLabelOccurrences": 46,
+    "sourceProofTest": "readable/tests/test-geoblox-switch-prefix-source.mjs",
+    "sourceProofTestSha256": "9c4ab11cc68d218b415ac0c9b6bbd137401a0bcdf366f3b0a70e4167e9c23aa1",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "ac39cdbbb180ee5af13fbe34106de30da5f5b4ec",
+    "sourceCommit": "6e364298f2479598a7aad7fb00b387a923a81f89",
+    "previousSourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
+    "intermediateTreeSha256": "2f558d216f741ef55ec8e70ad007229c02ef48a552519a41e0a94115b7a1d72d",
+    "sourceTreeSha256": "431801b29c355cdd1c62aff59e2716d3721d41861b39da182f454154accbb8a9",
+    "javaToolsCommit": "5cfac9209842c294b29b743ed01ff109e3ab5747",
+    "sourceArchiveSha256": "ffba3cd4c15e34d8c3770d485cec94ee1204ff25d687ab0c80094d3892ac302f",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1"
+    },
+    "bindingsBefore": 138048,
+    "bindingsCompared": 138098,
+    "transfersBefore": 4807,
+    "transfersCompared": 4793,
+    "originalIdentityMigrations": [
+      {
+        "before": "L:ab.a(IF)V#31",
+        "after": "L:ab.a(IF)V#32"
+      },
+      {
+        "before": "L:ba.run()V#10",
+        "after": "L:ba.run()V#11"
+      },
+      {
+        "before": "L:ba.run()V#11",
+        "after": "L:ba.run()V#12"
+      },
+      {
+        "before": "L:ba.run()V#12",
+        "after": "L:ba.run()V#13"
+      },
+      {
+        "before": "L:ba.run()V#13",
+        "after": "L:ba.run()V#14"
+      },
+      {
+        "before": "L:ba.run()V#14",
+        "after": "L:ba.run()V#15"
+      },
+      {
+        "before": "L:ba.run()V#15",
+        "after": "L:ba.run()V#16"
+      },
+      {
+        "before": "L:ba.run()V#16",
+        "after": "L:ba.run()V#17"
+      },
+      {
+        "before": "B:bj.b(B)V#1",
+        "after": "B:bj.b(B)V#0"
+      },
+      {
+        "before": "B:bj.b(B)V#2",
+        "after": "B:bj.b(B)V#1"
+      },
+      {
+        "before": "L:c.b(IB)V#9",
+        "after": "L:c.b(IB)V#10"
+      },
+      {
+        "before": "L:c.b(IB)V#10",
+        "after": "L:c.b(IB)V#11"
+      },
+      {
+        "before": "L:eg.a(Ljava/lang/CharSequence;BIZ)I#14",
+        "after": "L:eg.a(Ljava/lang/CharSequence;BIZ)I#15"
+      },
+      {
+        "before": "L:pa.a(Ljava/lang/CharSequence;ZII)Z#13",
+        "after": "L:pa.a(Ljava/lang/CharSequence;ZII)Z#14"
+      },
+      {
+        "before": "L:pf.f(I)V#14",
+        "after": "L:pf.f(I)V#15"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#35",
+        "after": "L:pg.a(ILd;ILqc;)V#36"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#36",
+        "after": "L:pg.a(ILd;ILqc;)V#37"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#37",
+        "after": "L:pg.a(ILd;ILqc;)V#38"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#38",
+        "after": "L:pg.a(ILd;ILqc;)V#39"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#39",
+        "after": "L:pg.a(ILd;ILqc;)V#40"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#40",
+        "after": "L:pg.a(ILd;ILqc;)V#41"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#41",
+        "after": "L:pg.a(ILd;ILqc;)V#42"
+      },
+      {
+        "before": "L:pg.a(ILd;ILqc;)V#42",
+        "after": "L:pg.a(ILd;ILqc;)V#43"
+      },
+      {
+        "before": "L:r.a(Ljava/lang/String;Z)Lnd;#21",
+        "after": "L:r.a(Ljava/lang/String;Z)Lnd;#22"
+      },
+      {
+        "before": "L:rh.a(II[II)Z#61",
+        "after": "L:rh.a(II[II)Z#62"
+      },
+      {
+        "before": "L:rh.a(II[II)Z#62",
+        "after": "L:rh.a(II[II)Z#63"
+      },
+      {
+        "before": "L:sd.a(IIII[IIIII)V#23",
+        "after": "L:sd.a(IIII[IIIII)V#24"
+      },
+      {
+        "before": "L:uf.run()V#10",
+        "after": "L:uf.run()V#11"
+      },
+      {
+        "before": "L:uf.run()V#11",
+        "after": "L:uf.run()V#12"
+      },
+      {
+        "before": "L:uf.run()V#12",
+        "after": "L:uf.run()V#13"
+      }
+    ],
+    "removedSymbols": [
+      "B:ab.a(IF)V#0",
+      "B:ba.run()V#0",
+      "B:bj.b(B)V#0",
+      "B:c.b(IB)V#0",
+      "B:eg.a(Ljava/lang/CharSequence;BIZ)I#0",
+      "B:pa.a(Ljava/lang/CharSequence;ZII)Z#0",
+      "B:pf.f(I)V#0",
+      "B:pg.a(ILd;ILqc;)V#0",
+      "B:r.a(Ljava/lang/String;Z)Lnd;#0",
+      "B:rh.a(II[II)Z#0",
+      "B:sd.a(IIII[IIIII)V#0",
+      "B:uf.run()V#0",
+      "B:wf.b(ZI)V#0"
+    ],
+    "allOtherOperationsBindingsTargetsAndScopesPreserved": true,
+    "independentlyAttributedAstFiles": 303,
+    "normalSwitchExitAndCompleteSharedTailIndependentlyDerived": true,
+    "effectfulPrefixConditionsScopesAndCompleteSuffixesIndependentlyDerived": true,
+    "newFlagsIndependentlyTypedAndDefinitelyAssigned": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "genericFocusedTestGroupsPassed": 15,
+    "genericSwitchPrefixTestGroupsPassed": 6,
+    "newIndependentNativeOracleCases": 421200,
+    "remainingLargeFramedMethods": 0,
+    "plainBlockLabelsAfter": 19,
+    "remainingUnresolvedFieldPurposes": 41,
+    "remainingLiteralPhaseNames": 0,
+    "remainingNumberedPhaseNames": 0,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "fixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "sourceCommit": "ac39cdbbb180ee5af13fbe34106de30da5f5b4ec",
+      "sourceTreeSha256": "626404f1f94e64946075bf692b6c8f944526b542f206206c5b9b6fc3a4b09a82",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "workflowCommit": "296338b0563d9d00cdedea50677bd0472e7f950d"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Pass256 assigns the original common switch tail to its sole direct normal case, preserving all case order, fallthrough, selector/predicate reads, effects and protection. Nineteen surrounding-frame exits become ordinary switch breaks. Thirteen frame remainders use named continuation decisions: each effectful conditional prefix stays in its original arm and sets its fresh flag false only after completing at its original terminal exit. No callback, snapshot, store, original predicate, failure order or finally/monitor scope is removed. Independent javac switch recipes and guarded-frame recipes, complete binding/override and protected-target audits, and native oracles cover the transformations. Original bytecode and generic defaults are unchanged; generated Java is never hand-edited. Whole-game and phone/FPS behavior remain unverified.",
+    "switchSelections": [
+      {
+        "file": "c.java",
+        "methodStart": 73845,
+        "label": "L1",
+        "switch": {
+          "start": 74698,
+          "end": 82130
+        },
+        "tail": {
+          "start": 82145,
+          "end": 82160
+        },
+        "normalExit": {
+          "start": 82055,
+          "end": 82061
+        },
+        "finalExit": {
+          "start": 82175,
+          "end": 82184
+        },
+        "tailStatements": 1,
+        "jumps": [
+          {
+            "start": 75171,
+            "end": 75180
+          },
+          {
+            "start": 75357,
+            "end": 75366
+          },
+          {
+            "start": 75498,
+            "end": 75507
+          },
+          {
+            "start": 75641,
+            "end": 75650
+          },
+          {
+            "start": 76150,
+            "end": 76159
+          },
+          {
+            "start": 76600,
+            "end": 76609
+          },
+          {
+            "start": 76741,
+            "end": 76750
+          },
+          {
+            "start": 77775,
+            "end": 77784
+          },
+          {
+            "start": 80197,
+            "end": 80206
+          },
+          {
+            "start": 80354,
+            "end": 80363
+          },
+          {
+            "start": 80577,
+            "end": 80586
+          },
+          {
+            "start": 80860,
+            "end": 80869
+          },
+          {
+            "start": 81083,
+            "end": 81092
+          },
+          {
+            "start": 81367,
+            "end": 81376
+          },
+          {
+            "start": 81553,
+            "end": 81562
+          },
+          {
+            "start": 81694,
+            "end": 81703
+          },
+          {
+            "start": 81838,
+            "end": 81847
+          },
+          {
+            "start": 81982,
+            "end": 81991
+          },
+          {
+            "start": 82105,
+            "end": 82114
+          }
+        ]
+      }
+    ],
+    "selections": [
+      {
+        "file": "ab.java",
+        "methodStart": 5781,
+        "name": "decompiledFrameRemainder0",
+        "label": "L2",
+        "region": {
+          "start": 6965,
+          "end": 11564
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 8183,
+              "end": 8302
+            },
+            "condition": {
+              "start": 8186,
+              "end": 8201
+            },
+            "jump": {
+              "start": 8273,
+              "end": 8282
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 8224,
+              "end": 8252
+            }
+          },
+          {
+            "range": {
+              "start": 8620,
+              "end": 8702
+            },
+            "condition": {
+              "start": 8623,
+              "end": 8650
+            },
+            "jump": {
+              "start": 8673,
+              "end": 8682
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ]
+          }
+        ],
+        "guardsAdded": 4,
+        "prefixAssignments": [],
+        "removedSymbol": "B:ab.a(IF)V#0",
+        "method": "M:ab.a(IF)V",
+        "symbol": "L:ab.a(IF)V#31",
+        "afterStart": 6965
+      },
+      {
+        "file": "ba.java",
+        "methodStart": 6526,
+        "name": "decompiledFrameRemainder0",
+        "label": "L2",
+        "region": {
+          "start": 7054,
+          "end": 7945
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 7134,
+              "end": 7260
+            },
+            "condition": {
+              "start": 7137,
+              "end": 7151
+            },
+            "jump": {
+              "start": 7229,
+              "end": 7238
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 7176,
+              "end": 7206
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:ba.run()V#0",
+        "method": "M:ba.run()V",
+        "symbol": "L:ba.run()V#10",
+        "afterStart": 7054
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "name": "decompiledFrameRemainder2",
+        "label": "L2",
+        "region": {
+          "start": 14087,
+          "end": 20529
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 18341,
+              "end": 19061
+            },
+            "condition": {
+              "start": 18344,
+              "end": 18371
+            },
+            "jump": {
+              "start": 19028,
+              "end": 19037
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "LabeledStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 18398,
+              "end": 19003
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:bj.b(B)V#0",
+        "method": "M:bj.b(B)V",
+        "symbol": "L:bj.b(B)V#17",
+        "afterStart": 14087
+      },
+      {
+        "file": "c.java",
+        "methodStart": 73845,
+        "name": "decompiledFrameRemainder1",
+        "label": "L1",
+        "region": {
+          "start": 74416,
+          "end": 82842
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 74636,
+              "end": 82142
+            },
+            "condition": {
+              "start": 74639,
+              "end": 74681
+            },
+            "jump": {
+              "start": 82119,
+              "end": 82128
+            },
+            "corridorKinds": [
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 74698,
+              "end": 82089
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "removedSymbol": "B:c.b(IB)V#0",
+        "method": "M:c.b(IB)V",
+        "symbol": "L:c.b(IB)V#9",
+        "afterStart": 74416
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 589,
+        "name": "decompiledFrameRemainder0",
+        "label": "L3",
+        "region": {
+          "start": 1509,
+          "end": 2703
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 1610,
+              "end": 1711
+            },
+            "condition": {
+              "start": 1613,
+              "end": 1625
+            },
+            "jump": {
+              "start": 1682,
+              "end": 1691
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 1648,
+              "end": 1661
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "removedSymbol": "B:eg.a(Ljava/lang/CharSequence;BIZ)I#0",
+        "method": "M:eg.a(Ljava/lang/CharSequence;BIZ)I",
+        "symbol": "L:eg.a(Ljava/lang/CharSequence;BIZ)I#14",
+        "afterStart": 1509
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2620,
+        "name": "decompiledFrameRemainder0",
+        "label": "L3",
+        "region": {
+          "start": 3439,
+          "end": 4570
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 3540,
+              "end": 3641
+            },
+            "condition": {
+              "start": 3543,
+              "end": 3555
+            },
+            "jump": {
+              "start": 3612,
+              "end": 3621
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 3578,
+              "end": 3591
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "removedSymbol": "B:pa.a(Ljava/lang/CharSequence;ZII)Z#0",
+        "method": "M:pa.a(Ljava/lang/CharSequence;ZII)Z",
+        "symbol": "L:pa.a(Ljava/lang/CharSequence;ZII)Z#13",
+        "afterStart": 3439
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 869,
+        "name": "decompiledFrameRemainder0",
+        "label": "L0",
+        "region": {
+          "start": 1354,
+          "end": 2858
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 2556,
+              "end": 2654
+            },
+            "condition": {
+              "start": 2559,
+              "end": 2573
+            },
+            "jump": {
+              "start": 2627,
+              "end": 2636
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 2594,
+              "end": 2608
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:pf.f(I)V#0",
+        "method": "M:pf.f(I)V",
+        "symbol": "L:pf.f(I)V#14",
+        "afterStart": 1354
+      },
+      {
+        "file": "pg.java",
+        "methodStart": 688,
+        "name": "decompiledFrameRemainder0",
+        "label": "L2",
+        "region": {
+          "start": 2578,
+          "end": 4898
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 2767,
+              "end": 2963
+            },
+            "condition": {
+              "start": 2770,
+              "end": 2824
+            },
+            "jump": {
+              "start": 2932,
+              "end": 2941
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 2849,
+              "end": 2909
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:pg.a(ILd;ILqc;)V#0",
+        "method": "M:pg.a(ILd;ILqc;)V",
+        "symbol": "L:pg.a(ILd;ILqc;)V#35",
+        "afterStart": 2578
+      },
+      {
+        "file": "r.java",
+        "methodStart": 3804,
+        "name": "decompiledFrameRemainder0",
+        "label": "L1",
+        "region": {
+          "start": 5668,
+          "end": 6291
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 5791,
+              "end": 5991
+            },
+            "condition": {
+              "start": 5794,
+              "end": 5906
+            },
+            "jump": {
+              "start": 5964,
+              "end": 5973
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 5927,
+              "end": 5945
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [
+          {
+            "name": "var5Lifetime1",
+            "declarationOffset": 4509,
+            "assignmentOffset": 5688
+          }
+        ],
+        "removedSymbol": "B:r.a(Ljava/lang/String;Z)Lnd;#0",
+        "method": "M:r.a(Ljava/lang/String;Z)Lnd;",
+        "symbol": "L:r.a(Ljava/lang/String;Z)Lnd;#21",
+        "afterStart": 5668
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 10652,
+        "name": "decompiledFrameRemainder0",
+        "label": "L4",
+        "region": {
+          "start": 13534,
+          "end": 14040
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 13552,
+              "end": 13961
+            },
+            "condition": {
+              "start": 13555,
+              "end": 13687
+            },
+            "jump": {
+              "start": 13938,
+              "end": 13947
+            },
+            "corridorKinds": [
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 13704,
+              "end": 13923
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "removedSymbol": "B:rh.a(II[II)Z#0",
+        "method": "M:rh.a(II[II)Z",
+        "symbol": "L:rh.a(II[II)Z#61",
+        "afterStart": 13534
+      },
+      {
+        "file": "sd.java",
+        "methodStart": 2051,
+        "name": "decompiledFrameRemainder0",
+        "label": "L6",
+        "region": {
+          "start": 4801,
+          "end": 6559
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 4859,
+              "end": 5119
+            },
+            "condition": {
+              "start": 4862,
+              "end": 4874
+            },
+            "jump": {
+              "start": 5090,
+              "end": 5099
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 4897,
+              "end": 5069
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:sd.a(IIII[IIIII)V#0",
+        "method": "M:sd.a(IIII[IIIII)V",
+        "symbol": "L:sd.a(IIII[IIIII)V#23",
+        "afterStart": 4801
+      },
+      {
+        "file": "uf.java",
+        "methodStart": 9784,
+        "name": "decompiledFrameRemainder0",
+        "label": "L4",
+        "region": {
+          "start": 11047,
+          "end": 11605
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 11112,
+              "end": 11319
+            },
+            "condition": {
+              "start": 11115,
+              "end": 11134
+            },
+            "jump": {
+              "start": 11290,
+              "end": 11299
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 11157,
+              "end": 11269
+            }
+          }
+        ],
+        "guardsAdded": 2,
+        "prefixAssignments": [],
+        "removedSymbol": "B:uf.run()V#0",
+        "method": "M:uf.run()V",
+        "symbol": "L:uf.run()V#10",
+        "afterStart": 11047
+      },
+      {
+        "file": "wf.java",
+        "methodStart": 6878,
+        "name": "decompiledFrameRemainder0",
+        "label": "L30",
+        "region": {
+          "start": 12821,
+          "end": 13163
+        },
+        "guards": [
+          {
+            "range": {
+              "start": 12874,
+              "end": 13081
+            },
+            "condition": {
+              "start": 12877,
+              "end": 12956
+            },
+            "jump": {
+              "start": 13057,
+              "end": 13067
+            },
+            "corridorKinds": [
+              "BlockStatement",
+              "IfStatement",
+              "BlockStatement"
+            ],
+            "effectful": true,
+            "prefix": {
+              "start": 12973,
+              "end": 13042
+            }
+          }
+        ],
+        "guardsAdded": 1,
+        "prefixAssignments": [],
+        "removedSymbol": "B:wf.b(ZI)V#0",
+        "method": "M:wf.b(ZI)V",
+        "symbol": "L:wf.b(ZI)V#12",
+        "afterStart": 12821
+      }
+    ],
+    "dictionaryIdentities": 20443,
+    "survivingCompleteRulesPreserved": 20123,
+    "survivingDictionaryIdentitiesPreserved": 20430,
+    "historicalSourceProofsPreserved": 98,
+    "historicalRecordsPreserved": 179,
+    "readableIdentifierEdits": 122163,
+    "readableTotalEdits": 122329,
+    "dictionaryReversalByteExact": true,
+    "publicationTestGroupsPassed": 27,
+    "unresolvedFieldInventoryRechecked": true,
+    "matchingNativeTraceGroups": 27,
+    "gameplayNativeTraceGroups": 3,
+    "renderingNativeTraceGroups": 10,
+    "resultNativeTraceGroups": 14,
+    "nativeVariantsCompared": [
+      "native",
+      "original",
+      "renamed"
+    ],
+    "sourceWorkflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e",
+    "sourceProofWorkflowCommit": "0e95bc27a6ca939148be805dff2ad4c058b03c4e"
   }
 }

@@ -166,23 +166,28 @@ final class AccountCreationDialog extends MessageDialog implements ButtonActivat
           }
           previousCharacterWasDot = 0;
           for (unquotedCharacterIndex = 0; unquotedCharacterIndex < localPartLength; unquotedCharacterIndex++) {
-            unquotedLocalPartCharacter: {
+            {
+              boolean unquotedLocalPartCharacterFrameContinues = true;
               unquotedCharacterCode = localPart.charAt(unquotedCharacterIndex);
               if (unquotedCharacterCode == 46) {
                 if (0 != unquotedCharacterIndex &&
                   unquotedCharacterIndex != -1 + localPartLength &&
                   previousCharacterWasDot == 0) {
                   previousCharacterWasDot = 1;
-                  break unquotedLocalPartCharacter;
+                  unquotedLocalPartCharacterFrameContinues = false;
                 }
-                invalidDotFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
-                return invalidDotFailureBeforeReturn;
+                if (unquotedLocalPartCharacterFrameContinues) {
+                  invalidDotFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+                  return invalidDotFailureBeforeReturn;
+                }
               }
-              if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(unquotedCharacterCode) == -1) {
-                invalidCharacterFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
-                return invalidCharacterFailureBeforeReturn;
+              if (unquotedLocalPartCharacterFrameContinues) {
+                if (StatefulWidgetRenderer.emailLocalPartCharacters.indexOf(unquotedCharacterCode) == -1) {
+                  invalidCharacterFailureBeforeReturn = ArchiveLoadStep.invalidTextFormatFailure;
+                  return invalidCharacterFailureBeforeReturn;
+                }
+                previousCharacterWasDot = 0;
               }
-              previousCharacterWasDot = 0;
             }
           }
           if (preserveNotLoggedInText) {

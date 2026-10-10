@@ -145,48 +145,53 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 leftXStepQ16 = rightXStepQ16;
                 rightXStepQ16 = edgeSwapXStepQ16;
               }
-              upperTriangleSegmentClipAndScan: {
+              {
+                boolean upperTriangleSegmentClipAndScanFrameContinues = true;
                 if (0 > topY) {
                   if (middleY < 0) {
                     topY = middleY - topY;
                     leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
                     rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
                     topY = middleY;
-                    break upperTriangleSegmentClipAndScan;
+                    upperTriangleSegmentClipAndScanFrameContinues = false;
                   }
-                  topY = -topY;
-                  rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
-                  leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
-                  topY = 0;
+                  if (upperTriangleSegmentClipAndScanFrameContinues) {
+                    topY = -topY;
+                    rightXQ16 = rightXQ16 + rightXStepQ16 * topY;
+                    leftXQ16 = leftXQ16 + leftXStepQ16 * topY;
+                    topY = 0;
+                  }
                 }
-                upperSegmentRowBase = TriangleRasterState.rowBaseOffsets[topY];
-                while (topY < middleY) {
-                  upperSpanLeft = leftXQ16 >> 16;
-                  if (TriangleRasterState.clipWidth > upperSpanLeft) {
-                    spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
-                    if (spanWidth != 0) {
-                      if (upperSpanLeft + spanWidth >= TriangleRasterState.clipWidth) {
-                        spanWidth = -1 + (-upperSpanLeft + TriangleRasterState.clipWidth);
-                      }
-                      if (0 <= upperSpanLeft) {
-                        DebouncedValidationProvider.drawHalfBlendSolidSpan(47, destinationPixels, upperSegmentRowBase + upperSpanLeft, halfRgb, spanWidth);
+                if (upperTriangleSegmentClipAndScanFrameContinues) {
+                  upperSegmentRowBase = TriangleRasterState.rowBaseOffsets[topY];
+                  while (topY < middleY) {
+                    upperSpanLeft = leftXQ16 >> 16;
+                    if (TriangleRasterState.clipWidth > upperSpanLeft) {
+                      spanWidth = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                      if (spanWidth != 0) {
+                        if (upperSpanLeft + spanWidth >= TriangleRasterState.clipWidth) {
+                          spanWidth = -1 + (-upperSpanLeft + TriangleRasterState.clipWidth);
+                        }
+                        if (0 <= upperSpanLeft) {
+                          DebouncedValidationProvider.drawHalfBlendSolidSpan(47, destinationPixels, upperSegmentRowBase + upperSpanLeft, halfRgb, spanWidth);
+                        } else {
+                          DebouncedValidationProvider.drawHalfBlendSolidSpan(57, destinationPixels, upperSegmentRowBase, halfRgb, upperSpanLeft + spanWidth);
+                        }
                       } else {
-                        DebouncedValidationProvider.drawHalfBlendSolidSpan(57, destinationPixels, upperSegmentRowBase, halfRgb, upperSpanLeft + spanWidth);
-                      }
-                    } else {
-                      if (upperSpanLeft >= 0 &&
-                        TriangleRasterState.clipWidth > upperSpanLeft) {
-                        DebouncedValidationProvider.drawHalfBlendSolidSpan(-61, destinationPixels, upperSpanLeft + upperSegmentRowBase, halfRgb, spanWidth);
+                        if (upperSpanLeft >= 0 &&
+                          TriangleRasterState.clipWidth > upperSpanLeft) {
+                          DebouncedValidationProvider.drawHalfBlendSolidSpan(-61, destinationPixels, upperSpanLeft + upperSegmentRowBase, halfRgb, spanWidth);
+                        }
                       }
                     }
+                    topY++;
+                    if (topY >= TriangleRasterState.clipHeight) {
+                      return;
+                    }
+                    upperSegmentRowBase = upperSegmentRowBase + SoftwareRasterizer.stride;
+                    leftXQ16 = leftXQ16 + leftXStepQ16;
+                    rightXQ16 = rightXQ16 + rightXStepQ16;
                   }
-                  topY++;
-                  if (topY >= TriangleRasterState.clipHeight) {
-                    return;
-                  }
-                  upperSegmentRowBase = upperSegmentRowBase + SoftwareRasterizer.stride;
-                  leftXQ16 = leftXQ16 + leftXStepQ16;
-                  rightXQ16 = rightXQ16 + rightXStepQ16;
                 }
               }
               lowerSegmentRows = -middleY + bottomY;

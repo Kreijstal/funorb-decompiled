@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/296338b0563d9d00cdedea50677bd0472e7f950d/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/0e95bc27a6ca939148be805dff2ad4c058b03c4e/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,048 bindings,
+identities. Both 303-file Java corpora compile and compare 138,098 bindings,
 preserving 388 override relationships.
 
-## Current visible character literals (pass 255)
+## Current switch exits and effectful prefixes (pass 256)
+
+Menu activation uses 19 ordinary switch exits and a named continuation decision
+for session startup. Its original sole-normal-exit update, every control-flag
+check and fallthrough behavior remain. Thirteen frames are reconstructed across
+menu, entity contacts, archive/socket/cache, reflection, text and raster helpers.
+All original effects and scopes are preserved. Nineteen smaller frames and
+41 finer field purposes remain. Source/binding/transfer and native oracle checks
+pass; all 303 sources compile, reproduce and reverse exactly. Generic recovery
+stays in java-tools; game rules and proofs stay in Deko.
+
+## Previous visible character literals (pass 255)
 
 Four raw controls in three Java files now use visible escapes. Values and
 all ordered syntax, bindings and protected targets remain unchanged. The generic

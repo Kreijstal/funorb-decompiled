@@ -1916,7 +1916,8 @@ final class GameScreen extends MenuScreen {
           if (methodGuard != -2) {
             this.updateTransition(-70);
           }
-          menuActionDispatch: {
+          {
+            boolean menuSessionStartupFrameContinues = true;
             selectedActionSnapshot = actionId;
             if (selectedActionSnapshot == 15 &&
               clientControlFlowGuard == 0) {
@@ -1940,23 +1941,23 @@ final class GameScreen extends MenuScreen {
                 case 1:
                   ScoreSubmission.requestedScreenId = -1;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 2:
                   if (!UnderlinedButtonRenderer.isGuestSessionMode(-100)) {
                     ScoreSubmission.requestedScreenId = 2;
                     if (clientControlFlowGuard == 0) {
-                      break menuActionDispatch;
+                      break;
                     }
                   }
                   ScoreSubmission.requestedScreenId = 8;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 3:
                   ScoreSubmission.requestedScreenId = 3;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 4:
                   if (InstrumentPatch.activeFullscreenCanvas == null) {
@@ -1971,7 +1972,7 @@ final class GameScreen extends MenuScreen {
                   this.pointerInteractionActive = false;
                   this.activeTicks = 0;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 14:
                   InstrumentPatch.earnedAchievementMask = 0;
@@ -1984,12 +1985,12 @@ final class GameScreen extends MenuScreen {
                     SpriteCheckboxRenderer.previousMenuScreenId == 1) {
                     ScoreSubmission.requestedScreenId = 1;
                     if (clientControlFlowGuard == 0) {
-                      break menuActionDispatch;
+                      break;
                     }
                   }
                   ScoreSubmission.requestedScreenId = 0;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 13:
                   if (null != UiWidget.gameplaySession) {
@@ -2018,7 +2019,7 @@ final class GameScreen extends MenuScreen {
                   }
                   ProxySocketConnector.gameplayOriginScreenId = this.screenId;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 6:
                   {
@@ -2076,19 +2077,19 @@ final class GameScreen extends MenuScreen {
                   }
                   IntrusiveNodeHashTable.selectLoopingBackgroundMusic(methodGuard + 2, GameGraphicsResources.titleMusicTrack);
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 7:
                   EntityCollisionSupport.openQuitPage(NodeHashTableIterator.getActiveApplet(methodGuard ^ -125), 62);
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 12:
                   if (this.tutorialPageIndex >= 4 ||
                     this.tutorialSlideActive) {
                     suppressPressAnimationFlag = 1;
                     if (clientControlFlowGuard == 0) {
-                      break menuActionDispatch;
+                      break;
                     }
                   }
                   this.previousTutorialPageIndex = this.tutorialPageIndex;
@@ -2096,14 +2097,14 @@ final class GameScreen extends MenuScreen {
                   this.tutorialSlideForward = true;
                   this.tutorialSlideActive = true;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 11:
                   if (this.tutorialPageIndex <= 0 ||
                     this.tutorialSlideActive) {
                     suppressPressAnimationFlag = 1;
                     if (clientControlFlowGuard == 0) {
-                      break menuActionDispatch;
+                      break;
                     }
                   }
                   this.previousTutorialPageIndex = this.tutorialPageIndex;
@@ -2111,56 +2112,59 @@ final class GameScreen extends MenuScreen {
                   this.tutorialPageIndex = this.tutorialPageIndex - 1;
                   this.tutorialSlideForward = false;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 10:
                   if (UnderlinedButtonRenderer.isGuestSessionMode(-112)) {
                     ScoreSubmission.requestedScreenId = 7;
                     if (clientControlFlowGuard == 0) {
-                      break menuActionDispatch;
+                      break;
                     }
                   }
                   ScoreSubmission.requestedScreenId = 5;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 16:
                   ClientOptionSupport.selectedHighscoreView = 0;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 17:
                   ClientOptionSupport.selectedHighscoreView = 1;
                   if (clientControlFlowGuard == 0) {
-                    break menuActionDispatch;
+                    break;
                   }
                 case 18:
+                  ClientOptionSupport.selectedHighscoreView = 2;
                   break;
                 default:
-                  break menuActionDispatch;
+                  break;
               }
-              ClientOptionSupport.selectedHighscoreView = 2;
-              break menuActionDispatch;
+
+              menuSessionStartupFrameContinues = false;
             }
-            if (newSessionTutorialModeFlag == 0) {
-              if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ 107) &&
-                BoardReconciliationSupport.sessionStartAttemptCount == 0) {
-                newSessionTutorialModeFlag = 1;
-              } else {
-                if (FifoResponseToken.activeHighscoreQuery != null &&
-                  FifoResponseToken.activeHighscoreQuery.completed &&
-                  FifoResponseToken.activeHighscoreQuery.namesByView != null) {
-                  scoreCategoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[1];
-                  missingFirstScoreNameFlag = (scoreCategoryNames[0] != null) ? 0 : 1;
-                  newSessionTutorialModeFlag = missingFirstScoreNameFlag;
+            if (menuSessionStartupFrameContinues) {
+              if (newSessionTutorialModeFlag == 0) {
+                if (UnderlinedButtonRenderer.isGuestSessionMode(methodGuard ^ 107) &&
+                  BoardReconciliationSupport.sessionStartAttemptCount == 0) {
+                  newSessionTutorialModeFlag = 1;
+                } else {
+                  if (FifoResponseToken.activeHighscoreQuery != null &&
+                    FifoResponseToken.activeHighscoreQuery.completed &&
+                    FifoResponseToken.activeHighscoreQuery.namesByView != null) {
+                    scoreCategoryNames = FifoResponseToken.activeHighscoreQuery.namesByView[1];
+                    missingFirstScoreNameFlag = (scoreCategoryNames[0] != null) ? 0 : 1;
+                    newSessionTutorialModeFlag = missingFirstScoreNameFlag;
+                  }
                 }
               }
+              BoardReconciliationSupport.sessionStartAttemptCount = BoardReconciliationSupport.sessionStartAttemptCount + 1;
+              GameplaySetupSupport.resetGameplayDifficulty(methodGuard ^ -9410);
+              UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
+              PointerInputListener.resetEntityQueuesAndContactState((byte) -39);
+              ScoreSubmission.requestedScreenId = -1;
             }
-            BoardReconciliationSupport.sessionStartAttemptCount = BoardReconciliationSupport.sessionStartAttemptCount + 1;
-            GameplaySetupSupport.resetGameplayDifficulty(methodGuard ^ -9410);
-            UiWidget.gameplaySession = new GameplaySession(this.gameApplet, newSessionTutorialModeFlag != 0);
-            PointerInputListener.resetEntityQueuesAndContactState((byte) -39);
-            ScoreSubmission.requestedScreenId = -1;
           }
           if (suppressPressAnimationFlag == 0) {
             this.menuPressAnimationActive = true;

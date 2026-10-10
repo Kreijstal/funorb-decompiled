@@ -80,7 +80,8 @@ final class GameplaySetupSupport {
             operationIndex = 0;
             while (operationIndex < reflectionRequest.operationCount) {
               try {
-                reflectionOperationDecode: {
+                {
+                  boolean reflectionOperationDecodeFrameContinues = true;
                   operationType = buffer.readUnsignedByte((byte) 34);
                   if (0 != operationType &&
                     1 != operationType &&
@@ -89,36 +90,38 @@ final class GameplaySetupSupport {
                       operationType != 4) {
                       operationIndex++;
                       operationIncrementAlreadyApplied = 1;
-                      break reflectionOperationDecode;
+                      reflectionOperationDecodeFrameContinues = false;
                     }
-                    methodOwnerClassName = buffer.readNullTerminatedText((byte) 103);
-                    memberName = buffer.readNullTerminatedText((byte) 98);
-                    argumentCountOrIntegerWriteValue = buffer.readUnsignedByte((byte) 34);
-                    argumentTypeNames = new String[argumentCountOrIntegerWriteValue];
-                    for (argumentTypeNameIndex = 0; argumentCountOrIntegerWriteValue > argumentTypeNameIndex; argumentTypeNameIndex++) {
-                      argumentTypeNames[argumentTypeNameIndex] = buffer.readNullTerminatedText((byte) 120);
-                    }
-                    allocatedSerializedArguments = new byte[argumentCountOrIntegerWriteValue][];
-                    serializedArgumentsBeforeAlias = allocatedSerializedArguments;
-                    serializedArgumentsAlias = serializedArgumentsBeforeAlias;
-                    if (operationType == 3) {
-                      for (serializedArgumentIndex = 0; serializedArgumentIndex < argumentCountOrIntegerWriteValue; serializedArgumentIndex++) {
-                        serializedArgumentLength = buffer.readIntBE((byte) -70);
-                        newSerializedArgumentBytes = new byte[serializedArgumentLength];
-                        serializedArgumentsAlias[serializedArgumentIndex] = newSerializedArgumentBytes;
-                        buffer.readBytes(29915, serializedArgumentLength, allocatedSerializedArguments[serializedArgumentIndex], 0);
+                    if (reflectionOperationDecodeFrameContinues) {
+                      methodOwnerClassName = buffer.readNullTerminatedText((byte) 103);
+                      memberName = buffer.readNullTerminatedText((byte) 98);
+                      argumentCountOrIntegerWriteValue = buffer.readUnsignedByte((byte) 34);
+                      argumentTypeNames = new String[argumentCountOrIntegerWriteValue];
+                      for (argumentTypeNameIndex = 0; argumentCountOrIntegerWriteValue > argumentTypeNameIndex; argumentTypeNameIndex++) {
+                        argumentTypeNames[argumentTypeNameIndex] = buffer.readNullTerminatedText((byte) 120);
                       }
+                      allocatedSerializedArguments = new byte[argumentCountOrIntegerWriteValue][];
+                      serializedArgumentsBeforeAlias = allocatedSerializedArguments;
+                      serializedArgumentsAlias = serializedArgumentsBeforeAlias;
+                      if (operationType == 3) {
+                        for (serializedArgumentIndex = 0; serializedArgumentIndex < argumentCountOrIntegerWriteValue; serializedArgumentIndex++) {
+                          serializedArgumentLength = buffer.readIntBE((byte) -70);
+                          newSerializedArgumentBytes = new byte[serializedArgumentLength];
+                          serializedArgumentsAlias[serializedArgumentIndex] = newSerializedArgumentBytes;
+                          buffer.readBytes(29915, serializedArgumentLength, allocatedSerializedArguments[serializedArgumentIndex], 0);
+                        }
+                      }
+                      reflectionRequest.operationTypes[operationIndex] = operationType;
+                      resolvedArgumentClasses = new Class[argumentCountOrIntegerWriteValue];
+                      argumentClassIndex = 0;
+                      unusedInitialArgumentClassIndexSnapshot = argumentClassIndex;
+                      while (argumentClassIndex < argumentCountOrIntegerWriteValue) {
+                        resolvedArgumentClasses[argumentClassIndex] = EmailValidator.resolveReflectionClass(argumentTypeNames[argumentClassIndex], false);
+                        argumentClassIndex++;
+                      }
+                      reflectionRequest.methodLookupTasks[operationIndex] = taskDispatcher.requestDeclaredMethod(memberName, -126, resolvedArgumentClasses, EmailValidator.resolveReflectionClass(methodOwnerClassName, false));
+                      reflectionRequest.serializedArguments[operationIndex] = allocatedSerializedArguments;
                     }
-                    reflectionRequest.operationTypes[operationIndex] = operationType;
-                    resolvedArgumentClasses = new Class[argumentCountOrIntegerWriteValue];
-                    argumentClassIndex = 0;
-                    unusedInitialArgumentClassIndexSnapshot = argumentClassIndex;
-                    while (argumentClassIndex < argumentCountOrIntegerWriteValue) {
-                      resolvedArgumentClasses[argumentClassIndex] = EmailValidator.resolveReflectionClass(argumentTypeNames[argumentClassIndex], false);
-                      argumentClassIndex++;
-                    }
-                    reflectionRequest.methodLookupTasks[operationIndex] = taskDispatcher.requestDeclaredMethod(memberName, -126, resolvedArgumentClasses, EmailValidator.resolveReflectionClass(methodOwnerClassName, false));
-                    reflectionRequest.serializedArguments[operationIndex] = allocatedSerializedArguments;
                   } else {
                     fieldOwnerClassName = buffer.readNullTerminatedText((byte) 117);
                     unusedFieldOwnerNameAlias = fieldOwnerClassName;
@@ -132,7 +135,9 @@ final class GameplaySetupSupport {
                     reflectionRequest.integerWriteValues[operationIndex] = argumentCountOrIntegerWriteValue;
                     reflectionRequest.fieldLookupTasks[operationIndex] = taskDispatcher.requestDeclaredField(EmailValidator.resolveReflectionClass(fieldOwnerClassName, false), 0, fieldName);
                   }
-                  operationIncrementAlreadyApplied = 0;
+                  if (reflectionOperationDecodeFrameContinues) {
+                    operationIncrementAlreadyApplied = 0;
+                  }
                 }
               } catch (java.lang.ClassNotFoundException operationClassResolutionFailure) {
                 caughtReflectionFailure = operationClassResolutionFailure;
