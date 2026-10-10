@@ -259,7 +259,8 @@ class hk extends el {
     }
 
     final void a(int param0, int param1, boolean param2, el param3, int param4, int param5) {
-        if (null != this.field_u && this.field_u instanceof ti) {
+        if (null != this.field_u &&
+          this.field_u instanceof ti) {
           ((ti) (this.field_u)).a(param4, param5, (byte) 55, this, param0, param1);
         }
         if (!param2) {

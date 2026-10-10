@@ -170,7 +170,10 @@ final class rh {
         if (!this.a(0)) {
           return false;
         }
-        if (0 > param2 || param0 < 0 || this.field_c.field_k.length <= param2 || this.field_c.field_k[param2] <= param0) {
+        if (0 > param2 ||
+          param0 < 0 ||
+          this.field_c.field_k.length <= param2 ||
+          this.field_c.field_k[param2] <= param0) {
           if (!vf.field_K) {
             return false;
           }
@@ -278,7 +281,9 @@ final class rh {
         if (param1 != 3) {
           field_j = (String) null;
         }
-        if (param0 >= 0 && param0 < this.field_c.field_k.length && this.field_c.field_k[param0] != 0) {
+        if (param0 >= 0 &&
+          param0 < this.field_c.field_k.length &&
+          this.field_c.field_k[param0] != 0) {
           return true;
         }
         if (vf.field_K) {
@@ -834,7 +839,8 @@ final class rh {
     rh(nh param0, boolean param1, int param2) {
         this.field_c = null;
         try {
-          if (0 > param2 || 2 < param2) {
+          if (0 > param2 ||
+            2 < param2) {
             throw new IllegalArgumentException("");
           }
           this.field_b = param2;

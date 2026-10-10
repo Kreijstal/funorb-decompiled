@@ -56,7 +56,8 @@ final class eg extends hf {
             for (var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
               var9 = param0.charAt(var8);
-              if ((var8 == 0) && (var9 == 45)) {
+              if ((var8 == 0) &&
+                (var9 == 45)) {
                 var4_int = 1;
                 decompiledFrameRemainder0 = false;
               }

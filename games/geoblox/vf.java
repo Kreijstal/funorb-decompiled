@@ -16,7 +16,8 @@ class vf extends hk {
         int var5 = -this.field_v + param2;
         int var6 = param0 - this.field_m;
         fb var7 = this.a((byte) -114, var6, var5);
-        if (var7 != null && null != this.field_u) {
+        if (var7 != null &&
+          null != this.field_u) {
           ((pe) ((Object) this.field_u)).a(this, var7.field_g, param1 + 28924, param3);
         }
     }

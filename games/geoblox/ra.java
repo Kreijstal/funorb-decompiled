@@ -43,7 +43,8 @@ final class ra implements Iterable {
     }
 
     final static void a(int param0, rf param1) {
-        if (param1 == null || fe.field_e == param1) {
+        if (param1 == null ||
+          fe.field_e == param1) {
           return;
         }
         try {

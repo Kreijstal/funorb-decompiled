@@ -569,7 +569,9 @@ final class vb {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 >= field_e) {
-          if (param1 < field_i || param0 >= field_k || param1 >= field_d) {
+          if (param1 < field_i ||
+            param0 >= field_k ||
+            param1 >= field_d) {
             return;
           }
           field_c[param0 + param1 * field_f] = param2;

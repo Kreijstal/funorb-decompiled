@@ -237,7 +237,9 @@ final class kj extends ia {
         if ((this.field_m[param1] & 2) != 0) {
           var3 = (pc) (this.field_I.field_l.g(0));
           while (var3 != null) {
-            if (param1 == var3.field_t && null == this.field_j[param1][var3.field_D] && var3.field_y < 0) {
+            if (param1 == var3.field_t &&
+              null == this.field_j[param1][var3.field_D] &&
+              var3.field_y < 0) {
               var3.field_y = 0;
             }
             var3 = (pc) (this.field_I.field_l.d(1));

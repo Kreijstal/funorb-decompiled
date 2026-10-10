@@ -90,7 +90,8 @@ final class eb {
           wg.field_i.field_q = 2;
           wg.field_i.field_b = wg.field_i.field_b + 1;
           if (wg.field_i.field_b < 2) {
-            if (wg.field_i.field_b >= 2 && 50 == param0) {
+            if (wg.field_i.field_b >= 2 &&
+              50 == param0) {
               return 5;
             }
             if (param1 != 28625) {
@@ -143,7 +144,8 @@ final class eb {
             if (param0 == 51) {
               return 2;
             }
-            if (wg.field_i.field_b >= 2 && 50 == param0) {
+            if (wg.field_i.field_b >= 2 &&
+              50 == param0) {
               return 5;
             }
             if (param1 != 28625) {
@@ -158,7 +160,8 @@ final class eb {
             }
             return -1;
           }
-          if (wg.field_i.field_b >= 2 && 50 == param0) {
+          if (wg.field_i.field_b >= 2 &&
+            50 == param0) {
             return 5;
           }
           if (param1 != 28625) {
@@ -207,7 +210,8 @@ final class eb {
           }
           return -1;
         }
-        if (wg.field_i.field_b >= 2 && 50 == param0) {
+        if (wg.field_i.field_b >= 2 &&
+          50 == param0) {
           return 5;
         }
         if (param1 != 28625) {

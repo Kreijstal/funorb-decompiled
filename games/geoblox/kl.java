@@ -26,7 +26,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 + 256 - param4 + param12) / param12;
         }
-        if (param12 == 0 || param5 + (param10 + 256 - param4 + param12) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 + 256 - param4 + param12) / param12 > param9) {
           param8 = param9;
         }
         param5 = param5 << 1;
@@ -46,7 +47,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = (param5 >> 1) + (param10 - param4 + param12) / param12;
         }
-        if (param12 == 0 || (param5 >> 1) + (param10 - param4 + param12) / param12 > param9) {
+        if (param12 == 0 ||
+          (param5 >> 1) + (param10 - param4 + param12) / param12 > param9) {
           param8 = param9;
         }
         param8 = param8 << 1;
@@ -70,7 +72,8 @@ final class kl extends ia {
     }
 
     final int d() {
-        if (this.field_u == 0 && this.field_l == 0) {
+        if (this.field_u == 0 &&
+          this.field_l == 0) {
           return 0;
         }
         return 1;
@@ -337,7 +340,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12 - 257) / param12;
         }
-        if (param12 == 0 || param5 + (param10 - param4 + param12 - 257) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 - param4 + param12 - 257) / param12 > param9) {
           param8 = param9;
         }
         param5 = param5 << 1;
@@ -357,7 +361,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = (param5 >> 1) + (param10 - param4 + param12 - 1) / param12;
         }
-        if (param12 == 0 || (param5 >> 1) + (param10 - param4 + param12 - 1) / param12 > param9) {
+        if (param12 == 0 ||
+          (param5 >> 1) + (param10 - param4 + param12 - 1) / param12 > param9) {
           param8 = param9;
         }
         param8 = param8 << 1;
@@ -611,7 +616,8 @@ final class kl extends ia {
         if (param14 != 0) {
           param10 = param5 + (param12 - param4 + param14 - 257) / param14;
         }
-        if (param14 == 0 || param5 + (param12 - param4 + param14 - 257) / param14 > param11) {
+        if (param14 == 0 ||
+          param5 + (param12 - param4 + param14 - 257) / param14 > param11) {
           param10 = param11;
         }
         param5 = param5 << 1;
@@ -633,7 +639,8 @@ final class kl extends ia {
         if (param14 != 0) {
           param10 = (param5 >> 1) + (param12 - param4 + param14 - 1) / param14;
         }
-        if (param14 == 0 || (param5 >> 1) + (param12 - param4 + param14 - 1) / param14 > param11) {
+        if (param14 == 0 ||
+          (param5 >> 1) + (param12 - param4 + param14 - 1) / param14 > param11) {
           param10 = param11;
         }
         param10 = param10 << 1;
@@ -665,7 +672,8 @@ final class kl extends ia {
         if (param11 != 0) {
           param7 = param5 + (param9 + 256 - param4 + param11) / param11;
         }
-        if (param11 == 0 || param5 + (param9 + 256 - param4 + param11) / param11 > param8) {
+        if (param11 == 0 ||
+          param5 + (param9 + 256 - param4 + param11) / param11 > param8) {
           param7 = param8;
         }
         while (param5 < param7) {
@@ -679,7 +687,8 @@ final class kl extends ia {
         if (param11 != 0) {
           param7 = param5 + (param9 - param4 + param11) / param11;
         }
-        if (param11 == 0 || param5 + (param9 - param4 + param11) / param11 > param8) {
+        if (param11 == 0 ||
+          param5 + (param9 - param4 + param11) / param11 > param8) {
           param7 = param8;
         }
         param0 = param12;
@@ -703,7 +712,8 @@ final class kl extends ia {
         if (param14 != 0) {
           param10 = param5 + (param12 + 256 - param4 + param14) / param14;
         }
-        if (param14 == 0 || param5 + (param12 + 256 - param4 + param14) / param14 > param11) {
+        if (param14 == 0 ||
+          param5 + (param12 + 256 - param4 + param14) / param14 > param11) {
           param10 = param11;
         }
         param5 = param5 << 1;
@@ -725,7 +735,8 @@ final class kl extends ia {
         if (param14 != 0) {
           param10 = (param5 >> 1) + (param12 - param4 + param14) / param14;
         }
-        if (param14 == 0 || (param5 >> 1) + (param12 - param4 + param14) / param14 > param11) {
+        if (param14 == 0 ||
+          (param5 >> 1) + (param12 - param4 + param14) / param14 > param11) {
           param10 = param11;
         }
         param10 = param10 << 1;
@@ -1268,7 +1279,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 + 256 - param4 + param12) / param12;
         }
-        if (param12 == 0 || param5 + (param10 + 256 - param4 + param12) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 + 256 - param4 + param12) / param12 > param9) {
           param8 = param9;
         }
         while (param5 < param8) {
@@ -1283,7 +1295,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12) / param12;
         }
-        if (param12 == 0 || param5 + (param10 - param4 + param12) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 - param4 + param12) / param12 > param9) {
           param8 = param9;
         }
         param0 = param13;
@@ -1389,7 +1402,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12 - 257) / param12;
         }
-        if (param12 == 0 || param5 + (param10 - param4 + param12 - 257) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 - param4 + param12 - 257) / param12 > param9) {
           param8 = param9;
         }
         while (param5 < param8) {
@@ -1404,7 +1418,8 @@ final class kl extends ia {
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12 - 1) / param12;
         }
-        if (param12 == 0 || param5 + (param10 - param4 + param12 - 1) / param12 > param9) {
+        if (param12 == 0 ||
+          param5 + (param10 - param4 + param12 - 1) / param12 > param9) {
           param8 = param9;
         }
         param1 = param13;
@@ -1612,7 +1627,8 @@ final class kl extends ia {
         if (param11 != 0) {
           param7 = param5 + (param9 - param4 + param11 - 257) / param11;
         }
-        if (param11 == 0 || param5 + (param9 - param4 + param11 - 257) / param11 > param8) {
+        if (param11 == 0 ||
+          param5 + (param9 - param4 + param11 - 257) / param11 > param8) {
           param7 = param8;
         }
         while (param5 < param7) {
@@ -1626,7 +1642,8 @@ final class kl extends ia {
         if (param11 != 0) {
           param7 = param5 + (param9 - param4 + param11 - 1) / param11;
         }
-        if (param11 == 0 || param5 + (param9 - param4 + param11 - 1) / param11 > param8) {
+        if (param11 == 0 ||
+          param5 + (param9 - param4 + param11 - 1) / param11 > param8) {
           param7 = param8;
         }
         param1 = param12;

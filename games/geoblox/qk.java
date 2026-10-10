@@ -161,7 +161,8 @@ class qk {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        if (param0 < 8000 || param0 > 48000) {
+        if (param0 < 8000 ||
+          param0 > 48000) {
           throw new IllegalArgumentException();
         }
         field_j = param0;

@@ -149,7 +149,9 @@ final class sk {
               }
               decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
             }
-            if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (param1 > 0)) {
+            if ((decompiledFrameRemainder0) &&
+              (decompiledFrameCompleted0) &&
+              (param1 > 0)) {
               this.a(true);
               var9_intLifetime1Lifetime1 = param1;
               if (this.field_i < var9_intLifetime1Lifetime1) {

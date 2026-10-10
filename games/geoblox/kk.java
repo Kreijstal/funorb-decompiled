@@ -179,7 +179,8 @@ final class kk extends ji {
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
-                    if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0)) {
+                    if ((decompiledFrameRemainder0) &&
+                      (decompiledFrameCompleted0)) {
                       var14_ref = (sd) (this.field_e.c((byte) 121));
                       while (var14_ref != null) {
                         if (~var12 == ~var14_ref.field_i) {

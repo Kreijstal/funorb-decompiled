@@ -333,7 +333,8 @@ final class kc {
                   }
                 }
               }
-              if ((decompiledFrameCompleted1) && (decompiledFrameCompleted0)) {
+              if ((decompiledFrameCompleted1) &&
+                (decompiledFrameCompleted0)) {
                 var2_ref_ja.field_K = null;
               }
               el.field_o.field_F = true;
@@ -360,7 +361,8 @@ final class kc {
             }
             break;
           }
-          if ((decompiledNaturalLoopExit0) && (w.field_f)) {
+          if ((decompiledNaturalLoopExit0) &&
+            (w.field_f)) {
             jc.a(3, false);
             jl.field_t = false;
           }

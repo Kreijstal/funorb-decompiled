@@ -67,7 +67,8 @@ final class c extends ka {
           } else {
             decompiledFrameRemainder0 = (var3_int == 9);
           }
-          if ((decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+          if ((decompiledFrameRemainder1) &&
+            (decompiledFrameRemainder0)) {
             if (102 != ki.field_d) {
               if (103 != ki.field_d) {
                 super.a(param0, -70);
@@ -177,7 +178,11 @@ final class c extends ka {
                     }
                     if (decompiledFrameRemainder1) {
                       if (this.field_o != 0) {
-                        if ((!(this.field_o >= 0)) && (!(qa.field_a <= 170)) && (!(qa.field_a >= 290)) && (!(ue.field_e <= 265)) && (!(ue.field_e >= 299))) {
+                        if ((!(this.field_o >= 0)) &&
+                          (!(qa.field_a <= 170)) &&
+                          (!(qa.field_a >= 290)) &&
+                          (!(ue.field_e <= 265)) &&
+                          (!(ue.field_e >= 299))) {
                           this.field_g = true;
                           if (null != el.field_o) {
                             el.field_o.e((byte) -70);
@@ -1197,7 +1202,8 @@ final class c extends ka {
             this.a(true);
             decompiledFrameRemainder0 = (var3 != 0);
           }
-          if ((decompiledFrameRemainder0) && (bi.field_g != 0)) {
+          if ((decompiledFrameRemainder0) &&
+            (bi.field_g != 0)) {
             if (fh.c(-104)) {
               if (265 < he.field_d &&
                 he.field_d < 299) {
@@ -1740,7 +1746,8 @@ final class c extends ka {
               this.field_b = 2;
               decompiledSharedTail0 = (Geoblox.field_C != 0);
             }
-            if ((decompiledSharedTail0) && (this.field_q == 4)) {
+            if ((decompiledSharedTail0) &&
+              (this.field_q == 4)) {
               if (this.field_b == 2) {
                 this.field_b = 1;
               }
@@ -2286,7 +2293,8 @@ final class c extends ka {
                 if (var6 != 13) {
                   param3 = 395;
                 }
-                if (var6 == 13 || var14 != 0) {
+                if (var6 == 13 ||
+                  var14 != 0) {
                   param3 = 265;
                 }
                 var9 = 10 + (var11 >> 1) + var10;
@@ -2305,7 +2313,8 @@ final class c extends ka {
                 var10 = 121;
                 var9 = (var11 >> 1) + var10 + 10;
               }
-              if (var6 != 13 || var14 != 0) {
+              if (var6 != 13 ||
+                var14 != 0) {
                 var10 = 436;
                 var9 = (var11 >> 1) + var10 + 10;
               }
@@ -2362,7 +2371,8 @@ final class c extends ka {
             if (!param0) {
               ma.a(param3, var10, 40, (byte) -92, var11, eb.field_g);
             }
-            if (param0 || var14 != 0) {
+            if (param0 ||
+              var14 != 0) {
               var9 = var9 + this.field_T;
               var10 = var10 + this.field_T;
               param3 = param3 - this.field_T;
@@ -2374,7 +2384,8 @@ final class c extends ka {
             dd.field_G.field_K[0][wf.field_p] = 15488514;
             var12 = this.field_T;
           }
-          if (!param0 || var14 != 0) {
+          if (!param0 ||
+            var14 != 0) {
             var12 = 0;
           }
           if (var6 == 8 ||
@@ -2515,7 +2526,8 @@ final class c extends ka {
                 }
                 this.field_l = true;
                 this.c((byte) -107);
-                if ((var3 != 0) && (0 <= this.field_b)) {
+                if ((var3 != 0) &&
+                  (0 <= this.field_b)) {
                   this.a(this.field_b, -29);
                 }
               } else {

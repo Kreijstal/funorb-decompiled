@@ -584,7 +584,8 @@ final class gh {
             463 >= this.field_T) {
             if (this.field_y != 1 ||
               this.field_T >= 640) {
-              if (this.field_T == 463 && gf.field_f == 0) {
+              if (this.field_T == 463 &&
+                gf.field_f == 0) {
                 this.field_y = 1;
                 el.field_o.c(false);
                 if (var5 != 0) {
@@ -626,7 +627,8 @@ final class gh {
             if (!ll.field_g[c.field_ab]) {
               return;
             }
-            if (!this.field_E && var5 == 0) {
+            if (!this.field_E &&
+              var5 == 0) {
               var2 = 96;
               var3 = 97;
             } else {
@@ -847,7 +849,8 @@ final class gh {
             decompiledSharedTail0 = (var5 != 0);
           }
         }
-        if ((decompiledFrameRemainder1) && (decompiledSharedTail0)) {
+        if ((decompiledFrameRemainder1) &&
+          (decompiledSharedTail0)) {
           if (this.field_D == 0) {
             fi.a(param0 ^ -1578896191, pi.field_S);
           }
@@ -1201,7 +1204,8 @@ final class gh {
           this.field_t = 0;
           decompiledFrameRemainder0 = (var3 != 0);
         }
-        if ((decompiledFrameRemainder0) && (1 == this.field_t)) {
+        if ((decompiledFrameRemainder0) &&
+          (1 == this.field_t)) {
           if (this.field_p == 3 ||
             this.field_p == 5) {
             this.c(7000);
@@ -1218,7 +1222,8 @@ final class gh {
           if (decompiledFrameRemainder0) {
             if (this.field_p != 1 ||
               !(0 < dd.field_D - this.field_U)) {
-              if (this.field_p == 2 && !(dk.field_b - this.field_U <= 0)) {
+              if (this.field_p == 2 &&
+                !(dk.field_b - this.field_U <= 0)) {
                 this.field_t = 2;
                 if (var3 != 0) {
                   this.field_t = 2;
@@ -1324,37 +1329,58 @@ final class gh {
                   }
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5) &&
+                (decompiledFrameRemainder4) &&
+                (decompiledFrameRemainder3) &&
+                (decompiledFrameRemainder2) &&
+                (decompiledFrameRemainder1) &&
+                (decompiledFrameRemainder0)) {
                 ra.a(fa.field_f ^ 255, -61, fa.field_f);
                 if (var4 == 0) {
                   break;
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5) &&
+                (decompiledFrameRemainder4) &&
+                (decompiledFrameRemainder3) &&
+                (decompiledFrameRemainder2) &&
+                (decompiledFrameRemainder1)) {
                 ra.a(255 ^ hj.field_b, -84, hj.field_b);
                 if (var4 == 0) {
                   break;
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3) && (decompiledFrameRemainder2)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5) &&
+                (decompiledFrameRemainder4) &&
+                (decompiledFrameRemainder3) &&
+                (decompiledFrameRemainder2)) {
                 ra.a(255 ^ ac.field_u, -50, ac.field_u);
                 if (var4 == 0) {
                   break;
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4) && (decompiledFrameRemainder3)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5) &&
+                (decompiledFrameRemainder4) &&
+                (decompiledFrameRemainder3)) {
                 ra.a(255 ^ kf.field_d, -71, kf.field_d);
                 if (var4 == 0) {
                   break;
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5) &&
+                (decompiledFrameRemainder4)) {
                 ra.a(255 ^ vi.field_E, -115, vi.field_E);
                 if (var4 == 0) {
                   break;
                 }
               }
-              if ((decompiledFrameRemainder6) && (decompiledFrameRemainder5)) {
+              if ((decompiledFrameRemainder6) &&
+                (decompiledFrameRemainder5)) {
                 ra.a(255 ^ jj.field_g, -92, jj.field_g);
                 if (var4 == 0) {
                   break;

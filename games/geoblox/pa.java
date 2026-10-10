@@ -104,7 +104,8 @@ final class pa {
             for (var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;
               var9 = param0.charAt(var8);
-              if ((var8 == 0) && (45 == var9)) {
+              if ((var8 == 0) &&
+                (45 == var9)) {
                 var4_int = 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -224,7 +225,8 @@ final class pa {
           this.field_f = param2;
           this.field_c = 0L;
           var5_int = this.field_d.read();
-          if (var5_int != -1 && !param1.equals("r")) {
+          if (var5_int != -1 &&
+            !param1.equals("r")) {
             this.field_d.seek(0L);
             this.field_d.write(var5_int);
           }

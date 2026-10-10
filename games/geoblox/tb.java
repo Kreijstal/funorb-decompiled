@@ -369,7 +369,8 @@ final class tb {
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
-            } while (var13 == 0 || var13 == 1);
+            } while (var13 == 0 ||
+              var13 == 1);
             var15++;
             var1 = param0.field_x[param0.field_e[param0.field_y[0]] & 255];
             param0.field_m[var1 & 255] = param0.field_m[var1 & 255] + var15;

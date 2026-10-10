@@ -760,7 +760,8 @@ abstract class m extends rc {
     }
 
     final void a(ha[] param0, int[] param1) {
-        if (param1 != null && param1.length != param0.length) {
+        if (param1 != null &&
+          param1.length != param0.length) {
           throw new IllegalArgumentException();
         }
         this.field_s = param0;

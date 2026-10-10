@@ -497,7 +497,8 @@ abstract class wh extends rc {
                 break;
               }
             }
-            if ((decompiledFrameCompleted0) && (var7 != 0)) {
+            if ((decompiledFrameCompleted0) &&
+              (var7 != 0)) {
               var4 = param2;
             }
           } else {
@@ -608,7 +609,8 @@ abstract class wh extends rc {
                 var18 = param9 << 16;
                 var25 = param12;
               }
-              if (~param4 != ~param8 || var42 != 0) {
+              if (~param4 != ~param8 ||
+                var42 != 0) {
                 var35 = -param15 + param4;
                 if (param9 <= param2) {
                   var27 = (param0 - param3 << 16) / var35;
@@ -628,7 +630,8 @@ abstract class wh extends rc {
                   var22 = param1 << 16;
                   var26 = param12 << 16;
                 }
-                if (!(param9 <= param2) || var42 != 0) {
+                if (!(param9 <= param2) ||
+                  var42 != 0) {
                   var28 = (param0 - param3 << 16) / var35;
                   var23 = (param6 - param1 << 16) / var34;
                   var19 = (param13 - param2 << 16) / var34;
@@ -718,7 +721,8 @@ abstract class wh extends rc {
                   var21 = var21 + param8 * var23;
                   param8 = 0;
                 }
-                if (!(param15 >= 0) || var42 != 0) {
+                if (!(param15 >= 0) ||
+                  var42 != 0) {
                   param8 = param15 - param8;
                   var21 = var21 + param8 * var23;
                   var26 = var26 + param8 * var28;
@@ -792,7 +796,8 @@ abstract class wh extends rc {
                 var28 = 0;
                 var32 = 0;
               }
-              if (stackIn_73_0 != stackIn_73_1 || var42 != 0) {
+              if (stackIn_73_0 != stackIn_73_1 ||
+                var42 != 0) {
                 var37Lifetime2 = param13 << 16;
                 var38Lifetime2 = param6 << 16;
                 var39Lifetime2 = param0 << 16;
@@ -803,7 +808,8 @@ abstract class wh extends rc {
                   var21 = param10 << 16;
                   var25 = param3 << 16;
                 }
-                if (var33Lifetime1 != 0 || var42 != 0) {
+                if (var33Lifetime1 != 0 ||
+                  var42 != 0) {
                   var22 = param10 << 16;
                   var18 = param9 << 16;
                   var26 = param3 << 16;

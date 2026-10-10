@@ -262,7 +262,8 @@ final class w {
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
         }
-        if (var6 <= 0 || var5 <= 0) {
+        if (var6 <= 0 ||
+          var5 <= 0) {
           return;
         }
         w.a(vb.field_c, param0.field_v, var4, var3, var6, var5, var7, var8);

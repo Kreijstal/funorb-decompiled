@@ -300,7 +300,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     this.a((byte) 79, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
-                  if ((decompiledFrameRemainder3) && (var2.startsWith("1.6.0_"))) {
+                  if ((decompiledFrameRemainder3) &&
+                    (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
                       stackIn_66_0 = rc.a(-58, var2.charAt(var3));
@@ -316,7 +317,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
+                      if (f.b((byte) -115, (CharSequence) ((Object) var4)) &&
+                        !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) 79, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -324,13 +326,16 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   }
                 }
               }
-              if ((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) {
+              if ((decompiledFrameRemainder3) &&
+                (decompiledFrameCompleted0)) {
                 decompiledFrameRemainder2 = (d.field_t != null);
                 if (decompiledFrameRemainder2) {
                   stackIn_66_0 = d.field_t.startsWith("1.");
                 }
               }
-              if ((decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (stackIn_66_0)) {
+              if ((decompiledFrameRemainder3) &&
+                (decompiledFrameRemainder2) &&
+                (stackIn_66_0)) {
                 var1_int = 2;
                 var2_int = 0;
                 while (true) {
@@ -382,7 +387,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                   if (0L != ka.field_a) {
                     stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
                     decompiledFrameRemainder0 = (var5 == 0);
-                    if ((decompiledFrameRemainder0) && (stackIn_99_0 >= 0)) {
+                    if ((decompiledFrameRemainder0) &&
+                      (stackIn_99_0 >= 0)) {
                       break;
                     }
                   }
@@ -717,7 +723,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void destroy() {
-        if (qa.field_d != this || ad.field_p) {
+        if (qa.field_d != this ||
+          ad.field_p) {
           return;
         }
         try {

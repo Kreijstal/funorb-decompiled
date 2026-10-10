@@ -67,7 +67,8 @@ final class fk extends sh {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           var7 = lh.field_b;
-          if (var7 != null && this.a(param1, -1, param5, param4, param0)) {
+          if (var7 != null &&
+            this.a(param1, -1, param5, param4, param0)) {
             if (this.field_u instanceof rg) {
               ((rg) (this.field_u)).a(this, var7, 22176);
               lh.field_b = null;

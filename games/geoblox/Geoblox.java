@@ -66,7 +66,10 @@ public final class Geoblox extends wf {
         int var7_intLifetime2;
         int var9Lifetime1;
         oj.a(vc.field_i, (byte) -104);
-        if (null != wj.field_F && null != fe.field_a && ah.field_c != null && null != cd.field_m) {
+        if (null != wj.field_F &&
+          null != fe.field_a &&
+          ah.field_c != null &&
+          null != cd.field_m) {
           lc.a(ca.field_h, -2, 60.0f);
           this.a(25853);
           jg.a(wj.field_F, (byte) 80, ah.field_c, fe.field_a, cd.field_m);
@@ -77,7 +80,9 @@ public final class Geoblox extends wf {
           ih.b(127);
           return false;
         }
-        if (null != ll.field_f && null != ii.field_k && ki.field_b != null) {
+        if (null != ll.field_f &&
+          null != ii.field_k &&
+          ki.field_b != null) {
           lc.a(oh.field_c, param0 - 25871, 80.0f);
           this.a(25853);
           dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");

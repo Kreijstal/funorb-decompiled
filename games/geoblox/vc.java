@@ -109,7 +109,11 @@ final class vc extends dk {
         if (param3 != 58) {
           vc.d(-90);
         }
-        if (this.field_p == param4 && this.field_d && this.field_k == 1 && null != this.field_n && this.field_n.equals(param0)) {
+        if (this.field_p == param4 &&
+          this.field_d &&
+          this.field_k == 1 &&
+          null != this.field_n &&
+          this.field_n.equals(param0)) {
           return;
         }
         try {

@@ -1765,7 +1765,8 @@ class dm extends wh {
           if (param3 <= 0) {
             return;
           }
-          if (param2 == this.field_r && param3 == this.field_m) {
+          if (param2 == this.field_r &&
+            param3 == this.field_m) {
             this.a(param0, param1, param4);
             return;
           }

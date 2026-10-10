@@ -551,12 +551,17 @@ final class bj extends nh {
                 }
               }
             }
-            if ((decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+            if ((decompiledFrameRemainder3) &&
+              (decompiledFrameRemainder2) &&
+              (decompiledFrameRemainder1) &&
+              (decompiledFrameRemainder0)) {
               this.field_d = null;
             }
           }
         }
-        if ((decompiledFrameRemainder2) && (decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+        if ((decompiledFrameRemainder2) &&
+          (decompiledFrameRemainder1) &&
+          (decompiledFrameRemainder0)) {
           if (param0 != -38) {
             this.b(25, 41);
           }
@@ -581,7 +586,8 @@ final class bj extends nh {
             }
           }
         }
-        if ((decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+        if ((decompiledFrameRemainder1) &&
+          (decompiledFrameRemainder0)) {
           this.field_n = 1000L + oa.a(param0 - 12482);
         }
 

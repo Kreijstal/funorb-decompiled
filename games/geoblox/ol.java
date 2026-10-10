@@ -39,7 +39,8 @@ final class ol extends hk {
     }
 
     final int c(int param0, int param1) {
-        if (param1 < 0 || this.field_F.a((byte) 101) <= param1) {
+        if (param1 < 0 ||
+          this.field_F.a((byte) 101) <= param1) {
           return -1;
         }
         int var3 = 34 / ((param0 - 88) / 32);

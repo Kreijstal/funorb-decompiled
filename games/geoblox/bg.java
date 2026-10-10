@@ -154,7 +154,8 @@ final class bg extends m {
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
         }
-        if (param3 <= 0 || param4 <= 0) {
+        if (param3 <= 0 ||
+          param4 <= 0) {
           return;
         }
         bg.a(vb.field_c, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);

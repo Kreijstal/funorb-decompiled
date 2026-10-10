@@ -755,7 +755,8 @@ class qc extends hf {
     }
 
     final void c(int param0, int param1) {
-        if (param0 < 64 && param0 >= -64) {
+        if (param0 < 64 &&
+          param0 >= -64) {
           this.d((byte) 125, 64 + param0);
           return;
         }
