@@ -457,7 +457,7 @@ final class DisplayNamePanel extends WidgetContainer implements UsernameSuggesti
           }
           guardQuotient = 37 / ((-70 - methodGuard) / 38);
           validationState = validationProvider.getDebouncedValidationState((byte) -105);
-          acceptedBeforeReturn = !(validationState != SocketArchiveNetworkClient.validInputValidationState);
+          acceptedBeforeReturn = (validationState == SocketArchiveNetworkClient.validInputValidationState);
           return acceptedBeforeReturn;
         } catch (java.lang.RuntimeException acceptanceFailure) {
           caughtAcceptanceFailure = acceptanceFailure;

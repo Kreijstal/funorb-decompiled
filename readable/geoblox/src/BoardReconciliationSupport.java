@@ -290,7 +290,7 @@ final class BoardReconciliationSupport {
                       routedEntityForCategoryReset.sameCategoryEntityCount = 0;
                       routedEntityForVariantReset.sameVariantEntityCount = 0;
                       ArchiveNetworkClient.movingEntities.addLast(-36, routedAttachedEntity);
-                      routingDestinationSelectionFrameContinues = !(clientControlSnapshot == 0);
+                      routingDestinationSelectionFrameContinues = (clientControlSnapshot != 0);
                     }
                   }
                   if (routingDestinationSelectionFrameContinues) {
@@ -329,7 +329,7 @@ final class BoardReconciliationSupport {
                             }
                             PlayfieldRules.spawnPointsPopup(popupOriginYInput, popupOriginXInput, popupGuardInput, popupPoints);
                           }
-                          boolean applyKindSevenConversionAndCounters = !(4 != routedAttachedEntity.entitySpriteKindId);
+                          boolean applyKindSevenConversionAndCounters = (4 == routedAttachedEntity.entitySpriteKindId);
                           if (!applyKindSevenConversionAndCounters) {
                             routedAttachedEntity.configureEntitySprite(320, routedAttachedEntity.entityCategoryKey, routedAttachedEntity.spriteVariantIndex, 5);
                             applyKindSevenConversionAndCounters = (clientControlSnapshot != 0);

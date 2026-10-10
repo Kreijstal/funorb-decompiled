@@ -171,7 +171,7 @@ abstract class MenuScreen {
             if (EntityCollisionSupport.heldPointerButtonSnapshot != 0 &&
               this.pointerInteractionActive) {
               hitItemIndex = this.selectedItemIndex;
-              if (!(hitItemIndex == -1)) {
+              if ((hitItemIndex != -1)) {
                 this.handleMenuPointer(hitItemIndex, PrefixCodeDecoder.pointerXSnapshot, false, -(this.itemSpacing * hitItemIndex) + (PcmResampler.pointerYSnapshot - this.firstItemY), true, EntityCollisionSupport.heldPointerButtonSnapshot);
               }
               menuPointerInteractionFrameContinues = false;

@@ -97,7 +97,7 @@ final class ScoreSubmission extends IntrusiveNode {
                     if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
                       segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
                       if (segmentEnd >= 0) {
-                        sessionUrlSegmentSelectionFrameContinues = !(settingsValue == null);
+                        sessionUrlSegmentSelectionFrameContinues = (settingsValue != null);
                         if (sessionUrlSegmentSelectionFrameContinues) {
                           urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
                           continue;

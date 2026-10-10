@@ -146,7 +146,7 @@ final class ClientFlowToken {
               caughtMarkerOrCookieFailure = cookieLookupFailure;
               ignoredCookieLookupFailure = caughtMarkerOrCookieFailure;
             }
-            appletMarkerBeforeReturn = !(null == applet.getParameter("tuhstatbut"));
+            appletMarkerBeforeReturn = (null != applet.getParameter("tuhstatbut"));
             return appletMarkerBeforeReturn;
           } catch (java.lang.RuntimeException markerFailure) {
             caughtMarkerOrCookieFailure = markerFailure;

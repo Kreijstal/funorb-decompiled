@@ -86,7 +86,7 @@ final class GameplaySession {
           promptTop = 300;
           if (this.tutorialStepId == 0) {
             promptTop = 232;
-            tutorialPromptPlacementContinues = !(clientControlFlowGuard == 0);
+            tutorialPromptPlacementContinues = (clientControlFlowGuard != 0);
           }
           if (tutorialPromptPlacementContinues) {
             if (this.tutorialStepId != 3) {
@@ -619,12 +619,12 @@ final class GameplaySession {
                 sessionProgressionAndEndingFrameContinues = !(!this.sceneTransitionRequested);
                 if (sessionProgressionAndEndingFrameContinues) {
                   this.updateSceneTransition((byte) -80);
-                  sessionProgressionAndEndingFrameContinues = !(clientControlFlowGuard == 0);
+                  sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
                 }
               }
               if (sessionProgressionAndEndingFrameContinues) {
                 this.updateResultSequence(10);
-                sessionProgressionAndEndingFrameContinues = !(clientControlFlowGuard == 0);
+                sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
               }
             }
             if (sessionProgressionAndEndingFrameContinues) {
@@ -1069,19 +1069,19 @@ final class GameplaySession {
                 this.tutorialStepPhase = 1;
                 if (this.tutorialStepId == 0) {
                   this.tutorialProgressMetric = 0;
-                  tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
+                  tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
                 }
                 if (tutorialAutoAdvanceFrameContinues) {
                   if (this.tutorialStepId == 1) {
                     this.tutorialProgressMetric = FadingDialog.variantMatchCandidateCount;
-                    tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
+                    tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
                   }
                   if (tutorialAutoAdvanceFrameContinues) {
                     if (this.tutorialStepId != 2) {
                       return;
                     }
                     this.tutorialProgressMetric = TextLayout.categoryMatchCandidateCount;
-                    tutorialAutoAdvanceFrameContinues = !(clientControlFlowGuard == 0);
+                    tutorialAutoAdvanceFrameContinues = (clientControlFlowGuard != 0);
                   }
                 }
               }
@@ -1201,7 +1201,7 @@ final class GameplaySession {
         if (!requirePendingTransitionOrPhase) {
           return true;
         }
-        hasPendingTransitionOrPhase = (this.sceneTransitionRequested) || !(0 == this.sessionPhase);
+        hasPendingTransitionOrPhase = (this.sceneTransitionRequested) || (0 != this.sessionPhase);
         return hasPendingTransitionOrPhase;
     }
 
@@ -1214,7 +1214,7 @@ final class GameplaySession {
             this.tutorialStepId = this.tutorialStepId + 1;
             this.tutorialPromptActive = true;
             this.tutorialStepPhase = 0;
-            tutorialStepPhaseUpdateFrameContinues = !(clientControlFlowGuard == 0);
+            tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
           }
           if (tutorialStepPhaseUpdateFrameContinues) {
             if (1 == this.tutorialStepPhase) {
@@ -1229,7 +1229,7 @@ final class GameplaySession {
               if (this.tutorialStepId == 0 &&
                 this.tutorialProgressMetric > 450) {
                 this.tutorialStepPhase = 2;
-                tutorialStepPhaseUpdateFrameContinues = !(clientControlFlowGuard == 0);
+                tutorialStepPhaseUpdateFrameContinues = (clientControlFlowGuard != 0);
               }
               if (tutorialStepPhaseUpdateFrameContinues) {
                 if (this.tutorialStepId != 1 ||
@@ -1290,7 +1290,7 @@ final class GameplaySession {
                   if (7 > themeIndexThenId) {
                     selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
                     themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
-                    precedingThemeDispatchPreparationFrameContinues = !(clientControlFlowGuard != 0);
+                    precedingThemeDispatchPreparationFrameContinues = (clientControlFlowGuard == 0);
                     if (precedingThemeDispatchPreparationFrameContinues) {
                       if (selectedThemeComplementOrThemeSentinel == themeEntryComplementOrThemeId) {
                         if (0 < themeIndexThenId) {
@@ -1338,14 +1338,14 @@ final class GameplaySession {
                                   jewelsAchievementEntryFrameContinues = !(themeIndexThenId == 0 &&
                                     clientControlFlowGuard == 0);
                                   if (jewelsAchievementEntryFrameContinues) {
-                                    spaceAchievementEntryFrameContinues = !(themeIndexThenId == 6);
+                                    spaceAchievementEntryFrameContinues = (themeIndexThenId != 6);
                                     if (spaceAchievementEntryFrameContinues) {
                                       sportsAchievementEntryFrameContinues = !(5 == themeIndexThenId &&
                                         clientControlFlowGuard == 0);
                                       if (sportsAchievementEntryFrameContinues) {
-                                        fallbackSunAchievementEntryFrameContinues = !(2 != themeIndexThenId);
+                                        fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId);
                                         if (fallbackSunAchievementEntryFrameContinues) {
-                                          sweetsAchievementEntryFrameContinues = !(clientControlFlowGuard == 0);
+                                          sweetsAchievementEntryFrameContinues = (clientControlFlowGuard != 0);
                                         }
                                       }
                                     }
@@ -1479,7 +1479,7 @@ final class GameplaySession {
             PacketBuffer.resultBubbleSprite.drawScaledAlpha(320 - (this.sceneAnimationTick >> 1), 240 - (this.sceneAnimationTick >> 1), this.sceneAnimationTick, this.sceneAnimationTick, 150);
             PointerMenuState.smallBoxSprite.draw(this.resultPanelX, -(PointerMenuState.smallBoxSprite.fullHeight >> 1) + 240 + 60);
             FadingDialog.uiPaletteFont.drawText(SharedBufferPools.bubbleBonusText, 15 + this.resultPanelX, 312, 0, -1);
-            resultSequenceRenderingContinues = !(clientControlFlowGuard == 0);
+            resultSequenceRenderingContinues = (clientControlFlowGuard != 0);
           }
           if (resultSequenceRenderingContinues) {
             shrinkingDiameter = -this.sceneAnimationTick + 460 + 460;
@@ -1547,7 +1547,7 @@ final class GameplaySession {
               endingEntity = MeshDepthSupport.findOutermostAttachedEntity((byte) -128);
               if (null == endingEntity) {
                 this.endingEntityRadius = 29;
-                endingEntityRadiusMeasurementFrameContinues = !(controlFlowGuard == 0);
+                endingEntityRadiusMeasurementFrameContinues = (controlFlowGuard != 0);
               }
               if (endingEntityRadiusMeasurementFrameContinues) {
                 HotspotTextWidget.spriteScratchRaster.setAsRasterTarget();
@@ -1625,7 +1625,7 @@ final class GameplaySession {
             }
             if (3 == this.sessionPhase) {
               this.resultBonusPoints = this.resultBonusPoints + 7;
-              resultSequenceTickAndCompletionFrameContinues = !(controlFlowGuard == 0);
+              resultSequenceTickAndCompletionFrameContinues = (controlFlowGuard != 0);
             }
             if (resultSequenceTickAndCompletionFrameContinues) {
               if (this.sessionPhase != 2) {
@@ -1633,7 +1633,7 @@ final class GameplaySession {
                   ValidationIconWidget.playPcmSample(-348, GameSoundResources.gameSoundSamples[28]);
                 }
                 this.resultSequenceCountdown = this.resultSequenceCountdown - 1;
-                resultSequenceTickAndCompletionFrameContinues = !(controlFlowGuard == 0);
+                resultSequenceTickAndCompletionFrameContinues = (controlFlowGuard != 0);
               }
               if (resultSequenceTickAndCompletionFrameContinues) {
                 if (this.resultExpansionAudioStream == null ||
@@ -1721,7 +1721,7 @@ final class GameplaySession {
           boolean themeProgressHudRenderingContinues = true;
           if (this.sessionPhase != 0) {
             FadingDialog.uiPaletteFont.drawParagraph(LoginUiSupport.lastGeobloxOfLevelText, 426, 404, 200, 100, 0, -1, 2, 0, 30);
-            themeProgressHudRenderingContinues = !(clientControlFlowGuard == 0);
+            themeProgressHudRenderingContinues = (clientControlFlowGuard != 0);
           }
           if (themeProgressHudRenderingContinues) {
             remainingThemeReleases = -MatchCandidateSupport.releasedInCurrentTheme + MessageDialogSupport.releasesPerTheme;
@@ -1770,11 +1770,11 @@ final class GameplaySession {
             if (this.newActionCount <= 0) {
               if (this.score > 0) {
                 ScoreSubmission.requestedScreenId = 2;
-                sessionExitScreenSelectionContinues = !(clientControlFlowGuard == 0);
+                sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
               }
               if (sessionExitScreenSelectionContinues) {
                 ScoreSubmission.requestedScreenId = 0;
-                sessionExitScreenSelectionContinues = !(clientControlFlowGuard == 0);
+                sessionExitScreenSelectionContinues = (clientControlFlowGuard != 0);
               }
             }
             if (sessionExitScreenSelectionContinues) {

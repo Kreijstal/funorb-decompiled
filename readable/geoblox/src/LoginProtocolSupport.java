@@ -119,9 +119,9 @@ final class LoginProtocolSupport {
                 SessionBootstrapSupport.persistSessionSeedBytes((byte) 65);
               }
               if (!useLongLoginPayload) {
-                responseFlagFourSet = !((loginResponseFlags & 4) == 0);
+                responseFlagFourSet = ((loginResponseFlags & 4) != 0);
                 GzipInflater.loginResponseFlagFourSet = responseFlagFourSet;
-                responseFlagEightSet = !((loginResponseFlags & 8) == 0);
+                responseFlagEightSet = ((loginResponseFlags & 8) != 0);
                 TextHotspotBounds.loginResponseFlagEightSet = responseFlagEightSet;
                 if (!TextHotspotBounds.loginResponseFlagEightSet) {
                 }

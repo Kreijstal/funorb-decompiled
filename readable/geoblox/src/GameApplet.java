@@ -301,7 +301,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           javaVersionText.startsWith("1.5.") ||
                           javaVersionText.equals("1.6.0")) {
                           this.showGameError((byte) 79, "wrongjava");
-                          appletExecutionFrameContinues = !(clientControlSnapshot == 0);
+                          appletExecutionFrameContinues = (clientControlSnapshot != 0);
                         }
                         if (appletExecutionFrameContinues) {
                           if (javaVersionText.startsWith("1.6.0_")) {
@@ -322,7 +322,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                               javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
                               if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
                                 this.showGameError((byte) 79, "wrongjava");
-                                appletExecutionFrameContinues = !(clientControlSnapshot == 0);
+                                appletExecutionFrameContinues = (clientControlSnapshot != 0);
                               }
                             }
                           }
@@ -331,7 +331,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (appletExecutionFrameContinues) {
                       if (digitOrLegacyVersionDecisionRemainderEnabled) {
-                        legacyJavaVersionCheckFrameContinues = !(PlatformTaskDispatcher.javaVersion == null);
+                        legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null);
                         if (legacyJavaVersionCheckFrameContinues) {
                           digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                         }
@@ -350,7 +350,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                               updateSuffixIndexOrVersionDigitOrTickIndex = PlatformTaskDispatcher.javaVersion.charAt(javaVersionDigitIndex);
                               majorVersionComparisonLeft = updateSuffixIndexOrVersionDigitOrTickIndex;
                               majorVersionComparisonRight = 48;
-                              majorVersionComparisonFrameContinues = !(clientControlSnapshot != 0);
+                              majorVersionComparisonFrameContinues = (clientControlSnapshot == 0);
                               if (majorVersionComparisonFrameContinues) {
                                 if (majorVersionComparisonLeft >= majorVersionComparisonRight &&
                                   updateSuffixIndexOrVersionDigitOrTickIndex <= 57) {
@@ -399,7 +399,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       boolean stopDeadlineOrTickDecisionFrameContinues = true;
                       if (0L != MenuScreen.appletStopDeadlineMillis) {
                         stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
-                        stopDeadlineOrTickDecisionFrameContinues = !(clientControlSnapshot != 0);
+                        stopDeadlineOrTickDecisionFrameContinues = (clientControlSnapshot == 0);
                         if (stopDeadlineOrTickDecisionFrameContinues) {
                           if (stopDeadlineComparisonOrTickIndex >= 0) {
                             break;
@@ -517,7 +517,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (selectedContainerOrFailure)).add((java.awt.Component) ((Object) MessageDialog.gameCanvas));
           MessageDialog.gameCanvas.setSize(AudioService.canvasWidth, ClientRenderingState.canvasHeight);
           MessageDialog.gameCanvas.setVisible(visible);
-          boolean positionRebuiltCanvasWithinFrame = !(SharedBufferPools.fullscreenFrame != selectedContainerOrFailure);
+          boolean positionRebuiltCanvasWithinFrame = (SharedBufferPools.fullscreenFrame == selectedContainerOrFailure);
           if (!positionRebuiltCanvasWithinFrame) {
             MessageDialog.gameCanvas.setLocation(PrefixCodeDecoder.canvasOffsetX, ButtonWidget.canvasOffsetY);
             positionRebuiltCanvasWithinFrame = (clientControlSnapshot != 0);

@@ -479,7 +479,7 @@ final class CachedArchiveSource extends ArchiveSource {
                       phaseComplete = 0;
                       break;
                     }
-                    if (!(phaseComplete == 0)) {
+                    if ((phaseComplete != 0)) {
                       this.backgroundGroupIndex = 0;
                       this.verifyDiskCachePending = false;
                     }

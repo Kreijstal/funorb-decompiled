@@ -656,7 +656,7 @@ class MessageDialog extends ContentTransitionDialog implements ButtonActivationL
           if (methodGuard != 19810) {
             return;
           }
-          retryButtonActionValue = !(256 != errorKind);
+          retryButtonActionValue = (256 == errorKind);
           this.retryButtonAction = retryButtonActionValue;
           this.errorContentInstallationStarted = true;
           this.dialogStatusPanel.setStripeColors(4210752, 8405024, (byte) -103);

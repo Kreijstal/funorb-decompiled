@@ -74,7 +74,7 @@ class TextInputRenderer extends TextWidgetRenderer {
           if (methodGuard < 6) {
             TextInputRenderer.releaseStaticReferences((byte) -125);
           }
-          booleanValueBeforeReturn = !(1 != packet.readBits((byte) -17, 1));
+          booleanValueBeforeReturn = (1 == packet.readBits((byte) -17, 1));
           return booleanValueBeforeReturn;
         } catch (java.lang.RuntimeException readFailure) {
           caughtReadFailure = readFailure;

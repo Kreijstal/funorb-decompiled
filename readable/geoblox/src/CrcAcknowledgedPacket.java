@@ -22,7 +22,7 @@ final class CrcAcknowledgedPacket extends IntrusiveNode {
           if (methodGuard > -77) {
             canvasHasFocus = true;
           }
-          containsNameBeforeReturn = !(textToSearch.indexOf(accountNameThenWithoutUnderscores) == -1) || !(textToSearch.indexOf(reversedName) == -1);
+          containsNameBeforeReturn = (textToSearch.indexOf(accountNameThenWithoutUnderscores) != -1) || (textToSearch.indexOf(reversedName) != -1);
           return containsNameBeforeReturn;
         } catch (java.lang.RuntimeException comparisonFailure) {
           caughtComparisonFailure = comparisonFailure;

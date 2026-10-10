@@ -914,7 +914,7 @@ final class PcmSampleStream extends PcmStream {
                 this.sampleStepFixed = -this.sampleStepFixed;
                 remainingAfterInitialBounce = this.loopsRemaining - 1;
                 this.loopsRemaining = this.loopsRemaining - 1;
-                finiteLoopSkippingContinues = !(remainingAfterInitialBounce == 0);
+                finiteLoopSkippingContinues = (remainingAfterInitialBounce != 0);
               }
               if (finiteLoopSkippingContinues) {
                 do {
@@ -1211,7 +1211,7 @@ final class PcmSampleStream extends PcmStream {
                 this.sampleStepFixed = -this.sampleStepFixed;
                 remainingAfterInitialBounce = this.loopsRemaining - 1;
                 this.loopsRemaining = this.loopsRemaining - 1;
-                finiteLoopMixingContinues = !(remainingAfterInitialBounce == 0);
+                finiteLoopMixingContinues = (remainingAfterInitialBounce != 0);
               }
               if (finiteLoopMixingContinues) {
                 do {

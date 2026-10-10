@@ -457,7 +457,7 @@ final class ResourceArchive {
             decompressionFailureForContext = caughtUnpackFailure;
             decompressionFailureBeforeContext = decompressionFailureForContext;
             decompressionMessagePrefix = new StringBuilder();
-            keySuppliedForDiagnostic = !(decryptionKey == null);
+            keySuppliedForDiagnostic = (decryptionKey != null);
             throw InstrumentEnvelope.withFailureContext((Throwable) ((Object) decompressionFailureBeforeContext), ((StringBuilder) (Object) decompressionMessagePrefix).append(keySuppliedForDiagnostic).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(NameCharacterSupport.computePrefixCrc32(packedBytes, methodGuard + 95, packedBytes.length)).append(" ").append(NameCharacterSupport.computePrefixCrc32(packedBytes, methodGuard ^ 73, packedBytes.length - 2)).append(" ").append(this.index.groupCrc32[groupId]).append(" ").append(this.index.indexCrc32).toString());
           }
           if (this.discardPackedGroups) {

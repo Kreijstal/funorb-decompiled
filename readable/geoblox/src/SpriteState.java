@@ -664,7 +664,7 @@ abstract class SpriteState extends DualLinkNode {
                   leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
                   rightGreenQ16 = rightGreenQ16 + topY * rightGreenStepQ16;
                   topY = 0;
-                  triangleEdgeInitializationFrameContinues = !(controlFlagSnapshot == 0);
+                  triangleEdgeInitializationFrameContinues = (controlFlagSnapshot != 0);
                 }
               }
               if (triangleEdgeInitializationFrameContinues) {
@@ -736,7 +736,7 @@ abstract class SpriteState extends DualLinkNode {
                         rightRedQ16 = rightRedQ16 + topY * rightRedStepQ16;
                         leftBlueQ16 = leftBlueQ16 + leftBlueStepQ16 * topY;
                         topY = middleY;
-                        upperSegmentScanFrameContinues = !(controlFlagSnapshot == 0);
+                        upperSegmentScanFrameContinues = (controlFlagSnapshot != 0);
                       }}
                     if (upperSegmentScanFrameContinues) {
                       edgeSwapOrRowBaseOrLowerRowsThenLeftX = TriangleRasterState.rowBaseOffsets[topY];

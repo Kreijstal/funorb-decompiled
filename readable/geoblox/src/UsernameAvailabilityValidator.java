@@ -34,7 +34,7 @@ final class UsernameAvailabilityValidator extends TextInputValidator {
           if (methodGuard != 8) {
             cameraMeshVertexY = (int[]) null;
           }
-          containsPasswordOrReverseResult = !(usernameText.indexOf(passwordText) == -1) || !(usernameText.indexOf(reversedPasswordText) == -1);
+          containsPasswordOrReverseResult = (usernameText.indexOf(passwordText) != -1) || (usernameText.indexOf(reversedPasswordText) != -1);
           return containsPasswordOrReverseResult;
         } catch (java.lang.RuntimeException usernamePasswordComparisonFailure) {
           caughtComparisonFailure = usernamePasswordComparisonFailure;

@@ -426,7 +426,7 @@ final class CanvasResizeController {
           if (methodGuard <= 12) {
             pendingNavigationTarget = (String) null;
           }
-          hasEntryResult = !(SocketConnector.findSocialEntry((byte) -62, displayName) == null);
+          hasEntryResult = (SocketConnector.findSocialEntry((byte) -62, displayName) != null);
           return hasEntryResult;
         } catch (java.lang.RuntimeException lookupFailure) {
           caughtLookupFailure = lookupFailure;

@@ -52,7 +52,7 @@ final class LogoPreparationSupport {
         packet = LogoCompositor.sessionPacketBuffer;
         recordHeaderByte = packet.readUnsignedByte((byte) 34);
         StrongCacheReference.receivedTextRecordKind = recordHeaderByte & 127;
-        headerFlagSetSnapshot = !((headerFlagMask & recordHeaderByte) == 0);
+        headerFlagSetSnapshot = ((headerFlagMask & recordHeaderByte) != 0);
         ReceivedTextRecord.receivedRecordHeaderFlagSet = headerFlagSetSnapshot;
         ArchiveIndex.receivedRecordMetadataByte = packet.readUnsignedByte((byte) 34);
         DiskCacheWorker.receivedRecordLongId = packet.readLongBE(2901);

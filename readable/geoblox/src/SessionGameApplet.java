@@ -480,7 +480,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         } else {
           suppressLoginHandshakeSnapshot = false;
-          fullscreenActiveSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
+          fullscreenActiveSnapshot = (InstrumentPatch.activeFullscreenCanvas != null);
           discardedFullscreenUiResult = this.processAccountUiActions(suppressLoginHandshakeSnapshot, fullscreenActiveSnapshot, -1);
         }
         if (methodGuard < 104) {
@@ -770,7 +770,7 @@ abstract class SessionGameApplet extends GameApplet {
                               Bzip2DecoderState.closeSessionSocket((byte) -122);
                               return;
                             }
-                            useTextTemplate = !(packetOpcode != 12);
+                            useTextTemplate = (packetOpcode == 12);
                             receivedRecord = LogoPreparationSupport.readSessionTextRecord(useTextTemplate, 128);
                             Under13TermsPanel.retainReceivedTextRecordIfNew(receivedRecord, 0);
                           }

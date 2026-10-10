@@ -627,7 +627,7 @@ public final class Geoblox extends SessionGameApplet {
           InstrumentPatch.activeFullscreenCanvas.exitFullscreen(0, MenuScreen.platformTaskDispatcher);
           InstrumentPatch.activeFullscreenCanvas = null;
         }
-        fullscreenAvailableSnapshot = !(null == InstrumentPatch.activeFullscreenCanvas);
+        fullscreenAvailableSnapshot = (null != InstrumentPatch.activeFullscreenCanvas);
         this.updateSessionBootstrapAndInput(fullscreenAvailableSnapshot, 19660);
         if (AgeValidator.gameArchiveRequestPending) {
           archiveRequestGuardSnapshot = !(methodGuard);
@@ -659,7 +659,7 @@ public final class Geoblox extends SessionGameApplet {
               } else {
                 if (FadingDialog.beginSessionRetryAndCheckStageEleven((byte) 47) &&
                   !FullscreenSupport.fullscreenDialogActiveSnapshot) {
-                  fullscreenAvailableForUiSnapshot = !(InstrumentPatch.activeFullscreenCanvas == null);
+                  fullscreenAvailableForUiSnapshot = (InstrumentPatch.activeFullscreenCanvas != null);
                   uiServiceResultOrOverlayMode = UsernameAvailabilityQuery.processAccountUiActionsWithoutLogin(fullscreenAvailableForUiSnapshot, (SessionGameApplet) (this), false);
                   if (uiServiceResultOrOverlayMode != 2364824) {
                     if (uiServiceResultOrOverlayMode == 1 ||

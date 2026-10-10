@@ -243,7 +243,7 @@ final class EntityMotionSupport {
                   if (DelayedIncomingPacket.contactProbeOverlapsScratchSprite(true, boardAngleRadians, movingEntity)) {
                     contactedEntityId = SecondaryDeque.contactProbeRaster.pixels[PixelOverlapProbe.firstOverlapX + SecondaryDeque.contactProbeRaster.fullWidth * PixelOverlapProbe.firstOverlapY] - 1;
                     contactedEntity = RasterTargetSnapshot.entitiesById[contactedEntityId];
-                    movingEntityContactResolutionFrameContinues = !(BoardEntityState.attachedEntities == contactedEntity.entityQueue);
+                    movingEntityContactResolutionFrameContinues = (BoardEntityState.attachedEntities != contactedEntity.entityQueue);
                     if (movingEntityContactResolutionFrameContinues) {
                       sharedVelocityXOrCrossProduct = 0.5f * (contactedEntity.velocityX + movingEntity.velocityX);
                       sharedVelocityYOrDirectionScale = (contactedEntity.velocityY + movingEntity.velocityY) * 0.5f;

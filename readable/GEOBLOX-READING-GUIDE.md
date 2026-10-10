@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/14b6517305cd72901b772dd61f68960074d9f32d/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 264)
+## Current readability (pass 265)
 
 The export has 20,133 guarded names and 122,233 Java identifier edits, plus 11
 class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,22 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current direct Boolean alternatives (pass 264)
+## Current negated equality values (pass 265)
+
+106 negated equality values use the complementary operator directly in 48
+methods/26 files, including applet, gameplay, menu, music, login and helpers.
+For example, `(clientControlFlowGuard != 0)` states the same continuation value
+as the original negated equality. Both operand expressions, order, unboxing,
+boxing and overload choice remain. NaNs, signed zero and reference identities
+retain their original outcomes; ordering comparisons and unknown boxed negations
+remain untouched. All names remain unchanged.
+
+No plain block labels or large framed methods remain. Forty-one finer field
+purposes and long ordinary bodies remain to review. Independent AST/native
+certificates and exact reproduction/reversal pass; whole-game/browser/phone and
+heap/presented-FPS acceptance remain unverified.
+
+## Previous direct Boolean alternatives (pass 264)
 
 Twenty remainder tests use direct `else` work after independently proving the
 same primitive local was true before the original decision. Login, PCM, menu,

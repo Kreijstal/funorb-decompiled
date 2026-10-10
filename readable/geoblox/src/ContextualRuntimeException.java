@@ -29,7 +29,7 @@ final class ContextualRuntimeException extends RuntimeException {
             if (tooltipText != null) {
               tooltipAgeAdjustmentFrameContinues = !(tooltipText.equals(SettingsCookieSupport.currentTooltipText));
             } else {
-              tooltipAgeAdjustmentFrameContinues = !(null != SettingsCookieSupport.currentTooltipText);
+              tooltipAgeAdjustmentFrameContinues = (null == SettingsCookieSupport.currentTooltipText);
             }
             if (tooltipAgeAdjustmentFrameContinues) {
               if (!InstrumentPatch.tooltipSuppressed) {
