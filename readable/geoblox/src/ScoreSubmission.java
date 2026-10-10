@@ -79,12 +79,10 @@ final class ScoreSubmission extends IntrusiveNode {
               boolean sessionUrlSegmentSelectionFrameContinues = true;
               if (urlFile.regionMatches(prefixEnd, "/l=", 0, 3)) {
                 segmentEnd = urlFile.indexOf('/', prefixEnd + 1);
-                if (segmentEnd >= 0) {
-                  sessionUrlSegmentSelectionFrameContinues = !(languageId < 0);
-                  if (sessionUrlSegmentSelectionFrameContinues) {
-                    urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
-                    continue;
-                  }
+                if ((segmentEnd >= 0) &&
+                  (sessionUrlSegmentSelectionFrameContinues = !(languageId < 0))) {
+                  urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
+                  continue;
                 }
               }
               if (sessionUrlSegmentSelectionFrameContinues) {
@@ -95,12 +93,10 @@ final class ScoreSubmission extends IntrusiveNode {
                 if (sessionUrlSegmentSelectionFrameContinues) {
                   if (urlFile.regionMatches(prefixEnd, "/p=", 0, 3)) {
                     segmentEnd = urlFile.indexOf('/', 1 + prefixEnd);
-                    if (segmentEnd >= 0) {
-                      sessionUrlSegmentSelectionFrameContinues = (settingsValue != null);
-                      if (sessionUrlSegmentSelectionFrameContinues) {
-                        urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
-                        continue;
-                      }
+                    if ((segmentEnd >= 0) &&
+                      (sessionUrlSegmentSelectionFrameContinues = (settingsValue != null))) {
+                      urlFile = urlFile.substring(0, prefixEnd) + urlFile.substring(segmentEnd);
+                      continue;
                     }
                   }
                   if (sessionUrlSegmentSelectionFrameContinues) {

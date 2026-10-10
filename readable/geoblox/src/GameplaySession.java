@@ -610,13 +610,11 @@ final class GameplaySession {
             !this.matchBatchProcessedThisTick ||
             !this.preserveScoreOnTransition) &&
             this.canAdvanceSession(true)) {
-            if (0 == this.sessionPhase ||
-              this.sessionPhase == 5) {
-              sessionProgressionAndEndingFrameContinues = (this.sceneTransitionRequested);
-              if (sessionProgressionAndEndingFrameContinues) {
-                this.updateSceneTransition((byte) -80);
-                sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
-              }
+            if ((0 == this.sessionPhase ||
+              this.sessionPhase == 5) &&
+              (sessionProgressionAndEndingFrameContinues = (this.sceneTransitionRequested))) {
+              this.updateSceneTransition((byte) -80);
+              sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);
             }
             if (sessionProgressionAndEndingFrameContinues) {
               this.updateResultSequence(10);
@@ -1303,31 +1301,19 @@ final class GameplaySession {
               boolean jewelsAchievementEntryFrameContinues = true;
               boolean germsAchievementEntryFrameContinues = true;
               boolean sunAchievementEntryFrameContinues = true;
-              if (selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
-                clientControlFlowGuard != 0) {
-                sunAchievementEntryFrameContinues = (themeIndexThenId != 1 ||
-                  clientControlFlowGuard != 0);
-                if (sunAchievementEntryFrameContinues) {
-                  germsAchievementEntryFrameContinues = (themeIndexThenId != 3 ||
-                    clientControlFlowGuard != 0);
-                  if (germsAchievementEntryFrameContinues) {
-                    jewelsAchievementEntryFrameContinues = (themeIndexThenId != 0 ||
-                      clientControlFlowGuard != 0);
-                    if (jewelsAchievementEntryFrameContinues) {
-                      spaceAchievementEntryFrameContinues = (themeIndexThenId != 6);
-                      if (spaceAchievementEntryFrameContinues) {
-                        sportsAchievementEntryFrameContinues = (5 != themeIndexThenId ||
-                          clientControlFlowGuard != 0);
-                        if (sportsAchievementEntryFrameContinues) {
-                          fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId);
-                          if (fallbackSunAchievementEntryFrameContinues) {
-                            sweetsAchievementEntryFrameContinues = (clientControlFlowGuard != 0);
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+              if ((selectedThemeComplementOrThemeSentinel != themeEntryComplementOrThemeId ||
+                clientControlFlowGuard != 0) &&
+                (sunAchievementEntryFrameContinues = (themeIndexThenId != 1 ||
+                clientControlFlowGuard != 0)) &&
+                (germsAchievementEntryFrameContinues = (themeIndexThenId != 3 ||
+                clientControlFlowGuard != 0)) &&
+                (jewelsAchievementEntryFrameContinues = (themeIndexThenId != 0 ||
+                clientControlFlowGuard != 0)) &&
+                (spaceAchievementEntryFrameContinues = (themeIndexThenId != 6)) &&
+                (sportsAchievementEntryFrameContinues = (5 != themeIndexThenId ||
+                clientControlFlowGuard != 0)) &&
+                (fallbackSunAchievementEntryFrameContinues = (2 == themeIndexThenId))) {
+                sweetsAchievementEntryFrameContinues = (clientControlFlowGuard != 0);
               }
               if ((fallbackSunAchievementEntryFrameContinues) &&
                 (sweetsAchievementEntryFrameContinues) &&

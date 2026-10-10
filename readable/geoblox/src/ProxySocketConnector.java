@@ -287,37 +287,35 @@ final class ProxySocketConnector extends SocketConnector {
           unusedGuardRemainder = -22 % ((3 - methodGuard) / 53);
           statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
           if (statusLineOrChallengeHeaderOrScheme != null) {
-            if (!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
-              !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) {
-              connectResponseAcceptanceFrameContinues = (statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") ||
-                statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407"));
-              if (connectResponseAcceptanceFrameContinues) {
-                scannedHeaderCount = 0;
-                authenticateHeaderPrefix = "proxy-authenticate: ";
-                statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
-                statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
-                statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
-                while (statusLineOrChallengeHeaderOrScheme != null) {
-                  if (scannedHeaderCount < 50) {
-                    if (!statusLineOrChallengeHeaderOrScheme.toLowerCase().startsWith(authenticateHeaderPrefix)) {
-                      statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
-                      scannedHeaderCount++;
-                      continue;
-                    }
-                    trimmedAuthenticationChallenge = statusLineOrChallengeHeaderOrScheme.substring(authenticateHeaderPrefix.length()).trim();
-                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
-                    authenticationSchemeSeparator = trimmedAuthenticationChallenge.indexOf(' ');
-                    if (authenticationSchemeSeparator != -1) {
-                      statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge.substring(0, authenticationSchemeSeparator);
-                    }
-                    throw new ProxyAuthenticationRequiredException(statusLineOrChallengeHeaderOrScheme);
+            if ((!statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 200") &&
+              !statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 200")) &&
+              (connectResponseAcceptanceFrameContinues = (statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.0 407") ||
+              statusLineOrChallengeHeaderOrScheme.startsWith("HTTP/1.1 407")))) {
+              scannedHeaderCount = 0;
+              authenticateHeaderPrefix = "proxy-authenticate: ";
+              statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
+              statusLineOrChallengeHeaderOrScheme = authenticateHeaderPrefix;
+              statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
+              while (statusLineOrChallengeHeaderOrScheme != null) {
+                if (scannedHeaderCount < 50) {
+                  if (!statusLineOrChallengeHeaderOrScheme.toLowerCase().startsWith(authenticateHeaderPrefix)) {
+                    statusLineOrChallengeHeaderOrScheme = proxyResponseReader.readLine();
+                    scannedHeaderCount++;
+                    continue;
                   }
-                  break;
+                  trimmedAuthenticationChallenge = statusLineOrChallengeHeaderOrScheme.substring(authenticateHeaderPrefix.length()).trim();
+                  statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                  statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                  statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge;
+                  authenticationSchemeSeparator = trimmedAuthenticationChallenge.indexOf(' ');
+                  if (authenticationSchemeSeparator != -1) {
+                    statusLineOrChallengeHeaderOrScheme = trimmedAuthenticationChallenge.substring(0, authenticationSchemeSeparator);
+                  }
+                  throw new ProxyAuthenticationRequiredException(statusLineOrChallengeHeaderOrScheme);
                 }
-                throw new ProxyAuthenticationRequiredException("");
+                break;
               }
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (connectResponseAcceptanceFrameContinues) {
               acceptedSocketBeforeReturn = proxySocket;

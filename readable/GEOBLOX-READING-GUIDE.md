@@ -20,14 +20,14 @@ The applet and session share work with static helpers. A semantic class name des
 
 | Task | Source entry point |
 | --- | --- |
-| Scene preparation, completion and theme achievements | [GameplaySession.updateSceneTransition](geoblox/src/GameplaySession.java#L1242) |
-| Select and request the next theme | [GameplaySession.prepareNextTheme](geoblox/src/GameplaySession.java#L1771) |
-| Advance tutorial phases and steps | [GameplaySession.advanceTutorialStep](geoblox/src/GameplaySession.java#L1197) |
+| Scene preparation, completion and theme achievements | [GameplaySession.updateSceneTransition](geoblox/src/GameplaySession.java#L1240) |
+| Select and request the next theme | [GameplaySession.prepareNextTheme](geoblox/src/GameplaySession.java#L1757) |
+| Advance tutorial phases and steps | [GameplaySession.advanceTutorialStep](geoblox/src/GameplaySession.java#L1195) |
 | Draw the tutorial prompt and its controls | [GameplaySession.renderTutorialPrompt](geoblox/src/GameplaySession.java#L69) |
-| Start the ending sequence | [GameplaySession.startSessionEndSequence](geoblox/src/GameplaySession.java#L1166) |
-| Advance result expansion, countdown and completion | [GameplaySession.updateResultSequence](geoblox/src/GameplaySession.java#L1463) |
-| Add points and update score-dependent state | [GameplaySession.addScore](geoblox/src/GameplaySession.java#L1103) |
-| Submit an eligible positive score | [GameplaySession.submitScore](geoblox/src/GameplaySession.java#L1620) |
+| Start the ending sequence | [GameplaySession.startSessionEndSequence](geoblox/src/GameplaySession.java#L1164) |
+| Advance result expansion, countdown and completion | [GameplaySession.updateResultSequence](geoblox/src/GameplaySession.java#L1449) |
+| Add points and update score-dependent state | [GameplaySession.addScore](geoblox/src/GameplaySession.java#L1101) |
+| Submit an eligible positive score | [GameplaySession.submitScore](geoblox/src/GameplaySession.java#L1606) |
 | Process sorted/deduplicated match candidates | [MatchScoringSupport.processMatchCandidates](geoblox/src/MatchScoringSupport.java#L39) |
 | Test whether entity queues have settled | [EntityContactSupport.areEntityQueuesSettled](geoblox/src/EntityContactSupport.java#L29) |
 | Link entities through ownership-mask contacts | [EntityContactSupport.linkEntityAtMaskContacts](geoblox/src/EntityContactSupport.java#L47) |
@@ -69,6 +69,6 @@ env -u JAVA_TOOL_OPTIONS node readable/reproduce-geoblox.mjs --check
 
 Both commands cover the current Java export and this guide. No generated Java belongs in Deko or the cloner. Read [SYMBOLS.md](geoblox/SYMBOLS.md) for the symbol index and [mapping.json](geoblox/mapping.json) for original spellings, full JVM descriptors, declaration ordinals and UTF-16 edit positions. Reverse the dictionary with Deko’s `readable/tools/restore-original.mjs`; do not append opaque spellings to readable names.
 
-Current raw source: `bad2a58aca81c3a4b55bfc515ec333ff25f11e1a`; tree SHA-256: `532f490805700d0224ef545b47ce3940d8f730d5561134ed62bb2233ebf9918b`.
+Current raw source: `5655c1ef8a4c572da920e241af2b2daeaadc8b6a`; tree SHA-256: `81eb635934077ec3fc5ff1d8a49e09007405e189d218e6453ae4ab7230a99411`.
 
-Decompiler source: `d1dffcee5f4aa551e76bdac6d98bb42da82349d3`. The SHA-256 of its tracked Git tar is `940df31b58deca6107af7ef21724766b276a5ab73d4738adf9101c1d5013d831`; this is the decompiler source hash, not a game JAR hash.
+Decompiler source: `a029e5af7446a1e1d4190e33b5e3bd35245869b3`. The SHA-256 of its tracked Git tar is `ae472b9a682af8c8f10f569bf2a115e7a5c4c2b377ebc8fa331ea1fe0ec7c428`; this is the decompiler source hash, not a game JAR hash.

@@ -115,13 +115,11 @@ final class GameScreen extends MenuScreen {
                       !(265 < PcmResampler.pointerYSnapshot) ||
                       !(PcmResampler.pointerYSnapshot < 299))) {
                       if (InstrumentPatch.activeFullscreenCanvas == null) {
-                        if (0 != this.fullscreenDialogButtonIndex) {
-                          menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 260);
-                          if ((menuKeyDispatchFrameContinues) &&
-                            (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 380)) &&
-                            (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 274))) {
-                            menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 309);
-                          }
+                        if ((0 != this.fullscreenDialogButtonIndex) &&
+                          (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 260)) &&
+                          (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 380)) &&
+                          (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 274))) {
+                          menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 309);
                         }
                         if (menuKeyDispatchFrameContinues) {
                           this.pointerInteractionActive = true;
@@ -142,14 +140,12 @@ final class GameScreen extends MenuScreen {
                           menuKeyDispatchFrameContinues = (clientControlFlowGuard != 0);
                         }
                         if (menuKeyDispatchFrameContinues) {
-                          if (this.fullscreenDialogButtonIndex != 0) {
-                            menuKeyDispatchFrameContinues = !(this.fullscreenDialogButtonIndex >= 0);
-                            if ((menuKeyDispatchFrameContinues) &&
-                              (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 170)) &&
-                              (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 290)) &&
-                              (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 327))) {
-                              menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 362);
-                            }
+                          if ((this.fullscreenDialogButtonIndex != 0) &&
+                            (menuKeyDispatchFrameContinues = !(this.fullscreenDialogButtonIndex >= 0)) &&
+                            (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot <= 170)) &&
+                            (menuKeyDispatchFrameContinues = !(PrefixCodeDecoder.pointerXSnapshot >= 290)) &&
+                            (menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot <= 327))) {
+                            menuKeyDispatchFrameContinues = !(PcmResampler.pointerYSnapshot >= 362);
                           }
                           if (menuKeyDispatchFrameContinues) {
                             this.pointerInteractionActive = true;
@@ -824,21 +820,19 @@ final class GameScreen extends MenuScreen {
                     }
                   }
                   if (nonMainMenuHitTestFrameContinues) {
-                    if (this.screenId == 4) {
-                      nonMainMenuHitTestFrameContinues = !(pointerX <= 171);
+                    if ((this.screenId == 4) &&
+                      (nonMainMenuHitTestFrameContinues = !(pointerX <= 171)) &&
+                      (nonMainMenuHitTestFrameContinues = !(pointerX >= 469))) {
+                      if (265 < pointerY &&
+                        pointerY < 301) {
+                        loginUpperItemResult = 0;
+                        return loginUpperItemResult;
+                      }
+                      nonMainMenuHitTestFrameContinues = !(pointerY <= 395);
                       if ((nonMainMenuHitTestFrameContinues) &&
-                        (nonMainMenuHitTestFrameContinues = !(pointerX >= 469))) {
-                        if (265 < pointerY &&
-                          pointerY < 301) {
-                          loginUpperItemResult = 0;
-                          return loginUpperItemResult;
-                        }
-                        nonMainMenuHitTestFrameContinues = !(pointerY <= 395);
-                        if ((nonMainMenuHitTestFrameContinues) &&
-                          (nonMainMenuHitTestFrameContinues = !(431 <= pointerY))) {
-                          loginLowerItemResult = 1;
-                          return loginLowerItemResult;
-                        }
+                        (nonMainMenuHitTestFrameContinues = !(431 <= pointerY))) {
+                        loginLowerItemResult = 1;
+                        return loginLowerItemResult;
                       }
                     }
                     if ((nonMainMenuHitTestFrameContinues) &&
@@ -1129,19 +1123,17 @@ final class GameScreen extends MenuScreen {
             boolean tutorialThemeAnimationFrameContinues = true;
             if (this.tutorialPageIndex != 3) {
               if (4 == this.tutorialPageIndex) {
-                if (49 > (this.animationTick & 255)) {
-                  tutorialThemeAnimationFrameContinues = ((15 & this.animationTick) == 0);
+                if ((49 > (this.animationTick & 255)) &&
+                  (tutorialThemeAnimationFrameContinues = ((15 & this.animationTick) == 0))) {
+                  this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
+                  if (this.tutorialEffectFrame >= 4) {
+                    this.tutorialEffectFrame = 0;
+                  }
+                  this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
+                  tutorialThemeAnimationFrameContinues = !(4 > this.tutorialStarFrameOrColorIndex);
                   if (tutorialThemeAnimationFrameContinues) {
-                    this.tutorialEffectFrame = this.tutorialEffectFrame + 1;
-                    if (this.tutorialEffectFrame >= 4) {
-                      this.tutorialEffectFrame = 0;
-                    }
-                    this.tutorialStarFrameOrColorIndex = this.tutorialStarFrameOrColorIndex + 1;
-                    tutorialThemeAnimationFrameContinues = !(4 > this.tutorialStarFrameOrColorIndex);
-                    if (tutorialThemeAnimationFrameContinues) {
-                      this.tutorialStarFrameOrColorIndex = 0;
-                      tutorialThemeAnimationFrameContinues = (clientControlFlowGuard != 0);
-                    }
+                    this.tutorialStarFrameOrColorIndex = 0;
+                    tutorialThemeAnimationFrameContinues = (clientControlFlowGuard != 0);
                   }
                 }
                 if (tutorialThemeAnimationFrameContinues) {
@@ -2433,12 +2425,10 @@ final class GameScreen extends MenuScreen {
             this.screenId != 4) {
             boolean directionalMenuSelectionFrameContinues = true;
             if (SessionTextHistorySupport.currentKeyboardEventCode == 96) {
-              if (this.fullscreenDialogActive) {
-                directionalMenuSelectionFrameContinues = (this.fullscreenDialogButtonIndex != 0);
-                if (directionalMenuSelectionFrameContinues) {
-                  this.fullscreenDialogButtonIndex = 0;
-                  directionalMenuSelectionFrameContinues = (clientControlFlowGuard != 0);
-                }
+              if ((this.fullscreenDialogActive) &&
+                (directionalMenuSelectionFrameContinues = (this.fullscreenDialogButtonIndex != 0))) {
+                this.fullscreenDialogButtonIndex = 0;
+                directionalMenuSelectionFrameContinues = (clientControlFlowGuard != 0);
               }
               if (directionalMenuSelectionFrameContinues) {
                 if (0 >= this.selectedItemIndex) {

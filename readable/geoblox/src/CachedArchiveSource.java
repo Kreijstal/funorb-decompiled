@@ -529,25 +529,23 @@ final class CachedArchiveSource extends ArchiveSource {
                   this.getPackedGroup(25, 41);
                 }
                 backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
-                if (backgroundLoadingAndSweepFrameContinues) {
-                  requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
-                  if (requestSweepDueCheckFrameContinues) {
-                    cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-                    while (cleanupRequest != null) {
-                      if (!cleanupRequest.pending) {
-                        if (cleanupRequest.seenByCleanup) {
-                          if (!cleanupRequest.priority) {
-                            throw new RuntimeException();
-                          }
-                          cleanupRequest.unlinkNode(false);
-                        } else {
-                          cleanupRequest.seenByCleanup = true;
+                if ((backgroundLoadingAndSweepFrameContinues) &&
+                  (requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis))) {
+                  cleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+                  while (cleanupRequest != null) {
+                    if (!cleanupRequest.pending) {
+                      if (cleanupRequest.seenByCleanup) {
+                        if (!cleanupRequest.priority) {
+                          throw new RuntimeException();
                         }
+                        cleanupRequest.unlinkNode(false);
+                      } else {
+                        cleanupRequest.seenByCleanup = true;
                       }
-                      cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                     }
-                    completedRequestSweepFrameContinues = false;
+                    cleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
                   }
+                  completedRequestSweepFrameContinues = false;
                 }
               }
             }
@@ -566,23 +564,21 @@ final class CachedArchiveSource extends ArchiveSource {
             this.getPackedGroup(25, 41);
           }
           backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
-          if (backgroundLoadingAndSweepFrameContinues) {
-            requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
-            if (requestSweepDueCheckFrameContinues) {
-              completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
-              while (completedCleanupRequest != null) {
-                if (!completedCleanupRequest.pending) {
-                  if (completedCleanupRequest.seenByCleanup) {
-                    if (!completedCleanupRequest.priority) {
-                      throw new RuntimeException();
-                    }
-                    completedCleanupRequest.unlinkNode(false);
-                  } else {
-                    completedCleanupRequest.seenByCleanup = true;
+          if ((backgroundLoadingAndSweepFrameContinues) &&
+            (requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis))) {
+            completedCleanupRequest = (ArchiveRequest) (this.groupRequests.firstForIteration((byte) 125));
+            while (completedCleanupRequest != null) {
+              if (!completedCleanupRequest.pending) {
+                if (completedCleanupRequest.seenByCleanup) {
+                  if (!completedCleanupRequest.priority) {
+                    throw new RuntimeException();
                   }
+                  completedCleanupRequest.unlinkNode(false);
+                } else {
+                  completedCleanupRequest.seenByCleanup = true;
                 }
-                completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
               }
+              completedCleanupRequest = (ArchiveRequest) (this.groupRequests.nextForIteration(74));
             }
           }
         }

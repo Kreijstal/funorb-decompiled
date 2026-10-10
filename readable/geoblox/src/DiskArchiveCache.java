@@ -273,14 +273,12 @@ final class DiskArchiveCache {
                         nextSectorNumber = (TextInputWidget.diskSectorBuffer[8] & 255) + ((255 & TextInputWidget.diskSectorBuffer[6]) << 16) + (65280 & TextInputWidget.diskSectorBuffer[7] << 8);
                         headerChunkNumber = (TextInputWidget.diskSectorBuffer[4] << 8 & 65280) + (255 & TextInputWidget.diskSectorBuffer[5]);
                       }
-                      if (headerEntryIdOrPayloadLength == entryId &&
+                      if ((headerEntryIdOrPayloadLength == entryId &&
                         chunkNumber == headerChunkNumber &&
-                        headerArchiveId == this.archiveId) {
-                        existingSectorHeaderValidationFrameContinues = (!(nextSectorNumber >= 0) ||
-                          !((this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber));
-                        if (existingSectorHeaderValidationFrameContinues) {
-                          return false;
-                        }
+                        headerArchiveId == this.archiveId) &&
+                        (existingSectorHeaderValidationFrameContinues = (!(nextSectorNumber >= 0) ||
+                        !((this.dataFile.length((byte) 46) / 520L) >= (long)nextSectorNumber)))) {
+                        return false;
                       }
                       if (existingSectorHeaderValidationFrameContinues) {
                         return false;

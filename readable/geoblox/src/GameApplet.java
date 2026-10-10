@@ -326,12 +326,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                 }
               }
-              if ((appletExecutionFrameContinues) &&
-                (digitOrLegacyVersionDecisionRemainderEnabled)) {
-                legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null);
-                if (legacyJavaVersionCheckFrameContinues) {
-                  digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
-                }
+              if (((appletExecutionFrameContinues) && (digitOrLegacyVersionDecisionRemainderEnabled)) &&
+                (legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null))) {
+                digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
               }
               if ((appletExecutionFrameContinues) &&
                 (legacyJavaVersionCheckFrameContinues) &&
