@@ -64,43 +64,41 @@ class ff implements dh, cc {
         int var12Lifetime1;
         var13 = Geoblox.field_C;
         try {
-          {
-            boolean decompiledFrameRemainder0 = true;
-            uh.a(param0 + param2.field_m, param2.field_v + param7, param3 - 14045, param2.field_m + (param0 + param2.field_h), param2.field_r + (param7 + param2.field_v));
-            var9_int = this.a(param2, param3 - 1);
-            var10 = this.b(289769985, param2);
-            if (!this.field_q) {
-              var12 = this.field_i;
-              if (var12 != 0) {
-                if (var12 != 2) {
-                  if (var12 != 3 &&
-                    var12 != 1) {
-                  }
-                  var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
-                } else {
-                  var11 = var10 - this.field_n.field_q;
+          boolean decompiledFrameRemainder0 = true;
+          uh.a(param0 + param2.field_m, param2.field_v + param7, param3 - 14045, param2.field_m + (param0 + param2.field_h), param2.field_r + (param7 + param2.field_v));
+          var9_int = this.a(param2, param3 - 1);
+          var10 = this.b(289769985, param2);
+          if (!this.field_q) {
+            var12 = this.field_i;
+            if (var12 != 0) {
+              if (var12 != 2) {
+                if (var12 != 3 &&
+                  var12 != 1) {
                 }
+                var11 = (-this.field_n.field_o + (var10 - this.field_n.field_q) >> 1) + this.field_n.field_o;
               } else {
-                var11 = this.field_n.field_o;
-              }
-              var12Lifetime1 = this.field_g;
-              if (var12Lifetime1 != 0 &&
-                var12Lifetime1 != 3) {
-                if (var12Lifetime1 == 1) {
-                  this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
-                } else {
-                  if ((var12Lifetime1 == 2)) {
-                    this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
-                  }
-                }
-                decompiledFrameRemainder0 = false;
-              }
-              else {
-                this.field_n.a(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+                var11 = var10 - this.field_n.field_q;
               }
             } else {
-              this.field_n.a(this.c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, this.field_g, this.field_i, this.field_f);
+              var11 = this.field_n.field_o;
             }
+            var12Lifetime1 = this.field_g;
+            if (var12Lifetime1 != 0 &&
+              var12Lifetime1 != 3) {
+              if (var12Lifetime1 == 1) {
+                this.field_n.b(this.c(125, param2), this.a(param2, param7, 11875, param6) + (var9_int >> 1), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+              } else {
+                if ((var12Lifetime1 == 2)) {
+                  this.field_n.c(this.c(112, param2), var9_int + this.a(param2, param7, param3 + 11875, param6), var11 + this.b(param2, param0, 1674, param4), param5, param1);
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              this.field_n.a(this.c(121, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4) + var11, param5, param1);
+            }
+          } else {
+            this.field_n.a(this.c(113, param2), this.a(param2, param7, 11875, param6), this.b(param2, param0, 1674, param4), var9_int, var10, param5, param1, this.field_g, this.field_i, this.field_f);
           }
           if (param3 != 0) {
             this.field_e = -98;

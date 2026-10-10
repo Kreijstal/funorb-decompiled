@@ -131,36 +131,34 @@ final class sk {
               this.field_f = this.field_f + (long)var9_int;
               param2 = param2 + var9_int;
             }
-            {
-              boolean decompiledFrameRemainder0 = true;
-              boolean decompiledFrameCompleted0 = true;
-              if (this.field_h.length < param1) {
-                this.field_a.a(this.field_f, true);
-                this.field_b = this.field_f;
-                while (param1 > 0) {
-                  var9_intLifetime1 = this.field_a.a(param1, param0, param2, false);
-                  if (-1 == var9_intLifetime1) {
-                    decompiledFrameCompleted0 = false;
-                    break;
-                  }
-                  this.field_f = this.field_f + (long)var9_intLifetime1;
-                  this.field_b = this.field_b + (long)var9_intLifetime1;
-                  param1 = param1 - var9_intLifetime1;
-                  param2 = param2 + var9_intLifetime1;
+            boolean decompiledFrameRemainder0 = true;
+            boolean decompiledFrameCompleted0 = true;
+            if (this.field_h.length < param1) {
+              this.field_a.a(this.field_f, true);
+              this.field_b = this.field_f;
+              while (param1 > 0) {
+                var9_intLifetime1 = this.field_a.a(param1, param0, param2, false);
+                if (-1 == var9_intLifetime1) {
+                  decompiledFrameCompleted0 = false;
+                  break;
                 }
-                decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+                this.field_f = this.field_f + (long)var9_intLifetime1;
+                this.field_b = this.field_b + (long)var9_intLifetime1;
+                param1 = param1 - var9_intLifetime1;
+                param2 = param2 + var9_intLifetime1;
               }
-              if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (param1 > 0)) {
-                this.a(true);
-                var9_intLifetime1Lifetime1 = param1;
-                if (this.field_i < var9_intLifetime1Lifetime1) {
-                  var9_intLifetime1Lifetime1 = this.field_i;
-                }
-                sf.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
-                param1 = param1 - var9_intLifetime1Lifetime1;
-                param2 = param2 + var9_intLifetime1Lifetime1;
-                this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
+              decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+            }
+            if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0) && (param1 > 0)) {
+              this.a(true);
+              var9_intLifetime1Lifetime1 = param1;
+              if (this.field_i < var9_intLifetime1Lifetime1) {
+                var9_intLifetime1Lifetime1 = this.field_i;
               }
+              sf.a(this.field_h, 0, param0, param2, var9_intLifetime1Lifetime1);
+              param1 = param1 - var9_intLifetime1Lifetime1;
+              param2 = param2 + var9_intLifetime1Lifetime1;
+              this.field_f = this.field_f + (long)var9_intLifetime1Lifetime1;
             }
             if (-1L != this.field_c) {
               if (this.field_c > this.field_f) {

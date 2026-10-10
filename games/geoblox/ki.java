@@ -42,20 +42,18 @@ final class ki {
           p.field_o[dupTemp$0] = p.field_o[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; oj.field_b > var3; var3++) {
-            {
-              boolean decompiledFrameRemainder0 = true;
-              if (param0.field_f == n.field_k[var3].field_f) {
-                var4 = n.field_k[var3].c(124);
-                if (p.field_o[var4] > pc.field_v) {
-                  p.field_o[var4] = p.field_o[var4] - 1;
-                  decompiledFrameRemainder0 = false;
-                }
+            boolean decompiledFrameRemainder0 = true;
+            if (param0.field_f == n.field_k[var3].field_f) {
+              var4 = n.field_k[var3].c(124);
+              if (p.field_o[var4] > pc.field_v) {
+                p.field_o[var4] = p.field_o[var4] - 1;
+                decompiledFrameRemainder0 = false;
               }
-              if (decompiledFrameRemainder0) {
-                incrementValue$2 = var2_intLifetime2;
-                var2_intLifetime2++;
-                n.field_k[incrementValue$2] = n.field_k[var3];
-              }
+            }
+            if (decompiledFrameRemainder0) {
+              incrementValue$2 = var2_intLifetime2;
+              var2_intLifetime2++;
+              n.field_k[incrementValue$2] = n.field_k[var3];
             }
           }
           oj.field_b = var2_intLifetime2;

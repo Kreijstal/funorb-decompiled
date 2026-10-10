@@ -163,31 +163,29 @@ final class kk extends ji {
                     var9 = this.field_j.a((byte) -61);
                     var10 = var8 & 127;
                     stackIn_49_0 = ((128 & var8) == 0) ? 0 : 1;
-                    {
-                      boolean decompiledFrameRemainder0 = true;
-                      boolean decompiledFrameCompleted0 = true;
-                      var11 = stackIn_49_0;
-                      var12 = (long)var7 + ((long)var6 << 32);
-                      var14 = null;
-                      if (var11 != 0) {
-                        var14_ref = (sd) (this.field_c.c((byte) 121));
-                        while (var14_ref != null) {
-                          if (var12 == var14_ref.field_i) {
-                            decompiledFrameCompleted0 = false;
-                            break;
-                          }
-                          var14_ref = (sd) (this.field_c.a(-30));
+                    boolean decompiledFrameRemainder0 = true;
+                    boolean decompiledFrameCompleted0 = true;
+                    var11 = stackIn_49_0;
+                    var12 = (long)var7 + ((long)var6 << 32);
+                    var14 = null;
+                    if (var11 != 0) {
+                      var14_ref = (sd) (this.field_c.c((byte) 121));
+                      while (var14_ref != null) {
+                        if (var12 == var14_ref.field_i) {
+                          decompiledFrameCompleted0 = false;
+                          break;
                         }
-                        decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+                        var14_ref = (sd) (this.field_c.a(-30));
                       }
-                      if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0)) {
-                        var14_ref = (sd) (this.field_e.c((byte) 121));
-                        while (var14_ref != null) {
-                          if (~var12 == ~var14_ref.field_i) {
-                            break;
-                          }
-                          var14_ref = (sd) (this.field_e.a(72));
+                      decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
+                    }
+                    if ((decompiledFrameRemainder0) && (decompiledFrameCompleted0)) {
+                      var14_ref = (sd) (this.field_e.c((byte) 121));
+                      while (var14_ref != null) {
+                        if (~var12 == ~var14_ref.field_i) {
+                          break;
                         }
+                        var14_ref = (sd) (this.field_e.a(72));
                       }
                     }
                     if (var14_ref == null) {

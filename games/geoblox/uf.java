@@ -304,24 +304,22 @@ final class uf implements Runnable {
               continue;
             }
             try {
-              {
-                boolean decompiledFrameRemainder0 = true;
-                if (var7.field_x != 2) {
-                  if (3 == var7.field_x) {
-                    var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
-                    decompiledRegionSelector1 = 1;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
-                    var7.field_u = false;
-                  }
-                } else {
-                  var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
+              boolean decompiledFrameRemainder0 = true;
+              if (var7.field_x != 2) {
+                if (3 == var7.field_x) {
+                  var7.field_y = var7.field_w.a((int)var7.field_i, (byte) -76);
+                  decompiledRegionSelector1 = 1;
+                  decompiledFrameRemainder0 = false;
+                }
+                else {
                   var7.field_u = false;
                 }
-                if (decompiledFrameRemainder0) {
-                  decompiledRegionSelector1 = 0;
-                }
+              } else {
+                var7.field_w.a(var7.field_y, (byte) -53, (int)var7.field_i, var7.field_y.length);
+                var7.field_u = false;
+              }
+              if (decompiledFrameRemainder0) {
+                decompiledRegionSelector1 = 0;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

@@ -51,53 +51,51 @@ final class pf extends ee implements ga, pl {
         int[] var11 = null;
         var8 = Geoblox.field_C;
         try {
-          {
-            boolean decompiledFrameRemainder0 = true;
-            var9 = eh.field_d;
-            var2 = var9.c((byte) 34);
-            var3 = var9.c((byte) 34);
-            if (0 == var2) {
-              var4_ref_ea = (ea) (ea.field_g.g(0));
-              if (var4_ref_ea == null) {
+          boolean decompiledFrameRemainder0 = true;
+          var9 = eh.field_d;
+          var2 = var9.c((byte) 34);
+          var3 = var9.c((byte) 34);
+          if (0 == var2) {
+            var4_ref_ea = (ea) (ea.field_g.g(0));
+            if (var4_ref_ea == null) {
+              jl.a((byte) -116);
+              return;
+            }
+            var5_int = -var9.field_f + p.field_k;
+            var11 = var4_ref_ea.field_h;
+            var10 = var11;
+            var6 = var10;
+            if (var5_int > var11.length << 2) {
+              var5_int = var11.length << 2;
+            }
+            for (var7 = 0; var5_int > var7; var7++) {
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.c((byte) 34) << cd.a(var7 << 8, 768));
+            }
+            var4_ref_ea.a(false);
+          } else {
+            if (var2 == 1) {
+              var4 = var9.h(76);
+              var5 = (se) (sj.field_g.g(0));
+              while (var5 != null) {
+                if (var5.field_g != var3 ||
+                  var5.field_j != var4) {
+                  var5 = (se) (sj.field_g.d(1));
+                  continue;
+                }
+                break;
+              }
+              if (var5 != null) {
+                var5.a(false);
+                decompiledFrameRemainder0 = false;
+              }
+              else {
                 jl.a((byte) -116);
                 return;
               }
-              var5_int = -var9.field_f + p.field_k;
-              var11 = var4_ref_ea.field_h;
-              var10 = var11;
-              var6 = var10;
-              if (var5_int > var11.length << 2) {
-                var5_int = var11.length << 2;
-              }
-              for (var7 = 0; var5_int > var7; var7++) {
-                var6[var7 >> 2] = var6[var7 >> 2] + (var9.c((byte) 34) << cd.a(var7 << 8, 768));
-              }
-              var4_ref_ea.a(false);
-            } else {
-              if (var2 == 1) {
-                var4 = var9.h(76);
-                var5 = (se) (sj.field_g.g(0));
-                while (var5 != null) {
-                  if (var5.field_g != var3 ||
-                    var5.field_j != var4) {
-                    var5 = (se) (sj.field_g.d(1));
-                    continue;
-                  }
-                  break;
-                }
-                if (var5 != null) {
-                  var5.a(false);
-                  decompiledFrameRemainder0 = false;
-                }
-                else {
-                  jl.a((byte) -116);
-                  return;
-                }
-              }
-              if (decompiledFrameRemainder0) {
-                gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
-                jl.a((byte) -123);
-              }
+            }
+            if (decompiledFrameRemainder0) {
+              gi.a((Throwable) null, "LR1: " + og.e(55), (byte) 125);
+              jl.a((byte) -123);
             }
           }
           if (param0 >= -95) {

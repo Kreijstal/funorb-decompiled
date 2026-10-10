@@ -79,32 +79,30 @@ final class ri {
               var10 = (String) null;
               ri.a(false, (String) null, 95, false, (String) null, 13);
             }
-            {
-              boolean decompiledFrameRemainder0 = true;
-              if (da.field_g == pk.field_l &&
-                el.b(30000, 1)) {
-                var6_intLifetime1 = eh.field_d.c((byte) 34);
-                eh.field_d.field_f = 0;
-                fl.field_b = null;
-                me.field_l = var6_intLifetime1;
-                if (var6_intLifetime1 != 0 &&
-                  var6_intLifetime1 != 1) {
-                  if (var6_intLifetime1 != 8) {
-                    pk.field_l = ac.field_v;
-                    p.field_k = -1;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
-                    jl.a((byte) -116);
-                    ck.field_e = false;
-                    stackIn_33_0 = var6_intLifetime1;
-                    return stackIn_33_0;
-                  }
-                }
-                if (decompiledFrameRemainder0) {
+            boolean decompiledFrameRemainder0 = true;
+            if (da.field_g == pk.field_l &&
+              el.b(30000, 1)) {
+              var6_intLifetime1 = eh.field_d.c((byte) 34);
+              eh.field_d.field_f = 0;
+              fl.field_b = null;
+              me.field_l = var6_intLifetime1;
+              if (var6_intLifetime1 != 0 &&
+                var6_intLifetime1 != 1) {
+                if (var6_intLifetime1 != 8) {
+                  pk.field_l = ac.field_v;
                   p.field_k = -1;
-                  pk.field_l = da.field_f;
+                  decompiledFrameRemainder0 = false;
                 }
+                else {
+                  jl.a((byte) -116);
+                  ck.field_e = false;
+                  stackIn_33_0 = var6_intLifetime1;
+                  return stackIn_33_0;
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                p.field_k = -1;
+                pk.field_l = da.field_f;
               }
             }
             if (da.field_f == pk.field_l &&

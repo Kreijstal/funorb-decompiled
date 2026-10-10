@@ -427,22 +427,20 @@ final class rh {
           if (var8 != 0) {
             return true;
           }
-          {
-            boolean decompiledFrameRemainder0 = true;
-            if (param2 != null && (param2[0] != 0 ||
-              param2[1] != 0 ||
-              param2[2] != 0 ||
-              0 != param2[3])) {
-              var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
-              var24 = var34;
-              var9 = var24;
-              var25 = new qc(var34);
-              var25.a((byte) -125, param2, 5, var25.field_j.length);
-              decompiledFrameRemainder0 = false;
-            }
-            else {
-              var9 = uk.a(false, param1 - 90, this.field_f[param3]);
-            }
+          boolean decompiledFrameRemainder0 = true;
+          if (param2 != null && (param2[0] != 0 ||
+            param2[1] != 0 ||
+            param2[2] != 0 ||
+            0 != param2[3])) {
+            var34 = uk.a(true, param1 ^ -114, this.field_f[param3]);
+            var24 = var34;
+            var9 = var24;
+            var25 = new qc(var34);
+            var25.a((byte) -125, param2, 5, var25.field_j.length);
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            var9 = uk.a(false, param1 - 90, this.field_f[param3]);
           }
           if (param1 != 4) {
             return false;

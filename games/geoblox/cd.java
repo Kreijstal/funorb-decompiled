@@ -281,49 +281,47 @@ final class cd extends jg {
           } else {
             var6.write(("CONNECT " + this.field_e + ":" + this.field_b + " HTTP/1.0\n" + param1 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
-          {
-            boolean decompiledFrameRemainder0 = true;
-            var6.flush();
-            var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var14.getInputStream())));
-            var9 = -22 % ((3 - param0) / 53);
-            var8 = var7.readLine();
-            if (var8 != null) {
-              if (!var8.startsWith("HTTP/1.0 200") &&
-                !var8.startsWith("HTTP/1.1 200")) {
-                decompiledFrameRemainder0 = (var8.startsWith("HTTP/1.0 407") ||
-                  var8.startsWith("HTTP/1.1 407"));
-                if (decompiledFrameRemainder0) {
-                  var10 = 0;
-                  var11 = "proxy-authenticate: ";
-                  var8 = var11;
-                  var8 = var11;
-                  var8 = var7.readLine();
-                  while (var8 != null) {
-                    if (var10 < 50) {
-                      if (!var8.toLowerCase().startsWith(var11)) {
-                        var8 = var7.readLine();
-                        var10++;
-                        continue;
-                      }
-                      var15 = var8.substring(var11.length()).trim();
-                      var8 = var15;
-                      var8 = var15;
-                      var8 = var15;
-                      var12 = var15.indexOf(' ');
-                      if (var12 != -1) {
-                        var8 = var15.substring(0, var12);
-                      }
-                      throw new bd(var8);
-                    }
-                    break;
-                  }
-                  throw new bd("");
-                }
-              }
+          boolean decompiledFrameRemainder0 = true;
+          var6.flush();
+          var7 = new BufferedReader((Reader) ((Object) new InputStreamReader(var14.getInputStream())));
+          var9 = -22 % ((3 - param0) / 53);
+          var8 = var7.readLine();
+          if (var8 != null) {
+            if (!var8.startsWith("HTTP/1.0 200") &&
+              !var8.startsWith("HTTP/1.1 200")) {
+              decompiledFrameRemainder0 = (var8.startsWith("HTTP/1.0 407") ||
+                var8.startsWith("HTTP/1.1 407"));
               if (decompiledFrameRemainder0) {
-                stackIn_10_0 = var14;
-                return stackIn_10_0;
+                var10 = 0;
+                var11 = "proxy-authenticate: ";
+                var8 = var11;
+                var8 = var11;
+                var8 = var7.readLine();
+                while (var8 != null) {
+                  if (var10 < 50) {
+                    if (!var8.toLowerCase().startsWith(var11)) {
+                      var8 = var7.readLine();
+                      var10++;
+                      continue;
+                    }
+                    var15 = var8.substring(var11.length()).trim();
+                    var8 = var15;
+                    var8 = var15;
+                    var8 = var15;
+                    var12 = var15.indexOf(' ');
+                    if (var12 != -1) {
+                      var8 = var15.substring(0, var12);
+                    }
+                    throw new bd(var8);
+                  }
+                  break;
+                }
+                throw new bd("");
               }
+            }
+            if (decompiledFrameRemainder0) {
+              stackIn_10_0 = var14;
+              return stackIn_10_0;
             }
           }
           var6.close();

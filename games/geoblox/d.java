@@ -88,28 +88,26 @@ final class d implements Runnable {
           while (true) {
             var2 = this;
             synchronized (var2) {
-              {
-                boolean decompiledFrameCompleted0 = true;
-                while (!this.field_c) {
-                  if (this.field_d != null) {
-                    var9 = this.field_d;
-                    this.field_d = this.field_d.field_e;
-                    if (null == this.field_d) {
-                      this.field_g = null;
-                    }
-                    decompiledFrameCompleted0 = false;
-                    break;
+              boolean decompiledFrameCompleted0 = true;
+              while (!this.field_c) {
+                if (this.field_d != null) {
+                  var9 = this.field_d;
+                  this.field_d = this.field_d.field_e;
+                  if (null == this.field_d) {
+                    this.field_g = null;
                   }
-                  try {
-                    this.wait();
-                  } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    var3 = (InterruptedException) (Object) decompiledCaughtException;
-                  }
+                  decompiledFrameCompleted0 = false;
+                  break;
                 }
-                if (decompiledFrameCompleted0) {
-                  return;
+                try {
+                  this.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var3 = (InterruptedException) (Object) decompiledCaughtException;
                 }
+              }
+              if (decompiledFrameCompleted0) {
+                return;
               }
             }
             try {

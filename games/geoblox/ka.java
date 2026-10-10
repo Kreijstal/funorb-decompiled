@@ -146,48 +146,46 @@ abstract class ka {
         int stackIn_16_2 = 0;
         Object stackIn_17_0;
         boolean stackIn_17_3;
-        {
-          boolean decompiledFrameRemainder0 = true;
-          var3 = Geoblox.field_C;
-          if (bi.field_g != 0) {
-            var2 = this.a(mc.field_a, he.field_d, (byte) 28);
-            this.field_b = var2;
-            if (var2 != -1) {
-              this.field_g = true;
-              stackIn_16_1 = var2;
-              stackIn_16_2 = mc.field_a;
-              if (param0) {
-                stackIn_17_0 = this;
-                stackIn_17_3 = false;
-              } else {
-                stackIn_17_0 = this;
-                stackIn_17_3 = true;
-              }
-              this.a(stackIn_16_1, stackIn_16_2, stackIn_17_3, -(var2 * this.field_d) - this.field_k + he.field_d, false, bi.field_g);
+        boolean decompiledFrameRemainder0 = true;
+        var3 = Geoblox.field_C;
+        if (bi.field_g != 0) {
+          var2 = this.a(mc.field_a, he.field_d, (byte) 28);
+          this.field_b = var2;
+          if (var2 != -1) {
+            this.field_g = true;
+            stackIn_16_1 = var2;
+            stackIn_16_2 = mc.field_a;
+            if (param0) {
+              stackIn_17_0 = this;
+              stackIn_17_3 = false;
             } else {
-              this.field_g = false;
+              stackIn_17_0 = this;
+              stackIn_17_3 = true;
             }
+            this.a(stackIn_16_1, stackIn_16_2, stackIn_17_3, -(var2 * this.field_d) - this.field_k + he.field_d, false, bi.field_g);
           } else {
-            if (gf.field_a != 0 &&
-              this.field_g) {
-              var2 = this.field_b;
-              if ((var2 != -1)) {
-                this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
-              }
-              decompiledFrameRemainder0 = false;
+            this.field_g = false;
+          }
+        } else {
+          if (gf.field_a != 0 &&
+            this.field_g) {
+            var2 = this.field_b;
+            if ((var2 != -1)) {
+              this.a(var2, qa.field_a, false, -(this.field_d * var2) + (ue.field_e - this.field_k), true, gf.field_a);
             }
-            else {
-              this.field_g = false;
-              if (wb.field_a) {
-                var2 = this.a(qa.field_a, ue.field_e, (byte) 126);
-                if (var2 != -1) {
+            decompiledFrameRemainder0 = false;
+          }
+          else {
+            this.field_g = false;
+            if (wb.field_a) {
+              var2 = this.a(qa.field_a, ue.field_e, (byte) 126);
+              if (var2 != -1) {
+                this.field_b = var2;
+                this.field_l = false;
+              } else {
+                if (!this.field_l) {
                   this.field_b = var2;
                   this.field_l = false;
-                } else {
-                  if (!this.field_l) {
-                    this.field_b = var2;
-                    this.field_l = false;
-                  }
                 }
               }
             }

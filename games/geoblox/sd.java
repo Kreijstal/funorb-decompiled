@@ -145,53 +145,51 @@ final class sd extends pb {
                 var11 = var12;
                 var12 = var16;
               }
-              {
-                boolean decompiledFrameRemainder0 = true;
-                if (0 > param8) {
-                  if (param7 < 0) {
-                    param8 = param7 - param8;
-                    var9_int = var9_int + var11 * param8;
-                    var10 = var10 + var12 * param8;
-                    param8 = param7;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
-                    param8 = -param8;
-                    var10 = var10 + var12 * param8;
-                    var9_int = var9_int + var11 * param8;
-                    param8 = 0;
-                  }
+              boolean decompiledFrameRemainder0 = true;
+              if (0 > param8) {
+                if (param7 < 0) {
+                  param8 = param7 - param8;
+                  var9_int = var9_int + var11 * param8;
+                  var10 = var10 + var12 * param8;
+                  param8 = param7;
+                  decompiledFrameRemainder0 = false;
                 }
-                if (decompiledFrameRemainder0) {
-                  var16Lifetime2 = mh.field_b[param8];
-                  while (param8 < param7) {
-                    var17 = var9_int >> 16;
-                    if (mh.field_c > var17) {
-                      var18 = (var10 >> 16) - (var9_int >> 16);
-                      if (var18 != 0) {
-                        if (var17 + var18 >= mh.field_c) {
-                          var18 = -1 + (-var17 + mh.field_c);
-                        }
-                        if (0 <= var17) {
-                          ib.a(47, param4, var16Lifetime2 + var17, param2, var18);
-                        } else {
-                          ib.a(57, param4, var16Lifetime2, param2, var17 + var18);
-                        }
+                else {
+                  param8 = -param8;
+                  var10 = var10 + var12 * param8;
+                  var9_int = var9_int + var11 * param8;
+                  param8 = 0;
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                var16Lifetime2 = mh.field_b[param8];
+                while (param8 < param7) {
+                  var17 = var9_int >> 16;
+                  if (mh.field_c > var17) {
+                    var18 = (var10 >> 16) - (var9_int >> 16);
+                    if (var18 != 0) {
+                      if (var17 + var18 >= mh.field_c) {
+                        var18 = -1 + (-var17 + mh.field_c);
+                      }
+                      if (0 <= var17) {
+                        ib.a(47, param4, var16Lifetime2 + var17, param2, var18);
                       } else {
-                        if (var17 >= 0 &&
-                          mh.field_c > var17) {
-                          ib.a(-61, param4, var17 + var16Lifetime2, param2, var18);
-                        }
+                        ib.a(57, param4, var16Lifetime2, param2, var17 + var18);
+                      }
+                    } else {
+                      if (var17 >= 0 &&
+                        mh.field_c > var17) {
+                        ib.a(-61, param4, var17 + var16Lifetime2, param2, var18);
                       }
                     }
-                    param8++;
-                    if (param8 >= mh.field_h) {
-                      return;
-                    }
-                    var16Lifetime2 = var16Lifetime2 + vb.field_f;
-                    var9_int = var9_int + var11;
-                    var10 = var10 + var12;
                   }
+                  param8++;
+                  if (param8 >= mh.field_h) {
+                    return;
+                  }
+                  var16Lifetime2 = var16Lifetime2 + vb.field_f;
+                  var9_int = var9_int + var11;
+                  var10 = var10 + var12;
                 }
               }
               var16Lifetime3 = -param7 + param5;

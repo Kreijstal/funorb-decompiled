@@ -54,40 +54,38 @@ final class eg extends hf {
               eg.a((CharSequence) null, (byte) 58, 6, false);
             }
             for (var8 = 0; var7 > var8; var8++) {
-              {
-                boolean decompiledFrameRemainder0 = true;
-                var9 = param0.charAt(var8);
-                if ((var8 == 0) && (var9 == 45)) {
-                  var4_int = 1;
-                  decompiledFrameRemainder0 = false;
+              boolean decompiledFrameRemainder0 = true;
+              var9 = param0.charAt(var8);
+              if ((var8 == 0) && (var9 == 45)) {
+                var4_int = 1;
+                decompiledFrameRemainder0 = false;
+              }
+              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
+                !param3))) {
+                if (48 <= var9 &&
+                  var9 <= 57) {
+                  var9 -= 48;
+                } else if (65 <= var9 &&
+                  90 >= var9) {
+                  var9 -= 55;
+                } else if (var9 >= 97 &&
+                  122 >= var9) {
+                  var9 -= 87;
+                } else {
+                  throw new NumberFormatException();
                 }
-                if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
-                  !param3))) {
-                  if (48 <= var9 &&
-                    var9 <= 57) {
-                    var9 -= 48;
-                  } else if (65 <= var9 &&
-                    90 >= var9) {
-                    var9 -= 55;
-                  } else if (var9 >= 97 &&
-                    122 >= var9) {
-                    var9 -= 87;
-                  } else {
-                    throw new NumberFormatException();
-                  }
-                  if (var9 >= param2) {
-                    throw new NumberFormatException();
-                  }
-                  if (var4_int != 0) {
-                    var9 = -var9;
-                  }
-                  var10 = var6 * param2 + var9;
-                  if (var6 != var10 / param2) {
-                    throw new NumberFormatException();
-                  }
-                  var5 = 1;
-                  var6 = var10;
+                if (var9 >= param2) {
+                  throw new NumberFormatException();
                 }
+                if (var4_int != 0) {
+                  var9 = -var9;
+                }
+                var10 = var6 * param2 + var9;
+                if (var6 != var10 / param2) {
+                  throw new NumberFormatException();
+                }
+                var5 = 1;
+                var6 = var10;
               }
             }
             if (var5 == 0) {

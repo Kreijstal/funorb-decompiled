@@ -199,106 +199,104 @@ final class ab {
           sh.field_y.a(255);
           var2 = (ja) (ji.field_r.g(0));
           while (var2 != null) {
-            {
-              boolean decompiledFrameRemainder0 = true;
-              if (a.field_d != var2.field_K) {
-                if (!el.field_o.field_C) {
-                  var2.f((byte) -59);
-                  var2.b(true);
+            boolean decompiledFrameRemainder0 = true;
+            if (a.field_d != var2.field_K) {
+              if (!el.field_o.field_C) {
+                var2.f((byte) -59);
+                var2.b(true);
+              }
+              gf.a(var2, -1232328029, param1);
+              if (uj.a(var2, param1, 0)) {
+                vf.field_L.g(1);
+                if (var2.field_E <= 0) {
+                  al.a(9666, c.field_ab);
                 }
-                gf.a(var2, -1232328029, param1);
-                if (uj.a(var2, param1, 0)) {
-                  vf.field_L.g(1);
-                  if (var2.field_E <= 0) {
-                    al.a(9666, c.field_ab);
+                field_f = true;
+                var2.field_K = null;
+                for (var3 = 0; var3 < var2.field_L; var3++) {
+                  var2.field_n[var3].a(var2, 0);
+                }
+                var2.field_L = 0;
+                stackIn_17_0 = (var2.field_z != 2) ? 0 : 1;
+                var3 = stackIn_17_0;
+                ih.a(-1, td.field_E, var2, ng.field_G);
+                if (var3 == 0 ||
+                  var2.field_z == 2) {
+                  if (var2.field_z != 2) {
+                    var2.field_u = var2.field_u - param1;
                   }
-                  field_f = true;
-                  var2.field_K = null;
-                  for (var3 = 0; var3 < var2.field_L; var3++) {
-                    var2.field_n[var3].a(var2, 0);
-                  }
-                  var2.field_L = 0;
-                  stackIn_17_0 = (var2.field_z != 2) ? 0 : 1;
-                  var3 = stackIn_17_0;
-                  ih.a(-1, td.field_E, var2, ng.field_G);
-                  if (var3 == 0 ||
-                    var2.field_z == 2) {
-                    if (var2.field_z != 2) {
-                      var2.field_u = var2.field_u - param1;
+                  var2.field_v = (float)td.field_E;
+                  var2.field_K = a.field_d;
+                  var2.field_o = (float)ng.field_G;
+                }
+                if (!var2.field_B) {
+                  wb.field_b = wb.field_b + 1;
+                  decompiledFrameRemainder0 = false;
+                }
+                else {
+                  var2 = (ja) (ji.field_r.d(1));
+                  continue;
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                if (ma.a(true, param1, var2)) {
+                  var3Lifetime2 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
+                  var4 = tl.field_g[var3Lifetime2];
+                  decompiledFrameRemainder0 = (a.field_d != var4.field_K);
+                  if (decompiledFrameRemainder0) {
+                    var5 = 0.5f * (var4.field_w + var2.field_w);
+                    var6 = (var4.field_F + var2.field_F) * 0.5f;
+                    var7 = var6 * var6 + var5 * var5;
+                    var7 = og.field_r / (float)Math.sqrt((double)var7);
+                    var6 = var6 * var7;
+                    var5 = var5 * var7;
+                    var8 = -var4.field_o + 320.0f;
+                    var9 = 240.0f - var4.field_v;
+                    var10 = -var5 - var4.field_o + 320.0f;
+                    var11 = 240.0f - (var4.field_v + var6);
+                    var10 = var10 * var10;
+                    var11 = var11 * var11;
+                    stackIn_36_0 = (!(var10 + var11 > var9 * var9 + var8 * var8)) ? 0 : 1;
+                    var12 = stackIn_36_0;
+                    var8Lifetime1 = 320.0f - var2.field_o;
+                    var11Lifetime1 = 240.0f - (var6 + var2.field_v);
+                    var10Lifetime1 = -var2.field_o - var5 + 320.0f;
+                    var9Lifetime1 = -var2.field_v + 240.0f;
+                    var10Lifetime1 = var10Lifetime1 * var10Lifetime1;
+                    var11Lifetime1 = var11Lifetime1 * var11Lifetime1;
+                    stackIn_39_0 = (!(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 < var11Lifetime1 + var10Lifetime1)) ? 0 : 1;
+                    var13 = stackIn_39_0;
+                    if (var12 != 0 &&
+                      var13 != 0) {
+                      var8Lifetime2 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
+                      var9Lifetime2 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
+                      var14 = og.field_r / (float)Math.sqrt((double)(var8Lifetime2 * var8Lifetime2 + var9Lifetime2 * var9Lifetime2));
+                      var5 = var8Lifetime2 * var14;
+                      var6 = var14 * var9Lifetime2;
                     }
-                    var2.field_v = (float)td.field_E;
-                    var2.field_K = a.field_d;
-                    var2.field_o = (float)ng.field_G;
+                    var2.field_F = var2.field_F * -1.0f;
+                    var2.field_w = var2.field_w * -1.0f;
+                    var2.f((byte) -59);
+                    var4.field_w = var5;
+                    var2.field_w = var5;
+                    var4.field_F = var6;
+                    var2.field_F = var6;
                   }
-                  if (!var2.field_B) {
-                    wb.field_b = wb.field_b + 1;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
-                    var2 = (ja) (ji.field_r.d(1));
-                    continue;
+                } else {
+                  var3_float = 320.0f - var2.field_o;
+                  var4_float = 240.0f - var2.field_v;
+                  var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
+                  if (var2.field_L == 0 &&
+                    var5 * var5 > 0.30000001192092896f) {
+                    var2.field_w = var3_float;
+                    var2.field_F = var4_float;
+                    var6 = og.field_r / (float)Math.sqrt((double)(var2.field_w * var2.field_w + var2.field_F * var2.field_F));
+                    var2.field_w = var2.field_w * var6;
+                    var2.field_F = var2.field_F * var6;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (ma.a(true, param1, var2)) {
-                    var3Lifetime2 = wd.field_b.field_v[aa.field_a + wd.field_b.field_s * aa.field_b] - 1;
-                    var4 = tl.field_g[var3Lifetime2];
-                    decompiledFrameRemainder0 = (a.field_d != var4.field_K);
-                    if (decompiledFrameRemainder0) {
-                      var5 = 0.5f * (var4.field_w + var2.field_w);
-                      var6 = (var4.field_F + var2.field_F) * 0.5f;
-                      var7 = var6 * var6 + var5 * var5;
-                      var7 = og.field_r / (float)Math.sqrt((double)var7);
-                      var6 = var6 * var7;
-                      var5 = var5 * var7;
-                      var8 = -var4.field_o + 320.0f;
-                      var9 = 240.0f - var4.field_v;
-                      var10 = -var5 - var4.field_o + 320.0f;
-                      var11 = 240.0f - (var4.field_v + var6);
-                      var10 = var10 * var10;
-                      var11 = var11 * var11;
-                      stackIn_36_0 = (!(var10 + var11 > var9 * var9 + var8 * var8)) ? 0 : 1;
-                      var12 = stackIn_36_0;
-                      var8Lifetime1 = 320.0f - var2.field_o;
-                      var11Lifetime1 = 240.0f - (var6 + var2.field_v);
-                      var10Lifetime1 = -var2.field_o - var5 + 320.0f;
-                      var9Lifetime1 = -var2.field_v + 240.0f;
-                      var10Lifetime1 = var10Lifetime1 * var10Lifetime1;
-                      var11Lifetime1 = var11Lifetime1 * var11Lifetime1;
-                      stackIn_39_0 = (!(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 < var11Lifetime1 + var10Lifetime1)) ? 0 : 1;
-                      var13 = stackIn_39_0;
-                      if (var12 != 0 &&
-                        var13 != 0) {
-                        var8Lifetime2 = -((var2.field_o + var4.field_o) * 0.5f) + 320.0f;
-                        var9Lifetime2 = 240.0f - 0.5f * (var4.field_v + var2.field_v);
-                        var14 = og.field_r / (float)Math.sqrt((double)(var8Lifetime2 * var8Lifetime2 + var9Lifetime2 * var9Lifetime2));
-                        var5 = var8Lifetime2 * var14;
-                        var6 = var14 * var9Lifetime2;
-                      }
-                      var2.field_F = var2.field_F * -1.0f;
-                      var2.field_w = var2.field_w * -1.0f;
-                      var2.f((byte) -59);
-                      var4.field_w = var5;
-                      var2.field_w = var5;
-                      var4.field_F = var6;
-                      var2.field_F = var6;
-                    }
-                  } else {
-                    var3_float = 320.0f - var2.field_o;
-                    var4_float = 240.0f - var2.field_v;
-                    var5 = -(var4_float * var2.field_o) + var2.field_v * var3_float;
-                    if (var2.field_L == 0 &&
-                      var5 * var5 > 0.30000001192092896f) {
-                      var2.field_w = var3_float;
-                      var2.field_F = var4_float;
-                      var6 = og.field_r / (float)Math.sqrt((double)(var2.field_w * var2.field_w + var2.field_F * var2.field_F));
-                      var2.field_w = var2.field_w * var6;
-                      var2.field_F = var2.field_F * var6;
-                    }
-                  }
-                  if (decompiledFrameRemainder0) {
-                    var2.h((byte) 51);
-                  }
+                  var2.h((byte) 51);
                 }
               }
             }
