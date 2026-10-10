@@ -303,75 +303,65 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                           this.a((byte) 79, "wrongjava");
                           decompiledFrameRemainder3 = (var5 != 0);
                         }
-                        if (decompiledFrameRemainder3) {
-                          if (var2.startsWith("1.6.0_")) {
-                            var3 = 6;
-                            while (var2.length() > var3) {
-                              stackIn_66_0 = rc.a(-58, var2.charAt(var3));
-                              if (var5 != 0) {
-                                decompiledFrameCompleted0 = false;
-                                break;
-                              }
-                              if (stackIn_66_0) {
-                                var3++;
-                                continue;
-                              }
+                        if ((decompiledFrameRemainder3) && (var2.startsWith("1.6.0_"))) {
+                          var3 = 6;
+                          while (var2.length() > var3) {
+                            stackIn_66_0 = rc.a(-58, var2.charAt(var3));
+                            if (var5 != 0) {
+                              decompiledFrameCompleted0 = false;
                               break;
                             }
-                            if (decompiledFrameCompleted0) {
-                              var4 = var2.substring(6, var3);
-                              if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
-                                this.a((byte) 79, "wrongjava");
-                                decompiledFrameRemainder3 = (var5 != 0);
-                              }
+                            if (stackIn_66_0) {
+                              var3++;
+                              continue;
+                            }
+                            break;
+                          }
+                          if (decompiledFrameCompleted0) {
+                            var4 = var2.substring(6, var3);
+                            if (f.b((byte) -115, (CharSequence) ((Object) var4)) && !(ol.a(false, (CharSequence) ((Object) var4)) >= 10)) {
+                              this.a((byte) 79, "wrongjava");
+                              decompiledFrameRemainder3 = (var5 != 0);
                             }
                           }
                         }
                       }
                     }
-                    if (decompiledFrameRemainder3) {
-                      if (decompiledFrameCompleted0) {
-                        decompiledFrameRemainder2 = (d.field_t != null);
-                        if (decompiledFrameRemainder2) {
-                          stackIn_66_0 = d.field_t.startsWith("1.");
-                        }
+                    if ((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) {
+                      decompiledFrameRemainder2 = (d.field_t != null);
+                      if (decompiledFrameRemainder2) {
+                        stackIn_66_0 = d.field_t.startsWith("1.");
                       }
                     }
                   }
-                  if (decompiledFrameRemainder3) {
-                    if (decompiledFrameRemainder2) {
-                      if (stackIn_66_0) {
-                        var1_int = 2;
-                        var2_int = 0;
-                        while (true) {
-                          {
-                            boolean decompiledFrameRemainder1 = true;
-                            if (d.field_t.length() > var1_int) {
-                              var3 = d.field_t.charAt(var1_int);
-                              stackIn_78_0 = var3;
-                              stackIn_78_1 = 48;
-                              decompiledFrameRemainder1 = (var5 == 0);
-                              if (decompiledFrameRemainder1) {
-                                if (stackIn_78_0 >= stackIn_78_1 &&
-                                  var3 <= 57) {
-                                  var2_int = 10 * var2_int - 48 + var3;
-                                  var1_int++;
-                                  continue;
-                                }
-                              }
-                            }
-                            if (decompiledFrameRemainder1) {
-                              stackIn_78_0 = ~var2_int;
-                              stackIn_78_1 = -6;
-                            }
+                  if ((decompiledFrameRemainder3) && (decompiledFrameRemainder2) && (stackIn_66_0)) {
+                    var1_int = 2;
+                    var2_int = 0;
+                    while (true) {
+                      {
+                        boolean decompiledFrameRemainder1 = true;
+                        if (d.field_t.length() > var1_int) {
+                          var3 = d.field_t.charAt(var1_int);
+                          stackIn_78_0 = var3;
+                          stackIn_78_1 = 48;
+                          decompiledFrameRemainder1 = (var5 == 0);
+                          if ((decompiledFrameRemainder1) && (stackIn_78_0 >= stackIn_78_1 &&
+                            var3 <= 57)) {
+                            var2_int = 10 * var2_int - 48 + var3;
+                            var1_int++;
+                            continue;
                           }
-                          if (stackIn_78_0 > stackIn_78_1) {
-                            break;
-                          }
-                          oe.field_S = true;
-                          break;
+                        }
+                        if (decompiledFrameRemainder1) {
+                          stackIn_78_0 = ~var2_int;
+                          stackIn_78_1 = -6;
                         }
                       }
+                      if (stackIn_78_0 > stackIn_78_1) {
+                        break;
+                      }
+                      oe.field_S = true;
+                      break;
                     }
                   }
                 }
@@ -400,10 +390,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
                       if (0L != ka.field_a) {
                         stackIn_99_0 = $cfr$lcmp(~ka.field_a, ~oa.a(-12520));
                         decompiledFrameRemainder0 = (var5 == 0);
-                        if (decompiledFrameRemainder0) {
-                          if (stackIn_99_0 >= 0) {
-                            break;
-                          }
+                        if ((decompiledFrameRemainder0) && (stackIn_99_0 >= 0)) {
+                          break;
                         }
                       }
                       if (decompiledFrameRemainder0) {

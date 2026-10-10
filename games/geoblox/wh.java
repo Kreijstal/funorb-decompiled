@@ -498,10 +498,8 @@ abstract class wh extends rc {
                   break;
                 }
               }
-              if (decompiledFrameCompleted0) {
-                if (var7 != 0) {
-                  var4 = param2;
-                }
+              if ((decompiledFrameCompleted0) && (var7 != 0)) {
+                var4 = param2;
               }
             } else {
               var4 = param2;

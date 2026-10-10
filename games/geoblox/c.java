@@ -69,22 +69,20 @@ final class c extends ka {
               } else {
                 decompiledFrameRemainder0 = (var3_int == 9);
               }
-              if (decompiledFrameRemainder1) {
-                if (decompiledFrameRemainder0) {
-                  if (102 != ki.field_d) {
-                    if (103 != ki.field_d) {
-                      super.a(param0, -70);
-                      decompiledFrameRemainder1 = (var4 != 0);
-                    }
-                    if (decompiledFrameRemainder1) {
-                      wg.a(-15346, 80);
-                      decompiledFrameRemainder1 = (var4 != 0);
-                    }
-                  }
-                  if (decompiledFrameRemainder1) {
-                    wg.a(-15346, 0);
+              if ((decompiledFrameRemainder1) && (decompiledFrameRemainder0)) {
+                if (102 != ki.field_d) {
+                  if (103 != ki.field_d) {
+                    super.a(param0, -70);
                     decompiledFrameRemainder1 = (var4 != 0);
                   }
+                  if (decompiledFrameRemainder1) {
+                    wg.a(-15346, 80);
+                    decompiledFrameRemainder1 = (var4 != 0);
+                  }
+                }
+                if (decompiledFrameRemainder1) {
+                  wg.a(-15346, 0);
+                  decompiledFrameRemainder1 = (var4 != 0);
                 }
               }
             }
@@ -182,24 +180,16 @@ final class c extends ka {
                       }
                       if (decompiledFrameRemainder1) {
                         if (this.field_o != 0) {
-                          if (!(this.field_o >= 0)) {
-                            if (!(qa.field_a <= 170)) {
-                              if (!(qa.field_a >= 290)) {
-                                if (!(ue.field_e <= 265)) {
-                                  if (!(ue.field_e >= 299)) {
-                                    this.field_g = true;
-                                    if (null != el.field_o) {
-                                      el.field_o.e((byte) -70);
-                                    }
-                                    el.field_i = 0;
-                                    ai.field_p = -1;
-                                    cd.field_j = 0;
-                                    if (var4 != 0) {
-                                      super.a(param0, -100);
-                                    }
-                                  }
-                                }
-                              }
+                          if ((!(this.field_o >= 0)) && (!(qa.field_a <= 170)) && (!(qa.field_a >= 290)) && (!(ue.field_e <= 265)) && (!(ue.field_e >= 299))) {
+                            this.field_g = true;
+                            if (null != el.field_o) {
+                              el.field_o.e((byte) -70);
+                            }
+                            el.field_i = 0;
+                            ai.field_p = -1;
+                            cd.field_j = 0;
+                            if (var4 != 0) {
+                              super.a(param0, -100);
                             }
                           }
                         } else {
@@ -389,12 +379,10 @@ final class c extends ka {
               var5 += 10;
               decompiledSharedTail0 = (var12 != 0);
             }
-            if (decompiledSharedTail0) {
-              if (this.field_K == 8 ||
-                this.field_K == 7) {
-                var4 += 20;
-                var5 -= 10;
-              }
+            if ((decompiledSharedTail0) && (this.field_K == 8 ||
+              this.field_K == 7)) {
+              var4 += 20;
+              var5 -= 10;
             }
             ma.a(var3, var5, var2_intLifetime1, (byte) -92, var4, ll.field_h);
           }
@@ -873,19 +861,17 @@ final class c extends ka {
                       }
                     }
                   }
-                  if (decompiledFrameRemainder0) {
-                    if (param1 > 437 &&
-                      param1 < 473) {
-                      if (param0 > 121 &&
-                        356 > param0) {
-                        stackIn_54_0 = 0;
-                        return stackIn_54_0;
-                      }
-                      if (436 < param0 &&
-                        param1 < 518) {
-                        stackIn_60_0 = 1;
-                        return stackIn_60_0;
-                      }
+                  if ((decompiledFrameRemainder0) && (param1 > 437 &&
+                    param1 < 473)) {
+                    if (param0 > 121 &&
+                      356 > param0) {
+                      stackIn_54_0 = 0;
+                      return stackIn_54_0;
+                    }
+                    if (436 < param0 &&
+                      param1 < 518) {
+                      stackIn_60_0 = 1;
+                      return stackIn_60_0;
                     }
                   }
                 } else {
@@ -1224,85 +1210,83 @@ final class c extends ka {
               this.a(true);
               decompiledFrameRemainder0 = (var3 != 0);
             }
-            if (decompiledFrameRemainder0) {
-              if (bi.field_g != 0) {
-                if (fh.c(-104)) {
-                  if (265 < he.field_d &&
-                    he.field_d < 299) {
-                    if (mc.field_a > 350 &&
-                      mc.field_a < 470) {
-                      this.field_g = true;
-                      this.field_C = false;
+            if ((decompiledFrameRemainder0) && (bi.field_g != 0)) {
+              if (fh.c(-104)) {
+                if (265 < he.field_d &&
+                  he.field_d < 299) {
+                  if (mc.field_a > 350 &&
+                    mc.field_a < 470) {
+                    this.field_g = true;
+                    this.field_C = false;
+                    decompiledFrameRemainder0 = (var3 != 0);
+                  }
+                  if (decompiledFrameRemainder0) {
+                    if (!(mc.field_a > 170) ||
+                      !(mc.field_a < 290)) {
+                      this.field_g = false;
                       decompiledFrameRemainder0 = (var3 != 0);
                     }
                     if (decompiledFrameRemainder0) {
+                      this.field_g = true;
+                      if (null != el.field_o) {
+                        el.field_o.e((byte) -70);
+                      }
+                      ai.field_p = -1;
+                      el.field_i = 0;
+                      cd.field_j = 0;
+                      decompiledFrameRemainder0 = (var3 != 0);
+                    }
+                  }
+                }
+                if (decompiledFrameRemainder0) {
+                  this.field_g = false;
+                  decompiledFrameRemainder0 = (var3 != 0);
+                }
+              }
+              if (decompiledFrameRemainder0) {
+                if (og.field_n > 0 &&
+                  null != vl.field_n) {
+                  if (he.field_d > 317 &&
+                    352 > he.field_d) {
+                    if (!(mc.field_a > 350) ||
+                      !(mc.field_a < 470)) {
                       if (!(mc.field_a > 170) ||
                         !(mc.field_a < 290)) {
                         this.field_g = false;
                         decompiledFrameRemainder0 = (var3 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        this.field_g = true;
-                        if (null != el.field_o) {
-                          el.field_o.e((byte) -70);
-                        }
-                        ai.field_p = -1;
-                        el.field_i = 0;
-                        cd.field_j = 0;
-                        decompiledFrameRemainder0 = (var3 != 0);
-                      }
-                    }
-                  }
-                  if (decompiledFrameRemainder0) {
-                    this.field_g = false;
-                    decompiledFrameRemainder0 = (var3 != 0);
-                  }
-                }
-                if (decompiledFrameRemainder0) {
-                  if (og.field_n > 0 &&
-                    null != vl.field_n) {
-                    if (he.field_d > 317 &&
-                      352 > he.field_d) {
-                      if (!(mc.field_a > 350) ||
-                        !(mc.field_a < 470)) {
-                        if (!(mc.field_a > 170) ||
-                          !(mc.field_a < 290)) {
-                          this.field_g = false;
-                          decompiledFrameRemainder0 = (var3 != 0);
-                        }
-                        if (decompiledFrameRemainder0) {
-                          this.field_C = false;
-                          this.field_g = true;
-                          if (var3 != 0) {
-                            this.field_C = false;
-                            em.b(255);
-                            this.field_g = true;
-                            this.field_g = false;
-                            this.field_g = true;
-                            this.field_C = false;
-                          }
-                        }
-                      } else {
                         this.field_C = false;
-                        em.b(255);
                         this.field_g = true;
                         if (var3 != 0) {
+                          this.field_C = false;
+                          em.b(255);
+                          this.field_g = true;
                           this.field_g = false;
                           this.field_g = true;
                           this.field_C = false;
                         }
                       }
                     } else {
-                      this.field_g = false;
+                      this.field_C = false;
+                      em.b(255);
+                      this.field_g = true;
                       if (var3 != 0) {
+                        this.field_g = false;
                         this.field_g = true;
                         this.field_C = false;
                       }
                     }
                   } else {
-                    this.field_g = true;
-                    this.field_C = false;
+                    this.field_g = false;
+                    if (var3 != 0) {
+                      this.field_g = true;
+                      this.field_C = false;
+                    }
                   }
+                } else {
+                  this.field_g = true;
+                  this.field_C = false;
                 }
               }
             }
@@ -1774,15 +1758,13 @@ final class c extends ka {
               this.field_b = 2;
               decompiledSharedTail0 = (Geoblox.field_C != 0);
             }
-            if (decompiledSharedTail0) {
-              if (this.field_q == 4) {
-                if (this.field_b == 2) {
-                  this.field_b = 1;
-                }
-                if (oc.field_b == 1 &&
-                  this.field_b == 3) {
-                  this.field_b = 1;
-                }
+            if ((decompiledSharedTail0) && (this.field_q == 4)) {
+              if (this.field_b == 2) {
+                this.field_b = 1;
+              }
+              if (oc.field_b == 1 &&
+                this.field_b == 3) {
+                this.field_b = 1;
               }
             }
             if (this.field_q == 0 &&
@@ -2279,13 +2261,11 @@ final class c extends ka {
             param3 += 280;
             decompiledSharedTail0 = (var14 != 0);
           }
-          if (decompiledSharedTail0) {
-            if (this.field_K == 5 ||
-              this.field_K == 7 ||
-              this.field_K == 6 ||
-              this.field_K == 4) {
-              param3 += 295;
-            }
+          if ((decompiledSharedTail0) && (this.field_K == 5 ||
+            this.field_K == 7 ||
+            this.field_K == 6 ||
+            this.field_K == 4)) {
+            param3 += 295;
           }
           var8 = dd.field_G;
           var9 = 320;
@@ -2517,18 +2497,16 @@ final class c extends ka {
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.field_C) {
-                      if (this.field_o != 1) {
-                        if (fh.c(-122) ||
-                          !(og.field_n <= 0)) {
-                          this.field_o = 1;
-                          if (var3 != 0) {
-                            this.field_b = this.field_b + 1;
-                            this.field_l = true;
-                            if (this.field_e <= this.field_b) {
-                              this.field_b = 0;
-                            }
-                            this.c((byte) -117);
+                      if ((this.field_o != 1) && (fh.c(-122) ||
+                        !(og.field_n <= 0))) {
+                        this.field_o = 1;
+                        if (var3 != 0) {
+                          this.field_b = this.field_b + 1;
+                          this.field_l = true;
+                          if (this.field_e <= this.field_b) {
+                            this.field_b = 0;
                           }
+                          this.c((byte) -117);
                         }
                       }
                     } else {
@@ -2566,10 +2544,8 @@ final class c extends ka {
                   }
                   this.field_l = true;
                   this.c((byte) -107);
-                  if (var3 != 0) {
-                    if (0 <= this.field_b) {
-                      this.a(this.field_b, -29);
-                    }
+                  if ((var3 != 0) && (0 <= this.field_b)) {
+                    this.a(this.field_b, -29);
                   }
                 } else {
                   if (0 <= this.field_b) {
