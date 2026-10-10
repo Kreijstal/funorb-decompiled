@@ -41558,8 +41558,8 @@
     {
       "symbol": "L:gh.b(B)V#7",
       "originalName": "decompiledFrameRemainder8",
-      "to": "tutorialPromptPlacementFrameContinues",
-      "evidence": "Pass259 continuation eligibility for the original precedingThemeLookup remainder. Shared same-target exits retain one terminal destination, every original predicate/read once and each complete true prefix or false-arm work. The Boolean becomes false at the remaining old guarded exit; exact original suffixes use that captured decision. Preserve all callbacks/stores, aliases, nonzero flags, unused snapshots, arithmetic, failure order and protected scopes. Independent javac recipes verify normalization and the frozen frame/compaction certificate checks typed flags, every other operation, binding, override and protected destination. Game names and proof metadata stay in Deko; generic recovery/native models stay in java-tools. Original bytecode is unchanged; no generated Java is hand-edited and no whole-game or phone/FPS claim is made.",
+      "to": "precedingThemeLookupFrameContinues",
+      "evidence": "Pass259 continuation eligibility for the original precedingThemeLookup remainder. Shared same-target exits retain one terminal destination, every original predicate/read once and each complete true prefix or false-arm work. The Boolean becomes false at the remaining old guarded exit; exact original suffixes use that captured decision. Preserve all callbacks/stores, aliases, nonzero flags, unused snapshots, arithmetic, failure order and protected scopes. Independent javac recipes verify normalization and the frozen frame/compaction certificate checks typed flags, every other operation, binding, override and protected destination. Game names and proof metadata stay in Deko; generic recovery/native models stay in java-tools. Original bytecode is unchanged; no generated Java is hand-edited and no whole-game or phone/FPS claim is made. Pass271 context correction: gh.b(B)V updates scene/theme transitions, not tutorial prompt placement. This unique retained Boolean is initialized true during the seven-entry preceding-theme search and written false on the matched entry; no later read occurs. The source-reviewed original frame was precedingThemeLookup. Preserve this unused snapshot, both identifier occurrences, all stores and every original control/nonzero path. This refinement changes only its guarded readable name; raw source and decompiler/naming dependency pins remain unchanged.",
       "renamedSymbol": "L:GameplaySession.updateSceneTransition(B)V#7"
     },
     {
@@ -206258,7 +206258,7 @@
       "symbol": "L:gh.b(B)V#7",
       "renamedSymbol": "L:GameplaySession.updateSceneTransition(B)V#7",
       "originalName": "decompiledFrameRemainder8",
-      "renamedName": "tutorialPromptPlacementFrameContinues",
+      "renamedName": "precedingThemeLookupFrameContinues",
       "declaration": {
         "file": "gh.java",
         "start": 42124,
@@ -622741,7 +622741,7 @@
       "original": "gh.java",
       "renamed": "GameplaySession.java",
       "inputSha256": "5430bd1fd901c662fdc213aea42d149a7077136d4ed161762d7f80ea68dd8187",
-      "outputSha256": "05558d0d3cc7e934f00368f7adf62d073fbb79c65d7f34ff4a6a84edd7b9fb7c",
+      "outputSha256": "439ed36e86edde98ff407bc2c6e6620a37de3b5aff736b7616fff20bbac61f69",
       "edits": [
         {
           "start": 50,
@@ -636989,7 +636989,7 @@
           "end": 42149,
           "symbol": "L:gh.b(B)V#7",
           "original": "decompiledFrameRemainder8",
-          "renamed": "tutorialPromptPlacementFrameContinues"
+          "renamed": "precedingThemeLookupFrameContinues"
         },
         {
           "start": 42180,
@@ -637143,7 +637143,7 @@
           "end": 42669,
           "symbol": "L:gh.b(B)V#7",
           "original": "decompiledFrameRemainder8",
-          "renamed": "tutorialPromptPlacementFrameContinues"
+          "renamed": "precedingThemeLookupFrameContinues"
         },
         {
           "start": 42744,

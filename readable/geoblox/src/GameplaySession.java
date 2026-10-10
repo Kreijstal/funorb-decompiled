@@ -1271,7 +1271,7 @@ final class GameplaySession {
             themeIndexThenId = 0;
             while (true) {
               boolean precedingThemeDispatchPreparationFrameContinues = true;
-              boolean tutorialPromptPlacementFrameContinues = true;
+              boolean precedingThemeLookupFrameContinues = true;
               if (7 > themeIndexThenId) {
                 selectedThemeComplementOrThemeSentinel = ~GameScreen.selectedThemeId;
                 themeEntryComplementOrThemeId = ~WidgetContainer.themeCycleOrder[themeIndexThenId];
@@ -1283,7 +1283,7 @@ final class GameplaySession {
                     } else {
                       precedingThemeId = WidgetContainer.themeCycleOrder[6];
                     }
-                    tutorialPromptPlacementFrameContinues = false;
+                    precedingThemeLookupFrameContinues = false;
                   }
                   else {
                     themeIndexThenId++;

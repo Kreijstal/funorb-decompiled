@@ -3357,21 +3357,22 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "7c4c23dc603f66739e89db6b10867461bb7f99d6",
+    "commit": "d11d2ce829b2ccb780189014563d5e5586b8eda8",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "10243f2c103730525b00632dbe37ed3513c4b7ef1f8f3a00d6e4361b0587311e"
+      "sha256": "f4a02b5b41510a7ab02ee4aab32475175e634ba7c4f6d2f04d0236a62a9db440"
     },
     "generatorFiles": {
-      "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
+      "build-geoblox-reading-guide.mjs": "5d68c5f4ba6ef74426f29c9e3c9c687d2f83e38c69de30dbb8caecfc71ad2c69",
+      "build-geoblox-rules.mjs": "c441bb8f91720791841ba25628cdc4bc32cad609209345013080994efa85dc37",
       "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
-      "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
+      "reproduce-geoblox.mjs": "9de9cf9890bfcb787ac09a88c92711df7e8cfa4a8e26218fc8a9cfc70d83b06d",
       "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "c4dd6cc6b4d7ed27f7c0dc2ba740fe7070b4826a3bf9b497428c11fb8fac07b4",
+    "outputTreeSha256": "c877fd67b7f0be5b0f32ad8f259ed5f06f6c870e794d9ed52ab66cbcfeb99ca5",
     "files": 303,
     "rules": 20133,
     "identifierEdits": 122233,
@@ -3386,25 +3387,23 @@
     "labelBindingsCompared": 76,
     "labelDeclarationsCompared": 28,
     "namingPass": {
-      "version": 180,
-      "rulesAdded": 16,
-      "rulesRefined": 0,
-      "previousRules": 18436,
-      "previousCompleteRulesPreserved": 18363,
-      "allPreviousCompleteRulesPreserved": true,
-      "rawInputAndGeneratorPinsUnchanged": false,
-      "remainingOpaqueBlockLabels": 37,
-      "remainingOpaqueLoopLabels": 0,
-      "wholeGameEquivalenceVerified": false,
-      "remainingOpaqueLabels": 0,
-      "remainingOpaquePlainBlockLabels": 0,
-      "remainingOpaqueFields": 0,
-      "remainingUnresolvedFieldPurposes": 41
+      "version": 271,
+      "rulesRefined": 1,
+      "rulesAdded": 0,
+      "previousRules": 20133,
+      "previousCompleteRulesPreserved": 20132,
+      "remainingUnresolvedFieldPurposes": 41,
+      "wholeGameEquivalenceVerified": false
     },
     "structuralPass": 269,
     "semanticPass": 269,
     "literalFormattingPass": 255,
-    "formattingPass": 270
+    "formattingPass": 270,
+    "readingGuide": {
+      "file": "readable/GEOBLOX-READING-GUIDE.md",
+      "generator": "readable/build-geoblox-reading-guide.mjs",
+      "sha256": "e8ed7daea7488e2d00959f026d2534480e0ce2804a1e15b842f2621b5d0150d7"
+    }
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36895,7 +36894,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6"
+    "workflowCommit": "d11d2ce829b2ccb780189014563d5e5586b8eda8"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -58043,5 +58042,90 @@
     "fieldObservationsPreserved": true,
     "sourceWorkflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6",
     "sourceProofWorkflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6"
+  },
+  "gameplayReadingGuideRecovery": {
+    "version": 271,
+    "refinedRule": "L:gh.b(B)V#7",
+    "previousReadableName": "tutorialPromptPlacementFrameContinues",
+    "readableName": "precedingThemeLookupFrameContinues",
+    "rulesUnchanged": 20132,
+    "dictionaryIdentities": 20440,
+    "rawSourceAndCompilerAndNamingDependencyPinsUnchanged": true,
+    "executableWorkflowMigration": {
+      "previousFiles": {
+        "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
+        "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
+        "reproduce-geoblox.mjs": "b5f18f72b5ddfb008f4e9dfd52facc95b3347d06f5af83bf6e856a3f7a64c98f",
+        "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
+      },
+      "currentFiles": {
+        "build-geoblox-reading-guide.mjs": "5d68c5f4ba6ef74426f29c9e3c9c687d2f83e38c69de30dbb8caecfc71ad2c69",
+        "build-geoblox-rules.mjs": "c441bb8f91720791841ba25628cdc4bc32cad609209345013080994efa85dc37",
+        "layout.mjs": "2a9b891a257b9bf089dbf23d77ca788e7e76c8ca5f161b25df4dad0453af630f",
+        "reproduce-geoblox.mjs": "9de9cf9890bfcb787ac09a88c92711df7e8cfa4a8e26218fc8a9cfc70d83b06d",
+        "text-resource-evidence.mjs": "b3df24bd91653055689544164cce208e5544f7558eb4cb5c2b8512e35ccce496"
+      }
+    },
+    "gameSpecificReadingGuideGenerator": "readable/build-geoblox-reading-guide.mjs",
+    "gameSpecificReadingGuideGeneratorSha256": "5d68c5f4ba6ef74426f29c9e3c9c687d2f83e38c69de30dbb8caecfc71ad2c69",
+    "previousReadingGuideLines": 9974,
+    "historicalSourceProofsPreserved": 113,
+    "historicalRecordsPreserved": 195,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "bad2a58aca81c3a4b55bfc515ec333ff25f11e1a",
+      "sourceTreeSha256": "532f490805700d0224ef545b47ce3940d8f730d5561134ed62bb2233ebf9918b",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6"
+    },
+    "previousNamingPass": {
+      "version": 180,
+      "rulesAdded": 16,
+      "rulesRefined": 0,
+      "previousRules": 18436,
+      "previousCompleteRulesPreserved": 18363,
+      "allPreviousCompleteRulesPreserved": true,
+      "rawInputAndGeneratorPinsUnchanged": false,
+      "remainingOpaqueBlockLabels": 37,
+      "remainingOpaqueLoopLabels": 0,
+      "wholeGameEquivalenceVerified": false,
+      "remainingOpaqueLabels": 0,
+      "remainingOpaquePlainBlockLabels": 0,
+      "remainingOpaqueFields": 0,
+      "remainingUnresolvedFieldPurposes": 41
+    },
+    "noGeneratedJavaHandEdits": true,
+    "remainingUnresolvedFieldPurposes": 41,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Correct the retained preceding-theme lookup continuation name in gh.b(B)V by its existing source-reviewed frame and current body. Preserve its unused snapshot and all original operations. Rebuild one current gameplay reading guide from current symbol identities/declarations, not historical line numbers. The guide covers the loop, session update/render, scene/theme/achievement flow, tutorials, matches, scoring, ending and the 41 unresolved field purposes. Previous pass narratives remain in Git and existing workflow documentation. One canonical reproduction command generates/checks Java and the guide together; explicit workflow hash migration adds the guide generator. Original-game/browser/phone/performance equivalence remains unverified.",
+    "readingGuideLines": 74,
+    "readingGuideSha256": "e8ed7daea7488e2d00959f026d2534480e0ce2804a1e15b842f2621b5d0150d7",
+    "sourceCodeProof": {
+      "sourceFiles": 303,
+      "changedSourceFiles": 1,
+      "identifierOccurrencesRefined": 2,
+      "noDebugCompiledClassesByteIdentical": 304,
+      "rawSourceUnchanged": true
+    },
+    "existingPublicationGroupsPassed": 27,
+    "newGuideRollbackGroupsPassed": 2,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "fieldObservationsPreserved": true,
+    "sourceWorkflowCommit": "d11d2ce829b2ccb780189014563d5e5586b8eda8",
+    "sourceProofWorkflowCommit": "d11d2ce829b2ccb780189014563d5e5586b8eda8"
   }
 }
