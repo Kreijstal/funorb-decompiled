@@ -1325,19 +1325,19 @@ final class gh {
                             boolean decompiledFrameRemainder0 = true;
                             if (stackIn_27_0 != stackIn_27_1 ||
                               var4 != 0) {
-                              decompiledFrameRemainder0 = !(var3 == 1 &&
-                                var4 == 0);
+                              decompiledFrameRemainder0 = (var3 != 1 ||
+                                var4 != 0);
                               if (decompiledFrameRemainder0) {
-                                decompiledFrameRemainder1 = !(var3 == 3 &&
-                                  var4 == 0);
+                                decompiledFrameRemainder1 = (var3 != 3 ||
+                                  var4 != 0);
                                 if (decompiledFrameRemainder1) {
-                                  decompiledFrameRemainder2 = !(var3 == 0 &&
-                                    var4 == 0);
+                                  decompiledFrameRemainder2 = (var3 != 0 ||
+                                    var4 != 0);
                                   if (decompiledFrameRemainder2) {
                                     decompiledFrameRemainder3 = (var3 != 6);
                                     if (decompiledFrameRemainder3) {
-                                      decompiledFrameRemainder4 = !(5 == var3 &&
-                                        var4 == 0);
+                                      decompiledFrameRemainder4 = (5 != var3 ||
+                                        var4 != 0);
                                       if (decompiledFrameRemainder4) {
                                         decompiledFrameRemainder6 = (2 == var3);
                                         if (decompiledFrameRemainder6) {

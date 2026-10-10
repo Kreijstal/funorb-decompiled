@@ -99,8 +99,8 @@ final class c extends ka {
                 }
                 decompiledFrameRemainder1 = (~ai.field_p != ~this.field_K);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = !(this.field_K != 1 &&
-                  this.field_K != 0))) {
+                  (decompiledFrameRemainder1 = (this.field_K == 1 ||
+                  this.field_K == 0))) {
                   oc.field_b = this.field_K;
                   decompiledFrameRemainder1 = (var4 != 0);
                 }
@@ -1752,8 +1752,8 @@ final class c extends ka {
           }
           if (3 == this.field_K &&
             !this.field_E) {
-            boolean decompiledSharedTail0 = !(this.field_q != 4 &&
-              this.field_b == 3);
+            boolean decompiledSharedTail0 = (this.field_q == 4 ||
+              this.field_b != 3);
             if (!decompiledSharedTail0) {
               this.field_b = 2;
               decompiledSharedTail0 = (Geoblox.field_C != 0);
@@ -2255,8 +2255,8 @@ final class c extends ka {
             this.field_b == 3) {
             param0 = true;
           }
-          boolean decompiledSharedTail0 = !(this.field_K == 3 ||
-            this.field_K == 2);
+          boolean decompiledSharedTail0 = (this.field_K != 3 &&
+            this.field_K != 2);
           if (!decompiledSharedTail0) {
             param3 += 280;
             decompiledSharedTail0 = (var14 != 0);

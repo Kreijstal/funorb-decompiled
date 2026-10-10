@@ -879,8 +879,8 @@ public abstract class ch extends java.applet.Applet implements Runnable, java.aw
             dl.field_c = true;
             f.field_kb.setSize(kh.field_d, ok.field_c);
             f.field_kb.setVisible(true);
-            boolean decompiledSharedTail0 = !(sg.field_a == null ||
-              he.field_a != null);
+            boolean decompiledSharedTail0 = (sg.field_a != null &&
+              he.field_a == null);
             if (!decompiledSharedTail0) {
               f.field_kb.setLocation(qa.field_b, hk.field_B);
               decompiledSharedTail0 = (Geoblox.field_C != 0);

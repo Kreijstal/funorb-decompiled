@@ -277,8 +277,8 @@ final class jh {
                         if (var11 == param2 &&
                           var9 == var12 &&
                           var13 == this.field_b) {
-                          decompiledFrameRemainder0 = !(var10 >= 0 &&
-                            (this.field_d.a((byte) 46) / 520L) >= (long)var10);
+                          decompiledFrameRemainder0 = (!(var10 >= 0) ||
+                            !((this.field_d.a((byte) 46) / 520L) >= (long)var10));
                           if (decompiledFrameRemainder0) {
                             return false;
                           }

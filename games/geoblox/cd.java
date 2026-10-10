@@ -290,8 +290,8 @@ final class cd extends jg {
             if (var8 != null) {
               if (!var8.startsWith("HTTP/1.0 200") &&
                 !var8.startsWith("HTTP/1.1 200")) {
-                decompiledFrameRemainder0 = !(!var8.startsWith("HTTP/1.0 407") &&
-                  !var8.startsWith("HTTP/1.1 407"));
+                decompiledFrameRemainder0 = (var8.startsWith("HTTP/1.0 407") ||
+                  var8.startsWith("HTTP/1.1 407"));
                 if (decompiledFrameRemainder0) {
                   var10 = 0;
                   var11 = "proxy-authenticate: ";
