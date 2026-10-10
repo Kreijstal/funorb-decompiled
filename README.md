@@ -17,14 +17,26 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/07f3f425b976426ed0783a1fb0372f6912fb57e5/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/76c16defb04ab66170a57de803980b7e8f0d5958/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
-identities. Both 303-file Java corpora compile and compare 138,167 bindings,
+identities. Both 303-file Java corpora compile and compare 138,188 bindings,
 preserving 388 override relationships.
 
-## Current prior assignments and gameplay continuations (pass 262)
+## Current scoped login/audio continuations (pass 263)
+
+The last four plain frames are reconstructed: MIDI note skipping captures scan
+completion; finite PCM skipping/mixing and login response dispatch use named
+continuation decisions. No plain block labels or large framed methods remain.
+Every original operation, prior assignment, snapshot, callback, nonzero flag path
+and protected action remains. Independent target/token/tail/AST certificates and
+native oracles pass; all 303 sources compile, reproduce and reverse exactly.
+Forty-one finer field purposes and long ordinary methods remain to review.
+Generic recovery and agent guidance stay in java-tools; game metadata and source
+proofs stay in Deko.
+
+## Previous prior assignments and gameplay continuations (pass 262)
 
 Tutorial, result rendering, HUD, exit-screen and retained-text frames use named
 continuation decisions. `GameplaySession` has no plain block labels left.

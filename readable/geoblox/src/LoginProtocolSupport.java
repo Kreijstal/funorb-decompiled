@@ -79,7 +79,8 @@ final class LoginProtocolSupport {
               unusedNullPrimaryTextSnapshot = (String) null;
               LoginProtocolSupport.advanceLoginHandshake(false, (String) null, 95, false, (String) null, 13);
             }
-            loginResultDispatch: {
+            {
+              boolean loginResultDispatchContinues = true;
               if (ClientOptionSupport.awaitingLoginResultStage == PacketBuffer.currentProtocolStage &&
                 UiWidget.readSessionBytesIfAvailable(30000, 1)) {
                 loginResultResponseByte = LogoCompositor.sessionPacketBuffer.readUnsignedByte((byte) 34);
@@ -91,15 +92,19 @@ final class LoginProtocolSupport {
                   if (loginResultResponseByte != 8) {
                     PacketBuffer.currentProtocolStage = TextInputRenderer.awaitingLoginFailureTextStage;
                     AchievementSubmission.sessionPacketPayloadLength = -1;
-                    break loginResultDispatch;
+                    loginResultDispatchContinues = false;
                   }
-                  Bzip2DecoderState.closeSessionSocket((byte) -116);
-                  TextTemplateArgumentType.loginRetryAttempted = false;
-                  closedResponseResult = loginResultResponseByte;
-                  return closedResponseResult;
+                  if (loginResultDispatchContinues) {
+                    Bzip2DecoderState.closeSessionSocket((byte) -116);
+                    TextTemplateArgumentType.loginRetryAttempted = false;
+                    closedResponseResult = loginResultResponseByte;
+                    return closedResponseResult;
+                  }
                 }
-                AchievementSubmission.sessionPacketPayloadLength = -1;
-                PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
+                if (loginResultDispatchContinues) {
+                  AchievementSubmission.sessionPacketPayloadLength = -1;
+                  PacketBuffer.currentProtocolStage = ClientOptionSupport.awaitingLoginDetailsStage;
+                }
               }
             }
             if (ClientOptionSupport.awaitingLoginDetailsStage == PacketBuffer.currentProtocolStage &&

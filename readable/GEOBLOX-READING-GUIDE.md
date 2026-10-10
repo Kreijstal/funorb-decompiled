@@ -7,16 +7,16 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/07f3f425b976426ed0783a1fb0372f6912fb57e5/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/76c16defb04ab66170a57de803980b7e8f0d5958/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 262)
+## Current readability (pass 263)
 
-The export has 20,133 guarded names and 122,232 Java identifier edits, plus 11
-class-name literal edits and 87 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
+The export has 20,133 guarded names and 122,253 Java identifier edits, plus 11
+class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
 renames and the original `Geoblox`. Finer purposes, long bodies and nested guards remain.
 The total naming-rule count mostly measures members and local declarations. All 303 sources
-compile and compare 138,167 bindings, reproduce and
+compile and compare 138,188 bindings, reproduce and
 reverse to the pinned raw Git input. Forty-one nested skip frames now use
 short-circuit guards for their original remainders, consuming 82 breaks and
 saving 219 lines. Menu hit-test trees preserve every strict boundary and
@@ -25,7 +25,22 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current prior assignments and gameplay continuations (pass 262)
+## Current scoped login/audio continuations (pass 263)
+
+`MidiNoteMixer.skipFrames` keeps its scan and uses `noteSkipTailEnabled` only for
+the original work after that scan. `PcmSampleStream.skipFrames` and `mixFrames`
+keep their complete finite wrap/bounce, loop decrement and terminal-boundary
+work, guarded by named continuation decisions. `LoginProtocolSupport.advanceLoginHandshake`
+keeps its packet reads, failure/detail/close alternatives and return order.
+No assignment or prior snapshot moves, and all nonzero paths and protected
+actions remain. There are no plain block labels or large framed methods left.
+
+Independent Java target/suffix and MIDI token/tail certificates, complete
+login/PCM ASTs, typed flags, native work oracles and exact reproduction/reversal
+pass. Forty-one finer field purposes and long ordinary methods remain to review.
+Whole-game/browser/phone and heap/presented-FPS acceptance remain unverified.
+
+## Previous prior assignments and gameplay continuations (pass 262)
 
 `GameplaySession.renderTutorialPrompt`, `renderResultSequence`,
 `renderProgressHud` and `requestSessionExitScreen` keep their original client
