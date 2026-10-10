@@ -608,7 +608,7 @@ final class GameplaySession {
         }
         {
           boolean sessionProgressionAndEndingFrameContinues = true;
-          boolean advanceEndingSequence = !(!this.sessionEnding);
+          boolean advanceEndingSequence = (this.sessionEnding);
           if (!advanceEndingSequence) {
             if ((EntityContactSupport.areEntityQueuesSettled(0) &&
               !this.matchBatchProcessedThisTick ||
@@ -616,7 +616,7 @@ final class GameplaySession {
               this.canAdvanceSession(true)) {
               if (0 == this.sessionPhase ||
                 this.sessionPhase == 5) {
-                sessionProgressionAndEndingFrameContinues = !(!this.sceneTransitionRequested);
+                sessionProgressionAndEndingFrameContinues = (this.sceneTransitionRequested);
                 if (sessionProgressionAndEndingFrameContinues) {
                   this.updateSceneTransition((byte) -80);
                   sessionProgressionAndEndingFrameContinues = (clientControlFlowGuard != 0);

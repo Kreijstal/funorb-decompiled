@@ -134,7 +134,7 @@ final class ProgressDialog extends ResizableDialog {
             this.progressBar.fillFractionQ16 = (int)(65536.0f * (percentage / 100.0f));
             return;
           }
-          enabledHighlightSnapshot = !(!redHighlight);
+          enabledHighlightSnapshot = (redHighlight);
           this.redHighlightActive = enabledHighlightSnapshot;
           if (!this.redHighlightActive) {
             this.progressBar.setStripeColors(4210752, 2113632, (byte) -103);

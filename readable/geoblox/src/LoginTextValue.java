@@ -31,7 +31,7 @@ final class LoginTextValue {
           if (null == this.text) {
             this.text = "";
           }
-          lookupInclusionSnapshot = !(!includeInLookupRequest);
+          lookupInclusionSnapshot = (includeInLookupRequest);
           this.includeInLookupRequest = lookupInclusionSnapshot;
           if (this.text.length() != 0) {
             return;

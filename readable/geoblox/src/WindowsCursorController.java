@@ -34,7 +34,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
           this.callbackRootAllocated = true;
         }
         if (targetWindowHandle == this.windowHandle) {
-          sameWindowVisibilitySnapshot = !(!visible);
+          sameWindowVisibilitySnapshot = (visible);
           this.cursorVisible = sameWindowVisibilitySnapshot;
         } else {
           if (0 != this.windowHandle) {
@@ -50,7 +50,7 @@ final class WindowsCursorController extends com.ms.dll.Callback {
             this.windowHandle = targetWindowHandle;
             this.previousWindowProcedure = com.ms.win32.User32.SetWindowLong(this.windowHandle, -4, this);
           }
-          replacementWindowVisibilitySnapshot = !(!visible);
+          replacementWindowVisibilitySnapshot = (visible);
           this.cursorVisible = replacementWindowVisibilitySnapshot;
         }
         com.ms.win32.User32.SendMessage(targetWindowHandle, 101024, 0, 0);

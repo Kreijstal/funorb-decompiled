@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "ae9627d832fbcd300c359350e5d40cc2ff415e5c",
+      "commit": "8a2dc9c68457ecb4a8e5f8d0c4e829ac427131f4",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "0db415c3e9bbf1a72cffc7fb2706a807305adb50cbfd24f152da97709ad19931",
-        "reproduce": "git archive --format=tar ae9627d832fbcd300c359350e5d40cc2ff415e5c | sha256sum",
+        "sha256": "cb7ee81441f8fa9b787ebf97e9811eb7e3f774156d9e56b6fd7888539011b5fa",
+        "reproduce": "git archive --format=tar 8a2dc9c68457ecb4a8e5f8d0c4e829ac427131f4 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -47,7 +47,8 @@
         "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
         "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
         "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
-        "CFR_JS_NEGATED_EQUALITY_VALUES": "1"
+        "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+        "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1"
       }
     },
     "namingTool": {
@@ -152,7 +153,8 @@
       "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
       "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
       "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
-      "CFR_JS_NEGATED_EQUALITY_VALUES": "1"
+      "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1"
     }
   },
   "freshVerification": {
@@ -3347,11 +3349,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc",
+    "commit": "7d71c5237e66286b2e100862f10406348a5b36f7",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "0b5ae771ff34f881bdd30917d93681e9e6fe8a1cb73aa17c66f008ed2d8b919b"
+      "sha256": "1175c488268bbaa11e2faa0eca5e66cbee466813317644ea87ff5e24d22736ee"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3361,7 +3363,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "e003f5e3303a3a57c64fd6bfa6646222cee329ff2fbf941be9f5b11cf817da68",
+    "outputTreeSha256": "7019f263c9dd7fcab1215b603fa7267d065e7735e2229b3f7dc1c76d2f82187d",
     "files": 303,
     "rules": 20133,
     "identifierEdits": 122233,
@@ -3391,8 +3393,8 @@
       "remainingOpaqueFields": 0,
       "remainingUnresolvedFieldPurposes": 41
     },
-    "structuralPass": 265,
-    "semanticPass": 265,
+    "structuralPass": 266,
+    "semanticPass": 266,
     "literalFormattingPass": 255
   },
   "arrayIndexReadRecovery": {
@@ -36871,8 +36873,8 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
     "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
-    "sourceCommit": "4be78f5377b2ac689aa733e2907c3cdcf5153aeb",
-    "sourceTreeSha256": "d300fa0a91467612ee0c26ea77f0ba0543b76c1bf2ebba9105f731d38b849595",
+    "sourceCommit": "fc616c1a9241e7ce47442c5b924f02906edadd23",
+    "sourceTreeSha256": "ec8b17753a9650d6295312d99c52c96385c71df54842a80b15dcdbb66915555d",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
@@ -36884,7 +36886,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc"
+    "workflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -54619,5 +54621,309 @@
     "reverseByteExactFiles": 303,
     "sourceWorkflowCommit": "ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc",
     "sourceProofWorkflowCommit": "ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc"
+  },
+  "primitiveBooleanValueRecovery": {
+    "version": 266,
+    "files": 303,
+    "changedFiles": 8,
+    "changedMethods": 9,
+    "doubleNegationsRemoved": 14,
+    "bindingsBefore": 138168,
+    "bindingsAfter": 138168,
+    "transfersCompared": 4757,
+    "sourceTreeSha256": "ec8b17753a9650d6295312d99c52c96385c71df54842a80b15dcdbb66915555d",
+    "selections": [
+      {
+        "file": "bj.java",
+        "methodStart": 21482,
+        "negations": [
+          {
+            "start": 22638,
+            "end": 22639
+          },
+          {
+            "start": 22640,
+            "end": 22641
+          }
+        ]
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "negations": [
+          {
+            "start": 18450,
+            "end": 18451
+          },
+          {
+            "start": 18452,
+            "end": 18453
+          }
+        ]
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "negations": [
+          {
+            "start": 20242,
+            "end": 20243
+          },
+          {
+            "start": 20244,
+            "end": 20245
+          }
+        ]
+      },
+      {
+        "file": "d.java",
+        "methodStart": 20853,
+        "negations": [
+          {
+            "start": 21423,
+            "end": 21424
+          },
+          {
+            "start": 21425,
+            "end": 21426
+          }
+        ]
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19033,
+        "negations": [
+          {
+            "start": 20940,
+            "end": 20941
+          },
+          {
+            "start": 20942,
+            "end": 20943
+          }
+        ]
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 19033,
+        "negations": [
+          {
+            "start": 21241,
+            "end": 21242
+          },
+          {
+            "start": 21243,
+            "end": 21244
+          }
+        ]
+      },
+      {
+        "file": "hd.java",
+        "methodStart": 2076,
+        "negations": [
+          {
+            "start": 2978,
+            "end": 2979
+          },
+          {
+            "start": 2980,
+            "end": 2981
+          }
+        ]
+      },
+      {
+        "file": "mb.java",
+        "methodStart": 400,
+        "negations": [
+          {
+            "start": 847,
+            "end": 848
+          },
+          {
+            "start": 849,
+            "end": 850
+          }
+        ]
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 27372,
+        "negations": [
+          {
+            "start": 28323,
+            "end": 28324
+          },
+          {
+            "start": 28325,
+            "end": 28326
+          }
+        ]
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 27372,
+        "negations": [
+          {
+            "start": 28430,
+            "end": 28431
+          },
+          {
+            "start": 28432,
+            "end": 28433
+          }
+        ]
+      },
+      {
+        "file": "pf.java",
+        "methodStart": 27372,
+        "negations": [
+          {
+            "start": 28505,
+            "end": 28506
+          },
+          {
+            "start": 28507,
+            "end": 28508
+          }
+        ]
+      },
+      {
+        "file": "rl.java",
+        "methodStart": 3907,
+        "negations": [
+          {
+            "start": 4762,
+            "end": 4763
+          },
+          {
+            "start": 4764,
+            "end": 4765
+          }
+        ]
+      },
+      {
+        "file": "tg.java",
+        "methodStart": 248,
+        "negations": [
+          {
+            "start": 1170,
+            "end": 1171
+          },
+          {
+            "start": 1172,
+            "end": 1173
+          }
+        ]
+      },
+      {
+        "file": "tg.java",
+        "methodStart": 248,
+        "negations": [
+          {
+            "start": 1748,
+            "end": 1749
+          },
+          {
+            "start": 1750,
+            "end": 1751
+          }
+        ]
+      }
+    ],
+    "sourceProofTest": "readable/tests/test-geoblox-primitive-value-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "150c3d708b396c7136ae2f710747d88588f6cb43e77563d71774a0b47d9d95e9",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "4be78f5377b2ac689aa733e2907c3cdcf5153aeb",
+    "sourceCommit": "fc616c1a9241e7ce47442c5b924f02906edadd23",
+    "previousSourceTreeSha256": "d300fa0a91467612ee0c26ea77f0ba0543b76c1bf2ebba9105f731d38b849595",
+    "javaToolsCommit": "8a2dc9c68457ecb4a8e5f8d0c4e829ac427131f4",
+    "sourceArchiveSha256": "cb7ee81441f8fa9b787ebf97e9811eb7e3f774156d9e56b6fd7888539011b5fa",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
+      "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
+      "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
+      "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1"
+    },
+    "genericFocusedTestGroupsPassed": 4,
+    "existingPredicateTestGroupsPassed": 15,
+    "newIndependentNativeOracleCases": 3888,
+    "independentlyAttributedAstFiles": 303,
+    "primitiveBooleanOperandTypesAndSingleEvaluationsIndependentlyAttributed": true,
+    "allOperationsBindingsTargetsAndScopesPreserved": true,
+    "unboxingBoxingDispatchAndVolatileReadsPreserved": true,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "completeRulesPreserved": 20133,
+    "dictionaryIdentitiesPreserved": 20440,
+    "historicalSourceProofsPreserved": 108,
+    "historicalRecordsPreserved": 189,
+    "ordinalMigrations": 0,
+    "readableIdentifierEdits": 122233,
+    "readableTotalEdits": 122320,
+    "plainBlockLabelsAfter": 0,
+    "remainingLargeFramedMethods": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "fieldObservationsPreserved": true,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "4be78f5377b2ac689aa733e2907c3cdcf5153aeb",
+      "sourceTreeSha256": "d300fa0a91467612ee0c26ea77f0ba0543b76c1bf2ebba9105f731d38b849595",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Fourteen parenthesized double-negation pairs in nine methods/eight files remove only primitive Boolean logical noise. Existing scoped source types prove unique locals, primitive formals, Boolean array components/casts and exact declared owning fields. Boxed/unknown operands, inherited fields, shadowed/out-of-scope locals and unproven class qualifiers remain; no arbitrary call return type is inferred. Independent javac types normalize pairs only when the operand is primitive Boolean and compare every ordered AST, binding, override and protected transfer. Single operand evaluations, snapshots, callbacks, volatile reads, indexing, canonical boxing, overload choice, failures and protected actions remain. All names, declarations, stores and historical proofs remain. Whole-game/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "sourceWorkflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7",
+    "sourceProofWorkflowCommit": "7d71c5237e66286b2e100862f10406348a5b36f7"
   }
 }

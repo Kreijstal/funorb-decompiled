@@ -90,7 +90,7 @@ final class LabeledChildWidget extends SingleChildWidget {
           this.child = child;
           this.padding = padding;
           this.labelFont = labelFont;
-          labelPlacementSnapshot = !(!labelAfterChild);
+          labelPlacementSnapshot = (labelAfterChild);
           this.labelAfterChild = labelPlacementSnapshot;
           this.labelWidth = labelWidth;
           this.labelText = labelText;

@@ -532,7 +532,7 @@ final class CachedArchiveSource extends ArchiveSource {
                         if (methodGuard != -38) {
                           this.getPackedGroup(25, 41);
                         }
-                        backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
+                        backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
                         if (backgroundLoadingAndSweepFrameContinues) {
                           requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
                           if (requestSweepDueCheckFrameContinues) {
@@ -573,7 +573,7 @@ final class CachedArchiveSource extends ArchiveSource {
                     if (methodGuard != -38) {
                       this.getPackedGroup(25, 41);
                     }
-                    backgroundLoadingAndSweepFrameContinues = !(!this.sweepCompletedRequests);
+                    backgroundLoadingAndSweepFrameContinues = (this.sweepCompletedRequests);
                     if (backgroundLoadingAndSweepFrameContinues) {
                       requestSweepDueCheckFrameContinues = !(ClientClockSupport.correctedCurrentTimeMillis(-12520) < this.nextRequestSweepMillis);
                       if (requestSweepDueCheckFrameContinues) {
@@ -636,7 +636,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
           this.diskWorker = diskWorker;
           this.indexDiskCache = indexDiskCache;
-          sweepOptionSnapshot = !(!sweepCompletedRequests);
+          sweepOptionSnapshot = (sweepCompletedRequests);
           this.sweepCompletedRequests = sweepOptionSnapshot;
           this.expectedIndexWhirlpoolDigest = expectedIndexWhirlpoolDigest;
           this.networkClient = networkClient;

@@ -17,14 +17,25 @@ readability generator, rules and proof fixtures belong in `dekobloko-work`; this
 repository publishes their matching Java export, dictionary and provenance.
 
 [`readable/geoblox/src`](readable/geoblox/src) contains the reproducible readable
-mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/ab8ec97f95e4568dfa0cae0cdd755d0d3154f9bc/readable/geoblox-rules.json) records its exact
+mirror. The current [manifest](https://github.com/Kreijstal/dekobloko-work/blob/7d71c5237e66286b2e100862f10406348a5b36f7/readable/geoblox-rules.json) records its exact
 input, guarded names and evidence; the [reproduction procedure](readable/README.md)
 and [gameplay reading guide](readable/GEOBLOX-READING-GUIDE.md) describe the
 current export. Names omit opaque suffixes and the dictionary preserves original
 identities. Both 303-file Java corpora compile and compare 138,168 bindings,
 preserving 388 override relationships.
 
-## Current negated equality values (pass 265)
+## Current primitive Boolean value copies (pass 266)
+
+Fourteen double-negation pairs in nine methods/eight files become direct copies
+of proven primitive Boolean values. Single operand evaluations, volatile reads,
+boxing, overload choice, callbacks and failures remain; boxed/unknown operands
+keep their unboxing and null behavior. All names/dictionary identities remain.
+Independent source/native checks pass; all 303 sources compile, reproduce and
+reverse exactly. No plain block labels or large framed methods remain. Forty-one
+finer field purposes and long ordinary methods remain to review. Generic
+recovery/agent guidance stay in java-tools; game metadata/proofs stay in Deko.
+
+## Previous negated equality values (pass 265)
 
 106 value expressions in 48 methods across 26 files complement equality directly
 while preserving both operands, order, unboxing, primitive result and boxing.

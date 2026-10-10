@@ -720,12 +720,12 @@ final class LoginPanel extends WidgetContainer implements TextInputListener, But
         LabeledChildWidget identifierRowAlias = null;
         LabeledChildWidget passwordRowAlias = null;
         try {
-          showCreateAccountValue = !(!showCreateAccount);
+          showCreateAccountValue = (showCreateAccount);
           this.showCreateAccount = showCreateAccountValue;
           this.messageText = message;
-          retryModeValue = !(!retryMode);
+          retryModeValue = (retryMode);
           this.retryMode = retryModeValue;
-          allowJustPlayValue = !(!allowJustPlay);
+          allowJustPlayValue = (allowJustPlay);
           this.allowJustPlay = allowJustPlayValue;
           if (this.retryMode && (this.showCreateAccount ||
             this.allowJustPlay)) {
