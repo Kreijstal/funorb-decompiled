@@ -427,7 +427,8 @@ final class rh {
           if (var8 != 0) {
             return true;
           }
-          L4: {
+          {
+            boolean decompiledFrameRemainder0 = true;
             if (param2 != null && (param2[0] != 0 ||
               param2[1] != 0 ||
               param2[2] != 0 ||
@@ -437,9 +438,11 @@ final class rh {
               var9 = var24;
               var25 = new qc(var34);
               var25.a((byte) -125, param2, 5, var25.field_j.length);
-              break L4;
+              decompiledFrameRemainder0 = false;
             }
-            var9 = uk.a(false, param1 - 90, this.field_f[param3]);
+            if (decompiledFrameRemainder0) {
+              var9 = uk.a(false, param1 - 90, this.field_f[param3]);
+            }
           }
           if (param1 != 4) {
             return false;

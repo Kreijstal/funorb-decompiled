@@ -416,15 +416,18 @@ abstract class wf extends ch {
           }
           mi.field_C = 11;
         }
-        L30: {
+        {
+          boolean decompiledFrameRemainder0 = true;
           if (mi.field_C == 11) {
             if (null != ak.field_b && (!ak.field_b.a(0) ||
               !ak.field_b.b(true))) {
               lc.a(si.a(ri.field_c, 2147483647, vc.field_g, ak.field_b), -2, 0.0f);
-              break L30;
+              decompiledFrameRemainder0 = false;
             }
-            cf.field_k = true;
-            mi.field_C = 12;
+            if (decompiledFrameRemainder0) {
+              cf.field_k = true;
+              mi.field_C = 12;
+            }
           }
         }
         if (param1 != 19660) {

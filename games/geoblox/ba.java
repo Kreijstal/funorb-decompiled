@@ -221,26 +221,31 @@ final class ba implements Runnable {
             while (true) {
               var3 = this;
               synchronized (var3) {
-                L2: {
+                {
+                  boolean decompiledFrameRemainder0 = true;
                   if (this.field_k == this.field_e) {
                     if (this.field_f) {
                       decompiledRegionSelector0 = 0;
-                      break L2;
+                      decompiledFrameRemainder0 = false;
                     }
-                    try {
-                      this.wait();
-                    } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      var4 = (InterruptedException) (Object) decompiledCaughtException;
+                    if (decompiledFrameRemainder0) {
+                      try {
+                        this.wait();
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        var4 = (InterruptedException) (Object) decompiledCaughtException;
+                      }
                     }
                   }
-                  var2 = this.field_k;
-                  if (this.field_e < this.field_k) {
-                    var1_int = this.field_b - this.field_k;
-                  } else {
-                    var1_int = this.field_e - this.field_k;
+                  if (decompiledFrameRemainder0) {
+                    var2 = this.field_k;
+                    if (this.field_e < this.field_k) {
+                      var1_int = this.field_b - this.field_k;
+                    } else {
+                      var1_int = this.field_e - this.field_k;
+                    }
+                    decompiledRegionSelector0 = 1;
                   }
-                  decompiledRegionSelector0 = 1;
                 }
               }
               if (decompiledRegionSelector0 == 0) {

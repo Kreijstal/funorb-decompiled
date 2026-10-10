@@ -1916,7 +1916,8 @@ final class c extends ka {
           if (param1 != -2) {
             this.c(-70);
           }
-          L1: {
+          {
+            boolean decompiledFrameRemainder1 = true;
             var6_int = var5;
             if (var6_int == 15 &&
               var7 == 0) {
@@ -1940,23 +1941,23 @@ final class c extends ka {
                 case 1:
                   ai.field_p = -1;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 2:
                   if (!fh.c(-100)) {
                     ai.field_p = 2;
                     if (var7 == 0) {
-                      break L1;
+                      break;
                     }
                   }
                   ai.field_p = 8;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 3:
                   ai.field_p = 3;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 4:
                   if (vl.field_n == null) {
@@ -1971,7 +1972,7 @@ final class c extends ka {
                   this.field_g = false;
                   this.field_y = 0;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 14:
                   vl.field_p = 0;
@@ -1984,12 +1985,12 @@ final class c extends ka {
                     oc.field_b == 1) {
                     ai.field_p = 1;
                     if (var7 == 0) {
-                      break L1;
+                      break;
                     }
                   }
                   ai.field_p = 0;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 13:
                   if (null != el.field_o) {
@@ -2018,7 +2019,7 @@ final class c extends ka {
                   }
                   cd.field_j = this.field_K;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 6:
                   {
@@ -2076,19 +2077,19 @@ final class c extends ka {
                   }
                   fi.a(param1 + 2, ll.field_d);
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 7:
                   gf.a(k.c(param1 ^ -125), 62);
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 12:
                   if (this.field_q >= 4 ||
                     this.field_E) {
                     var4 = 1;
                     if (var7 == 0) {
-                      break L1;
+                      break;
                     }
                   }
                   this.field_n = this.field_q;
@@ -2096,14 +2097,14 @@ final class c extends ka {
                   this.field_v = true;
                   this.field_E = true;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 11:
                   if (this.field_q <= 0 ||
                     this.field_E) {
                     var4 = 1;
                     if (var7 == 0) {
-                      break L1;
+                      break;
                     }
                   }
                   this.field_n = this.field_q;
@@ -2111,56 +2112,59 @@ final class c extends ka {
                   this.field_q = this.field_q - 1;
                   this.field_v = false;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 10:
                   if (fh.c(-112)) {
                     ai.field_p = 7;
                     if (var7 == 0) {
-                      break L1;
+                      break;
                     }
                   }
                   ai.field_p = 5;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 16:
                   da.field_c = 0;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 17:
                   da.field_c = 1;
                   if (var7 == 0) {
-                    break L1;
+                    break;
                   }
                 case 18:
+                  da.field_c = 2;
                   break;
                 default:
-                  break L1;
+                  break;
               }
-              da.field_c = 2;
-              break L1;
+
+              decompiledFrameRemainder1 = false;
             }
-            if (var3_int == 0) {
-              if (fh.c(param1 ^ 107) &&
-                kc.field_c == 0) {
-                var3_int = 1;
-              } else {
-                if (ca.field_f != null &&
-                  ca.field_f.field_j &&
-                  ca.field_f.field_k != null) {
-                  var6 = ca.field_f.field_k[1];
-                  stackIn_105_0 = (var6[0] != null) ? 0 : 1;
-                  var3_int = stackIn_105_0;
+            if (decompiledFrameRemainder1) {
+              if (var3_int == 0) {
+                if (fh.c(param1 ^ 107) &&
+                  kc.field_c == 0) {
+                  var3_int = 1;
+                } else {
+                  if (ca.field_f != null &&
+                    ca.field_f.field_j &&
+                    ca.field_f.field_k != null) {
+                    var6 = ca.field_f.field_k[1];
+                    stackIn_105_0 = (var6[0] != null) ? 0 : 1;
+                    var3_int = stackIn_105_0;
+                  }
                 }
               }
+              kc.field_c = kc.field_c + 1;
+              pg.a(param1 ^ -9410);
+              el.field_o = new gh(this.field_p, var3_int != 0);
+              le.a((byte) -39);
+              ai.field_p = -1;
             }
-            kc.field_c = kc.field_c + 1;
-            pg.a(param1 ^ -9410);
-            el.field_o = new gh(this.field_p, var3_int != 0);
-            le.a((byte) -39);
-            ai.field_p = -1;
           }
           if (var4 == 0) {
             this.field_H = true;
