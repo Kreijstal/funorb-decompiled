@@ -134,7 +134,7 @@ final class rl extends oe {
             this.field_bb.field_x = (int)(65536.0f * (param3 / 100.0f));
             return;
           }
-          stackIn_8_1 = !(!param0);
+          stackIn_8_1 = (param0);
           this.field_Z = stackIn_8_1;
           if (!this.field_Z) {
             this.field_bb.a(4210752, 2113632, (byte) -103);

@@ -31,7 +31,7 @@ final class mb {
           if (null == this.field_d) {
             this.field_d = "";
           }
-          stackIn_6_1 = !(!param1);
+          stackIn_6_1 = (param1);
           this.field_c = stackIn_6_1;
           if (this.field_d.length() != 0) {
             return;

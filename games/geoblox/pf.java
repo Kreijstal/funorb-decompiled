@@ -720,12 +720,12 @@ final class pf extends ee implements ga, pl {
         hd var12 = null;
         hd var13 = null;
         try {
-          stackIn_4_1 = !(!param3);
+          stackIn_4_1 = (param3);
           this.field_C = stackIn_4_1;
           this.field_L = param1;
-          stackIn_7_1 = !(!param2);
+          stackIn_7_1 = (param2);
           this.field_N = stackIn_7_1;
-          stackIn_10_1 = !(!param4);
+          stackIn_10_1 = (param4);
           this.field_I = stackIn_10_1;
           if (this.field_N && (this.field_C ||
             this.field_I)) {

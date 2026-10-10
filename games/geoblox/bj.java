@@ -532,7 +532,7 @@ final class bj extends nh {
                         if (param0 != -38) {
                           this.b(25, 41);
                         }
-                        decompiledFrameRemainder1 = !(!this.field_w);
+                        decompiledFrameRemainder1 = (this.field_w);
                         if (decompiledFrameRemainder1) {
                           decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
                           if (decompiledFrameRemainder0) {
@@ -573,7 +573,7 @@ final class bj extends nh {
                     if (param0 != -38) {
                       this.b(25, 41);
                     }
-                    decompiledFrameRemainder1 = !(!this.field_w);
+                    decompiledFrameRemainder1 = (this.field_w);
                     if (decompiledFrameRemainder1) {
                       decompiledFrameRemainder0 = !(oa.a(-12520) < this.field_n);
                       if (decompiledFrameRemainder0) {
@@ -636,7 +636,7 @@ final class bj extends nh {
           }
           this.field_i = param4;
           this.field_y = param2;
-          stackIn_7_1 = !(!param8);
+          stackIn_7_1 = (param8);
           this.field_w = stackIn_7_1;
           this.field_x = param6;
           this.field_f = param3;

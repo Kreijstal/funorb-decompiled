@@ -608,7 +608,7 @@ final class gh {
         }
         {
           boolean decompiledFrameRemainder1 = true;
-          boolean decompiledSharedTail0 = !(!this.field_x);
+          boolean decompiledSharedTail0 = (this.field_x);
           if (!decompiledSharedTail0) {
             if ((ih.a(0) &&
               !this.field_n ||
@@ -616,7 +616,7 @@ final class gh {
               this.b(true)) {
               if (0 == this.field_bb ||
                 this.field_bb == 5) {
-                decompiledFrameRemainder1 = !(!this.field_H);
+                decompiledFrameRemainder1 = (this.field_H);
                 if (decompiledFrameRemainder1) {
                   this.b((byte) -80);
                   decompiledFrameRemainder1 = (var5 != 0);
