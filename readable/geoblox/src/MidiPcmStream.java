@@ -237,7 +237,9 @@ final class MidiPcmStream extends PcmStream {
         if ((this.channelFlags[channelIndex] & 2) != 0) {
           note = (MidiNote) (this.noteMixer.notes.firstForIteration(0));
           while (note != null) {
-            if (channelIndex == note.channelIndex && null == this.heldNotesByKey[channelIndex][note.keyNumber] && note.releaseEnvelopeTime < 0) {
+            if (channelIndex == note.channelIndex &&
+              null == this.heldNotesByKey[channelIndex][note.keyNumber] &&
+              note.releaseEnvelopeTime < 0) {
               note.releaseEnvelopeTime = 0;
             }
             note = (MidiNote) (this.noteMixer.notes.nextForIteration(1));

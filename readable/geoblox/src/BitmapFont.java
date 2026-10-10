@@ -760,7 +760,8 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final void setInlineImages(IndexedSpriteState[] images, int[] baselineOffsets) {
-        if (baselineOffsets != null && baselineOffsets.length != images.length) {
+        if (baselineOffsets != null &&
+          baselineOffsets.length != images.length) {
           throw new IllegalArgumentException();
         }
         this.inlineImages = images;

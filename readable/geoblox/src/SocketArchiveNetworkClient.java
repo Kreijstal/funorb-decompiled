@@ -179,7 +179,8 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
                       }
                       archiveResponseRequestLookupFrameContinues = !(archiveResponseRequestLookupRemainderEnabled);
                     }
-                    if ((archiveResponseRequestLookupFrameContinues) && (archiveResponseRequestLookupRemainderEnabled)) {
+                    if ((archiveResponseRequestLookupFrameContinues) &&
+                      (archiveResponseRequestLookupRemainderEnabled)) {
                       matchedRequest = (NetworkArchiveRequest) (this.sentPriorityRequests.firstForIteration((byte) 121));
                       while (matchedRequest != null) {
                         if (~responseKey == ~matchedRequest.secondaryKey) {

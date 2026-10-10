@@ -67,7 +67,8 @@ final class DropTargetWidget extends SingleChildWidget {
         try {
           super.handlePointerRelease(parentX, pointerX, releaseGuard, eventContext, parentY, pointerY);
           draggedWidget = ValidationState.activeDragWidget;
-          if (draggedWidget != null && this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
+          if (draggedWidget != null &&
+            this.containsPointer(pointerX, -1, pointerY, parentY, parentX)) {
             if (this.listener instanceof DropListener) {
               ((DropListener) (this.listener)).onDrop(this, draggedWidget, 22176);
               ValidationState.activeDragWidget = null;

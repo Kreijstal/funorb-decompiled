@@ -262,7 +262,8 @@ final class SessionSocketSupport {
           sourceRowSkip = sourceRowSkip + rightClipPixels;
           destinationRowSkip = destinationRowSkip + rightClipPixels;
         }
-        if (drawWidth <= 0 || drawHeight <= 0) {
+        if (drawWidth <= 0 ||
+          drawHeight <= 0) {
           return;
         }
         SessionSocketSupport.copyPixelsIntoEmptyDestination(SoftwareRasterizer.framebuffer, sprite.pixels, sourceIndex, destinationIndex, drawWidth, drawHeight, destinationRowSkip, sourceRowSkip);

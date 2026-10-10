@@ -170,7 +170,10 @@ final class ResourceArchive {
         if (!this.ensureIndexLoaded(0)) {
           return false;
         }
-        if (0 > groupId || fileId < 0 || this.index.fileSlotCounts.length <= groupId || this.index.fileSlotCounts[groupId] <= fileId) {
+        if (0 > groupId ||
+          fileId < 0 ||
+          this.index.fileSlotCounts.length <= groupId ||
+          this.index.fileSlotCounts[groupId] <= fileId) {
           if (!HotspotTextWidget.throwOnInvalidArchiveIds) {
             return false;
           }
@@ -278,7 +281,9 @@ final class ResourceArchive {
         if (methodGuard != 3) {
           createUsernameUnavailableText = (String) null;
         }
-        if (groupId >= 0 && groupId < this.index.fileSlotCounts.length && this.index.fileSlotCounts[groupId] != 0) {
+        if (groupId >= 0 &&
+          groupId < this.index.fileSlotCounts.length &&
+          this.index.fileSlotCounts[groupId] != 0) {
           return true;
         }
         if (HotspotTextWidget.throwOnInvalidArchiveIds) {
@@ -834,7 +839,8 @@ final class ResourceArchive {
     ResourceArchive(ArchiveSource archiveSource, boolean discardPackedGroups, int fileRetentionPolicy) {
         this.index = null;
         try {
-          if (0 > fileRetentionPolicy || 2 < fileRetentionPolicy) {
+          if (0 > fileRetentionPolicy ||
+            2 < fileRetentionPolicy) {
             throw new IllegalArgumentException("");
           }
           this.fileRetentionPolicy = fileRetentionPolicy;

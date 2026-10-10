@@ -7,10 +7,10 @@ rules: two `a` overloads can have different roles. The map records original and
 renamed identities, input/output files and every edit offset. Source offsets are
 UTF-16 code units, not byte offsets.
 
-The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/3365dc162dce4aa5b34f28d2853eec1fec980997/readable/README.md) now live in
+The [generator and current rules](https://github.com/Kreijstal/dekobloko-work/blob/7c4c23dc603f66739e89db6b10867461bb7f99d6/readable/README.md) now live in
 `dekobloko-work`; the only maintained readable Java export is here.
 
-## Current readability (pass 269)
+## Current readability (pass 270)
 
 The export has 20,133 guarded names and 122,233 Java identifier edits, plus 11
 class-name literal edits and 76 separately recorded label edits. All 303 top-level names are meaningful: 302 semantic
@@ -25,7 +25,35 @@ An earlier recovery reduced menu rendering from 372 to 296 lines and ten to
 three block labels; later passes continue restructuring that body.
 Prefix/branch scopes and protected regions remain intact.
 
-## Current independent declaration scopes (pass 269)
+## Current logical condition lines (pass 270)
+
+90 single-line control conditions in 54 methods across 34 files gain 125
+logical operand line breaks. The achievement continuation ladder now places
+each named decision on its own line. Every token, parenthesis, operand, literal,
+declaration, action and statement boundary stays exact. Existing multiline
+conditions stay unchanged; source debug line metadata follows the new layout.
+
+The generic opt-in is `CFR_JS_WRAP_LOGICAL_CONDITIONS=1`. It changes only
+horizontal trivia after logical operators in control headers, after recovery
+and before structured indentation. Defaults remain unchanged. Generic formatting
+and agent guidance stay in java-tools; game rules and certificates stay in Deko.
+The tracked decompiler-source tar SHA-256 is `940df31b58deca6107af7ef21724766b276a5ab73d4738adf9101c1d5013d831`.
+
+Independent token comparison and javac verify all 303 complete ordered ASTs,
+all 138,168 bindings, 388 overrides and 4,757 protected transfers. Compiling both
+corpora with `javac -g:none` produces 304 byte-identical classes. Five existing
+formatting regression groups and seven control/protected token samples pass.
+The clean tracked compiler reproduces every source byte and unchanged diagnostics.
+All 27 publication groups pass; 27 native trace groups match the original classes,
+and all 303 sources reverse byte for byte. Fresh checkouts run the same pinned
+builder, exporter, source proof and field audit.
+
+All 20,133 rules and 20,440 dictionary identities remain unchanged. No plain
+block labels or large framed methods remain. Forty-one finer field purposes
+and long ordinary bodies remain to review. Original-game equivalence, browser/phone
+behavior and heap/presented-FPS acceptance remain unverified.
+
+## Previous independent declaration scopes (pass 269)
 
 84 standalone declaration wrappers disappear from 54 methods across 32 files, saving
 167 lines. The achievement dispatch retains its seven continuation declarations

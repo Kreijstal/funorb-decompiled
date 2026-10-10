@@ -161,7 +161,8 @@ class AudioOutput {
     }
 
     final static void configureAudio(int sampleRate, boolean stereo, int threadPriority) {
-        if (sampleRate < 8000 || sampleRate > 48000) {
+        if (sampleRate < 8000 ||
+          sampleRate > 48000) {
           throw new IllegalArgumentException();
         }
         sampleRateHz = sampleRate;

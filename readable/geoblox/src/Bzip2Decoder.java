@@ -369,7 +369,8 @@ final class Bzip2Decoder {
                 codeBits = codeBits << 1 | nextCodeBit;
               }
               symbol = ((int[]) (selectedSymbols))[codeBits - ((int[]) (selectedBases))[currentCodeLength]];
-            } while (symbol == 0 || symbol == 1);
+            } while (symbol == 0 ||
+              symbol == 1);
             runLength++;
             byteOrBitValue = state.alphabetBytes[state.moveToFrontBytes[state.moveToFrontBlockStarts[0]] & 255];
             state.byteFrequencies[byteOrBitValue & 255] = state.byteFrequencies[byteOrBitValue & 255] + runLength;

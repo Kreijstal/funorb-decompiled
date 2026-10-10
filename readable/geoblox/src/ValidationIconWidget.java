@@ -208,7 +208,8 @@ final class ValidationIconWidget extends ButtonWidget {
 
     final static void advanceLogoAnimationTick(byte methodGuard) {
         int guardRemainder = -28 % ((methodGuard - 36) / 43);
-        if (DequeCursor.logoAnimationTick != -DiskCacheWorker.logoStartDelayTicks + 0 && 250 - DiskCacheWorker.logoStartDelayTicks == DequeCursor.logoAnimationTick) {
+        if (DequeCursor.logoAnimationTick != -DiskCacheWorker.logoStartDelayTicks + 0 &&
+          250 - DiskCacheWorker.logoStartDelayTicks == DequeCursor.logoAnimationTick) {
         }
         DequeCursor.logoAnimationTick = DequeCursor.logoAnimationTick + 1;
     }

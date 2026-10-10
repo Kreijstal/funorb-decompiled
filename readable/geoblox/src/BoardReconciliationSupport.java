@@ -333,7 +333,8 @@ final class BoardReconciliationSupport {
                   }
                 }
               }
-              if ((movingEntityRoutingRemainderEnabled) && (transientEntityRoutingRemainderEnabled)) {
+              if ((movingEntityRoutingRemainderEnabled) &&
+                (transientEntityRoutingRemainderEnabled)) {
                 routedAttachedEntity.entityQueue = null;
               }
               UiWidget.gameplaySession.boardRasterDirty = true;
@@ -360,7 +361,8 @@ final class BoardReconciliationSupport {
             }
             break;
           }
-          if ((transientQueueExhausted) && (SessionSocketSupport.avatarShockPending)) {
+          if ((transientQueueExhausted) &&
+            (SessionSocketSupport.avatarShockPending)) {
             AvatarFeedbackSupport.requestAvatarFeedback(3, false);
             Bzip2DecoderState.avatarShockContactPending = false;
           }

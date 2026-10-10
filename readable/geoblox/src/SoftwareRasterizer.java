@@ -569,7 +569,9 @@ final class SoftwareRasterizer {
 
     final static void setPixel(int x, int y, int color) {
         if (x >= clipLeft) {
-          if (y < clipTop || x >= clipRight || y >= clipBottom) {
+          if (y < clipTop ||
+            x >= clipRight ||
+            y >= clipBottom) {
             return;
           }
           framebuffer[x + y * stride] = color;

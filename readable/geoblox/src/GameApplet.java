@@ -300,7 +300,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     this.showGameError((byte) 79, "wrongjava");
                     appletExecutionFrameContinues = (clientControlSnapshot != 0);
                   }
-                  if ((appletExecutionFrameContinues) && (javaVersionText.startsWith("1.6.0_"))) {
+                  if ((appletExecutionFrameContinues) &&
+                    (javaVersionText.startsWith("1.6.0_"))) {
                     updateSuffixIndexOrVersionDigitOrTickIndex = 6;
                     while (javaVersionText.length() > updateSuffixIndexOrVersionDigitOrTickIndex) {
                       digitOrLegacyVersionPredicate = DualLinkNode.isAsciiDigit(-58, javaVersionText.charAt(updateSuffixIndexOrVersionDigitOrTickIndex));
@@ -316,7 +317,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (digitOrLegacyVersionDecisionRemainderEnabled) {
                       javaUpdateSuffix = javaVersionText.substring(6, updateSuffixIndexOrVersionDigitOrTickIndex);
-                      if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) && !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
+                      if (MessageDialog.isSignedDecimalInt((byte) -115, (CharSequence) ((Object) javaUpdateSuffix)) &&
+                        !(MultiHandleSliderWidget.parseSignedDecimalInt(false, (CharSequence) ((Object) javaUpdateSuffix)) >= 10)) {
                         this.showGameError((byte) 79, "wrongjava");
                         appletExecutionFrameContinues = (clientControlSnapshot != 0);
                       }
@@ -324,13 +326,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   }
                 }
               }
-              if ((appletExecutionFrameContinues) && (digitOrLegacyVersionDecisionRemainderEnabled)) {
+              if ((appletExecutionFrameContinues) &&
+                (digitOrLegacyVersionDecisionRemainderEnabled)) {
                 legacyJavaVersionCheckFrameContinues = (PlatformTaskDispatcher.javaVersion != null);
                 if (legacyJavaVersionCheckFrameContinues) {
                   digitOrLegacyVersionPredicate = PlatformTaskDispatcher.javaVersion.startsWith("1.");
                 }
               }
-              if ((appletExecutionFrameContinues) && (legacyJavaVersionCheckFrameContinues) && (digitOrLegacyVersionPredicate)) {
+              if ((appletExecutionFrameContinues) &&
+                (legacyJavaVersionCheckFrameContinues) &&
+                (digitOrLegacyVersionPredicate)) {
                 javaVersionDigitIndex = 2;
                 parsedJavaMajorVersion = 0;
                 while (true) {
@@ -382,7 +387,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (0L != MenuScreen.appletStopDeadlineMillis) {
                     stopDeadlineComparisonOrTickIndex = compareSignedLongs(~MenuScreen.appletStopDeadlineMillis, ~ClientClockSupport.correctedCurrentTimeMillis(-12520));
                     stopDeadlineOrTickDecisionFrameContinues = (clientControlSnapshot == 0);
-                    if ((stopDeadlineOrTickDecisionFrameContinues) && (stopDeadlineComparisonOrTickIndex >= 0)) {
+                    if ((stopDeadlineOrTickDecisionFrameContinues) &&
+                      (stopDeadlineComparisonOrTickIndex >= 0)) {
                       break;
                     }
                   }
@@ -717,7 +723,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void destroy() {
-        if (PrefixCodeDecoder.activeGameApplet != this || MidiNoteMixer.appletShutdownStarted) {
+        if (PrefixCodeDecoder.activeGameApplet != this ||
+          MidiNoteMixer.appletShutdownStarted) {
           return;
         }
         try {

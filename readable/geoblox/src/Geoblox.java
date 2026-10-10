@@ -66,7 +66,10 @@ public final class Geoblox extends SessionGameApplet {
         int sparkleFrameIndex;
         int unusedInitialKeyboardIconIndexSnapshot;
         ByteStorage.pollAccountDialogUi(CachedTextLayout.wheelRotationSnapshot, (byte) -104);
-        if (null != OpacityWidget.synthesizedSoundArchive && null != GzipInflater.initialMusicScoreArchive && TextWidgetSupport.initialVorbisArchive != null && null != ProxySocketConnector.instrumentPatchArchive) {
+        if (null != OpacityWidget.synthesizedSoundArchive &&
+          null != GzipInflater.initialMusicScoreArchive &&
+          TextWidgetSupport.initialVorbisArchive != null &&
+          null != ProxySocketConnector.instrumentPatchArchive) {
           HighscoreNameEntry.setLoadingProgress(FifoResponseToken.unpackingMusicText, -2, 60.0f);
           this.renderFrame(25853);
           SocketConnector.prepareInitialGameAudio(OpacityWidget.synthesizedSoundArchive, (byte) 80, TextWidgetSupport.initialVorbisArchive, GzipInflater.initialMusicScoreArchive, ProxySocketConnector.instrumentPatchArchive);
@@ -77,7 +80,9 @@ public final class Geoblox extends SessionGameApplet {
           EntityContactSupport.resetFrameTimingHistory(127);
           return false;
         }
-        if (null != GameGraphicsResources.gameGraphicsArchive && null != ArchiveLoadStep.fontMetricsArchive && SessionTextHistorySupport.basicUiGraphicsArchive != null) {
+        if (null != GameGraphicsResources.gameGraphicsArchive &&
+          null != ArchiveLoadStep.fontMetricsArchive &&
+          SessionTextHistorySupport.basicUiGraphicsArchive != null) {
           HighscoreNameEntry.setLoadingProgress(ClientScreenExitSupport.unpackingGraphicsText, methodGuard - 25871, 80.0f);
           this.renderFrame(25853);
           FadingDialog.uiPaletteFont = SessionSocketSupport.loadPaletteFont("", GameGraphicsResources.gameGraphicsArchive, ArchiveLoadStep.fontMetricsArchive, true, "font");

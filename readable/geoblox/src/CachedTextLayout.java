@@ -109,7 +109,11 @@ final class CachedTextLayout extends TextLayout {
         if (methodGuard != 58) {
           CachedTextLayout.compactDepthBucketFaceOrder(-90);
         }
-        if (this.cachedFont == font && this.singleLineMode && this.cachedHorizontalAlignment == 1 && null != this.cachedText && this.cachedText.equals(text)) {
+        if (this.cachedFont == font &&
+          this.singleLineMode &&
+          this.cachedHorizontalAlignment == 1 &&
+          null != this.cachedText &&
+          this.cachedText.equals(text)) {
           return;
         }
         try {

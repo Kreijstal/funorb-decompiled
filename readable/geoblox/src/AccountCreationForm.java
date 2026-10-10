@@ -198,13 +198,15 @@ final class AccountCreationForm extends WidgetContainer implements HotspotActiva
     final static LoginTextValue createActiveLoginLookupValue(int methodGuard) {
         String unusedEmailFilteredLoginIdentifier = ClientFlowToken.getActiveLoginIdentifier(0);
         if (methodGuard == 25) {
-          if (unusedEmailFilteredLoginIdentifier != null && unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
+          if (unusedEmailFilteredLoginIdentifier != null &&
+            unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
             unusedEmailFilteredLoginIdentifier = "";
           }
           return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));
         }
         archiveHandshakeStage = 84;
-        if (unusedEmailFilteredLoginIdentifier != null && unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
+        if (unusedEmailFilteredLoginIdentifier != null &&
+          unusedEmailFilteredLoginIdentifier.indexOf('@') >= 0) {
           unusedEmailFilteredLoginIdentifier = "";
         }
         return new LoginTextValue(ClientFlowToken.getActiveLoginIdentifier(0), ProgressDialog.isUsernameQueryFlowPending(-1071908447));

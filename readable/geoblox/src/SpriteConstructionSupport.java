@@ -8,7 +8,8 @@ final class SpriteConstructionSupport {
 
     final static int unsignedBitLength(byte methodGuard, int remainingBits) {
         int shiftedBitCount = 0;
-        if (0 > remainingBits || remainingBits >= 65536) {
+        if (0 > remainingBits ||
+          remainingBits >= 65536) {
           remainingBits = remainingBits >>> 16;
           shiftedBitCount += 16;
         }

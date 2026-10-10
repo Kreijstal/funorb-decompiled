@@ -7,11 +7,11 @@
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "18405a936e16be4a0ea2b57de8a21f0fc80737a6",
+      "commit": "d1dffcee5f4aa551e76bdac6d98bb42da82349d3",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "a12d32c26f96b34d4812217177a6b3e75d1f49858054a622fd1c455da2b8fadf",
-        "reproduce": "git archive --format=tar 18405a936e16be4a0ea2b57de8a21f0fc80737a6 | sha256sum",
+        "sha256": "940df31b58deca6107af7ef21724766b276a5ab73d4738adf9101c1d5013d831",
+        "reproduce": "git archive --format=tar d1dffcee5f4aa551e76bdac6d98bb42da82349d3 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       },
       "environment": {
@@ -51,7 +51,8 @@
         "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
         "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
         "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
-        "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1"
+        "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1",
+        "CFR_JS_WRAP_LOGICAL_CONDITIONS": "1"
       }
     },
     "namingTool": {
@@ -160,7 +161,8 @@
       "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
       "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
       "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
-      "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1"
+      "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1",
+      "CFR_JS_WRAP_LOGICAL_CONDITIONS": "1"
     }
   },
   "freshVerification": {
@@ -3355,11 +3357,11 @@
   },
   "readabilityWorkflow": {
     "repository": "Kreijstal/dekobloko-work",
-    "commit": "3365dc162dce4aa5b34f28d2853eec1fec980997",
+    "commit": "7c4c23dc603f66739e89db6b10867461bb7f99d6",
     "trackedClean": true,
     "manifest": {
       "path": "readable/geoblox-rules.json",
-      "sha256": "b90c725c27cfd2e0de45ada7bcc890ccddea75e6a66f21f2f0af3f764328ebbc"
+      "sha256": "10243f2c103730525b00632dbe37ed3513c4b7ef1f8f3a00d6e4361b0587311e"
     },
     "generatorFiles": {
       "build-geoblox-rules.mjs": "52731c04dc967e2b5a5c9bea766a8ff2367c016538ccc8968443a51686cb1359",
@@ -3369,7 +3371,7 @@
     },
     "outputRepository": "Kreijstal/funorb-decompiled",
     "outputDirectory": "readable/geoblox",
-    "outputTreeSha256": "833a88857692d67b0fee9751aa417a0b32a10f360df25f52ec9c08aa6010a84a",
+    "outputTreeSha256": "c4dd6cc6b4d7ed27f7c0dc2ba740fe7070b4826a3bf9b497428c11fb8fac07b4",
     "files": 303,
     "rules": 20133,
     "identifierEdits": 122233,
@@ -3401,7 +3403,8 @@
     },
     "structuralPass": 269,
     "semanticPass": 269,
-    "literalFormattingPass": 255
+    "literalFormattingPass": 255,
+    "formattingPass": 270
   },
   "arrayIndexReadRecovery": {
     "historicalPassVersion": 119,
@@ -36879,8 +36882,8 @@
   "currentUnresolvedFieldSourceAudit": {
     "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
     "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
-    "sourceCommit": "ca60d3cb76991b3d390a9947b78cef511e9c44ad",
-    "sourceTreeSha256": "31b75effd73b3f53b2878ebbc8cb4d658ce6399b88e714cb3ec497fe6d717b08",
+    "sourceCommit": "bad2a58aca81c3a4b55bfc515ec333ff25f11e1a",
+    "sourceTreeSha256": "532f490805700d0224ef545b47ce3940d8f730d5561134ed62bb2233ebf9918b",
     "previousAuditRetained": true,
     "unresolvedFieldPurposes": 41,
     "compiledSourceFiles": 303,
@@ -36892,7 +36895,7 @@
       "ch.java"
     ],
     "fieldObservationsPreserved": true,
-    "workflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997"
+    "workflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6"
   },
   "checkedReferenceCastBridgeCleanup": {
     "version": 247,
@@ -57047,5 +57050,998 @@
     "fieldObservationsPreserved": true,
     "sourceWorkflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997",
     "sourceProofWorkflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997"
+  },
+  "logicalConditionLineRecovery": {
+    "version": 270,
+    "files": 303,
+    "changedFiles": 34,
+    "changedMethods": 54,
+    "conditionsWrapped": 90,
+    "operatorsWrapped": 125,
+    "noDebugCompiledClassesByteIdentical": 304,
+    "allSourceTokensAndCompleteAstUnchanged": true,
+    "bindingsBefore": 138168,
+    "bindingsAfter": 138168,
+    "transfersCompared": 4757,
+    "sourceTreeSha256": "532f490805700d0224ef545b47ce3940d8f730d5561134ed62bb2233ebf9918b",
+    "selections": [
+      {
+        "file": "Geoblox.java",
+        "methodStart": 954,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 5,
+        "conditions": [
+          {
+            "start": 1745,
+            "end": 1831,
+            "operators": 3
+          },
+          {
+            "start": 2155,
+            "end": 2219,
+            "operators": 2
+          }
+        ]
+      },
+      {
+        "file": "bg.java",
+        "methodStart": 3877,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 5141,
+            "end": 5169,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "bj.java",
+        "methodStart": 13559,
+        "conditionsWrapped": 3,
+        "operatorsWrapped": 6,
+        "conditions": [
+          {
+            "start": 18524,
+            "end": 18646,
+            "operators": 3
+          },
+          {
+            "start": 18731,
+            "end": 18822,
+            "operators": 2
+          },
+          {
+            "start": 19719,
+            "end": 19779,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "c.java",
+        "methodStart": 91210,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 95528,
+            "end": 95564,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "c.java",
+        "methodStart": 83551,
+        "conditionsWrapped": 4,
+        "operatorsWrapped": 4,
+        "conditions": [
+          {
+            "start": 86947,
+            "end": 86973,
+            "operators": 1
+          },
+          {
+            "start": 87650,
+            "end": 87676,
+            "operators": 1
+          },
+          {
+            "start": 89722,
+            "end": 89744,
+            "operators": 1
+          },
+          {
+            "start": 90141,
+            "end": 90164,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "c.java",
+        "methodStart": 68409,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 68947,
+            "end": 68995,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "c.java",
+        "methodStart": 40907,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 46987,
+            "end": 47037,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "c.java",
+        "methodStart": 1052,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 5,
+        "conditions": [
+          {
+            "start": 1918,
+            "end": 1978,
+            "operators": 1
+          },
+          {
+            "start": 6879,
+            "end": 7007,
+            "operators": 4
+          }
+        ]
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 27378,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 27419,
+            "end": 27453,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "ch.java",
+        "methodStart": 10380,
+        "conditionsWrapped": 5,
+        "operatorsWrapped": 6,
+        "conditions": [
+          {
+            "start": 12031,
+            "end": 12091,
+            "operators": 1
+          },
+          {
+            "start": 12710,
+            "end": 12816,
+            "operators": 1
+          },
+          {
+            "start": 13057,
+            "end": 13117,
+            "operators": 1
+          },
+          {
+            "start": 13346,
+            "end": 13424,
+            "operators": 2
+          },
+          {
+            "start": 15602,
+            "end": 15654,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "dm.java",
+        "methodStart": 62432,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 62968,
+            "end": 63018,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "eb.java",
+        "methodStart": 2474,
+        "conditionsWrapped": 4,
+        "operatorsWrapped": 4,
+        "conditions": [
+          {
+            "start": 2896,
+            "end": 2937,
+            "operators": 1
+          },
+          {
+            "start": 4295,
+            "end": 4336,
+            "operators": 1
+          },
+          {
+            "start": 4700,
+            "end": 4741,
+            "operators": 1
+          },
+          {
+            "start": 5963,
+            "end": 6004,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "eg.java",
+        "methodStart": 589,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 1610,
+            "end": 1639,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "fk.java",
+        "methodStart": 2433,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 2670,
+            "end": 2730,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 41047,
+        "conditionsWrapped": 6,
+        "operatorsWrapped": 21,
+        "conditions": [
+          {
+            "start": 44478,
+            "end": 44693,
+            "operators": 6
+          },
+          {
+            "start": 44862,
+            "end": 45046,
+            "operators": 5
+          },
+          {
+            "start": 45215,
+            "end": 45368,
+            "operators": 4
+          },
+          {
+            "start": 45537,
+            "end": 45659,
+            "operators": 3
+          },
+          {
+            "start": 45828,
+            "end": 45919,
+            "operators": 2
+          },
+          {
+            "start": 46089,
+            "end": 46149,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 39763,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 40105,
+            "end": 40157,
+            "operators": 1
+          },
+          {
+            "start": 40683,
+            "end": 40739,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "gh.java",
+        "methodStart": 18909,
+        "conditionsWrapped": 3,
+        "operatorsWrapped": 3,
+        "conditions": [
+          {
+            "start": 20165,
+            "end": 20205,
+            "operators": 1
+          },
+          {
+            "start": 21560,
+            "end": 21588,
+            "operators": 1
+          },
+          {
+            "start": 29390,
+            "end": 29446,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "hj.java",
+        "methodStart": 136,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 215,
+            "end": 246,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "hk.java",
+        "methodStart": 8990,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 9091,
+            "end": 9143,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "i.java",
+        "methodStart": 8829,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 10988,
+            "end": 11047,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "i.java",
+        "methodStart": 3221,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 5355,
+            "end": 5414,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kc.java",
+        "methodStart": 1820,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 13260,
+            "end": 13320,
+            "operators": 1
+          },
+          {
+            "start": 14228,
+            "end": 14273,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kj.java",
+        "methodStart": 8613,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 8904,
+            "end": 8994,
+            "operators": 2
+          }
+        ]
+      },
+      {
+        "file": "kk.java",
+        "methodStart": 414,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 7006,
+            "end": 7066,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 58953,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 59335,
+            "end": 59414,
+            "operators": 1
+          },
+          {
+            "start": 59925,
+            "end": 60002,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 50244,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 50780,
+            "end": 50860,
+            "operators": 1
+          },
+          {
+            "start": 51408,
+            "end": 51486,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 45826,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 46362,
+            "end": 46442,
+            "operators": 1
+          },
+          {
+            "start": 46986,
+            "end": 47060,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 26139,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 26700,
+            "end": 26781,
+            "operators": 1
+          },
+          {
+            "start": 27604,
+            "end": 27686,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 24654,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 25036,
+            "end": 25115,
+            "operators": 1
+          },
+          {
+            "start": 25622,
+            "end": 25695,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 22208,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 22769,
+            "end": 22850,
+            "operators": 1
+          },
+          {
+            "start": 23677,
+            "end": 23763,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 12442,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 12906,
+            "end": 12986,
+            "operators": 1
+          },
+          {
+            "start": 13735,
+            "end": 13820,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 2529,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 2556,
+            "end": 2596,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "kl.java",
+        "methodStart": 450,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 914,
+            "end": 994,
+            "operators": 1
+          },
+          {
+            "start": 1739,
+            "end": 1820,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "m.java",
+        "methodStart": 25182,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 25235,
+            "end": 25285,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "ol.java",
+        "methodStart": 1178,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 1227,
+            "end": 1279,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 7856,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 8310,
+            "end": 8349,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "pa.java",
+        "methodStart": 2620,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 3540,
+            "end": 3569,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "qc.java",
+        "methodStart": 26050,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 26100,
+            "end": 26130,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "qh.java",
+        "methodStart": 8785,
+        "conditionsWrapped": 2,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 8889,
+            "end": 8929,
+            "operators": 1
+          },
+          {
+            "start": 9063,
+            "end": 9103,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "qk.java",
+        "methodStart": 4803,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 4876,
+            "end": 4909,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "ra.java",
+        "methodStart": 1426,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 1482,
+            "end": 1522,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 29071,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 29171,
+            "end": 29197,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 9028,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 9234,
+            "end": 9324,
+            "operators": 2
+          }
+        ]
+      },
+      {
+        "file": "rh.java",
+        "methodStart": 5117,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 3,
+        "conditions": [
+          {
+            "start": 5354,
+            "end": 5463,
+            "operators": 3
+          }
+        ]
+      },
+      {
+        "file": "sk.java",
+        "methodStart": 2483,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 5368,
+            "end": 5444,
+            "operators": 2
+          }
+        ]
+      },
+      {
+        "file": "tb.java",
+        "methodStart": 181,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 12125,
+            "end": 12151,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "td.java",
+        "methodStart": 6692,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 6785,
+            "end": 6850,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "vb.java",
+        "methodStart": 18880,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 18984,
+            "end": 19044,
+            "operators": 2
+          }
+        ]
+      },
+      {
+        "file": "vc.java",
+        "methodStart": 3460,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 4,
+        "conditions": [
+          {
+            "start": 3742,
+            "end": 3858,
+            "operators": 4
+          }
+        ]
+      },
+      {
+        "file": "vf.java",
+        "methodStart": 271,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 530,
+            "end": 568,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "w.java",
+        "methodStart": 7370,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 8670,
+            "end": 8694,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 19575,
+        "conditionsWrapped": 5,
+        "operatorsWrapped": 5,
+        "conditions": [
+          {
+            "start": 22192,
+            "end": 22226,
+            "operators": 1
+          },
+          {
+            "start": 23158,
+            "end": 23193,
+            "operators": 1
+          },
+          {
+            "start": 27398,
+            "end": 27429,
+            "operators": 1
+          },
+          {
+            "start": 30535,
+            "end": 30579,
+            "operators": 1
+          },
+          {
+            "start": 31016,
+            "end": 31051,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "wh.java",
+        "methodStart": 17607,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 1,
+        "conditions": [
+          {
+            "start": 18535,
+            "end": 18579,
+            "operators": 1
+          }
+        ]
+      },
+      {
+        "file": "wl.java",
+        "methodStart": 2530,
+        "conditionsWrapped": 1,
+        "operatorsWrapped": 2,
+        "conditions": [
+          {
+            "start": 2748,
+            "end": 2822,
+            "operators": 2
+          }
+        ]
+      }
+    ],
+    "sourceProofTest": "readable/tests/test-geoblox-condition-lines-source.mjs",
+    "sourceProofTestRepository": "Kreijstal/dekobloko-work",
+    "sourceProofTestSha256": "2ea32ce5bec682fb608a98d1b3b0dc126119927d1b96a31b9549c446d109775a",
+    "bodyPositionFixtureSha256": "bd055a5b54cc29b307cf4cfc584509741a18d283a8ed53a284e2d629c40471cd",
+    "previousSourceCommit": "ca60d3cb76991b3d390a9947b78cef511e9c44ad",
+    "sourceCommit": "bad2a58aca81c3a4b55bfc515ec333ff25f11e1a",
+    "previousSourceTreeSha256": "31b75effd73b3f53b2878ebbc8cb4d658ce6399b88e714cb3ec497fe6d717b08",
+    "javaToolsCommit": "d1dffcee5f4aa551e76bdac6d98bb42da82349d3",
+    "sourceArchiveSha256": "940df31b58deca6107af7ef21724766b276a5ab73d4738adf9101c1d5013d831",
+    "compilerEnvironment": {
+      "CFR_JS_DISABLE_LOOP_TAIL_MERGE": "1",
+      "CFR_JS_SPLIT_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_LOOP_FRAME_COMPLETION": "1",
+      "CFR_JS_FINAL_BOOLEAN_PREDICATES": "1",
+      "CFR_JS_FINAL_LOCAL_GUARDS": "1",
+      "CFR_JS_FLATTEN_STANDALONE_BLOCKS": "1",
+      "CFR_JS_SPLIT_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_REFERENCE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SPLIT_ARRAY_DIMENSION_LIFETIMES": "1",
+      "CFR_JS_SPLIT_NESTED_INITIALIZED_PRIMITIVE_LIFETIMES": "1",
+      "CFR_JS_SHARE_DYNAMIC_GUARDED_TAILS": "1",
+      "CFR_JS_AVOID_PROVEN_REFERENCE_CAST_BRIDGES": "1",
+      "CFR_JS_LEADING_LOOP_EXIT_WORK": "1",
+      "CFR_JS_SIMPLIFY_NATURAL_LOOP_EXIT_CAPTURES": "1",
+      "CFR_JS_GUARDED_FRAME_COMPLETION": "1",
+      "CFR_JS_COMPACT_LOCAL_BOOLEAN_GUARDS": "1",
+      "CFR_JS_REINDENT_STRUCTURED_BODIES": "1",
+      "CFR_JS_EXHAUSTIVE_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_EXHAUSTIVE_IF_FRAME_EXITS": "1",
+      "CFR_JS_SWITCH_EXIT_TAILS": "1",
+      "CFR_JS_GUARDED_FRAME_PREFIX_EFFECTS": "1",
+      "CFR_JS_GUARDED_FRAME_ALTERNATES": "1",
+      "CFR_JS_OPAQUE_CONTROL_DISPATCHES": "1",
+      "CFR_JS_SHARED_FRAME_EXIT_GUARDS": "1",
+      "CFR_JS_SHARED_SWITCH_FRAME_EXITS": "1",
+      "CFR_JS_SPLIT_MULTILINE_BLOCK_HEADERS": "1",
+      "CFR_JS_SHARED_LOOP_FRAME_EXITS": "1",
+      "CFR_JS_GUARDED_FRAME_DOMINATING_ASSIGNMENTS": "1",
+      "CFR_JS_SCOPED_FRAME_INITIALIZATION": "1",
+      "CFR_JS_KNOWN_BOOLEAN_ALTERNATIVES": "1",
+      "CFR_JS_NEGATED_EQUALITY_VALUES": "1",
+      "CFR_JS_PRIMITIVE_BOOLEAN_VALUES": "1",
+      "CFR_JS_LATE_NESTED_IF_CONDITIONS": "1",
+      "CFR_JS_BOOLEAN_LOGICAL_VALUES": "1",
+      "CFR_JS_UNIQUE_DECLARATION_BLOCKS": "1",
+      "CFR_JS_WRAP_LOGICAL_CONDITIONS": "1"
+    },
+    "existingFormattingRegressionTestGroupsPassed": 5,
+    "controlAndProtectedTokenSamplesCompared": 7,
+    "cleanSourceArchiveReproducesSourcesAndDiagnostics": true,
+    "diagnosticsUnchanged": true,
+    "completeRulesPreserved": 20133,
+    "dictionaryIdentitiesPreserved": 20440,
+    "historicalSourceProofsPreserved": 112,
+    "historicalRecordsPreserved": 194,
+    "ordinalMigrations": 0,
+    "readableIdentifierEdits": 122233,
+    "readableTotalEdits": 122320,
+    "plainBlockLabelsAfter": 0,
+    "remainingLargeFramedMethods": 0,
+    "remainingUnresolvedFieldPurposes": 41,
+    "previousUnresolvedFieldSourceAudit": {
+      "fixture": "readable/tests/test-geoblox-current-unresolved-fields.mjs",
+      "fixtureSha256": "82e4ec470846f64d6d06046a0cd8c9b825abfe287df6fab9e32fb94495550880",
+      "sourceCommit": "ca60d3cb76991b3d390a9947b78cef511e9c44ad",
+      "sourceTreeSha256": "31b75effd73b3f53b2878ebbc8cb4d658ce6399b88e714cb3ec497fe6d717b08",
+      "previousAuditRetained": true,
+      "unresolvedFieldPurposes": 41,
+      "compiledSourceFiles": 303,
+      "observerFixture": "readable/tests/test-geoblox-unresolved-fields.mjs",
+      "observerFixtureSha256": "481dfb6193bc4226434c89e0b9f6330f355adea396acc6e64ca00d65158a79e3",
+      "previousInventoryCommit": "5fa8aee91d24371274fe6649b16e57deae9de2ee",
+      "refreshedSourceHashes": 6,
+      "refreshedSourceFiles": [
+        "ch.java"
+      ],
+      "fieldObservationsPreserved": true,
+      "workflowCommit": "3365dc162dce4aa5b34f28d2853eec1fec980997"
+    },
+    "bytecodeChanged": false,
+    "recompiledSourceBytecodeChanged": true,
+    "sourceDebugMetadataChangesExpected": true,
+    "sourceBodyEditedByHand": false,
+    "wholeGameEquivalenceVerified": false,
+    "scope": "Whitespace-only formatting of 90 logical control headers in 54 methods/34 files, inserting 125 logical operand line breaks. Every token, parenthesis, quoted value, declaration, action and statement boundary remains. Complete ordered javac trees and all bindings/overrides/protected transfers stay exact. Independent javac -g:none compilation produces 304 byte-identical class files, proving that this pass changes no executable compiled source behavior; source debug line metadata changes as expected. Clean compiler output equals every independently verified source byte and unchanged diagnostics. All names and historical proofs remain. Forty-one finer field purposes and long ordinary bodies remain to review. Original-game/browser/phone and heap/presented-FPS acceptance remain unverified.",
+    "publicationTestGroupsPassed": 27,
+    "existingNativeGameplayScenarios": 3,
+    "existingNativeNineSliceScenarios": 10,
+    "existingNativeResultHelperScenarios": 14,
+    "reverseByteExactFiles": 303,
+    "fieldObservationsPreserved": true,
+    "sourceWorkflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6",
+    "sourceProofWorkflowCommit": "7c4c23dc603f66739e89db6b10867461bb7f99d6"
   }
 }

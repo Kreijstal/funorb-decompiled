@@ -1765,7 +1765,8 @@ class Sprite extends SpriteState {
           if (destinationHeight <= 0) {
             return;
           }
-          if (destinationWidth == this.width && destinationHeight == this.height) {
+          if (destinationWidth == this.width &&
+            destinationHeight == this.height) {
             this.drawSilhouette(x, y, color);
             return;
           }

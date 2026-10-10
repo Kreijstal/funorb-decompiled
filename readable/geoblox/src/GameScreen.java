@@ -67,7 +67,8 @@ final class GameScreen extends MenuScreen {
           } else {
             volumeKeyHandlingFrameContinues = (actionId == 9);
           }
-          if ((menuKeyDispatchFrameContinues) && (volumeKeyHandlingFrameContinues)) {
+          if ((menuKeyDispatchFrameContinues) &&
+            (volumeKeyHandlingFrameContinues)) {
             if (102 != SessionTextHistorySupport.currentKeyboardEventCode) {
               if (103 != SessionTextHistorySupport.currentKeyboardEventCode) {
                 super.handleMenuKey(itemIndex, -70);
@@ -177,7 +178,11 @@ final class GameScreen extends MenuScreen {
                     }
                     if (menuKeyDispatchFrameContinues) {
                       if (this.fullscreenDialogButtonIndex != 0) {
-                        if ((!(this.fullscreenDialogButtonIndex >= 0)) && (!(PrefixCodeDecoder.pointerXSnapshot <= 170)) && (!(PrefixCodeDecoder.pointerXSnapshot >= 290)) && (!(PcmResampler.pointerYSnapshot <= 265)) && (!(PcmResampler.pointerYSnapshot >= 299))) {
+                        if ((!(this.fullscreenDialogButtonIndex >= 0)) &&
+                          (!(PrefixCodeDecoder.pointerXSnapshot <= 170)) &&
+                          (!(PrefixCodeDecoder.pointerXSnapshot >= 290)) &&
+                          (!(PcmResampler.pointerYSnapshot <= 265)) &&
+                          (!(PcmResampler.pointerYSnapshot >= 299))) {
                           this.pointerInteractionActive = true;
                           if (null != UiWidget.gameplaySession) {
                             UiWidget.gameplaySession.submitScore((byte) -70);
@@ -1197,7 +1202,8 @@ final class GameScreen extends MenuScreen {
             this.updatePointer(true);
             fullscreenPointerHandlingFrameContinues = (clientControlFlowGuard != 0);
           }
-          if ((fullscreenPointerHandlingFrameContinues) && (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
+          if ((fullscreenPointerHandlingFrameContinues) &&
+            (CheckboxRenderer.pointerPressButtonSnapshot != 0)) {
             if (UnderlinedButtonRenderer.isGuestSessionMode(-104)) {
               if (265 < FullscreenFocusCanvas.pointerPressYSnapshot &&
                 FullscreenFocusCanvas.pointerPressYSnapshot < 299) {
@@ -1740,7 +1746,8 @@ final class GameScreen extends MenuScreen {
               this.selectedItemIndex = 2;
               normalizeFinalTutorialSelection = (Geoblox.clientControlFlowFlag != 0);
             }
-            if ((normalizeFinalTutorialSelection) && (this.tutorialPageIndex == 4)) {
+            if ((normalizeFinalTutorialSelection) &&
+              (this.tutorialPageIndex == 4)) {
               if (this.selectedItemIndex == 2) {
                 this.selectedItemIndex = 1;
               }
@@ -2286,7 +2293,8 @@ final class GameScreen extends MenuScreen {
                 if (actionId != 13) {
                   rowY = 395;
                 }
-                if (actionId == 13 || clientControlFlowGuard != 0) {
+                if (actionId == 13 ||
+                  clientControlFlowGuard != 0) {
                   rowY = 265;
                 }
                 buttonTextCenter = 10 + (buttonWidth >> 1) + buttonLeft;
@@ -2305,7 +2313,8 @@ final class GameScreen extends MenuScreen {
                 buttonLeft = 121;
                 buttonTextCenter = (buttonWidth >> 1) + buttonLeft + 10;
               }
-              if (actionId != 13 || clientControlFlowGuard != 0) {
+              if (actionId != 13 ||
+                clientControlFlowGuard != 0) {
                 buttonLeft = 436;
                 buttonTextCenter = (buttonWidth >> 1) + buttonLeft + 10;
               }
@@ -2362,7 +2371,8 @@ final class GameScreen extends MenuScreen {
             if (!selected) {
               DelayedIncomingPacket.drawNineSlicePanel(rowY, buttonLeft, 40, (byte) -92, buttonWidth, ArchiveLoadSequence.mouseBoxFrames);
             }
-            if (selected || clientControlFlowGuard != 0) {
+            if (selected ||
+              clientControlFlowGuard != 0) {
               buttonTextCenter = buttonTextCenter + this.menuPressOffset;
               buttonLeft = buttonLeft + this.menuPressOffset;
               rowY = rowY - this.menuPressOffset;
@@ -2374,7 +2384,8 @@ final class GameScreen extends MenuScreen {
             FadingDialog.uiPaletteFont.colorPalettes[0][SessionGameApplet.uiAccentPaletteIndex] = 15488514;
             itemColumnOrPressOffset = this.menuPressOffset;
           }
-          if (!selected || clientControlFlowGuard != 0) {
+          if (!selected ||
+            clientControlFlowGuard != 0) {
             itemColumnOrPressOffset = 0;
           }
           if (actionId == 8 ||
@@ -2515,7 +2526,8 @@ final class GameScreen extends MenuScreen {
                 }
                 this.keyboardSelectionActive = true;
                 this.skipUnavailableTutorialItemsForward((byte) -107);
-                if ((clientControlFlowGuard != 0) && (0 <= this.selectedItemIndex)) {
+                if ((clientControlFlowGuard != 0) &&
+                  (0 <= this.selectedItemIndex)) {
                   this.handleMenuKey(this.selectedItemIndex, -29);
                 }
               } else {

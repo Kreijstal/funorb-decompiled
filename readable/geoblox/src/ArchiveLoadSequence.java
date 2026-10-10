@@ -90,7 +90,8 @@ final class ArchiveLoadSequence {
           AsyncResourceDownloader.archiveNetworkClient.failureCode = 2;
           AsyncResourceDownloader.archiveNetworkClient.failureCount = AsyncResourceDownloader.archiveNetworkClient.failureCount + 1;
           if (AsyncResourceDownloader.archiveNetworkClient.failureCount < 2) {
-            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 &&
+              50 == replyCode) {
               return 5;
             }
             if (methodGuard != 28625) {
@@ -143,7 +144,8 @@ final class ArchiveLoadSequence {
             if (replyCode == 51) {
               return 2;
             }
-            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+            if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 &&
+              50 == replyCode) {
               return 5;
             }
             if (methodGuard != 28625) {
@@ -158,7 +160,8 @@ final class ArchiveLoadSequence {
             }
             return -1;
           }
-          if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+          if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 &&
+            50 == replyCode) {
             return 5;
           }
           if (methodGuard != 28625) {
@@ -207,7 +210,8 @@ final class ArchiveLoadSequence {
           }
           return -1;
         }
-        if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 && 50 == replyCode) {
+        if (AsyncResourceDownloader.archiveNetworkClient.failureCount >= 2 &&
+          50 == replyCode) {
           return 5;
         }
         if (methodGuard != 28625) {

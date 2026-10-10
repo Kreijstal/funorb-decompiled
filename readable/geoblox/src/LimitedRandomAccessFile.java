@@ -104,7 +104,8 @@ final class LimitedRandomAccessFile {
             for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
               boolean signedNumberCharacterFrameContinues = true;
               characterCodeThenSignedDigit = numberText.charAt(characterIndex);
-              if ((characterIndex == 0) && (45 == characterCodeThenSignedDigit)) {
+              if ((characterIndex == 0) &&
+                (45 == characterCodeThenSignedDigit)) {
                 negativeNumberFlag = 1;
                 signedNumberCharacterFrameContinues = false;
               }
@@ -224,7 +225,8 @@ final class LimitedRandomAccessFile {
           this.maximumLength = maximumLength;
           this.position = 0L;
           firstByte = this.file.read();
-          if (firstByte != -1 && !mode.equals("r")) {
+          if (firstByte != -1 &&
+            !mode.equals("r")) {
             this.file.seek(0L);
             this.file.write(firstByte);
           }

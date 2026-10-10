@@ -149,7 +149,9 @@ final class BufferedRandomAccessFile {
               }
               underlyingReadSelectionFrameContinues = !(underlyingReadSelectionRemainderEnabled);
             }
-            if ((underlyingReadSelectionFrameContinues) && (underlyingReadSelectionRemainderEnabled) && (remainingLength > 0)) {
+            if ((underlyingReadSelectionFrameContinues) &&
+              (underlyingReadSelectionRemainderEnabled) &&
+              (remainingLength > 0)) {
               this.refillReadBuffer(true);
               refillCopyCount = remainingLength;
               if (this.readBufferLength < refillCopyCount) {

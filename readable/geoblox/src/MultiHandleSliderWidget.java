@@ -39,7 +39,8 @@ final class MultiHandleSliderWidget extends ButtonWidget {
     }
 
     final int handleValueAt(int methodGuard, int index) {
-        if (index < 0 || this.handleValues.size((byte) 101) <= index) {
+        if (index < 0 ||
+          this.handleValues.size((byte) 101) <= index) {
           return -1;
         }
         int handleLookupGuardQuotient = 34 / ((methodGuard - 88) / 32);

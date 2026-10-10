@@ -259,7 +259,8 @@ class ButtonWidget extends UiWidget {
     }
 
     final void handlePointerRelease(int parentX, int pointerX, boolean releaseGuard, UiWidget eventContext, int parentY, int pointerY) {
-        if (null != this.listener && this.listener instanceof ButtonPointerListener) {
+        if (null != this.listener &&
+          this.listener instanceof ButtonPointerListener) {
           ((ButtonPointerListener) (this.listener)).onButtonPointerReleased(parentY, pointerY, (byte) 55, this, parentX, pointerX);
         }
         if (!releaseGuard) {

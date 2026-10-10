@@ -56,7 +56,8 @@ final class ReflectionCheckRequest extends IntrusiveNode {
             for (characterIndex = 0; textLength > characterIndex; characterIndex++) {
               boolean signedIntegerCharacterFrameContinues = true;
               characterCodeOrSignedDigit = text.charAt(characterIndex);
-              if ((characterIndex == 0) && (characterCodeOrSignedDigit == 45)) {
+              if ((characterIndex == 0) &&
+                (characterCodeOrSignedDigit == 45)) {
                 negativeSignInt = 1;
                 signedIntegerCharacterFrameContinues = false;
               }

@@ -43,7 +43,8 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final static void selectBackgroundMusic(int methodGuard, MusicScore track) {
-        if (track == null || GzipInflater.currentMusicTrack == track) {
+        if (track == null ||
+          GzipInflater.currentMusicTrack == track) {
           return;
         }
         try {

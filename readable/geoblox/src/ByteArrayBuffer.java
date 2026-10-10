@@ -755,7 +755,8 @@ class ByteArrayBuffer extends IntrusiveNode {
     }
 
     final void writeSignedSmart(int value, int methodGuard) {
-        if (value < 64 && value >= -64) {
+        if (value < 64 &&
+          value >= -64) {
           this.writeByte((byte) 125, 64 + value);
           return;
         }

@@ -551,12 +551,17 @@ final class CachedArchiveSource extends ArchiveSource {
                 }
               }
             }
-            if ((backgroundGroupLoadingFrameContinues) && (completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+            if ((backgroundGroupLoadingFrameContinues) &&
+              (completedRequestSweepFrameContinues) &&
+              (backgroundLoadingAndSweepFrameContinues) &&
+              (requestSweepDueCheckFrameContinues)) {
               this.backgroundGroups = null;
             }
           }
         }
-        if ((completedRequestSweepFrameContinues) && (backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+        if ((completedRequestSweepFrameContinues) &&
+          (backgroundLoadingAndSweepFrameContinues) &&
+          (requestSweepDueCheckFrameContinues)) {
           if (methodGuard != -38) {
             this.getPackedGroup(25, 41);
           }
@@ -581,7 +586,8 @@ final class CachedArchiveSource extends ArchiveSource {
             }
           }
         }
-        if ((backgroundLoadingAndSweepFrameContinues) && (requestSweepDueCheckFrameContinues)) {
+        if ((backgroundLoadingAndSweepFrameContinues) &&
+          (requestSweepDueCheckFrameContinues)) {
           this.nextRequestSweepMillis = 1000L + ClientClockSupport.correctedCurrentTimeMillis(methodGuard - 12482);
         }
 
