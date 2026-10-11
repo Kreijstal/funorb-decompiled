@@ -39,10 +39,10 @@ final class co {
         int var5Lifetime1;
         int var6Lifetime1;
         if (!param0) {
-          if (tb.field_h[param1] > tb.field_h[param2]) {
+          if (EffectPresentation.field_h[param1] > EffectPresentation.field_h[param2]) {
             return true;
           }
-          if (tb.field_h[param2] > tb.field_h[param1]) {
+          if (EffectPresentation.field_h[param2] > EffectPresentation.field_h[param1]) {
             return false;
           }
           if (no.field_U[param1] > no.field_U[param2]) {
@@ -75,11 +75,11 @@ final class co {
         if (no.field_U[param2] > no.field_U[param1]) {
           return false;
         }
-        if (tb.field_h[param1] > tb.field_h[param2]) {
+        if (EffectPresentation.field_h[param1] > EffectPresentation.field_h[param2]) {
           return true;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (tb.field_h[param1] >= tb.field_h[param2]) {
+        if (EffectPresentation.field_h[param1] >= EffectPresentation.field_h[param2]) {
           var4Lifetime1 = pe.field_s[param2] + wp.field_w[param2] + TutorialController.field_c[param2];
           var5Lifetime1 = pe.field_s[param1] + (wp.field_w[param1] + TutorialController.field_c[param1]);
           if (var4Lifetime1 < var5Lifetime1) {

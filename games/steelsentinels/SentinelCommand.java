@@ -5,14 +5,14 @@ final class SentinelCommand extends IntrusiveNode {
     boolean field_q;
     static boolean field_v;
     static NodeDeque field_w;
-    boolean field_p;
+    boolean scheduled;
     int actionVariant;
     static int field_o;
     int startTick;
     int actionType;
-    int field_B;
-    int field_u;
-    int field_y;
+    int aimAngle;
+    int targetWorldX;
+    int targetWorldY;
     int endTick;
     boolean activated;
     static int field_t;
@@ -60,94 +60,94 @@ final class SentinelCommand extends IntrusiveNode {
         }
     }
 
-    SentinelCommand(int param0, int param1, int param2) {
-        int var4;
-        this.startTick = param2;
-        this.actionType = param0;
+    SentinelCommand(int actionType, int actionVariant, int startTick) {
+        int durationTicks;
+        this.startTick = startTick;
+        this.actionType = actionType;
         this.field_q = false;
-        this.actionVariant = param1;
-        this.field_p = false;
-        var4 = 50;
+        this.actionVariant = actionVariant;
+        this.scheduled = false;
+        durationTicks = 50;
         this.activated = false;
         if (this.actionType == 6) {
-          var4 = 5;
+          durationTicks = 5;
         }
         if (this.actionType == 5) {
           this.activated = true;
-          var4 = 125;
+          durationTicks = 125;
         }
         if (this.actionType == 12) {
           this.activated = false;
-          var4 = 5;
+          durationTicks = 5;
         }
         if (this.actionType == 3) {
           this.activated = true;
-          var4 = 100;
+          durationTicks = 100;
         }
         if (0 == this.actionType) {
-          var4 = 10;
+          durationTicks = 10;
           if (this.actionVariant == 0) {
-            var4 = 25;
+            durationTicks = 25;
           }
           if (1 == this.actionVariant) {
-            var4 = 20;
+            durationTicks = 20;
           }
           if (this.actionVariant == 2) {
-            var4 = 35;
+            durationTicks = 35;
           }
           if (3 == this.actionVariant) {
-            var4 = 50;
+            durationTicks = 50;
           }
           if (6 == this.actionVariant) {
-            var4 = 40;
+            durationTicks = 40;
             this.activated = true;
           }
           if (this.actionVariant == 7) {
-            var4 = 50;
+            durationTicks = 50;
             this.activated = true;
           }
           if (8 == this.actionVariant) {
-            var4 = 100;
+            durationTicks = 100;
             this.activated = true;
           }
           if (this.actionVariant == 9) {
-            var4 = 30;
+            durationTicks = 30;
             this.activated = true;
           }
           if (this.actionVariant == 10) {
-            var4 = 20;
+            durationTicks = 20;
             this.activated = true;
           }
           if (this.actionVariant == 4) {
-            var4 = 75;
+            durationTicks = 75;
           }
           if (5 == this.actionVariant) {
-            var4 = 75;
+            durationTicks = 75;
           }
         }
         if (this.actionType == 7) {
           this.activated = true;
-          var4 = 25;
+          durationTicks = 25;
           if (3 == this.actionVariant) {
-            var4 = 100;
+            durationTicks = 100;
           }
         }
         if (this.actionType == 8) {
-          var4 = 25;
+          durationTicks = 25;
           this.activated = true;
         }
         if (this.actionType == 9) {
           this.activated = true;
-          var4 = 25;
+          durationTicks = 25;
         }
         if (11 == this.actionType) {
-          var4 = 25;
+          durationTicks = 25;
           this.activated = false;
         }
         if (this.actionType == 10) {
-          var4 = 1;
+          durationTicks = 1;
         }
-        this.endTick = var4 + this.startTick;
+        this.endTick = durationTicks + this.startTick;
     }
 
     static {

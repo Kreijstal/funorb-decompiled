@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ir {
-    private int field_b;
-    private int field_n;
-    static v field_d;
-    private int field_a;
+final class AiInfluenceMap {
+    private int minimumY;
+    private int maximumY;
+    static BattleCamera field_d;
+    private int mapWidth;
     static String field_j;
     static kl field_f;
-    private int field_e;
-    private int field_c;
+    private int minimumX;
+    private int maximumX;
     static String field_l;
-    private MapTile[] field_m;
+    private MapTile[] tiles;
     static BitmapFont field_h;
     static String field_k;
-    private int field_g;
-    private int[] field_i;
+    private int mapHeight;
+    private int[] packedCosts;
 
     final void a(float[] param0, boolean param1, float param2, int param3, byte param4, int param5, int param6, int param7) {
         int var12 = 0;
@@ -36,7 +36,7 @@ final class ir {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param4 != -4) {
-            this.field_b = 94;
+            this.minimumY = 94;
           }
           var18 = wg.field_b[param3];
           var19 = var18;
@@ -44,10 +44,10 @@ final class ir {
           var19.tileY = param6;
           this.a(var19, 120);
           var10 = 3 * bw.unitDefinitions[var18.unitType][3];
-          for (var12 = this.field_b; var12 <= this.field_n; var12++) {
-            var11 = this.field_e + this.field_a * var12;
-            for (var13 = this.field_e; var13 <= this.field_c; var13++) {
-              var14 = this.field_i[var11];
+          for (var12 = this.minimumY; var12 <= this.maximumY; var12++) {
+            var11 = this.minimumX + this.mapWidth * var12;
+            for (var13 = this.minimumX; var13 <= this.maximumX; var13++) {
+              var14 = this.packedCosts[var11];
               var15 = (65535 & var14) + (var14 >> 16) * var10;
               var16 = 10.0f * param2 / (float)(1 + var15);
               if (param1) {
@@ -178,7 +178,7 @@ final class ir {
     final static String a(int param0, int param1) {
         if (param0 != 10602) {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
-          ir.a(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);
+          AiInfluenceMap.a(12, 72, -87, -119, -83, -86, (CipherPacketBuffer) null);
         }
         return Integer.toString(param1);
     }
@@ -219,17 +219,17 @@ final class ir {
           this.a(param3, 124);
           var7 = 0;
           var8 = bw.unitDefinitions[param3.unitType][7];
-          this.field_n = Math.min(this.field_n + var8, this.field_g - 1);
-          this.field_c = Math.min(var8 + this.field_c, this.field_a - 1);
-          this.field_b = Math.max(-var8 + this.field_b, 0);
-          this.field_e = Math.max(-var8 + this.field_e, 0);
-          for (var9 = this.field_b; this.field_n >= var9; var9++) {
-            var16 = this.field_a * var9 + this.field_e;
+          this.maximumY = Math.min(this.maximumY + var8, this.mapHeight - 1);
+          this.maximumX = Math.min(var8 + this.maximumX, this.mapWidth - 1);
+          this.minimumY = Math.max(-var8 + this.minimumY, 0);
+          this.minimumX = Math.max(-var8 + this.minimumX, 0);
+          for (var9 = this.minimumY; this.maximumY >= var9; var9++) {
+            var16 = this.mapWidth * var9 + this.minimumX;
             var7Lifetime1 = var16;
-            for (var10 = this.field_e; var10 <= this.field_c; var10++) {
-              var11 = this.a(this.field_i, param3, var10, var9, (byte) 5);
+            for (var10 = this.minimumX; var10 <= this.maximumX; var10++) {
+              var11 = this.a(this.packedCosts, param3, var10, var9, (byte) 5);
               if (var11 != 1000000) {
-                var12 = this.field_i[var11];
+                var12 = this.packedCosts[var11];
                 var13 = var12 >> 16;
                 var14 = var13 + 1;
                 var14 = var14 * var14;
@@ -237,7 +237,7 @@ final class ir {
                 dupTemp$0[var16] = dupTemp$0[var16] + (float)(param1 * param3.getEffectiveStrength((byte) 122)) / (float)var14;
               }
               if (var6 != 0) {
-                var12Lifetime1 = this.field_i[var16];
+                var12Lifetime1 = this.packedCosts[var16];
                 var13Lifetime1 = var12Lifetime1 >> 16;
                 var14Lifetime1 = var13Lifetime1 + 1;
                 var14Lifetime1 = var14Lifetime1 * var14Lifetime1;
@@ -271,7 +271,7 @@ final class ir {
     private final void a(int param0, int param1, float param2, int param3, float[][][] param4, boolean param5, int param6, boolean param7) {
         try {
           if (!param7) {
-            this.field_a = -97;
+            this.mapWidth = -97;
           }
           this.a(param4[param0][param6], param5, param2, param0, (byte) -4, param6, param3, param1);
         } catch (RuntimeException runtimeException) {
@@ -350,33 +350,33 @@ final class ir {
         int var10Lifetime3;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var3_int = 0; this.field_i.length > var3_int; var3_int++) {
-            this.field_i[var3_int] = 268435455;
+          for (var3_int = 0; this.packedCosts.length > var3_int; var3_int++) {
+            this.packedCosts[var3_int] = 268435455;
           }
-          this.field_b = param0.tileY;
-          this.field_c = param0.tileX;
-          this.field_n = param0.tileY;
-          this.field_e = param0.tileX;
-          this.field_c = Math.min(this.field_c + 1, -1 + this.field_a);
-          this.field_n = Math.min(1 + this.field_n, this.field_g - 1);
-          this.field_e = Math.max(-1 + this.field_e, 0);
-          this.field_b = Math.max(-1 + this.field_b, 0);
-          this.field_i[param0.tileX + param0.tileY * this.field_a] = 0;
+          this.minimumY = param0.tileY;
+          this.maximumX = param0.tileX;
+          this.maximumY = param0.tileY;
+          this.minimumX = param0.tileX;
+          this.maximumX = Math.min(this.maximumX + 1, -1 + this.mapWidth);
+          this.maximumY = Math.min(1 + this.maximumY, this.mapHeight - 1);
+          this.minimumX = Math.max(-1 + this.minimumX, 0);
+          this.minimumY = Math.max(-1 + this.minimumY, 0);
+          this.packedCosts[param0.tileX + param0.tileY * this.mapWidth] = 0;
           if (param1 < 118) {
-            this.field_e = -1;
+            this.minimumX = -1;
           }
           var3_intLifetime1 = 3 * bw.unitDefinitions[param0.unitType][3];
           var4 = 0;
           while (500 > var4) {
             var5 = 0;
             var6 = 0;
-            for (var7 = this.field_b; this.field_n >= var7; var7++) {
-              var12 = this.field_e + var7 * this.field_a;
+            for (var7 = this.minimumY; this.maximumY >= var7; var7++) {
+              var12 = this.minimumX + var7 * this.mapWidth;
               var6Lifetime1 = var12;
-              for (var8 = this.field_e; this.field_c >= var8; var8++) {
+              for (var8 = this.minimumX; this.maximumX >= var8; var8++) {
                 var9 = 2147483647;
                 if (var8 > 0) {
-                  var10 = this.field_i[-1 + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - 1, false, true);
+                  var10 = this.packedCosts[-1 + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - 1, false, true);
                   if (var3_intLifetime1 < (65535 & var10)) {
                     var10 = -var3_intLifetime1 + (((var10 >> 16) + 1 << 16) + (65535 & var10));
                   }
@@ -385,7 +385,7 @@ final class ir {
                   }
                 }
                 if (var7 > 0) {
-                  var10Lifetime1 = this.field_i[var12 - this.field_a] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 - this.field_a, false, true);
+                  var10Lifetime1 = this.packedCosts[var12 - this.mapWidth] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 - this.mapWidth, false, true);
                   if (var3_intLifetime1 < (var10Lifetime1 & 65535)) {
                     var10Lifetime1 = (65535 & var10Lifetime1) + ((1 + (var10Lifetime1 >> 16) << 16) - var3_intLifetime1);
                   }
@@ -393,8 +393,8 @@ final class ir {
                     var9 = var10Lifetime1;
                   }
                 }
-                if (-1 + this.field_a > var8) {
-                  var10Lifetime2 = this.field_i[1 + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + 1, false, true);
+                if (-1 + this.mapWidth > var8) {
+                  var10Lifetime2 = this.packedCosts[1 + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + 1, false, true);
                   if ((var10Lifetime2 & 65535) > var3_intLifetime1) {
                     var10Lifetime2 = (1 + (var10Lifetime2 >> 16) << 16) + (var10Lifetime2 & 65535) - var3_intLifetime1;
                   }
@@ -402,8 +402,8 @@ final class ir {
                     var9 = var10Lifetime2;
                   }
                 }
-                if (-1 + this.field_g > var7) {
-                  var10Lifetime3 = this.field_i[this.field_a + var12] + SpellCastEvent.a(this.field_a, this.field_m, false, var12, param0.ownerPlayer, this.field_g, -1, param0, var12 + this.field_a, false, true);
+                if (-1 + this.mapHeight > var7) {
+                  var10Lifetime3 = this.packedCosts[this.mapWidth + var12] + SpellCastEvent.a(this.mapWidth, this.tiles, false, var12, param0.ownerPlayer, this.mapHeight, -1, param0, var12 + this.mapWidth, false, true);
                   if ((var10Lifetime3 & 65535) > var3_intLifetime1) {
                     var10Lifetime3 = -var3_intLifetime1 + ((var10Lifetime3 >> 16) + 1 << 16) + (65535 & var10Lifetime3);
                   }
@@ -411,20 +411,20 @@ final class ir {
                     var9 = var10Lifetime3;
                   }
                 }
-                if (var9 < this.field_i[var12] &&
+                if (var9 < this.packedCosts[var12] &&
                   6 >= var9 >> 16) {
-                  this.field_i[var12] = var9;
-                  if (this.field_n <= var7) {
-                    this.field_n = Math.min(var7 + 1, this.field_g - 1);
+                  this.packedCosts[var12] = var9;
+                  if (this.maximumY <= var7) {
+                    this.maximumY = Math.min(var7 + 1, this.mapHeight - 1);
                   }
-                  if (this.field_c <= var8) {
-                    this.field_c = Math.min(1 + var8, this.field_a - 1);
+                  if (this.maximumX <= var8) {
+                    this.maximumX = Math.min(1 + var8, this.mapWidth - 1);
                   }
-                  if (this.field_b >= var7) {
-                    this.field_b = Math.max(-1 + var7, 0);
+                  if (this.minimumY >= var7) {
+                    this.minimumY = Math.max(-1 + var7, 0);
                   }
-                  if (var8 <= this.field_e) {
-                    this.field_e = Math.max(-1 + var8, 0);
+                  if (var8 <= this.minimumX) {
+                    this.minimumX = Math.max(-1 + var8, 0);
                   }
                   if (var5 < var9) {
                     var5 = var9;
@@ -476,9 +476,9 @@ final class ir {
         int var9Lifetime1Lifetime1Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 + param3 >= 0 &&
-          param3 + param0 < this.field_a &&
+          param3 + param0 < this.mapWidth &&
           param5 + param4 >= 0 &&
-          this.field_g > param4 + param5) {
+          this.mapHeight > param4 + param5) {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if (param3 != 0) {
@@ -489,9 +489,9 @@ final class ir {
               var8 = 1;
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var8 >= param4))) {
-                var9 = param0 + (var8 * var7 + param5) * this.field_a;
+                var9 = param0 + (var8 * var7 + param5) * this.mapWidth;
                 if ((param2 ||
-                  2 != this.field_m[var9].terrainType) && this.field_m[var9].terrainType != 3) {
+                  2 != this.tiles[var9].terrainType) && this.tiles[var9].terrainType != 3) {
                   var8++;
                   continue;
                 }
@@ -513,12 +513,12 @@ final class ir {
               var7 = stackIn_13_0;
               param4 = param4 * var7;
               for (var8 = 1; var8 < param4; var8++) {
-                var9 = param0 + (var8 * var7 + param5) * this.field_a;
+                var9 = param0 + (var8 * var7 + param5) * this.mapWidth;
                 if (!param2 &&
-                  2 == this.field_m[var9].terrainType) {
+                  2 == this.tiles[var9].terrainType) {
                   return false;
                 }
-                if (this.field_m[var9].terrainType == 3) {
+                if (this.tiles[var9].terrainType == 3) {
                   return false;
                 }
               }
@@ -539,9 +539,9 @@ final class ir {
                 if (var8Lifetime1 >= param3) {
                   return true;
                 }
-                var9Lifetime1 = param5 * this.field_a + var7Lifetime1 * var8Lifetime1 + param0;
+                var9Lifetime1 = param5 * this.mapWidth + var7Lifetime1 * var8Lifetime1 + param0;
                 if ((param2 ||
-                  this.field_m[var9Lifetime1].terrainType != 2) && this.field_m[var9Lifetime1].terrainType != 3) {
+                  this.tiles[var9Lifetime1].terrainType != 2) && this.tiles[var9Lifetime1].terrainType != 3) {
                   var8Lifetime1++;
                   continue;
                 }
@@ -564,9 +564,9 @@ final class ir {
                   break;
                 }
                 var10 = var9Lifetime1Lifetime1 * param4 / param3;
-                var11 = (var10 * var8Lifetime1Lifetime1 + param5) * this.field_a + var9Lifetime1Lifetime1 * var7Lifetime1Lifetime1 + param0;
+                var11 = (var10 * var8Lifetime1Lifetime1 + param5) * this.mapWidth + var9Lifetime1Lifetime1 * var7Lifetime1Lifetime1 + param0;
                 if ((param2 ||
-                  this.field_m[var11].terrainType != 2) && this.field_m[var11].terrainType != 3) {
+                  this.tiles[var11].terrainType != 2) && this.tiles[var11].terrainType != 3) {
                   var9Lifetime1Lifetime1++;
                   continue;
                 }
@@ -580,9 +580,9 @@ final class ir {
               var9Lifetime1Lifetime1Lifetime1 = 1;
               while (param4 > var9Lifetime1Lifetime1Lifetime1) {
                 var10Lifetime1 = param3 * var9Lifetime1Lifetime1Lifetime1 / param4;
-                var11Lifetime1 = (var9Lifetime1Lifetime1Lifetime1 * var8Lifetime1Lifetime1 + param5) * this.field_a + var7Lifetime1Lifetime1 * var10Lifetime1 + param0;
+                var11Lifetime1 = (var9Lifetime1Lifetime1Lifetime1 * var8Lifetime1Lifetime1 + param5) * this.mapWidth + var7Lifetime1Lifetime1 * var10Lifetime1 + param0;
                 if ((param2 ||
-                  2 != this.field_m[var11Lifetime1].terrainType) && this.field_m[var11Lifetime1].terrainType != 3) {
+                  2 != this.tiles[var11Lifetime1].terrainType) && this.tiles[var11Lifetime1].terrainType != 3) {
                   var9Lifetime1Lifetime1Lifetime1++;
                   continue;
                 }
@@ -636,7 +636,7 @@ final class ir {
               if (var9 <= var13 &&
                 var13 <= var10 &&
                 this.a(param2, -117, var8 != 0, var12, var11, param3)) {
-                var15 = (param3 + var11) * this.field_a + param2 + var12;
+                var15 = (param3 + var11) * this.mapWidth + param2 + var12;
                 var16 = param0[var15];
                 if (var7 > var16) {
                   var6_int = var15;
@@ -679,7 +679,7 @@ final class ir {
         }
     }
 
-    ir(MapTile[] param0, int param1, int param2) {
+    AiInfluenceMap(MapTile[] tiles, int mapWidth, int mapHeight) {
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -695,10 +695,10 @@ final class ir {
         RuntimeException var4_ref = null;
         int var5Lifetime1;
         try {
-          this.field_a = param1;
-          this.field_g = param2;
-          this.field_m = param0;
-          this.field_i = new int[this.field_m.length];
+          this.mapWidth = mapWidth;
+          this.mapHeight = mapHeight;
+          this.tiles = tiles;
+          this.packedCosts = new int[this.tiles.length];
           if (null == wg.field_b) {
             wg.field_b = new Unit[8];
             var12 = new int[wg.field_b.length];
@@ -727,12 +727,12 @@ final class ir {
           var4_ref = decompiledCaughtException;
           stackIn_14_0 = var4_ref;
           stackIn_14_1 = new StringBuilder().append("ir.<init>(");
-          if (param0 == null) {
+          if (tiles == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(mapWidth).append(',').append(mapHeight).append(')').toString());
         }
     }
 

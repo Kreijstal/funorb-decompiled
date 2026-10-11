@@ -50,8 +50,8 @@ final class np extends je {
         }
         ee.field_v.a(0, -118, 0);
         if (param1 >= -111) {
-          gd var3 = (gd) null;
-          np.a(false, (gd) null);
+          ModelMesh var3 = (ModelMesh) null;
+          np.a(false, (ModelMesh) null);
         }
     }
 
@@ -161,7 +161,7 @@ final class np extends je {
         }
     }
 
-    final static void a(boolean param0, gd param1) {
+    final static void a(boolean param0, ModelMesh param1) {
         int var2_int = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {

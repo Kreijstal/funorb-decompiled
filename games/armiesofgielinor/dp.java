@@ -698,7 +698,7 @@ final class dp extends je {
           var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             boolean decompiledFrameRemainder0 = true;
-            var2_int = this.c(param0 ^ 48, sm.field_d - (this.field_V + this.field_Pb.field_F));
+            var2_int = this.c(param0 ^ 48, AiPlanningStrategy.field_d - (this.field_V + this.field_Pb.field_F));
             if (this.field_yb == 1) {
               this.b(var2_int, false);
               this.field_Ib = true;

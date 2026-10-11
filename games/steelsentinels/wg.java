@@ -71,7 +71,7 @@ final class wg extends we {
     private final void a(IntrusiveNode param0, w param1) {
         while (true) {
           if (param0 == this.field_s.sentinel) {
-            IsaacRandom.a(param0, 30, param1);
+            IsaacRandom.insertNodeBefore(param0, 30, param1);
             this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
             return;
           }
@@ -81,7 +81,7 @@ final class wg extends we {
           }
           break;
         }
-        IsaacRandom.a(param0, 30, param1);
+        IsaacRandom.insertNodeBefore(param0, 30, param1);
         this.field_v = ((w) (this.field_s.sentinel.next)).field_o;
         return;
     }

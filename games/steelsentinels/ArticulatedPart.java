@@ -42,8 +42,8 @@ final class ArticulatedPart extends DualNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = ol.d((byte) -105);
-          var10.field_O = param7;
-          var10.field_B = param4;
+          var10.velocityY = param7;
+          var10.worldY = param4;
           if (param3 <= 86) {
             var11 = (CombatWorld) null;
             ArticulatedPart.a(91, 120, (CombatWorld) null, -2, -98, true, 88, 125, 5, -15);
@@ -54,9 +54,9 @@ final class ArticulatedPart extends DualNode {
           stackIn_4_0.field_G = stackIn_5_1;
           var10.field_M = param0;
           var10.field_D = param6;
-          var10.field_F = param8;
+          var10.worldX = param8;
           var10.field_I = 0;
-          var10.field_A = param1;
+          var10.velocityX = param1;
           var10.world = param2;
           stackIn_6_0 = var10;
           return stackIn_6_0;

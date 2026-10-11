@@ -38,7 +38,7 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void d(int param0) {
-        tb.field_e = null;
+        EffectPresentation.field_e = null;
         if (param0 != -1) {
           field_i = (String) null;
         }

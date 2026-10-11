@@ -889,7 +889,7 @@ final class GameplayController {
               stackIn_186_0 = (var14Lifetime1 >= oh.field_f) ? 0 : 1;
               var16 = stackIn_186_0;
               if (qg.field_n != null) {
-                stackIn_193_0 = (0 >= qg.field_n.field_B) ? 0 : 1;
+                stackIn_193_0 = (0 >= qg.field_n.aimAngle) ? 0 : 1;
                 var16 = stackIn_193_0;
               }
               if (var16 == 0) {
@@ -932,7 +932,7 @@ final class GameplayController {
               stackIn_223_0 = (var16Lifetime2 >= oh.field_f) ? 0 : 1;
               var17Lifetime1 = stackIn_223_0;
               if (qg.field_n != null) {
-                stackIn_230_0 = (qg.field_n.field_B <= 0) ? 0 : 1;
+                stackIn_230_0 = (qg.field_n.aimAngle <= 0) ? 0 : 1;
                 var17Lifetime1 = stackIn_230_0;
               }
               if (var17Lifetime1 != 0) {
@@ -1607,7 +1607,7 @@ final class GameplayController {
             if (!fc.field_e[81] &&
               null != qg.field_n &&
               this.controlledSentinel.field_Xb.length > 0) {
-              var8_refLifetime1.chassis.a(qg.field_n.field_B * bj.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
+              var8_refLifetime1.chassis.a(qg.field_n.aimAngle * bj.field_h, -126, var8_refLifetime1.field_Xb[this.field_F]);
             }
             var9_ref = (SentinelCommand) (var8_refLifetime1.pendingCommands.b(1063677678));
             while (var9_ref != null) {
@@ -1619,7 +1619,7 @@ final class GameplayController {
               }
               if (stackIn_251_0 == stackIn_251_1) {
                 qi.field_k = true;
-                var8_refLifetime1.chassis.a(var9_ref.field_B * this.controlledSentinel.field_E, -117, var9_ref.actionVariant);
+                var8_refLifetime1.chassis.a(var9_ref.aimAngle * this.controlledSentinel.field_E, -117, var9_ref.actionVariant);
               }
               var9_ref = (SentinelCommand) (var8_refLifetime1.pendingCommands.a(-2137));
             }
@@ -2976,14 +2976,14 @@ final class GameplayController {
                 if (stackIn_872_0 > stackIn_873_1 &&
                   var7_ref_mb.pendingCommands.f(7)) {
                   var9_ref_je = new SentinelCommand(3, 0, 10 + this.world.simulationTick);
-                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(19) / 4.0) - this.world.terrain.getProfileLength(32) / 8 << 4) + this.controlledSentinel.worldX;
-                  var9_ref_je.field_p = true;
+                  var9_ref_je.targetWorldX = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(19) / 4.0) - this.world.terrain.getProfileLength(32) / 8 << 4) + this.controlledSentinel.worldX;
+                  var9_ref_je.scheduled = true;
                   if (var7_ref_mb.velocityX > 0 &&
                     384000 > var7_ref_mb.worldX ||
                     !(var7_ref_mb.worldX >= 64000)) {
-                    var9_ref_je.field_u = var7_ref_mb.worldX + 5000;
+                    var9_ref_je.targetWorldX = var7_ref_mb.worldX + 5000;
                   } else {
-                    var9_ref_je.field_u = var7_ref_mb.worldX - 5000;
+                    var9_ref_je.targetWorldX = var7_ref_mb.worldX - 5000;
                   }
                   stackIn_894_0 = var9_ref_je;
                   if (var8 != 0) {
@@ -2991,7 +2991,7 @@ final class GameplayController {
                   } else {
                     stackIn_895_1 = -80000;
                   }
-                  stackIn_894_0.field_y = stackIn_895_1;
+                  stackIn_894_0.targetWorldY = stackIn_895_1;
                   var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
                   var7_ref_mb.refillCharge(5);
                 }
@@ -3005,15 +3005,15 @@ final class GameplayController {
                 if (var8 < var7_ref_mb.worldY &&
                   var7_ref_mb.pendingCommands.f(7)) {
                   var9_ref_je = new SentinelCommand(3, 0, 10 + this.world.simulationTick);
-                  var9_ref_je.field_u = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(-123) / 4.0) - this.world.terrain.getProfileLength(41) / 8 << 4) + this.controlledSentinel.worldX;
-                  if (var9_ref_je.field_u < (-5000 + var7_ref_mb.worldX)) {
-                    var9_ref_je.field_u = var7_ref_mb.worldX - 5000;
+                  var9_ref_je.targetWorldX = ((int)(Math.random() * (double)this.world.terrain.getProfileLength(-123) / 4.0) - this.world.terrain.getProfileLength(41) / 8 << 4) + this.controlledSentinel.worldX;
+                  if (var9_ref_je.targetWorldX < (-5000 + var7_ref_mb.worldX)) {
+                    var9_ref_je.targetWorldX = var7_ref_mb.worldX - 5000;
                   }
-                  var9_ref_je.field_y = -60000;
-                  if (var9_ref_je.field_u > (var7_ref_mb.worldX + 5000)) {
-                    var9_ref_je.field_u = var7_ref_mb.worldX + 5000;
+                  var9_ref_je.targetWorldY = -60000;
+                  if (var9_ref_je.targetWorldX > (var7_ref_mb.worldX + 5000)) {
+                    var9_ref_je.targetWorldX = var7_ref_mb.worldX + 5000;
                   }
-                  var9_ref_je.field_p = true;
+                  var9_ref_je.scheduled = true;
                   var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
                   var7_ref_mb.refillCharge(5);
                   var9_ref_je = new SentinelCommand(0, var7_ref_mb.field_Xb[0], this.world.simulationTick + 20);
@@ -3033,8 +3033,8 @@ final class GameplayController {
                       bj.field_h = -1;
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
-                    var9_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var9_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
+                    var9_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var9_ref_je.aimAngle * bj.field_h, var7_ref_mb.field_Xb[0]);
                     var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
                     var16 = 0;
                     var17 = 0;
@@ -3050,19 +3050,19 @@ final class GameplayController {
                       var12_int = var12_int - var16 / var15_ref_nk__.length;
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
-                    var9_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var9_ref_je.field_y = this.controlledSentinel.worldY;
-                    var9_ref_je.field_u = this.controlledSentinel.worldX;
+                    var9_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
+                    var9_ref_je.targetWorldY = this.controlledSentinel.worldY;
+                    var9_ref_je.targetWorldX = this.controlledSentinel.worldX;
                     if (bj.field_h < 0) {
-                      if (!(16384 >= var9_ref_je.field_B)) {
-                        var9_ref_je.field_B = var9_ref_je.field_B - 65536;
+                      if (!(16384 >= var9_ref_je.aimAngle)) {
+                        var9_ref_je.aimAngle = var9_ref_je.aimAngle - 65536;
                       }
                     } else {
-                      if (var9_ref_je.field_B < -16384) {
-                        var9_ref_je.field_B = var9_ref_je.field_B + 65536;
+                      if (var9_ref_je.aimAngle < -16384) {
+                        var9_ref_je.aimAngle = var9_ref_je.aimAngle + 65536;
                       }
                     }
-                    var9_ref_je.field_p = true;
+                    var9_ref_je.scheduled = true;
                     var7_ref_mb.pendingCommands.addLast(3, var9_ref_je);
                   }
                 }
@@ -3089,9 +3089,9 @@ final class GameplayController {
                   if (5 == var7_ref_mb.field_Nb &&
                     var7_ref_mb.worldY > -20000) {
                     var10_ref_je = new SentinelCommand(3, 0, 1 + this.world.simulationTick);
-                    var10_ref_je.field_y = -20000 + var7_ref_mb.worldY;
-                    var10_ref_je.field_u = var7_ref_mb.worldX;
-                    var10_ref_je.field_p = true;
+                    var10_ref_je.targetWorldY = -20000 + var7_ref_mb.worldY;
+                    var10_ref_je.targetWorldX = var7_ref_mb.worldX;
+                    var10_ref_je.scheduled = true;
                     var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
                     var7_ref_mb.refillCharge(5);
                   }
@@ -3119,9 +3119,9 @@ final class GameplayController {
                         }
                       } else {
                         var10_ref_je = new SentinelCommand(3, 0, 1 + this.world.simulationTick);
-                        var10_ref_je.field_y = -20000 + var7_ref_mb.worldY;
-                        var10_ref_je.field_p = true;
-                        var10_ref_je.field_u = this.controlledSentinel.worldX;
+                        var10_ref_je.targetWorldY = -20000 + var7_ref_mb.worldY;
+                        var10_ref_je.scheduled = true;
+                        var10_ref_je.targetWorldX = this.controlledSentinel.worldX;
                         var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
                         var7_ref_mb.refillCharge(5);
                       }
@@ -3146,8 +3146,8 @@ final class GameplayController {
                       bj.field_h = -1;
                     }
                     var13_double = Math.atan2((double)var11, (double)(-var12_int));
-                    var10_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var10_ref_je.field_B * bj.field_h, var7_ref_mb.field_Xb[0]);
+                    var10_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
+                    var15_ref_nk__ = var7_ref_mb.chassis.a(0, var7_ref_mb, new ArticulatedPart[]{}, var10_ref_je.aimAngle * bj.field_h, var7_ref_mb.field_Xb[0]);
                     var7_ref_mb.chassis.b((byte) -128, 0, bj.field_h, 0);
                     var16 = 0;
                     var17 = 0;
@@ -3161,19 +3161,19 @@ final class GameplayController {
                         var12_int = var12_int - var16 / var15_ref_nk__.length;
                       }
                       var13_double = Math.atan2((double)var11, (double)(-var12_int));
-                      var10_ref_je.field_B = (int)(var13_double * 65536.0 / 6.283185307179586);
-                      var10_ref_je.field_u = this.controlledSentinel.worldX;
+                      var10_ref_je.aimAngle = (int)(var13_double * 65536.0 / 6.283185307179586);
+                      var10_ref_je.targetWorldX = this.controlledSentinel.worldX;
                       if (0 <= bj.field_h) {
-                        if (!(-16384 <= var10_ref_je.field_B)) {
-                          var10_ref_je.field_B = var10_ref_je.field_B + 65536;
+                        if (!(-16384 <= var10_ref_je.aimAngle)) {
+                          var10_ref_je.aimAngle = var10_ref_je.aimAngle + 65536;
                         }
                       } else {
-                        if (var10_ref_je.field_B > 16384) {
-                          var10_ref_je.field_B = var10_ref_je.field_B - 65536;
+                        if (var10_ref_je.aimAngle > 16384) {
+                          var10_ref_je.aimAngle = var10_ref_je.aimAngle - 65536;
                         }
                       }
-                      var10_ref_je.field_p = true;
-                      var10_ref_je.field_y = this.controlledSentinel.worldY;
+                      var10_ref_je.scheduled = true;
+                      var10_ref_je.targetWorldY = this.controlledSentinel.worldY;
                       var7_ref_mb.pendingCommands.addLast(3, var10_ref_je);
                       if (var7_ref_mb.field_Xb[0] != 13) {
                         break;
@@ -3660,10 +3660,10 @@ final class GameplayController {
                 mm.field_g.b(true, 0);
                 mm.field_g.b(true, 0);
                 if (var18 != 0) {
-                  var10_ref_je.field_p = true;
+                  var10_ref_je.scheduled = true;
                 }
               } else {
-                var10_ref_je.field_p = true;
+                var10_ref_je.scheduled = true;
               }
               if (di.field_g != -1 ||
                 1 != this.world.field_c) {
@@ -3862,10 +3862,10 @@ final class GameplayController {
                 mm.field_g.b(true, 0);
                 mm.field_g.b(true, 0);
                 if (var18 != 0) {
-                  var11_ref_je.field_p = true;
+                  var11_ref_je.scheduled = true;
                 }
               } else {
-                var11_ref_je.field_p = true;
+                var11_ref_je.scheduled = true;
               }
               if (di.field_g != -1 ||
                 this.world.field_c != 1) {
@@ -3892,10 +3892,10 @@ final class GameplayController {
                 mm.field_g.b(true, 0);
                 mm.field_g.b(true, 0);
                 if (var18 != 0) {
-                  var11_ref_je.field_p = true;
+                  var11_ref_je.scheduled = true;
                 }
               } else {
-                var11_ref_je.field_p = true;
+                var11_ref_je.scheduled = true;
               }
               if (di.field_g != -1 ||
                 1 != this.world.field_c) {
@@ -3922,10 +3922,10 @@ final class GameplayController {
                 mm.field_g.b(true, 0);
                 mm.field_g.b(true, 0);
                 if (var18 != 0) {
-                  var11_ref_je.field_p = true;
+                  var11_ref_je.scheduled = true;
                 }
               } else {
-                var11_ref_je.field_p = true;
+                var11_ref_je.scheduled = true;
               }
               if (di.field_g != -1 ||
                 this.world.field_c != 1) {
@@ -5293,8 +5293,8 @@ final class GameplayController {
             var26_ref_jb = (Explosion) (this.world.field_C.first(13058));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var26_ref_jb))) {
-              var13 = var22 + var26_ref_jb.field_M / (var18 * 16);
-              var12 = (var17 * var26_ref_jb.field_H / var24 >> 4) + var16;
+              var13 = var22 + var26_ref_jb.worldY / (var18 * 16);
+              var12 = (var17 * var26_ref_jb.worldX / var24 >> 4) + var16;
               var27 = var26_ref_jb.field_F;
               var14 = 300 * var27 / var24 / 2;
               var15 = (var27 >> 6) / 2;
@@ -11627,8 +11627,8 @@ final class GameplayController {
               fc.a((byte) 101, 69, -1);
               if (this.controlledSentinel.hasModuleType(16, -27)) {
                 var7 = new SentinelCommand(5, this.field_u.playerId, var5_int);
-                var7.field_y = param1;
-                var7.field_u = param3;
+                var7.targetWorldY = param1;
+                var7.targetWorldX = param3;
                 if (this.field_d) {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 126, 5);
@@ -11638,10 +11638,10 @@ final class GameplayController {
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
                   if (var20 != 0) {
-                    var7.field_p = true;
+                    var7.scheduled = true;
                   }
                 } else {
-                  var7.field_p = true;
+                  var7.scheduled = true;
                 }
                 if (di.field_g != -1 ||
                   1 != this.world.field_c) {
@@ -11664,7 +11664,7 @@ final class GameplayController {
               }
               var7Lifetime3 = new SentinelCommand(12, 0, var5_intLifetime3);
               if (!this.field_d) {
-                var7Lifetime3.field_p = true;
+                var7Lifetime3.scheduled = true;
                 if (var20 != 0) {
                   mm.field_g.a(64, (byte) -117);
                   mm.field_g.a((byte) 111, 12);
@@ -11742,8 +11742,8 @@ final class GameplayController {
                 (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
                 !(this.controlledSentinel.charge < 1)))) {
                 var7Lifetime1 = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1);
-                var7Lifetime1.field_u = param3;
-                var7Lifetime1.field_y = param1;
+                var7Lifetime1.targetWorldX = param3;
+                var7Lifetime1.targetWorldY = param1;
                 var8_int = (km.field_c >> 8) - (this.field_P >> 4);
                 var9 = 400 + (-(this.field_E >> 4) + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
                 if (var8_int < 0) {
@@ -11759,11 +11759,11 @@ final class GameplayController {
                   var9 = 332;
                 }
                 if (nc.field_b) {
-                  var7Lifetime1.field_y = dl.field_G + 10000 * (pi.field_c - var9);
-                  var7Lifetime1.field_u = (oh.field_f - var8_int) * 10000 + km.field_c;
+                  var7Lifetime1.targetWorldY = dl.field_G + 10000 * (pi.field_c - var9);
+                  var7Lifetime1.targetWorldX = (oh.field_f - var8_int) * 10000 + km.field_c;
                 }
-                var10 = -km.field_c + var7Lifetime1.field_u;
-                var11 = var7Lifetime1.field_y - dl.field_G;
+                var10 = -km.field_c + var7Lifetime1.targetWorldX;
+                var11 = var7Lifetime1.targetWorldY - dl.field_G;
                 if (var10 < 0) {
                   bj.field_h = -1;
                 }
@@ -11823,56 +11823,56 @@ final class GameplayController {
                     var11 = 0;
                   }
                   var15_double = Math.atan2((double)var10, (double)(-var11));
-                  var7Lifetime1.field_B = (int)(var15_double * 65536.0 / 6.283185307179586);
-                  if ((var7Lifetime1.field_B * bj.field_h) >= (this.field_Q + 1 << 8)) {
-                    if (bj.field_h * var7Lifetime1.field_B <= this.field_Z - 1 << 8) {
-                      var10 = (int)(256.0 * Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
-                      var11 = -(int)(Math.cos(2.0 * (3.141592653589793 * (double)var7Lifetime1.field_B) / 65536.0) * 256.0);
+                  var7Lifetime1.aimAngle = (int)(var15_double * 65536.0 / 6.283185307179586);
+                  if ((var7Lifetime1.aimAngle * bj.field_h) >= (this.field_Q + 1 << 8)) {
+                    if (bj.field_h * var7Lifetime1.aimAngle <= this.field_Z - 1 << 8) {
+                      var10 = (int)(256.0 * Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
+                      var11 = -(int)(Math.cos(2.0 * (3.141592653589793 * (double)var7Lifetime1.aimAngle) / 65536.0) * 256.0);
                       if (var20 != 0) {
-                        var7Lifetime1.field_B = (-1 + this.field_Z << 8) * bj.field_h;
-                        var10 = (int)(Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
-                        var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0));
-                        var7Lifetime1.field_B = bj.field_h * (1 + this.field_Q << 8);
-                        var10 = (int)(Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
-                        var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.field_B * 2.0 / 65536.0) * 256.0);
+                        var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * bj.field_h;
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
+                        var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                       }
                     } else {
-                      var7Lifetime1.field_B = (-1 + this.field_Z << 8) * bj.field_h;
-                      var10 = (int)(Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
-                      var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0));
+                      var7Lifetime1.aimAngle = (-1 + this.field_Z << 8) * bj.field_h;
+                      var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                      var11 = -(int)(256.0 * Math.cos((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                       if (var20 != 0) {
-                        var7Lifetime1.field_B = bj.field_h * (1 + this.field_Q << 8);
-                        var10 = (int)(Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
-                        var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.field_B * 2.0 / 65536.0) * 256.0);
+                        var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
+                        var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                        var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                       }
                     }
                   } else {
-                    var7Lifetime1.field_B = bj.field_h * (1 + this.field_Q << 8);
-                    var10 = (int)(Math.sin((double)var7Lifetime1.field_B * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
-                    var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.field_B * 2.0 / 65536.0) * 256.0);
+                    var7Lifetime1.aimAngle = bj.field_h * (1 + this.field_Q << 8);
+                    var10 = (int)(Math.sin((double)var7Lifetime1.aimAngle * 3.141592653589793 * 2.0 / 65536.0) * 256.0) * bj.field_h;
+                    var11 = -(int)(Math.cos(3.141592653589793 * (double)var7Lifetime1.aimAngle * 2.0 / 65536.0) * 256.0);
                   }
                   if (bj.field_h < 0) {
-                    if (!(16384 >= var7Lifetime1.field_B)) {
-                      var7Lifetime1.field_B = var7Lifetime1.field_B - 65536;
+                    if (!(16384 >= var7Lifetime1.aimAngle)) {
+                      var7Lifetime1.aimAngle = var7Lifetime1.aimAngle - 65536;
                       if ((var20 != 0) &&
-                        (var7Lifetime1.field_B < -16384)) {
-                        var7Lifetime1.field_B = var7Lifetime1.field_B + 65536;
+                        (var7Lifetime1.aimAngle < -16384)) {
+                        var7Lifetime1.aimAngle = var7Lifetime1.aimAngle + 65536;
                       }
                     }
                   } else {
-                    if (var7Lifetime1.field_B < -16384) {
-                      var7Lifetime1.field_B = var7Lifetime1.field_B + 65536;
+                    if (var7Lifetime1.aimAngle < -16384) {
+                      var7Lifetime1.aimAngle = var7Lifetime1.aimAngle + 65536;
                     }
                   }
-                  if ((bj.field_h * var7Lifetime1.field_B) >= sl.field_i) {
-                    if (!(ic.field_P >= bj.field_h * var7Lifetime1.field_B)) {
-                      var7Lifetime1.field_B = ic.field_P;
+                  if ((bj.field_h * var7Lifetime1.aimAngle) >= sl.field_i) {
+                    if (!(ic.field_P >= bj.field_h * var7Lifetime1.aimAngle)) {
+                      var7Lifetime1.aimAngle = ic.field_P;
                       if (var20 != 0) {
-                        var7Lifetime1.field_B = sl.field_i;
+                        var7Lifetime1.aimAngle = sl.field_i;
                       }
                     }
                   } else {
-                    var7Lifetime1.field_B = sl.field_i;
+                    var7Lifetime1.aimAngle = sl.field_i;
                   }
                   if (var12 == 0L) {
                     break;
@@ -11882,14 +11882,14 @@ final class GameplayController {
                     mm.field_g.a((byte) 123, 0);
                     mm.field_g.a((byte) 112, this.controlledSentinel.field_Xb[this.field_F]);
                     mm.field_g.b(true, var5_intLifetime1);
-                    mm.field_g.b(true, var7Lifetime1.field_u);
-                    mm.field_g.b(true, var7Lifetime1.field_y);
-                    mm.field_g.b(true, var7Lifetime1.field_B);
+                    mm.field_g.b(true, var7Lifetime1.targetWorldX);
+                    mm.field_g.b(true, var7Lifetime1.targetWorldY);
+                    mm.field_g.b(true, var7Lifetime1.aimAngle);
                     if (var20 != 0) {
-                      var7Lifetime1.field_p = true;
+                      var7Lifetime1.scheduled = true;
                     }
                   } else {
-                    var7Lifetime1.field_p = true;
+                    var7Lifetime1.scheduled = true;
                   }
                   fc.a((byte) -83, 69, -1);
                   if (-1 != di.field_g ||
@@ -11965,8 +11965,8 @@ final class GameplayController {
               } else {
                 qg.field_n = new SentinelCommand(0, this.controlledSentinel.field_Xb[this.field_F], var5_intLifetime1Lifetime1);
               }
-              qg.field_n.field_u = param3;
-              qg.field_n.field_y = param1;
+              qg.field_n.targetWorldX = param3;
+              qg.field_n.targetWorldY = param1;
               var8_intLifetime1Lifetime1 = (km.field_c >> 8) - (this.field_P >> 4);
               var9Lifetime1 = -(this.field_E >> 4) + (400 + (dl.field_G - this.controlledSentinel.field_Db * 8 >> 8));
               if (var8_intLifetime1Lifetime1 < 0) {
@@ -11982,11 +11982,11 @@ final class GameplayController {
                 var9Lifetime1 = 332;
               }
               if (nc.field_b) {
-                qg.field_n.field_y = dl.field_G + (-var9Lifetime1 + pi.field_c) * 10000;
-                qg.field_n.field_u = km.field_c + 10000 * (oh.field_f - var8_intLifetime1Lifetime1);
+                qg.field_n.targetWorldY = dl.field_G + (-var9Lifetime1 + pi.field_c) * 10000;
+                qg.field_n.targetWorldX = km.field_c + 10000 * (oh.field_f - var8_intLifetime1Lifetime1);
               }
-              var10Lifetime1 = qg.field_n.field_u - km.field_c;
-              var11Lifetime1 = -dl.field_G + qg.field_n.field_y;
+              var10Lifetime1 = qg.field_n.targetWorldX - km.field_c;
+              var11Lifetime1 = -dl.field_G + qg.field_n.targetWorldY;
               if (0 > var10Lifetime1) {
                 bj.field_h = -1;
               }
@@ -12046,40 +12046,40 @@ final class GameplayController {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 var16 = Math.atan2((double)var10Lifetime1, (double)(-var11Lifetime1));
-                qg.field_n.field_B = (int)(65536.0 * var16 / 6.283185307179586);
-                if ((bj.field_h * qg.field_n.field_B) < (1 + this.field_Q << 8)) {
-                  qg.field_n.field_B = bj.field_h * (this.field_Q + 1 << 8);
-                  var10Lifetime1 = (int)(Math.sin(2.0 * ((double)qg.field_n.field_B * 3.141592653589793) / 65536.0) * 256.0) * bj.field_h;
-                  var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.field_B * 3.141592653589793 * 2.0 / 65536.0));
+                qg.field_n.aimAngle = (int)(65536.0 * var16 / 6.283185307179586);
+                if ((bj.field_h * qg.field_n.aimAngle) < (1 + this.field_Q << 8)) {
+                  qg.field_n.aimAngle = bj.field_h * (this.field_Q + 1 << 8);
+                  var10Lifetime1 = (int)(Math.sin(2.0 * ((double)qg.field_n.aimAngle * 3.141592653589793) / 65536.0) * 256.0) * bj.field_h;
+                  var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                   decompiledFrameRemainder0 = (var20 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (-1 + this.field_Z << 8 >= qg.field_n.field_B * bj.field_h) {
-                    var10Lifetime1 = (int)(256.0 * Math.sin((double)qg.field_n.field_B * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
-                    var11Lifetime1 = -(int)(256.0 * Math.cos(3.141592653589793 * (double)qg.field_n.field_B * 2.0 / 65536.0));
+                  if (-1 + this.field_Z << 8 >= qg.field_n.aimAngle * bj.field_h) {
+                    var10Lifetime1 = (int)(256.0 * Math.sin((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0)) * bj.field_h;
+                    var11Lifetime1 = -(int)(256.0 * Math.cos(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0));
                     if (var20 != 0) {
-                      qg.field_n.field_B = bj.field_h * (this.field_Z - 1 << 8);
-                      var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.field_B * 2.0 / 65536.0)) * bj.field_h;
-                      var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.field_B * 3.141592653589793 * 2.0 / 65536.0));
+                      qg.field_n.aimAngle = bj.field_h * (this.field_Z - 1 << 8);
+                      var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0)) * bj.field_h;
+                      var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                     }
                   } else {
-                    qg.field_n.field_B = bj.field_h * (this.field_Z - 1 << 8);
-                    var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.field_B * 2.0 / 65536.0)) * bj.field_h;
-                    var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.field_B * 3.141592653589793 * 2.0 / 65536.0));
+                    qg.field_n.aimAngle = bj.field_h * (this.field_Z - 1 << 8);
+                    var10Lifetime1 = (int)(256.0 * Math.sin(3.141592653589793 * (double)qg.field_n.aimAngle * 2.0 / 65536.0)) * bj.field_h;
+                    var11Lifetime1 = -(int)(256.0 * Math.cos((double)qg.field_n.aimAngle * 3.141592653589793 * 2.0 / 65536.0));
                   }
                 }
-                qg.field_n.field_p = true;
+                qg.field_n.scheduled = true;
                 if (bj.field_h < 0) {
-                  if (!(qg.field_n.field_B <= 16384)) {
-                    qg.field_n.field_B = qg.field_n.field_B - 65536;
+                  if (!(qg.field_n.aimAngle <= 16384)) {
+                    qg.field_n.aimAngle = qg.field_n.aimAngle - 65536;
                     if ((var20 != 0) &&
-                      (-16384 > qg.field_n.field_B)) {
-                      qg.field_n.field_B = qg.field_n.field_B + 65536;
+                      (-16384 > qg.field_n.aimAngle)) {
+                      qg.field_n.aimAngle = qg.field_n.aimAngle + 65536;
                     }
                   }
                 } else {
-                  if (-16384 > qg.field_n.field_B) {
-                    qg.field_n.field_B = qg.field_n.field_B + 65536;
+                  if (-16384 > qg.field_n.aimAngle) {
+                    qg.field_n.aimAngle = qg.field_n.aimAngle + 65536;
                   }
                 }
                 var18 = 0;
@@ -12087,7 +12087,7 @@ final class GameplayController {
                   var18 = 1;
                 }
                 if (0L == var12Lifetime1) {
-                  qg.field_n.field_p = false;
+                  qg.field_n.scheduled = false;
                   var18 = 1;
                   qg.field_n = null;
                 }
@@ -12097,7 +12097,7 @@ final class GameplayController {
                     this.controlledSentinel.field_ub != 0)) {
                     if (this.controlledSentinel.field_Xb[this.field_F] != 8 ||
                       !(this.controlledSentinel.charge < 1)) {
-                      if ((ml.field_f[Math.max(0, qg.field_n.field_B * bj.field_h >> 8)] == 0) &&
+                      if ((ml.field_f[Math.max(0, qg.field_n.aimAngle * bj.field_h >> 8)] == 0) &&
                         (0 == hf.field_c)) {
                         var18 = 1;
                         if (var20 != 0) {
@@ -12189,12 +12189,12 @@ final class GameplayController {
             }
             if (500 + this.world.simulationTick > var6) {
               var8 = new SentinelCommand(3, 0, var6);
-              var8.field_u = param3;
-              var8.field_y = param1;
+              var8.targetWorldX = param3;
+              var8.targetWorldY = param1;
               if (!this.b(param0 ^ 2756, param3, param1)) {
                 boolean decompiledSharedTail0 = (this.field_d);
                 if (!decompiledSharedTail0) {
-                  var8.field_p = true;
+                  var8.scheduled = true;
                   decompiledSharedTail0 = (var20 != 0);
                 }
                 if (decompiledSharedTail0) {
@@ -12202,9 +12202,9 @@ final class GameplayController {
                   mm.field_g.a((byte) 112, 3);
                   mm.field_g.a((byte) 113, 0);
                   mm.field_g.b(true, var6);
-                  mm.field_g.b(true, var8.field_u);
-                  mm.field_g.b(true, var8.field_y);
-                  mm.field_g.b(true, var8.field_B);
+                  mm.field_g.b(true, var8.targetWorldX);
+                  mm.field_g.b(true, var8.targetWorldY);
+                  mm.field_g.b(true, var8.aimAngle);
                 }
                 fc.a((byte) 67, 69, -1);
                 if (di.field_g != -1 ||
@@ -12224,8 +12224,8 @@ final class GameplayController {
               if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
                 qg.field_n = new SentinelCommand(3, 0, var6);
-                qg.field_n.field_y = param1;
-                qg.field_n.field_u = param3;
+                qg.field_n.targetWorldY = param1;
+                qg.field_n.targetWorldX = param3;
               }
             }
           } else {
@@ -12239,8 +12239,8 @@ final class GameplayController {
               if ((500 + this.world.simulationTick) > var6 &&
                 !this.b(-5821, param3, param1)) {
                 qg.field_n = new SentinelCommand(3, 0, var6);
-                qg.field_n.field_y = param1;
-                qg.field_n.field_u = param3;
+                qg.field_n.targetWorldY = param1;
+                qg.field_n.targetWorldX = param3;
               }
             }
           }
@@ -12476,7 +12476,7 @@ final class GameplayController {
                 var6Lifetime1 == 0) {
                 var7Lifetime4 = new SentinelCommand(6, -1, var4Lifetime1);
                 if (!this.field_d) {
-                  var7Lifetime4.field_p = true;
+                  var7Lifetime4.scheduled = true;
                   if (var9 != 0) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 108, 6);
@@ -12536,10 +12536,10 @@ final class GameplayController {
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
                   if (var9 != 0) {
-                    var7Lifetime1Lifetime1.field_p = true;
+                    var7Lifetime1Lifetime1.scheduled = true;
                   }
                 } else {
-                  var7Lifetime1Lifetime1.field_p = true;
+                  var7Lifetime1Lifetime1.scheduled = true;
                 }
                 if (di.field_g != -1 ||
                   this.world.field_c != 1) {
@@ -12577,10 +12577,10 @@ final class GameplayController {
                   mm.field_g.b(true, 0);
                   mm.field_g.b(true, 0);
                   if (var9 != 0) {
-                    var7Lifetime2.field_p = true;
+                    var7Lifetime2.scheduled = true;
                   }
                 } else {
-                  var7Lifetime2.field_p = true;
+                  var7Lifetime2.scheduled = true;
                 }
                 if (di.field_g != -1 ||
                   this.world.field_c != 1) {
@@ -12599,7 +12599,7 @@ final class GameplayController {
               if (500 + this.world.simulationTick > var4Lifetime4) {
                 var6_ref_je = new SentinelCommand(7, this.controlledSentinel.field_fb, var4Lifetime4);
                 if (!this.field_d) {
-                  var6_ref_je.field_p = true;
+                  var6_ref_je.scheduled = true;
                   if (var9 != 0) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 112, 7);
@@ -12635,7 +12635,7 @@ final class GameplayController {
               if (500 + this.world.simulationTick > var4Lifetime5) {
                 var6_ref_jeLifetime1 = new SentinelCommand(8, 0, var4Lifetime5);
                 if (!this.field_d) {
-                  var6_ref_jeLifetime1.field_p = true;
+                  var6_ref_jeLifetime1.scheduled = true;
                   if (var9 != 0) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 112, 8);
@@ -12673,7 +12673,7 @@ final class GameplayController {
                 var6Lifetime4 = stackIn_367_0;
                 var7Lifetime3 = new SentinelCommand(var6Lifetime4, 0, var4Lifetime6);
                 if (!this.field_d) {
-                  var7Lifetime3.field_p = true;
+                  var7Lifetime3.scheduled = true;
                   if (var9 != 0) {
                     mm.field_g.a(64, (byte) -117);
                     mm.field_g.a((byte) 116, var6Lifetime4);

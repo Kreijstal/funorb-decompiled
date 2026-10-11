@@ -42,7 +42,7 @@ final class lo extends IntrusiveNode {
           if (null != param0.field_d) {
             ma.field_ab = param0.field_n;
             rv.field_b = param0.field_d;
-            ge.field_h = param0.field_m;
+            WeightedScoreStrategy.field_h = param0.field_m;
             no.field_S = param0.field_b;
           }
           bc.a(3208, param0);

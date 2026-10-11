@@ -56,7 +56,7 @@ final class nf extends je {
         if (param0 != 26136) {
           nf.l(77);
         }
-        return kl.field_a.field_p[0];
+        return kl.field_a.currentPosition[0];
     }
 
     public static void k(int param0) {

@@ -27,7 +27,7 @@ final class oq extends wv {
 
     final h a(byte param0) {
         int var2 = -72 / ((-63 - param0) / 45);
-        return qv.field_l;
+        return MovementPresentation.field_l;
     }
 
     final static int a(boolean param0) {

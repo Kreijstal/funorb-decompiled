@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class lf {
+final class BattleCharacter {
     boolean field_l;
     private boolean field_u;
-    int field_s;
-    private gd field_A;
-    private int field_C;
+    int destinationY;
+    private ModelMesh model;
+    private int unitType;
     static double field_b;
     private int field_w;
     boolean field_e;
     private int[] field_k;
-    private int field_G;
-    int field_a;
-    int field_D;
+    private int modelIndex;
+    int destinationX;
+    int animationState;
     boolean field_d;
     boolean field_H;
     private int[] field_F;
@@ -24,12 +24,12 @@ final class lf {
     private boolean field_B;
     private int[] field_r;
     private boolean field_n;
-    int field_j;
+    int currentX;
     private int field_y;
     private int field_J;
-    int field_p;
-    int field_m;
-    int field_f;
+    int currentY;
+    int animationDelay;
+    int animationFrame;
     private int[] field_I;
     private int[] field_o;
     private int[] field_z;
@@ -91,82 +91,82 @@ final class lf {
         this.a((byte) -118);
         this.field_J = this.field_J + 1;
         var2 = 8;
-        var3 = -this.field_j + this.field_a;
-        var4 = -this.field_p + this.field_s;
+        var3 = -this.currentX + this.destinationX;
+        var4 = -this.currentY + this.destinationY;
         if (param0 != 113) {
           this.a(78, -75);
         }
         var5 = (int)Math.sqrt((double)(var4 * var4 + var3 * var3));
-        if (this.field_D == 4) {
+        if (this.animationState == 4) {
           if (var2 < var5) {
-            this.field_s = this.field_s - var4 * var2 / var5;
-            this.field_a = this.field_a - var2 * var3 / var5;
+            this.destinationY = this.destinationY - var4 * var2 / var5;
+            this.destinationX = this.destinationX - var2 * var3 / var5;
             if (this.field_J % 20 == 0) {
-              stackIn_9_0 = this.field_s;
+              stackIn_9_0 = this.destinationY;
               stackIn_10_1 = (!this.field_u) ? 1 : -1;
-              jg.a(stackIn_9_0, stackIn_10_1 * this.field_a, 512, 0, this.field_C);
+              jg.a(stackIn_9_0, stackIn_10_1 * this.destinationX, 512, 0, this.unitType);
               this.field_J = this.field_J + AttackEvent.a(false, 10, li.field_n);
             }
           } else {
-            this.field_s = this.field_p;
-            this.field_a = this.field_j;
-            this.a(0, (byte) -93);
+            this.destinationY = this.currentY;
+            this.destinationX = this.currentX;
+            this.setAnimationState(0, (byte) -93);
           }
         }
-        if (this.field_D == 7) {
-          this.field_s = this.field_p;
-          this.field_a = this.field_j;
+        if (this.animationState == 7) {
+          this.destinationY = this.currentY;
+          this.destinationX = this.currentX;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_D == 0) {
+        if (this.animationState == 0) {
           if (0 == var3 &&
             var4 == 0) {
-            if (((this.field_D == 0)) &&
-              ((this.field_f != -1))) {
-              this.field_m = this.field_m - 1;
-              if (!(0 < this.field_m)) {
-                this.a(this.field_f, (byte) -124);
-                this.field_f = -1;
+            if (((this.animationState == 0)) &&
+              ((this.animationFrame != -1))) {
+              this.animationDelay = this.animationDelay - 1;
+              if (!(0 < this.animationDelay)) {
+                this.setAnimationState(this.animationFrame, (byte) -124);
+                this.animationFrame = -1;
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_C != 39 &&
-              this.field_C != 51) {
-              this.a(4, (byte) -107);
+            if (this.unitType != 39 &&
+              this.unitType != 51) {
+              this.setAnimationState(4, (byte) -107);
             } else {
-              this.a(6, (byte) -125);
+              this.setAnimationState(6, (byte) -125);
             }
           }
         } else {
-          if (this.field_D == 0 &&
-            this.field_f != -1) {
-            this.field_m = this.field_m - 1;
-            if (0 >= this.field_m) {
-              this.a(this.field_f, (byte) -124);
-              this.field_f = -1;
+          if (this.animationState == 0 &&
+            this.animationFrame != -1) {
+            this.animationDelay = this.animationDelay - 1;
+            if (0 >= this.animationDelay) {
+              this.setAnimationState(this.animationFrame, (byte) -124);
+              this.animationFrame = -1;
             }
           }
         }
         var6 = this.field_y;
         if (this.field_d &&
-          2 == this.field_D) {
+          2 == this.animationState) {
           var6Lifetime1 = 7;
         } else {
-          if (this.field_D == 4) {
+          if (this.animationState == 4) {
             var6Lifetime1 = 2;
           } else {
-            if (this.field_D != 6) {
-              if (this.field_D != 7) {
-                if (this.field_D == 1) {
+            if (this.animationState != 6) {
+              if (this.animationState != 7) {
+                if (this.animationState == 1) {
                   var6Lifetime1 = 3;
                 } else {
-                  if (2 != this.field_D) {
-                    if (3 == this.field_D) {
+                  if (2 != this.animationState) {
+                    if (3 == this.animationState) {
                       var6Lifetime1 = 4;
                     } else {
-                      var6Lifetime1 = (this.field_D == 5) ? 5 : 0;
+                      var6Lifetime1 = (this.animationState == 5) ? 5 : 0;
                     }
                   } else {
                     var6Lifetime1 = 6;
@@ -182,141 +182,141 @@ final class lf {
         }
         this.a(var6Lifetime1, 0);
         var7 = this.field_x.a(param0 ^ -13) ? 1 : 0;
-        if (1 != this.field_D) {
+        if (1 != this.animationState) {
         }
-        if (this.field_J == je.field_K[this.field_G][1] &&
-          this.field_D == 3 &&
+        if (this.field_J == je.field_K[this.modelIndex][1] &&
+          this.animationState == 3 &&
           !this.field_B) {
-          stackIn_56_0 = this.field_s;
+          stackIn_56_0 = this.destinationY;
           if (this.field_u) {
             stackIn_57_1 = -1;
           } else {
             stackIn_57_1 = 1;
           }
-          jg.a(stackIn_56_0, stackIn_57_1 * this.field_a, 512, 7, this.field_C);
+          jg.a(stackIn_56_0, stackIn_57_1 * this.destinationX, 512, 7, this.unitType);
           this.field_B = true;
           this.field_l = true;
         } else {
-          if (3 == this.field_D && (!(je.field_K[this.field_G][1] >= 0) ||
-            !(this.field_F[this.field_D] < je.field_K[this.field_G][1])) && !this.field_B) {
-            stackIn_66_0 = this.field_s;
-            stackIn_66_1 = this.field_a;
+          if (3 == this.animationState && (!(je.field_K[this.modelIndex][1] >= 0) ||
+            !(this.field_F[this.animationState] < je.field_K[this.modelIndex][1])) && !this.field_B) {
+            stackIn_66_0 = this.destinationY;
+            stackIn_66_1 = this.destinationX;
             if (!this.field_u) {
               stackIn_67_2 = 1;
             } else {
               stackIn_67_2 = -1;
             }
-            jg.a(stackIn_66_0, stackIn_66_1 * stackIn_67_2, 512, 7, this.field_C);
+            jg.a(stackIn_66_0, stackIn_66_1 * stackIn_67_2, 512, 7, this.unitType);
             this.field_B = true;
             this.field_l = true;
           }
         }
-        if (this.field_J == je.field_K[this.field_G][0] &&
-          1 == this.field_D &&
+        if (this.field_J == je.field_K[this.modelIndex][0] &&
+          1 == this.animationState &&
           !this.field_B) {
-          stackIn_84_0 = this.field_s;
-          stackIn_84_1 = this.field_a;
+          stackIn_84_0 = this.destinationY;
+          stackIn_84_1 = this.destinationX;
           if (this.field_u) {
             stackIn_85_2 = -1;
           } else {
             stackIn_85_2 = 1;
           }
-          jg.a(stackIn_84_0, stackIn_84_1 * stackIn_85_2, 512, 4, this.field_C);
+          jg.a(stackIn_84_0, stackIn_84_1 * stackIn_85_2, 512, 4, this.unitType);
           this.field_e = true;
           this.field_B = true;
         } else {
-          if (this.field_D == 1 && (!(je.field_K[this.field_G][0] >= 0) ||
-            !(je.field_K[this.field_G][0] > this.field_F[this.field_D])) && !this.field_B) {
-            stackIn_80_0 = this.field_s;
+          if (this.animationState == 1 && (!(je.field_K[this.modelIndex][0] >= 0) ||
+            !(je.field_K[this.modelIndex][0] > this.field_F[this.animationState])) && !this.field_B) {
+            stackIn_80_0 = this.destinationY;
             if (this.field_u) {
               stackIn_81_1 = -1;
             } else {
               stackIn_81_1 = 1;
             }
-            jg.a(stackIn_80_0, stackIn_81_1 * this.field_a, 512, 4, this.field_C);
+            jg.a(stackIn_80_0, stackIn_81_1 * this.destinationX, 512, 4, this.unitType);
             this.field_e = true;
             this.field_B = true;
           }
         }
         if (1 == this.field_J &&
-          this.field_D == 1) {
-          stackIn_90_0 = this.field_s;
-          stackIn_90_1 = this.field_a;
+          this.animationState == 1) {
+          stackIn_90_0 = this.destinationY;
+          stackIn_90_1 = this.destinationX;
           stackIn_91_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_90_0, stackIn_90_1 * stackIn_91_2, 512, 3, this.field_C);
+          jg.a(stackIn_90_0, stackIn_90_1 * stackIn_91_2, 512, 3, this.unitType);
         }
         if (1 == this.field_J &&
-          this.field_D == 2 &&
+          this.animationState == 2 &&
           this.field_d) {
-          stackIn_97_0 = this.field_s;
+          stackIn_97_0 = this.destinationY;
           stackIn_98_1 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_97_0, stackIn_98_1 * this.field_a, 512, 5, this.field_C);
-          stackIn_100_0 = this.field_s;
-          stackIn_100_1 = this.field_a;
+          jg.a(stackIn_97_0, stackIn_98_1 * this.destinationX, 512, 5, this.unitType);
+          stackIn_100_0 = this.destinationY;
+          stackIn_100_1 = this.destinationX;
           stackIn_101_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_100_0, stackIn_100_1 * stackIn_101_2, 512, 2, this.field_C);
+          jg.a(stackIn_100_0, stackIn_100_1 * stackIn_101_2, 512, 2, this.unitType);
         }
         if (1 == this.field_J &&
-          2 == this.field_D &&
+          2 == this.animationState &&
           !this.field_d) {
-          stackIn_108_0 = this.field_s;
-          stackIn_108_1 = this.field_a;
+          stackIn_108_0 = this.destinationY;
+          stackIn_108_1 = this.destinationX;
           stackIn_109_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_108_0, stackIn_108_1 * stackIn_109_2, param0 ^ 625, 1, this.field_C);
-          stackIn_111_0 = this.field_s;
+          jg.a(stackIn_108_0, stackIn_108_1 * stackIn_109_2, param0 ^ 625, 1, this.unitType);
+          stackIn_111_0 = this.destinationY;
           stackIn_112_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_111_0, stackIn_112_1 * this.field_a, 512, 2, this.field_C);
+          jg.a(stackIn_111_0, stackIn_112_1 * this.destinationX, 512, 2, this.unitType);
         }
         if (this.field_J == 1 &&
-          this.field_D == 5) {
-          stackIn_118_0 = this.field_s;
-          stackIn_118_1 = this.field_a;
+          this.animationState == 5) {
+          stackIn_118_0 = this.destinationY;
+          stackIn_118_1 = this.destinationX;
           stackIn_119_2 = (this.field_u) ? -1 : 1;
-          jg.a(stackIn_118_0, stackIn_118_1 * stackIn_119_2, param0 ^ 625, 6, this.field_C);
+          jg.a(stackIn_118_0, stackIn_118_1 * stackIn_119_2, param0 ^ 625, 6, this.unitType);
         }
         if (1 == this.field_J &&
-          this.field_D == 7) {
-          stackIn_125_0 = this.field_s;
+          this.animationState == 7) {
+          stackIn_125_0 = this.destinationY;
           stackIn_126_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_125_0, stackIn_126_1 * this.field_a, 512, 0, this.field_C);
+          jg.a(stackIn_125_0, stackIn_126_1 * this.destinationX, 512, 0, this.unitType);
         }
         if (this.field_J == 1 &&
-          this.field_D == 6) {
-          stackIn_131_0 = this.field_s;
+          this.animationState == 6) {
+          stackIn_131_0 = this.destinationY;
           stackIn_132_1 = (!this.field_u) ? 1 : -1;
-          jg.a(stackIn_131_0, stackIn_132_1 * this.field_a, param0 + 399, 5, this.field_C);
+          jg.a(stackIn_131_0, stackIn_132_1 * this.destinationX, param0 + 399, 5, this.unitType);
         }
         this.a(param0 ^ -313055231);
         if (var7 != 0) {
           this.field_J = 0;
           if (this.field_y != 5) {
             if (this.field_y != 7) {
-              if (this.field_D == 6) {
-                this.a(7, (byte) -122);
+              if (this.animationState == 6) {
+                this.setAnimationState(7, (byte) -122);
               } else {
-                if (this.field_D == 3) {
+                if (this.animationState == 3) {
                   if (!this.field_B) {
-                    stackIn_152_0 = this.field_s;
+                    stackIn_152_0 = this.destinationY;
                     stackIn_153_1 = (this.field_u) ? -1 : 1;
-                    jg.a(stackIn_152_0, stackIn_153_1 * this.field_a, 512, 7, this.field_C);
+                    jg.a(stackIn_152_0, stackIn_153_1 * this.destinationX, 512, 7, this.unitType);
                     this.field_l = true;
                   }
                 } else {
-                  if (this.field_D == 1 &&
+                  if (this.animationState == 1 &&
                     !this.field_B) {
-                    stackIn_147_0 = this.field_s;
+                    stackIn_147_0 = this.destinationY;
                     stackIn_148_1 = (this.field_u) ? -1 : 1;
-                    jg.a(stackIn_147_0, stackIn_148_1 * this.field_a, param0 ^ 625, 4, this.field_C);
+                    jg.a(stackIn_147_0, stackIn_148_1 * this.destinationX, param0 ^ 625, 4, this.unitType);
                     this.field_e = true;
                   }
                 }
-                this.a(0, (byte) -94);
+                this.setAnimationState(0, (byte) -94);
               }
             } else {
               this.field_H = true;
             }
           } else {
-            this.a(5, (byte) -86);
+            this.setAnimationState(5, (byte) -86);
             this.field_E = true;
           }
         }
@@ -354,17 +354,17 @@ final class lf {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean isAtDestination(int obfuscationGuard) {
         boolean stackIn_6_0 = false;
-        if (param0 != 2166) {
+        if (obfuscationGuard != 2166) {
           this.d(-90);
         }
-        stackIn_6_0 = (this.field_j == this.field_a) && (this.field_p == this.field_s);
+        stackIn_6_0 = (this.currentX == this.destinationX) && (this.currentY == this.destinationY);
         return stackIn_6_0;
     }
 
     private final void d(int param0) {
-        this.field_x.a(-1, pg.a(this.field_y, 176, true, this.field_G));
+        this.field_x.a(-1, pg.a(this.field_y, 176, true, this.modelIndex));
         this.a(-313055120);
         if (param0 > -77) {
           this.a(-77, 60);
@@ -459,7 +459,7 @@ final class lf {
         int stackIn_12_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_20_1 = 0;
-        gd stackIn_26_0;
+        ModelMesh stackIn_26_0;
         int stackIn_26_1;
         int stackIn_26_2;
         int stackIn_26_3;
@@ -489,19 +489,19 @@ final class lf {
         int var10;
         int var11;
         int var12;
-        gd var13;
+        ModelMesh var13;
         int var9Lifetime1;
         int var10Lifetime1;
         int var9Lifetime1Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null == this.field_A) {
+        if (null == this.model) {
           return;
         }
-        var13 = (gd) (this.field_x.a(false, true, false, this.field_A));
-        if (this.field_G == 75) {
+        var13 = (ModelMesh) (this.field_x.a(false, true, false, this.model));
+        if (this.modelIndex == 75) {
           var13.b(250, 250, 250);
         }
-        if (this.field_G == 76) {
+        if (this.modelIndex == 76) {
           var13.b(512, 512, 512);
         }
         var5 = 0;
@@ -512,9 +512,9 @@ final class lf {
         var6 = stackIn_12_0;
         var7 = 0;
         var8 = 150;
-        if (4 == this.field_D) {
-          var9 = -this.field_j + this.field_a;
-          var10 = -this.field_p + this.field_s;
+        if (4 == this.animationState) {
+          var9 = -this.currentX + this.destinationX;
+          var10 = -this.currentY + this.destinationY;
           if (0 != var9 ||
             var10 != 0) {
             stackIn_19_0 = (int)(1024.0 * Math.atan2((double)var9, (double)var10) / 3.141592653589793);
@@ -534,7 +534,7 @@ final class lf {
         stackIn_26_2 = var6;
         stackIn_26_3 = var7;
         stackIn_26_4 = var8;
-        stackIn_26_5 = this.field_a;
+        stackIn_26_5 = this.destinationX;
         stackIn_27_6 = (!this.field_u) ? 1 : -1;
         stackIn_30_5 = stackIn_26_5 * stackIn_27_6;
         stackIn_30_6 = 600;
@@ -544,12 +544,12 @@ final class lf {
         } else {
           stackIn_31_7 = 0;
         }
-        ((gd) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, stackIn_30_5, stackIn_30_6 - stackIn_31_7, this.field_s);
+        ((ModelMesh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, stackIn_30_5, stackIn_30_6 - stackIn_31_7, this.destinationY);
         if (!param2) {
           if (this.field_w == 1) {
             for (var9Lifetime1 = 0; var9Lifetime1 < lb.field_a; var9Lifetime1++) {
               if (0 < this.field_k[var9Lifetime1]) {
-                stackIn_58_0 = this.field_s;
+                stackIn_58_0 = this.destinationY;
                 stackIn_58_1 = hs.field_F[this.field_k[var9Lifetime1] % hs.field_F.length];
                 if (255 < this.field_k[var9Lifetime1] << 4) {
                   stackIn_59_2 = 256;
@@ -562,13 +562,13 @@ final class lf {
                 } else {
                   stackIn_62_4 = -1;
                 }
-                cb.a(stackIn_58_0, stackIn_58_1, stackIn_59_2, stackIn_61_3, stackIn_62_4 * (this.field_a - (this.field_z[var9Lifetime1] >> 16)), -(this.field_I[var9Lifetime1] >> 16) + 600);
+                cb.a(stackIn_58_0, stackIn_58_1, stackIn_59_2, stackIn_61_3, stackIn_62_4 * (this.destinationX - (this.field_z[var9Lifetime1] >> 16)), -(this.field_I[var9Lifetime1] >> 16) + 600);
               }
             }
             return;
           }
           if (this.field_w == 0) {
-            var9Lifetime1Lifetime1 = bw.unitDefinitions[this.field_C][1] + 1;
+            var9Lifetime1Lifetime1 = bw.unitDefinitions[this.unitType][1] + 1;
             var12 = 0;
             var10Lifetime1 = var12;
             while (var12 < lb.field_a) {
@@ -586,13 +586,13 @@ final class lf {
                 } else {
                   stackIn_46_4 = 63;
                 }
-                stackIn_48_5 = this.field_a - (this.field_z[var12] >> 16);
+                stackIn_48_5 = this.destinationX - (this.field_z[var12] >> 16);
                 if (!this.field_u) {
                   stackIn_49_6 = 1;
                 } else {
                   stackIn_49_6 = -1;
                 }
-                fh.$cfr$intArgs$a$e0bc7fdb2979(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.field_s);
+                fh.$cfr$intArgs$a$e0bc7fdb2979(stackIn_42_0, stackIn_43_1, stackIn_45_2, stackIn_45_3, stackIn_46_4, stackIn_48_5 * stackIn_49_6, this.destinationY);
               }
               var12++;
             }
@@ -602,11 +602,11 @@ final class lf {
         return;
     }
 
-    final boolean b(byte param0) {
+    final boolean isIdle(byte obfuscationGuard) {
         int var2;
         boolean stackIn_4_0 = false;
-        var2 = -118 / ((param0 + 7) / 36);
-        stackIn_4_0 = (this.field_D == 0) && (this.field_f == -1);
+        var2 = -118 / ((obfuscationGuard + 7) / 36);
+        stackIn_4_0 = (this.animationState == 0) && (this.animationFrame == -1);
         return stackIn_4_0;
     }
 
@@ -636,47 +636,47 @@ final class lf {
         if (param0 >= -85) {
           return;
         }
-        if (this.field_D != 1 &&
-          3 != this.field_D) {
+        if (this.animationState != 1 &&
+          3 != this.animationState) {
           return;
         }
         if (null != this.field_F &&
-          this.field_D >= 0 &&
-          this.field_D < this.field_F.length) {
-          if (0 > this.field_F[this.field_D]) {
+          this.animationState >= 0 &&
+          this.animationState < this.field_F.length) {
+          if (0 > this.field_F[this.animationState]) {
             var2 = -1;
-            if (1 == this.field_D) {
+            if (1 == this.animationState) {
               var2 = 3;
             }
-            if (this.field_D == 3) {
+            if (this.animationState == 3) {
               var2 = 4;
             }
             if (var2 >= 0 &&
               this.field_y == var2) {
-              if (aw.field_j != null &&
-                this.field_G >= 0 &&
-                aw.field_j.length > this.field_G) {
-                if (aw.field_j[this.field_G] != null &&
+              if (BestScoreStrategy.field_j != null &&
+                this.modelIndex >= 0 &&
+                BestScoreStrategy.field_j.length > this.modelIndex) {
+                if (BestScoreStrategy.field_j[this.modelIndex] != null &&
                   0 <= var2 &&
-                  var2 < aw.field_j[this.field_G].length) {
-                  if (aw.field_j[this.field_G][this.field_y] != null &&
-                    aw.field_j[this.field_G][this.field_y].length != 0) {
-                    if (aw.field_j[this.field_G][this.field_y][0] < 0) {
-                      this.field_F[this.field_D] = 0;
+                  var2 < BestScoreStrategy.field_j[this.modelIndex].length) {
+                  if (BestScoreStrategy.field_j[this.modelIndex][this.field_y] != null &&
+                    BestScoreStrategy.field_j[this.modelIndex][this.field_y].length != 0) {
+                    if (BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] < 0) {
+                      this.field_F[this.animationState] = 0;
                       return;
                     }
                     if (null != ck.field_e &&
                       null != sf.field_P &&
-                      0 <= this.field_G &&
-                      sf.field_P.length > this.field_G) {
-                      if (sf.field_P[this.field_G] >= 0 &&
-                        sf.field_P[this.field_G] < ck.field_e.length) {
-                        if (null != ck.field_e[sf.field_P[this.field_G]] &&
-                          aw.field_j[this.field_G][this.field_y][0] >= 0 &&
-                          aw.field_j[this.field_G][this.field_y][0] < ck.field_e[sf.field_P[this.field_G]].length) {
+                      0 <= this.modelIndex &&
+                      sf.field_P.length > this.modelIndex) {
+                      if (sf.field_P[this.modelIndex] >= 0 &&
+                        sf.field_P[this.modelIndex] < ck.field_e.length) {
+                        if (null != ck.field_e[sf.field_P[this.modelIndex]] &&
+                          BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] >= 0 &&
+                          BestScoreStrategy.field_j[this.modelIndex][this.field_y][0] < ck.field_e[sf.field_P[this.modelIndex]].length) {
                           var3 = new vj();
                           this.a(-313055120);
-                          var3.a(-1, ck.field_e[sf.field_P[this.field_G]][aw.field_j[this.field_G][this.field_y][0]]);
+                          var3.a(-1, ck.field_e[sf.field_P[this.modelIndex]][BestScoreStrategy.field_j[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
                           var6 = 10000;
@@ -689,7 +689,7 @@ final class lf {
                               var4++;
                             }
                             if (var6 <= var7) {
-                              this.field_F[this.field_D] = 0;
+                              this.field_F[this.animationState] = 0;
                               return;
                             }
                             if (var5Lifetime1 == 0) {
@@ -702,39 +702,39 @@ final class lf {
                             }
                             break;
                           }
-                          this.field_F[this.field_D] = var4;
+                          this.field_F[this.animationState] = var4;
                           return;
                         }
-                        this.field_F[this.field_D] = 0;
+                        this.field_F[this.animationState] = 0;
                         return;
                       }
-                      this.field_F[this.field_D] = 0;
+                      this.field_F[this.animationState] = 0;
                       return;
                     }
-                    this.field_F[this.field_D] = 0;
+                    this.field_F[this.animationState] = 0;
                     return;
                   }
-                  this.field_F[this.field_D] = 0;
+                  this.field_F[this.animationState] = 0;
                   return;
                 }
-                this.field_F[this.field_D] = 0;
+                this.field_F[this.animationState] = 0;
                 return;
               }
-              this.field_F[this.field_D] = 0;
+              this.field_F[this.animationState] = 0;
               return;
             }
-            this.field_F[this.field_D] = 0;
+            this.field_F[this.animationState] = 0;
             return;
           }
           return;
         }
     }
 
-    final void a(int param0, byte param1) {
-        if (param1 > -83) {
+    final void setAnimationState(int animationState, byte obfuscationGuard) {
+        if (obfuscationGuard > -83) {
           this.field_l = false;
         }
-        this.field_D = param0;
+        this.animationState = animationState;
     }
 
     private final void a(int param0) {
@@ -747,10 +747,10 @@ final class lf {
     }
 
     final void c(byte param0) {
-        this.a(3, (byte) -91);
+        this.setAnimationState(3, (byte) -91);
         this.field_E = true;
         if (param0 != 102) {
-          lf.a(-71, 76, -87, 82, -108, 110, 13, -61, -101);
+          BattleCharacter.a(-71, 76, -87, 82, -108, 110, 13, -61, -101);
         }
     }
 
@@ -800,52 +800,52 @@ final class lf {
         }
     }
 
-    lf(int param0, boolean param1, int param2, int param3, boolean param4, int param5) {
+    BattleCharacter(int param0, boolean param1, int param2, int param3, boolean param4, int param5) {
         int var8 = 0;
         boolean stackIn_16_1 = false;
         int var7;
-        this.field_D = 0;
+        this.animationState = 0;
         this.field_d = false;
         this.field_H = false;
-        this.field_m = 0;
-        this.field_f = -1;
+        this.animationDelay = 0;
+        this.animationFrame = -1;
         this.field_w = -1;
         this.field_x = new vj(1);
-        this.field_C = param0;
-        this.field_G = param0;
+        this.unitType = param0;
+        this.modelIndex = param0;
         if (param0 == 43) {
-          this.field_G = 77;
+          this.modelIndex = 77;
         }
         if (!param4) {
           if (16 == param0) {
-            this.field_G = 78;
+            this.modelIndex = 78;
           }
           if (25 == param0) {
-            this.field_G = 79;
+            this.modelIndex = 79;
           }
           if (48 == param0) {
-            this.field_G = 80;
+            this.modelIndex = 80;
           }
           if (param0 == 85) {
-            this.field_G = 89;
+            this.modelIndex = 89;
           }
         }
-        var7 = AttackEvent.a(false, SpellAreaSelection.field_k[this.field_G].length, li.field_n);
-        this.field_A = (gd) (SpellAreaSelection.field_k[this.field_G][var7]);
-        if (null == this.field_A) {
-          af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.field_G + " variation: " + var7);
+        var7 = AttackEvent.a(false, SpellAreaSelection.field_k[this.modelIndex].length, li.field_n);
+        this.model = (ModelMesh) (SpellAreaSelection.field_k[this.modelIndex][var7]);
+        if (null == this.model) {
+          af.a((Throwable) null, 100, "BattleCharacter: no model found - model_index: " + this.modelIndex + " variation: " + var7);
         }
-        this.field_n = nh.field_D[this.field_G];
-        this.field_a = param2 + param5;
+        this.field_n = nh.field_D[this.modelIndex];
+        this.destinationX = param2 + param5;
         this.field_z = new int[lb.field_a];
         this.field_k = new int[lb.field_a];
         stackIn_16_1 = (param1);
         this.field_u = stackIn_16_1;
         this.field_I = new int[lb.field_a];
         this.field_J = 0;
-        this.field_j = param2;
-        this.field_p = param3;
-        this.field_s = param3;
+        this.currentX = param2;
+        this.currentY = param3;
+        this.destinationY = param3;
         this.field_y = 0;
         this.field_r = new int[lb.field_a];
         this.field_o = new int[lb.field_a];

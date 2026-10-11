@@ -33,7 +33,7 @@ abstract class SpellAreaEffect extends IntrusiveNode {
           for (var5 = 0; var5 < var4_int; var5++) {
             var6 = param0[var5].length;
             array$1 = new int[var6];
-            aw.field_j[param2][var5] = array$1;
+            BestScoreStrategy.field_j[param2][var5] = array$1;
             da.a(var5, 0, param0, param1, param2);
           }
           return;

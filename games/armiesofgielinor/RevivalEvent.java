@@ -216,7 +216,7 @@ final class RevivalEvent extends GameEvent {
     RevivalEvent(Unit param0, int param1, int param2) {
         try {
           this.unit = param0;
-          this.field_m = 25;
+          this.eventKind = 25;
           this.destinationY = param2;
           this.destinationX = param1;
         } catch (RuntimeException runtimeException) {

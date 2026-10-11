@@ -94,11 +94,11 @@ class fw extends kb {
             if (this.field_q == ro.field_ub) {
               return;
             }
-            if (this.b(param0 - 32721, param1, ko.field_b, sm.field_d, param2) &&
+            if (this.b(param0 - 32721, param1, ko.field_b, AiPlanningStrategy.field_d, param2) &&
               ro.field_ub == 0) {
-              this.a(this.field_q, sm.field_d - param1, ko.field_b - param2, true);
+              this.a(this.field_q, AiPlanningStrategy.field_d - param1, ko.field_b - param2, true);
             }
-            this.a(param2, param3, sm.field_d, (byte) -118, ko.field_b, param1);
+            this.a(param2, param3, AiPlanningStrategy.field_d, (byte) -118, ko.field_b, param1);
           }
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

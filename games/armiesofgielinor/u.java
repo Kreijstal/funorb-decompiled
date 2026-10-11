@@ -5,7 +5,7 @@ final class u extends IntrusiveNode {
     lv field_m;
     static pf field_l;
     static int[][] field_o;
-    static sr field_p;
+    static CombatViewTransition field_p;
     static ru field_n;
     static int field_k;
 

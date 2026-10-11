@@ -125,7 +125,7 @@ final class ln {
           }
           nl.a(param1, ck.field_e, param2, (byte) 126);
           nl.a(param1, pv.field_a, param2, (byte) 126);
-          qv.c(param3 ^ -11757);
+          MovementPresentation.c(param3 ^ -11757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

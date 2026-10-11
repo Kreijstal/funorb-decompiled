@@ -235,7 +235,7 @@ abstract class wl extends tj {
         try {
           qc.field_h.a(param0);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            jb.field_u[var1_int] = 0L;
+            AiActionCandidate.field_u[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             om.field_r[var1_intLifetime1] = 0L;

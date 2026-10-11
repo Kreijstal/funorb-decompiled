@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sm {
+abstract class AiPlanningStrategy {
     static int field_b;
     static int field_c;
     static String field_g;
     static String field_e;
-    NodeDeque field_a;
+    NodeDeque candidates;
     static int field_d;
-    private NodeDeque field_f;
+    private NodeDeque recycledCandidates;
 
     final static hl a(int param0, int param1, boolean param2) {
         dn stackIn_4_0;
@@ -53,7 +53,7 @@ abstract class sm {
           var3_int = ((dn) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, 0, 2) ? 1 : 0;
           var4 = mw.field_E.field_Nb.field_fb;
           if (param0 <= 20) {
-            sm.a(-8, (String[]) null, (String) null, -108);
+            AiPlanningStrategy.a(-8, (String[]) null, (String) null, -108);
           }
           boolean decompiledFrameRemainder1 = true;
           var5 = null;
@@ -186,7 +186,7 @@ abstract class sm {
               } else {
                 decompiledFrameRemainder0 = (0 != mw.field_E.field_Ib.field_yb);
                 if (decompiledFrameRemainder0) {
-                  tb.field_e = new oc(mw.field_E.field_Ib.field_V, mw.field_E.field_Ib.field_D, mw.field_E.field_Ib.field_gb, mw.field_E.field_Ib.field_ob, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new oc(mw.field_E.field_Ib.field_V, mw.field_E.field_Ib.field_D, mw.field_E.field_Ib.field_gb, mw.field_E.field_Ib.field_ob, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -195,7 +195,7 @@ abstract class sm {
               if (mw.field_E.field_Rb.field_yb == 0) {
                 break;
               }
-              tb.field_e = new oc(mw.field_E.field_Rb.field_V, mw.field_E.field_Rb.field_D, mw.field_E.field_Rb.field_gb, mw.field_E.field_Rb.field_ob, se.field_b, kq.field_N, eq.field_h, eq.field_h);
+              EffectPresentation.field_e = new oc(mw.field_E.field_Rb.field_V, mw.field_E.field_Rb.field_D, mw.field_E.field_Rb.field_gb, mw.field_E.field_Rb.field_ob, se.field_b, kq.field_N, eq.field_h, eq.field_h);
               ut.field_fb = 1;
               break;
             }
@@ -209,63 +209,63 @@ abstract class sm {
         }
     }
 
-    private final jb b(int param0) {
-        jb var2 = null;
+    private final AiActionCandidate acquireCandidate(int obfuscationGuard) {
+        AiActionCandidate var2 = null;
         RuntimeException var2_ref = null;
-        jb stackIn_2_0 = null;
-        jb stackIn_8_0 = null;
+        AiActionCandidate stackIn_2_0 = null;
+        AiActionCandidate stackIn_8_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 640) {
-            stackIn_2_0 = (jb) null;
+          if (obfuscationGuard != 640) {
+            stackIn_2_0 = (AiActionCandidate) null;
             return stackIn_2_0;
           }
-          var2 = (jb) (this.field_f.a(0));
+          var2 = (AiActionCandidate) (this.recycledCandidates.a(0));
           if (null == var2) {
-            var2 = new jb();
+            var2 = new AiActionCandidate();
           }
-          var2.h(-1);
+          var2.reset(-1);
           stackIn_8_0 = var2;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ig.a((Throwable) ((Object) var2_ref), "sm.G(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) var2_ref), "sm.G(" + obfuscationGuard + ')');
         }
     }
 
-    abstract jb a(byte param0);
+    abstract AiActionCandidate selectCandidate(byte obfuscationGuard);
 
     final void a(int param0, int param1, int param2, float param3) {
-        jb var5 = null;
+        AiActionCandidate var5 = null;
         if (param2 >= -69) {
           return;
         }
         try {
-          var5 = this.b(640);
-          var5.field_t = param3;
-          var5.field_q = param0;
-          var5.field_s = param1;
-          this.a(16777062, var5);
+          var5 = this.acquireCandidate(640);
+          var5.score = param3;
+          var5.destinationY = param0;
+          var5.destinationX = param1;
+          this.submitCandidate(16777062, var5);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sm.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     final void a(int param0, int param1, int param2, float param3, byte param4, int param5) {
-        jb var7 = null;
+        AiActionCandidate var7 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
           if (param4 != 71) {
-            sm.a(76, (String[]) null, (String) null, 20);
+            AiPlanningStrategy.a(76, (String[]) null, (String) null, 20);
           }
-          var7 = this.b(param4 ^ 711);
-          var7.field_t = param3;
-          var7.field_s = param1;
-          var7.field_m = param5;
-          var7.field_q = param2;
-          this.a(16777062, var7);
+          var7 = this.acquireCandidate(param4 ^ 711);
+          var7.score = param3;
+          var7.destinationX = param1;
+          var7.spellId = param5;
+          var7.destinationY = param2;
+          this.submitCandidate(16777062, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,17 +275,17 @@ abstract class sm {
     }
 
     final void a(byte param0, int param1, float param2) {
-        jb var4 = null;
+        AiActionCandidate var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref = null;
         try {
           if (param0 != -68) {
             field_g = (String) null;
           }
-          var4 = this.b(640);
-          var4.field_r = param1;
-          var4.field_t = param2;
-          this.a(16777062, var4);
+          var4 = this.acquireCandidate(640);
+          var4.executionResult = param1;
+          var4.score = param2;
+          this.submitCandidate(16777062, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,7 +346,7 @@ abstract class sm {
             fw.a(-1, (String[]) null);
           }
           if (param0 <= 28) {
-            sm.a(-35, -5, true);
+            AiPlanningStrategy.a(-35, -5, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -370,50 +370,50 @@ abstract class sm {
     }
 
     final void a(int param0, int param1, float param2, int param3, int param4, boolean param5) {
-        jb var7 = this.b(640);
-        var7.field_r = -2;
+        AiActionCandidate var7 = this.acquireCandidate(640);
+        var7.executionResult = -2;
         if (!param5) {
           return;
         }
         try {
-          var7.field_q = param0;
-          var7.field_m = param3;
-          var7.field_t = param2;
-          var7.field_l = param1;
-          var7.field_s = param4;
-          this.a(16777062, var7);
+          var7.destinationY = param0;
+          var7.spellId = param3;
+          var7.score = param2;
+          var7.selectionVariant = param1;
+          var7.destinationX = param4;
+          this.submitCandidate(16777062, var7);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "sm.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    void b(byte param0) {
+    void reset(byte obfuscationGuard) {
         try {
-          int var2_int = -101 / ((param0 + 67) / 49);
-          this.field_a.a(true, this.field_f);
+          int var2_int = -101 / ((obfuscationGuard + 67) / 49);
+          this.candidates.a(true, this.recycledCandidates);
         } catch (RuntimeException runtimeException) {
-          throw ig.a((Throwable) ((Object) runtimeException), "sm.D(" + param0 + ')');
+          throw ig.a((Throwable) ((Object) runtimeException), "sm.D(" + obfuscationGuard + ')');
         }
     }
 
-    void a(int param0, jb param1) {
+    void submitCandidate(int obfuscationGuard, AiActionCandidate candidate) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 16777062) {
+          if (obfuscationGuard != 16777062) {
             return;
           }
-          this.field_a.addLast((byte) -119, (IntrusiveNode) (param1));
+          this.candidates.addLast((byte) -119, (IntrusiveNode) (candidate));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_7_0 = runtimeException;
-          stackIn_7_1 = new StringBuilder().append("sm.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("sm.F(").append(obfuscationGuard).append(',');
+          if (candidate == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -424,18 +424,18 @@ abstract class sm {
 
     final void a(int param0, int param1, int param2, int param3, float param4, int param5) {
         RuntimeException runtimeException = null;
-        jb var7 = null;
+        AiActionCandidate var7 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.b(640);
-          var7.field_t = param4;
-          var7.field_s = param2;
-          var7.field_k = param1;
-          var7.field_q = param0;
-          var7.field_o = param5;
-          this.a(16777062, var7);
+          var7 = this.acquireCandidate(640);
+          var7.score = param4;
+          var7.destinationX = param2;
+          var7.targetX = param1;
+          var7.destinationY = param0;
+          var7.targetY = param5;
+          this.submitCandidate(16777062, var7);
           if (param3 > -114) {
-            this.field_f = (NodeDeque) null;
+            this.recycledCandidates = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -499,22 +499,22 @@ abstract class sm {
         }
     }
 
-    sm(AiPlanner param0) {
+    AiPlanningStrategy(AiPlanner planner) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_a = new NodeDeque();
-          this.field_f = new NodeDeque();
+          this.candidates = new NodeDeque();
+          this.recycledCandidates = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("sm.<init>(");
-          if (param0 == null) {
+          if (planner == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

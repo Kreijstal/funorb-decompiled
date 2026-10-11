@@ -52,7 +52,7 @@ final class qf {
         if (param0 == 56) {
           KingBlackDragonEvent.field_C.j(-114);
           if (pq.field_a == null) {
-            pq.field_a = new cr(KingBlackDragonEvent.field_C, aw.field_h);
+            pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
           }
           KingBlackDragonEvent.field_C.a(pq.field_a, 0);
           return;
@@ -60,7 +60,7 @@ final class qf {
         field_d = (int[]) null;
         KingBlackDragonEvent.field_C.j(-114);
         if (pq.field_a == null) {
-          pq.field_a = new cr(KingBlackDragonEvent.field_C, aw.field_h);
+          pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
         }
         KingBlackDragonEvent.field_C.a(pq.field_a, 0);
     }

@@ -33,7 +33,7 @@ final class ep {
         if (param0 >= -15) {
           this.a(29);
         }
-        return new RgbSprite(ql.field_j.a("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
+        return new RgbSprite(PopupPresentation.field_j.a("intro" + (param1 + 1) + ".jpg", -125, ""), (java.awt.Component) ((Object) ll.p(0)));
     }
 
     final void a(boolean param0) {
@@ -457,7 +457,7 @@ final class ep {
         this.field_l = 0;
         try {
           kv.field_F = 0;
-          ql.field_j = param0;
+          PopupPresentation.field_j = param0;
           us.field_a = 0;
           this.field_d = 301.25;
           this.field_k = this.field_d;

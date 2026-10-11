@@ -148,7 +148,7 @@ final class da {
             var7 = var6;
             var8 = jj.a((byte) 103, var7, param2, param0);
             var9 = t.a(var8, param3, (byte) 118);
-            aw.field_j[param4][param0][var7] = var9;
+            BestScoreStrategy.field_j[param4][param0][var7] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

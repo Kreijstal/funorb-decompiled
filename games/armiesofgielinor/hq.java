@@ -36,8 +36,8 @@ final class hq {
             vl.field_n = new CipherPacketBuffer(param1);
             io.field_t = param5;
             k.field_c = param10;
-            aw.field_l = param9;
-            sm.field_c = param2;
+            BestScoreStrategy.field_l = param9;
+            AiPlanningStrategy.field_c = param2;
             wj.field_n = param11;
             rn.field_d = param8;
             ul.field_a = param4;

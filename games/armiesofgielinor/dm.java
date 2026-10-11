@@ -249,17 +249,17 @@ final class dm {
     final static void a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         if (param5) {
           if ((4 & param4) != 0) {
-            tb.a(param5, param3, true, param2, (byte) -33, param0);
+            EffectPresentation.a(param5, param3, true, param2, (byte) -33, param0);
           }
           if ((2 & param4) != 0) {
-            tb.a(param5, param3, false, param2, (byte) -33, param0);
+            EffectPresentation.a(param5, param3, false, param2, (byte) -33, param0);
           }
         } else {
           if (0 != (param4 & 1)) {
-            tb.a(param5, param3, false, param2, (byte) -33, param0);
+            EffectPresentation.a(param5, param3, false, param2, (byte) -33, param0);
           }
           if ((8 & param4) != 0) {
-            tb.a(param5, param3, true, param2, (byte) -33, param0);
+            EffectPresentation.a(param5, param3, true, param2, (byte) -33, param0);
           }
         }
         if (param1) {
@@ -935,7 +935,7 @@ final class dm {
         RuntimeException var1 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var1_int = sm.field_d;
+          var1_int = AiPlanningStrategy.field_d;
           var2 = ko.field_b;
           stackIn_4_0 = (DeployEvent.field_A != 1) ? 0 : 1;
           var3 = stackIn_4_0;
@@ -949,7 +949,7 @@ final class dm {
             if (rs.field_q == 13) {
               CipherPacketBuffer.a(true, 0, 1, jt.field_a);
               if (null != ll.field_Rb.field_k) {
-                ll.field_Rb.field_k.field_H = null;
+                ll.field_Rb.field_k.framebuffer = null;
                 ll.field_Rb.field_k.field_A = null;
               }
               le.field_b = null;

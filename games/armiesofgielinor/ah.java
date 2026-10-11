@@ -20,12 +20,12 @@ final class ah {
     final static void b(byte param0) {
         if (param0 == 90) {
           vl.field_n.h(32161, 71);
-          ir.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
+          AiInfluenceMap.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
           return;
         }
         ah.a((byte) 9, -104);
         vl.field_n.h(32161, 71);
-        ir.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
+        AiInfluenceMap.a(field_a.field_a, (byte) 100, vl.field_n, field_a.field_b);
     }
 
     final static Class a(String param0, byte param1) throws ClassNotFoundException {

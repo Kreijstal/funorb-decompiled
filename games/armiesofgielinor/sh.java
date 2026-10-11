@@ -14,7 +14,7 @@ final class sh {
     private int field_p;
     private int field_f;
     static int field_l;
-    private gd field_e;
+    private ModelMesh field_e;
     static kl field_j;
     private int field_k;
     static int[] field_a;
@@ -81,19 +81,19 @@ final class sh {
         if (SpellAreaSelection.field_k[this.field_c] == null) {
           this.field_c = 24;
         }
-        this.field_e = (gd) (SpellAreaSelection.field_k[this.field_c][param0]);
+        this.field_e = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][param0]);
         this.field_q = nh.field_D[this.field_c];
     }
 
     final void e(byte param0) {
-        gd var23 = null;
-        gd var24_ref = null;
-        gd var25 = null;
-        gd var19 = null;
-        gd var20_ref = null;
-        gd var21 = null;
-        gd var22_ref = null;
-        gd var18_ref = null;
+        ModelMesh var23 = null;
+        ModelMesh var24_ref = null;
+        ModelMesh var25 = null;
+        ModelMesh var19 = null;
+        ModelMesh var20_ref = null;
+        ModelMesh var21 = null;
+        ModelMesh var22_ref = null;
+        ModelMesh var18_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -136,7 +136,7 @@ final class sh {
           var11 = (!this.field_q ? 300 : 400) - this.field_f * 2;
           var12 = -400;
           if (this.field_b) {
-            var22_ref = (gd) (this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
+            var22_ref = (ModelMesh) (this.field_n.a(var2 != 0, true, var3 != 0, this.field_e));
             var23 = var22_ref;
             var22_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
             tm.a();
@@ -145,7 +145,7 @@ final class sh {
           } else {
             tm.a();
             tm.c(this.field_i, this.field_g);
-            var24_ref = (gd) (this.field_e.a(var2 != 0, false, var3 != 0));
+            var24_ref = (ModelMesh) (this.field_e.a(var2 != 0, false, var3 != 0));
             var25 = var24_ref;
             var24_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
             var25.a(var4, var5, var6, var9, var10, var11, var12);
@@ -165,7 +165,7 @@ final class sh {
         var11Lifetime1 = (!this.field_q ? 300 : 400) - this.field_f * 2;
         var12Lifetime1 = -400;
         if (this.field_b) {
-          var18_ref = (gd) (this.field_n.a(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
+          var18_ref = (ModelMesh) (this.field_n.a(var2Lifetime1 != 0, true, var3Lifetime1 != 0, this.field_e));
           var19 = var18_ref;
           var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
           tm.a();
@@ -174,7 +174,7 @@ final class sh {
         } else {
           tm.a();
           tm.c(this.field_i, this.field_g);
-          var20_ref = (gd) (this.field_e.a(var2Lifetime1 != 0, false, var3Lifetime1 != 0));
+          var20_ref = (ModelMesh) (this.field_e.a(var2Lifetime1 != 0, false, var3Lifetime1 != 0));
           var21 = var20_ref;
           var20_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
           var21.a(var4Lifetime1, var5Lifetime1, var6Lifetime1, var9Lifetime1, var10Lifetime1, var11Lifetime1, var12Lifetime1);

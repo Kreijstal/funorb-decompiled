@@ -114,10 +114,10 @@ final class hk extends je {
           var9.field_Eb = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; cl.field_z.length > var12; var12++) {
+          for (var12 = 0; AiUnitPlanner.field_z.length > var12; var12++) {
             var13 = new je(0L, param3, bt.field_c[var12]);
-            var14 = new je(0L, param3, cl.field_z[var12]);
-            var15 = param3.field_Z.a(cl.field_z[var12]);
+            var14 = new je(0L, param3, AiUnitPlanner.field_z[var12]);
+            var15 = param3.field_Z.a(AiUnitPlanner.field_z[var12]);
             if (var11 < var15) {
               var11 = var15;
             }

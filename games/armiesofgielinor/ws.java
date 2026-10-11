@@ -34,7 +34,7 @@ final class ws extends fw {
           var8_int = param0 + (-this.field_B + (-param1 - this.field_S));
           var9 = param5 - this.field_M + (-this.field_p - param2);
           if (var8_int * var8_int + var9 * var9 < this.field_Q * this.field_Q) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - lf.field_b;
+            var10 = Math.atan2((double)var9, (double)var8_int) - BattleCharacter.field_b;
             if (!(0.0 > var10)) {
               if (var10 > 0.0) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_L;

@@ -12,10 +12,10 @@ final class po {
           return;
         }
         oo.a(param4, param2, param5, param7, param3, param1, (byte) -103);
-        ac.field_k[ls.a(sr.a(1 + param7, param1 - 1, 2, (byte) -108), 1, sr.a(param7, -1 + param1, 2, (byte) -109), sr.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
-        ac.field_k[ls.a(sr.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, sr.a(param7, param1 - 1, 2, (byte) -116), sr.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
-        ac.field_k[182 + ls.a(sr.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, sr.a(param7, param1 + 1, 2, (byte) -127), sr.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
-        ac.field_k[183 + ls.a(sr.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, sr.a(param7, param1 + 1, 2, (byte) -116), sr.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
+        ac.field_k[ls.a(CombatViewTransition.a(1 + param7, param1 - 1, 2, (byte) -108), 1, CombatViewTransition.a(param7, -1 + param1, 2, (byte) -109), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
+        ac.field_k[ls.a(CombatViewTransition.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, CombatViewTransition.a(param7, param1 - 1, 2, (byte) -116), CombatViewTransition.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
+        ac.field_k[182 + ls.a(CombatViewTransition.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -127), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
+        ac.field_k[183 + ls.a(CombatViewTransition.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -116), CombatViewTransition.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
     }
 
     final static sc a(CipherPacketBuffer param0, int param1) {
@@ -104,7 +104,7 @@ final class po {
             }
             if (vt.field_l != 2) {
               if (vt.field_l == 2) {
-                if (!aw.a(true)) {
+                if (!BestScoreStrategy.a(true)) {
                   return true;
                 }
                 var4 = (String) null;
@@ -124,20 +124,20 @@ final class po {
               }
             }
           }
-          if (aw.a(true)) {
+          if (BestScoreStrategy.a(true)) {
             var4Lifetime4 = (String) null;
             it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
           }
           return true;
         }
-        if (rb.a(ma.field_ab, ge.field_h, -17231, no.field_S, rv.field_b)) {
+        if (rb.a(ma.field_ab, WeightedScoreStrategy.field_h, -17231, no.field_S, rv.field_b)) {
           if (2 == no.field_S) {
-            return me.a(param1 ^ 6251, ge.field_h, rv.field_b, ma.field_ab, no.field_S);
+            return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
           }
           if (var3 != 0) {
             return false;
           }
-          return me.a(param1 ^ 6251, ge.field_h, rv.field_b, ma.field_ab, no.field_S);
+          return me.a(param1 ^ 6251, WeightedScoreStrategy.field_h, rv.field_b, ma.field_ab, no.field_S);
         }
         if (param1 != 6150) {
           field_a = (String) null;
@@ -156,7 +156,7 @@ final class po {
           }
           if (vt.field_l != 2) {
             if (vt.field_l == 2) {
-              if (!aw.a(true)) {
+              if (!BestScoreStrategy.a(true)) {
                 return true;
               }
               var4Lifetime1 = (String) null;
@@ -175,7 +175,7 @@ final class po {
               return false;
             }
           }
-          if (aw.a(true)) {
+          if (BestScoreStrategy.a(true)) {
             var4Lifetime1Lifetime1 = (String) null;
             it.a(vi.field_e, -82, vt.field_l, wn.field_db, param0, (String) null);
           }
@@ -196,7 +196,7 @@ final class po {
         }
         if (vt.field_l != 2) {
           if (vt.field_l == 2) {
-            if (!aw.a(true)) {
+            if (!BestScoreStrategy.a(true)) {
               return true;
             }
             var4Lifetime2 = (String) null;
@@ -215,7 +215,7 @@ final class po {
             return false;
           }
         }
-        if (!aw.a(true)) {
+        if (!BestScoreStrategy.a(true)) {
           return true;
         }
         var4Lifetime3 = (String) null;

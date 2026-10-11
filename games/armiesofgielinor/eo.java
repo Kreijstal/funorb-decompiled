@@ -4,7 +4,7 @@
 final class eo {
     static RgbSprite field_a;
     static String field_c;
-    private v field_b;
+    private BattleCamera field_b;
 
     private final boolean a(byte param0, int param1) {
         this.field_b.a(1, param1);
@@ -35,7 +35,7 @@ final class eo {
         if (param0 != 1) {
           return 66;
         }
-        return kl.field_a.field_p[1];
+        return kl.field_a.currentPosition[1];
     }
 
     final boolean a(int param0, int param1, int param2, int param3, Unit param4) {
@@ -51,7 +51,7 @@ final class eo {
             return true;
           }
           if (param1 != -35) {
-            this.field_b = (v) null;
+            this.field_b = (BattleCamera) null;
           }
           if (-1 < param3) {
             param4.facingAngle = param3;
@@ -290,7 +290,7 @@ final class eo {
         }
     }
 
-    eo(v param0) {
+    eo(BattleCamera param0) {
         j discarded$0 = null;
         try {
           discarded$0 = new j(240, param0);

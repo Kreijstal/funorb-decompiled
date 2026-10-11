@@ -101,7 +101,7 @@ final class GrowthEvent extends GameEvent {
         this.originX = param2;
         this.playerId = param5;
         this.strength = param4;
-        this.field_m = 11;
+        this.eventKind = 11;
         this.tileY = param1;
         this.tileX = param0;
         this.applied = false;

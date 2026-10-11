@@ -101,7 +101,7 @@ final class AreaSpell extends Spell {
             param4 == 1) {
             if (1 < param4) {
               hc.field_b = hc.field_b + 1;
-              hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
+              hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
               hc.field_b = Math.abs(hc.field_b);
               var8 = hc.field_b % 8;
               var9 = var8;

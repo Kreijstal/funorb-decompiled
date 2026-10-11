@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aw extends sm {
+final class BestScoreStrategy extends AiPlanningStrategy {
     static RgbSprite field_m;
     static String field_k;
     static boolean field_l;
@@ -45,32 +45,32 @@ final class aw extends sm {
         return true;
     }
 
-    final void a(int param0, jb param1) {
+    final void submitCandidate(int obfuscationGuard, AiActionCandidate candidate) {
         RuntimeException runtimeException = null;
-        jb var3 = null;
-        jb var4 = null;
+        AiActionCandidate var3 = null;
+        AiActionCandidate var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (jb) (this.field_a.a(0));
-          if (param0 != 16777062) {
-            var4 = (jb) null;
-            this.a(64, (jb) null);
+          var3 = (AiActionCandidate) (this.candidates.a(0));
+          if (obfuscationGuard != 16777062) {
+            var4 = (AiActionCandidate) null;
+            this.submitCandidate(64, (AiActionCandidate) null);
           }
           if (var3 == null ||
-            param1.field_t > var3.field_t) {
-            var3 = param1;
+            candidate.score > var3.score) {
+            var3 = candidate;
           }
-          this.field_a.addFirst(750, var3);
+          this.candidates.addFirst(750, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_10_0 = runtimeException;
-          stackIn_10_1 = new StringBuilder().append("aw.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("aw.F(").append(obfuscationGuard).append(',');
+          if (candidate == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -79,15 +79,15 @@ final class aw extends sm {
         }
     }
 
-    final jb a(byte param0) {
-        jb var2 = null;
-        jb var2Lifetime1;
-        if (param0 <= -28) {
-          var2 = (jb) (this.field_a.a(0));
+    final AiActionCandidate selectCandidate(byte obfuscationGuard) {
+        AiActionCandidate var2 = null;
+        AiActionCandidate var2Lifetime1;
+        if (obfuscationGuard <= -28) {
+          var2 = (AiActionCandidate) (this.candidates.a(0));
           return var2;
         }
-        this.a((byte) -5);
-        var2Lifetime1 = (jb) (this.field_a.a(0));
+        this.selectCandidate((byte) -5);
+        var2Lifetime1 = (AiActionCandidate) (this.candidates.a(0));
         return var2Lifetime1;
     }
 
@@ -187,7 +187,7 @@ final class aw extends sm {
           if (param1 == 1742) {
             return;
           }
-          aw.a(true);
+          BestScoreStrategy.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -205,8 +205,8 @@ final class aw extends sm {
         field_i = null;
     }
 
-    aw(AiPlanner param0) {
-        super(param0);
+    BestScoreStrategy(AiPlanner planner) {
+        super(planner);
     }
 
     static {

@@ -23,7 +23,7 @@ final class pf {
             }
             return;
           }
-          ee.field_v.a(true, -6226, en.field_F, cl.field_s);
+          ee.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
           ee.field_v.d((byte) -117);
           while (Unit.i((byte) 107)) {
             ee.field_v.a(rs.field_q, ui.field_i, 80);
@@ -180,12 +180,12 @@ final class pf {
         if (param0 != -15291) {
           field_a = (String[]) null;
         }
-        if (null == lf.field_q) {
+        if (null == BattleCharacter.field_q) {
           return;
         }
-        var1 = lf.field_q;
+        var1 = BattleCharacter.field_q;
         synchronized (var1) {
-          lf.field_q = null;
+          BattleCharacter.field_q = null;
         }
     }
 

@@ -86,7 +86,7 @@ final class rj extends kb {
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5_int = param3 + this.field_l;
-          id.a(this.field_J.field_y + param3, -this.field_J.field_y + var5_int, param1 + this.field_w, param1, (byte) 87);
+          CampaignUnitOverride.a(this.field_J.field_y + param3, -this.field_J.field_y + var5_int, param1 + this.field_w, param1, (byte) 87);
           var6 = -this.field_N + param3;
           var7 = -123 / ((param0 + 26) / 40);
           while (var6 < var5_int) {
@@ -205,7 +205,7 @@ final class rj extends kb {
         int var6 = param1 + this.field_p;
         this.a(-77, var6, this.field_O[0], var5);
         if (65536 > this.field_D) {
-          id.a((this.field_l * this.field_D >> 16) + var5, var5 + this.field_l, this.field_w + var6, var6, (byte) 74);
+          CampaignUnitOverride.a((this.field_l * this.field_D >> 16) + var5, var5 + this.field_l, this.field_w + var6, var6, (byte) 74);
           this.a(-103, var6, this.field_O[1], var5);
           rf.b(-18862);
         }
@@ -309,7 +309,7 @@ final class rj extends kb {
         if (param0 < 96) {
           return;
         }
-        qv.field_j = null;
+        MovementPresentation.field_j = null;
         iq.field_g = null;
     }
 

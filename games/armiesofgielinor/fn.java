@@ -76,7 +76,7 @@ class fn extends fw {
           if (1 == this.field_q) {
             if (this.field_k instanceof pm) {
               var5 = (pm) ((Object) this.field_k);
-              var6 = var5.a((kb) (this), sm.field_d, 113, param2, ko.field_b, param1);
+              var6 = var5.a((kb) (this), AiPlanningStrategy.field_d, 113, param2, ko.field_b, param1);
               if (var6 != -1) {
                 if (this.field_P &&
                   this.field_V > var6 &&
@@ -197,11 +197,11 @@ class fn extends fw {
                     }
                   }
                 }
-                SpellAreaSelection.field_k[param1][var4] = var6.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+                SpellAreaSelection.field_k[param1][var4] = var6.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
                 if (param1 == 76) {
                   bn.field_a[var4] = SpellAreaSelection.field_k[param1][var4];
                 }
-                if (0 == ((gd) (SpellAreaSelection.field_k[param1][var4])).field_I) {
+                if (0 == ((ModelMesh) (SpellAreaSelection.field_k[param1][var4])).field_I) {
                   SpellAreaSelection.field_k[param1] = null;
                 }
               }
@@ -549,7 +549,7 @@ class fn extends fw {
           if (!(this.field_k instanceof pm)) {
             return false;
           }
-          var8_int = ((pm) ((Object) this.field_k)).a((kb) (this), sm.field_d, 87, param2, ko.field_b, param1);
+          var8_int = ((pm) ((Object) this.field_k)).a((kb) (this), AiPlanningStrategy.field_d, 87, param2, ko.field_b, param1);
           if (var8_int != -1) {
             stackIn_9_1 = var8_int;
           } else {

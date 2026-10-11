@@ -22,7 +22,7 @@ final class bw {
         if (rd.field_j.field_u) {
           if (0 == (1 << rd.field_j.field_q & rd.field_j.battlefield.field_i)) {
             if (rd.field_j.battlefield.field_i != 0) {
-              il.field_t[12] = id.field_c;
+              il.field_t[12] = CampaignUnitOverride.field_c;
             } else {
               if ((1 << rd.field_j.field_q | rd.field_j.field_hb) != (1 << rd.field_j.battlefield.playerCount) - 1) {
                 il.field_t[12] = fa.field_e;
@@ -154,10 +154,10 @@ final class bw {
             wr.a((byte) -71, var4, param1);
             var4 = (aj) (GameEvent.field_r.next((byte) 123));
           }
-          var5 = (wj) (lf.field_c.first((byte) 117));
+          var5 = (wj) (BattleCharacter.field_c.first((byte) 117));
           while (var5 != null) {
             gn.a(param1, var5, 0);
-            var5 = (wj) (lf.field_c.next((byte) 123));
+            var5 = (wj) (BattleCharacter.field_c.next((byte) 123));
           }
           if (param0 < 120) {
             unitDefinitions = (int[][]) null;

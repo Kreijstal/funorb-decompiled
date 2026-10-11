@@ -88,7 +88,7 @@ final class wi {
           if (vu.field_M != null && (null != ep.field_p ||
             iv.field_e != null ||
             jv.field_d != null ||
-            sk.field_j != null)) {
+            CombatPresentation.field_j != null)) {
             for (var9 = 0; var9 < tq.field_b; var9++) {
               var10_int = vu.field_M.field_pc[var9] & 255;
               if (null != ep.field_p &&
@@ -118,9 +118,9 @@ final class wi {
                   var7 = var11_intLifetime1;
                 }
               }
-              if (null != sk.field_j &&
-                null != sk.field_j[var9]) {
-                var8 = var8 | sk.field_j[var9][var10_int];
+              if (null != CombatPresentation.field_j &&
+                null != CombatPresentation.field_j[var9]) {
+                var8 = var8 | CombatPresentation.field_j[var9][var10_int];
               }
             }
           }
@@ -220,7 +220,7 @@ final class wi {
               var12.field_dc.field_W = var24_int;
               if (bu.field_a != param4) {
                 if (var12.field_Wb) {
-                  var12.field_ac.field_X = fo.a(param1 ^ 4671, sm.field_g, new String[]{var20});
+                  var12.field_ac.field_X = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
                   var12.field_ec.field_X = ac.field_s;
                 } else {
                   if (var12.field_Ub) {
@@ -368,7 +368,7 @@ final class wi {
                     if (var6 <= var12.field_Sb) {
                       if (0 != (var8 & ~var12.field_Ob)) {
                         var25_int = fd.a(true, ~var12.field_Ob & var8);
-                        var24Lifetime2 = vb.field_l;
+                        var24Lifetime2 = EventPresenter.field_l;
                         if (var25_int > 0 &&
                           null != jl.field_c &&
                           jl.field_c.length >= var25_int &&
@@ -424,9 +424,9 @@ final class wi {
                       var29 = 1;
                     }
                   }
-                  if (sk.field_j != null &&
-                    null != sk.field_j[var27_int] &&
-                    (~var12.field_Ob & sk.field_j[var27_int][var28]) != 0) {
+                  if (CombatPresentation.field_j != null &&
+                    null != CombatPresentation.field_j[var27_int] &&
+                    (~var12.field_Ob & CombatPresentation.field_j[var27_int][var28]) != 0) {
                     var29 = 1;
                   }
                   if (var29 != 0) {

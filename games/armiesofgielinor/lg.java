@@ -175,7 +175,7 @@ final class lg {
             return stackIn_2_0;
           }
           if (param1) {
-            stackIn_7_0 = ir.field_h.a(param0);
+            stackIn_7_0 = AiInfluenceMap.field_h.a(param0);
             return stackIn_7_0;
           }
           stackIn_5_0 = sc.field_b.a(param0);

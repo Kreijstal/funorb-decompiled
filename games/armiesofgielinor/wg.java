@@ -14,10 +14,10 @@ final class wg implements Iterable {
     final static boolean a(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != -33) {
           wg.a(-108);
-          if (sm.field_d < param1) {
+          if (AiPlanningStrategy.field_d < param1) {
             return false;
           }
-          if (sm.field_d > param2) {
+          if (AiPlanningStrategy.field_d > param2) {
             return false;
           }
           if (param3 > ko.field_b) {
@@ -28,10 +28,10 @@ final class wg implements Iterable {
           }
           return false;
         }
-        if (sm.field_d < param1) {
+        if (AiPlanningStrategy.field_d < param1) {
           return false;
         }
-        if (sm.field_d > param2) {
+        if (AiPlanningStrategy.field_d > param2) {
           return false;
         }
         if (param3 > ko.field_b) {

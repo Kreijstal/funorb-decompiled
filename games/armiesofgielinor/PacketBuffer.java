@@ -356,7 +356,7 @@ class PacketBuffer extends IntrusiveNode {
             for (var11 = param0; param4 > var11; var11++) {
               var12 = vt.field_m[var11];
               if (!param6) {
-                stackIn_24_0 = tb.field_h[var12];
+                stackIn_24_0 = EffectPresentation.field_h[var12];
               } else {
                 stackIn_24_0 = no.field_U[var12];
               }

@@ -209,7 +209,7 @@ final class SummonEvent extends GameEvent {
     SummonEvent(int param0, int param1, int param2, int param3, int param4, boolean param5) {
         this.tileY = param2;
         this.field_y = param5 ? true : false;
-        this.field_m = 2;
+        this.eventKind = 2;
         this.playerId = param4;
         this.strengthBonus = param3;
         this.unitType = param0;
@@ -219,7 +219,7 @@ final class SummonEvent extends GameEvent {
     SummonEvent(int param0, int param1, int param2, int param3, int param4) {
         this.tileY = param2;
         this.unitType = param0;
-        this.field_m = 2;
+        this.eventKind = 2;
         this.field_y = false;
         this.playerId = param4;
         this.tileX = param1;

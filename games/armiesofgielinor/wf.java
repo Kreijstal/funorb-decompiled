@@ -90,7 +90,7 @@ abstract class wf extends iv {
         if (this.field_i) {
           return -1;
         }
-        if (!qv.j(-11)) {
+        if (!MovementPresentation.j(-11)) {
           return -1;
         }
         if (ol.field_C) {
@@ -99,7 +99,7 @@ abstract class wf extends iv {
         if (param0 >= -15) {
           this.field_o = true;
         }
-        var2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), sk.i(-4938), true);
+        var2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), true);
         if (var2 == -1) {
           return -1;
         }
@@ -221,7 +221,7 @@ abstract class wf extends iv {
           if (1 == var4) {
             var5_int = sa.a(false, om.c((byte) -27), fp.l(-117));
             if (var5_int != -1) {
-              sm.a(103, br.field_b, lk.field_r, var5_int);
+              AiPlanningStrategy.a(103, br.field_b, lk.field_r, var5_int);
               lk.field_r = null;
               br.field_b = null;
             }
@@ -231,7 +231,7 @@ abstract class wf extends iv {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = vo.a((byte) -46, sk.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
+            var5_intLifetime1 = vo.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.field_n, qp.e((byte) -127), jr.a(-1));
             if (var5_intLifetime1 != -1) {
               cq.a(lk.field_r, -14, br.field_b, var5_intLifetime1);
               lk.field_r = null;
@@ -247,7 +247,7 @@ abstract class wf extends iv {
             if (param1) {
               ol.field_C = false;
             } else {
-              var5_intLifetime2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), sk.i(-4938), false);
+              var5_intLifetime2 = rk.a((byte) -53, this.field_n, this.field_w, jr.a(-1), CombatPresentation.i(-4938), false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   wv.a(lk.field_r, 10, var5_intLifetime2);
@@ -262,7 +262,7 @@ abstract class wf extends iv {
             }
           }
           if (var4 == 4) {
-            if (aw.field_l) {
+            if (BestScoreStrategy.field_l) {
               bl.a(CombatEvent.d((byte) -116), true);
             } else {
               bl.field_b = true;
@@ -414,7 +414,7 @@ abstract class wf extends iv {
                 da.a((byte) -101);
                 break;
               case 6:
-                ir.a(true);
+                AiInfluenceMap.a(true);
                 break;
               case 16:
                 da.a(67);
@@ -524,7 +524,7 @@ abstract class wf extends iv {
         if (param0 <= 124) {
           return;
         }
-        if (!ql.h(31337) &&
+        if (!PopupPresentation.h(31337) &&
           p.field_b != 11) {
           pf.a((byte) 73);
         }
@@ -553,7 +553,7 @@ abstract class wf extends iv {
           if (var3Lifetime1 != 0 &&
             gk.field_K == 0 &&
             11 == p.field_b &&
-            !qv.j(-11)) {
+            !MovementPresentation.j(-11)) {
             ms.e(112);
           }
           if (gk.field_K != -1 &&
@@ -607,7 +607,7 @@ abstract class wf extends iv {
         }
         if ((gk.field_K != -1 &&
           gk.field_K != 0 ||
-          qv.j(-11)) &&
+          MovementPresentation.j(-11)) &&
           jl.field_a <= vi.b(74)) {
           ol.field_C = false;
           if (gk.field_K != -1 &&
@@ -617,7 +617,7 @@ abstract class wf extends iv {
           }
         }
         if (gk.field_K == 0 &&
-          !qv.j(-11)) {
+          !MovementPresentation.j(-11)) {
           dd.field_a = false;
         }
         if (f.field_E == 0 &&
@@ -629,11 +629,11 @@ abstract class wf extends iv {
             nf.field_Nb = nu.a(on.field_n, true);
           }
           ps.field_u = DamageEvent.a(1, mo.field_c, (byte) 119, false, true);
-          sk.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
+          CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, ms.field_t, (byte) 127, false, true);
           gg.field_K = ps.field_u;
           f.field_E = 2;
-          ks.field_A = sk.field_M;
+          ks.field_A = CombatPresentation.field_M;
         }
         if (f.field_E == 2) {
           if (null != nf.field_Nb &&
@@ -642,7 +642,7 @@ abstract class wf extends iv {
               nf.field_Nb = null;
             } else {
               if (nf.field_Nb.a(28979, "")) {
-                id.a((byte) -82, nf.field_Nb);
+                CampaignUnitOverride.a((byte) -82, nf.field_Nb);
                 nf.field_Nb = null;
                 wl.a(0);
               }
@@ -653,13 +653,13 @@ abstract class wf extends iv {
           }
         }
         if (f.field_E == 3 &&
-          wh.a(ps.field_u, (byte) 127, h.field_g, sk.field_M) &&
+          wh.a(ps.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
           wh.a(h.field_g, -27701)) {
           cd.a(12);
           vl.c((byte) 91);
           it.field_b = false;
           UnitSpell.field_e = ef.field_a;
-          StateChangeEvent.a(sk.field_M, ps.field_u, h.field_g, 0, aw.field_l);
+          StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
           if (mo.field_r ||
             pd.field_b != null) {
             stackIn_96_0 = 3;
@@ -677,7 +677,7 @@ abstract class wf extends iv {
           }
           qd.a(h.field_g, (byte) 76, pt.field_eb, ko.field_e);
           ps.field_u = null;
-          sk.field_M = null;
+          CombatPresentation.field_M = null;
           h.field_g = null;
           p.a(-24602, (java.applet.Applet) (this));
           wl.a(0);
@@ -707,10 +707,10 @@ abstract class wf extends iv {
         }
         if (13 == f.field_E) {
           var3Lifetime2 = 1;
-          if (null != sk.field_G) {
-            stackIn_127_0 = (!sk.field_G.a(2189)) ? 0 : 1;
+          if (null != CombatPresentation.field_G) {
+            stackIn_127_0 = (!CombatPresentation.field_G.a(2189)) ? 0 : 1;
             var3Lifetime2 = stackIn_127_0;
-            bn.a((byte) -24, sk.field_G.field_d, sk.field_G.field_b);
+            bn.a((byte) -24, CombatPresentation.field_G.field_d, CombatPresentation.field_G.field_b);
           }
           if (var3Lifetime2 != 0) {
             f.field_E = 20;

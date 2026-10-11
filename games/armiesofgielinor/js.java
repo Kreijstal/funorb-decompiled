@@ -887,7 +887,7 @@ final class js extends ni {
     }
 
     final kk a(int param0, int param1, int param2, int param3, int param4) {
-        return (kk) ((Object) new gd(this, param0, param1, param2, param3, param4));
+        return (kk) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
     final void a() {

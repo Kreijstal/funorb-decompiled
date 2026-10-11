@@ -2717,16 +2717,16 @@ public final class SteelSentinels extends FunOrbClient {
                     var5 = -1;
                   }
                   var10_ref = new SentinelCommand(var4, var5, var6);
-                  var10_ref.field_B = var9;
-                  var10_ref.field_u = var7;
-                  var10_ref.field_y = var8;
+                  var10_ref.aimAngle = var9;
+                  var10_ref.targetWorldX = var7;
+                  var10_ref.targetWorldY = var8;
                   var11 = ((GameplayController) (var2)).world.findSentinelForPlayer(var3, -128);
                   if (var4 == 10) {
                   }
                   if (null == var11) {
                     continue;
                   }
-                  var11.d((byte) 79, var10_ref);
+                  var11.scheduleCommand((byte) 79, var10_ref);
                   continue;
                 }
                 if (ch.field_N == 76) {

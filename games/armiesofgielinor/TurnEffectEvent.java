@@ -319,7 +319,7 @@ final class TurnEffectEvent extends GameEvent {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = 19;
+          this.eventKind = 19;
           this.effectType = param1;
           this.unit = param0;
           return;

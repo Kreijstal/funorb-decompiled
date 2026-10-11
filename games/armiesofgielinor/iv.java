@@ -784,8 +784,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = vi.b(94);
-          var4 = jb.field_u[ih.field_ab];
-          jb.field_u[ih.field_ab] = var2_long;
+          var4 = AiActionCandidate.field_u[ih.field_ab];
+          AiActionCandidate.field_u[ih.field_ab] = var2_long;
           ih.field_ab = ih.field_ab + 1 & 31;
           if (0L != var4 &&
             var4 < var2_long) {

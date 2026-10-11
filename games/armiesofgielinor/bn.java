@@ -171,7 +171,7 @@ final class bn {
             mt.field_d != lm.field_e[0]) {
             mt.field_d = lm.field_e[0];
           }
-          qv.a(param3, mt.field_d, 0, true, DeployEvent.field_F, 5623);
+          MovementPresentation.a(param3, mt.field_d, 0, true, DeployEvent.field_F, 5623);
         }
         if (td.field_g.field_yb != 0) {
           bw.field_g = false;

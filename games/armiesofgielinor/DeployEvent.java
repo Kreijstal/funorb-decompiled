@@ -274,13 +274,13 @@ final class DeployEvent extends GameEvent {
             var6 = (hl) (var4.next((byte) 123));
           }
           if (0 != sc.field_g.field_Ib.field_yb) {
-            tb.field_e = new oc(sc.field_g.field_Ib.field_V, sc.field_g.field_Ib.field_D, sc.field_g.field_Ib.field_gb, sc.field_g.field_Ib.field_ob, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
+            EffectPresentation.field_e = new oc(sc.field_g.field_Ib.field_V, sc.field_g.field_Ib.field_D, sc.field_g.field_Ib.field_gb, sc.field_g.field_Ib.field_ob, iw.field_o, kq.field_N, eq.field_h, eq.field_h);
             ut.field_fb = 2;
           }
           if (sc.field_g.field_Rb.field_yb == 0) {
             return;
           }
-          tb.field_e = new oc(sc.field_g.field_Rb.field_V, sc.field_g.field_Rb.field_D, sc.field_g.field_Rb.field_gb, sc.field_g.field_Rb.field_ob, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new oc(sc.field_g.field_Rb.field_V, sc.field_g.field_Rb.field_D, sc.field_g.field_Rb.field_gb, sc.field_g.field_Rb.field_ob, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
           ut.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -293,7 +293,7 @@ final class DeployEvent extends GameEvent {
     DeployEvent(int param0, int param1, int param2) {
         this.modifiers = param2;
         this.tileX = param0;
-        this.field_m = 18;
+        this.eventKind = 18;
         this.tileY = param1;
     }
 

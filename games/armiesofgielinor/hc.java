@@ -250,7 +250,7 @@ final class hc {
         int var8;
         int[] var9;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var9 = aw.field_j[this.field_a][param0];
+        var9 = BestScoreStrategy.field_j[this.field_a][param0];
         var3 = var9;
         var4 = var3[AttackEvent.a(false, var9.length, new Random())];
         if (0 <= var4) {
@@ -266,7 +266,7 @@ final class hc {
         if (param1 != -6892) {
           this.d((byte) -91);
         }
-        return aw.field_j[this.field_a][0][0];
+        return BestScoreStrategy.field_j[this.field_a][0][0];
     }
 
     private final void a(int param0, int param1, int param2) {

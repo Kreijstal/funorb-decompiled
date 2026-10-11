@@ -146,12 +146,12 @@ final class rg {
                 if (this.field_i[var13] == ab.field_a) {
                   TeamRoster.field_e.f(db.a(true, var14 - 35), u.a(var15 - 35, (byte) 94), 256 - param1);
                 }
-                lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].g(db.a(true, var14 - 20), u.a(-20 + var15, (byte) 94));
+                BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].g(db.a(true, var14 - 20), u.a(-20 + var15, (byte) 94));
                 if (ev.field_d == this.field_i[var13]) {
-                  lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, -20 + var14), u.a(var15 - 20, (byte) 94), param1);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, -20 + var14), u.a(var15 - 20, (byte) 94), param1);
                 }
                 if (this.field_i[var13] == ab.field_a) {
-                  lf.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, var14 - 20), u.a(var15 - 20, (byte) 94), 256 - param1);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.field_i[var13]][2]].f(db.a(true, var14 - 20), u.a(var15 - 20, (byte) 94), 256 - param1);
                 }
                 km.field_h[0].g(db.a(true, -23 + var14), u.a(var15 - 23, (byte) 94));
               }
@@ -198,7 +198,7 @@ final class rg {
         this.field_j = null;
         try {
           this.field_f = param0;
-          this.field_c = lf.field_h[param0];
+          this.field_c = BattleCharacter.field_h[param0];
           this.field_k = param1;
           this.field_i = param3;
           this.field_g = param2;
@@ -246,7 +246,7 @@ final class rg {
         this.field_j = null;
         try {
           this.field_f = param0;
-          this.field_c = lf.field_h[param0];
+          this.field_c = BattleCharacter.field_h[param0];
           this.field_k = param1;
           this.field_a = param3;
           this.field_g = param2;

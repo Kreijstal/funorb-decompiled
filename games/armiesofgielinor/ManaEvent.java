@@ -289,7 +289,7 @@ final class ManaEvent extends GameEvent {
     }
 
     ManaEvent(int param0, int param1, int param2) {
-        this.field_m = 9;
+        this.eventKind = 9;
         this.field_z = param0;
         this.manaPoints = param1;
         this.playerId = param2;

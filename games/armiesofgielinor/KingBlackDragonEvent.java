@@ -128,7 +128,7 @@ final class KingBlackDragonEvent extends GameEvent {
 
     KingBlackDragonEvent(int param0) {
         this.field_B = param0;
-        this.field_m = -1;
+        this.eventKind = -1;
     }
 
     static {

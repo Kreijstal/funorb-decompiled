@@ -243,7 +243,7 @@ final class wd {
               var9 = IntrusiveNode.field_e.a(var4);
               if (!us.a(true)) {
                 if (UpkeepEvent.field_z.field_eb &&
-                  var9 > (-UpkeepEvent.field_z.field_V + sm.field_d)) {
+                  var9 > (-UpkeepEvent.field_z.field_V + AiPlanningStrategy.field_d)) {
                   if (!bb.field_a) {
                     var1 = ps.field_z;
                   } else {

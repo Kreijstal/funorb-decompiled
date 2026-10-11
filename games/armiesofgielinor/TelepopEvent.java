@@ -39,7 +39,7 @@ final class TelepopEvent extends GameEvent {
     TelepopEvent(int param0, int param1) {
         this.field_E = param1;
         this.field_z = param0;
-        this.field_m = 6;
+        this.eventKind = 6;
     }
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {

@@ -7,20 +7,20 @@ abstract class GameEvent extends IntrusiveNode {
     static String field_u;
     static NodeDeque field_r;
     static int[] field_n;
-    boolean field_o;
+    boolean presentationComplete;
     static int field_v;
     Unit unit;
     static String field_x;
     static int[] field_t;
-    int field_m;
+    int eventKind;
     static int[] field_q;
-    int field_s;
+    int pendingPresentations;
     static String field_l;
 
     abstract void applyToBattlefield(Battlefield battlefield, int obfuscationGuard);
 
     final void a(int param0) {
-        this.field_o = false;
+        this.presentationComplete = false;
         if (param0 >= -30) {
           return;
         }
@@ -36,7 +36,7 @@ abstract class GameEvent extends IntrusiveNode {
           var4 = (CipherPacketBuffer) null;
           GameEvent.a(-38, (CipherPacketBuffer) null);
         }
-        var2 = this.field_m;
+        var2 = this.eventKind;
         if (0 == var2) {
           return true;
         }
@@ -119,7 +119,7 @@ abstract class GameEvent extends IntrusiveNode {
     abstract String describeEvent(byte obfuscationGuard, boolean verbose);
 
     final boolean a(byte param0, GameplayController param1, NodeDeque param2, boolean param3) {
-        vb var5 = null;
+        EventPresenter var5 = null;
         RuntimeException var5_ref = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
@@ -161,19 +161,19 @@ abstract class GameEvent extends IntrusiveNode {
         }
     }
 
-    final void c(byte param0) {
-        this.field_s = this.field_s - 1;
-        if (this.field_s > 0) {
+    final void acknowledgePresentation(byte obfuscationGuard) {
+        this.pendingPresentations = this.pendingPresentations - 1;
+        if (this.pendingPresentations > 0) {
           return;
         }
-        this.field_o = true;
+        this.presentationComplete = true;
         if (null != this.unit &&
-          this.field_m != 19) {
+          this.eventKind != 19) {
           this.unit.field_u = false;
           this.unit.field_z = 0;
         }
-        if (param0 > -46) {
-          this.c((byte) -28);
+        if (obfuscationGuard > -46) {
+          this.acknowledgePresentation((byte) -28);
         }
     }
 
@@ -220,7 +220,7 @@ abstract class GameEvent extends IntrusiveNode {
     }
 
     final boolean a(int param0, int param1, GameplayController param2, NodeDeque param3, int param4) {
-        vb var6 = null;
+        EventPresenter var6 = null;
         RuntimeException var6_ref = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -355,8 +355,8 @@ abstract class GameEvent extends IntrusiveNode {
         if (param0 != 6) {
           GameEvent.a((byte) 88);
         }
-        this.field_s = 0;
-        this.field_o = true;
+        this.pendingPresentations = 0;
+        this.presentationComplete = true;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
@@ -411,7 +411,7 @@ abstract class GameEvent extends IntrusiveNode {
     }
 
     protected GameEvent() {
-        this.field_s = 1;
+        this.pendingPresentations = 1;
     }
 
     static {

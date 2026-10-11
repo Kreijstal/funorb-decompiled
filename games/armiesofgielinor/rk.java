@@ -669,7 +669,7 @@ final class rk {
           }
           ro.field_rb[param5.getUnitCategory(0)].a(106, 32);
           en.field_E.c(100 - param3 + "%", 20, 45, 16777215, -1);
-          vb.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
+          EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(5605);
           uf.field_j.e(db.a(true, param1), u.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
@@ -2346,7 +2346,7 @@ final class rk {
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             if (null == am.field_z &&
-              !tb.a(param5, 0)) {
+              !EffectPresentation.a(param5, 0)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -2493,7 +2493,7 @@ final class rk {
                 }
               }
               if (df.field_M > 0) {
-                aw.field_l = true;
+                BestScoreStrategy.field_l = true;
               }
               vl.field_n.a(CombatEvent.field_L, -106);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
@@ -2532,8 +2532,8 @@ final class rk {
                 return stackIn_109_0;
               }
               var6_intLifetime2 = rn.field_d;
-              rn.field_d = sm.field_c;
-              sm.field_c = var6_intLifetime2;
+              rn.field_d = AiPlanningStrategy.field_c;
+              AiPlanningStrategy.field_c = var6_intLifetime2;
               ev.field_b = true;
             }
             stackIn_112_0 = -1;

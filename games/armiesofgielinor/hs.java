@@ -215,22 +215,22 @@ abstract class hs extends kb implements gw {
               stackIn_44_0 = -1 + param2.statusEffectValue;
             }
             var17Lifetime1 = stackIn_44_0;
-            lf.field_h[vr.field_a[param2.statusEffectType - 1] + var17Lifetime1].h(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
+            BattleCharacter.field_h[vr.field_a[param2.statusEffectType - 1] + var17Lifetime1].h(-(30 * (var13 & 3)) + (235 + param4), param7 + (-36 + param6) + (var13 >> 2) * 30);
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), 30 * (var13 >> 2) + param7 - 37 + param6);
             var13++;
           }
           if (param2.equipmentDescriptor > -1) {
-            lf.field_h[co.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
+            BattleCharacter.field_h[co.field_p[param2.getEquipmentCategory(20640)][param2.getEquipmentId((byte) 81)]].h(235 + param4 - (var13 & 3) * 30, (var13 >> 2) * 30 + param7 + (-36 + param6));
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), (var13 >> 2) * 30 - 37 + param6 + param7);
             var13++;
           }
           if (param2.accessoryType > 0) {
-            lf.field_h[uj.field_o[param2.accessoryType - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
+            BattleCharacter.field_h[uj.field_o[param2.accessoryType - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), (var13 >> 2) * 30 + param7 + param6 - 37);
             var13++;
           }
           if (param2.immobilizedTurns > 0) {
-            stackIn_54_0 = lf.field_h;
+            stackIn_54_0 = BattleCharacter.field_h;
             stackIn_54_1 = jq.field_H;
             if (3 >= param2.immobilizedTurns) {
               stackIn_55_2 = -1 + param2.immobilizedTurns;
@@ -242,17 +242,17 @@ abstract class hs extends kb implements gw {
             var13++;
           }
           if (param2.meleeLifeSteal) {
-            lf.field_h[133].h(-((3 & var13) * 30) + 235 + param4, param6 - (36 - param7 - 30 * (var13 >> 2)));
+            BattleCharacter.field_h[133].h(-((3 & var13) * 30) + 235 + param4, param6 - (36 - param7 - 30 * (var13 >> 2)));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), -37 + (param6 + param7) + (var13 >> 2) * 30);
             var13++;
           }
           if (param2.packedFlag256) {
-            lf.field_h[122 + bw.unitDefinitions[param2.unitType][2]].h(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
+            BattleCharacter.field_h[122 + bw.unitDefinitions[param2.unitType][2]].h(param4 + (235 - (var13 & 3) * 30), param7 - 36 - (-param6 - (var13 >> 2) * 30));
             km.field_h[0].h(param4 + 233 - 30 * (var13 & 3), param7 - 37 - (-param6 - (var13 >> 2) * 30));
             var13++;
           }
           if (param2.packedFlag32) {
-            lf.field_h[j.field_j[td.a(param2.unitType, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
+            BattleCharacter.field_h[j.field_j[td.a(param2.unitType, (byte) -125)]].h(-((3 & var13) * 30) + 235 + param4, 30 * (var13 >> 2) + param7 + param6 - 36);
             km.field_h[0].h(-((var13 & 3) * 30) + (param4 + 233), param6 - 37 + (param7 + (var13 >> 2) * 30));
             var13++;
           }

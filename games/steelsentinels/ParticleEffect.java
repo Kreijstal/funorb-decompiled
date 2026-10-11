@@ -4,18 +4,18 @@
 final class ParticleEffect extends DualNode {
     static boolean field_J;
     int field_D;
-    int field_A;
+    int velocityX;
     boolean field_G;
-    int field_B;
+    int worldY;
     int field_P;
     static SceneWidget field_K;
     int field_M;
-    int field_O;
+    int velocityY;
     static String[][] field_y;
     static fm field_H;
     CombatWorld world;
     int field_I;
-    int field_F;
+    int worldX;
     static SceneWidget field_E;
     static String field_C;
     static IndexedSprite[] field_L;
@@ -98,9 +98,9 @@ final class ParticleEffect extends DualNode {
         int var9Lifetime2;
         int var9Lifetime3;
         var10 = SteelSentinels.obfuscationControl;
-        var5 = (this.field_F >> 8) + param0;
+        var5 = (this.worldX >> 8) + param0;
         var6 = -124 / ((-25 - param3) / 54);
-        var7 = (this.field_B >> 8) + param1;
+        var7 = (this.worldY >> 8) + param1;
         if (var5 >= -32 &&
           var5 <= 672 &&
           var7 >= -32 &&
@@ -270,7 +270,7 @@ final class ParticleEffect extends DualNode {
         return wb.field_c == null ? kc.field_q : true;
     }
 
-    final void c(byte param0) {
+    final void advanceParticle(byte obfuscationGuard) {
         ParticleEffect var2;
         int var3;
         String var4;
@@ -278,9 +278,9 @@ final class ParticleEffect extends DualNode {
         if (this.world == null) {
           return;
         }
-        this.field_F = this.field_F + this.field_A;
-        this.field_B = this.field_B + this.field_O;
-        if (param0 < 1) {
+        this.worldX = this.worldX + this.velocityX;
+        this.worldY = this.worldY + this.velocityY;
+        if (obfuscationGuard < 1) {
           var4 = (String) null;
           ParticleEffect.a(-116, -34, (String) null, -4, (String) null);
         }
@@ -290,67 +290,67 @@ final class ParticleEffect extends DualNode {
         if (this.world.terrain.getTerrainType(110) != 4) {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_G) {
-            if (!(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) <= -(this.field_B >> 4))) {
+            if (!(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) <= -(this.worldY >> 4))) {
               if ((this.world.terrain.getTerrainType(51) != 2 ||
-                !(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) > 2048)) &&
+                !(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) > 2048)) &&
                 (decompiledFrameRemainder0 = ((this.field_M != 2 &&
                 3 != this.field_M &&
                 this.field_M != 9 &&
                 10 != this.field_M &&
                 this.field_M != 6) ||
-                this.world.terrain.getSurfaceProfileAt((byte) 126, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)))) {
-                this.field_B = -(this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4) << 4);
+                this.world.terrain.getSurfaceProfileAt((byte) 126, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)))) {
+                this.worldY = -(this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4) << 4);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
-                this.field_F = this.field_F - this.field_A;
-                this.field_A = 0;
+                this.worldX = this.worldX - this.velocityX;
+                this.velocityX = 0;
                 if ((var3 != 0) &&
-                  (this.world.terrain.getSurfaceProfileAt((byte) 122, this.field_F >> 4) < -(this.field_B >> 4))) {
+                  (this.world.terrain.getSurfaceProfileAt((byte) 122, this.worldX >> 4) < -(this.worldY >> 4))) {
                   if (this.field_M != 2 &&
                     this.field_M != 3 &&
                     this.field_M != 9 &&
                     this.field_M != 10 &&
                     this.field_M != 6 ||
-                    this.world.terrain.getSurfaceProfileAt((byte) 127, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
-                    this.field_B = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.field_F >> 4) << 4);
+                    this.world.terrain.getSurfaceProfileAt((byte) 127, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
+                    this.worldY = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.worldX >> 4) << 4);
                   }
-                  if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.field_F >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
+                  if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.worldX >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
                     this.field_G = false;
                   }
                 }
               }
             }
           } else {
-            if (this.world.terrain.getSurfaceProfileAt((byte) 122, this.field_F >> 4) < -(this.field_B >> 4)) {
+            if (this.world.terrain.getSurfaceProfileAt((byte) 122, this.worldX >> 4) < -(this.worldY >> 4)) {
               if (this.field_M != 2 &&
                 this.field_M != 3 &&
                 this.field_M != 9 &&
                 this.field_M != 10 &&
                 this.field_M != 6 ||
-                this.world.terrain.getSurfaceProfileAt((byte) 127, this.field_F >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
-                this.field_B = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.field_F >> 4) << 4);
+                this.world.terrain.getSurfaceProfileAt((byte) 127, this.worldX >> 4) != this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
+                this.worldY = -(this.world.terrain.getSurfaceProfileAt((byte) 118, this.worldX >> 4) << 4);
               }
-              if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.field_F >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.field_F >> 4)) {
+              if (this.world.terrain.getSurfaceProfileAt((byte) 120, this.worldX >> 4) == this.world.terrain.getSecondaryHeightAt(false, this.worldX >> 4)) {
                 this.field_G = false;
               }
             }
           }
-          if (this.world.terrain.getGroundHeightAt((byte) -96, this.field_F >> 4) > -(this.field_B >> 4)) {
-            this.field_B = -(this.world.terrain.getGroundHeightAt((byte) -128, this.field_F >> 4) << 4);
+          if (this.world.terrain.getGroundHeightAt((byte) -96, this.worldX >> 4) > -(this.worldY >> 4)) {
+            this.worldY = -(this.world.terrain.getGroundHeightAt((byte) -128, this.worldX >> 4) << 4);
           }
         }
         if (this.field_M != 10) {
-          this.field_A = this.field_A * 9 / 10;
-          this.field_O = this.field_O * 9 / 10;
+          this.velocityX = this.velocityX * 9 / 10;
+          this.velocityY = this.velocityY * 9 / 10;
           if (var3 != 0) {
-            this.field_O = this.field_O + this.world.field_z;
-            var2 = ArticulatedPart.a(9, 0, this.world, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+            this.velocityY = this.velocityY + this.world.field_z;
+            var2 = ArticulatedPart.a(9, 0, this.world, 105, this.worldY, this.field_G, 100, 0, this.worldX, this.field_P);
             this.world.field_O.addLast(3, var2);
           }
         } else {
-          this.field_O = this.field_O + this.world.field_z;
-          var2 = ArticulatedPart.a(9, 0, this.world, 105, this.field_B, this.field_G, 100, 0, this.field_F, this.field_P);
+          this.velocityY = this.velocityY + this.world.field_z;
+          var2 = ArticulatedPart.a(9, 0, this.world, 105, this.worldY, this.field_G, 100, 0, this.worldX, this.field_P);
           this.world.field_O.addLast(3, var2);
         }
         this.field_I = this.field_I + 1;

@@ -76,11 +76,11 @@ final class b extends IntrusiveNode {
             field_n = (la) null;
           }
           var17.position = 3 + (-(var3 * 3) + (-(8 * iw.field_n) - 7) + param0.length);
-          qv.field_j = new int[var3];
+          MovementPresentation.field_j = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            qv.field_j[var4Lifetime4] = var17.d((byte) -13);
-            if (qv.field_j[var4Lifetime4] == 0) {
-              qv.field_j[var4Lifetime4] = 1;
+            MovementPresentation.field_j[var4Lifetime4] = var17.d((byte) -13);
+            if (MovementPresentation.field_j[var4Lifetime4] == 0) {
+              MovementPresentation.field_j[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

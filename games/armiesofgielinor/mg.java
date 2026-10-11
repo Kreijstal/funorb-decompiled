@@ -14,10 +14,10 @@ abstract class mg {
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 <= -23) {
-          return lf.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
+          return BattleCharacter.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
         }
         mg.a(0, -20, (byte) -123, -41, 33);
-        return lf.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
+        return BattleCharacter.a(param3, 1, param4, 1, 3, param1, -1, 1, param0);
     }
 
     public static void b(int param0) {

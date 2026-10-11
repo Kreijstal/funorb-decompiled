@@ -122,8 +122,8 @@ final class Battlefield {
             if (var4 != 0) {
               return;
             }
-            if (var3 instanceof mm) {
-              ((mm) ((Object) var3)).a(unit, (byte) -2);
+            if (var3 instanceof UnitObserver) {
+              ((UnitObserver) ((Object) var3)).onUnitRegistered(unit, (byte) -2);
             }
             var3 = this.unitObservers.next((byte) 123);
           }
@@ -1902,7 +1902,7 @@ final class Battlefield {
           if (decompiledNaturalLoopExit0) {
             output.a(new String[]{"mana: ", Integer.toString(this.playerMana[playerId]), ", collected: ", Integer.toString(this.teamManaCollected[this.playerTeamIndices[playerId]])}, (byte) -49);
             output.a(new String[]{"turns: ", Integer.toString(this.playerTurnCounts[playerId])}, (byte) -102);
-            stackIn_9_0 = ~lf.field_i[this.field_Q];
+            stackIn_9_0 = ~BattleCharacter.field_i[this.field_Q];
           }
           if (stackIn_9_0 != -1) {
             output.a(new String[]{"rune cap remaining: ", Integer.toString(this.remainingRuneCap[playerId])}, (byte) -62);
@@ -3404,7 +3404,7 @@ final class Battlefield {
               break;
             }
             this.field_T[var3_int] = new ln();
-            tb.a(this.field_T[var3_int].field_a, param1, false, this.field_T[var3_int].field_b);
+            EffectPresentation.a(this.field_T[var3_int].field_a, param1, false, this.field_T[var3_int].field_b);
             var3_int++;
           } while (var13 == 0);
           stackIn_10_1 = !((var3_int & 1) <= 0);
@@ -3494,7 +3494,7 @@ final class Battlefield {
               }
               if (decompiledFrameCompleted0) {
                 stackIn_50_0 = -1;
-                stackIn_50_1 = ~lf.field_i[this.field_Q];
+                stackIn_50_1 = ~BattleCharacter.field_i[this.field_Q];
               }
               if (stackIn_50_0 == stackIn_50_1) {
                 break;
@@ -4034,7 +4034,7 @@ final class Battlefield {
           var5 = 0;
           scanLoop1: while (true) {
             if (var5 < this.playerCount) {
-              ir.a(this.field_T[var5].field_a, (byte) 100, param0, this.field_T[var5].field_b);
+              AiInfluenceMap.a(this.field_T[var5].field_a, (byte) 100, param0, this.field_T[var5].field_b);
               var5++;
               if (var12 == 0) {
                 continue;
@@ -4102,7 +4102,7 @@ final class Battlefield {
               }
             }
             if ((decompiledFrameCompleted1) &&
-              (decompiledFrameRemainder0 = (lf.field_i[this.field_Q] != 0))) {
+              (decompiledFrameRemainder0 = (BattleCharacter.field_i[this.field_Q] != 0))) {
               param0.b(true, this.remainingRuneCap[param2]);
             }
           }
@@ -6142,7 +6142,7 @@ final class Battlefield {
           var3 = var3 ^ this.teamManaCollected[this.playerTeamIndices[param0]] * 12473;
         }
         var3 = var3 ^ 7563 * this.playerTurnCounts[param0];
-        if (lf.field_i[this.field_Q] != 0) {
+        if (BattleCharacter.field_i[this.field_Q] != 0) {
           var3 = var3 ^ 7317 * this.remainingRuneCap[param0];
         }
         return var3;
@@ -7384,7 +7384,7 @@ final class Battlefield {
                   break;
                 }
                 this.godFavourLevels[var17_int][6] = 1;
-                this.remainingRuneCap[var17_int] = lf.field_i[this.field_Q];
+                this.remainingRuneCap[var17_int] = BattleCharacter.field_i[this.field_Q];
                 var17_int++;
                 continue;
               }

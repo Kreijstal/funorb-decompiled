@@ -1325,7 +1325,7 @@ final class CombatWorld {
             var8 = (Explosion) (this.field_C.first(obfuscationGuard ^ 13081));
             scanLoop9: while (true) {
               if (var8 != null) {
-                ((Explosion) (var8)).a(false);
+                ((Explosion) (var8)).advanceExplosion(false);
                 var8 = (Explosion) (this.field_C.next((byte) -30));
                 if (var15 == 0) {
                   continue;
@@ -1335,7 +1335,7 @@ final class CombatWorld {
                   this.field_O.a(35, this.field_o);
                   var8 = (ParticleEffect) (this.field_o.first(13058));
                   while (null != var8) {
-                    ((ParticleEffect) (var8)).c((byte) 60);
+                    ((ParticleEffect) (var8)).advanceParticle((byte) 60);
                     var8 = (ParticleEffect) (this.field_o.next((byte) -13));
                     if (var15 != 0) {
                       break scanLoop9;
@@ -1790,7 +1790,7 @@ final class CombatWorld {
                 var6.field_pb = 0;
                 var6.field_t = 0;
                 var8_ref_je = new SentinelCommand(11, 0, this.simulationTick + 2);
-                var8_ref_je.field_p = true;
+                var8_ref_je.scheduled = true;
                 var6.pendingCommands.addLast(3, var8_ref_je);
               }
               if (var6.field_t > 0 &&
@@ -1798,7 +1798,7 @@ final class CombatWorld {
                 var6.field_pb = 0;
                 var6.field_t = 0;
                 var8_ref_jeLifetime1 = new SentinelCommand(8, 0, 2 + this.simulationTick);
-                var8_ref_jeLifetime1.field_p = true;
+                var8_ref_jeLifetime1.scheduled = true;
                 var6.pendingCommands.addLast(3, var8_ref_jeLifetime1);
               }
               var8Lifetime1Lifetime1 = var6.chassis.componentId;
@@ -2043,7 +2043,7 @@ final class CombatWorld {
               stackIn_26_3 = -1;
             }
             var7 = new SentinelCommand(stackIn_25_2, stackIn_26_3, 2 + this.simulationTick);
-            var7.field_p = true;
+            var7.scheduled = true;
             param4.pendingCommands.addLast(3, var7);
             decompiledFrameRemainder0 = (var11 != 0);
           }
@@ -2051,17 +2051,17 @@ final class CombatWorld {
             if ((Math.abs(param3) < 30000) &&
               (decompiledFrameRemainder0 = !(Math.abs(param3) >= 30000))) {
               var7Lifetime1 = new SentinelCommand(6, -param1, this.simulationTick + 2);
-              var7Lifetime1.field_p = true;
+              var7Lifetime1.scheduled = true;
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
               var7Lifetime2 = new SentinelCommand(6, param1, this.simulationTick + 2);
-              var7Lifetime2.field_p = true;
+              var7Lifetime2.scheduled = true;
               param4.pendingCommands.addLast(3, var7Lifetime2);
               var7Lifetime3 = new SentinelCommand(3, 0, 100 + this.simulationTick + (4 + (param5.worldX + this.simulationTick + param4.worldX) % 100));
-              var7Lifetime3.field_u = param5.worldX;
-              var7Lifetime3.field_p = true;
-              var7Lifetime3.field_y = param4.worldY - 20000;
+              var7Lifetime3.targetWorldX = param5.worldX;
+              var7Lifetime3.scheduled = true;
+              var7Lifetime3.targetWorldY = param4.worldY - 20000;
               param4.pendingCommands.addLast(3, var7Lifetime3);
               param4.charge = param4.maximumCharge;
             }
@@ -2095,24 +2095,24 @@ final class CombatWorld {
           }
           if (stackIn_55_0 > stackIn_55_1) {
             var8 = new SentinelCommand(0, 0, 5 + (this.simulationTick + (param5.worldX + (this.simulationTick + param4.worldX)) % 100));
-            var8.field_y = param5.worldY;
-            var8.field_u = param5.worldX;
+            var8.targetWorldY = param5.worldY;
+            var8.targetWorldX = param5.worldX;
             var9 = Math.atan2((double)param3, (double)(-param2));
-            var8.field_B = (int)(var9 * 65536.0 / 6.283185307179586);
+            var8.aimAngle = (int)(var9 * 65536.0 / 6.283185307179586);
             if (param1 < 0) {
-              if (!(var8.field_B <= 16384)) {
-                var8.field_B = var8.field_B - 65536;
+              if (!(var8.aimAngle <= 16384)) {
+                var8.aimAngle = var8.aimAngle - 65536;
                 if ((var11 != 0) &&
-                  (var8.field_B < -16384)) {
-                  var8.field_B = var8.field_B + 65536;
+                  (var8.aimAngle < -16384)) {
+                  var8.aimAngle = var8.aimAngle + 65536;
                 }
               }
             } else {
-              if (var8.field_B < -16384) {
-                var8.field_B = var8.field_B + 65536;
+              if (var8.aimAngle < -16384) {
+                var8.aimAngle = var8.aimAngle + 65536;
               }
             }
-            var8.field_p = true;
+            var8.scheduled = true;
             param4.pendingCommands.addLast(3, var8);
           }
           return;
@@ -2494,15 +2494,15 @@ final class CombatWorld {
             Math.abs(param1) < 30000) {
             param4.charge = 10;
             var7 = new SentinelCommand(8, param3, this.simulationTick + 2);
-            var7.field_p = true;
+            var7.scheduled = true;
             param4.pendingCommands.addLast(3, var7);
             var7 = new SentinelCommand(6, param3, 4 + this.simulationTick);
-            var7.field_p = true;
+            var7.scheduled = true;
             param4.pendingCommands.addLast(3, var7);
             var7 = new SentinelCommand(3, 0, this.simulationTick + 100);
-            var7.field_u = param4.worldX + param3 * 20000;
-            var7.field_y = -20000 + param4.worldY;
-            var7.field_p = true;
+            var7.targetWorldX = param4.worldX + param3 * 20000;
+            var7.targetWorldY = -20000 + param4.worldY;
+            var7.scheduled = true;
             param4.pendingCommands.addLast(3, var7);
             param4.charge = param4.maximumCharge;
           } else {
@@ -2520,7 +2520,7 @@ final class CombatWorld {
                 stackIn_20_3 = 1;
               }
               var7 = new SentinelCommand(stackIn_19_2, stackIn_20_3, 2 + this.simulationTick);
-              var7.field_p = true;
+              var7.scheduled = true;
               param4.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder0 = (var8 != 0);
             }
@@ -2528,7 +2528,7 @@ final class CombatWorld {
               if (Math.abs(param1) >= 15000 && (!(param4.charge < 5) ||
                 !(Math.abs(param1) < 30000))) {
                 var7 = new SentinelCommand(6, param3, 2 + this.simulationTick);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param4.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
@@ -2537,23 +2537,23 @@ final class CombatWorld {
                   !(Math.abs(param5) < 10000)) &&
                   (decompiledFrameRemainder0 = !(10000 <= Math.abs(param1)))) {
                   var7 = new SentinelCommand(6, -param3, 2 + this.simulationTick);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   decompiledFrameRemainder0 = (var8 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   param4.charge = 10;
                   var7 = new SentinelCommand(6, param3, this.simulationTick + 2);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   var7 = new SentinelCommand(7, param3, 4 + this.simulationTick);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   var7 = new SentinelCommand(6, -param3, 25 + this.simulationTick + 4);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   var7 = new SentinelCommand(6, 0, 254 + this.simulationTick);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   return;
                 }
@@ -2568,9 +2568,9 @@ final class CombatWorld {
               if (80000 < Math.abs(param1) &&
                 param4.charge > 0) {
                 var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
-                var7Lifetime1.field_u = param4.worldX + 20000 * param3;
-                var7Lifetime1.field_y = -20000 + param4.worldY;
-                var7Lifetime1.field_p = true;
+                var7Lifetime1.targetWorldX = param4.worldX + 20000 * param3;
+                var7Lifetime1.targetWorldY = -20000 + param4.worldY;
+                var7Lifetime1.scheduled = true;
                 param4.pendingCommands.addLast(3, var7Lifetime1);
                 param4.charge = param4.maximumCharge;
               }
@@ -2631,14 +2631,14 @@ final class CombatWorld {
             if (40000 <= Math.abs(param3) &&
               param2.field_U != param1) {
               var7 = new SentinelCommand(6, param1, this.simulationTick + 2);
-              var7.field_p = true;
+              var7.scheduled = true;
               param2.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder1 = (var8 != 0);
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder1 = !(30000 <= Math.abs(param3)))) {
               var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
-              var7Lifetime2.field_p = true;
+              var7Lifetime2.scheduled = true;
               param2.pendingCommands.addLast(3, var7Lifetime2);
               decompiledFrameRemainder1 = (var8 != 0);
             }
@@ -2657,7 +2657,7 @@ final class CombatWorld {
               stackIn_19_3 = 1;
             }
             var7Lifetime1 = new SentinelCommand(stackIn_18_2, stackIn_19_3, 2 + this.simulationTick);
-            var7Lifetime1.field_p = true;
+            var7Lifetime1.scheduled = true;
             param2.pendingCommands.addLast(3, var7Lifetime1);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -2786,7 +2786,7 @@ final class CombatWorld {
           if (param2.field_Vb == null &&
             0 < param2.charge) {
             var6 = new SentinelCommand(5, param1.playerId, 1 + this.simulationTick);
-            var6.field_p = true;
+            var6.scheduled = true;
             param2.pendingCommands.addLast(3, var6);
           }
           if (param2.field_t > 0) {
@@ -2803,18 +2803,18 @@ final class CombatWorld {
               stackIn_15_3 = -1;
             }
             var6Lifetime1 = new SentinelCommand(stackIn_14_2, stackIn_15_3, this.simulationTick + 2);
-            var6Lifetime1.field_p = true;
+            var6Lifetime1.scheduled = true;
             param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             if ((var7 != 0) &&
               (Math.abs(param0) > 80000)) {
               var6Lifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
-              var6Lifetime1.field_p = true;
+              var6Lifetime1.scheduled = true;
               param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             }
           } else {
             if (Math.abs(param0) > 80000) {
               var6Lifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
-              var6Lifetime1.field_p = true;
+              var6Lifetime1.scheduled = true;
               param2.pendingCommands.addLast(param3 - 20060, var6Lifetime1);
             }
           }
@@ -2822,10 +2822,10 @@ final class CombatWorld {
             return;
           }
           var6Lifetime2 = new SentinelCommand(0, param2.field_Xb[2], 3 + this.simulationTick);
-          var6Lifetime2.field_B = 13384 * param2.field_E;
-          var6Lifetime2.field_p = true;
-          var6Lifetime2.field_y = param1.worldY;
-          var6Lifetime2.field_u = param1.worldX;
+          var6Lifetime2.aimAngle = 13384 * param2.field_E;
+          var6Lifetime2.scheduled = true;
+          var6Lifetime2.targetWorldY = param1.worldY;
+          var6Lifetime2.targetWorldX = param1.worldX;
           param2.pendingCommands.addLast(param3 - 20060, var6Lifetime2);
           if (param2.charge > 0 &&
             param2.worldY > param1.worldY) {
@@ -2833,10 +2833,10 @@ final class CombatWorld {
               return;
             }
             var6Lifetime3 = new SentinelCommand(0, param2.field_Xb[1], (param1.worldX + this.simulationTick + param2.worldX) % 100 + this.simulationTick + 29);
-            var6Lifetime3.field_u = param1.worldX;
-            var6Lifetime3.field_B = param4 * 15384;
-            var6Lifetime3.field_y = param1.worldY;
-            var6Lifetime3.field_p = true;
+            var6Lifetime3.targetWorldX = param1.worldX;
+            var6Lifetime3.aimAngle = param4 * 15384;
+            var6Lifetime3.targetWorldY = param1.worldY;
+            var6Lifetime3.scheduled = true;
             param2.pendingCommands.addLast(3, var6Lifetime3);
             if (var7 == 0) {
               return;
@@ -2844,10 +2844,10 @@ final class CombatWorld {
           }
           if (param2.field_Vb != null) {
             var6Lifetime4 = new SentinelCommand(0, param2.field_Xb[0], (param1.worldX + (this.simulationTick + param2.worldX)) % 100 + 4 + (this.simulationTick + 50));
-            var6Lifetime4.field_B = 16384 * param4;
-            var6Lifetime4.field_p = true;
-            var6Lifetime4.field_y = param1.worldY;
-            var6Lifetime4.field_u = param1.worldX;
+            var6Lifetime4.aimAngle = 16384 * param4;
+            var6Lifetime4.scheduled = true;
+            var6Lifetime4.targetWorldY = param1.worldY;
+            var6Lifetime4.targetWorldX = param1.worldX;
             param2.pendingCommands.addLast(param3 - 20060, var6Lifetime4);
           }
           return;
@@ -2968,7 +2968,7 @@ final class CombatWorld {
                     stackIn_34_3 = 1;
                   }
                   var9 = new SentinelCommand(stackIn_33_2, stackIn_34_3, 2 + this.simulationTick);
-                  var9.field_p = true;
+                  var9.scheduled = true;
                   param5.pendingCommands.addLast(param2 ^ 16387, var9);
                   decompiledFrameRemainder1 = (var13 != 0);
                 }
@@ -2978,23 +2978,23 @@ final class CombatWorld {
                     if (!(Math.abs(param0) <= 60000) ||
                       param5.field_U == 0) {
                       var9 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                      var9.field_p = true;
+                      var9.scheduled = true;
                       param5.pendingCommands.addLast(3, var9);
                       if (var13 != 0) {
                         var9 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
-                        var9.field_p = true;
+                        var9.scheduled = true;
                         param5.pendingCommands.addLast(3, var9);
                       }
                     }
                   } else {
                     var9 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
-                    var9.field_p = true;
+                    var9.scheduled = true;
                     param5.pendingCommands.addLast(3, var9);
                   }
                 }
                 if (param5.charge >= 1) {
                   var9 = new SentinelCommand(5, param1.playerId, 4 + (this.simulationTick + (param5.worldX + (param1.worldX + this.simulationTick)) % 500));
-                  var9.field_p = true;
+                  var9.scheduled = true;
                   param5.pendingCommands.addLast(3, var9);
                   if (var13 == 0) {
                     return;
@@ -3004,11 +3004,11 @@ final class CombatWorld {
                   return;
                 }
                 var9 = new SentinelCommand(0, param5.field_Xb[0], (param5.worldX + param1.worldX + this.simulationTick) % 100 + (4 + this.simulationTick));
-                var9.field_y = param1.worldY;
-                var9.field_u = param1.worldX;
+                var9.targetWorldY = param1.worldY;
+                var9.targetWorldX = param1.worldX;
                 var10 = Math.atan2((double)param0, (double)(-param3));
-                var9.field_p = true;
-                var9.field_B = (int)(var10 * 65536.0 / 6.283185307179586);
+                var9.scheduled = true;
+                var9.aimAngle = (int)(var10 * 65536.0 / 6.283185307179586);
                 param5.pendingCommands.addLast(3, var9);
                 if (var13 == 0) {
                   return;
@@ -3033,23 +3033,23 @@ final class CombatWorld {
                   stackIn_66_3 = 1;
                 }
                 var10_ref_je = new SentinelCommand(stackIn_65_2, stackIn_66_3, 2 + this.simulationTick);
-                var10_ref_je.field_p = true;
+                var10_ref_je.scheduled = true;
                 param5.pendingCommands.addLast(3, var10_ref_je);
                 decompiledSharedTail0 = (var13 != 0);
               }
               if ((decompiledSharedTail0) &&
                 (~var9_int != ~param5.field_U)) {
                 var10_ref_je = new SentinelCommand(6, var9_int, this.simulationTick + 2);
-                var10_ref_je.field_p = true;
+                var10_ref_je.scheduled = true;
                 param5.pendingCommands.addLast(3, var10_ref_je);
               }
               if (Math.abs(param0) < 30000) {
                 var10_ref_jeLifetime1 = new SentinelCommand(0, param5.field_Xb[0], (param5.worldX + (param1.worldX + this.simulationTick)) % 100 + 4 + this.simulationTick);
-                var10_ref_jeLifetime1.field_u = param1.worldX;
-                var10_ref_jeLifetime1.field_y = param1.worldY;
+                var10_ref_jeLifetime1.targetWorldX = param1.worldX;
+                var10_ref_jeLifetime1.targetWorldY = param1.worldY;
                 var11 = Math.atan2((double)param0, (double)(-param3));
-                var10_ref_jeLifetime1.field_p = true;
-                var10_ref_jeLifetime1.field_B = (int)(65536.0 * var11 / 6.283185307179586);
+                var10_ref_jeLifetime1.scheduled = true;
+                var10_ref_jeLifetime1.aimAngle = (int)(65536.0 * var11 / 6.283185307179586);
                 param5.pendingCommands.addLast(3, var10_ref_jeLifetime1);
               }
               if (var13 == 0) {
@@ -3076,13 +3076,13 @@ final class CombatWorld {
             } else {
               var9Lifetime5 = new SentinelCommand(6, param4, this.simulationTick + 2);
             }
-            var9Lifetime5.field_p = true;
+            var9Lifetime5.scheduled = true;
             param5.pendingCommands.addLast(3, var9Lifetime5);
             var9Lifetime6 = new SentinelCommand(0, param5.field_Xb[1], 4 + this.simulationTick + (this.simulationTick + param1.worldX + param5.worldX) % 500);
-            var9Lifetime6.field_p = true;
-            var9Lifetime6.field_u = param4 * 25000 + param5.worldX;
-            var9Lifetime6.field_y = -25000 + param5.worldY;
-            var9Lifetime6.field_B = param4 * 4096;
+            var9Lifetime6.scheduled = true;
+            var9Lifetime6.targetWorldX = param4 * 25000 + param5.worldX;
+            var9Lifetime6.targetWorldY = -25000 + param5.worldY;
+            var9Lifetime6.aimAngle = param4 * 4096;
             param5.pendingCommands.addLast(param2 - 16381, var9Lifetime6);
             if (var13 == 0) {
               return;
@@ -3103,7 +3103,7 @@ final class CombatWorld {
                 stackIn_100_3 = 1;
               }
               var9Lifetime1 = new SentinelCommand(stackIn_99_2, stackIn_100_3, this.simulationTick + 2);
-              var9Lifetime1.field_p = true;
+              var9Lifetime1.scheduled = true;
               param5.pendingCommands.addLast(param2 ^ 16387, var9Lifetime1);
             }
             boolean decompiledFrameRemainder0 = true;
@@ -3111,14 +3111,14 @@ final class CombatWorld {
               Math.abs(param0) >= 90000) {
               if (param5.field_t == 0) {
                 var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                var9Lifetime1Lifetime1.field_p = true;
+                var9Lifetime1Lifetime1.scheduled = true;
                 param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               }
               var9Lifetime1Lifetime1 = new SentinelCommand(0, param5.field_Xb[1], (param1.worldX + this.simulationTick + param5.worldX) % 500 + (4 + this.simulationTick));
-              var9Lifetime1Lifetime1.field_u = param4 * 25000 + param5.worldX;
-              var9Lifetime1Lifetime1.field_p = true;
-              var9Lifetime1Lifetime1.field_y = -25000 + param5.worldY;
-              var9Lifetime1Lifetime1.field_B = param4 * 4096;
+              var9Lifetime1Lifetime1.targetWorldX = param4 * 25000 + param5.worldX;
+              var9Lifetime1Lifetime1.scheduled = true;
+              var9Lifetime1Lifetime1.targetWorldY = -25000 + param5.worldY;
+              var9Lifetime1Lifetime1.aimAngle = param4 * 4096;
               param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               decompiledFrameRemainder0 = (var13 != 0);
             }
@@ -3140,17 +3140,17 @@ final class CombatWorld {
                     stackIn_130_3 = -param4;
                   }
                   var9Lifetime1Lifetime1 = new SentinelCommand(stackIn_129_2, stackIn_130_3, 2 + this.simulationTick);
-                  var9Lifetime1Lifetime1.field_p = true;
+                  var9Lifetime1Lifetime1.scheduled = true;
                   param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
                   if (var13 != 0) {
                     var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                    var9Lifetime1Lifetime1.field_p = true;
+                    var9Lifetime1Lifetime1.scheduled = true;
                     param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
                   }
                 }
               } else {
                 var9Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                var9Lifetime1Lifetime1.field_p = true;
+                var9Lifetime1Lifetime1.scheduled = true;
                 param5.pendingCommands.addLast(3, var9Lifetime1Lifetime1);
               }
             }
@@ -3161,7 +3161,7 @@ final class CombatWorld {
               return;
             }
             var9Lifetime1Lifetime2 = new SentinelCommand(5, param1.playerId, this.simulationTick + 4 + (param5.worldX + (this.simulationTick + param1.worldX)) % 500);
-            var9Lifetime1Lifetime2.field_p = true;
+            var9Lifetime1Lifetime2.scheduled = true;
             param5.pendingCommands.addLast(3, var9Lifetime1Lifetime2);
             if (var13 == 0) {
               return;
@@ -3171,30 +3171,30 @@ final class CombatWorld {
             if (param5.worldX <= (param5.field_C + ((Sentinel) (var8)).worldX + 1000)) {
               if (~((Sentinel) (var8)).field_U != ~param5.field_U) {
                 var9Lifetime2 = new SentinelCommand(6, ((Sentinel) (var8)).field_U, 2 + this.simulationTick);
-                var9Lifetime2.field_p = true;
+                var9Lifetime2.scheduled = true;
                 param5.pendingCommands.addLast(param2 - 16381, var9Lifetime2);
                 if (var13 != 0) {
                   var9Lifetime2 = new SentinelCommand(6, -1, 2 + this.simulationTick);
-                  var9Lifetime2.field_p = true;
+                  var9Lifetime2.scheduled = true;
                   param5.pendingCommands.addLast(3, var9Lifetime2);
                   var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
-                  var9Lifetime2.field_p = true;
+                  var9Lifetime2.scheduled = true;
                   param5.pendingCommands.addLast(3, var9Lifetime2);
                 }
               }
             } else {
               var9Lifetime2 = new SentinelCommand(6, -1, 2 + this.simulationTick);
-              var9Lifetime2.field_p = true;
+              var9Lifetime2.scheduled = true;
               param5.pendingCommands.addLast(3, var9Lifetime2);
               if (var13 != 0) {
                 var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
-                var9Lifetime2.field_p = true;
+                var9Lifetime2.scheduled = true;
                 param5.pendingCommands.addLast(3, var9Lifetime2);
               }
             }
           } else {
             var9Lifetime2 = new SentinelCommand(6, 1, this.simulationTick + 2);
-            var9Lifetime2.field_p = true;
+            var9Lifetime2.scheduled = true;
             param5.pendingCommands.addLast(3, var9Lifetime2);
           }
           param5.field_Vb = ((Sentinel) (var8)).field_Vb;
@@ -3202,19 +3202,19 @@ final class CombatWorld {
           if (param5.field_Vb != null &&
             Math.abs(param0) >= 90000) {
             var9Lifetime3 = new SentinelCommand(0, param5.field_Xb[1], 4 + (this.simulationTick + (param5.worldX + this.simulationTick + param1.worldX) % 500));
-            var9Lifetime3.field_y = -25000 + param5.worldY;
-            var9Lifetime3.field_u = param5.worldX + param4 * 25000;
-            var9Lifetime3.field_B = 4096 * param4;
-            var9Lifetime3.field_p = true;
+            var9Lifetime3.targetWorldY = -25000 + param5.worldY;
+            var9Lifetime3.targetWorldX = param5.worldX + param4 * 25000;
+            var9Lifetime3.aimAngle = 4096 * param4;
+            var9Lifetime3.scheduled = true;
             param5.pendingCommands.addLast(3, var9Lifetime3);
           }
           if (10000 > Math.abs(param0)) {
             var9Lifetime4 = new SentinelCommand(0, param5.field_Xb[0], (param1.worldX + (this.simulationTick + param5.worldX)) % 100 + (4 + this.simulationTick));
-            var9Lifetime4.field_y = param1.worldY;
-            var9Lifetime4.field_u = param1.worldX;
+            var9Lifetime4.targetWorldY = param1.worldY;
+            var9Lifetime4.targetWorldX = param1.worldX;
             var10Lifetime1 = Math.atan2((double)param0, (double)(-param3));
-            var9Lifetime4.field_B = (int)(var10Lifetime1 * 65536.0 / 6.283185307179586);
-            var9Lifetime4.field_p = true;
+            var9Lifetime4.aimAngle = (int)(var10Lifetime1 * 65536.0 / 6.283185307179586);
+            var9Lifetime4.scheduled = true;
             param5.pendingCommands.addLast(3, var9Lifetime4);
           }
           return;
@@ -3404,40 +3404,40 @@ final class CombatWorld {
           if (null == param1.field_Vb &&
             0 < param1.charge) {
             var7 = new SentinelCommand(5, param3.playerId, 1 + this.simulationTick);
-            var7.field_p = true;
+            var7.scheduled = true;
             param1.pendingCommands.addLast(3, var7);
           }
           if ((param1.field_Lb ||
             !(param1.charge < 5)) && param1.charge >= 1) {
             if (Math.abs(param2) <= 50000) {
               var7Lifetime1 = new SentinelCommand(3, 0, 5 + ((param1.worldX + (this.simulationTick + param3.worldX)) % 100 + this.simulationTick + 4));
-              var7Lifetime1.field_y = -20000 + param1.worldY;
-              var7Lifetime1.field_u = -(param4 * 20000) + param1.worldX;
-              var7Lifetime1.field_p = true;
+              var7Lifetime1.targetWorldY = -20000 + param1.worldY;
+              var7Lifetime1.targetWorldX = -(param4 * 20000) + param1.worldX;
+              var7Lifetime1.scheduled = true;
               param1.pendingCommands.addLast(param5 ^ 14435, var7Lifetime1);
               if (var10 != 0) {
                 var7Lifetime1 = new SentinelCommand(3, 0, 4 + (this.simulationTick + ((param3.worldX + this.simulationTick + param1.worldX) % 100 + 50)));
-                var7Lifetime1.field_u = param3.worldX;
-                if (var7Lifetime1.field_u > param1.worldX + 10000) {
-                  var7Lifetime1.field_u = param1.worldX + 10000;
+                var7Lifetime1.targetWorldX = param3.worldX;
+                if (var7Lifetime1.targetWorldX > param1.worldX + 10000) {
+                  var7Lifetime1.targetWorldX = param1.worldX + 10000;
                 }
-                var7Lifetime1.field_p = true;
-                var7Lifetime1.field_y = -20000 + param1.worldY;
-                if ((param1.worldX - 10000) > var7Lifetime1.field_u) {
-                  var7Lifetime1.field_u = param1.worldX - 10000;
+                var7Lifetime1.scheduled = true;
+                var7Lifetime1.targetWorldY = -20000 + param1.worldY;
+                if ((param1.worldX - 10000) > var7Lifetime1.targetWorldX) {
+                  var7Lifetime1.targetWorldX = param1.worldX - 10000;
                 }
                 param1.pendingCommands.addLast(3, var7Lifetime1);
               }
             } else {
               var7Lifetime1 = new SentinelCommand(3, 0, 4 + (this.simulationTick + ((param3.worldX + this.simulationTick + param1.worldX) % 100 + 50)));
-              var7Lifetime1.field_u = param3.worldX;
-              if (var7Lifetime1.field_u > param1.worldX + 10000) {
-                var7Lifetime1.field_u = param1.worldX + 10000;
+              var7Lifetime1.targetWorldX = param3.worldX;
+              if (var7Lifetime1.targetWorldX > param1.worldX + 10000) {
+                var7Lifetime1.targetWorldX = param1.worldX + 10000;
               }
-              var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = -20000 + param1.worldY;
-              if ((param1.worldX - 10000) > var7Lifetime1.field_u) {
-                var7Lifetime1.field_u = param1.worldX - 10000;
+              var7Lifetime1.scheduled = true;
+              var7Lifetime1.targetWorldY = -20000 + param1.worldY;
+              if ((param1.worldX - 10000) > var7Lifetime1.targetWorldX) {
+                var7Lifetime1.targetWorldX = param1.worldX - 10000;
               }
               param1.pendingCommands.addLast(3, var7Lifetime1);
             }
@@ -3452,53 +3452,53 @@ final class CombatWorld {
               return;
             }
             var7Lifetime2 = new SentinelCommand(0, 0, 4 + (this.simulationTick + (param3.worldX + this.simulationTick + param1.worldX) % 100 + 60));
-            var7Lifetime2.field_y = param3.worldY;
-            var7Lifetime2.field_u = param3.worldX;
+            var7Lifetime2.targetWorldY = param3.worldY;
+            var7Lifetime2.targetWorldX = param3.worldX;
             var8 = Math.atan2((double)param2, (double)(-param0));
-            var7Lifetime2.field_B = (int)(var8 * 65536.0 / 6.283185307179586);
+            var7Lifetime2.aimAngle = (int)(var8 * 65536.0 / 6.283185307179586);
             if (0 > param4) {
-              if (!(var7Lifetime2.field_B <= 16384)) {
-                var7Lifetime2.field_B = var7Lifetime2.field_B - 65536;
+              if (!(var7Lifetime2.aimAngle <= 16384)) {
+                var7Lifetime2.aimAngle = var7Lifetime2.aimAngle - 65536;
                 if ((var10 != 0) &&
-                  (var7Lifetime2.field_B < -16384)) {
-                  var7Lifetime2.field_B = var7Lifetime2.field_B + 65536;
+                  (var7Lifetime2.aimAngle < -16384)) {
+                  var7Lifetime2.aimAngle = var7Lifetime2.aimAngle + 65536;
                 }
               }
             } else {
-              if (var7Lifetime2.field_B < -16384) {
-                var7Lifetime2.field_B = var7Lifetime2.field_B + 65536;
+              if (var7Lifetime2.aimAngle < -16384) {
+                var7Lifetime2.aimAngle = var7Lifetime2.aimAngle + 65536;
               }
             }
-            var7Lifetime2.field_p = true;
+            var7Lifetime2.scheduled = true;
             param1.pendingCommands.addLast(3, var7Lifetime2);
             if (var10 == 0) {
               return;
             }
           }
           var7Lifetime3 = new SentinelCommand(0, 8, 60 + (param3.worldX + this.simulationTick + param1.worldX) % 100 + this.simulationTick + 4);
-          var7Lifetime3.field_y = param3.worldY;
-          var7Lifetime3.field_u = param3.worldX;
+          var7Lifetime3.targetWorldY = param3.worldY;
+          var7Lifetime3.targetWorldX = param3.worldX;
           var8Lifetime1 = Math.atan2((double)param2, (double)(-param0));
-          var7Lifetime3.field_B = (int)(var8Lifetime1 * 65536.0 / 6.283185307179586);
+          var7Lifetime3.aimAngle = (int)(var8Lifetime1 * 65536.0 / 6.283185307179586);
           if (param4 < 0) {
-            if (!(16384 >= var7Lifetime3.field_B)) {
-              var7Lifetime3.field_B = var7Lifetime3.field_B - 65536;
+            if (!(16384 >= var7Lifetime3.aimAngle)) {
+              var7Lifetime3.aimAngle = var7Lifetime3.aimAngle - 65536;
               if ((var10 != 0) &&
-                (-16384 > var7Lifetime3.field_B)) {
-                var7Lifetime3.field_B = var7Lifetime3.field_B + 65536;
+                (-16384 > var7Lifetime3.aimAngle)) {
+                var7Lifetime3.aimAngle = var7Lifetime3.aimAngle + 65536;
               }
             }
           } else {
-            if (-16384 > var7Lifetime3.field_B) {
-              var7Lifetime3.field_B = var7Lifetime3.field_B + 65536;
+            if (-16384 > var7Lifetime3.aimAngle) {
+              var7Lifetime3.aimAngle = var7Lifetime3.aimAngle + 65536;
             }
           }
-          var7Lifetime3.field_p = true;
+          var7Lifetime3.scheduled = true;
           param1.pendingCommands.addLast(param5 - 14429, var7Lifetime3);
           var7Lifetime4 = new SentinelCommand(3, 0, 5 + (4 + this.simulationTick) + (param1.worldX + (param3.worldX + this.simulationTick)) % 100);
-          var7Lifetime4.field_y = param1.worldY - 20000;
-          var7Lifetime4.field_u = 5000 * param4 + param1.worldX;
-          var7Lifetime4.field_p = true;
+          var7Lifetime4.targetWorldY = param1.worldY - 20000;
+          var7Lifetime4.targetWorldX = 5000 * param4 + param1.worldX;
+          var7Lifetime4.scheduled = true;
           param1.secondaryCommands.addLast(3, var7Lifetime4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3591,8 +3591,8 @@ final class CombatWorld {
             return false;
           }
           var8 = new SentinelCommand(0, param3.field_Xb[param2], param6);
-          var8.field_y = param4.worldY;
-          var8.field_u = param4.worldX;
+          var8.targetWorldY = param4.worldY;
+          var8.targetWorldX = param4.worldX;
           stackIn_22_0 = (param4.worldX <= param3.worldX) ? -1 : 1;
           var9 = stackIn_22_0;
           if (!param3.field_u &&
@@ -3654,20 +3654,20 @@ final class CombatWorld {
           if (param1 >= -16) {
             this.field_J = (DualNodeDeque) null;
           }
-          var8.field_B = var11[var17Lifetime1];
+          var8.aimAngle = var11[var17Lifetime1];
           if (var18 == 0L ||
-            var8.field_B == 0) {
+            var8.aimAngle == 0) {
             var17Lifetime1 = -var17Lifetime1 + 1;
-            var8.field_B = var11[var17Lifetime1];
+            var8.aimAngle = var11[var17Lifetime1];
             var18 = var12[var17Lifetime1];
           }
           if (var18 != 0L &&
-            var8.field_B != 0) {
+            var8.aimAngle != 0) {
             var20 = new bh(param3);
             var20.field_b = var9;
             var21 = param3.worldX;
             var22 = -(param3.field_Db << 3) + param3.worldY;
-            var23 = var20.a(var13, (byte) 121, var8.field_u, var8.field_B, var22, var21, var8.field_y);
+            var23 = var20.a(var13, (byte) 121, var8.targetWorldX, var8.aimAngle, var22, var21, var8.targetWorldY);
             var23.field_I = true;
             if (null != var23) {
               var24 = 0;
@@ -3725,7 +3725,7 @@ final class CombatWorld {
                 param3.field_Xb[param2] != 16) {
                 param3.field_Mb[param2] = param3.field_Mb[param2] + (-var8.startTick + var8.endTick);
               }
-              var8.field_p = true;
+              var8.scheduled = true;
               param3.pendingCommands.addLast(3, var8);
               return true;
             }
@@ -3852,7 +3852,7 @@ final class CombatWorld {
               if (Math.abs(param3) >= 10000 && (!param2.field_Lb ||
                 !(Math.abs(param3) < 40000))) {
                 var7 = new SentinelCommand(6, param5, 2 + this.simulationTick);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param4.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
                 decompiledFrameRemainder1 = !(decompiledFrameRemainder0);
@@ -3870,13 +3870,13 @@ final class CombatWorld {
                 if (decompiledFrameRemainder0) {
                   param4.charge = param4.charge + 2;
                   var7 = new SentinelCommand(6, param5, this.simulationTick + 2);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   var7 = new SentinelCommand(7, param5, this.simulationTick + 4);
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   var7 = new SentinelCommand(6, param5, 25 + (this.simulationTick + 4));
-                  var7.field_p = true;
+                  var7.scheduled = true;
                   param4.pendingCommands.addLast(3, var7);
                   return;
                 }
@@ -3884,9 +3884,9 @@ final class CombatWorld {
             }
             if (decompiledFrameRemainder0) {
               var7Lifetime2 = new SentinelCommand(3, 0, this.simulationTick + 15);
-              var7Lifetime2.field_p = true;
-              var7Lifetime2.field_y = param4.worldY - 20000;
-              var7Lifetime2.field_u = -(20000 * param5) + param4.worldX;
+              var7Lifetime2.scheduled = true;
+              var7Lifetime2.targetWorldY = param4.worldY - 20000;
+              var7Lifetime2.targetWorldX = -(20000 * param5) + param4.worldX;
               param4.pendingCommands.addLast(3, var7Lifetime2);
               decompiledFrameRemainder0 = (var8 != 0);
             }
@@ -3905,7 +3905,7 @@ final class CombatWorld {
               stackIn_49_3 = -1;
             }
             var7Lifetime1 = new SentinelCommand(stackIn_48_2, stackIn_49_3, 2 + this.simulationTick);
-            var7Lifetime1.field_p = true;
+            var7Lifetime1.scheduled = true;
             param4.pendingCommands.addLast(3, var7Lifetime1);
           }
           if (!this.a(this.field_z, (byte) -73, 3, param4, param2, 2600, this.simulationTick + 15)) {
@@ -4050,25 +4050,25 @@ final class CombatWorld {
               stackIn_11_3 = -1;
             }
             var7 = new SentinelCommand(stackIn_10_2, stackIn_11_3, this.simulationTick + 2);
-            var7.field_p = true;
+            var7.scheduled = true;
             param0.pendingCommands.addLast(3, var7);
             decompiledFrameRemainder0 = (var12 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (Math.abs(param5) > 80000) {
               var7Lifetime2 = new SentinelCommand(6, param1, 2 + this.simulationTick);
-              var7Lifetime2.field_p = true;
+              var7Lifetime2.scheduled = true;
               param0.pendingCommands.addLast(3, var7Lifetime2);
               if ((var12 != 0) &&
                 (Math.abs(param5) < 30000)) {
                 var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
-                var7Lifetime2.field_p = true;
+                var7Lifetime2.scheduled = true;
                 param0.pendingCommands.addLast(3, var7Lifetime2);
               }
             } else {
               if (Math.abs(param5) < 30000) {
                 var7Lifetime2 = new SentinelCommand(6, -param1, 2 + this.simulationTick);
-                var7Lifetime2.field_p = true;
+                var7Lifetime2.scheduled = true;
                 param0.pendingCommands.addLast(3, var7Lifetime2);
               }
             }
@@ -4076,22 +4076,22 @@ final class CombatWorld {
           if (60000 > Math.abs(param5)) {
             if (param0.field_Xb[0] != 9) {
               var7Lifetime1 = new SentinelCommand(0, param0.field_Xb[0], (param0.worldX + (param3.worldX + this.simulationTick)) % 100 + this.simulationTick + 4);
-              var7Lifetime1.field_y = param3.worldY;
-              var7Lifetime1.field_u = param3.worldX;
+              var7Lifetime1.targetWorldY = param3.worldY;
+              var7Lifetime1.targetWorldX = param3.worldX;
               var8_double = Math.atan2((double)param5, (double)(-param2));
-              var7Lifetime1.field_B = (int)(var8_double * 65536.0 / 6.283185307179586);
-              var7Lifetime1.field_p = true;
+              var7Lifetime1.aimAngle = (int)(var8_double * 65536.0 / 6.283185307179586);
+              var7Lifetime1.scheduled = true;
               if (param1 >= 0) {
-                if (!(var7Lifetime1.field_B >= -16384)) {
-                  var7Lifetime1.field_B = var7Lifetime1.field_B + 65536;
+                if (!(var7Lifetime1.aimAngle >= -16384)) {
+                  var7Lifetime1.aimAngle = var7Lifetime1.aimAngle + 65536;
                   if ((var12 != 0) &&
-                    (16384 < var7Lifetime1.field_B)) {
-                    var7Lifetime1.field_B = var7Lifetime1.field_B - 65536;
+                    (16384 < var7Lifetime1.aimAngle)) {
+                    var7Lifetime1.aimAngle = var7Lifetime1.aimAngle - 65536;
                   }
                 }
               } else {
-                if (16384 < var7Lifetime1.field_B) {
-                  var7Lifetime1.field_B = var7Lifetime1.field_B - 65536;
+                if (16384 < var7Lifetime1.aimAngle) {
+                  var7Lifetime1.aimAngle = var7Lifetime1.aimAngle - 65536;
                 }
               }
               param0.pendingCommands.addLast(param4 ^ 3, var7Lifetime1);
@@ -4100,14 +4100,14 @@ final class CombatWorld {
               }
             }
             var7Lifetime1Lifetime1 = new SentinelCommand(0, param0.field_Xb[0], this.simulationTick - (-4 - (param3.worldX + (this.simulationTick + param0.worldX)) % 100));
-            var7Lifetime1Lifetime1.field_u = param3.worldX;
-            var7Lifetime1Lifetime1.field_y = param3.worldY;
+            var7Lifetime1Lifetime1.targetWorldX = param3.worldX;
+            var7Lifetime1Lifetime1.targetWorldY = param3.worldY;
             var8 = 900;
             var9 = this.field_z;
             var10 = 0;
             var11 = 10922;
             this.a(param1, param2, param5, var8, var10, var7Lifetime1Lifetime1, var9, var11, -1);
-            var7Lifetime1Lifetime1.field_p = true;
+            var7Lifetime1Lifetime1.scheduled = true;
             param0.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
           }
           return;
@@ -4481,7 +4481,7 @@ final class CombatWorld {
         int var17 = 0;
         var17 = SteelSentinels.obfuscationControl;
         try {
-          param5.field_B = param4;
+          param5.aimAngle = param4;
           var10_int = param8;
           var11 = param4;
           while (param7 > var11) {
@@ -4503,7 +4503,7 @@ final class CombatWorld {
               if (!(Math.abs(var16) >= var10_int) ||
                 var10_int == -1) {
                 var10_int = Math.abs(var16);
-                param5.field_B = param0 * var11;
+                param5.aimAngle = param0 * var11;
               }
             }
             var11 += 128;
@@ -4551,36 +4551,36 @@ final class CombatWorld {
           if (param4.field_Vb == null &&
             0 < param4.charge) {
             var7 = new SentinelCommand(5, param5.playerId, this.simulationTick + 1);
-            var7.field_p = true;
+            var7.scheduled = true;
             param4.pendingCommands.addLast(3, var7);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4.field_t <= 0) {
             if (Math.abs(param0) > 80000) {
               var7Lifetime1 = new SentinelCommand(6, param3, 2 + this.simulationTick);
-              var7Lifetime1.field_p = true;
+              var7Lifetime1.scheduled = true;
               param4.pendingCommands.addLast(3, var7Lifetime1);
               var7Lifetime1 = new SentinelCommand(3, 0, (param4.worldX + this.simulationTick + param5.worldX) % 100 + 4 + (this.simulationTick + 100));
-              var7Lifetime1.field_u = param5.worldX;
-              var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = -20000 + param4.worldY;
+              var7Lifetime1.targetWorldX = param5.worldX;
+              var7Lifetime1.scheduled = true;
+              var7Lifetime1.targetWorldY = -20000 + param4.worldY;
               param4.pendingCommands.addLast(3, var7Lifetime1);
               param4.charge = param4.maximumCharge;
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
               var7Lifetime1 = new SentinelCommand(3, 0, 100 + ((param4.worldX + param5.worldX + this.simulationTick) % 100 + (this.simulationTick + 4)));
-              var7Lifetime1.field_y = param4.worldY - 20000;
-              var7Lifetime1.field_u = param4.worldX - param3 * 20000;
-              var7Lifetime1.field_p = true;
+              var7Lifetime1.targetWorldY = param4.worldY - 20000;
+              var7Lifetime1.targetWorldX = param4.worldX - param3 * 20000;
+              var7Lifetime1.scheduled = true;
               param4.pendingCommands.addLast(3, var7Lifetime1);
               param4.charge = param4.maximumCharge;
               if (null != param4.field_Vb) {
                 var7Lifetime1 = new SentinelCommand(0, 11, 150 + ((param5.worldX + this.simulationTick + param4.worldX) % 100 + (4 + this.simulationTick)));
-                var7Lifetime1.field_u = param5.worldX;
-                var7Lifetime1.field_y = param5.worldY;
-                var7Lifetime1.field_p = true;
-                var7Lifetime1.field_B = 16384 * param3;
+                var7Lifetime1.targetWorldX = param5.worldX;
+                var7Lifetime1.targetWorldY = param5.worldY;
+                var7Lifetime1.scheduled = true;
+                var7Lifetime1.aimAngle = 16384 * param3;
                 param4.pendingCommands.addLast(3, var7Lifetime1);
               }
               decompiledFrameRemainder0 = (var10 != 0);
@@ -4600,30 +4600,30 @@ final class CombatWorld {
               stackIn_22_3 = 1;
             }
             var7Lifetime1Lifetime1 = new SentinelCommand(stackIn_21_2, stackIn_22_3, 2 + this.simulationTick);
-            var7Lifetime1Lifetime1.field_p = true;
+            var7Lifetime1Lifetime1.scheduled = true;
             param4.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
           }
           if (Math.abs(param0) < 100000 &&
             1 <= param4.charge) {
             var7Lifetime2 = new SentinelCommand(0, 7, 4 + (this.simulationTick - (-((param4.worldX + this.simulationTick + param5.worldX) % 100) - 175)));
-            var7Lifetime2.field_u = param5.worldX;
-            var7Lifetime2.field_y = param5.worldY;
+            var7Lifetime2.targetWorldX = param5.worldX;
+            var7Lifetime2.targetWorldY = param5.worldY;
             var8 = Math.atan2((double)param0, (double)(-param2));
-            var7Lifetime2.field_B = (int)(65536.0 * var8 / 6.283185307179586);
+            var7Lifetime2.aimAngle = (int)(65536.0 * var8 / 6.283185307179586);
             if (0 <= param3) {
-              if (!(var7Lifetime2.field_B >= -16384)) {
-                var7Lifetime2.field_B = var7Lifetime2.field_B + 65536;
+              if (!(var7Lifetime2.aimAngle >= -16384)) {
+                var7Lifetime2.aimAngle = var7Lifetime2.aimAngle + 65536;
                 if ((var10 != 0) &&
-                  (16384 < var7Lifetime2.field_B)) {
-                  var7Lifetime2.field_B = var7Lifetime2.field_B - 65536;
+                  (16384 < var7Lifetime2.aimAngle)) {
+                  var7Lifetime2.aimAngle = var7Lifetime2.aimAngle - 65536;
                 }
               }
             } else {
-              if (16384 < var7Lifetime2.field_B) {
-                var7Lifetime2.field_B = var7Lifetime2.field_B - 65536;
+              if (16384 < var7Lifetime2.aimAngle) {
+                var7Lifetime2.aimAngle = var7Lifetime2.aimAngle - 65536;
               }
             }
-            var7Lifetime2.field_p = true;
+            var7Lifetime2.scheduled = true;
             param4.pendingCommands.addLast(3, var7Lifetime2);
           }
           return;
@@ -4721,7 +4721,7 @@ final class CombatWorld {
             if (15000 <= Math.abs(param1) && (!(param4.field_mc > 0) ||
               !(Math.abs(param1) < 40000))) {
               var7 = new SentinelCommand(6, param0, this.simulationTick + 2);
-              var7.field_p = true;
+              var7.scheduled = true;
               param3.pendingCommands.addLast(3, var7);
               decompiledFrameRemainder0 = (var8 != 0);
             }
@@ -4730,13 +4730,13 @@ final class CombatWorld {
                 10000 > Math.abs(param2) &&
                 param3.charge > 1) {
                 var7 = new SentinelCommand(6, param0, 2 + this.simulationTick);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param3.pendingCommands.addLast(3, var7);
                 var7 = new SentinelCommand(7, param0, 4 + this.simulationTick);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param3.pendingCommands.addLast(3, var7);
                 var7 = new SentinelCommand(6, param0, 4 + this.simulationTick + 25);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param3.pendingCommands.addLast(3, var7);
                 return;
               }
@@ -4745,7 +4745,7 @@ final class CombatWorld {
                 (decompiledFrameRemainder0 = (!(param4.field_mc <= 1) ||
                 !(Math.abs(param1) >= 10000)))) {
                 var7 = new SentinelCommand(6, -param0, this.simulationTick + 2);
-                var7.field_p = true;
+                var7.scheduled = true;
                 param3.pendingCommands.addLast(3, var7);
                 decompiledFrameRemainder0 = (var8 != 0);
               }
@@ -4765,7 +4765,7 @@ final class CombatWorld {
               stackIn_37_3 = 1;
             }
             var7Lifetime2 = new SentinelCommand(stackIn_36_2, stackIn_37_3, 2 + this.simulationTick);
-            var7Lifetime2.field_p = true;
+            var7Lifetime2.scheduled = true;
             param3.pendingCommands.addLast(3, var7Lifetime2);
           }
           if (param5) {
@@ -4780,9 +4780,9 @@ final class CombatWorld {
               Math.abs(param1) > 80000 &&
               param3.charge > 0) {
               var7Lifetime1 = new SentinelCommand(3, 0, this.simulationTick + 30);
-              var7Lifetime1.field_p = true;
-              var7Lifetime1.field_y = param3.worldY - 20000;
-              var7Lifetime1.field_u = param0 * 20000 + param3.worldX;
+              var7Lifetime1.scheduled = true;
+              var7Lifetime1.targetWorldY = param3.worldY - 20000;
+              var7Lifetime1.targetWorldX = param0 * 20000 + param3.worldX;
               param3.pendingCommands.addLast(3, var7Lifetime1);
             }
           } else {
@@ -4938,7 +4938,7 @@ final class CombatWorld {
             0 < param3.charge &&
             !param2.hasModuleType(18, -27)) {
             var7 = new SentinelCommand(5, param2.playerId, 1 + this.simulationTick);
-            var7.field_p = true;
+            var7.scheduled = true;
             param3.pendingCommands.addLast(param0 ^ 58, var7);
           }
           boolean decompiledFrameRemainder0 = true;
@@ -4956,7 +4956,7 @@ final class CombatWorld {
               stackIn_18_3 = -1;
             }
             var7Lifetime1 = new SentinelCommand(stackIn_17_2, stackIn_18_3, this.simulationTick + 2);
-            var7Lifetime1.field_p = true;
+            var7Lifetime1.scheduled = true;
             param3.pendingCommands.addLast(3, var7Lifetime1);
             decompiledFrameRemainder0 = (var8 != 0);
           }
@@ -4966,39 +4966,39 @@ final class CombatWorld {
               if (Math.abs(param1) >= 20000) {
                 if (!(Math.abs(param1) >= 50000)) {
                   var7Lifetime1Lifetime1 = new SentinelCommand(6, 0, this.simulationTick + 2);
-                  var7Lifetime1Lifetime1.field_p = true;
+                  var7Lifetime1Lifetime1.scheduled = true;
                   param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
                   if (var8 != 0) {
                     var7Lifetime1Lifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
-                    var7Lifetime1Lifetime1.field_p = true;
+                    var7Lifetime1Lifetime1.scheduled = true;
                     param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
                     var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                    var7Lifetime1Lifetime1.field_p = true;
+                    var7Lifetime1Lifetime1.scheduled = true;
                     param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
                   }
                 }
               } else {
                 var7Lifetime1Lifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
-                var7Lifetime1Lifetime1.field_p = true;
+                var7Lifetime1Lifetime1.scheduled = true;
                 param3.pendingCommands.addLast(3, var7Lifetime1Lifetime1);
                 if (var8 != 0) {
                   var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-                  var7Lifetime1Lifetime1.field_p = true;
+                  var7Lifetime1Lifetime1.scheduled = true;
                   param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
                 }
               }
             } else {
               var7Lifetime1Lifetime1 = new SentinelCommand(6, param4, this.simulationTick + 2);
-              var7Lifetime1Lifetime1.field_p = true;
+              var7Lifetime1Lifetime1.scheduled = true;
               param3.pendingCommands.addLast(param0 ^ 58, var7Lifetime1Lifetime1);
             }
           }
           if (null != param3.field_Vb) {
             var7Lifetime2 = new SentinelCommand(0, param3.field_Xb[2], 5 + this.simulationTick);
-            var7Lifetime2.field_B = 7192 * param4;
-            var7Lifetime2.field_p = true;
-            var7Lifetime2.field_y = param2.worldY;
-            var7Lifetime2.field_u = param2.worldX;
+            var7Lifetime2.aimAngle = 7192 * param4;
+            var7Lifetime2.scheduled = true;
+            var7Lifetime2.targetWorldY = param2.worldY;
+            var7Lifetime2.targetWorldX = param2.worldX;
             param3.pendingCommands.addLast(3, var7Lifetime2);
           }
           if (param0 != 57) {
@@ -5193,14 +5193,14 @@ final class CombatWorld {
             if (Math.abs(param3) >= 30000 &&
               param4.charge > 5) {
               var6 = new SentinelCommand(6, param1, this.simulationTick + 2);
-              var6.field_p = true;
+              var6.scheduled = true;
               param4.pendingCommands.addLast(3, var6);
               decompiledFrameRemainder0 = (var7 != 0);
             }
             if ((decompiledFrameRemainder0) && (0 == param4.field_U ||
               !(param4.charge > 1))) {
               var6 = new SentinelCommand(6, -param1, this.simulationTick + 2);
-              var6.field_p = true;
+              var6.scheduled = true;
               param4.pendingCommands.addLast(3, var6);
               if (var7 != 0) {
                 var6_ref = null;
@@ -5209,7 +5209,7 @@ final class CombatWorld {
                 } else {
                   var6 = new SentinelCommand(6, -1, 2 + this.simulationTick);
                 }
-                var6.field_p = true;
+                var6.scheduled = true;
                 param4.pendingCommands.addLast(3, var6);
               }
             }
@@ -5220,7 +5220,7 @@ final class CombatWorld {
             } else {
               var6 = new SentinelCommand(6, -1, 2 + this.simulationTick);
             }
-            var6.field_p = true;
+            var6.scheduled = true;
             param4.pendingCommands.addLast(3, var6);
           }
           if (param0 >= -77) {
@@ -5236,17 +5236,17 @@ final class CombatWorld {
                 (this.a(0, (byte) -69, 0, param4, param2, 4608, 25 + this.simulationTick)) &&
                 (param4.field_t == 0)) {
                 var6Lifetime1 = new SentinelCommand(3, 0, 3 + this.simulationTick);
-                var6Lifetime1.field_y = param4.worldY - 20000;
-                var6Lifetime1.field_u = param4.worldX + 10000 * param1;
-                var6Lifetime1.field_p = true;
+                var6Lifetime1.targetWorldY = param4.worldY - 20000;
+                var6Lifetime1.targetWorldX = param4.worldX + 10000 * param1;
+                var6Lifetime1.scheduled = true;
                 param4.pendingCommands.addLast(3, var6Lifetime1);
                 param4.refillCharge(5);
                 if ((var7 != 0) && (param4.field_t == 0 &&
                   param4.charge > 0)) {
                   var6Lifetime1 = new SentinelCommand(3, 0, 30 + this.simulationTick);
-                  var6Lifetime1.field_y = param4.worldY - 20000;
-                  var6Lifetime1.field_p = true;
-                  var6Lifetime1.field_u = param4.worldX - 20000 * param1;
+                  var6Lifetime1.targetWorldY = param4.worldY - 20000;
+                  var6Lifetime1.scheduled = true;
+                  var6Lifetime1.targetWorldX = param4.worldX - 20000 * param1;
                   param4.pendingCommands.addLast(3, var6Lifetime1);
                   param4.refillCharge(5);
                 }
@@ -5255,9 +5255,9 @@ final class CombatWorld {
               if (param4.field_t == 0 &&
                 param4.charge > 0) {
                 var6Lifetime1 = new SentinelCommand(3, 0, 30 + this.simulationTick);
-                var6Lifetime1.field_y = param4.worldY - 20000;
-                var6Lifetime1.field_p = true;
-                var6Lifetime1.field_u = param4.worldX - 20000 * param1;
+                var6Lifetime1.targetWorldY = param4.worldY - 20000;
+                var6Lifetime1.scheduled = true;
+                var6Lifetime1.targetWorldX = param4.worldX - 20000 * param1;
                 param4.pendingCommands.addLast(3, var6Lifetime1);
                 param4.refillCharge(5);
               }
@@ -5639,7 +5639,7 @@ final class CombatWorld {
               stackIn_23_0 = var4;
               break;
             }
-            ((Sentinel) (Object) stackIn_23_0).d((byte) 85, new SentinelCommand(10, 0, param0));
+            ((Sentinel) (Object) stackIn_23_0).scheduleCommand((byte) 85, new SentinelCommand(10, 0, param0));
             return;
           }
           return;
@@ -5714,7 +5714,7 @@ final class CombatWorld {
               stackIn_12_3 = -1;
             }
             var8_ref_je = new SentinelCommand(stackIn_11_2, stackIn_12_3, 2 + this.simulationTick);
-            var8_ref_je.field_p = true;
+            var8_ref_je.scheduled = true;
             param0.pendingCommands.addLast(3, var8_ref_je);
             decompiledFrameRemainder1 = (var10 != 0);
           }
@@ -5723,7 +5723,7 @@ final class CombatWorld {
               if (Math.abs(param3) >= 60000) {
                 if (param0.field_U == 0) {
                   var8_ref_jeLifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
-                  var8_ref_jeLifetime1.field_p = true;
+                  var8_ref_jeLifetime1.scheduled = true;
                   param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
                   decompiledFrameRemainder1 = (var10 != 0);
                 }
@@ -5742,13 +5742,13 @@ final class CombatWorld {
                     stackIn_43_4 = 32;
                   }
                   var6 = new SentinelCommand(stackIn_42_2, stackIn_42_3, stackIn_43_4 + this.simulationTick);
-                  ((SentinelCommand) (var6)).field_p = true;
-                  ((SentinelCommand) (var6)).field_u = 5000 * param4 + param0.worldX;
-                  ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
+                  ((SentinelCommand) (var6)).scheduled = true;
+                  ((SentinelCommand) (var6)).targetWorldX = 5000 * param4 + param0.worldX;
+                  ((SentinelCommand) (var6)).targetWorldY = -20000 + param0.worldY;
                 }
               } else {
                 var8_ref_jeLifetime1 = new SentinelCommand(6, -param4, 2 + this.simulationTick);
-                var8_ref_jeLifetime1.field_p = true;
+                var8_ref_jeLifetime1.scheduled = true;
                 param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
                 if (var7 != 0) {
                   stackIn_32_0 = null;
@@ -5765,14 +5765,14 @@ final class CombatWorld {
                     stackIn_33_4 = 60;
                   }
                   var6 = new SentinelCommand(stackIn_32_2, stackIn_32_3, stackIn_33_4 + this.simulationTick);
-                  ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
-                  ((SentinelCommand) (var6)).field_u = param0.worldX - 20000 * param4;
-                  ((SentinelCommand) (var6)).field_p = true;
+                  ((SentinelCommand) (var6)).targetWorldY = -20000 + param0.worldY;
+                  ((SentinelCommand) (var6)).targetWorldX = param0.worldX - 20000 * param4;
+                  ((SentinelCommand) (var6)).scheduled = true;
                 }
               }
             } else {
               var8_ref_jeLifetime1 = new SentinelCommand(6, param4, 2 + this.simulationTick);
-              var8_ref_jeLifetime1.field_p = true;
+              var8_ref_jeLifetime1.scheduled = true;
               param0.pendingCommands.addLast(3, var8_ref_jeLifetime1);
               if (var7 != 0) {
                 stackIn_22_0 = null;
@@ -5790,9 +5790,9 @@ final class CombatWorld {
                   stackIn_23_5 = 60;
                 }
                 var6 = new SentinelCommand(stackIn_22_2, stackIn_22_3, stackIn_22_4 + stackIn_23_5);
-                ((SentinelCommand) (var6)).field_u = param2.worldX;
-                ((SentinelCommand) (var6)).field_y = -20000 + param0.worldY;
-                ((SentinelCommand) (var6)).field_p = true;
+                ((SentinelCommand) (var6)).targetWorldX = param2.worldX;
+                ((SentinelCommand) (var6)).targetWorldY = -20000 + param0.worldY;
+                ((SentinelCommand) (var6)).scheduled = true;
               }
             }
           }
@@ -5804,13 +5804,13 @@ final class CombatWorld {
               if ((!this.a(this.field_z, (byte) -75, 1, param0, param2, 4608, this.simulationTick + 3)) &&
                 (decompiledFrameRemainder0 = !(!this.a(this.field_z, (byte) -26, 0, param0, param2, 1280, this.simulationTick + 3)))) {
                 var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
-                var9.field_p = true;
+                var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
               if (decompiledFrameRemainder0) {
                 var9 = new SentinelCommand(6, -param4, this.simulationTick + 25);
-                var9.field_p = true;
+                var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
@@ -5818,19 +5818,19 @@ final class CombatWorld {
             if ((decompiledFrameRemainder0) &&
               (this.a(this.field_z, (byte) -30, 0, param0, param2, 1280, this.simulationTick + 3))) {
               var9 = new SentinelCommand(6, -param4, this.simulationTick + 50);
-              var9.field_p = true;
+              var9.scheduled = true;
               param0.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
                 discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
                 var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
-                var9.field_p = true;
+                var9.scheduled = true;
                 param0.pendingCommands.addLast(3, var9);
               }
             }
           } else {
             discarded$0 = this.a(this.field_z, (byte) -87, 2, param0, param2, 2600, this.simulationTick + 15);
             var9 = new SentinelCommand(6, -param4, 30 + this.simulationTick);
-            var9.field_p = true;
+            var9.scheduled = true;
             param0.pendingCommands.addLast(3, var9);
           }
           if (var6 != null &&
@@ -5925,18 +5925,18 @@ final class CombatWorld {
             (param4.pendingCommands.f(7))) {
             boolean decompiledFrameRemainder0 = true;
             var8 = new SentinelCommand(3, 0, 10 + this.simulationTick);
-            var8.field_u = (this.simulationTick * 77 % (this.terrain.getProfileLength(-123) / 4) - this.terrain.getProfileLength(1) / 8 << 4) + param0.worldX;
+            var8.targetWorldX = (this.simulationTick * 77 % (this.terrain.getProfileLength(-123) / 4) - this.terrain.getProfileLength(1) / 8 << 4) + param0.worldX;
             var9 = 5000;
             var10 = 1;
             if (var7_int == 0) {
               if (param4.field_Xb.length != 0 ||
                 param4.field_Xb[0] != 1) {
-                if (var8.field_u < (param4.worldX - var9)) {
-                  var8.field_u = -var9 + param4.worldX;
+                if (var8.targetWorldX < (param4.worldX - var9)) {
+                  var8.targetWorldX = -var9 + param4.worldX;
                 }
-                var8.field_y = -30000 + param0.worldY;
-                if (var8.field_u > (param4.worldX + var9)) {
-                  var8.field_u = var9 + param4.worldX;
+                var8.targetWorldY = -30000 + param0.worldY;
+                if (var8.targetWorldX > (param4.worldX + var9)) {
+                  var8.targetWorldX = var9 + param4.worldX;
                 }
                 decompiledFrameRemainder0 = !(Math.abs(param1) <= 80000);
                 if (decompiledFrameRemainder0) {
@@ -5947,29 +5947,29 @@ final class CombatWorld {
               if (decompiledFrameRemainder0) {
                 var9 = 100000;
                 if (param4.worldX < param0.worldX) {
-                  if (var8.field_u > param0.worldX - var9) {
-                    var8.field_u = param0.worldX - var9;
+                  if (var8.targetWorldX > param0.worldX - var9) {
+                    var8.targetWorldX = param0.worldX - var9;
                   }
-                  if (!(var8.field_u >= 0)) {
-                    var8.field_u = param0.worldX + var9;
+                  if (!(var8.targetWorldX >= 0)) {
+                    var8.targetWorldX = param0.worldX + var9;
                     if (var16 != 0) {
-                      if (var8.field_u < (var9 + param0.worldX)) {
-                        var8.field_u = param0.worldX + var9;
+                      if (var8.targetWorldX < (var9 + param0.worldX)) {
+                        var8.targetWorldX = param0.worldX + var9;
                       }
-                      if (var8.field_u > this.terrain.getProfileLength(param2 ^ 68) << 4) {
-                        var8.field_u = param0.worldX - var9;
+                      if (var8.targetWorldX > this.terrain.getProfileLength(param2 ^ 68) << 4) {
+                        var8.targetWorldX = param0.worldX - var9;
                       }
                     }
                   }
                 } else {
-                  if (var8.field_u < (var9 + param0.worldX)) {
-                    var8.field_u = param0.worldX + var9;
+                  if (var8.targetWorldX < (var9 + param0.worldX)) {
+                    var8.targetWorldX = param0.worldX + var9;
                   }
-                  if (var8.field_u > this.terrain.getProfileLength(param2 ^ 68) << 4) {
-                    var8.field_u = param0.worldX - var9;
+                  if (var8.targetWorldX > this.terrain.getProfileLength(param2 ^ 68) << 4) {
+                    var8.targetWorldX = param0.worldX - var9;
                   }
                 }
-                var8.field_y = -60000;
+                var8.targetWorldY = -60000;
               }
             }
             if ((decompiledFrameRemainder0) &&
@@ -5977,40 +5977,40 @@ final class CombatWorld {
               var16 != 0)) {
               var9Lifetime1 = 50000;
               if (param4.worldX >= param0.worldX) {
-                if (param0.worldX + var9Lifetime1 > var8.field_u) {
-                  var8.field_u = param0.worldX + var9Lifetime1;
+                if (param0.worldX + var9Lifetime1 > var8.targetWorldX) {
+                  var8.targetWorldX = param0.worldX + var9Lifetime1;
                 }
-                if (!(var8.field_u <= this.terrain.getProfileLength(29) << 4)) {
-                  var8.field_u = param0.worldX - var9Lifetime1;
+                if (!(var8.targetWorldX <= this.terrain.getProfileLength(29) << 4)) {
+                  var8.targetWorldX = param0.worldX - var9Lifetime1;
                   if (var16 != 0) {
-                    if (var8.field_u > -var9Lifetime1 + param0.worldX) {
-                      var8.field_u = param0.worldX - var9Lifetime1;
+                    if (var8.targetWorldX > -var9Lifetime1 + param0.worldX) {
+                      var8.targetWorldX = param0.worldX - var9Lifetime1;
                     }
-                    if (var8.field_u < 0) {
-                      var8.field_u = var9Lifetime1 + param0.worldX;
+                    if (var8.targetWorldX < 0) {
+                      var8.targetWorldX = var9Lifetime1 + param0.worldX;
                     }
                   }
                 }
               } else {
-                if (var8.field_u > -var9Lifetime1 + param0.worldX) {
-                  var8.field_u = param0.worldX - var9Lifetime1;
+                if (var8.targetWorldX > -var9Lifetime1 + param0.worldX) {
+                  var8.targetWorldX = param0.worldX - var9Lifetime1;
                 }
-                if (var8.field_u < 0) {
-                  var8.field_u = var9Lifetime1 + param0.worldX;
+                if (var8.targetWorldX < 0) {
+                  var8.targetWorldX = var9Lifetime1 + param0.worldX;
                 }
               }
-              var8.field_y = -60000;
+              var8.targetWorldY = -60000;
             }
             if (this.field_fb &&
               this.field_j) {
-              var8.field_y = -5000 + param4.worldY;
+              var8.targetWorldY = -5000 + param4.worldY;
               if (-199000 > param4.worldY) {
                 param4.field_Hb = true;
                 param4.unlink(param2 ^ -60);
                 System.out.println(param4.playerId + " unlinked");
               }
             }
-            var8.field_p = true;
+            var8.scheduled = true;
             param4.pendingCommands.addLast(3, var8);
             param4.charge = param4.maximumCharge;
             if (param4.field_Xb.length <= 0) {
@@ -6024,8 +6024,8 @@ final class CombatWorld {
             if (var10 != 0) {
               if (param4.field_Xb[0] != 1) {
                 var11_double = Math.atan2((double)param1, (double)(-param3));
-                var8.field_B = (int)(65536.0 * var11_double / 6.283185307179586);
-                var13_ref_nk__ = param4.chassis.a(0, param4, new ArticulatedPart[]{}, var8.field_B * param5, param4.field_Xb[0]);
+                var8.aimAngle = (int)(65536.0 * var11_double / 6.283185307179586);
+                var13_ref_nk__ = param4.chassis.a(0, param4, new ArticulatedPart[]{}, var8.aimAngle * param5, param4.field_Xb[0]);
                 param4.chassis.b((byte) -128, 0, param5, 0);
                 var14 = 0;
                 var15 = 0;
@@ -6045,36 +6045,36 @@ final class CombatWorld {
                   break;
                 }
                 var11_doubleLifetime1 = Math.atan2((double)param1, (double)(-param3));
-                var8.field_B = (int)(var11_doubleLifetime1 * 65536.0 / 6.283185307179586);
-                var8.field_u = param0.worldX;
-                var8.field_y = param0.worldY;
+                var8.aimAngle = (int)(var11_doubleLifetime1 * 65536.0 / 6.283185307179586);
+                var8.targetWorldX = param0.worldX;
+                var8.targetWorldY = param0.worldY;
                 if (0 <= param5) {
-                  if (!(var8.field_B >= -16384)) {
-                    var8.field_B = var8.field_B + 65536;
+                  if (!(var8.aimAngle >= -16384)) {
+                    var8.aimAngle = var8.aimAngle + 65536;
                     if ((var16 != 0) &&
-                      (var8.field_B > 16384)) {
-                      var8.field_B = var8.field_B - 65536;
+                      (var8.aimAngle > 16384)) {
+                      var8.aimAngle = var8.aimAngle - 65536;
                     }
                   }
                 } else {
-                  if (var8.field_B > 16384) {
-                    var8.field_B = var8.field_B - 65536;
+                  if (var8.aimAngle > 16384) {
+                    var8.aimAngle = var8.aimAngle - 65536;
                   }
                 }
-                var8.field_p = true;
+                var8.scheduled = true;
                 param4.pendingCommands.addLast(param2 ^ -61, var8);
                 decompiledFrameRemainder1 = (var16 != 0);
               }
               if (decompiledFrameRemainder1) {
                 var8 = new SentinelCommand(0, param4.field_Xb[1], (this.simulationTick + param0.worldX + param4.worldX) % 50 + this.simulationTick + 4 + 25);
-                var8.field_y = param0.worldY;
-                var8.field_u = param0.worldX;
+                var8.targetWorldY = param0.worldY;
+                var8.targetWorldX = param0.worldX;
                 var11 = 2500;
                 var12 = 0;
                 var13 = 8192;
                 var14Lifetime1 = 32768;
                 this.a(param5, param3, param1, var11, var13, var8, var12, var14Lifetime1, -1);
-                var8.field_p = true;
+                var8.scheduled = true;
                 param4.pendingCommands.addLast(3, var8);
               }
             }
@@ -6155,13 +6155,13 @@ final class CombatWorld {
             if ((param4.field_t == 0) &&
               (!(30000 > Math.abs(param5)))) {
               var9 = new SentinelCommand(6, param1, this.simulationTick + 27);
-              var9.field_p = true;
+              var9.scheduled = true;
               param4.pendingCommands.addLast(3, var9);
               if (var10 != 0) {
                 if (!(60000 >= Math.abs(param5)) ||
                   param4.field_U == 0) {
                   var9 = new SentinelCommand(6, param1, this.simulationTick + 2);
-                  var9.field_p = true;
+                  var9.scheduled = true;
                   param4.pendingCommands.addLast(3, var9);
                 }
                 if (Math.abs(param5) < 100000) {
@@ -6173,7 +6173,7 @@ final class CombatWorld {
             if (!(60000 >= Math.abs(param5)) ||
               param4.field_U == 0) {
               var9 = new SentinelCommand(6, param1, this.simulationTick + 2);
-              var9.field_p = true;
+              var9.scheduled = true;
               param4.pendingCommands.addLast(3, var9);
             }
             if (Math.abs(param5) < 100000) {
@@ -6194,7 +6194,7 @@ final class CombatWorld {
               stackIn_49_3 = -1;
             }
             var9Lifetime1 = new SentinelCommand(stackIn_48_2, stackIn_49_3, 2 + this.simulationTick);
-            var9Lifetime1.field_p = true;
+            var9Lifetime1.scheduled = true;
             param4.pendingCommands.addLast(param2 ^ 22, var9Lifetime1);
             if (var10 == 0) {
               return;
@@ -6202,7 +6202,7 @@ final class CombatWorld {
           }
           if (Math.abs(param5) < 30000) {
             var9Lifetime2 = new SentinelCommand(6, -param1, this.simulationTick + 29);
-            var9Lifetime2.field_p = true;
+            var9Lifetime2.scheduled = true;
             param4.pendingCommands.addLast(3, var9Lifetime2);
           }
           return;

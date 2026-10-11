@@ -164,7 +164,7 @@ final class rf {
           SoftwareRaster.a(var1_ref.field_t, var1_ref.field_u, var1_ref.field_q);
           SoftwareRaster.f(var1_ref.field_p, var1_ref.field_r, var1_ref.field_s, var1_ref.field_o);
           var1_ref.field_t = null;
-          vb.field_q.addLast((byte) -119, (IntrusiveNode) (var1_ref));
+          EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_ref));
           return;
         }
         var1_refLifetime1 = (fg) (ParasiteEvent.field_y.c((byte) -125));
@@ -174,7 +174,7 @@ final class rf {
         SoftwareRaster.a(var1_refLifetime1.field_t, var1_refLifetime1.field_u, var1_refLifetime1.field_q);
         SoftwareRaster.f(var1_refLifetime1.field_p, var1_refLifetime1.field_r, var1_refLifetime1.field_s, var1_refLifetime1.field_o);
         var1_refLifetime1.field_t = null;
-        vb.field_q.addLast((byte) -119, (IntrusiveNode) (var1_refLifetime1));
+        EventPresenter.field_q.addLast((byte) -119, (IntrusiveNode) (var1_refLifetime1));
     }
 
     final ar a(int param0, int param1) {

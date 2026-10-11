@@ -32,7 +32,7 @@ final class hf {
         ef.field_d[19] = ih.field_X;
         ef.field_d[11] = pf.field_f;
         ef.field_d[6] = bs.field_c;
-        ef.field_d[13] = tb.field_b;
+        ef.field_d[13] = EffectPresentation.field_b;
         ef.field_d[7] = vs.field_d;
         ef.field_d[21] = dq.field_f;
         ef.field_d[20] = dm.field_d;

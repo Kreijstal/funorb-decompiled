@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends IntrusiveNode {
-    int field_m;
-    int field_k;
+final class AiActionCandidate extends IntrusiveNode {
+    int spellId;
+    int targetX;
     static String field_n;
-    int field_s;
+    int destinationX;
     static long[] field_u;
-    float field_t;
-    int field_o;
-    int field_r;
-    int field_q;
+    float score;
+    int targetY;
+    int executionResult;
+    int destinationY;
     static String field_v;
-    int field_l;
+    int selectionVariant;
     static int[] field_p;
 
     final static void e(int param0) {
@@ -33,12 +33,12 @@ final class jb extends IntrusiveNode {
         field_n = null;
     }
 
-    final boolean g(int param0) {
-        int var2 = 75 / ((-13 - param0) / 54);
-        return this.field_k != -1 ? true : false;
+    final boolean hasTarget(int obfuscationGuard) {
+        int var2 = 75 / ((-13 - obfuscationGuard) / 54);
+        return this.targetX != -1 ? true : false;
     }
 
-    final int a(byte param0, AiPlanner param1) {
+    final int execute(byte obfuscationGuard, AiPlanner planner) {
         int stackIn_15_0 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -48,37 +48,37 @@ final class jb extends IntrusiveNode {
         RuntimeException var3_ref = null;
         SpellAreaSelection var4 = null;
         try {
-          if (this.field_s != -1) {
-            if (this.field_l == -1) {
-              param1.field_U.reconstructPath(this.field_q, (byte) -116, this.field_s);
-              if (param1.field_U.pathLength <= 0 &&
-                this.field_k == -1) {
-                this.field_r = -2;
+          if (this.destinationX != -1) {
+            if (this.selectionVariant == -1) {
+              planner.actionMovement.reconstructPath(this.destinationY, (byte) -116, this.destinationX);
+              if (planner.actionMovement.pathLength <= 0 &&
+                this.targetX == -1) {
+                this.executionResult = -2;
               }
-              if (this.field_k != -1) {
-                param1.field_U.targetDeltaX = -this.field_s + this.field_k;
-                param1.field_U.targetDeltaY = this.field_o - this.field_q;
+              if (this.targetX != -1) {
+                planner.actionMovement.targetDeltaX = -this.destinationX + this.targetX;
+                planner.actionMovement.targetDeltaY = this.targetY - this.destinationY;
               }
-              var4 = param1.field_U.a(param1.field_z, 103);
-              if (!param1.a(var4, -125)) {
-                this.field_r = -2;
+              var4 = planner.actionMovement.a(planner.playerId, 103);
+              if (!planner.executeSelection(var4, -125)) {
+                this.executionResult = -2;
               }
             } else {
-              var3 = new hw(this.field_m, this.field_s, this.field_q, this.field_l);
-              param1.a(var3, -124);
+              var3 = new hw(this.spellId, this.destinationX, this.destinationY, this.selectionVariant);
+              planner.executeSelection(var3, -124);
             }
           }
-          if (param0 != 5) {
-            this.field_o = 65;
+          if (obfuscationGuard != 5) {
+            this.targetY = 65;
           }
-          stackIn_15_0 = this.field_r;
+          stackIn_15_0 = this.executionResult;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("jb.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("jb.G(").append(obfuscationGuard).append(',');
+          if (planner == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -87,22 +87,22 @@ final class jb extends IntrusiveNode {
         }
     }
 
-    final void h(int param0) {
-        this.field_m = -1;
-        this.field_t = 1.401298464324817e-45f;
-        this.field_s = -1;
-        this.field_l = -1;
-        this.field_q = -1;
-        this.field_r = -1;
-        this.field_o = param0;
-        this.field_k = -1;
+    final void reset(int targetY) {
+        this.spellId = -1;
+        this.score = 1.401298464324817e-45f;
+        this.destinationX = -1;
+        this.selectionVariant = -1;
+        this.destinationY = -1;
+        this.executionResult = -1;
+        this.targetY = targetY;
+        this.targetX = -1;
     }
 
-    final boolean a(int param0) {
-        if (param0 != 0) {
-          this.g(-25);
+    final boolean hasDestination(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          this.hasTarget(-25);
         }
-        return this.field_s != -1 ? true : false;
+        return this.destinationX != -1 ? true : false;
     }
 
     final static boolean a(char param0, int param1) {
@@ -147,7 +147,7 @@ final class jb extends IntrusiveNode {
         }
     }
 
-    jb() {
+    AiActionCandidate() {
     }
 
     static {

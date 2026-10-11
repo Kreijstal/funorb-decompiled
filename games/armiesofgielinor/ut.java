@@ -320,7 +320,7 @@ final class ut extends sf implements he {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_mb == this.field_Y) {
           ck.b(param0 - 59);
-          jb.e(param0 ^ -17024);
+          AiActionCandidate.e(param0 ^ -17024);
         } else {
           if (this.field_Y == this.field_Z) {
             ck.b(-109);
@@ -333,7 +333,7 @@ final class ut extends sf implements he {
                   AreaSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
                 }
               }
-              sm.a(true, param0 + 8029);
+              AiPlanningStrategy.a(true, param0 + 8029);
               this.field_G.a(new cs(this.field_G), 0);
             }
           }
@@ -374,7 +374,7 @@ final class ut extends sf implements he {
         pe.field_s[kt.field_p] = param1;
         int var6 = param0 + (param3 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
-        tb.field_h[kt.field_p] = var7;
+        EffectPresentation.field_h[kt.field_p] = var7;
         kt.field_p = kt.field_p + 1;
         if (!(sq.field_k <= var7)) {
           sq.field_k = var7;
@@ -486,11 +486,11 @@ final class ut extends sf implements he {
             }
             pv.field_c = false;
           }
-          if (cl.field_t) {
+          if (AiUnitPlanner.field_t) {
             PacketBuffer.i((byte) -97);
             pu.d(-112);
             da.c(-120);
-            cl.field_t = false;
+            AiUnitPlanner.field_t = false;
           }
           if (param0 < 120) {
             ut.a(-43, 103, -36, -123, (byte) 96, -93);

@@ -394,7 +394,7 @@ final class ou {
                 var25 = param0.field_M[var23];
                 var26 = param0.field_v[var23];
                 dl.field_c[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
-                jb.field_p[var23] = (var26 * var19 + var13 * var24 + var16 * var25 >> 16) + var10;
+                AiActionCandidate.field_p[var23] = (var26 * var19 + var13 * var24 + var16 * var25 >> 16) + var10;
                 uq.field_u[var23] = (var24 * var14 + (var17 * var25 + var26 * var20) >> 16) + var11;
                 var24 = param0.field_N[var23];
                 var25 = param0.field_a[var23];

@@ -38,7 +38,7 @@ final class gs implements kh {
         var2.b(1, 2);
         var2.a(ln.field_d, 0, ln.field_d.length, 113);
         var2.b(1, nh.field_E);
-        var2.b(1, sm.field_b);
+        var2.b(1, AiPlanningStrategy.field_b);
         var2.a(tg.field_d, 0, tg.field_d.length, -72);
         if (param1 != -8006) {
           field_b = -111;

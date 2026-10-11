@@ -155,7 +155,7 @@ final class UpkeepEvent extends GameEvent {
     }
 
     UpkeepEvent(int param0, int param1) {
-        this.field_m = 20;
+        this.eventKind = 20;
         this.field_D = param0;
         this.field_y = param1;
     }

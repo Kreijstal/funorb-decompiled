@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id {
-    int field_a;
-    int field_b;
-    String field_e;
+final class CampaignUnitOverride {
+    int unitType;
+    int strength;
+    String displayName;
     static String field_c;
     static int[] field_d;
 
@@ -303,7 +303,7 @@ final class id {
                 }
                 var2 = bb.a(50, "mu_options");
                 if (null != var2) {
-                  tb.field_d = uu.a(var2, (byte) 49);
+                  EffectPresentation.field_d = uu.a(var2, (byte) 49);
                 }
                 var2 = bb.a(50, "mu_options_whocanjoin");
                 if (null != var2) {
@@ -491,7 +491,7 @@ final class id {
                 }
                 var2 = bb.a(50, "rated_game_tips");
                 if (var2 != null) {
-                  jb.field_v = uu.a(var2, (byte) -108);
+                  AiActionCandidate.field_v = uu.a(var2, (byte) -108);
                 }
                 var2 = bb.a(50, "searching_for_opponent_singular");
                 if (null != var2) {
@@ -579,7 +579,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "inviting_x");
                 if (null != var2) {
-                  sm.field_g = uu.a(var2, (byte) -120);
+                  AiPlanningStrategy.field_g = uu.a(var2, (byte) -120);
                 }
                 var2 = bb.a(param0 ^ -100, "x_wants_to_join");
                 if (var2 != null) {
@@ -775,7 +775,7 @@ final class id {
                 }
                 var2 = bb.a(50, "runescapeclan");
                 if (var2 != null) {
-                  ir.field_j = uu.a(var2, (byte) -97);
+                  AiInfluenceMap.field_j = uu.a(var2, (byte) -97);
                 }
                 var2 = bb.a(50, "rated_membersonly");
                 if (null != var2) {
@@ -851,7 +851,7 @@ final class id {
                 }
                 var2 = bb.a(param0 + 132, "gameopt_youhaventunlocked");
                 if (var2 != null) {
-                  vb.field_l = uu.a(var2, (byte) 88);
+                  EventPresenter.field_l = uu.a(var2, (byte) 88);
                 }
                 var2 = bb.a(50, "gameopt_trychanging1");
                 if (var2 != null) {
@@ -997,7 +997,7 @@ final class id {
                 }
                 var2 = bb.a(50, "rule_2_0");
                 if (var2 != null) {
-                  tb.field_b = uu.a(var2, (byte) -97);
+                  EffectPresentation.field_b = uu.a(var2, (byte) -97);
                 }
                 var2 = bb.a(50, "rule_2_1");
                 if (null != var2) {
@@ -1541,7 +1541,7 @@ final class id {
                 }
                 var2 = bb.a(50, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  ge.field_i = uu.a(var2, (byte) 21);
+                  WeightedScoreStrategy.field_i = uu.a(var2, (byte) 21);
                 }
                 var2 = bb.a(50, "create_email_tooltip");
                 if (var2 != null) {
@@ -1689,11 +1689,11 @@ final class id {
                 }
                 var2 = bb.a(50, "unable_to_delete_friend");
                 if (null != var2) {
-                  ql.field_l = uu.a(var2, (byte) 17);
+                  PopupPresentation.field_l = uu.a(var2, (byte) 17);
                 }
                 var2 = bb.a(param0 ^ -100, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  tb.field_a = uu.a(var2, (byte) -106);
+                  EffectPresentation.field_a = uu.a(var2, (byte) -106);
                 }
                 var2 = bb.a(param0 + 132, "friendlistfull");
                 if (var2 != null) {
@@ -1725,7 +1725,7 @@ final class id {
                 }
                 var2 = bb.a(50, "removefriendfirst");
                 if (var2 != null) {
-                  ql.field_p = uu.a(var2, (byte) -123);
+                  PopupPresentation.field_p = uu.a(var2, (byte) -123);
                 }
                 var2 = bb.a(param0 + 132, "enterfriend_add");
                 if (null != var2) {
@@ -1911,7 +1911,7 @@ final class id {
                 }
                 var2 = bb.a(50, "screensize");
                 if (null != var2) {
-                  ir.field_k = uu.a(var2, (byte) 39);
+                  AiInfluenceMap.field_k = uu.a(var2, (byte) 39);
                 }
                 var2 = bb.a(param0 ^ -100, "highscores");
                 if (var2 != null) {
@@ -2482,27 +2482,27 @@ final class id {
                 }
                 var2 = bb.a(50, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  cl.field_z[0] = uu.a(var2, (byte) -105);
+                  AiUnitPlanner.field_z[0] = uu.a(var2, (byte) -105);
                 }
                 var2 = bb.a(50, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  cl.field_z[1] = uu.a(var2, (byte) -102);
+                  AiUnitPlanner.field_z[1] = uu.a(var2, (byte) -102);
                 }
                 var2 = bb.a(50, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  cl.field_z[2] = uu.a(var2, (byte) 84);
+                  AiUnitPlanner.field_z[2] = uu.a(var2, (byte) 84);
                 }
                 var2 = bb.a(50, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  cl.field_z[3] = uu.a(var2, (byte) 61);
+                  AiUnitPlanner.field_z[3] = uu.a(var2, (byte) 61);
                 }
                 var2 = bb.a(50, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  cl.field_z[4] = uu.a(var2, (byte) -118);
+                  AiUnitPlanner.field_z[4] = uu.a(var2, (byte) -118);
                 }
                 var2 = bb.a(param0 + 132, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  cl.field_z[5] = uu.a(var2, (byte) -112);
+                  AiUnitPlanner.field_z[5] = uu.a(var2, (byte) -112);
                 }
                 var2 = bb.a(50, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
@@ -2666,7 +2666,7 @@ final class id {
                 }
                 var2 = bb.a(50, "fs_button_cancel");
                 if (var2 != null) {
-                  ge.field_m = uu.a(var2, (byte) 6);
+                  WeightedScoreStrategy.field_m = uu.a(var2, (byte) 6);
                 }
                 var2 = bb.a(param0 ^ -100, "fs_accept_aftercancel");
                 if (null != var2) {

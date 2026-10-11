@@ -104,7 +104,7 @@ final class cv {
               1 != param2) {
               return;
             }
-            var4.field_r = ir.a(10602, param2);
+            var4.field_r = AiInfluenceMap.a(10602, param2);
             var4.field_A = param2;
             return;
           }
@@ -338,7 +338,7 @@ final class cv {
             fe.c(var3, db.a(true, 477), u.a(396, (byte) 94), 0, true);
             var4 = db.a(true, 359);
             var5 = u.a(85, (byte) 94);
-            id.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
+            CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
             boolean decompiledSharedTail0 = (this.field_d == null ||
               this.field_d.field_k != -1);
             if (!decompiledSharedTail0) {
@@ -366,7 +366,7 @@ final class cv {
               stackIn_31_0 = stackOut_30_0;
               if (var8 == 0) {
                 boolean decompiledFrameRemainder0 = true;
-                if (stackIn_31_0 && (var3_ref.a(sm.field_d, ko.field_b, param0 - 275) ||
+                if (stackIn_31_0 && (var3_ref.a(AiPlanningStrategy.field_d, ko.field_b, param0 - 275) ||
                   var3_ref == this.field_d)) {
                   stackIn_43_0 = 1;
                   decompiledFrameRemainder0 = false;
@@ -450,7 +450,7 @@ final class cv {
         try {
           var5_int = db.a(true, -15 + param2.field_y);
           var6 = u.a(19 + param2.field_x, (byte) 94);
-          id.a(db.a(true, param2.field_y), db.a(true, param2.field_B + param2.field_y), u.a(param2.field_x + param2.field_o, (byte) 94), u.a(param2.field_x, (byte) 94), (byte) 125);
+          CampaignUnitOverride.a(db.a(true, param2.field_y), db.a(true, param2.field_B + param2.field_y), u.a(param2.field_x + param2.field_o, (byte) 94), u.a(param2.field_x, (byte) 94), (byte) 125);
           var7 = 54;
           var8 = 128;
           var9 = -1;
@@ -480,7 +480,7 @@ final class cv {
           stackIn_17_1 = u.a(param2.field_x, (byte) 94);
           stackIn_17_2 = param2.field_B;
           stackIn_17_3 = param2.field_o;
-          stackIn_17_4 = tb.field_j;
+          stackIn_17_4 = EffectPresentation.field_j;
           if (param3) {
             stackIn_18_5 = nd.field_b;
           } else {
@@ -1148,7 +1148,7 @@ final class cv {
             rs.field_n.a(ft.field_l + var23_ref.field_c, db.a(true, var23_ref.field_h.field_A + 31), u.a(-10 + var6Lifetime2, (byte) 94), -13 + (-var23_ref.field_h.field_A + var4Lifetime1), var23_ref.field_h.field_x, 16776960, 0, 0, 1, 0);
             if (null != var19) {
               var25_intLifetime2 = 100;
-              var26Lifetime1 = sm.field_d;
+              var26Lifetime1 = AiPlanningStrategy.field_d;
               var27Lifetime2 = rs.field_n.a(((sd) (var19)).field_u, var25_intLifetime2, 0);
               var28Lifetime2 = -(var27Lifetime2 / 2) + (25 + ko.field_b);
               SoftwareRaster.b(db.a(true, var26Lifetime1), u.a(var28Lifetime2, (byte) 94), var25_intLifetime2, var27Lifetime2 + 2, 0, 255);
@@ -1415,7 +1415,7 @@ final class cv {
           var3 = new cq(param1);
           var4 = mh.a(this.field_l, param0 - 119, var3.field_k);
           if (~var4 < param0) {
-            var3.field_r = ir.a(10602, var4);
+            var3.field_r = AiInfluenceMap.a(10602, var4);
             var3.field_A = var4;
           }
           this.field_i.a(var3, (long)var3.field_k, 122);
@@ -1548,7 +1548,7 @@ final class cv {
                 this.b((byte) 107);
                 return;
               }
-              var2_int = this.field_e.a(sm.field_d - db.a(true, 0), (byte) -79, ko.field_b - u.a(0, (byte) 94));
+              var2_int = this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -79, ko.field_b - u.a(0, (byte) 94));
               if (-1 < var2_int) {
                 var3 = null;
                 var4_ref = (cq) (this.field_i.b(1));
@@ -1578,7 +1578,7 @@ final class cv {
                       wr.field_L = 224;
                       kw.field_R = 2297;
                       hc.field_b = hc.field_b + 1;
-                      hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
+                      hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
                       hc.field_b = Math.abs(hc.field_b);
                       var5 = hc.field_b % 4;
                       var6 = var5;
@@ -1723,7 +1723,7 @@ final class cv {
                   return;
                 }
                 if (var4_ref.field_l &&
-                  var4_ref.a(sm.field_d, ko.field_b, 122)) {
+                  var4_ref.a(AiPlanningStrategy.field_d, ko.field_b, 122)) {
                   var2 = var4_ref;
                 } else {
                   var4_ref = (cq) (((bg) (var3)).b((byte) 80));
@@ -2197,8 +2197,8 @@ final class cv {
             if (var8 == 0) {
               if (stackIn_96_0 == stackIn_96_1) {
                 if (var5_ref_cq.field_l &&
-                  sm.field_d >= db.a(true, var5_ref_cq.field_y) &&
-                  sm.field_d <= db.a(true, var5_ref_cq.field_y + var5_ref_cq.field_B) &&
+                  AiPlanningStrategy.field_d >= db.a(true, var5_ref_cq.field_y) &&
+                  AiPlanningStrategy.field_d <= db.a(true, var5_ref_cq.field_y + var5_ref_cq.field_B) &&
                   ko.field_b >= u.a(var5_ref_cq.field_x, (byte) 94) &&
                   ko.field_b <= u.a(var5_ref_cq.field_o + var5_ref_cq.field_x, (byte) 94)) {
                   stackIn_38_0 = 1;
@@ -2208,7 +2208,7 @@ final class cv {
                 var6Lifetime1 = stackIn_38_0;
                 if (this.field_e != null) {
                   if (var5_ref_cq.field_l &&
-                    this.field_e.a(sm.field_d - db.a(true, 0), (byte) -128, ko.field_b - u.a(0, (byte) 94)) == var5_ref_cq.field_k) {
+                    this.field_e.a(AiPlanningStrategy.field_d - db.a(true, 0), (byte) -128, ko.field_b - u.a(0, (byte) 94)) == var5_ref_cq.field_k) {
                     stackIn_48_0 = 1;
                   } else {
                     stackIn_48_0 = 0;

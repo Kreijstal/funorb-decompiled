@@ -53,8 +53,8 @@ final class lt extends ev {
 
     public final void a(int param0, int param1, int param2) {
         super.a(param0, param1, param2);
-        if (ir.field_d != null) {
-          ir.field_d.j(-128);
+        if (AiInfluenceMap.field_d != null) {
+          AiInfluenceMap.field_d.j(-128);
         }
     }
 

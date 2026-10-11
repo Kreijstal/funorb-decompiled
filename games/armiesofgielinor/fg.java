@@ -107,7 +107,7 @@ final class fg extends IntrusiveNode {
             }
           }
           var1_intLifetime1 = -93 / ((28 - param0) / 54);
-          ql.field_j = null;
+          PopupPresentation.field_j = null;
           System.gc();
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "fg.C(" + param0 + ')');

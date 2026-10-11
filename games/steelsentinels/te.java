@@ -329,7 +329,7 @@ final class te {
             stackIn_65_2 = var6Lifetime1;
             break;
           }
-          IsaacRandom.a(stackIn_65_0, stackIn_65_1, stackIn_65_2);
+          IsaacRandom.insertNodeBefore(stackIn_65_0, stackIn_65_1, stackIn_65_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

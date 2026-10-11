@@ -6,7 +6,7 @@ class ro extends pt implements he {
     private boolean field_sb;
     static String field_kb;
     private boolean field_wb;
-    static v field_ob;
+    static BattleCamera field_ob;
     private boolean field_mb;
     static int field_pb;
     static int[] field_lb;

@@ -184,11 +184,11 @@ final class dl {
           }
           vi.a(-68);
           CombatEvent.field_I.a(true, param3);
-          if (aw.field_i != null) {
+          if (BestScoreStrategy.field_i != null) {
             if (bb.field_a) {
-              aw.field_i.a(param3, -6226, CombatEvent.field_I.field_V, CombatEvent.field_I.field_D);
+              BestScoreStrategy.field_i.a(param3, -6226, CombatEvent.field_I.field_V, CombatEvent.field_I.field_D);
             } else {
-              aw.field_i = null;
+              BestScoreStrategy.field_i = null;
             }
           }
           for (var4_int = param2; var4_int < 5; var4_int++) {

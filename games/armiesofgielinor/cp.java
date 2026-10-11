@@ -11,11 +11,11 @@ final class cp {
     static String field_f;
     static je field_d;
 
-    final static vb a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, eo param5) {
-        vb var6 = null;
+    final static EventPresenter a(GameplayController param0, int param1, Battlefield param2, boolean param3, GameEvent param4, eo param5) {
+        EventPresenter var6 = null;
         RuntimeException var6_ref = null;
-        vb stackIn_2_0 = null;
-        vb stackIn_6_0 = null;
+        EventPresenter stackIn_2_0 = null;
+        EventPresenter stackIn_6_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -28,11 +28,11 @@ final class cp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 10120) {
-            stackIn_2_0 = (vb) null;
+            stackIn_2_0 = (EventPresenter) null;
             return stackIn_2_0;
           }
-          var6 = new vb(param0, param2, param5, param4, param3);
-          if (!var6.e(-19702)) {
+          var6 = new EventPresenter(param0, param2, param5, param4, param3);
+          if (!var6.initialize(-19702)) {
             return null;
           }
           stackIn_6_0 = var6;

@@ -3,40 +3,40 @@
  */
 import java.io.*;
 
-final class qv implements pa {
-    private int[] field_h;
-    private int field_p;
+final class MovementPresentation implements EventPresentation {
+    private int[] pathDirections;
+    private int pathLength;
     private int field_f;
     private int[] field_k;
-    private int field_u;
+    private int elapsedFrames;
     private int[] field_m;
     private int field_a;
     private int[] field_g;
     private int[] field_c;
     private int[] field_b;
     private int[] field_n;
-    private Battlefield field_o;
-    private int field_w;
+    private Battlefield battlefield;
+    private int pathIndex;
     private int[] field_e;
     private int[] field_d;
-    private v field_v;
-    private vb field_q;
+    private BattleCamera camera;
+    private EventPresenter presenter;
     static char[] field_i;
     private int field_t;
     static h field_l;
-    private int field_s;
+    private int durationFrames;
     static int[] field_j;
     static String field_r;
 
-    public final boolean b(byte param0) {
-        if (param0 >= -25) {
+    public final boolean isCombatViewReady(byte obfuscationGuard) {
+        if (obfuscationGuard >= -25) {
           return true;
         }
         return false;
     }
 
     private final void h(int param0) {
-        if (this.field_q.field_r.field_m != 7) {
+        if (this.presenter.event.eventKind != 7) {
           this.field_f = nu.field_z[ek.field_d];
         } else {
           this.field_f = 50;
@@ -44,7 +44,7 @@ final class qv implements pa {
         if (param0 != -7432) {
           return;
         }
-        this.field_s = this.field_p * this.field_f;
+        this.durationFrames = this.pathLength * this.field_f;
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, byte[] param4, int param5) {
@@ -73,7 +73,7 @@ final class qv implements pa {
         }
     }
 
-    public final boolean a(GameEvent param0, byte param1) {
+    public final boolean initialize(GameEvent event, byte obfuscationGuard) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -91,18 +91,18 @@ final class qv implements pa {
         int[] var17 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 57) {
-            this.field_u = 46;
+          if (obfuscationGuard != 57) {
+            this.elapsedFrames = 46;
           }
-          this.field_u = 0;
-          if (param0.field_m != 0) {
-            if (7 == param0.field_m) {
-              var10 = (ParasiteEvent) (param0);
+          this.elapsedFrames = 0;
+          if (event.eventKind != 0) {
+            if (7 == event.eventKind) {
+              var10 = (ParasiteEvent) (event);
               var4 = var10.field_D + var10.field_B * this.field_t;
-              var10.unit = this.field_o.getUnitAt(var10.field_B, true, var10.field_D);
+              var10.unit = this.battlefield.getUnitAt(var10.field_B, true, var10.field_D);
               if (null == var10.unit) {
                 var11 = Battlefield.field_q + ": Can see parasite";
-                this.field_o.a(0, var11, param0);
+                this.battlefield.a(0, var11, event);
                 return false;
               }
               var14 = new int[1];
@@ -122,20 +122,20 @@ final class qv implements pa {
                   var14[0] = 3;
                 }
               }
-              var10.a(var10.unit, param1 - 45);
+              var10.a(var10.unit, obfuscationGuard - 45);
               this.a(var17, true, var4);
-              this.b(var10, (byte) -94);
+              this.advanceFrame(var10, (byte) -94);
             }
           } else {
-            var8 = (MoveEvent) (param0);
+            var8 = (MoveEvent) (event);
             var4 = this.field_t * var8.startY + var8.startX;
             this.a(var8.pathDirections, true, var4);
             if (null == var8.unit) {
-              var8.unit = this.field_o.getUnitAt(var8.startY, true, var8.startX);
+              var8.unit = this.battlefield.getUnitAt(var8.startY, true, var8.startX);
             }
             if (var8.unit == null) {
               var9 = Battlefield.field_q + ": Can see start";
-              this.field_o.a(0, var9, param0);
+              this.battlefield.a(0, var9, event);
               return false;
             }
             if (var8.unit.packedFlag256) {
@@ -144,7 +144,7 @@ final class qv implements pa {
             }
             var8.unit.field_z = 1;
             var8.a(var8.unit, 12);
-            this.b(var8, (byte) 58);
+            this.advanceFrame(var8, (byte) 58);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -152,12 +152,12 @@ final class qv implements pa {
           var3 = decompiledCaughtException;
           stackIn_32_0 = var3;
           stackIn_32_1 = new StringBuilder().append("qv.E(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class qv implements pa {
             var2 = sf.field_P.length;
           }
           var3 = fd.field_n[0].length;
-          aw.field_j = new int[var2][var3][];
+          BestScoreStrategy.field_j = new int[var2][var3][];
           if (param0 != -11757) {
             return;
           }
@@ -201,10 +201,10 @@ final class qv implements pa {
     private final void d(byte param0) {
         this.field_e[0] = this.field_d[0];
         this.field_e[1] = this.field_d[1];
-        if (0 >= this.field_p) {
+        if (0 >= this.pathLength) {
           return;
         }
-        int var2 = this.field_h[0];
+        int var2 = this.pathDirections[0];
         this.field_k[1] = 0;
         this.field_k[0] = 0;
         this.a(var2, 96);
@@ -215,9 +215,9 @@ final class qv implements pa {
         this.field_n[0] = this.field_k[0] + this.field_e[0];
     }
 
-    public final void a(byte param0) {
-        if (param0 != -52) {
-          qv.c(101);
+    public final void drawOverlayLayer(byte obfuscationGuard) {
+        if (obfuscationGuard != -52) {
+          MovementPresentation.c(101);
         }
     }
 
@@ -225,26 +225,26 @@ final class qv implements pa {
         if (param0) {
           this.field_b = (int[]) null;
         }
-        int var2 = this.field_u / this.field_f;
-        this.field_a = (-(this.field_f * this.field_w) + this.field_u << 8) / this.field_f;
-        if (var2 == this.field_w) {
+        int var2 = this.elapsedFrames / this.field_f;
+        this.field_a = (-(this.field_f * this.pathIndex) + this.elapsedFrames << 8) / this.field_f;
+        if (var2 == this.pathIndex) {
           return false;
         }
-        if (this.field_w + 1 == var2) {
-          this.field_w = var2;
+        if (this.pathIndex + 1 == var2) {
+          this.pathIndex = var2;
           this.field_e[1] = this.field_n[1];
           this.field_e[0] = this.field_n[0];
           this.field_k[1] = 0;
           this.field_k[0] = 0;
-          this.field_a = (-(this.field_f * this.field_w) + this.field_u << 8) / this.field_f;
-          this.a(this.field_h[this.field_w], 126);
+          this.field_a = (-(this.field_f * this.pathIndex) + this.elapsedFrames << 8) / this.field_f;
+          this.a(this.pathDirections[this.pathIndex], 126);
           this.field_n[0] = this.field_e[0] + this.field_k[0];
           this.field_n[1] = this.field_k[1] + this.field_e[1];
           return true;
         }
         this.i(-14628);
-        this.field_w = var2;
-        this.field_a = (-(this.field_f * this.field_w) + this.field_u << 8) / this.field_f;
+        this.pathIndex = var2;
+        this.field_a = (-(this.field_f * this.pathIndex) + this.elapsedFrames << 8) / this.field_f;
         return true;
     }
 
@@ -264,9 +264,9 @@ final class qv implements pa {
         }
     }
 
-    public final void c(byte param0) {
-        if (param0 >= -119) {
-          this.a((byte) 114);
+    public final void drawBaseLayer(byte obfuscationGuard) {
+        if (obfuscationGuard >= -119) {
+          this.drawOverlayLayer((byte) 114);
         }
     }
 
@@ -379,11 +379,11 @@ final class qv implements pa {
     }
 
     private final int e(byte param0) {
-        if (this.field_h == null ||
-          this.field_h.length < 1) {
+        if (this.pathDirections == null ||
+          this.pathDirections.length < 1) {
           return -1;
         }
-        int var2 = this.field_h[this.field_w];
+        int var2 = this.pathDirections[this.pathIndex];
         int var3 = 1792;
         if (1 == var2) {
           var3 -= 1024;
@@ -412,8 +412,8 @@ final class qv implements pa {
         this.field_b[1] = var3 + this.field_c[1];
     }
 
-    public final void a(int param0) {
-        if (param0 < 94) {
+    public final void requestFinish(int obfuscationGuard) {
+        if (obfuscationGuard < 94) {
           this.field_g = (int[]) null;
         }
     }
@@ -428,8 +428,8 @@ final class qv implements pa {
         if (param0 != -14628) {
           this.e(87);
         }
-        for (var2 = 0; var2 <= this.field_w; var2++) {
-          this.a(this.field_h[this.field_w], 104);
+        for (var2 = 0; var2 <= this.pathIndex; var2++) {
+          this.a(this.pathDirections[this.pathIndex], 104);
           this.field_n[0] = this.field_n[0] + this.field_k[0];
           this.field_n[1] = this.field_n[1] + this.field_k[1];
         }
@@ -438,7 +438,7 @@ final class qv implements pa {
     }
 
     private final void f(byte param0) {
-        this.field_w = this.field_p - 1;
+        this.pathIndex = this.pathLength - 1;
         this.i(-14628);
         if (param0 > -79) {
           this.field_k = (int[]) null;
@@ -457,11 +457,11 @@ final class qv implements pa {
         field_i = null;
     }
 
-    public final boolean b(int param0) {
-        if (param0 != 8865) {
+    public final boolean isFinished(int obfuscationGuard) {
+        if (obfuscationGuard != 8865) {
           this.field_d = (int[]) null;
         }
-        return this.field_s <= this.field_u ? true : false;
+        return this.durationFrames <= this.elapsedFrames ? true : false;
     }
 
     private final void a(boolean param0, GameEvent param1) {
@@ -473,14 +473,14 @@ final class qv implements pa {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_q.field_x = this.f(-4923);
+          this.presenter.tileIndex = this.f(-4923);
           if (!param0) {
-            qv.j(101);
+            MovementPresentation.j(101);
           }
           var3_int = 0;
           var4 = 0;
-          if (this.field_q.field_x != -1) {
-            if (this.field_q.field_x == -2) {
+          if (this.presenter.tileIndex != -1) {
+            if (this.presenter.tileIndex == -2) {
               var3_int = this.field_n[0];
               var4 = this.field_n[1];
             }
@@ -488,7 +488,7 @@ final class qv implements pa {
             var3_int = this.field_e[0];
             var4 = this.field_e[1];
           }
-          this.field_q.field_x = var4 * this.field_t + var3_int;
+          this.presenter.tileIndex = var4 * this.field_t + var3_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -513,7 +513,7 @@ final class qv implements pa {
         return stackIn_7_0;
     }
 
-    qv(Battlefield param0, v param1, vb param2) {
+    MovementPresentation(Battlefield battlefield, BattleCamera camera, EventPresenter presenter) {
         RuntimeException var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -526,11 +526,11 @@ final class qv implements pa {
         try {
           this.field_n = new int[2];
           this.field_c = new int[2];
-          this.field_o = param0;
+          this.battlefield = battlefield;
           this.field_m = new int[2];
-          this.field_v = param1;
-          this.field_t = param0.mapWidth;
-          this.field_q = param2;
+          this.camera = camera;
+          this.field_t = battlefield.mapWidth;
+          this.presenter = presenter;
           this.field_b = new int[2];
           this.field_g = new int[2];
           this.field_e = new int[2];
@@ -542,19 +542,19 @@ final class qv implements pa {
           var4 = decompiledCaughtException;
           stackIn_5_0 = var4;
           stackIn_5_1 = new StringBuilder().append("qv.<init>(");
-          if (param0 == null) {
+          if (battlefield == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
           stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',');
-          if (param1 == null) {
+          if (camera == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (presenter == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -570,13 +570,13 @@ final class qv implements pa {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h = param0;
-          this.field_p = this.field_h.length;
+          this.pathDirections = param0;
+          this.pathLength = this.pathDirections.length;
           this.field_d[1] = param2 / this.field_t;
           this.field_d[0] = -(this.field_d[1] * this.field_t) + param2;
           this.f((byte) -116);
           this.h(-7432);
-          this.field_w = 0;
+          this.pathIndex = 0;
           if (!param1) {
             return;
           }
@@ -596,7 +596,7 @@ final class qv implements pa {
         }
     }
 
-    public final void b(GameEvent param0, byte param1) {
+    public final void advanceFrame(GameEvent event, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Unit var4 = null;
@@ -607,47 +607,47 @@ final class qv implements pa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(false)) {
-            dh.a(param0.unit.unitType, 0, 32);
+            dh.a(event.unit.unitType, 0, 32);
           }
-          if (param0 == null) {
+          if (event == null) {
             return;
           }
-          this.a(true, param0);
+          this.a(true, event);
           this.d(22);
           this.e(1);
-          this.field_q.field_m = this.field_b[0];
-          this.field_q.field_v = this.field_b[1];
+          this.presenter.screenX = this.field_b[0];
+          this.presenter.screenY = this.field_b[1];
           var3_int = this.e((byte) -69);
-          var4 = param0.unit;
-          if (param0.field_m != 7) {
+          var4 = event.unit;
+          if (event.eventKind != 7) {
             var4.field_z = 1;
           } else {
             var4.field_z = 5;
           }
-          this.field_q.field_u.a(1 + this.field_q.field_m, -35, this.field_q.field_v - 6, var3_int, var4);
-          var5 = 115 / ((param1 + 26) / 48);
-          this.field_u = this.field_u + 1;
+          this.presenter.field_u.a(1 + this.presenter.screenX, -35, this.presenter.screenY - 6, var3_int, var4);
+          var5 = 115 / ((obfuscationGuard + 26) / 48);
+          this.elapsedFrames = this.elapsedFrames + 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
           stackIn_11_1 = new StringBuilder().append("qv.Q(");
-          if (param0 == null) {
+          if (event == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ig.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     private final int f(int param0) {
         int var2;
         int var3;
-        if (null != this.field_h &&
-          1 <= this.field_h.length) {
-          var2 = this.field_h[this.field_w];
+        if (null != this.pathDirections &&
+          1 <= this.pathDirections.length) {
+          var2 = this.pathDirections[this.pathIndex];
           if (param0 != -4923) {
             return -113;
           }
@@ -671,20 +671,20 @@ final class qv implements pa {
 
     private final void d(int param0) {
         if (param0 <= 12) {
-          this.field_q = (vb) null;
+          this.presenter = (EventPresenter) null;
         }
-        this.field_v.field_c[1] = this.field_e[1];
-        this.field_v.field_c[0] = this.field_e[0];
-        this.field_v.f(-88);
-        this.field_v.i(0);
-        this.field_c[1] = this.field_v.field_e[1];
-        this.field_c[0] = this.field_v.field_e[0];
-        this.field_v.field_c[1] = this.field_n[1];
-        this.field_v.field_c[0] = this.field_n[0];
-        this.field_v.f(-54);
-        this.field_v.i(0);
-        this.field_m[0] = this.field_v.field_e[0];
-        this.field_m[1] = this.field_v.field_e[1];
+        this.camera.field_c[1] = this.field_e[1];
+        this.camera.field_c[0] = this.field_e[0];
+        this.camera.f(-88);
+        this.camera.i(0);
+        this.field_c[1] = this.camera.field_e[1];
+        this.field_c[0] = this.camera.field_e[0];
+        this.camera.field_c[1] = this.field_n[1];
+        this.camera.field_c[0] = this.field_n[0];
+        this.camera.f(-54);
+        this.camera.i(0);
+        this.field_m[0] = this.camera.field_e[0];
+        this.field_m[1] = this.camera.field_e[1];
     }
 
     static {

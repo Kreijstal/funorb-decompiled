@@ -2417,7 +2417,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TXT_RANGES2");
                 if (null != var2) {
-                  sm.field_e = uu.a(var2, (byte) 78);
+                  AiPlanningStrategy.field_e = uu.a(var2, (byte) 78);
                 }
                 var2 = fk.a(false, "TXT_RANGE");
                 if (null != var2) {
@@ -3171,7 +3171,7 @@ final class em {
                 }
                 var2 = fk.a(false, "SKIP_ON");
                 if (var2 != null) {
-                  sk.field_N = uu.a(var2, (byte) -126);
+                  CombatPresentation.field_N = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "SKIP_OFF");
                 if (null != var2) {
@@ -4835,7 +4835,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREEN_LANDSCAPE");
                 if (var2 != null) {
-                  v.field_f = uu.a(var2, (byte) 77);
+                  BattleCamera.field_f = uu.a(var2, (byte) 77);
                 }
                 var2 = fk.a(false, "TTREEN_INFLUENCE");
                 if (null != var2) {
@@ -4927,7 +4927,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREED_DRAGONSCALE");
                 if (null != var2) {
-                  jb.field_n = uu.a(var2, (byte) -122);
+                  AiActionCandidate.field_n = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "TTREED_CAMOUFLAGE");
                 if (null != var2) {
@@ -5007,11 +5007,11 @@ final class em {
                 }
                 var2 = fk.a(false, "TTREED_SOURCERY");
                 if (null != var2) {
-                  lf.field_v = uu.a(var2, (byte) -101);
+                  BattleCharacter.field_v = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "TTREED_PRAYER");
                 if (var2 != null) {
-                  ir.field_l = uu.a(var2, (byte) -102);
+                  AiInfluenceMap.field_l = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "TTREED_TONICS");
                 if (var2 != null) {
@@ -5075,7 +5075,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOTENEMY");
                 if (null != var2) {
-                  qv.field_r = uu.a(var2, (byte) 84);
+                  MovementPresentation.field_r = uu.a(var2, (byte) 84);
                 }
                 var2 = fk.a(false, "TERROR_NOTKQUEEN");
                 if (var2 != null) {
@@ -5169,7 +5169,7 @@ final class em {
                 }
                 var2 = fk.a(false, "TERROR_NOSOULSTONELEADER");
                 if (null != var2) {
-                  cl.field_w = uu.a(var2, (byte) -123);
+                  AiUnitPlanner.field_w = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "TERROR_BLADEFLYER");
                 if (var2 != null) {
@@ -5631,20 +5631,20 @@ final class em {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        id var3 = null;
+        CampaignUnitOverride var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         sd var7 = null;
-        id[] var8 = null;
+        CampaignUnitOverride[] var8 = null;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = new id();
-          var3.field_a = param2.k(0);
-          var3.field_e = param2.h((byte) 121);
-          var3.field_b = param2.e((byte) -104);
+          var3 = new CampaignUnitOverride();
+          var3.unitType = param2.k(0);
+          var3.displayName = param2.h((byte) 121);
+          var3.strength = param2.e((byte) -104);
           if (param1 != -7) {
             return;
           }
@@ -5661,7 +5661,7 @@ final class em {
             }
             if (~var7.field_o == ~var7.field_k.length) {
               var8 = var7.field_k;
-              var7.field_k = new id[10 + var8.length];
+              var7.field_k = new CampaignUnitOverride[10 + var8.length];
               vm.a(var8, 0, var7.field_k, 0, var8.length);
             }
             var5++;

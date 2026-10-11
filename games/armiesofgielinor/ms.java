@@ -118,7 +118,7 @@ class ms extends IntrusiveNode {
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 >= 111) {
           ac.field_n = false;
-          aw.field_h = null;
+          BestScoreStrategy.field_h = null;
           if (fh.field_i) {
             qc.field_a.o(4259);
             return;
@@ -126,11 +126,11 @@ class ms extends IntrusiveNode {
           var1 = vt.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              aw.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
             } else {
-              aw.field_h = hh.field_a;
+              BestScoreStrategy.field_h = hh.field_a;
             }
-            aw.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);
@@ -138,18 +138,18 @@ class ms extends IntrusiveNode {
         }
         ms.e(75);
         ac.field_n = false;
-        aw.field_h = null;
+        BestScoreStrategy.field_h = null;
         if (fh.field_i) {
           qc.field_a.o(4259);
         } else {
           var1 = vt.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              aw.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
             } else {
-              aw.field_h = hh.field_a;
+              BestScoreStrategy.field_h = hh.field_a;
             }
-            aw.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) aw.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
+            BestScoreStrategy.field_h = SpellCastEvent.a(593277313, new CharSequence[]{(CharSequence) ((Object) BestScoreStrategy.field_h), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) c.field_a)});
           }
           qc.field_a.b(true);
           qf.a(56);

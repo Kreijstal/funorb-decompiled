@@ -275,7 +275,7 @@ final class DamageEvent extends GameEvent {
             return stackIn_3_0;
           }
           if (th.field_a != 2) {
-            stackIn_7_0 = ql.field_l;
+            stackIn_7_0 = PopupPresentation.field_l;
             return stackIn_7_0;
           }
           var8 = lg.a(param0, (byte) -34);
@@ -332,7 +332,7 @@ final class DamageEvent extends GameEvent {
     DamageEvent(Unit param0, int param1, boolean param2) {
         try {
           this.unit = param0;
-          this.field_m = 15;
+          this.eventKind = 15;
           this.poison = param2 ? true : false;
           this.damageAmount = param1;
         } catch (RuntimeException runtimeException) {

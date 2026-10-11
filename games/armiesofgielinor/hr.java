@@ -3,7 +3,7 @@
  */
 final class hr {
     static je field_m;
-    private gd field_a;
+    private ModelMesh field_a;
     private int field_f;
     static RgbSprite field_b;
     private int field_j;
@@ -67,46 +67,46 @@ final class hr {
         if (this.field_c < 0) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         if (SpellAreaSelection.field_k.length <= this.field_c) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         if (SpellAreaSelection.field_k[this.field_c] == null) {
           this.field_c = 0;
           if (param0 >= 42) {
-            this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+            this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
             this.field_k = nh.field_D[this.field_c];
             return;
           }
           this.a(54, 25, (byte) -41);
-          this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         if (param0 >= 42) {
-          this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+          this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
           this.field_k = nh.field_D[this.field_c];
           return;
         }
         this.a(54, 25, (byte) -41);
-        this.field_a = (gd) (SpellAreaSelection.field_k[this.field_c][0]);
+        this.field_a = (ModelMesh) (SpellAreaSelection.field_k[this.field_c][0]);
         this.field_k = nh.field_D[this.field_c];
     }
 
@@ -357,8 +357,8 @@ final class hr {
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3) {
-        gd var18_ref = null;
-        gd var20 = null;
+        ModelMesh var18_ref = null;
+        ModelMesh var20 = null;
         Object var17 = null;
         Object var18 = null;
         int var5 = param0 ? 1 : 0;
@@ -375,7 +375,7 @@ final class hr {
         if (!this.field_l) {
           tm.a();
           tm.c(param2, param3);
-          var18_ref = (gd) (this.field_a.a(var5 != 0, false, var6 != 0));
+          var18_ref = (ModelMesh) (this.field_a.a(var5 != 0, false, var6 != 0));
           var20 = var18_ref;
           var18_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
           if (param1) {
@@ -386,8 +386,8 @@ final class hr {
         }
         tm.a();
         tm.c(param2, param3);
-        gd var17_ref = (gd) (this.field_g.a(var5 != 0, true, var6 != 0, this.field_a));
-        gd var19 = var17_ref;
+        ModelMesh var17_ref = (ModelMesh) (this.field_g.a(var5 != 0, true, var6 != 0, this.field_a));
+        ModelMesh var19 = var17_ref;
         var17_ref.b(hk.field_Jb[this.field_c], hk.field_Jb[this.field_c], hk.field_Jb[this.field_c]);
         if (param1) {
           np.a(param0, var19);
@@ -432,7 +432,7 @@ final class hr {
           io.a(var3, (byte) -34);
           return;
         }
-        this.field_a = (gd) null;
+        this.field_a = (ModelMesh) null;
         io.a(var3, (byte) -34);
     }
 

@@ -39,8 +39,8 @@ final class tl implements Iterator {
         try {
           try {
             var9 = si.field_b.getGraphics();
-            if (null == lf.field_g) {
-              lf.field_g = new java.awt.Font("Helvetica", 1, 13);
+            if (null == BattleCharacter.field_g) {
+              BattleCharacter.field_g = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
@@ -63,7 +63,7 @@ final class tl implements Iterator {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(param4 * 3 + 2, 2, 300 - param4 * 3, 30);
-              var10.setFont(lf.field_g);
+              var10.setFont(BattleCharacter.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - 6 * param2.length()) / 2, 22);
               var9.drawImage(gp.field_e, -152 + bn.field_b / 2, dt.field_a / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -78,14 +78,14 @@ final class tl implements Iterator {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, 1 + var8, 301, 31);
               var9.fillRect(param4 * 3 + 2 + var7, var8 + 2, -(param4 * 3) + 300, 30);
-              var9.setFont(lf.field_g);
+              var9.setFont(BattleCharacter.field_g);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, var7 + (304 - param2.length() * 6) / 2, 22 + var8);
             }
             if (an.field_G == null) {
               return;
             }
-            var9.setFont(lf.field_g);
+            var9.setFont(BattleCharacter.field_g);
             var9.setColor(java.awt.Color.white);
             var9.drawString(an.field_G, bn.field_b / 2 - an.field_G.length() * 6 / 2, dt.field_a / 2 - 26);
             return;

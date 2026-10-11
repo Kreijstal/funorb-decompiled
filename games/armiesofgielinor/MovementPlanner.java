@@ -445,7 +445,7 @@ final class MovementPlanner {
         this.actionAllowed = this.actionAllowed & (!this.unit.movementSpent ? true : false);
     }
 
-    final void a(v param0, int param1) {
+    final void a(BattleCamera param0, int param1) {
         int var10 = 0;
         RgbSprite[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;

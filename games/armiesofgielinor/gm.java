@@ -27,7 +27,7 @@ final class gm implements lv {
           if (param1 < 71) {
             field_f = (tu) null;
           }
-          var2 = new d(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, qv.field_j, vj.field_j);
+          var2 = new d(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, vj.field_j);
           rj.d((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -196,10 +196,10 @@ final class gm implements lv {
           var2 = var27.k(0);
           if (0 == var2) {
             var3 = var27.e((byte) -104);
-            var4_ref = (wj) (lf.field_c.first((byte) 100));
+            var4_ref = (wj) (BattleCharacter.field_c.first((byte) 100));
             while (var4_ref != null) {
               if (var4_ref.field_r != var3) {
-                var4_ref = (wj) (lf.field_c.next((byte) 123));
+                var4_ref = (wj) (BattleCharacter.field_c.next((byte) 123));
                 continue;
               }
               break;

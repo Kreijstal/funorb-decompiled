@@ -66,18 +66,18 @@ final class pl extends SpellAreaEffect {
 
     final static wj a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        wj var5 = (wj) (lf.field_c.first((byte) 114));
+        wj var5 = (wj) (BattleCharacter.field_c.first((byte) 114));
         while (var5 != null) {
           if (param1 == var5.field_r) {
             return var5;
           }
-          var5 = (wj) (lf.field_c.next((byte) 123));
+          var5 = (wj) (BattleCharacter.field_c.next((byte) 123));
         }
         var5 = new wj();
         var5.field_p = param4;
         var5.field_k = param3;
         var5.field_r = param1;
-        lf.field_c.addLast((byte) -119, (IntrusiveNode) (var5));
+        BattleCharacter.field_c.addLast((byte) -119, (IntrusiveNode) (var5));
         gn.a(param2, var5, 0);
         if (param0 == 34) {
           return var5;

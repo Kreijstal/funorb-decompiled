@@ -29,7 +29,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
     int statusEffectValue;
     int immobilizedTurns;
     int objectiveId;
-    cl field_p;
+    AiUnitPlanner aiPlanner;
     int[] field_R;
     static String field_T;
     int field_z;
@@ -122,7 +122,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
 
     final boolean k(byte param0) {
         if (param0 < 75) {
-          this.field_p = (cl) null;
+          this.aiPlanner = (AiUnitPlanner) null;
         }
         return this.unitType == 27 ? true : false;
     }

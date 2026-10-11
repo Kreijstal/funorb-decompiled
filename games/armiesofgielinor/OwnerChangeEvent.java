@@ -240,7 +240,7 @@ final class OwnerChangeEvent extends GameEvent {
           if (me.field_e == -1 &&
             of.field_Ib == -1) {
             of.field_Ib = ko.field_b;
-            me.field_e = sm.field_d;
+            me.field_e = AiPlanningStrategy.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
@@ -318,7 +318,7 @@ final class OwnerChangeEvent extends GameEvent {
           this.field_z = param2 ? true : false;
           this.applied = false;
           this.newOwnerPlayer = param1;
-          this.field_m = 23;
+          this.eventKind = 23;
           this.unit = param0;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "as.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

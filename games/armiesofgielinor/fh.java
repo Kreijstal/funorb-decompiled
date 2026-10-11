@@ -21,7 +21,7 @@ final class fh {
         this.a(param1, this.field_a + 1, param0 ^ -27002);
     }
 
-    final static void a(int param0, gd param1) {
+    final static void a(int param0, ModelMesh param1) {
         try {
           if (param0 <= 123) {
             field_c = false;
@@ -156,7 +156,7 @@ final class fh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        gd var15 = null;
+        ModelMesh var15 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -167,8 +167,8 @@ final class fh {
           var9 = tm.field_n[150];
           var10 = tm.field_e[150];
           if (param2 != 56) {
-            var15 = (gd) null;
-            fh.a(104, (gd) null);
+            var15 = (ModelMesh) null;
+            fh.a(104, (ModelMesh) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;
@@ -209,7 +209,7 @@ final class fh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        gd var15 = null;
+        ModelMesh var15 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -220,8 +220,8 @@ final class fh {
           var9 = tm.field_n[150];
           var10 = tm.field_e[150];
           if (param2 != 56) {
-            var15 = (gd) null;
-            fh.a(104, (gd) null);
+            var15 = (ModelMesh) null;
+            fh.a(104, (ModelMesh) null);
           }
           var11 = -(param6 * var9) + var10 * param0 >> 16;
           var12 = param0 * var9 + param6 * var10 >> 16;

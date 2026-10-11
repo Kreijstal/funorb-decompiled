@@ -65,12 +65,12 @@ final class fu {
           } else {
             if (param1 == -1) {
               if (param2 > 0) {
-                this.field_h = lf.field_h[161];
+                this.field_h = BattleCharacter.field_h[161];
               } else {
                 this.field_h = null;
               }
             } else {
-              this.field_h = lf.field_h[uc.spellDefinitions[param1][2]];
+              this.field_h = BattleCharacter.field_h[uc.spellDefinitions[param1][2]];
             }
           }
           if (param0 != null) {

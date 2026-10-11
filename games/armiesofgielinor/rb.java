@@ -193,10 +193,10 @@ abstract class rb implements n {
           var7Lifetime1 = 0;
           var8Lifetime1 = ae.b(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = g.a(param0 - 10, var6Lifetime1) >> 8;
-          if (sm.field_d != -1 &&
+          if (AiPlanningStrategy.field_d != -1 &&
             ko.field_b != -1) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = sm.field_d - 320;
+            var7Lifetime1 = AiPlanningStrategy.field_d - 320;
             var8Lifetime1 = -ko.field_b + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));

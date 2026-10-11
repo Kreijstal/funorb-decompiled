@@ -5,27 +5,27 @@ final class Explosion extends DualNode {
     private Projectile projectile;
     static int field_P;
     private CombatWorld world;
-    private int field_z;
+    private int durationTicks;
     private int field_N;
     int field_G;
-    int field_H;
-    int field_M;
-    int field_V;
+    int worldX;
+    int worldY;
+    int velocityX;
     static RgbSprite field_L;
     static String field_Q;
     private boolean field_R;
     boolean field_O;
     static RgbSprite field_B;
     static RgbSprite[] field_S;
-    int field_T;
+    int velocityY;
     static String field_E;
     int field_K;
     private int field_y;
-    private Sentinel[] field_X;
+    private Sentinel[] affectedSentinels;
     static String field_W;
     int field_U;
     int field_F;
-    private int field_Y;
+    private int ageTicks;
     static NodeDeque field_A;
     static RgbSprite[] field_J;
     static SceneWidget field_C;
@@ -42,12 +42,12 @@ final class Explosion extends DualNode {
         if (!ka.field_V) {
           return;
         }
-        var4 = param1 + (this.field_H >> 8);
-        var5 = param0 + (this.field_M >> 8);
+        var4 = param1 + (this.worldX >> 8);
+        var5 = param0 + (this.worldY >> 8);
         var6 = 2 % ((param2 - 30) / 54);
-        var7 = (this.field_Y + (-this.field_Y + this.field_z) / 4) * this.field_U / this.field_z;
+        var7 = (this.ageTicks + (-this.ageTicks + this.durationTicks) / 4) * this.field_U / this.durationTicks;
         var8 = var7 >> 4;
-        var9 = this.field_z / 2;
+        var9 = this.durationTicks / 2;
         var10 = 2500;
         if (null != this.projectile) {
           var10 = this.projectile.field_O * 25;
@@ -59,13 +59,13 @@ final class Explosion extends DualNode {
           boolean decompiledFrameRemainder0 = true;
           if (this.projectile != null &&
             300 < this.projectile.field_O) {
-            if (this.field_Y < var9) {
-              qh.b(var10 * this.field_Y * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+            if (this.ageTicks < var9) {
+              qh.b(var10 * this.ageTicks * 10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               decompiledFrameRemainder0 = (SteelSentinels.obfuscationControl != 0);
             }
             if ((decompiledFrameRemainder0) &&
-              (this.field_Y < (2 * var9))) {
-              qh.b(10 * (2 * var9 - this.field_Y) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
+              (this.ageTicks < (2 * var9))) {
+              qh.b(10 * (2 * var9 - this.ageTicks) * var10 / var9, var5 << 4, 15, var4 << 4, var8 << 4);
               return;
             }
           }
@@ -117,7 +117,7 @@ final class Explosion extends DualNode {
         return var1;
     }
 
-    final void a(boolean param0) {
+    final void advanceExplosion(boolean obfuscationGuard) {
         int stackIn_2_0 = 0;
         int stackIn_2_1 = 0;
         int stackIn_4_0 = 0;
@@ -187,11 +187,11 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 3. */
                         {
-                            this.field_M = this.field_M + this.field_T;
-                            this.field_H = this.field_H + this.field_V;
-                            stackIn_266_0 = ~this.world.terrain.getGroundHeightAt((byte) -105, this.field_H >> 4);
+                            this.worldY = this.worldY + this.velocityY;
+                            this.worldX = this.worldX + this.velocityX;
+                            stackIn_266_0 = ~this.world.terrain.getGroundHeightAt((byte) -105, this.worldX >> 4);
                             stackIn_4_0 = stackIn_266_0;
-                            stackIn_266_1 = ~-(this.field_M >> 4);
+                            stackIn_266_1 = ~-(this.worldY >> 4);
                             stackIn_4_1 = stackIn_266_1;
                             if (var13 != 0) {
                                 statePc = 266;
@@ -205,7 +205,7 @@ final class Explosion extends DualNode {
                                     } else {
                                         /* Inlined CFG state: 5. */
                                         {
-                                            this.field_M = -(this.world.terrain.getGroundHeightAt((byte) -124, this.field_H >> 4) << 4);
+                                            this.worldY = -(this.world.terrain.getGroundHeightAt((byte) -124, this.worldX >> 4) << 4);
                                             statePc = 6;
                                             continue scanLoop1;
                                         }
@@ -216,7 +216,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 6: {
-                    var3 = this.field_G * this.field_Y / (this.field_z * 2);
+                    var3 = this.field_G * this.ageTicks / (this.durationTicks * 2);
                     if (var3 != 0) {
                         statePc = 10;
                     } else {
@@ -225,7 +225,7 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 7: {
-                    if (0 < this.field_Y) {
+                    if (0 < this.ageTicks) {
                         /* Inlined CFG state: 9. */
                         {
                             var3 = 1;
@@ -238,8 +238,8 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 10: {
-                    this.field_Y = this.field_Y + 1;
-                    var4 = this.field_Y * this.field_G / (this.field_z * 2);
+                    this.ageTicks = this.ageTicks + 1;
+                    var4 = this.ageTicks * this.field_G / (this.durationTicks * 2);
                     if (this.projectile == null) {
                         statePc = 29;
                     } else {
@@ -248,7 +248,7 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 11: {
-                    if (this.field_X == null) {
+                    if (this.affectedSentinels == null) {
                         statePc = 29;
                         continue scanLoop1;
                     } else {
@@ -272,7 +272,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 15: {
-                    if ((this.field_Y & 63) != 0) {
+                    if ((this.ageTicks & 63) != 0) {
                         statePc = 29;
                         continue scanLoop1;
                     } else {
@@ -295,7 +295,7 @@ final class Explosion extends DualNode {
                         {
                             stackIn_25_0 = var6;
                             stackIn_19_0 = stackIn_25_0;
-                            stackIn_25_1 = this.field_X.length;
+                            stackIn_25_1 = this.affectedSentinels.length;
                             stackIn_19_1 = stackIn_25_1;
                             if (var13 != 0) {
                                 statePc = 25;
@@ -306,9 +306,9 @@ final class Explosion extends DualNode {
                                     if (stackIn_19_0 == stackIn_19_1) {
                                         /* Inlined CFG state: 21. */
                                         {
-                                            var15 = this.field_X;
-                                            this.field_X = new Sentinel[this.world.sentinels.size((byte) -128)];
-                                            ii.a(var15, 0, this.field_X, 0, var6);
+                                            var15 = this.affectedSentinels;
+                                            this.affectedSentinels = new Sentinel[this.world.sentinels.size((byte) -128)];
+                                            ii.a(var15, 0, this.affectedSentinels, 0, var6);
                                             statePc = 22;
                                             continue scanLoop1;
                                         }
@@ -322,7 +322,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 22: {
-                    this.field_X[var6] = var7_ref_mb;
+                    this.affectedSentinels[var6] = var7_ref_mb;
                     var6++;
                     var7_ref_mb = (Sentinel) (var14.d(2));
                     if (var13 == 0) {
@@ -334,7 +334,7 @@ final class Explosion extends DualNode {
                 }
                 case 24: {
                     stackIn_25_0 = ~var6;
-                    stackIn_25_1 = ~this.field_X.length;
+                    stackIn_25_1 = ~this.affectedSentinels.length;
                     statePc = 25;
                     continue scanLoop1;
                 }
@@ -345,7 +345,7 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 26. */
                         {
-                            this.field_X[var6] = null;
+                            this.affectedSentinels[var6] = null;
                             var6++;
                             if (var13 != 0) {
                                 statePc = 31;
@@ -411,19 +411,19 @@ final class Explosion extends DualNode {
                     if (stackIn_36_0 == stackIn_36_1) {
                         /* Inlined CFG state: 66. */
                         {
-                            var8_double = (Math.random() * (double)(-this.field_Y + this.field_z) / 4.0 + (double)this.field_Y) * (double)this.field_U / (double)this.field_z + 1.0;
+                            var8_double = (Math.random() * (double)(-this.ageTicks + this.durationTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks + 1.0;
                             var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                             var11 = (int)(var8_double * Math.cos(var5_double)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 126, this.field_M + var11 / 2, this.field_R, 150, 0, var10 / 2 + this.field_H, this.field_y);
+                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 126, this.worldY + var11 / 2, this.field_R, 150, 0, var10 / 2 + this.worldX, this.field_y);
                             this.world.field_O.addLast(3, var7_ref_qb);
-                            if (10 <= this.field_Y) {
+                            if (10 <= this.ageTicks) {
                                 statePc = 68;
                                 continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 67. */
                                 {
                                     var12 = 25;
-                                    var7_ref_qb = ArticulatedPart.a(10, (int)((double)(var12 * var10) / var8_double), this.world, 95, var11 + this.field_M, this.field_R, 100, (int)((double)(var12 * var11) / var8_double), var10 + this.field_H, this.field_y);
+                                    var7_ref_qb = ArticulatedPart.a(10, (int)((double)(var12 * var10) / var8_double), this.world, 95, var11 + this.worldY, this.field_R, 100, (int)((double)(var12 * var11) / var8_double), var10 + this.worldX, this.field_y);
                                     this.world.field_O.addLast(3, var7_ref_qb);
                                     statePc = 68;
                                     continue scanLoop1;
@@ -439,10 +439,10 @@ final class Explosion extends DualNode {
                                     if (this.field_K == 2) {
                                         /* Inlined CFG state: 57. */
                                         {
-                                            var8_double = (Math.random() * (double)(this.field_z - this.field_Y) / 4.0 + (double)this.field_Y) * (double)this.field_U / (double)this.field_z;
+                                            var8_double = (Math.random() * (double)(this.durationTicks - this.ageTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                             var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 125, var11 / 2 + this.field_M, this.field_R, 50, 0, this.field_H + var10 / 2, this.field_y);
+                                            var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 125, var11 / 2 + this.worldY, this.field_R, 50, 0, this.worldX + var10 / 2, this.field_y);
                                             this.world.field_O.addLast(3, var7_ref_qb);
                                             var12 = 0;
                                             statePc = 58;
@@ -454,10 +454,10 @@ final class Explosion extends DualNode {
                                             if (this.field_K == 3) {
                                                 /* Inlined CFG state: 56. */
                                                 {
-                                                    var8_double = Math.random() * (double)((this.field_z - this.field_Y) / 4 + this.field_Y) * (double)this.field_U / (double)this.field_z;
+                                                    var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                                     var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                                    var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 95, this.field_M + var11, this.field_R, 100, 0, var10 + this.field_H, this.field_y);
+                                                    var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
                                                     this.world.field_O.addLast(3, var7_ref_qb);
                                                     statePc = 69;
                                                     continue scanLoop1;
@@ -479,10 +479,10 @@ final class Explosion extends DualNode {
                             } else {
                                 /* Inlined CFG state: 38. */
                                 {
-                                    var8_double = Math.random() * (double)((this.field_z - this.field_Y) / 4 + this.field_Y) * (double)this.field_U / (double)this.field_z;
+                                    var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                     var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                    var7_ref_qb = ArticulatedPart.a(3, 0, this.world, 104, this.field_M + var11, this.field_R, 50, 0, var10 + this.field_H, this.field_y);
+                                    var7_ref_qb = ArticulatedPart.a(3, 0, this.world, 104, this.worldY + var11, this.field_R, 50, 0, var10 + this.worldX, this.field_y);
                                     this.world.field_O.addLast(3, var7_ref_qb);
                                     statePc = 69;
                                     continue scanLoop1;
@@ -492,12 +492,12 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 42: {
-                    var8_double = (Math.random() * (double)(-this.field_Y + this.field_z) / 4.0 + (double)this.field_Y) * (double)this.field_U / (double)this.field_z;
+                    var8_double = (Math.random() * (double)(-this.ageTicks + this.durationTicks) / 4.0 + (double)this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                     var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                    var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 114, this.field_M + var11, this.field_R, 150, 0, this.field_H + var10, this.field_y);
+                    var7_ref_qb = ArticulatedPart.a(1, 0, this.world, 114, this.worldY + var11, this.field_R, 150, 0, this.worldX + var10, this.field_y);
                     this.world.field_O.addLast(3, var7_ref_qb);
-                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 5, this.world, 115, this.field_M + var11 / 2, this.field_R, 300, var11 >> 5, this.field_H + var10 / 2, this.field_y);
+                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 5, this.world, 115, this.worldY + var11 / 2, this.field_R, 300, var11 >> 5, this.worldX + var10 / 2, this.field_y);
                     this.world.field_O.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
@@ -506,14 +506,14 @@ final class Explosion extends DualNode {
                     if (5 == this.field_K) {
                         /* Inlined CFG state: 55. */
                         {
-                            var8_double = Math.random() * (double)((this.field_z - this.field_Y) / 4 + this.field_Y) * (double)this.field_U / (double)this.field_z;
+                            var8_double = Math.random() * (double)((this.durationTicks - this.ageTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                             var11 = (int)(var8_double * Math.cos(var5_double)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 104, this.field_M - (-(var11 / 256) + 3584), this.field_R, 100, 0, this.field_H + var10 / 256, this.field_y);
+                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 104, this.worldY - (-(var11 / 256) + 3584), this.field_R, 100, 0, this.worldX + var10 / 256, this.field_y);
                             this.world.field_O.addLast(3, var7_ref_qb);
                             var10 = (int)(Math.sin((double)var3 * 0.2) * var8_double) << 4;
                             var11 = (int)(var8_double * Math.cos((double)var3 * 0.2)) << 4;
-                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 95, this.field_M + var11, this.field_R, 100, 0, this.field_H + var10, this.field_y);
+                            var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 95, this.worldY + var11, this.field_R, 100, 0, this.worldX + var10, this.field_y);
                             this.world.field_O.addLast(3, var7_ref_qb);
                             statePc = 69;
                             continue scanLoop1;
@@ -527,10 +527,10 @@ final class Explosion extends DualNode {
                                     if (this.field_K == 7) {
                                         /* Inlined CFG state: 54. */
                                         {
-                                            var8_double = Math.random() * (double)((-this.field_Y + this.field_z) / 4 + this.field_Y) * (double)this.field_U / (double)this.field_z;
+                                            var8_double = Math.random() * (double)((-this.ageTicks + this.durationTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                                             var10 = (int)(Math.sin(var5_double) * var8_double) << 4;
                                             var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                            var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 112, var11 + this.field_M, this.field_R, 100, 0, this.field_H + var10, this.field_y);
+                                            var7_ref_qb = ArticulatedPart.a(4, 0, this.world, 112, var11 + this.worldY, this.field_R, 100, 0, this.worldX + var10, this.field_y);
                                             this.world.field_O.addLast(3, var7_ref_qb);
                                             statePc = 69;
                                             continue scanLoop1;
@@ -541,12 +541,12 @@ final class Explosion extends DualNode {
                                             if (8 == this.field_K) {
                                                 /* Inlined CFG state: 53. */
                                                 {
-                                                    var8_double = (double)(this.field_Y * this.field_U / this.field_z);
+                                                    var8_double = (double)(this.ageTicks * this.field_U / this.durationTicks);
                                                     var10 = (int)(var8_double * Math.sin(0.2 * (double)var3)) << 4;
                                                     var11 = (int)(var8_double * Math.cos(0.2 * (double)var3)) << 4;
-                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 99, this.field_M + var11, this.field_R, 100, 0, var10 + this.field_H, this.field_y);
+                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 99, this.worldY + var11, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
                                                     this.world.field_O.addLast(3, var7_ref_qb);
-                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 113, -var11 + this.field_M, this.field_R, 100, 0, this.field_H - var10, this.field_y);
+                                                    var7_ref_qb = ArticulatedPart.a(5, 0, this.world, 113, -var11 + this.worldY, this.field_R, 100, 0, this.worldX - var10, this.field_y);
                                                     this.world.field_O.addLast(3, var7_ref_qb);
                                                     statePc = 69;
                                                     continue scanLoop1;
@@ -568,11 +568,11 @@ final class Explosion extends DualNode {
                             } else {
                                 /* Inlined CFG state: 45. */
                                 {
-                                    var8_double = Math.random() * (double)(this.field_Y + (this.field_z - this.field_Y) / 4) * (double)this.field_U / (double)this.field_z;
+                                    var8_double = Math.random() * (double)(this.ageTicks + (this.durationTicks - this.ageTicks) / 4) * (double)this.field_U / (double)this.durationTicks;
                                     var10 = (int)(var8_double * Math.sin(var5_double)) << 4;
                                     var11 = (int)(Math.cos(var5_double) * var8_double) << 4;
-                                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 111, var11 + this.field_M, this.field_R, 100, 0, var10 + this.field_H, this.field_y);
-                                    var7_ref_qb.field_O = (int)(2000.0 * -Math.random());
+                                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 111, var11 + this.worldY, this.field_R, 100, 0, var10 + this.worldX, this.field_y);
+                                    var7_ref_qb.velocityY = (int)(2000.0 * -Math.random());
                                     this.world.field_O.addLast(3, var7_ref_qb);
                                     statePc = 69;
                                     continue scanLoop1;
@@ -582,7 +582,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 49: {
-                    var8_double = Math.random() * (double)((-this.field_Y + this.field_z) / 4 + this.field_Y) * (double)this.field_U / (double)this.field_z;
+                    var8_double = Math.random() * (double)((-this.ageTicks + this.durationTicks) / 4 + this.ageTicks) * (double)this.field_U / (double)this.durationTicks;
                     stackIn_51_0 = var8_double;
                     stackIn_50_0 = stackIn_51_0;
                     if (Math.sin(var5_double) < 0.0) {
@@ -605,7 +605,7 @@ final class Explosion extends DualNode {
                 }
                 case 52: {
                     var10 = (int)(stackIn_52_0 * (double)stackIn_52_1) << 4;
-                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 102, 0, this.field_R, 50, 0, this.field_H + var10, this.field_y);
+                    var7_ref_qb = ArticulatedPart.a(0, 0, this.world, 102, 0, this.field_R, 50, 0, this.worldX + var10, this.field_y);
                     this.world.field_O.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
@@ -617,7 +617,7 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 59. */
                         {
-                            var7_ref_qb = ArticulatedPart.a(0, (int)(-64.0 + 128.0 * Math.random()) + (var10 >> 5), this.world, 117, this.field_M + var11 / 2, this.field_R, 200, (var11 >> 5) + (int)(128.0 * Math.random() - 64.0), this.field_H + var10 / 2, this.field_y);
+                            var7_ref_qb = ArticulatedPart.a(0, (int)(-64.0 + 128.0 * Math.random()) + (var10 >> 5), this.world, 117, this.worldY + var11 / 2, this.field_R, 200, (var11 >> 5) + (int)(128.0 * Math.random() - 64.0), this.worldX + var10 / 2, this.field_y);
                             var12++;
                             if (var13 != 0) {
                                 statePc = 69;
@@ -649,7 +649,7 @@ final class Explosion extends DualNode {
                             } else {
                                 /* Inlined CFG state: 64. */
                                 {
-                                    fc.a((byte) -69, 91, this.field_H);
+                                    fc.a((byte) -69, 91, this.worldX);
                                     statePc = 65;
                                     continue scanLoop1;
                                 }
@@ -663,7 +663,7 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 68: {
-                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 4, this.world, 94, this.field_M + var11 / 2, this.field_R, 300, -(10 * this.field_Y) + (var11 >> 4), var10 / 2 + this.field_H, this.field_y);
+                    var7_ref_qb = ArticulatedPart.a(0, var10 >> 4, this.world, 94, this.worldY + var11 / 2, this.field_R, 300, -(10 * this.ageTicks) + (var11 >> 4), var10 / 2 + this.worldX, this.field_y);
                     this.world.field_O.addLast(3, var7_ref_qb);
                     statePc = 69;
                     continue scanLoop1;
@@ -687,10 +687,10 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 71: {
-                    if (!param0) {
+                    if (!obfuscationGuard) {
                         /* Inlined CFG state: 73. */
                         {
-                            this.field_F = this.field_U * (this.field_Y + (-this.field_Y + this.field_z) / 4) / this.field_z;
+                            this.field_F = this.field_U * (this.ageTicks + (-this.ageTicks + this.durationTicks) / 4) / this.durationTicks;
                             if (!this.field_O) {
                                 statePc = 101;
                                 continue scanLoop1;
@@ -698,7 +698,7 @@ final class Explosion extends DualNode {
                                 /* Inlined CFG state: 74. */
                                 {
                                     var2 = this.field_F * this.field_F;
-                                    var16 = new IsaacRandom(new int[]{this.world.simulationTick, this.field_H, this.field_M});
+                                    var16 = new IsaacRandom(new int[]{this.world.simulationTick, this.worldX, this.worldY});
                                     var4_ref_jc = new NodeIterator(this.world.field_db);
                                     var5_ref_wl = (Projectile) (var4_ref_jc.b(2));
                                     statePc = 75;
@@ -720,8 +720,8 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 76. */
                         {
-                            var6 = -var5_ref_wl.worldX + this.field_H >> 4;
-                            var7 = -var5_ref_wl.worldY + this.field_M >> 4;
+                            var6 = -var5_ref_wl.worldX + this.worldX >> 4;
+                            var7 = -var5_ref_wl.worldY + this.worldY >> 4;
                             stackIn_266_0 = ~var5_ref_wl.effectType;
                             stackIn_77_0 = stackIn_266_0;
                             stackIn_266_1 = -3;
@@ -876,7 +876,7 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 101: {
-                    if (this.field_X == null) {
+                    if (this.affectedSentinels == null) {
                         statePc = 265;
                         continue scanLoop1;
                     } else {
@@ -897,13 +897,13 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 105: {
-                    if (this.field_X.length <= var2) {
+                    if (this.affectedSentinels.length <= var2) {
                         statePc = 265;
                         continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 106. */
                         {
-                            var17 = this.field_X[var2];
+                            var17 = this.affectedSentinels[var2];
                             if (var13 != 0) {
                                 statePc = 268;
                             } else {
@@ -1000,8 +1000,8 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 121: {
-                    var4 = this.field_H - var17.worldX >> 4;
-                    var5 = 768 + (-var17.worldY + this.field_M) >> 4;
+                    var4 = this.worldX - var17.worldX >> 4;
+                    var5 = 768 + (-var17.worldY + this.worldY) >> 4;
                     if (Math.abs(var4) > this.field_F) {
                         statePc = 264;
                     } else {
@@ -1097,7 +1097,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 135: {
-                    this.field_X[var2] = null;
+                    this.affectedSentinels[var2] = null;
                     var6 = ik.a(var5 * var5 + var4 * var4, -117);
                     if (var6 <= this.field_U / 2) {
                         statePc = 139;
@@ -1405,7 +1405,7 @@ final class Explosion extends DualNode {
                     } else {
                         /* Inlined CFG state: 186. */
                         {
-                            fc.a((byte) 114, 27, this.field_H);
+                            fc.a((byte) 114, 27, this.worldX);
                             statePc = 187;
                             continue scanLoop1;
                         }
@@ -1454,7 +1454,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 193: {
-                    fc.a((byte) 91, 55, this.field_H);
+                    fc.a((byte) 91, 55, this.worldX);
                     if (var13 == 0) {
                         statePc = 196;
                     } else {
@@ -1463,7 +1463,7 @@ final class Explosion extends DualNode {
                     continue scanLoop1;
                 }
                 case 195: {
-                    fc.a((byte) -100, 51, this.field_H);
+                    fc.a((byte) -100, 51, this.worldX);
                     var8_int = var17.addModuleBonuses(0, 33);
                     var17.field_S = var17.field_S >> var8_int;
                     statePc = 196;
@@ -1887,7 +1887,7 @@ final class Explosion extends DualNode {
                     }
                 }
                 case 268: {
-                    if (this.field_z >= this.field_Y) {
+                    if (this.durationTicks >= this.ageTicks) {
                         statePc = 270;
                         continue scanLoop1;
                     } else {
@@ -1928,7 +1928,7 @@ final class Explosion extends DualNode {
         int var1 = -122 / ((-17 - param0) / 41);
     }
 
-    Explosion(int param0, int param1, int param2, int param3, int param4, CombatWorld param5, Sentinel[] param6, Projectile param7) {
+    Explosion(int worldX, int worldY, int velocityX, int velocityY, int durationTicks, CombatWorld world, Sentinel[] affectedSentinels, Projectile projectile) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -1939,46 +1939,46 @@ final class Explosion extends DualNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
         try {
-          this.field_X = param6;
-          this.field_T = param3;
-          this.field_z = param4;
-          this.field_V = param2;
-          this.field_H = param0;
-          this.world = param5;
-          this.field_Y = 0;
-          this.projectile = param7;
-          this.field_M = param1;
-          this.field_y = this.field_H;
+          this.affectedSentinels = affectedSentinels;
+          this.velocityY = velocityY;
+          this.durationTicks = durationTicks;
+          this.velocityX = velocityX;
+          this.worldX = worldX;
+          this.world = world;
+          this.ageTicks = 0;
+          this.projectile = projectile;
+          this.worldY = worldY;
+          this.field_y = this.worldX;
           if (null != this.projectile) {
             this.field_R = this.projectile.field_ob;
           }
           this.field_K = 0;
           this.field_G = 5;
           this.field_N = 5;
-          if (this.field_z < 1) {
-            this.field_z = 1;
+          if (this.durationTicks < 1) {
+            this.durationTicks = 1;
           }
           this.field_U = 64;
-          this.field_F = this.field_U * (this.field_Y + (this.field_z - this.field_Y) / 4) / this.field_z;
+          this.field_F = this.field_U * (this.ageTicks + (this.durationTicks - this.ageTicks) / 4) / this.durationTicks;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_9_0 = var9;
-          stackIn_9_1 = new StringBuilder().append("jb.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_9_1 = new StringBuilder().append("jb.<init>(").append(worldX).append(',').append(worldY).append(',').append(velocityX).append(',').append(velocityY).append(',').append(durationTicks).append(',');
+          if (world == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param6 == null) {
+          if (affectedSentinels == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param7 == null) {
+          if (projectile == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";

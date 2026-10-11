@@ -95,9 +95,9 @@ public final class ArmiesOfGielinor extends wf {
           if (param0 > -111) {
             return;
           }
-          if (ql.h(31337)) {
+          if (PopupPresentation.h(31337)) {
             this.g((byte) 4);
-            if (ql.h(31337)) {
+            if (PopupPresentation.h(31337)) {
               if (wd.a((byte) 105)) {
                 discarded$0 = this.c(-100, false);
               }
@@ -217,7 +217,7 @@ public final class ArmiesOfGielinor extends wf {
                     uk.b(22963);
                     SoftwareRaster.b();
                     CipherPacketBuffer.a(false, 0, 1, 0);
-                    cl.field_t = true;
+                    AiUnitPlanner.field_t = true;
                     du.field_h = false;
                     kg.field_d = false;
                     gk.field_H = false;
@@ -265,7 +265,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (nm.field_o == 75) {
                   var2 = mg.field_e;
-                  tb.a(ah.field_a.field_a, (PacketBuffer) (var2), false, ah.field_a.field_b);
+                  EffectPresentation.a(ah.field_a.field_a, (PacketBuffer) (var2), false, ah.field_a.field_b);
                   im.field_w = true;
                   continue;
                 }
@@ -558,7 +558,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_348_0 = 0;
           }
           var2_intLifetime2 = stackIn_348_0;
-          if (qv.j(-11)) {
+          if (MovementPresentation.j(-11)) {
             var3Lifetime1 = this.h((byte) -116);
             if (var3Lifetime1 == 0 ||
               var3Lifetime1 == 1) {
@@ -567,12 +567,12 @@ public final class ArmiesOfGielinor extends wf {
               ah.a((byte) 33, 4);
               op.a(5, true);
               SpellCastEvent.b(6, -32666);
-              aw.a(7, 1742);
+              BestScoreStrategy.a(7, 1742);
               bo.a(true);
               if (var3Lifetime1 != 1) {
                 if (kg.field_d) {
                   du.field_h = false;
-                  cl.field_t = true;
+                  AiUnitPlanner.field_t = true;
                   vs.field_j = true;
                   if (!fj.field_c) {
                     CipherPacketBuffer.a(false, 0, 1, 0);
@@ -614,7 +614,7 @@ public final class ArmiesOfGielinor extends wf {
               dn.field_Qb) {
               var4Lifetime1 = 1;
             }
-            if (!qv.j(-11)) {
+            if (!MovementPresentation.j(-11)) {
               var4Lifetime1 = 0;
             }
             if (var4Lifetime1 != 0) {
@@ -919,11 +919,11 @@ public final class ArmiesOfGielinor extends wf {
                   if (pq.field_f != null) {
                     UnitSpell.a(3, 1, pq.field_f);
                   }
-                  sk.n(param0 ^ -110);
+                  CombatPresentation.n(param0 ^ -110);
                   CipherPacketBuffer.a(false, tg.field_a, 1, 0);
                   if (ke.field_a) {
                     ke.field_a = false;
-                    sm.a(false, 8028);
+                    AiPlanningStrategy.a(false, 8028);
                   }
                   if (tv.field_a) {
                     CipherPacketBuffer.a(false, -4, 1, jt.field_a);
@@ -1015,7 +1015,7 @@ public final class ArmiesOfGielinor extends wf {
         int var4 = 0;
         try {
           var2 = ll.p(0);
-          if (ql.h(param0 ^ 31337)) {
+          if (PopupPresentation.h(param0 ^ 31337)) {
             iv.a(false, fs.a(false), var2);
             return;
           }
@@ -1032,7 +1032,7 @@ public final class ArmiesOfGielinor extends wf {
             null != bc.field_a) &&
             jt.field_a == 7);
           io.field_w = stackIn_21_0;
-          if (param0 > ~sm.field_d &&
+          if (param0 > ~AiPlanningStrategy.field_d &&
             -1 < ko.field_b) {
           }
           ei.a(jt.field_a, true, io.field_w, false);
@@ -1272,23 +1272,23 @@ public final class ArmiesOfGielinor extends wf {
           MovementPlanner.b(-104);
           ub.a((byte) -122);
           eu.a((byte) -55);
-          v.d((byte) 55);
+          BattleCamera.d((byte) 55);
           eo.a(0);
           sj.a((byte) -95);
           iu.b(1);
-          vb.f(-126);
+          EventPresenter.f(-126);
           GameEvent.a((byte) -103);
           fi.a(param0 ^ 101);
           AreaSpell.a(false);
           SpellAreaSelection.a(100);
           CipherPacketBuffer.k((byte) -97);
           km.e(param0 + 77);
-          sk.c(-128);
+          CombatPresentation.c(-128);
           vj.b(-106);
-          gd.c();
+          ModelMesh.c();
           ms.f(param0 ^ 71);
           ac.a((byte) 71);
-          ql.d((byte) 109);
+          PopupPresentation.d((byte) 109);
           po.a(true);
           DamageEvent.d((byte) -26);
           StateChangeEvent.d((byte) 35);
@@ -1353,7 +1353,7 @@ public final class ArmiesOfGielinor extends wf {
           pd.a((byte) 95);
           hk.l(param0 ^ 55);
           jk.a(param0 ^ -28);
-          cl.a(-31116);
+          AiUnitPlanner.a(-31116);
           DeathEvent.g(-81);
           RevivalEvent.e((byte) 91);
           TelefragEvent.g(-75);
@@ -1390,8 +1390,8 @@ public final class ArmiesOfGielinor extends wf {
           rh.a(-74);
           sc.a(-91);
           tf.a(false);
-          lf.c(-1);
-          sr.b((byte) 120);
+          BattleCharacter.c(-1);
+          CombatViewTransition.b((byte) 120);
           br.a(111);
           vt.a(false);
           ng.w(0);
@@ -1441,8 +1441,8 @@ public final class ArmiesOfGielinor extends wf {
           dh.c(-117);
           hu.a();
           vc.a(-119);
-          ir.a(61);
-          sm.a(-1);
+          AiInfluenceMap.a(61);
+          AiPlanningStrategy.a(-1);
           ja.e(-93);
           j.b((byte) 125);
           jr.b(76);
@@ -1479,13 +1479,13 @@ public final class ArmiesOfGielinor extends wf {
           pi.a((byte) -63);
           AttackEvent.a(false);
           jv.a((byte) 36);
-          aw.c((byte) 110);
-          jb.f(param0 ^ -123);
-          ge.c(-104);
+          BestScoreStrategy.c((byte) 110);
+          AiActionCandidate.f(param0 ^ -123);
+          WeightedScoreStrategy.c(-104);
           vf.c(param0 ^ 18);
           wq.a((byte) -57);
-          qv.g(67);
-          tb.c(param0 ^ 40);
+          MovementPresentation.g(67);
+          EffectPresentation.c(param0 ^ 40);
           ph.a((byte) -54);
           sb.b(false);
           no.c(false);
@@ -1522,7 +1522,7 @@ public final class ArmiesOfGielinor extends wf {
           te.a((byte) -75);
           cf.a((byte) 9);
           sd.a((byte) -95);
-          id.a(param0 ^ -10);
+          CampaignUnitOverride.a(param0 ^ -10);
           iq.c(param0 ^ -72);
           cq.a(-101);
           bj.a(param0 ^ -72);
@@ -1719,7 +1719,7 @@ public final class ArmiesOfGielinor extends wf {
           oh.field_M = nu.a(20, true);
           fw.field_F = nu.a(22, true);
           vc.field_m = DamageEvent.a(0, 21, (byte) 127, false, false);
-          ir.field_f = nu.a(23, true);
+          AiInfluenceMap.field_f = nu.a(23, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1961,8 +1961,8 @@ public final class ArmiesOfGielinor extends wf {
                                           oh.field_M.d(-27927)) {
                                           if (fw.field_F.a((byte) 82) &&
                                             fw.field_F.d(-27927)) {
-                                            if (ir.field_f.a((byte) 82) &&
-                                              ir.field_f.d(-27927)) {
+                                            if (AiInfluenceMap.field_f.a((byte) 82) &&
+                                              AiInfluenceMap.field_f.d(-27927)) {
                                               if (vc.field_m.a((byte) 82) &&
                                                 vc.field_m.d(-27927)) {
                                                 if (!this.q(-46)) {
@@ -2021,7 +2021,7 @@ public final class ArmiesOfGielinor extends wf {
                                               bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, en.field_G, vc.field_m));
                                               return false;
                                             }
-                                            bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, en.field_G, ir.field_f));
+                                            bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, en.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
                                           bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, en.field_G, fw.field_F));
@@ -2157,9 +2157,9 @@ public final class ArmiesOfGielinor extends wf {
               fw.field_F = null;
               return false;
             }
-            if (ir.field_f != null) {
-              cv.a(ir.field_f, 1, -85);
-              ir.field_f = null;
+            if (AiInfluenceMap.field_f != null) {
+              cv.a(AiInfluenceMap.field_f, 1, -85);
+              AiInfluenceMap.field_f = null;
               return false;
             }
             if (!this.o(11672)) {
@@ -2191,7 +2191,7 @@ public final class ArmiesOfGielinor extends wf {
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
           bu.field_c = fk.a("endturnlozenge", (byte) -127, iw.field_l, "basic");
           jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
-          vb.field_t = nh.a("bubblepoint", "basic", iw.field_l, false);
+          EventPresenter.field_t = nh.a("bubblepoint", "basic", iw.field_l, false);
           ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
           od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
           ro.field_rb = lo.a("trait_icons", -28106, "basic", iw.field_l);
@@ -2206,7 +2206,7 @@ public final class ArmiesOfGielinor extends wf {
           ur.field_w = fk.a("placeicons", (byte) -124, iw.field_l, "basic");
           mp.field_Jb = nh.a("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
-          aw.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
+          BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
           wc.field_Q = fk.a("silverbar", (byte) -125, iw.field_l, "basic");
           sc.field_f = fk.a("pathfinder", (byte) -125, iw.field_l, "basic");
           pl.field_x = ac.a(iw.field_l, "unitheads", (byte) -4, "basic");
@@ -2242,7 +2242,7 @@ public final class ArmiesOfGielinor extends wf {
           it.field_a = GameplayController.a("results_rune_icon", (byte) 51, "basic", iw.field_l);
           rq.field_k = fk.a("results_mini_button_silver", (byte) -124, iw.field_l, "basic");
           ga.field_a = fk.a("results_mini_button_gold", (byte) -127, iw.field_l, "basic");
-          lf.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
+          BattleCharacter.field_h = ac.a(iw.field_l, "trinketicons", (byte) -4, "basic");
           AttackEvent.field_E = nh.a("eye", "basic", iw.field_l, false);
           cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
           mo.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
@@ -2257,7 +2257,7 @@ public final class ArmiesOfGielinor extends wf {
               dq.field_i = om.a((byte) -125, "frame_outer", "basic", iw.field_l);
               io.field_m = om.a((byte) 83, "frame_inner", "basic", iw.field_l);
               oh.field_J = om.a((byte) 83, "frame_ingame", "basic", iw.field_l);
-              tb.field_j = om.a((byte) -108, "frame_boxes", "basic", iw.field_l);
+              EffectPresentation.field_j = om.a((byte) -108, "frame_boxes", "basic", iw.field_l);
               il.field_s = om.a((byte) 89, "frame_button", "basic", iw.field_l);
               break;
             }
@@ -2293,8 +2293,8 @@ public final class ArmiesOfGielinor extends wf {
           am.field_A = GameplayController.a("unachieved", (byte) 51, "basic", gg.field_K);
           DeathEvent.field_A = GameplayController.a("locked", (byte) 51, "basic", gg.field_K);
           mo.field_t = GameplayController.a("orbcoin", (byte) 51, "basic", gg.field_K);
-          id.a(300, am.field_A);
-          id.a(300, mo.field_t);
+          CampaignUnitOverride.a(300, am.field_A);
+          CampaignUnitOverride.a(300, mo.field_t);
           dk.field_v = new RgbSprite(32, 32);
           dk.field_v.b();
           mo.field_t.d(0, 0, 32, 32);
@@ -2384,7 +2384,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException decompiledCaughtException = null;
         try {
           CombatEvent.field_I.b(param1, param0 ^ 20);
-          var2 = aw.field_i;
+          var2 = BestScoreStrategy.field_i;
           if (null != var2) {
             var2.a(CombatEvent.field_I.field_V, -125, CombatEvent.field_I.field_D);
           }

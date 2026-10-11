@@ -11,7 +11,7 @@ final class kl {
     private Object[] field_h;
     static String field_d;
     static String field_f;
-    static v field_a;
+    static BattleCamera field_a;
     static volatile int field_i;
 
     final synchronized int a(int param0) {
@@ -118,7 +118,7 @@ final class kl {
             return false;
           }
           if (param0 != 28979) {
-            field_a = (v) (this.field_h[6]);
+            field_a = (BattleCamera) (this.field_h[6]);
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
@@ -505,7 +505,7 @@ final class kl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          var1_int = sm.field_d;
+          var1_int = AiPlanningStrategy.field_d;
           var2 = ko.field_b;
           if (param0 != -20193) {
             field_d = (String) null;

@@ -17,7 +17,7 @@ final class er {
     final static void b(int param0) {
         if (~p.field_b == param0 ||
           !du.c(10)) {
-          tb.d(7);
+          EffectPresentation.d(7);
           p.field_b = 11;
         }
         dd.field_a = true;

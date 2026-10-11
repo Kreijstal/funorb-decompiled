@@ -5,7 +5,7 @@ final class la {
     private int field_b;
     private boolean field_h;
     static String field_e;
-    private gd field_c;
+    private ModelMesh field_c;
     private vj field_a;
     int field_f;
     static int field_d;
@@ -16,9 +16,9 @@ final class la {
         int var2;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = aw.field_j[this.field_f].length;
+        var2 = BestScoreStrategy.field_j[this.field_f].length;
         for (var3 = 0; var2 > var3; var3++) {
-          if (aw.field_j[this.field_f][var3][0] >= 0) {
+          if (BestScoreStrategy.field_j[this.field_f][var3][0] >= 0) {
             return var3;
           }
         }
@@ -75,7 +75,7 @@ final class la {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        hl var3 = sm.a(param2 + 76, param1, param0);
+        hl var3 = AiPlanningStrategy.a(param2 + 76, param1, param0);
         tg var4Lifetime1;
         if (var3 != null) {
           tn.field_Z.a(23899, false);
@@ -119,7 +119,7 @@ final class la {
           this.field_b = 0;
         }
         if (var3 != 0) {
-          if (aw.field_j[this.field_f][this.field_b][0] < 0) {
+          if (BestScoreStrategy.field_j[this.field_f][this.field_b][0] < 0) {
             this.field_b = this.c((byte) 82);
           }
           this.c(param0 ^ -126);
@@ -153,7 +153,7 @@ final class la {
         if (param0 == 43) {
           param0 = 77;
         }
-        this.field_c = (gd) (SpellAreaSelection.field_k[param0][0]);
+        this.field_c = (ModelMesh) (SpellAreaSelection.field_k[param0][0]);
         this.field_h = nh.field_D[param0];
         this.field_b = 0;
         this.c(0);
@@ -196,7 +196,7 @@ final class la {
     private final void c(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
-          this.field_a.a(-1, ck.field_e[sf.field_P[this.field_f]][aw.field_j[this.field_f][this.field_b][0]]);
+          this.field_a.a(-1, ck.field_e[sf.field_P[this.field_f]][BestScoreStrategy.field_j[this.field_f][this.field_b][0]]);
         } else {
           this.field_a.a(~param0, ck.field_e[sf.field_P[this.field_f]][0]);
         }
@@ -207,7 +207,7 @@ final class la {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        gd var15 = (gd) (this.field_a.a(false, true, false, this.field_c));
+        ModelMesh var15 = (ModelMesh) (this.field_a.a(false, true, false, this.field_c));
         if (75 == this.field_f) {
           var15.b(250, 250, 250);
         }

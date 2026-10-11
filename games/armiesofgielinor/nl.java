@@ -340,7 +340,7 @@ abstract class nl extends kb implements gw {
           of.field_Lb = new je(0L, sh.field_m);
           r.field_v = new je(0L, te.field_p, IntrusiveNode.field_a);
           ek.field_c = new je(0L, ho.field_a, wb.field_c);
-          sr.field_p = new je(0L, ho.field_a, fk.field_g);
+          CombatViewTransition.field_p = new je(0L, ho.field_a, fk.field_g);
           bs.field_a = new je(0L, ho.field_a, fw.field_H);
           ee.field_A = new je(0L, ho.field_a, hs.field_D);
           wl.field_K = new je(0L, br.field_e, RevivalEvent.field_B);
@@ -366,7 +366,7 @@ abstract class nl extends kb implements gw {
           ov.field_i.a(of.field_Lb, 47);
           of.field_Lb.a(r.field_v, 38);
           of.field_Lb.a(ek.field_c, 114);
-          of.field_Lb.a(sr.field_p, 121);
+          of.field_Lb.a(CombatViewTransition.field_p, 121);
           if (fh.field_c) {
             of.field_Lb.a(bs.field_a, 114);
           }
@@ -404,7 +404,7 @@ abstract class nl extends kb implements gw {
           mp.field_Lb = new je(0L, kd.field_M, pl.field_v.toUpperCase());
           kd.field_F = new je(0L, be.field_y);
           vc.field_l = new je(0L, sh.field_m);
-          iu.field_d = new je(0L, rn.field_a, tb.field_d.toUpperCase());
+          iu.field_d = new je(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new je[param1 + 4];
           pu.field_k = new nf[4 + param1][];
           KingBlackDragonEvent.field_z[0] = new je(0L, fp.field_Lb, et.field_c);
@@ -769,7 +769,7 @@ abstract class nl extends kb implements gw {
                     var10 = var17.length;
                     for (var11 = 0; var11 < var10; var11++) {
                       var12 = var17[var11] >> 16;
-                      var13 = ge.a(0, var12) ? 1 : 0;
+                      var13 = WeightedScoreStrategy.a(0, var12) ? 1 : 0;
                       if (var13 == 0) {
                         var14 = new fd(param2, param0, var12);
                         if (null == bk.field_e) {

@@ -134,7 +134,7 @@ final class CombatEvent extends GameEvent {
           param2.e(this.battleId, -56);
           this.applyToBattlefield(param2.battlefield, -26661);
           param2.a(true, var6);
-          this.c((byte) -125);
+          this.acknowledgePresentation((byte) -125);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ final class CombatEvent extends GameEvent {
     }
 
     CombatEvent(int unseenUnitType, int attackerX, int attackerY, int targetDeltaX, int targetDeltaY, int attackerDamage, int defenderDamage, boolean attackerDies, boolean defenderDies, int attackerAnimationCount, int defenderAnimationCount, boolean attackerDeployed, boolean defenderDeployed, int battleId) {
-        this.field_m = 1;
+        this.eventKind = 1;
         this.attackerDamage = attackerDamage;
         this.battleId = battleId;
         this.attackerDeployed = attackerDeployed ? true : false;

@@ -96,7 +96,7 @@ final class nu extends lk {
           var10.field_n = new om[var13];
           for (var14 = 0; var13 > var14; var14++) {
             try {
-              var22 = lf.a(var10, var4, param1, (byte) -73);
+              var22 = BattleCharacter.a(var10, var4, param1, (byte) -73);
               var10.field_n[var22.field_v] = var22;
             } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

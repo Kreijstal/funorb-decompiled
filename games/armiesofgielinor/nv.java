@@ -454,7 +454,7 @@ final class nv extends hs implements he {
             this.field_P.field_G == 1) {
             if (this.field_M) {
               if (this.field_V) {
-                var5_intLifetime1 = -this.field_B - param1 + (sm.field_d - (this.field_O.field_B + (this.field_O.field_l >> 1)));
+                var5_intLifetime1 = -this.field_B - param1 + (AiPlanningStrategy.field_d - (this.field_O.field_B + (this.field_O.field_l >> 1)));
                 var6 = -param2 + ko.field_b - (this.field_p + this.field_O.field_p + (this.field_O.field_w >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
@@ -478,7 +478,7 @@ final class nv extends hs implements he {
               }
             } else {
               if (this.field_V) {
-                if (param1 + (this.field_O.field_B + (this.field_O.field_l >> 1)) >= sm.field_d) {
+                if (param1 + (this.field_O.field_B + (this.field_O.field_l >> 1)) >= AiPlanningStrategy.field_d) {
                   this.a(this.field_T - this.field_S, (byte) 84);
                 } else {
                   this.a(this.field_T + this.field_S, (byte) 110);

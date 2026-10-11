@@ -277,7 +277,7 @@ final class AttackEvent extends GameEvent {
         try {
           this.field_L = param0;
           this.targetDeltaY = param3;
-          this.field_m = 27;
+          this.eventKind = 27;
           this.field_M = param1;
           this.applied = false;
           this.attackerAnimationCount = param5;

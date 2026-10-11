@@ -155,13 +155,13 @@ final class ui {
         int var11Lifetime4;
         int var11Lifetime1Lifetime1;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        stackIn_3_0 = (11 != sr.a(param3, -1 + param0, 11, (byte) -122)) ? 0 : 1;
+        stackIn_3_0 = (11 != CombatViewTransition.a(param3, -1 + param0, 11, (byte) -122)) ? 0 : 1;
         var5 = stackIn_3_0;
-        stackIn_6_0 = (11 != sr.a(param3, param0 + 1, 11, (byte) -115)) ? 0 : 1;
+        stackIn_6_0 = (11 != CombatViewTransition.a(param3, param0 + 1, 11, (byte) -115)) ? 0 : 1;
         var6 = stackIn_6_0;
-        stackIn_9_0 = (11 != sr.a(param3 + 1, param0, 11, (byte) -104)) ? 0 : 1;
+        stackIn_9_0 = (11 != CombatViewTransition.a(param3 + 1, param0, 11, (byte) -104)) ? 0 : 1;
         var7 = stackIn_9_0;
-        stackIn_12_0 = (sr.a(param3 - 1, param0, 11, (byte) -94) != 11) ? 0 : 1;
+        stackIn_12_0 = (CombatViewTransition.a(param3 - 1, param0, 11, (byte) -94) != 11) ? 0 : 1;
         var8 = stackIn_12_0;
         var10 = -98 % ((11 - param2) / 40);
         var9 = 0;

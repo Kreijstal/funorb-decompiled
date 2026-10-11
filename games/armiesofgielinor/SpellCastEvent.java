@@ -154,11 +154,11 @@ final class SpellCastEvent extends GameEvent {
         if (!ps.field_u.a(28979, "commonui")) {
           return Battlefield.field_nb + " - " + ps.field_u.a("commonui", (byte) -34) + "%";
         }
-        if (!sk.field_M.a((byte) 82)) {
+        if (!CombatPresentation.field_M.a((byte) 82)) {
           return is.field_f;
         }
-        if (!sk.field_M.a(28979, "commonui")) {
-          return rf.field_a + " - " + sk.field_M.a("commonui", (byte) 122) + "%";
+        if (!CombatPresentation.field_M.a(28979, "commonui")) {
+          return rf.field_a + " - " + CombatPresentation.field_M.a("commonui", (byte) 122) + "%";
         }
         if (!h.field_g.a((byte) 82)) {
           return cr.field_eb;
@@ -440,7 +440,7 @@ final class SpellCastEvent extends GameEvent {
           this.castingPlayer = param2;
           this.field_y = param1;
           this.spell = param0;
-          this.field_m = 24;
+          this.eventKind = 24;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

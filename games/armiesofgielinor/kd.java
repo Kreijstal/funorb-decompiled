@@ -186,7 +186,7 @@ final class kd extends tj implements nq, he, mf {
         this.field_I.field_s = bb.field_d;
         this.field_H.field_s = oc.field_Jb;
         this.field_V.field_s = bm.field_k;
-        this.field_K.field_s = ge.field_i;
+        this.field_K.field_s = WeightedScoreStrategy.field_i;
         this.field_N.field_s = f.field_A;
         this.field_ab.field_s = rd.field_g;
         this.field_O.a((byte) 16, new uj(this.field_O));
@@ -631,17 +631,17 @@ final class kd extends tj implements nq, he, mf {
         Object var5 = null;
         Object var5Lifetime1;
         Object var5Lifetime2;
-        if (null != tb.field_e) {
-          var3 = tb.field_e.b(true, param2);
+        if (null != EffectPresentation.field_e) {
+          var3 = EffectPresentation.field_e.b(true, param2);
           if (0 == var3) {
           } else {
             if (var3 == 2 &&
-              tb.field_e.field_X != null &&
-              !tb.field_e.field_X.equals("")) {
-              if (tb.field_e.field_X.charAt(0) == 91) {
-                var4 = tb.field_e.field_X;
+              EffectPresentation.field_e.field_X != null &&
+              !EffectPresentation.field_e.field_X.equals("")) {
+              if (EffectPresentation.field_e.field_X.charAt(0) == 91) {
+                var4 = EffectPresentation.field_e.field_X;
               } else {
-                var6 = (CharSequence) ((Object) tb.field_e.field_X);
+                var6 = (CharSequence) ((Object) EffectPresentation.field_e.field_X);
                 var4 = k.a(var6, false);
                 var5 = var4;
                 var5Lifetime2 = var4;
@@ -663,7 +663,7 @@ final class kd extends tj implements nq, he, mf {
                 ta.a((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
               }
             }
-            tb.field_e = null;
+            EffectPresentation.field_e = null;
             ut.field_fb = -1;
           }
         }

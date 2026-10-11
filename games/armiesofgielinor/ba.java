@@ -70,7 +70,7 @@ final class ba extends dr {
             }
             var1_int = 1;
           }
-          MovementPlanner.field_z.a(0, vo.a((byte) -47, ur.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, sm.field_d));
+          MovementPlanner.field_z.a(0, vo.a((byte) -47, ur.field_z, iu.field_t), vo.a((byte) 93, ko.field_b, AiPlanningStrategy.field_d));
           if (MovementPlanner.field_z.d((byte) 46)) {
             var1_int = 1;
           }
@@ -79,7 +79,7 @@ final class ba extends dr {
             MovementPlanner.field_z.field_h >= 0) {
             var2 = rg.field_m[MovementPlanner.field_z.field_h];
             if (var2 == 2) {
-              sk.n(-112);
+              CombatPresentation.n(-112);
             }
           }
           stackIn_18_0 = var2;

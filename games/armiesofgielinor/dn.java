@@ -55,9 +55,9 @@ final class dn extends je {
     final static boolean l(int param0) {
         if (param0 != 0) {
           dn.k(118);
-          return null != tb.field_e ? true : false;
+          return null != EffectPresentation.field_e ? true : false;
         }
-        return null != tb.field_e ? true : false;
+        return null != EffectPresentation.field_e ? true : false;
     }
 
     public static void k(int param0) {

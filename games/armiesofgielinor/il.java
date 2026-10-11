@@ -81,9 +81,9 @@ final class il extends SpellAreaEffect {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           int var2_int = -78 / ((param1 + 46) / 57);
-          param0.addMouseListener(lf.field_q);
-          param0.addMouseMotionListener(lf.field_q);
-          param0.addFocusListener(lf.field_q);
+          param0.addMouseListener(BattleCharacter.field_q);
+          param0.addMouseMotionListener(BattleCharacter.field_q);
+          param0.addFocusListener(BattleCharacter.field_q);
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

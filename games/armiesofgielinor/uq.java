@@ -48,7 +48,7 @@ abstract class uq extends ms {
           var14 = param1.a(param2 ^ -20049);
           var8 = param5.a(-91);
           if (null == am.field_z &&
-            !tb.a(false, 0)) {
+            !EffectPresentation.a(false, 0)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
@@ -182,9 +182,9 @@ abstract class uq extends ms {
               return stackIn_62_0;
             }
             var9Lifetime3 = rn.field_d;
-            rn.field_d = sm.field_c;
+            rn.field_d = AiPlanningStrategy.field_c;
             ev.field_b = true;
-            sm.field_c = var9Lifetime3;
+            AiPlanningStrategy.field_c = var9Lifetime3;
           }
           stackIn_65_0 = -1;
           return stackIn_65_0;

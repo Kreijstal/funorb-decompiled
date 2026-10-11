@@ -99,10 +99,10 @@ final class dd {
           if (!ps.field_u.a(28979, "commonui")) {
             return 40;
           }
-          if (!sk.field_M.a((byte) 82)) {
+          if (!CombatPresentation.field_M.a((byte) 82)) {
             return 50;
           }
-          if (!sk.field_M.a(28979, "commonui")) {
+          if (!CombatPresentation.field_M.a(28979, "commonui")) {
             return 60;
           }
           if (!h.field_g.a((byte) 82)) {
@@ -129,10 +129,10 @@ final class dd {
           if (!ps.field_u.a(28979, "commonui")) {
             return 57;
           }
-          if (!sk.field_M.a((byte) 82)) {
+          if (!CombatPresentation.field_M.a((byte) 82)) {
             return 71;
           }
-          if (!sk.field_M.a(28979, "commonui")) {
+          if (!CombatPresentation.field_M.a(28979, "commonui")) {
             return 80;
           }
           if (!h.field_g.a((byte) 82)) {

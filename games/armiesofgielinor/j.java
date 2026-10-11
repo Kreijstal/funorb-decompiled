@@ -5,7 +5,7 @@ final class j {
     private wq field_i;
     static int[] field_j;
     static int field_b;
-    private v field_h;
+    private BattleCamera field_h;
     private int[] field_c;
     private wq field_f;
     private int field_g;
@@ -57,7 +57,7 @@ final class j {
           il.field_t[7] = gp.field_c;
           il.field_t[3] = lb.field_d;
           il.field_t[53] = gk.field_P;
-          il.field_t[6] = ir.field_k;
+          il.field_t[6] = AiInfluenceMap.field_k;
           il.field_t[9] = SpellAreaEffect.field_k;
           il.field_t[8] = null;
           il.field_t[4] = el.field_a;
@@ -176,8 +176,8 @@ final class j {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_h.field_k[0] = param1;
-          this.field_h.field_k[1] = param3;
+          this.field_h.targetPosition[0] = param1;
+          this.field_h.targetPosition[1] = param3;
           this.field_h.a((byte) -49);
           var6_int = this.field_h.field_h[0];
           var7 = param4;
@@ -353,7 +353,7 @@ final class j {
                 }
               }
             } else {
-              uj.field_l.field_X = jb.field_v;
+              uj.field_l.field_X = AiActionCandidate.field_v;
               mp.field_Lb.field_xb = false;
               if (var8 != 0) {
                 stackIn_23_0 = p.field_f;
@@ -417,7 +417,7 @@ final class j {
         }
     }
 
-    j(int param0, v param1) {
+    j(int param0, BattleCamera param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

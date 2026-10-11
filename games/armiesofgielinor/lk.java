@@ -115,7 +115,7 @@ class lk implements kh, pm {
               stackIn_4_3 = var14.field_b[1 + var7].field_n;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            id.a(param2 + param3.field_B, param3.field_B + param2 + param3.field_l, param3.field_w + (param3.field_p + param0), param3.field_p + param0, (byte) 100);
+            CampaignUnitOverride.a(param2 + param3.field_B, param3.field_B + param2 + param3.field_l, param3.field_w + (param3.field_p + param0), param3.field_p + param0, (byte) 100);
             t.field_c.a(this.field_o, var12, var10, (byte) 101, var11, var10);
             rf.b(-18862);
           }
@@ -524,7 +524,7 @@ class lk implements kh, pm {
           }
           var10 = var18.a(param0 ^ -21259, var8);
           var11 = var18.a(param0 ^ -21259, var9);
-          id.a(param5 + param3.field_B, param3.field_l + (param5 + param3.field_B), param3.field_w + (param4 + param3.field_p), param3.field_p + param4, (byte) 116);
+          CampaignUnitOverride.a(param5 + param3.field_B, param3.field_l + (param5 + param3.field_B), param3.field_w + (param4 + param3.field_p), param3.field_p + param4, (byte) 116);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_b[var12];
             if (~var12 != ~var10) {
@@ -605,7 +605,7 @@ class lk implements kh, pm {
             this.field_b = -74;
           }
           boolean decompiledFrameRemainder0 = true;
-          id.a(param6.field_B + param2, param6.field_l + param2 + param6.field_B, param6.field_w + (param6.field_p + param1), param6.field_p + param1, (byte) 91);
+          CampaignUnitOverride.a(param6.field_B + param2, param6.field_l + param2 + param6.field_B, param6.field_w + (param6.field_p + param1), param6.field_p + param1, (byte) 91);
           var9_int = this.b(103, param6);
           var10 = this.c(-99, param6);
           if (!this.field_c) {

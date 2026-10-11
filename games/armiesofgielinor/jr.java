@@ -50,7 +50,7 @@ final class jr {
         }
         if (!this.field_a) {
           if (param0 > 0) {
-            if (this.b(112, sm.field_d, param1, param3, ko.field_b)) {
+            if (this.b(112, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
               hr.field_d[this.field_c].g(this.field_b + param3 - 25, param1 + (this.field_g - 25));
               hr.field_d[0].f(param3 + (this.field_b - 25), -25 + this.field_g + param1, 256);
               if (var6 != 0) {
@@ -72,7 +72,7 @@ final class jr {
           }
         }
         if (0 < param0) {
-          if (this.b(31, sm.field_d, param1, param3, ko.field_b)) {
+          if (this.b(31, AiPlanningStrategy.field_d, param1, param3, ko.field_b)) {
             lw.field_ob.b(param3 - (-this.field_b + 20), -20 + (this.field_g + param1), bo.field_g[this.field_c]);
             if (var6 == 0) {
               if (this.field_i != 81) {

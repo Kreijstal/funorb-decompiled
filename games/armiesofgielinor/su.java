@@ -18,7 +18,7 @@ final class su {
         field_c = null;
     }
 
-    final AiPlanner a(byte param0, Battlefield param1, id[] param2, int param3, boolean param4) {
+    final AiPlanner a(byte param0, Battlefield param1, CampaignUnitOverride[] param2, int param3, boolean param4) {
         AiPlanner var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -39,7 +39,7 @@ final class su {
           var7 = 0;
           var8 = -40 / ((param0 + 12) / 61);
           while (var7 < 62) {
-            var10.field_P[var7] = this.field_e[var7];
+            var10.weights[var7] = this.field_e[var7];
             var7++;
           }
           stackIn_5_0 = var6;

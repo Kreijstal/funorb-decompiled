@@ -22,7 +22,7 @@ final class rq extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        fg var1 = (fg) (vb.field_q.c((byte) -121));
+        fg var1 = (fg) (EventPresenter.field_q.c((byte) -121));
         if (var1 == null) {
           var1 = new fg();
         }

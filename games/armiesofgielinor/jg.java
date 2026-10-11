@@ -535,7 +535,7 @@ final class jg extends IntrusiveNode {
             }
             if (var12.field_ic.field_eb) {
               if (1 == var12.field_Tb) {
-                var34 = ir.field_j;
+                var34 = AiInfluenceMap.field_j;
               } else {
                 var34 = ks.field_u[var12.field_Tb];
               }

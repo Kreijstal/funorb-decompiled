@@ -27,11 +27,11 @@ final class oh extends dr {
 
     final static void e(byte param0) {
         String var2 = null;
-        if (ql.field_e != null) {
-          var2 = ql.field_e;
+        if (PopupPresentation.field_e != null) {
+          var2 = PopupPresentation.field_e;
           String var1 = var2;
           wr.a((byte) 68, fo.a(4800, AreaSpell.field_l, new String[]{var2}));
-          ql.field_e = null;
+          PopupPresentation.field_e = null;
         }
         if (param0 <= -127) {
           return;

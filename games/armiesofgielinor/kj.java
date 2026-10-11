@@ -17,7 +17,7 @@ final class kj extends SpellAreaEffect {
 
     final static void a(boolean param0, int param1) {
         qc.field_d = new dl(2);
-        qc.field_d.a(-1, param0, vf.a(sm.field_d, -1, ko.field_b), param1);
+        qc.field_d.a(-1, param0, vf.a(AiPlanningStrategy.field_d, -1, ko.field_b), param1);
     }
 
     final static byte[] a(byte[] param0, int param1) {

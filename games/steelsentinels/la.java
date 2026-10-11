@@ -42,7 +42,7 @@ final class la {
           if (var2 == null) {
             q.field_m.addLast(3, param1);
           } else {
-            IsaacRandom.a(var2, 30, param1);
+            IsaacRandom.insertNodeBefore(var2, 30, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

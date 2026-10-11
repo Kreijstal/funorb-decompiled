@@ -361,7 +361,7 @@ final class bl {
             }
             if (1 == var2 &&
               vu.field_M != null) {
-              ql.field_e = vu.field_M.field_rc;
+              PopupPresentation.field_e = vu.field_M.field_rc;
             }
             if (4 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).e((byte) -104);
@@ -388,7 +388,7 @@ final class bl {
                 ln.field_d[var3] = ((PacketBuffer) ((Object) var1)).a((byte) -1);
               }
               nh.field_E = ((PacketBuffer) ((Object) var1)).k(0);
-              sm.field_b = ((PacketBuffer) ((Object) var1)).k(0);
+              AiPlanningStrategy.field_b = ((PacketBuffer) ((Object) var1)).k(0);
               for (var3 = 0; tg.field_d.length > var3; var3++) {
                 tg.field_d[var3] = ((PacketBuffer) ((Object) var1)).a((byte) -106);
               }
@@ -479,7 +479,7 @@ final class bl {
                   }
                 }
               }
-              SpellAreaSelection.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+              SpellAreaSelection.field_k[var3][0] = var10.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
               for (var6Lifetime2 = 1; var6Lifetime2 < SpellAreaSelection.field_m[var3].length; var6Lifetime2++) {
                 SpellAreaSelection.field_k[var3][var6Lifetime2] = null;
               }
@@ -499,8 +499,8 @@ final class bl {
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
-            if (((gd) (cs.field_db[var3Lifetime1])).field_I == 0) {
+            cs.field_db[var3Lifetime1] = var5Lifetime1.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
+            if (((ModelMesh) (cs.field_db[var3Lifetime1])).field_I == 0) {
               cs.field_db[var3Lifetime1] = null;
             }
           }

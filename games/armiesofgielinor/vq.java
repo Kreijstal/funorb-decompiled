@@ -212,7 +212,7 @@ final class vq {
             mi.field_G[0] = 5;
             wp.field_v[4] = ts.field_f;
             wp.field_v[2] = od.field_e;
-            wp.field_v[3] = ge.field_m;
+            wp.field_v[3] = WeightedScoreStrategy.field_m;
             TileMetadata.field_h[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_41_0 = wp.field_v;
@@ -302,7 +302,7 @@ final class vq {
             var4Lifetime3++;
           }
           if (no.field_J != 2) {
-            ug.field_c.a(0, param1, TeleportEvent.a(sm.field_d, 120, ko.field_b), 0);
+            ug.field_c.a(0, param1, TeleportEvent.a(AiPlanningStrategy.field_d, 120, ko.field_b), 0);
           } else {
             ug.field_c.a(-1, param1, -1, 0);
           }

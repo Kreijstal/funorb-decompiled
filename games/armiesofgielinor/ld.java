@@ -122,7 +122,7 @@ final class ld extends SpellAreaEffect {
             field_x = (int[]) null;
           }
           rk.field_r = -(ms.field_r >> 1) + lm.field_g;
-          MovementPlanner.field_z.a(0, param2, vo.a((byte) -73, ko.field_b, sm.field_d), 0);
+          MovementPlanner.field_z.a(0, param2, vo.a((byte) -73, ko.field_b, AiPlanningStrategy.field_d), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

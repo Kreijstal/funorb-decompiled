@@ -48,7 +48,7 @@ final class qu extends IntrusiveNode {
         int var3 = var10.battlefield.playerTurnCounts[var10.field_q];
         int var4 = var10.battlefield.field_zb[var10.field_q];
         hc.field_b = hc.field_b + 1;
-        hc.field_b = hc.field_b + (ko.field_b ^ sm.field_d);
+        hc.field_b = hc.field_b + (ko.field_b ^ AiPlanningStrategy.field_d);
         if (param1 <= 31) {
           qu.a(-2, (byte) 45);
         }
@@ -97,47 +97,47 @@ final class qu extends IntrusiveNode {
             !(param2 <= pe.field_s.length)) {
             pe.field_s = new int[param2 * 2];
           }
-          if (tb.field_h == null) {
-            tb.field_h = new int[2 * param2];
+          if (EffectPresentation.field_h == null) {
+            EffectPresentation.field_h = new int[2 * param2];
             if (vt.field_m == null ||
               !(param2 + param1 <= vt.field_m.length)) {
               vt.field_m = new int[(param2 + param1) * 2];
             }
-            if (cl.field_q == null ||
-              !(cl.field_q.length >= param2)) {
-              cl.field_q = new boolean[2 * param2];
+            if (AiUnitPlanner.field_q == null ||
+              !(AiUnitPlanner.field_q.length >= param2)) {
+              AiUnitPlanner.field_q = new boolean[2 * param2];
             }
           } else {
-            if (tb.field_h.length < param2) {
-              tb.field_h = new int[2 * param2];
+            if (EffectPresentation.field_h.length < param2) {
+              EffectPresentation.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (cl.field_q == null ||
-                !(cl.field_q.length >= param2)) {
-                cl.field_q = new boolean[2 * param2];
+              if (AiUnitPlanner.field_q == null ||
+                !(AiUnitPlanner.field_q.length >= param2)) {
+                AiUnitPlanner.field_q = new boolean[2 * param2];
               }
             } else {
               if (vt.field_m == null) {
                 vt.field_m = new int[(param2 + param1) * 2];
-                if (cl.field_q == null ||
-                  !(cl.field_q.length >= param2)) {
-                  cl.field_q = new boolean[2 * param2];
+                if (AiUnitPlanner.field_q == null ||
+                  !(AiUnitPlanner.field_q.length >= param2)) {
+                  AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (param2 + param1 > vt.field_m.length) {
                   vt.field_m = new int[(param2 + param1) * 2];
-                  if (cl.field_q == null ||
-                    !(cl.field_q.length >= param2)) {
-                    cl.field_q = new boolean[2 * param2];
+                  if (AiUnitPlanner.field_q == null ||
+                    !(AiUnitPlanner.field_q.length >= param2)) {
+                    AiUnitPlanner.field_q = new boolean[2 * param2];
                   }
                 } else {
-                  if (cl.field_q == null) {
-                    cl.field_q = new boolean[2 * param2];
+                  if (AiUnitPlanner.field_q == null) {
+                    AiUnitPlanner.field_q = new boolean[2 * param2];
                   } else {
-                    if (cl.field_q.length < param2) {
-                      cl.field_q = new boolean[2 * param2];
+                    if (AiUnitPlanner.field_q.length < param2) {
+                      AiUnitPlanner.field_q = new boolean[2 * param2];
                     }
                   }
                 }
@@ -162,47 +162,47 @@ final class qu extends IntrusiveNode {
               !(param2 <= pe.field_s.length)) {
               pe.field_s = new int[param2 * 2];
             }
-            if (tb.field_h == null) {
-              tb.field_h = new int[2 * param2];
+            if (EffectPresentation.field_h == null) {
+              EffectPresentation.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (cl.field_q == null ||
-                !(cl.field_q.length >= param2)) {
-                cl.field_q = new boolean[2 * param2];
+              if (AiUnitPlanner.field_q == null ||
+                !(AiUnitPlanner.field_q.length >= param2)) {
+                AiUnitPlanner.field_q = new boolean[2 * param2];
               }
             } else {
-              if (tb.field_h.length < param2) {
-                tb.field_h = new int[2 * param2];
+              if (EffectPresentation.field_h.length < param2) {
+                EffectPresentation.field_h = new int[2 * param2];
                 if (vt.field_m == null ||
                   !(param2 + param1 <= vt.field_m.length)) {
                   vt.field_m = new int[(param2 + param1) * 2];
                 }
-                if (cl.field_q == null ||
-                  !(cl.field_q.length >= param2)) {
-                  cl.field_q = new boolean[2 * param2];
+                if (AiUnitPlanner.field_q == null ||
+                  !(AiUnitPlanner.field_q.length >= param2)) {
+                  AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (vt.field_m == null) {
                   vt.field_m = new int[(param2 + param1) * 2];
-                  if (cl.field_q == null ||
-                    !(cl.field_q.length >= param2)) {
-                    cl.field_q = new boolean[2 * param2];
+                  if (AiUnitPlanner.field_q == null ||
+                    !(AiUnitPlanner.field_q.length >= param2)) {
+                    AiUnitPlanner.field_q = new boolean[2 * param2];
                   }
                 } else {
                   if (param2 + param1 > vt.field_m.length) {
                     vt.field_m = new int[(param2 + param1) * 2];
-                    if (cl.field_q == null ||
-                      !(cl.field_q.length >= param2)) {
-                      cl.field_q = new boolean[2 * param2];
+                    if (AiUnitPlanner.field_q == null ||
+                      !(AiUnitPlanner.field_q.length >= param2)) {
+                      AiUnitPlanner.field_q = new boolean[2 * param2];
                     }
                   } else {
-                    if (cl.field_q == null) {
-                      cl.field_q = new boolean[2 * param2];
+                    if (AiUnitPlanner.field_q == null) {
+                      AiUnitPlanner.field_q = new boolean[2 * param2];
                     } else {
-                      if (cl.field_q.length < param2) {
-                        cl.field_q = new boolean[2 * param2];
+                      if (AiUnitPlanner.field_q.length < param2) {
+                        AiUnitPlanner.field_q = new boolean[2 * param2];
                       }
                     }
                   }
@@ -227,29 +227,29 @@ final class qu extends IntrusiveNode {
               !(param2 <= pe.field_s.length)) {
               pe.field_s = new int[param2 * 2];
             }
-            if (tb.field_h == null) {
-              tb.field_h = new int[2 * param2];
+            if (EffectPresentation.field_h == null) {
+              EffectPresentation.field_h = new int[2 * param2];
               if (vt.field_m == null ||
                 !(param2 + param1 <= vt.field_m.length)) {
                 vt.field_m = new int[(param2 + param1) * 2];
               }
-              if (cl.field_q == null) {
-                cl.field_q = new boolean[2 * param2];
+              if (AiUnitPlanner.field_q == null) {
+                AiUnitPlanner.field_q = new boolean[2 * param2];
               } else {
-                if (cl.field_q.length < param2) {
-                  cl.field_q = new boolean[2 * param2];
+                if (AiUnitPlanner.field_q.length < param2) {
+                  AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               }
             } else {
-              if (tb.field_h.length < param2) {
-                tb.field_h = new int[2 * param2];
+              if (EffectPresentation.field_h.length < param2) {
+                EffectPresentation.field_h = new int[2 * param2];
                 if (vt.field_m == null ||
                   !(param2 + param1 <= vt.field_m.length)) {
                   vt.field_m = new int[(param2 + param1) * 2];
                 }
-                if (cl.field_q == null ||
-                  !(cl.field_q.length >= param2)) {
-                  cl.field_q = new boolean[2 * param2];
+                if (AiUnitPlanner.field_q == null ||
+                  !(AiUnitPlanner.field_q.length >= param2)) {
+                  AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
                 if (vt.field_m == null) {
@@ -259,11 +259,11 @@ final class qu extends IntrusiveNode {
                     vt.field_m = new int[(param2 + param1) * 2];
                   }
                 }
-                if (cl.field_q == null) {
-                  cl.field_q = new boolean[2 * param2];
+                if (AiUnitPlanner.field_q == null) {
+                  AiUnitPlanner.field_q = new boolean[2 * param2];
                 } else {
-                  if (cl.field_q.length < param2) {
-                    cl.field_q = new boolean[2 * param2];
+                  if (AiUnitPlanner.field_q.length < param2) {
+                    AiUnitPlanner.field_q = new boolean[2 * param2];
                   }
                 }
               }

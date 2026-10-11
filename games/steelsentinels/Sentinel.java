@@ -779,7 +779,7 @@ final class Sentinel extends IntrusiveNode {
         return this.a(param1, param5, param4, param0, (byte) 125, false, param3, param2);
     }
 
-    private final void a(boolean param0, SentinelCommand param1, int param2) {
+    private final void executeCommand(boolean obfuscationGuard, SentinelCommand command, int simulationTick) {
         int stackIn_120_0 = 0;
         RuntimeException stackIn_169_0 = null;
         StringBuilder stackIn_169_1 = null;
@@ -794,37 +794,37 @@ final class Sentinel extends IntrusiveNode {
         Projectile var9 = null;
         var7 = SteelSentinels.obfuscationControl;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             return;
           }
           if (this.world.field_j &&
             this.world.field_fb &&
             this.field_Nb == 8) {
-            if (param2 - 8 >= param1.startTick) {
+            if (simulationTick - 8 >= command.startTick) {
               return;
             }
-            if (param2 < param1.startTick) {
+            if (simulationTick < command.startTick) {
               return;
             }
             if (this.field_pc &&
-              6 != param1.actionType) {
-              if (param1.actionType != 3) {
+              6 != command.actionType) {
+              if (command.actionType != 3) {
                 return;
               }
               if (this.field_Qb >= 0) {
                 return;
               }
             }
-            if (!param1.field_p) {
+            if (!command.scheduled) {
               return;
             }
             if (this.charge <= 0 &&
               this.field_ub < 0 &&
-              param1.activated) {
+              command.activated) {
               return;
             }
-            if (param1.actionType != 3) {
-              param1.unlink(4);
+            if (command.actionType != 3) {
+              command.unlink(4);
             } else {
               if (this.field_Dc == 0 && (!this.field_Lb ||
                 this.field_cb > 0 ||
@@ -834,12 +834,12 @@ final class Sentinel extends IntrusiveNode {
                   if (this.field_Fb < 5 &&
                     this.field_oc == 0) {
                     if (this.field_cb < 15) {
-                      this.consumeCharge(param0, 1);
+                      this.consumeCharge(obfuscationGuard, 1);
                     } else {
                       this.field_ub = this.field_ub - 45000 / this.field_cb;
                       if (this.field_ub < 0) {
                         this.field_ub = this.field_ub + 3000;
-                        this.consumeCharge(param0, 1);
+                        this.consumeCharge(obfuscationGuard, 1);
                       }
                     }
                   }
@@ -859,11 +859,11 @@ final class Sentinel extends IntrusiveNode {
                     this.field_ub = this.field_ub - 45000 / this.field_cb;
                     if (this.field_ub < 0) {
                       this.field_ub = this.field_ub + 3000;
-                      this.consumeCharge(param0, 1);
+                      this.consumeCharge(obfuscationGuard, 1);
                     }
                   }
                 }
-                this.a(param1, (byte) -106);
+                this.a(command, (byte) -106);
                 if (3 == di.field_g &&
                   1 == qh.field_Yb &&
                   this.field_Lb) {
@@ -871,53 +871,53 @@ final class Sentinel extends IntrusiveNode {
                 }
               }
             }
-            if (param2 >= param1.startTick) {
-              param1.unlink(4);
+            if (simulationTick >= command.startTick) {
+              command.unlink(4);
               return;
             }
-            if (param1.endTick > param1.startTick) {
+            if (command.endTick > command.startTick) {
               return;
             }
-            param1.unlink(4);
+            command.unlink(4);
             return;
           }
-          if (param1.startTick != param2) {
-            if (param2 > param1.startTick) {
-              param1.unlink(4);
+          if (command.startTick != simulationTick) {
+            if (simulationTick > command.startTick) {
+              command.unlink(4);
               return;
             }
           } else {
-            if (param1.actionType == 10) {
+            if (command.actionType == 10) {
               this.field_V = true;
             }
             if (this.field_pc &&
-              param1.actionType != 6) {
-              if (param1.actionType != 3) {
-                param1.unlink(4);
+              command.actionType != 6) {
+              if (command.actionType != 3) {
+                command.unlink(4);
                 return;
               }
               if (this.field_Qb >= 0) {
-                param1.unlink(4);
+                command.unlink(4);
                 return;
               }
             }
-            if (!param1.field_p) {
-              param1.unlink(4);
+            if (!command.scheduled) {
+              command.unlink(4);
               return;
             }
             if (this.charge <= 0 &&
               0 > this.field_ub &&
-              param1.activated) {
-              param1.unlink(4);
+              command.activated) {
+              command.unlink(4);
               return;
             }
-            if (param1.actionType == 0 &&
+            if (command.actionType == 0 &&
               !this.field_pc) {
               this.field_F = -Math.abs(this.field_F);
-              this.c((byte) 69, param1);
-              param1.activated = false;
+              this.c((byte) 69, command);
+              command.activated = false;
             } else {
-              if (3 == param1.actionType) {
+              if (3 == command.actionType) {
                 stackIn_120_0 = (!this.field_Lb) ? 0 : 1;
                 var4_int = stackIn_120_0;
                 if (this.field_Dc == 0 && (var4_int == 0 ||
@@ -936,7 +936,7 @@ final class Sentinel extends IntrusiveNode {
                     }
                     if (this.field_cb != 0) {
                       if (this.field_cb < 15) {
-                        this.consumeCharge(param0, 1);
+                        this.consumeCharge(obfuscationGuard, 1);
                       } else {
                         this.field_ub = this.field_ub - 45000 / this.field_cb;
                         if (this.field_ub < 0) {
@@ -961,15 +961,15 @@ final class Sentinel extends IntrusiveNode {
                     }
                   }
                   if (var4_int == 0 &&
-                    param1.startTick != param1.endTick - 100 + ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][2] &&
+                    command.startTick != command.endTick - 100 + ka.field_G[o.a((byte) 84, this.chassis.componentId)][25][2] &&
                     39 != this.activeModuleType) {
                     this.field_U = 0;
-                    if (param1.startTick == -100 + param1.endTick) {
+                    if (command.startTick == -100 + command.endTick) {
                       this.field_oc = 1;
                     }
-                    param1.startTick = param1.startTick + 1;
+                    command.startTick = command.startTick + 1;
                   } else {
-                    this.a(param1, (byte) -96);
+                    this.a(command, (byte) -96);
                   }
                   if (di.field_g == 3 &&
                     qh.field_Yb == 1 &&
@@ -978,13 +978,13 @@ final class Sentinel extends IntrusiveNode {
                   }
                 }
               } else {
-                if (5 != param1.actionType) {
-                  if (param1.actionType == 12) {
+                if (5 != command.actionType) {
+                  if (command.actionType == 12) {
                     this.field_Vb = null;
                   } else {
-                    if (param1.actionType == 6) {
+                    if (command.actionType == 6) {
                       var4_int = this.field_U;
-                      this.field_U = param1.actionVariant;
+                      this.field_U = command.actionVariant;
                       if (this.field_U < 0 ||
                         1 < this.field_U) {
                         this.field_U = -1;
@@ -1007,28 +1007,28 @@ final class Sentinel extends IntrusiveNode {
                         this.field_Pb = 0;
                       }
                     } else {
-                      if (param1.actionType != 7) {
-                        if (8 == param1.actionType) {
+                      if (command.actionType != 7) {
+                        if (8 == command.actionType) {
                           this.field_F = -Math.abs(this.field_F);
-                          this.b((byte) -31, param1);
-                          param1.activated = false;
+                          this.b((byte) -31, command);
+                          command.activated = false;
                         } else {
-                          if (9 == param1.actionType ||
-                            param1.actionType == 11) {
+                          if (9 == command.actionType ||
+                            command.actionType == 11) {
                             this.field_F = -Math.abs(this.field_F);
-                            this.a(param1, 10);
-                            param1.activated = false;
+                            this.a(command, 10);
+                            command.activated = false;
                           }
                         }
                       } else {
                         this.field_F = -Math.abs(this.field_F);
-                        this.a((byte) 10, param1);
+                        this.a((byte) 10, command);
                       }
                     }
                   }
                 } else {
-                  this.consumeCharge(param0, 1);
-                  this.field_Vb = this.world.findSentinelForPlayer(param1.actionVariant, -128);
+                  this.consumeCharge(obfuscationGuard, 1);
+                  this.field_Vb = this.world.findSentinelForPlayer(command.actionVariant, -128);
                   if (null != this.field_Vb) {
                     this.field_ec = 1000;
                     if (!this.field_Vb.hasModuleType(18, -27)) {
@@ -1049,12 +1049,12 @@ final class Sentinel extends IntrusiveNode {
                 }
               }
             }
-            if (param2 >= param1.startTick) {
-              param1.unlink(4);
+            if (simulationTick >= command.startTick) {
+              command.unlink(4);
               return;
             }
-            if (param1.startTick >= param1.endTick) {
-              param1.unlink(4);
+            if (command.startTick >= command.endTick) {
+              command.unlink(4);
               return;
             }
           }
@@ -1063,13 +1063,13 @@ final class Sentinel extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_169_0 = var4;
-          stackIn_169_1 = new StringBuilder().append("mb.T(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_169_1 = new StringBuilder().append("mb.T(").append(obfuscationGuard).append(',');
+          if (command == null) {
             stackIn_170_2 = "null";
           } else {
             stackIn_170_2 = "{...}";
           }
-          throw ci.a((Throwable) ((Object) stackIn_169_0), ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',').append(param2).append(')').toString());
+          throw ci.a((Throwable) ((Object) stackIn_169_0), ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',').append(simulationTick).append(')').toString());
         }
     }
 
@@ -1097,7 +1097,7 @@ final class Sentinel extends IntrusiveNode {
         int var8Lifetime1;
         var9 = SteelSentinels.obfuscationControl;
         try {
-          stackIn_4_0 = (param1.field_B > 0) ? 1 : -1;
+          stackIn_4_0 = (param1.aimAngle > 0) ? 1 : -1;
           var3_int = stackIn_4_0;
           if (param0 < 61) {
             return;
@@ -1110,7 +1110,7 @@ final class Sentinel extends IntrusiveNode {
             !param1.activated) {
             this.field_Lb = false;
           }
-          var5 = this.chassis.a(0, this, new ArticulatedPart[]{}, var3_int * param1.field_B, param1.actionVariant);
+          var5 = this.chassis.a(0, this, new ArticulatedPart[]{}, var3_int * param1.aimAngle, param1.actionVariant);
           if (var5.length > 0) {
             this.field_E = var3_int;
           }
@@ -1120,7 +1120,7 @@ final class Sentinel extends IntrusiveNode {
           }
           stackIn_22_1 = (var4 != 0);
           this.field_Lb = stackIn_22_1;
-          this.chassis.a(param1.field_B * this.field_E, -97, param1.actionVariant);
+          this.chassis.a(param1.aimAngle * this.field_E, -97, param1.actionVariant);
           this.chassis.b((byte) -128, this.worldX, this.field_E, this.field_fc);
           if (param1.activated) {
             var6 = 0;
@@ -1790,7 +1790,7 @@ final class Sentinel extends IntrusiveNode {
           this.weaponParts[var7Lifetime2].a((byte) -37, var6Lifetime4 != 0, var5Lifetime5 != 0);
         }
         this.field_Jb = false;
-        this.a((byte) 75, simulationTick);
+        this.advanceCommandQueues((byte) 75, simulationTick);
         var5Lifetime6 = this.chassis.componentId;
         if (this.chassis != null) {
           this.g(-18, var5Lifetime6);
@@ -2190,34 +2190,34 @@ final class Sentinel extends IntrusiveNode {
             param2.componentId == 34 ||
             param2.componentId == 47 ||
             param2.componentId == 52) && null != this.field_Vb) {
-            param0.field_u = this.field_Vb.worldX;
-            param0.field_y = this.field_Vb.worldY - (this.field_Vb.field_Db << 3);
-            var6 = param0.field_u - this.worldX;
+            param0.targetWorldX = this.field_Vb.worldX;
+            param0.targetWorldY = this.field_Vb.worldY - (this.field_Vb.field_Db << 3);
+            var6 = param0.targetWorldX - this.worldX;
             if (0 <= var6) {
               this.field_E = 1;
             } else {
               this.field_E = -1;
             }
-            var7 = param0.field_y - param2.field_V;
+            var7 = param0.targetWorldY - param2.field_V;
             if (this.field_E != this.field_U) {
               this.field_U = 0;
             }
             var8_double = Math.atan2((double)var6, (double)(-var7));
-            param0.field_B = (int)(65536.0 * var8_double / 6.283185307179586);
+            param0.aimAngle = (int)(65536.0 * var8_double / 6.283185307179586);
             if (this.field_E < 0) {
-              if (param0.field_B > 16384) {
-                param0.field_B = param0.field_B - 65536;
+              if (param0.aimAngle > 16384) {
+                param0.aimAngle = param0.aimAngle - 65536;
               }
             } else {
-              if (param0.field_B < -16384) {
-                param0.field_B = param0.field_B + 65536;
+              if (param0.aimAngle < -16384) {
+                param0.aimAngle = param0.aimAngle + 65536;
               }
             }
-            if (param2.field_K > this.field_E * param0.field_B) {
-              param0.field_B = this.field_E * param2.field_K;
+            if (param2.field_K > this.field_E * param0.aimAngle) {
+              param0.aimAngle = this.field_E * param2.field_K;
             }
-            if (this.field_E * param0.field_B > param2.field_W) {
-              param0.field_B = param2.field_W * this.field_E;
+            if (this.field_E * param0.aimAngle > param2.field_W) {
+              param0.aimAngle = param2.field_W * this.field_E;
             }
           }
           var6Lifetime1 = -46 / ((param1 + 89) / 33);
@@ -2462,7 +2462,7 @@ final class Sentinel extends IntrusiveNode {
             } else {
               if (param2.componentId == 31 ||
                 param2.componentId == 45) {
-                var13 = cl.a(param0.field_B, 12);
+                var13 = cl.a(param0.aimAngle, 12);
               }
             }
             var16 = 5000;
@@ -2497,7 +2497,7 @@ final class Sentinel extends IntrusiveNode {
             var15 = 32;
           }
           if (var5 == 0) {
-            param0.field_B = param0.field_B + ((127 & this.world.simulationTick) - 64);
+            param0.aimAngle = param0.aimAngle + ((127 & this.world.simulationTick) - 64);
           }
           if (var5 == 6) {
             var17 = 1;
@@ -2509,10 +2509,10 @@ final class Sentinel extends IntrusiveNode {
           if (param2.componentId == 43 ||
             param2.componentId == 44 ||
             param2.componentId == 45) {
-            param0.field_B = param0.field_B + (-64 + (this.world.simulationTick & 127));
+            param0.aimAngle = param0.aimAngle + (-64 + (this.world.simulationTick & 127));
           }
-          var18 = 100 * jh.a(param0.field_B >> 3, 4096) >> 16;
-          var19 = -kg.a(param0.field_B >> 3, (byte) -92) * 100 >> 16;
+          var18 = 100 * jh.a(param0.aimAngle >> 3, 4096) >> 16;
+          var19 = -kg.a(param0.aimAngle >> 3, (byte) -92) * 100 >> 16;
           if (var18 < 0) {
             this.field_E = -1;
           } else {
@@ -2670,8 +2670,8 @@ final class Sentinel extends IntrusiveNode {
           }
           stackIn_244_0.field_nb = stackIn_245_1;
           if (3 == var5) {
-            var21.field_S = param0.field_y;
-            var21.field_K = param0.field_u;
+            var21.field_S = param0.targetWorldY;
+            var21.field_K = param0.targetWorldX;
           }
           this.world.projectiles.addLast(3, var21);
           stackIn_249_0 = var4_int;
@@ -2706,21 +2706,21 @@ final class Sentinel extends IntrusiveNode {
         return stackIn_6_0;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void advanceCommandQueues(byte obfuscationGuard, int simulationTick) {
         if (this.field_V) {
-          this.secondaryCommands.clear(param0 ^ 77);
+          this.secondaryCommands.clear(obfuscationGuard ^ 77);
           this.pendingCommands.clear(6);
         }
-        SentinelCommand var3 = (SentinelCommand) (this.pendingCommands.first(param0 + 12983));
-        SentinelCommand var4 = (SentinelCommand) (this.secondaryCommands.first(13058));
-        if (var3 != null) {
-          this.a(true, var3, param1);
+        SentinelCommand primaryCommand = (SentinelCommand) (this.pendingCommands.first(obfuscationGuard + 12983));
+        SentinelCommand secondaryCommand = (SentinelCommand) (this.secondaryCommands.first(13058));
+        if (primaryCommand != null) {
+          this.executeCommand(true, primaryCommand, simulationTick);
         }
-        if (param0 != 75) {
+        if (obfuscationGuard != 75) {
           return;
         }
-        if (var4 != null) {
-          this.a(true, var4, param1);
+        if (secondaryCommand != null) {
+          this.executeCommand(true, secondaryCommand, simulationTick);
         }
     }
 
@@ -3521,8 +3521,8 @@ final class Sentinel extends IntrusiveNode {
           var6.field_K = 5;
           var6.field_U = 500;
           if (this.field_fb == 1) {
-            var6.field_T = var6.field_T * 2;
-            var6.field_V = var6.field_V * 2;
+            var6.velocityY = var6.velocityY * 2;
+            var6.velocityX = var6.velocityX * 2;
           }
           if (this.field_fb == 2) {
             var6.field_K = 6;
@@ -3530,8 +3530,8 @@ final class Sentinel extends IntrusiveNode {
           }
           if (this.field_fb == 3) {
             var6.field_K = 7;
-            var6.field_T = var6.field_T * 2;
-            var6.field_V = var6.field_V * 2;
+            var6.velocityY = var6.velocityY * 2;
+            var6.velocityX = var6.velocityX * 2;
             var6.field_U = 750;
           }
           if (this.activeModuleType == 41) {
@@ -3623,9 +3623,9 @@ final class Sentinel extends IntrusiveNode {
         }
     }
 
-    final void d(byte param0, SentinelCommand param1) {
-        NodeDeque var3 = null;
-        SentinelCommand var4 = null;
+    final void scheduleCommand(byte obfuscationGuard, SentinelCommand command) {
+        NodeDeque commandQueue = null;
+        SentinelCommand queuedCommand = null;
         int var5 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -3634,44 +3634,44 @@ final class Sentinel extends IntrusiveNode {
         RuntimeException var3_ref = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          var3 = this.pendingCommands;
-          if (param1.actionType == 6 ||
-            param1.actionType == 3 ||
-            param1.actionType == 4) {
-            var3 = this.secondaryCommands;
+          commandQueue = this.pendingCommands;
+          if (command.actionType == 6 ||
+            command.actionType == 3 ||
+            command.actionType == 4) {
+            commandQueue = this.secondaryCommands;
           }
-          if (param0 <= 45) {
+          if (obfuscationGuard <= 45) {
             return;
           }
-          var4 = (SentinelCommand) (var3.first(13058));
-          while (var4 != null) {
-            if (param1.startTick > var4.startTick &&
-              !var4.field_p) {
-              var4.unlink(4);
+          queuedCommand = (SentinelCommand) (commandQueue.first(13058));
+          while (queuedCommand != null) {
+            if (command.startTick > queuedCommand.startTick &&
+              !queuedCommand.scheduled) {
+              queuedCommand.unlink(4);
             } else {
-              if (param1.startTick == var4.startTick) {
-                param1.field_p = true;
-                IsaacRandom.a(var4, 30, param1);
-                var4.unlink(4);
+              if (command.startTick == queuedCommand.startTick) {
+                command.scheduled = true;
+                IsaacRandom.insertNodeBefore(queuedCommand, 30, command);
+                queuedCommand.unlink(4);
                 return;
               }
-              if (var4.startTick > param1.startTick) {
-                param1.field_p = true;
-                IsaacRandom.a(var4, 30, param1);
+              if (queuedCommand.startTick > command.startTick) {
+                command.scheduled = true;
+                IsaacRandom.insertNodeBefore(queuedCommand, 30, command);
                 return;
               }
             }
-            var4 = (SentinelCommand) (var3.next((byte) -36));
+            queuedCommand = (SentinelCommand) (commandQueue.next((byte) -36));
           }
-          param1.field_p = true;
-          var3.addLast(3, param1);
+          command.scheduled = true;
+          commandQueue.addLast(3, command);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_26_0 = var3_ref;
-          stackIn_26_1 = new StringBuilder().append("mb.H(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_26_1 = new StringBuilder().append("mb.H(").append(obfuscationGuard).append(',');
+          if (command == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -3933,7 +3933,7 @@ final class Sentinel extends IntrusiveNode {
             20 == var4.effectType) && var4.sourceWeaponType != 32) {
             var5_int = this.worldX - var4.worldX;
             var6_int = -var4.worldY + this.worldY;
-            if (var6_int * var4.field_F + var5_int * var4.field_eb <= 0) {
+            if (var6_int * var4.velocityY + var5_int * var4.velocityX <= 0) {
               var4 = (Projectile) (this.world.field_db.next((byte) -23));
               continue;
             }
@@ -3953,34 +3953,34 @@ final class Sentinel extends IntrusiveNode {
           var9 = ((Projectile) (var3)).worldY - this.worldY;
           var21 = new SentinelCommand(0, 1, 1 + this.world.simulationTick);
           var5_ref = var21;
-          var21.field_y = ((Projectile) (var3)).worldY;
-          var21.field_u = ((Projectile) (var3)).worldX;
+          var21.targetWorldY = ((Projectile) (var3)).worldY;
+          var21.targetWorldX = ((Projectile) (var3)).worldX;
           var6 = Math.atan2((double)var8, (double)(-var9));
-          var21.field_B = (int)(65536.0 * var6 / 6.283185307179586);
-          this.chassis.a(this.field_E * var21.field_B, -96, 1);
-          var20 = this.chassis.a(0, this, new ArticulatedPart[]{}, var21.field_B * this.field_E, 1);
+          var21.aimAngle = (int)(65536.0 * var6 / 6.283185307179586);
+          this.chassis.a(this.field_E * var21.aimAngle, -96, 1);
+          var20 = this.chassis.a(0, this, new ArticulatedPart[]{}, var21.aimAngle * this.field_E, 1);
           var4_arrayLifetime1 = var20;
           if (var20.length == 0) {
             var22 = new SentinelCommand(0, 0, 1 + this.world.simulationTick);
             var5_ref = var22;
             var22.endTick = var22.startTick + 25;
-            var22.field_y = ((Projectile) (var3)).worldY;
-            var22.field_u = ((Projectile) (var3)).worldX;
+            var22.targetWorldY = ((Projectile) (var3)).worldY;
+            var22.targetWorldX = ((Projectile) (var3)).worldX;
             var6Lifetime1 = Math.atan2((double)var8, (double)(-var9));
-            var22.field_B = (int)(65536.0 * var6Lifetime1 / 6.283185307179586);
-            this.chassis.a(var22.field_B * this.field_E, -86, 0);
-            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, this.field_E * var22.field_B, 0);
+            var22.aimAngle = (int)(65536.0 * var6Lifetime1 / 6.283185307179586);
+            this.chassis.a(var22.aimAngle * this.field_E, -86, 0);
+            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, this.field_E * var22.aimAngle, 0);
           }
           if (var4_arrayLifetime1.length == 0 &&
             1 <= this.charge) {
             var23 = new SentinelCommand(0, 7, this.world.simulationTick + 1);
             var5_ref = var23;
-            var23.field_u = ((Projectile) (var3)).worldX;
-            var23.field_y = ((Projectile) (var3)).worldY;
+            var23.targetWorldX = ((Projectile) (var3)).worldX;
+            var23.targetWorldY = ((Projectile) (var3)).worldY;
             var6Lifetime2 = Math.atan2((double)var8, (double)(-var9));
-            var23.field_B = (int)(var6Lifetime2 * 65536.0 / 6.283185307179586);
-            this.chassis.a(var23.field_B * this.field_E, -95, 7);
-            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, var23.field_B * this.field_E, 7);
+            var23.aimAngle = (int)(var6Lifetime2 * 65536.0 / 6.283185307179586);
+            this.chassis.a(var23.aimAngle * this.field_E, -95, 7);
+            var4_arrayLifetime1 = this.chassis.a(0, this, new ArticulatedPart[]{}, var23.aimAngle * this.field_E, 7);
           }
           this.chassis.b((byte) -128, 0, this.field_E, 0);
           var10 = 0;
@@ -3990,12 +3990,12 @@ final class Sentinel extends IntrusiveNode {
           var11Lifetime1 = 0;
           if (var4_arrayLifetime1.length > 0) {
             var12 = this.worldY + var10 / var4_arrayLifetime1.length;
-            var13 = var5_ref.field_u - this.worldX;
-            var14 = var5_ref.field_y - var12;
+            var13 = var5_ref.targetWorldX - this.worldX;
+            var14 = var5_ref.targetWorldY - var12;
             var15 = this.worldX >> 4;
             var16 = var12 >> 4;
-            var17 = var5_ref.field_u >> 4;
-            var18 = var5_ref.field_y >> 4;
+            var17 = var5_ref.targetWorldX >> 4;
+            var18 = var5_ref.targetWorldY >> 4;
             stackIn_37_0 = (!this.world.a(var18, var14, var13, var16, var15, (byte) 112, var17)) ? 0 : 1;
             var11Lifetime1 = stackIn_37_0;
           }
@@ -4019,17 +4019,17 @@ final class Sentinel extends IntrusiveNode {
             }
           }
           var6Lifetime3 = Math.atan2((double)var8, (double)(-var9));
-          var5_ref.field_B = (int)(65536.0 * var6Lifetime3 / 6.283185307179586);
+          var5_ref.aimAngle = (int)(65536.0 * var6Lifetime3 / 6.283185307179586);
           if (this.field_E >= 0) {
-            if (var5_ref.field_B < -16384) {
-              var5_ref.field_B = var5_ref.field_B + 65536;
+            if (var5_ref.aimAngle < -16384) {
+              var5_ref.aimAngle = var5_ref.aimAngle + 65536;
             }
           } else {
-            if (var5_ref.field_B > 16384) {
-              var5_ref.field_B = var5_ref.field_B - 65536;
+            if (var5_ref.aimAngle > 16384) {
+              var5_ref.aimAngle = var5_ref.aimAngle - 65536;
             }
           }
-          var5_ref.field_p = true;
+          var5_ref.scheduled = true;
           if (!((Projectile) (var3)).field_T) {
             return;
           }
@@ -4113,7 +4113,7 @@ final class Sentinel extends IntrusiveNode {
             var3 = param1.field_G;
           }
           if (param0 <= 9) {
-            this.a((byte) 19, 121);
+            this.advanceCommandQueues((byte) 19, 121);
           }
           this.field_Cc = false;
           if (var3 != null &&
@@ -4244,7 +4244,7 @@ final class Sentinel extends IntrusiveNode {
           var10 = (this.worldY * param1 >> 16) + param0;
           if (param2 != 16711680) {
             var17 = (SentinelCommand) null;
-            this.d((byte) 107, (SentinelCommand) null);
+            this.scheduleCommand((byte) 107, (SentinelCommand) null);
           }
           if (this.chassis.componentId != 109 &&
             !this.field_pc &&
@@ -4396,8 +4396,8 @@ final class Sentinel extends IntrusiveNode {
             qh.field_Yb == 6) {
             tj.field_c = 1;
           }
-          var3_int = -this.worldX + param0.field_u >> 4;
-          var4 = param0.field_y - this.worldY >> 4;
+          var3_int = -this.worldX + param0.targetWorldX >> 4;
+          var4 = param0.targetWorldY - this.worldY >> 4;
           var5 = ik.a(var3_int * var3_int + var4 * var4, 50);
           if (param1 > -72) {
             this.field_S = 104;

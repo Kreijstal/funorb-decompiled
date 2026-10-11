@@ -16,7 +16,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lf.field_q == null) {
+          if (BattleCharacter.field_q == null) {
             return;
           }
           av.field_a = 0;
@@ -55,7 +55,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lf.field_q != null) {
+          if (BattleCharacter.field_q != null) {
             av.field_a = 0;
             mq.field_Xb = param0.getX();
             ei.field_d = param0.getY();
@@ -69,13 +69,13 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              tb.field_g = tb.field_g | 1;
+              EffectPresentation.field_g = EffectPresentation.field_g | 1;
             }
             if ((var2_int & 8) != 0) {
-              tb.field_g = tb.field_g | 2;
+              EffectPresentation.field_g = EffectPresentation.field_g | 2;
             }
             if ((4 & var2_int) != 0) {
-              tb.field_g = tb.field_g | 4;
+              EffectPresentation.field_g = EffectPresentation.field_g | 4;
             }
             ku.field_I = true;
           }
@@ -105,7 +105,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lf.field_q == null) {
+          if (BattleCharacter.field_q == null) {
             return;
           }
           av.field_a = 0;
@@ -155,7 +155,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lf.field_q == null) {
+          if (BattleCharacter.field_q == null) {
             return;
           }
           av.field_a = 0;
@@ -194,7 +194,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
-          if (lf.field_q != null) {
+          if (BattleCharacter.field_q != null) {
             av.field_a = 0;
             nh.field_B = param0.getX();
             kl.field_i = param0.getY();
@@ -207,7 +207,7 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (lf.field_q != null) {
+          if (BattleCharacter.field_q != null) {
             ob.field_J = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -223,19 +223,19 @@ final class pq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != lf.field_q) {
+          if (null != BattleCharacter.field_q) {
             av.field_a = 0;
             ob.field_J = 0;
             ku.field_I = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              tb.field_g = tb.field_g & -2;
+              EffectPresentation.field_g = EffectPresentation.field_g & -2;
             }
             if ((var2_int & 8) != 0) {
-              tb.field_g = tb.field_g & -3;
+              EffectPresentation.field_g = EffectPresentation.field_g & -3;
             }
             if ((var2_int & 4) != 0) {
-              tb.field_g = tb.field_g & -5;
+              EffectPresentation.field_g = EffectPresentation.field_g & -5;
             }
           }
           if (!param0.isPopupTrigger()) {

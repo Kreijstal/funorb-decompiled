@@ -13,8 +13,8 @@ current reverse dictionaries belong here.
 ## Read the games
 
 - [GeoBlox](games/geoblox/README.md): gameplay, tutorial, screens and rendering.
-- [Steel Sentinels](games/steelsentinels/README.md): first gameplay pass for sentinel physics, armour/charge, world state, projectiles, engineering and articulated parts.
-- [Armies of Gielinor](games/armiesofgielinor/README.md): first gameplay pass for battlefield state, units, tiles, teams, events, movement, AI and tutorial anchors.
+- [Steel Sentinels](games/steelsentinels/README.md): gameplay naming for command scheduling, sentinel physics, armour/charge, world state, projectiles, engineering and articulated parts.
+- [Armies of Gielinor](games/armiesofgielinor/README.md): gameplay naming for presentation/AI strategies, battlefield state, units, tiles, teams, events, movement, AI and tutorial anchors.
 - [Deko Bloko](games/dekobloko/README.md): buckets, falling pieces, controls,
   feedback shapes, multiplayer snapshots, assets and UI.
 
@@ -23,15 +23,17 @@ by default for every game. Semantic game-specific names use explicit naming
 rules. Deko's numbered structural-category and type-based names identify
 unresolved purposes honestly; they are not complete semantic deobfuscation.
 
-Armies has 45 reviewed class names, not a complete semantic map. Its raw/named
+Armies has 63 reviewed class names, not a complete semantic map. Its raw/named
 core probe checks map lookups, alliances, status packing, damage, equipment/ranges,
 spell payload bytes and queued combat consequences under a controlled headless
 boundary. SpellCastEvent corrects the earlier trinket label from actual spell-table
-dispatch. Three dispatcher files remain.
+dispatch. Candidate selection/recycling and presentation acknowledgement are
+also tested. Three dispatcher files remain.
 
 Steel has 27 reviewed class names. Its controlled raw/named core checks cover
 module aliases, armour/charge mutations, terrain bounds, recursive part armour
-and synchronization checksums. Three dispatcher files remain.
+and synchronization checksums, plus command timing, scheduling, queue routing
+and equal-tick replacement. Three dispatcher files remain.
 
 ## Reproduce
 

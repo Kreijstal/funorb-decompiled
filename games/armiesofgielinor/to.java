@@ -92,7 +92,7 @@ final class to extends SpellAreaSelection {
         RuntimeException decompiledCaughtException = null;
         try {
           if (pq.field_a == null) {
-            pq.field_a = new cr(KingBlackDragonEvent.field_C, aw.field_h);
+            pq.field_a = new cr(KingBlackDragonEvent.field_C, BestScoreStrategy.field_h);
             KingBlackDragonEvent.field_C.a(pq.field_a, param3 + 1);
           }
           pq.field_a.a(param1, 30, param0, param2);

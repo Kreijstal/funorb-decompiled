@@ -215,7 +215,7 @@ final class ml extends je {
             return;
           }
           while (var7 < op.field_c[0].length) {
-            SpellAreaSelection.field_k[76][var7] = ge.b(op.field_c[0][var7], -20849);
+            SpellAreaSelection.field_k[76][var7] = WeightedScoreStrategy.b(op.field_c[0][var7], -20849);
             bp.a(var7, op.field_c[0][var7], param1 - 100);
             var7++;
           }
@@ -286,7 +286,7 @@ final class ml extends je {
         if (param3) {
           return true;
         }
-        return (ko.field_b - param0) * (-param0 + ko.field_b) + (-param1 + sm.field_d) * (-param1 + sm.field_d) < param2 * param2 ? true : false;
+        return (ko.field_b - param0) * (-param0 + ko.field_b) + (-param1 + AiPlanningStrategy.field_d) * (-param1 + AiPlanningStrategy.field_d) < param2 * param2 ? true : false;
     }
 
     ml(long param0, je param1, String[] param2, je param3, je[] param4, int param5) {

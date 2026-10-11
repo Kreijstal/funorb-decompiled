@@ -176,7 +176,7 @@ final class TeleportEvent extends GameEvent {
         this.destinationX = -128 + (this.destinationX ^ 128);
         this.destinationY = (128 ^ this.destinationY) - 128;
         this.field_D = param3 ? true : false;
-        this.field_m = this.field_D ? 21 : 26;
+        this.eventKind = this.field_D ? 21 : 26;
     }
 
     TeleportEvent(int param0, int param1, int param2, int param3, boolean param4) {
@@ -185,7 +185,7 @@ final class TeleportEvent extends GameEvent {
         this.destinationX = param2;
         this.field_D = param4 ? true : false;
         this.destinationY = param3;
-        this.field_m = this.field_D ? 21 : 26;
+        this.eventKind = this.field_D ? 21 : 26;
     }
 
     static {

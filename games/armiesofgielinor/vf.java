@@ -280,9 +280,9 @@ abstract class vf {
               var28.field_yb != 0) {
               if (param1) {
                 if (var6Lifetime1 == 0) {
-                  sm.field_b = 0;
+                  AiPlanningStrategy.field_b = 0;
                 } else {
-                  sm.field_b = sm.field_b ^ var6Lifetime1;
+                  AiPlanningStrategy.field_b = AiPlanningStrategy.field_b ^ var6Lifetime1;
                 }
               } else {
                 if (var6Lifetime1 != param3.field_ac) {
@@ -301,11 +301,11 @@ abstract class vf {
             } else {
               if (var6Lifetime1 != 0) {
                 stackIn_132_0 = var28;
-                stackIn_133_1 = ((var6Lifetime1 & sm.field_b) != 0);
+                stackIn_133_1 = ((var6Lifetime1 & AiPlanningStrategy.field_b) != 0);
                 stackIn_132_0.field_rb = stackIn_133_1;
               } else {
                 stackIn_128_0 = var28;
-                stackIn_129_1 = (sm.field_b == 0);
+                stackIn_129_1 = (AiPlanningStrategy.field_b == 0);
                 stackIn_128_0.field_rb = stackIn_129_1;
               }
             }
@@ -355,11 +355,11 @@ abstract class vf {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (sk.field_j != null &&
-                  sk.field_j[var7] != null &&
-                  (~ei.field_a & sk.field_j[var7][var9]) > 0) {
+                if (CombatPresentation.field_j != null &&
+                  CombatPresentation.field_j[var7] != null &&
+                  (~ei.field_a & CombatPresentation.field_j[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = fd.a(true, sk.field_j[var7][var9] & ~ei.field_a);
+                  var15 = fd.a(true, CombatPresentation.field_j[var7][var9] & ~ei.field_a);
                 }
                 if (ep.field_p != null &&
                   null != ep.field_p[var7] &&
@@ -634,7 +634,7 @@ abstract class vf {
             if (param1) {
               return;
             }
-            cl.b(5, param2);
+            AiUnitPlanner.b(5, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

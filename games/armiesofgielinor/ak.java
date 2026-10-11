@@ -364,7 +364,7 @@ final class ak extends ju {
         of.field_Lb.a(-30 + (-40 + ov.field_i.field_ob) - 2, -20500, ov.field_i.field_gb, 30, 0);
         r.field_v.a(30, -20500, 68, 5, 5);
         ek.field_c.a(30, -20500, 78, 5, 75);
-        sr.field_p.a(30, -20500, 48, 5, 155);
+        CombatViewTransition.field_p.a(30, -20500, 48, 5, 155);
         bs.field_a.a(30, -20500, 48, 5, 205);
         int var2 = !fh.field_c ? 200 : 250;
         ee.field_A.a(30, -20500, -var2 + 363, 5, var2 + 5);

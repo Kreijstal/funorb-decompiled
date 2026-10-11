@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sr {
+final class CombatViewTransition {
     private int[] field_g;
     private int field_o;
     private int[] field_a;
-    int field_n;
+    int transitionFactor;
     private int field_e;
     private int[] field_b;
     private int field_c;
@@ -14,7 +14,7 @@ final class sr {
     private boolean field_h;
     static je field_p;
     private int field_l;
-    v field_k;
+    BattleCamera camera;
     private int field_j;
     private int[] field_d;
     private int[] field_f;
@@ -38,9 +38,9 @@ final class sr {
         return -54;
     }
 
-    final boolean a(byte param0) {
-        int var2 = -78 / ((param0 - 41) / 62);
-        return this.field_n == 256 ? true : false;
+    final boolean isExpanded(byte obfuscationGuard) {
+        int var2 = -78 / ((obfuscationGuard - 41) / 62);
+        return this.transitionFactor == 256 ? true : false;
     }
 
     final void a(int param0, int param1) {
@@ -51,14 +51,14 @@ final class sr {
         this.field_m = 0;
         this.field_g[1] = this.field_l;
         this.field_g[0] = this.field_c;
-        this.field_k.a(1, param1);
-        this.field_a[0] = this.field_k.field_e[0];
-        this.field_a[1] = this.field_k.field_e[1];
+        this.camera.a(1, param1);
+        this.field_a[0] = this.camera.field_e[0];
+        this.field_a[1] = this.camera.field_e[1];
         this.field_b[0] = so.field_b.field_a >> 1;
         this.field_b[1] = so.field_b.field_g >> 1;
         this.field_h = false;
         if (param0 > -59) {
-          this.a((byte) -51);
+          this.isExpanded((byte) -51);
         }
     }
 
@@ -81,7 +81,7 @@ final class sr {
         int var6Lifetime1;
         try {
           try {
-            var7 = this.field_n;
+            var7 = this.transitionFactor;
             var6 = param1.field_x;
             var5 = param1.field_A;
             var5Lifetime1 = this.field_d[0];
@@ -161,7 +161,7 @@ final class sr {
           this.field_a[0] = so.field_b.field_a >> 1;
           this.field_a[1] = so.field_b.field_g >> 1;
           this.a(-120);
-          this.field_n = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
+          this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
           var2 = this.field_i[0] - this.field_g[0];
           var3 = this.a((byte) -71, var2);
           var2 = var3 * var2;
@@ -181,7 +181,7 @@ final class sr {
         this.field_b[1] = so.field_b.field_g >> 1;
         this.field_b[0] = so.field_b.field_a >> 1;
         this.a(-120);
-        this.field_n = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
+        this.transitionFactor = this.a(param0 - 1959107776, this.field_j, this.field_e, this.field_o, this.field_m);
         var2Lifetime1 = this.field_i[0] - this.field_g[0];
         var3Lifetime1 = this.a((byte) -71, var2Lifetime1);
         var2Lifetime1 = var3Lifetime1 * var2Lifetime1;
@@ -220,9 +220,9 @@ final class sr {
         this.field_g[0] = 16;
         this.field_i[0] = this.field_c;
         this.field_i[1] = this.field_l;
-        this.field_k.a(1, param0);
-        this.field_b[1] = this.field_k.field_e[1];
-        this.field_b[0] = this.field_k.field_e[0];
+        this.camera.a(1, param0);
+        this.field_b[1] = this.camera.field_e[1];
+        this.field_b[0] = this.camera.field_e[0];
         this.field_h = true;
         int var3 = -107 / ((74 - param1) / 42);
         this.field_a[0] = so.field_b.field_a >> 1;
@@ -231,7 +231,7 @@ final class sr {
 
     private final void b(int param0) {
         this.field_d[0] = this.field_i[0];
-        this.field_n = this.field_m;
+        this.transitionFactor = this.field_m;
         this.field_d[1] = this.field_i[1];
         if (param0 <= -41) {
           this.field_f[1] = this.field_a[1];
@@ -253,15 +253,15 @@ final class sr {
     public static void b(byte param0) {
         field_p = null;
         if (param0 != 120) {
-          sr.a(51, -118, -11, (byte) 113);
+          CombatViewTransition.a(51, -118, -11, (byte) 113);
         }
     }
 
-    sr(int param0, int param1, v param2) {
+    CombatViewTransition(int param0, int param1, BattleCamera param2) {
         this.field_o = 60;
         try {
           this.field_a = new int[2];
-          this.field_k = param2;
+          this.camera = param2;
           this.field_d = new int[2];
           this.field_i = new int[2];
           this.field_f = new int[2];

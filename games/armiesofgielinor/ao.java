@@ -12,7 +12,7 @@ final class ao extends lk {
           int var5_int = 58 / ((param1 + 86) / 38);
           if (param2 < param4) {
             param3.c(param0, (byte) 0);
-            ir.a(14, 20, param4, 30, 1, 4, param3);
+            AiInfluenceMap.a(14, 20, param4, 30, 1, 4, param3);
           }
           param3.d((byte) -83, param4 + param2 + param0);
         } catch (RuntimeException runtimeException) {
@@ -91,7 +91,7 @@ final class ao extends lk {
             stackIn_3_0 = null;
           }
           var10 = (fw) (stackIn_3_0);
-          id.a(param1 + param0.field_B, param0.field_l + (param0.field_B + param1), param0.field_p + (param4 + param0.field_w), param4 + param0.field_p, (byte) 72);
+          CampaignUnitOverride.a(param1 + param0.field_B, param0.field_l + (param0.field_B + param1), param0.field_p + (param4 + param0.field_w), param4 + param0.field_p, (byte) 72);
           if (param2 >= -79) {
             return;
           }

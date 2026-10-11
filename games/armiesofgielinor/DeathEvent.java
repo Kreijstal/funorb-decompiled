@@ -133,7 +133,7 @@ final class DeathEvent extends GameEvent {
         this.field_z = false;
         this.field_y = param0;
         this.field_D = param1;
-        this.field_m = 10;
+        this.eventKind = 10;
         this.unit = null;
     }
 
@@ -195,7 +195,7 @@ final class DeathEvent extends GameEvent {
           this.field_D = param0.tileY;
           this.field_y = param0.tileX;
           this.unit = param0;
-          this.field_m = 10;
+          this.eventKind = 10;
           this.field_z = false;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "hp.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -247,7 +247,7 @@ final class DeathEvent extends GameEvent {
         this.field_B = false;
         try {
           this.field_z = param1 ? true : false;
-          this.field_m = 10;
+          this.eventKind = 10;
           this.field_D = param0.tileY;
           this.field_y = param0.tileX;
           this.unit = param0;

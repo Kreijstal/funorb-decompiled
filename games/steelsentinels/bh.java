@@ -121,8 +121,8 @@ final class bh {
         int var5 = 0;
         int var6 = 0;
         try {
-          var3_int = param1.field_u - this.field_g >> 4;
-          var4 = -this.field_q + param1.field_y >> 4;
+          var3_int = param1.targetWorldX - this.field_g >> 4;
+          var4 = -this.field_q + param1.targetWorldY >> 4;
           if (!param0) {
             return;
           }
@@ -292,7 +292,7 @@ final class bh {
                 var4 = var6;
               } else {
                 if (var6.actionType == 0) {
-                  if (var6.field_u > this.field_g) {
+                  if (var6.targetWorldX > this.field_g) {
                     this.field_b = 1;
                   } else {
                     this.field_b = -1;
@@ -345,7 +345,7 @@ final class bh {
                 }
               } else {
                 var4 = var6Lifetime1;
-                if (this.field_g < var6Lifetime1.field_u) {
+                if (this.field_g < var6Lifetime1.targetWorldX) {
                   this.field_b = 1;
                 } else {
                   this.field_b = -1;
@@ -369,7 +369,7 @@ final class bh {
           while (var6Lifetime2 != null) {
             if (~param2 == ~var6Lifetime2.startTick &&
               var6Lifetime2.actionType == 0) {
-              if (var6Lifetime2.field_u <= this.field_g) {
+              if (var6Lifetime2.targetWorldX <= this.field_g) {
                 this.field_b = -1;
               } else {
                 this.field_b = 1;
@@ -392,7 +392,7 @@ final class bh {
                 }
               } else {
                 if (param0.actionType == 0) {
-                  if (param0.field_u > this.field_g) {
+                  if (param0.targetWorldX > this.field_g) {
                     this.field_b = 1;
                   } else {
                     this.field_b = -1;
@@ -408,7 +408,7 @@ final class bh {
                     cf.field_q = -1;
                     l.field_g = -1;
                   } else {
-                    if (this.field_g < param0.field_u) {
+                    if (this.field_g < param0.targetWorldX) {
                       this.field_b = 1;
                     } else {
                       this.field_b = -1;
@@ -620,7 +620,7 @@ final class bh {
         RuntimeException var3_ref = null;
         var5 = SteelSentinels.obfuscationControl;
         try {
-          if (this.field_g >= param0.field_u) {
+          if (this.field_g >= param0.targetWorldX) {
             this.field_b = -1;
           } else {
             this.field_b = 1;
@@ -631,9 +631,9 @@ final class bh {
           if (param1 <= 0) {
             this.field_c = (Sentinel) null;
           }
-          var6 = this.field_c.chassis.a(0, this.field_c, new ArticulatedPart[]{}, this.field_b * param0.field_B, param0.actionVariant);
+          var6 = this.field_c.chassis.a(0, this.field_c, new ArticulatedPart[]{}, this.field_b * param0.aimAngle, param0.actionVariant);
           var3 = var6;
-          this.field_c.chassis.a(param0.field_B * this.field_b, -86, param0.actionVariant);
+          this.field_c.chassis.a(param0.aimAngle * this.field_b, -86, param0.actionVariant);
           this.field_c.chassis.b((byte) -128, this.field_g, this.field_b, this.field_q);
           var4 = 0;
           while (var4 < var6.length) {
@@ -984,10 +984,10 @@ final class bh {
             param1.componentId == 47 ||
             param1.componentId == 52) &&
             null != this.field_c.field_Vb) {
-            param2.field_u = this.field_c.field_Vb.worldX;
-            param2.field_y = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.worldY;
-            var5 = -this.field_g + param2.field_u;
-            var6 = -param1.field_V + param2.field_y;
+            param2.targetWorldX = this.field_c.field_Vb.worldX;
+            param2.targetWorldY = -(this.field_c.field_Vb.field_Db << 3) + this.field_c.field_Vb.worldY;
+            var5 = -this.field_g + param2.targetWorldX;
+            var6 = -param1.field_V + param2.targetWorldY;
             if (0 > var5) {
               this.field_b = -1;
             } else {
@@ -997,26 +997,26 @@ final class bh {
               this.field_d = 0;
             }
             var7_double = Math.atan2((double)var5, (double)(-var6));
-            param2.field_B = (int)(var7_double * 65536.0 / 6.283185307179586);
+            param2.aimAngle = (int)(var7_double * 65536.0 / 6.283185307179586);
             if (this.field_b < 0) {
-              if (param2.field_B > 16384) {
-                param2.field_B = param2.field_B - 65536;
+              if (param2.aimAngle > 16384) {
+                param2.aimAngle = param2.aimAngle - 65536;
               }
             } else {
-              if (param2.field_B < -16384) {
-                param2.field_B = param2.field_B + 65536;
+              if (param2.aimAngle < -16384) {
+                param2.aimAngle = param2.aimAngle + 65536;
               }
             }
-            if (param1.field_K > this.field_b * param2.field_B) {
-              param2.field_B = this.field_b * param1.field_K;
+            if (param1.field_K > this.field_b * param2.aimAngle) {
+              param2.aimAngle = this.field_b * param1.field_K;
             }
-            if (param1.field_W < param2.field_B * this.field_b) {
-              param2.field_B = this.field_b * param1.field_W;
+            if (param1.field_W < param2.aimAngle * this.field_b) {
+              param2.aimAngle = this.field_b * param1.field_W;
             }
           }
           var4_int = 2;
-          var5Lifetime1 = -this.field_g + param2.field_u;
-          var6Lifetime1 = param2.field_y - this.field_q;
+          var5Lifetime1 = -this.field_g + param2.targetWorldX;
+          var6Lifetime1 = param2.targetWorldY - this.field_q;
           if (var5Lifetime1 >= 0) {
             this.field_b = 1;
           } else {
@@ -1156,7 +1156,7 @@ final class bh {
             } else {
               if (param1.componentId == 31 ||
                 param1.componentId == 45) {
-                var10 = cl.a(param2.field_B, -127);
+                var10 = cl.a(param2.aimAngle, -127);
               }
             }
             var13 = 5000;
@@ -1193,7 +1193,7 @@ final class bh {
           if (1 > var9) {
             var9 = 1;
           }
-          var5Lifetime2 = jh.a(param2.field_B >> 3, 4096) * 100 >> 16;
+          var5Lifetime2 = jh.a(param2.aimAngle >> 3, 4096) * 100 >> 16;
           if (var4_int == 6) {
             var12 = 32;
             var10 = 512;
@@ -1201,7 +1201,7 @@ final class bh {
             var13 = 5;
             var14 = 1;
           }
-          var6Lifetime2 = -kg.a(param2.field_B >> 3, (byte) -87) * 100 >> 16;
+          var6Lifetime2 = -kg.a(param2.aimAngle >> 3, (byte) -87) * 100 >> 16;
           var9Lifetime1 = 100;
           if (null != IsaacRandom.field_f[-17 + param1.componentId]) {
             var15_int = -param1.field_G + IsaacRandom.field_f[param1.componentId - 17][0];
@@ -1226,8 +1226,8 @@ final class bh {
           stackIn_155_1 = (param0);
           stackIn_154_0.field_V = stackIn_155_1;
           if (var4_int == 3) {
-            var15.field_S = param2.field_y;
-            var15.field_K = param2.field_u;
+            var15.field_S = param2.targetWorldY;
+            var15.field_K = param2.targetWorldX;
           }
           pm.field_db.addLast(3, var15);
           cf.field_q = var15.worldY - this.field_q;

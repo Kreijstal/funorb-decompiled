@@ -434,7 +434,7 @@ class je extends im {
             this.field_hb = 0;
           }
         }
-        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.field_j <= sm.field_d) && (SoftwareRaster.field_e > sm.field_d) && (SoftwareRaster.field_a <= ko.field_b) && (SoftwareRaster.field_f > ko.field_b);
+        stackIn_30_1 = (!bl.field_f) && (SoftwareRaster.field_j <= AiPlanningStrategy.field_d) && (SoftwareRaster.field_e > AiPlanningStrategy.field_d) && (SoftwareRaster.field_a <= ko.field_b) && (SoftwareRaster.field_f > ko.field_b);
         this.field_jb = stackIn_30_1;
         if (ro.field_ub == 0) {
           this.field_hb = 0;
@@ -457,7 +457,7 @@ class je extends im {
         SoftwareRaster.f(var8, var9, var10, var11);
         if (this.field_hb != 0 &&
           this.field_Gb) {
-          this.field_S = -this.field_bb + sm.field_d - param5;
+          this.field_S = -this.field_bb + AiPlanningStrategy.field_d - param5;
           this.field_ab = -this.field_Ab + ko.field_b - param2;
           if (0 > this.field_S) {
             this.field_S = 0;
@@ -627,8 +627,8 @@ class je extends im {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (vb.field_o != null) {
-                      stackIn_43_0 = (vb.field_o[var6 - 4]) ? 1 : 0;
+                    if (EventPresenter.field_o != null) {
+                      stackIn_43_0 = (EventPresenter.field_o[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_43_0 = 0;
                     }

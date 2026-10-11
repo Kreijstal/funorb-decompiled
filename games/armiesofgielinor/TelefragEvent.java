@@ -131,7 +131,7 @@ final class TelefragEvent extends GameEvent {
     TelefragEvent(Unit param0) {
         try {
           this.unit = param0;
-          this.field_m = 5;
+          this.eventKind = 5;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "kn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

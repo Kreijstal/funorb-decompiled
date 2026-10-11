@@ -19,11 +19,11 @@ final class ds {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = lf.field_q;
+        var1 = BattleCharacter.field_q;
         synchronized (var1) {
           ro.field_ub = ob.field_J;
           av.field_a = av.field_a + 1;
-          sm.field_d = nh.field_B;
+          AiPlanningStrategy.field_d = nh.field_B;
           ko.field_b = kl.field_i;
           lk.field_f = ku.field_I;
           var2 = 48 / ((36 - param0) / 56);
@@ -32,7 +32,7 @@ final class ds {
           iu.field_t = mq.field_Xb;
           ur.field_z = ei.field_d;
           jm.field_k = 0;
-          eq.field_l = tb.field_g;
+          eq.field_l = EffectPresentation.field_g;
         }
     }
 

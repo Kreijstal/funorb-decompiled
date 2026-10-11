@@ -34,7 +34,7 @@ final class cs extends sf implements he {
           this.field_ab.field_k = (kh) ((Object) new lk(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, this.field_ab);
           this.field_Z = this.a(ui.field_e, -63, (qo) (this));
-          this.field_gb = this.a(ge.field_m, -74, (qo) (this));
+          this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (qo) (this));
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "cs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

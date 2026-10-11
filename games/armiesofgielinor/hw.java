@@ -71,8 +71,8 @@ final class hw extends SpellAreaSelection {
         if (param1 >= -74) {
           field_w = (String) null;
         }
-        if (tb.field_e != null) {
-          tb.field_e.b(param0, 20);
+        if (EffectPresentation.field_e != null) {
+          EffectPresentation.field_e.b(param0, 20);
         }
     }
 

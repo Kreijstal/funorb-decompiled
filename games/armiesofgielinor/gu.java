@@ -53,7 +53,7 @@ final class gu {
               var2.addLast((byte) -119, (IntrusiveNode) (new og(sb.field_d, var3.field_c - 1)));
               continue;
             }
-            var2.addLast((byte) -119, (IntrusiveNode) (aw.a((byte) 121, var3)));
+            var2.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.a((byte) 121, var3)));
           }
           stackIn_18_0 = var2;
           return stackIn_18_0;

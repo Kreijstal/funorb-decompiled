@@ -289,7 +289,7 @@ abstract class sf extends wl {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7_int = 0;
-        vb var7 = null;
+        EventPresenter var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -346,19 +346,19 @@ abstract class sf extends wl {
             }
             rs.a(26449, param3, param4, param5);
           }
-          var7 = (vb) (jf.field_C.field_pc.first((byte) 106));
+          var7 = (EventPresenter) (jf.field_C.eventPresenters.first((byte) 106));
           while (var7 != null) {
-            if (var7.field_x == param4) {
-              if (var7.field_n) {
-                var7 = (vb) (jf.field_C.field_pc.next((byte) 123));
+            if (var7.tileIndex == param4) {
+              if (var7.presentationActive) {
+                var7 = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
                 continue;
               }
-              if (null != var7.field_r.unit &&
-                var7.field_r.unit.field_x != null &&
-                !var7.field_z) {
-                var8Lifetime1 = var7.field_r.unit.field_x.field_e[0];
-                var9Lifetime1 = var7.field_r.unit.field_x.field_e[1];
-                var10 = var7.field_r.unit.ownerPlayer;
+              if (null != var7.event.unit &&
+                var7.event.unit.field_x != null &&
+                !var7.fullCombatScene) {
+                var8Lifetime1 = var7.event.unit.field_x.field_e[0];
+                var9Lifetime1 = var7.event.unit.field_x.field_e[1];
+                var10 = var7.event.unit.ownerPlayer;
                 stackIn_43_0 = TeamRoster.field_g;
                 stackIn_43_1 = -30 + var8Lifetime1;
                 stackIn_43_2 = var9Lifetime1 - 15;
@@ -372,7 +372,7 @@ abstract class sf extends wl {
                 wl.field_N.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
-            var7 = (vb) (jf.field_C.field_pc.next((byte) 123));
+            var7 = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
           }
           if (vs.field_e[param4].occupant != null) {
             if (vs.field_e[param4].occupant.field_u) {

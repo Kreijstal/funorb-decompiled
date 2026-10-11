@@ -10,7 +10,7 @@ final class sd extends IntrusiveNode {
     int field_o;
     int[] field_n;
     static String field_r;
-    id[] field_k;
+    CampaignUnitOverride[] field_k;
     int field_m;
     ln field_q;
     private static String field_z;
@@ -23,7 +23,7 @@ final class sd extends IntrusiveNode {
     }
 
     sd() {
-        this.field_k = new id[10];
+        this.field_k = new CampaignUnitOverride[10];
     }
 
     static {

@@ -181,9 +181,9 @@ final class ib extends mk {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = fs.a(param3, 24340, param2, param8, param4, param5, param1);
-          fe.a(param2, param8, param5, param1, tb.field_j, jh.field_k, 0, 128, false);
-          fe.a(param2 + 4, param8 + 4, param5 - 8, 40, tb.field_j, jh.field_k, 0, 128, false);
-          fe.a(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, tb.field_j, jh.field_k, 0, 128, false);
+          fe.a(param2, param8, param5, param1, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+          fe.a(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+          fe.a(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
           if (var9_int == -3 &&
             param3 - param8 < 40 &&
             0 < dd.field_e) {

@@ -28,7 +28,7 @@ final class ur extends SpellAreaEffect {
         var3.field_o = new String[]{"runewars_atmospheric_countryside_river", "runewars_atmospheric_countryside_bird", "runewars_atmospheric_countryside_breeze"};
         var3.field_e = var3.field_v + "_shadows";
         var3.field_c = var3.field_q + "_shadows";
-        aw.a(var3, var4, param0 + 4287);
+        BestScoreStrategy.a(var3, var4, param0 + 4287);
         co var5 = new co();
         var5.field_d = 1;
         var5.field_a = "terrain_desert";
@@ -43,7 +43,7 @@ final class ur extends SpellAreaEffect {
           return (co[]) null;
         }
         var5.field_i = new int[]{13408580, 8943462, 7820612, 5609779, 7829503, 5596740, 5592541, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
-        aw.a(var5, var4, -5841);
+        BestScoreStrategy.a(var5, var4, -5841);
         co var6 = new co();
         var6.field_d = 2;
         var6.field_a = "terrain_ice";
@@ -55,7 +55,7 @@ final class ur extends SpellAreaEffect {
         var6.field_i = new int[]{14540287, 7833753, 5592422, 4495735, 7829503, 4482645, 5592541, 6710886, 6710886, 6710886, 7833753, 6710886, 11184810, 11184810, 6710886, 11184810};
         var6.field_l = "poles apart";
         var6.field_c = var6.field_q + "_shadows";
-        aw.a(var6, var4, param0 ^ 12639);
+        BestScoreStrategy.a(var6, var4, param0 ^ 12639);
         co var7 = new co();
         var7.field_a = "terrain_swamp";
         var7.field_v = "foliage_swamp";
@@ -67,7 +67,7 @@ final class ur extends SpellAreaEffect {
         var7.field_c = var7.field_q + "_shadows";
         var7.field_e = var7.field_v + "_shadows";
         var7.field_o = new String[]{"runewars_atmospheric_swamp_wind1", "runewars_atmospheric_swamp_wind2", "runewars_atmospheric_swamp_creature2", "runewars_atmospheric_swamp_creature3"};
-        aw.a(var7, var4, -5841);
+        BestScoreStrategy.a(var7, var4, -5841);
         co var8 = new co();
         var8.field_v = "foliage_burnt";
         var8.field_q = "structures_burnt";
@@ -79,7 +79,7 @@ final class ur extends SpellAreaEffect {
         var8.field_i = new int[]{4541241, 6965824, 2693658, 3026214, 4864561, 3422244, 15432192, 6710886, 6710886, 6710886, 8943462, 6710886, 11184810, 11184810, 6710886, 11184810};
         var8.field_o = new String[]{"runewars_atmospheric_burnt_wind1", "runewars_atmospheric_burnt_wind2", "runewars_atmospheric_burnt_lava_rumble_1", "runewars_atmospheric_burnt_lava_rumble_2"};
         var8.field_e = var8.field_v + "_shadows";
-        aw.a(var8, var4, -5841);
+        BestScoreStrategy.a(var8, var4, -5841);
         return var1;
     }
 

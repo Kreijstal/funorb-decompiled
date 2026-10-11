@@ -237,12 +237,12 @@ final class fp extends je {
         if (param0 >= -110) {
           return (gl) null;
         }
-        String var1 = sk.i(-4938);
+        String var1 = CombatPresentation.i(-4938);
         if (var1 != null &&
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new gl(sk.i(-4938), gi.a(false));
+        return new gl(CombatPresentation.i(-4938), gi.a(false));
     }
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {

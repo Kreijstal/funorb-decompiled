@@ -73,7 +73,7 @@ final class wc extends nl {
           if ((!(this.field_E instanceof fw) ||
             ((fw) (this.field_E)).field_I) &&
             this.field_q == 1) {
-            var5_int = -param1 + (sm.field_d - this.field_N);
+            var5_int = -param1 + (AiPlanningStrategy.field_d - this.field_N);
             var6 = -this.field_L + (ko.field_b - param2);
             if (this.field_B != var5_int ||
               this.field_p != var6) {

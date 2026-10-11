@@ -104,14 +104,14 @@ final class ea {
         }
         if (u.field_k == 1) {
           ut.field_eb = var8.e((byte) -104);
-          aw.field_k = var8.g(1);
+          BestScoreStrategy.field_k = var8.g(1);
         } else {
           if (u.field_k == 4) {
             ut.field_eb = var8.e((byte) -104);
-            aw.field_k = var8.g(1);
+            BestScoreStrategy.field_k = var8.g(1);
           } else {
             ut.field_eb = 0;
-            aw.field_k = null;
+            BestScoreStrategy.field_k = null;
           }
         }
         if (!param1) {
@@ -270,14 +270,14 @@ final class ea {
         }
         if (u.field_k == 1) {
           ut.field_eb = var8.e((byte) -104);
-          aw.field_k = var8.g(1);
+          BestScoreStrategy.field_k = var8.g(1);
         } else {
           if (u.field_k == 4) {
             ut.field_eb = var8.e((byte) -104);
-            aw.field_k = var8.g(1);
+            BestScoreStrategy.field_k = var8.g(1);
           } else {
             ut.field_eb = 0;
-            aw.field_k = null;
+            BestScoreStrategy.field_k = null;
           }
         }
         if (!param1) {

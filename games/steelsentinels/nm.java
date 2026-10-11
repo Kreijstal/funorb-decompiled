@@ -39,7 +39,7 @@ final class nm extends ia {
             break;
           }
           if (var2 != null) {
-            IsaacRandom.a(var2, 30, param1);
+            IsaacRandom.insertNodeBefore(var2, 30, param1);
           } else {
             ci.field_e.addLast(3, param1);
           }

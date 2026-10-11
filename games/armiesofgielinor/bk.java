@@ -46,7 +46,7 @@ final class bk {
           vl.field_n.a((byte) -67, fl.field_e);
           vl.field_n.a(an.field_E, 38359632);
           var6 = 0;
-          if (aw.field_l) {
+          if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;
           }
           if (ul.field_a) {
@@ -219,7 +219,7 @@ final class bk {
             !bb.field_a) {
             return;
           }
-          aw.field_i = new wr(0, 0, 0, 0);
+          BestScoreStrategy.field_i = new wr(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

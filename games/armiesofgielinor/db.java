@@ -53,10 +53,10 @@ final class db {
         int var7Lifetime1;
         int var8Lifetime1;
         if (param3 == 1661761121) {
-          if (sm.field_d < param4) {
+          if (AiPlanningStrategy.field_d < param4) {
             return false;
           }
-          if (param2 < sm.field_d) {
+          if (param2 < AiPlanningStrategy.field_d) {
             return false;
           }
           if (ko.field_b < param1) {
@@ -70,17 +70,17 @@ final class db {
           var7 = -param4 + param2 >> 1;
           var8 = -param1 + param0 >> 1;
           if (var8 < var7) {
-            stackIn_33_0 = !(Math.abs(var5 - sm.field_d) + Math.abs(var6 - ko.field_b) * var7 / var8 > var7);
+            stackIn_33_0 = !(Math.abs(var5 - AiPlanningStrategy.field_d) + Math.abs(var6 - ko.field_b) * var7 / var8 > var7);
             return stackIn_33_0;
           }
-          stackIn_37_0 = !(Math.abs(var6 - ko.field_b) + Math.abs(var5 - sm.field_d) * var8 / var7 > var8);
+          stackIn_37_0 = !(Math.abs(var6 - ko.field_b) + Math.abs(var5 - AiPlanningStrategy.field_d) * var8 / var7 > var8);
           return stackIn_37_0;
         }
         field_e = (String[]) null;
-        if (sm.field_d < param4) {
+        if (AiPlanningStrategy.field_d < param4) {
           return false;
         }
-        if (param2 < sm.field_d) {
+        if (param2 < AiPlanningStrategy.field_d) {
           return false;
         }
         if (ko.field_b < param1) {
@@ -94,10 +94,10 @@ final class db {
         var7Lifetime1 = -param4 + param2 >> 1;
         var8Lifetime1 = -param1 + param0 >> 1;
         if (var8Lifetime1 < var7Lifetime1) {
-          stackIn_15_0 = !(Math.abs(var5Lifetime1 - sm.field_d) + Math.abs(var6Lifetime1 - ko.field_b) * var7Lifetime1 / var8Lifetime1 > var7Lifetime1);
+          stackIn_15_0 = !(Math.abs(var5Lifetime1 - AiPlanningStrategy.field_d) + Math.abs(var6Lifetime1 - ko.field_b) * var7Lifetime1 / var8Lifetime1 > var7Lifetime1);
           return stackIn_15_0;
         }
-        if (Math.abs(var6Lifetime1 - ko.field_b) + Math.abs(var5Lifetime1 - sm.field_d) * var8Lifetime1 / var7Lifetime1 > var8Lifetime1) {
+        if (Math.abs(var6Lifetime1 - ko.field_b) + Math.abs(var5Lifetime1 - AiPlanningStrategy.field_d) * var8Lifetime1 / var7Lifetime1 > var8Lifetime1) {
           return false;
         }
         return true;

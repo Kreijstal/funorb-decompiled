@@ -45,7 +45,7 @@ final class ParasiteEvent extends GameEvent {
           var4 = vj.field_j[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = qv.field_j[rn.a(255, (int) var4[var6])];
+            var5[var6] = MovementPresentation.field_j[rn.a(255, (int) var4[var6])];
           }
           var1[var2] = new RgbSprite(lg.field_d, wr.field_J, j.field_e[var2], iq.field_g[var2], qm.field_K[var2], c.field_e[var2], var5);
         }
@@ -98,7 +98,7 @@ final class ParasiteEvent extends GameEvent {
         this.field_E = param0 + param2;
         this.field_B = param1;
         this.field_D = param0;
-        this.field_m = 7;
+        this.eventKind = 7;
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
@@ -109,20 +109,20 @@ final class ParasiteEvent extends GameEvent {
           var7 = battlefield.getUnitAt(this.field_B, true, this.field_D);
           var4 = battlefield.getUnitAt(this.field_z, true, this.field_E);
           if (var4 != null) {
-            if (null != var4.field_p) {
-              var4.field_p.unlink(-116);
+            if (null != var4.aiPlanner) {
+              var4.aiPlanner.unlink(-116);
             }
             var5 = var4.replaceWithOwner(this.field_C, -1);
             if (var7 != null &&
-              var7.field_p != null &&
+              var7.aiPlanner != null &&
               var5 != null) {
-              var7.field_p.field_r.a(80, var5);
+              var7.aiPlanner.planner.a(80, var5);
             }
           }
           if (var7 != null) {
             var7.unlink(obfuscationGuard ^ 26704);
-            if (var7.field_p != null) {
-              var7.field_p.unlink(-128);
+            if (var7.aiPlanner != null) {
+              var7.aiPlanner.unlink(-128);
             }
             battlefield.tiles[battlefield.mapWidth * this.field_B + this.field_D].occupant = null;
           }

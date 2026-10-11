@@ -52,12 +52,12 @@ final class StateChangeEvent extends GameEvent {
             if (var6 != 1) {
               if (var6 != 4) {
                 if (var6 != 0) {
-                  this.c((byte) -95);
+                  this.acknowledgePresentation((byte) -95);
                 } else if (this.a((byte) -39, param2, param0, true)) {
                   var4_int = 1;
                 }
               } else if (!param2.battlefield.tiles[param2.battlefield.mapWidth * this.tileY + this.tileX].hasCorpse(111)) {
-                this.c((byte) -74);
+                this.acknowledgePresentation((byte) -74);
               } else if (this.a((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
@@ -69,7 +69,7 @@ final class StateChangeEvent extends GameEvent {
                   var13 != null &&
                   param2.battlefield.arePlayersAllied(var13.ownerPlayer, -16985, this.playerId) &&
                   var13.a(23072)) {
-                  this.field_s = this.field_s + 1;
+                  this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
                     var4_int = 1;
                   }
@@ -82,7 +82,7 @@ final class StateChangeEvent extends GameEvent {
                   var14 != null &&
                   param2.battlefield.arePlayersAllied(var14.ownerPlayer, -16985, this.playerId) &&
                   var14.a(23072)) {
-                  this.field_s = this.field_s + 1;
+                  this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY, 15, param2, param0, 1 + this.tileX)) {
                     var4_int = 1;
                   }
@@ -95,7 +95,7 @@ final class StateChangeEvent extends GameEvent {
                   var15 != null &&
                   param2.battlefield.arePlayersAllied(var15.ownerPlayer, -16985, this.playerId) &&
                   var15.a(23072)) {
-                  this.field_s = this.field_s + 1;
+                  this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
@@ -108,14 +108,14 @@ final class StateChangeEvent extends GameEvent {
                   var16 != null &&
                   param2.battlefield.arePlayersAllied(var16.ownerPlayer, -16985, this.playerId) &&
                   var16.a(23072)) {
-                  this.field_s = this.field_s + 1;
+                  this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY + 1, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
                   }
                 }
               }
-              if (this.field_s <= 1) {
-                this.c((byte) -127);
+              if (this.pendingPresentations <= 1) {
+                this.acknowledgePresentation((byte) -127);
               } else if (this.a((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
@@ -125,7 +125,7 @@ final class StateChangeEvent extends GameEvent {
               var9 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX - 1);
               if (var9 != null &&
                 param2.battlefield.arePlayersAllied(var9.ownerPlayer, -16985, this.playerId)) {
-                this.field_s = this.field_s + 1;
+                this.pendingPresentations = this.pendingPresentations + 1;
                 if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
                   var4_int = 1;
                 }
@@ -135,7 +135,7 @@ final class StateChangeEvent extends GameEvent {
               var10 = param2.battlefield.getUnitAt(this.tileY, true, this.tileX + 1);
               if (var10 != null &&
                 param2.battlefield.arePlayersAllied(var10.ownerPlayer, -16985, this.playerId)) {
-                this.field_s = this.field_s + 1;
+                this.pendingPresentations = this.pendingPresentations + 1;
                 if (this.a(this.tileY, 15, param2, param0, this.tileX + 1)) {
                   var4_int = 1;
                 }
@@ -145,7 +145,7 @@ final class StateChangeEvent extends GameEvent {
               var11 = param2.battlefield.getUnitAt(this.tileY - 1, true, this.tileX);
               if (var11 != null &&
                 param2.battlefield.arePlayersAllied(var11.ownerPlayer, -16985, this.playerId)) {
-                this.field_s = this.field_s + 1;
+                this.pendingPresentations = this.pendingPresentations + 1;
                 if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
@@ -155,18 +155,18 @@ final class StateChangeEvent extends GameEvent {
               var12 = param2.battlefield.getUnitAt(1 + this.tileY, true, this.tileX);
               if (var12 != null &&
                 param2.battlefield.arePlayersAllied(var12.ownerPlayer, -16985, this.playerId)) {
-                this.field_s = this.field_s + 1;
+                this.pendingPresentations = this.pendingPresentations + 1;
                 if (this.a(1 + this.tileY, 15, param2, param0, this.tileX)) {
                   var4_int = 1;
                 }
               }
             }
-            if (1 < this.field_s) {
+            if (1 < this.pendingPresentations) {
               if (this.a((byte) -39, param2, param0, true)) {
                 var4_int = 1;
               }
             } else {
-              this.c((byte) -114);
+              this.acknowledgePresentation((byte) -114);
             }
           }
           if (param1 >= -84) {
@@ -442,22 +442,22 @@ final class StateChangeEvent extends GameEvent {
         this.effectType = param0;
         this.tileX = param1;
         this.tileY = param2;
-        this.field_m = -1;
+        this.eventKind = -1;
         var5 = this.effectType;
         if (var5 == 0) {
-          this.field_m = 3;
+          this.eventKind = 3;
         } else {
           if (1 == var5) {
-            this.field_m = 16;
+            this.eventKind = 16;
           } else {
             if (var5 == 2) {
-              this.field_m = 12;
+              this.eventKind = 12;
             } else {
               if (var5 == 3) {
-                this.field_m = 14;
+                this.eventKind = 14;
               } else {
                 if (var5 == 4) {
-                  this.field_m = 17;
+                  this.eventKind = 17;
                 }
               }
             }

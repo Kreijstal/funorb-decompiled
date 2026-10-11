@@ -233,20 +233,20 @@ final class IsaacRandom {
         return this.field_h[fieldTemp$0];
     }
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
-        if (param2.previous != null) {
-          param2.unlink(4);
+    final static void insertNodeBefore(IntrusiveNode existingNode, int obfuscationGuard, IntrusiveNode node) {
+        if (node.previous != null) {
+          node.unlink(4);
         }
-        param2.next = param0;
-        param2.previous = param0.previous;
-        param2.previous.next = param2;
-        if (param1 != 30) {
+        node.next = existingNode;
+        node.previous = existingNode.previous;
+        node.previous.next = node;
+        if (obfuscationGuard != 30) {
           return;
         }
         try {
-          param2.next.previous = param2;
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw ci.a((Throwable) ((Object) runtimeException), "ie.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ci.a((Throwable) ((Object) runtimeException), "ie.G(" + (existingNode != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -73,7 +73,7 @@ final class TutorialController {
           }
           var12 = this.b((byte) 84, param1);
           if (var12 > -1) {
-            aw.field_m.f(var12, -2 + var9);
+            BestScoreStrategy.field_m.f(var12, -2 + var9);
           }
           if (var4_int != 17 &&
             var4_int != 18) {
@@ -480,7 +480,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            fe.b(db.a(true, 30), u.a(50, (byte) 94), 580, 90, tb.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), u.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
             SoftwareRaster.f(db.a(true, 34), u.a(54, (byte) 94), db.a(true, 606), u.a(136, (byte) 94));
           }
           var2_int = 0;
@@ -511,7 +511,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), u.a(150, (byte) 94), 270, 270, tb.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), u.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
             SoftwareRaster.f(db.a(true, 34), u.a(154, (byte) 94), db.a(true, 296), u.a(416, (byte) 94));
             stackIn_26_0 = pg.field_d.a(0);
             stackIn_26_1 = ah.field_b;
@@ -527,16 +527,16 @@ final class TutorialController {
           stackIn_33_5 = !(pg.field_d.a(0) > ah.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, tb.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, tb.field_j, nd.field_b, 0, 128);
-          fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, tb.field_j, jh.field_k, 0, 0);
+          fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+          fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), u.a(366, (byte) 94), nd.field_b, true);
           fe.c(dd.a(pg.field_d.a((byte) 45), param0 ^ -23666), db.a(true, 382), u.a(406, (byte) 94), nd.field_b, true);
           if (hi.field_j >= 2) {
             rs.field_n.c(pg.field_d.a((byte) 127) + "", db.a(true, 382), u.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           var2_int = 0;
           var3 = 0;
           do {
@@ -1796,7 +1796,7 @@ final class TutorialController {
                                                                     }
                                                                     if (this.field_d.a(false)) {
                                                                       var6 = -100 + this.a(true, param2) - (-this.a(param2, param1 - 3858) - wd.field_b) >> 1;
-                                                                      var7Lifetime2 = sm.field_d - var6;
+                                                                      var7Lifetime2 = AiPlanningStrategy.field_d - var6;
                                                                       var8 = 256 * var7Lifetime2 / 100;
                                                                       if (var8 <= 0) {
                                                                         mh.a(0, (byte) -118);
@@ -1851,7 +1851,7 @@ final class TutorialController {
                                                                   }
                                                                   if (this.field_d.a(false)) {
                                                                     var6 = -100 + (this.a(true, param2) + this.a(param2, -3858) + wd.field_b) >> 1;
-                                                                    var7Lifetime1 = -var6 + sm.field_d;
+                                                                    var7Lifetime1 = -var6 + AiPlanningStrategy.field_d;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
                                                                       jf.b(0, 94);
@@ -2392,7 +2392,7 @@ final class TutorialController {
             en.field_E.a(fo.a(4800, ae.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           fe.a(var4, var8 >> 1, 35, -45 + var8, nd.field_b, true);
-          lf.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
+          BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
           stackIn_32_0 = km.field_h;
           if (var7 == 0) {
             stackIn_33_1 = 0;
@@ -2432,15 +2432,15 @@ final class TutorialController {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (-1 < wh.field_a &&
-            sm.field_d > db.a(true, 40) &&
-            sm.field_d < db.a(true, 376) &&
+            AiPlanningStrategy.field_d > db.a(true, 40) &&
+            AiPlanningStrategy.field_d < db.a(true, 376) &&
             ko.field_b > u.a(330, (byte) 94) &&
             ko.field_b < u.a(414, (byte) 94)) {
-            ah.field_a.a(wh.field_a, (sm.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - u.a(330, (byte) 94)) / 42), (byte) -110);
+            ah.field_a.a(wh.field_a, (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + 16 * ((ko.field_b - u.a(330, (byte) 94)) / 42), (byte) -110);
             ub.$cfr$intArgs$a$6d836999ad61(62, im.field_v[10]);
             return;
           }
-          var2_int = fs.a(ko.field_b, 24340, db.a(true, 380), u.a(60, (byte) 94), sm.field_d, 224, 352);
+          var2_int = fs.a(ko.field_b, 24340, db.a(true, 380), u.a(60, (byte) 94), AiPlanningStrategy.field_d, 224, 352);
           if (param0 != 330) {
             discarded$0 = this.f(-6, -35);
           }
@@ -2463,8 +2463,8 @@ final class TutorialController {
           }
           boolean decompiledFrameCompleted0 = true;
           var3 = 44;
-          if (sm.field_d > db.a(true, 308) &&
-            sm.field_d < db.a(true, 376)) {
+          if (AiPlanningStrategy.field_d > db.a(true, 308) &&
+            AiPlanningStrategy.field_d < db.a(true, 376)) {
             var4 = 0;
             while (var4 < 6) {
               stackIn_58_0 = ~ko.field_b;
@@ -2489,7 +2489,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            var2_int = ah.field_a.a(ko.field_b, param0 ^ 21728, db.a(true, 55), u.a(70, (byte) 94), sm.field_d);
+            var2_int = ah.field_a.a(ko.field_b, param0 ^ 21728, db.a(true, 55), u.a(70, (byte) 94), AiPlanningStrategy.field_d);
             stackIn_58_0 = ~var2_int;
             stackIn_58_1 = 1;
           }
@@ -3604,16 +3604,16 @@ final class TutorialController {
           if (null == pg.field_d) {
             return;
           }
-          fe.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, tb.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, tb.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           SoftwareRaster.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, 0, 192);
           SoftwareRaster.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, 0, 192);
           if (tg.field_k == 0) {
-            fe.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, tb.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 167), u.a(380, (byte) 94), 123, 40, 0, 128);
           }
           if (1 == tg.field_k) {
-            fe.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, tb.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledSharedTail2 = !(!wg.a(-33, db.a(true, 171), db.a(true, 286), u.a(384, (byte) 94), u.a(416, (byte) 94)));
@@ -3646,7 +3646,7 @@ final class TutorialController {
             SoftwareRaster.b(db.a(true, 40), u.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledFrameRemainder0 = true;
-          fe.b(db.a(true, 30), u.a(60, (byte) 94), 270, 324, tb.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 30), u.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, jh.field_k, 0, 256);
           if (tg.field_k == 0) {
             SoftwareRaster.f(db.a(true, 34), u.a(64, (byte) 94), db.a(true, 296), u.a(380, (byte) 94));
             if (vu.field_O == null ||
@@ -3725,7 +3725,7 @@ final class TutorialController {
             fe.a(ou.field_j, db.a(true, 165), u.a(76, (byte) 94), 230, nd.field_b, true);
           }
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), u.a(60, (byte) 94), 300, 80, tb.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 310), u.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, jh.field_k, 0, 256);
           var4Lifetime1 = 1;
           var5 = 0;
           while (true) {
@@ -3747,7 +3747,7 @@ final class TutorialController {
                   var7++;
                 }
                 var4Lifetime1 = 0;
-                stackIn_102_0 = lf.field_h[uc.spellDefinitions[pg.field_d.field_d[var5]][2]];
+                stackIn_102_0 = BattleCharacter.field_h[uc.spellDefinitions[pg.field_d.field_d[var5]][2]];
                 stackIn_102_1 = db.a(true, 310 + var5 * 55 + 20);
                 stackIn_102_2 = u.a(78, (byte) 94);
                 if (var6 > 0) {
@@ -3781,17 +3781,17 @@ final class TutorialController {
           }
           fe.b(cp.field_c, db.a(true, 460), u.a(76, (byte) 94), true);
           fe.c(cp.field_c, db.a(true, 460), u.a(76, (byte) 94), nd.field_b, true);
-          fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, tb.field_j, jh.field_k, 0, 256);
-          fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, tb.field_j, nd.field_b, 0, 128);
-          fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, tb.field_j, jh.field_k, 0, 0);
+          fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+          fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), u.a(366, (byte) 94), nd.field_b, true);
           fe.c(dd.a(pg.field_d.a((byte) 48), 82), db.a(true, 382), u.a(406, (byte) 94), nd.field_b, true);
           if (2 <= hi.field_j &&
             ln.field_e) {
             rs.field_n.c(pg.field_d.a((byte) 114) + "", db.a(true, 382), u.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           this.g(ev.field_d, -118);
           var5Lifetime1 = 40 + (nr.field_e.a(ig.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), u.a(19, (byte) 94), -104);
@@ -3800,8 +3800,8 @@ final class TutorialController {
             na.field_F = 45;
           }
           if (TelepopEvent.field_D) {
-            lf.field_h[uc.spellDefinitions[ev.field_d][2]].h(12 + sm.field_d, ko.field_b + 12);
-            km.field_h[0].h(sm.field_d + 10, 10 + ko.field_b);
+            BattleCharacter.field_h[uc.spellDefinitions[ev.field_d][2]].h(12 + AiPlanningStrategy.field_d, ko.field_b + 12);
+            km.field_h[0].h(AiPlanningStrategy.field_d + 10, 10 + ko.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3857,7 +3857,7 @@ final class TutorialController {
             if (!uc.field_a) {
               stackIn_34_1 = fk.field_a;
             } else {
-              stackIn_34_1 = sk.field_N;
+              stackIn_34_1 = CombatPresentation.field_N;
             }
             var3 = ((StringBuilder) (Object) stackIn_33_0).append(stackIn_34_1).toString();
           }
@@ -4128,7 +4128,7 @@ final class TutorialController {
           if (this.field_d.field_h != -1) {
             param2 = this.field_d.field_h;
           }
-          this.field_d.a(param2, param1, this.b(ko.field_b, sm.field_d, 31), 0);
+          this.field_d.a(param2, param1, this.b(ko.field_b, AiPlanningStrategy.field_d, 31), 0);
           vs.field_a = -1;
           lm.field_c = -1;
           ac.field_p = param2;
@@ -4190,7 +4190,7 @@ final class TutorialController {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           na.field_F = -1;
-          fe.b(db.a(true, 30), u.a(50, (byte) 94), 580, 90, tb.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 30), u.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
           var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
           var3 = (int)(128.0 - Math.cos((double)ri.field_d * 3.141592653589793 / 256.0) * 128.0);
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
@@ -4227,7 +4227,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), u.a(150, (byte) 94), 270, 270, tb.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), u.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
             stackIn_18_0 = db.a(true, 34);
           }
           SoftwareRaster.f(stackIn_18_0, u.a(154, (byte) 94), db.a(true, 296), u.a(416, (byte) 94));
@@ -4318,9 +4318,9 @@ final class TutorialController {
               }
             }
             SoftwareRaster.a();
-            fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, tb.field_j, jh.field_k, 0, 128);
-            fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, tb.field_j, nd.field_b, 0, 128);
-            fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, tb.field_j, jh.field_k, 0, 0);
+            fe.b(db.a(true, 310), u.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 310), u.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, nd.field_b, 0, 128);
+            fe.b(db.a(true, 320), u.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
             fe.c(ov.field_f, db.a(true, 382), u.a(366, (byte) 94), nd.field_b, true);
             fe.c(dd.a(pg.field_d.a((byte) 55), 82), db.a(true, 382), u.a(406, (byte) 94), nd.field_b, true);
             stackIn_71_0 = hi.field_j;
@@ -4330,8 +4330,8 @@ final class TutorialController {
             ln.field_e) {
             rs.field_n.c(pg.field_d.a((byte) 96) + "", db.a(true, 382), u.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, tb.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), u.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
           if (jq.field_F <= -1) {
             this.d((byte) -35, 1 + li.field_q);
             if (var10 == 0) {
@@ -4706,7 +4706,7 @@ final class TutorialController {
                   continue;
                 }
               } else {
-                ac.field_p = this.b(ko.field_b, sm.field_d, 31);
+                ac.field_p = this.b(ko.field_b, AiPlanningStrategy.field_d, 31);
                 this.field_d.a(0, this.b(ur.field_z, iu.field_t, 31), ac.field_p);
               }
               if (~pn.field_m != ~ac.field_p) {
@@ -4855,7 +4855,7 @@ final class TutorialController {
                           ub.$cfr$intArgs$a$6d836999ad61(65, im.field_v[1]);
                           GameplayController.field_J = na.field_F;
                         }
-                        ul.a((byte) -102, 224, db.a(true, 380), ro.field_ub, ko.field_b, 352, sm.field_d, u.a(60, (byte) 94));
+                        ul.a((byte) -102, 224, db.a(true, 380), ro.field_ub, ko.field_b, 352, AiPlanningStrategy.field_d, u.a(60, (byte) 94));
                         decompiledFrameRemainder3 = (var4 != 0);
                       }
                     }
@@ -5020,7 +5020,7 @@ final class TutorialController {
                     stackIn_41_4 = 5592405;
                   }
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
-                  lf.field_h[uc.spellDefinitions[param1.field_i[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), u.a(63 + var9Lifetime1, (byte) 94));
+                  BattleCharacter.field_h[uc.spellDefinitions[param1.field_i[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), u.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), u.a(60 + var9Lifetime1, (byte) 94));
                   en.field_E.c(Integer.toString(pg.field_d.field_a[param1.field_i[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), u.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (ml.a(u.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
@@ -5076,7 +5076,7 @@ final class TutorialController {
               }
             }
             ke.field_a = false;
-            sm.a(false, 8028);
+            AiPlanningStrategy.a(false, 8028);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -5365,7 +5365,7 @@ final class TutorialController {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          lm.field_c = this.d(sm.field_d, -1, ko.field_b);
+          lm.field_c = this.d(AiPlanningStrategy.field_d, -1, ko.field_b);
           if (1 == DeployEvent.field_A) {
             ub.$cfr$intArgs$a$6d836999ad61(94, im.field_v[2]);
             var2_int = this.d(iu.field_t, -1, ur.field_z);
@@ -5468,7 +5468,7 @@ final class TutorialController {
           }
           var9 = param5;
           fe.a(var9, db.a(true, 80), u.a(param3, (byte) 94), param4, true);
-          var9Lifetime1 = ir.a(param0 + 10539, param2);
+          var9Lifetime1 = AiInfluenceMap.a(param0 + 10539, param2);
           fe.c(var9Lifetime1, db.a(true, var8[4]), u.a(param3, (byte) 94), param4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -6037,8 +6037,8 @@ final class TutorialController {
         int var5Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 40), u.a(60, (byte) 94), 264, 260, tb.field_j, jh.field_k, 0, 128, false);
-          na.field_F = ah.field_a.a(db.a(true, 55), 0, sm.field_d, wh.field_a, mv.field_d, u.a(70, (byte) 94), ko.field_b);
+          fe.a(db.a(true, 40), u.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+          na.field_F = ah.field_a.a(db.a(true, 55), 0, AiPlanningStrategy.field_d, wh.field_a, mv.field_d, u.a(70, (byte) 94), ko.field_b);
           var2_int = 44;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -6046,22 +6046,22 @@ final class TutorialController {
             var4 = db.a(true, 308);
             var5 = u.a(60 + var2_int * var3, (byte) 94);
             stackIn_35_0 = ~var4;
-            stackIn_35_1 = ~sm.field_d;
+            stackIn_35_1 = ~AiPlanningStrategy.field_d;
             if (var8 == 0) {
               if (stackIn_35_0 > stackIn_35_1 &&
-                var4 + 68 > sm.field_d &&
+                var4 + 68 > AiPlanningStrategy.field_d &&
                 var5 < ko.field_b &&
                 (60 + (var2_int * (1 + var3) - 4)) > ko.field_b) {
                 if (~var3 != ~wh.field_a) {
-                  fe.a(var4, var5, 68, -4 + var2_int, tb.field_j, field_e, 0, 128, false);
+                  fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
-                  fe.a(var4, var5, 68, var2_int - 4, tb.field_j, nd.field_b, 0, 128, false);
+                  fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, nd.field_b, 0, 128, false);
                 }
                 na.field_F = var3;
               } else if (~wh.field_a != ~var3) {
-                fe.a(var4, var5, 68, var2_int - 4, tb.field_j, jh.field_k, 0, 128, false);
+                fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, jh.field_k, 0, 128, false);
               } else {
-                fe.a(var4, var5, 68, -4 + var2_int, tb.field_j, nd.field_b, 0, 128, false);
+                fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, nd.field_b, 0, 128, false);
               }
               wv.field_h[var3].g(db.a(true, 323), u.a(var2_int * var3 + 66, (byte) 94));
               var3++;
@@ -6077,11 +6077,11 @@ final class TutorialController {
             na.field_F = na.field_F + 100;
           }
           var3Lifetime1 = -1;
-          if (sm.field_d > db.a(true, 40) &&
-            sm.field_d < db.a(true, 376) &&
+          if (AiPlanningStrategy.field_d > db.a(true, 40) &&
+            AiPlanningStrategy.field_d < db.a(true, 376) &&
             ko.field_b > u.a(330, (byte) 94) &&
             ko.field_b < u.a(414, (byte) 94)) {
-            var3Lifetime1 = (sm.field_d - db.a(true, 40)) / 21 + (ko.field_b - u.a(330, (byte) 94)) / 42 * 16;
+            var3Lifetime1 = (AiPlanningStrategy.field_d - db.a(true, 40)) / 21 + (ko.field_b - u.a(330, (byte) 94)) / 42 * 16;
           }
           if (na.field_F <= -1) {
             na.field_F = var3Lifetime1;
@@ -6109,12 +6109,12 @@ final class TutorialController {
                   stackIn_59_1 = -1;
                   if (stackIn_59_0 > stackIn_59_1 &&
                     var5Lifetime1 + var4Lifetime1 * 16 == ah.field_a.field_b[kd.field_X]) {
-                    fe.a(var6, var7, 20, 40, tb.field_j, nd.field_b, 0, 128, false);
+                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, nd.field_b, 0, 128, false);
                   } else if (kd.field_X > -1 &&
                     ~(var5Lifetime1 + var4Lifetime1 * 16) == ~var3Lifetime1) {
-                    fe.a(var6, var7, 20, 40, tb.field_j, field_e, 0, 128, false);
+                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, field_e, 0, 128, false);
                   } else {
-                    fe.a(var6, var7, 20, 40, tb.field_j, jh.field_k, 0, 128, false);
+                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
                   }
                   if (-1 < kd.field_X) {
                     SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), u.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, SpellAreaEffect.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
@@ -6130,14 +6130,14 @@ final class TutorialController {
             }
             if (stackIn_89_0 > ~kd.field_X) {
               stackIn_96_0 = !(ro.field_ub <= 0);
-              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.field_b, sm.field_d, 224, ah.field_a.field_a[kd.field_X], -40, u.a(60, (byte) 94));
+              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, ah.field_a.field_a[kd.field_X], -40, u.a(60, (byte) 94));
               if (var8 != 0) {
                 stackIn_103_0 = !(ro.field_ub <= 0);
-                var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, sm.field_d, 224, -1, -40, u.a(60, (byte) 94));
+                var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, -1, -40, u.a(60, (byte) 94));
               }
             } else {
               stackIn_103_0 = !(ro.field_ub <= 0);
-              var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, sm.field_d, 224, -1, -40, u.a(60, (byte) 94));
+              var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.field_b, AiPlanningStrategy.field_d, 224, -1, -40, u.a(60, (byte) 94));
             }
             if (na.field_F > -1) {
               na.field_F = na.field_F + 200;

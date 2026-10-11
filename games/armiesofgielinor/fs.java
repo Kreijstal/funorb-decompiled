@@ -17,7 +17,7 @@ final class fs {
         RuntimeException decompiledCaughtException = null;
         int var9_int = 0;
         RuntimeException var9 = null;
-        vb var10_ref_vb = null;
+        EventPresenter var10_ref_vb = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -36,12 +36,12 @@ final class fs {
             eq.$cfr$intArgs$a$de73e65787eb(20 + param0, true, 126, var9_int, param3, false, 40 + param4, param7);
           }
           KingBlackDragonEvent.a(1, param5, param4, false, param0);
-          var10_ref_vb = (vb) (jf.field_C.field_pc.first((byte) 122));
+          var10_ref_vb = (EventPresenter) (jf.field_C.eventPresenters.first((byte) 122));
           while (var10_ref_vb != null) {
-            if (~param5 == ~var10_ref_vb.field_x) {
-              var10_ref_vb.a(ug.field_b, 31785, false);
+            if (~param5 == ~var10_ref_vb.tileIndex) {
+              var10_ref_vb.draw(ug.field_b, 31785, false);
             }
-            var10_ref_vb = (vb) (jf.field_C.field_pc.next((byte) 123));
+            var10_ref_vb = (EventPresenter) (jf.field_C.eventPresenters.next((byte) 123));
           }
           if (vs.field_e[param5].terrainType == 3) {
             stackIn_20_0 = param0 + 20;

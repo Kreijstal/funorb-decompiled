@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends sm {
-    private float field_k;
-    private int field_l;
+final class WeightedScoreStrategy extends AiPlanningStrategy {
+    private float minimumScore;
+    private int candidateCount;
     static String field_i;
     static String field_m;
-    private float field_j;
+    private float totalWeight;
     static String field_h;
 
     final static kk b(int param0, int param1) {
@@ -27,7 +27,7 @@ final class ge extends sm {
           }
           var2.field_i[var5] = (short)oe.c(var6, rn.a(~var4, var3));
         }
-        return var2.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
+        return var2.a(be.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, ni.field_a);
     }
 
     final static boolean a(int param0, int param1) {
@@ -60,80 +60,80 @@ final class ge extends sm {
         }
     }
 
-    final void b(byte param0) {
-        int var2 = -4 / ((param0 + 67) / 49);
-        super.b((byte) 111);
-        this.field_j = 0.0f;
-        this.field_k = 3.4028234663852886e+38f;
-        this.field_l = 0;
+    final void reset(byte obfuscationGuard) {
+        int var2 = -4 / ((obfuscationGuard + 67) / 49);
+        super.reset((byte) 111);
+        this.totalWeight = 0.0f;
+        this.minimumScore = 3.4028234663852886e+38f;
+        this.candidateCount = 0;
     }
 
-    ge(AiPlanner param0) {
-        super(param0);
-        this.field_k = 3.4028234663852886e+38f;
-        this.field_j = 0.0f;
+    WeightedScoreStrategy(AiPlanner planner) {
+        super(planner);
+        this.minimumScore = 3.4028234663852886e+38f;
+        this.totalWeight = 0.0f;
     }
 
-    final jb a(byte param0) {
+    final AiActionCandidate selectCandidate(byte obfuscationGuard) {
         Object var2_ref;
-        jb var2_ref_jb;
+        AiActionCandidate var2_ref_jb;
         float var2;
-        jb var3;
+        AiActionCandidate var3;
         int var4;
-        jb var2_ref_jbLifetime1;
+        AiActionCandidate var2_ref_jbLifetime1;
         var2_ref = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_a.a(false)) {
+        if (this.candidates.a(false)) {
           return null;
         }
-        this.field_j = 0.0f;
-        if (this.field_k < 1.0f) {
-          var2_ref_jb = (jb) (this.field_a.first((byte) 102));
+        this.totalWeight = 0.0f;
+        if (this.minimumScore < 1.0f) {
+          var2_ref_jb = (AiActionCandidate) (this.candidates.first((byte) 102));
           while (var2_ref_jb != null) {
-            var2_ref_jb.field_t = var2_ref_jb.field_t + (1.0f - this.field_k);
-            var2_ref_jb = (jb) (this.field_a.next((byte) 123));
+            var2_ref_jb.score = var2_ref_jb.score + (1.0f - this.minimumScore);
+            var2_ref_jb = (AiActionCandidate) (this.candidates.next((byte) 123));
           }
-          this.field_k = 1.0f;
+          this.minimumScore = 1.0f;
         }
-        if (param0 > -28) {
-          this.field_j = 0.7643955945968628f;
+        if (obfuscationGuard > -28) {
+          this.totalWeight = 0.7643955945968628f;
         }
-        var2_ref_jbLifetime1 = (jb) (this.field_a.first((byte) 94));
+        var2_ref_jbLifetime1 = (AiActionCandidate) (this.candidates.first((byte) 94));
         while (var2_ref_jbLifetime1 != null) {
-          this.field_j = (float)((double)this.field_j + Math.pow((double)(var2_ref_jbLifetime1.field_t / this.field_k), 4.0));
-          var2_ref_jbLifetime1 = (jb) (this.field_a.next((byte) 123));
+          this.totalWeight = (float)((double)this.totalWeight + Math.pow((double)(var2_ref_jbLifetime1.score / this.minimumScore), 4.0));
+          var2_ref_jbLifetime1 = (AiActionCandidate) (this.candidates.next((byte) 123));
         }
-        var2 = (float)(Math.random() * (double)this.field_j);
-        var3 = (jb) (this.field_a.first((byte) 116));
+        var2 = (float)(Math.random() * (double)this.totalWeight);
+        var3 = (AiActionCandidate) (this.candidates.first((byte) 116));
         while (var3 != null) {
-          var2 = (float)((double)var2 - Math.pow((double)(var3.field_t / this.field_k), 4.0));
+          var2 = (float)((double)var2 - Math.pow((double)(var3.score / this.minimumScore), 4.0));
           if (var2 <= 0.0f) {
             return var3;
           }
-          var3 = (jb) (this.field_a.next((byte) 123));
+          var3 = (AiActionCandidate) (this.candidates.next((byte) 123));
         }
-        af.a((Throwable) null, -114, "ran out of orders! total " + this.field_j + ", num " + this.field_l + " w " + var2);
+        af.a((Throwable) null, -114, "ran out of orders! total " + this.totalWeight + ", num " + this.candidateCount + " w " + var2);
         return null;
     }
 
-    final void a(int param0, jb param1) {
+    final void submitCandidate(int obfuscationGuard, AiActionCandidate candidate) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
-          if (param1.field_t < this.field_k) {
-            this.field_k = param1.field_t;
+          super.submitCandidate(obfuscationGuard, candidate);
+          if (candidate.score < this.minimumScore) {
+            this.minimumScore = candidate.score;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ge.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ge.F(").append(obfuscationGuard).append(',');
+          if (candidate == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -144,7 +144,7 @@ final class ge extends sm {
 
     public static void c(int param0) {
         if (param0 > -98) {
-          ge.a(39, 60);
+          WeightedScoreStrategy.a(39, 60);
         }
         field_h = null;
         field_m = null;

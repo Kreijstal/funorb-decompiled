@@ -152,7 +152,7 @@ final class de {
                     return stackIn_283_0;
                   }
                   if (param2.arePlayersAllied(var7.ownerPlayer, -16985, param5)) {
-                    stackIn_286_0 = qv.field_r;
+                    stackIn_286_0 = MovementPresentation.field_r;
                     return stackIn_286_0;
                   }
                   if (param4 != 68) {
@@ -464,7 +464,7 @@ final class de {
                 }
                 if (uc.spellDefinitions[param4][5] == 5 &&
                   var7.hasMovementFlag1(false)) {
-                  stackIn_276_0 = cl.field_w;
+                  stackIn_276_0 = AiUnitPlanner.field_w;
                   return stackIn_276_0;
                 }
               }

@@ -113,7 +113,7 @@ final class fi extends IntrusiveNode {
           }
           ro.field_rb[this.field_r.getUnitCategory(0)].a(106, 32);
           en.field_E.c(-param5.a(param5.mapWidth * this.field_r.tileY + this.field_r.tileX, param2 - 9, this.field_r) + 100 + "%", 20, 45, 16777215, -1);
-          vb.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
+          EventPresenter.field_t.b(68, 60, nd.field_b[-1 + nd.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.field_k - param3 - 75;
           var10 = this.field_t - (param4 + 80);

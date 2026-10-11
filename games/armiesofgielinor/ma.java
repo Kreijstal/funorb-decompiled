@@ -26,7 +26,7 @@ final class ma extends fn implements eg {
         if (this.field_s == null) {
           return null;
         }
-        ip.a(ko.field_b, this.field_l - this.field_W + sm.field_d, (byte) 113);
+        ip.a(ko.field_b, this.field_l - this.field_W + AiPlanningStrategy.field_d, (byte) 113);
         if (param0 != 21384) {
           return (String) null;
         }
@@ -131,7 +131,7 @@ final class ma extends fn implements eg {
             this.field_W = 103;
           }
           super.a(param0 + 0, param1, param2, param3);
-          this.field_W = sm.field_d - this.field_B - param1;
+          this.field_W = AiPlanningStrategy.field_d - this.field_B - param1;
         } catch (RuntimeException runtimeException) {
           throw ig.a((Throwable) ((Object) runtimeException), "ma.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

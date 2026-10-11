@@ -92,7 +92,7 @@ final class br {
         try {
           pf.field_d = param1;
           sc.field_b = param0;
-          ir.field_h = param3;
+          AiInfluenceMap.field_h = param3;
           pt.c(SoftwareRaster.field_l / 2, SoftwareRaster.field_g / 2, 75);
           uc.a(param0.field_L + param0.field_z, param0.field_z, param3.field_z, false, param3.field_L + param3.field_z);
           if (param2 != 333) {

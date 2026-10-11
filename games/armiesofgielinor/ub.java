@@ -217,12 +217,12 @@ final class ub {
         }
     }
 
-    final static vb a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, eo param7) {
+    final static EventPresenter a(GameEvent param0, Battlefield param1, boolean param2, int param3, GameplayController param4, int param5, int param6, eo param7) {
         int var8_int = 0;
         RuntimeException var8 = null;
-        vb var9 = null;
+        EventPresenter var9 = null;
         Object stackIn_2_0 = null;
-        vb stackIn_4_0 = null;
+        EventPresenter stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -235,13 +235,13 @@ final class ub {
         RuntimeException decompiledCaughtException = null;
         try {
           var8_int = -39 / ((-87 - param5) / 33);
-          var9 = new vb(param4, param1, param7, param0, param6, param3, param2);
+          var9 = new EventPresenter(param4, param1, param7, param0, param6, param3, param2);
           if (var9.b(param6, param3, true)) {
             stackIn_4_0 = var9;
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (vb) (stackIn_2_0);
+          return (EventPresenter) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;

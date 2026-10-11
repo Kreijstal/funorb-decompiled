@@ -98,15 +98,15 @@ final class fq {
     final static String a(byte param0, long param1) {
         int var8 = 0;
         int var9 = 0;
-        ql.field_c.setTime(new Date(param1));
-        int var3 = ql.field_c.get(7);
-        int var4 = ql.field_c.get(5);
-        int var5 = ql.field_c.get(2);
-        int var6 = ql.field_c.get(1);
-        int var7 = ql.field_c.get(11);
+        PopupPresentation.field_c.setTime(new Date(param1));
+        int var3 = PopupPresentation.field_c.get(7);
+        int var4 = PopupPresentation.field_c.get(5);
+        int var5 = PopupPresentation.field_c.get(2);
+        int var6 = PopupPresentation.field_c.get(1);
+        int var7 = PopupPresentation.field_c.get(11);
         if (param0 == -82) {
-          var8 = ql.field_c.get(12);
-          var9 = ql.field_c.get(13);
+          var8 = PopupPresentation.field_c.get(12);
+          var9 = PopupPresentation.field_c.get(13);
           return so.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + gi.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
@@ -152,7 +152,7 @@ final class fq {
             return stackIn_3_0;
           }
           if (th.field_a != 2) {
-            stackIn_6_0 = tb.field_a;
+            stackIn_6_0 = EffectPresentation.field_a;
             return stackIn_6_0;
           }
           var7 = db.a(param1, -122);

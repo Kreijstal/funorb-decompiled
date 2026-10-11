@@ -26,7 +26,7 @@ final class pg {
           param0 >= 9) {
           param0 = 0;
         }
-        int[] var13 = aw.field_j[param3][param0];
+        int[] var13 = BestScoreStrategy.field_j[param3][param0];
         int[] var11 = var13;
         int[] var10 = var11;
         int[] var4 = var10;
@@ -47,7 +47,7 @@ final class pg {
         if (!param2) {
           return null;
         }
-        return ck.field_e[sf.field_P[param3]][aw.field_j[param3][0][0]];
+        return ck.field_e[sf.field_P[param3]][BestScoreStrategy.field_j[param3][0][0]];
     }
 
     final static void a(boolean param0) {

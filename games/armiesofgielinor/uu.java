@@ -234,7 +234,7 @@ final class uu {
                 (decompiledFrameRemainder1 = (ep.field_p != null ||
                 null != iv.field_e ||
                 jv.field_d != null ||
-                null != sk.field_j))) {
+                null != CombatPresentation.field_j))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -261,9 +261,9 @@ final class uu {
                         var11_int = 1;
                       }
                     }
-                    if (sk.field_j != null &&
-                      null != sk.field_j[var16]) {
-                      var15 = var15 | sk.field_j[var16][var17_int];
+                    if (CombatPresentation.field_j != null &&
+                      null != CombatPresentation.field_j[var16]) {
+                      var15 = var15 | CombatPresentation.field_j[var16][var17_int];
                     }
                     if (jv.field_d != null &&
                       jv.field_d[var16] != null) {

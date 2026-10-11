@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends kk {
+final class ModelMesh extends kk {
     private int[] field_q;
     private int[] field_w;
     int[] field_R;
@@ -24,7 +24,7 @@ final class gd extends kk {
     private int[] field_G;
     private int[][] field_S;
     private int[] field_nb;
-    private static gd field_ib;
+    private static ModelMesh field_ib;
     private short[] field_r;
     int[] field_t;
     private int field_p;
@@ -83,15 +83,15 @@ final class gd extends kk {
             if (this.field_R[var4] != -1) {
               if (this.field_R[var4] != -2) {
                 var2 = this.field_Z[var4] & -131072;
-                this.field_Z[var4] = var2 | gd.a(var1, var2 >> 17);
+                this.field_Z[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
                 var2 = this.field_t[var4] & -131072;
-                this.field_t[var4] = var2 | gd.a(var1, var2 >> 17);
+                this.field_t[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
                 var2 = this.field_R[var4] & -131072;
-                this.field_R[var4] = var2 | gd.a(var1, var2 >> 17);
+                this.field_R[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
               }
             } else {
               var2 = this.field_Z[var4] & -131072;
-              this.field_Z[var4] = var2 | gd.a(var1, var2 >> 17);
+              this.field_Z[var4] = var2 | ModelMesh.a(var1, var2 >> 17);
             }
           }
         }
@@ -474,7 +474,7 @@ final class gd extends kk {
         return param0;
     }
 
-    private final kk a(boolean param0, boolean param1, gd param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
+    private final kk a(boolean param0, boolean param1, ModelMesh param2, byte[] param3, short[] param4, int[] param5, int[] param6, int[] param7) {
         int var9;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1813,7 +1813,7 @@ final class gd extends kk {
         }
     }
 
-    private gd() {
+    private ModelMesh() {
         this.field_Y = 0;
         this.field_l = 0;
         this.field_I = 0;
@@ -1822,7 +1822,7 @@ final class gd extends kk {
         this.field_p = 0;
     }
 
-    gd(js param0, int param1, int param2, int param3, int param4, int param5) {
+    ModelMesh(js param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -1969,7 +1969,7 @@ final class gd extends kk {
               } else {
                 var19 = param0.field_L[var16];
                 var14 = param1 + (param3 * var19.field_b + param4 * var19.field_a + param5 * var19.field_e) / (var8 + var8 / 2);
-                this.field_Z[var16] = gd.d(var14);
+                this.field_Z[var16] = ModelMesh.d(var14);
                 this.field_R[var16] = -1;
               }
             } else {
@@ -1980,7 +1980,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_jb[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
-              this.field_Z[var16] = gd.d(var14);
+              this.field_Z[var16] = ModelMesh.d(var14);
               if (param0.field_g != null &&
                 param0.field_g[this.field_bb[var16]] != null) {
                 var13 = param0.field_g[this.field_bb[var16]];
@@ -1988,7 +1988,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_bb[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
-              this.field_t[var16] = gd.d(var14);
+              this.field_t[var16] = ModelMesh.d(var14);
               if (param0.field_g != null &&
                 param0.field_g[this.field_N[var16]] != null) {
                 var13 = param0.field_g[this.field_N[var16]];
@@ -1996,7 +1996,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_N[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g);
-              this.field_R[var16] = gd.d(var14);
+              this.field_R[var16] = ModelMesh.d(var14);
             }
           } else {
             if (var10Lifetime2 != 0) {
@@ -2010,7 +2010,7 @@ final class gd extends kk {
               } else {
                 var18 = param0.field_L[var16];
                 var14 = param1 + (param3 * var18.field_b + param4 * var18.field_a + param5 * var18.field_e) / (var8 + var8 / 2) << 17;
-                this.field_Z[var16] = var14 | gd.a(param0.field_i[var16] & 65535, var14 >> 17);
+                this.field_Z[var16] = var14 | ModelMesh.a(param0.field_i[var16] & 65535, var14 >> 17);
                 this.field_R[var16] = -1;
               }
             } else {
@@ -2022,7 +2022,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_jb[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
-              this.field_Z[var16] = var14 | gd.a(var15, var14 >> 17);
+              this.field_Z[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
               if (param0.field_g != null &&
                 param0.field_g[this.field_bb[var16]] != null) {
                 var13 = param0.field_g[this.field_bb[var16]];
@@ -2030,7 +2030,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_bb[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
-              this.field_t[var16] = var14 | gd.a(var15, var14 >> 17);
+              this.field_t[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
               if (param0.field_g != null &&
                 param0.field_g[this.field_N[var16]] != null) {
                 var13 = param0.field_g[this.field_N[var16]];
@@ -2038,7 +2038,7 @@ final class gd extends kk {
                 var13 = param0.field_y[this.field_N[var16]];
               }
               var14 = param1 + (param3 * var13.field_d + param4 * var13.field_e + param5 * var13.field_b) / (var8 * var13.field_g) << 17;
-              this.field_R[var16] = var14 | gd.a(var15, var14 >> 17);
+              this.field_R[var16] = var14 | ModelMesh.a(var15, var14 >> 17);
             }
           }
           var16++;
@@ -2046,14 +2046,14 @@ final class gd extends kk {
     }
 
     static {
-        field_ib = new gd();
+        field_ib = new ModelMesh();
         field_gb = new int[1];
         field_u = new byte[1];
         field_C = new short[1];
         field_K = new int[1];
         field_m = new int[1];
-        gd discarded$0 = new gd();
-        gd discarded$1 = new gd();
+        ModelMesh discarded$0 = new ModelMesh();
+        ModelMesh discarded$1 = new ModelMesh();
         field_y = false;
         field_M = new int[4096];
         field_eb = new int[10];

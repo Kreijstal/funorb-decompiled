@@ -22,7 +22,7 @@ final class lq {
           if (param0 == null) {
             return null;
           }
-          var2 = new nc(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, qv.field_j, vj.field_j);
+          var2 = new nc(param0, j.field_e, iq.field_g, qm.field_K, c.field_e, MovementPresentation.field_j, vj.field_j);
           if (param1 != 0) {
             stackIn_5_0 = (nc) null;
             return stackIn_5_0;

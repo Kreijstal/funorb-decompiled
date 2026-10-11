@@ -3,7 +3,7 @@
  */
 final class vn {
     private int[] field_i;
-    sk field_k;
+    CombatPresentation field_k;
     private RgbSprite[] field_f;
     private int field_c;
     static pf field_j;
@@ -249,7 +249,7 @@ final class vn {
             var22 = var17;
           }
           var23 = (var17 - var22) * (fk.field_d[var21][var20] * ri.field_c[var10]) / 10000;
-          this.field_k = new sk((Battlefield) null, (v) null, (vb) null);
+          this.field_k = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
           this.field_k.a(var22, var19, var23, true, var18);
           le.field_b = new cg();
         }
@@ -329,7 +329,7 @@ final class vn {
 
     final void c(int param0) {
         if (null != this.field_k) {
-          this.field_k.c((byte) -120);
+          this.field_k.drawBaseLayer((byte) -120);
         } else {
           this.field_d.a(113);
           this.field_h.a(71);
@@ -406,8 +406,8 @@ final class vn {
           }
         }
         if (null != this.field_k) {
-          this.field_k.b((GameEvent) null, (byte) -121);
-          if (this.field_k.b(8865)) {
+          this.field_k.advanceFrame((GameEvent) null, (byte) -121);
+          if (this.field_k.isFinished(8865)) {
             this.field_k = null;
             le.field_b = new cg();
           }

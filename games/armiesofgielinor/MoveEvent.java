@@ -498,7 +498,7 @@ final class MoveEvent extends GameEvent {
         this.applied = false;
         try {
           this.startX = startX;
-          this.field_m = 0;
+          this.eventKind = 0;
           this.pathDirections = pathDirections;
           this.startY = startY;
           return;

@@ -86,10 +86,10 @@ final class cd {
         gp.field_e = null;
         if (param0 != 12) {
           field_b = (String) null;
-          lf.field_g = null;
+          BattleCharacter.field_g = null;
           return;
         }
-        lf.field_g = null;
+        BattleCharacter.field_g = null;
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
@@ -149,7 +149,7 @@ final class cd {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        lf.field_h[uc.spellDefinitions[param0][param3]].h(48 + param1, param2 + 12);
+        BattleCharacter.field_h[uc.spellDefinitions[param0][param3]].h(48 + param1, param2 + 12);
         km.field_h[0].h(param1 + 46, param2 + 10);
     }
 

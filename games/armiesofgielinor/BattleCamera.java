@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class v {
-    private int[] field_l;
+final class BattleCamera {
+    private int[] velocity;
     private int[] field_n;
-    private vb field_d;
+    private EventPresenter focusedPresenter;
     int[] field_h;
     private boolean field_q;
     private int field_i;
     int field_b;
     private int[] field_a;
     private int field_m;
-    int[] field_k;
-    int[] field_p;
+    int[] targetPosition;
+    int[] currentPosition;
     int[] field_e;
     int[] field_o;
     private int[] field_r;
@@ -31,27 +31,27 @@ final class v {
         int var7;
         int var8;
         boolean stackIn_8_0 = false;
-        this.a(-100, this.field_k);
-        var3 = this.field_k[0];
-        var4 = this.field_k[1];
-        var5 = -this.field_p[0] + var3;
-        var6 = -this.field_p[1] + var4;
+        this.a(-100, this.targetPosition);
+        var3 = this.targetPosition[0];
+        var4 = this.targetPosition[1];
+        var5 = -this.currentPosition[0] + var3;
+        var6 = -this.currentPosition[1] + var4;
         var7 = 16;
         if (param1 > -1) {
           var7 = param1;
         }
         var8 = 2;
-        this.field_l[0] = this.a(this.field_l[0], 6198, var5, var8, var7);
-        this.field_l[1] = this.a(this.field_l[1], 6198, var6, var8, var7);
+        this.velocity[0] = this.a(this.velocity[0], 6198, var5, var8, var7);
+        this.velocity[1] = this.a(this.velocity[1], 6198, var6, var8, var7);
         if (param0 >= -118) {
           this.f(-83);
         }
-        this.field_p[1] = this.field_p[1] + this.field_l[1];
-        this.field_p[0] = this.field_p[0] + this.field_l[0];
-        this.a(-78, this.field_p);
+        this.currentPosition[1] = this.currentPosition[1] + this.velocity[1];
+        this.currentPosition[0] = this.currentPosition[0] + this.velocity[0];
+        this.a(-78, this.currentPosition);
         this.a(false);
         this.h(-1);
-        stackIn_8_0 = (0 == this.field_l[0]) && (0 == this.field_l[1]);
+        stackIn_8_0 = (0 == this.velocity[0]) && (0 == this.velocity[1]);
         return stackIn_8_0;
     }
 
@@ -139,11 +139,11 @@ final class v {
           this.field_a[1] = param3;
           return false;
         }
-        this.field_p[0] = this.field_p[0] - (param2 - this.field_a[0]);
-        this.field_p[1] = this.field_p[1] - (-this.field_a[1] + param3);
+        this.currentPosition[0] = this.currentPosition[0] - (param2 - this.field_a[0]);
+        this.currentPosition[1] = this.currentPosition[1] - (-this.field_a[1] + param3);
         this.field_a[0] = param2;
         this.field_a[1] = param3;
-        this.a(-85, this.field_p);
+        this.a(-85, this.currentPosition);
         this.a(!param0 ? true : false);
         this.h(-1);
         if (!param0) {
@@ -170,9 +170,9 @@ final class v {
     }
 
     final void a(int param0, int param1, byte param2) {
-        this.field_p[1] = param1;
-        this.field_p[0] = param0;
-        this.a(-93, this.field_p);
+        this.currentPosition[1] = param1;
+        this.currentPosition[0] = param0;
+        this.a(-93, this.currentPosition);
         this.a(false);
         if (param2 <= 54) {
           this.field_m = -31;
@@ -210,7 +210,7 @@ final class v {
           var4 += 255;
         }
         if (param1 != -4510) {
-          v.d((byte) -11);
+          BattleCamera.d((byte) -11);
         }
         if (param2 > -1 &&
           param2 < this.field_j &&
@@ -225,11 +225,11 @@ final class v {
 
     final void c(int param0) {
         this.f(-41);
-        this.field_e[0] = -this.field_p[0] + (this.field_k[0] + (so.field_b.field_a >> 1));
+        this.field_e[0] = -this.currentPosition[0] + (this.targetPosition[0] + (so.field_b.field_a >> 1));
         if (param0 != 9470337) {
           this.field_q = false;
         }
-        this.field_e[1] = -this.field_p[1] + (this.field_k[1] + (so.field_b.field_g >> 1) - 20);
+        this.field_e[1] = -this.currentPosition[1] + (this.targetPosition[1] + (so.field_b.field_g >> 1) - 20);
     }
 
     final void j(int param0) {
@@ -245,8 +245,8 @@ final class v {
         if (param0 != -28) {
           field_f = (String) null;
         }
-        this.field_g = this.field_k[0];
-        this.field_i = this.field_k[1];
+        this.field_g = this.targetPosition[0];
+        this.field_i = this.targetPosition[1];
         this.a(false);
         this.h(param0 + 27);
     }
@@ -268,7 +268,7 @@ final class v {
         try {
           var3_int = 40 * this.field_j >> 1;
           if (param0 >= -76) {
-            this.field_d = (vb) null;
+            this.focusedPresenter = (EventPresenter) null;
           }
           var4 = param1[0] - (var3_int << 1) >> 1;
           var5 = param1[1] - var3_int;
@@ -409,10 +409,10 @@ final class v {
         int var2 = this.field_e[0];
         var3 = var3 - (so.field_b.field_g >> 1);
         var2 = var2 - (so.field_b.field_a >> 1);
-        int var4 = var2 + this.field_p[0];
-        int var5 = var3 + this.field_p[1];
-        this.field_k[1] = var5;
-        this.field_k[0] = var4;
+        int var4 = var2 + this.currentPosition[0];
+        int var5 = var3 + this.currentPosition[1];
+        this.targetPosition[1] = var5;
+        this.targetPosition[0] = var4;
     }
 
     final void b(int param0, int param1, byte param2) {
@@ -581,49 +581,49 @@ final class v {
         var8 = 16;
         if (!param5) {
           if (!param2 &&
-            this.field_l[1] < 0) {
-            this.field_l[1] = this.field_l[1] + 1;
+            this.velocity[1] < 0) {
+            this.velocity[1] = this.velocity[1] + 1;
           }
         } else {
-          if (this.field_l[1] > -var8) {
-            this.field_l[1] = this.field_l[1] - 1;
+          if (this.velocity[1] > -var8) {
+            this.velocity[1] = this.velocity[1] - 1;
           }
         }
         if (param1) {
-          if (this.field_l[1] < var8) {
-            this.field_l[1] = this.field_l[1] + 1;
+          if (this.velocity[1] < var8) {
+            this.velocity[1] = this.velocity[1] + 1;
           }
         } else {
           if (!param2 &&
-            this.field_l[1] > 0) {
-            this.field_l[1] = this.field_l[1] - 1;
+            this.velocity[1] > 0) {
+            this.velocity[1] = this.velocity[1] - 1;
           }
         }
         if (param4) {
-          if (-var8 < this.field_l[0]) {
-            this.field_l[0] = this.field_l[0] - 1;
+          if (-var8 < this.velocity[0]) {
+            this.velocity[0] = this.velocity[0] - 1;
           }
         } else {
           if (!param2 &&
-            this.field_l[0] < 0) {
-            this.field_l[0] = this.field_l[0] + 1;
+            this.velocity[0] < 0) {
+            this.velocity[0] = this.velocity[0] + 1;
           }
         }
         if (param3) {
-          if (this.field_l[0] < var8) {
-            this.field_l[0] = this.field_l[0] + 1;
+          if (this.velocity[0] < var8) {
+            this.velocity[0] = this.velocity[0] + 1;
           }
         } else {
           if (!param2 &&
-            0 < this.field_l[0]) {
-            this.field_l[0] = this.field_l[0] - 1;
+            0 < this.velocity[0]) {
+            this.velocity[0] = this.velocity[0] - 1;
           }
         }
         if (!param2 ||
           var7 != 0) {
-          this.field_p[1] = this.field_p[1] + this.field_l[1];
-          this.field_p[0] = this.field_p[0] + (this.field_l[0] << 1);
-          this.a(-81, this.field_p);
+          this.currentPosition[1] = this.currentPosition[1] + this.velocity[1];
+          this.currentPosition[0] = this.currentPosition[0] + (this.velocity[0] << 1);
+          this.a(-81, this.currentPosition);
           this.a(false);
           this.h(-1);
         }
@@ -631,8 +631,8 @@ final class v {
     }
 
     private final void d(int param0) {
-        int var2 = -40 + this.field_k[0] >> 1;
-        int var3 = this.field_k[1] - (this.field_m * 40 >> 1);
+        int var2 = -40 + this.targetPosition[0] >> 1;
+        int var3 = this.targetPosition[1] - (this.field_m * 40 >> 1);
         int var5 = var3 + var2;
         int var4 = var2 - var3;
         if (var4 < 0) {
@@ -649,7 +649,7 @@ final class v {
         this.field_c[1] = param0 / this.field_j;
         this.field_c[0] = param0 - this.field_j * this.field_c[1];
         if (!param1) {
-          this.field_l = (int[]) null;
+          this.velocity = (int[]) null;
         }
         this.b(!param1 ? true : false);
     }
@@ -739,8 +739,8 @@ final class v {
     }
 
     final void a(byte param0) {
-        int var2 = this.field_k[0];
-        int var3 = this.field_k[1];
+        int var2 = this.targetPosition[0];
+        int var3 = this.targetPosition[1];
         int var4 = 0;
         int var5 = 0;
         int var6 = so.a(327680, -129);
@@ -754,10 +754,10 @@ final class v {
     }
 
     final void i(int param0) {
-        int var3 = this.field_k[1];
-        int var2 = this.field_k[0];
-        int var5 = var3 - this.field_p[1];
-        int var4 = var2 - this.field_p[param0];
+        int var3 = this.targetPosition[1];
+        int var2 = this.targetPosition[0];
+        int var5 = var3 - this.currentPosition[1];
+        int var4 = var2 - this.currentPosition[param0];
         var4 = var4 + (so.field_b.field_a >> 1);
         var5 = (so.field_b.field_g >> 1) + var5;
         this.field_e[1] = var5;
@@ -1111,7 +1111,7 @@ final class v {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vb var3 = null;
+        EventPresenter var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -1119,22 +1119,22 @@ final class v {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = (vb) (param1.d((byte) -77));
+          var3 = (EventPresenter) (param1.d((byte) -77));
           while (var3 != null) {
-            if (var3.field_x <= -1) {
-              var3 = (vb) (param1.b((byte) 73));
+            if (var3.tileIndex <= -1) {
+              var3 = (EventPresenter) (param1.b((byte) 73));
               continue;
             }
-            stackIn_7_0 = (var3 != this.field_d) ? 0 : 1;
+            stackIn_7_0 = (var3 != this.focusedPresenter) ? 0 : 1;
             var4 = stackIn_7_0;
-            this.field_d = var3;
+            this.focusedPresenter = var3;
             if (var4 == 0) {
               this.field_q = true;
             }
-            this.field_i = -(so.field_b.field_g >> 1) + var3.field_v + this.field_p[1];
-            this.field_g = this.field_p[0] + var3.field_m - (so.field_b.field_a >> 1);
-            var5 = this.field_p[0] - this.field_g;
-            var6 = -this.field_i + this.field_p[1];
+            this.field_i = -(so.field_b.field_g >> 1) + var3.screenY + this.currentPosition[1];
+            this.field_g = this.currentPosition[0] + var3.screenX - (so.field_b.field_a >> 1);
+            var5 = this.currentPosition[0] - this.field_g;
+            var6 = -this.field_i + this.currentPosition[1];
             if (var6 * var6 + var5 * var5 < 40000) {
               if (var4 == 0) {
                 this.field_q = false;
@@ -1147,8 +1147,8 @@ final class v {
             }
             break;
           }
-          this.field_k[0] = this.field_g;
-          this.field_k[1] = this.field_i;
+          this.targetPosition[0] = this.field_g;
+          this.targetPosition[1] = this.field_i;
           if (param0 <= 99) {
             this.b(63, 30, (byte) -17);
           }
@@ -1195,10 +1195,10 @@ final class v {
 
     private final void b(boolean param0) {
         this.f(-112);
-        this.field_p[0] = this.field_k[0];
-        this.field_p[1] = this.field_k[1];
-        this.field_g = this.field_k[0];
-        this.field_i = this.field_k[1];
+        this.currentPosition[0] = this.targetPosition[0];
+        this.currentPosition[1] = this.targetPosition[1];
+        this.field_g = this.targetPosition[0];
+        this.field_i = this.targetPosition[1];
         this.a(param0);
         if (param0) {
           this.a(true);
@@ -1206,23 +1206,23 @@ final class v {
         this.h(-1);
     }
 
-    v(int param0, int param1) {
+    BattleCamera(int param0, int param1) {
         this.field_i = 0;
         this.field_g = 0;
         this.a(param1, param0, -87);
-        ir.field_d = this;
+        AiInfluenceMap.field_d = this;
     }
 
     private final void a(int param0, int param1, int param2) {
-        this.field_l = new int[2];
+        this.velocity = new int[2];
         this.field_n = new int[2];
         this.field_r = new int[2];
         this.field_a = new int[2];
-        this.field_p = new int[2];
-        this.field_p[0] = 40 + 80 * (this.field_j >> 1) - 80;
+        this.currentPosition = new int[2];
+        this.currentPosition[0] = 40 + 80 * (this.field_j >> 1) - 80;
         this.field_e = new int[2];
-        this.field_p[1] = 20 + 40 * (-1 + (this.field_m >> 1));
-        this.field_k = new int[2];
+        this.currentPosition[1] = 20 + 40 * (-1 + (this.field_m >> 1));
+        this.targetPosition = new int[2];
         if (param2 > -53) {
           return;
         }
@@ -1243,7 +1243,7 @@ final class v {
         int var4 = this.field_c[0];
         int var5 = this.field_c[1];
         if (param0 >= -30) {
-          this.field_d = (vb) null;
+          this.focusedPresenter = (EventPresenter) null;
         }
         int var8 = 40;
         int var3 = this.field_j * 40 >> 1;
@@ -1251,8 +1251,8 @@ final class v {
         int var10 = var6 * var4 + var8 * var5;
         var3 = var3 + var11;
         var2 = var10 + var2;
-        this.field_k[0] = var2;
-        this.field_k[1] = var3;
+        this.targetPosition[0] = var2;
+        this.targetPosition[1] = var3;
     }
 
     static {

@@ -71,7 +71,7 @@ final class TurnChangeEvent extends GameEvent {
 
     TurnChangeEvent(int param0, int param1) {
         this.nextPlayer = param1;
-        this.field_m = 22;
+        this.eventKind = 22;
         this.newTurnNumber = param0;
     }
 

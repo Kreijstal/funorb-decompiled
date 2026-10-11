@@ -204,18 +204,18 @@ final class oo {
               this.field_p > qk.field_a &&
               257 < ur.field_z &&
               290 > ur.field_z) {
-              if (sm.field_d > 9 &&
-                sm.field_d < 82) {
+              if (AiPlanningStrategy.field_d > 9 &&
+                AiPlanningStrategy.field_d < 82) {
                 this.field_p = qk.field_a;
               }
-              if (558 < sm.field_d &&
-                631 > sm.field_d) {
+              if (558 < AiPlanningStrategy.field_d &&
+                631 > AiPlanningStrategy.field_d) {
                 this.field_p = qk.field_a;
               }
             }
           }
           if (param0) {
-            this.field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(sm.field_d, ko.field_b, -387));
+            this.field_h.a(0, this.a(iu.field_t, ur.field_z, -387), this.a(AiPlanningStrategy.field_d, ko.field_b, -387));
             var4Lifetime1 = 0;
             if (this.field_h.d((byte) 96)) {
               if (0 == this.field_h.field_h) {
@@ -439,17 +439,17 @@ final class oo {
             mg.field_d.d(558, 257);
             if (ko.field_b > 257 &&
               ko.field_b < 290) {
-              var2_intLifetime2 = (40 * sr.c(this.field_f << 4, 127) >> 16) + 40;
+              var2_intLifetime2 = (40 * CombatViewTransition.c(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
-                if (sm.field_d > 9 &&
-                  sm.field_d < 82) {
+                if (AiPlanningStrategy.field_d > 9 &&
+                  AiPlanningStrategy.field_d < 82) {
                   mg.field_d.f(8, 256, var2_intLifetime2);
                   mg.field_d.f(10, 256, var2_intLifetime2);
                   mg.field_d.f(8, 258, var2_intLifetime2);
                   mg.field_d.f(10, 258, var2_intLifetime2);
                 } else {
-                  if (sm.field_d > 558 &&
-                    sm.field_d < 631) {
+                  if (AiPlanningStrategy.field_d > 558 &&
+                    AiPlanningStrategy.field_d < 631) {
                     mg.field_d.h();
                     mg.field_d.f(557, 256, var2_intLifetime2);
                     mg.field_d.f(559, 256, var2_intLifetime2);
@@ -714,12 +714,12 @@ final class oo {
         try {
           var7_int = -43 % ((param6 - 19) / 62);
           var8 = 0;
-          if (sr.a(param3 - 1, param5, 2, (byte) -113) == 2 ||
-            4 == sr.a(-1 + param3, param5, 2, (byte) -104)) {
+          if (CombatViewTransition.a(param3 - 1, param5, 2, (byte) -113) == 2 ||
+            4 == CombatViewTransition.a(-1 + param3, param5, 2, (byte) -104)) {
             var8++;
           }
-          if (sr.a(param3, 1 + param5, 2, (byte) -113) == 2 ||
-            sr.a(param3, 1 + param5, 2, (byte) -100) == 4) {
+          if (CombatViewTransition.a(param3, 1 + param5, 2, (byte) -113) == 2 ||
+            CombatViewTransition.a(param3, 1 + param5, 2, (byte) -100) == 4) {
             var8 += 2;
           }
           if ((var8 & 1) > 0) {

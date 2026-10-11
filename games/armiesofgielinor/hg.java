@@ -96,7 +96,7 @@ final class hg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (null != va.field_w) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
-              jb.a((char) var2_int, 16150)) {
+              AiActionCandidate.a((char) var2_int, 16150)) {
               var3 = 127 & cr.field_Z + 1;
               if (var3 != be.field_E) {
                 gt.field_d[cr.field_Z] = -1;
