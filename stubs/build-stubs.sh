@@ -10,7 +10,14 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 SRC_DIR="src"
-CLASSES_DIR="classes"
+TEMPORARY="$(mktemp -d /tmp/funorb-stubs-build.XXXXXX)"
+trap 'rm -rf "$TEMPORARY"' EXIT
+CLASSES_DIR="$TEMPORARY/classes"
+OUTPUT="${1:-$(mktemp /tmp/funorb-stubs.XXXXXX.jar)}"
+OUTPUT="$(realpath -m "$OUTPUT")"
+case "$OUTPUT" in
+  "$(pwd)"/*|"$(dirname "$(pwd)")"/*) echo 'Keep compilation binaries outside the source repository' >&2; exit 2 ;;
+esac
 
 rm -rf "$CLASSES_DIR"
 mkdir -p "$CLASSES_DIR"
@@ -21,5 +28,5 @@ else
   javac -source 8 -target 8 -d "$CLASSES_DIR" $(find "$SRC_DIR" -name '*.java' | sort)
 fi
 
-jar cf funorb-stubs.jar -C "$CLASSES_DIR" .
-echo "Built funorb-stubs.jar"
+jar cf "$OUTPUT" -C "$CLASSES_DIR" .
+echo "Built $OUTPUT"
